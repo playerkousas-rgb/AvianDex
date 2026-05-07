@@ -14,4 +14,15 @@ body {
 .perspective-1000 {
   perspective: 1000px;
 }
+/* 全域鼠標設定 */
+html, body {
+  /* 16 0 代表點擊點在圖片的水平中央、最上方尖端 */
+  cursor: url('/images/cursor_main.png') 16 0, auto;
+  min-height: 100vh;
+}
 
+/* 當滑鼠移到按鈕或連結上時，如果你沒有準備另一張圖，
+   建議強制它依然維持這張鳥爪圖，否則會變回預設的手指 */
+button, a, [role="button"] {
+  cursor: url('/images/cursor_main.png') 16 0, pointer !important;
+}
