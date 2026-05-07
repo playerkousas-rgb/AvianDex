@@ -493,11 +493,18 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                       詳細資料 / RESEARCH
                     </button>
 
-                    {/* 5. 系統告示 */}
-                    <div className="bg-black/60 p-4 rounded-2xl border-2 border-red-900/40 text-[10px] text-white/80">
-                      <p className="text-yellow-400 font-black mb-1">【 系統告示 / SYSTEM NOTICE 】</p>
-                      <p>本機為教學強化版，若需更多資訊請點擊詳細資料。</p>
-                    </div>
+                    {/* 三行完整的內容 */}
+  <div className="flex flex-col gap-1">
+    <p className="text-white/90 text-[13px] font-bold leading-snug">
+      1. 本機中文名稱由 AI 輔助生成，部分生僻字可能不夠精確。
+    </p>
+    <p className="text-white/90 text-[13px] font-bold leading-snug">
+      2. 建議參考右側校對過的資訊，或以英文學名為準。
+    </p>
+    <p className="text-amber-200/80 text-[11px] font-medium italic mt-1">
+      * 如需獲取權威數據，請點擊下方科研終端按鈕。
+    </p>
+  </div>
                   </motion.div>
                 ) : (
              /* --- Page 2: 科學研究自學頁 (BIRDDEX 圖片導航版) --- */
