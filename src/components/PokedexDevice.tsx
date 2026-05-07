@@ -32,6 +32,9 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   const [isSearching, setIsSearching] = useState(false);
   
   // 放大鏡專用狀態
+  // 新增：切換模式 (lens: 放大鏡, zoom: 自由縮放)
+  const [viewMode, setViewMode] = useState<'lens' | 'zoom'>('lens');
+  const [scale, setScale] = useState(1); // 用於自由縮放模式
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [lensPosition, setLensPosition] = useState({ x: 0, y: 0 });
   const [isLensVisible, setIsLensVisible] = useState(false);
@@ -331,9 +334,10 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             </div>
 
             {/* --- 右半部分：控制與資料面板 --- */}
-            <div className="w-full md:w-1/2 h-2/5 md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-8 md:p-12 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] justify-between relative">
-              
-              <div className="flex-1 flex flex-col justify-center max-w-md mx-auto w-full gap-6">
+           {/* 右半部分：控制與資料面板 */}
+<div className="w-full md:w-1/2 h-2/5 md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] relative overflow-y-auto scrollbar-hide">
+  {/* 內部容器加入 gap 並確保不會被壓縮 */}
+  <div className="flex flex-col justify-start min-h-max w-full gap-4 relative z-10 pb-10">
                 
                 {/* 1. 頂部編號螢幕 (螢幕化) */}
                 <div className="bg-[#1a1a1a] border-[5px] border-gray-600 rounded-2xl p-5 flex items-center justify-center relative shadow-[inset_0_0_20px_rgba(0,0,0,1)]">
