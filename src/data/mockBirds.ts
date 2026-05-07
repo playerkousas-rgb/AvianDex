@@ -15,15 +15,7 @@ export const mockBirds: Bird[] = Array.from({ length: TOTAL_SLOTS }, (_, i) => {
   return {
     id: idString,
     name: knownInfo?.name || '???',
-    scientificName: knownInfo?.scientificName || 'Unknown',
-    category: knownInfo?.category || 'Bird',
-    height: knownInfo?.height || '???',
-    weight: knownInfo?.weight || '???',
-    description: knownInfo?.description || 'This bird has not been discovered yet.',
     imageUrl: `${R2_DOMAIN}/${FOLDER}/${idString}.avif`,
-    habitat: knownInfo?.habitat || 'Unknown',
-    diet: knownInfo?.diet || 'Unknown',
-    rarity: (knownInfo?.rarity as any) || 'Legendary',
-    discovered: !!knownInfo, 
+    // 刪除了所有會報錯的 scientificName, category, description 等等
   };
 });
