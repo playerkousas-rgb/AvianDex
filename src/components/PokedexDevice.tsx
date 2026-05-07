@@ -498,7 +498,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                     </div>
                   </motion.div>
                 ) : (
-               /* --- Page 2: 科學研究自學頁 (BIRDDEX 圖片導航版) --- */
+             /* --- Page 2: 科學研究自學頁 (BIRDDEX 圖片導航版) --- */
           <motion.div
             key="research-page"
             initial={{ opacity: 0, x: -20 }}
@@ -506,8 +506,8 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             exit={{ opacity: 0, x: 20 }}
             className="flex flex-col w-full h-full gap-4 relative z-10"
           >
-            {/* 標題區域 */}
-            <div className="bg-black/60 rounded-2xl p-4 border-2 border-blue-500/30 backdrop-blur-md">
+            {/* 核心功能：四宮格圖片容器 */}
+            <div className="flex-1 bg-black/40 rounded-3xl p-5 border-2 border-blue-500/30 flex flex-col gap-4 overflow-hidden">
               <div className="flex items-center gap-3">
                 <div className="bg-blue-500/20 p-2 rounded-lg">
                   <Globe className="w-5 h-5 text-blue-400 animate-pulse" />
@@ -517,62 +517,61 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                   <p className="text-white/40 text-[9px] uppercase tracking-widest mt-1">Research Hub / {currentBird.name}</p>
                 </div>
               </div>
-            </div>
 
-            {/* 四宮格圖片矩陣 */}
-            <div className="grid grid-cols-2 gap-3 flex-1 min-h-0">
-              {/* 1. 深度百科 */}
-              <button 
-                onClick={() => window.open(`https://www.allaboutbirds.org/guide/${currentBird.name.replace(/ /g, '_')}`, '_blank')}
-                className="relative group rounded-2xl border-b-4 border-blue-950 overflow-hidden active:translate-y-0.5 transition-all"
-              >
-                <img src="/images/hub_encyclopedia.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-blue-900/40 group-hover:bg-blue-800/20 transition-colors" />
-                <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
-                  <BookOpen className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
-                  <span className="text-white font-black text-[10px] tracking-tight">深度百科</span>
-                </div>
-              </button>
+              {/* 四宮格圖片矩陣 */}
+              <div className="grid grid-cols-2 gap-3 flex-1 min-h-0">
+                {/* 1. 深度百科 */}
+                <button 
+                  onClick={() => window.open(`https://www.allaboutbirds.org/guide/${currentBird.name.replace(/ /g, '_')}`, '_blank')}
+                  className="relative group rounded-2xl border-b-4 border-blue-950 overflow-hidden active:translate-y-0.5 transition-all"
+                >
+                  <img src="/images/hub_encyclopedia.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Encyclopedia" />
+                  <div className="absolute inset-0 bg-blue-900/40 group-hover:bg-blue-800/20 transition-colors" />
+                  <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
+                    <BookOpen className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
+                    <span className="text-white font-black text-[10px] tracking-tight">深度百科</span>
+                  </div>
+                </button>
 
-              {/* 2. 觀察雷達 */}
-              <button 
-                onClick={() => window.open(`https://ebird.org/explore?query=${currentBird.name}`, '_blank')}
-                className="relative group rounded-2xl border-b-4 border-emerald-950 overflow-hidden active:translate-y-0.5 transition-all"
-              >
-                <img src="/images/hub_map_radar.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-emerald-900/40 group-hover:bg-emerald-800/20 transition-colors" />
-                <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
-                  <MapPin className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
-                  <span className="text-white font-black text-[10px] tracking-tight">觀察雷達</span>
-                </div>
-              </button>
+                {/* 2. 觀察雷達 */}
+                <button 
+                  onClick={() => window.open(`https://ebird.org/explore?query=${currentBird.name}`, '_blank')}
+                  className="relative group rounded-2xl border-b-4 border-emerald-950 overflow-hidden active:translate-y-0.5 transition-all"
+                >
+                  <img src="/images/hub_map_radar.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Radar" />
+                  <div className="absolute inset-0 bg-emerald-900/40 group-hover:bg-emerald-800/20 transition-colors" />
+                  <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
+                    <MapPin className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
+                    <span className="text-white font-black text-[10px] tracking-tight">觀察雷達</span>
+                  </div>
+                </button>
 
-              {/* 3. 影音圖庫 */}
-              <button 
-                onClick={() => window.open(`https://www.macaulaylibrary.org/taxa/bird-guide/search?q=${currentBird.name}`, '_blank')}
-                className="relative group rounded-2xl border-b-4 border-purple-950 overflow-hidden active:translate-y-0.5 transition-all"
-              >
-                <img src="/images/hub_media_library.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-purple-900/40 group-hover:bg-purple-800/20 transition-colors" />
-                <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
-                  <Music className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
-                  <span className="text-white font-black text-[10px] tracking-tight">影音圖庫</span>
-                </div>
-              </button>
+                {/* 3. 影音圖庫 */}
+                <button 
+                  onClick={() => window.open(`https://www.macaulaylibrary.org/taxa/bird-guide/search?q=${currentBird.name}`, '_blank')}
+                  className="relative group rounded-2xl border-b-4 border-purple-950 overflow-hidden active:translate-y-0.5 transition-all"
+                >
+                  <img src="/images/hub_media_library.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Media" />
+                  <div className="absolute inset-0 bg-purple-900/40 group-hover:bg-purple-800/20 transition-colors" />
+                  <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
+                    <Music className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
+                    <span className="text-white font-black text-[10px] tracking-tight">影音圖庫</span>
+                  </div>
+                </button>
 
-              {/* 4. 雀鳥辨識 */}
-              <button 
-                onClick={() => window.open(`https://merlin.allaboutbirds.org/`, '_blank')}
-                className="relative group rounded-2xl border-b-4 border-orange-950 overflow-hidden active:translate-y-0.5 transition-all"
-              >
-                <img src="/images/hub_ai_scan.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-orange-900/40 group-hover:bg-orange-800/20 transition-colors" />
-                <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
-                  <Focus className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
-                  <span className="text-white font-black text-[10px] tracking-tight">雀鳥辨識</span>
-                </div>
-              </button>
-            </div>
+                {/* 4. 雀鳥辨識 */}
+                <button 
+                  onClick={() => window.open(`https://merlin.allaboutbirds.org/`, '_blank')}
+                  className="relative group rounded-2xl border-b-4 border-orange-950 overflow-hidden active:translate-y-0.5 transition-all"
+                >
+                  <img src="/images/hub_ai_scan.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="AI Scan" />
+                  <div className="absolute inset-0 bg-orange-900/40 group-hover:bg-orange-800/20 transition-colors" />
+                  <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
+                    <Focus className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
+                    <span className="text-white font-black text-[10px] tracking-tight">雀鳥辨識</span>
+                  </div>
+                </button>
+              </div>
 
               {/* 鳴謝區 */}
               <div className="mt-auto p-3 bg-blue-900/30 rounded-xl border border-blue-400/20">
@@ -584,7 +583,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                   鳴謝 eBird 及 Macaulay Library。
                 </p>
               </div>
-            </div>
+            </div> {/* <-- 剛才漏掉的這個容器關閉標籤 */}
 
             {/* 返回按鈕 */}
             <button 
@@ -596,15 +595,13 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-
-    {/* 右下角裝飾 */}
-              <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
-            </div>
-          </motion.div>
-        </div>
-      )}
-    </AnimatePresence>
-  );
+      <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
+    </div>
+  </motion.div>
+</div>
+)}
+</AnimatePresence>
+);
 };
 
 export default PokedexDevice;
