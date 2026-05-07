@@ -526,10 +526,10 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 <div className="grid grid-cols-2 gap-3 flex-1 min-h-0">
   
   {/* 1. 深度百科 */}
-  <button 
-    onClick={() => window.open(`https://www.allaboutbirds.org/guide/${currentBird.englishName || currentBird.name}`, '_blank')}
-    className="relative group rounded-2xl border-b-4 border-blue-950 overflow-hidden active:translate-y-0.5 transition-all"
-  >
+ <button 
+  onClick={() => window.open(`https://www.allaboutbirds.org/guide/${currentBird.name.replace(/ /g, '_')}`, '_blank')}
+  className="relative group rounded-2xl border-b-4 border-blue-950 overflow-hidden active:translate-y-0.5 transition-all"
+>
     <img src="/images/hub_wiki.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wiki" />
     <div className="absolute inset-0 bg-blue-900/40 group-hover:bg-blue-800/20 transition-colors" />
     <div className="absolute bottom-0 inset-x-0 bg-black/80 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
@@ -553,9 +553,9 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 
   {/* 3. 視覺圖庫 */}
   <button 
-    onClick={() => window.open(`https://www.flickr.com/search/?text=${currentBird.englishName || currentBird.name}`, '_blank')}
-    className="relative group rounded-2xl border-b-4 border-purple-950 overflow-hidden active:translate-y-0.5 transition-all"
-  >
+  onClick={() => window.open(`https://www.flickr.com/search/?text=${currentBird.name}`, '_blank')}
+  className="relative group rounded-2xl border-b-4 border-purple-950 overflow-hidden active:translate-y-0.5 transition-all"
+>
     <img src="/images/hub_photo.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Photos" />
     <div className="absolute inset-0 bg-purple-900/40 group-hover:bg-purple-800/20 transition-colors" />
     <div className="absolute bottom-0 inset-x-0 bg-black/80 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
