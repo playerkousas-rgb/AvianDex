@@ -6,19 +6,17 @@ import {
   ChevronLeft, 
   ChevronRight, 
   X, 
-  Globe,      // <--- 補上這個
-  BookOpen,    // <--- 補上這個
+  Globe, 
+  BookOpen, 
   Maximize2, 
-  ZoomIn,  
-  Music,       // ← 新增
-  Focus,       // ← 新增
-  Award,        // ← 新增
+  ZoomIn, 
   MapPin,     // 觀察雷達
   Camera,     // 視覺圖庫
   PlayCircle, // 影片中心
   Volume2,    // 鳴聲資料
-  Download   // 辨識裝備
- } from 'lucide-react';
+  Download,   // 辨識裝備
+  Award       // 鳴謝區
+} from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BirdSilhouette } from './BirdSilhouette.tsx';
 
