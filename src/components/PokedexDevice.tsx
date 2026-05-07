@@ -339,21 +339,23 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   {/* 內部容器加入 gap 並確保不會被壓縮 */}
   <div className="flex flex-col justify-start min-h-max w-full gap-4 relative z-10 pb-10">
                 
-                {/* 1. 頂部編號螢幕 (螢幕化) */}
-                <div className="bg-[#1a1a1a] border-[5px] border-gray-600 rounded-2xl p-5 flex items-center justify-center relative shadow-[inset_0_0_20px_rgba(0,0,0,1)]">
-                  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 pointer-events-none" />
-                  <span className="text-green-400 font-mono text-4xl md:text-6xl font-black z-10 tracking-[0.2em] drop-shadow-[0_0_12px_rgba(74,222,128,0.6)] uppercase">
-                    ID-{currentBird.id}
-                  </span>
-                </div>
+               {/* 1. 頂部編號螢幕 - 縮小高度與字體 */}
+<div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-2 md:p-3 flex items-center justify-center relative shadow-[inset_0_0_15px_rgba(0,0,0,1)]">
+  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
+  <span className="text-green-400 font-mono text-2xl md:text-4xl font-black z-10 tracking-[0.1em] drop-shadow-[0_0_8px_rgba(74,222,128,0.5)]">
+    ID-{currentBird.id}
+  </span>
+</div>
 
-                {/* 2. 中文名稱顯示螢幕 (螢幕化) */}
-                <div className="bg-[#1a1a1a] border-[5px] border-gray-600 rounded-2xl p-6 flex items-center justify-center relative shadow-[inset_0_0_20px_rgba(0,0,0,1)]">
-                  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 pointer-events-none" />
-                  <span className="text-green-400 text-4xl md:text-5xl font-bold z-10 tracking-wider drop-shadow-[0_0_12px_rgba(74,222,128,0.6)] text-center">
-                    {currentBird.name}
-                  </span>
-                </div>
+{/* 2. 中文名稱顯示螢幕 - 加入縮小字級與不換行處理 */}
+<div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-3 md:p-4 flex items-center justify-center relative shadow-[inset_0_0_15px_rgba(0,0,0,1)] min-h-[60px] md:min-h-[80px]">
+  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
+  <span className={`text-green-400 font-bold z-10 tracking-wider drop-shadow-[0_0_10px_rgba(74,222,128,0.5)] text-center leading-tight ${
+    currentBird.name.length > 5 ? 'text-xl md:text-2xl' : 'text-3xl md:text-4xl'
+  }`}>
+    {currentBird.name}
+  </span>
+</div>
 
                 {/* 3. 搜尋與快速跳轉 */}
                 <div className="bg-red-900/30 p-6 rounded-[30px] border-2 border-red-900/20 space-y-5 shadow-inner">
