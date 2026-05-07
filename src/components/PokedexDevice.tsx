@@ -6,6 +6,8 @@ import {
   ChevronLeft, 
   ChevronRight, 
   X, 
+  Globe,      // <--- 補上這個
+  BookOpen,    // <--- 補上這個
   Maximize2, 
   ZoomIn 
 } from 'lucide-react';
