@@ -155,78 +155,136 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
           SECTION 1: 全螢幕教學觀察模式 (放大鏡模式)
           ============================================================ */}
       {isFullscreen && (
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center cursor-none overflow-hidden" 
-          onMouseMove={handleMagnifierMouseMove}
-          onClick={() => setIsFullscreen(false)}
+  <motion.div 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    /* 根據 viewMode 切換游標顯示：放大鏡模式隱藏游標(因為有鏡面)，縮放模式顯示游標 */
+    className={`fixed inset-0 z-[100] bg-black/95 flex items-center justify-center overflow-hidden ${viewMode === 'lens' ? 'cursor-none' : 'cursor-default'}`}
+    onMouseMove={viewMode === 'lens' ? handleMagnifierMouseMove : undefined}
+    onClick={() => setIsFullscreen(false)}
+  >
+    {/* --- 1. 教學標頭導覽 (保持原樣，僅調整 z-index) --- */}
+    <div className="absolute top-0 left-0 w-full p-6 md:p-10 flex justify-between items-start z-[110] pointer-events-none">
+      <div className="bg-black/60 backdrop-blur-md border border-white/20 p-6 rounded-2xl flex items-center gap-6 shadow-2xl">
+        <div className="bg-yellow-400 p-3 rounded-xl shadow-[0_0_15px_rgba(250,204,21,0.4)]">
+          <ZoomIn className="w-10 h-10 text-black animate-pulse" />
+        </div>
+        <div className="flex flex-col">
+          <span className="text-green-400 font-black text-3xl tracking-widest uppercase">Micro-Observation</span>
+          <span className="text-white text-xl font-bold">【NO.{currentBird.id}】{currentBird.name}</span>
+        </div>
+      </div>
+      
+      <div className="hidden lg:flex flex-col items-end gap-2 text-white/70 font-mono text-sm">
+        <p>MODE: {viewMode === 'lens' ? 'PHYSICAL_LENS' : 'DIGITAL_ZOOM'}</p>
+        <p>MAGNIFICATION: {viewMode === 'lens' ? ZOOM_LEVEL : zoomScale.toFixed(1)}X</p>
+        <p>STATUS: ACTIVE_RESEARCH</p>
+      </div>
+    </div>
+
+    {/* --- 2. 🚀 新增：中央頂部模式切換與 +- 控制器 --- */}
+    <div 
+      className="absolute top-32 md:top-10 left-1/2 -translate-x-1/2 z-[130] flex flex-col items-center gap-4 pointer-events-auto"
+      onClick={(e) => e.stopPropagation()} // 防止點擊控制按鈕時關閉全螢幕
+    >
+      {/* 模式切換按鈕 */}
+      <div className="bg-gray-900/80 backdrop-blur-xl border border-white/20 p-1.5 rounded-2xl flex gap-1 shadow-2xl">
+        <button 
+          onClick={() => setViewMode('lens')}
+          className={`px-6 py-2 rounded-xl font-bold transition-all ${viewMode === 'lens' ? 'bg-yellow-400 text-black' : 'text-white hover:bg-white/10'}`}
         >
-          {/* 教學標頭導覽 */}
-          <div className="absolute top-0 left-0 w-full p-6 md:p-10 flex justify-between items-start z-[110] pointer-events-none">
-            <div className="bg-black/60 backdrop-blur-md border border-white/20 p-6 rounded-2xl flex items-center gap-6 shadow-2xl">
-              <div className="bg-yellow-400 p-3 rounded-xl shadow-[0_0_15px_rgba(250,204,21,0.4)]">
-                <ZoomIn className="w-10 h-10 text-black animate-pulse" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-green-400 font-black text-3xl tracking-widest uppercase">Micro-Observation</span>
-                <span className="text-white text-xl font-bold">【NO.{currentBird.id}】{currentBird.name}</span>
-              </div>
-            </div>
-            
-            <div className="hidden lg:flex flex-col items-end gap-2 text-white/70 font-mono text-sm">
-              <p>MAGNIFICATION: {ZOOM_LEVEL}.0X</p>
-              <p>LENS DIAMETER: {LENS_SIZE}PX</p>
-              <p>STATUS: ACTIVE_RESEARCH</p>
-            </div>
-          </div>
+          🔍 放大鏡
+        </button>
+        <button 
+          onClick={() => { setViewMode('zoom'); if(zoomScale === 1) setZoomScale(1.5); }}
+          className={`px-6 py-2 rounded-xl font-bold transition-all ${viewMode === 'zoom' ? 'bg-yellow-400 text-black' : 'text-white hover:bg-white/10'}`}
+        >
+          🖼️ 縮放模式
+        </button>
+      </div>
 
-          {/* 右下角關閉引導 */}
-          <div className="absolute bottom-10 right-10 z-[110]">
-            <button 
-              className="bg-red-600 hover:bg-red-500 text-white p-5 rounded-full shadow-2xl transition-all active:scale-90 flex items-center gap-3"
-              onClick={() => setIsFullscreen(false)}
-            >
-              <span className="font-bold px-2">退出觀察</span>
-              <X className="w-8 h-8" />
-            </button>
-          </div>
-
-          {/* 觀察對象主體圖片 */}
-          <div className="relative flex items-center justify-center w-full h-full p-10">
-            <img 
-              ref={imgRef}
-              src={currentBird.imageUrl} 
-              alt={currentBird.name} 
-              className="max-w-full max-h-full object-contain rounded-lg shadow-[0_0_80px_rgba(255,255,255,0.05)]"
-            />
-            
-            {/* 實體放大鏡鏡面效果 */}
-            {isLensVisible && (
-              <div 
-                className="pointer-events-none fixed z-[120] border-[8px] border-white/90 shadow-[0_0_60px_rgba(0,0,0,0.8)] overflow-hidden rounded-full"
-                style={{
-                  width: `${LENS_SIZE}px`,
-                  height: `${LENS_SIZE}px`,
-                  left: `${cursorPos.x - LENS_SIZE / 2}px`,
-                  top: `${cursorPos.y - LENS_SIZE / 2}px`,
-                  backgroundImage: `url('${currentBird.imageUrl}')`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundSize: imgRef.current 
-                    ? `${imgRef.current.width * ZOOM_LEVEL}px ${imgRef.current.height * ZOOM_LEVEL}px` 
-                    : 'auto',
-                  backgroundPosition: `-${lensPosition.x * ZOOM_LEVEL - LENS_SIZE / 2}px -${lensPosition.y * ZOOM_LEVEL - LENS_SIZE / 2}px`
-                }}
-              >
-                {/* 鏡面反光裝飾 */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5 pointer-events-none" />
-                <div className="absolute top-4 left-1/4 w-12 h-4 bg-white/20 rounded-full blur-sm rotate-12" />
-              </div>
-            )}
-          </div>
+      {/* 縮放專用控制 +- (僅在 zoom 模式顯示) */}
+      {viewMode === 'zoom' && (
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}
+          className="bg-white/10 backdrop-blur-md border border-white/20 p-1.5 rounded-2xl flex items-center gap-4 px-4 shadow-xl"
+        >
+          <button 
+            onClick={() => setZoomScale(s => Math.max(1, s - 0.5))}
+            className="w-10 h-10 rounded-lg bg-white/20 text-white hover:bg-white/40 font-black text-2xl flex items-center justify-center"
+          >−</button>
+          <span className="text-yellow-400 font-mono font-bold text-xl min-w-[60px] text-center">
+            {Math.round(zoomScale * 100)}%
+          </span>
+          <button 
+            onClick={() => setZoomScale(s => Math.min(5, s + 0.5))}
+            className="w-10 h-10 rounded-lg bg-white/20 text-white hover:bg-white/40 font-black text-2xl flex items-center justify-center"
+          >＋</button>
         </motion.div>
       )}
+    </div>
+
+    {/* --- 3. 觀察對象主體圖片 (加入縮放邏輯) --- */}
+    <div 
+      className={`relative flex items-center justify-center w-full h-full p-10 ${viewMode === 'zoom' ? 'overflow-auto scrollbar-hide' : ''}`}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <motion.img 
+        ref={imgRef}
+        src={currentBird.imageUrl} 
+        alt={currentBird.name} 
+        style={{ 
+          /* 核心切換邏輯：zoom 模式下使用 zoomScale，lens 模式下保持原樣 */
+          transform: viewMode === 'zoom' ? `scale(${zoomScale})` : 'scale(1)',
+          transition: viewMode === 'zoom' ? 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)' : 'none',
+          cursor: viewMode === 'zoom' ? 'grab' : 'none'
+        }}
+        className="max-w-[90%] max-h-[90%] object-contain rounded-lg shadow-[0_0_80px_rgba(255,255,255,0.05)]"
+        /* 支援滑鼠滾輪縮放 */
+        onWheel={(e) => {
+          if (viewMode === 'zoom') {
+            const delta = e.deltaY > 0 ? -0.2 : 0.2;
+            setZoomScale(s => Math.min(5, Math.max(1, s + delta)));
+          }
+        }}
+      />
+      
+      {/* 4. 實體放大鏡鏡面效果 (僅在 lens 模式顯示) */}
+      {viewMode === 'lens' && isLensVisible && (
+        <div 
+          className="pointer-events-none fixed z-[120] border-[8px] border-white/90 shadow-[0_0_60px_rgba(0,0,0,0.8)] overflow-hidden rounded-full"
+          style={{
+            width: `${LENS_SIZE}px`,
+            height: `${LENS_SIZE}px`,
+            left: `${cursorPos.x - LENS_SIZE / 2}px`,
+            top: `${cursorPos.y - LENS_SIZE / 2}px`,
+            backgroundImage: `url('${currentBird.imageUrl}')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: imgRef.current 
+              ? `${imgRef.current.width * ZOOM_LEVEL}px ${imgRef.current.height * ZOOM_LEVEL}px` 
+              : 'auto',
+            backgroundPosition: `-${lensPosition.x * ZOOM_LEVEL - LENS_SIZE / 2}px -${lensPosition.y * ZOOM_LEVEL - LENS_SIZE / 2}px`
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/5 pointer-events-none" />
+          <div className="absolute top-4 left-1/4 w-12 h-4 bg-white/20 rounded-full blur-sm rotate-12" />
+        </div>
+      )}
+    </div>
+
+    {/* 右下角關閉引導 (保持原樣，增加 pointer-events-auto) */}
+    <div className="absolute bottom-10 right-10 z-[140] pointer-events-auto">
+      <button 
+        className="bg-red-600 hover:bg-red-500 text-white p-5 rounded-full shadow-2xl transition-all active:scale-90 flex items-center gap-3"
+        onClick={() => setIsFullscreen(false)}
+      >
+        <span className="font-bold px-2 text-xl">退出觀察</span>
+        <X className="w-8 h-8" />
+      </button>
+    </div>
+  </motion.div>
+)}
 
       {/* ============================================================
           SECTION 2: 主圖鑑機設備界面
