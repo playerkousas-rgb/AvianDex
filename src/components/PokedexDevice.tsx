@@ -10,7 +10,6 @@ import {
   BookOpen,    // <--- 補上這個
   Maximize2, 
   ZoomIn,  
-  MapPin,     // ← 新增
   Music,       // ← 新增
   Focus,       // ← 新增
   Award,        // ← 新增
@@ -18,9 +17,8 @@ import {
   Camera,     // 視覺圖庫
   PlayCircle, // 影片中心
   Volume2,    // 鳴聲資料
-  Download,   // 辨識裝備
-  ChevronLeft // 返回按鈕圖示
-} from 'lucide-react';
+  Download   // 辨識裝備
+ } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BirdSilhouette } from './BirdSilhouette.tsx';
 
@@ -524,8 +522,9 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                 </div>
               </div>
 
-             {/* 六宮格圖片矩陣 */}
+            {/* 六宮格圖片矩陣 */}
 <div className="grid grid-cols-2 gap-3 flex-1 min-h-0">
+  
   {/* 1. 深度百科 */}
   <button 
     onClick={() => window.open(`https://www.allaboutbirds.org/guide/${currentBird.englishName || currentBird.name}`, '_blank')}
@@ -533,8 +532,8 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   >
     <img src="/images/hub_wiki.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wiki" />
     <div className="absolute inset-0 bg-blue-900/40 group-hover:bg-blue-800/20 transition-colors" />
-    <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
-      <BookOpen className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
+    <div className="absolute bottom-0 inset-x-0 bg-black/80 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
+      <BookOpen className="w-4 h-4 text-white/90" />
       <span className="text-white font-black text-[10px] tracking-tight">深度百科</span>
     </div>
   </button>
@@ -546,65 +545,65 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   >
     <img src="/images/hub_radar.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Radar" />
     <div className="absolute inset-0 bg-emerald-900/40 group-hover:bg-emerald-800/20 transition-colors" />
-    <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
-      <MapPin className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
+    <div className="absolute bottom-0 inset-x-0 bg-black/80 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
+      <MapPin className="w-4 h-4 text-white/90" />
       <span className="text-white font-black text-[10px] tracking-tight">觀察雷達</span>
     </div>
   </button>
 
-  {/* 3. 視覺圖庫 (Flickr) */}
+  {/* 3. 視覺圖庫 */}
   <button 
     onClick={() => window.open(`https://www.flickr.com/search/?text=${currentBird.englishName || currentBird.name}`, '_blank')}
     className="relative group rounded-2xl border-b-4 border-purple-950 overflow-hidden active:translate-y-0.5 transition-all"
   >
     <img src="/images/hub_photo.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Photos" />
     <div className="absolute inset-0 bg-purple-900/40 group-hover:bg-purple-800/20 transition-colors" />
-    <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
-      <Camera className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
+    <div className="absolute bottom-0 inset-x-0 bg-black/80 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
+      <Camera className="w-4 h-4 text-white/90" />
       <span className="text-white font-black text-[10px] tracking-tight">視覺圖庫</span>
     </div>
   </button>
 
-  {/* 4. 影片中心 (YouTube) */}
+  {/* 4. 影片中心 */}
   <button 
     onClick={() => window.open(`https://www.youtube.com/results?search_query=${currentBird.name}+bird+wildlife`, '_blank')}
     className="relative group rounded-2xl border-b-4 border-red-950 overflow-hidden active:translate-y-0.5 transition-all"
   >
     <img src="/images/hub_video.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Videos" />
     <div className="absolute inset-0 bg-red-900/40 group-hover:bg-red-800/20 transition-colors" />
-    <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
-      <PlayCircle className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
+    <div className="absolute bottom-0 inset-x-0 bg-black/80 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
+      <PlayCircle className="w-4 h-4 text-white/90" />
       <span className="text-white font-black text-[10px] tracking-tight">影片中心</span>
     </div>
   </button>
 
-  {/* 5. 鳴聲資料 (Xeno-canto) */}
+  {/* 5. 鳴聲資料 */}
   <button 
     onClick={() => window.open(`https://xeno-canto.org/explore?query=${currentBird.name}`, '_blank')}
     className="relative group rounded-2xl border-b-4 border-orange-950 overflow-hidden active:translate-y-0.5 transition-all"
   >
     <img src="/images/hub_audio.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Audio" />
     <div className="absolute inset-0 bg-orange-900/40 group-hover:bg-orange-800/20 transition-colors" />
-    <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
-      <Volume2 className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
+    <div className="absolute bottom-0 inset-x-0 bg-black/80 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
+      <Volume2 className="w-4 h-4 text-white/90" />
       <span className="text-white font-black text-[10px] tracking-tight">鳴聲資料</span>
     </div>
   </button>
 
-  {/* 6. AI 辨識裝備 (eBird Download) */}
+  {/* 6. 辨識裝備 */}
   <button 
     onClick={() => window.open(`https://ebird.org/mobile/download`, '_blank')}
     className="relative group rounded-2xl border-b-4 border-slate-950 overflow-hidden active:translate-y-0.5 transition-all"
   >
     <img src="/images/hub_download.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Download" />
     <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-800/20 transition-colors" />
-    <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
-      <Download className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
+    <div className="absolute bottom-0 inset-x-0 bg-black/80 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
+      <Download className="w-4 h-4 text-white/90" />
       <span className="text-white font-black text-[10px] tracking-tight">辨識裝備</span>
     </div>
   </button>
-</div>
 
+</div>
               {/* 鳴謝區 */}
               <div className="mt-auto p-3 bg-blue-900/30 rounded-xl border border-blue-400/20">
                 <p className="text-[10px] text-blue-300 font-black tracking-widest uppercase mb-1 flex items-center gap-2">
