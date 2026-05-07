@@ -589,18 +589,18 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   </button>
 
   {/* 6. 辨識裝備 */}
-  <button 
-    onClick={() => window.open(`https://ebird.org/mobile/download`, '_blank')}
-    className="relative group rounded-2xl border-b-4 border-slate-950 overflow-hidden active:translate-y-0.5 transition-all"
-  >
-    <img src="/images/hub_download.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Download" />
-    <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-800/20 transition-colors" />
-    <div className="absolute bottom-0 inset-x-0 bg-black/80 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
-      <Download className="w-4 h-4 text-white/90" />
-      <span className="text-white font-black text-[10px] tracking-tight">辨識裝備</span>
-    </div>
-  </button>
-
+<button 
+  onClick={() => window.open('https://merlin.allaboutbirds.org/', '_blank')}
+  className="relative group rounded-2xl border-b-4 border-slate-950 overflow-hidden active:translate-y-0.5 transition-all"
+>
+  <img src="/images/hub_download.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Download" />
+  <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-800/20 transition-colors" />
+  <div className="absolute bottom-0 inset-x-0 bg-black/80 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
+    <Download className="w-4 h-4 text-white/90" />
+    <span className="text-white font-black text-[10px] tracking-tight">辨識裝備</span>
+  </div>
+</button>
+  
 </div>
               {/* 鳴謝區 */}
               <div className="mt-auto p-3 bg-blue-900/30 rounded-xl border border-blue-400/20">
