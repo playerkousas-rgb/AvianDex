@@ -534,21 +534,21 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                 </button>
 
                 {/* 2. 觀察雷達 */}
-                <button 
-                  onClick={() => window.open(`https://ebird.org/explore?query=${currentBird.name}`, '_blank')}
-                  className="relative group rounded-2xl border-b-4 border-emerald-950 overflow-hidden active:translate-y-0.5 transition-all"
-                >
-                  <img src="/images/hub_map_radar.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Radar" />
-                  <div className="absolute inset-0 bg-emerald-900/40 group-hover:bg-emerald-800/20 transition-colors" />
-                  <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
-                    <MapPin className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
-                    <span className="text-white font-black text-[10px] tracking-tight">觀察雷達</span>
-                  </div>
-                </button>
+<button 
+  onClick={() => window.open(`https://ebird.org/region/HK?yr=all&m=`, '_blank')}
+  className="relative group rounded-2xl border-b-4 border-emerald-950 overflow-hidden active:translate-y-0.5 transition-all"
+>
+  <img src="/images/hub_map_radar.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Radar" />
+  <div className="absolute inset-0 bg-emerald-900/40 group-hover:bg-emerald-800/20 transition-colors" />
+  <div className="absolute bottom-0 inset-x-0 bg-black/60 backdrop-blur-sm p-2 flex flex-col items-center gap-1 border-t border-white/10">
+    <MapPin className="w-5 h-5 text-white/90 group-hover:animate-bounce" />
+    <span className="text-white font-black text-[10px] tracking-tight">觀察雷達</span>
+  </div>
+</button>
 
                 {/* 3. 影音圖庫 */}
                 <button 
-                  onClick={() => window.open(`https://www.macaulaylibrary.org/taxa/bird-guide/search?q=${currentBird.name}`, '_blank')}
+                  onClick={() => window.open(`https://www.macaulaylibrary.org/`, '_blank')}
                   className="relative group rounded-2xl border-b-4 border-purple-950 overflow-hidden active:translate-y-0.5 transition-all"
                 >
                   <img src="/images/hub_media_library.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Media" />
