@@ -249,79 +249,78 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
               <X className="w-8 h-8" />
             </button>
 
-            {/* --- 左半部分：圖鑑顯示面板 --- */}
-            <div className="w-full md:w-1/2 h-3/5 md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]">
-              
-              {/* 頂部感應燈區塊 */}
-              <div className="flex items-center gap-6 p-6 border-b-8 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
-                {/* 大號藍色主感應燈 */}
-                <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-white flex items-center justify-center border-[6px] border-gray-800 shadow-xl">
-                  <div className="w-12 h-12 md:w-18 md:h-18 rounded-full bg-[#31A5E8] border-[4px] border-white shadow-[0_0_25px_rgba(49,165,232,1)] relative overflow-hidden">
-                    <div className="absolute top-2 left-2 w-5 h-5 bg-white/50 rounded-full blur-[2px]" />
-                  </div>
-                </div>
-                {/* 三色狀態燈 */}
-                <div className="flex gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-600 border-2 border-black/30 shadow-inner" />
-                  <div className="w-5 h-5 rounded-full bg-yellow-400 border-2 border-black/30 shadow-inner" />
-                  <div className="w-5 h-5 rounded-full bg-green-500 border-2 border-black/30 shadow-inner" />
-                </div>
-              </div>
+           {/* --- 左半部分：圖鑑顯示面板 --- */}
+<div className="w-full md:w-1/2 h-[55%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]">
+  
+  {/* 頂部感應燈區塊：大幅壓縮垂直空間 (p-6 -> p-2) */}
+  <div className="flex items-center gap-4 p-2 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
+    {/* 大號藍色主感應燈：從 w-24 縮小到 w-12 */}
+    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center border-[3px] border-gray-800 shadow-md">
+      <div className="w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#31A5E8] border-[2px] border-white shadow-[0_0_10px_rgba(49,165,232,0.8)] relative overflow-hidden">
+        <div className="absolute top-1 left-1 w-2 h-2 bg-white/50 rounded-full blur-[1px]" />
+      </div>
+    </div>
+    
+    {/* 三色狀態燈：縮小尺寸 (w-5 -> w-3) */}
+    <div className="flex gap-2">
+      <div className="w-3 h-3 rounded-full bg-red-600 border border-black/30 shadow-inner" />
+      <div className="w-3 h-3 rounded-full bg-yellow-400 border border-black/30 shadow-inner" />
+      <div className="w-3 h-3 rounded-full bg-green-500 border border-black/30 shadow-inner" />
+    </div>
+  </div>
 
-              {/* 螢幕核心區域 */}
-              <div className="flex-1 p-6 md:p-8 flex flex-col items-center justify-center">
-                {/* 灰色內框螢幕 */}
-                <div className="w-full h-full bg-[#DEDEDE] rounded-t-2xl rounded-bl-2xl rounded-br-[60px] p-6 border-[6px] border-gray-800 shadow-[inset_0_0_20px_rgba(0,0,0,0.2)] relative flex flex-col overflow-hidden">
-                  
-                  {/* 螢幕上方雙指示燈 */}
-                  <div className="flex justify-center gap-6 mb-4">
-                    <div className="w-3 h-3 rounded-full bg-red-600 border-2 border-red-900 animate-pulse" />
-                    <div className="w-3 h-3 rounded-full bg-red-600 border-2 border-red-900" />
-                  </div>
+  {/* 螢幕核心區域：將內距縮到最小 (p-6/8 -> p-2/3) */}
+  <div className="flex-1 p-2 md:p-3 flex flex-col items-center justify-center overflow-hidden">
+    {/* 灰色內框螢幕：減少 Padding (p-6 -> p-2) */}
+    <div className="w-full h-full bg-[#DEDEDE] rounded-t-xl rounded-bl-xl rounded-br-[40px] p-2 md:p-3 border-[5px] border-gray-800 shadow-[inset_0_0_15px_rgba(0,0,0,0.2)] relative flex flex-col overflow-hidden">
+      
+      {/* 螢幕上方雙指示燈：縮小間距 (mb-4 -> mb-1) */}
+      <div className="flex justify-center gap-4 mb-1">
+        <div className="w-2 h-2 rounded-full bg-red-600 border border-red-900 animate-pulse" />
+        <div className="w-2 h-2 rounded-full bg-red-600 border border-red-900" />
+      </div>
 
-                  {/* 黑色顯示區域 (點擊進入觀察模式) */}
-                  <div 
-                    className="flex-1 bg-[#1a1a1a] rounded-2xl border-[6px] border-gray-700 relative overflow-hidden flex items-center justify-center cursor-zoom-in group shadow-2xl"
-                    onClick={() => setIsFullscreen(true)}
-                  >
-                    {imgStatus === 'loading' && (
-                      <div className="flex flex-col items-center gap-4">
-                        <div className="w-14 h-14 border-4 border-gray-600 border-t-green-400 rounded-full animate-spin" />
-                        <span className="text-green-400 font-mono text-sm animate-pulse">LOADING_DATA...</span>
-                      </div>
-                    )}
-                    
-                    <motion.img 
-                      key={currentBird.id}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      src={currentBird.imageUrl} 
-                      onLoad={() => setImgStatus('loaded')}
-                      onError={() => setImgStatus('error')}
-                      className={`w-full h-full object-contain z-10 p-2 transition-transform duration-700 group-hover:scale-110 ${imgStatus === 'loaded' ? 'block' : 'hidden'}`}
-                    />
+      {/* 黑色顯示區域：這塊現在會變得超級大！ */}
+      <div 
+        className="flex-1 bg-[#1a1a1a] rounded-lg border-[4px] border-gray-700 relative overflow-hidden flex items-center justify-center cursor-zoom-in group shadow-2xl"
+        onClick={() => setIsFullscreen(true)}
+      >
+        {imgStatus === 'loading' && (
+          <div className="flex flex-col items-center gap-2">
+            <div className="w-10 h-10 border-3 border-gray-600 border-t-green-400 rounded-full animate-spin" />
+            <span className="text-green-400 font-mono text-[10px] animate-pulse">LOADING...</span>
+          </div>
+        )}
+        
+        <motion.img 
+          key={currentBird.id}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          src={currentBird.imageUrl} 
+          onLoad={() => setImgStatus('loaded')}
+          className={`w-full h-full object-contain z-10 p-1 transition-transform duration-700 group-hover:scale-105 ${imgStatus === 'loaded' ? 'block' : 'hidden'}`}
+        />
 
-                    {/* 懸浮引導 */}
-                    {imgStatus === 'loaded' && (
-                      <div className="absolute bottom-6 right-6 z-20">
-                        <div className="bg-yellow-400 text-black font-black px-5 py-2 rounded-xl shadow-2xl flex items-center gap-3 transform translate-y-12 group-hover:translate-y-0 transition-transform duration-300">
-                          <ZoomIn className="w-5 h-5" />
-                          <span>進入放大觀察模式</span>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* 右下角喇叭開孔裝置 */}
-                  <div className="absolute bottom-6 right-10 flex flex-col gap-2">
-                    <div className="w-10 h-2 bg-gray-800 rounded-full opacity-80" />
-                    <div className="w-10 h-2 bg-gray-800 rounded-full opacity-80" />
-                    <div className="w-10 h-2 bg-gray-800 rounded-full opacity-80" />
-                    <div className="w-10 h-2 bg-gray-800 rounded-full opacity-80" />
-                  </div>
-                </div>
-              </div>
+        {/* 懸浮引導：縮小尺寸以免擋圖 */}
+        {imgStatus === 'loaded' && (
+          <div className="absolute bottom-3 right-3 z-20 scale-75 md:scale-100 origin-bottom-right">
+            <div className="bg-yellow-400/90 text-black font-black px-3 py-1 rounded-lg shadow-xl flex items-center gap-2 transform translate-y-10 group-hover:translate-y-0 transition-transform">
+              <ZoomIn className="w-4 h-4" />
+              <span className="text-xs">點擊觀測</span>
             </div>
+          </div>
+        )}
+      </div>
+
+      {/* 右下角喇叭孔：縮小尺寸 (w-10 -> w-6) */}
+      <div className="absolute bottom-3 right-6 flex flex-col gap-1 opacity-40">
+        <div className="w-6 h-1 bg-gray-800 rounded-full" />
+        <div className="w-6 h-1 bg-gray-800 rounded-full" />
+        <div className="w-6 h-1 bg-gray-800 rounded-full" />
+      </div>
+    </div>
+  </div>
+</div>
 
             {/* --- 中間摺疊轉軸 --- */}
             <div className="hidden md:flex w-16 bg-[#C02A0A] border-y-[10px] border-gray-800 flex-col justify-around py-20 shadow-[inset_0_0_30px_rgba(0,0,0,0.5)] z-10 relative">
