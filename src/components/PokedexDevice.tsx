@@ -388,32 +388,32 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                   </div>
                 </div>
 
-                {/* 4. 底部導航大按鈕 */}
-                <div className="flex justify-between items-center bg-black/20 p-6 rounded-[35px]">
-                  <button 
-                    onClick={handlePrev}
-                    disabled={currentIndex === 0}
-                    className={`w-20 h-20 md:w-24 md:h-24 rounded-full border-[6px] border-gray-800 flex items-center justify-center shadow-2xl active:scale-90 transition-all ${currentIndex === 0 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}
-                  >
-                    <ChevronLeft className="w-12 h-12 text-white" />
-                  </button>
-                  
-                  <div className="flex flex-col items-center gap-3">
-                    <div className="flex gap-3">
-                      <div className="w-12 h-3 bg-gray-800 rounded-full opacity-30" />
-                      <div className="w-12 h-3 bg-gray-800 rounded-full opacity-30" />
-                    </div>
-                    <span className="text-red-900 font-black text-xs uppercase tracking-tighter">Navigation System</span>
-                  </div>
+               {/* 4. 底部導航按鈕 (優化版：垂直空間占用減少約 30%) */}
+<div className="flex justify-between items-center bg-black/20 p-3 md:p-4 rounded-[25px]">
+  <button 
+    onClick={handlePrev}
+    disabled={currentIndex === 0}
+    className={`w-16 h-16 md:w-20 md:h-20 rounded-full border-[5px] border-gray-800 flex items-center justify-center shadow-xl active:scale-90 transition-all ${currentIndex === 0 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}
+  >
+    <ChevronLeft className="w-10 h-10 text-white" />
+  </button>
+  
+  <div className="flex flex-col items-center gap-1.5">
+    <div className="flex gap-2">
+      <div className="w-8 h-2 bg-gray-800 rounded-full opacity-30" />
+      <div className="w-8 h-2 bg-gray-800 rounded-full opacity-30" />
+    </div>
+    <span className="text-red-900 font-black text-[10px] uppercase tracking-tighter">NAV SYSTEM</span>
+  </div>
 
-                  <button 
-                    onClick={handleNext}
-                    disabled={currentIndex === birds.length - 1}
-                    className={`w-20 h-20 md:w-24 md:h-24 rounded-full border-[6px] border-gray-800 flex items-center justify-center shadow-2xl active:scale-90 transition-all ${currentIndex === birds.length - 1 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}
-                  >
-                    <ChevronRight className="w-12 h-12 text-white" />
-                  </button>
-                </div>
+  <button 
+    onClick={handleNext}
+    disabled={currentIndex === birds.length - 1}
+    className={`w-16 h-16 md:w-20 md:h-20 rounded-full border-[5px] border-gray-800 flex items-center justify-center shadow-xl active:scale-90 transition-all ${currentIndex === birds.length - 1 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}
+  >
+    <ChevronRight className="w-10 h-10 text-white" />
+  </button>
+</div>
 
                 {/* 5. 系統告示與裝飾 */}
                 <div className="bg-black/60 p-5 rounded-2xl border-2 border-red-900/40 text-xs text-white/90 leading-relaxed shadow-2xl">
