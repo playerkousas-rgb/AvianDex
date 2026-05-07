@@ -494,47 +494,98 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                     </div>
                   </motion.div>
                 ) : (
-                  /* --- Page 2: 科學研究自學頁 --- */
-                  <motion.div
-                    key="research-page"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 20 }}
-                    className="flex flex-col w-full h-full gap-6 relative z-10"
-                  >
-                    <div className="flex-1 bg-black/40 rounded-2xl p-6 border-2 border-blue-500/30 flex flex-col items-center justify-center text-center gap-6">
-                      <div className="bg-blue-500/20 p-4 rounded-full">
-                        <Globe className="w-12 h-12 text-blue-400 animate-pulse" />
-                      </div>
-                      <h3 className="text-blue-300 font-black text-2xl tracking-tighter uppercase">詳細科學檔案</h3>
-                      <p className="text-white/70 text-sm">正在建立與國際數據庫的連結...</p>
-                      <button 
-                        onClick={() => {
-                          const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(currentBird.name)}+site:allaboutbirds.org+OR+wikipedia.org`;
-                          window.open(searchUrl, '_blank');
-                        }}
-                        className="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-5 rounded-2xl shadow-lg transition-all"
-                      >
-                        啟動自學傳送門
-                      </button>
-                    </div>
+                 /* --- Page 2: 科學研究自學頁 (BIRDDEX 專業模式) --- */
+          <motion.div
+            key="research-page"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 20 }}
+            className="flex flex-col w-full h-full gap-4 relative z-10"
+          >
+            {/* 核心功能：四宮格按鈕容器 */}
+            <div className="flex-1 bg-black/40 rounded-3xl p-5 border-2 border-blue-500/30 flex flex-col gap-4 overflow-hidden">
+              <div className="flex items-center gap-3">
+                <div className="bg-blue-500/20 p-2 rounded-lg">
+                  <Globe className="w-5 h-5 text-blue-400 animate-pulse" />
+                </div>
+                <div>
+                  <h3 className="text-blue-300 font-black text-lg tracking-tighter uppercase leading-none">科學研究中心</h3>
+                  <p className="text-white/40 text-[9px] uppercase tracking-widest mt-1">Research Hub / {currentBird.name}</p>
+                </div>
+              </div>
 
-                    <button 
-                      onClick={() => setShowDetails(false)}
-                      className="w-full bg-red-900/40 hover:bg-red-900/60 text-red-200 font-bold py-3 rounded-xl border border-red-900/50"
-                    >
-                      返回基礎面板
-                    </button>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {/* 四宮格矩陣 */}
+              <div className="grid grid-cols-2 gap-3 flex-1">
+                <button 
+                  onClick={() => window.open(`https://www.allaboutbirds.org/guide/${currentBird.name.replace(/ /g, '_')}`, '_blank')}
+                  className="flex flex-col items-center justify-center bg-blue-600/80 hover:bg-blue-500 rounded-2xl border-b-4 border-blue-900 active:translate-y-1 active:border-b-0 transition-all p-3 gap-2 group"
+                >
+                  <BookOpen className="w-7 h-7 text-white group-hover:scale-110 transition-transform" />
+                  <span className="text-white font-black text-[10px]">深度百科</span>
+                </button>
 
-              {/* 右下角機械裝飾點 */}
-              <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
-            </div> {/* 結束 右半面板 */}
-          </motion.div> {/* 結束 本體容器 (Fullscreen 內的那層) */}
-        </div> 
-      )}
-    </AnimatePresence>
+                <button 
+                  onClick={() => window.open(`https://ebird.org/explore?query=${currentBird.name}`, '_blank')}
+                  className="flex flex-col items-center justify-center bg-emerald-600/80 hover:bg-emerald-500 rounded-2xl border-b-4 border-emerald-900 active:translate-y-1 active:border-b-0 transition-all p-3 gap-2 group"
+                >
+                  <MapPin className="w-7 h-7 text-white group-hover:scale-110 transition-transform" />
+                  <span className="text-white font-black text-[10px]">觀察雷達</span>
+                </button>
+
+                <button 
+                  onClick={() => window.open(`https://www.macaulaylibrary.org/taxa/bird-guide/search?q=${currentBird.name}`, '_blank')}
+                  className="flex flex-col items-center justify-center bg-purple-600/80 hover:bg-purple-500 rounded-2xl border-b-4 border-purple-900 active:translate-y-1 active:border-b-0 transition-all p-3 gap-2 group"
+                >
+                  <Music className="w-7 h-7 text-white group-hover:scale-110 transition-transform" />
+                  <span className="text-white font-black text-[10px]">影音圖庫</span>
+                </button>
+
+                <button 
+                  onClick={() => window.open(`https://merlin.allaboutbirds.org/`, '_blank')}
+                  className="flex flex-col items-center justify-center bg-orange-600/80 hover:bg-orange-500 rounded-2xl border-b-4 border-orange-900 active:translate-y-1 active:border-b-0 transition-all p-3 gap-2 group"
+                >
+                  <Focus className="w-7 h-7 text-white group-hover:scale-110 transition-transform" />
+                  <span className="text-white font-black text-[10px]">雀鳥辨識</span>
+                </button>
+              </div>
+
+              {/* 鳴謝區 */}
+              <div className="mt-auto p-3 bg-blue-900/30 rounded-xl border border-blue-400/20">
+                <p className="text-[10px] text-blue-300 font-black tracking-widest uppercase mb-1 flex items-center gap-2">
+                  <Award className="w-3 h-3" /> Credits & Sources
+                </p>
+                <p className="text-[9px] text-white/50 leading-relaxed italic">
+                  本計畫之科學數據與多媒體資料由 <span className="text-blue-400 font-bold">Cornell Lab of Ornithology</span> 提供。
+                  鳴謝 eBird 及 Macaulay Library 建立之全球公民科學平台。
+                </p>
+              </div>
+            </div>
+
+            {/* 返回按鈕 */}
+            <button 
+              onClick={() => setShowDetails(false)}
+              className="w-full bg-red-900/60 hover:bg-red-800 text-white font-black py-4 rounded-2xl border-b-4 border-red-950 active:translate-y-1 active:border-b-0 transition-all flex items-center justify-center gap-2"
+            >
+              <ChevronLeft className="w-4 h-4" /> 返回基礎數據面板
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* 右下角機械裝飾點 */}
+      <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
+    </div> 
+    {/* ↑ 結束右側內容 flex-1 */}
+  </div> 
+  {/* ↑ 結束右半部分紅色外殼 */}
+</motion.div> 
+{/* ↑ 結束 Pokedex 本體 motion.div */}
+
+{/* 💡 最後這三個結尾是用來對應最外層的 isFullscreen 判斷與組件渲染的 */}
+      </div>
+    )}
+  </AnimatePresence>
   );
 };
+
+export default PokedexDevice;
