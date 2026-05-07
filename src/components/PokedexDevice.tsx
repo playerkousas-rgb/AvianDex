@@ -408,7 +408,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
               <div className="w-full h-1 bg-black/20" />
             </div>
 
-                   {/* --- 右半部分：控制與資料面板 --- */}
+                  {/* --- 右半部分：控制與資料面板 --- */}
 <div className="w-full md:w-1/2 h-2/5 md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] relative overflow-hidden">
   
   {/* 內部容器 - 加入分頁邏輯 */}
@@ -549,20 +549,6 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
     )}
   </AnimatePresence>
 
-   {/* 右下角機械裝飾點 */}
-
-              <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
-
-            </div>
-
-          </motion.div>
-
-        </div>
-
-      )}
-
-    </AnimatePresence>
-
-  );
-
-};
+  {/* 右下角裝飾點 (不變) */}
+  <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
+</div>
