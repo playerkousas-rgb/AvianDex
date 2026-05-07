@@ -535,23 +535,26 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
         </div>
 
         {/* 返回按鈕 */}
-        <button 
+       <button 
           onClick={() => setShowDetails(false)}
-          className="w-full bg-red-900/40 hover:bg-red-900/60 text-red-200 font-bold py-3 rounded-xl border border-red-900/50 transition-all flex items-center justify-center gap-2"
+          className="mt-4 w-full bg-red-900/60 hover:bg-red-800 text-white/80 font-bold py-2 rounded-lg border border-red-700/50 transition-all"
         >
-          <ChevronLeft className="w-5 h-5" /> 返回基礎數據面板
+          {"<<<"} 返回基礎數據
         </button>
-
-        <p className="text-[10px] text-center text-white/30 italic">
-          * 外部連結內容非本機預載，請由導師陪同閱讀。
-        </p>
       </motion.div>
     )}
   </AnimatePresence>
 
- {/* 右下角機械裝飾點 (這就是你原本代碼裡的那個點) */}
-        <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
-      </div> {/* <-- 這是關閉原本右側面板的 flex-1 div */}
-    </div> {/* <-- 這是關閉右半部分 bg-[#E3350D] 的容器 */}
-  </motion.div> {/* <-- 這是關閉 Pokedex 本體的容器 */}
-</div> {/* <-- 這是關閉 isFullscreen 外層的容器（如果有） */}
+  {/* 右下角機械裝飾點 */}
+  <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
+</div> 
+{/* ↑ 上面這個 </div> 關閉的是 <div className="flex-1 flex flex-col p-4 md:p-6 gap-3 overflow-hidden relative"> */}
+
+</div> 
+{/* ↑ 上面這個 </div> 關閉的是右半部分 bg-[#E3350D] 的紅色大外殼 */}
+
+</motion.div> 
+{/* ↑ 上面這個 </motion.div> 關閉的是本體 motion.div (isFullscreen 的那個) */}
+
+{/* 💡 最後如果還有括號，通常是全螢幕條件判斷的結尾 */}
+)}
