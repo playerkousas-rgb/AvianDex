@@ -25,29 +25,25 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   isOpen, 
   onClose 
 }) => {
-
-  const [viewMode, setViewMode] = useState<'lens' | 'zoom'>('lens');
-  const [zoomScale, setZoomScale] = useState(1);
-  // 基礎狀態控制
+  // --- 1. 核心狀態 ---
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [imgStatus, setImgStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
   const [searchTerm, setSearchTerm] = useState('');
   const [isSearching, setIsSearching] = useState(false);
-  
-  // 放大鏡專用狀態
-  // 新增：切換模式 (lens: 放大鏡, zoom: 自由縮放)
-  const [viewMode, setViewMode] = useState<'lens' | 'zoom'>('lens');
-  const [scale, setScale] = useState(1); // 用於自由縮放模式
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  // --- 2. 教學模式與放大鏡專用狀態 ---
+  // 注意：這裡只定義一次 viewMode 和 zoomScale
+  const [viewMode, setViewMode] = useState<'lens' | 'zoom'>('lens');
+  const [zoomScale, setZoomScale] = useState(1); 
   const [lensPosition, setLensPosition] = useState({ x: 0, y: 0 });
   const [isLensVisible, setIsLensVisible] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-  
-  // 引用圖片 DOM 以計算放大位置
+
+  // --- 3. 引用與配置 ---
   const imgRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // 放大參數配置
   const ZOOM_LEVEL = 4;      // 4倍放大
   const LENS_SIZE = 280;     // 放大鏡直徑
 
