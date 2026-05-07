@@ -25,6 +25,9 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   isOpen, 
   onClose 
 }) => {
+
+  const [viewMode, setViewMode] = useState<'lens' | 'zoom'>('lens');
+  const [zoomScale, setZoomScale] = useState(1);
   // 基礎狀態控制
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [imgStatus, setImgStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
