@@ -549,6 +549,20 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
     )}
   </AnimatePresence>
 
-  {/* 右下角裝飾點 (不變) */}
-  <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
-</div>
+   {/* 右下角機械裝飾點 */}
+
+              <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
+
+            </div>
+
+          </motion.div>
+
+        </div>
+
+      )}
+
+    </AnimatePresence>
+
+  );
+
+};
