@@ -67,7 +67,8 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ birds, initialInde
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const found = birds.find(b => b.id === searchTerm || (b as any).name === searchTerm);
+    // 這裡支援編號或中文名搜尋
+    const found = birds.find(b => b.id === searchTerm || b.name === searchTerm);
     if (found) {
       jumpToBird(found.id);
     }
@@ -77,17 +78,19 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ birds, initialInde
 
   const currentBird = birds[currentIndex];
 
-  // Fullscreen Image View
+  // Fullscreen Image View - 點擊圖片後的放大模式
   if (isFullscreen) {
     return (
-      <div className="fixed inset-0 z-[100] bg-black flex items-center justify-center" onClick={() => setIsFullscreen(false)}>
+      <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center cursor-zoom-out" onClick={() => setIsFullscreen(false)}>
         <button className="absolute top-6 right-6 text-white/50 hover:text-white z-50">
-          <X className="w-8 h-8" />
+          <X className="w-10 h-10" />
         </button>
-        <img 
+        <motion.img 
+          initial={{ scale: 0.9 }}
+          animate={{ scale: 1 }}
           src={currentBird.imageUrl} 
-          alt={`Card No. ${currentBird.id}`} 
-          className="max-w-full max-h-full object-contain"
+          alt={currentBird.name} 
+          className="max-w-[95%] max-h-[95%] object-contain shadow-2xl"
         />
       </div>
     );
@@ -129,19 +132,21 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ birds, initialInde
                 </div>
               </div>
 
-              {/* Main Display Screen (Shows the Full Card) */}
-              <div className="flex-1 p-4 md:p-6 flex flex-col items-center justify-center">
-                <div className="w-full h-full max-h-[600px] bg-[#DEDEDE] rounded-t-xl rounded-bl-xl rounded-br-[40px] p-4 border-4 border-gray-800 shadow-inner relative flex flex-col">
+              {/* Main Display Screen - 加上 overflow-hidden 解決圖片超出灰色框框 */}
+              <div className="flex-1 p-4 md:p-6 flex flex-col items-center justify-center overflow-hidden">
+                <div className="w-full h-full max-h-[600px] bg-[#DEDEDE] rounded-t-xl rounded-bl-xl rounded-br-[40px] p-4 border-4 border-gray-800 shadow-inner relative flex flex-col overflow-hidden">
                   
-                  {/* Little red lights above screen */}
+                  {/* Little red lights */}
                   <div className="flex justify-center gap-4 mb-2">
                     <div className="w-2 h-2 rounded-full bg-red-500 border border-red-800"></div>
                     <div className="w-2 h-2 rounded-full bg-red-500 border border-red-800"></div>
                   </div>
 
-                  {/* Actual Screen Area */}
-                  <div className="flex-1 bg-[#232323] rounded-xl border-4 border-gray-600 relative overflow-hidden flex items-center justify-center">
-                    
+                  {/* Actual Screen Area - 點擊觸發放大 */}
+                  <div 
+                    className="flex-1 bg-[#232323] rounded-xl border-4 border-gray-600 relative overflow-hidden flex items-center justify-center cursor-zoom-in group"
+                    onClick={() => setIsFullscreen(true)}
+                  >
                     {imgStatus === 'loading' && (
                       <div className="w-12 h-12 border-4 border-gray-600 border-t-green-400 rounded-full animate-spin"></div>
                     )}
@@ -153,21 +158,17 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ birds, initialInde
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 1.05 }}
                         src={currentBird.imageUrl} 
-                        alt={`Card No. ${currentBird.id}`} 
+                        alt={currentBird.name} 
                         onLoad={() => setImgStatus('loaded')}
                         onError={() => setImgStatus('error')}
-                        className={`w-full h-full object-contain z-0 ${imgStatus === 'loaded' ? 'block' : 'hidden'}`}
+                        className={`w-full h-full object-contain z-0 transition-transform duration-300 group-hover:scale-105 ${imgStatus === 'loaded' ? 'block' : 'hidden'}`}
                       />
                     </AnimatePresence>
 
-                    {/* Expand Button */}
                     {imgStatus === 'loaded' && (
-                      <button 
-                        onClick={() => setIsFullscreen(true)}
-                        className="absolute bottom-2 right-2 bg-black/50 hover:bg-black/80 text-white p-2 rounded-lg backdrop-blur-sm transition-colors z-20"
-                      >
+                      <div className="absolute bottom-2 right-2 bg-black/50 hover:bg-black/80 text-white p-2 rounded-lg backdrop-blur-sm transition-opacity opacity-0 group-hover:opacity-100 z-20">
                         <Maximize2 className="w-5 h-5" />
-                      </button>
+                      </div>
                     )}
 
                     {imgStatus === 'error' && (
@@ -178,7 +179,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ birds, initialInde
                     )}
                   </div>
 
-                  {/* Speaker grill below screen */}
+                  {/* Speaker grill */}
                   <div className="absolute bottom-4 right-6 flex flex-col gap-1">
                     <div className="w-6 h-1 bg-gray-800 rounded-full"></div>
                     <div className="w-6 h-1 bg-gray-800 rounded-full"></div>
@@ -188,7 +189,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ birds, initialInde
               </div>
             </div>
 
-            {/* Middle Hinge (Desktop only) */}
+            {/* Middle Hinge */}
             <div className="hidden md:flex w-12 bg-[#C02A0A] border-y-8 border-gray-800 flex-col justify-between py-12 shadow-[inset_0_0_20px_rgba(0,0,0,0.5)] z-10">
               <div className="w-full h-1 bg-gray-800/50"></div>
               <div className="w-full h-1 bg-gray-800/50"></div>
@@ -200,35 +201,33 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ birds, initialInde
               
               <div className="flex-1 flex flex-col justify-center max-w-sm mx-auto w-full gap-4">
                 
-                {/* Current Number Display */}
+                {/* 1. 編號顯示螢幕 */}
                 <div className="bg-[#232323] border-4 border-gray-600 rounded-xl p-4 flex items-center justify-center shadow-inner relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpi2rV7928GBgYgxgAAEECAAQC2BAdy8y0IAAAAAElFTkSuQmCC')] opacity-20 pointer-events-none z-10"></div>
+                  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none"></div>
                   <span className="text-green-400 font-mono text-4xl md:text-5xl font-black z-20 tracking-widest drop-shadow-[0_0_8px_rgba(74,222,128,0.5)]">
                     NO.{currentBird.id}
                   </span>
                 </div>
 
-                {/* [新增區塊] 中文姓名顯示區 */}
-                <div className="bg-black/40 border-l-8 border-yellow-400 p-4 rounded-r-xl shadow-lg">
-                  <div className="text-[10px] text-red-300 font-bold mb-1 uppercase tracking-widest opacity-80">Official Chinese Name:</div>
-                  <div className="text-3xl text-white font-black drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-                    {/* @ts-ignore */}
-                    {currentBird.name || '未命名雀鳥'}
-                  </div>
+                {/* 2. 中文姓名顯示螢幕 (樣式同步編號螢幕) */}
+                <div className="bg-[#232323] border-4 border-gray-600 rounded-xl p-4 flex items-center justify-center shadow-inner relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none"></div>
+                  <span className="text-green-400 font-bold text-3xl md:text-4xl z-20 tracking-tight drop-shadow-[0_0_8px_rgba(74,222,128,0.5)] text-center">
+                    {currentBird.name || '未發現'}
+                  </span>
                 </div>
 
                 {/* Search & Jump Controls */}
-                <div className="bg-red-900/20 p-4 md:p-6 rounded-2xl border-2 border-red-900/30 flex flex-col gap-4">
-                  
+                <div className="bg-red-900/20 p-4 rounded-2xl border-2 border-red-900/30 flex flex-col gap-4">
                   <form onSubmit={handleSearchSubmit} className="relative">
                     <input
                       type="text"
-                      placeholder="Search No. (e.g. 0001)"
+                      placeholder="搜尋名稱或編號..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                       onFocus={() => setIsSearching(true)}
                       onBlur={() => setIsSearching(false)}
-                      className="w-full bg-[#DEDEDE] border-4 border-gray-800 rounded-lg py-3 pl-4 pr-12 font-mono font-bold text-gray-900 placeholder-gray-500 text-lg focus:outline-none focus:bg-white transition-colors"
+                      className="w-full bg-[#DEDEDE] border-4 border-gray-800 rounded-lg py-3 pl-4 pr-12 font-bold text-gray-900 placeholder-gray-500 text-lg focus:outline-none focus:bg-white transition-colors"
                     />
                     <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-800 p-1.5 rounded hover:bg-gray-700 transition-colors">
                       <Search className="w-5 h-5 text-white" />
@@ -239,7 +238,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ birds, initialInde
                     <select
                       onChange={(e) => jumpToBird(e.target.value)}
                       value={currentBird.id}
-                      className="w-full appearance-none bg-yellow-400 border-4 border-gray-800 rounded-lg py-3 pl-4 pr-12 font-mono font-black text-gray-900 text-lg cursor-pointer hover:bg-yellow-300 transition-colors shadow-sm"
+                      className="w-full appearance-none bg-yellow-400 border-4 border-gray-800 rounded-lg py-3 pl-4 pr-12 font-black text-gray-900 text-lg cursor-pointer hover:bg-yellow-300 transition-colors shadow-sm"
                     >
                       {birds.map(bird => (
                         <option key={bird.id} value={bird.id}>
@@ -249,7 +248,6 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ birds, initialInde
                     </select>
                     <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-900 pointer-events-none" />
                   </div>
-
                 </div>
 
                 {/* Navigation Controls */}
@@ -279,11 +277,11 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ birds, initialInde
                   </button>
                 </div>
 
-                {/* [新增區塊] 系統告示區 */}
-                <div className="bg-black/20 p-3 rounded-lg border border-red-900/10 text-[9px] text-red-950/90 leading-relaxed font-sans">
-                  <p className="font-black mb-1 opacity-80 underline tracking-widest">【 系統告示 / SYSTEM NOTICE 】</p>
+                {/* System Notice Section - 顏色改深增加對比 */}
+                <div className="bg-black/30 p-3 rounded-lg border border-red-900/20 text-[10px] text-white/90 leading-relaxed font-sans shadow-inner">
+                  <p className="text-yellow-200 font-black mb-1 underline tracking-widest">【 系統告示 / SYSTEM NOTICE 】</p>
                   <p>1. 本機螢幕顯示之「中文名稱」為校對標準。</p>
-                  <p>2. 圖鑑卡由 AI 生成，部分生僻字(如：鵯、鷿等)或有偏差，請以本機名及卡上學名為準。</p>
+                  <p>2. 圖鑑卡由 AI 生成，部分細節若有偏差，請以本機編號為準。</p>
                 </div>
 
               </div>
