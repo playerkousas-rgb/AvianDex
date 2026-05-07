@@ -555,8 +555,8 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                   <Award className="w-3 h-3" /> Credits & Sources
                 </p>
                 <p className="text-[9px] text-white/50 leading-relaxed italic">
-                  本計畫之科學數據與多媒體資料由 <span className="text-blue-400 font-bold">Cornell Lab of Ornithology</span> 提供。
-                  鳴謝 eBird 及 Macaulay Library 建立之全球公民科學平台。
+                  本計畫之科學數據與多媒體資料由 <span className="text-blue-400 font-bold">Cornell Lab</span> 提供。
+                  鳴謝 eBird 及 Macaulay Library。
                 </p>
               </div>
             </div>
@@ -572,20 +572,13 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
         )}
       </AnimatePresence>
 
-      {/* 右下角機械裝飾點 */}
       <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
-    </div> 
-    {/* ↑ 結束右側內容 flex-1 */}
-  </div> 
-  {/* ↑ 結束右半部分紅色外殼 */}
-</motion.div> 
-{/* ↑ 結束 Pokedex 本體 motion.div */}
-
-{/* 💡 最後這三個結尾是用來對應最外層的 isFullscreen 判斷與組件渲染的 */}
-      </div>
-    )}
-  </AnimatePresence>
-  );
+    </div>
+  </div>
+</motion.div>
+)}
+</AnimatePresence>
+);
 };
 
 export default PokedexDevice;
