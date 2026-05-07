@@ -14,15 +14,25 @@ body {
 .perspective-1000 {
   perspective: 1000px;
 }
-/* 全域鼠標設定 */
-html, body {
-  /* 16 0 代表點擊點在圖片的水平中央、最上方尖端 */
-  cursor: url('/images/cursor_main.png') 16 0, auto;
-  min-height: 100vh;
+/* 1. 基礎頁面與所有元素 */
+*, html, body {
+  cursor: url('/images/cursor_main.png') 16 0, auto !important;
 }
 
-/* 當滑鼠移到按鈕或連結上時，如果你沒有準備另一張圖，
-   建議強制它依然維持這張鳥爪圖，否則會變回預設的手指 */
-button, a, [role="button"] {
+/* 2. 針對所有可點擊、可輸入的元素進行強制覆蓋 */
+/* 這樣當移到 6 宮格按鈕、切換鍵或搜尋框時，鳥爪就不會消失 */
+button, 
+a, 
+input, 
+select, 
+textarea, 
+[role="button"],
+.cursor-pointer {
   cursor: url('/images/cursor_main.png') 16 0, pointer !important;
+}
+
+/* 3. 如果你希望點擊時有「按下去」的感覺 (選配) */
+/* 雖然還是同一張圖，但可以讓它稍微偏移或變色 */
+button:active, a:active {
+  transform: scale(0.98); /* 讓按鈕縮小一點來展現回饋 */
 }
