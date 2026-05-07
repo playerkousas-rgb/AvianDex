@@ -572,13 +572,19 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
         )}
       </AnimatePresence>
 
-      {/* 右下角裝飾 */}
+     {/* 右下角裝飾 */}
       <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
-    </div>
-  </div>
-</motion.div>
+    </div> {/* 結束右半部分內容 (p-6 md:p-8) */}
+  </div> {/* 結束右半部分紅色外殼 (w-full md:w-1/2) */}
+
+</motion.div> {/* 結束機身本體 (max-w-5xl) */}
+
+</div> 
+/* ↑ 結束 isOpen 判斷後的固定定位容器 (fixed inset-0) */
 )}
+
 </AnimatePresence>
+/* ↑ 結束最外層控制主機出現的動畫容器 */
 );
 };
 
