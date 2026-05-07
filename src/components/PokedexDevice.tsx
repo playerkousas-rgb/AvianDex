@@ -47,21 +47,34 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   const ZOOM_LEVEL = 4;      // 4倍放大
   const LENS_SIZE = 280;     // 放大鏡直徑
 
-  // 當圖鑑打開時，初始化索引
+ // 1. 當圖鑑打開或切換全螢幕時，控制網頁滾動
   useEffect(() => {
     if (isOpen) {
+      // 只要圖鑑打開，就禁止背景網頁捲動，避免出現拉假的捲軸
+      document.body.style.overflow = 'hidden';
       setCurrentIndex(initialIndex);
       setImgStatus('loading');
-      setIsFullscreen(false);
+    } else {
+      document.body.style.overflow = 'unset';
     }
+    return () => { document.body.style.overflow = 'unset'; };
   }, [isOpen, initialIndex]);
 
-  // 切換鳥類時觸發讀取狀態
+  // 2. 切換全螢幕狀態時的額外處理
+  useEffect(() => {
+    if (!isFullscreen) {
+      // 退出全螢幕時，重置縮放倍率和模式，確保下次進入是乾淨的
+      setZoomScale(1);
+      setViewMode('lens');
+    }
+  }, [isFullscreen]);
+
+  // 3. 切換鳥類時觸發讀取狀態
   useEffect(() => {
     setImgStatus('loading');
   }, [currentIndex]);
 
-  // 鍵盤快捷鍵邏輯 (ESC 退出, 左右鍵切換)
+  // 4. 鍵盤快捷鍵邏輯 (ESC 退出, 左右鍵切換)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
@@ -75,20 +88,16 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
         return;
       }
 
-      // 搜尋時禁用箭頭切換
-      if (isSearching) return; 
-      
-      if (e.key === 'ArrowRight' && currentIndex < birds.length - 1) {
-        handleNext();
-      }
-      if (e.key === 'ArrowLeft' && currentIndex > 0) {
-        handlePrev();
+      // 如果不是在搜尋狀態，允許左右鍵切換
+      if (!isSearching && !isFullscreen) {
+        if (e.key === 'ArrowLeft') handlePrev();
+        if (e.key === 'ArrowRight') handleNext();
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, currentIndex, birds.length, onClose, isSearching, isFullscreen]);
+  }, [isOpen, isFullscreen, isSearching, currentIndex]);
 
   // 下一隻
   const handleNext = () => {
