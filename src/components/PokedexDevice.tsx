@@ -549,6 +549,9 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
     )}
   </AnimatePresence>
 
-  {/* 右下角裝飾點 (不變) */}
-  <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
-</div>
+ {/* 右下角機械裝飾點 (這就是你原本代碼裡的那個點) */}
+        <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
+      </div> {/* <-- 這是關閉原本右側面板的 flex-1 div */}
+    </div> {/* <-- 這是關閉右半部分 bg-[#E3350D] 的容器 */}
+  </motion.div> {/* <-- 這是關閉 Pokedex 本體的容器 */}
+</div> {/* <-- 這是關閉 isFullscreen 外層的容器（如果有） */}
