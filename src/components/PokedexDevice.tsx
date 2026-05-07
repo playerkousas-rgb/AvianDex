@@ -234,30 +234,39 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
       )}
     </div>
 
-    {/* --- 3. 觀察對象主體圖片 (加入縮放邏輯) --- */}
-    <div 
-      className={`relative flex items-center justify-center w-full h-full p-10 ${viewMode === 'zoom' ? 'overflow-auto scrollbar-hide' : ''}`}
-      onClick={(e) => e.stopPropagation()}
-    >
-      <motion.img 
-        ref={imgRef}
-        src={currentBird.imageUrl} 
-        alt={currentBird.name} 
-        style={{ 
-          /* 核心切換邏輯：zoom 模式下使用 zoomScale，lens 模式下保持原樣 */
-          transform: viewMode === 'zoom' ? `scale(${zoomScale})` : 'scale(1)',
-          transition: viewMode === 'zoom' ? 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)' : 'none',
-          cursor: viewMode === 'zoom' ? 'grab' : 'none'
-        }}
-        className="max-w-[90%] max-h-[90%] object-contain rounded-lg shadow-[0_0_80px_rgba(255,255,255,0.05)]"
-        /* 支援滑鼠滾輪縮放 */
-        onWheel={(e) => {
-          if (viewMode === 'zoom') {
-            const delta = e.deltaY > 0 ? -0.2 : 0.2;
-            setZoomScale(s => Math.min(5, Math.max(1, s + delta)));
-          }
-        }}
-      />
+  {/* --- 3. 觀察對象主體圖片 (修正版：放大不吃頭) --- */}
+<div 
+  className={`relative flex w-full h-full p-4 md:p-10 transition-all ${
+    viewMode === 'zoom' 
+      ? 'overflow-y-auto items-start justify-center pt-20 pb-32' // 縮放模式：靠頂部、允許垂直捲動、預留上下呼吸空間
+      : 'items-center justify-center overflow-hidden'         // 放大鏡模式：保持置中、禁止溢出
+  }`}
+  onClick={(e) => e.stopPropagation()}
+>
+  <motion.img 
+    ref={imgRef}
+    src={currentBird.imageUrl} 
+    alt={currentBird.name} 
+    style={{ 
+      /* 核心切換邏輯 */
+      transform: viewMode === 'zoom' ? `scale(${zoomScale})` : 'scale(1)',
+      transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+      cursor: viewMode === 'zoom' ? 'grab' : 'none',
+      
+      /* 🌟 關鍵修正：縮放模式時從頂部放大，保證頭部文字永遠在捲動起點 */
+      transformOrigin: viewMode === 'zoom' ? 'top center' : 'center center'
+    }}
+    /* 縮放模式下取消 max-h 限制，否則會被強制壓扁 */
+    className={`object-contain rounded-lg shadow-[0_0_80px_rgba(255,255,255,0.1)] ${
+      viewMode === 'zoom' ? 'max-w-[85%] h-auto' : 'max-w-[90%] max-h-[90%]'
+    }`}
+    onWheel={(e) => {
+      if (viewMode === 'zoom') {
+        const delta = e.deltaY > 0 ? -0.1 : 0.1; // 步長小一點，縮放更順滑
+        setZoomScale(s => Math.min(5, Math.max(1, s + delta)));
+      }
+    }}
+  />
       
       {/* 4. 實體放大鏡鏡面效果 (僅在 lens 模式顯示) */}
       {viewMode === 'lens' && isLensVisible && (
