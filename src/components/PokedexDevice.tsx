@@ -408,153 +408,131 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
               <div className="w-full h-1 bg-black/20" />
             </div>
 
-                  {/* --- 右半部分：控制與資料面板 --- */}
-<div className="w-full md:w-1/2 h-2/5 md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] relative overflow-hidden">
-  
-  {/* 內部容器 - 加入分頁邏輯 */}
-  <AnimatePresence mode="wait">
-    {!showDetails ? (
-      /* ==========================================
-         第一頁：基礎資料 (原本的內容)
-         ========================================== */
-      <motion.div
-        key="page1"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -20 }}
-        className="flex flex-col justify-start min-h-max w-full gap-4 relative z-10 pb-10 h-full"
-      >
-        {/* 1. 頂部編號螢幕 */}
-        <div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-2 md:p-3 flex items-center justify-center relative shadow-[inset_0_0_15px_rgba(0,0,0,1)]">
-          <span className="text-green-400 font-mono text-2xl md:text-4xl font-black z-10 tracking-[0.1em] drop-shadow-[0_0_8px_rgba(74,222,128,0.5)]">
-            ID-{currentBird.id}
-          </span>
-        </div>
+                 {/* --- 右半部分：控制與資料面板 --- */}
+            <div className="w-full md:w-1/2 h-2/5 md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] relative overflow-hidden">
+              
+              <AnimatePresence mode="wait">
+                {!showDetails ? (
+                  /* --- Page 1: 基礎數據 --- */
+                  <motion.div
+                    key="data-page"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    className="flex flex-col justify-start min-h-max w-full gap-4 relative z-10 pb-10"
+                  >
+                    {/* 1. 頂部編號螢幕 */}
+                    <div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-2 md:p-3 flex items-center justify-center relative shadow-[inset_0_0_15px_rgba(0,0,0,1)]">
+                      <span className="text-green-400 font-mono text-2xl md:text-4xl font-black z-10 tracking-[0.1em]">
+                        ID-{currentBird.id}
+                      </span>
+                    </div>
 
-        {/* 2. 中文名稱螢幕 */}
-        <div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-3 md:p-4 flex items-center justify-center relative shadow-[inset_0_0_15px_rgba(0,0,0,1)] min-h-[60px] md:min-h-[80px]">
-          <span className={`text-green-400 font-bold z-10 tracking-wider drop-shadow-[0_0_10px_rgba(74,222,128,0.5)] text-center leading-tight ${
-            currentBird.name.length > 5 ? 'text-xl md:text-2xl' : 'text-3xl md:text-4xl'
-          }`}>
-            {currentBird.name}
-          </span>
-        </div>
+                    {/* 2. 中文名稱顯示 */}
+                    <div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-3 md:p-4 flex items-center justify-center relative min-h-[60px] md:min-h-[80px]">
+                      <span className={`text-green-400 font-bold z-10 tracking-wider text-center leading-tight ${
+                        currentBird.name.length > 5 ? 'text-xl md:text-2xl' : 'text-3xl md:text-4xl'
+                      }`}>
+                        {currentBird.name}
+                      </span>
+                    </div>
 
-        {/* 3. 搜尋與快速跳轉 */}
-        <div className="bg-red-900/30 p-4 rounded-[30px] border-2 border-red-900/20 space-y-3 shadow-inner">
-          <form onSubmit={handleSearchSubmit} className="relative">
-            <input
-              type="text"
-              placeholder="搜尋..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-[#DEDEDE] border-[4px] border-gray-800 rounded-xl py-3 px-4 font-black text-gray-900 text-lg outline-none"
-            />
-            <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-800 p-2 rounded-lg"><Search className="w-5 h-5 text-white" /></button>
-          </form>
-          
-          <select
-            onChange={(e) => jumpToBird(e.target.value)}
-            value={currentBird.id}
-            className="w-full bg-yellow-400 border-[4px] border-gray-800 rounded-xl py-3 px-4 font-black text-gray-900 text-lg shadow-lg"
-          >
-            {birds.map(bird => (
-              <option key={bird.id} value={bird.id}>{bird.id} ➟ {bird.name}</option>
-            ))}
-          </select>
-        </div>
+                    {/* 3. 搜尋與快速跳轉 */}
+                    <div className="bg-red-900/30 p-5 rounded-[30px] border-2 border-red-900/20 space-y-4 shadow-inner">
+                      <form onSubmit={handleSearchSubmit} className="relative">
+                        <input
+                          type="text"
+                          placeholder="搜尋名稱或編號..."
+                          value={searchTerm}
+                          onChange={(e) => setSearchTerm(e.target.value)}
+                          className="w-full bg-[#DEDEDE] border-[5px] border-gray-800 rounded-xl py-3 px-4 font-black text-gray-900 outline-none"
+                        />
+                        <button type="submit" className="absolute right-4 top-1/2 -translate-y-1/2 bg-gray-800 p-2 rounded-lg">
+                          <Search className="w-5 h-5 text-white" />
+                        </button>
+                      </form>
+                      
+                      <div className="relative">
+                        <select
+                          onChange={(e) => jumpToBird(e.target.value)}
+                          value={currentBird.id}
+                          className="w-full appearance-none bg-yellow-400 border-[5px] border-gray-800 rounded-xl py-3 px-4 font-black text-gray-900 cursor-pointer"
+                        >
+                          {birds.map(bird => (
+                            <option key={bird.id} value={bird.id}>{bird.id} ➟ {bird.name}</option>
+                          ))}
+                        </select>
+                        <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-900 pointer-events-none" />
+                      </div>
+                    </div>
 
-        {/* 4. 底部導航按鈕 */}
-        <div className="flex justify-between items-center bg-black/20 p-2 rounded-[20px]">
-          <button onClick={handlePrev} disabled={currentIndex === 0} className={`w-14 h-14 rounded-full border-[4px] border-gray-800 flex items-center justify-center shadow-lg active:scale-95 transition-all ${currentIndex === 0 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}>
-            <ChevronLeft className="w-8 h-8 text-white" />
-          </button>
-          <span className="text-red-900 font-black text-[9px] uppercase tracking-tighter">NAV SYSTEM</span>
-          <button onClick={handleNext} disabled={currentIndex === birds.length - 1} className={`w-14 h-14 rounded-full border-[4px] border-gray-800 flex items-center justify-center shadow-lg active:scale-95 transition-all ${currentIndex === birds.length - 1 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}>
-            <ChevronRight className="w-8 h-8 text-white" />
-          </button>
-        </div>
+                    {/* 4. 底部導航按鈕 */}
+                    <div className="flex justify-between items-center bg-black/20 p-2 rounded-[20px]">
+                      <button onClick={handlePrev} disabled={currentIndex === 0} className={`w-14 h-14 rounded-full border-[4px] border-gray-800 flex items-center justify-center ${currentIndex === 0 ? 'bg-gray-500' : 'bg-[#31A5E8]'}`}>
+                        <ChevronLeft className="w-8 h-8 text-white" />
+                      </button>
+                      <span className="text-red-900 font-black text-[9px] uppercase">NAV SYSTEM</span>
+                      <button onClick={handleNext} disabled={currentIndex === birds.length - 1} className={`w-14 h-14 rounded-full border-[4px] border-gray-800 flex items-center justify-center ${currentIndex === birds.length - 1 ? 'bg-gray-500' : 'bg-[#31A5E8]'}`}>
+                        <ChevronRight className="w-8 h-8 text-white" />
+                      </button>
+                    </div>
 
-        {/* 🚀 關鍵：切換分頁按鈕 (放在原本系統告示的上方) */}
-        <button 
-          onClick={() => setShowDetails(true)}
-          className="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-2xl border-[4px] border-blue-900 shadow-[0_5px_0_rgba(30,58,138,1)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-3 mt-2"
-        >
-          <BookOpen className="w-6 h-6" /> 詳細自學資料
-        </button>
+                    {/* 詳細資料按鈕 - 觸發換頁 */}
+                    <button 
+                      onClick={() => setShowDetails(true)}
+                      className="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-xl border-[4px] border-blue-800 shadow-[0_4px_0_rgba(30,58,138,1)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2"
+                    >
+                      詳細資料 / RESEARCH
+                    </button>
 
-        {/* 5. 原本的系統告示 (稍微壓縮) */}
-        <div className="bg-black/60 p-4 rounded-2xl border-2 border-red-900/40 text-[10px] text-white/70 leading-tight">
-          <p className="text-yellow-400 font-black mb-1 flex items-center gap-2">
-             【 SYSTEM V2.4.0 】
-          </p>
-          <p>若發現圖鑑細節與實體不符，請進入詳細模式連結科學數據庫。</p>
-        </div>
-      </motion.div>
-    ) : (
-      /* ==========================================
-         第二頁：科學自學中心 (詳細資料模式)
-         ========================================== */
-      <motion.div
-        key="page2"
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 20 }}
-        className="flex flex-col w-full h-full gap-6 relative z-10"
-      >
-        {/* 頂部裝飾標題 */}
-        <div className="bg-slate-900 border-b-4 border-blue-500 p-4 rounded-t-2xl">
-           <h2 className="text-blue-400 font-black text-xl tracking-widest text-center uppercase">Research Center</h2>
-        </div>
+                    {/* 5. 系統告示 */}
+                    <div className="bg-black/60 p-4 rounded-2xl border-2 border-red-900/40 text-[10px] text-white/80">
+                      <p className="text-yellow-400 font-black mb-1">【 系統告示 / SYSTEM NOTICE 】</p>
+                      <p>本機為教學強化版，若需更多資訊請點擊詳細資料。</p>
+                    </div>
+                  </motion.div>
+                ) : (
+                  /* --- Page 2: 科學研究自學頁 --- */
+                  <motion.div
+                    key="research-page"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 20 }}
+                    className="flex flex-col w-full h-full gap-6 relative z-10"
+                  >
+                    <div className="flex-1 bg-black/40 rounded-2xl p-6 border-2 border-blue-500/30 flex flex-col items-center justify-center text-center gap-6">
+                      <div className="bg-blue-500/20 p-4 rounded-full">
+                        <Globe className="w-12 h-12 text-blue-400 animate-pulse" />
+                      </div>
+                      <h3 className="text-blue-300 font-black text-2xl tracking-tighter uppercase">詳細科學檔案</h3>
+                      <p className="text-white/70 text-sm">正在建立與國際數據庫的連結...</p>
+                      <button 
+                        onClick={() => {
+                          const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(currentBird.name)}+site:allaboutbirds.org+OR+wikipedia.org`;
+                          window.open(searchUrl, '_blank');
+                        }}
+                        className="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-5 rounded-2xl shadow-lg transition-all"
+                      >
+                        啟動自學傳送門
+                      </button>
+                    </div>
 
-        <div className="flex-1 bg-black/40 rounded-2xl p-6 border-2 border-blue-500/30 flex flex-col items-center justify-center text-center gap-6">
-          <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center border-2 border-blue-500/50 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
-            <Globe className="w-10 h-10 text-blue-400 animate-spin-slow" />
-          </div>
+                    <button 
+                      onClick={() => setShowDetails(false)}
+                      className="w-full bg-red-900/40 hover:bg-red-900/60 text-red-200 font-bold py-3 rounded-xl border border-red-900/50"
+                    >
+                      返回基礎面板
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
-          <div className="space-y-2">
-            <p className="text-white/60 text-xs uppercase tracking-widest">目前檢索對象</p>
-            <p className="text-white text-3xl font-black italic">{currentBird.name}</p>
-          </div>
-
-          <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
-
-          <p className="text-blue-200/80 text-sm leading-relaxed px-4">
-            點擊下方按鈕，系統將自動穿透防火牆，連結至 <span className="text-white font-bold">康奈爾大學鳥類學實驗室</span> 或 <span className="text-white font-bold">維基百科</span> 提供深度自學內容。
-          </p>
-
-          <button 
-            onClick={() => {
-              const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(currentBird.name)}+site:allaboutbirds.org+OR+wikipedia.org`;
-              window.open(searchUrl, '_blank');
-            }}
-            className="w-full bg-blue-500 hover:bg-blue-400 text-white font-black py-5 rounded-2xl shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all flex items-center justify-center gap-3 text-lg group"
-          >
-            啟動外部連結中心 <ExternalLink className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-          </button>
-        </div>
-
-        {/* 返回按鈕 */}
-       <button 
-          onClick={() => setShowDetails(false)}
-          className="mt-4 w-full bg-red-900/60 hover:bg-red-800 text-white/80 font-bold py-2 rounded-lg border border-red-700/50 transition-all"
-        >
-          {"<<<"} 返回基礎數據
-        </button>
-      </motion.div>
-    )}
-  </AnimatePresence>
-
-  {/* 右下角機械裝飾點 */}
-  <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
-</div> 
-{/* ↑ 上面這個 </div> 關閉的是 <div className="flex-1 flex flex-col p-4 md:p-6 gap-3 overflow-hidden relative"> */}
-
-</div> 
-{/* ↑ 上面這個 </div> 關閉的是右半部分 bg-[#E3350D] 的紅色大外殼 */}
-
-</motion.div> 
-{/* ↑ 上面這個 </motion.div> 關閉的是本體 motion.div (isFullscreen 的那個) */}
-
-{/* 💡 最後如果還有括號，通常是全螢幕條件判斷的結尾 */}
-)}
+              {/* 右下角機械裝飾點 */}
+              <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
+            </div> {/* 結束 右半面板 */}
+          </motion.div> {/* 結束 本體容器 (Fullscreen 內的那層) */}
+        </div> 
+      )}
+    </AnimatePresence>
+  );
+};
