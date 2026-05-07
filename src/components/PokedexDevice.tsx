@@ -388,30 +388,30 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                   </div>
                 </div>
 
-               {/* 4. 底部導航按鈕 (優化版：垂直空間占用減少約 30%) */}
-<div className="flex justify-between items-center bg-black/20 p-3 md:p-4 rounded-[25px]">
+             {/* 4. 底部導航按鈕 (高度極致壓縮版，消除捲軸) */}
+<div className="flex justify-between items-center bg-black/20 p-2 md:p-3 rounded-[20px]">
   <button 
     onClick={handlePrev}
     disabled={currentIndex === 0}
-    className={`w-16 h-16 md:w-20 md:h-20 rounded-full border-[5px] border-gray-800 flex items-center justify-center shadow-xl active:scale-90 transition-all ${currentIndex === 0 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}
+    className={`w-14 h-14 md:w-16 md:h-16 rounded-full border-[4px] border-gray-800 flex items-center justify-center shadow-lg active:scale-95 transition-all ${currentIndex === 0 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}
   >
-    <ChevronLeft className="w-10 h-10 text-white" />
+    <ChevronLeft className="w-8 h-8 text-white" />
   </button>
   
-  <div className="flex flex-col items-center gap-1.5">
-    <div className="flex gap-2">
-      <div className="w-8 h-2 bg-gray-800 rounded-full opacity-30" />
-      <div className="w-8 h-2 bg-gray-800 rounded-full opacity-30" />
+  <div className="flex flex-col items-center gap-1">
+    <div className="flex gap-1.5">
+      <div className="w-6 h-1.5 bg-gray-800 rounded-full opacity-30" />
+      <div className="w-6 h-1.5 bg-gray-800 rounded-full opacity-30" />
     </div>
-    <span className="text-red-900 font-black text-[10px] uppercase tracking-tighter">NAV SYSTEM</span>
+    <span className="text-red-900 font-black text-[9px] uppercase tracking-tighter leading-none">NAV SYSTEM</span>
   </div>
 
   <button 
     onClick={handleNext}
     disabled={currentIndex === birds.length - 1}
-    className={`w-16 h-16 md:w-20 md:h-20 rounded-full border-[5px] border-gray-800 flex items-center justify-center shadow-xl active:scale-90 transition-all ${currentIndex === birds.length - 1 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}
+    className={`w-14 h-14 md:w-16 md:h-16 rounded-full border-[4px] border-gray-800 flex items-center justify-center shadow-lg active:scale-95 transition-all ${currentIndex === birds.length - 1 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}
   >
-    <ChevronRight className="w-10 h-10 text-white" />
+    <ChevronRight className="w-8 h-8 text-white" />
   </button>
 </div>
 
