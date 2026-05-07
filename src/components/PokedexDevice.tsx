@@ -26,6 +26,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   onClose 
 }) => {
   // --- 1. 核心狀態 ---
+  const [showDetails, setShowDetails] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [imgStatus, setImgStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
   const [searchTerm, setSearchTerm] = useState('');
@@ -407,109 +408,147 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
               <div className="w-full h-1 bg-black/20" />
             </div>
 
-            {/* --- 右半部分：控制與資料面板 --- */}
-           {/* 右半部分：控制與資料面板 */}
-<div className="w-full md:w-1/2 h-2/5 md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] relative overflow-y-auto scrollbar-hide">
-  {/* 內部容器加入 gap 並確保不會被壓縮 */}
-  <div className="flex flex-col justify-start min-h-max w-full gap-4 relative z-10 pb-10">
-                
-               {/* 1. 頂部編號螢幕 - 縮小高度與字體 */}
-<div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-2 md:p-3 flex items-center justify-center relative shadow-[inset_0_0_15px_rgba(0,0,0,1)]">
-  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
-  <span className="text-green-400 font-mono text-2xl md:text-4xl font-black z-10 tracking-[0.1em] drop-shadow-[0_0_8px_rgba(74,222,128,0.5)]">
-    ID-{currentBird.id}
-  </span>
-</div>
-
-{/* 2. 中文名稱顯示螢幕 - 加入縮小字級與不換行處理 */}
-<div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-3 md:p-4 flex items-center justify-center relative shadow-[inset_0_0_15px_rgba(0,0,0,1)] min-h-[60px] md:min-h-[80px]">
-  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
-  <span className={`text-green-400 font-bold z-10 tracking-wider drop-shadow-[0_0_10px_rgba(74,222,128,0.5)] text-center leading-tight ${
-    currentBird.name.length > 5 ? 'text-xl md:text-2xl' : 'text-3xl md:text-4xl'
-  }`}>
-    {currentBird.name}
-  </span>
-</div>
-
-                {/* 3. 搜尋與快速跳轉 */}
-                <div className="bg-red-900/30 p-6 rounded-[30px] border-2 border-red-900/20 space-y-5 shadow-inner">
-                  <form onSubmit={handleSearchSubmit} className="relative">
-                    <input
-                      type="text"
-                      placeholder="輸入名稱或編號..."
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      onFocus={() => setIsSearching(true)}
-                      onBlur={() => setIsSearching(false)}
-                      className="w-full bg-[#DEDEDE] border-[5px] border-gray-800 rounded-xl py-4 px-6 font-black text-gray-900 placeholder-gray-500 text-xl focus:bg-white transition-all outline-none"
-                    />
-                    <button type="submit" className="absolute right-4 top-1/2 -translate-y-1/2 bg-gray-800 p-2.5 rounded-lg hover:bg-gray-700 transition-colors">
-                      <Search className="w-6 h-6 text-white" />
-                    </button>
-                  </form>
-                  
-                  <div className="relative">
-                    <select
-                      onChange={(e) => jumpToBird(e.target.value)}
-                      value={currentBird.id}
-                      className="w-full appearance-none bg-yellow-400 border-[5px] border-gray-800 rounded-xl py-4 px-6 font-black text-gray-900 text-xl cursor-pointer hover:bg-yellow-300 transition-all shadow-lg"
-                    >
-                      {birds.map(bird => (
-                        <option key={bird.id} value={bird.id}>
-                          {bird.id} ➟ {bird.name}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-8 h-8 text-gray-900 pointer-events-none" />
-                  </div>
-                </div>
-
-             {/* 4. 底部導航按鈕 (高度極致壓縮版，消除捲軸) */}
-<div className="flex justify-between items-center bg-black/20 p-2 md:p-3 rounded-[20px]">
-  <button 
-    onClick={handlePrev}
-    disabled={currentIndex === 0}
-    className={`w-14 h-14 md:w-16 md:h-16 rounded-full border-[4px] border-gray-800 flex items-center justify-center shadow-lg active:scale-95 transition-all ${currentIndex === 0 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}
-  >
-    <ChevronLeft className="w-8 h-8 text-white" />
-  </button>
+                   {/* --- 右半部分：控制與資料面板 --- */}
+<div className="w-full md:w-1/2 h-2/5 md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] relative overflow-hidden">
   
-  <div className="flex flex-col items-center gap-1">
-    <div className="flex gap-1.5">
-      <div className="w-6 h-1.5 bg-gray-800 rounded-full opacity-30" />
-      <div className="w-6 h-1.5 bg-gray-800 rounded-full opacity-30" />
-    </div>
-    <span className="text-red-900 font-black text-[9px] uppercase tracking-tighter leading-none">NAV SYSTEM</span>
-  </div>
-
-  <button 
-    onClick={handleNext}
-    disabled={currentIndex === birds.length - 1}
-    className={`w-14 h-14 md:w-16 md:h-16 rounded-full border-[4px] border-gray-800 flex items-center justify-center shadow-lg active:scale-95 transition-all ${currentIndex === birds.length - 1 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}
-  >
-    <ChevronRight className="w-8 h-8 text-white" />
-  </button>
-</div>
-
-                {/* 5. 系統告示與裝飾 */}
-                <div className="bg-black/60 p-5 rounded-2xl border-2 border-red-900/40 text-xs text-white/90 leading-relaxed shadow-2xl">
-                  <p className="text-yellow-400 font-black mb-2 underline decoration-red-600 decoration-2 underline-offset-4 flex items-center gap-2">
-                    <span className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(250,204,21,1)]" />
-                    【 系統告示 / SYSTEM NOTICE 】
-                  </p>
-                  <p className="font-bold opacity-80">1. 本機之中文名稱為唯一校對標準，請仔細比對。</p>
-                  <p className="font-bold opacity-80">2. 若發現圖鑑細節與實體不符，請點擊螢幕進入放大模式。</p>
-                  <p className="font-bold opacity-80">3. 圖鑑機系統版本：V2.4.0 (教學強化版)</p>
-                </div>
-
-              </div>
-
-              {/* 右下角機械裝飾點 */}
-              <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
-            </div>
-          </motion.div>
+  {/* 內部容器 - 加入分頁邏輯 */}
+  <AnimatePresence mode="wait">
+    {!showDetails ? (
+      /* ==========================================
+         第一頁：基礎資料 (原本的內容)
+         ========================================== */
+      <motion.div
+        key="page1"
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -20 }}
+        className="flex flex-col justify-start min-h-max w-full gap-4 relative z-10 pb-10 h-full"
+      >
+        {/* 1. 頂部編號螢幕 */}
+        <div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-2 md:p-3 flex items-center justify-center relative shadow-[inset_0_0_15px_rgba(0,0,0,1)]">
+          <span className="text-green-400 font-mono text-2xl md:text-4xl font-black z-10 tracking-[0.1em] drop-shadow-[0_0_8px_rgba(74,222,128,0.5)]">
+            ID-{currentBird.id}
+          </span>
         </div>
-      )}
-    </AnimatePresence>
-  );
-};
+
+        {/* 2. 中文名稱螢幕 */}
+        <div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-3 md:p-4 flex items-center justify-center relative shadow-[inset_0_0_15px_rgba(0,0,0,1)] min-h-[60px] md:min-h-[80px]">
+          <span className={`text-green-400 font-bold z-10 tracking-wider drop-shadow-[0_0_10px_rgba(74,222,128,0.5)] text-center leading-tight ${
+            currentBird.name.length > 5 ? 'text-xl md:text-2xl' : 'text-3xl md:text-4xl'
+          }`}>
+            {currentBird.name}
+          </span>
+        </div>
+
+        {/* 3. 搜尋與快速跳轉 */}
+        <div className="bg-red-900/30 p-4 rounded-[30px] border-2 border-red-900/20 space-y-3 shadow-inner">
+          <form onSubmit={handleSearchSubmit} className="relative">
+            <input
+              type="text"
+              placeholder="搜尋..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full bg-[#DEDEDE] border-[4px] border-gray-800 rounded-xl py-3 px-4 font-black text-gray-900 text-lg outline-none"
+            />
+            <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-800 p-2 rounded-lg"><Search className="w-5 h-5 text-white" /></button>
+          </form>
+          
+          <select
+            onChange={(e) => jumpToBird(e.target.value)}
+            value={currentBird.id}
+            className="w-full bg-yellow-400 border-[4px] border-gray-800 rounded-xl py-3 px-4 font-black text-gray-900 text-lg shadow-lg"
+          >
+            {birds.map(bird => (
+              <option key={bird.id} value={bird.id}>{bird.id} ➟ {bird.name}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* 4. 底部導航按鈕 */}
+        <div className="flex justify-between items-center bg-black/20 p-2 rounded-[20px]">
+          <button onClick={handlePrev} disabled={currentIndex === 0} className={`w-14 h-14 rounded-full border-[4px] border-gray-800 flex items-center justify-center shadow-lg active:scale-95 transition-all ${currentIndex === 0 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}>
+            <ChevronLeft className="w-8 h-8 text-white" />
+          </button>
+          <span className="text-red-900 font-black text-[9px] uppercase tracking-tighter">NAV SYSTEM</span>
+          <button onClick={handleNext} disabled={currentIndex === birds.length - 1} className={`w-14 h-14 rounded-full border-[4px] border-gray-800 flex items-center justify-center shadow-lg active:scale-95 transition-all ${currentIndex === birds.length - 1 ? 'bg-gray-500 opacity-50' : 'bg-[#31A5E8] hover:bg-blue-400'}`}>
+            <ChevronRight className="w-8 h-8 text-white" />
+          </button>
+        </div>
+
+        {/* 🚀 關鍵：切換分頁按鈕 (放在原本系統告示的上方) */}
+        <button 
+          onClick={() => setShowDetails(true)}
+          className="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-2xl border-[4px] border-blue-900 shadow-[0_5px_0_rgba(30,58,138,1)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-3 mt-2"
+        >
+          <BookOpen className="w-6 h-6" /> 詳細自學資料
+        </button>
+
+        {/* 5. 原本的系統告示 (稍微壓縮) */}
+        <div className="bg-black/60 p-4 rounded-2xl border-2 border-red-900/40 text-[10px] text-white/70 leading-tight">
+          <p className="text-yellow-400 font-black mb-1 flex items-center gap-2">
+             【 SYSTEM V2.4.0 】
+          </p>
+          <p>若發現圖鑑細節與實體不符，請進入詳細模式連結科學數據庫。</p>
+        </div>
+      </motion.div>
+    ) : (
+      /* ==========================================
+         第二頁：科學自學中心 (詳細資料模式)
+         ========================================== */
+      <motion.div
+        key="page2"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 20 }}
+        className="flex flex-col w-full h-full gap-6 relative z-10"
+      >
+        {/* 頂部裝飾標題 */}
+        <div className="bg-slate-900 border-b-4 border-blue-500 p-4 rounded-t-2xl">
+           <h2 className="text-blue-400 font-black text-xl tracking-widest text-center uppercase">Research Center</h2>
+        </div>
+
+        <div className="flex-1 bg-black/40 rounded-2xl p-6 border-2 border-blue-500/30 flex flex-col items-center justify-center text-center gap-6">
+          <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center border-2 border-blue-500/50 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+            <Globe className="w-10 h-10 text-blue-400 animate-spin-slow" />
+          </div>
+
+          <div className="space-y-2">
+            <p className="text-white/60 text-xs uppercase tracking-widest">目前檢索對象</p>
+            <p className="text-white text-3xl font-black italic">{currentBird.name}</p>
+          </div>
+
+          <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+
+          <p className="text-blue-200/80 text-sm leading-relaxed px-4">
+            點擊下方按鈕，系統將自動穿透防火牆，連結至 <span className="text-white font-bold">康奈爾大學鳥類學實驗室</span> 或 <span className="text-white font-bold">維基百科</span> 提供深度自學內容。
+          </p>
+
+          <button 
+            onClick={() => {
+              const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(currentBird.name)}+site:allaboutbirds.org+OR+wikipedia.org`;
+              window.open(searchUrl, '_blank');
+            }}
+            className="w-full bg-blue-500 hover:bg-blue-400 text-white font-black py-5 rounded-2xl shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all flex items-center justify-center gap-3 text-lg group"
+          >
+            啟動外部連結中心 <ExternalLink className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+          </button>
+        </div>
+
+        {/* 返回按鈕 */}
+        <button 
+          onClick={() => setShowDetails(false)}
+          className="w-full bg-red-900/40 hover:bg-red-900/60 text-red-200 font-bold py-3 rounded-xl border border-red-900/50 transition-all flex items-center justify-center gap-2"
+        >
+          <ChevronLeft className="w-5 h-5" /> 返回基礎數據面板
+        </button>
+
+        <p className="text-[10px] text-center text-white/30 italic">
+          * 外部連結內容非本機預載，請由導師陪同閱讀。
+        </p>
+      </motion.div>
+    )}
+  </AnimatePresence>
+
+  {/* 右下角裝飾點 (不變) */}
+  <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
+</div>
