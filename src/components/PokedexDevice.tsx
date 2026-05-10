@@ -286,7 +286,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             </button>
 
            {/* --- 左半部分：圖鑑顯示面板 --- */}
-<div className="w-full md:w-1/2 h-[55%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]">
+<div className="w-full md:w-1/2 min-h-[50%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]">
   
   {/* 頂部感應燈區塊：大幅壓縮垂直空間 (p-6 -> p-2) */}
   <div className="flex items-center gap-4 p-2 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
