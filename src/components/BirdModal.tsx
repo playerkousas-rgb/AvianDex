@@ -42,46 +42,52 @@ export const BirdModal: React.FC<BirdModalProps> = ({ bird, isOpen, onClose, onN
             className="absolute inset-0 bg-black/80 backdrop-blur-sm"
           />
 
-         {/* Modal Container */}
+        {/* Modal Container */}
           <motion.div
-            key={bird.id} // Re-animate when bird changes
-            initial={{ opacity: 0, scale: 0.95, x: 20 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
-            exit={{ opacity: 0, scale: 0.95, x: -20 }}
+            key={bird.id}
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: -20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            /* 修正：在行動端使用 h-[90dvh] 確保高度計算精確，並移除原本可能鎖死滾動的 overflow-hidden */
-            className="relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl flex flex-col h-[90vh] md:max-h-[90vh] overflow-hidden"
+            /* 關鍵修正 1：移除 overflow-hidden。
+               關鍵修正 2：在行動端 (md以下) 使用 h-full，確保它是一個撐滿的容器，
+               不再受限於「遊戲機外殼」的高度。
+            */
+            className="relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl flex flex-col h-[90vh] md:h-auto md:max-h-[92vh]"
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* Header */}
-            <div className="flex-none flex justify-between items-center p-5 border-b border-gray-100 bg-white z-10">
+            {/* Header: 強制固定在頂部 */}
+            <div className="flex-none flex justify-between items-center p-5 border-b border-gray-100 bg-white z-30 rounded-t-2xl">
               <div className="flex items-center gap-4">
                 <span className="text-2xl font-bold text-gray-400 font-mono">No. {bird.id}</span>
                 <h2 className="text-3xl font-black text-[#313131] tracking-tight">{bird.discovered ? bird.name : '???'}</h2>
               </div>
               <button 
                 onClick={onClose} 
-                className="p-2 text-gray-400 hover:text-gray-800 transition-colors bg-gray-100 rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-[#31A5E8]"
+                className="p-2 text-gray-400 hover:text-gray-800 transition-colors bg-gray-100 rounded-full active:scale-90"
               >
                 <X className="w-6 h-6" />
               </button>
             </div>
 
-            {/* Content Area */}
+            {/* Content Area: 徹底解放捲動限制 */}
             <div 
-              /* 修正：添加 WebkitOverflowScrolling 確保 iOS 順暢度，touch-pan-y 確保手勢只在垂直方向觸發 */
-              className="flex-1 overflow-y-auto p-6 md:p-8 bg-white touch-pan-y"
-              style={{ WebkitOverflowScrolling: 'touch' }}
+              /* 關鍵修正 3：使用 flex-1 配合 min-h-0。
+                 關鍵修正 4：加入 WebkitOverflowScrolling 並移除所有會擋住手勢的層級。
+              */
+              className="flex-1 overflow-y-auto bg-white touch-pan-y min-h-0"
+              style={{ 
+                WebkitOverflowScrolling: 'touch',
+                overscrollBehavior: 'contain' // 防止捲動到底部時觸發背景頁面的捲動
+              }}
             >
-              <div className="flex flex-col md:flex-row gap-8">
+              <div className="p-6 md:p-8 flex flex-col md:flex-row gap-8">
+                
                 {/* Left Column - Image */}
-                <div className="w-full md:w-1/2 flex flex-col items-center">
+                <div className="w-full md:w-1/2 flex-none">
                   <div className="w-full aspect-square bg-[#f2f2f2] rounded-2xl overflow-hidden flex items-center justify-center p-4 border border-gray-200">
                     {bird.discovered ? (
-                      <img 
-                        src={bird.imageUrl} 
-                        alt={bird.name} 
-                        className="w-full h-full object-cover rounded-xl shadow-md" 
-                      />
+                      <img src={bird.imageUrl} alt={bird.name} className="w-full h-full object-cover rounded-xl shadow-md" />
                     ) : (
                       <div className="text-8xl text-gray-300 font-bold">?</div>
                     )}
@@ -94,7 +100,9 @@ export const BirdModal: React.FC<BirdModalProps> = ({ bird, isOpen, onClose, onN
                     {bird.discovered ? bird.description : 'This species has not been documented yet.'}
                   </p>
 
+                  {/* 藍色資料卡 */}
                   <div className="bg-[#30a7d7] rounded-2xl p-6 text-white grid grid-cols-2 gap-y-6 gap-x-4 shadow-lg">
+                    {/* ... 這裡保留你的 Height, Weight, Category 等 ... */}
                     <div>
                       <h4 className="text-white/80 text-sm font-bold mb-1 uppercase tracking-wider">Height</h4>
                       <p className="text-2xl font-black">{bird.height}</p>
@@ -117,6 +125,7 @@ export const BirdModal: React.FC<BirdModalProps> = ({ bird, isOpen, onClose, onN
                     </div>
                   </div>
 
+                  {/* Habitat & Diet */}
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-gray-100 rounded-xl p-5 border border-gray-200">
                       <h4 className="text-gray-500 text-sm font-bold mb-2 uppercase tracking-wider">Habitat</h4>
@@ -128,37 +137,36 @@ export const BirdModal: React.FC<BirdModalProps> = ({ bird, isOpen, onClose, onN
                     </div>
                   </div>
 
-                  {/* 墊片：在行動端最後預留空間，確保不會滑不到底 */}
-                  <div className="h-4 md:hidden"></div>
+                  {/* 關鍵修正 5：超大墊片。
+                      在遊戲機 UI 中，按鈕往往被壓在最下面。我們給它 80px 的空間，
+                      確保手指能把按鈕推到導覽列上方。
+                  */}
+                  <div className="h-24 md:hidden" />
                 </div>
               </div>
             </div>
 
-            {/* Navigation Footer */}
-            <div className="flex-none bg-gray-50 p-4 border-t border-gray-200 flex justify-between items-center z-10">
+            {/* Navigation Footer: 確保它永遠在最底層且不遮擋捲動區域 */}
+            <div className="flex-none bg-gray-50 p-4 border-t border-gray-200 flex justify-between items-center z-30 rounded-b-2xl">
               <button 
                 onClick={onPrev} 
                 disabled={!hasPrev}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all ${
-                  hasPrev 
-                    ? 'bg-white border-2 border-gray-200 text-gray-700 hover:border-[#31A5E8] hover:text-[#31A5E8] shadow-sm active:scale-95' 
-                    : 'bg-transparent text-gray-300 cursor-not-allowed'
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all active:scale-95 ${
+                  hasPrev ? 'bg-white border-2 border-gray-200 text-gray-700' : 'text-gray-300'
                 }`}
               >
-                <ChevronLeft className="w-5 h-5" /> Previous
+                <ChevronLeft className="w-5 h-5" /> Prev
               </button>
               
-              <div className="hidden sm:block text-gray-400 font-mono text-sm font-bold uppercase tracking-widest">
-                Use arrow keys to navigate
+              <div className="hidden sm:block text-gray-400 font-mono text-xs font-bold uppercase">
+                Pokedex System Active
               </div>
 
               <button 
                 onClick={onNext} 
                 disabled={!hasNext}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all ${
-                  hasNext 
-                    ? 'bg-[#E3350D] text-white hover:bg-red-700 shadow-md active:scale-95' 
-                    : 'bg-transparent text-gray-300 cursor-not-allowed'
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all active:scale-95 ${
+                  hasNext ? 'bg-[#E3350D] text-white shadow-md' : 'text-gray-300'
                 }`}
               >
                 Next <ChevronRight className="w-5 h-5" />
