@@ -574,6 +574,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                 </p>
               </div>
             </div> {/* <-- 剛才漏掉的這個容器關閉標籤 */}
+            <div className="h-32 w-full md:hidden flex-none"></div>
 
             {/* 返回按鈕 */}
             <button 
@@ -581,7 +582,6 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
               className="w-full bg-red-900/60 hover:bg-red-800 text-white font-black py-4 rounded-2xl border-b-4 border-red-950 active:translate-y-1 active:border-b-0 transition-all flex items-center justify-center gap-2"
             >
               <ChevronLeft className="w-4 h-4" /> 返回基礎數據面板
-              <div className="h-32 w-full md:hidden flex-none"></div>
             </button>
           </motion.div>
         )}
