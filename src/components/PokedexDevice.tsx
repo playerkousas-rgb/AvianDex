@@ -170,117 +170,84 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   return (
     <AnimatePresence>
  {/* ============================================================
-          SECTION 1: 全螢幕觀察模式 (iPad/手機捲動優化版)
+          SECTION 1: 全螢幕觀察模式 (排除 CSS 游標干擾版)
           ============================================================ */}
       {isFullscreen && (
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className={`fixed inset-0 z-[100] bg-black/98 flex flex-col ${viewMode === 'lens' ? 'md:cursor-none' : 'cursor-default'}`}
-          onMouseMove={viewMode === 'lens' ? handleMagnifierMouseMove : undefined}
-          /* 點擊最外層背景仍可退出 */
+          /* 在行動端徹底強制 cursor-auto 蓋過 index.css 的設定 */
+          className="fixed inset-0 z-[9999] bg-black/98 flex flex-col cursor-auto touch-pan-y"
           onClick={() => setIsFullscreen(false)}
+          style={{ height: '100dvh', width: '100vw' }}
         >
-          {/* --- 1. 頂部固定導覽 (iPad/手機僅顯示關閉鈕) --- */}
-          <div className="sticky top-0 left-0 w-full p-4 md:p-10 flex justify-between items-center z-[150] pointer-events-none">
-            {/* 電腦版大標題：md 以上才顯示 */}
-            <div className="hidden md:flex bg-black/60 backdrop-blur-md border border-white/20 p-6 rounded-2xl items-center gap-6 shadow-2xl pointer-events-auto">
-              <div className="bg-yellow-400 p-3 rounded-xl">
-                <ZoomIn className="w-10 h-10 text-black" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-green-400 font-black text-3xl tracking-widest uppercase">Micro-Observation</span>
-                <span className="text-white text-xl font-bold">【NO.{currentBird.id}】{currentBird.name}</span>
-              </div>
+          {/* --- 1. 固定頂部 (僅關閉與名字) --- */}
+          <div className="flex-none w-full p-4 md:p-10 flex justify-between items-center z-[150] pointer-events-none">
+            {/* 電腦標題 */}
+            <div className="hidden md:flex bg-black/60 backdrop-blur-md border border-white/20 p-6 rounded-2xl items-center gap-6 pointer-events-auto">
+              <span className="text-white text-xl font-bold">【NO.{currentBird.id}】 {currentBird.name}</span>
             </div>
-
-            {/* iPad/手機版簡易標題：確保知道在看哪隻鳥 */}
+            {/* iPad/手機標題 */}
             <div className="md:hidden bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 pointer-events-auto">
-              <span className="text-yellow-400 font-bold">【{currentBird.id}】{currentBird.name}</span>
+              <span className="text-yellow-400 font-bold text-sm">【{currentBird.id}】 {currentBird.name}</span>
             </div>
-
-            {/* 右上角 X 關閉鈕：必備功能 */}
+            {/* 右上角 X */}
             <button 
               onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); }}
-              className="pointer-events-auto bg-white/10 hover:bg-red-500 backdrop-blur-xl border border-white/20 text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all active:scale-90"
+              className="pointer-events-auto bg-white/10 hover:bg-red-500 border border-white/20 text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl"
             >
               <X className="w-8 h-8 md:w-10 md:h-10" />
             </button>
           </div>
 
-          {/* --- 2. 模式切換器：僅在電腦端顯示 (md:flex) --- */}
-          <div 
-            className="hidden md:flex absolute top-10 left-1/2 -translate-x-1/2 z-[130] flex-col items-center gap-4 pointer-events-auto"
-            onClick={(e) => e.stopPropagation()} 
-          >
+          {/* --- 2. 模式切換器 (僅電腦) --- */}
+          <div className="hidden md:flex absolute top-10 left-1/2 -translate-x-1/2 z-[130] pointer-events-auto">
             <div className="bg-gray-900/80 backdrop-blur-xl border border-white/20 p-1.5 rounded-2xl flex gap-1 shadow-2xl">
-              <button 
-                onClick={() => setViewMode('lens')}
-                className={`px-6 py-2 rounded-xl font-bold transition-all ${viewMode === 'lens' ? 'bg-yellow-400 text-black' : 'text-white hover:bg-white/10'}`}
-              >🔍 放大鏡</button>
-              <button 
-                onClick={() => { setViewMode('zoom'); if(zoomScale === 1) setZoomScale(1.5); }}
-                className={`px-6 py-2 rounded-xl font-bold transition-all ${viewMode === 'zoom' ? 'bg-yellow-400 text-black' : 'text-white hover:bg-white/10'}`}
-              >🖼️ 縮放模式</button>
+              <button onClick={(e) => { e.stopPropagation(); setViewMode('lens'); }} className={`px-6 py-2 rounded-xl font-bold ${viewMode === 'lens' ? 'bg-yellow-400 text-black' : 'text-white'}`}>🔍 放大鏡</button>
+              <button onClick={(e) => { e.stopPropagation(); setViewMode('zoom'); }} className={`px-6 py-2 rounded-xl font-bold ${viewMode === 'zoom' ? 'bg-yellow-400 text-black' : 'text-white'}`}>🖼️ 縮放模式</button>
             </div>
           </div>
 
-          {/* --- 3. 核心捲動內容區：解決 iPad 無法看到下方資訊的問題 --- */}
+          {/* --- 3. 獨立捲動區 --- */}
           <div 
-            className="flex-1 overflow-y-auto overflow-x-hidden touch-pan-y w-full"
+            className="flex-1 w-full overflow-y-auto overflow-x-hidden px-4"
+            style={{ WebkitOverflowScrolling: 'touch' }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex flex-col items-center w-full min-h-full py-6 md:py-10">
-              {/* 圖片主體 */}
+            <div className="flex flex-col items-center w-full py-10">
               <motion.img 
                 ref={imgRef}
                 src={currentBird.imageUrl} 
                 alt={currentBird.name} 
                 style={{ 
                   transform: viewMode === 'zoom' ? `scale(${zoomScale})` : 'scale(1)',
-                  transition: 'transform 0.2s ease-out',
-                  transformOrigin: 'top center'
+                  transformOrigin: 'top center',
+                  touchAction: 'pan-y' // 強制開啟觸控滑動
                 }}
-                /* 在手機/iPad 上，圖片寬度稍微縮小一點（92%），確保左右留白觸發捲動更順暢 */
-                className={`object-contain rounded-lg shadow-2xl transition-all ${
-                  viewMode === 'zoom' ? 'w-[92%] md:w-[85%] h-auto' : 'max-w-[95%] max-h-[85vh]'
+                className={`object-contain rounded-lg shadow-2xl transition-transform ${
+                  viewMode === 'zoom' ? 'w-[95%] md:w-[85%] h-auto' : 'max-w-full max-h-[85vh]'
                 }`}
               />
-
-              {/* 這裡可以放置原本在圖中的「詳細資料/RESEARCH」按鈕，
-                  如果它是圖片的一部分，現在因為 overflow-y-auto，你一定可以滑到底部看到它 */}
-              
-              {/* 額外留白：確保底部內容不會貼齊螢幕邊緣 */}
-              <div className="h-20 w-full" />
+              {/* 墊片：確保能滑到底看到按鈕 */}
+              <div className="h-[150px] w-full flex items-center justify-center">
+                 <div className="w-20 h-1 bg-white/10 rounded-full" />
+              </div>
             </div>
           </div>
 
-          {/* 放大鏡鏡面 (僅電腦版) */}
+          {/* 放大鏡鏡面 (僅電腦) */}
           {viewMode === 'lens' && isLensVisible && (
-            <div 
-              className="pointer-events-none fixed z-[120] border-[8px] border-white/90 shadow-2xl overflow-hidden rounded-full hidden md:block"
+            <div className="hidden md:block pointer-events-none fixed z-[140] border-[8px] border-white/90 shadow-2xl overflow-hidden rounded-full"
               style={{
                 width: `${LENS_SIZE}px`, height: `${LENS_SIZE}px`,
                 left: `${cursorPos.x - LENS_SIZE / 2}px`, top: `${cursorPos.y - LENS_SIZE / 2}px`,
                 backgroundImage: `url('${currentBird.imageUrl}')`,
-                backgroundRepeat: 'no-repeat',
                 backgroundSize: imgRef.current ? `${imgRef.current.width * ZOOM_LEVEL}px ${imgRef.current.height * ZOOM_LEVEL}px` : 'auto',
                 backgroundPosition: `-${lensPosition.x * ZOOM_LEVEL - LENS_SIZE / 2}px -${lensPosition.y * ZOOM_LEVEL - LENS_SIZE / 2}px`
               }}
             />
           )}
-
-          {/* 電腦版底部退出鈕 */}
-          <div className="absolute bottom-10 right-10 z-[140] pointer-events-auto hidden md:block">
-            <button 
-              className="bg-red-600 hover:bg-red-500 text-white p-5 rounded-full shadow-2xl transition-all active:scale-90 flex items-center gap-3"
-              onClick={() => setIsFullscreen(false)}
-            >
-              <span className="font-bold px-2 text-xl">退出觀察</span>
-              <X className="w-8 h-8" />
-            </button>
-          </div>
         </motion.div>
       )}
  
