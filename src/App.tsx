@@ -23,7 +23,8 @@ function App() {
     return (
       <div className="min-h-screen bg-[#313131] flex items-center justify-center">
         <div className="bg-red-500 text-white p-6 rounded-xl font-bold shadow-2xl">
-          Error loading Dex: {error.message}
+          {/* 使用類型斷言 (as any) 或 (error as Error) 解決 TS 報錯 */}
+          Error loading Dex: {(error as any)?.message || "Unknown error"}
         </div>
       </div>
     );
