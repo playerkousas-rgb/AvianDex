@@ -169,85 +169,99 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 
   return (
     <AnimatePresence>
- {/* ============================================================
-          SECTION 1: 全螢幕觀察模式 (排除 CSS 游標干擾版)
+{/* ============================================================
+          SECTION 1: 全螢幕觀察模式 (原生縮放與手勢優先版)
           ============================================================ */}
       {isFullscreen && (
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          /* 在行動端徹底強制 cursor-auto 蓋過 index.css 的設定 */
-          className="fixed inset-0 z-[9999] bg-black/98 flex flex-col cursor-auto touch-pan-y"
+          /* 關鍵修正 1：移除最外層所有的 flex 置中邏輯
+             className 從 'flex items-center justify-center' 改為 'block'
+             這能讓行動瀏覽器的原生滾動條（Scrollbar）正確認識內容高度。
+          */
+          className="fixed inset-0 z-[100] bg-black/98 block overflow-x-hidden overflow-y-auto"
           onClick={() => setIsFullscreen(false)}
+          /* 關鍵修正 2：在最外層鎖定 dvh，防止行動端工具列跑出來擋圖 */
           style={{ height: '100dvh', width: '100vw' }}
         >
-          {/* --- 1. 固定頂部 (僅關閉與名字) --- */}
-          <div className="flex-none w-full p-4 md:p-10 flex justify-between items-center z-[150] pointer-events-none">
-            {/* 電腦標題 */}
+          {/* --- 1. 固定頂部 (僅保留關閉與名字，且 z-index 最高) --- */}
+          {/* 加入 sticky top-0 確保它隨捲動浮動，不遮擋圖片主體 */}
+          <div className="sticky top-0 left-0 w-full p-4 md:p-10 flex justify-between items-center z-[150] pointer-events-none">
+            {/* iPad/手機標題 (簡化並缩小以讓出空間) */}
+            <div className="md:hidden bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 pointer-events-auto origin-top-left scale-90">
+              <span className="text-yellow-400 font-bold text-xs">【{currentBird.id}】 {currentBird.name}</span>
+            </div>
+
+            {/* 電腦標題 (md以上顯示) */}
             <div className="hidden md:flex bg-black/60 backdrop-blur-md border border-white/20 p-6 rounded-2xl items-center gap-6 pointer-events-auto">
               <span className="text-white text-xl font-bold">【NO.{currentBird.id}】 {currentBird.name}</span>
             </div>
-            {/* iPad/手機標題 */}
-            <div className="md:hidden bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 pointer-events-auto">
-              <span className="text-yellow-400 font-bold text-sm">【{currentBird.id}】 {currentBird.name}</span>
-            </div>
-            {/* 右上角 X */}
+
+            {/* 右上角 X 關閉鈕：必備退出功能 */}
             <button 
               onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); }}
-              className="pointer-events-auto bg-white/10 hover:bg-red-500 border border-white/20 text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl"
+              className="pointer-events-auto bg-white/10 hover:bg-red-500 backdrop-blur-xl border border-white/20 text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all active:scale-90 shadow-2xl"
             >
               <X className="w-8 h-8 md:w-10 md:h-10" />
             </button>
           </div>
 
-          {/* --- 2. 模式切換器 (僅電腦) --- */}
-          <div className="hidden md:flex absolute top-10 left-1/2 -translate-x-1/2 z-[130] pointer-events-auto">
+          {/* --- 2. 模式切換器：僅在電腦版顯示，行動端完全移除 (hidden md:flex) --- */}
+          <div 
+            className="absolute top-10 left-1/2 -translate-x-1/2 z-[130] hidden md:flex flex-col items-center gap-4 pointer-events-auto"
+            onClick={(e) => e.stopPropagation()} 
+          >
             <div className="bg-gray-900/80 backdrop-blur-xl border border-white/20 p-1.5 rounded-2xl flex gap-1 shadow-2xl">
-              <button onClick={(e) => { e.stopPropagation(); setViewMode('lens'); }} className={`px-6 py-2 rounded-xl font-bold ${viewMode === 'lens' ? 'bg-yellow-400 text-black' : 'text-white'}`}>🔍 放大鏡</button>
-              <button onClick={(e) => { e.stopPropagation(); setViewMode('zoom'); }} className={`px-6 py-2 rounded-xl font-bold ${viewMode === 'zoom' ? 'bg-yellow-400 text-black' : 'text-white'}`}>🖼️ 縮放模式</button>
+              <button onClick={() => setViewMode('lens')} className={`px-6 py-2 rounded-xl font-bold ${viewMode === 'lens' ? 'bg-yellow-400 text-black' : 'text-white'}`}>🔍 放大鏡</button>
+              <button onClick={() => setViewMode('zoom')} className={`px-6 py-2 rounded-xl font-bold ${viewMode === 'zoom' ? 'bg-yellow-400 text-black' : 'text-white'}`}>🖼️ 縮放模式</button>
             </div>
           </div>
 
-          {/* --- 3. 獨立捲動區 --- */}
+          {/* --- 3. 核心圖片顯示區：釋放容器限制 --- */}
           <div 
-            className="flex-1 w-full overflow-y-auto overflow-x-hidden px-4"
-            style={{ WebkitOverflowScrolling: 'touch' }}
+            /* 關鍵修正 3：移除所有置中、overflow 限制
+               改用一個獨立的捲動層，並加入 WebkitOverflowScrolling 確保 iOS 慣性。
+            */
+            className="w-full h-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex flex-col items-center w-full py-10">
+            <div className="w-full flex justify-center py-6 md:py-10">
+              {/* 圖片主體 */}
               <motion.img 
                 ref={imgRef}
                 src={currentBird.imageUrl} 
                 alt={currentBird.name} 
+                /* 邏輯保留：電腦版 viewMode */
                 style={{ 
                   transform: viewMode === 'zoom' ? `scale(${zoomScale})` : 'scale(1)',
-                  transformOrigin: 'top center',
-                  touchAction: 'pan-y' // 強制開啟觸控滑動
+                  transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+                  cursor: viewMode === 'zoom' ? 'grab' : 'none',
+                  transformOrigin: 'center center' 
                 }}
-                className={`object-contain rounded-lg shadow-2xl transition-transform ${
-                  viewMode === 'zoom' ? 'w-[95%] md:w-[85%] h-auto' : 'max-w-full max-h-[85vh]'
+                /* 關鍵修正 4：行動端放寬 max-w 到 98% 甚至 100%，
+                   並移除 max-h-screen 限制，讓圖片長度決定捲動範圍。
+                */
+                className={`object-contain rounded-lg shadow-2xl transition-all ${
+                  viewMode === 'zoom' ? 'w-[98%] md:w-[85%] h-auto' : 'w-[98%] md:max-w-[95%] h-auto md:max-h-[85vh]'
                 }`}
               />
-              {/* 墊片：確保能滑到底看到按鈕 */}
-              <div className="h-[150px] w-full flex items-center justify-center">
-                 <div className="w-20 h-1 bg-white/10 rounded-full" />
-              </div>
             </div>
+            
+            {/* 詳細資料按鈕 / RESEARCH：確保它在圖片捲動範圍內，且容易按到 */}
+            {currentBird.discovered && (
+               <div className="w-full flex justify-center py-12 pb-24 md:hidden">
+                 <button 
+                   onClick={() => window.open(`https://www.allaboutbirds.org/guide/${currentBird.name.replace(/ /g, '_')}`, '_blank')}
+                   className="bg-blue-600 text-white font-black px-12 py-5 rounded-2xl text-xl shadow-2xl active:scale-95 transition-all flex items-center gap-3"
+                 >
+                   <BookOpen className="w-6 h-6" />
+                   詳細資料 / RESEARCH
+                 </button>
+               </div>
+            )}
           </div>
-
-          {/* 放大鏡鏡面 (僅電腦) */}
-          {viewMode === 'lens' && isLensVisible && (
-            <div className="hidden md:block pointer-events-none fixed z-[140] border-[8px] border-white/90 shadow-2xl overflow-hidden rounded-full"
-              style={{
-                width: `${LENS_SIZE}px`, height: `${LENS_SIZE}px`,
-                left: `${cursorPos.x - LENS_SIZE / 2}px`, top: `${cursorPos.y - LENS_SIZE / 2}px`,
-                backgroundImage: `url('${currentBird.imageUrl}')`,
-                backgroundSize: imgRef.current ? `${imgRef.current.width * ZOOM_LEVEL}px ${imgRef.current.height * ZOOM_LEVEL}px` : 'auto',
-                backgroundPosition: `-${lensPosition.x * ZOOM_LEVEL - LENS_SIZE / 2}px -${lensPosition.y * ZOOM_LEVEL - LENS_SIZE / 2}px`
-              }}
-            />
-          )}
         </motion.div>
       )}
  
