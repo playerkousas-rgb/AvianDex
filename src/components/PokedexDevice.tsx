@@ -275,7 +275,9 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.8, y: 100, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 120 }}
-            className="w-full max-w-5xl h-[92vh] md:h-[88vh] flex flex-col md:flex-row shadow-2xl relative"
+           className="w-full max-w-5xl flex flex-col md:flex-row shadow-2xl relative bg-[#E3350D] 
+           fixed inset-0 md:static md:h-[88vh] md:rounded-[40px] md:border-[10px] border-gray-800 
+           overflow-y-auto md:overflow-hidden"
           >
             {/* 總開關關閉按鈕 */}
             <button 
@@ -286,7 +288,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             </button>
 
            {/* --- 左半部分：圖鑑顯示面板 --- */}
-<div className="w-full md:w-1/2 h-[55%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]">
+<div className="w-full md:w-1/2 flex-none bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]"
   
   {/* 頂部感應燈區塊：大幅壓縮垂直空間 (p-6 -> p-2) */}
   <div className="flex items-center gap-4 p-2 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
@@ -579,6 +581,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
               className="w-full bg-red-900/60 hover:bg-red-800 text-white font-black py-4 rounded-2xl border-b-4 border-red-950 active:translate-y-1 active:border-b-0 transition-all flex items-center justify-center gap-2"
             >
               <ChevronLeft className="w-4 h-4" /> 返回基礎數據面板
+              <div className="h-32 w-full md:hidden flex-none"></div>
             </button>
           </motion.div>
         )}
