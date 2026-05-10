@@ -307,20 +307,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
           </div>
         </motion.div>
       )}
-
-    {/* 右下角關閉引導 (保持原樣，增加 pointer-events-auto) */}
-    <div className="absolute bottom-10 right-10 z-[140] pointer-events-auto">
-      <button 
-        className="bg-red-600 hover:bg-red-500 text-white p-5 rounded-full shadow-2xl transition-all active:scale-90 flex items-center gap-3"
-        onClick={() => setIsFullscreen(false)}
-      >
-        <span className="font-bold px-2 text-xl">退出觀察</span>
-        <X className="w-8 h-8" />
-      </button>
-    </div>
-  </motion.div>
-)}
-
+ 
       {/* ============================================================
           SECTION 2: 主圖鑑機設備界面
           ============================================================ */}
