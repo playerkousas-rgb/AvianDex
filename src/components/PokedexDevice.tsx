@@ -278,8 +278,8 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 iPad 捲動修正已經包含在內。
 
 TypeScript
-      {/* ============================================================
-          SECTION 2: 主圖鑑機設備界面 (修正標籤閉合與 iPad 捲動版)
+    {/* ============================================================
+          SECTION 2: 主圖鑑機設備界面 (功能全保留 + 標籤修正版)
           ============================================================ */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-0 sm:p-4 perspective-1000">
@@ -288,10 +288,7 @@ TypeScript
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.8, y: 100, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 120 }}
-            /* 修正 iPad 捲動：在行動端取消固定高度，改為 overflow-y-auto */
-            className="w-full max-w-5xl flex flex-col md:flex-row shadow-2xl relative bg-[#E3350D] 
-                       fixed inset-0 md:static md:h-[88vh] md:rounded-[40px] md:border-[10px] border-gray-800 
-                       overflow-y-auto md:overflow-hidden"
+            className="w-full max-w-5xl flex flex-col md:flex-row shadow-2xl relative bg-[#E3350D] fixed inset-0 md:static md:h-[88vh] md:rounded-[40px] md:border-[10px] border-gray-800 overflow-y-auto md:overflow-hidden"
           >
             {/* 總開關關閉按鈕 */}
             <button 
@@ -305,67 +302,66 @@ TypeScript
             <div className="w-full md:w-1/2 flex-none bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 md:shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]">
               {/* 頂部感應燈區塊 */}
               <div className="flex items-center gap-4 p-2 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent pt-14 md:pt-3">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center border-[3px] border-gray-800 shadow-md">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center border-[3px] border-gray-800">
                   <div className="w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#31A5E8] border-[2px] border-white shadow-[0_0_10px_rgba(49,165,232,0.8)] relative overflow-hidden">
                     <div className="absolute top-1 left-1 w-2 h-2 bg-white/50 rounded-full blur-[1px]" />
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-600 border border-black/30 shadow-inner" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400 border border-black/30 shadow-inner" />
-                  <div className="w-3 h-3 rounded-full bg-green-500 border border-black/30 shadow-inner" />
+                  <div className="w-3 h-3 rounded-full bg-red-600 border border-black/30" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-400 border border-black/30" />
+                  <div className="w-3 h-3 rounded-full bg-green-500 border border-black/30" />
                 </div>
               </div>
 
               {/* 螢幕核心區域 */}
-              <div className="flex-1 p-2 md:p-3 flex flex-col items-center justify-center">
+              <div className="flex-1 p-4 md:p-3 flex flex-col items-center justify-center">
                 <div className="w-full aspect-[4/3] md:h-full bg-[#DEDEDE] rounded-t-xl rounded-bl-xl rounded-br-[40px] p-2 md:p-3 border-[5px] border-gray-800 shadow-[inset_0_0_15px_rgba(0,0,0,0.2)] relative flex flex-col overflow-hidden">
                   <div className="flex justify-center gap-4 mb-1">
-                    <div className="w-2 h-2 rounded-full bg-red-600 border border-red-900 animate-pulse" />
-                    <div className="w-2 h-2 rounded-full bg-red-600 border border-red-900" />
+                    <div className="w-2 h-2 rounded-full bg-red-600 animate-pulse" />
+                    <div className="w-2 h-2 rounded-full bg-red-600" />
                   </div>
                   <div 
-                    className="flex-1 bg-[#1a1a1a] rounded-lg border-[4px] border-gray-700 relative overflow-hidden flex items-center justify-center cursor-zoom-in group shadow-2xl"
+                    className="flex-1 bg-[#1a1a1a] rounded-lg border-[4px] border-gray-700 relative overflow-hidden flex items-center justify-center cursor-zoom-in group"
                     onClick={() => setIsFullscreen(true)}
                   >
                     <motion.img 
                       key={currentBird.id}
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
                       src={currentBird.imageUrl} 
-                      className="w-full h-full object-contain z-10 p-1"
+                      className="w-full h-full object-contain p-2"
                     />
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* --- 中間摺疊轉軸 --- */}
-            <div className="hidden md:flex w-16 bg-[#C02A0A] border-y-[10px] border-gray-800 flex-col justify-around py-20 shadow-[inset_0_0_30px_rgba(0,0,0,0.5)] z-10 relative">
+            {/* --- 中間摺疊轉軸 (iPad版自動隱藏) --- */}
+            <div className="hidden md:flex w-16 bg-[#C02A0A] border-y-[10px] border-gray-800 flex-col justify-around py-20 z-10 relative">
               {[...Array(6)].map((_, i) => <div key={i} className="w-full h-1 bg-black/20" />)}
             </div>
 
             {/* --- 右半部分：控制與資料面板 --- */}
-            <div className="w-full md:w-1/2 flex-1 min-h-max bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 md:shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] relative">
+            <div className="w-full md:w-1/2 flex-1 bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 relative">
               <AnimatePresence mode="wait">
                 {!showDetails ? (
-                  /* --- Page 1: 基礎數據 --- */
-                  <motion.div key="data-page" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-4">
-                    <div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-3 flex items-center justify-center shadow-inner">
-                      <span className="text-green-400 font-mono text-2xl md:text-4xl font-black tracking-[0.1em]">ID-{currentBird.id}</span>
+                  <motion.div key="p1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} className="flex flex-col gap-4">
+                    <div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-3 flex items-center justify-center">
+                      <span className="text-green-400 font-mono text-2xl md:text-4xl font-black">ID-{currentBird.id}</span>
                     </div>
                     <div className="bg-[#1a1a1a] border-[4px] border-gray-600 rounded-xl p-4 flex items-center justify-center min-h-[80px]">
-                      <span className={`text-green-400 font-bold text-center ${currentBird.name.length > 5 ? 'text-xl' : 'text-3xl'}`}>{currentBird.name}</span>
+                      <span className={`text-green-400 font-bold text-center leading-tight ${currentBird.name.length > 5 ? 'text-xl' : 'text-3xl'}`}>{currentBird.name}</span>
                     </div>
 
-                    {/* 搜尋與跳轉 (恢復你原本的功能) */}
+                    {/* 搜尋功能區 */}
                     <div className="bg-red-900/30 p-5 rounded-[30px] border-2 border-red-900/20 space-y-4">
                       <form onSubmit={handleSearchSubmit} className="relative">
-                        <input type="text" placeholder="搜尋名稱或編號..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-[#DEDEDE] border-[5px] border-gray-800 rounded-xl py-3 px-4 font-black text-gray-900 outline-none" />
+                        <input type="text" placeholder="搜尋..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-[#DEDEDE] border-[5px] border-gray-800 rounded-xl py-3 px-4 font-black" />
                         <button type="submit" className="absolute right-4 top-1/2 -translate-y-1/2 bg-gray-800 p-2 rounded-lg"><Search className="w-5 h-5 text-white" /></button>
                       </form>
                       <div className="relative">
-                        <select onChange={(e) => jumpToBird(e.target.value)} value={currentBird.id} className="w-full appearance-none bg-yellow-400 border-[5px] border-gray-800 rounded-xl py-3 px-4 font-black text-gray-900 cursor-pointer">
+                        <select onChange={(e) => jumpToBird(e.target.value)} value={currentBird.id} className="w-full appearance-none bg-yellow-400 border-[5px] border-gray-800 rounded-xl py-3 px-4 font-black">
                           {birds.map(bird => <option key={bird.id} value={bird.id}>{bird.id} ➟ {bird.name}</option>)}
                         </select>
                         <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-900 pointer-events-none" />
@@ -373,22 +369,23 @@ TypeScript
                     </div>
 
                     <div className="flex justify-between items-center bg-black/20 p-2 rounded-[20px]">
-                      <button onClick={handlePrev} disabled={currentIndex === 0} className="w-14 h-14 rounded-full border-[4px] border-gray-800 bg-[#31A5E8] flex items-center justify-center"><ChevronLeft className="w-8 h-8 text-white" /></button>
-                      <button onClick={handleNext} disabled={currentIndex === birds.length - 1} className="w-14 h-14 rounded-full border-[4px] border-gray-800 bg-[#31A5E8] flex items-center justify-center"><ChevronRight className="w-8 h-8 text-white" /></button>
+                      <button onClick={handlePrev} className="w-14 h-14 rounded-full border-[4px] border-gray-800 bg-[#31A5E8] flex items-center justify-center"><ChevronLeft className="w-8 h-8 text-white" /></button>
+                      <button onClick={handleNext} className="w-14 h-14 rounded-full border-[4px] border-gray-800 bg-[#31A5E8] flex items-center justify-center"><ChevronRight className="w-8 h-8 text-white" /></button>
                     </div>
 
-                    <button onClick={() => setShowDetails(true)} className="w-full bg-blue-600 text-white font-black py-4 rounded-xl border-[4px] border-blue-800 shadow-[0_4px_0_rgba(30,58,138,1)] active:translate-y-1">詳細資料 / RESEARCH</button>
-                    
+                    <button onClick={() => setShowDetails(true)} className="w-full bg-blue-600 text-white font-black py-4 rounded-xl border-[4px] border-blue-800 shadow-[0_4px_0_rgba(30,58,138,1)] active:translate-y-1 transition-all">
+                      詳細資料 / RESEARCH
+                    </button>
+
                     <div className="flex flex-col gap-1 text-white/90 text-[13px] font-bold">
                       <p>1. 本機中文名稱由 AI 輔助生成。</p>
                       <p>2. 建議參考右側校對過的資訊。</p>
+                      <p className="text-amber-200/80 text-[11px] italic mt-1">* 如需獲取權威數據，請點擊下方科研終端按鈕。</p>
                     </div>
                   </motion.div>
                 ) : (
-                  /* --- Page 2: 六宮格 (恢復原本的連結與圖標) --- */
-                  <motion.div key="details-page" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 20 }} className="flex flex-col gap-4">
+                  <motion.div key="p2" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 20 }} className="flex flex-col gap-4">
                     <div className="grid grid-cols-2 gap-3">
-                      {/* 六宮格按鈕保持原樣 */}
                       <button onClick={() => window.open(`https://www.allaboutbirds.org/guide/${currentBird.name}`, '_blank')} className="bg-blue-900/40 p-4 rounded-xl border-b-4 border-blue-950 flex flex-col items-center gap-2">
                         <BookOpen className="text-white" /> <span className="text-white text-xs font-black">百科</span>
                       </button>
@@ -408,22 +405,18 @@ TypeScript
                         <Download className="text-white" /> <span className="text-white text-xs font-black">裝備</span>
                       </button>
                     </div>
-                    <button onClick={() => setShowDetails(false)} className="w-full bg-red-900/60 text-white font-black py-4 rounded-xl">返回基礎數據</button>
+                    <button onClick={() => setShowDetails(false)} className="w-full bg-red-900/60 text-white font-black py-4 rounded-xl flex items-center justify-center gap-2">
+                      <ChevronLeft className="w-4 h-4" /> 返回基礎數據
+                    </button>
                   </motion.div>
                 )}
               </AnimatePresence>
-              {/* 關鍵墊片：防止 iPad 底部遮擋 */}
+              {/* 防止遮擋墊片 */}
               <div className="h-32 w-full md:hidden flex-none"></div>
             </div>
           </motion.div>
         </div>
       )}
-      </AnimatePresence>
-      <div className="absolute bottom-6 right-6 w-10 h-10 rounded-full bg-red-950/20 border-4 border-red-900/10 pointer-events-none" />
-    </div>
-  </motion.div>
-</div>
- )}
 </AnimatePresence>
 );
 };
