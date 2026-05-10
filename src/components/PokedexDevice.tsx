@@ -169,23 +169,23 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 
   return (
     <AnimatePresence>
-    {/* ============================================================
-          SECTION 1: 全螢幕教學觀察模式 (功能全保留，僅優化顯示)
+  {/* ============================================================
+          SECTION 1: 全螢幕教學觀察模式 (行動端精簡滾動版)
           ============================================================ */}
       {isFullscreen && (
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          /* 邏輯保留：電腦版 lens 模式隱藏游標 */
+          /* 僅電腦版在鏡面模式下隱藏游標 */
           className={`fixed inset-0 z-[100] bg-black/98 flex items-center justify-center overflow-hidden ${viewMode === 'lens' ? 'md:cursor-none' : 'cursor-default'}`}
           onMouseMove={viewMode === 'lens' ? handleMagnifierMouseMove : undefined}
           onClick={() => setIsFullscreen(false)}
         >
-          {/* --- 1. 頂部控制欄：保留所有資訊，僅手機版縮小 --- */}
+          {/* --- 1. 頂部導覽：手機版僅保留關閉與名字，移除雜物 --- */}
           <div className="absolute top-0 left-0 w-full p-4 md:p-10 flex justify-between items-center z-[150] pointer-events-none">
-            {/* 電腦版大標題：隱藏在手機版以騰出空間 */}
-            <div className="hidden md:flex bg-black/60 backdrop-blur-md border border-white/20 p-6 rounded-2xl items-center gap-6 shadow-2xl scale-100 origin-top-left pointer-events-auto">
+            {/* 電腦版標題區 */}
+            <div className="hidden md:flex bg-black/60 backdrop-blur-md border border-white/20 p-6 rounded-2xl items-center gap-6 shadow-2xl origin-top-left pointer-events-auto">
               <div className="bg-yellow-400 p-3 rounded-xl">
                 <ZoomIn className="w-10 h-10 text-black animate-pulse" />
               </div>
@@ -195,66 +195,70 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
               </div>
             </div>
 
-            {/* 行動端標題（小）：確保手機版也能看到名字 */}
-            <div className="md:hidden bg-black/60 backdrop-blur-md p-3 rounded-xl border border-white/10 pointer-events-auto">
-              <span className="text-yellow-400 font-bold">【{currentBird.id}】{currentBird.name}</span>
+            {/* 行動端標題：精簡化 */}
+            <div className="md:hidden bg-black/40 backdrop-blur-md p-2 px-4 rounded-full border border-white/10 pointer-events-auto">
+              <span className="text-yellow-400 font-bold text-sm">【{currentBird.id}】{currentBird.name}</span>
             </div>
 
-            {/* 必備退出鈕：確保任何裝置都能關閉 */}
+            {/* 右上角關閉鈕：iPad/手機主要關閉途徑 */}
             <button 
               onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); }}
-              className="pointer-events-auto bg-white/10 hover:bg-red-500 backdrop-blur-xl border border-white/20 text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all active:scale-90"
+              className="pointer-events-auto bg-white/10 hover:bg-red-500 backdrop-blur-xl border border-white/20 text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all active:scale-90 shadow-2xl"
             >
               <X className="w-8 h-8 md:w-10 md:h-10" />
             </button>
           </div>
 
-          {/* --- 2. 模式切換器：功能完整保留 --- */}
+          {/* --- 2. 模式切換器：僅在電腦版顯示，行動端完全移除 --- */}
           <div 
-            className="absolute top-20 md:top-10 left-1/2 -translate-x-1/2 z-[130] flex flex-col items-center gap-4 pointer-events-auto"
+            className="absolute top-10 left-1/2 -translate-x-1/2 z-[130] hidden md:flex flex-col items-center gap-4 pointer-events-auto"
             onClick={(e) => e.stopPropagation()} 
           >
-            {/* 這裡我們讓手機版也能看到模式切換，但縮小一點 */}
-            <div className="bg-gray-900/80 backdrop-blur-xl border border-white/20 p-1 rounded-xl md:rounded-2xl flex gap-1 shadow-2xl scale-90 md:scale-100">
+            <div className="bg-gray-900/80 backdrop-blur-xl border border-white/20 p-1.5 rounded-2xl flex gap-1 shadow-2xl">
               <button 
                 onClick={() => setViewMode('lens')}
-                className={`px-4 md:px-6 py-2 rounded-lg md:rounded-xl font-bold transition-all text-sm md:text-base ${viewMode === 'lens' ? 'bg-yellow-400 text-black' : 'text-white hover:bg-white/10'}`}
+                className={`px-6 py-2 rounded-xl font-bold transition-all ${viewMode === 'lens' ? 'bg-yellow-400 text-black' : 'text-white hover:bg-white/10'}`}
               >🔍 放大鏡</button>
               <button 
                 onClick={() => { setViewMode('zoom'); if(zoomScale === 1) setZoomScale(1.5); }}
-                className={`px-4 md:px-6 py-2 rounded-lg md:rounded-xl font-bold transition-all text-sm md:text-base ${viewMode === 'zoom' ? 'bg-yellow-400 text-black' : 'text-white hover:bg-white/10'}`}
+                className={`px-6 py-2 rounded-xl font-bold transition-all ${viewMode === 'zoom' ? 'bg-yellow-400 text-black' : 'text-white hover:bg-white/10'}`}
               >🖼️ 縮放模式</button>
             </div>
           </div>
 
-          {/* --- 3. 圖片主體：加入滾動功能 --- */}
+          {/* --- 3. 圖片主體與捲動區域 (解決拉BAR問題) --- */}
           <div 
-            className={`relative flex w-full h-full p-2 md:p-10 transition-all ${
-              viewMode === 'zoom' 
-                ? 'overflow-y-auto items-start justify-center pt-32 pb-20' 
-                : 'items-center justify-center overflow-hidden'         
+            /* 關鍵優化：
+              1. overflow-y-scroll 強制出現捲動軌道 
+              2. touch-pan-y 確保手勢順暢
+              3. scrollbar 為自定義樣式類名 (需確保 index.css 有相關設定)
+            */
+            className={`relative w-full h-full p-2 md:p-10 transition-all overflow-x-hidden overflow-y-scroll touch-pan-y z-[120] ${
+              viewMode === 'zoom' ? 'pt-24 pb-32' : 'flex items-center justify-center'
             }`}
             onClick={(e) => e.stopPropagation()}
           >
-            <motion.img 
-              ref={imgRef}
-              src={currentBird.imageUrl} 
-              alt={currentBird.name} 
-              style={{ 
-                transform: viewMode === 'zoom' ? `scale(${zoomScale})` : 'scale(1)',
-                transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
-                cursor: viewMode === 'zoom' ? 'grab' : 'none',
-                transformOrigin: 'top center' // 關鍵：讓放大後的內容向下延伸，方便捲動
-              }}
-              className={`object-contain rounded-lg shadow-2xl ${
-                viewMode === 'zoom' ? 'w-[98%] md:w-[85%] h-auto' : 'max-w-[95%] max-h-[90%]'
-              }`}
-            />
+            <div className="flex flex-col items-center min-h-full w-full">
+              <motion.img 
+                ref={imgRef}
+                src={currentBird.imageUrl} 
+                alt={currentBird.name} 
+                style={{ 
+                  transform: viewMode === 'zoom' ? `scale(${zoomScale})` : 'scale(1)',
+                  transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+                  cursor: viewMode === 'zoom' ? 'grab' : 'none',
+                  transformOrigin: 'top center' 
+                }}
+                className={`object-contain rounded-lg shadow-2xl ${
+                  viewMode === 'zoom' ? 'w-[98%] md:w-[85%] h-auto' : 'max-w-[95%] max-h-[90%]'
+                }`}
+              />
+            </div>
             
-            {/* 放大鏡鏡面（僅電腦版顯示，行動端自動失效以優化體驗） */}
+            {/* 放大鏡鏡面 (僅電腦版顯示) */}
             {viewMode === 'lens' && isLensVisible && (
               <div 
-                className="pointer-events-none fixed z-[120] border-[8px] border-white/90 shadow-2xl overflow-hidden rounded-full hidden md:block"
+                className="pointer-events-none fixed z-[140] border-[8px] border-white/90 shadow-2xl overflow-hidden rounded-full hidden md:block"
                 style={{
                   width: `${LENS_SIZE}px`, height: `${LENS_SIZE}px`,
                   left: `${cursorPos.x - LENS_SIZE / 2}px`, top: `${cursorPos.y - LENS_SIZE / 2}px`,
@@ -267,7 +271,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             )}
           </div>
 
-          {/* --- 4. 電腦版專屬退出鈕 --- */}
+          {/* --- 4. 底部退出鈕 (電腦版專屬) --- */}
           <div className="absolute bottom-10 right-10 z-[140] pointer-events-auto hidden md:block">
             <button 
               className="bg-red-600 hover:bg-red-500 text-white p-5 rounded-full shadow-2xl transition-all active:scale-90 flex items-center gap-3"
