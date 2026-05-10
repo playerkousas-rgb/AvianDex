@@ -423,8 +423,7 @@ TypeScript
     </div>
   </motion.div>
 </div>
-   <div className="h-32 w-full md:hidden flex-none"></div>
-)}
+ )}
 </AnimatePresence>
 );
 };
