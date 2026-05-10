@@ -70,18 +70,19 @@ export const BirdModal: React.FC<BirdModalProps> = ({ bird, isOpen, onClose, onN
               </button>
             </div>
 
-            {/* Content Area: 徹底解放捲動限制 */}
+          {/* Content Area - 強制捲動版 */}
             <div 
-              /* 關鍵修正 3：使用 flex-1 配合 min-h-0。
-                 關鍵修正 4：加入 WebkitOverflowScrolling 並移除所有會擋住手勢的層級。
-              */
-              className="flex-1 overflow-y-auto bg-white touch-pan-y min-h-0"
+              className="flex-1 overflow-y-scroll bg-white touch-pan-y"
               style={{ 
                 WebkitOverflowScrolling: 'touch',
-                overscrollBehavior: 'contain' // 防止捲動到底部時觸發背景頁面的捲動
+                maxHeight: 'calc(90vh - 140px)', // 強制扣除頭尾高度，擠壓出捲動空間
               }}
             >
-              <div className="p-6 md:p-8 flex flex-col md:flex-row gap-8">
+              {/* 關鍵修正：
+                我們在內部塞一個 padding 非常大的容器，
+                並在底部塞一個「透明的緩衝區」，確保 iPad 感覺到有「長度」
+              */}
+              <div className="p-6 md:p-8 flex flex-col md:flex-row gap-8 min-h-[101%]">
                 
                 {/* Left Column - Image */}
                 <div className="w-full md:w-1/2 flex-none">
@@ -100,9 +101,7 @@ export const BirdModal: React.FC<BirdModalProps> = ({ bird, isOpen, onClose, onN
                     {bird.discovered ? bird.description : 'This species has not been documented yet.'}
                   </p>
 
-                  {/* 藍色資料卡 */}
                   <div className="bg-[#30a7d7] rounded-2xl p-6 text-white grid grid-cols-2 gap-y-6 gap-x-4 shadow-lg">
-                    {/* ... 這裡保留你的 Height, Weight, Category 等 ... */}
                     <div>
                       <h4 className="text-white/80 text-sm font-bold mb-1 uppercase tracking-wider">Height</h4>
                       <p className="text-2xl font-black">{bird.height}</p>
@@ -119,10 +118,6 @@ export const BirdModal: React.FC<BirdModalProps> = ({ bird, isOpen, onClose, onN
                       <h4 className="text-white/80 text-sm font-bold mb-1 uppercase tracking-wider">Rarity</h4>
                       <p className="text-xl font-bold">{bird.rarity}</p>
                     </div>
-                    <div className="col-span-2 pt-2 border-t border-white/20">
-                      <h4 className="text-white/80 text-sm font-bold mb-1 uppercase tracking-wider">Scientific Name</h4>
-                      <p className="text-xl font-bold italic">{bird.scientificName}</p>
-                    </div>
                   </div>
 
                   {/* Habitat & Diet */}
@@ -137,11 +132,14 @@ export const BirdModal: React.FC<BirdModalProps> = ({ bird, isOpen, onClose, onN
                     </div>
                   </div>
 
-                  {/* 關鍵修正 5：超大墊片。
-                      在遊戲機 UI 中，按鈕往往被壓在最下面。我們給它 80px 的空間，
-                      確保手指能把按鈕推到導覽列上方。
+                  {/* 【最強制手段】：
+                    如果還是滑不到，我們在底部加入一個超大的透明區塊，
+                    並在這裡放一個提示圖標，讓用戶知道這裡是可以滑的。
                   */}
-                  <div className="h-24 md:hidden" />
+                  <div className="h-60 w-full flex flex-col items-center justify-start pt-10 md:hidden">
+                    <div className="w-1 h-12 bg-gray-200 rounded-full animate-bounce mb-2" />
+                    <span className="text-gray-400 text-xs font-bold uppercase tracking-widest italic">Scroll to bottom</span>
+                  </div>
                 </div>
               </div>
             </div>
