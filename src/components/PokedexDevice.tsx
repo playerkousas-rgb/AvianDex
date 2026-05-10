@@ -574,7 +574,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                 </p>
               </div>
             </div> {/* <-- 剛才漏掉的這個容器關閉標籤 */}
-            <div className="h-32 w-full md:hidden flex-none"></div>
+           
 
             {/* 返回按鈕 */}
             <button 
@@ -590,6 +590,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
     </div>
   </motion.div>
 </div>
+   <div className="h-32 w-full md:hidden flex-none"></div>
 )}
 </AnimatePresence>
 );
