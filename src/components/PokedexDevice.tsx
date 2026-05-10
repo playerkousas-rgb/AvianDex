@@ -369,8 +369,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             </div>
 
                  {/* --- 右半部分：控制與資料面板 --- */}
-            <div className="w-full md:w-1/2 h-2/5 md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] relative overflow-hidden">
-              
+          <div className="w-full md:w-1/2 min-h-[60%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] relative overflow-y-auto">
               <AnimatePresence mode="wait">
                 {!showDetails ? (
                   /* --- Page 1: 基礎數據 --- */
