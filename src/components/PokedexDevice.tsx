@@ -10,6 +10,7 @@ import {
   BookOpen, 
   Maximize2, 
   ZoomIn, 
+  Mic,      // 加入這一個
   MapPin,     // 觀察雷達
   Camera,     // 視覺圖庫
   PlayCircle, // 影片中心
@@ -291,13 +292,14 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   {/* 頂部感應燈區塊：大幅壓縮垂直空間 (p-6 -> p-2) */}
   {/* --- 這裡是我們要新增的行動端專用 HUD 按鈕 --- */}
 <div className="md:hidden absolute top-20 left-4 right-4 flex justify-between z-30 pointer-events-none">
-  {/* 錄音按鈕 (左) */}
-  <button 
-    onClick={() => alert('啟動錄音感測器...')}
-    className="pointer-events-auto w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border-2 border-cyan-400/50 flex items-center justify-center text-cyan-400 active:scale-95 transition-transform"
-  >
-    <Volume2 className="w-6 h-6" />
-  </button>
+ {/* 左感測器：環境麥克風 (咪) */}
+<button 
+  onClick={(e) => { e.stopPropagation(); alert('正在偵測周邊鳥鳴聲...'); }}
+  className="pointer-events-auto w-10 h-10 rounded-full bg-cyan-500/20 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-400 active:bg-cyan-400 active:text-black active:shadow-[0_0_15px_#22d3ee] transition-all"
+>
+  {/* 把 Volume2 換成 Mic */}
+  <Mic className="w-5 h-5" /> 
+</button>
 
   {/* 拍照按鈕 (右) */}
   <button 
