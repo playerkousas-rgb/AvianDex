@@ -289,6 +289,24 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 <div className="w-full md:w-1/2 min-h-[50%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]">
   
   {/* 頂部感應燈區塊：大幅壓縮垂直空間 (p-6 -> p-2) */}
+  {/* --- 這裡是我們要新增的行動端專用 HUD 按鈕 --- */}
+<div className="md:hidden absolute top-20 left-4 right-4 flex justify-between z-30 pointer-events-none">
+  {/* 錄音按鈕 (左) */}
+  <button 
+    onClick={() => alert('啟動錄音感測器...')}
+    className="pointer-events-auto w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border-2 border-cyan-400/50 flex items-center justify-center text-cyan-400 active:scale-95 transition-transform"
+  >
+    <Volume2 className="w-6 h-6" />
+  </button>
+
+  {/* 拍照按鈕 (右) */}
+  <button 
+    onClick={() => alert('啟動視覺掃描器...')}
+    className="pointer-events-auto w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border-2 border-white/50 flex items-center justify-center text-white active:scale-95 transition-transform"
+  >
+    <Camera className="w-6 h-6" />
+  </button>
+</div>
   <div className="flex items-center gap-4 p-2 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
     {/* 大號藍色主感應燈：從 w-24 縮小到 w-12 */}
     <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center border-[3px] border-gray-800 shadow-md">
