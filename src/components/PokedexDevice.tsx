@@ -323,28 +323,46 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
       </div>
     </div>
 
-    {/* --- 電腦版：音訊分析上傳入口 --- */}
-    <div className="hidden md:flex items-center gap-3 bg-black/20 px-3 py-1.5 rounded-lg border border-white/10 hover:bg-black/40 transition-colors group">
-      <div className="text-right">
-        <p className="text-[8px] text-white/40 font-mono leading-none uppercase">Analysis Engine</p>
-        <p className="text-[10px] text-cyan-400 font-black tracking-tighter uppercase group-hover:text-cyan-300">Acoustic Input</p>
-      </div>
-      <label className="cursor-pointer">
-        <div className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center border border-cyan-500/40 group-hover:bg-cyan-500 group-hover:text-black transition-all">
-          <Mic className="w-4 h-4 text-cyan-400 group-hover:text-black" />
-        </div>
-        <input 
-          type="file" 
-          accept="audio/*" 
-          className="hidden" 
-          onChange={(e) => {
-            const file = e.target.files?.[0];
-            if (file && onAnalyze) onAnalyze(file);
-          }}
-        />
-      </label>
-    </div>
+    {/* --- 電腦版：音訊分析上傳入口 (偵錯版) --- */}
+<div className="hidden md:flex items-center gap-3 bg-black/20 px-3 py-1.5 rounded-lg border border-white/10 hover:bg-black/40 transition-colors group relative z-50">
+  <div className="text-right">
+    <p className="text-[8px] text-white/40 font-mono leading-none uppercase">Analysis Engine</p>
+    <p className="text-[10px] text-cyan-400 font-black tracking-tighter uppercase group-hover:text-cyan-300">Acoustic Input</p>
   </div>
+  
+  {/* 使用 htmlFor 強制關聯 */}
+  <label htmlFor="bird-audio-upload" className="cursor-pointer">
+    <div className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center border border-cyan-500/40 group-hover:bg-cyan-500 group-hover:text-black transition-all">
+      <Mic className="w-4 h-4 text-cyan-400 group-hover:text-black" />
+    </div>
+  </label>
+
+  <input 
+    id="bird-audio-upload"
+    type="file" 
+    accept="audio/*" 
+    className="hidden" 
+    onChange={(e) => {
+      console.log("📍 [Step 1] Input 偵測到變更 (onChange)");
+      const file = e.target.files?.[0];
+      
+      if (!file) {
+        console.log("❌ [Step 2] 沒有選取任何檔案");
+        return;
+      }
+      
+      console.log("✅ [Step 2] 已選取檔案:", file.name);
+
+      if (typeof onAnalyze === 'function') {
+        console.log("🚀 [Step 3] 正在呼叫傳入的 onAnalyze 函數...");
+        onAnalyze(file);
+      } else {
+        console.error("❌ [Step 3] 錯誤：onAnalyze 不是一個函數！目前的內容是:", onAnalyze);
+        alert("系統連結失效：onAnalyze 未正確傳入");
+      }
+    }}
+  />
+</div>
 
   {/* 螢幕核心區域 (保持不變) */}
   <div className="flex-1 p-2 md:p-3 flex flex-col items-center justify-center overflow-hidden">
