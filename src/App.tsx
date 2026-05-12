@@ -10,30 +10,46 @@ function App() {
   const [isOpened, setIsOpened] = useState(false);
 
   // --- 新增：音訊分析與自動跳轉邏輯 ---
-  const analyzeAudio = async (file: File | Blob) => {
-    console.log("🚀 [App] 接收到音訊檔案，準備開始分析...", file);
-    
-    // 這裡目前是「模擬模式」，確認流程完全打通
-    // 未來我們會將此處換成真正的 API 請求
-    setTimeout(() => {
-      // 模擬辨識結果：你可以改這兩個字來測試不同的鳥
-      const mockResult = "小葵花鳳頭鸚鵡"; 
-      console.log("✅ [App] 分析完成，辨識結果：", mockResult);
+ const analyzeAudio = async (file: File | Blob) => {
+    console.log("🚀 [App] 正在上傳音訊至 Hugging Face 分析...", file);
 
-      // 在現有的鳥類清單中尋找匹配項 (支援中文名或英文名部分匹配)
-      const foundIndex = birds.findIndex(b => 
-        b.name.includes(mockResult) || 
-        (b.englishName && b.englishName.includes(mockResult))
+    try {
+      const response = await fetch(
+        "https://api-inference.huggingface.co/models/Niroj/BirdNET-Pytorch", 
+        {
+          headers: { 
+            Authorization: "Bearer hf_xxxxxxxxxxxx", // 👈 這裡填你的 Hugging Face Token
+            "Content-Type": "application/octet-stream"
+          },
+          method: "POST",
+          body: file,
+        }
       );
 
-      if (foundIndex !== -1) {
-        console.log("🎯 [App] 找到匹配鳥種，自動切換至索引：", foundIndex);
-        setSelectedIndex(foundIndex);
-      } else {
-        console.warn("⚠️ [App] 辨識完成但圖鑑資料庫中找不到名為 " + mockResult + " 的鳥類");
-        alert("辨識結果為：" + mockResult + "，但圖鑑中尚無此資料。");
+      const result = await response.json();
+      console.log("✅ [API 回傳結果]", result);
+
+      // BirdNET 通常回傳陣列，第一筆 [0] 是機率最高的
+      if (Array.isArray(result) && result.length > 0) {
+        const topResult = result[0].label; // 例如 "Spotted Dove"
+        console.log("🎯 AI 辨識結果：", topResult);
+
+        // 在圖鑑中尋找 (支援英文名或中文名匹配)
+        const foundIndex = birds.findIndex(b => 
+          (b as any).englishName === topResult || b.name === topResult
+        );
+
+        if (foundIndex !== -1) {
+          console.log("🎯 找到匹配，自動跳轉至索引：", foundIndex);
+          setSelectedIndex(foundIndex);
+        } else {
+          alert(`辨識成功：${topResult}，但你的 JSON 裡沒有這隻鳥。`);
+        }
       }
-    }, 1500); 
+    } catch (err) {
+      console.error("❌ API 請求失敗:", err);
+      alert("分析失敗，請檢查網路或 API Token。");
+    }
   };
 
   // 修正：當圖鑑打開時，鎖定底層捲動
