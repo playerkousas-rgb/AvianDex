@@ -26,6 +26,8 @@ interface PokedexDeviceProps {
   initialIndex: number;
   isOpen: boolean;
   onClose: () => void;
+  // 加上這一行，告訴 TS 這個組件可以接收辨識函數
+  onAnalyze?: (file: File | Blob) => void; 
 }
 
 export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ 
