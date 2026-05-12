@@ -289,10 +289,10 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
               <X className="w-8 h-8" />
             </button>
 
-          {/* --- 左半部分：圖鑑顯示面板 --- */}
+          {/* --- 左半部分：圖鑑顯示面板 (修正版) --- */}
 <div className="w-full md:w-1/2 min-h-[50%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]">
   
-  {/* 行動端專用 HUD (保持不變) */}
+  {/* 行動端專用 HUD */}
   <div className="md:hidden absolute top-20 left-4 right-4 flex justify-between z-30 pointer-events-none">
     <button 
       onClick={(e) => { e.stopPropagation(); alert('正在啟動行動端錄音...'); }}
@@ -305,90 +305,14 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
     </button>
   </div>
 
-  {/* 頂部感應燈區 + 電腦版上傳中心 (新增功能) */}
-  <div className="flex items-center justify-between p-2 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
-    <div className="flex items-center gap-4">
-      {/* 大號藍色主感應燈 */}
-      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center border-[3px] border-gray-800 shadow-md">
-        <div className="w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#31A5E8] border-[2px] border-white shadow-[0_0_10px_rgba(49,165,232,0.8)] relative overflow-hidden">
-          <div className="absolute top-1 left-1 w-2 h-2 bg-white/50 rounded-full blur-[1px]" />
-        </div>
-      </div>
-      
-      {/* 三色狀態燈 */}
-      <div className="flex gap-2">
-        <div className="w-3 h-3 rounded-full bg-red-600 border border-black/30 shadow-inner" />
-        <div className="w-3 h-3 rounded-full bg-yellow-400 border border-black/30 shadow-inner" />
-        <div className="w-3 h-3 rounded-full bg-green-500 border border-black/30 shadow-inner" />
-      </div>
-    </div>
-
-    {/* --- 電腦版：音訊分析上傳入口 (偵錯版) --- */}
-<div className="hidden md:flex items-center gap-3 bg-black/20 px-3 py-1.5 rounded-lg border border-white/10 hover:bg-black/40 transition-colors group relative z-50">
-  <div className="text-right">
-    <p className="text-[8px] text-white/40 font-mono leading-none uppercase">Analysis Engine</p>
-    <p className="text-[10px] text-cyan-400 font-black tracking-tighter uppercase group-hover:text-cyan-300">Acoustic Input</p>
-  </div>
-  
-  {/* 使用 htmlFor 強制關聯 */}
-  <label htmlFor="bird-audio-upload" className="cursor-pointer">
-    <div className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center border border-cyan-500/40 group-hover:bg-cyan-500 group-hover:text-black transition-all">
-      <Mic className="w-4 h-4 text-cyan-400 group-hover:text-black" />
-    </div>
-  </label>
-
-  <input 
-    id="bird-audio-upload"
-    type="file" 
-    accept="audio/*" 
-    className="hidden" 
-    onChange={(e) => {
-      console.log("📍 [Step 1] Input 偵測到變更 (onChange)");
-      const file = e.target.files?.[0];
-      
-      if (!file) {
-        console.log("❌ [Step 2] 沒有選取任何檔案");
-        return;
-      }
-      
-      console.log("✅ [Step 2] 已選取檔案:", file.name);
-
-      if (typeof onAnalyze === 'function') {
-        console.log("🚀 [Step 3] 正在呼叫傳入的 onAnalyze 函數...");
-        onAnalyze(file);
-      } else {
-        console.error("❌ [Step 3] 錯誤：onAnalyze 不是一個函數！目前的內容是:", onAnalyze);
-        alert("系統連結失效：onAnalyze 未正確傳入");
-      }
-    }}
-  />
-</div>{/* --- 左半部分：圖鑑顯示面板 --- */}
-<div className="w-full md:w-1/2 min-h-[50%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]">
-  
-  {/* 行動端專用 HUD */}
-  <div className="md:hidden absolute top-20 left-4 right-4 flex justify-between z-30 pointer-events-none">
-    <button 
-      onClick={(e) => { e.stopPropagation(); alert('正在偵測周邊鳥鳴聲...'); }}
-      className="pointer-events-auto w-10 h-10 rounded-full bg-cyan-500/20 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-400 active:bg-cyan-400 transition-all"
-    >
-      <Mic className="w-5 h-5" /> 
-    </button>
-    <button className="pointer-events-auto w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border-2 border-white/50 flex items-center justify-center text-white">
-      <Camera className="w-6 h-6" />
-    </button>
-  </div>
-
   {/* 頂部感應燈區塊 + 電腦版上傳中心 */}
   <div className="flex items-center justify-between p-2 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
     <div className="flex items-center gap-4">
-      {/* 大號藍色主感應燈 */}
       <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center border-[3px] border-gray-800 shadow-md">
         <div className="w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#31A5E8] border-[2px] border-white shadow-[0_0_10px_rgba(49,165,232,0.8)] relative overflow-hidden">
           <div className="absolute top-1 left-1 w-2 h-2 bg-white/50 rounded-full blur-[1px]" />
         </div>
       </div>
-      
-      {/* 三色狀態燈 */}
       <div className="flex gap-2">
         <div className="w-3 h-3 rounded-full bg-red-600 border border-black/30 shadow-inner" />
         <div className="w-3 h-3 rounded-full bg-yellow-400 border border-black/30 shadow-inner" />
@@ -396,33 +320,26 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
       </div>
     </div>
 
-    {/* --- 電腦版：音訊分析上傳入口 (偵錯版) --- */}
-    <div className="hidden md:flex items-center gap-3 bg-black/20 px-3 py-1.5 rounded-lg border border-white/10 hover:bg-black/40 transition-colors group relative z-50">
+    {/* 電腦版上傳按鈕 */}
+    <div className="hidden md:flex items-center gap-3 bg-black/20 px-3 py-1.5 rounded-lg border border-white/10 hover:bg-black/40 group relative z-50">
       <div className="text-right">
-        <p className="text-[8px] text-white/40 font-mono leading-none uppercase">Analysis Engine</p>
-        <p className="text-[10px] text-cyan-400 font-black tracking-tighter uppercase group-hover:text-cyan-300">Acoustic Input</p>
+        <p className="text-[8px] text-white/40 font-mono uppercase">Analysis Engine</p>
+        <p className="text-[10px] text-cyan-400 font-black uppercase">Acoustic Input</p>
       </div>
-      
       <label htmlFor="bird-audio-upload" className="cursor-pointer">
         <div className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center border border-cyan-500/40 group-hover:bg-cyan-500 group-hover:text-black transition-all">
-          <Mic className="w-4 h-4 text-cyan-400 group-hover:text-black" />
+          <Mic className="w-4 h-4" />
         </div>
       </label>
-
       <input 
         id="bird-audio-upload"
         type="file" 
         accept="audio/*" 
         className="hidden" 
         onChange={(e) => {
-          console.log("📍 [Step 1] Input 偵測到變更");
           const file = e.target.files?.[0];
-          if (file && onAnalyze) {
-            console.log("✅ [Step 2] 準備分析檔案:", file.name);
-            onAnalyze(file);
-          } else {
-            console.error("❌ [Step 2] 檔案缺失或 onAnalyze 未定義");
-          }
+          console.log("📍 上傳偵測:", file?.name);
+          if (file && onAnalyze) onAnalyze(file);
         }}
       />
     </div>
@@ -431,42 +348,23 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   {/* 螢幕核心區域 */}
   <div className="flex-1 p-2 md:p-3 flex flex-col items-center justify-center overflow-hidden">
     <div className="w-full h-full bg-[#DEDEDE] rounded-t-xl rounded-bl-xl rounded-br-[40px] p-2 md:p-3 border-[5px] border-gray-800 shadow-[inset_0_0_15px_rgba(0,0,0,0.2)] relative flex flex-col overflow-hidden">
-      
       <div className="flex justify-center gap-4 mb-1">
         <div className="w-2 h-2 rounded-full bg-red-600 border border-red-900 animate-pulse" />
         <div className="w-2 h-2 rounded-full bg-red-600 border border-red-900" />
       </div>
 
       <div 
-        className="flex-1 bg-[#1a1a1a] rounded-lg border-[4px] border-gray-700 relative overflow-hidden flex items-center justify-center cursor-zoom-in group shadow-2xl"
+        className="flex-1 bg-[#1a1a1a] rounded-lg border-[4px] border-gray-700 relative overflow-hidden flex items-center justify-center cursor-zoom-in group"
         onClick={() => setIsFullscreen(true)}
       >
-        {imgStatus === 'loading' && (
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-10 h-10 border-3 border-gray-600 border-t-green-400 rounded-full animate-spin" />
-            <span className="text-green-400 font-mono text-[10px] animate-pulse">LOADING...</span>
-          </div>
-        )}
-        
         <motion.img 
           key={currentBird.id}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
           src={currentBird.imageUrl} 
-          onLoad={() => setImgStatus('loaded')}
-          className={`w-full h-full object-contain z-10 p-1 transition-transform duration-700 group-hover:scale-105 ${imgStatus === 'loaded' ? 'block' : 'hidden'}`}
+          className="w-full h-full object-contain p-1"
         />
-
-        {imgStatus === 'loaded' && (
-          <div className="absolute bottom-3 right-3 z-20 scale-75 md:scale-100 origin-bottom-right">
-            <div className="bg-yellow-400/90 text-black font-black px-3 py-1 rounded-lg shadow-xl flex items-center gap-2 transform translate-y-10 group-hover:translate-y-0 transition-transform">
-              <ZoomIn className="w-4 h-4" />
-              <span className="text-xs">點擊觀測</span>
-            </div>
-          </div>
-        )}
       </div>
 
+      {/* 右下角喇叭孔 */}
       <div className="absolute bottom-3 right-6 flex flex-col gap-1 opacity-40">
         <div className="w-6 h-1 bg-gray-800 rounded-full" />
         <div className="w-6 h-1 bg-gray-800 rounded-full" />
@@ -474,7 +372,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
       </div>
     </div>
   </div>
-</div> {/* 這行是左半面板的總結尾，非常重要！ */}
+</div> {/* 左面板結束 */}
 
                  {/* --- 右半部分：控制與資料面板 --- */}
           <div className="w-full md:w-1/2 min-h-[60%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] relative overflow-y-auto">
