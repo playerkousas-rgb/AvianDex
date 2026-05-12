@@ -1,47 +1,36 @@
-// src/hooks/useBirdNet.ts
-export const useBirdNet = () => {
+import { useState } from 'react';
+
+export const useBirdNet = (onResult: (birdName: string) => void) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
   const analyzeAudio = async (audioBlob: Blob) => {
+    setIsLoading(true);
+    setError(null);
     console.log("啟動 BirdNET 辨識引擎...");
-    // 這裡放我們剛才討論的 fetch Hugging Face 的邏輯
-    // 這是核心辨識邏輯 (Pseudo-code)
-async function identifyBirdSound(audioBlob: Blob) {
-  setIsLoading(true); // 啟動 UI 的分析動畫
-  
-  try {
-    // 1. 將音檔封裝進 FormData
-    const formData = new FormData();
-    formData.append("files", audioBlob, "recording.wav");
 
-    // 2. 這裡調用 Hugging Face 的 API 節點
-    // 註：這通常是 https://[你的SpaceID].hf.space/run/predict
-    const response = await fetch("https://monet-pigeon-birdnet-analyzer.hf.space/run/predict", {
-      method: "POST",
-      body: JSON.stringify({
-        data: [
-          {"data": "base64_audio_string...", "name": "audio.wav"}, // 視 API 要求而定
-          0.1, // 信心值門檻
-        ]
-      }),
-      headers: { "Content-Type": "application/json" }
-    });
+    try {
+      // 這裡暫時模擬 API 請求流程
+      // 未來我們會在這裡發送真正的 fetch 到 Hugging Face 或你的後端
+      const formData = new FormData();
+      formData.append("file", audioBlob);
 
-    const result = await response.json();
-    
-    // 3. 處理結果
-    const birdName = result.data[0].label; // 假設回傳：'Rock Pigeon'
-    const confidence = result.data[0].conf;
-    
-    // 4. 自動定位到圖鑑
-    if (confidence > 0.7) {
-       findAndSelectBird(birdName); 
+      // 模擬網路延遲 2 秒
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      // 假設辨識結果回傳了 "Rock Pigeon" (原鴿)
+      const mockResult = "Rock Pigeon"; 
+      
+      console.log("辨識成功:", mockResult);
+      onResult(mockResult); // 這裡會觸發外面傳進來的 findAndSelectBird 邏輯
+
+    } catch (err) {
+      setError("辨識過程中發生錯誤");
+      console.error(err);
+    } finally {
+      setIsLoading(false);
     }
-  } catch (error) {
-    console.error("辨識失敗", error);
-  } finally {
-    setIsLoading(false);
-  }
-}
-    };
+  };
 
-  return { analyzeAudio };
+  return { analyzeAudio, isLoading, error };
 };
