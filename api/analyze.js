@@ -29,7 +29,7 @@ export default async function handler(req, res) {
     // 3. 呼叫 Hugging Face (換一個更穩定的官方接口測試)
     // 我們先試著用這個最穩定的 BirdNET 模型路徑
     const hfResponse = await fetch(
-      "https://api-inference.huggingface.co/models/google/chirp-v2-f1",
+      "MIT/ast-finetuned-audioset-10-10-0.4593",
       {
         headers: {
           "Authorization": `Bearer ${token}`,
