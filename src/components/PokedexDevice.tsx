@@ -286,57 +286,71 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
               <X className="w-8 h-8" />
             </button>
 
-           {/* --- 左半部分：圖鑑顯示面板 --- */}
+          {/* --- 左半部分：圖鑑顯示面板 --- */}
 <div className="w-full md:w-1/2 min-h-[50%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]">
   
-  {/* 頂部感應燈區塊：大幅壓縮垂直空間 (p-6 -> p-2) */}
-  {/* --- 這裡是我們要新增的行動端專用 HUD 按鈕 --- */}
-<div className="md:hidden absolute top-20 left-4 right-4 flex justify-between z-30 pointer-events-none">
- {/* 左感測器：環境麥克風 (咪) */}
-<button 
-  onClick={(e) => { e.stopPropagation(); alert('正在偵測周邊鳥鳴聲...'); }}
-  className="pointer-events-auto w-10 h-10 rounded-full bg-cyan-500/20 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-400 active:bg-cyan-400 active:text-black active:shadow-[0_0_15px_#22d3ee] transition-all"
->
-  {/* 把 Volume2 換成 Mic */}
-  <Mic className="w-5 h-5" /> 
-</button>
+  {/* 行動端專用 HUD (保持不變) */}
+  <div className="md:hidden absolute top-20 left-4 right-4 flex justify-between z-30 pointer-events-none">
+    <button 
+      onClick={(e) => { e.stopPropagation(); alert('正在啟動行動端錄音...'); }}
+      className="pointer-events-auto w-10 h-10 rounded-full bg-cyan-500/20 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-400 active:bg-cyan-400"
+    >
+      <Mic className="w-5 h-5" /> 
+    </button>
+    <button className="pointer-events-auto w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border-2 border-white/50 flex items-center justify-center text-white">
+      <Camera className="w-6 h-6" />
+    </button>
+  </div>
 
-  {/* 拍照按鈕 (右) */}
-  <button 
-    onClick={() => alert('啟動視覺掃描器...')}
-    className="pointer-events-auto w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border-2 border-white/50 flex items-center justify-center text-white active:scale-95 transition-transform"
-  >
-    <Camera className="w-6 h-6" />
-  </button>
-</div>
-  <div className="flex items-center gap-4 p-2 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
-    {/* 大號藍色主感應燈：從 w-24 縮小到 w-12 */}
-    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center border-[3px] border-gray-800 shadow-md">
-      <div className="w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#31A5E8] border-[2px] border-white shadow-[0_0_10px_rgba(49,165,232,0.8)] relative overflow-hidden">
-        <div className="absolute top-1 left-1 w-2 h-2 bg-white/50 rounded-full blur-[1px]" />
+  {/* 頂部感應燈區 + 電腦版上傳中心 (新增功能) */}
+  <div className="flex items-center justify-between p-2 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
+    <div className="flex items-center gap-4">
+      {/* 大號藍色主感應燈 */}
+      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center border-[3px] border-gray-800 shadow-md">
+        <div className="w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#31A5E8] border-[2px] border-white shadow-[0_0_10px_rgba(49,165,232,0.8)] relative overflow-hidden">
+          <div className="absolute top-1 left-1 w-2 h-2 bg-white/50 rounded-full blur-[1px]" />
+        </div>
+      </div>
+      
+      {/* 三色狀態燈 */}
+      <div className="flex gap-2">
+        <div className="w-3 h-3 rounded-full bg-red-600 border border-black/30 shadow-inner" />
+        <div className="w-3 h-3 rounded-full bg-yellow-400 border border-black/30 shadow-inner" />
+        <div className="w-3 h-3 rounded-full bg-green-500 border border-black/30 shadow-inner" />
       </div>
     </div>
-    
-    {/* 三色狀態燈：縮小尺寸 (w-5 -> w-3) */}
-    <div className="flex gap-2">
-      <div className="w-3 h-3 rounded-full bg-red-600 border border-black/30 shadow-inner" />
-      <div className="w-3 h-3 rounded-full bg-yellow-400 border border-black/30 shadow-inner" />
-      <div className="w-3 h-3 rounded-full bg-green-500 border border-black/30 shadow-inner" />
+
+    {/* --- 電腦版：音訊分析上傳入口 --- */}
+    <div className="hidden md:flex items-center gap-3 bg-black/20 px-3 py-1.5 rounded-lg border border-white/10 hover:bg-black/40 transition-colors group">
+      <div className="text-right">
+        <p className="text-[8px] text-white/40 font-mono leading-none uppercase">Analysis Engine</p>
+        <p className="text-[10px] text-cyan-400 font-black tracking-tighter uppercase group-hover:text-cyan-300">Acoustic Input</p>
+      </div>
+      <label className="cursor-pointer">
+        <div className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center border border-cyan-500/40 group-hover:bg-cyan-500 group-hover:text-black transition-all">
+          <Mic className="w-4 h-4 text-cyan-400 group-hover:text-black" />
+        </div>
+        <input 
+          type="file" 
+          accept="audio/*" 
+          className="hidden" 
+          onChange={(e) => {
+            const file = e.target.files?.[0];
+            if (file && onAnalyze) onAnalyze(file);
+          }}
+        />
+      </label>
     </div>
   </div>
 
-  {/* 螢幕核心區域：將內距縮到最小 (p-6/8 -> p-2/3) */}
+  {/* 螢幕核心區域 (保持不變) */}
   <div className="flex-1 p-2 md:p-3 flex flex-col items-center justify-center overflow-hidden">
-    {/* 灰色內框螢幕：減少 Padding (p-6 -> p-2) */}
     <div className="w-full h-full bg-[#DEDEDE] rounded-t-xl rounded-bl-xl rounded-br-[40px] p-2 md:p-3 border-[5px] border-gray-800 shadow-[inset_0_0_15px_rgba(0,0,0,0.2)] relative flex flex-col overflow-hidden">
-      
-      {/* 螢幕上方雙指示燈：縮小間距 (mb-4 -> mb-1) */}
       <div className="flex justify-center gap-4 mb-1">
         <div className="w-2 h-2 rounded-full bg-red-600 border border-red-900 animate-pulse" />
         <div className="w-2 h-2 rounded-full bg-red-600 border border-red-900" />
       </div>
 
-      {/* 黑色顯示區域：這塊現在會變得超級大！ */}
       <div 
         className="flex-1 bg-[#1a1a1a] rounded-lg border-[4px] border-gray-700 relative overflow-hidden flex items-center justify-center cursor-zoom-in group shadow-2xl"
         onClick={() => setIsFullscreen(true)}
@@ -357,7 +371,6 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
           className={`w-full h-full object-contain z-10 p-1 transition-transform duration-700 group-hover:scale-105 ${imgStatus === 'loaded' ? 'block' : 'hidden'}`}
         />
 
-        {/* 懸浮引導：縮小尺寸以免擋圖 */}
         {imgStatus === 'loaded' && (
           <div className="absolute bottom-3 right-3 z-20 scale-75 md:scale-100 origin-bottom-right">
             <div className="bg-yellow-400/90 text-black font-black px-3 py-1 rounded-lg shadow-xl flex items-center gap-2 transform translate-y-10 group-hover:translate-y-0 transition-transform">
@@ -368,7 +381,6 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
         )}
       </div>
 
-      {/* 右下角喇叭孔：縮小尺寸 (w-10 -> w-6) */}
       <div className="absolute bottom-3 right-6 flex flex-col gap-1 opacity-40">
         <div className="w-6 h-1 bg-gray-800 rounded-full" />
         <div className="w-6 h-1 bg-gray-800 rounded-full" />
@@ -377,16 +389,6 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
     </div>
   </div>
 </div>
-
-            {/* --- 中間摺疊轉軸 --- */}
-            <div className="hidden md:flex w-16 bg-[#C02A0A] border-y-[10px] border-gray-800 flex-col justify-around py-20 shadow-[inset_0_0_30px_rgba(0,0,0,0.5)] z-10 relative">
-              <div className="w-full h-1 bg-black/20" />
-              <div className="w-full h-1 bg-black/20" />
-              <div className="w-full h-1 bg-black/20" />
-              <div className="w-full h-1 bg-black/20" />
-              <div className="w-full h-1 bg-black/20" />
-              <div className="w-full h-1 bg-black/20" />
-            </div>
 
                  {/* --- 右半部分：控制與資料面板 --- */}
           <div className="w-full md:w-1/2 min-h-[60%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] relative overflow-y-auto">
