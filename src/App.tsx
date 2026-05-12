@@ -9,16 +9,18 @@ function App() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isOpened, setIsOpened] = useState(false);
 
-  // --- 新增：音訊分析與自動跳轉邏輯 ---
- const analyzeAudio = async (file: File | Blob) => {
-    console.log("🚀 [App] 正在上傳音訊至 Hugging Face 分析...", file);
+  // --- 音訊分析與自動跳轉邏輯 ---
+  const analyzeAudio = async (file: File | Blob) => {
+    console.log("🚀 [App] 接收到音訊檔案，準備開始分析...", file);
 
     try {
+      // 呼叫 Hugging Face 上的 BirdNET 模型
       const response = await fetch(
-        "https://api-inference.huggingface.co/models/Niroj/BirdNET-Pytorch", 
+        "https://api-inference.huggingface.co/models/Niroj/BirdNET-Pytorch",
         {
-          headers: { 
-            Authorization: "Bearer hf_xxxxxxxxxxxx", // 👈 這裡填你的 Hugging Face Token
+          headers: {
+            // 優先從環境變數讀取，避免 GitHub 洩漏；若無則使用後備 Key
+          Authorization: `Bearer ${import.meta.env.VITE_HF_TOKEN || ''}`,
             "Content-Type": "application/octet-stream"
           },
           method: "POST",
@@ -29,30 +31,40 @@ function App() {
       const result = await response.json();
       console.log("✅ [API 回傳結果]", result);
 
-      // BirdNET 通常回傳陣列，第一筆 [0] 是機率最高的
+      // 判斷回傳是否為有效的辨識陣列
       if (Array.isArray(result) && result.length > 0) {
         const topResult = result[0].label; // 例如 "Spotted Dove"
         console.log("🎯 AI 辨識結果：", topResult);
 
-        // 在圖鑑中尋找 (支援英文名或中文名匹配)
-        const foundIndex = birds.findIndex(b => 
-          (b as any).englishName === topResult || b.name === topResult
-        );
+        // 在 1500 隻鳥中尋找匹配項 (優先比對英文名，支援大小寫模糊匹配)
+        const foundIndex = birds.findIndex(b => {
+          const bird = b as any;
+          const searchTag = topResult.toLowerCase();
+          
+          return (
+            bird.englishName?.toLowerCase() === searchTag || 
+            bird.name.toLowerCase().includes(searchTag) ||
+            bird.englishName?.toLowerCase().includes(searchTag)
+          );
+        });
 
         if (foundIndex !== -1) {
-          console.log("🎯 找到匹配，自動跳轉至索引：", foundIndex);
+          console.log("🎯 找到匹配鳥種，自動切換至索引：", foundIndex);
           setSelectedIndex(foundIndex);
         } else {
-          alert(`辨識成功：${topResult}，但你的 JSON 裡沒有這隻鳥。`);
+          console.warn("⚠️ 辨識完成但在圖鑑庫中找不到：" + topResult);
+          alert(`辨識結果為：${topResult}，但圖鑑資料中尚無對應名稱。`);
         }
+      } else {
+        alert("無法辨識此音訊內容，請嘗試更清楚的錄音。");
       }
     } catch (err) {
       console.error("❌ API 請求失敗:", err);
-      alert("分析失敗，請檢查網路或 API Token。");
+      alert("分析失敗，請檢查網路連接或 API Token 權限。");
     }
   };
 
-  // 修正：當圖鑑打開時，鎖定底層捲動
+  // 當圖鑑打開時，鎖定底層捲動，優化 UI 體驗
   useEffect(() => {
     if (selectedIndex !== null) {
       document.body.style.overflow = 'hidden';
@@ -131,7 +143,7 @@ function App() {
         </main>
       </div>
 
-      {/* 3. 圖鑑機細節彈窗 - 傳入 onAnalyze */}
+      {/* 3. 圖鑑機細節彈窗 */}
       <PokedexDevice 
         birds={birds}
         initialIndex={selectedIndex ?? 0}
