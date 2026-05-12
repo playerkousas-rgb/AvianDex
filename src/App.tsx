@@ -15,16 +15,19 @@ function App() {
 
     try {
       // 呼叫 Hugging Face 上的 BirdNET 模型
-      const response = await fetch(
+     const response = await fetch(
         "https://api-inference.huggingface.co/models/Niroj/BirdNET-Pytorch",
         {
           headers: {
-            // 優先從環境變數讀取，避免 GitHub 洩漏；若無則使用後備 Key
-          Authorization: `Bearer ${import.meta.env.VITE_HF_TOKEN || ''}`,
-            "Content-Type": "application/octet-stream"
+            // 確保 Token 有正確帶入
+            Authorization: `Bearer ${import.meta.env.VITE_HF_TOKEN || ''}`,
+            // 有時候這個 Header 會導致 CORS 預檢失敗，如果還不行可以試著把下面這行註解掉
+            "Content-Type": "application/octet-stream" 
           },
           method: "POST",
           body: file,
+          // 加上這行強制開啟 CORS 模式
+          mode: 'cors', 
         }
       );
 
