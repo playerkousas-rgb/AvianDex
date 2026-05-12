@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Bird } from '../types';
 import { motion } from 'framer-motion';
-// BirdSilhouette 已移除，改用 PhyloPic SVG
+import { Bird as BirdIcon } from 'lucide-react'; // 加上這一行就解決了！
 
 interface BirdCardProps {
   bird: Bird;
