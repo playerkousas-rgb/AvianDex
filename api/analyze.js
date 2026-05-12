@@ -1,9 +1,21 @@
 // api/analyze.js
+import FormData from 'form-data';
+import fetch from 'node-fetch';
+
 export const config = {
   api: {
-    bodyParser: false, // 必須關閉，否則音訊檔會被破壞
+    bodyParser: false, // 必須關閉，我們手動處理二進制流
   },
 };
+
+// 輔助函式：讀取 Stream 轉成 Buffer
+async function getRawBody(readable) {
+  const chunks = [];
+  for await (const chunk of readable) {
+    chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk);
+  }
+  return Buffer.concat(chunks);
+}
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -11,58 +23,54 @@ export default async function handler(req, res) {
   }
 
   try {
-    // 1. 讀取原始音訊二進制數據
-    const chunks = [];
-    for await (const chunk of req) {
-      chunks.push(chunk);
-    }
-    const buffer = Buffer.concat(chunks);
-
-    console.log("接收到的音訊大小:", buffer.length, "bytes");
-
-    // 2. 準備 Token
-    const token = process.env.VITE_HF_TOKEN;
-    if (!token) {
-      return res.status(500).json({ error: '找不到 API Token，請檢查 Vercel 環境變數' });
+    // 1. 獲取前端傳來的音訊 Buffer
+    const buffer = await getRawBody(req);
+    
+    if (buffer.length === 0) {
+      return res.status(400).json({ error: '接收到的音訊為空' });
     }
 
-    // 3. 呼叫 Hugging Face (換一個更穩定的官方接口測試)
-    // 我們先試著用這個最穩定的 BirdNET 模型路徑
-    const hfResponse = await fetch(
-      "https://api-inference.huggingface.co/models/MIT/ast-finetuned-audioset-10-10-0.4593",
-      {
-        headers: {
-          "Authorization": `Bearer ${token}`,
-          "Content-Type": "application/octet-stream",
-        },
-        method: "POST",
-        body: buffer,
-      }
-    );
+    // 2. 建立「懂鳥 API」要求的 Form Data 格式
+    const form = new FormData();
+    // 'file' 是懂鳥文件要求的欄位名，後面的 filename 隨便取但要有後綴
+    form.append('file', buffer, {
+      filename: 'audio.wav',
+      contentType: 'audio/wav', 
+    });
 
-    const resultText = await hfResponse.text();
-    console.log("HF 回傳原始內容:", resultText.substring(0, 100));
+    // 3. 呼叫懂鳥 API
+    // 根據你提供的文檔網址：https://ai.open.hhodata.com/dongniao
+    const response = await fetch("https://ai.open.hhodata.com/dongniao", {
+      method: "POST",
+      body: form,
+      headers: form.getHeaders(), // 這會自動生成正確的 boundary
+    });
 
-    // 4. 處理回傳結果
-    try {
-      const data = JSON.parse(resultText);
-      
-      // 如果 HF 回傳的是錯誤訊息 (例如模型還在加載)
-      if (data.error && data.error.includes("loading")) {
-        return res.status(503).json({ error: "AI 正在暖機中，請過 10 秒再試一次" });
-      }
+    const result = await response.json();
 
-      return res.status(200).json(data);
-    } catch (e) {
-      // 如果解析 JSON 失敗，代表回傳的是 HTML (那個 < 符號的來源)
+    // 4. 格式化回傳結果給你的 AvianDex 前端
+    // 懂鳥的回傳通常包含 code, msg, 和 data (內含 species 等)
+    if (result.code === 200 || result.success) {
+      // 這裡需要根據懂鳥實際回傳的 JSON 結構調整
+      // 假設它回傳 data: [{ name: "珠頸斑鳩", score: 0.9 }]
+      const formattedData = (result.data || []).map(item => ({
+        label: item.name || item.species, // 懂鳥給的是中文名
+        score: item.confidence || item.score || 1.0
+      }));
+
+      return res.status(200).json(formattedData);
+    } else {
       return res.status(500).json({ 
-        error: "HF 伺服器拒絕請求", 
-        debug: resultText.substring(0, 50) 
+        error: "懂鳥辨識失敗", 
+        details: result.msg || "未知錯誤" 
       });
     }
 
   } catch (error) {
-    console.error("Server Error:", error);
-    return res.status(500).json({ error: "伺服器內部錯誤", details: error.message });
+    console.error("懂鳥串接錯誤:", error);
+    return res.status(500).json({ 
+      error: "伺服器通訊錯誤", 
+      details: error.message 
+    });
   }
 }
