@@ -36,7 +36,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   isOpen, 
   onClose,
   onAnalyze // <-- 關鍵！這裡沒寫，下面就抓不到這個變數
-}) => {{
+}) => {
   // --- 1. 核心狀態 ---
   const [showDetails, setShowDetails] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
