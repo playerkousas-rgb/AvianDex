@@ -1,16 +1,17 @@
-eexport interface Bird {
+export interface Bird {
   id: string;
   name: string;
-  englishName?: string; // 👈 這裡一定要有，不然上面那段還是會報錯
+  englishName?: string;
+  scientificName: string;
+  category: string;
+  height: string;
+  weight: string;
+  description: string;
   imageUrl: string;
-  // 以下全部加個問號，代表「選填」，就不會報錯了
-  scientificName?: string;
-  category?: string;
-  height?: string;
-  weight?: string;
-  description?: string;
-  habitat?: string;
-  diet?: string;
-  rarity?: string;
-  discovered?: boolean;
+  habitat: string;
+  diet: string;
+  rarity: string;
+  discovered: boolean;
 }
+
+// 如果你還有其他型別定義，接在下面即可
