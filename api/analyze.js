@@ -1,13 +1,8 @@
 // api/analyze.js
-
-// 關閉 Vercel 的自動 Body 解析，確保音訊二進位檔不被破壞
 export const config = {
-  api: {
-    bodyParser: false,
-  },
+  api: { bodyParser: false },
 };
 
-// 輔助函數：讀取原始數據流
 async function getRawBody(readable) {
   const chunks = [];
   for await (const chunk of readable) {
@@ -17,35 +12,44 @@ async function getRawBody(readable) {
 }
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
   try {
     const rawBody = await getRawBody(req);
-    // 注意：後端用 process.env
     const token = process.env.VITE_HF_TOKEN;
 
-    if (!token) {
-      return res.status(500).json({ error: 'HF Token is missing in environment variables' });
+    // 呼叫 Hugging Face 的函數
+    const queryHF = async () => {
+      const response = await fetch(
+        "https://api-inference.huggingface.co/models/Niroj/BirdNET-Pytorch",
+        {
+          headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/octet-stream" },
+          method: "POST",
+          body: rawBody,
+        }
+      );
+      
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        return await response.json();
+      } else {
+        // 如果回傳的是 HTML (就是那個 < )，拋出錯誤觸發重試
+        throw new Error("Model is loading or busy");
+      }
+    };
+
+    // 嘗試第一次
+    try {
+      const data = await queryHF();
+      return res.status(200).json(data);
+    } catch (e) {
+      // 如果失敗，等 3 秒再試第二次（給模型熱機時間）
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      const data = await queryHF();
+      return res.status(200).json(data);
     }
 
-    const hfResponse = await fetch(
-      "https://api-inference.huggingface.co/models/Niroj/BirdNET-Pytorch",
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/octet-stream"
-        },
-        method: "POST",
-        body: rawBody,
-      }
-    );
-
-    const data = await hfResponse.json();
-    return res.status(200).json(data);
   } catch (error) {
-    console.error('Server Error:', error);
-    return res.status(500).json({ error: 'Backend failed', details: error.message });
+    res.status(500).json({ error: "辨識失敗", details: "模型可能正在初始化，請等 10 秒後再試一次。" });
   }
 }
