@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "aliases": "node scripts/build-aliases.mjs",
+    "aliases:dry": "node scripts/build-aliases.mjs --dry"
   },
   "dependencies": {
     "form-data": "^4.0.0",

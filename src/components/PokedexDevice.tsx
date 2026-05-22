@@ -289,7 +289,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.8, y: 100, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 120 }}
-            className="w-full max-w-5xl h-[92vh] md:h-[88vh] flex flex-col md:flex-row shadow-2xl relative"
+            className="w-full max-w-5xl h-[92vh] md:h-[88vh] flex flex-col md:flex-row shadow-[0_25px_70px_rgba(0,0,0,0.8),0_0_60px_rgba(250,204,21,0.15)] relative drop-shadow-2xl"
           >
             {/* 總開關關閉按鈕 */}
             <button 
@@ -300,7 +300,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             </button>
 
           {/* --- 左半部分：圖鑑顯示面板 (修正版) --- */}
-<div className="w-full md:w-1/2 min-h-[50%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]">
+<div className="w-full md:w-1/2 min-h-[50%] md:h-full bg-gradient-to-br from-[#E3350D] via-[#c92b0a] to-[#9a2208] border-[6px] md:border-[10px] border-gray-900 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3),inset_0_3px_8px_rgba(255,255,255,0.15)]">
   
   {/* 行動端專用 HUD - 聲音/影像 AI 辨識 */}
   <div className="md:hidden absolute top-20 left-4 right-4 flex justify-between z-30 pointer-events-none">
@@ -364,14 +364,14 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 
   {/* 螢幕核心區域 */}
   <div className="flex-1 p-2 md:p-3 flex flex-col items-center justify-center overflow-hidden">
-    <div className="w-full h-full bg-[#DEDEDE] rounded-t-xl rounded-bl-xl rounded-br-[40px] p-2 md:p-3 border-[5px] border-gray-800 shadow-[inset_0_0_15px_rgba(0,0,0,0.2)] relative flex flex-col overflow-hidden">
+    <div className="w-full h-full bg-gradient-to-b from-[#fff8d6] to-[#f5e8a3] rounded-t-xl rounded-bl-xl rounded-br-[40px] p-2 md:p-3 border-[5px] border-gray-900 shadow-[inset_0_0_15px_rgba(0,0,0,0.2)] relative flex flex-col overflow-hidden">
       <div className="flex justify-center gap-4 mb-1">
         <div className="w-2 h-2 rounded-full bg-red-600 border border-red-900 animate-pulse" />
         <div className="w-2 h-2 rounded-full bg-red-600 border border-red-900" />
       </div>
 
       <div 
-        className="flex-1 bg-[#1a1a1a] rounded-lg border-[4px] border-gray-700 relative overflow-hidden flex items-center justify-center cursor-zoom-in group"
+        className="flex-1 bg-gradient-to-br from-[#1a1410] to-[#0a0805] rounded-lg border-[4px] border-amber-900/60 relative overflow-hidden flex items-center justify-center cursor-zoom-in group shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]"
         onClick={() => setIsFullscreen(true)}
       >
         <motion.img 
@@ -392,7 +392,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 </div> {/* 左面板結束 */}
 
                  {/* --- 右半部分：控制與資料面板 --- */}
-          <div className="w-full md:w-1/2 min-h-[60%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3)] relative overflow-y-auto">
+          <div className="w-full md:w-1/2 min-h-[60%] md:h-full bg-gradient-to-bl from-[#c92b0a] via-[#9a2208] to-[#6e1804] border-[6px] md:border-[10px] border-gray-900 rounded-b-[40px] md:rounded-r-[40px] md:rounded-bl-none flex flex-col p-6 md:p-8 shadow-[inset_15px_0_40px_rgba(0,0,0,0.3),inset_0_3px_8px_rgba(255,255,255,0.15)] relative overflow-y-auto">
               <AnimatePresence mode="wait">
                 {!showDetails ? (
                   /* --- Page 1: 基礎數據 --- */
@@ -450,11 +450,11 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 
                     {/* 4. 底部導航按鈕 */}
                     <div className="flex justify-between items-center bg-black/20 p-2 rounded-[20px]">
-                      <button onClick={handlePrev} disabled={currentIndex === 0} className={`w-14 h-14 rounded-full border-[4px] border-gray-800 flex items-center justify-center ${currentIndex === 0 ? 'bg-gray-500' : 'bg-[#31A5E8]'}`}>
+                      <button onClick={handlePrev} disabled={currentIndex === 0} className={`w-14 h-14 rounded-full border-[4px] border-gray-800 flex items-center justify-center ${currentIndex === 0 ? 'bg-gray-500' : 'bg-gradient-to-b from-amber-300 to-amber-600 shadow-[inset_0_-3px_6px_rgba(0,0,0,0.3)]'}`}>
                         <ChevronLeft className="w-8 h-8 text-white" />
                       </button>
                       <span className="text-red-900 font-black text-[9px] uppercase">NAV SYSTEM</span>
-                      <button onClick={handleNext} disabled={currentIndex === birds.length - 1} className={`w-14 h-14 rounded-full border-[4px] border-gray-800 flex items-center justify-center ${currentIndex === birds.length - 1 ? 'bg-gray-500' : 'bg-[#31A5E8]'}`}>
+                      <button onClick={handleNext} disabled={currentIndex === birds.length - 1} className={`w-14 h-14 rounded-full border-[4px] border-gray-800 flex items-center justify-center ${currentIndex === birds.length - 1 ? 'bg-gray-500' : 'bg-gradient-to-b from-amber-300 to-amber-600 shadow-[inset_0_-3px_6px_rgba(0,0,0,0.3)]'}`}>
                         <ChevronRight className="w-8 h-8 text-white" />
                       </button>
                     </div>
@@ -462,7 +462,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                     {/* 詳細資料按鈕 - 觸發換頁 */}
                     <button 
                       onClick={() => setShowDetails(true)}
-                      className="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-xl border-[4px] border-blue-800 shadow-[0_4px_0_rgba(30,58,138,1)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2"
+                      className="w-full bg-gradient-to-b from-yellow-400 to-yellow-600 hover:from-yellow-300 hover:to-yellow-500 text-gray-900 font-black py-4 rounded-xl border-[4px] border-yellow-800 shadow-[0_4px_0_rgba(133,77,14,1)] active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2"
                     >
                       詳細資料 / RESEARCH
                     </button>
@@ -490,13 +490,13 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             className="flex flex-col w-full h-full gap-4 relative z-10"
           >
             {/* 核心功能：四宮格圖片容器 */}
-            <div className="flex-1 bg-black/40 rounded-3xl p-5 border-2 border-blue-500/30 flex flex-col gap-4 overflow-hidden">
+            <div className="flex-1 bg-gradient-to-b from-amber-950/60 to-black/70 rounded-3xl p-5 border-2 border-amber-500/30 flex flex-col gap-4 overflow-hidden shadow-inner">
               <div className="flex items-center gap-3">
-                <div className="bg-blue-500/20 p-2 rounded-lg">
-                  <Globe className="w-5 h-5 text-blue-400 animate-pulse" />
+                <div className="bg-amber-500/20 p-2 rounded-lg">
+                  <Globe className="w-5 h-5 text-amber-300 animate-pulse" />
                 </div>
                 <div>
-                  <h3 className="text-blue-300 font-black text-lg tracking-tighter uppercase leading-none">科學研究中心</h3>
+                  <h3 className="text-amber-200 font-black text-lg tracking-tighter uppercase leading-none">科學研究中心</h3>
                   <p className="text-white/40 text-[9px] uppercase tracking-widest mt-1">Research Hub / {currentBird.name}</p>
                 </div>
               </div>
@@ -584,12 +584,12 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   
 </div>
               {/* 鳴謝區 */}
-              <div className="mt-auto p-3 bg-blue-900/30 rounded-xl border border-blue-400/20">
-                <p className="text-[10px] text-blue-300 font-black tracking-widest uppercase mb-1 flex items-center gap-2">
+              <div className="mt-auto p-3 bg-amber-900/30 rounded-xl border border-amber-400/20">
+                <p className="text-[10px] text-amber-300 font-black tracking-widest uppercase mb-1 flex items-center gap-2">
                   <Award className="w-3 h-3" /> Credits & Sources
                 </p>
                 <p className="text-[9px] text-white/50 leading-relaxed italic">
-                  本計畫之科學數據由 <span className="text-blue-400 font-bold">Cornell Lab</span> 提供。
+                  本計畫之科學數據由 <span className="text-amber-300 font-bold">Cornell Lab</span> 提供。
                   鳴謝 eBird 及 Macaulay Library。
                 </p>
               </div>
