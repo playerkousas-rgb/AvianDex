@@ -20,14 +20,17 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BirdSilhouette } from './BirdSilhouette.tsx';
+import { MediaCapturePanel, MediaKind } from './MediaCapturePanel.tsx';
 
 interface PokedexDeviceProps {
   birds: Bird[];
   initialIndex: number;
   isOpen: boolean;
   onClose: () => void;
-  // 加上這一行，告訴 TS 這個組件可以接收辨識函數
-  onAnalyze?: (file: File | Blob) => void; 
+  /** 舊版簽名：只傳檔案；內部會用 MIME 判斷聲音 / 圖片 */
+  onAnalyze?: (file: File | Blob) => void;
+  /** 新版簽名：明確指定 'audio' 或 'image' */
+  onAnalyzeMedia?: (file: File | Blob, kind: 'audio' | 'image') => void;
 }
 
 export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ 
@@ -35,8 +38,15 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   initialIndex, 
   isOpen, 
   onClose,
-  onAnalyze // <-- 關鍵！這裡沒寫，下面就抓不到這個變數
+  onAnalyze, // 舊版相容
+  onAnalyzeMedia, // 新版：可同時做聲音/圖片
 }) => {
+  // --- 媒體擷取面板 ---
+  const [captureKind, setCaptureKind] = useState<MediaKind | null>(null);
+  const dispatchMedia = (file: File | Blob, kind: MediaKind) => {
+    if (onAnalyzeMedia) { onAnalyzeMedia(file, kind); return; }
+    if (onAnalyze) onAnalyze(file);
+  };
   // --- 1. 核心狀態 ---
   const [showDetails, setShowDetails] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
@@ -292,16 +302,21 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
           {/* --- 左半部分：圖鑑顯示面板 (修正版) --- */}
 <div className="w-full md:w-1/2 min-h-[50%] md:h-full bg-[#E3350D] border-[6px] md:border-[10px] border-gray-800 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3)]">
   
-  {/* 行動端專用 HUD */}
+  {/* 行動端專用 HUD - 聲音/影像 AI 辨識 */}
   <div className="md:hidden absolute top-20 left-4 right-4 flex justify-between z-30 pointer-events-none">
     <button 
-      onClick={(e) => { e.stopPropagation(); alert('正在啟動行動端錄音...'); }}
-      className="pointer-events-auto w-10 h-10 rounded-full bg-cyan-500/20 backdrop-blur-md border border-cyan-400/50 flex items-center justify-center text-cyan-400 active:bg-cyan-400"
+      onClick={(e) => { e.stopPropagation(); setCaptureKind('audio'); }}
+      title="聲音辨識"
+      className="pointer-events-auto w-12 h-12 rounded-full bg-cyan-500/30 backdrop-blur-md border-2 border-cyan-400/70 flex items-center justify-center text-cyan-300 active:scale-90 active:bg-cyan-400 active:text-black shadow-lg shadow-cyan-500/30"
     >
       <Mic className="w-5 h-5" /> 
     </button>
-    <button className="pointer-events-auto w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border-2 border-white/50 flex items-center justify-center text-white">
-      <Camera className="w-6 h-6" />
+    <button 
+      onClick={(e) => { e.stopPropagation(); setCaptureKind('image'); }}
+      title="看圖認雀"
+      className="pointer-events-auto w-12 h-12 rounded-full bg-fuchsia-500/30 backdrop-blur-md border-2 border-fuchsia-400/70 flex items-center justify-center text-fuchsia-300 active:scale-90 active:bg-fuchsia-400 active:text-black shadow-lg shadow-fuchsia-500/30"
+    >
+      <Camera className="w-5 h-5" />
     </button>
   </div>
 
@@ -320,28 +335,30 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
       </div>
     </div>
 
-    {/* 電腦版上傳按鈕 */}
+    {/* 電腦版 AI 辨識中心 - ACOUSTIC + VISUAL */}
     <div className="hidden md:flex items-center gap-3 bg-black/20 px-3 py-1.5 rounded-lg border border-white/10 hover:bg-black/40 group relative z-50">
       <div className="text-right">
         <p className="text-[8px] text-white/40 font-mono uppercase">Analysis Engine</p>
-        <p className="text-[10px] text-cyan-400 font-black uppercase">Acoustic Input</p>
+        <p className="text-[10px] text-cyan-400 font-black uppercase">Acoustic / Visual</p>
       </div>
-      <label htmlFor="bird-audio-upload" className="cursor-pointer">
-        <div className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center border border-cyan-500/40 group-hover:bg-cyan-500 group-hover:text-black transition-all">
-          <Mic className="w-4 h-4" />
-        </div>
-      </label>
-      <input 
-        id="bird-audio-upload"
-        type="file" 
-        accept="audio/*" 
-        className="hidden" 
-        onChange={(e) => {
-          const file = e.target.files?.[0];
-          console.log("📍 上傳偵測:", file?.name);
-          if (file && onAnalyze) onAnalyze(file);
-        }}
-      />
+      {/* 聲音辨識 */}
+      <button
+        type="button"
+        onClick={(e) => { e.stopPropagation(); setCaptureKind('audio'); }}
+        title="聲音辨識 / Listen"
+        className="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center border border-cyan-500/40 hover:bg-cyan-500 hover:text-black transition-all active:scale-90"
+      >
+        <Mic className="w-4 h-4" />
+      </button>
+      {/* 影像辨識 */}
+      <button
+        type="button"
+        onClick={(e) => { e.stopPropagation(); setCaptureKind('image'); }}
+        title="看圖認雀 / Snap"
+        className="w-8 h-8 rounded-full bg-fuchsia-500/20 flex items-center justify-center border border-fuchsia-500/40 hover:bg-fuchsia-500 hover:text-black transition-all active:scale-90"
+      >
+        <Camera className="w-4 h-4" />
+      </button>
     </div>
   </div>
 
@@ -593,6 +610,16 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   </motion.div>
 </div>
 )}
+
+      {/* === AI 媒體擷取面板 (錄音 / 拍照 / 上傳) === */}
+      {captureKind && (
+        <MediaCapturePanel
+          open={!!captureKind}
+          kind={captureKind}
+          onClose={() => setCaptureKind(null)}
+          onCapture={(file, kind) => dispatchMedia(file, kind)}
+        />
+      )}
 </AnimatePresence>
 );
 };
