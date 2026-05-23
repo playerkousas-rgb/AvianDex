@@ -1,164 +1,142 @@
-# 🤖 AvianDex AI 辨識功能 — 設定指南
+# 🤖 AvianDex v1.4.0 — 完整設定與功能指南
 
-本次更新為 AvianDex 加入兩大 AI 功能：
+## 🎉 v1.4 新功能總覽
 
-| 功能 | 引擎 | 免費額度 | 入口 |
-|------|------|---------|------|
-| 🎙️ **聽聲認雀** | [BirdNET](https://github.com/birdnet-team/BirdNET-Analyzer)（Hugging Face Space） | 無限（公開 Space） | 左屏麥克風按鈕 |
-| 📷 **看圖認雀** | [Nyckel Bird Identifier](https://www.nyckel.com/pretrained-classifiers/bird-identifier/) | 1,000 次 / 月 | 左屏相機按鈕 |
+| 功能 | 入口 | 引擎 |
+|------|------|------|
+| 🎙️ 聽聲認雀 | 浮動按鈕 / 圖鑑機 Mic | **Hugging Face** (主) → Nyckel/BirdNET (備援) |
+| 📷 看圖認雀 | 浮動按鈕 / 圖鑑機 Camera | **Hugging Face** (主) → Nyckel (備援) |
+| 🏆 我的進度 | 頂欄 Trophy 按鈕 / 手機漢堡選單 | localStorage 統計 + 8 階成就 |
+| 🗺️ 觀鳥地圖 | 頂欄 Map 按鈕 / 手機漢堡選單 | eBird API（你已有 `EBIRD_API_KEY`） |
+| 🔍 搜尋 | 頂欄黃色搜尋框 | 即時過濾編號 / 中文 / 英文 |
+| CARD / ZOOM | 副欄右側按鈕 | CARD = 完整圖卡；ZOOM = 放大裁切只看鳥主體 |
+| 📱 完整響應式 | 手機 / iPad / 桌機 | 漢堡選單、抽屜、自適應網格 |
 
 ---
 
-## 🚀 部署步驟
+## 🔑 環境變數設定（重要！）
 
-### 1️⃣ 申請 Nyckel API Key
+### 必填 ✅
 
-1. 到 <https://www.nyckel.com/> 註冊免費帳號
-2. 進入 **Console → Settings → API Keys → Create new API Key**
-3. 複製產生的 **Client ID** 與 **Client Secret**
+| Key | 取得方式 | 用途 |
+|-----|---------|------|
+| **`HF_TOKEN`** | https://huggingface.co/settings/tokens → 點「+ New token」→ Read 權限 | **AI 主引擎**：聲音 + 圖片，免費額度大 |
 
-### 2️⃣ 在 Vercel 設定環境變數
+### 你已有的 ✅
 
-到你的 AvianDex 專案 → **Settings → Environment Variables**，新增：
+| Key | 用途 |
+|-----|------|
+| `EBIRD_API_KEY` | 觀鳥地圖即時觀察紀錄 |
+| `NYCKEL_CLIENT_ID` | 圖片辨識備援（可留可拿掉） |
+| `NYCKEL_CLIENT_SECRET` | 同上 |
 
-| Key | Value | 必要 |
-|-----|-------|------|
-| `NYCKEL_CLIENT_ID` | 你剛剛複製的 Client ID | ✅ 必填（看圖認雀） |
-| `NYCKEL_CLIENT_SECRET` | 你剛剛複製的 Client Secret | ✅ 必填（看圖認雀） |
-| `BIRDNET_SPACE_URL` | （可選）`https://你的-username-birdnet.hf.space` | 可選 |
+### 選填
 
-> 💡 **BIRDNET_SPACE_URL 是什麼？**
-> 預設使用 BirdNET 團隊公開的 Hugging Face Space。如果遇到流量限制或冷啟動太慢，可以：
-> 1. 到 <https://huggingface.co/spaces> 點 **Duplicate** 複製一份 BirdNET Space
-> 2. 把網址（例如 `https://你的帳號-birdnet-demo.hf.space`）填到此環境變數
-> 3. Hugging Face Space 也是**永久免費**
+| Key | 用途 |
+|-----|------|
+| `BIRDNET_SPACE_URL` | 自架的 BirdNET Gradio Space 網址（聲音備援） |
 
-### 3️⃣ 重新部署
+### 在 Vercel 加 `HF_TOKEN` 的步驟
+
+1. 進入 Vercel Dashboard → 你的專案 → **Settings → Environment Variables**
+2. 新增 `HF_TOKEN`，**Production / Preview / Development 三個環境都要勾選**
+3. 名稱必須完全相同（大小寫、無 `VITE_` 前綴）
+4. **務必到 Deployments 重新部署一次**（環境變數變更不會自動觸發部署）
+
+### 🩺 健康檢查端點
+
+部署後造訪 `https://你的網址.vercel.app/api/analyze`（GET 請求）會回傳：
+
+```json
+{
+  "ok": true,
+  "version": "v1.4.0",
+  "service": "AvianDex AI Recognition",
+  "engines": {
+    "huggingface": true,    ← 必須是 true
+    "nyckel": true,
+    "birdnetSpace": false,
+    "ebird": true            ← 你已有
+  }
+}
+```
+
+如果 `huggingface: false`，代表 `HF_TOKEN` 沒設定或沒生效。
+
+---
+
+## 🐛 為何之前出現「Nyckel 金鑰未設定」？
+
+舊版有兩個問題：
+1. **環境變數設定**：Vercel 中可能只勾了 Production，沒勾 Preview，導致預覽部署拿不到
+2. **沒備援**：舊程式只用 Nyckel，一掛全掛
+
+v1.4 改為 **Hugging Face 為主、Nyckel 為備**，即使 Nyckel 失敗也能正常運作。
+
+---
+
+## 📚 圖鑑維護腳本
+
+```bash
+# 從 Wikipedia + 中文 Wikipedia 自動產生鳥種對照
+npm run aliases
+
+# 預覽（不寫入檔案）
+npm run aliases:dry
+```
+
+**目前狀態**：
+- `src/data/birds.json` — **569 筆**香港鳥種
+- `src/data/nameAliases.ts` — **2003+ 個** alias
+- 中文名覆蓋率：**475/569 (83.5%)**，剩 94 隻迷鳥用英文俗名
+
+**修改鳥名**：直接編輯 `src/data/birds.json`，把英文名改成你想要的中文。重跑 `npm run aliases` 不會覆蓋你已改的中文名。
+
+---
+
+## 🗺️ 觀鳥地圖 — 15 個香港熱點
+
+米埔、塱原、大埔滘、船灣、城門水塘、九龍公園、維多利亞公園、香港公園、香港動植物公園、蒲台島、大帽山、南大嶼、長洲、南丫島、西貢
+
+點選後**即時透過你的 `EBIRD_API_KEY` 查詢該熱點近 14 天觀察紀錄**。
+
+---
+
+## 🏆 成就階梯
+
+| 解鎖數 | 徽章 | 標題 |
+|--------|------|------|
+| 1 | 🐣 | 初次相遇 |
+| 10 | 🔍 | 見習觀鳥員 |
+| 50 | 🏘️ | 社區巡守員 |
+| 100 | 🎖️ | 鳥類達人 |
+| 250 | 🏆 | 香港百鳥圖 |
+| 500 | 📚 | 生態學者 |
+| 1000 | 👑 | 飛羽傳奇 |
+| 1500 | ✨ | 完美圖鑑 |
+
+達成時跳出金色浮窗。重置：「我的進度」面板 → 底部「重置成就記錄」按鈕。
+
+---
+
+## 📱 響應式對應
+
+| 機種 | 適配重點 |
+|------|---------|
+| **手機 (< 640px)** | 漢堡選單收起工具列、卡片 2 欄、底部留空避免被浮動按鈕擋、地圖縱向排列 |
+| **iPad (640~1023px)** | 卡片 3-4 欄、抽屜選單、地圖左右分割 |
+| **桌機 (≥ 1024px)** | 完整工具列、LED + Wi-Fi/Battery 燈、卡片 5-6 欄、tooltip |
+
+---
+
+## 🚀 部署
 
 ```bash
 git add .
-git commit -m "feat: AI 聲音與圖像辨識 (BirdNET + Nyckel)"
+git commit -m "feat(v1.4.0): HF Inference + 觀鳥地圖 + 進度面板 + 響應式 + 569 隻 HK 鳥種"
 git push
 ```
 
-Vercel 會自動觸發新部署。完成後測試：
-- 打開圖鑑機 → 點左屏右上角 **🎙️ Mic** 或 **📷 Camera** 按鈕
-- 或在行動裝置上點左屏頂部的兩顆 HUD 按鈕
-
----
-
-## 🧪 使用流程
-
-```
-使用者點「麥克風/相機」
-   ↓
-彈出 MediaCapturePanel
-   ├─ 🎙️ 即時錄音（最長 15 秒）
-   ├─ 📷 即時拍照（瀏覽器 getUserMedia）
-   └─ 📁 上傳本機檔案
-   ↓
-檔案送到 /api/analyze（Vercel Serverless）
-   ├─ 自動偵測：音訊 → BirdNET
-   └─ 自動偵測：圖片 → Nyckel
-   ↓
-回傳 Top-5 候選
-   ↓
-RecognitionResultModal 顯示
-   ├─ 信心 ≥ 70% 且在圖鑑內 → 1.2 秒後自動跳轉
-   └─ 否則：列出 Top-5，使用者點擊「在圖鑑」候選跳轉
-```
-
----
-
-## 📚 圖鑑名稱對照表
-
-你目前的 `birds.json` 都是中文鳥名，但 BirdNET / Nyckel 回傳的是英文。
-
-對照表在 **`src/data/nameAliases.ts`**。
-
-### 新增鳥種時請同時補上對照
-
-範例（你新增第 22 號鳥「白鶺鴒」）：
-
-```ts
-// src/data/nameAliases.ts
-export const NAME_TO_ID: Record<string, string> = {
-  // ... 既有條目 ...
-
-  // 0022 白鶺鴒
-  'white wagtail': '0022',
-  'motacilla alba': '0022',
-  '白鹡鸰': '0022',
-  '白鶺鴒': '0022',
-};
-```
-
-> 💡 一筆 ID 可以對應多個 key（英文俗名、學名、繁簡中文都建議放）。
-
----
-
-## 🛠️ 進階：自架 BirdNET（如果預設 Space 不穩定）
-
-最簡單的方式是直接 fork 並 duplicate：
-
-1. 開 <https://huggingface.co/spaces>
-2. 搜尋 `birdnet`，挑一個 Gradio Space
-3. 右上角 ⋮ → **Duplicate this Space**（免費帳號可以建私人 Space）
-4. 部署完成後，URL 是 `https://<你的帳號>-<space-name>.hf.space`
-5. 把這個 URL 填到 Vercel 的 `BIRDNET_SPACE_URL` 環境變數
-
-### 或：完全自架（最高彈性）
-
-如果你願意付一點伺服器費用（或用 Render 免費 plan），可以直接跑 BirdNET-Analyzer：
-
-```bash
-git clone https://github.com/birdnet-team/BirdNET-Analyzer
-cd BirdNET-Analyzer
-pip install -r requirements.txt
-# 用 FastAPI 包成 REST API（範例請見該 repo 的 server.py）
-```
-
----
-
-## ❓ 疑難排解
-
-| 問題 | 原因 | 解決 |
-|------|------|------|
-| 「Nyckel API 金鑰未設定」 | 環境變數沒填 | 到 Vercel Settings 設定後**重新部署** |
-| 「BirdNET 服務暫時無法連線」 | HF Space 冷啟動中 | 等 30 秒重試；長期請自架 Space |
-| 辨識到了鳥但跳不到圖鑑卡 | 名稱對照表沒收錄 | 在 `nameAliases.ts` 補對應 |
-| 行動端錄音/相機沒反應 | 瀏覽器權限 | 必須是 **HTTPS**（Vercel 預設就是），首次會問權限 |
-| Google Sites 嵌入後拿不到麥克風 | iframe 權限 | 在 Google Sites 嵌入時，加上 `allow="microphone; camera"` |
-
-### Google Sites 嵌入修補
-
-Google Sites 預設 iframe 不允許麥克風/相機。你需要：
-1. Embed → **Insert by URL** 改成 **Embed code**
-2. 把產生的 `<iframe>` 改成：
-
-```html
-<iframe
-  src="https://你的-aviandex.vercel.app"
-  width="100%"
-  height="900"
-  frameborder="0"
-  allow="microphone; camera; clipboard-write"
-></iframe>
-```
-
-> ⚠️ Google Sites 的「Embed」功能對 `allow` 屬性有限制，如果不生效，建議使用者直接點「全螢幕」按鈕跳到 Vercel 原網址操作。
-
----
-
-## 📦 本次變更檔案清單
-
-| 檔案 | 變更 |
-|------|------|
-| `api/analyze.js` | 重構為**統一辨識代理**（音訊 → BirdNET，圖片 → Nyckel） |
-| `src/App.tsx` | 加入 `analyzeMedia` 統一函式 + Recognition 浮窗狀態 |
-| `src/components/PokedexDevice.tsx` | 左屏加 📷 視覺辨識按鈕；行動端 HUD 接上實際邏輯 |
-| `src/components/MediaCapturePanel.tsx` | **新增**：錄音/拍照/上傳三合一 popover |
-| `src/components/RecognitionResultModal.tsx` | **新增**：Pokédex 風格的 Top-5 結果浮窗 |
-| `src/data/nameAliases.ts` | **新增**：英文/學名/中文 → 圖鑑 ID 對照表 |
+部署完後**第一件事**：開 `https://你的網址/api/analyze` 確認 `huggingface: true` ✅
 
 Enjoy! 🐦
