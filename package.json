@@ -12,6 +12,7 @@
     "aliases:dry": "node scripts/build-aliases.mjs --dry"
   },
   "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
     "form-data": "^4.0.0",
     "node-fetch": "^3.3.0",
     "@tailwindcss/vite": "^4.2.1",
