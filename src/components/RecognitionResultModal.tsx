@@ -21,6 +21,10 @@ export interface Candidate {
 interface Props {
   isOpen: boolean;
   loading: boolean;
+  /** 本地模型首次下載/暖機中 */
+  warming?: boolean;
+  /** 模型下載進度 0~100（僅 warming 時有意義） */
+  downloadProgress?: number;
   mode: 'audio' | 'image' | null;
   error: string | null;
   candidates: Candidate[];
@@ -31,6 +35,8 @@ interface Props {
 export const RecognitionResultModal: React.FC<Props> = ({
   isOpen,
   loading,
+  warming = false,
+  downloadProgress = 0,
   mode,
   error,
   candidates,
@@ -82,7 +88,33 @@ export const RecognitionResultModal: React.FC<Props> = ({
 
             {/* Body */}
             <div className="p-5 bg-gradient-to-b from-[#DEDEDE] to-[#bdbdbd] min-h-[280px]">
-              {loading && (
+              {/* 聲音：首次下載 / 暖機 → 顯示進度條 */}
+              {loading && warming && mode === 'audio' && (
+                <div className="flex flex-col items-center justify-center py-10 gap-4">
+                  <div className="relative w-16 h-16">
+                    <Loader2 className="w-16 h-16 text-red-700 animate-spin" />
+                    <span className="absolute inset-0 flex items-center justify-center font-black text-xs text-red-900">
+                      {downloadProgress}%
+                    </span>
+                  </div>
+                  <p className="text-gray-800 font-black tracking-widest text-center">
+                    {downloadProgress < 100 ? '下載辨識模型中…' : '初始化神經網絡…'}
+                  </p>
+                  <div className="w-full max-w-xs h-3 bg-gray-300 rounded-full overflow-hidden border border-gray-400">
+                    <div
+                      className="h-full bg-gradient-to-r from-cyan-500 to-green-500 transition-all duration-200"
+                      style={{ width: `${Math.min(100, downloadProgress)}%` }}
+                    />
+                  </div>
+                  <p className="text-gray-600 text-[11px] font-mono text-center max-w-xs leading-relaxed">
+                    首次使用需下載 BirdNET 模型（約 56MB），
+                    完成後會永久快取，<span className="font-black">下次秒辨、且不需網路</span>。
+                  </p>
+                </div>
+              )}
+
+              {/* 其他 loading（圖片 / 聲音推論中） */}
+              {loading && !(warming && mode === 'audio') && (
                 <div className="flex flex-col items-center justify-center py-10 gap-3">
                   <Loader2 className="w-12 h-12 text-red-700 animate-spin" />
                   <p className="text-gray-800 font-black tracking-widest">
@@ -90,7 +122,7 @@ export const RecognitionResultModal: React.FC<Props> = ({
                   </p>
                   <p className="text-gray-600 text-xs font-mono">
                     {mode === 'audio'
-                      ? 'BirdNET 神經網絡運算中（首次可能需 30 秒喚醒）'
+                      ? 'BirdNET 在你的裝置上運算中（不上傳音訊）'
                       : 'Nyckel 視覺模型分析中'}
                   </p>
                 </div>

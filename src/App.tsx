@@ -9,6 +9,7 @@ import { ProgressPanel } from './components/ProgressPanel.tsx';
 import { BirdingMapModal } from './components/BirdingMapModal.tsx';
 import { useBirds } from './hooks/useBirds';
 import { resolveBirdId } from './data/nameAliases';
+import { useBirdNetLocal } from './hooks/useBirdNetLocal';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Bird as BirdIcon,
@@ -50,6 +51,9 @@ function App() {
   const [globalCaptureKind, setGlobalCaptureKind] = useState<MediaKind | null>(null);
   const [recogOpen, setRecogOpen] = useState(false);
   const [recogLoading, setRecogLoading] = useState(false);
+
+  // 前端本地 BirdNET（聲音）引擎
+  const birdnet = useBirdNetLocal();
   const [recogMode, setRecogMode] = useState<AnalyzeMode | null>(null);
   const [recogError, setRecogError] = useState<string | null>(null);
   const [recogCandidates, setRecogCandidates] = useState<Candidate[]>([]);
@@ -63,27 +67,38 @@ function App() {
       setRecogOpen(true);
 
       try {
-        const response = await fetch('/api/analyze', {
-          method: 'POST',
-          headers: {
-            'Content-Type': (file as any).type || (mode === 'audio' ? 'audio/wav' : 'image/jpeg'),
-            'X-Media-Type': mode,
-          },
-          body: file,
-        });
+        let results: { label: string; score: number; scientific?: string }[] = [];
 
-        const text = await response.text();
-        let payload: any = null;
-        try { payload = JSON.parse(text); }
-        catch { throw new Error(`伺服器回傳非預期內容：${text.slice(0, 200)}`); }
+        if (mode === 'audio') {
+          // ✅ 聲音：走前端本地 BirdNET（免費、不上傳、無 rate limit）
+          const r = await birdnet.analyze(file);
+          if (birdnet.error) throw new Error(birdnet.error);
+          results = r.map((x) => ({ label: x.label, score: x.score, scientific: x.scientific }));
+        } else {
+          // 圖片：維持原本後端 HF /api/analyze
+          const response = await fetch('/api/analyze', {
+            method: 'POST',
+            headers: {
+              'Content-Type': (file as any).type || 'image/jpeg',
+              'X-Media-Type': mode,
+            },
+            body: file,
+          });
 
-        if (!response.ok) {
-          throw new Error(payload?.details || payload?.error || `HTTP ${response.status}`);
+          const text = await response.text();
+          let payload: any = null;
+          try { payload = JSON.parse(text); }
+          catch { throw new Error(`伺服器回傳非預期內容：${text.slice(0, 200)}`); }
+
+          if (!response.ok) {
+            throw new Error(payload?.details || payload?.error || `HTTP ${response.status}`);
+          }
+          results = payload?.results || [];
         }
-        const results: { label: string; score: number }[] = payload?.results || [];
 
         const candidates: Candidate[] = results.map((r) => {
-          const id = resolveBirdId(r.label);
+          // 名稱對映：俗名先試，對不上再試學名（BirdNET 同時提供兩者）
+          const id = resolveBirdId(r.label) || (r.scientific ? resolveBirdId(r.scientific) : undefined);
           const idx = id ? birds.findIndex((b) => b.id === id) : -1;
           return {
             label: r.label,
@@ -109,7 +124,7 @@ function App() {
         setRecogLoading(false);
       }
     },
-    [birds],
+    [birds, birdnet],
   );
 
   const analyzeAudio = useCallback((file: File | Blob) => {
@@ -117,6 +132,11 @@ function App() {
     const mode: AnalyzeMode = t.startsWith('image/') ? 'image' : 'audio';
     analyzeMedia(file, mode);
   }, [analyzeMedia]);
+
+  // 打開「聽聲」面板時，背景預熱本地模型（下載 + 暖機），讓使用者錄完即用
+  useEffect(() => {
+    if (globalCaptureKind === 'audio') birdnet.prefetch();
+  }, [globalCaptureKind, birdnet]);
 
   useEffect(() => {
     const anyModalOpen =
@@ -431,6 +451,8 @@ function App() {
       <RecognitionResultModal
         isOpen={recogOpen}
         loading={recogLoading}
+        warming={birdnet.isWarming}
+        downloadProgress={birdnet.progress}
         mode={recogMode}
         error={recogError}
         candidates={recogCandidates}
