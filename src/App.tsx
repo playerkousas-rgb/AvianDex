@@ -4,8 +4,6 @@ import { PokedexDevice } from './components/PokedexDevice.tsx';
 import { WelcomeScreen } from './components/WelcomeScreen.tsx';
 import { RecognitionResultModal, Candidate } from './components/RecognitionResultModal.tsx';
 import { MediaCapturePanel, MediaKind } from './components/MediaCapturePanel.tsx';
-import { AchievementToast } from './components/AchievementToast.tsx';
-import { ProgressPanel } from './components/ProgressPanel.tsx';
 import { BirdingMapModal } from './components/BirdingMapModal.tsx';
 import { useBirds } from './hooks/useBirds';
 import { resolveBirdId } from './data/nameAliases';
@@ -19,15 +17,15 @@ import {
   Sparkles,
   Wifi,
   BatteryFull,
-  LayoutGrid,
-  Crop,
-  Trophy,
   Map as MapIcon,
   Menu,
   X as XIcon,
 } from 'lucide-react';
 
-export const APP_VERSION = 'v1.4.0';
+export const APP_VERSION = 'v1.5.0';
+
+// 捕精靈 App（BIRD-DEX 2）網址
+export const BIRDDEX2_URL = 'https://skw-birdex2.vercel.app';
 
 type AnalyzeMode = 'audio' | 'image';
 
@@ -36,17 +34,8 @@ function App() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isOpened, setIsOpened] = useState(false);
   const [query, setQuery] = useState('');
-  const [showProgress, setShowProgress] = useState(false);
   const [showMap, setShowMap] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const [viewMode, setViewMode] = useState<'card' | 'specimen'>(() => {
-    try { return (localStorage.getItem('aviandex_view_mode') as any) || 'card'; }
-    catch { return 'card'; }
-  });
-  useEffect(() => {
-    try { localStorage.setItem('aviandex_view_mode', viewMode); } catch {}
-  }, [viewMode]);
 
   const [globalCaptureKind, setGlobalCaptureKind] = useState<MediaKind | null>(null);
   const [recogOpen, setRecogOpen] = useState(false);
@@ -138,12 +127,71 @@ function App() {
     if (globalCaptureKind === 'audio') birdnet.prefetch();
   }, [globalCaptureKind, birdnet]);
 
+  // ============================================================
+  // 跨 App 深層連結（與「捕精靈 App / BIRD-DEX 2」共用同一套編號）
+  // 支援：?id=12 或 ?id=0012（編號，最可靠，兩邊共用）
+  //       ?search=珠頸斑鳩（中文名後備）
+  // 例：https://avian-dex.vercel.app/?id=12
+  // ============================================================
+  useEffect(() => {
+    if (!birds.length) return;
+    let params: URLSearchParams;
+    try { params = new URLSearchParams(window.location.search); }
+    catch { return; }
+
+    const rawId = params.get('id');
+    const rawSearch = params.get('search');
+    if (!rawId && !rawSearch) return;
+
+    let idx = -1;
+
+    // 1) 以編號比對（容許 12 / 0012 / "12 " 等寫法）
+    if (rawId != null && rawId.trim() !== '') {
+      const digits = rawId.trim().replace(/\D/g, '');
+      if (digits) {
+        const padded = digits.padStart(4, '0');
+        idx = birds.findIndex((b) => b.id === padded);
+      }
+    }
+
+    // 2) 後備：以中文名 / 英文名 / 學名比對
+    if (idx < 0 && rawSearch != null && rawSearch.trim() !== '') {
+      const term = rawSearch.trim();
+      idx = birds.findIndex((b) => b.id === term || b.name === term);
+      if (idx < 0) {
+        const resolved = resolveBirdId(term);
+        if (resolved) idx = birds.findIndex((b) => b.id === resolved);
+      }
+      if (idx < 0) {
+        const low = term.toLowerCase();
+        idx = birds.findIndex(
+          (b) =>
+            b.name?.toLowerCase().includes(low) ||
+            (b as any).englishName?.toLowerCase?.().includes(low),
+        );
+      }
+    }
+
+    if (idx >= 0) {
+      setIsOpened(true);        // 跳過開機畫面，直接進入
+      setSelectedIndex(idx);    // 打開該鳥的圖鑑機
+    }
+
+    // 清掉網址參數，避免重新整理時又彈出
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('id');
+      url.searchParams.delete('search');
+      window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+    } catch {}
+  }, [birds]);
+
   useEffect(() => {
     const anyModalOpen =
-      selectedIndex !== null || showProgress || showMap || recogOpen || !!globalCaptureKind;
+      selectedIndex !== null || showMap || recogOpen || !!globalCaptureKind;
     document.body.style.overflow = anyModalOpen ? 'hidden' : 'unset';
     return () => { document.body.style.overflow = 'unset'; };
-  }, [selectedIndex, showProgress, showMap, recogOpen, globalCaptureKind]);
+  }, [selectedIndex, showMap, recogOpen, globalCaptureKind]);
 
   const filteredBirds = useMemo(() => {
     if (!query.trim()) return birds;
@@ -155,11 +203,11 @@ function App() {
     );
   }, [birds, query]);
 
-  const discoveredCount = useMemo(
+  // 圖鑑收錄的鳥種總數（已正式記錄、非 ??? 佔位）
+  const speciesCount = useMemo(
     () => birds.filter((b) => b.name && b.name !== '???').length,
     [birds],
   );
-  const progress = birds.length > 0 ? (discoveredCount / birds.length) * 100 : 0;
 
   if (error) {
     return (
@@ -237,13 +285,6 @@ function App() {
                 >
                   <MapIcon className="w-4 h-4" /> 觀鳥地圖
                 </button>
-                <button
-                  onClick={() => setShowProgress(true)}
-                  className="flex items-center gap-1.5 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-lg px-3 py-2 border border-yellow-400/20 text-yellow-200 font-black text-xs tracking-wider transition-all active:scale-95"
-                  title="我的進度"
-                >
-                  <Trophy className="w-4 h-4" /> 我的進度
-                </button>
                 <div className="flex gap-1.5 bg-black/30 backdrop-blur-sm rounded-full px-2.5 py-1.5 border border-white/10">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-500 border border-red-900 shadow-[0_0_8px_rgba(239,68,68,0.8)] animate-pulse" />
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-400 border border-yellow-700 shadow-[0_0_8px_rgba(250,204,21,0.8)]" />
@@ -276,22 +317,16 @@ function App() {
                   transition={{ duration: 0.25 }}
                   className="overflow-hidden md:hidden"
                 >
-                  <div className="bg-black/60 backdrop-blur-md border-t-2 border-yellow-400/20 px-3 py-3 grid grid-cols-2 gap-2 relative">
+                  <div className="bg-black/60 backdrop-blur-md border-t-2 border-yellow-400/20 px-3 py-3 grid grid-cols-1 gap-2 relative">
                     <button
                       onClick={() => { setShowMap(true); setMobileMenuOpen(false); }}
-                      className="flex items-center gap-2 bg-black/40 active:bg-yellow-500/20 rounded-lg px-3 py-3 border border-yellow-400/30 text-yellow-200 font-black text-xs tracking-wider transition-all active:scale-95"
+                      className="flex items-center justify-center gap-2 bg-black/40 active:bg-yellow-500/20 rounded-lg px-3 py-3 border border-yellow-400/30 text-yellow-200 font-black text-xs tracking-wider transition-all active:scale-95"
                     >
                       <MapIcon className="w-4 h-4 shrink-0" /> 觀鳥地圖
                     </button>
                     <button
-                      onClick={() => { setShowProgress(true); setMobileMenuOpen(false); }}
-                      className="flex items-center gap-2 bg-black/40 active:bg-yellow-500/20 rounded-lg px-3 py-3 border border-yellow-400/30 text-yellow-200 font-black text-xs tracking-wider transition-all active:scale-95"
-                    >
-                      <Trophy className="w-4 h-4 shrink-0" /> 我的進度
-                    </button>
-                    <button
-                      onClick={() => window.open('https://skw-birdex2.vercel.app', '_blank')}
-                      className="col-span-2 flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-800 rounded-lg px-3 py-3 border border-red-400/50 text-white font-black text-xs tracking-wider transition-all active:scale-95 shadow-lg shadow-red-900/50"
+                      onClick={() => window.open(BIRDDEX2_URL, '_blank')}
+                      className="flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-800 rounded-lg px-3 py-3 border border-red-400/50 text-white font-black text-xs tracking-wider transition-all active:scale-95 shadow-lg shadow-red-900/50"
                     >
                       <CameraIcon className="w-4 h-4 shrink-0" /> 前往 BIRD-DEX 2 捕捉精靈卡
                     </button>
@@ -304,25 +339,17 @@ function App() {
           <div className="bg-gradient-to-b from-yellow-300 to-yellow-400 border-b-[6px] border-black shadow-md relative">
             <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
               <div className="flex-1 flex items-center gap-2 sm:gap-3 min-w-0">
-                <div className="flex flex-col shrink-0">
-                  <span className="font-mono text-[8px] sm:text-[10px] text-red-900 font-black tracking-widest">
-                    COLLECTION
-                  </span>
-                  <span className="font-black text-gray-900 text-sm sm:text-base md:text-lg leading-none">
-                    {discoveredCount}
-                    <span className="text-gray-700 text-[10px] sm:text-xs font-mono"> / {birds.length}</span>
-                  </span>
-                </div>
-                <div className="flex-1 h-4 bg-black/30 rounded-full border-2 border-black overflow-hidden relative shadow-inner min-w-0">
-                  <div
-                    className="h-full bg-gradient-to-r from-green-400 via-emerald-500 to-cyan-500 transition-all duration-1000 relative"
-                    style={{ width: `${progress}%` }}
-                  >
-                    <div className="absolute inset-0 bg-white/20 animate-pulse" />
+                <div className="flex items-center gap-2 shrink-0 bg-black/15 border-2 border-black/40 rounded-lg px-3 py-1.5 shadow-inner">
+                  <BirdIcon className="w-4 h-4 sm:w-5 sm:h-5 text-red-900 shrink-0" strokeWidth={2.5} />
+                  <div className="flex flex-col leading-none">
+                    <span className="font-mono text-[8px] sm:text-[9px] text-red-900 font-black tracking-widest">
+                      圖鑑收錄 · SPECIES
+                    </span>
+                    <span className="font-black text-gray-900 text-sm sm:text-base md:text-lg leading-tight">
+                      {speciesCount}
+                      <span className="text-gray-700 text-[10px] sm:text-xs font-mono"> 種</span>
+                    </span>
                   </div>
-                  <span className="absolute inset-0 flex items-center justify-center font-mono text-[9px] sm:text-[10px] font-black text-white drop-shadow-md">
-                    {progress.toFixed(1)}%
-                  </span>
                 </div>
               </div>
 
@@ -365,26 +392,6 @@ function App() {
                   <BirdIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   SPECIMEN ARCHIVE
                 </h2>
-                <div className="flex bg-black/50 border-2 border-yellow-400/40 rounded-lg overflow-hidden shadow-md">
-                  <button
-                    onClick={() => setViewMode('card')}
-                    title="完整圖卡"
-                    className={`px-2.5 sm:px-3 py-1.5 flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-[10px] font-black tracking-widest transition-all ${
-                      viewMode === 'card' ? 'bg-yellow-400 text-black' : 'text-yellow-300/70 hover:bg-white/5'
-                    }`}
-                  >
-                    <LayoutGrid className="w-3 h-3" /> CARD
-                  </button>
-                  <button
-                    onClick={() => setViewMode('specimen')}
-                    title="放大裁切"
-                    className={`px-2.5 sm:px-3 py-1.5 flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-[10px] font-black tracking-widest transition-all ${
-                      viewMode === 'specimen' ? 'bg-yellow-400 text-black' : 'text-yellow-300/70 hover:bg-white/5'
-                    }`}
-                  >
-                    <Crop className="w-3 h-3" /> ZOOM
-                  </button>
-                </div>
                 <div className="flex-1 h-1 bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent rounded min-w-[20px]" />
               </div>
 
@@ -397,7 +404,6 @@ function App() {
                       bird={bird}
                       isActive={selectedIndex === realIdx}
                       onClick={() => setSelectedIndex(realIdx)}
-                      viewMode={viewMode}
                     />
                   );
                 })}
@@ -431,6 +437,42 @@ function App() {
             </span>
             <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-[8px] font-black px-1 rounded border border-black">
               AI
+            </span>
+          </button>
+
+          {/* 精靈球：跳轉去 BIRD-DEX 2（捕精靈 App） */}
+          <button
+            onClick={() => window.open(BIRDDEX2_URL, '_blank')}
+            title="前往 BIRD-DEX 2 捕捉精靈"
+            aria-label="前往 BIRD-DEX 2 捕捉精靈"
+            className="group relative w-14 h-14 sm:w-16 sm:h-16 rounded-full border-[3px] sm:border-[4px] border-gray-900 shadow-[0_5px_0_rgba(0,0,0,0.7),0_8px_20px_rgba(227,53,13,0.5)] active:translate-y-1 active:shadow-[0_2px_0_rgba(0,0,0,0.7)] transition-all flex items-center justify-center overflow-hidden bg-white"
+          >
+            {/* 精靈球圖案 */}
+            <svg viewBox="0 0 100 100" className="w-full h-full">
+              <defs>
+                <linearGradient id="pkb-top" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#ff5b3d" />
+                  <stop offset="100%" stopColor="#d4280a" />
+                </linearGradient>
+                <linearGradient id="pkb-bot" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#ffffff" />
+                  <stop offset="100%" stopColor="#d9d9d9" />
+                </linearGradient>
+              </defs>
+              <circle cx="50" cy="50" r="48" fill="url(#pkb-bot)" />
+              <path d="M2 50a48 48 0 0 1 96 0Z" fill="url(#pkb-top)" />
+              <rect x="2" y="45" width="96" height="10" fill="#111" />
+              <circle cx="50" cy="50" r="15" fill="#111" />
+              <circle cx="50" cy="50" r="11" fill="#fff" />
+              <circle cx="50" cy="50" r="6" fill="#f4f4f4" stroke="#111" strokeWidth="2" />
+              {/* 高光 */}
+              <ellipse cx="34" cy="28" rx="11" ry="7" fill="rgba(255,255,255,0.45)" />
+            </svg>
+            <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-black/80 text-white text-xs font-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+              去 BIRD-DEX 2 捕捉精靈
+            </span>
+            <span className="absolute -top-1 -right-1 bg-emerald-400 text-black text-[8px] font-black px-1 rounded border border-black animate-pulse">
+              GO
             </span>
           </button>
         </div>
@@ -467,15 +509,6 @@ function App() {
           setSelectedIndex(idx);
           setRecogOpen(false);
         }}
-      />
-
-      <AchievementToast discoveredCount={discoveredCount} />
-
-      <ProgressPanel
-        isOpen={showProgress}
-        onClose={() => setShowProgress(false)}
-        birds={birds}
-        onPick={(idx) => setSelectedIndex(idx)}
       />
 
       <BirdingMapModal isOpen={showMap} onClose={() => setShowMap(false)} />

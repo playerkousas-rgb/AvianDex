@@ -58,27 +58,50 @@ export const WelcomeScreen: React.FC<{ onOpen: () => void }> = ({ onOpen }) => {
       </motion.div>
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
-        <button
+        <motion.button
           onClick={handleOpen}
           className="relative group focus:outline-none"
+          animate={{ y: [0, -6, 0] }}
+          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+          whileTap={{ scale: 0.93 }}
         >
-          <div className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full border-[12px] border-black flex items-center justify-center shadow-[0_0_0_8px_rgba(255,255,255,0.1),0_15px_30px_rgba(0,0,0,0.8)] overflow-hidden transition-transform duration-300 group-active:scale-95 group-hover:shadow-[0_0_0_8px_rgba(255,255,255,0.2),0_15px_30px_rgba(0,0,0,0.8)]">
-            <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-100 to-gray-400" />
-            <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-100 rounded-full border-4 border-gray-300 shadow-inner flex items-center justify-center relative z-10 group-hover:border-gray-400 transition-colors">
+          {/* 外圈光暈 */}
+          <motion.div
+            className="absolute inset-0 rounded-full bg-cyan-400/30 blur-2xl"
+            animate={{ opacity: bootStep >= 2 ? [0.3, 0.7, 0.3] : 0.2, scale: bootStep >= 2 ? [1, 1.15, 1] : 1 }}
+            transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
+          />
+
+          {/* 精靈球本體 */}
+          <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-[6px] border-black shadow-[0_18px_40px_rgba(0,0,0,0.7),inset_0_-10px_20px_rgba(0,0,0,0.25)] overflow-hidden transition-transform duration-300 group-hover:scale-105">
+            {/* 上半紅 */}
+            <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#ff5b3d] to-[#d4280a]" />
+            {/* 下半白 */}
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-[#ffffff] to-[#d9d9d9]" />
+            {/* 中央黑帶 */}
+            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[14%] bg-black" />
+            {/* 高光 */}
+            <div className="absolute top-[14%] left-[20%] w-10 h-7 md:w-14 md:h-9 bg-white/40 rounded-full blur-md rotate-[-20deg]" />
+
+            {/* 中央按鈕 */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-16 md:h-16 rounded-full bg-black flex items-center justify-center shadow-lg">
               <motion.div
                 animate={{
-                  opacity: bootStep >= 2 ? [0.5, 1, 0.5] : 0.5,
-                  boxShadow: bootStep >= 2 ? ['0 0 10px rgba(56,189,248,0)', '0 0 20px rgba(56,189,248,0.6)', '0 0 10px rgba(56,189,248,0)'] : 'none',
+                  boxShadow: bootStep >= 2
+                    ? ['0 0 8px rgba(56,189,248,0.3)', '0 0 24px rgba(56,189,248,0.9)', '0 0 8px rgba(56,189,248,0.3)']
+                    : '0 0 6px rgba(255,255,255,0.2)',
                 }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-white flex items-center justify-center relative overflow-hidden"
+                transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+                className={`w-8 h-8 md:w-11 md:h-11 rounded-full border-[3px] flex items-center justify-center relative overflow-hidden transition-colors duration-500 ${
+                  bootStep >= 2 ? 'bg-white border-cyan-200' : 'bg-gray-100 border-gray-300'
+                }`}
               >
-                <div className="absolute top-1 left-2 w-4 h-4 bg-white rounded-full blur-[2px]" />
-                <Power className={`w-5 h-5 md:w-6 md:h-6 transition-colors duration-500 ${bootStep >= 2 ? 'text-blue-500' : 'text-gray-300'}`} />
+                <div className="absolute top-1 left-1.5 w-2.5 h-2.5 bg-white rounded-full blur-[1px]" />
+                <Power className={`w-4 h-4 md:w-5 md:h-5 transition-colors duration-500 ${bootStep >= 2 ? 'text-cyan-500' : 'text-gray-300'}`} strokeWidth={3} />
               </motion.div>
             </div>
           </div>
-        </button>
+        </motion.button>
       </div>
 
       <motion.div

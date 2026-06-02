@@ -8,15 +8,12 @@ interface BirdCardProps {
   bird: Bird;
   onClick: () => void;
   isActive?: boolean;
-  /** 'card' = 完整圖卡；'specimen' = 放大裁切 */
-  viewMode?: 'card' | 'specimen';
 }
 
 export const BirdCard: React.FC<BirdCardProps> = ({
   bird,
   onClick,
   isActive = false,
-  viewMode = 'card',
 }) => {
   const [imgStatus, setImgStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
   const discovered = bird.name && bird.name !== '???';
@@ -32,10 +29,7 @@ export const BirdCard: React.FC<BirdCardProps> = ({
           : 'border-gray-900 shadow-[0_6px_0_rgba(0,0,0,0.6),0_10px_20px_rgba(0,0,0,0.4)] hover:border-cyan-300'
       }`}
       style={{
-        background:
-          viewMode === 'specimen'
-            ? 'linear-gradient(160deg, #FFF4C2 0%, #FFE680 50%, #E8B838 100%)'
-            : 'linear-gradient(160deg, #FFE680 0%, #FFD43B 40%, #E0A800 100%)',
+        background: 'linear-gradient(160deg, #FFE680 0%, #FFD43B 40%, #E0A800 100%)',
       }}
       onClick={onClick}
     >
@@ -58,20 +52,9 @@ export const BirdCard: React.FC<BirdCardProps> = ({
           alt={`Card No. ${bird.id}`}
           onLoad={() => setImgStatus('loaded')}
           onError={() => setImgStatus('error')}
-          className={`w-full h-full ${imgStatus === 'loaded' ? 'block' : 'hidden'} ${
-            viewMode === 'specimen'
-              ? 'object-cover scale-[1.45] origin-[50%_42%] transition-transform duration-500 group-hover:scale-[1.55]'
-              : 'object-cover'
-          }`}
+          className={`w-full h-full object-cover ${imgStatus === 'loaded' ? 'block' : 'hidden'}`}
         />
       </div>
-
-      {viewMode === 'specimen' && imgStatus === 'loaded' && (
-        <>
-          <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-amber-900/40 via-transparent to-amber-100/10 z-10" />
-          <div className="absolute inset-2 pointer-events-none border-2 border-yellow-100/30 rounded-xl z-10" />
-        </>
-      )}
 
       {imgStatus === 'loaded' && discovered && (
         <div className="absolute bottom-0 inset-x-0 z-20 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-2 pt-6">

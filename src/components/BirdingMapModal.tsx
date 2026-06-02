@@ -250,39 +250,106 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                 <p className="text-[10px] text-emerald-900 font-mono uppercase tracking-widest mb-2 font-black flex items-center gap-1">
                   <MapPin className="w-3 h-3" /> 點選地點查看觀察紀錄
                 </p>
-                <div className="relative aspect-[10/7] w-full bg-[#cae9ec] rounded-xl border-[3px] border-gray-900 overflow-hidden shadow-inner">
+                <div className="relative aspect-[10/7] w-full rounded-xl border-[3px] border-gray-900 overflow-hidden shadow-[inset_0_2px_12px_rgba(0,0,0,0.3)]">
                   <svg viewBox="0 0 1000 700" className="w-full h-full">
-                    {/* 海洋 */}
-                    <rect width="1000" height="700" fill="#a3d9e8" />
+                    <defs>
+                      {/* 海洋漸層 */}
+                      <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#bfe9f2" />
+                        <stop offset="55%" stopColor="#8fd0e6" />
+                        <stop offset="100%" stopColor="#5fb4d6" />
+                      </linearGradient>
+                      {/* 陸地漸層 */}
+                      <linearGradient id="land" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#c8e6a0" />
+                        <stop offset="100%" stopColor="#86bf6a" />
+                      </linearGradient>
+                      {/* 陸地陰影 */}
+                      <filter id="landShadow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="0" dy="6" stdDeviation="8" floodColor="#1d4a2e" floodOpacity="0.35" />
+                      </filter>
+                      {/* pin 陰影 */}
+                      <filter id="pinShadow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feDropShadow dx="0" dy="3" stdDeviation="3" floodColor="#000" floodOpacity="0.45" />
+                      </filter>
+                    </defs>
 
-                    {/* 香港大致輪廓（簡化）*/}
-                    {/* 新界 */}
-                    <path
-                      d="M 80,180 Q 150,150 220,170 L 320,160 Q 400,170 460,200 L 540,200 Q 620,180 700,220 L 780,260 Q 820,300 800,360 L 750,420 L 700,400 Q 640,420 580,400 L 520,420 L 460,440 Q 400,450 340,430 L 280,400 Q 220,420 160,400 L 120,360 Q 80,300 80,180 Z"
-                      fill="#9eca8e"
-                      stroke="#4a7c2e"
-                      strokeWidth="2"
-                    />
-                    {/* 大嶼山 */}
-                    <path
-                      d="M 150,500 Q 220,480 280,510 L 350,520 Q 400,540 380,580 L 320,600 Q 250,610 180,590 Q 130,560 150,500 Z"
-                      fill="#9eca8e"
-                      stroke="#4a7c2e"
-                      strokeWidth="2"
-                    />
-                    {/* 港島 */}
-                    <path
-                      d="M 470,480 Q 530,470 590,485 L 650,490 Q 680,500 670,540 L 600,560 Q 540,565 480,555 Q 450,540 470,480 Z"
-                      fill="#9eca8e"
-                      stroke="#4a7c2e"
-                      strokeWidth="2"
-                    />
-                    {/* 蒲台 */}
-                    <ellipse cx="690" cy="620" rx="25" ry="15" fill="#9eca8e" stroke="#4a7c2e" strokeWidth="2" />
-                    {/* 長洲 */}
-                    <ellipse cx="380" cy="580" rx="20" ry="13" fill="#9eca8e" stroke="#4a7c2e" strokeWidth="2" />
-                    {/* 南丫 */}
-                    <ellipse cx="490" cy="610" rx="22" ry="20" fill="#9eca8e" stroke="#4a7c2e" strokeWidth="2" />
+                    {/* 海洋底 */}
+                    <rect width="1000" height="700" fill="url(#ocean)" />
+
+                    {/* 海洋經緯格線 */}
+                    <g stroke="#ffffff" strokeOpacity="0.18" strokeWidth="1.5">
+                      {[100, 200, 300, 400, 500, 600].map((y) => (
+                        <line key={`h${y}`} x1="0" y1={y} x2="1000" y2={y} />
+                      ))}
+                      {[150, 300, 450, 600, 750, 900].map((x) => (
+                        <line key={`v${x}`} x1={x} y1="0" x2={x} y2="700" />
+                      ))}
+                    </g>
+
+                    {/* 海浪點紋 */}
+                    <g fill="#ffffff" fillOpacity="0.25">
+                      {[[120,120],[300,90],[640,110],[860,150],[180,470],[700,520],[880,470],[420,640],[600,660]].map(([cx,cy],i)=>(
+                        <g key={i} transform={`translate(${cx},${cy})`}>
+                          <path d="M -10 0 q 5 -6 10 0 q 5 6 10 0" fill="none" stroke="#ffffff" strokeOpacity="0.3" strokeWidth="2" />
+                        </g>
+                      ))}
+                    </g>
+
+                    {/* 陸地群（加陰影濾鏡）*/}
+                    <g filter="url(#landShadow)">
+                      {/* 新界 + 九龍 */}
+                      <path
+                        d="M 80,180 Q 150,150 220,170 L 320,158 Q 400,168 462,198 L 540,198 Q 624,176 702,220 L 784,262 Q 826,302 802,362 L 752,422 L 700,402 Q 640,422 580,402 L 520,422 L 462,442 Q 400,452 340,432 L 280,402 Q 220,422 160,402 L 120,362 Q 78,300 80,180 Z"
+                        fill="url(#land)"
+                        stroke="#3f6e29"
+                        strokeWidth="3"
+                        strokeLinejoin="round"
+                      />
+                      {/* 大嶼山 */}
+                      <path
+                        d="M 150,500 Q 222,480 282,510 L 352,520 Q 402,540 380,582 L 320,602 Q 250,612 180,592 Q 128,560 150,500 Z"
+                        fill="url(#land)"
+                        stroke="#3f6e29"
+                        strokeWidth="3"
+                        strokeLinejoin="round"
+                      />
+                      {/* 港島 */}
+                      <path
+                        d="M 470,482 Q 532,470 592,486 L 652,492 Q 682,502 670,542 L 600,562 Q 540,566 480,556 Q 448,540 470,482 Z"
+                        fill="url(#land)"
+                        stroke="#3f6e29"
+                        strokeWidth="3"
+                        strokeLinejoin="round"
+                      />
+                      {/* 離島 */}
+                      <ellipse cx="690" cy="620" rx="26" ry="16" fill="url(#land)" stroke="#3f6e29" strokeWidth="3" />
+                      <ellipse cx="380" cy="580" rx="21" ry="14" fill="url(#land)" stroke="#3f6e29" strokeWidth="3" />
+                      <ellipse cx="490" cy="610" rx="23" ry="21" fill="url(#land)" stroke="#3f6e29" strokeWidth="3" />
+                    </g>
+
+                    {/* 山脈紋理（淡色）*/}
+                    <g stroke="#5a8c3e" strokeOpacity="0.35" strokeWidth="2" fill="none">
+                      <path d="M 380,330 q 20,-18 40,0 q 20,18 40,0" />
+                      <path d="M 460,300 q 16,-14 32,0 q 16,14 32,0" />
+                      <path d="M 250,260 q 18,-15 36,0" />
+                    </g>
+
+                    {/* 指南針 */}
+                    <g transform="translate(915, 95)">
+                      <circle r="42" fill="#0d2818" fillOpacity="0.55" stroke="#facc15" strokeWidth="2.5" />
+                      <path d="M 0,-32 L 9,0 L 0,32 L -9,0 Z" fill="#ef4444" />
+                      <path d="M 0,32 L 9,0 L 0,0 Z" fill="#fef3c7" />
+                      <path d="M 0,-32 L 9,0 L 0,0 Z" fill="#fca5a5" />
+                      <text y="-22" textAnchor="middle" fontSize="16" fontWeight="900" fill="#fff">N</text>
+                    </g>
+
+                    {/* 比例尺 */}
+                    <g transform="translate(60, 650)">
+                      <rect x="0" y="0" width="120" height="7" fill="#0d2818" fillOpacity="0.6" rx="2" />
+                      <rect x="0" y="0" width="60" height="7" fill="#facc15" rx="2" />
+                      <text x="60" y="24" textAnchor="middle" fontSize="13" fontWeight="800" fill="#0d3b22">~10 km</text>
+                    </g>
 
                     {/* 地點 pin */}
                     {SPOTS.map((spot) => {
@@ -296,25 +363,29 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                           style={{ transition: 'transform 0.2s' }}
                         >
                           {active && (
-                            <circle r="22" fill="rgba(250,204,21,0.4)" className="animate-ping" />
+                            <circle r="24" fill="rgba(250,204,21,0.4)" className="animate-ping" />
                           )}
-                          <circle
-                            r={active ? 13 : 9}
-                            fill={active ? '#facc15' : '#ef4444'}
-                            stroke="#111"
-                            strokeWidth="2.5"
-                          />
-                          <circle r="3" fill="white" />
+                          {/* 水滴形 pin */}
+                          <g filter="url(#pinShadow)" transform={active ? 'scale(1.15)' : 'scale(1)'} style={{ transition: 'transform 0.2s' }}>
+                            <path
+                              d="M 0,8 C -11,-4 -11,-20 0,-22 C 11,-20 11,-4 0,8 Z"
+                              fill={active ? '#facc15' : '#ef4444'}
+                              stroke="#111"
+                              strokeWidth="2.5"
+                              strokeLinejoin="round"
+                            />
+                            <circle cx="0" cy="-12" r="4.5" fill="#fff" />
+                          </g>
                           <text
-                            y={active ? -20 : -16}
+                            y={active ? -32 : -28}
                             textAnchor="middle"
                             className="font-black"
                             style={{
-                              fontSize: active ? '14px' : '11px',
-                              fill: active ? '#7c2d12' : '#1f2937',
+                              fontSize: active ? '15px' : '12px',
+                              fill: active ? '#7c2d12' : '#14361f',
                               paintOrder: 'stroke',
                               stroke: '#fff',
-                              strokeWidth: '3px',
+                              strokeWidth: '3.5px',
                               strokeLinejoin: 'round',
                             }}
                           >
@@ -325,11 +396,10 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                     })}
 
                     {/* 圖例 */}
-                    <g transform="translate(20, 670)">
-                      <circle cx="0" cy="0" r="6" fill="#ef4444" stroke="#111" strokeWidth="2" />
-                      <text x="12" y="4" fontSize="11" fill="#1f2937" fontWeight="900">
-                        觀鳥熱點
-                      </text>
+                    <g transform="translate(20, 680)">
+                      <rect x="-8" y="-16" width="120" height="26" rx="6" fill="#0d2818" fillOpacity="0.55" />
+                      <path d="M 6,2 C -2,-6 -2,-15 6,-16 C 14,-15 14,-6 6,2 Z" fill="#ef4444" stroke="#111" strokeWidth="1.5" />
+                      <text x="22" y="2" fontSize="12" fill="#fff" fontWeight="900">觀鳥熱點</text>
                     </g>
                   </svg>
                 </div>

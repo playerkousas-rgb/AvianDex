@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, MouseEvent } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Bird } from '../types';
 import { 
   Search, 
@@ -8,8 +8,6 @@ import {
   X, 
   Globe, 
   BookOpen, 
-  Maximize2, 
-  ZoomIn, 
   Mic,      // 加入這一個
   MapPin,     // 觀察雷達
   Camera,     // 視覺圖庫
@@ -55,21 +53,6 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   const [isSearching, setIsSearching] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  // --- 2. 教學模式與放大鏡專用狀態 ---
-  // 注意：這裡只定義一次 viewMode 和 zoomScale
-  const [viewMode, setViewMode] = useState<'lens' | 'zoom'>('lens');
-  const [zoomScale, setZoomScale] = useState(1); 
-  const [lensPosition, setLensPosition] = useState({ x: 0, y: 0 });
-  const [isLensVisible, setIsLensVisible] = useState(false);
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-
-  // --- 3. 引用與配置 ---
-  const imgRef = useRef<HTMLImageElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const ZOOM_LEVEL = 4;      // 4倍放大
-  const LENS_SIZE = 280;     // 放大鏡直徑
-
  // 1. 當圖鑑打開或切換全螢幕時，控制網頁滾動
   useEffect(() => {
     if (isOpen) {
@@ -82,15 +65,6 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
     }
     return () => { document.body.style.overflow = 'unset'; };
   }, [isOpen, initialIndex]);
-
-  // 2. 切換全螢幕狀態時的額外處理
-  useEffect(() => {
-    if (!isFullscreen) {
-      // 退出全螢幕時，重置縮放倍率和模式，確保下次進入是乾淨的
-      setZoomScale(1);
-      setViewMode('lens');
-    }
-  }, [isFullscreen]);
 
   // 3. 切換鳥類時觸發讀取狀態
   useEffect(() => {
@@ -157,26 +131,6 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
     }
   };
 
-  // 核心放大鏡移動計算法
-  const handleMagnifierMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    if (!imgRef.current) return;
-
-    const rect = imgRef.current.getBoundingClientRect();
-    
-    // 計算滑鼠相對於圖片的位置
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    // 檢查滑鼠是否在圖片範圍內
-    if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
-      setLensPosition({ x, y });
-      setCursorPos({ x: e.clientX, y: e.clientY });
-      setIsLensVisible(true);
-    } else {
-      setIsLensVisible(false);
-    }
-  };
-
   if (!isOpen) return null;
 
   const currentBird = birds[currentIndex];
@@ -222,44 +176,18 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             </button>
           </div>
 
-          {/* --- 2. 模式切換器：僅在電腦版顯示，行動端完全移除 (hidden md:flex) --- */}
+          {/* --- 核心圖片顯示區：原生縮放優先（電腦滾輪 / 手機雙指）---
+               已移除自訂放大鏡與縮放模式，改由瀏覽器/裝置內置縮放手勢處理。 */}
           <div 
-            className="absolute top-10 left-1/2 -translate-x-1/2 z-[130] hidden md:flex flex-col items-center gap-4 pointer-events-auto"
-            onClick={(e) => e.stopPropagation()} 
-          >
-            <div className="bg-gray-900/80 backdrop-blur-xl border border-white/20 p-1.5 rounded-2xl flex gap-1 shadow-2xl">
-              <button onClick={() => setViewMode('lens')} className={`px-6 py-2 rounded-xl font-bold ${viewMode === 'lens' ? 'bg-yellow-400 text-black' : 'text-white'}`}>🔍 放大鏡</button>
-              <button onClick={() => setViewMode('zoom')} className={`px-6 py-2 rounded-xl font-bold ${viewMode === 'zoom' ? 'bg-yellow-400 text-black' : 'text-white'}`}>🖼️ 縮放模式</button>
-            </div>
-          </div>
-
-          {/* --- 3. 核心圖片顯示區：釋放容器限制 --- */}
-          <div 
-            /* 關鍵修正 3：移除所有置中、overflow 限制
-               改用一個獨立的捲動層，並加入 WebkitOverflowScrolling 確保 iOS 慣性。
-            */
             className="w-full h-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="w-full flex justify-center py-6 md:py-10">
               {/* 圖片主體 */}
               <motion.img 
-                ref={imgRef}
                 src={currentBird.imageUrl} 
                 alt={currentBird.name} 
-                /* 邏輯保留：電腦版 viewMode */
-                style={{ 
-                  transform: viewMode === 'zoom' ? `scale(${zoomScale})` : 'scale(1)',
-                  transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
-                  cursor: viewMode === 'zoom' ? 'grab' : 'none',
-                  transformOrigin: 'center center' 
-                }}
-                /* 關鍵修正 4：行動端放寬 max-w 到 98% 甚至 100%，
-                   並移除 max-h-screen 限制，讓圖片長度決定捲動範圍。
-                */
-                className={`object-contain rounded-lg shadow-2xl transition-all ${
-                  viewMode === 'zoom' ? 'w-[98%] md:w-[85%] h-auto' : 'w-[98%] md:max-w-[95%] h-auto md:max-h-[85vh]'
-                }`}
+                className="object-contain rounded-lg shadow-2xl w-[98%] md:max-w-[95%] h-auto md:max-h-[85vh]"
               />
             </div>
             
