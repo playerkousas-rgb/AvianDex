@@ -20,6 +20,19 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { BirdSilhouette } from './BirdSilhouette.tsx';
 import { MediaCapturePanel, MediaKind } from './MediaCapturePanel.tsx';
 
+// 捕精靈 App（BIRD-DEX 2）網址
+const BIRDDEX2_URL = 'https://skw-birdex2.vercel.app';
+
+// 精靈球小圖示（用於跳轉 BIRD-DEX 2 的按鈕）
+const PokeballIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg viewBox="0 0 100 100" className={className}>
+    <circle cx="50" cy="50" r="46" fill="#fff" stroke="#111" strokeWidth="6" />
+    <path d="M5 50a45 45 0 0 1 90 0Z" fill="#ef4444" stroke="#111" strokeWidth="6" />
+    <line x1="4" y1="50" x2="96" y2="50" stroke="#111" strokeWidth="6" />
+    <circle cx="50" cy="50" r="14" fill="#fff" stroke="#111" strokeWidth="6" />
+  </svg>
+);
+
 interface PokedexDeviceProps {
   birds: Bird[];
   initialIndex: number;
@@ -230,21 +243,32 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
           {/* --- 左半部分：圖鑑顯示面板 (修正版) --- */}
 <div className="w-full md:w-1/2 min-h-[50%] md:h-full bg-gradient-to-br from-[#E3350D] via-[#c92b0a] to-[#9a2208] border-[6px] md:border-[10px] border-gray-900 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3),inset_0_3px_8px_rgba(255,255,255,0.15)]">
   
-  {/* 行動端專用 HUD - 聲音/影像 AI 辨識 */}
-  <div className="md:hidden absolute top-20 left-4 right-4 flex justify-between z-30 pointer-events-none">
+  {/* 行動端專用 HUD - 聲音/影像 AI 辨識 + 精靈球跳轉 */}
+  <div className="md:hidden absolute top-20 left-4 right-4 flex justify-between items-center z-30 pointer-events-none">
+    <div className="flex gap-3">
+      <button 
+        onClick={(e) => { e.stopPropagation(); setCaptureKind('audio'); }}
+        title="聲音辨識"
+        className="pointer-events-auto w-12 h-12 rounded-full bg-cyan-500/30 backdrop-blur-md border-2 border-cyan-400/70 flex items-center justify-center text-cyan-300 active:scale-90 active:bg-cyan-400 active:text-black shadow-lg shadow-cyan-500/30"
+      >
+        <Mic className="w-5 h-5" /> 
+      </button>
+      <button 
+        onClick={(e) => { e.stopPropagation(); setCaptureKind('image'); }}
+        title="看圖認雀"
+        className="pointer-events-auto w-12 h-12 rounded-full bg-fuchsia-500/30 backdrop-blur-md border-2 border-fuchsia-400/70 flex items-center justify-center text-fuchsia-300 active:scale-90 active:bg-fuchsia-400 active:text-black shadow-lg shadow-fuchsia-500/30"
+      >
+        <Camera className="w-5 h-5" />
+      </button>
+    </div>
+    {/* 精靈球：跳轉去 BIRD-DEX 2 捕捉精靈 */}
     <button 
-      onClick={(e) => { e.stopPropagation(); setCaptureKind('audio'); }}
-      title="聲音辨識"
-      className="pointer-events-auto w-12 h-12 rounded-full bg-cyan-500/30 backdrop-blur-md border-2 border-cyan-400/70 flex items-center justify-center text-cyan-300 active:scale-90 active:bg-cyan-400 active:text-black shadow-lg shadow-cyan-500/30"
+      onClick={(e) => { e.stopPropagation(); window.open(BIRDDEX2_URL, '_blank'); }}
+      title="前往 BIRD-DEX 2 捕捉精靈"
+      aria-label="前往 BIRD-DEX 2 捕捉精靈"
+      className="pointer-events-auto w-12 h-12 rounded-full bg-white/90 backdrop-blur-md border-2 border-gray-900 flex items-center justify-center p-1.5 active:scale-90 shadow-lg shadow-red-500/30"
     >
-      <Mic className="w-5 h-5" /> 
-    </button>
-    <button 
-      onClick={(e) => { e.stopPropagation(); setCaptureKind('image'); }}
-      title="看圖認雀"
-      className="pointer-events-auto w-12 h-12 rounded-full bg-fuchsia-500/30 backdrop-blur-md border-2 border-fuchsia-400/70 flex items-center justify-center text-fuchsia-300 active:scale-90 active:bg-fuchsia-400 active:text-black shadow-lg shadow-fuchsia-500/30"
-    >
-      <Camera className="w-5 h-5" />
+      <PokeballIcon className="w-full h-full" />
     </button>
   </div>
 
@@ -286,6 +310,16 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
         className="w-8 h-8 rounded-full bg-fuchsia-500/20 flex items-center justify-center border border-fuchsia-500/40 hover:bg-fuchsia-500 hover:text-black transition-all active:scale-90"
       >
         <Camera className="w-4 h-4" />
+      </button>
+      {/* 精靈球：跳轉去 BIRD-DEX 2 */}
+      <button
+        type="button"
+        onClick={(e) => { e.stopPropagation(); window.open(BIRDDEX2_URL, '_blank'); }}
+        title="前往 BIRD-DEX 2 捕捉精靈"
+        aria-label="前往 BIRD-DEX 2 捕捉精靈"
+        className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center border border-gray-900 p-1 hover:scale-110 transition-all active:scale-90"
+      >
+        <PokeballIcon className="w-full h-full" />
       </button>
     </div>
   </div>
