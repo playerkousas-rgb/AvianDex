@@ -449,22 +449,27 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 20 }}
-            className="flex flex-col w-full h-full gap-4 relative z-10"
+            className="flex flex-col justify-start min-h-max w-full gap-4 relative z-10 pb-10"
           >
-            {/* 核心功能：四宮格圖片容器 */}
-            <div className="flex-1 bg-gradient-to-b from-amber-950/60 to-black/70 rounded-3xl p-5 border-2 border-amber-500/30 flex flex-col gap-4 overflow-hidden shadow-inner">
-              <div className="flex items-center gap-3">
-                <div className="bg-amber-500/20 p-2 rounded-lg">
+            {/* 核心功能：六宮格圖片容器（手機版改為自然高度，可隨頁面捲動） */}
+            <div className="bg-gradient-to-b from-amber-950/60 to-black/70 rounded-3xl p-5 border-2 border-amber-500/30 flex flex-col gap-4 shadow-inner">
+              <div className="flex items-start gap-3">
+                <div className="bg-amber-500/20 p-2 rounded-lg shrink-0">
                   <Globe className="w-5 h-5 text-amber-300 animate-pulse" />
                 </div>
-                <div>
+                <div className="flex-1 min-w-0">
                   <h3 className="text-amber-200 font-black text-lg tracking-tighter uppercase leading-none">科學研究中心</h3>
-                  <p className="text-white/40 text-[9px] uppercase tracking-widest mt-1">Research Hub / {currentBird.name}</p>
+                  <p className="text-white/40 text-[9px] uppercase tracking-widest mt-1 truncate">Research Hub / {currentBird.name}</p>
+                  {/* 小字鳴謝 — 直接放在副標下方，不再單獨佔一行 */}
+                  <p className="text-[8px] text-amber-300/70 leading-snug mt-1.5 italic">
+                    <Award className="w-2.5 h-2.5 inline-block mr-0.5 -mt-0.5" />
+                    數據鳴謝：<span className="text-amber-300 font-bold not-italic">Cornell Lab</span>、eBird、Macaulay Library
+                  </p>
                 </div>
               </div>
 
-            {/* 六宮格圖片矩陣 */}
-<div className="grid grid-cols-2 gap-3 flex-1 min-h-0">
+            {/* 六宮格圖片矩陣（每格固定為正方形，手機版確保 6 格都看得到、按得到） */}
+<div className="grid grid-cols-2 gap-3 [&>button]:aspect-square">
   
   {/* 1. 深度百科 */}
  <button 
@@ -545,17 +550,8 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 </button>
   
 </div>
-              {/* 鳴謝區 */}
-              <div className="mt-auto p-3 bg-amber-900/30 rounded-xl border border-amber-400/20">
-                <p className="text-[10px] text-amber-300 font-black tracking-widest uppercase mb-1 flex items-center gap-2">
-                  <Award className="w-3 h-3" /> Credits & Sources
-                </p>
-                <p className="text-[9px] text-white/50 leading-relaxed italic">
-                  本計畫之科學數據由 <span className="text-amber-300 font-bold">Cornell Lab</span> 提供。
-                  鳴謝 eBird 及 Macaulay Library。
-                </p>
-              </div>
-            </div> {/* <-- 剛才漏掉的這個容器關閉標籤 */}
+              {/* 鳴謝改為小字放在科研中心副標下方，不再單獨佔一塊 */}
+            </div> {/* <-- 容器關閉標籤 */}
 
             {/* 返回按鈕 */}
             <button 
