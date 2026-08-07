@@ -6,6 +6,7 @@ import { RecognitionResultModal, Candidate } from './components/RecognitionResul
 import { MediaCapturePanel, MediaKind } from './components/MediaCapturePanel.tsx';
 import { BirdingMapModal } from './components/BirdingMapModal.tsx';
 import { useBirds } from './hooks/useBirds';
+import { Bird } from './types';
 import { resolveBirdId } from './data/nameAliases';
 import { useBirdNetLocal } from './hooks/useBirdNetLocal';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -68,16 +69,21 @@ function App() {
           const response = await fetch('/api/analyze', {
             method: 'POST',
             headers: {
-              'Content-Type': (file as any).type || 'image/jpeg',
+              'Content-Type': (file as File).type || 'image/jpeg',
               'X-Media-Type': mode,
             },
             body: file,
           });
 
           const text = await response.text();
-          let payload: any = null;
-          try { payload = JSON.parse(text); }
-          catch { throw new Error(`伺服器回傳非預期內容：${text.slice(0, 200)}`); }
+          interface ApiPayload {
+            details?: string;
+            error?: string;
+            results?: { label: string; score: number; scientific?: string }[];
+          }
+          let payload: ApiPayload | null = null;
+          try { payload = JSON.parse(text) as ApiPayload; }
+          catch { throw new Error(`伺服器回傳非預期內容：${String(text).slice(0, 200)}`); }
 
           if (!response.ok) {
             throw new Error(payload?.details || payload?.error || `HTTP ${response.status}`);
@@ -107,9 +113,10 @@ function App() {
             setRecogOpen(false);
           }, 1200);
         }
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error('辨識失敗:', err);
-        setRecogError(err?.message || '未知錯誤');
+        const msg = err instanceof Error ? err.message : '未知錯誤';
+        setRecogError(msg);
         setRecogLoading(false);
       }
     },
@@ -117,7 +124,7 @@ function App() {
   );
 
   const analyzeAudio = useCallback((file: File | Blob) => {
-    const t = (file as any).type || '';
+          const t = (file as File).type || '';
     const mode: AnalyzeMode = t.startsWith('image/') ? 'image' : 'audio';
     analyzeMedia(file, mode);
   }, [analyzeMedia]);
@@ -183,7 +190,7 @@ function App() {
       url.searchParams.delete('id');
       url.searchParams.delete('search');
       window.history.replaceState({}, '', url.pathname + url.search + url.hash);
-    } catch {}
+    } catch { /* ignore URL errors */ }
   }, [birds]);
 
   useEffect(() => {
@@ -199,7 +206,7 @@ function App() {
     return birds.filter((b) =>
       b.id.includes(q) ||
       b.name.toLowerCase().includes(q) ||
-      (b as any).englishName?.toLowerCase?.().includes(q),
+            (b as Bird).englishName ? (b as Bird).englishName!.toLowerCase().includes(q) : false,
     );
   }, [birds, query]);
 
@@ -213,7 +220,7 @@ function App() {
     return (
       <div className="min-h-screen bg-[#313131] flex items-center justify-center">
         <div className="bg-red-500 text-white p-6 rounded-xl font-bold shadow-2xl">
-          Error loading Dex: {(error as any)?.message || 'Unknown error'}
+          Error loading Dex: {(error as Error)?.message || 'Unknown error'}
         </div>
       </div>
     );
