@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Bird } from '../types';
 import { mockBirds } from '../data/mockBirds';
 
-const TOTAL_SLOTS = 151; // 預產生 151 個槽位
+const TOTAL_SLOTS = 569; // 對應 birds.json 完整資料（原為 151，導致只顯示部分圖卡）
 
 export function useBirds() {
   const [birds, setBirds] = useState<Bird[]>([]);
