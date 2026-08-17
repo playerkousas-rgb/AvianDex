@@ -489,7 +489,7 @@ function App() {
             <p className="text-yellow-300 font-black tracking-widest mb-1">► CREDITS & DATA SOURCES ({APP_VERSION})</p>
             <p>科學數據：Cornell Lab · eBird · Macaulay Library · Xeno-canto</p>
             <p>AI 引擎：Hugging Face (BirdSet) · Nyckel · BirdNET</p>
-            <p className="text-white/30 mt-1">© Scout Systemio</p>
+            <p className="text-white/30 mt-1">© Scout System</p>
           </div>
         </footer>
       </div>
