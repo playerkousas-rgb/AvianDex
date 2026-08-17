@@ -60,7 +60,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
             <div className="p-4 border-t border-white/10">
               <p className="text-[10px] text-gray-500 font-mono text-center">
-                CREATED BY SKWSCOUT © 2026
+                CREATED BY Scout Systemio © 2026
               </p>
             </div>
           </motion.div>
