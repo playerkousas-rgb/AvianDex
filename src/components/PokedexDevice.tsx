@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Bird } from '../types';
 import { 
   Search, 
@@ -17,7 +17,6 @@ import {
   Award       // 鳴謝區
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BirdSilhouette } from './BirdSilhouette.tsx';
 import { MediaCapturePanel, MediaKind } from './MediaCapturePanel.tsx';
 
 // 捕精靈 App（BIRD-DEX 2）網址
@@ -61,34 +60,43 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   // --- 1. 核心狀態 ---
   const [showDetails, setShowDetails] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
-  const [imgStatus, setImgStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
   const [searchTerm, setSearchTerm] = useState('');
   const [isSearching, setIsSearching] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  // 下一隻
+  const handleNext = useCallback(() => {
+    if (currentIndex < birds.length - 1) {
+      setCurrentIndex(prev => prev + 1);
+    }
+  }, [currentIndex, birds.length]);
+
+  // 上一隻
+  const handlePrev = useCallback(() => {
+    if (currentIndex > 0) {
+      setCurrentIndex(prev => prev - 1);
+    }
+  }, [currentIndex]);
 
  // 1. 當圖鑑打開或切換全螢幕時，控制網頁滾動
   useEffect(() => {
     if (isOpen) {
       // 只要圖鑑打開，就禁止背景網頁捲動，避免出現拉假的捲軸
       document.body.style.overflow = 'hidden';
+      // 圖鑑機元件常駐（關閉時 return null），重新打開時必須同步到最新編號
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional: resync index when device reopens
       setCurrentIndex(initialIndex);
-      setImgStatus('loading');
     } else {
       document.body.style.overflow = 'unset';
     }
     return () => { document.body.style.overflow = 'unset'; };
   }, [isOpen, initialIndex]);
 
-  // 3. 切換鳥類時觸發讀取狀態
-  useEffect(() => {
-    setImgStatus('loading');
-  }, [currentIndex]);
-
   // 4. 鍵盤快捷鍵邏輯 (ESC 退出, 左右鍵切換)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
-      
+
       if (e.key === 'Escape') {
         if (isFullscreen) {
           setIsFullscreen(false);
@@ -107,21 +115,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, isFullscreen, isSearching, currentIndex]);
-
-  // 下一隻
-  const handleNext = () => {
-    if (currentIndex < birds.length - 1) {
-      setCurrentIndex(prev => prev + 1);
-    }
-  };
-
-  // 上一隻
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(prev => prev - 1);
-    }
-  };
+  }, [isOpen, isFullscreen, isSearching, handleNext, handlePrev, onClose]);
 
   // 跳轉功能 (優化清單顯示)
   const jumpToBird = (id: string) => {

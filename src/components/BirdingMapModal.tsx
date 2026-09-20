@@ -175,6 +175,13 @@ interface Props {
   onClose: () => void;
 }
 
+/** eBird 回傳 ISO 時間字串（2025-09-18T08:30:00.000+00:00）→ 顯示用日期（YYYY-MM-DD），解析失敗退回原文 */
+function fmtObsDate(raw: string): string {
+  const d = new Date(raw);
+  if (Number.isNaN(d.getTime())) return raw.length >= 10 ? raw.slice(0, 10) : raw;
+  return d.toISOString().slice(0, 10);
+}
+
 export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
   const [selected, setSelected] = useState<BirdingSpot | null>(null);
   const [observations, setObservations] = useState<Observation[]>([]);
@@ -189,12 +196,12 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
     try {
       const res = await fetch(`/api/ebird?hotspot=${spot.hotspotId}`);
       const text = await res.text();
-      let data;
+      let data: { error?: string; details?: string; observations?: Observation[] } | null = null;
       try { data = JSON.parse(text); } catch { throw new Error(text.slice(0, 200)); }
       if (!res.ok) throw new Error(data?.error || data?.details || `HTTP ${res.status}`);
-      setObservations(data.observations || []);
-    } catch (e: any) {
-      setError(e?.message || '無法載入觀察紀錄');
+      setObservations(data?.observations || []);
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : '無法載入觀察紀錄');
     } finally {
       setLoading(false);
     }
@@ -481,7 +488,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                             </p>
                             <p className="font-mono text-[9px] text-amber-600 flex items-center gap-1 mt-0.5">
                               <Calendar className="w-2.5 h-2.5" />
-                              {obs.obsDt}
+                              {fmtObsDate(obs.obsDt)}
                             </p>
                           </div>
                         ))}

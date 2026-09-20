@@ -1,0 +1,50 @@
+# ============================================================
+# AvianDex — .vercelignore（防增肥第二道門：不讓 Vercel 上傳/掃描這些路徑）
+# 適用：檔案上傳部署（Import）與 zip 部署時決定哪些檔案被傳上 Vercel；
+#      Git 部署時 Vercel 只拉取 repo，但此檔仍可防止意外包含本機垃圾。
+# 原則：只上傳「執行期真正需要的東西」—— src/ public/ api/ 與建置設定。
+# ============================================================
+
+# --- 版本控制與開發環境（絕對排除）---
+.git
+.gitignore
+node_modules
+.vercel
+
+# --- 建置產物與快取（Vercel 會自己 build，舊產物只佔空間）---
+dist
+build
+out
+.vite
+.vite-source-tags.js
+tsconfig.tsbuildinfo
+
+# --- 備份 / 暫存 / 日誌（開發殘渣）---
+*.bak
+*.tmp
+*.old
+*.orig
+*.rej
+*.log
+*.swp
+*~
+
+# --- 測試上傳資料夾 ---
+uploads/
+tmp/
+
+# --- 大型模型（走 R2/CDN，不進部署；見 SLIMMING_GUIDE.md）---
+public/models
+
+# --- 文件與開發腳本（執行期不需要）---
+README.md
+README_UPDATE.md
+SETUP_AI_RECOGNITION.md
+SLIMMING_GUIDE.md
+*.txt
+BIRD_ID_MAPPING.csv
+scripts
+
+# --- 系統檔 ---
+.DS_Store
+Thumbs.db

@@ -5,15 +5,32 @@ const R2_DOMAIN = "https://pub-a9333a974e814ccba1994639b6e79266.r2.dev";
 const FOLDER = "aviandex";
 const TOTAL_SLOTS = 1500;
 
-// 將結果強制轉為 any，再轉回 Bird[]，這會讓 TS 停止檢查屬性是否齊全
+// id → 中文名 查表（O(1)；舊版每隻鳥线性 find 一遍，1500×569 次比對）
+const nameById = new Map<string, string>(birdsRawData.map((b) => [b.id, b.name]));
+
+// 未收錄鳥種的占位資料（與 useBirds.ts 的 ??? 占位保持一致）
+const PLACEHOLDER = {
+  name: '???',
+  scientificName: '???',
+  category: '???',
+  height: '???',
+  weight: '???',
+  description: 'This species has not been documented yet. Keep exploring to uncover its secrets!',
+  habitat: '???',
+  diet: '???',
+  rarity: 'Common',
+  discovered: false,
+} as const;
+
 export const mockBirds: Bird[] = Array.from({ length: TOTAL_SLOTS }, (_, i) => {
   const idNumber = i + 1;
   const idString = String(idNumber).padStart(4, '0');
-  const knownInfo = birdsRawData.find(b => b.id === idString);
+  const knownName = nameById.get(idString);
 
   return {
     id: idString,
-    name: knownInfo?.name || '???',
     imageUrl: `${R2_DOMAIN}/${FOLDER}/${idString}.avif`,
-  } as any; // 👈 關鍵：加上 as any，強制讓 TS 忽略缺少的 scientificName 等欄位
-}) as unknown as Bird[];
+    ...PLACEHOLDER,
+    name: knownName || PLACEHOLDER.name, // 已收錄用真名，未收錄用 ???
+  };
+});

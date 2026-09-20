@@ -50,6 +50,8 @@ export const BirdCard: React.FC<BirdCardProps> = ({
         <img
           src={bird.imageUrl}
           alt={`Card No. ${bird.id}`}
+          loading="lazy"
+          decoding="async"
           onLoad={() => setImgStatus('loaded')}
           onError={() => setImgStatus('error')}
           className={`w-full h-full object-cover ${imgStatus === 'loaded' ? 'block' : 'hidden'}`}

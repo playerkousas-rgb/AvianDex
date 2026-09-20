@@ -5,7 +5,7 @@
 // ============================================================
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mic, Camera, Upload, Square, Circle, X, Loader2 } from 'lucide-react';
+import { Mic, Camera, Upload, Square, Circle, X } from 'lucide-react';
 
 export type MediaKind = 'audio' | 'image';
 
@@ -14,8 +14,6 @@ interface Props {
   kind: MediaKind;
   onClose: () => void;
   onCapture: (file: File | Blob, kind: MediaKind) => void;
-  /** 錨點按鈕對應的位置（電腦版用），行動端會用全螢幕底部彈出 */
-  anchor?: 'topRight' | 'bottomCenter';
 }
 
 export const MediaCapturePanel: React.FC<Props> = ({
@@ -23,7 +21,6 @@ export const MediaCapturePanel: React.FC<Props> = ({
   kind,
   onClose,
   onCapture,
-  anchor = 'topRight',
 }) => {
   // 錄音狀態
   const [isRecording, setIsRecording] = useState(false);
@@ -56,11 +53,9 @@ export const MediaCapturePanel: React.FC<Props> = ({
     setRecordSecs(0);
   };
 
-  useEffect(() => {
-    if (!open) stopAllStreams();
-    return () => stopAllStreams();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [open]);
+  // 面板關閉時父元件會直接移除本元件（{captureKind && <MediaCapturePanel/>}），
+  // 所以只需在 unmount 時確保 mic / 鏡頭 stream 全部關閉
+  useEffect(() => () => stopAllStreams(), []);
 
   // ─── 錄音 ───
   const startRecording = async () => {
@@ -70,7 +65,7 @@ export const MediaCapturePanel: React.FC<Props> = ({
 
       // 選擇瀏覽器支援的 mime（webm/opus 最普及）
       const candidates = ['audio/webm;codecs=opus', 'audio/webm', 'audio/ogg;codecs=opus', 'audio/mp4'];
-      const mime = candidates.find((m) => (window as any).MediaRecorder?.isTypeSupported?.(m)) || '';
+      const mime = candidates.find((m) => window.MediaRecorder?.isTypeSupported?.(m)) || '';
       const recorder = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined);
       recorderRef.current = recorder;
 
@@ -97,8 +92,8 @@ export const MediaCapturePanel: React.FC<Props> = ({
           return s + 1;
         });
       }, 1000);
-    } catch (err: any) {
-      alert(`無法存取麥克風：${err.message || err}`);
+    } catch (err: unknown) {
+      alert(`無法存取麥克風：${err instanceof Error ? err.message : String(err)}`);
       onClose();
     }
   };
@@ -125,8 +120,8 @@ export const MediaCapturePanel: React.FC<Props> = ({
           videoRef.current.play().catch(() => {});
         }
       }, 50);
-    } catch (err: any) {
-      alert(`無法存取鏡頭：${err.message || err}`);
+    } catch (err: unknown) {
+      alert(`無法存取鏡頭：${err instanceof Error ? err.message : String(err)}`);
       onClose();
     }
   };

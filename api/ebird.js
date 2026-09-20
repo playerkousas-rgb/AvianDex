@@ -3,9 +3,10 @@
 // eBird 觀察紀錄代理（保護 EBIRD_API_KEY 不外洩到前端）
 // 用法：GET /api/ebird?hotspot=L922779
 //      GET /api/ebird?region=HK
+//
+// ⚠️ 瘦身守則：本檔只使用 Node 18+ 內建 global fetch，
+//    嚴禁再加回 node-fetch 等第三方依賴。
 // ============================================================
-
-import fetch from 'node-fetch';
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
