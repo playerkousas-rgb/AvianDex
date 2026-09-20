@@ -1,0 +1,44 @@
+# ============================================================
+# AvianDex — .gitignore（防增肥第一道門：進 Git 的東西會進 Vercel 建置）
+# ============================================================
+
+# 建置產物（絕不可提交；Vercel 每次部署會重新 build）
+dist/
+build/
+out/
+
+# 相依套件
+node_modules/
+
+# 大型模型檔（BirdNET ~56MB，只放 CDN/R2 或本地 public/models，絕不進 Git）
+public/models/
+*.bin
+*.onnx
+
+# 開發過程備份 / 暫存（任何 *.bak / *.orig / *.rej / *.tmp / *.old 一律不提交）
+*.bak
+*.tmp
+*.old
+*.orig
+*.rej
+*.swp
+*~
+
+# 日誌與快取
+*.log
+npm-debug.log*
+.eslintcache
+.vite/
+.vite-source-tags.js
+tsconfig.tsbuildinfo
+
+# Vercel
+.vercel/
+
+# 測試上傳 / 本機素材
+uploads/
+tmp/
+
+# 系統檔
+.DS_Store
+Thumbs.db

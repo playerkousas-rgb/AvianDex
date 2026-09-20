@@ -174,12 +174,14 @@ function App() {
         idx = birds.findIndex(
           (b) =>
             b.name?.toLowerCase().includes(low) ||
-            (b as any).englishName?.toLowerCase?.().includes(low),
+            (b.englishName ? b.englishName.toLowerCase().includes(low) : false),
         );
       }
     }
 
     if (idx >= 0) {
+      // 深層連結：birds 是異步載入的，只能在 effect 中、資料就緒後套用網址參數
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional: apply ?id=/?search= after async data load
       setIsOpened(true);        // 跳過開機畫面，直接進入
       setSelectedIndex(idx);    // 打開該鳥的圖鑑機
     }

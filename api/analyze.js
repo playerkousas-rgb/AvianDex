@@ -17,10 +17,10 @@
 //   - 不要加 VITE_ 前綴
 //   - Production / Preview / Development 三個環境都勾選
 //   - 設定後務必 redeploy
+//
+// ⚠️ 瘦身守則：本檔只使用 Node 18+ 內建 API（global fetch / FormData / Blob），
+//    嚴禁再加回 node-fetch / form-data 等第三方依賴（會增加生產環境安裝體積）。
 // ============================================================
-
-import FormData from 'form-data';
-import fetch from 'node-fetch';
 
 export const config = {
   api: {
@@ -116,15 +116,13 @@ async function identifyImageWithNyckel(buffer, contentType) {
   }
   const { access_token } = await tokenRes.json();
   const form = new FormData();
-  form.append('data', buffer, {
-    filename: 'bird.jpg',
-    contentType: contentType || 'image/jpeg',
-  });
+  // Node 18+ 原生 FormData：檔案需包成 Blob；Content-Type(含 boundary) 由 fetch 自動設定
+  form.append('data', new Blob([buffer], { type: contentType || 'image/jpeg' }), 'bird.jpg');
   const invokeRes = await fetch(
     'https://www.nyckel.com/v1/functions/bird-identifier/invoke',
     {
       method: 'POST',
-      headers: { Authorization: `Bearer ${access_token}`, ...form.getHeaders() },
+      headers: { Authorization: `Bearer ${access_token}` },
       body: form,
     },
   );
@@ -150,14 +148,10 @@ async function identifyAudioWithBirdNetSpace(buffer, contentType) {
             : contentType?.includes('webm') ? 'webm'
             : contentType?.includes('ogg') ? 'ogg'
             : 'wav';
-  form.append('audio', buffer, {
-    filename: `clip.${ext}`,
-    contentType: contentType || 'audio/wav',
-  });
+  form.append('audio', new Blob([buffer], { type: contentType || 'audio/wav' }), `clip.${ext}`);
   const res = await fetch(`${spaceBase}/api/predict`, {
     method: 'POST',
     body: form,
-    headers: form.getHeaders(),
   });
   const text = await res.text();
   if (!res.ok) throw new Error(`BirdNET Space ${res.status}：${text.slice(0, 200)}`);

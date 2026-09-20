@@ -22,9 +22,10 @@ AvianDex 是一款專為兒童與觀鳥愛好者設計的互動式網頁應用�
 AI 辨識裝備 (Merlin AI 下載)
 
 📁 極簡維護系統
-自動偵測 (Zero-Config)：完全不需編輯 JSON 或資料庫。只要將圖片丟進資料夾，應用程式會自動識別並解鎖圖鑑位。
+鳥卡圖走 **Cloudflare R2**（`aviandex/NNNN.avif`）：上傳到 R2 該編號的 avif 檔案，圖鑑即自動解鎖對應編號。
+（詳細上傳步驟見「AvianDex 及Birddex2 維護需知.txt」；新增鳥種名稱/對映見下方「圖鑑維護腳本」。）
 
-預設 151 個槽位：未放入圖片的槽位會顯示 "UNDISCOVERED" 剪影，激發使用者的收集慾。
+未放入圖片的槽位會顯示 "UNDISCOVERED" 剪影，激發使用者的收集慾。
 
 📱 友善的操作體驗
 多種導航：支援大按鈕點擊、鍵盤左右方向鍵控制、下拉式選單快速跳轉。
@@ -36,11 +37,13 @@ AI 辨識裝備 (Merlin AI 下載)
 🛠️ 如何新增鳥類卡片
 更新 AvianDex 極其簡單，完全不需要寫程式：
 
-準備卡片：將你的鳥類卡片（包含插圖與數據）存為 PNG 或 JPG。
+準備卡片：生成鳥類卡片（插圖與數據）後，用 https://squoosh.app/ 轉成 **AVIF**（體積小很多）。
 
-格式命名：根據插槽編號使用 4 位數命名（例如：1 號鳥類命名為 0001.png）。
+格式命名：根據插槽編號使用 4 位數命名（例如：1 號鳥類命名為 0001.avif）。
 
-放置路徑：將圖檔放入 public/images/ 目錄。
+放置路徑：上傳到 **Cloudflare R2** → `aviandex/` 資料夾（不是 repo！大圖不進 git / Vercel）。
+
+名稱對映：在 `src/data/birds.json` 加 `{ "id": "0001", "name": "中文名" }`（或放進 `BIRD_ID_MAPPING.csv` 後跑 `npm run aliases` 重新生成 `nameAliases.ts`）。
 
 即刻生效：刷新頁面，該編號就會從「未發現」自動解鎖為你的彩色卡片！
 
@@ -48,6 +51,8 @@ AI 辨識裝備 (Merlin AI 下載)
 Hub 圖片：存放於 public/images/，命名為 hub_wiki.jpg, hub_radar.jpg 等。
 
 自定義鼠標：支援 32x32 像素的遊戲化鼠標指標，強化沉浸感。
+
+⚖️ **部署瘦身**：儲存空間與 Vercel 部署規範（防增肥守則）請見 [SLIMMING_GUIDE.md](./SLIMMING_GUIDE.md)。
 
 💻 技術棧
 React 19：最新版本的 React 核心。
