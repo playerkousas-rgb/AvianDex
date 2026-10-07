@@ -22,6 +22,7 @@ import {
   Menu,
   X as XIcon,
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 export const APP_VERSION = 'v1.5.0';
 
@@ -530,6 +531,8 @@ function App() {
           onCapture={(file, kind) => analyzeMedia(file, kind)}
         />
       )}
+
+      <Analytics />
     </>
   );
 }
