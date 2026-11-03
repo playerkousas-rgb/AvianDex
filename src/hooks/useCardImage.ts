@@ -1,9 +1,10 @@
-import { useCallback, useSyncExternalStore } from 'react';
-import { getEntry, requestCard, retryCard, resetAll, subscribe } from '../lib/cardImage';
+import { useCallback, useEffect, useSyncExternalStore } from 'react';
+import { getEntry, requestCard, retryCard, subscribe } from '../lib/cardImage';
 
 /**
  * 訂閱單張卡片的載入狀態。
- * 卡片一掛載就自動排隊（交由 cardImage 的全域併發限制統一控制）。
+ * 排隊動作放在 effect 內做（不要在 render 期間改全域狀態，
+ * 否則會在 StrictMode 下觸發「render 期間更新另一個元件」的警告）。
  */
 export function useCardImage(id: string) {
   const entry = useSyncExternalStore(
@@ -12,10 +13,12 @@ export function useCardImage(id: string) {
     () => getEntry(id),
   );
 
-  if (entry.status === 'idle') requestCard(id);
+  useEffect(() => {
+    requestCard(id);
+  }, [id]);
 
   const retry = useCallback(() => retryCard(id), [id]);
   return { ...entry, retry };
 }
 
-export { requestCard, retryCard, resetAll };
+export { requestCard, retryCard };

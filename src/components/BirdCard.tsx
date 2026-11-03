@@ -52,7 +52,10 @@ export const BirdCard: React.FC<BirdCardProps> = ({
       </div>
       <div className="absolute top-2 right-2 z-30 w-3 h-3 rounded-full bg-red-600 border-2 border-red-900 shadow-inner" />
 
-      {(image.status === 'queued' || image.status === 'loading' || (image.status === 'loaded' && !imgReady)) && (
+      {(image.status === 'idle' ||
+        image.status === 'queued' ||
+        image.status === 'loading' ||
+        (image.status === 'loaded' && !imgReady)) && (
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-yellow-100 to-yellow-300">
           <div className="w-8 h-8 border-4 border-yellow-700/30 border-t-yellow-700 rounded-full animate-spin" />
         </div>
