@@ -2,49 +2,27 @@ import { useState, useEffect } from 'react';
 import { Bird } from '../types';
 import { mockBirds } from '../data/mockBirds';
 
-const TOTAL_SLOTS = 569; // 對應 birds.json 完整資料（原為 151，導致只顯示部分圖卡）
-
+/**
+ * 鳥種清單。
+ * ⚠️ 槽位數一律由 src/data/mockBirds.ts（＝ birds.json 長度）決定，
+ *    不要在別處再寫死數字（舊版一處 569、一處 1500，導致尾段全是永遠的 ???）。
+ */
 export function useBirds() {
   const [birds, setBirds] = useState<Bird[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchBirds = async () => {
-      setLoading(true);
-      // 模擬網路延遲
-      await new Promise(resolve => setTimeout(resolve, 300));
-      
-      const allBirds: Bird[] = Array.from({ length: TOTAL_SLOTS }, (_, i) => {
-        const id = String(i + 1).padStart(4, '0');
-        const existing = mockBirds.find(b => b.id === id);
-        
-        // 如果 mock 資料中已經有這隻鳥，就使用現有資料
-        if (existing) return existing;
-        
-        // 否則創建一個占位符（加上 englishName 欄位以符合型別檢查）
-        return {
-          id,
-          name: '???',
-          englishName: '???', // 👈 補上這一行，解決 TS 報錯
-          scientificName: '???',
-          category: '???',
-          height: '???',
-          weight: '???',
-          description: 'This species has not been documented yet. Keep exploring to uncover its secrets!',
-          imageUrl: `/images/${id}.png`,
-          habitat: '???',
-          diet: '???',
-          rarity: 'Common',
-          discovered: false,
-        };
-      });
-
-      setBirds(allBirds);
+    let cancelled = false;
+    // 只要一個 microtask，讓「載入中」畫面有機會顯示，不需要假的 300ms 延遲
+    Promise.resolve().then(() => {
+      if (cancelled) return;
+      setBirds(mockBirds);
       setLoading(false);
+    });
+    return () => {
+      cancelled = true;
     };
-
-    fetchBirds();
   }, []);
 
-  return { birds, loading, error: null };
+  return { birds, loading, error: null as Error | null };
 }

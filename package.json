@@ -1,7 +1,7 @@
 {
   "name": "aviandex",
   "private": true,
-  "version": "1.5.0",
+  "version": "1.6.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,12 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "aliases": "node scripts/build-aliases.mjs",
-    "aliases:dry": "node scripts/build-aliases.mjs --dry"
+    "aliases:dry": "node scripts/build-aliases.mjs --dry",
+    "cards:probe": "node scripts/probe-cards.mjs",
+    "cards:probe:quick": "node scripts/probe-cards.mjs --limit 60",
+    "test:cards": "node --test tests/*.test.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "names:merge": "node scripts/merge-english-names.mjs"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",

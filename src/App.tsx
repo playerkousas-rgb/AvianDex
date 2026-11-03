@@ -5,13 +5,17 @@ import { WelcomeScreen } from './components/WelcomeScreen.tsx';
 import { RecognitionResultModal, Candidate } from './components/RecognitionResultModal.tsx';
 import { MediaCapturePanel, MediaKind } from './components/MediaCapturePanel.tsx';
 import { BirdingMapModal } from './components/BirdingMapModal.tsx';
+import { CardLoadDiagnostics } from './components/CardLoadDiagnostics.tsx';
 import { useBirds } from './hooks/useBirds';
-import { Bird } from './types';
+import { useCardStats } from './hooks/useCardStats';
+import { getLoadedIds, resetAll, requestCard } from './lib/cardImage';
+import { APP_VERSION, CARDS_PER_PAGE } from './config';
 import { resolveBirdId } from './data/nameAliases';
 import { useBirdNetLocal } from './hooks/useBirdNetLocal';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Bird as BirdIcon,
+  RefreshCw,
   Mic,
   Camera as CameraIcon,
   Search,
@@ -24,7 +28,7 @@ import {
 } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 
-export const APP_VERSION = 'v1.5.0';
+export { APP_VERSION };
 
 // 捕精靈 App（BIRD-DEX 2）網址
 export const BIRDDEX2_URL = 'https://skw-birdex2.vercel.app';
@@ -38,6 +42,10 @@ function App() {
   const [query, setQuery] = useState('');
   const [showMap, setShowMap] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // 分頁顯示：一次過 render 569 張卡會同時觸發幾百個圖片請求（r2.dev 會限流）
+  const [visibleCount, setVisibleCount] = useState(CARDS_PER_PAGE);
+  const [onlyUnlocked, setOnlyUnlocked] = useState(false);
+  const cardStats = useCardStats();
 
   const [globalCaptureKind, setGlobalCaptureKind] = useState<MediaKind | null>(null);
   const [recogOpen, setRecogOpen] = useState(false);
@@ -204,18 +212,34 @@ function App() {
   }, [selectedIndex, showMap, recogOpen, globalCaptureKind]);
 
   const filteredBirds = useMemo(() => {
-    if (!query.trim()) return birds;
     const q = query.trim().toLowerCase();
-    return birds.filter((b) =>
-      b.id.includes(q) ||
-      b.name.toLowerCase().includes(q) ||
-            (b as Bird).englishName ? (b as Bird).englishName!.toLowerCase().includes(q) : false,
-    );
-  }, [birds, query]);
+    let base = !q
+      ? birds
+      : birds.filter((b) =>
+          b.id.includes(q) ||
+          b.name.toLowerCase().includes(q) ||
+          b.englishName?.toLowerCase().includes(q) ||
+          b.scientificName?.toLowerCase().includes(q),
+        );
+    if (onlyUnlocked) {
+      const loaded = getLoadedIds();
+      base = base.filter((b) => loaded.has(b.id));
+    }
+    return base;
+    // cardStats 只係用作「圖片狀態已變」的觸發器，令「只看有圖」跟得上載入進度
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [birds, query, onlyUnlocked, cardStats]);
+
+  // 只 render 首 N 張；其餘靠「載入更多」逐批出現（避免一次性打爆 R2）
+  const pagedBirds = useMemo(
+    () => filteredBirds.slice(0, visibleCount),
+    [filteredBirds, visibleCount],
+  );
+
 
   // 圖鑑收錄的鳥種總數（已正式記錄、非 ??? 佔位）
   const speciesCount = useMemo(
-    () => birds.filter((b) => b.name && b.name !== '???').length,
+    () => birds.filter((b) => b.discovered).length,
     [birds],
   );
 
@@ -348,7 +372,7 @@ function App() {
 
           <div className="bg-gradient-to-b from-yellow-300 to-yellow-400 border-b-[6px] border-black shadow-md relative">
             <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
-              <div className="flex-1 flex items-center gap-2 sm:gap-3 min-w-0">
+              <div className="flex-1 flex items-center gap-2 sm:gap-3 min-w-0 flex-wrap">
                 <div className="flex items-center gap-2 shrink-0 bg-black/15 border-2 border-black/40 rounded-lg px-3 py-1.5 shadow-inner">
                   <BirdIcon className="w-4 h-4 sm:w-5 sm:h-5 text-red-900 shrink-0" strokeWidth={2.5} />
                   <div className="flex flex-col leading-none">
@@ -361,6 +385,51 @@ function App() {
                     </span>
                   </div>
                 </div>
+
+                {/* 圖卡解鎖進度：直接講清楚「R2 有幾多張圖」，唔使靠估 */}
+                <div
+                  className="flex items-center gap-2 shrink-0 bg-black/15 border-2 border-black/40 rounded-lg px-3 py-1.5 shadow-inner"
+                  title="已由 Cloudflare R2 成功載入的圖卡數量"
+                >
+                  <span className="text-base leading-none">🖼️</span>
+                  <div className="flex flex-col leading-none">
+                    <span className="font-mono text-[8px] sm:text-[9px] text-red-900 font-black tracking-widest">
+                      已解鎖圖卡 · CARDS
+                    </span>
+                    <span className="font-black text-gray-900 text-sm sm:text-base md:text-lg leading-tight">
+                      {cardStats.loaded}
+                      <span className="text-gray-700 text-[10px] sm:text-xs font-mono"> 張</span>
+                      {cardStats.error > 0 && (
+                        <span className="ml-1.5 text-[9px] font-mono text-red-800">⚠ {cardStats.error} 失敗</span>
+                      )}
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => {
+                    resetAll();
+                    // 重新排隊：由第一張開始逐張 revalidate
+                  birds.slice(0, visibleCount).forEach((b) => requestCard(b.id));
+                  }}
+                  title="重新向 R2 探測所有圖卡（剛上傳完圖可按）"
+                  className="shrink-0 flex items-center gap-1.5 bg-white/70 hover:bg-white border-2 border-black/50 rounded-lg px-2.5 py-2 font-black text-[10px] text-gray-900 tracking-wider active:scale-95 transition-all"
+                >
+                  <RefreshCw className="w-3.5 h-3.5" /> 重新掃描
+                </button>
+
+                <label className="shrink-0 flex items-center gap-2 bg-white/60 border-2 border-black/40 rounded-lg px-2.5 py-2 font-black text-[10px] text-gray-900 tracking-wider cursor-pointer select-none">
+                  <input
+                    type="checkbox"
+                    checked={onlyUnlocked}
+                    onChange={(e) => {
+                      setOnlyUnlocked(e.target.checked);
+                      setVisibleCount(CARDS_PER_PAGE);
+                    }}
+                    className="w-3.5 h-3.5 accent-red-700"
+                  />
+                  只看有圖
+                </label>
               </div>
 
               <div className="flex items-center bg-white rounded-lg border-2 border-black shadow-[0_3px_0_rgba(0,0,0,0.4)] overflow-hidden">
@@ -378,6 +447,9 @@ function App() {
         </header>
 
         <main className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-10 relative z-10">
+          {!loading && (
+            <CardLoadDiagnostics visibleIds={pagedBirds.map((b) => b.id)} />
+          )}
           {loading ? (
             <div className="flex flex-col items-center justify-center py-24 sm:py-32 bg-black/40 backdrop-blur-md rounded-2xl sm:rounded-3xl border-2 sm:border-4 border-yellow-400/30">
               <div className="w-16 h-16 sm:w-20 sm:h-20 border-[6px] sm:border-8 border-white/20 border-t-yellow-400 rounded-full animate-spin mb-4 sm:mb-6 shadow-xl" />
@@ -406,8 +478,8 @@ function App() {
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5 sm:gap-4 md:gap-5 relative z-10">
-                {filteredBirds.map((bird) => {
-                  const realIdx = birds.findIndex((b) => b.id === bird.id);
+                {pagedBirds.map((bird) => {
+                  const realIdx = Number.parseInt(bird.id, 10) - 1;
                   return (
                     <BirdCard
                       key={bird.id}
@@ -418,6 +490,24 @@ function App() {
                   );
                 })}
               </div>
+
+              {/* 載入更多：每次只 render 一批，避免一次過打幾百個 R2 請求 */}
+              {visibleCount < filteredBirds.length && (
+                <div className="mt-6 flex flex-col items-center gap-2">
+                  <button
+                    onClick={() => setVisibleCount((n) => n + CARDS_PER_PAGE)}
+                    className="bg-gradient-to-b from-yellow-300 to-yellow-500 text-gray-900 font-black px-8 py-3 rounded-xl border-[3px] border-black shadow-[0_4px_0_rgba(0,0,0,0.6)] active:translate-y-1 active:shadow-none transition-all"
+                  >
+                    載入更多 · LOAD MORE（{pagedBirds.length} / {filteredBirds.length}）
+                  </button>
+                  <button
+                    onClick={() => setVisibleCount(filteredBirds.length)}
+                    className="text-yellow-200/60 font-mono text-[10px] tracking-widest underline underline-offset-2"
+                  >
+                    全部顯示（{filteredBirds.length} 張，圖片會排隊慢慢載入）
+                  </button>
+                </div>
+              )}
             </>
           )}
         </main>

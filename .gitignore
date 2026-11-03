@@ -32,6 +32,11 @@ npm-debug.log*
 .vite-source-tags.js
 tsconfig.tsbuildinfo
 
+# 環境變數（secret 只放本機 .env.local 與 Vercel Dashboard，絕不入 Git）
+.env
+.env.*
+!.env.example
+
 # Vercel
 .vercel/
 
@@ -42,3 +47,6 @@ tmp/
 # 系統檔
 .DS_Store
 Thumbs.db
+
+# 圖卡體檢報告（由 scripts/probe-cards.mjs 產生，唔需要進 Git）
+reports/

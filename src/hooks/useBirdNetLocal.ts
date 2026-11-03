@@ -30,6 +30,7 @@
 import { useCallback, useRef, useState } from 'react';
 // 只引入「型別」（type-only import 不會被打進 bundle）
 import type { GraphModel, Tensor } from '@tensorflow/tfjs';
+import { R2_BASE_URL } from '../config';
 
 // tfjs 整個命名空間的型別（用於動態 import 後的 tf 變數）
 type TfModule = typeof import('@tensorflow/tfjs');
@@ -37,7 +38,7 @@ type TfModule = typeof import('@tensorflow/tfjs');
 // 模型基底路徑（依序嘗試：本機 → R2/CDN；找到 model.json 的那個生效）
 const MODEL_BASES = [
   '/models/birdnet',
-  'https://pub-a9333a974e814ccba1994639b6e79266.r2.dev/aviandex/models/birdnet',
+  `${R2_BASE_URL}/aviandex/models/birdnet`,
 ];
 const LABEL_NAMES = ['zh.txt', 'en_us.txt']; // 想預設英文就對調
 const SAMPLE_RATE = 48000;     // BirdNET 要求 48kHz

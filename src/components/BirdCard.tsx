@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Bird } from '../types';
 import { motion } from 'framer-motion';
-import { HelpCircle, Footprints } from 'lucide-react';
+import { HelpCircle, Footprints, RefreshCw, AlertTriangle } from 'lucide-react';
 import { BirdSilhouette } from './BirdSilhouette';
+import { useCardImage } from '../hooks/useCardImage';
 
 interface BirdCardProps {
   bird: Bird;
@@ -10,13 +11,24 @@ interface BirdCardProps {
   isActive?: boolean;
 }
 
+/**
+ * 單一張鳥卡。
+ * 圖片載入交由 useCardImage（全域排隊 + 併發上限 + 多副檔名），
+ * 不再用 <img loading="lazy"> 配 display:none —— 呢個組合會令圖片永遠唔載入，
+ * 卡就永遠停喺「載入中」或誤判成「未發現」。
+ */
 export const BirdCard: React.FC<BirdCardProps> = ({
   bird,
   onClick,
   isActive = false,
 }) => {
-  const [imgStatus, setImgStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
-  const discovered = bird.name && bird.name !== '???';
+  const image = useCardImage(bird.id);
+  const [imgReady, setImgReady] = useState(false);
+  const hasName = bird.name && bird.name !== '???';
+
+  // 圖片已載入（onLoad 觸發）才算「已發現」；名字只用於顯示標題
+  const showArtwork = image.status === 'loaded' && imgReady;
+  const missing = image.status === 'missing' || image.status === 'error';
 
   return (
     <motion.div
@@ -40,25 +52,28 @@ export const BirdCard: React.FC<BirdCardProps> = ({
       </div>
       <div className="absolute top-2 right-2 z-30 w-3 h-3 rounded-full bg-red-600 border-2 border-red-900 shadow-inner" />
 
-      {imgStatus === 'loading' && (
+      {(image.status === 'queued' || image.status === 'loading' || (image.status === 'loaded' && !imgReady)) && (
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-yellow-100 to-yellow-300">
-          <div className="w-8 h-8 border-4 border-yellow-700/30 border-t-yellow-700 rounded-full animate-spin"></div>
+          <div className="w-8 h-8 border-4 border-yellow-700/30 border-t-yellow-700 rounded-full animate-spin" />
         </div>
       )}
 
       <div className="absolute inset-0 overflow-hidden">
-        <img
-          src={bird.imageUrl}
-          alt={`Card No. ${bird.id}`}
-          loading="lazy"
-          decoding="async"
-          onLoad={() => setImgStatus('loaded')}
-          onError={() => setImgStatus('error')}
-          className={`w-full h-full object-cover ${imgStatus === 'loaded' ? 'block' : 'hidden'}`}
-        />
+        {image.url && (
+          <img
+            key={image.url}
+            src={image.url}
+            alt={hasName ? `${bird.name}（NO.${bird.id}）` : `Card No. ${bird.id}`}
+            decoding="async"
+            referrerPolicy="no-referrer"
+            onLoad={() => setImgReady(true)}
+            onError={() => setImgReady(false)}
+            className={`w-full h-full object-cover ${showArtwork ? 'block' : 'hidden'}`}
+          />
+        )}
       </div>
 
-      {imgStatus === 'loaded' && discovered && (
+      {showArtwork && hasName && (
         <div className="absolute bottom-0 inset-x-0 z-20 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-2 pt-6">
           <p className="text-white font-black text-xs sm:text-sm tracking-tight truncate drop-shadow-lg text-center">
             {bird.name}
@@ -66,7 +81,7 @@ export const BirdCard: React.FC<BirdCardProps> = ({
         </div>
       )}
 
-      {imgStatus === 'error' && (
+      {missing && (
         <div
           className="absolute inset-0 flex flex-col items-center justify-center p-3 overflow-hidden"
           style={{ background: 'radial-gradient(ellipse at center, #4a3520 0%, #2b1d10 70%, #1a1208 100%)' }}
@@ -102,21 +117,35 @@ export const BirdCard: React.FC<BirdCardProps> = ({
           </div>
 
           <p className="mt-3 text-yellow-300 font-black text-[11px] tracking-[0.25em] uppercase drop-shadow-md">
-            ? ? ?
+            {hasName ? bird.name : '? ? ?'}
           </p>
           <p className="mt-0.5 text-yellow-200/50 font-mono text-[8px] tracking-widest uppercase">
-            UNDISCOVERED
+            {image.status === 'error' ? 'LOAD ERROR' : 'UNDISCOVERED'}
           </p>
-          <div className="absolute bottom-2 inset-x-2 bg-black/60 border border-yellow-400/30 rounded px-2 py-0.5 text-center">
-            <span className="text-yellow-200/70 font-mono text-[8px] tracking-widest">
-              ◆ DATA LOCKED ◆
+
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              image.retry();
+            }}
+            className="absolute bottom-2 inset-x-2 bg-black/60 hover:bg-black/80 border border-yellow-400/30 rounded px-2 py-1 flex items-center justify-center gap-1 text-yellow-200/80 active:scale-95"
+            aria-label={`重新載入 NO.${bird.id} 圖卡`}
+          >
+            {image.status === 'error' ? (
+              <AlertTriangle className="w-3 h-3" />
+            ) : (
+              <RefreshCw className="w-3 h-3" />
+            )}
+            <span className="font-mono text-[8px] tracking-widest">
+              {image.status === 'error' ? 'RETRY LOAD' : 'RETRY / 重新探測'}
             </span>
-          </div>
+          </button>
         </div>
       )}
 
       <div className="absolute inset-0 bg-gradient-to-t from-cyan-400/0 via-cyan-400/0 to-cyan-300/0 group-hover:from-cyan-400/10 group-hover:to-cyan-300/20 transition-all pointer-events-none z-10" />
-      {imgStatus === 'loaded' && (
+      {showArtwork && (
         <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-yellow-300/40 rounded-full blur-xl pointer-events-none" />
       )}
     </motion.div>
