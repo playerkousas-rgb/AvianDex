@@ -20,6 +20,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MediaCapturePanel, MediaKind } from './MediaCapturePanel.tsx';
 import { BirdSilhouette } from './BirdSilhouette';
 import { useCardImage } from '../hooks/useCardImage';
+import { searchBirds } from '../lib/pokedexOrder';
 
 // 捕精靈 App（BIRD-DEX 2）網址
 const BIRDDEX2_URL = 'https://skw-birdex2.vercel.app';
@@ -173,10 +174,11 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const term = searchTerm.trim();
-    // 同時支援編號與中文名搜尋
-    const found = birds.find(b => b.id === term || b.name === term);
-    if (found) {
-      jumpToBird(found.id);
+    if (!term) return;
+    // 以英文名為主（英文俗名 > 學名 > 中文名 > 編號），與首頁搜尋同一套規則
+    const hits = searchBirds(birds, term);
+    if (hits[0]) {
+      jumpToBird(hits[0].id);
     }
   };
 

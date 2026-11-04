@@ -16,7 +16,10 @@
  *  後備做法 2（完全離線）：用你已經下載好的 CSV
  *      node scripts/cards/update-ebird-taxonomy.mjs --file ~/Downloads/ebird_taxonomy_v2024.csv
  *
- *  輸出：src/data/ebird-taxonomy.csv（只留 5 欄、只得 species 級，體積可控）
+ *  輸出：src/data/ebird-taxonomy.csv（6 欄、只得 species 級，體積可控）
+ *        SPECIES_CODE,PRIMARY_COM_NAME,SCI_NAME,ORDER,FAMILY,TAXON_ORDER
+ *        TAXON_ORDER = eBird/Clements 的演化排序號；
+ *        前端「跟 eBird 排序」就靠這個數字，唔需要自己砌目→科的次序。
  * ============================================================ */
 
 import fs from 'node:fs';
@@ -139,9 +142,9 @@ async function fetchOfficialApi() {
   const list = await res.json();
   // API 回傳 JSON；轉成與 Clements CSV 相同的欄位
   return [
-    'CATEGORY,SPECIES_CODE,PRIMARY_COM_NAME,SCI_NAME,ORDER,FAMILY',
+    'CATEGORY,SPECIES_CODE,PRIMARY_COM_NAME,SCI_NAME,ORDER,FAMILY,TAXON_ORDER',
     ...list.map((t) =>
-      [t.category, t.speciesCode, t.comName, t.sciName, t.order, t.familyComName || t.familySciName]
+      [t.category, t.speciesCode, t.comName, t.sciName, t.order, t.familyComName || t.familySciName, t.taxonOrder]
         .map((v) => (String(v ?? '').includes(',') ? `"${String(v).replace(/"/g, '""')}"` : String(v ?? '')))
         .join(','),
     ),
@@ -173,21 +176,28 @@ async function main() {
   const iSci = idx('SCI_NAME');
   const iOrder = idx('ORDER');
   const iFamily = idx('FAMILY');
+  const iTaxonOrder = idx('TAXON_ORDER');
   // 精簡版 CSV 沒有 CATEGORY 欄 → 當作全部都是 species
   const hasCategory = iCat >= 0;
   if ([iCode, iName, iSci, iOrder, iFamily].some((i) => i < 0)) {
     throw new Error('分類表欄位不符預期（需要 SPECIES_CODE/PRIMARY_COM_NAME/SCI_NAME/ORDER/FAMILY），請檢查來源');
   }
 
-  const outRows = [['SPECIES_CODE', 'PRIMARY_COM_NAME', 'SCI_NAME', 'ORDER', 'FAMILY']];
+  const outRows = [['SPECIES_CODE', 'PRIMARY_COM_NAME', 'SCI_NAME', 'ORDER', 'FAMILY', 'TAXON_ORDER']];
   let species = 0;
   for (const r of rows) {
     if (hasCategory && r[iCat] !== 'species') continue;
     const sci = (r[iSci] || '').trim();
     const name = (r[iName] || '').trim();
     if (!sci || !name) continue;
-    outRows.push([(r[iCode] || '').trim(), name, sci, (r[iOrder] || '').trim(), (r[iFamily] || '').trim()]);
+    const order = iTaxonOrder >= 0 ? (r[iTaxonOrder] || '').trim() : '';
+    outRows.push([(r[iCode] || '').trim(), name, sci, (r[iOrder] || '').trim(), (r[iFamily] || '').trim(), order]);
     species += 1;
+  }
+
+  // 沒有 TAXON_ORDER 的來源 → 用原始行序（Clements 本身已按演化排序）
+  if (outRows.length > 1 && outRows[1][5] === '') {
+    for (let i = 1; i < outRows.length; i += 1) outRows[i][5] = String(i);
   }
 
   const csv = toCsv(outRows);

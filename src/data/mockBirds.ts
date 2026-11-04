@@ -8,7 +8,14 @@ import { TOTAL_SLOTS, cardUrl } from '../config';
  * 有這份資料，卡片就唔會再顯示 `scientificName: '???'`，
  * 搜尋亦可以撳學名／目／科搵到（見 App 的 filteredBirds）。
  */
-type TaxonomyEntry = { speciesCode: string; comName: string; sciName: string; order: string; family: string };
+type TaxonomyEntry = {
+  speciesCode: string;
+  comName: string;
+  sciName: string;
+  order: string;
+  family: string;
+  taxonOrder: number;
+};
 const taxonomyById = taxonomyRaw as Record<string, TaxonomyEntry>;
 
 // id → 中文名 查表（O(1)）

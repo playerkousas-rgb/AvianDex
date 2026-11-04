@@ -19,6 +19,8 @@ export interface Bird {
     sciName: string;
     order: string;
     family: string;
+    /** eBird/Clements 演化排序號（目 → 科 → 種） */
+    taxonOrder: number;
   };
 }
 

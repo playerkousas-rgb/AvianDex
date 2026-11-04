@@ -9,6 +9,8 @@ interface BirdCardProps {
   bird: Bird;
   onClick: () => void;
   isActive?: boolean;
+  /** 目前排序下排第幾（1-based）；唔顯示就傳 undefined */
+  listPosition?: number;
 }
 
 /**
@@ -21,6 +23,7 @@ export const BirdCard: React.FC<BirdCardProps> = ({
   bird,
   onClick,
   isActive = false,
+  listPosition,
 }) => {
   const image = useCardImage(bird.id);
   const [imgReady, setImgReady] = useState(false);
@@ -45,10 +48,17 @@ export const BirdCard: React.FC<BirdCardProps> = ({
       }}
       onClick={onClick}
     >
-      <div className="absolute top-2 left-2 z-30 bg-black/85 backdrop-blur-sm rounded-md px-2 py-0.5 border border-yellow-300/50 shadow-md">
-        <span className="font-mono font-black text-yellow-300 text-[10px] tracking-wider">
-          NO.{bird.id}
-        </span>
+      <div className="absolute top-2 left-2 z-30 flex items-center gap-1">
+        <div className="bg-black/85 backdrop-blur-sm rounded-md px-2 py-0.5 border border-yellow-300/50 shadow-md">
+          <span className="font-mono font-black text-yellow-300 text-[10px] tracking-wider">
+            NO.{bird.id}
+          </span>
+        </div>
+        {listPosition != null && (
+          <div className="bg-black/55 backdrop-blur-sm rounded-md px-1.5 py-0.5 border border-white/20 shadow-md">
+            <span className="font-mono text-white/70 text-[8px] tracking-wider">#{listPosition}</span>
+          </div>
+        )}
       </div>
       <div className="absolute top-2 right-2 z-30 w-3 h-3 rounded-full bg-red-600 border-2 border-red-900 shadow-inner" />
 
@@ -81,8 +91,13 @@ export const BirdCard: React.FC<BirdCardProps> = ({
           <p className="text-white font-black text-xs sm:text-sm tracking-tight truncate drop-shadow-lg text-center">
             {bird.name}
           </p>
+          {(bird.taxonomy?.comName || (bird.englishName && bird.englishName !== '???')) && (
+            <p className="text-yellow-200/80 font-mono text-[8px] sm:text-[9px] tracking-tight truncate text-center leading-tight">
+              {bird.taxonomy?.comName || bird.englishName}
+            </p>
+          )}
           {bird.taxonomy?.sciName && (
-            <p className="text-white/60 font-mono text-[8px] italic truncate text-center leading-tight">
+            <p className="text-white/55 font-mono text-[7px] italic truncate text-center leading-tight">
               {bird.taxonomy.sciName}
             </p>
           )}
@@ -127,8 +142,13 @@ export const BirdCard: React.FC<BirdCardProps> = ({
           <p className="mt-3 text-yellow-300 font-black text-[11px] tracking-[0.25em] uppercase drop-shadow-md">
             {hasName ? bird.name : '? ? ?'}
           </p>
+          {(bird.taxonomy?.comName || (bird.englishName && bird.englishName !== '???')) && (
+            <p className="mt-0.5 text-yellow-100/70 font-mono text-[7px] tracking-wide text-center px-2 truncate max-w-full">
+              {bird.taxonomy?.comName || bird.englishName}
+            </p>
+          )}
           {bird.taxonomy?.sciName && (
-            <p className="mt-0.5 text-yellow-100/60 font-mono text-[7px] italic tracking-wide text-center px-2 truncate max-w-full">
+            <p className="text-yellow-100/40 font-mono text-[6px] italic tracking-wide text-center px-2 truncate max-w-full">
               {bird.taxonomy.sciName}
             </p>
           )}

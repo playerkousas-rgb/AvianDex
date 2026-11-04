@@ -8,7 +8,7 @@
 import birdsRawData from './data/birds.json';
 
 /** 雙版號 V1：檔名／頁面標題／APP_VERSION／頁尾 必須一致 */
-export const APP_VERSION = 'v1.7.0';
+export const APP_VERSION = 'v1.8.0';
 
 /**
  * 圖卡（鳥卡）來源 —— Cloudflare R2 公開網域。
@@ -31,6 +31,15 @@ export const CARD_EXTENSIONS = ['avif', 'webp', 'jpg', 'jpeg', 'png'] as const;
 
 /** 異圖（同一編號的第二款卡面）後綴，見 BIRD_ID_MAPPING.csv */
 export const CARD_ALT_SUFFIX = '_UR';
+
+/**
+ * 圖鑑預設次序。
+ *   'ebird'   = 跟 eBird/Clements 演化排序（目 → 科 → 種），英文為權威（預設）
+ *   'pokedex' = 原本 NO.0001 → 0569 的固定次序
+ *   'chinese' = 中文名次序
+ * 只影響畫面排法，NO. 編號（＝R2 檔名）永不變。
+ */
+export const DEFAULT_SORT_MODE: 'ebird' | 'pokedex' | 'chinese' = 'ebird';
 
 /** 圖鑑槽位總數：一律由 birds.json 決定（舊版兩處寫死 569 / 1500，會對不上） */
 export const TOTAL_SLOTS = birdsRawData.length;

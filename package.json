@@ -1,7 +1,7 @@
 {
   "name": "aviandex",
   "private": true,
-  "version": "1.7.0",
+  "version": "1.8.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -17,6 +17,7 @@
     "test": "node --test tests/*.test.mjs",
     "test:facts": "node --test tests/facts.test.mjs",
     "test:taxonomy": "node --test tests/taxonomy.test.mjs",
+    "test:order": "node --test tests/pokedexOrder.test.mjs",
     "names:merge": "node scripts/merge-english-names.mjs",
     "cards:worklist": "node scripts/make-card-worklist.mjs",
     "cards:prompt": "node scripts/cards/prompt-builder.mjs",

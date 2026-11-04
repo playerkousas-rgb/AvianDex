@@ -158,6 +158,8 @@ function main() {
       sciName: rec.SCI_NAME,
       order: rec.ORDER,
       family: stripFamily(rec.FAMILY),
+      // eBird/Clements 演化排序（目 → 科 → 種）；前端「跟 eBird 排序」用
+      taxonOrder: Number(rec.TAXON_ORDER) || 0,
       source: 'eBird/Clements',
       via,
       ...(zhMismatch ? { zhMismatch } : {}),
@@ -185,6 +187,7 @@ function main() {
       sciName: t.sciName,
       order: t.order,
       family: t.family,
+      taxonOrder: t.taxonOrder,
     };
   }
   fs.writeFileSync(OUT_TAXONOMY, `${JSON.stringify(ordered)}\n`);

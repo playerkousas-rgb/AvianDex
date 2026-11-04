@@ -35,13 +35,38 @@
 
 ---
 
+## 2.5 排序與搜尋（前端怎樣用這批資料）
+
+| 模式 | 排列依據 | 用途 |
+|---|---|---|
+| `ebird`（預設） | `birdTaxonomy.json` 的 `taxonOrder`（Clements 演化排序號） | 同教科書一樣，由雞形目行到雀形目；科內物種亦按親緣排 |
+| `pokedex` | `NO.` 編號 | 同 R2 檔名次序一致，方便對圖 |
+| `chinese` | 中文名（`zh-Hant-HK` collation） | 想用中文查閱時 |
+
+`taxonOrder` 由 `npm run ebird:taxonomy` 一併寫入 CSV 第 6 欄（`TAXON_ORDER`），
+再由 `npm run birds:enrich` 帶入 `birdTaxonomy.json`。實測範圍 248 → 32,560，559 張卡全部有號。
+
+搜尋評分（`src/lib/pokedexOrder.ts`）：
+
+```
+英文俗名完全相同 100 > 學名完全相同 95 > 英文名開頭 88 > 英文名包含 80
+> 中文名完全相同 70 > 中文名包含 60 > 學名包含 50 > 編號 40 > 科 30 > 目 25
+```
+
+即係**英文永遠排先**；中文仍然搜得到，只係排後面。有搜尋字時保留相關度次序，唔會再被排序蓋過。
+
+> ⚠️ 排序只影響顯示。`NO. NNNN` 永遠等於 R2 檔名，任何情況下都不能因為排序而改編號
+> （`tests/pokedexOrder.test.mjs` 有測試把關：三種模式排完之後，編號集合必須完全相同）。
+
+---
+
 ## 3. 資料檔（各自角色）
 
 | 檔案 | 內容 | 誰產生 |
 |---|---|---|
-| `src/data/ebird-taxonomy.csv` | Clements 物種表：code／英文名／學名／目／科 | `npm run ebird:taxonomy` |
+| `src/data/ebird-taxonomy.csv` | Clements 物種表：code／英文名／學名／目／科／**演化排序號** | `npm run ebird:taxonomy` |
 | `src/data/ebird-taxonomy.meta.json` | 來源、抓取時間、物種數 | 同上 |
-| `src/data/birdTaxonomy.json` | 每張卡對到的 eBird 分類（**前端唯一會 import 的檔**，77 KB） | `npm run birds:enrich` |
+| `src/data/birdTaxonomy.json` | 每張卡對到的 eBird 分類＋`taxonOrder`（**前端唯一會 import 的檔**，約 90 KB） | `npm run birds:enrich` |
 | `reports/enrich-birds.json` / `.md` | 同一批結果＋比對途徑＋衝突清單（審計用，不入前端） | 同上 |
 | `src/data/name-aliases.generated.json` | 中文名 → eBird 代碼 → 英文名／學名 | `npm run aliases:build` |
 | `scripts/cards/zh-name-codes.json` | eBird 代碼 → 中文名（1044 筆，來源見 §6） | 已內建 |

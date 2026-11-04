@@ -67,7 +67,17 @@ Hub 圖片：存放於 public/images/，命名為 hub_wiki.jpg, hub_radar.jpg �
 配 `public/manifest.webmanifest`，Android／iOS 可「加到主畫面」全螢幕使用；貼連結到 WhatsApp／Signal 會有預覽圖。
 規範依 `readme` 的 G11（見該 repo `docs/33-icon-standard.md`），**換圖標時記得改檔名，不要原地覆蓋**（有長快取）。
 
-📚 分類資料的權威（v1.7.0）
+🔠 排序與搜尋（v1.8.0）
+
+- **預設次序跟 eBird / Clements 演化排序**（目 → 科 → 種），唔再係舊嘅 NO.0001→0569。
+  右上角「排序」有三個掣：`eBird`（預設）／`NO.`（原本編號次序）／`中文`（中文名次序）。
+- **搜尋以英文名為主**：`dove` → Spotted Dove 排第一；`Spilopelia chinensis` 搜學名亦得；
+  打中文（`珠頸`）都搵得到，但排英文命中之後。規則寫死在 `src/lib/pokedexOrder.ts`（有 8 個測試）。
+- 中文名只作**顯示**；卡片右下角依次顯示 中文名 → 英文名（eBird 正式名）→ 學名（斜體）。
+- ⚠️ **排序只影響畫面次序，`NO. NNNN` 編號永遠不變**——因為編號 = R2 檔名 `aviandex/NNNN.avif`，
+  一改就全部對唔上。所以跟 eBird 排序之後，卡上會多一個 `#12` 表示「排第幾」，同 `NO.0456` 分開顯示。
+
+📚 分類資料的權威（v1.7.0 起）
 
 **英文名、學名、目、科全部以 eBird / Clements Checklist（Cornell Lab of Ornithology）為準**；
 中文名只作顯示，由中文維基以「學名」反查（香港繁體），**永不反向改英文**。
