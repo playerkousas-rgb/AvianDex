@@ -50,3 +50,6 @@ Thumbs.db
 
 # 圖卡體檢報告（由 scripts/probe-cards.mjs 產生，唔需要進 Git）
 reports/
+
+# 資料抓取快取（fetch-facts.mjs）
+.cache/

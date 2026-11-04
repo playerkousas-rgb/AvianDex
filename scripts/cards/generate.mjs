@@ -43,7 +43,15 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { encyclopediaPrompt, illustrationPrompt, findBird, loadBirds, ROOT } from './prompt-builder.mjs';
+import {
+  encyclopediaPrompt,
+  illustrationPrompt,
+  factStatus,
+  findBird,
+  getFacts,
+  loadBirds,
+  ROOT,
+} from './prompt-builder.mjs';
 
 const ARGS = process.argv.slice(2);
 const arg = (name, fallback) => {
@@ -290,8 +298,11 @@ async function main() {
       const custom = fs.existsSync(customFile) ? fs.readFileSync(customFile, 'utf8').trim() : '';
       const prompt =
         custom ||
-        (STYLE === 'illustration' ? illustrationPrompt(bird) : encyclopediaPrompt(bird));
-      console.log(`\n===== ${bird.id} ${bird.name}${custom ? '（自訂提示詞）' : ''} =====\n${prompt}`);
+        (STYLE === 'illustration'
+          ? illustrationPrompt(bird)
+          : encyclopediaPrompt(bird, { facts: getFacts(bird.id) }));
+      const status = factStatus(bird.id);
+      console.log(`\n===== ${bird.id} ${bird.name}${custom ? '（自訂提示詞）' : ''}（資料：${status}）=====\n${prompt}`);
     }
     return;
   }
@@ -314,6 +325,22 @@ async function main() {
     process.exit(1);
   }
 
+  // 資料把關：百科卡未有查證資料 → 先警告（避免出一堆錯分類的卡）
+  if (STYLE !== 'illustration') {
+    const unverified = ids.filter((id) => factStatus(id) !== 'verified');
+    if (unverified.length) {
+      console.warn(
+        `⚠️  ${unverified.length} / ${ids.length} 張未有查證資料：${unverified.slice(0, 12).join(' ')}${unverified.length > 12 ? ' …' : ''}`,
+      );
+      console.warn('    建議先跑：npm run facts:fetch -- --from 22 --to 41');
+      console.warn('    這些卡的提示詞會要求「分類欄位寫資料待查」，不會讓 AI 自己編。');
+      if (!has('--allow-unverified')) {
+        console.warn('    如確定要出，加 --allow-unverified');
+        process.exit(2);
+      }
+    }
+  }
+
   let done = 0;
   let skipped = 0;
   let failed = 0;
@@ -332,7 +359,9 @@ async function main() {
     const custom = fs.existsSync(customFile) ? fs.readFileSync(customFile, 'utf8').trim() : '';
     const prompt =
       custom ||
-      (STYLE === 'illustration' ? illustrationPrompt(bird) : encyclopediaPrompt(bird));
+      (STYLE === 'illustration'
+        ? illustrationPrompt(bird)
+        : encyclopediaPrompt(bird, { facts: getFacts(bird.id) }));
     if (custom) process.stdout.write(`📝 用自訂提示詞 ${path.relative(ROOT, customFile)}\n`);
     const negative =
       STYLE === 'illustration'

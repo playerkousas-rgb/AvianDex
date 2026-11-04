@@ -1,0 +1,13 @@
+{
+  "0289": {
+    "id": "0289",
+    "name": "普通翠鳥",
+    "en": "Common Kingfisher",
+    "iucn": "無危（IUCN 3.1）",
+    "rank": { "界": "動物界", "門": "脊索動物門", "綱": "鳥綱", "目": "佛法僧目", "科": "翠鳥科", "屬": "翠鳥屬", "種": "普通翠鳥" },
+    "latin": { "目": "Coraciiformes", "科": "Alcedinidae", "屬": "Alcedo" },
+    "scientificName": "Alcedo atthis",
+    "source": { "site": "zh.wikipedia.org", "title": "普通翠鸟", "pageid": 34390, "url": "https://zh.wikipedia.org/wiki/%E6%99%AE%E9%80%9A%E7%BF%A0%E9%B8%9F" },
+    "verifiedAt": "2026-11-04T00:00:00.000Z"
+  }
+}

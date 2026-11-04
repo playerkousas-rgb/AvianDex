@@ -17,7 +17,10 @@
     "names:merge": "node scripts/merge-english-names.mjs",
     "cards:worklist": "node scripts/make-card-worklist.mjs",
     "cards:prompt": "node scripts/cards/prompt-builder.mjs",
-    "cards:generate": "node scripts/cards/generate.mjs"
+    "cards:generate": "node scripts/cards/generate.mjs",
+    "test:facts": "node --test tests/facts.test.mjs",
+    "facts:fetch": "node scripts/cards/fetch-facts.mjs",
+    "facts:build": "node scripts/cards/build-facts.mjs"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",
