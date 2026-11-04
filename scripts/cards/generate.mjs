@@ -325,15 +325,30 @@ async function main() {
     process.exit(1);
   }
 
-  // 資料把關：百科卡未有查證資料 → 先警告（避免出一堆錯分類的卡）
+  /*
+   * 資料把關（三級）：
+   *   verified = eBird 對得上 + 中文目／科齊 → 直接出
+   *   partial  = 只有 eBird 的英文／學名／目／科（未跑維基） → 可以出，
+   *              提示詞已要求中文欄位寫「資料待查」，屬可接受情況
+   *   missing  = 連 eBird 都對不上 → 默認擋住（--allow-unverified 才放行）
+   */
   if (STYLE !== 'illustration') {
-    const unverified = ids.filter((id) => factStatus(id) !== 'verified');
-    if (unverified.length) {
-      console.warn(
-        `⚠️  ${unverified.length} / ${ids.length} 張未有查證資料：${unverified.slice(0, 12).join(' ')}${unverified.length > 12 ? ' …' : ''}`,
+    const statuses = ids.map((id) => ({ id, status: factStatus(id) }));
+    const missing = statuses.filter((x) => x.status === 'missing').map((x) => x.id);
+    const partial = statuses.filter((x) => x.status === 'partial').map((x) => x.id);
+
+    if (partial.length) {
+      console.log(
+        `ℹ️  ${partial.length} / ${ids.length} 張只有 eBird 分類（未有中文目／科）：${partial.slice(0, 12).join(' ')}${partial.length > 12 ? ' …' : ''}`,
       );
-      console.warn('    建議先跑：npm run facts:fetch -- --from 22 --to 41');
-      console.warn('    這些卡的提示詞會要求「分類欄位寫資料待查」，不會讓 AI 自己編。');
+      console.log('    這些卡的中文欄位會寫「資料待查」；想補齊請跑：npm run facts:fetch -- --from 22 --to 41');
+    }
+
+    if (missing.length) {
+      console.warn(
+        `⚠️  ${missing.length} / ${ids.length} 張完全冇分類資料：${missing.slice(0, 12).join(' ')}${missing.length > 12 ? ' …' : ''}`,
+      );
+      console.warn('    可能是英文名未對上 eBird：先跑 npm run birds:enrich 睇報告。');
       if (!has('--allow-unverified')) {
         console.warn('    如確定要出，加 --allow-unverified');
         process.exit(2);

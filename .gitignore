@@ -53,3 +53,6 @@ reports/
 
 # 資料抓取快取（fetch-facts.mjs）
 .cache/
+
+# 資料工具產生的備份檔（不要在 repo 內留兩份 569 行 JSON）
+src/data/birds.json.bak

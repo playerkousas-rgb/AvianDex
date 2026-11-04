@@ -8,7 +8,7 @@
 import birdsRawData from './data/birds.json';
 
 /** 雙版號 V1：檔名／頁面標題／APP_VERSION／頁尾 必須一致 */
-export const APP_VERSION = 'v1.6.0';
+export const APP_VERSION = 'v1.7.0';
 
 /**
  * 圖卡（鳥卡）來源 —— Cloudflare R2 公開網域。

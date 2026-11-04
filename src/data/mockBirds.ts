@@ -1,6 +1,15 @@
 import { Bird } from '../types';
 import birdsRawData from './birds.json';
+import taxonomyRaw from './birdTaxonomy.json';
 import { TOTAL_SLOTS, cardUrl } from '../config';
+
+/**
+ * eBird/Clements 權威分類（由 scripts/cards/enrich-birds.mjs 產生）。
+ * 有這份資料，卡片就唔會再顯示 `scientificName: '???'`，
+ * 搜尋亦可以撳學名／目／科搵到（見 App 的 filteredBirds）。
+ */
+type TaxonomyEntry = { speciesCode: string; comName: string; sciName: string; order: string; family: string };
+const taxonomyById = taxonomyRaw as Record<string, TaxonomyEntry>;
 
 // id → 中文名 查表（O(1)）
 const nameById = new Map<string, string>(birdsRawData.map((b) => [b.id, b.name]));
@@ -31,12 +40,17 @@ export const mockBirds: Bird[] = Array.from({ length: TOTAL_SLOTS }, (_, i) => {
   const idString = String(i + 1).padStart(4, '0');
   const knownName = nameById.get(idString);
 
+  const tax = taxonomyById[idString];
+
   return {
     id: idString,
     imageUrl: cardUrl(idString),
     ...PLACEHOLDER,
     name: knownName || PLACEHOLDER.name,
     englishName: enById.get(idString) || PLACEHOLDER.name,
+    scientificName: tax?.sciName || PLACEHOLDER.scientificName,
+    category: tax?.family || PLACEHOLDER.category,
+    taxonomy: tax,
     discovered: Boolean(knownName),
   };
 });

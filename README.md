@@ -67,6 +67,23 @@ Hub 圖片：存放於 public/images/，命名為 hub_wiki.jpg, hub_radar.jpg �
 配 `public/manifest.webmanifest`，Android／iOS 可「加到主畫面」全螢幕使用；貼連結到 WhatsApp／Signal 會有預覽圖。
 規範依 `readme` 的 G11（見該 repo `docs/33-icon-standard.md`），**換圖標時記得改檔名，不要原地覆蓋**（有長快取）。
 
+📚 分類資料的權威（v1.7.0）
+
+**英文名、學名、目、科全部以 eBird / Clements Checklist（Cornell Lab of Ornithology）為準**；
+中文名只作顯示，由中文維基以「學名」反查（香港繁體），**永不反向改英文**。
+
+| 想做的事 | 一句指令 |
+|---|---|
+| 更新 Clements 分類表 | `npm run ebird:taxonomy`（有 key 可加 `--api`；有本地 CSV 可加 `--file`） |
+| 睇邊張卡嘅英文名／學名有問題 | `npm run ebird:audit` → `reports/ebird-audit.md` |
+| 把權威分類接上 569 張卡 | `npm run birds:enrich`（先睇報告）→ `npm run birds:enrich -- --apply` |
+| 中文名對照（eBird 代碼做橋） | `npm run aliases:build` → `reports/name-alias.md` |
+| 補中文目／科／IUCN | `npm run facts:fetch -- --from 22 --to 41` → `npm run facts:build` |
+
+現況：**559 / 569 張卡已對上 eBird**（其中 38 張原本把學名當英文名、8 張原本係 `Unknown Species`）。
+剩下 9 張中英名互相矛盾、10 張仍然對唔上，清單在 `reports/enrich-birds.md`，等拍板後才改中文名。
+完整規則、限制與出處見 **[docs/TAXONOMY_PIPELINE.md](./docs/TAXONOMY_PIPELINE.md)**。
+
 ⚖️ **部署瘦身**：儲存空間與 Vercel 部署規範（防增肥守則）請見 [SLIMMING_GUIDE.md](./SLIMMING_GUIDE.md)。
 
 ⚙️ 設定集中一處

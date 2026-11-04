@@ -57,7 +57,7 @@
   {
     "id": "0012",
     "name": "黑領椋鳥",
-    "en": "Unknown Species"
+    "en": "Black-collared Starling"
   },
   {
     "id": "0013",
@@ -102,7 +102,7 @@
   {
     "id": "0021",
     "name": "亞歷山大鸚鵡",
-    "en": "Unknown Species"
+    "en": "Alexandrine Parakeet"
   },
   {
     "id": "0022",
@@ -242,7 +242,7 @@
   {
     "id": "0049",
     "name": "青頭潛鴨",
-    "en": "Aythya Baeri"
+    "en": "Baer's Pochard"
   },
   {
     "id": "0050",
@@ -267,7 +267,7 @@
   {
     "id": "0054",
     "name": "斑臉海番鴨",
-    "en": "Melanitta Stejnegeri"
+    "en": "Stejneger's Scoter"
   },
   {
     "id": "0055",
@@ -412,7 +412,7 @@
   {
     "id": "0083",
     "name": "棕腹杜鵑",
-    "en": "Hierococcyx Nisicolor"
+    "en": "Hodgson's Hawk-Cuckoo"
   },
   {
     "id": "0084",
@@ -537,7 +537,7 @@
   {
     "id": "0108",
     "name": "小田雞",
-    "en": "Zapornia Pusilla"
+    "en": "Baillon's Crake"
   },
   {
     "id": "0109",
@@ -717,7 +717,7 @@
   {
     "id": "0144",
     "name": "青腳濱鷸",
-    "en": "Calidris Temminckii"
+    "en": "Temminck's Stint"
   },
   {
     "id": "0145",
@@ -777,7 +777,7 @@
   {
     "id": "0156",
     "name": "橙腹葉鵯",
-    "en": "Gallinago Hardwickii"
+    "en": "Orange-bellied Leafbird"
   },
   {
     "id": "0157",
@@ -792,7 +792,7 @@
   {
     "id": "0159",
     "name": "大沙錐",
-    "en": "Gallinago Megala"
+    "en": "Swinhoe's Snipe"
   },
   {
     "id": "0160",
@@ -837,7 +837,7 @@
   {
     "id": "0168",
     "name": "小青腳鷸",
-    "en": "Tringa Guttifer"
+    "en": "Nordmann's Greenshank"
   },
   {
     "id": "0169",
@@ -917,7 +917,7 @@
   {
     "id": "0184",
     "name": "黑嘴鷗",
-    "en": "Saundersilarus Saundersi"
+    "en": "Saunders's Gull"
   },
   {
     "id": "0185",
@@ -942,7 +942,7 @@
   {
     "id": "0189",
     "name": "弗氏鷗",
-    "en": "Leucophaeus Pipixcan"
+    "en": "Franklin's Gull"
   },
   {
     "id": "0190",
@@ -952,7 +952,7 @@
   {
     "id": "0191",
     "name": "漁鷗",
-    "en": "Ichthyaetus Ichthyaetus"
+    "en": "Pallas's Gull"
   },
   {
     "id": "0192",
@@ -1092,7 +1092,7 @@
   {
     "id": "0219",
     "name": "褐燕鸌",
-    "en": "Bulweria Bulwerii"
+    "en": "Bulwer's Petrel"
   },
   {
     "id": "0220",
@@ -1212,7 +1212,7 @@
   {
     "id": "0243",
     "name": "中白鷺",
-    "en": "Intermediate Egret"
+    "en": "Medium Egret"
   },
   {
     "id": "0244",
@@ -1312,7 +1312,7 @@
   {
     "id": "0263",
     "name": "白腹隼雕",
-    "en": "Aquila Fasciata"
+    "en": "Bonelli's Eagle"
   },
   {
     "id": "0264",
@@ -1357,7 +1357,7 @@
   {
     "id": "0272",
     "name": "蒼鷹",
-    "en": "Northern Goshawk"
+    "en": "Eurasian Goshawk"
   },
   {
     "id": "0273",
@@ -1822,7 +1822,7 @@
   {
     "id": "0365",
     "name": "賽氏篱鶯",
-    "en": "Iduna Rama"
+    "en": "Sykes's Warbler"
   },
   {
     "id": "0366",
@@ -1847,7 +1847,7 @@
   {
     "id": "0370",
     "name": "布氏葦鶯",
-    "en": "Acrocephalus Dumetorum"
+    "en": "Blyth's Reed Warbler"
   },
   {
     "id": "0371",
@@ -1857,7 +1857,7 @@
   {
     "id": "0372",
     "name": "蒼眉蝗鶯",
-    "en": "Helopsaltes Fasciolatus"
+    "en": "Gray's Grasshopper Warbler"
   },
   {
     "id": "0373",
@@ -1867,17 +1867,17 @@
   {
     "id": "0374",
     "name": "小蝗鶯",
-    "en": "Helopsaltes Certhiola"
+    "en": "Pallas's Grasshopper Warbler"
   },
   {
     "id": "0375",
     "name": "北蝗鶯",
-    "en": "Helopsaltes Ochotensis"
+    "en": "Middendorff's Grasshopper Warbler"
   },
   {
     "id": "0376",
     "name": "史氏蝗鶯",
-    "en": "Helopsaltes Pleskei"
+    "en": "Pleske's Grasshopper Warbler"
   },
   {
     "id": "0377",
@@ -1942,7 +1942,7 @@
   {
     "id": "0389",
     "name": "白腹毛腳燕",
-    "en": "Common House-Martin"
+    "en": "Siberian House-Martin"
   },
   {
     "id": "0390",
@@ -1987,7 +1987,7 @@
   {
     "id": "0398",
     "name": "淡眉柳鶯",
-    "en": "Phylloscopus Humei"
+    "en": "Hume's Warbler"
   },
   {
     "id": "0399",
@@ -1997,12 +1997,12 @@
   {
     "id": "0400",
     "name": "黃腰柳鶯",
-    "en": "Phylloscopus Proregulus"
+    "en": "Pallas's Leaf Warbler"
   },
   {
     "id": "0401",
     "name": "巨嘴柳鶯",
-    "en": "Phylloscopus Schwarzi"
+    "en": "Radde's Warbler"
   },
   {
     "id": "0402",
@@ -2032,7 +2032,7 @@
   {
     "id": "0407",
     "name": "飯島柳鶯",
-    "en": "Phylloscopus Ijimae"
+    "en": "Ijima's Leaf Warbler"
   },
   {
     "id": "0408",
@@ -2042,17 +2042,17 @@
   {
     "id": "0409",
     "name": "比氏鶲鶯",
-    "en": "Phylloscopus Valentini"
+    "en": "Bianchi's Warbler"
   },
   {
     "id": "0410",
     "name": "峨眉鶲鶯",
-    "en": "Phylloscopus Omeiensis"
+    "en": "Martens's Warbler"
   },
   {
     "id": "0411",
     "name": "純色尾鶲鶯",
-    "en": "Phylloscopus Soror"
+    "en": "Alström's Warbler"
   },
   {
     "id": "0412",
@@ -2097,17 +2097,17 @@
   {
     "id": "0420",
     "name": "冠紋柳鶯",
-    "en": "Phylloscopus Claudiae"
+    "en": "Claudia's Leaf Warbler"
   },
   {
     "id": "0421",
     "name": "華南冠紋柳鶯",
-    "en": "Phylloscopus Goodsoni"
+    "en": "Hartert's Leaf Warbler"
   },
   {
     "id": "0422",
     "name": "白斑尾柳鶯",
-    "en": "Phylloscopus Ogilviegranti"
+    "en": "Kloss's Leaf Warbler"
   },
   {
     "id": "0423",
@@ -2177,7 +2177,7 @@
   {
     "id": "0436",
     "name": "暗綠繡眼鳥",
-    "en": "Zosterops Simplex"
+    "en": "Swinhoe's White-eye"
   },
   {
     "id": "0437",
@@ -2197,7 +2197,7 @@
   {
     "id": "0440",
     "name": "黑眉雀鶥",
-    "en": "Alcippe Hueti"
+    "en": "Huet's Fulvetta"
   },
   {
     "id": "0441",
@@ -2277,7 +2277,7 @@
   {
     "id": "0456",
     "name": "虎斑地鶇",
-    "en": "Zoothera Aurea"
+    "en": "Scaly Thrush"
   },
   {
     "id": "0457",
@@ -2352,7 +2352,7 @@
   {
     "id": "0471",
     "name": "斑鶇",
-    "en": "Turdus Naumanni"
+    "en": "Naumann's Thrush"
   },
   {
     "id": "0472",
@@ -2422,7 +2422,7 @@
   {
     "id": "0485",
     "name": "琉璃藍鶲",
-    "en": "Cyanoptila Cumatilis"
+    "en": "Zappey's Flycatcher"
   },
   {
     "id": "0486",
@@ -2502,7 +2502,7 @@
   {
     "id": "0501",
     "name": "琉球姬鶲",
-    "en": "Ryuku Flycatcher"
+    "en": "Ryukyu Flycatcher"
   },
   {
     "id": "0502",
@@ -2542,7 +2542,7 @@
   {
     "id": "0509",
     "name": "黑喉紅尾鴝",
-    "en": "Phoenicurus Hodgsoni"
+    "en": "Hodgson's Redstart"
   },
   {
     "id": "0510",
@@ -2607,7 +2607,7 @@
   {
     "id": "0522",
     "name": "藍喉太陽鳥",
-    "en": "Aethopyga Gouldiae"
+    "en": "Mrs. Gould's Sunbird"
   },
   {
     "id": "0523",
@@ -2662,12 +2662,12 @@
   {
     "id": "0533",
     "name": "田鷚",
-    "en": "Anthus Richardi"
+    "en": "Richard's Pipit"
   },
   {
     "id": "0534",
     "name": "布氏鷚",
-    "en": "Anthus Godlewskii"
+    "en": "Blyth's Pipit"
   },
   {
     "id": "0535",
@@ -2797,7 +2797,7 @@
   {
     "id": "0560",
     "name": "葦鵐",
-    "en": "Emberiza Pallasi"
+    "en": "Pallas's Bunting"
   },
   {
     "id": "0561",
@@ -2842,6 +2842,6 @@
   {
     "id": "0569",
     "name": "白眉鵐",
-    "en": "Emberiza Tristrami"
+    "en": "Tristram's Bunting"
   }
 ]

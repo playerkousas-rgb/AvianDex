@@ -26,6 +26,7 @@ export const ROOT = path.resolve(__dirname, '../..');
 
 let cachedBirds = null;
 let cachedFacts = null;
+let cachedTaxonomy = null;
 
 export function loadBirds() {
   if (!cachedBirds) {
@@ -46,6 +47,31 @@ export function loadFacts() {
   return cachedFacts;
 }
 
+/**
+ * eBird/Clements 權威分類（由 scripts/cards/enrich-birds.mjs 產生）。
+ * 有這份，即使未跑維基查證，提示詞仍然有可信的英文名／學名／目／科可用。
+ */
+export function loadTaxonomy() {
+  if (cachedTaxonomy === null) {
+    try {
+      cachedTaxonomy = JSON.parse(fs.readFileSync(path.join(ROOT, 'src/data/birdTaxonomy.json'), 'utf8'));
+    } catch {
+      cachedTaxonomy = {};
+    }
+  }
+  return cachedTaxonomy;
+}
+
+export function getTaxonomy(id) {
+  return loadTaxonomy()[String(id).padStart(4, '0')] || null;
+}
+
+/** 只有「對得上 eBird」才算 authority-verified：英文名／學名／目／科 */
+export function hasEbirdAuthority(id) {
+  const tax = getTaxonomy(id);
+  return Boolean(tax?.sciName && tax?.order && tax?.family);
+}
+
 export function findBird(id) {
   const padded = String(id).replace(/\D/g, '').padStart(4, '0');
   const bird = loadBirds().find((b) => b.id === padded);
@@ -57,12 +83,30 @@ export function getFacts(id) {
   return loadFacts()[String(id).padStart(4, '0')] || null;
 }
 
-/** 查證狀態：verified / partial / missing */
+/**
+ * 查證狀態：
+ *   verified = eBird 對得上，而且維基中文目／科／學名都齊
+ *   partial  = 有部分資料（例如只有 eBird 的英文分類，未有中文目／科）
+ *   missing  = 完全冇
+ */
 export function factStatus(id) {
   const f = getFacts(id);
-  if (!f) return 'missing';
-  if (f.rank?.['目'] && f.rank?.['科'] && f.scientificName) return 'verified';
-  return 'partial';
+  const tax = getTaxonomy(id);
+  const ebirdOk = Boolean(tax?.sciName && tax?.order && tax?.family);
+  const wikiOk = Boolean(f?.rank?.['目'] && f?.rank?.['科'] && f?.scientificName);
+  if (ebirdOk && wikiOk) return 'verified';
+  if (ebirdOk || f) return 'partial';
+  return 'missing';
+}
+
+/** 這張卡的分類資料來自哪裡（用於提示詞與報告，方便追溯） */
+export function factProvenance(id) {
+  const f = getFacts(id);
+  const tax = getTaxonomy(id);
+  return {
+    ebird: tax ? { speciesCode: tax.speciesCode, source: 'eBird/Clements' } : null,
+    wiki: f?.source?.url ? { url: f.source.url, pageid: f.source.pageid } : null,
+  };
 }
 
 const HK_SECTIONS = [
@@ -84,8 +128,9 @@ const HK_SECTIONS = [
  * @param {{facts?:object, width?:number,height?:number}} [opts]
  */
 export function encyclopediaPrompt(bird, opts = {}) {
-  const en = bird.en || '';
-  const verified = opts.facts ? factsBlock(opts.facts, bird) : '';
+  const tax = opts.taxonomy === undefined ? getTaxonomy(bird.id) : opts.taxonomy;
+  const en = tax?.comName || bird.en || '';
+  const verified = tax || opts.facts ? factsBlock(opts.facts, bird, tax) : '';
 
   return `Generate a high-quality vertical encyclopedia-style infographic for ${bird.name}${en ? ` (${en})` : ''} — AvianDex NO.${bird.id}.
 
@@ -134,7 +179,10 @@ export const ILLUSTRATION_NEGATIVE =
 export function buildPrompt(id, style = 'encyclopedia', opts = {}) {
   const bird = findBird(id);
   if (style === 'illustration') return illustrationPrompt(bird);
-  return encyclopediaPrompt(bird, { facts: opts.noFacts ? null : getFacts(bird.id) });
+  return encyclopediaPrompt(bird, {
+    facts: opts.noFacts ? null : getFacts(bird.id),
+    taxonomy: getTaxonomy(bird.id),
+  });
 }
 
 // ── CLI ──

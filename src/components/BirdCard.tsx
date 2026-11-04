@@ -81,6 +81,11 @@ export const BirdCard: React.FC<BirdCardProps> = ({
           <p className="text-white font-black text-xs sm:text-sm tracking-tight truncate drop-shadow-lg text-center">
             {bird.name}
           </p>
+          {bird.taxonomy?.sciName && (
+            <p className="text-white/60 font-mono text-[8px] italic truncate text-center leading-tight">
+              {bird.taxonomy.sciName}
+            </p>
+          )}
         </div>
       )}
 
@@ -122,6 +127,11 @@ export const BirdCard: React.FC<BirdCardProps> = ({
           <p className="mt-3 text-yellow-300 font-black text-[11px] tracking-[0.25em] uppercase drop-shadow-md">
             {hasName ? bird.name : '? ? ?'}
           </p>
+          {bird.taxonomy?.sciName && (
+            <p className="mt-0.5 text-yellow-100/60 font-mono text-[7px] italic tracking-wide text-center px-2 truncate max-w-full">
+              {bird.taxonomy.sciName}
+            </p>
+          )}
           <p className="mt-0.5 text-yellow-200/50 font-mono text-[8px] tracking-widest uppercase">
             {image.status === 'error' ? 'LOAD ERROR' : 'UNDISCOVERED'}
           </p>

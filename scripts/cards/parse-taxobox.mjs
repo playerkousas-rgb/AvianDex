@@ -128,31 +128,41 @@ export function parseTaxobox(text = '') {
  * 產生「只准用這些事實」的提示詞段落。
  * 任何未列出的欄位 → 一律不准出現在卡上（避免 AI 自己補）。
  */
-export function factsBlock(facts, bird) {
-  if (!facts) return '';
-  const r = facts.rank || {};
-  const la = facts.latin || {};
+/**
+ * 產生提示詞用的【已查證資料】段落。
+ * @param {object|null} facts  維基 taxobox 解析結果（可為 null）
+ * @param {{id:string,name:string,en?:string}} bird
+ * @param {object|null} [taxonomy] eBird/Clements 權威分類（優先於維基的拉丁名）
+ */
+export function factsBlock(facts, bird, taxonomy = null) {
+  if (!facts && !taxonomy) return '';
+  const r = facts?.rank || {};
+  const la = facts?.latin || {};
   const rows = [];
   const push = (label, zh, latin) => {
-    if (zh || latin) rows.push(`${label}：${zh}${latin ? `（${latin}）` : ''}`);
+    if (zh && latin) rows.push(`${label}：${zh}（${latin}）`);
+    else if (zh) rows.push(`${label}：${zh}`);
+    else if (latin) rows.push(`${label}：中文待查（拉丁 ${latin}，eBird/Clements 權威）`);
   };
-  push('目', r['目'], la['目']);
-  push('科', r['科'], la['科']);
+  push('目', r['目'], la['目'] || taxonomy?.order);
+  push('科', r['科'], la['科'] || taxonomy?.family);
   push('屬', r['屬'], la['屬']);
-  if (facts.scientificName) rows.push(`學名：${facts.scientificName}`);
-  if (facts.iucn) rows.push(`IUCN：${facts.iucn}`);
+  const sciName = taxonomy?.sciName || facts?.scientificName;
+  if (sciName) rows.push(`學名：${sciName}`);
+  if (facts?.iucn) rows.push(`IUCN：${facts.iucn}`);
 
-  const missing = ['目', '科'].filter((k) => !r[k]);
+  const missing = ['目', '科'].filter((k) => !r[k] && !(k === '目' ? taxonomy?.order : taxonomy?.family));
 
   return [
     '【已查證資料 — 只准使用以下數值，嚴禁自行補充或改用相近物種的資料】',
     `中文名：${bird.name}`,
-    bird.en ? `英文名：${bird.en}` : '',
+    taxonomy?.comName || bird.en ? `英文名：${taxonomy?.comName || bird.en}（eBird 正式名）` : '',
     ...rows,
     missing.length
       ? `⚠️ 以下欄位未有可靠來源：${missing.join('、')} — 請在卡上留空或寫「資料待查」，不准猜。`
       : '',
-    facts.source?.url ? `資料來源：${facts.source.url}${facts.source.pageid ? `（pageid ${facts.source.pageid}）` : ''}` : '',
+    taxonomy ? `分類來源：eBird/Clements（species code ${taxonomy.speciesCode}）` : '',
+    facts?.source?.url ? `中文資料來源：${facts.source.url}${facts.source.pageid ? `（pageid ${facts.source.pageid}）` : ''}` : '',
   ]
     .filter(Boolean)
     .join('\n');

@@ -580,6 +580,7 @@ function App() {
         <footer className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 mt-6 sm:mt-8 pb-4">
           <div className="bg-black/40 backdrop-blur-sm border-2 border-yellow-400/20 rounded-xl p-3 sm:p-4 font-mono text-[9px] sm:text-[11px] text-yellow-200/60 leading-relaxed">
             <p className="text-yellow-300 font-black tracking-widest mb-1">► CREDITS & DATA SOURCES ({APP_VERSION})</p>
+            <p>分類權威：eBird / Clements Checklist（Cornell Lab of Ornithology）</p>
             <p>科學數據：Cornell Lab · eBird · Macaulay Library · Xeno-canto</p>
             <p>AI 引擎：Hugging Face (BirdSet) · Nyckel · BirdNET</p>
             <p className="text-white/30 mt-1">© Scout System</p>

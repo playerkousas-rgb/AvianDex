@@ -1,7 +1,7 @@
 {
   "name": "aviandex",
   "private": true,
-  "version": "1.6.0",
+  "version": "1.7.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,17 +10,23 @@
     "preview": "vite preview",
     "aliases": "node scripts/build-aliases.mjs",
     "aliases:dry": "node scripts/build-aliases.mjs --dry",
+    "aliases:build": "node scripts/cards/build-name-alias.mjs",
     "cards:probe": "node scripts/probe-cards.mjs",
     "cards:probe:quick": "node scripts/probe-cards.mjs --limit 60",
     "test:cards": "node --test tests/*.test.mjs",
     "test": "node --test tests/*.test.mjs",
+    "test:facts": "node --test tests/facts.test.mjs",
+    "test:taxonomy": "node --test tests/taxonomy.test.mjs",
     "names:merge": "node scripts/merge-english-names.mjs",
     "cards:worklist": "node scripts/make-card-worklist.mjs",
     "cards:prompt": "node scripts/cards/prompt-builder.mjs",
     "cards:generate": "node scripts/cards/generate.mjs",
-    "test:facts": "node --test tests/facts.test.mjs",
     "facts:fetch": "node scripts/cards/fetch-facts.mjs",
-    "facts:build": "node scripts/cards/build-facts.mjs"
+    "facts:build": "node scripts/cards/build-facts.mjs",
+    "ebird:taxonomy": "node scripts/cards/update-ebird-taxonomy.mjs",
+    "ebird:audit": "node scripts/cards/audit-vs-ebird.mjs",
+    "birds:enrich": "node scripts/cards/enrich-birds.mjs",
+    "zh:resolve": "node scripts/cards/resolve-zh.mjs"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",
