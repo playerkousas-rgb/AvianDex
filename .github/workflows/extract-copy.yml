@@ -3,7 +3,10 @@
 # ============================================================
 #  為什麼在 GitHub Actions 跑：
 #    開發沙盒／部分網絡封鎖 zh.wikipedia.org（SSL_ERROR_SYSCALL），
-#    但 GitHub runner 可以正常連維基。所以把「抓原文」放在這裡跑。
+#    但 GitHub runner（Azure）通常可以正常連維基。所以把「抓原文」放在這裡跑。
+#
+#  ⚠️ 先確認 runner 真的連得到（否則會在這裡失敗，不會改壞任何檔案）：
+#    第一步「連線檢查」會試 zh.wikipedia.org，HTTP 不是 200 就即時失敗。
 #
 #  安全性（重要）：
 #    · 只讀維基 + 寫 src/data/cardCopy.json，不接觸任何 secret
@@ -69,7 +72,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: ${{ github.event.repository.default_branch }}
+          # 在目前分支上建工作分支（未合併 main 時也可以先跑）
+          ref: ${{ github.ref_name }}
 
       - name: 安裝 Node
         uses: actions/setup-node@v4
@@ -86,6 +90,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           BRANCH="cards/extract-copy-${{ github.run_number }}"
+          echo "從 ${{ github.ref_name }} 開分支 $BRANCH"
           echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
           git checkout -b "$BRANCH"
 
@@ -171,7 +176,7 @@ jobs:
             echo "3. 有 \`notes\` 的卡代表原文本身有問題（矛盾／[來源請求]／翻譯品質），已在檔內註明理由。"
           } > /tmp/pr-body.md
           gh pr create \
-            --base "${{ github.event.repository.default_branch }}" \
+            --base "${{ github.ref_name }}" \
             --head "$BRANCH" \
             --title "chore(cards): 補齊卡面文案（維基原文抽取 · run #${{ github.run_number }}）" \
             --body-file /tmp/pr-body.md

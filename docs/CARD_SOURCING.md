@@ -100,6 +100,9 @@ npm run cards:render -- 0288 0289 0290
 開發沙盒禁止連 `zh.wikipedia.org`（`SSL_ERROR_SYSCALL`），所以「抓原文」放在 GitHub runner 做。
 Workflow 檔案：`.github/workflows/extract-copy.yml`。
 
+**前提**：workflow 檔案要在 **main** 分支才會有 Run workflow 按鈕
+（GitHub 的規定：`workflow_dispatch` 只認預設分支上的定義）。所以第 5 號 PR 要先合併。
+
 **怎樣跑（不需要寫程式）**
 
 1. 開 repo → **Actions** → 左邊選「**補齊卡面文案（維基原文抽取）**」
@@ -109,6 +112,8 @@ Workflow 檔案：`.github/workflows/extract-copy.yml`。
 3. 等約 30–45 分鐘（559 頁 × 0.6 秒禮貌間隔 + 分析）
 4. 完成後會自動開一個 PR，標題 `chore(cards): 補齊卡面文案（維基原文抽取 · run #N）`
 5. PR 內只會改 `src/data/cardCopy.json`，描述會附覆蓋率表
+   - 分支從你 **Run 時揀的分支**開（未合併 main 也可以先跑），base 亦是同一分支
+   - **不會**自動合併、**不會**改 main
 
 **安全性**
 
