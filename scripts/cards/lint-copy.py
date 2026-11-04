@@ -69,6 +69,9 @@ def has_en_sentence(txt):
     return False
 
 
+# 媒體碎片：圖說、檔名、攝影者（最常混入卡面的一類錯誤）
+MEDIA = re.compile(r"\.(?:jpe?g|png|gif|svg|tiff?|webp)\b|\bPhotograph by\b|\bFile:", re.I)
+
 LIST_FIELDS = {"highlights", "tips", "caution"}
 
 
@@ -79,6 +82,8 @@ def check_cell(fid, lang, txt):
     if not t:
         return []
     bad = []
+    if MEDIA.search(t):
+        bad.append("media-junk")
     if isinstance(txt, list):
         # 列表欄位：驗項數與每條長度（卡面每格最多 5 條、每條 ≤40 字）
         if len(txt) > 5:
@@ -109,7 +114,7 @@ def check_cell(fid, lang, txt):
 
 
 # 只會令出圖錯的才算錯誤；其餘係提示（人手可以接受）
-HARD = {"en-has-cjk", "zh-has-en-sentence", "too-long", "list-too-many"}
+HARD = {"en-has-cjk", "zh-has-en-sentence", "too-long", "list-too-many", "media-junk"}
 
 
 def severity(issue):
