@@ -32,6 +32,11 @@ npm-debug.log*
 .vite-source-tags.js
 tsconfig.tsbuildinfo
 
+# 環境變數（secret 只放本機 .env.local 與 Vercel Dashboard，絕不入 Git）
+.env
+.env.*
+!.env.example
+
 # Vercel
 .vercel/
 
@@ -39,6 +44,26 @@ tsconfig.tsbuildinfo
 uploads/
 tmp/
 
+# Python（圖卡引擎）
+__pycache__/
+*.pyc
+
 # 系統檔
 .DS_Store
 Thumbs.db
+
+# 圖卡體檢報告（由 scripts/probe-cards.mjs 產生，唔需要進 Git）
+reports/
+
+# 資料抓取快取（fetch-facts.mjs）
+.cache/
+
+# 資料工具產生的備份檔（不要在 repo 內留兩份 569 行 JSON）
+src/data/birds.json.bak
+
+# 圖卡插畫（大檔，只作本機素材；成品 AVIF 一律上傳 R2，不入 repo）
+cards/art/
+
+# 本機抽取的中間檔（由你電腦跑 extract-bilingual.mjs --out 產生；唔入 Git）
+data/cardCopy.local.json
+data/*.local.json

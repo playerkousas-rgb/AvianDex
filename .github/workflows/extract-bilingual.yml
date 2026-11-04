@@ -1,0 +1,182 @@
+# ============================================================
+#  AvianDex — 中英雙語資料抽取（手動觸發）
+# ------------------------------------------------------------
+#  為什麼在這裡跑：開發沙盒封鎖 zh/en.wikipedia.org，
+#  但 GitHub runner（Azure）通常連得到。所以抓原文一律放在 Actions。
+#
+#  安全性：
+#    · 只讀維基、只寫 src/data/cardCopy.json 與 reports/
+#    · 不接觸任何 secret；不自動 push 到工作分支，只開 PR
+#    · 抽唔到的欄位一律留空（卡面印「資料待查」／Data pending），永不生成文字
+#
+#  用法：Actions →「中英雙語抽取（15 欄）」→ Run workflow
+#    ids / from / to : 範圍（留空＝全部 548 張）
+#    missing_only    : 只做未夠 5 欄的卡
+#    limit           : 測試用，只做頭 N 張（例：5）
+#    dry_run         : 只統計，不開 PR
+# ============================================================
+name: 中英雙語抽取（15 欄）
+
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: '只做指定編號（逗號分隔，例：0008,0290）；留空＝全部'
+        required: false
+        default: ''
+      from:
+        description: '起始編號（例：1）'
+        required: false
+        default: ''
+      to:
+        description: '結束編號（例：60）'
+        required: false
+        default: ''
+      limit:
+        description: '只做頭 N 張（測試用；留空＝不限）'
+        required: false
+        default: ''
+      missing_only:
+        description: '只做未夠 5 欄的卡'
+        type: boolean
+        required: false
+        default: false
+      delay:
+        description: '每頁之間等幾毫秒（禮貌抓取）'
+        required: false
+        default: '700'
+      dry_run:
+        description: '只跑統計，不開 PR'
+        type: boolean
+        required: false
+        default: false
+
+concurrency:
+  group: extract-bilingual
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  extract:
+    name: 抓中英維基原文 → fieldCopy
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - name: 取出 repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref_name }}
+
+      - name: 安裝 Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 驗證解析器（離線測試，不需要網絡）
+        run: |
+          node scripts/cards/extract-bilingual.mjs --self-test
+          node --test tests/bilingual.test.mjs
+
+      - name: 連線檢查（中英維基）
+        run: |
+          set -e
+          for host in zh.wikipedia.org en.wikipedia.org; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 \
+              -A "AvianDex-BilingualExtractor/3.0 (educational)" \
+              "https://$host/w/api.php?action=query&format=json&meta=siteinfo")
+            echo "$host → HTTP $code"
+            if [ "$code" != "200" ]; then
+              echo "::error::連不到 $host（HTTP $code）。可能是 runner 網絡政策，請重跑。"
+              exit 1
+            fi
+          done
+
+      - name: 建工作分支
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          BRANCH="cards/bilingual-${{ github.run_number }}"
+          git checkout -b "$BRANCH"
+          echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
+
+      - name: 抽取
+        run: |
+          set -e
+          ARGS=""
+          if [ -n "${{ inputs.ids }}" ]; then
+            ARGS="$ARGS --ids ${{ inputs.ids }}"
+          else
+            if [ -n "${{ inputs.from }}" ]; then ARGS="$ARGS --from ${{ inputs.from }}"; fi
+            if [ -n "${{ inputs.to }}" ];   then ARGS="$ARGS --to ${{ inputs.to }}"; fi
+          fi
+          if [ -n "${{ inputs.limit }}" ]; then ARGS="$ARGS --limit ${{ inputs.limit }}"; fi
+          if [ "${{ inputs.missing_only }}" = "true" ]; then ARGS="$ARGS --missing-only"; fi
+          ARGS="$ARGS --delay ${{ inputs.delay }}"
+          echo "執行：node scripts/cards/extract-bilingual.mjs $ARGS"
+          node scripts/cards/extract-bilingual.mjs $ARGS
+
+      - name: 重建單檔工作室（讓資料入到 HTML 版）
+        run: |
+          node scripts/cards/build-studio-data.mjs
+          node scripts/cards/build-image-studio.mjs --no-ref
+
+      - name: 品質關卡
+        run: |
+          npm test
+          node scripts/cards/audit-copy.mjs
+
+      - name: 檢查有無改動
+        id: diff
+        run: |
+          if git diff --quiet -- src/data/cardCopy.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "cardCopy.json 冇改動。"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat -- src/data/cardCopy.json
+          fi
+
+      - name: Commit
+        if: steps.diff.outputs.changed == 'true' && inputs.dry_run == false
+        run: |
+          git add src/data/cardCopy.json reports/copy-bilingual.md docs/CARD_DATA_AUDIT.md \
+                  tools/card-studio/aviandex-studio.html tools/card-studio/aviandex-image-studio.html || true
+          git commit -m "chore(cards): 中英雙語原文抽取（15 欄，附 pageid）"
+          git push origin "$BRANCH"
+
+      - name: 開 Pull Request
+        if: steps.diff.outputs.changed == 'true' && inputs.dry_run == false
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "由 GitHub Actions 執行 \\`scripts/cards/extract-bilingual.mjs\\` 的結果。"
+            echo
+            echo "- 只改 \\`src/data/cardCopy.json\\`（加 \\`fieldCopy\\`：每欄有 zh 與 en 原文）"
+            echo "- 每句都是維基原文完整句，附 pageid；抽唔到就留空"
+            echo "- 沒有 AI 生成、沒有改寫、沒有機翻"
+            echo "- 選欄結果寫在 \\`picks\\`（最多 7 格）"
+            echo
+            echo "審核提示："
+            echo "1. 睇 \\`reports/copy-bilingual.md\\`：邊張卡抽到幾多中文／英文欄。"
+            echo "2. 睇 \\`docs/CARD_DATA_AUDIT.md\\`：有無跨物種污染（🔴 應該係 0）。"
+            echo "3. 任何一句都可以用 source 內的 pageid 回維基核對。"
+          } > /tmp/pr-body.md
+          gh pr create --base "${{ github.ref_name }}" --head "$BRANCH" \
+            --title "chore(cards): 中英雙語抽取 run #${{ github.run_number }}" \
+            --body-file /tmp/pr-body.md
+
+      - name: 上載報告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bilingual-report-${{ github.run_number }}
+          path: |
+            reports/copy-bilingual.md
+            docs/CARD_DATA_AUDIT.md
+            src/data/cardCopy.json
+          retention-days: 30

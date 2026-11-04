@@ -5,13 +5,18 @@ import { WelcomeScreen } from './components/WelcomeScreen.tsx';
 import { RecognitionResultModal, Candidate } from './components/RecognitionResultModal.tsx';
 import { MediaCapturePanel, MediaKind } from './components/MediaCapturePanel.tsx';
 import { BirdingMapModal } from './components/BirdingMapModal.tsx';
+import { CardLoadDiagnostics } from './components/CardLoadDiagnostics.tsx';
 import { useBirds } from './hooks/useBirds';
-import { Bird } from './types';
+import { useCardStats } from './hooks/useCardStats';
+import { getLoadedIds, resetAll, requestCard } from './lib/cardImage';
+import { APP_VERSION, CARDS_PER_PAGE, DEFAULT_SORT_MODE } from './config';
+import { sortBirds, searchBirds, type SortMode } from './lib/pokedexOrder';
 import { resolveBirdId } from './data/nameAliases';
 import { useBirdNetLocal } from './hooks/useBirdNetLocal';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Bird as BirdIcon,
+  RefreshCw,
   Mic,
   Camera as CameraIcon,
   Search,
@@ -24,7 +29,7 @@ import {
 } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 
-export const APP_VERSION = 'v1.5.0';
+export { APP_VERSION };
 
 // 捕精靈 App（BIRD-DEX 2）網址
 export const BIRDDEX2_URL = 'https://skw-birdex2.vercel.app';
@@ -33,11 +38,19 @@ type AnalyzeMode = 'audio' | 'image';
 
 function App() {
   const { birds, loading, error } = useBirds();
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  // 注意：用「編號」而唔係「陣列索引」記錄目前打開的卡，
+  // 因為排序（eBird / 中文 / 編號）會令同一張卡嘅索引變來變去。
+  const [selectedBirdId, setSelectedBirdId] = useState<string | null>(null);
   const [isOpened, setIsOpened] = useState(false);
   const [query, setQuery] = useState('');
   const [showMap, setShowMap] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // 分頁顯示：一次過 render 569 張卡會同時觸發幾百個圖片請求（r2.dev 會限流）
+  const [visibleCount, setVisibleCount] = useState(CARDS_PER_PAGE);
+  const [onlyUnlocked, setOnlyUnlocked] = useState(false);
+  // 排序：預設跟 eBird/Clements（目 → 科 → 種）；只影響畫面次序，NO. 編號永不變
+  const [sortMode, setSortMode] = useState<SortMode>(DEFAULT_SORT_MODE);
+  const cardStats = useCardStats();
 
   const [globalCaptureKind, setGlobalCaptureKind] = useState<MediaKind | null>(null);
   const [recogOpen, setRecogOpen] = useState(false);
@@ -110,7 +123,7 @@ function App() {
         const top = candidates[0];
         if (top && top.matchedIndex !== null && top.score >= 0.7) {
           setTimeout(() => {
-            setSelectedIndex(top.matchedIndex);
+            setSelectedBirdId(top.matchedBird?.id ?? null);
             setRecogOpen(false);
           }, 1200);
         }
@@ -184,7 +197,7 @@ function App() {
       // 深層連結：birds 是異步載入的，只能在 effect 中、資料就緒後套用網址參數
       // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional: apply ?id=/?search= after async data load
       setIsOpened(true);        // 跳過開機畫面，直接進入
-      setSelectedIndex(idx);    // 打開該鳥的圖鑑機
+      setSelectedBirdId(birds[idx]?.id ?? null);    // 打開該鳥的圖鑑機
     }
 
     // 清掉網址參數，避免重新整理時又彈出
@@ -198,24 +211,47 @@ function App() {
 
   useEffect(() => {
     const anyModalOpen =
-      selectedIndex !== null || showMap || recogOpen || !!globalCaptureKind;
+      selectedBirdId !== null || showMap || recogOpen || !!globalCaptureKind;
     document.body.style.overflow = anyModalOpen ? 'hidden' : 'unset';
     return () => { document.body.style.overflow = 'unset'; };
-  }, [selectedIndex, showMap, recogOpen, globalCaptureKind]);
+  }, [selectedBirdId, showMap, recogOpen, globalCaptureKind]);
 
   const filteredBirds = useMemo(() => {
-    if (!query.trim()) return birds;
-    const q = query.trim().toLowerCase();
-    return birds.filter((b) =>
-      b.id.includes(q) ||
-      b.name.toLowerCase().includes(q) ||
-            (b as Bird).englishName ? (b as Bird).englishName!.toLowerCase().includes(q) : false,
-    );
-  }, [birds, query]);
+    // 搜尋以英文名為主（見 src/lib/pokedexOrder.ts 的評分表），中文名仍可搜但排後
+    let base = searchBirds(birds, query);
+    if (onlyUnlocked) {
+      const loaded = getLoadedIds();
+      base = base.filter((b) => loaded.has(b.id));
+    }
+    // 有搜尋關鍵字時保留「相關度」次序（英文命中優先），否則跟所選分類次序
+    return query.trim() ? base : sortBirds(base, sortMode);
+    // cardStats 只係用作「圖片狀態已變」的觸發器，令「只看有圖」跟得上載入進度
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [birds, query, onlyUnlocked, sortMode, cardStats]);
+
+  // 只 render 首 N 張；其餘靠「載入更多」逐批出現（避免一次性打爆 R2）
+  const pagedBirds = useMemo(
+    () => filteredBirds.slice(0, visibleCount),
+    [filteredBirds, visibleCount],
+  );
+
+  /**
+   * 圖鑑機（左右箭頭切換）用的清單。
+   * 跟 eBird 排序時，在這裡切換就會由「目 → 科 → 種」逐隻行；
+   * 但 PokedexDevice 內部是用「索引」定位，所以要用 filtered 清單，
+   * 否則排序一改，開出來嘅卡就會跳錯。
+   */
+  const dexBirds = filteredBirds;
+  const dexIndex = useMemo(() => {
+    if (selectedBirdId === null) return 0;
+    const i = dexBirds.findIndex((b) => b.id === selectedBirdId);
+    return i >= 0 ? i : 0;
+  }, [dexBirds, selectedBirdId]);
+
 
   // 圖鑑收錄的鳥種總數（已正式記錄、非 ??? 佔位）
   const speciesCount = useMemo(
-    () => birds.filter((b) => b.name && b.name !== '???').length,
+    () => birds.filter((b) => b.discovered).length,
     [birds],
   );
 
@@ -348,7 +384,7 @@ function App() {
 
           <div className="bg-gradient-to-b from-yellow-300 to-yellow-400 border-b-[6px] border-black shadow-md relative">
             <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
-              <div className="flex-1 flex items-center gap-2 sm:gap-3 min-w-0">
+              <div className="flex-1 flex items-center gap-2 sm:gap-3 min-w-0 flex-wrap">
                 <div className="flex items-center gap-2 shrink-0 bg-black/15 border-2 border-black/40 rounded-lg px-3 py-1.5 shadow-inner">
                   <BirdIcon className="w-4 h-4 sm:w-5 sm:h-5 text-red-900 shrink-0" strokeWidth={2.5} />
                   <div className="flex flex-col leading-none">
@@ -361,6 +397,79 @@ function App() {
                     </span>
                   </div>
                 </div>
+
+                {/* 圖卡解鎖進度：直接講清楚「R2 有幾多張圖」，唔使靠估 */}
+                <div
+                  className="flex items-center gap-2 shrink-0 bg-black/15 border-2 border-black/40 rounded-lg px-3 py-1.5 shadow-inner"
+                  title="已由 Cloudflare R2 成功載入的圖卡數量"
+                >
+                  <span className="text-base leading-none">🖼️</span>
+                  <div className="flex flex-col leading-none">
+                    <span className="font-mono text-[8px] sm:text-[9px] text-red-900 font-black tracking-widest">
+                      已解鎖圖卡 · CARDS
+                    </span>
+                    <span className="font-black text-gray-900 text-sm sm:text-base md:text-lg leading-tight">
+                      {cardStats.loaded}
+                      <span className="text-gray-700 text-[10px] sm:text-xs font-mono"> 張</span>
+                      {cardStats.error > 0 && (
+                        <span className="ml-1.5 text-[9px] font-mono text-red-800">⚠ {cardStats.error} 失敗</span>
+                      )}
+                    </span>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => {
+                    resetAll();
+                    // 重新排隊：由第一張開始逐張 revalidate
+                  birds.slice(0, visibleCount).forEach((b) => requestCard(b.id));
+                  }}
+                  title="重新向 R2 探測所有圖卡（剛上傳完圖可按）"
+                  className="shrink-0 flex items-center gap-1.5 bg-white/70 hover:bg-white border-2 border-black/50 rounded-lg px-2.5 py-2 font-black text-[10px] text-gray-900 tracking-wider active:scale-95 transition-all"
+                >
+                  <RefreshCw className="w-3.5 h-3.5" /> 重新掃描
+                </button>
+
+                <label className="shrink-0 flex items-center gap-2 bg-white/60 border-2 border-black/40 rounded-lg px-2.5 py-2 font-black text-[10px] text-gray-900 tracking-wider cursor-pointer select-none">
+                  <input
+                    type="checkbox"
+                    checked={onlyUnlocked}
+                    onChange={(e) => {
+                      setOnlyUnlocked(e.target.checked);
+                      setVisibleCount(CARDS_PER_PAGE);
+                    }}
+                    className="w-3.5 h-3.5 accent-red-700"
+                  />
+                  只看有圖
+                </label>
+
+                <div className="shrink-0 flex items-center bg-white/70 border-2 border-black/50 rounded-lg overflow-hidden">
+                  <span className="px-1.5 font-mono text-[8px] font-black text-gray-700 tracking-wider border-r border-black/20 py-2">
+                    排序
+                  </span>
+                  {(
+                    [
+                      { key: 'ebird', label: 'eBird', title: '跟 eBird/Clements 演化排序（目 → 科 → 種）' },
+                      { key: 'pokedex', label: 'NO.', title: '原本 NO.0001 → NO.0569 次序' },
+                      { key: 'chinese', label: '中文', title: '按中文名排序' },
+                    ] as const
+                  ).map((m) => (
+                    <button
+                      key={m.key}
+                      type="button"
+                      title={m.title}
+                      onClick={() => {
+                        setSortMode(m.key);
+                        setVisibleCount(CARDS_PER_PAGE);
+                      }}
+                      className={`px-2 py-2 font-black text-[10px] tracking-wider transition-colors ${
+                        sortMode === m.key ? 'bg-red-700 text-yellow-200' : 'text-gray-900 hover:bg-white'
+                      }`}
+                    >
+                      {m.label}
+                    </button>
+                  ))}
+                </div>
               </div>
 
               <div className="flex items-center bg-white rounded-lg border-2 border-black shadow-[0_3px_0_rgba(0,0,0,0.4)] overflow-hidden">
@@ -369,7 +478,7 @@ function App() {
                   type="text"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  placeholder="編號 / 名稱搜尋..."
+                  placeholder="英文名 / 學名 / 中文 / 編號…"
                   className="bg-transparent px-2.5 py-1.5 text-sm font-bold text-gray-900 placeholder:text-gray-500 outline-none w-full sm:w-44"
                 />
               </div>
@@ -378,6 +487,9 @@ function App() {
         </header>
 
         <main className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-10 relative z-10">
+          {!loading && (
+            <CardLoadDiagnostics visibleIds={pagedBirds.map((b) => b.id)} />
+          )}
           {loading ? (
             <div className="flex flex-col items-center justify-center py-24 sm:py-32 bg-black/40 backdrop-blur-md rounded-2xl sm:rounded-3xl border-2 sm:border-4 border-yellow-400/30">
               <div className="w-16 h-16 sm:w-20 sm:h-20 border-[6px] sm:border-8 border-white/20 border-t-yellow-400 rounded-full animate-spin mb-4 sm:mb-6 shadow-xl" />
@@ -401,23 +513,42 @@ function App() {
                 <h2 className="text-yellow-300 font-black text-xs sm:text-sm tracking-[0.3em] sm:tracking-[0.4em] flex items-center gap-1.5 sm:gap-2">
                   <BirdIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   SPECIMEN ARCHIVE
+                  <span className="font-mono text-[9px] tracking-widest text-yellow-200/50 normal-case">
+                    {query.trim() ? '· SEARCH' : sortMode === 'ebird' ? '· eBird 分類序' : sortMode === 'chinese' ? '· 中文名序' : '· NO. 編號序'}
+                  </span>
                 </h2>
                 <div className="flex-1 h-1 bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent rounded min-w-[20px]" />
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5 sm:gap-4 md:gap-5 relative z-10">
-                {filteredBirds.map((bird) => {
-                  const realIdx = birds.findIndex((b) => b.id === bird.id);
-                  return (
-                    <BirdCard
-                      key={bird.id}
-                      bird={bird}
-                      isActive={selectedIndex === realIdx}
-                      onClick={() => setSelectedIndex(realIdx)}
-                    />
-                  );
-                })}
+                {pagedBirds.map((bird, pos) => (
+                  <BirdCard
+                    key={bird.id}
+                    bird={bird}
+                    listPosition={filteredBirds.length > 1 ? pos + 1 : undefined}
+                    isActive={selectedBirdId === bird.id}
+                    onClick={() => setSelectedBirdId(bird.id)}
+                  />
+                ))}
               </div>
+
+              {/* 載入更多：每次只 render 一批，避免一次過打幾百個 R2 請求 */}
+              {visibleCount < filteredBirds.length && (
+                <div className="mt-6 flex flex-col items-center gap-2">
+                  <button
+                    onClick={() => setVisibleCount((n) => n + CARDS_PER_PAGE)}
+                    className="bg-gradient-to-b from-yellow-300 to-yellow-500 text-gray-900 font-black px-8 py-3 rounded-xl border-[3px] border-black shadow-[0_4px_0_rgba(0,0,0,0.6)] active:translate-y-1 active:shadow-none transition-all"
+                  >
+                    載入更多 · LOAD MORE（{pagedBirds.length} / {filteredBirds.length}）
+                  </button>
+                  <button
+                    onClick={() => setVisibleCount(filteredBirds.length)}
+                    className="text-yellow-200/60 font-mono text-[10px] tracking-widest underline underline-offset-2"
+                  >
+                    全部顯示（{filteredBirds.length} 張，圖片會排隊慢慢載入）
+                  </button>
+                </div>
+              )}
             </>
           )}
         </main>
@@ -490,6 +621,7 @@ function App() {
         <footer className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 mt-6 sm:mt-8 pb-4">
           <div className="bg-black/40 backdrop-blur-sm border-2 border-yellow-400/20 rounded-xl p-3 sm:p-4 font-mono text-[9px] sm:text-[11px] text-yellow-200/60 leading-relaxed">
             <p className="text-yellow-300 font-black tracking-widest mb-1">► CREDITS & DATA SOURCES ({APP_VERSION})</p>
+            <p>分類權威：eBird / Clements Checklist（Cornell Lab of Ornithology）</p>
             <p>科學數據：Cornell Lab · eBird · Macaulay Library · Xeno-canto</p>
             <p>AI 引擎：Hugging Face (BirdSet) · Nyckel · BirdNET</p>
             <p className="text-white/30 mt-1">© Scout System</p>
@@ -498,10 +630,10 @@ function App() {
       </div>
 
       <PokedexDevice
-        birds={birds}
-        initialIndex={selectedIndex ?? 0}
-        isOpen={selectedIndex !== null}
-        onClose={() => setSelectedIndex(null)}
+        birds={dexBirds}
+        initialIndex={dexIndex}
+        isOpen={selectedBirdId !== null}
+        onClose={() => setSelectedBirdId(null)}
         onAnalyze={analyzeAudio}
         onAnalyzeMedia={analyzeMedia}
       />
@@ -516,7 +648,7 @@ function App() {
         candidates={recogCandidates}
         onClose={() => setRecogOpen(false)}
         onPick={(idx) => {
-          setSelectedIndex(idx);
+          setSelectedBirdId(birds[idx]?.id ?? null);
           setRecogOpen(false);
         }}
       />

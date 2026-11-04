@@ -1,85 +1,137 @@
-AvianDex: 個人專屬科研鳥類圖鑑
-AvianDex 是一款專為兒童與觀鳥愛好者設計的互動式網頁應用。它模仿經典「寶可夢圖鑑（Pokédex）」的雙螢幕手持設備介面，讓探索鳥類知識變得像玩遊戲一樣有趣。
+# AvianDex — 用寶可夢圖鑑的方式，讓小朋友愛上香港的鳥
 
-"不需資料庫，只需放照片。" —— 這是 AvianDex 的核心設計哲學。
+> 「你不用懂鳥，也會想知下一隻係咩。」
 
-✨ 核心特色
-🕹️ 沉浸式遊戲機介面
-雙螢幕設計：紅色的復古手持設備外觀，搭配精緻的動畫與 3D 陰影效果。
+AvianDex 是一個**給小朋友與初學者的鳥類圖鑑網頁 App**。它把 569 種香港可見的鳥，
+做成一部**紅色復古圖鑑機**：未見過的顯示剪影，見過／解鎖的變成一張彩色卡。
+目的不是把百科搬上網——**而是令小朋友產生「我想知下一隻係咩」的動力**。
 
-六宮格科研終端 (Scientific Hub)：全新的 3x2 選單，整合了全球權威鳥類數據：
+深度內容從不缺：按一下卡，就直達康奈爾大學的 All About Birds、eBird 即時分佈、
+Xeno-canto 鳥鳴、Flickr 生態照、YouTube 行為影片。**圖卡只負責吸引，百科負責深度。**
 
-深度百科 (Cornell Lab - All About Birds)
+---
 
-觀察雷達 (eBird 實時香港分佈圖)
+## 為什麼要做這個（Why）
 
-視覺圖庫 (Flickr 高清生態照)
+香港有超過 550 種鳥，但小朋友第一次接觸鳥類知識，通常是一張看不懂的表格。
+AvianDex 的做法是：**把「學習」包裝成「收集」**。
 
-影片中心 (YouTube 行為影像)
+- 學習動機來自 **收集**（編號、稀有度、未發現剪影），不是來自「你要學」。
+- 學習入口來自 **一圖看清**（一張卡 3 秒內講完「呢隻雀係咩、有咩特別」）。
+- 學習深度交給 **權威來源**（康奈爾 Lab、eBird、HKBWS），不由 AI 編。
 
-鳴聲資料 (Xeno-canto 全球鳥鳴資料庫)
+## 給誰用（Who）
 
-AI 辨識裝備 (Merlin AI 下載)
+| 對象 | 用法 |
+|---|---|
+| **學校／團體成員**（主要） | 老師或組長帶隊：一次活動一個目標鳥種、收集任務、校內比較 |
+| **家庭／親子** | 行山、公園、窗台觀鳥時即場比對「呢隻係咪卡上嗰隻」 |
+| **公開的家長與老師** | 直接開網頁就用，不需安裝、不需帳號 |
 
-📁 極簡維護系統
-鳥卡圖走 **Cloudflare R2**（`aviandex/NNNN.avif`）：上傳到 R2 該編號的 avif 檔案，圖鑑即自動解鎖對應編號。
-（詳細上傳步驟見「AvianDex 及Birddex2 維護需知.txt」；新增鳥種名稱/對映見下方「圖鑑維護腳本」。）
+三者的需求以「成員」為先；設計上寧願淺白（大字、少字、圖大），也不為了討好大人而加欄位。
 
-未放入圖片的槽位會顯示 "UNDISCOVERED" 剪影，激發使用者的收集慾。
+## 怎樣算成功（How we measure）
 
-📱 友善的操作體驗
-多種導航：支援大按鈕點擊、鍵盤左右方向鍵控制、下拉式選單快速跳轉。
+不是「資料欄位齊唔齊」，而是這四件事：
 
-搜尋功能：支援按編號快速定位特定鳥類。
+1. **小朋友會自己再打開**——不是被要求，而是想看下一張卡。
+2. **會講出至少一個特徵**——「佢個嘴好長」「佢識停喺空中」。
+3. **會想出去找**——問「邊度可以見到佢？」
+4. **會點入深度百科**——圖卡成功把人送進六宮格，而不是留在卡面。
 
-全螢幕閱讀：點擊卡片即可放大，清晰閱讀卡片上的所有細節與數據。
+> 反面標準：如果一張卡令小朋友「睇完就关」，就算 6 個欄位全齊，都算失敗。
 
-🛠️ 如何新增鳥類卡片
-更新 AvianDex 極其簡單，完全不需要寫程式：
+## 卡上放什麼（What's on a card）
 
-準備卡片：生成鳥類卡片（插圖與數據）後，用 https://squoosh.app/ 轉成 **AVIF**（體積小很多）。
+一張卡只回答三個問題，順序就是閱讀順序：
 
-格式命名：根據插槽編號使用 4 位數命名（例如：1 號鳥類命名為 0001.avif）。
+1. **呢隻係咩？** 大中文名、英文名、學名、目／科標籤
+2. **佢有咩特別？** 插畫 + 2–3 個特徵標註（不是一大段外形描述）
+3. **我可唔可以見到佢？** 稀有度、在香港幾時／邊度見到（收藏感的核心）
 
-放置路徑：上傳到 **Cloudflare R2** → `aviandex/` 資料夾（不是 repo！大圖不進 git / Vercel）。
+「食性／分佈／外形／棲地」這類完整資料屬於 App 內頁與康奈爾百科；
+**卡面只放會令人「想追」的資訊**。詳細取捨與未定項目見
+**[docs/CARD_CONTENT_GOALS.md](./docs/CARD_CONTENT_GOALS.md)**。
 
-名稱對映：在 `src/data/birds.json` 加 `{ "id": "0001", "name": "中文名" }`（或放進 `BIRD_ID_MAPPING.csv` 後跑 `npm run aliases` 重新生成 `nameAliases.ts`）。
+目前有兩種卡（都輸出 AVIF，文字 100% 由程式排版，AI 只畫鳥）：
 
-即刻生效：刷新頁面，該編號就會從「未發現」自動解鎖為你的彩色卡片！
+| | 鳥卡（簡單） | 資訊圖卡（滿版資料卡） |
+|---|---|---|
+| 用途 | 收藏、收集進度 | 吸引入門、一圖看清 |
+| 內容 | 插畫 + NO. + 中文名 + 英文名 + 學名 | 見下方七段，或 [docs/CARD_LAYOUT.md](./docs/CARD_LAYOUT.md) |
+| 造型 | 米色收藏卡 | 深綠外框＋白卡身、真雀相、圓形特寫、四欄資訊盒、生態價值評分 |
+| 尺寸／體積 | 900×1200／約 35 KB | 1200×1600／約 160 KB |
+| R2 路徑 | `aviandex/NNNN.avif` | `aviandex/info/NNNN.avif` |
 
-🎨 介面自定義規範
-Hub 圖片：存放於 public/images/，命名為 hub_wiki.jpg, hub_radar.jpg 等。
+**兩個出卡引擎，同一版式**：
+- `scripts/cards/render-card.py` —— Pillow，批次出 AVIF（適合 559 張、CI）
+- `tools/card-studio/aviandex-studio.html` —— **單檔 HTML 工作室**，打編號即出卡、可即時改字、
+  可在 Gemini Canvas 直接開（用法見 [tools/card-studio/README.md](./tools/card-studio/README.md)）
 
-自定義鼠標：支援 32x32 像素的遊戲化鼠標指標，強化沉浸感。
+**資訊圖卡的七段版面**（2026-11 依 `NO.0008 鵲鴝` 成品重做，樣張：
+[docs/assets/dexcard-0008-example.png](./docs/assets/dexcard-0008-example.png)）：
 
-⚖️ **部署瘦身**：儲存空間與 Vercel 部署規範（防增肥守則）請見 [SLIMMING_GUIDE.md](./SLIMMING_GUIDE.md)。
+1. **標題列**：`NO.NNNN` 膠囊、大中文名、學名、英文名膠囊；右上目／科；身長／體重／常見度（5 燈）
+2. **主圖列**：像素小圖（＋IUCN、別名）｜真雀相｜5 個圓形特寫（有引線）＋名稱由來
+3. **左欄**：基本介紹、分類資訊（界門綱目科屬種＋IUCN＋eBird code）
+4. **四欄**：分佈地區／棲息環境／食物／Top 5 特色亮點（每欄底有小插圖）
+5. **四欄**：成長與繁殖／觀察小貼士／有趣冷知識／注意事項
+6. **生態價值評分卡** 5 項 × 5 星 ＋ 右邊綠色綜合評分
+7. **底欄**：圖鑑編號／名稱／圖鑑版本／條碼；上方一行細字印來源與「主觀評分」聲明
 
-💻 技術棧
-React 19：最新版本的 React 核心。
+> ⚠️ 三類資料要分清楚，卡上亦得分清楚：
+> ①**維基原文**（可追溯 pageid）②**eBird/Clements 分類**（權威）
+> ③**編者主觀評分**（常見度、Top5、小貼士、生態價值 5 項、綜合評分）。
+> 第三類不是科學數據，卡面必須印出聲明，不可假裝成事實。
 
-Vite：極速的前端構建工具。
+> ⚠️ 卡面文字**不由 AI 生成**（會錯字）。每句都是可追溯的原文，附 pageid；
+> 抽唔到就印「資料待查」。規則見 **[docs/CARD_SOURCING.md](./docs/CARD_SOURCING.md)**。
 
-Tailwind CSS v4：用於構建精緻的紅白機質感 UI。
+## App 裡面有什麼
 
-Framer Motion：處理流暢的螢幕切換與按鈕動畫。
+- **圖鑑機介面**：紅色雙螢幕手持裝置、開機動畫、鍵盤左右鍵／大按鈕／下拉跳轉。
+- **收集進度**：已解鎖 / 未發現（剪影）、`NO. NNNN` 編號永不變（＝ R2 檔名）。
+- **排序與搜尋**：預設跟 eBird 演化排序；另有 `NO.` 與中文排序。搜尋以英文名為主。
+- **六宮格科研終端**（按卡即達）：
+  深度百科（Cornell All About Birds）· 觀察雷達（eBird 香港即時分佈）·
+  視覺圖庫（Flickr）· 影片中心（YouTube）· 鳴聲資料（Xeno-canto）· AI 辨識（Merlin）。
+- **可安裝**：加到主畫面全螢幕使用（PWA manifest + 圖標）。
 
-Lucide React：提供簡潔、一致的科研風格圖示。
+## 與 BirdEx 的關係
 
-🚀 快速開始
-Bash
-# 安裝依賴
+- **AvianDex**（本 repo）＝ 圖鑑與知識：看得到、學得到。
+- **BirdEx**（同一帳戶的另一個 repo）＝ 觀鳥／影相的**捕捉 → 儲卡**流程。
+- 兩者共用 `NO. NNNN` 編號、AVIF 卡面規格、eBird 分類權威。
+  AvianDex 產「卡與知識」，BirdEx 產「我捕捉到的記錄」。
+
+---
+
+## 快速開始
+
+```bash
 npm install
+npm run dev        # 開發
+npm run build      # 生產
+npm test           # 全部測試（38 項）
+npm run cards:probe   # 體檢：邊張卡有圖、邊張要上傳
+```
 
-# 啟動開發伺服器
-npm run dev
+新增一張卡（不需寫程式）與全部維護細節 → **[docs/MAINTENANCE.md](./docs/MAINTENANCE.md)**。
 
-# 構建生產版本
-npm run build
-📜 鳴謝與數據來源
-本計畫之科學數據連結由以下機構提供：
+## 文件索引
 
-Cornell Lab of Ornithology (eBird, All About Birds, Merlin)
+| 文件 | 內容 |
+|---|---|
+| [docs/MAINTENANCE.md](./docs/MAINTENANCE.md) | 維護手冊：加卡流程、資料管線、部署與瘦身 |
+| [docs/CARD_CONTENT_GOALS.md](./docs/CARD_CONTENT_GOALS.md) | 卡面內容目標（為何只放這些、待定項目） |
+| [docs/CARD_SOURCING.md](./docs/CARD_SOURCING.md) | 文字來源、核對責任、原文抽取規則 |
+| [docs/CARD_STYLE_V2.md](./docs/CARD_STYLE_V2.md) | 圖鑑機造型與插畫提示詞 |
+| [docs/CARD_METHODS.md](./docs/CARD_METHODS.md) | 腳本排版 vs AI 一次生成的比較 |
+| [docs/TAXONOMY_PIPELINE.md](./docs/TAXONOMY_PIPELINE.md) | 分類權威（eBird/Clements）與管線 |
+| [docs/APP_REVIEW.md](./docs/APP_REVIEW.md) | 健檢與改進紀錄 |
+| [CHANGELOG.md](./CHANGELOG.md) | 版本紀錄 |
 
-Xeno-canto Foundation
+## 鳴謝與數據來源
 
-Flickr API
+Cornell Lab of Ornithology（eBird、All About Birds、Merlin）· Xeno-canto Foundation ·
+Flickr · 香港觀鳥會（HKBWS）· 中文維基百科（卡面文案原文）· eBird/Clements Checklist（分類權威）。

@@ -18,6 +18,9 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MediaCapturePanel, MediaKind } from './MediaCapturePanel.tsx';
+import { BirdSilhouette } from './BirdSilhouette';
+import { useCardImage } from '../hooks/useCardImage';
+import { searchBirds } from '../lib/pokedexOrder';
 
 // 捕精靈 App（BIRD-DEX 2）網址
 const BIRDDEX2_URL = 'https://skw-birdex2.vercel.app';
@@ -31,6 +34,46 @@ const PokeballIcon: React.FC<{ className?: string }> = ({ className }) => (
     <circle cx="50" cy="50" r="14" fill="#fff" stroke="#111" strokeWidth="6" />
   </svg>
 );
+
+// 圖卡未載入／不存在時顯示於螢幕內（不再只是空白或轉圈）
+const CardImageFallback: React.FC<{
+  id: string;
+  status: 'idle' | 'queued' | 'loading' | 'loaded' | 'missing' | 'error';
+  onRetry: () => void;
+  compact?: boolean;
+}> = ({ id, status, onRetry, compact = false }) => {
+  const busy = status === 'idle' || status === 'queued' || status === 'loading' || status === 'loaded';
+  return (
+    <div
+      className={`w-full h-full flex flex-col items-center justify-center gap-2 text-center ${
+        compact ? 'p-3' : 'p-6'
+      }`}
+      style={{ background: 'radial-gradient(ellipse at center, #4a3520 0%, #2b1d10 70%, #1a1208 100%)' }}
+    >
+      {busy ? (
+        <>
+          <div className={`${compact ? 'w-7 h-7' : 'w-10 h-10'} border-4 border-yellow-700/30 border-t-yellow-500 rounded-full animate-spin`} />
+          <p className="text-yellow-200/70 font-mono text-[9px] tracking-widest uppercase">Loading NO.{id}</p>
+        </>
+      ) : (
+        <>
+          <BirdSilhouette id={id} className={`${compact ? 'w-12 h-12' : 'w-20 h-20'} text-black/85`} />
+          <p className="text-yellow-300 font-black text-[11px] tracking-[0.2em]">UNDISCOVERED</p>
+          <p className="text-yellow-200/50 font-mono text-[8px] tracking-widest leading-relaxed">
+            {status === 'error' ? '圖卡載入失敗（網絡／CORS）' : `R2 內未有 ${id}.avif`}
+          </p>
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); onRetry(); }}
+            className="mt-1 bg-black/60 hover:bg-black/80 border border-yellow-400/30 rounded px-2 py-1 text-yellow-200/80 font-mono text-[8px] tracking-widest active:scale-95"
+          >
+            RETRY / 重新探測
+          </button>
+        </>
+      )}
+    </div>
+  );
+};
 
 interface PokedexDeviceProps {
   birds: Bird[];
@@ -131,16 +174,27 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const term = searchTerm.trim();
-    // 同時支援編號與中文名搜尋
-    const found = birds.find(b => b.id === term || b.name === term);
-    if (found) {
-      jumpToBird(found.id);
+    if (!term) return;
+    // 以英文名為主（英文俗名 > 學名 > 中文名 > 編號），與首頁搜尋同一套規則
+    const hits = searchBirds(birds, term);
+    if (hits[0]) {
+      jumpToBird(hits[0].id);
     }
   };
 
-  if (!isOpen) return null;
+  const currentBird = birds[Math.min(currentIndex, birds.length - 1)] ?? birds[0];
+  // 圖卡狀態（與首頁卡片共用同一個載入器，已載入的圖即時顯示，不會再請求一次）
+  const currentImage = useCardImage(currentBird?.id ?? '0001');
+  // 科研終端的外部網站（All About Birds / Flickr / Xeno-canto）只認英文俗名，
+  // 用中文名搜尋等於一定查無此鳥 —— 呢個就係舊版六宮格「撳完冇嘢睇」的原因。
+  const sciQuery = currentBird
+    ? (currentBird.englishName && currentBird.englishName !== '???' ? currentBird.englishName : currentBird.name)
+        .replace(/\s+/g, ' ')
+        .trim()
+    : '';
+  const sciSlug = sciQuery.replace(/ /g, '_');
 
-  const currentBird = birds[currentIndex];
+  if (!isOpen || !currentBird) return null;
 
   return (
     <AnimatePresence>
@@ -191,18 +245,23 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
           >
             <div className="w-full flex justify-center py-6 md:py-10">
               {/* 圖片主體 */}
-              <motion.img 
-                src={currentBird.imageUrl} 
-                alt={currentBird.name} 
-                className="object-contain rounded-lg shadow-2xl w-[98%] md:max-w-[95%] h-auto md:max-h-[85vh]"
-              />
+              {currentImage.url ? (
+                <motion.img
+                  src={currentImage.url}
+                  alt={currentBird.name}
+                  referrerPolicy="no-referrer"
+                  className="object-contain rounded-lg shadow-2xl w-[98%] md:max-w-[95%] h-auto md:max-h-[85vh]"
+                />
+              ) : (
+                <CardImageFallback id={currentBird.id} status={currentImage.status} onRetry={currentImage.retry} />
+              )}
             </div>
             
             {/* 詳細資料按鈕 / RESEARCH：確保它在圖片捲動範圍內，且容易按到 */}
             {currentBird.discovered && (
                <div className="w-full flex justify-center py-12 pb-24 md:hidden">
                  <button 
-                   onClick={() => window.open(`https://www.allaboutbirds.org/guide/${currentBird.name.replace(/ /g, '_')}`, '_blank')}
+                   onClick={() => window.open(`https://www.allaboutbirds.org/guide/${encodeURIComponent(sciSlug)}`, '_blank')}
                    className="bg-blue-600 text-white font-black px-12 py-5 rounded-2xl text-xl shadow-2xl active:scale-95 transition-all flex items-center gap-3"
                  >
                    <BookOpen className="w-6 h-6" />
@@ -330,11 +389,17 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
         className="flex-1 bg-gradient-to-br from-[#1a1410] to-[#0a0805] rounded-lg border-[4px] border-amber-900/60 relative overflow-hidden flex items-center justify-center cursor-zoom-in group shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]"
         onClick={() => setIsFullscreen(true)}
       >
-        <motion.img 
-          key={currentBird.id}
-          src={currentBird.imageUrl} 
-          className="w-full h-full object-contain p-1"
-        />
+        {currentImage.url ? (
+          <motion.img
+            key={currentImage.url}
+            src={currentImage.url}
+            alt={currentBird.name}
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-contain p-1"
+          />
+        ) : (
+          <CardImageFallback id={currentBird.id} status={currentImage.status} onRetry={currentImage.retry} compact />
+        )}
       </div>
 
       {/* 右下角喇叭孔 */}
@@ -374,6 +439,36 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                         {currentBird.name}
                       </span>
                     </div>
+
+                    {/* 2.5 未有自己圖卡時：一鍵去 Google 圖片／eBird 睇真身 */}
+                    {!currentImage.url && (
+                      <div className="grid grid-cols-2 gap-2">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            window.open(
+                              `https://www.google.com/search?tbm=isch&q=${encodeURIComponent(`${sciQuery} bird`)}`,
+                              '_blank',
+                            )
+                          }
+                          className="bg-emerald-700/70 hover:bg-emerald-600 text-white font-black text-[11px] py-2.5 rounded-xl border-b-4 border-emerald-950 active:translate-y-0.5 active:border-b-0 transition-all"
+                        >
+                          睇真身 · GOOGLE 圖
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            window.open(
+                              `https://ebird.org/species/search?q=${encodeURIComponent(sciQuery)}`,
+                              '_blank',
+                            )
+                          }
+                          className="bg-sky-700/70 hover:bg-sky-600 text-white font-black text-[11px] py-2.5 rounded-xl border-b-4 border-sky-950 active:translate-y-0.5 active:border-b-0 transition-all"
+                        >
+                          物種頁 · eBIRD
+                        </button>
+                      </div>
+                    )}
 
                     {/* 3. 搜尋與快速跳轉 */}
                     <div className="bg-red-900/30 p-5 rounded-[30px] border-2 border-red-900/20 space-y-4 shadow-inner">
@@ -467,7 +562,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   
   {/* 1. 深度百科 */}
  <button 
-  onClick={() => window.open(`https://www.allaboutbirds.org/guide/${currentBird.name.replace(/ /g, '_')}`, '_blank')}
+  onClick={() => window.open(`https://www.allaboutbirds.org/guide/${encodeURIComponent(sciSlug)}`, '_blank')}
   className="relative group rounded-2xl border-b-4 border-blue-950 overflow-hidden active:translate-y-0.5 transition-all"
 >
     <img src="/images/hub_wiki.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wiki" />
@@ -493,7 +588,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 
   {/* 3. 視覺圖庫 */}
   <button 
-  onClick={() => window.open(`https://www.flickr.com/search/?text=${currentBird.name}`, '_blank')}
+  onClick={() => window.open(`https://www.flickr.com/search/?text=${encodeURIComponent(sciQuery)}`, '_blank')}
   className="relative group rounded-2xl border-b-4 border-purple-950 overflow-hidden active:translate-y-0.5 transition-all"
 >
     <img src="/images/hub_photo.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Photos" />
@@ -506,7 +601,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 
   {/* 4. 影片中心 */}
   <button 
-    onClick={() => window.open(`https://www.youtube.com/results?search_query=${currentBird.name}+bird+wildlife`, '_blank')}
+    onClick={() => window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(sciQuery)}+bird+sound`, '_blank')}
     className="relative group rounded-2xl border-b-4 border-red-950 overflow-hidden active:translate-y-0.5 transition-all"
   >
     <img src="/images/hub_video.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Videos" />
@@ -519,7 +614,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 
   {/* 5. 鳴聲資料 */}
   <button 
-    onClick={() => window.open(`https://xeno-canto.org/explore?query=${currentBird.name}`, '_blank')}
+    onClick={() => window.open(`https://xeno-canto.org/explore?query=${encodeURIComponent(sciQuery)}`, '_blank')}
     className="relative group rounded-2xl border-b-4 border-orange-950 overflow-hidden active:translate-y-0.5 transition-all"
   >
     <img src="/images/hub_audio.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Audio" />

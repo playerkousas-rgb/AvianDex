@@ -1,0 +1,8 @@
+{
+  "source": "OleksiiDubovyk/eBird-taxonomy/ebird_taxonomy_v2024.csv",
+  "authority": "eBird / Clements Checklist (Cornell Lab of Ornithology)",
+  "retrievedAt": "2026-11-04T00:41:16.008Z",
+  "speciesCount": 11145,
+  "bytes": 1118634,
+  "note": "GitHub 上的 Clements 快照（免 key）。正式版建議用 --api 以你的 key 取得即時分類。"
+}
