@@ -211,6 +211,14 @@ summary:hover{color:var(--g1)}
           <select id="jump" style="flex:1"></select>
         </div>
         <div class="hint" id="birdLine">—</div>
+        <div class="hint" id="photoSrc" style="margin-top:6px">—</div>
+        <div class="row" style="margin-top:6px">
+          <input type="text" id="assetId" placeholder="貼 Macaulay assetId（可留空）" style="flex:1;font-size:11px">
+          <button class="sm" id="btnAsset">開啟</button>
+        </div>
+        <div class="hint" style="font-size:11px;opacity:.75">
+          相片不入 Git：出圖時 Gemini 會按上面連結自己去 Macaulay 找。貼了 assetId 就只用那一張。
+        </div>
       </div>
 
       <!-- 3. 任務 -->
@@ -357,6 +365,7 @@ function birdOf(id) {
   return { name: t.zh || '', en: t.comName || '', sci: t.sciName || '',
     order: t.order || '', family: t.family || '', orderZh: t.orderZh || '', familyZh: t.familyZh || '' };
 }
+let RAW_BIRDS = (window.AVIANDEX_STUDIO && AVIANDEX_STUDIO.raw) || {};
 function copyOf(id) {
   const c = (BIRDS[id] && BIRDS[id].copy) || {};
   /* 英文 prompt 用：由 fieldCopy 取 en 版本，唔會把中文塞進英文 prompt */
@@ -489,6 +498,46 @@ function extractImage(data) {
   return `data:${part.inlineData.mimeType};base64,${part.inlineData.data}`;
 }
 
+/* ---------- 2b. 相片來源（Gemini 自己上網找，我方只提供「去哪找」） ---------- */
+/* 設計決定：Git 只存純文字。相片唔入 repo，由 Gemini 出圖時直接去
+ * Macaulay Library（康奈爾，免 key）取用；卡面工作室只提供可追溯的搜尋鍵。 */
+function sourceOf(id) {
+  const raw = RAW_BIRDS[id] || {};
+  const s = raw.src || {};
+  const sci = (birdOf(id) || {}).sci || '';
+  const code = raw.speciesCode || (TAX[id] || {}).speciesCode || '';
+  return {
+    code,
+    sci,
+    macaulay: s.macaulay || (code ? `https://search.macaulaylibrary.org/catalog?taxonCode=${code}&mediaType=photo&sort=rating_rank_desc` : ''),
+    asset: s.asset || '',
+  };
+}
+function photoSourceBlock(b, id) {
+  const src = sourceOf(id || b.id);
+  const en = b.en || src.sci || '';
+  const lines = [];
+  if (LANG === 'en') {
+    lines.push('【Where to get the bird photo】');
+    if (src.macaulay) lines.push(`· Search Macaulay Library (Cornell Lab, free, no key): ${src.macaulay}`);
+    if (src.code) lines.push(`· eBird species code: ${src.code}`);
+    if (src.sci) lines.push(`· Scientific name (use this for the search): ${src.sci}`);
+    if (src.asset) lines.push(`· Use this exact asset: https://macaulaylibrary.org/asset/${src.asset}`);
+    lines.push('· If you can use a photo from that library, pick one matching the description below (side view, whole bird in frame); if you cannot, follow the description instead.');
+    lines.push('· Do NOT invent markings, colours or proportions that the photo does not show.');
+    return lines.join('\n');
+  }
+  lines.push('【去哪裡找這隻雀的真實相片】');
+  if (src.macaulay) lines.push(`· Macaulay Library（康奈爾鳥類學實驗室，免費、免 key）：${src.macaulay}`);
+  if (src.code) lines.push(`· eBird 物種代碼：${src.code}`);
+  if (src.sci) lines.push(`· 學名（用這個搜尋）：${src.sci}`);
+  if (src.asset) lines.push(`· 指定用這張：https://macaulaylibrary.org/asset/${src.asset}`);
+  lines.push('· 若你可以直接取用該圖庫的照片，請取一張外形與下面描述相符的（優先側身、整隻鳥完整入鏡）；不能取用就按下面的描述作畫，但外形必須與描述一致。');
+  lines.push('· 照片上看不到的特徵，不要自行補畫。');
+  void en;
+  return lines.join('\n');
+}
+
 /* ---------- 3. 任務定義 ---------- */
 /* 每個任務＝一段「畫什麼」的固定板模。資料只填空位，唔會自由發揮。 */
 /* 出圖語言：中文版 → 中文 prompt + 中文字形要求；英文版 → 英文 prompt。
@@ -507,15 +556,19 @@ const TASKS = {
   photo: {
     name: '真雀相風格圖', nameEn: 'Realistic photo', size: '3:4', file: 'photo',
     frame: (b, c) => (LANG === 'en' ? [
-      `Generate a realistic wildlife photograph of the ${b.en || b.sci} (${b.sci}), vertical 3:4.`,
+      `Produce the bird photo for an AvianDex info card: the ${b.en || b.sci} (${b.sci}), vertical 3:4.`,
+      photoSourceBlock(b, b.id),
       c.enHabitat ? `Setting: ${c.enHabitat}` : '',
-      c.enLook ? `Bird appearance (must match exactly): ${c.enLook}` : '',
+      c.enLook ? `Bird appearance (must match the photo you pick and this text): ${c.enLook}` : '',
       'Composition: the whole bird clearly visible, natural posture, a branch or leaves in the foreground, soft background bokeh, gentle early-morning or late-afternoon side light.',
+      'If you cannot fetch a real photo, say so instead of inventing one.',
     ] : [
-      `請生成一張「${b.name || b.en}（${b.sci || b.en}）」的真實生態攝影風格照片，直式 3:4。`,
+      `請為 AvianDex 資訊卡準備「${b.name || b.en}（${b.sci || b.en}）」的鳥類照片，直式 3:4。`,
+      photoSourceBlock(b, b.id),
       c.habitat ? `場景：${c.habitat}` : '',
-      c.look ? `鳥的外形（必須一致）：${c.look}` : '',
+      c.look ? `鳥的外形（必須與你選的照片及以下描述一致）：${c.look}` : '',
       '構圖：整隻鳥清楚可見，站姿自然，旁邊有樹枝／葉片作為前景，背景柔焦（散景），光線為清晨或黃昏的柔和側光。',
+      '如果你找不到真實照片，請直接講明，不要自行虛構一隻雀。',
     ]),
   },
   sprite: {
@@ -642,6 +695,26 @@ function resetPrompt() {
 }
 /* 有人手改過就唔好覆蓋（避免出圖前被偷走修改） */
 let promptDirty = false;
+
+/* 相片來源顯示 */
+function refreshPhotoSrc() {
+  const id = curId();
+  const src = sourceOf(id);
+  const el = $('photoSrc');
+  if (!el) return;
+  if (!src.macaulay) { el.textContent = LANG === 'en' ? 'No Macaulay link (missing eBird code)' : '冇 Macaulay 連結（缺 eBird 代碼）'; return; }
+  el.innerHTML = '';
+  const a = document.createElement('a');
+  a.href = src.macaulay;
+  a.target = '_blank';
+  a.rel = 'noopener';
+  a.textContent = LANG === 'en' ? 'Macaulay Library photos ↗' : 'Macaulay Library 相片 ↗';
+  a.style.color = 'var(--green-d)';
+  el.append((LANG === 'en' ? `eBird ${src.code} · ` : `eBird ${src.code} · `), a,
+    src.asset ? ` · asset ${src.asset}` : '');
+  const inp = $('assetId');
+  if (inp && document.activeElement !== inp) inp.value = src.asset || '';
+}
 
 /* ---------- 5. 出圖 ---------- */
 let busy = false;
@@ -804,6 +877,7 @@ function refreshBird() {
   $('birdLine').innerHTML = `${esc(bits.join(' · ') || '（此編號未載入資料）')}
     <br>有資料可寫入 prompt：${have.length ? have.map(h => `<span class="pill ok">${h}</span>`).join(' ') : '<span class="pill bad">冇</span>'}`;
   if (!$('jump').value || $('jump').value !== id) $('jump').value = id;
+  refreshPhotoSrc();
   resetPrompt();
 }
 
@@ -868,7 +942,11 @@ function filenameFor(id, task) {
 /* ---------- 9. 開機 ---------- */
 function boot() {
   /* 資料 */
-  if (window.AVIANDEX_STUDIO) { BIRDS = window.AVIANDEX_STUDIO.cards || {}; TAX = window.AVIANDEX_STUDIO.tax || {}; }
+  if (window.AVIANDEX_STUDIO) {
+    BIRDS = window.AVIANDEX_STUDIO.cards || {};
+    TAX = window.AVIANDEX_STUDIO.tax || {};
+    RAW_BIRDS = window.AVIANDEX_STUDIO.raw || RAW_BIRDS;
+  }
   else if (window.AVIANDEX_CARDS) { BIRDS = window.AVIANDEX_CARDS; TAX = window.AVIANDEX_TAX || {}; }
 
   /* 編號下拉 */
@@ -914,6 +992,22 @@ $('btnLang').addEventListener('click', () => {
   applyLang();
   log(LANG === 'en' ? 'Prompt language: English' : 'Prompt 語言：中文');
 });
+
+$('btnAsset').addEventListener('click', () => {
+  const v = ($('assetId').value || '').replace(/\D/g, '');
+  const id = curId();
+  const c = (window.AVIANDEX_STUDIO && AVIANDEX_STUDIO.cards && AVIANDEX_STUDIO.cards[id]) || null;
+  if (c) {
+    c.src = c.src || {};
+    c.src.asset = v;
+    if (v) c.src.macaulay = `https://macaulaylibrary.org/asset/${v}`;
+  }
+  if (v) { window.open(`https://macaulaylibrary.org/asset/${v}`, '_blank', 'noopener'); log(`已指定 asset ${v}`); }
+  refreshPhotoSrc();
+  promptDirty = false;
+  resetPrompt();
+});
+$('assetId').addEventListener('change', () => $('btnAsset').click());
 
 $('mode').addEventListener('change', () => {
   $('keyRow').style.display = $('mode').value === 'own' ? 'flex' : 'none';

@@ -65,11 +65,23 @@ function main() {
     const b = byId.get(id) || {};
     const t = tax[id] || {};
     cards[id] = {
+      id,
       name: b.name || t.zh || '',
       en: t.comName || b.en || '',
       sci: t.sciName || '',
       orderZh: t.orderZh || '', familyZh: t.familyZh || '',
-      copy: c,
+      /* 只留卡面會用到的純文字欄位（唔要 fieldCopy 原始結構以外的雜訊） */
+      copy: {
+        ...c,
+        fieldCopy: (c.fieldCopy || []).map((x) => ({ id: x.id, zh: x.zh, en: x.en })),
+      },
+      /* 相片由 Gemini 自己上 Macaulay Library 找 → 這裡只給「去哪找」與可追溯的搜尋鍵 */
+      src: {
+        macaulay: `https://search.macaulaylibrary.org/catalog?taxonCode=${t.speciesCode || ''}&mediaType=photo&sort=rating_rank_desc`,
+        asset: '',                       // 有指定 assetId 才填（人手補）
+        wikidata: '',                    // 預留
+      },
+      speciesCode: t.speciesCode || '',
     };
   }
   const taxLite = {};
@@ -99,9 +111,27 @@ function main() {
     }
   }
 
+  /* 另外給一份「原始」copy（未加工的 fieldCopy 等），工作室用它取 en 與 src；
+   * cards 保持舊形狀，唔會影響已寫好的 prompt 模板。 */
+  const rawCopy = {};
+  for (const [id, c] of Object.entries(copy)) {
+    if (!/^\d{4}$/.test(id)) continue;
+    const t = tax[id] || {};
+    rawCopy[id] = {
+      ...c,
+      speciesCode: t.speciesCode || '',
+      src: {
+        macaulay: t.speciesCode
+          ? `https://search.macaulaylibrary.org/catalog?taxonCode=${t.speciesCode}&mediaType=photo&sort=rating_rank_desc`
+          : '',
+        asset: '',
+      },
+    };
+  }
+
   const payload =
     '<script>\n/* ==== 由 scripts/cards/build-image-studio.mjs 產生，請勿手改 ==== */\n' +
-    `window.AVIANDEX_STUDIO=${JSON.stringify({ cards, tax: taxLite })};\n` +
+    `window.AVIANDEX_STUDIO=${JSON.stringify({ cards, tax: taxLite, raw: rawCopy })};\n` +
     `window.AVIANDEX_ASSETS=${JSON.stringify(assets)};\n` +
     '</script>\n';
 
