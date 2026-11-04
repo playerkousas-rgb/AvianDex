@@ -211,8 +211,11 @@ def build_facts(bird_id):
         "order": (tax or {}).get("order") or "",
         "family": (tax or {}).get("family") or "",
         "code": (tax or {}).get("speciesCode") or "",
+        "orderZh": (tax or {}).get("orderZh") or "",
+        "familyZh": (tax or {}).get("familyZh") or "",
         "rank": (tax or {}).get("taxonOrder"),
         "copy": copy,
+        "notes": (copy or {}).get("notes") or "",
     }
 
 
@@ -361,8 +364,8 @@ def render_pokedex(f):
     y += H_TITLE
 
     # 分類標籤
-    order_zh = (f["copy"].get("orderZh") or "").strip()
-    family_zh = (f["copy"].get("familyZh") or "").strip()
+    order_zh = (f["copy"].get("orderZh") or f["orderZh"] or "").strip()
+    family_zh = (f["copy"].get("familyZh") or f["familyZh"] or "").strip()
     chips = []
     if f["order"]:
         chips.append((f"{order_zh} {f['order']}".strip(), (38, 116, 176)))
@@ -550,8 +553,8 @@ def render_info(f):
 
     # ── 3. 分類標籤（寶可夢屬性牌的感覺）──
     chips = []
-    order_zh = (f["copy"].get("orderZh") or "").strip()
-    family_zh = (f["copy"].get("familyZh") or "").strip()
+    order_zh = (f["copy"].get("orderZh") or f["orderZh"] or "").strip()
+    family_zh = (f["copy"].get("familyZh") or f["familyZh"] or "").strip()
     if f["order"]:
         chips.append((f"{order_zh} {f['order']}".strip(), DEEP_2, CREAM))
     if f["family"]:

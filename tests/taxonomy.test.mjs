@@ -18,6 +18,7 @@ const root = path.resolve(import.meta.dirname, '..');
 const birds = JSON.parse(readFileSync(path.join(root, 'src/data/birds.json'), 'utf8'));
 const taxonomy = JSON.parse(readFileSync(path.join(root, 'src/data/birdTaxonomy.json'), 'utf8'));
 const audit = JSON.parse(readFileSync(path.join(root, 'reports/enrich-birds.json'), 'utf8'));
+const zhTax = JSON.parse(readFileSync(path.join(root, 'src/data/taxonomyZh.json'), 'utf8'));
 
 test('每張有 eBird 分類的卡，學名／目／科都要齊', () => {
   const ids = Object.keys(taxonomy);
@@ -69,6 +70,24 @@ test('提示詞用 eBird 正式英文名，中文未查證就寫「待查」', (
   assert.match(block, /學名：Spilopelia chinensis/);
   assert.match(block, /中文待查/);
   assert.doesNotMatch(block, /undefined/);
+});
+
+test('中文目／科對照表覆蓋所有用到的目與科（唔會有 ???）', () => {
+  const orders = new Set();
+  const fams = new Set();
+  for (const t of Object.values(taxonomy)) {
+    if (t.order) orders.add(t.order);
+    if (t.family) fams.add(t.family);
+  }
+  const missingOrders = [...orders].filter((o) => !zhTax.orders[o]);
+  const missingFams = [...fams].filter((f) => !zhTax.families[f]);
+  assert.deepEqual(missingOrders, [], `缺中文目：${missingOrders.join('、')}`);
+  assert.deepEqual(missingFams, [], `缺中文科：${missingFams.join('、')}`);
+});
+
+test('每張卡的 orderZh / familyZh 都已填入', () => {
+  const missing = Object.entries(taxonomy).filter(([, t]) => !t.orderZh || !t.familyZh).map(([id]) => id);
+  assert.deepEqual(missing, [], `以下卡缺中文目／科：${missing.slice(0, 10).join(' ')}`);
 });
 
 test('冇任何資料時，factsBlock 回空字串（唔會亂填）', () => {

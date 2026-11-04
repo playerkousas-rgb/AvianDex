@@ -30,6 +30,7 @@ const ROOT = path.resolve(__dirname, '../..');
 const BIRDS = path.join(ROOT, 'src/data/birds.json');
 const TAXONOMY = path.join(ROOT, 'src/data/ebird-taxonomy.csv');
 const ALIASES = path.join(ROOT, 'src/data/name-aliases.generated.json');
+const TAXONOMY_ZH = path.join(ROOT, 'src/data/taxonomyZh.json');
 const OUT_TAXONOMY = path.join(ROOT, 'src/data/birdTaxonomy.json');
 const OUT_AUDIT = path.join(ROOT, 'reports/enrich-birds.json');
 const REPORT = path.join(ROOT, 'reports/enrich-birds.md');
@@ -87,6 +88,7 @@ function main() {
   const birds = JSON.parse(fs.readFileSync(BIRDS, 'utf8'));
   const tax = loadTaxonomy();
   const aliases = fs.existsSync(ALIASES) ? JSON.parse(fs.readFileSync(ALIASES, 'utf8')) : {};
+  const zhTax = fs.existsSync(TAXONOMY_ZH) ? JSON.parse(fs.readFileSync(TAXONOMY_ZH, 'utf8')) : { orders: {}, families: {} };
 
   const taxonomy = {};
   const fixes = [];
@@ -158,6 +160,9 @@ function main() {
       sciName: rec.SCI_NAME,
       order: rec.ORDER,
       family: stripFamily(rec.FAMILY),
+      // 中文目／科（只作顯示；分類權威仍然係 eBird）
+      orderZh: zhTax.orders?.[rec.ORDER] || '',
+      familyZh: zhTax.families?.[stripFamily(rec.FAMILY)] || '',
       // eBird/Clements 演化排序（目 → 科 → 種）；前端「跟 eBird 排序」用
       taxonOrder: Number(rec.TAXON_ORDER) || 0,
       source: 'eBird/Clements',
@@ -187,6 +192,8 @@ function main() {
       sciName: t.sciName,
       order: t.order,
       family: t.family,
+      orderZh: t.orderZh,
+      familyZh: t.familyZh,
       taxonOrder: t.taxonOrder,
     };
   }
