@@ -11,7 +11,8 @@
  * ============================================================ */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, mkdtempSync, existsSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import path from 'node:path';
 
 import {
@@ -214,4 +215,20 @@ test('extractFields 會把 infobox 數字放入輸出', () => {
   assert.equal(e.length, '19–21 cm');
   assert.equal(e.weight, '29–51 g');
   assert.equal(e.iucn, 'Near Threatened (NT)');
+});
+
+test('輸出：原子寫入（.tmp → rename），中途斷電不會留半個壞 JSON', async () => {
+  const { saveAll } = await import('../scripts/cards/extract-bilingual.mjs');
+  const dir = mkdtempSync(path.join(tmpdir(), 'aviandex-save-'));
+  try {
+    const f = path.join(dir, 'out.json');
+    saveAll({ '0008': { fieldCopy: [] }, _done: ['0008'] }, f);
+    assert.deepEqual(JSON.parse(readFileSync(f, 'utf8')), { '0008': { fieldCopy: [] }, _done: ['0008'] });
+    assert.equal(existsSync(f + '.tmp'), false);
+    /* 再寫一次覆蓋（模擬 --resume 中途再存） */
+    saveAll({ '0008': {}, _done: ['0008', '0001'] }, f);
+    assert.equal(JSON.parse(readFileSync(f, 'utf8'))._done.length, 2);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });

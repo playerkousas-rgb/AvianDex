@@ -32,6 +32,7 @@
  * ============================================================ */
 import fs from 'node:fs';
 import path from 'node:path';
+import http from 'node:http';
 import https from 'node:https';
 import { fileURLToPath } from 'node:url';
 import { FIELDS, FIELD_IDS, LIMITS, has, chooseFields } from './field-schema.mjs';
@@ -53,13 +54,24 @@ const API_EN = arg('--api-en', process.env.AVIANDEX_WIKI_EN || 'https://en.wikip
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+/** 原子寫入：先寫 .tmp 再 rename，中途 Ctrl-C／斷電都唔會留半個壞 JSON */
+export function saveAll(obj, file) {
+  const tmp = file + '.tmp';
+  fs.writeFileSync(tmp, `${JSON.stringify(obj, null, 2)}\n`);
+  fs.renameSync(tmp, file);
+}
+
+/** 顯示寬度：全形字（中文／中日韓標點）算 2 欄 */
+const dispW = (s) => [...String(s)].reduce((n, ch) => n
+  + (/[\u1100-\u115F\u2E80-\uA4CF\uA960-\uA97F\uAC00-\uD7A3\uF900-\uFAFF\uFE30-\uFE6F\uFF00-\uFF60\uFFE0-\uFFE6]/.test(ch) ? 2 : 1), 0);
+
 /** 用方框印出「檔案在哪」，方便唔熟路徑的人照抄 */
 function printBox(lines) {
-  const w = Math.max(...lines.map(([a, b]) => (a.length + (b ? 3 + b.length : 0)))) + 2;
+  const w = Math.max(...lines.map(([a, b]) => dispW(a) + (b ? 2 + dispW(b) : 0))) + 2;
   console.log('\n┌' + '─'.repeat(w) + '┐');
   for (const [a, b] of lines) {
-    const pad = ' '.repeat(Math.max(0, w - a.length - (b ? 3 + b.length : 0)));
-    console.log('│ ' + a + pad + (b ? '  ' + b : '') + ' │');
+    const used = dispW(a) + (b ? 2 + dispW(b) : 0);
+    console.log('│ ' + a + (b ? '  ' + b : '') + ' '.repeat(Math.max(0, w - used)) + ' │');
   }
   console.log('└' + '─'.repeat(w) + '┘');
 }
@@ -398,7 +410,8 @@ function cachePath(kind, name) {
 
 function fetchJson(url) {
   return new Promise((resolve, reject) => {
-    const req = https.get(url, { headers: { 'User-Agent': UA, Accept: 'application/json' } }, (res) => {
+    const lib = /^http:\/\//i.test(url) ? http : https;
+    const req = lib.get(url, { headers: { 'User-Agent': UA, Accept: 'application/json' } }, (res) => {
       if (res.statusCode >= 300 && res.headers.location) {
         res.resume();
         fetchJson(res.headers.location).then(resolve, reject);
@@ -496,12 +509,18 @@ async function main() {
   if (flag('--resume')) {
     const before = targets.length;
     targets = targets.filter((b) => {
-      const fe = copyAll[b.id]?.fieldCopy;
+      const c = copyAll[b.id];
+      const fe = c?.fieldCopy;
+      /* 完全搜唔到條目（中英都冇）→ 重試都係一樣，跳過，避免 --resume 每次重撞 */
+      if (c && c.lang && c.lang.zh === false && c.lang.en === false) return false;
+      if (Array.isArray(copyAll._done)) return !copyAll._done.includes(b.id);
       if (!Array.isArray(fe)) return true;
       const zhN = fe.filter((x) => x.zh).length;
       const enN = fe.filter((x) => x.en).length;
+      /* 舊檔案冇 _done：網絡斷過會留低「中 0 英 12」這種半截結果，未夠 5 欄一律重試 */
       return zhN < 5 || enN < 5;
     });
+    console.log(`   --resume：已完成 ${copyAll._done?.length || 0} 張，本次要跑 ${targets.length} 張`);
     console.log(`   --resume：跳過 ${before - targets.length} 張已齊（中英各 ≥5 欄）`);
   }
 
@@ -509,6 +528,7 @@ async function main() {
   console.log(`   中文：${API_ZH}\n   英文：${API_EN}`);
 
   const report = [];
+  let done = 0;
   for (const bird of targets) {
     const t = tax[bird.id];
     const sci = t.sciName;
@@ -529,6 +549,7 @@ async function main() {
     if (!zh && !en) {
       console.log(`   ❓ ${bird.id} ${bird.name} — 中英維基都找不到學名 ${sci}`);
       report.push({ id: bird.id, name: bird.name, sci, zh: 0, en: 0, doc: '—', pageid: '' });
+      done += 1;
       continue;
     }
 
@@ -575,17 +596,24 @@ async function main() {
     out.picks = sel.picks;
     out.fetchedAt = new Date().toISOString().slice(0, 10);
     copyAll[bird.id] = out;
+    /* _done：記錄「這張已經完整抽過」，--resume 靠它判斷（唔靠欄數，避免半截結果被當完成） */
+    const okZh = Boolean(zh);
+    const okEn = Boolean(en);
+    const doneList = new Set(copyAll._done || []);
+    if (okZh && okEn) doneList.add(bird.id); else doneList.delete(bird.id);
+    copyAll._done = [...doneList].sort();
 
-    /* 每張寫一次：中途停機都唔會白做（檔案細，10 分鐘內寫 500 次冇問題） */
-    if (!flag('--dry-run')) fs.writeFileSync(writeF, `${JSON.stringify(copyAll, null, 2)}\n`);
+    /* 每 10 張寫一次（548 張寫 55 次，唔會拖慢）；Ctrl-C 最多蝕 10 張 */
+    done += 1;
+    if (!flag('--dry-run') && done % 10 === 0) saveAll(copyAll, writeF);
 
     const zhN = fieldCopy.filter((x) => x.zh).length;
     const enN = fieldCopy.filter((x) => x.en).length;
-    console.log(`   ${zhN || enN ? '✅' : '➖'} ${bird.id} ${bird.name} — 中 ${zhN} 欄／英 ${enN} 欄，印 ${sel.picks.length} 格（${sel.picks.join('/') || '—'}）`);
+    console.log(`   ${zhN || enN ? '✅' : '➖'} [${done}/${targets.length}] ${bird.id} ${bird.name} — 中 ${zhN} 欄／英 ${enN} 欄，印 ${sel.picks.length} 格（${sel.picks.join('/') || '—'}）`);
     report.push({ id: bird.id, name: bird.name, sci, zh: zhN, en: enN, doc: `${zhN}/${enN}`, pageid: zh?.pageid || en?.pageid || '' });
   }
 
-  if (!flag('--dry-run')) fs.writeFileSync(writeF, `${JSON.stringify(copyAll, null, 2)}\n`);
+  if (!flag('--dry-run')) saveAll(copyAll, writeF);
   const total = Object.keys(copyAll).filter((k) => !k.startsWith('_')).length;
   const gotN = report.filter((r) => r.zh || r.en).length;
   console.log(`\n💾 已寫入 ${path.relative(ROOT, writeF)}（檔案共 ${total} 張，本次有更新 ${gotN} 張）`);
@@ -598,6 +626,16 @@ async function main() {
     ['② 想即時睇結果', `   node scripts/cards/show-picks.mjs --file ${path.relative(ROOT, writeF)} --ids 0008`],
     ['③ 想合併入 repo', '   node scripts/cards/show-picks.mjs --file ' + path.relative(ROOT, writeF) + ' --write'],
   ]);
+
+  const zero = report.filter((r) => !r.zh && !r.en);
+  const halfZh = report.filter((r) => r.zh && !r.en);
+  const halfEn = report.filter((r) => !r.zh && r.en);
+  const list = (arr) => (arr.length ? arr.slice(0, 30).map((r) => `${r.id} ${r.name}`).join('、') + (arr.length > 30 ? ` …共 ${arr.length} 張` : '') : '—');
+  console.log(`\n📊 本次 ${report.length} 張：中英齊 ${report.length - zero.length - halfZh.length - halfEn.length}、`
+    + `只有中文 ${halfZh.length}、只有英文 ${halfEn.length}、兩邊都冇 ${zero.length}`);
+  if (halfZh.length) console.log(`   ⚠️ 只有中文（英文維基冇條目／學名對不上）：${list(halfZh)}`);
+  if (halfEn.length) console.log(`   ⚠️ 只有英文（中文維基冇條目）：${list(halfEn)}`);
+  if (zero.length) console.log(`   ❌ 兩邊都冇：${list(zero)}`);
 
   const md = ['# 中英雙語抽取報告', '', `- 執行：${new Date().toISOString()}`, `- 目標：${targets.length} 張`,
     '', '| 編號 | 中文名 | 學名 | 中文欄 | 英文欄 | pageid |', '|---|---|---|---|---|---|'];
