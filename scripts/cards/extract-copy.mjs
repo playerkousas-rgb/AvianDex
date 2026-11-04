@@ -55,6 +55,17 @@ const arg = (n, d) => {
 };
 const flag = (n) => ARGS.includes(n);
 const DELAY = Number(arg('--delay', 600));
+
+/**
+ * API 來源。預設 zh.wikipedia；`--api-base` 可指向鏡像／代理／本機 mock，
+ * 方便在封鎖維基的網絡（或離線測試）跑同一條管線。
+ * 由環境變數 AVIANDEX_WIKI_API 亦可覆寫。
+ */
+const API_BASE =
+  arg('--api-base', process.env.AVIANDEX_WIKI_API || 'https://zh.wikipedia.org/w/api.php').replace(/\/+$/, '');
+
+/** 由來源組出 API URL（保持單一出口，唔會在兩處硬編字串） */
+const apiUrl = (params) => `${API_BASE}?${params}`;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /* ------------------------------------------------------------------
@@ -147,6 +158,12 @@ const SECTION_MATCH = {
 };
 
 /** 句子評分規則：must 必須命中，any 命中加分 */
+/**
+ * 卡面欄位長度上限 —— 必須與 tests/cardCopy.test.mjs 的 LIMITS 一致。
+ * （之前分開寫死 60 字，結果寫入超長文字，被 test:copy 抓到。）
+ */
+export const FIELD_LIMITS = { diet: 46, range: 46, look: 46, habitat: 46, funFact: 60 };
+
 const RULES = {
   diet: {
     must: ['食', '捕食', '獵物', '覓食', '獵食'],
@@ -179,7 +196,7 @@ const RULES = {
  * 在「首選章節 + 全文」中挑一句最貼題的原句。
  * 只回傳原文完整句（不改寫）；過長則截到完整分句。
  */
-export function pickSentence(list, rule, maxLen = 60) {
+export function pickSentence(list, rule, maxLen = 46) {
   let best = '';
   let bestScore = 0;
   for (const s of list) {
@@ -357,7 +374,7 @@ async function cachedJson(url, kind, name, noCache) {
 async function resolvePage(sciName, noCache) {
   const q = encodeURIComponent(`"${sciName}"`);
   const search = await cachedJson(
-    `https://zh.wikipedia.org/w/api.php?action=query&list=search&srsearch=${q}&srlimit=5&format=json&formatversion=2`,
+    apiUrl(`action=query&list=search&srsearch=${q}&srlimit=5&format=json&formatversion=2`),
     'search',
     sciName,
     noCache,
@@ -365,8 +382,9 @@ async function resolvePage(sciName, noCache) {
   const hits = search?.query?.search || [];
   for (const hit of hits) {
     const parse = await cachedJson(
-      'https://zh.wikipedia.org/w/api.php?action=parse' +
-        `&page=${encodeURIComponent(hit.title)}&prop=wikitext&variant=zh-hk&redirects=1&format=json&formatversion=2`,
+      apiUrl(
+        `action=parse&page=${encodeURIComponent(hit.title)}&prop=wikitext&variant=zh-hk&redirects=1&format=json&formatversion=2`,
+      ),
       'wt',
       hit.title,
       noCache,
@@ -377,6 +395,17 @@ async function resolvePage(sciName, noCache) {
     return { title: parse.parse.title, pageid: parse.parse.pageid, wt };
   }
   return null;
+}
+
+/** 合併 notes：以句為單位去重（重跑唔會越加越長） */
+export function mergeNotes(...parts) {
+  const segs = parts
+    .filter(Boolean)
+    .join(' ')
+    .split(/(?<=。)\s*/)
+    .map((x) => x.trim())
+    .filter(Boolean);
+  return [...new Set(segs)].join(' ');
 }
 
 /** 由整頁 wikitext 抽六個欄位（純函數，可離線測試） */
@@ -392,10 +421,11 @@ export function extractCopy(wt, { sciName = '' } = {}) {
     const focused = sections
       .filter((s) => anyOf(s.title, keys))
       .flatMap((s) => sentences(s.body));
-    let val = focused.length ? pickSentence(focused, rule) : '';
+    const maxLen = FIELD_LIMITS[key] || 46;
+    let val = focused.length ? pickSentence(focused, rule, maxLen) : '';
     let from = focused.length ? '章節' : '';
     if (!val) {
-      val = pickSentence(all, rule);
+      val = pickSentence(all, rule, maxLen);
       from = val ? '全文' : '';
     }
     if (val) {
@@ -411,10 +441,15 @@ export function extractCopy(wt, { sciName = '' } = {}) {
 
   const { iucn, note: iucnNote } = detectIucn(wt);
   if (iucn) picked.iucn = iucn;
-  if (iucnNote) notes.push(iucnNote);
+  const tags = [];
+  if (iucnNote) {
+    notes.push(iucnNote);
+    tags.push('iucn');
+  }
 
   if (/\{\{\s*(Rough translation| rough translation|RoughTranslation)/i.test(wt)) {
     notes.push('⚠️ 維基條目掛有「翻譯品質不佳」標記；以下內容為原文照錄，字句未改。');
+    tags.push('rough');
   }
   const srcReq = /\{\{\s*(Citation needed|citation needed|Fact|來源請求)/i.test(wt) || wt.includes('[來源請求]');
   if (srcReq) {
@@ -422,6 +457,7 @@ export function extractCopy(wt, { sciName = '' } = {}) {
     notes.push(
       `⚠️ 條目含「來源請求」標記（未經引註內容），受影響欄位：${hitField.join('、') || '未確定'}；已在卡面照錄，待日後以正式名錄覆核。`,
     );
+    tags.push('citation');
   }
 
   // 簡體 → 香港繁體（只做字形轉換）
@@ -430,6 +466,7 @@ export function extractCopy(wt, { sciName = '' } = {}) {
     out[k] = k === 'callouts' ? v.map((m) => ({ label: s2hk(m.label), text: s2hk(m.text) })) : s2hk(v);
   }
   out.notes = notes.join(' ');
+  out._noteTags = tags; // 內部用，寫入前會刪
   out._where = where; // 內部用，寫入前會刪
   return out;
 }
@@ -458,6 +495,7 @@ async function main() {
   if (flag('--limit')) targets = targets.slice(0, Number(arg('--limit', 20)));
 
   console.log(`📖 由中文維基原文抽取文案：${targets.length} 張卡（只抽原文，不改寫）`);
+  console.log(`   來源：${API_BASE}${/zh\.wikipedia\.org/.test(API_BASE) ? '' : '（非官方來源：測試用）'}`);
 
   const report = [];
   let filled = 0;
@@ -482,7 +520,10 @@ async function main() {
 
     const got = extractCopy(hit.wt, { sciName: tax.sciName });
     const where = got._where || {};
+    const gotNotes = got.notes || '';
+    const gotTags = got._noteTags || [];
     delete got._where;
+    delete got._noteTags;
 
     // 只補「未有」的欄位：手寫內容永不覆蓋
     const out = { ...existing };
@@ -497,9 +538,28 @@ async function main() {
         added.push(k);
       }
     }
-    if (got.notes) out.notes = [existing.notes, got.notes].filter(Boolean).join(' ');
+    const NOTE_MARK = { iucn: /IUCN 未填/, rough: /翻譯品質/, citation: /來源請求/ };
+    // 同一個 topic 只保留一條（重跑時會先移除舊條目再加回最新版本，
+    // 避免兩種措辭並存；用 set 去重是為了連跑多次都唔會膨脹）
+    const newTags = gotTags.filter((t) => !(NOTE_MARK[t] && NOTE_MARK[t].test(existing.notes || '')));
+    if (gotTags.length) {
+      const segs = String(out.notes || '')
+        .split(/(?<=\u3002)\s*/)
+        .filter(Boolean)
+        // 先丟掉同一 topic 的舊講法
+        .filter((seg) => !gotTags.some((t) => NOTE_MARK[t] && NOTE_MARK[t].test(seg)));
+      const fresh = gotNotes
+        .split(/(?<=\u3002)\s*/)
+        .filter(Boolean)
+        .filter((seg) => gotTags.some((t) => NOTE_MARK[t] && NOTE_MARK[t].test(seg)));
+      out.notes = mergeNotes(segs.join(' '), fresh.join(' '));
+    }
     const hadSource = (out.source || '').includes(String(hit.pageid));
-    out.source = `zh.wikipedia ${hit.title} · pageid ${hit.pageid}（variant=zh-hk）· 分類：eBird/Clements`;
+    // 來源一經確認（同一 pageid）就不再覆寫：避免用測試鏡像跑一次就污染正式來源字樣
+    if (!hadSource) {
+      const hostLabel = /zh\.wikipedia\.org/.test(API_BASE) ? 'zh.wikipedia' : API_BASE.replace(/^https?:\/\//, '');
+      out.source = `${hostLabel} ${hit.title} · pageid ${hit.pageid}（variant=zh-hk）· 分類：eBird/Clements`;
+    }
     out.orderZh = out.orderZh || tax.orderZh || '';
     out.familyZh = out.familyZh || tax.familyZh || '';
 

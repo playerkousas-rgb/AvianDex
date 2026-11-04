@@ -82,3 +82,20 @@ test('sentences 只回完整句（不會吐出半句）', () => {
   assert.deepEqual(list, ['甲乙丙丁戊己庚辛。', '壬癸子丑寅卯辰巳午！']);
   assert.ok(!list.some((s) => s.includes('未未')), '未以句號結尾的殘句不應計入');
 });
+
+test('重跑唔會令 notes 膨脹（同一 topic 只保留一條）', async () => {
+  const { mergeNotes } = await import('../scripts/cards/extract-copy.mjs');
+  const once = '⚠️ IUCN 未填：條目矛盾。 ⚠️ 條目掛有「翻譯品質不佳」標記。';
+  const twice = mergeNotes(once, once);
+  assert.equal(twice, once, 'notes 重複合併後應保持不變');
+  assert.equal((twice.match(/⚠️/g) || []).length, 2);
+});
+
+test('卡面上限：抽出的每個欄位都唔可以超過 FIELD_LIMITS', async () => {
+  const { FIELD_LIMITS } = await import('../scripts/cards/extract-copy.mjs');
+  const got = extractCopy(WT, { sciName: 'Halcyon pileata' });
+  for (const [k, max] of Object.entries(FIELD_LIMITS)) {
+    if (!got[k]) continue;
+    assert.ok([...got[k]].length <= max, `${k} 有 ${[...got[k]].length} 字，超出 ${max}`);
+  }
+});

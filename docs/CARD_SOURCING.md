@@ -128,10 +128,55 @@ Workflow 檔案：`.github/workflows/extract-copy.yml`。
   「某某為某科的一種鳥類」，那段要換來源（HKBWS 名錄／香港鳥類圖鑑），不是程式問題
 - Artifact `copy-extract-report-N`：完整的 `reports/copy-extract.md`（逐張卡：抽到什麼、取自哪個章節、仍缺什麼）
 
-**本機也可以跑**（有網即可）：
+---
+
+## 7. 做法 B：本機跑（建議）
 
 ```bash
-npm install
+git pull                                   # 拎最新版本
+npm install                                # 只需一次
 npm run copy:extract -- --all --missing-only --delay 600
-npm run copy:stats
+npm run copy:stats                         # 睇覆蓋率
+npm run test:copy                          # 品質關卡（超長／簡體／冇 source）
 ```
+
+時間估算：559 頁 × 0.6 秒禮貌間隔 + 解析 ≈ **25–40 分鐘**。中途可以 Ctrl-C，已抽到的卡已寫入
+`cardCopy.json`，下次再跑會自動跳過已齊的卡（`--missing-only`）。
+
+**跑完之後**
+
+```bash
+git add src/data/cardCopy.json
+git commit -m "chore(cards): 由維基原文補齊卡面文案"
+git push
+```
+
+`reports/copy-extract.md` 會列出每張卡「抽到什麼／取自哪個章節／仍缺什麼」（此檔不進 Git）。
+`仍缺` 很多的卡，代表中文維基條目本身冇嗰段 → 要換來源，不是程式問題。
+
+### 常見狀況
+
+| 症狀 | 原因 | 處理 |
+|---|---|---|
+| 開頭顯示「網絡錯誤」 | 連不到 zh.wikipedia | 檢查網絡／改用鏡像：`--api-base <鏡像網址>` |
+| 某張卡「維基找不到學名」 | 中文維基冇呢個物種條目 | 正常，報告會列出，需換來源 |
+| 「補 0 欄」 | 該卡已齊，或條目太短 | 正常，屬 `no-content` 分類 |
+| 想只補某幾張 | — | `--ids 0288,0289` 或 `--from 288 --to 320` |
+
+### 已用本地 mock 伺服器實跑驗證（2026-11-04）
+
+沙盒連不到維基，所以用本地 mock MediaWiki API（`--api-base`）跑完整條管線，結果：
+
+- ✅ 抽句 → 寫入 `cardCopy.json` → `test:copy` 全綠
+- ✅ 已有內容的卡**完全冇被改動**（只補空欄）
+- ✅ 同一個 topic 的 `notes` **重跑 3 次都唔會膨脹**
+- ✅ 抽出文字全部 ≤ 卡面上限（46 字）
+- 🐛 實跑揪出兩個真 bug 並已修：`maxLen` 寫死 60（超過卡面上限）、`notes` 每次累加
+
+> ⚠️ 測試時 `source` 會照實寫成 mock 網域，不會訛稱 `zh.wikipedia`；正式跑（預設 `--api-base`）才寫維基。
+
+### 為什麼不用 GitHub Actions 了
+
+Workflow 已保留在 `.github/workflows/extract-copy.yml`（未刪，可日後備用），但因為
+`workflow_dispatch` 只認 main 分支上的定義，而這個分支未合併 main，所以要等 PR 合併後才有 Run 按鈕。
+既然本機跑得到，就不必為此合併 main。
