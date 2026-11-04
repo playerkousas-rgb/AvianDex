@@ -10,14 +10,17 @@
  * ============================================================ */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { factsBlock } from '../scripts/cards/parse-taxobox.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const birds = JSON.parse(readFileSync(path.join(root, 'src/data/birds.json'), 'utf8'));
 const taxonomy = JSON.parse(readFileSync(path.join(root, 'src/data/birdTaxonomy.json'), 'utf8'));
-const audit = JSON.parse(readFileSync(path.join(root, 'reports/enrich-birds.json'), 'utf8'));
+/* reports/ 係本機產物（不出 Git）：新 clone 冇呢個檔就會整份測試掛掉。
+ * 改用「有就讀、冇就跳過該項」的做法。 */
+const auditPath = path.join(root, 'reports/enrich-birds.json');
+const audit = existsSync(auditPath) ? JSON.parse(readFileSync(auditPath, 'utf8')) : null;
 const zhTax = JSON.parse(readFileSync(path.join(root, 'src/data/taxonomyZh.json'), 'utf8'));
 
 test('每張有 eBird 分類的卡，學名／目／科都要齊', () => {
@@ -45,8 +48,13 @@ test('學名格式：屬名首字母大寫 + 種小名全小寫', () => {
   }
 });
 
-test('中英名衝突的卡，英文名欄位不會被程式改掉', () => {
-  const conflicts = Object.entries(audit).filter(([, t]) => t.zhMismatch);
+test('中英名衝突的卡，英文名欄位不會被程式改掉', (t) => {
+  /* reports/enrich-birds.json 係本機產物（不入 Git），新 clone 冇就跳過 */
+  if (!audit) {
+    t.skip('reports/enrich-birds.json 不存在（本機產物，不入 Git）');
+    return;
+  }
+  const conflicts = Object.entries(audit).filter(([, v]) => v.zhMismatch);
   assert.ok(conflicts.length > 0, '應該有中英名衝突嘅卡（用來驗證保護機制）');
   for (const [id, t] of conflicts) {
     const bird = birds.find((b) => b.id === id);

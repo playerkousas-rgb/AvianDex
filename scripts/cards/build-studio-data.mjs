@@ -113,8 +113,43 @@ function buildData() {
 }
 
 /* ---------- 內嵌資產 ---------- */
-function buildAssets() {
-  const A = {};
+/* 如果 cards/art/ 冇資產（例如 CI 或新 clone），但現有成品已內嵌，
+ * 就沿用成品的資產：否則每次重建都會把 3.9 MB 成品弄成 2.6 MB，
+ * 「有冇相」看起來沒變，但圖就靜靜消失了。 */
+function existingAssets(out) {
+  try {
+    if (!exists(out)) return {};
+    const s = fs.readFileSync(out, 'utf8');
+    const i = s.indexOf('window.AVIANDEX_ASSETS=');
+    if (i < 0) return {};
+    const start = i + 'window.AVIANDEX_ASSETS='.length;
+    let depth = 0;
+    let inStr = false;
+    let esc = false;
+    let end = -1;
+    for (let k = start; k < s.length; k += 1) {
+      const ch = s[k];
+      if (inStr) {
+        if (esc) esc = false;
+        else if (ch === '\\') esc = true;
+        else if (ch === '"') inStr = false;
+        continue;
+      }
+      if (ch === '"') { inStr = true; continue; }
+      if (ch === '{') depth += 1;
+      else if (ch === '}') { depth -= 1; if (depth === 0) { end = k + 1; break; } }
+    }
+    if (end < 0) return {};
+    const obj = JSON.parse(s.slice(start, end));
+    return obj && typeof obj === 'object' ? obj : {};
+  } catch (e) {
+    console.warn('⚠️  讀不到舊成品內嵌資產：' + e.message);
+    return {};
+  }
+}
+
+function buildAssets(out) {
+  const A = Object.assign({}, existingAssets(out));
   const photo = path.join(ART, `${HOME_CARD}-photo.png`);
   const sprite = path.join(ART, `${HOME_CARD}-sprite.png`);
   if (exists(photo)) A[`photo:${HOME_CARD}`] = embedImage(photo);
@@ -162,7 +197,7 @@ function main() {
   let shell = fs.readFileSync(shellPath, 'utf8');
 
   const { cards, tax } = buildData();
-  const assets = buildAssets();
+  const assets = buildAssets(out);
   const ids = Object.keys(cards).sort();
 
   /* 品質檢查報告 */
@@ -186,6 +221,15 @@ function main() {
     "const A = Object.assign({}, window.AVIANDEX_ASSETS || {});   /* 內嵌資產 + AI 生成 */");
 
   fs.mkdirSync(path.dirname(out), { recursive: true });
+  /* 防止「用咗舊資產重建」把成品弄瘦：成品檔（已內嵌資料的舊版）如果有內嵌圖而
+   * 今次冇，就唔好覆蓋 —— 否則 3.9 MB 會變成 2.6 MB，而冇人會發現。 */
+  /* 最後檢查：舊成品有圖、新成品冇圖 → 用舊圖補回（正常情況下 existingAssets 已處理） */
+  if (fs.existsSync(out) && fs.readFileSync(out, 'utf8').includes('data:image/')
+      && !JSON.stringify(assets).includes('data:image/')) {
+    fs.writeFileSync(out + '.new', shell, 'utf8');
+    console.warn('\n⚠️ 今次冇內嵌圖（cards/art/ 冇資產），但現有成品有 → 新版本寫成 .new，未覆蓋。');
+    return;
+  }
   fs.writeFileSync(out, shell, 'utf8');
 
   const kb = (fs.statSync(out).size / 1024).toFixed(0);

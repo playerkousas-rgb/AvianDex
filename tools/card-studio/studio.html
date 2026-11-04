@@ -309,7 +309,8 @@ details.more[open] summary::before{content:"▾ "}
               <button id="btnIcons">生小插圖</button>
             </div>
             <div class="hint">生成結果只留在畫布與瀏覽器，<b>不會</b> 自動寫入 repo。
-            正式版必須換成有授權的照片（Wikimedia／iNaturalist／Macaulay）。</div>
+            生「真雀相」時，prompt 會附上該雀的 <b>Macaulay Library</b>（康奈爾）搜尋連結，
+            由 Gemini 自己去拿真實照片；相片不入 Git，repo 只存文字。</div>
           </div>
         </details>
 
@@ -876,7 +877,18 @@ async function callImage(prompt, refDataUrl) {
 
 const PROMPT = {
   sprite: name => `Retro 16-bit pixel art sprite of a ${name}, standing side profile facing left, chunky visible pixels, limited palette, flat solid light cream background (#F7F1E0), no shadow, no text, centered with even margin, simple game sprite icon.`,
-  photo: name => `Photorealistic wildlife photograph of a ${name} perched on a natural branch, side profile, whole bird visible, sharp feather detail, soft blurred green bokeh background, professional bird photography, no text, no watermark.`,
+  /* 相片：先叫 Gemini 去 Macaulay（康奈爾）找真實照片；取不到才按外形描述作畫。
+   * 相片不入 Git —— repo 只存文字，圖由出圖時取得。 */
+  photo: (name, ctx = {}) => [
+    `Photorealistic wildlife photograph for an AvianDex info card: ${name}${ctx.sci ? ' (' + ctx.sci + ')' : ''}, vertical 3:4.`,
+    ctx.macaulay ? `Real photo source (Cornell Lab Macaulay Library, free, no key): ${ctx.macaulay}` : '',
+    ctx.code ? `eBird species code: ${ctx.code}` : '',
+    ctx.sci ? `Scientific name to search: ${ctx.sci}` : '',
+    'If you can use a photo from that library, pick one with the whole bird visible in side profile.',
+    ctx.look ? `Appearance it must show: ${ctx.look}` : '',
+    'Composition: natural branch, sharp feather detail, soft blurred green bokeh, professional bird photography, no text, no watermark.',
+    'If no real photo is available, follow the appearance text exactly — never invent markings or colours.',
+  ].filter(Boolean).join('\n'),
   icons: () => `A set of five flat minimal vector illustrations for a bird infographic, each on soft cream background, muted sage green and warm ochre palette, simple shapes, no text: (1) map of South and Southeast Asia, (2) urban park with tree and bench, (3) insects food icons, (4) nest with eggs in tree hollow, (5) musical notes beside a branch.`,
 };
 
@@ -1132,7 +1144,15 @@ async function gen(kind) {
   const name = [b.name, b.en, b.sci].filter(Boolean).join(' / ') || id;
   try {
     log('生成 ' + kind + '：' + name);
-    const prompt = kind === 'sprite' ? PROMPT.sprite(name) : PROMPT.photo(name);
+    const code = b.code || (TAX[id] || {}).speciesCode || '';
+    const prompt = kind === 'sprite' ? PROMPT.sprite(name) : PROMPT.photo(name, {
+      sci: b.sci || '',
+      code,
+      macaulay: code
+        ? `https://search.macaulaylibrary.org/catalog?taxonCode=${code}&mediaType=photo&sort=rating_rank_desc`
+        : '',
+      look: (typeof vo === 'function' ? (vo('look') || '') : ''),
+    });
     A[kind + ':' + id] = await callImage(prompt);
     render(id);
   } catch (e) { log('失敗：' + e.message); }
