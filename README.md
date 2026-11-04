@@ -63,6 +63,11 @@ AvianDex 的做法是：**把「學習」包裝成「收集」**。
 | 尺寸／體積 | 900×1200／約 35 KB | 1200×1600／約 160 KB |
 | R2 路徑 | `aviandex/NNNN.avif` | `aviandex/info/NNNN.avif` |
 
+**兩個出卡引擎，同一版式**：
+- `scripts/cards/render-card.py` —— Pillow，批次出 AVIF（適合 559 張、CI）
+- `tools/card-studio/aviandex-studio.html` —— **單檔 HTML 工作室**，打編號即出卡、可即時改字、
+  可在 Gemini Canvas 直接開（用法見 [tools/card-studio/README.md](./tools/card-studio/README.md)）
+
 **資訊圖卡的七段版面**（2026-11 依 `NO.0008 鵲鴝` 成品重做，樣張：
 [docs/assets/dexcard-0008-example.png](./docs/assets/dexcard-0008-example.png)）：
 

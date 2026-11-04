@@ -31,7 +31,8 @@
     "test:facts": "node --test tests/facts.test.mjs",
     "test:order": "node --test tests/pokedexOrder.test.mjs",
     "test:taxonomy": "node --test tests/taxonomy.test.mjs",
-    "zh:resolve": "node scripts/cards/resolve-zh.mjs"
+    "zh:resolve": "node scripts/cards/resolve-zh.mjs",
+    "cards:studio": "node scripts/cards/build-studio-data.mjs"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",

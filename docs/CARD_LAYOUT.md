@@ -141,3 +141,28 @@ npm run cards:render -- 0008                           # 同一支引擎（Node 
   需要一套公開準則（例如常見度＝eBird 香港近 5 年記錄頻度分 5 級）才可批量套用。
 - 用戶成品卡寫體重 23–32 g，中文維基寫 **29–51.3 g**（pageid 219197）。
   本 repo 一律用維基數字並記錄 pageid；差異要在卡面來源欄講清楚，不可兩邊都印。
+
+---
+
+## 7. 兩個實作（同一個版式，兩個引擎）
+
+同一套版面有兩個實作，**輸出一致，任你揀**：
+
+| | A · Pillow 引擎 | B · 卡面工作室（HTML） |
+|---|---|---|
+| 檔案 | `scripts/cards/render-card.py` | `tools/card-studio/aviandex-studio.html` |
+| 適合 | 批次出 559 張、CI、AVIF | 人手逐張檢視、即時改字、給非工程師用 |
+| 文字 | Pillow + Noto Sans TC | HTML + CSS（瀏覽器字型） |
+| 改字 | 改 JSON | 卡面內「編輯這一張」即時改 |
+| 輸出 | AVIF 159 KB | PNG（SVG foreignObject）／列印 PDF |
+| 資料檢查 | `npm test`（48 項） | `build-studio-data.mjs` 版面預算報告 |
+
+> 工作室的靈感來自用戶提供的兩份 HTML，各取一半：
+> `漫畫.html`＝**出圖機**（Gemini 出圖、模型降級、錯誤診斷）→ 借它的出圖流程；
+> `ai_scout_app (1).html`＝**只准用 git 內檔案回答的 LLM 對答機** → 借它「答案只可來自檔案」的原則，
+> 所以卡面文字全部由 `src/data/*.json` 注入，AI 一個字都唔准寫。
+> 用法與設計說明：[tools/card-studio/README.md](../tools/card-studio/README.md)
+
+```bash
+node scripts/cards/build-studio-data.mjs     # 重新產生單檔工作室（內嵌最新文案）
+```

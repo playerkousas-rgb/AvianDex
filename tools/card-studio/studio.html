@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1f18">
+<meta name="description" content="AvianDex 卡面工作室 — 打編號，自動由資料生成資訊圖卡">
+<title>AvianDex · 卡面工作室</title>
+<style>
+:root{
+  color-scheme:dark;
+  --ink:#07140f; --ink2:#0b1f18; --panel:rgba(13,34,26,.86);
+  --line:#1d3d2f; --line2:#2f6049; --tx:#eaf5ef; --mu:#8aa79a; --mu2:#5f7a6d;
+  --g1:#6ee7b7; --g2:#0ea472; --gold:#e8c981; --bad:#ff9d94;
+  --shadow:0 18px 44px -18px rgba(0,0,0,.85),0 2px 8px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+::selection{background:rgba(110,231,183,.28);color:#fff}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100%;color:var(--tx);
+  font:15px/1.7 system-ui,-apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  background:var(--ink);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;z-index:-2;pointer-events:none;border-radius:50%;
+  filter:blur(90px);width:720px;height:720px;left:-200px;top:-340px;
+  background:radial-gradient(circle,rgba(14,164,114,.32),transparent 66%)}
+body::after{content:"";position:fixed;z-index:-1;pointer-events:none;inset:0;
+  background-image:linear-gradient(rgba(110,231,183,.045) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(110,231,183,.045) 1px,transparent 1px);
+  background-size:52px 52px;
+  mask-image:radial-gradient(circle at 50% 0%,#000,transparent 72%);
+  -webkit-mask-image:radial-gradient(circle at 50% 0%,#000,transparent 72%)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 60px}
+.top{position:sticky;top:0;z-index:40;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:linear-gradient(180deg,rgba(7,20,15,.94),rgba(7,20,15,.62));border-bottom:1px solid var(--line)}
+.topin{max-width:1180px;margin:0 auto;padding:11px 16px;display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px;flex:0 0 44px;border-radius:14px;display:grid;place-items:center;
+  background:radial-gradient(120% 120% at 30% 10%,#14372a,#08160f 70%);
+  border:1px solid var(--line2);box-shadow:0 8px 22px -10px rgba(14,164,114,.9),inset 0 1px 0 rgba(255,255,255,.07)}
+.logo svg{width:26px;height:26px}
+.ttl{font-weight:700;font-size:15px;letter-spacing:.02em}
+.sub{font-size:11.5px;color:var(--mu);letter-spacing:.08em;text-transform:uppercase}
+.spacer{flex:1}
+.badge{font-size:11.5px;padding:5px 10px;border-radius:999px;border:1px solid var(--line2);
+  color:var(--mu);white-space:nowrap}
+.badge.ok{color:#9df3c9;border-color:rgba(110,231,183,.5);background:rgba(14,164,114,.14)}
+.badge.warn{color:#ffd9a3;border-color:rgba(232,201,129,.45);background:rgba(232,201,129,.1)}
+h1{font-size:20px;margin:22px 0 4px;letter-spacing:.01em}
+.lead{color:var(--mu);font-size:13.5px;margin:0 0 18px}
+.card-panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px;
+  box-shadow:var(--shadow);backdrop-filter:blur(10px)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+label.f{font-size:12px;color:var(--mu);display:block;margin-bottom:4px;letter-spacing:.03em}
+input[type=text],input[type=password],select,textarea{width:100%;background:#0a1a14;color:var(--tx);
+  border:1px solid var(--line2);border-radius:10px;padding:8px 10px;font:inherit;font-size:13.5px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--g2);box-shadow:0 0 0 3px rgba(14,164,114,.16)}
+button{font:inherit;font-size:13.5px;border-radius:10px;border:1px solid var(--line2);
+  background:#0e2a20;color:var(--tx);padding:8px 12px;cursor:pointer;transition:.16s}
+button:hover:not(:disabled){border-color:var(--g2);background:#123528}
+button:disabled{opacity:.45;cursor:not-allowed}
+button.primary{background:linear-gradient(180deg,#12a878,#0b7d59);border-color:#1abd86;font-weight:700;
+  box-shadow:0 10px 26px -14px rgba(14,164,114,.95)}
+button.ghost{background:transparent}
+.grid2{display:grid;grid-template-columns:minmax(320px,420px) 1fr;gap:16px;align-items:start}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chk{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--mu)}
+.hint{font-size:11.5px;color:var(--mu2);line-height:1.55;margin-top:8px}
+.stage{position:relative;border-radius:16px;overflow:auto;background:#07130e;
+  border:1px solid var(--line);padding:12px;display:grid;place-items:start center}
+.stage-inner{transform-origin:top center}
+#log{white-space:pre-wrap;font:11.5px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--mu);
+  background:#08150f;border:1px solid var(--line);border-radius:10px;padding:8px 10px;max-height:150px;
+  overflow:auto;margin-top:10px;display:none}
+#log.on{display:block}
+details.more{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+details.more summary{cursor:pointer;font-size:12.5px;color:var(--mu);list-style:none}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary::before{content:"▸ ";color:var(--g2)}
+details.more[open] summary::before{content:"▾ "}
+.linkbtn{background:none;border:none;color:var(--g1);padding:0;cursor:pointer;font-size:12.5px;text-decoration:underline dotted}
+
+/* ============== 卡面本體（1200 × 1600，全部用 em 以 16px 為基準） ============== */
+.dex{
+  --G:#1c6a4e; --GD:#14543d; --GL:#2e8264; --PAGE:#f8faf5; --INK:#1e2a24;
+  --SUB:#5c7066; --LINE:#cede d3;
+  width:75em;height:100em;position:relative;background:var(--PAGE);color:var(--INK);
+  font-family:"Noto Sans TC","Noto Sans CJK TC","PingFang TC","Microsoft JhengHei",
+              "Hiragino Sans","Source Han Sans TC",system-ui,sans-serif;
+  padding:1.375em;display:flex;flex-direction:column;gap:.75em;
+  border-radius:.75em;overflow:hidden;font-size:16px;line-height:1.4;
+  box-shadow:0 20px 60px -20px rgba(0,0,0,.8)
+}
+.dex *{box-sizing:border-box}
+.dex .hdr{background:#fff;border:1.5px solid var(--GL);border-radius:1.25em;padding:.75em 1em;
+  display:grid;grid-template-columns:8.5em 1fr 15.5em;gap:.75em;align-items:start;flex:0 0 auto}
+.dex .idcol{display:flex;flex-direction:column;gap:.5em;align-items:flex-start}
+.dex .pill-no{display:inline-flex;align-items:center;gap:.3em;background:var(--GD);color:#f0c828;
+  font-weight:900;font-size:1.25em;padding:.28em .6em .28em .45em;border-radius:999em;letter-spacing:.01em}
+.dex .ball{width:1.05em;height:1.05em;border-radius:50%;background:#fff;position:relative;flex:0 0 auto}
+.dex .ball::before{content:"";position:absolute;left:0;right:0;top:48%;height:10%;background:#d9ded7}
+.dex .ball::after{content:"";position:absolute;left:50%;top:50%;width:.34em;height:.34em;margin:-.17em 0 0 -.17em;
+  border-radius:50%;background:#d9ded7;box-shadow:0 0 0 .12em #fff}
+.dex .names{min-width:0}
+.dex .zh{font-size:3.6em;font-weight:900;line-height:1.05;letter-spacing:.01em}
+.dex .sci{font-size:1.35em;color:#43544b;margin-top:.25em;font-style:italic}
+.dex .pill-en{display:inline-block;background:var(--G);color:#fff;font-weight:700;font-size:1.15em;
+  padding:.28em .85em;border-radius:999em;margin-left:.75em;vertical-align:.12em;max-width:100%}
+.dex .meta{text-align:right;font-size:1.05em;color:#3c4c44}
+.dex .meta .tag{font-weight:700}
+.dex .factline{display:flex;justify-content:flex-end;gap:.5em;align-items:baseline;margin-top:.55em;font-size:1em}
+.dex .factline b{color:var(--SUB);font-weight:700;min-width:3.2em;text-align:right}
+.dex .factline span{font-weight:700;color:var(--INK)}
+.dex .dots{display:inline-flex;gap:.28em;align-items:center}
+.dex .dot{width:.95em;height:.95em;border-radius:50%;border:1.5px solid var(--GL);background:#e2e8e2}
+.dex .dot.on{background:var(--G)}
+.dex .pending{color:#a8b6ad;font-weight:600;font-size:.92em}
+
+.dex .body{display:grid;grid-template-columns:18.75em 1fr;gap:.75em;flex:1 1 auto;min-height:0}
+.dex .col{display:flex;flex-direction:column;gap:.6em;min-height:0}
+.dex .mainrow{display:grid;grid-template-columns:14.5em 1fr;gap:.6em;min-height:0}
+.dex .box{background:#fff;border:1.5px solid #d8e2d9;border-radius:1em;padding:.6em .7em;overflow:hidden}
+.dex .spritepane{display:flex;flex-direction:column;gap:.45em;padding:.55em}
+.dex .sprite-frame{background:#faf6ea;border:1px solid #e6e0cd;border-radius:.7em;overflow:hidden}
+.dex .sprite-frame img{display:block;width:100%;height:11em;object-fit:cover}
+.dex .ph{display:grid;place-items:center;height:11em;color:#b3c0b7;font-size:.85em;text-align:center;padding:0 .5em}
+.dex .iucn{display:inline-block;align-self:flex-start;border:1px solid #bfe0cc;background:#e9f6ee;
+  color:var(--GD);font-weight:700;font-size:.8em;padding:.22em .55em;border-radius:999em}
+.dex .alabel{font-size:.78em;color:var(--SUB);font-weight:700}
+.dex .chips{display:flex;flex-wrap:wrap;gap:.25em}
+.dex .chip{background:#eef3ee;color:#465c50;font-size:.76em;padding:.14em .5em;border-radius:999em}
+
+.dex .head{display:flex;align-items:center;gap:.4em;margin:0 0 .4em}
+.dex .head .ic{width:1.55em;height:1.55em;border-radius:50%;background:#e2f0e7;color:var(--G);
+  display:grid;place-items:center;font-weight:900;font-size:.82em;flex:0 0 auto}
+.dex .head .t{font-weight:900;color:var(--GD);font-size:1.28em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dex .p{font-size:.94em;line-height:1.62;color:var(--INK);word-break:break-word}
+.dex .p.dim{color:#a8b6ad}
+.dex ol.list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:.3em}
+.dex ol.list li{display:flex;gap:.4em;font-size:.92em;line-height:1.5}
+.dex ol.list .n{flex:0 0 auto;width:1.22em;height:1.22em;border-radius:50%;background:var(--G);color:#fff;
+  font-weight:700;font-size:.78em;display:grid;place-items:center;margin-top:.18em}
+.dex .artband{width:100%;height:3.1em;object-fit:cover;border-radius:.5em;display:block;margin-top:.35em}
+.dex .artband-ph{width:100%;height:3.1em;border-radius:.5em;background:#f0f4ef;display:grid;place-items:center;
+  color:#bcc8bf;font-size:.75em;margin-top:.35em}
+
+.dex .leftcol{gap:.6em}
+.dex .leftcol .box{display:flex;flex-direction:column}
+.dex .greenbar{background:var(--G);color:#fff;font-weight:900;font-size:1.18em;border-radius:.75em .75em 0 0;
+  padding:.34em .7em .34em 2.2em;margin:-.6em -.7em .5em;position:relative}
+.dex .greenbar::before{content:"";position:absolute;left:.62em;top:50%;width:1.15em;height:1.15em;margin-top:-.575em;
+  border-radius:50%;background:#fff;opacity:.92}
+.dex .taxrow{display:flex;gap:.35em;font-size:.9em;line-height:1.85;border-bottom:1px dashed #e8efe8}
+.dex .taxrow:last-child{border-bottom:none}
+.dex .taxrow .k{color:var(--GD);font-weight:700;flex:0 0 4.4em}
+.dex .taxrow .v{color:var(--INK);min-width:0;word-break:break-word}
+
+.dex .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:.6em}
+.dex .photocol{display:flex;flex-direction:column;gap:.55em;min-height:0}
+.dex .photo{position:relative;border-radius:.9em;overflow:hidden;background:#dfe7df;flex:1 1 auto;min-height:0}
+.dex .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.dex .photo .empty{position:absolute;inset:0;display:grid;place-items:center;text-align:center;
+  color:#8fa196;font-size:.95em;padding:1em;background:repeating-linear-gradient(45deg,#eef2ec,#eef2ec 10px,#e6ece5 10px,#e6ece5 20px)}
+.dex .rightcol{display:flex;flex-direction:column;gap:.55em;min-height:0;width:13.4em}
+.dex .callouts{display:flex;flex-direction:column;justify-content:space-around;flex:1 1 auto;gap:.2em}
+.dex .callout{display:flex;align-items:center;gap:.45em;min-width:0}
+.dex .callout .thumb{width:3.1em;height:3.1em;border-radius:50%;overflow:hidden;flex:0 0 auto;
+  border:2px solid #fff;box-shadow:0 0 0 1px var(--GL);background:#e6ece5}
+.dex .callout .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.dex .callout .ct{min-width:0}
+.dex .callout .cl{font-size:.78em;color:var(--SUB);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dex .callout .cv{font-size:.82em;font-weight:600;line-height:1.35}
+.dex .ety{background:#f2f8f2;border-color:#dbe7dc}
+.dex .ety .head .t{font-size:1.1em}
+
+.dex .scores{background:#fff;border:1.5px solid #d8e2d9;border-radius:1em;display:grid;
+  grid-template-columns:1fr 13.6em;overflow:hidden;flex:0 0 auto}
+.dex .scores .left{padding:.55em .8em .6em}
+.dex .scores .greenbar{margin:-.55em -.8em .5em;font-size:1.05em;padding:.32em .7em .32em 2.1em}
+.dex .scoregrid{display:grid;grid-template-columns:repeat(5,1fr);gap:.35em}
+.dex .scoregrid .s{text-align:center;min-width:0}
+.dex .scoregrid .note{font-size:.72em;color:var(--SUB);line-height:1.35;height:2.7em;overflow:hidden}
+.dex .scoregrid .k{font-size:.86em;font-weight:700;color:var(--GD);margin-top:.15em;white-space:nowrap}
+.dex .stars{display:flex;justify-content:center;gap:.09em;margin:.2em 0 .1em;font-size:1em;line-height:1}
+.dex .stars i{font-style:normal;color:#e4e9e4;font-size:1.02em}
+.dex .stars i.on{color:#f0aa28}
+.dex .stars i.half{background:linear-gradient(90deg,#f0aa28 50%,#e4e9e4 50%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.dex .scoregrid .v{font-size:.8em;font-weight:700}
+.dex .overall{background:var(--G);color:#fff;padding:.55em .5em;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:.1em}
+.dex .overall .lab{font-size:1.02em;font-weight:900}
+.dex .overall .num{font-size:2.5em;font-weight:900;color:#f0c828;line-height:1.05}
+.dex .overall .num small{font-size:.42em;color:#d6e9dd;font-weight:700;margin-left:.15em}
+.dex .overall .stars i{font-size:.95em}
+
+.dex .foot{flex:0 0 auto;background:var(--G);color:#fff;border-radius:.7em;display:grid;
+  grid-template-columns:1fr auto 1fr;align-items:center;gap:.6em;padding:.42em .85em;font-size:.9em}
+.dex .foot .fname{text-align:center;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dex .foot .fright{display:flex;align-items:center;gap:.6em;justify-content:flex-end}
+.dex .barcode{display:flex;gap:.1em;height:1.5em;align-items:stretch}
+.dex .barcode i{background:#fff;display:block;width:.11em}
+.dex .note{font-size:.62em;color:#9aab9f;line-height:1.45;text-align:left;flex:0 0 auto}
+
+@media print{
+  body{background:#fff}
+  .top,.side,.stage{border:none;background:none;padding:0}
+  .dex{box-shadow:none;border-radius:0}
+}
+</style>
+</head>
+<body>
+<div class="top"><div class="topin">
+  <div class="logo" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="none">
+      <circle cx="32" cy="32" r="24" stroke="#6ee7b7" stroke-width="2" opacity=".7"/>
+      <path d="M32 12 36.6 27.4 52 32 36.6 36.6 32 52 27.4 36.6 12 32 27.4 27.4Z" fill="#6ee7b7"/>
+    </svg>
+  </div>
+  <div>
+    <div class="ttl">AvianDex 卡面工作室</div>
+    <div class="sub">打編號 · 自動填字 · AI 只畫圖</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="badge" id="apiBadge">API：檢查中</div>
+</div></div>
+
+<div class="wrap">
+  <h1>一張卡了解一隻鳥</h1>
+  <p class="lead">文字 100% 由資料＋HTML 排版（永遠準確，冇 AI 假字）；AI 只負責畫像素圖、真雀相、小插圖。<br>
+  改任何一格 → 右邊即時更新 → 按「輸出 PNG」出 1200×1600 卡面。</p>
+
+  <div class="grid2">
+    <!-- ================= 左：控制台 ================= -->
+    <div class="side">
+      <div class="card-panel">
+        <div class="row" style="gap:8px">
+          <div style="flex:1 1 120px">
+            <label class="f" for="num">圖鑑編號</label>
+            <input id="num" type="text" inputmode="numeric" maxlength="4" placeholder="0008" value="0008">
+          </div>
+          <div style="flex:1 1 120px">
+            <label class="f">目前卡</label>
+            <input id="curBird" type="text" readonly value="—">
+          </div>
+        </div>
+        <div class="tools">
+          <button id="prev" class="ghost" title="上一張">◀</button>
+          <button id="next" class="ghost" title="下一張">▶</button>
+          <select id="jump" style="flex:1 1 160px"></select>
+          <button id="btnData" class="ghost">資料</button>
+        </div>
+        <div class="hint">只有 <b>cardCopy.json 有文案</b> 的編號才會出齊内容；其他會顯示「資料待查」，這正是正確行為。</div>
+      </div>
+
+      <div class="card-panel" id="editor" style="margin-top:12px;display:none">
+        <div class="row" style="justify-content:space-between">
+          <div class="ttl" style="font-size:14px">編輯 NO.<span id="editId">0000</span></div>
+          <div class="tools" style="margin:0">
+            <button id="btnNew" class="ghost">新增空白卡</button>
+            <button id="btnCloseEdit" class="ghost">收起</button>
+          </div>
+        </div>
+        <div id="editForm" style="margin-top:10px;display:flex;flex-direction:column;gap:8px"></div>
+        <div class="hint">改完即刻反映在卡面。按「儲存 JSON」會下載整份 <code>cardCopy.json</code> 相容格式，
+        你可以直接覆蓋 repo 內的同名檔案（建議先 commit）。</div>
+      </div>
+
+      <div class="card-panel" style="margin-top:12px">
+        <label class="f">匯入／匯出</label>
+        <div class="tools" style="margin-top:0">
+          <button id="btnEdit" class="primary">編輯這一張</button>
+          <button id="btnLoad">載入 JSON</button>
+          <button id="btnSave">儲存 JSON</button>
+          <button id="btnPng" class="primary">輸出 PNG</button>
+          <button id="btnPdf" class="ghost">PDF／列印</button>
+        </div>
+        <input id="file" type="file" accept=".json,application/json" style="display:none">
+        <div class="chk" style="margin-top:10px">
+          <input id="autoSave" type="checkbox" checked><label for="autoSave">自動儲存在這個瀏覽器</label>
+        </div>
+        <div class="hint">「載入 JSON」＝直接把 <code>src/data/cardCopy.json</code> 拖進來。<br>
+        工作室只讀不寫 repo，寫回 JSON 由你決定（避免覆蓋未 review 的資料）。</div>
+
+        <details class="more">
+          <summary>AI 出圖（選用）</summary>
+          <div style="margin-top:8px">
+            <label class="f" for="mode">出圖模式</label>
+            <select id="mode">
+              <option value="none">唔用 AI（只用已放入的圖）</option>
+              <option value="canvas">Gemini Canvas（自動帶 key）</option>
+              <option value="key">自己貼 API key</option>
+            </select>
+            <div id="keyRow" style="margin-top:8px;display:none">
+              <label class="f" for="key">Gemini API key</label>
+              <input id="key" type="password" placeholder="AIza…" autocomplete="off">
+              <div class="tools"><button id="saveKey">記住</button><button id="clearKey" class="ghost">清除</button></div>
+            </div>
+            <div class="tools" style="margin-top:8px">
+              <button id="btnSprite">生像素圖</button>
+              <button id="btnPhoto">生真雀相</button>
+              <button id="btnIcons">生小插圖</button>
+            </div>
+            <div class="hint">生成結果只留在畫布與瀏覽器，<b>不會</b> 自動寫入 repo。
+            正式版必須換成有授權的照片（Wikimedia／iNaturalist／Macaulay）。</div>
+          </div>
+        </details>
+
+        <div id="log"></div>
+      </div>
+    </div>
+
+    <!-- ================= 右：卡面 ================= -->
+    <div class="stage" id="stage">
+      <div class="stage-inner" id="stageInner">
+        <div class="dex" id="card"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+ *  AvianDex 卡面工作室
+ *  ------------------------------------------------------------
+ *  設計原則（不可改）：
+ *   1. 卡面所有文字由 render() 由 JS 物件寫入 DOM → 必然準確
+ *   2. AI 只出圖（像素圖／真雀相／小插圖），永不出字
+ *   3. 缺資料印「資料待查」，不亂填、不縮成 0
+ *   4. 主觀評分（常見度、Top5、小貼士、生態價值）必須有聲明
+ * ============================================================ */
+(function () {
+'use strict';
+
+/* ---------- 0. 小工具 ---------- */
+const $ = id => document.getElementById(id);
+const el = {
+  num: $('num'), curBird: $('curBird'), jump: $('jump'), prev: $('prev'), next: $('next'),
+  card: $('card'), stage: $('stage'), stageInner: $('stageInner'),
+  mode: $('mode'), keyRow: $('keyRow'), key: $('key'), apiBadge: $('apiBadge'), log: $('log'),
+};
+const PNG_W = 1200, PNG_H = 1600;
+const LOGS = [];
+function log(m) {
+  LOGS.push(new Date().toISOString().slice(11, 19) + '  ' + m);
+  if (LOGS.length > 120) LOGS.shift();
+  el.log.textContent = LOGS.join('\n');
+  el.log.classList.add('on');
+}
+
+/* ---------- 1. 資料 ---------- */
+/* BIRDS 由 scripts/cards/build-studio-data.mjs 產生（只含已有文案的編號） */
+let BIRDS = {};
+let TAX = {};   /* 全部編號的 eBird 分類，供補全 */
+const A = {};   /* 執行期資產（AI 生成或手動放入的圖） */
+
+const PENDING = '資料待查';
+const SCORE_KEYS = ['生態重要性', '適應力', '觀賞價值', '研究價值', '保育關注度'];
+const ICON_FOR = {
+  '分佈地區': 'icons/range-asia.png',
+  '棲息環境': 'icons/habitat-park.png',
+  '食物': 'icons/food-insects.png',
+  '成長與繁殖': 'icons/nest-eggs.png',
+  '有趣冷知識': 'icons/song-notes.png',
+};
+const GLYPH = { '分佈地區': '分', '棲息環境': '居', '食物': '食', 'Top 5 特色亮點': '五',
+  '成長與繁殖': '育', '觀察小貼士': '貼', '有趣冷知識': '知', '注意事項': '注', '名稱由來': '名', '外形特徵': '形' };
+
+/* ---------- 2. 取資料 ---------- */
+function birdOf(id) {
+  const b = BIRDS[id];
+  if (b) return b;
+  const t = TAX[id] || {};
+  return { name: t.zh || '', en: t.comName || '', sci: t.sciName || '', order: t.order || '',
+    family: t.family || '', orderZh: t.orderZh || '', familyZh: t.familyZh || '', code: t.speciesCode || '' };
+}
+function copyOf(id) { return (BIRDS[id] && BIRDS[id].copy) || {}; }
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+function pick(v) {
+  if (Array.isArray(v)) return v.filter(Boolean).length ? v : null;
+  const s = String(v == null ? '' : v).trim();
+  return s ? s : null;
+}
+function dots(n) {
+  const v = Math.max(0, Math.min(5, parseInt(n, 10) || 0));
+  if (!v) return '<span class="pending">' + PENDING + '</span>';
+  let h = '<span class="dots">';
+  for (let i = 1; i <= 5; i++) h += '<span class="dot' + (i <= v ? ' on' : '') + '"></span>';
+  return h + '</span>';
+}
+function stars(score) {
+  const s = Number(score) || 0;
+  let h = '<span class="stars">';
+  for (let i = 0; i < 5; i++) {
+    const cls = s >= i + 0.75 ? 'on' : (s >= i + 0.25 ? 'half' : '');
+    h += '<i class="' + cls + '">★</i>';
+  }
+  return h + '</span>';
+}
+function head(title) {
+  return '<div class="head"><span class="ic">' + esc(GLYPH[title] || '·') + '</span>' +
+    '<span class="t">' + esc(title) + '</span></div>';
+}
+function para(txt, dim) {
+  if (!pick(txt)) return '<div class="p' + (dim ? ' dim' : '') + '">' + PENDING + '</div>';
+  return '<div class="p">' + esc(txt) + '</div>';
+}
+function listItems(arr) {
+  if (!pick(arr)) return '<div class="p dim">' + PENDING + '</div>';
+  return '<ol class="list">' + arr.map((it, i) =>
+    '<li><span class="n">' + (i + 1) + '</span><span>' + esc(typeof it === 'string' ? it : it.text || '') + '</span></li>'
+  ).join('') + '</ol>';
+}
+function artBand(title) {
+  const key = 'icon:' + title;
+  const url = A[key] || ICON_FOR[title];
+  if (!url) return '';
+  return '<img class="artband" alt="" src="' + esc(url) + '">';
+}
+
+/* ---------- 3. 卡面 ---------- */
+function render(id) {
+  const bird = birdOf(id);
+  const c = copyOf(id);
+  const tax = TAX[id] || {};
+  const en = c.en || bird.en || tax.comName || '';
+  const sci = bird.sci || tax.sciName || '';
+  const order = bird.order || tax.order || '';
+  const family = bird.family || tax.family || '';
+  const orderZh = c.orderZh || bird.orderZh || tax.orderZh || '';
+  const familyZh = c.familyZh || bird.familyZh || tax.familyZh || '';
+  const code = bird.code || tax.speciesCode || '';
+
+  /* ①② 標題列 */
+  const hdr = `
+  <div class="hdr">
+    <div class="idcol">
+      <span class="pill-no"><span class="ball"></span>NO.${esc(id)}</span>
+    </div>
+    <div class="names">
+      <div class="zh">${esc(bird.name || en || PENDING)}</div>
+      <div class="sci">${esc(sci || '')}<span class="pill-en">${esc(en || PENDING)}</span></div>
+    </div>
+    <div class="meta">
+      <div class="tag">${esc((orderZh ? orderZh + ' ' : '') + (order || ''))}</div>
+      <div class="tag">${esc((familyZh ? familyZh + ' ' : '') + (family || ''))}</div>
+      <div class="factline"><b>身長</b><span>${esc(pick(c.length) || PENDING)}</span></div>
+      <div class="factline"><b>體重</b><span>${esc(pick(c.weight) || PENDING)}</span></div>
+      <div class="factline"><b>常見度</b>${dots(c.rarity)}</div>
+    </div>
+  </div>`;
+
+  /* ③ 主圖列：像素圖 | 真雀相 | 圓形標註 */
+  const spriteUrl = A['sprite:' + id] || c.sprite || '';
+  const photoUrl = A['photo:' + id] || c.photo || '';
+  const sprite = spriteUrl
+    ? `<div class="sprite-frame"><img alt="像素圖" src="${esc(spriteUrl)}"></div>`
+    : `<div class="sprite-frame"><div class="ph">未提供像素圖</div></div>`;
+  const iucn = pick(c.iucn) ? `<span class="iucn">IUCN ${esc(c.iucn)}</span>` : '';
+  const aliases = pick(c.aliases)
+    ? `<div class="alabel">別名</div><div class="chips">${c.aliases.map(a => `<span class="chip">${esc(a)}</span>`).join('')}</div>`
+    : '';
+
+  const photo = photoUrl
+    ? `<div class="photo"><img alt="真雀相" src="${esc(photoUrl)}"></div>`
+    : `<div class="photo"><div class="empty">（未提供真雀相）<br><span style="font-size:.85em">右邊改印外形特徵</span></div></div>`;
+
+  let right;
+  const calls = (pick(c.callouts) || []).slice(0, 5);
+  if (photoUrl && calls.length) {
+    right = `<div class="rightcol">
+      <div class="box callouts">${calls.map(m => `
+        <div class="callout">
+          <div class="thumb"><img alt="" src="${esc(photoUrl)}" style="object-position:${(m.fx != null ? m.fx * 100 : 50)}% ${(m.fy != null ? m.fy * 100 : 42)}%;transform:scale(${m.zoom ? (1 / Math.max(0.15, m.zoom)) : 1.6})"></div>
+          <div class="ct"><div class="cl">${esc(m.label || '')}</div><div class="cv">${esc(m.text || '')}</div></div>
+        </div>`).join('')}</div>
+      <div class="box ety">${head('名稱由來')}${para(c.etymology, true)}</div>
+    </div>`;
+  } else {
+    right = `<div class="rightcol">
+      <div class="box" style="flex:1 1 auto">${head('外形特徵')}${para(c.look)}</div>
+      <div class="box ety">${head('名稱由來')}${para(c.etymology, true)}</div>
+    </div>`;
+  }
+
+  const mainRow = `
+  <div class="mainrow">
+    <div class="box spritepane">${sprite}${iucn}${aliases}</div>
+    ${photo}
+    ${right}
+  </div>`;
+
+  /* ④ 左欄：基本介紹 + 分類資訊 */
+  const taxRows = [
+    ['界', '動物界 Animalia'], ['門', '脊索動物門 Chordata'], ['綱', '鳥綱 Aves'],
+    ['目', [orderZh, order].filter(Boolean).join(' ') || PENDING],
+    ['科', [familyZh, family].filter(Boolean).join(' ') || PENDING],
+    ['屬', sci ? sci.split(' ')[0] : PENDING],
+    ['種', sci || PENDING],
+    ['IUCN', pick(c.iucn) || PENDING],
+    ['eBird', code || PENDING],
+  ];
+  const left = `
+  <div class="col leftcol">
+    <div class="box" style="flex:1 1 auto">
+      <div class="greenbar">基本介紹</div>
+      ${para(c.intro_zh)}
+    </div>
+    <div class="box">
+      <div class="greenbar">分類資訊</div>
+      ${taxRows.map(([k, v]) => `<div class="taxrow"><span class="k">${esc(k)}：</span><span class="v">${esc(v)}</span></div>`).join('')}
+    </div>
+  </div>`;
+
+  /* ⑤ 兩排四欄 */
+  const row1 = [['分佈地區', c.range], ['棲息環境', c.habitat], ['食物', c.diet], ['Top 5 特色亮點', c.highlights]];
+  const row2 = [['成長與繁殖', c.breeding], ['觀察小貼士', c.tips], ['有趣冷知識', c.funFact], ['注意事項', c.caution]];
+  const boxOf = ([t, v]) => `<div class="box">${head(t)}${Array.isArray(v) ? listItems(v) : para(v)}${artBand(t)}</div>`;
+
+  /* ⑥ 評分卡 */
+  const sc = c.scores || {};
+  const notes = c.score_notes || {};
+  const keys = Object.keys(sc).length ? Object.keys(sc) : SCORE_KEYS;
+  const avg = Object.keys(sc).length
+    ? (Object.values(sc).reduce((a, b) => a + Number(b || 0), 0) / Object.keys(sc).length)
+    : null;
+  const scoreBlock = `
+  <div class="scores">
+    <div class="left">
+      <div class="greenbar">生態價值評分卡</div>
+      <div class="scoregrid">${keys.slice(0, 5).map(k => `
+        <div class="s">
+          <div class="note">${esc(notes[k] || '')}</div>
+          <div class="k">${esc(k)}</div>
+          ${stars(sc[k])}
+          <div class="v">${sc[k] != null ? esc(sc[k]) + ' / 5' : PENDING}</div>
+        </div>`).join('')}</div>
+    </div>
+    <div class="overall">
+      <div class="lab">綜合評分</div>
+      ${avg != null
+        ? `<div class="num">${avg.toFixed(1)}<small>/ 5</small></div>${stars(avg)}`
+        : `<div class="num" style="font-size:1.1em">${PENDING}</div>`}
+    </div>
+  </div>`;
+
+  /* ⑦ 底欄 */
+  const seed = (id + code).split('').reduce((a, ch) => a + ch.charCodeAt(0), 0);
+  let bars = '';
+  for (let i = 0; i < 34; i++) {
+    const w = 1 + ((seed >> (i % 7)) + i * 5) % 3;
+    bars += '<i style="width:' + (0.09 * w) + 'em"></i>';
+  }
+  const foot = `
+  <div class="note">${esc(pick(c.facts_note) || '「常見度」「Top 5」「小貼士」「注意事項」及「生態價值評分」屬編者主觀評分，非科學數據；其餘文字來源：' + (pick(c.source) || '待補'))}</div>
+  <div class="foot">
+    <div>圖鑑編號　NO.${esc(id)}</div>
+    <div class="fname">名稱：${esc(bird.name || '')}${sci ? '（' + esc(sci) + '）' : ''}</div>
+    <div class="fright"><span>圖鑑版本：v1.8</span><span class="barcode">${bars}</span></div>
+  </div>`;
+
+  el.card.innerHTML = hdr + `
+    <div class="body">
+      ${left}
+      <div class="col">
+        ${mainRow}
+        <div class="grid4" style="flex:0 0 auto">${row1.map(boxOf).join('')}</div>
+        <div class="grid4" style="flex:1 1 auto">${row2.map(boxOf).join('')}</div>
+        ${scoreBlock}
+      </div>
+    </div>
+    ${foot}`;
+
+  fitStage();
+  updateBadges();
+}
+
+/* ---------- 4. 顯示縮放 ---------- */
+function fitStage() {
+  const avail = el.stage.clientWidth - 26;
+  const scale = Math.min(1, Math.max(0.18, avail / PNG_W));
+  el.stageInner.style.transform = 'scale(' + scale + ')';
+  el.stageInner.style.width = PNG_W + 'px';
+  el.stageInner.style.height = (PNG_H * scale) + 'px';
+  el.card.style.transformOrigin = 'top left';
+}
+window.addEventListener('resize', fitStage);
+
+/* ---------- 5. 狀態列 ---------- */
+function updateBadges() {
+  const c = copyOf(el.num.value.trim().padStart(4, '0'));
+  const filled = ['intro_zh', 'length', 'weight', 'range', 'habitat', 'diet', 'breeding']
+    .filter(k => pick(c[k])).length;
+  el.curBird.value = (birdOf(el.num.value.trim().padStart(4, '0')).name || '—') +
+    '（資料 ' + filled + '/7）';
+}
+
+/* ---------- 6. 切換卡 ---------- */
+function show(id) {
+  id = String(id || '').replace(/\D/g, '').padStart(4, '0').slice(-4);
+  if (!id || id === '0000') return;
+  el.num.value = id;
+  render(id);
+  if (el.jump.value !== id) el.jump.value = id;
+  if ($('editor').style.display === 'block') buildEditor();
+  saveLocal();
+}
+
+/* ---------- 7. 本機儲存 ---------- */
+const LS = {
+  get(k) { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* Canvas 沙盒可能禁 */ } },
+};
+function saveLocal() {
+  if (!$('autoSave').checked) return;
+  const id = el.num.value;
+  LS.set('aviandex.studio.last', id);
+}
+
+/* ---------- 8. 輸出 PNG（自己畫，不靠外部庫） ---------- */
+async function toPng() {
+  /* 直接用卡面 DOM 的尺寸 + 內嵌字型重畫一次；避免外部 lib。
+     ⚠️ 這一步只會「重畫」文字與色塊；圖片會用 <img> 原圖貼上。 */
+  const scale = 2;   /* 2400×3200 超取樣，縮回 1200×1600 更鋭利 */
+  const canvas = document.createElement('canvas');
+  canvas.width = PNG_W * scale; canvas.height = PNG_H * scale;
+  const ctx = canvas.getContext('2d');
+  ctx.scale(scale, scale);
+  log('PNG：改用 SVG foreignObject 精確輸出…');
+  try {
+    return await svgToPng(scale);
+  } catch (e) {
+    log('SVG 失敗（' + e.message + '），改用列印：Ctrl/⌘ + P → 儲存為 PDF');
+    throw e;
+  }
+}
+
+/* 用 foreignObject 把整張卡（連 CSS 與字型）交給瀏覽器排版後截圖 */
+async function svgToPng(scale) {
+  const clone = el.card.cloneNode(true);
+  /* 把相對路徑的圖轉成 dataURL，否則 foreignObject 內會空白 */
+  await inlineImages(clone);
+  const css = collectCss();
+  const html = '<div xmlns="http://www.w3.org/1999/xhtml" class="dex-root">' +
+    '<style>' + css + '</style>' + clone.outerHTML + '</div>';
+  const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + PNG_W + '" height="' + PNG_H + '">' +
+    '<foreignObject x="0" y="0" width="' + PNG_W + '" height="' + PNG_H + '">' +
+    html + '</foreignObject></svg>';
+  const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const img = new Image();
+  img.decoding = 'sync';
+  await new Promise((res, rej) => { img.onload = res; img.onerror = () => rej(new Error('SVG 載入失敗')); img.src = url; });
+  const canvas = document.createElement('canvas');
+  canvas.width = PNG_W * scale; canvas.height = PNG_H * scale;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#f8faf5'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  URL.revokeObjectURL(url);
+  return canvas;
+}
+
+function collectCss() {
+  let out = '';
+  for (const sheet of document.styleSheets) {
+    let rules;
+    try { rules = sheet.cssRules; } catch (e) { continue; }
+    for (const r of rules || []) out += r.cssText + '\n';
+  }
+  return out;
+}
+
+async function inlineImages(root) {
+  const imgs = root.querySelectorAll('img');
+  await Promise.all([...imgs].map(async im => {
+    const src = im.getAttribute('src') || '';
+    if (!src || src.startsWith('data:')) return;
+    try {
+      const r = await fetch(src, { mode: 'cors' });
+      const b = await r.blob();
+      im.src = await new Promise(res => { const fr = new FileReader(); fr.onload = () => res(fr.result); fr.readAsDataURL(b); });
+    } catch (e) { log('圖未能內嵌：' + src + '（' + e.message + '）'); im.removeAttribute('src'); }
+  }));
+}
+
+async function download(canvas, name) {
+  const blob = await new Promise(res => canvas.toBlob(res, 'image/png'));
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+
+/* ---------- 9. AI 出圖（選用，永不出字） ---------- */
+const API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
+const IMAGE_MODELS = ['gemini-3.1-flash-image-preview', 'gemini-2.5-flash-image',
+  'gemini-3-pro-image-preview', 'gemini-2.5-flash-image-preview'];
+const GEN = { responseModalities: ['IMAGE'], imageConfig: { aspectRatio: '3:4' } };
+
+function getKey() {
+  const manual = (el.key.value || '').trim();
+  if (manual.length >= 20) return manual;
+  const cands = [window.GEMINI_API_KEY, window.__GEMINI_API_KEY__, window.__API_KEY__, window.apiKey, LS.get('aviandex.key')];
+  for (const c of cands) if (c && String(c).trim().length >= 20) return String(c).trim();
+  try {
+    for (const k of Object.keys(window)) {
+      const v = window[k];
+      if (typeof v === 'string' && /^AIza[0-9A-Za-z_\-]{30,}$/.test(v.trim())) return v.trim();
+    }
+  } catch (e) { /* ignore */ }
+  return '';
+}
+
+async function callImage(prompt, refDataUrl) {
+  const key = getKey();
+  if (!key) throw new Error('沒有 API key');
+  const parts = [{ text: prompt }];
+  if (refDataUrl) {
+    const [meta, b64] = refDataUrl.split(',');
+    const mime = (meta.match(/data:([^;]+)/) || [])[1] || 'image/png';
+    parts.push({ inlineData: { mimeType: mime, data: b64 } });
+  }
+  let lastErr;
+  for (const model of IMAGE_MODELS) {
+    try {
+      const r = await fetch(API_BASE + '/' + model + ':generateContent?key=' + encodeURIComponent(key), {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contents: [{ parts }], generationConfig: GEN }),
+      });
+      const data = await r.json();
+      if (!r.ok) throw Object.assign(new Error((data.error && data.error.message) || ('HTTP ' + r.status)), { status: r.status });
+      const p = (data.candidates?.[0]?.content?.parts || []).find(x => x.inlineData);
+      if (!p) throw new Error('模型沒有回傳圖片');
+      log('出圖成功：' + model);
+      return 'data:' + p.inlineData.mimeType + ';base64,' + p.inlineData.data;
+    } catch (err) {
+      lastErr = err;
+      log('出圖失敗 ' + model + '：' + err.message);
+      if (!/404|400|not found|unsupported/i.test(err.message)) break;
+    }
+  }
+  throw lastErr;
+}
+
+const PROMPT = {
+  sprite: name => `Retro 16-bit pixel art sprite of a ${name}, standing side profile facing left, chunky visible pixels, limited palette, flat solid light cream background (#F7F1E0), no shadow, no text, centered with even margin, simple game sprite icon.`,
+  photo: name => `Photorealistic wildlife photograph of a ${name} perched on a natural branch, side profile, whole bird visible, sharp feather detail, soft blurred green bokeh background, professional bird photography, no text, no watermark.`,
+  icons: () => `A set of five flat minimal vector illustrations for a bird infographic, each on soft cream background, muted sage green and warm ochre palette, simple shapes, no text: (1) map of South and Southeast Asia, (2) urban park with tree and bench, (3) insects food icons, (4) nest with eggs in tree hollow, (5) musical notes beside a branch.`,
+};
+
+/* ---------- 9.5 編輯面板 ---------- */
+const EDIT = [
+  { k: 'name', label: '中文名', kind: 'bird' },
+  { k: 'en', label: '英文名', kind: 'bird' },
+  { k: 'sci', label: '學名', kind: 'bird' },
+  { k: 'orderZh', label: '目（中文）', kind: 'copy' },
+  { k: 'familyZh', label: '科（中文）', kind: 'copy' },
+  { k: 'length', label: '身長', kind: 'copy', ph: '19–21 cm' },
+  { k: 'weight', label: '體重', kind: 'copy', ph: '29–51 g' },
+  { k: 'rarity', label: '常見度 0–5（0＝待查）', kind: 'copy', num: true },
+  { k: 'iucn', label: 'IUCN', kind: 'copy', ph: '無危 LC' },
+  { k: 'intro_zh', label: '基本介紹', kind: 'copy', area: 3 },
+  { k: 'range', label: '分佈地區', kind: 'copy', area: 2 },
+  { k: 'habitat', label: '棲息環境', kind: 'copy', area: 2 },
+  { k: 'diet', label: '食物', kind: 'copy', area: 2 },
+  { k: 'look', label: '外形特徵（無相時使用）', kind: 'copy', area: 2 },
+  { k: 'breeding', label: '成長與繁殖', kind: 'copy', area: 3 },
+  { k: 'funFact', label: '有趣冷知識', kind: 'copy', area: 2 },
+  { k: 'etymology', label: '名稱由來', kind: 'copy', area: 2 },
+  { k: 'highlights', label: 'Top 5 特色（每行一條）', kind: 'copy', area: 4, list: true },
+  { k: 'tips', label: '觀察小貼士（每行一條）', kind: 'copy', area: 3, list: true },
+  { k: 'caution', label: '注意事項（每行一條）', kind: 'copy', area: 3, list: true },
+  { k: 'source', label: '來源（pageid／網址）', kind: 'copy' },
+  { k: 'facts_note', label: '主觀評分聲明', kind: 'copy', area: 2 },
+];
+
+function buildEditor() {
+  const id = el.num.value;
+  const b = birdOf(id), c = copyOf(id);
+  $('editId').textContent = id;
+  const host = $('editForm');
+  host.innerHTML = EDIT.map(f => {
+    const src = f.kind === 'bird' ? b : c;
+    let v = src[f.k];
+    if (Array.isArray(v)) v = v.map(x => (typeof x === 'string' ? x : x.text || '')).join('\n');
+    v = v == null ? '' : String(v);
+    const common = `data-k="${f.k}" data-kind="${f.kind}" data-list="${f.list ? 1 : 0}" data-num="${f.num ? 1 : 0}"`;
+    return `<div><label class="f">${esc(f.label)}</label>` +
+      (f.area
+        ? `<textarea ${common} rows="${f.area}" placeholder="${esc(f.ph || '')}">${esc(v)}</textarea>`
+        : `<input type="text" ${common} value="${esc(v)}" placeholder="${esc(f.ph || '')}">`) + '</div>';
+  }).join('') + `
+    <div><label class="f">生態價值評分（0–5，可留空）</label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+        ${SCORE_KEYS.map(k => `<label class="chk" style="gap:4px">${esc(k)}
+          <input type="number" step="0.5" min="0" max="5" style="width:4.5em;padding:4px 6px"
+            data-score="${esc(k)}" value="${c.scores && c.scores[k] != null ? c.scores[k] : ''}"></label>`).join('')}
+      </div></div>`;
+  host.querySelectorAll('[data-k]').forEach(inp => {
+    inp.addEventListener('input', () => applyEdit(inp));
+  });
+  host.querySelectorAll('[data-score]').forEach(inp => {
+    inp.addEventListener('input', () => applyScore(inp));
+  });
+  $('editor').style.display = 'block';
+}
+
+function ensure(id) {
+  if (!BIRDS[id]) BIRDS[id] = { name: '', en: '', sci: '', order: '', family: '',
+    orderZh: '', familyZh: '', code: '', copy: {} };
+  if (!BIRDS[id].copy) BIRDS[id].copy = {};
+  return BIRDS[id];
+}
+
+function applyEdit(inp) {
+  const id = el.num.value;
+  const rec = ensure(id);
+  const k = inp.dataset.k;
+  const raw = inp.value;
+  const isList = inp.dataset.list === '1';
+  const isNum = inp.dataset.num === '1';
+  const val = isList
+    ? raw.split('\n').map(x => x.trim()).filter(Boolean)
+    : raw.trim();
+  if (inp.dataset.kind === 'bird') rec[k] = isList ? val : val;
+  else if (isNum) rec.copy[k] = val === '' ? 0 : (Number.isFinite(Number(val)) ? Number(val) : 0);
+  else rec.copy[k] = isList ? val : (val || '');
+  render(id);
+}
+
+function applyScore(inp) {
+  const id = el.num.value;
+  const rec = ensure(id);
+  rec.copy.scores = rec.copy.scores || {};
+  const v = inp.value === '' ? null : Number(inp.value);
+  if (v == null) delete rec.copy.scores[inp.dataset.score];
+  else rec.copy.scores[inp.dataset.score] = v;
+  render(id);
+}
+
+$('btnEdit').addEventListener('click', buildEditor);
+$('btnCloseEdit').addEventListener('click', () => { $('editor').style.display = 'none'; });
+$('btnNew').addEventListener('click', () => {
+  const id = prompt('新卡編號（四位數字）', '0300');
+  if (!id) return;
+  const nid = String(id).replace(/\D/g, '').padStart(4, '0').slice(-4);
+  ensure(nid);
+  refreshJump();
+  show(nid);
+  buildEditor();
+});
+
+/* ---------- 10. 事件 ---------- */
+el.num.addEventListener('change', () => show(el.num.value));
+el.num.addEventListener('input', () => { if (el.num.value.length === 4) show(el.num.value); });
+el.prev.addEventListener('click', () => step(-1));
+el.next.addEventListener('click', () => step(1));
+function step(d) {
+  const ids = Object.keys(BIRDS).sort();
+  const i = ids.indexOf(el.num.value);
+  const n = ids[Math.max(0, Math.min(ids.length - 1, (i < 0 ? 0 : i) + d))];
+  if (n) show(n);
+}
+el.jump.addEventListener('change', () => show(el.jump.value));
+
+$('btnData').addEventListener('click', () => {
+  const id = el.num.value;
+  $('file').click();
+  log('提示：請選擇 cardCopy.json（或 build-studio-data.mjs 產生的 JSON）');
+  void id;
+});
+
+$('file').addEventListener('change', async ev => {
+  const f = ev.target.files && ev.target.files[0];
+  if (!f) return;
+  try {
+    const data = JSON.parse(await f.text());
+    loadData(data);
+    log('已載入 ' + f.name + '：' + Object.keys(BIRDS).length + ' 張卡');
+  } catch (e) { log('JSON 讀取失敗：' + e.message); }
+  ev.target.value = '';
+});
+
+function loadData(data) {
+  if (data && data.cards && data.tax) { BIRDS = data.cards; TAX = data.tax; }
+  else {
+    /* 直接吃 src/data/cardCopy.json 也行（只有文案，沒有名／分類） */
+    BIRDS = {};
+    for (const [k, v] of Object.entries(data || {})) if (/^\d{4}$/.test(k)) BIRDS[k] = { copy: v };
+  }
+  refreshJump();
+  const ids = Object.keys(BIRDS).sort();
+  show(ids.includes('0008') ? '0008' : (ids[0] || '0008'));
+}
+
+function refreshJump() {
+  const ids = Object.keys(BIRDS).sort();
+  el.jump.innerHTML = ids.length
+    ? ids.map(i => `<option value="${i}">NO.${i} ${esc(birdOf(i).name || '')}</option>`).join('')
+    : '<option value="">（尚未載入資料）</option>';
+}
+
+$('btnLoad').addEventListener('click', () => $('file').click());
+$('btnSave').addEventListener('click', () => {
+  /* 主檔：cardCopy.json 相容格式（可直接覆蓋 repo 內同名檔案） */
+  const copy = {};
+  for (const [id, rec] of Object.entries(BIRDS)) {
+    copy[id] = Object.assign({}, rec.copy);
+    if (rec.orderZh && !copy[id].orderZh) copy[id].orderZh = rec.orderZh;
+    if (rec.familyZh && !copy[id].familyZh) copy[id].familyZh = rec.familyZh;
+  }
+  const blob = new Blob([JSON.stringify(copy, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'cardCopy.json';
+  a.click();
+  log('已下載 cardCopy.json（' + Object.keys(copy).length + ' 張）—— 覆蓋 repo 前請先 commit');
+});
+$('btnPng').addEventListener('click', async () => {
+  $('btnPng').disabled = true;
+  try {
+    const canvas = await toPng();
+    await download(canvas, 'aviandex-' + el.num.value + '.png');
+    log('已輸出 aviandex-' + el.num.value + '.png');
+  } catch (e) { log('輸出失敗：' + e.message + ' —— 請用「PDF／列印」或截圖'); }
+  finally { $('btnPng').disabled = false; }
+});
+$('btnPdf').addEventListener('click', () => window.print());
+
+el.mode.addEventListener('change', () => {
+  el.keyRow.style.display = el.mode.value === 'key' ? 'block' : 'none';
+  checkApi();
+});
+$('saveKey').addEventListener('click', () => { LS.set('aviandex.key', el.key.value.trim()); checkApi(); log('已記住 key（只存在這個瀏覽器）'); });
+$('clearKey').addEventListener('click', () => { LS.set('aviandex.key', ''); el.key.value = ''; checkApi(); });
+
+function checkApi() {
+  const k = getKey();
+  el.apiBadge.textContent = k ? 'API：已就緒' : 'API：未設定（可照出卡）';
+  el.apiBadge.className = 'badge ' + (k ? 'ok' : 'warn');
+}
+
+$('btnSprite').addEventListener('click', () => gen('sprite'));
+$('btnPhoto').addEventListener('click', () => gen('photo'));
+$('btnIcons').addEventListener('click', async () => {
+  try {
+    const url = await callImage(PROMPT.icons());
+    A['icon:分佈地區'] = A['icon:棲息環境'] = A['icon:食物'] = A['icon:成長與繁殖'] = A['icon:有趣冷知識'] = url;
+    render(el.num.value);
+    log('小插圖已更新（整張圖共用；正式版應分開五張）');
+  } catch (e) { log('小插圖失敗：' + e.message); }
+});
+
+async function gen(kind) {
+  const id = el.num.value;
+  const b = birdOf(id);
+  const name = [b.name, b.en, b.sci].filter(Boolean).join(' / ') || id;
+  try {
+    log('生成 ' + kind + '：' + name);
+    const prompt = kind === 'sprite' ? PROMPT.sprite(name) : PROMPT.photo(name);
+    A[kind + ':' + id] = await callImage(prompt);
+    render(id);
+  } catch (e) { log('失敗：' + e.message); }
+}
+
+/* ---------- 11. 啟動 ---------- */
+function boot() {
+  if (window.AVIANDEX_STUDIO) loadData(window.AVIANDEX_STUDIO);
+  else if (window.AVIANDEX_CARDS) loadData({ cards: window.AVIANDEX_CARDS, tax: window.AVIANDEX_TAX || {} });
+  else {
+    /* 冇資料：仍然畫一張示範卡，讓你看版式 */
+    BIRDS = { '0008': { name: '鵲鴝', en: 'Oriental Magpie-Robin', sci: 'Copsychus saularis',
+      order: 'Passeriformes', family: 'Muscicapidae', orderZh: '雀形目', familyZh: '鶲科',
+      code: 'magrob', copy: {} } };
+    TAX = {};
+    refreshJump();
+    show('0008');
+    log('未載入資料：現時顯示空白版式。按「載入 JSON」選擇 cardCopy.json 或 studio-data.json。');
+  }
+  el.key.value = LS.get('aviandex.key') || '';
+  checkApi();
+  fitStage();
+}
+boot();
+})();
+</script>
+</body>
+</html>
