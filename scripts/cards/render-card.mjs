@@ -9,10 +9,11 @@
  *    3) 把「插畫 → 卡面 → AVIF」一次過做完，減少手動步驟
  *
  *  用法：
- *    npm run cards:render -- 0289
- *    npm run cards:render -- --all
- *    npm run cards:render -- 0289 --preview     # 只出 PNG
- *    npm run cards:render -- 0289 --quality 55  # AVIF 品質（細啲）
+ *    npm run cards:render -- 0289                 # 資訊圖卡（詳細版）→ cards/out/info/
+ *    npm run cards:render -- 0289 --kind bird     # 簡單鳥卡        → cards/out/
+ *    npm run cards:render -- --all                # cards/art/ 內全部
+ *    npm run cards:render -- 0289 --preview       # 只出 PNG
+ *    npm run cards:render -- 0289 --quality 55    # AVIF 品質（細啲）
  *
  *  前置（本機第一次用）：
  *    pip3 install pillow numpy

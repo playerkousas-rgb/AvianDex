@@ -16,14 +16,23 @@
    src/data/cardCopy.json         卡面文案（每項都要有 source，否則顯示「資料待查」）
    cards/art/<ID>.png             AI 插畫（已去背／米色底）
 
- 用法：
-   python3 scripts/cards/render-card.py 0290
-   python3 scripts/cards/render-card.py --all
-   python3 scripts/cards/render-card.py 0290 --preview    # 只出 PNG 預覽，唔出 AVIF
+ 兩種卡（唔好搞亂，各自放唔同 R2 路徑）：
 
- 輸出：
-   cards/out/<ID>.avif     ← 上傳到 R2 的成品（AVIF，體積最細）
-   cards/out/<ID>.png      ← 預覽圖（同名 PNG，方便肉眼核對）
+   ┌ 鳥卡 bird card ────────────────────────────────┐
+   │ 簡單：插畫 + 編號 + 中文名 + 英文名（冇數據格） │
+   │ → R2：aviandex/<ID>.avif                       │
+   │ → python3 scripts/cards/render-card.py 0290 --kind bird
+   └────────────────────────────────────────────────┘
+   ┌ 資訊圖卡 infographic ──────────────────────────┐
+   │ 詳細：分類、食性、分佈、外形、棲地、保育狀況    │
+   │ → R2：aviandex/info/<ID>.avif                  │
+   │ → python3 scripts/cards/render-card.py 0290 --kind info
+   └────────────────────────────────────────────────┘
+
+ ⚠️ 兩者唔可以互相覆蓋：
+   鳥卡      → aviandex/<ID>.avif        （圖鑑格仔，簡單）
+   資訊圖卡  → aviandex/info/<ID>.avif   （點開後的詳細頁，重設計那張）
+ 預設 --kind = info（本次重新設計的對象）
 ================================================================
 """
 
@@ -38,7 +47,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageOps
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(ROOT, "src", "data")
 ART_DIR = os.path.join(ROOT, "cards", "art")
-OUT_DIR = os.path.join(ROOT, "cards", "out")
+OUT_ROOT = os.path.join(ROOT, "cards", "out")
 def _font_dir():
     """找中文字型：環境變數 > ~/.fonts > /usr/share/fonts（不要寫死沙盒路徑）。"""
     candidates = [
@@ -216,7 +225,43 @@ def pick(copy, key):
 
 
 # ---------------------------------------------------------------- 繪製
-def render(f):
+def render_bird(f):
+    """鳥卡：只有插畫 + 編號 + 名稱。冇數據格、冇特徵標註，一眼睇得清。"""
+    w, h = 900 * SS, 1200 * SS
+    img = Image.new("RGB", (w, h), CREAM)
+    d = ImageDraw.Draw(img)
+
+    # 米色卡底 + 金色細框（圖鑑收藏卡感）
+    rounded(d, [18 * SS, 18 * SS, w - 18 * SS, h - 18 * SS], 30 * SS,
+            fill=CREAM, outline=GOLD_LINE, width=3 * SS)
+
+    # 插畫：食滿上半部
+    art_path = os.path.join(ART_DIR, f"{f['id']}.png")
+    top_pad = 60 * SS
+    art_bottom = h - 250 * SS
+    if os.path.exists(art_path):
+        pic = card_art(art_path, (w - 120 * SS), art_bottom - top_pad)
+        img.paste(pic, (int((w - pic.width) / 2), int(top_pad + (art_bottom - top_pad - pic.height) / 2)))
+    else:
+        d.text((w / 2, (top_pad + art_bottom) / 2), "（未提供插畫）",
+               font=font(FONT_BOLD, 34 * SS), fill=(160, 140, 96), anchor="mm")
+
+    # 編號（左上）
+    d.text((56 * SS, 46 * SS), f"NO.{f['id']}", font=font(FONT_BLACK, 30 * SS), fill=(120, 92, 20))
+    # 分類小字（右上，只寫科）
+    if f["family"]:
+        d.text((w - 56 * SS, 48 * SS), f["family"], font=font(FONT_BOLD, 22 * SS),
+               fill=(150, 126, 70), anchor="ra")
+
+    # 底部：中文名 + 英文名
+    d.text((w / 2, h - 190 * SS), f["zh"], font=font(FONT_BLACK, 74 * SS), fill=(22, 40, 32), anchor="mm")
+    if f["sci"]:
+        d.text((w / 2, h - 122 * SS), f["sci"], font=font(FONT_REG, 28 * SS), fill=(96, 110, 92), anchor="mm")
+    d.text((w / 2, h - 72 * SS), f["en"], font=font(FONT_BOLD, 27 * SS), fill=(150, 108, 18), anchor="mm")
+    return img.resize((900, 1200), Image.LANCZOS)
+
+
+def render_info(f):
     w, h = W * SS, H * SS
     img = Image.new("RGB", (w, h), INK)
     d = ImageDraw.Draw(img)
@@ -452,11 +497,14 @@ def main():
     ap = argparse.ArgumentParser(description="AvianDex 圖卡排版（文字由字型渲染，非 AI 生成）")
     ap.add_argument("ids", nargs="*", help="卡片編號，例如 0290")
     ap.add_argument("--all", action="store_true", help="處理 cards/art/ 內所有插畫")
+    ap.add_argument("--kind", choices=["bird", "info"], default="info",
+                    help="bird=簡單鳥卡（R2 aviandex/）；info=詳細資訊圖卡（R2 aviandex/info/）")
     ap.add_argument("--preview", action="store_true", help="只出 PNG")
     ap.add_argument("--quality", type=int, default=58, help="AVIF 品質（預設 58，約 100–200 KB）")
     args = ap.parse_args()
 
-    os.makedirs(OUT_DIR, exist_ok=True)
+    out_dir = os.path.join(OUT_ROOT, "info") if args.kind == "info" else OUT_ROOT
+    os.makedirs(out_dir, exist_ok=True)
     ids = list(args.ids)
     if args.all:
         ids = sorted(p[:-4] for p in os.listdir(ART_DIR) if p.endswith(".png"))
@@ -468,14 +516,14 @@ def main():
             continue
         bird_id = bird_id.zfill(4)
         f = build_facts(bird_id)
-        img = render(f)
-        png_path = os.path.join(OUT_DIR, f"{bird_id}.png")
+        img = render_info(f) if args.kind == "info" else render_bird(f)
+        png_path = os.path.join(out_dir, f"{bird_id}.png")
         img.save(png_path, optimize=True)
         if args.preview:
             print(f"🖼  {bird_id} {f['zh']} → {os.path.relpath(png_path, ROOT)}")
             continue
 
-        avif_path = os.path.join(OUT_DIR, f"{bird_id}.avif")
+        avif_path = os.path.join(out_dir, f"{bird_id}.avif")
         # 用 ImageMagick 寫 AVIF（libheif 1.15，支援 AV1）；比 Pillow plugin 穩定
         subprocess.run(
             ["convert", png_path, "-quality", str(args.quality), "-define", "heic:speed=6", avif_path],
@@ -483,7 +531,7 @@ def main():
         )
         png_kb = os.path.getsize(png_path) / 1024
         avif_kb = os.path.getsize(avif_path) / 1024
-        print(f"✅ {bird_id} {f['zh']} / {f['en']}")
+        print(f"✅ [{args.kind}] {bird_id} {f['zh']} / {f['en']}")
         print(f"   PNG {png_kb:.0f} KB → AVIF {avif_kb:.0f} KB（省 {100 - avif_kb / png_kb * 100:.0f}%）")
         print(f"   {os.path.relpath(avif_path, ROOT)}")
 
