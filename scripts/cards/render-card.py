@@ -132,9 +132,10 @@ def wrap(draw, txt, f, max_w):
             cur = ""
             continue
         trial = cur + ch
+        # 英文長字（Copsy chus）優先斷在空格，中英文混排才不會切開拉丁詞
         if draw.textlength(trial, font=f) > max_w and cur:
             cut = cur.rfind(" ")
-            if cut > len(cur) * 0.5:
+            if cut > 0 and (len(cur) - cut) <= 12:
                 lines.append(cur[:cut])
                 cur = cur[cut + 1:] + ch
             else:
@@ -712,8 +713,9 @@ def main():
     ap = argparse.ArgumentParser(description="AvianDex 圖卡排版（文字由字型渲染，非 AI 生成）")
     ap.add_argument("ids", nargs="*", help="卡片編號，例如 0290")
     ap.add_argument("--all", action="store_true", help="處理 cards/art/ 內所有插畫")
-    ap.add_argument("--layout", choices=["pokedex", "grid"], default="pokedex",
-                    help="info 卡版式：pokedex=圖鑑機造型（預設）；grid=格仔卡片")
+    ap.add_argument("--layout", choices=["dexcard", "pokedex", "grid"], default="dexcard",
+                    help="info 卡版式：dexcard=滿版資料卡（預設，依 2026-11 成品規格）；"
+                         "pokedex/grid=舊版式（保留但不再使用）")
     ap.add_argument("--kind", choices=["bird", "info"], default="info",
                     help="bird=簡單鳥卡（R2 aviandex/）；info=詳細資訊圖卡（R2 aviandex/info/）")
     ap.add_argument("--preview", action="store_true", help="只出 PNG")
@@ -759,7 +761,8 @@ def main():
         bird_id = bird_id.zfill(4)
         f = build_facts(bird_id)
         if args.kind == "info":
-            img = render_info(f) if args.layout == "grid" else render_pokedex(f)
+            img = {"dexcard": render_dexcard, "grid": render_info,
+                   "pokedex": render_pokedex}[args.layout](f)
         else:
             img = render_bird(f)
         png_path = os.path.join(out_dir, f"{bird_id}.png")
@@ -779,6 +782,454 @@ def main():
         print(f"✅ [{args.kind}] {bird_id} {f['zh']} / {f['en']}")
         print(f"   PNG {png_kb:.0f} KB → AVIF {avif_kb:.0f} KB（省 {100 - avif_kb / png_kb * 100:.0f}%）")
         print(f"   {os.path.relpath(avif_path, ROOT)}")
+
+
+
+# ================================================================
+#  圖鑑資料卡（滿版資訊圖卡）—— 依 2026-11-04 用戶提供的成品規格
+# ----------------------------------------------------------------
+#  版面（由上而下）：
+#    1. 標題列：圖鑑 logo + NO.NNNN + 大中文名 + 學名 + 英文名藥丸
+#       + 右上目/科 + 身長/體重 + 常見度（5 燈）
+#    2. 主圖：像素小圖（左）+ 真雀相（中）+ 圓形特寫標註（右，最多 5 個）
+#    3. 四欄：分佈地區 / 棲息環境 / 食物 / Top 5 特色亮點
+#    4. 四欄：成長與繁殖 / 觀察小貼士 / 有趣冷知識 / 注意事項
+#    5. 生態價值評分卡（5 項 × 5 星）+ 綜合評分
+#    6. 底部：NO + 名稱 + 版本 + 條碼
+#  所有文字由字型渲染；AI 只提供像素圖與真雀相底圖。
+# ================================================================
+GREEN = (28, 106, 78)
+GREEN_D = (20, 84, 61)
+GREEN_L = (46, 130, 100)
+PAGE = (248, 250, 245)
+INK2 = (30, 42, 36)
+SUB = (92, 112, 102)
+LINE = (206, 220, 211)
+
+
+def _art(name, size):
+    """由 cards/art/ 讀圖，按目標長寬比置中裁切再縮放（缺檔回 None）。"""
+    if not name:
+        return None
+    path = os.path.join(ART_DIR, name)
+    if not os.path.exists(path):
+        return None
+    im = Image.open(path).convert("RGB")
+    tw, th = int(size[0]), int(size[1])
+    ratio = max(tw / im.width, th / im.height)
+    im = im.resize((max(1, int(im.width * ratio + 0.5)), max(1, int(im.height * ratio + 0.5))),
+                   Image.LANCZOS)
+    left = (im.width - tw) // 2
+    top = (im.height - th) // 2
+    return im.crop((left, top, left + tw, top + th))
+
+
+def radius_mask(size, r):
+    m = Image.new("L", size, 0)
+    ImageDraw.Draw(m).rounded_rectangle([0, 0, size[0] - 1, size[1] - 1], r, fill=255)
+    return m
+
+
+def circle_thumb(src, d, fx=0.5, fy=0.42, zoom=0.62):
+    """把真雀相某個部位裁成圓形小圖（標註用）。
+    fx／fy = 對焦點（0–1，相對整張相）；zoom = 裁切邊長佔短邊比例。"""
+    side = max(24, int(min(src.width, src.height) * float(zoom)))
+    cx, cy = int(src.width * float(fx)), int(src.height * float(fy))
+    box = (max(0, cx - side // 2), max(0, cy - side // 2),
+           min(src.width, cx + side // 2), min(src.height, cy + side // 2))
+    im = src.crop(box).resize((d, d), Image.LANCZOS)
+    m = Image.new("L", (d, d), 0)
+    ImageDraw.Draw(m).ellipse([0, 0, d - 1, d - 1], fill=255)
+    out = Image.new("RGB", (d, d), (255, 255, 255))
+    out.paste(im, (0, 0), m)
+    return out
+
+
+def section_head(d, x, y, title, icon, w=None):
+    """小節標題：淺綠圓底字符 + 綠色粗體標題（icon 只用中文字／基本符號，
+    避免 Noto Sans TC 缺字變成方框）。"""
+    d.ellipse([x, y, x + 26 * SS, y + 26 * SS], fill=(226, 240, 231))
+    d.text((x + 13 * SS, y + 13 * SS), icon, font=font(FONT_BOLD, 15 * SS),
+           fill=GREEN, anchor="mm")
+    d.text((x + 36 * SS, y + 13 * SS), title, font=font(FONT_BLACK, 21 * SS), fill=GREEN_D, anchor="lm")
+
+
+def para(d, x, y, text, w, f, fill=INK2, lh=1.62, max_lines=None):
+    """段落：回傳用完的高度。"""
+    lines = wrap(d, text, f, w)
+    if max_lines:
+        lines = lines[:max_lines]
+    for ln in lines:
+        d.text((x, y), ln, font=f, fill=fill, anchor="la")
+        y += f.size * lh
+    return y
+
+
+def stars(d, canvas, x, y, score, size=17, gap=3):
+    """5 星評分（支援半星）。"""
+    for i in range(5):
+        cx = x + i * (size + gap) * SS
+        box = [cx, y, cx + size * SS, y + size * SS]
+        pts = []
+        import math
+        for k in range(10):
+            ang = -math.pi / 2 + k * math.pi / 5
+            rr = (size * SS / 2) if k % 2 == 0 else (size * SS / 4.6)
+            pts.append((cx + size * SS / 2 + rr * math.cos(ang), y + size * SS / 2 + rr * math.sin(ang)))
+        filled = score >= i + 0.75
+        half = (not filled) and score >= i + 0.25
+        if filled:
+            d.polygon(pts, fill=(240, 170, 40))
+        elif half:
+            d.polygon(pts, fill=(228, 232, 226))
+            half_w = int(size * SS / 2)
+            mask = Image.new("L", (size * SS + 2, size * SS + 2), 0)
+            ImageDraw.Draw(mask).rectangle([0, 0, half_w, size * SS + 2], fill=255)
+            lay = Image.new("RGB", (size * SS + 2, size * SS + 2), PAGE)
+            ImageDraw.Draw(lay).polygon([(p[0] - cx, p[1] - y) for p in pts], fill=(240, 170, 40))
+            canvas.paste(lay, (int(cx), int(y)), mask)
+        else:
+            d.polygon(pts, fill=(228, 232, 226), outline=(206, 214, 206))
+
+
+def render_dexcard(f):
+    """滿版資訊圖卡（1200×1600）。"""
+    c = f["copy"]
+    Wc, Hc = 1200, 1600
+    S = 2
+    img = Image.new("RGB", (Wc * S, Hc * S), PAGE)
+    d = ImageDraw.Draw(img)
+    M = 22 * S
+
+    def F(kind, sz):
+        return font({"b": FONT_BLACK, "bold": FONT_BOLD, "r": FONT_REG}[kind], sz * S)
+
+    # ── 1. 標題列 ────────────────────────────────────────────
+    head_h = 196 * S
+    d.rounded_rectangle([M, M, Wc * S - M, M + head_h], 22 * S, fill=(255, 255, 255),
+                        outline=GREEN_L, width=2 * S)
+
+    # 1a. logo + 編號
+    d.rounded_rectangle([M + 16 * S, M + 16 * S, M + 16 * S + 40 * S, M + 16 * S + 40 * S],
+                        20 * S, fill=GREEN_D)
+    d.ellipse([M + 26 * S, M + 26 * S, M + 46 * S, M + 46 * S], fill=(255, 255, 255))
+    d.text((M + 70 * S, M + 36 * S), f"NO.{f['id']}", font=F("b", 34), fill=(240, 200, 40), anchor="lm")
+
+    # 1b. 大中文名 + 學名 + 英文藥丸
+    d.text((M + 300 * S, M + 18 * S), f["zh"], font=F("b", 62), fill=INK2, anchor="la")
+    d.text((M + 300 * S, M + 104 * S), f["sci"], font=F("r", 23), fill=(70, 84, 76), anchor="la")
+    pill_x = M + 300 * S + max(190 * S, int(d.textlength(f["sci"], font=F("r", 23))) + 24 * S)
+    pill_max = Wc * S - M - 320 * S - pill_x          # 右邊留位畀目／科
+    pf = F("bold", 19)
+    tw = d.textlength(f["en"], font=pf) + 30 * S
+    while tw > pill_max and pf.size > 20:
+        pf = font(FONT_BOLD, pf.size - 1)
+        tw = d.textlength(f["en"], font=pf) + 26 * S
+    tw = min(tw, pill_max)
+    d.rounded_rectangle([pill_x, M + 100 * S, pill_x + tw, M + 134 * S], 17 * S, fill=GREEN)
+    d.text((pill_x + tw / 2, M + 117 * S), f["en"], font=pf, fill=(255, 255, 255), anchor="mm")
+
+    # 1c. 右上：目／科
+    rx = Wc * S - M - 16 * S
+    d.text((rx, M + 26 * S), f"{f['orderZh']} {f['order']}", font=F("bold", 19), fill=(60, 76, 68), anchor="ra")
+    d.text((rx, M + 52 * S), f"{f['familyZh']} {f['family']}", font=F("bold", 19), fill=(60, 76, 68), anchor="ra")
+
+    # 1d. 身長／體重／常見度
+    bx1, bx2 = Wc * S - M - 300 * S, Wc * S - M - 16 * S
+    d.text((bx1, M + 92 * S), "身長", font=F("bold", 18), fill=SUB, anchor="la")
+    d.text((bx2, M + 92 * S), c.get("length") or PENDING, font=F("bold", 19), fill=INK2, anchor="ra")
+    d.text((bx1, M + 122 * S), "體重", font=F("bold", 18), fill=SUB, anchor="la")
+    d.text((bx2, M + 122 * S), c.get("weight") or PENDING, font=F("bold", 19), fill=INK2, anchor="ra")
+    d.text((bx1, M + 154 * S), "常見度", font=F("bold", 18), fill=SUB, anchor="la")
+    rarity = int(c.get("rarity") or 0)
+    if rarity:
+        for i in range(5):
+            cx = bx2 - (4 - i) * 26 * S - 12 * S
+            d.ellipse([cx - 9 * S, M + 156 * S, cx + 9 * S, M + 174 * S],
+                      fill=GREEN if i < rarity else (226, 232, 226), outline=GREEN_L, width=1 * S)
+    else:
+        d.text((bx2, M + 156 * S), PENDING, font=F("r", 16), fill=SUB, anchor="ra")
+
+    # 2. 名稱分隔列（對齊參考卡的主名字距離）
+    y = M + head_h + 14 * S
+    d.rounded_rectangle([M, y, Wc * S - M, y + 26 * S], 8 * S, fill=(236, 244, 238))
+
+    # ── 3. 主圖列：像素圖 | 真雀相 | 圓形標註 ─────────────────
+    y = M + head_h + 52 * S
+    row_h = 434 * S
+    sprite_w = 210 * S
+    call_w = 330 * S
+    photo_w = Wc * S - 2 * M - sprite_w - call_w - 24 * S
+
+    # 3a. 像素圖框
+    d.rounded_rectangle([M, y, M + sprite_w, y + row_h], 18 * S, fill=(255, 255, 255),
+                        outline=LINE, width=2 * S)
+    sp = _art(c.get("sprite"), (int(sprite_w - 26 * S), int(sprite_w - 26 * S)))
+    if sp:
+        img.paste(sp, (int(M + 13 * S), int(y + 18 * S)))
+    else:
+        d.rounded_rectangle([M + 13 * S, y + 18 * S, M + 13 * S + (sprite_w - 26 * S),
+                             y + 18 * S + (sprite_w - 26 * S)], 10 * S, fill=(243, 246, 242))
+        d.text((M + sprite_w / 2, y + 18 * S + (sprite_w - 26 * S) / 2), "未提供像素圖",
+               font=F("r", 14), fill=SUB, anchor="mm")
+    # 像素圖下面：IUCN 徽章 + 別名（皆為有來源資料）
+    badge_y = y + 18 * S + (sprite_w - 26 * S)
+    iucn = (c.get("iucn") or "").strip()
+    if iucn:
+        d.rounded_rectangle([M + 13 * S, badge_y, M + 13 * S + 96 * S, badge_y + 24 * S],
+                            12 * S, fill=(232, 244, 236), outline=GREEN_L, width=1 * S)
+        d.text((M + 61 * S, badge_y + 12 * S), f"IUCN {iucn}", font=F("bold", 12), fill=GREEN_D, anchor="mm")
+    aliases = c.get("aliases") or []
+    if aliases:
+        ay = badge_y + 32 * S
+        d.text((M + 13 * S, ay), "別名", font=F("bold", 12), fill=SUB, anchor="la")
+        ax, ayy = M + 13 * S, ay + 18 * S
+        for al in aliases:
+            tw = d.textlength(al, font=F("r", 12)) + 14 * S
+            if ax + tw > M + sprite_w - 12 * S:
+                ax = M + 13 * S
+                ayy += 22 * S
+            d.rounded_rectangle([ax, ayy, ax + tw, ayy + 19 * S], 9 * S, fill=(238, 243, 238))
+            d.text((ax + tw / 2, ayy + 9 * S), al, font=F("r", 12), fill=(70, 92, 80), anchor="mm")
+            ax += tw + 5 * S
+
+    # 3b. 真雀相
+    px1 = M + sprite_w + 12 * S
+    px2 = px1 + photo_w
+    has_photo = bool(c.get("photo")) and os.path.exists(os.path.join(ART_DIR, c["photo"]))
+    ph = _art(c.get("photo"), (int(photo_w), int(row_h)))
+    if ph:
+        img.paste(ph, (int(px1), int(y)), radius_mask((int(photo_w), int(row_h)), 18 * S))
+        d.rounded_rectangle([px1, y, px2, y + row_h], 18 * S, outline=(255, 255, 255), width=3 * S)
+    else:
+        d.rounded_rectangle([px1, y, px2, y + row_h], 18 * S, fill=(232, 238, 233))
+        d.text(((px1 + px2) / 2, y + row_h / 2), "（未提供真雀相）", font=F("r", 20), fill=SUB, anchor="mm")
+
+    if not has_photo:
+        # 冇相時右邊改為顯示「資料待查」清單，唔好留白
+        d.rounded_rectangle([px2 + 12 * S, y, Wc * S - M, y + row_h], 18 * S,
+                            fill=(255, 255, 255), outline=LINE, width=2 * S)
+        section_head(d, px2 + 24 * S, y + 12 * S, "外形特徵", "形")
+        para(d, px2 + 24 * S, y + 52 * S, c.get("look") or PENDING,
+             Wc * S - M - px2 - 48 * S, F("r", 15), INK2, 1.6)
+
+    # 3c. 圓形特寫標註
+    cx1 = px2 + 12 * S
+    calls = ([m for m in (c.get("callouts") or [])][:5]) if has_photo else []
+    if calls:
+        # 先量「名稱由來」需要幾高，再用剩餘空間排 5 個圓形標註
+        ety_txt = c.get("etymology") or PENDING
+        ety_w = Wc * S - M - cx1 - 24 * S
+        ety_lines = wrap(d, ety_txt, F("r", 13), ety_w)
+        ety_h = 44 * S + len(ety_lines) * 13 * S * 1.5 + 12 * S
+        calls_h = row_h - ety_h - 10 * S
+
+        d.rounded_rectangle([cx1, y, Wc * S - M, y + calls_h], 18 * S, fill=(255, 255, 255),
+                            outline=LINE, width=2 * S)
+        n = len(calls)
+        gap = (calls_h - 20 * S) / max(n, 1)
+        thumb_d = int(min(60 * S, gap - 8 * S))
+        src_im = Image.open(os.path.join(ART_DIR, c["photo"])).convert("RGB") if has_photo else None
+        for i, m in enumerate(calls):
+            cy = int(y + 10 * S + gap * i + max(0.0, (gap - thumb_d) / 2 - 6 * S))
+            th = circle_thumb(src_im, thumb_d, m.get("fx", 0.5), m.get("fy", 0.42),
+                              m.get("zoom", 0.62)) if src_im else None
+            if th:
+                img.paste(th, (int(cx1 + 12 * S), cy))
+                for w_, col in ((3, (255, 255, 255)), (1, GREEN_L)):
+                    d.ellipse([cx1 + 12 * S, cy, cx1 + 12 * S + thumb_d, cy + thumb_d],
+                              outline=col, width=w_ * S)
+                d.line([cx1 + 12 * S + thumb_d, cy + thumb_d / 2,
+                        cx1 + 12 * S + thumb_d + 8 * S, cy + thumb_d / 2],
+                       fill=GREEN_L, width=2 * S)
+            tx = cx1 + 12 * S + thumb_d + 14 * S
+            d.text((tx, cy + 2 * S), m.get("label", ""), font=F("bold", 15), fill=SUB, anchor="la")
+            para(d, tx, cy + 20 * S, m.get("text", ""), Wc * S - M - tx - 8 * S, F("r", 15),
+                 INK2, 1.4, 2)
+
+        # 名稱由來（有來源）
+        ey = y + calls_h + 10 * S
+        d.rounded_rectangle([cx1, ey, Wc * S - M, y + row_h], 18 * S, fill=(243, 248, 243),
+                            outline=LINE, width=2 * S)
+        section_head(d, cx1 + 12 * S, ey + 8 * S, "名稱由來", "名")
+        para(d, cx1 + 12 * S, ey + 44 * S, ety_txt, ety_w, F("r", 13), INK2, 1.5)
+    elif has_photo:
+        pass
+
+    # ── 4. 版面量度：先算文字需要幾高，再決定行高／字級 ────────
+    Mpt = 22.0
+    left_w = 300.0
+    gap = 12.0
+    grid_x = Mpt + left_w + gap            # 112 + ...
+    grid_w = Wc - Mpt - grid_x
+    col_w = (grid_w - 3 * 10.0) / 4
+    top_px = M + head_h + 52 * S + row_h + 14 * S     # 四欄起始（px，含超取樣）
+    foot_px = Hc * S - M - 34 * S                     # 底欄上緣
+    budget = (foot_px - 40 * S - 10 * S - 140 * S - 10 * S - top_px) / S
+    print(f"   四欄可用高度 {budget:.0f}pt")
+
+    intro_txt = c.get("intro_zh") or PENDING
+    tax_rows = [("界", "動物界 Animalia"), ("門", "脊索動物門 Chordata"), ("綱", "鳥綱 Aves"),
+                ("目", f"{f['orderZh']} {f['order']}"), ("科", f"{f['familyZh']} {f['family']}"),
+                ("屬", (f["sci"].split()[0] if f["sci"] else PENDING)),
+                ("種", f["sci"] or PENDING),
+                ("IUCN", c.get("iucn") or PENDING),
+                ("eBird", f["code"] or PENDING)]
+
+    ROW1 = [("分佈地區", "分", "p", c.get("range")),
+            ("棲息環境", "居", "p", c.get("habitat")),
+            ("食物", "食", "p", c.get("diet")),
+            ("Top 5 特色亮點", "五", "l", c.get("highlights"))]
+    ROW2 = [("成長與繁殖", "育", "p", c.get("breeding")),
+            ("觀察小貼士", "貼", "l", c.get("tips")),
+            ("有趣冷知識", "知", "p", c.get("funFact")),
+            ("注意事項", "注", "l", c.get("caution"))]
+
+    ICONS = {"分佈地區": "icons/range-asia.png", "棲息環境": "icons/habitat-park.png",
+             "食物": "icons/food-insects.png", "成長與繁殖": "icons/nest-eggs.png",
+             "有趣冷知識": "icons/song-notes.png"}
+    ART_H = 54.0        # 欄底橫幅插圖高度（pt）
+    ART_GAP = 8.0
+
+    def need(spec, size, scale=1.0):
+        """量度一格文字需要的高度（pt）。"""
+        title, icon, kind, payload = spec
+        fnt = F("r", size * scale)
+        inner = (col_w - (48 if kind == "l" else 24)) * S
+        h = 46 * scale
+        if kind == "l":
+            for it in (payload or [PENDING]):
+                lines = wrap(d, it, fnt, inner)
+                h += len(lines) * fnt.size * 1.5 / S + 3
+        else:
+            lines = wrap(d, payload or PENDING, fnt, inner)
+            h += len(lines) * fnt.size * 1.58 / S + 2
+        if title in ICONS:
+            h += ART_H + ART_GAP
+        return h
+
+    def row_need(row, size):
+        return max(need(sp, size) for sp in row)
+
+    size = 15.0
+    while size > 11.0:
+        n1, n2 = row_need(ROW1, size), row_need(ROW2, size)
+        if n1 + n2 + 10 <= budget:
+            break
+        size -= 0.5
+    n1, n2 = row_need(ROW1, size), row_need(ROW2, size)
+    extra = max(0.0, budget - (n1 + n2 + 10))
+    r1_h = n1 + extra * 0.42
+    r2_h = n2 + extra * 0.58
+    print(f"   字級 {size}pt｜第一行 {n1:.0f}pt／第二行 {n2:.0f}pt／預算 {budget:.0f}pt｜"
+          f"top_y={top_px / S:.0f} r1={r1_h:.0f} r2={r2_h:.0f} col_w={col_w:.0f}")
+
+    def box(spec, i, y0, h, y_pt_scale=1.0):
+        title, icon, kind, payload = spec
+        bx = (grid_x + i * (col_w + 10.0)) * S
+        bw = col_w * S
+        d.rounded_rectangle([bx, y0, bx + bw, y0 + h * S], 16 * S, fill=(255, 255, 255),
+                            outline=LINE, width=2 * S)
+        section_head(d, bx + 12 * S, y0 + 10 * S, title, icon)
+        fnt = F("r", size)
+        by = y0 + 46 * S + 2 * S
+        if kind == "l":
+            for n, it in enumerate(payload or [PENDING], 1):
+                d.ellipse([bx + 12 * S, by + 3 * S, bx + 30 * S, by + 21 * S], fill=GREEN)
+                d.text((bx + 21 * S, by + 12 * S), str(n), font=F("bold", 13), fill=(255, 255, 255), anchor="mm")
+                by = para(d, bx + 36 * S, by, it, bw - 48 * S, fnt, INK2, 1.5) + 3 * S
+        else:
+            para(d, bx + 12 * S, by, payload or PENDING, bw - 24 * S, fnt, INK2, 1.58)
+        art = ICONS.get(title)
+        if art:
+            aw = int(bw - 16 * S)
+            ah = int(ART_H * S)
+            il = _art(art, (aw, ah))
+            if il:
+                ay = int(y0 + h * S - ART_GAP * S - ah)
+                img.paste(il, (int(bx + 8 * S), ay), radius_mask((aw, ah), 8 * S))
+        return bx
+
+    # ── 5. 左欄：基本介紹 + 分類資訊（高度對齊右邊兩行）─────────
+    top_y = top_px
+    d.rounded_rectangle([M, top_y, M + left_w * S, top_y + r1_h * S], 18 * S,
+                        fill=(255, 255, 255), outline=LINE, width=2 * S)
+    d.rounded_rectangle([M, top_y, M + left_w * S, top_y + 34 * S], 18 * S, fill=GREEN)
+    d.text((M + 52 * S, top_y + 17 * S), "基本介紹", font=F("b", 20), fill=(255, 255, 255), anchor="lm")
+    d.ellipse([M + 12 * S, top_y + 6 * S, M + 40 * S, top_y + 34 * S], fill=(255, 255, 255))
+    para(d, M + 14 * S, top_y + 46 * S, intro_txt, (left_w - 28) * S, F("r", 17), INK2, 1.62)
+
+    y2 = top_y + r1_h * S + 10 * S
+    d.rounded_rectangle([M, y2, M + left_w * S, y2 + r2_h * S], 18 * S,
+                        fill=(255, 255, 255), outline=LINE, width=2 * S)
+    d.rounded_rectangle([M, y2, M + left_w * S, y2 + 34 * S], 18 * S, fill=GREEN)
+    d.text((M + 52 * S, y2 + 17 * S), "分類資訊", font=F("b", 20), fill=(255, 255, 255), anchor="lm")
+    d.ellipse([M + 12 * S, y2 + 6 * S, M + 40 * S, y2 + 34 * S], fill=(255, 255, 255))
+    step = min(30.0, max(21.0, (r2_h - 60) / len(tax_rows)))
+    ty = y2 + (44 + max(0.0, (r2_h - 52 - step * len(tax_rows)) / 2)) * S
+    for k, v in tax_rows:
+        d.text((M + 16 * S, ty), f"● {k}：", font=F("bold", 16), fill=GREEN_D, anchor="la")
+        d.text((M + 76 * S, ty), v, font=F("r", 16), fill=INK2, anchor="la")
+        ty += step * S
+
+    # ── 6. 兩排四欄 ─────────────────────────────────────────
+    for i, sp in enumerate(ROW1):
+        box(sp, i, top_y, r1_h)
+    y3 = top_y + r1_h * S + 10 * S
+    for i, sp in enumerate(ROW2):
+        box(sp, i, y3, r2_h)
+
+    # ── 7. 生態價值評分卡 ────────────────────────────────────
+    y4 = y3 + r2_h * S + 10 * S
+    score_h = 140 * S
+    right_w = 236 * S
+    d.rounded_rectangle([M, y4, Wc * S - M - right_w - 10 * S, y4 + score_h], 18 * S,
+                        fill=(255, 255, 255), outline=LINE, width=2 * S)
+    d.rounded_rectangle([M, y4, M + 190 * S, y4 + 34 * S], 18 * S, fill=GREEN)
+    d.text((M + 60 * S, y4 + 17 * S), "生態價值評分卡", font=F("b", 19), fill=(255, 255, 255), anchor="lm")
+    scores = c.get("scores") or {}
+    notes = c.get("score_notes") or {}
+    keys = list(scores.keys())[:5]
+    cell = (Wc * S - 2 * M - right_w - 10 * S - 28 * S) / max(len(keys), 1)
+    for i, k in enumerate(keys):
+        bx = M + 14 * S + i * cell
+        d.text((bx + cell / 2, y4 + 46 * S), notes.get(k, ""), font=F("r", 12), fill=SUB, anchor="ma")
+        d.text((bx + cell / 2, y4 + 70 * S), k, font=F("bold", 16), fill=GREEN_D, anchor="ma")
+        stars(d, img, bx + cell / 2 - 2.5 * 18 * S, y4 + 94 * S, float(scores[k]), 15)
+        d.text((bx + cell / 2, y4 + 124 * S), f"{scores[k]} / 5", font=F("bold", 14), fill=INK2, anchor="mm")
+
+    # 綜合評分
+    rx1 = Wc * S - M - right_w
+    avg = round(sum(float(v) for v in scores.values()) / len(scores), 1) if scores else 0
+    d.rounded_rectangle([rx1, y4, Wc * S - M, y4 + score_h], 18 * S, fill=GREEN, outline=GREEN_D, width=2 * S)
+    d.text((rx1 + right_w / 2, y4 + 22 * S), "綜合評分", font=F("b", 20), fill=(255, 255, 255), anchor="mm")
+    if scores:
+        d.text((rx1 + 96 * S, y4 + 78 * S), f"{avg}", font=F("b", 50), fill=(240, 200, 40), anchor="mm")
+        d.text((rx1 + 150 * S, y4 + 92 * S), "/ 5", font=F("bold", 18), fill=(220, 238, 230), anchor="lm")
+        stars(d, img, rx1 + 96 * S - 2.5 * 22 * S, y4 + 106 * S, avg, 19, 4)
+    else:
+        d.text((rx1 + right_w / 2, y4 + 86 * S), PENDING, font=F("b", 22), fill=(240, 200, 40), anchor="mm")
+
+    # ── 8. 底欄 ─────────────────────────────────────────────
+    y5 = Hc * S - M - 34 * S
+    d.rounded_rectangle([M, y5, Wc * S - M, Hc * S - M], 10 * S, fill=GREEN)
+    d.text((M + 16 * S, y5 + 17 * S), f"圖鑑編號  NO.{f['id']}", font=F("bold", 15), fill=(255, 255, 255), anchor="lm")
+    d.text((Wc * S / 2, y5 + 17 * S), f"名稱：{f['zh']}（{f['sci']}）", font=F("bold", 15),
+           fill=(255, 255, 255), anchor="mm")
+    d.text((Wc * S - M - 140 * S, y5 + 17 * S), "圖鑑版本：v1.8", font=F("r", 14), fill=(222, 238, 230), anchor="rm")
+    bx = Wc * S - M - 128 * S
+    seed = sum(ord(ch) for ch in f["id"] + f["code"])
+    for i in range(26):
+        bw = 1 + ((seed >> (i % 7)) + i * 5) % 3
+        d.rectangle([bx, y5 + 5 * S, bx + bw * S, y5 + 29 * S], fill=(255, 255, 255))
+        bx += (bw + 1.6) * S
+
+    # 註腳（來源／主觀評分說明）—— 印在底欄上方一行小字
+    note = c.get("facts_note") or ""
+    if note:
+        d.text((M + 2 * S, y5 - 16 * S), note, font=F("r", 11), fill=(146, 164, 154), anchor="ls")
+
+    return img.resize((Wc, Hc), Image.LANCZOS)
 
 
 if __name__ == "__main__":

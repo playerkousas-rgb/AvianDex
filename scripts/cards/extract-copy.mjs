@@ -162,7 +162,11 @@ const SECTION_MATCH = {
  * 卡面欄位長度上限 —— 必須與 tests/cardCopy.test.mjs 的 LIMITS 一致。
  * （之前分開寫死 60 字，結果寫入超長文字，被 test:copy 抓到。）
  */
-export const FIELD_LIMITS = { diet: 46, range: 46, look: 46, habitat: 46, funFact: 60 };
+export const FIELD_LIMITS = {
+  diet: 46, range: 46, habitat: 46, funFact: 60,
+  // 「外形」在滿版資料卡（dexcard）是整格段落，可以長過其他單句欄位
+  look: 74,
+};
 
 const RULES = {
   diet: {

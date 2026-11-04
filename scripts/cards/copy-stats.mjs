@@ -50,12 +50,27 @@ const full = rows.filter((r) => r.have === FIELDS.length);
 const partial = rows.filter((r) => r.have > 0 && r.have < FIELDS.length);
 const empty = rows.filter((r) => r.have === 0);
 
+// 資料卡（dexcard）需要的欄位：文字類要逐項計，評分類另計
+const DEX_TEXT = ['intro_zh', 'length', 'weight', 'range', 'habitat', 'diet',
+  'breeding', 'funFact'];
+const DEX_LIST = ['highlights', 'tips', 'caution', 'callouts'];
+
+const dexOf = (c) => {
+  const ok = (v) => (Array.isArray(v) ? v.length > 0 : String(v || '').trim().length > 0);
+  const textOk = DEX_TEXT.filter((f) => ok(c[f])).length;
+  const listOk = DEX_LIST.filter((f) => ok(c[f])).length;
+  const scoresOk = Object.keys(c.scores || {}).length === 5;
+  return { textOk, listOk, scoresOk, ready: textOk === DEX_TEXT.length && listOk === DEX_LIST.length };
+};
+
 // 缺欄原因統計（哪一欄最常缺）
 const missCount = {};
 for (const f of FIELDS) missCount[f] = rows.filter((r) => r.missing.includes(f)).length;
 
 // 冇 source 的卡（不合格，不應上卡）
 const noSource = rows.filter((r) => !r.source.trim());
+
+const dex = ids.map((id) => ({ id, ...dexOf(copy[id]) }));
 
 const stats = {
   totalSlots,
@@ -66,6 +81,8 @@ const stats = {
   empty: empty.length,
   noSource: noSource.map((r) => r.id),
   missingByField: missCount,
+  dexReady: dex.filter((d) => d.ready).length,
+  dexScores: dex.filter((d) => d.scoresOk).length,
   coveragePct: ids.length ? Math.round((full.length / ids.length) * 100) : 0,
   ofTaxonomyPct: withTax ? Math.round((full.length / withTax) * 100) : 0,
 };
@@ -80,6 +97,7 @@ if (wants('--json')) {
     `- 圖鑑槽位：**${totalSlots}**；已對上 eBird：**${withTax}**`,
     `- 有文案的卡：**${ids.length}**（完整 ${full.length}／部分 ${partial.length}／全空 ${empty.length}）`,
     `- 六欄全齊：**${full.length} / ${withTax}（${pct(full.length)}）**`,
+    `- 滿版資料卡（dexcard）可完整印出：**${stats.dexReady}**（5 項評分齊：${stats.dexScores}）`,
     `- 冇 source 的卡：**${noSource.length}**${noSource.length ? `（${noSource.map((r) => r.id).slice(0, 10).join(' ')}…）` : ''}`,
     '',
     '| 欄位 | 仍缺張數 |',
@@ -99,6 +117,10 @@ if (wants('--json')) {
   console.log('');
   console.log('欄位        仍缺');
   for (const f of FIELDS) console.log(`${f.padEnd(10)} ${String(missCount[f]).padStart(4)}`);
+  console.log(
+    `滿版資料卡可完整印出 ${stats.dexReady} 張（5 項評分齊 ${stats.dexScores} 張）｜` +
+      `評分與常見度屬編者主觀評分，非科學數據`,
+  );
   if (noSource.length) console.log(`\n⚠️ 冇 source：${noSource.map((r) => r.id).join(' ')}`);
   const worst = rows.filter((r) => r.have > 0 && r.have < FIELDS.length).slice(0, 12);
   if (worst.length) {
