@@ -98,6 +98,22 @@ python3 scripts/cards/render-card.py --from-image 圖.png --kind info   # 轉 AV
 
 ---
 
+## 5.5 備份（GitHub 帳戶有事時的保命方案）
+
+- `D:\GITBACKUP\AvianDex.git`（bare mirror）＝ **全部分支與歷史**，但**冇工作檔案**，唔可以喺入面 `npm install`。
+- 要工作就 `git clone <mirror>` 一個工作副本。
+- **git 備份拿不到插畫**（`cards/` 在 `.gitignore` 內，850 MB，只存在本機）。
+- 每日 `git fetch` 更新 mirror 就等於「整份 repo 補到最新」，只傳差異，不會觸發 GitHub 限制。
+- 腳本與完整說明：**[tools/backup/README.md](../tools/backup/README.md)**、
+  `tools/backup/backup-aviandex.bat`（每日 mirror＋每週 bundle＋每週素材 robocopy）。
+
+```bat
+tools\backup\backup-aviandex.bat            :: 跑備份
+tools\backup\backup-aviandex.bat restore    :: 睇還原步驟
+```
+
+---
+
 ## 6. 部署與瘦身
 
 - Vercel 每次部署會重新 build；`dist/ build/ out/` 不入 Git。
