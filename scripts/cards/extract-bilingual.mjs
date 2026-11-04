@@ -138,6 +138,92 @@ export function trimToLength(s, max) {
 const anyOf = (s, words) => words.some((w) => s.includes(w));
 
 /* ------------------------------------------------------------------
+ * 一b. infobox（taxobox / Speciesbox）→ 數字欄位
+ *     卡面右上角「身長／體重」同 IUCN 一直幾乎全空，因為舊抽取器只掃正文。
+ *     這裡直接讀模板參數（{{Speciesbox | status = LC | ...}}），比正文準。
+ * ------------------------------------------------------------------ */
+/** 取模板內某個參數的原始值（支援嵌套模板／連結，容許 `| key =` 前有空白） */
+export function templateParam(wt, key) {
+  const re = new RegExp(`\\|\\s*${key}\\s*=\\s*([^\\n]*)`, 'i');
+  const m = wt.match(re);
+  return m ? m[1].trim() : '';
+}
+
+/** 把 infobox 的長度寫法正規化："19-21 cm" / "19–21 cm" / "{{convert|19|cm}}" */
+export function parseLength(wt) {
+  const raw = templateParam(wt, 'length') || templateParam(wt, 'size');
+  // 只在「同一個 convert 模板」內找，避免跨到隔壁的模板
+  const conv = (wt.match(/\{\{\s*convert\s*\|[^{}]*\}\}/gi) || [])
+    .map((tpl) => {
+      /* 逐個參數拆開，比用 regex 猜分隔符可靠 */
+      const parts = tpl.replace(/^\{\{\s*convert\s*/i, '').replace(/\}\}$/, '').split('|').map((x) => x.trim());
+      const nums = parts.filter((x) => /^\d+(?:\.\d+)?$/.test(x));
+      const unit = parts.find((x) => /^(cm|mm|in)$/i.test(x));
+      if (!unit || !nums.length) return null;
+      return [null, nums[0], nums[1], unit];
+    })
+    .find(Boolean);
+  let m = /convert/i.test(raw) ? null
+    : raw.match(/(\d+(?:\.\d+)?)\s*(?:[-–—~至]\s*(\d+(?:\.\d+)?))?\s*(cm|mm|in|厘米|公分|毫米)?/i);
+  if (!m && conv) m = conv;
+  if (!m) return '';
+  const unit = (m[3] || 'cm').toLowerCase();
+  const u = /mm|毫米/.test(unit) ? 'mm' : /in|吋|英寸/.test(unit) ? 'in' : 'cm';
+  return m[2] ? `${m[1]}–${m[2]} ${u}` : `${m[1]} ${u}`;
+}
+
+/** 體重："29-51.3 g" / "{{convert|29|to|51|g}}" */
+export function parseWeight(wt) {
+  const raw = templateParam(wt, 'weight') || templateParam(wt, 'mass');
+  const conv = (wt.match(/\{\{\s*convert\s*\|[^{}]*\}\}/gi) || [])
+    .map((tpl) => {
+      const parts = tpl.replace(/^\{\{\s*convert\s*/i, '').replace(/\}\}$/, '').split('|').map((x) => x.trim());
+      const nums = parts.filter((x) => /^\d+(?:\.\d+)?$/.test(x));
+      const unit = parts.find((x) => /^(g|kg|oz)$/i.test(x));
+      if (!unit || !nums.length) return null;
+      return [null, nums[0], nums[1], unit];
+    })
+    .find(Boolean);
+  let m = /convert/i.test(raw) ? null
+    : raw.match(/(\d+(?:\.\d+)?)\s*(?:[-–—~至]\s*(\d+(?:\.\d+)?))?\s*(g|kg|oz|克|公斤|公克)?/i);
+  if (!m && conv) m = conv;
+  if (!m) return '';
+  const unit = (m[3] || 'g').toLowerCase();
+  const u = /kg|公斤/.test(unit) ? 'kg' : /oz/.test(unit) ? 'oz' : 'g';
+  return m[2] ? `${m[1]}–${m[2]} ${u}` : `${m[1]} ${u}`;
+}
+
+/** IUCN：只接受標準代碼，回傳「無危 LC」這種寫法；矛盾／未填就回空 */
+export function parseIucn(wt, lang = 'zh') {
+  const code = (templateParam(wt, 'status') || '').toUpperCase().trim();
+  const MAP = {
+    LC: ['無危 LC', 'Least Concern (LC)'],
+    NT: ['近危 NT', 'Near Threatened (NT)'],
+    VU: ['易危 VU', 'Vulnerable (VU)'],
+    EN: ['瀕危 EN', 'Endangered (EN)'],
+    CR: ['極危 CR', 'Critically Endangered (CR)'],
+    EW: ['野外滅絕 EW', 'Extinct in the Wild (EW)'],
+    EX: ['滅絕 EX', 'Extinct (EX)'],
+    DD: ['數據缺乏 DD', 'Data Deficient (DD)'],
+    NE: ['未評估 NE', 'Not Evaluated (NE)'],
+  };
+  const hit = MAP[code.slice(0, 2)];
+  if (!hit) return '';
+  return lang === 'en' ? hit[1] : hit[0];
+}
+
+/** 別名（中文維基 infobox 的「別名」欄，或首段的「又名」） */
+export function parseAliases(wt) {
+  const raw = templateParam(wt, '別名') || templateParam(wt, '别名') || templateParam(wt, 'synonyms');
+  if (!raw) return [];
+  return stripWiki(raw.replace(/\}\}/g, ''))
+    .split(/[、,，;；]/)
+    .map((x) => x.trim())
+    .filter((x) => x.length >= 2 && x.length <= 8)
+    .slice(0, 6);
+}
+
+/* ------------------------------------------------------------------
  * 二、欄位規則（中英各一套）
  * ------------------------------------------------------------------ */
 export const SECTIONS_ZH = {
@@ -265,6 +351,18 @@ export function extractFields(wt, { lang = 'zh', sciName = '', ownName = '', kno
     if (val) out[id] = val;
   }
 
+  /* infobox 直接讀：長度／體重／IUCN／別名（比正文準，且唔會抽到別隻雀） */
+  const len = parseLength(wt);
+  if (len) out.length = len;
+  const wgt = parseWeight(wt);
+  if (wgt) out.weight = wgt;
+  const iucn = parseIucn(wt, lang);
+  if (iucn) out.iucn = iucn;
+  if (lang === 'zh') {
+    const al = parseAliases(wt);
+    if (al.length) out.aliases = al;
+  }
+
   /* Top 5：由「外形／行為／鳴聲」各抽一句短句湊夠，最多 5 條 */
   const pool = [out.look, out.voice, out.behavior, out.habitat, out.diet, out.migration].filter(Boolean);
   const hi = [];
@@ -349,8 +447,13 @@ async function main() {
 
   const birds = JSON.parse(fs.readFileSync(BIRDS_F, 'utf8'));
   const tax = JSON.parse(fs.readFileSync(TAX_F, 'utf8'));
-  const copyAll = fs.existsSync(COPY_F) ? JSON.parse(fs.readFileSync(COPY_F, 'utf8')) : { _readme: {} };
+  const IN_F = arg('--in', '');
+  const OUT_F = arg('--out', '');
+  const readF = IN_F ? path.resolve(IN_F) : COPY_F;
+  const writeF = OUT_F ? path.resolve(OUT_F) : COPY_F;
+  const copyAll = fs.existsSync(readF) ? JSON.parse(fs.readFileSync(readF, 'utf8')) : { _readme: {} };
   const noCache = flag('--no-cache');
+  const lang = arg('--lang', 'zh') === 'en' ? 'en' : 'zh';
   const missingOnly = flag('--missing-only');
   const birdNames = [...new Set(birds.map((b) => b.name).filter(Boolean))];
 
@@ -370,6 +473,18 @@ async function main() {
     });
   }
   if (flag('--limit')) targets = targets.slice(0, Number(arg('--limit', 20)));
+  /* --resume：跳過「中英都已經有 ≥5 欄」的卡（斷線／中途停都可以續跑） */
+  if (flag('--resume')) {
+    const before = targets.length;
+    targets = targets.filter((b) => {
+      const fe = copyAll[b.id]?.fieldCopy;
+      if (!Array.isArray(fe)) return true;
+      const zhN = fe.filter((x) => x.zh).length;
+      const enN = fe.filter((x) => x.en).length;
+      return zhN < 5 || enN < 5;
+    });
+    console.log(`   --resume：跳過 ${before - targets.length} 張已齊（中英各 ≥5 欄）`);
+  }
 
   console.log(`🌐 中英雙語抽取：${targets.length} 張（只抽原文，不改寫、不機翻）`);
   console.log(`   中文：${API_ZH}\n   英文：${API_EN}`);
@@ -415,7 +530,6 @@ async function main() {
       if (z[k]) out[k] = z[k];
     }
     if (!has(out.highlights) && z.highlights) out.highlights = z.highlights;
-    if (!has(out.iucn) && z.iucn) out.iucn = z.iucn;
 
     out.fieldCopy = fieldCopy;
     out.lang = { zh: Boolean(zh), en: Boolean(en) };
@@ -424,9 +538,27 @@ async function main() {
     if (en) src.push(`en.wikipedia ${en.title} · pageid ${en.pageid}`);
     out.source = src.join(' ｜ ') + ' · 分類：eBird/Clements';
 
+    /* header 用嘅數字（長度／體重／IUCN／別名）：英文版優先英文維基，中文版優先中文維基 */
+    const primary = lang === 'en' ? e : z;
+    const secondary = lang === 'en' ? z : e;
+    out.length = out.length || primary.length || secondary.length || '';
+    out.weight = out.weight || primary.weight || secondary.weight || '';
+    /* IUCN 分開存：中文卡印「無危 LC」、英文卡印「Least Concern (LC)」，
+     * 兩邊都留，出圖時按 --lang 揀，唔會臨時翻譯 */
+    const codeOf = (v) => ({ 無危: 'LC', 近危: 'NT', 易危: 'VU', 瀕危: 'EN', 極危: 'CR',
+      數據缺乏: 'DD', 未評估: 'NE', 野外滅絕: 'EW', 滅絕: 'EX' }[String(v).split(' ')[0]] || '');
+    const iucnZh = [z.iucn, e.iucn].find((v) => v && codeOf(v)) || '';
+    if (iucnZh) out.iucn = iucnZh;
+    if (e.iucn) out.iucnEn = e.iucn;
+    if (primary.aliases && primary.aliases.length) out.aliases = primary.aliases;
+
     const sel = chooseFields({ ...out, photo: out.photo }, {});
     out.picks = sel.picks;
+    out.fetchedAt = new Date().toISOString().slice(0, 10);
     copyAll[bird.id] = out;
+
+    /* 每張寫一次：中途停機都唔會白做（檔案細，10 分鐘內寫 500 次冇問題） */
+    if (!flag('--dry-run')) fs.writeFileSync(writeF, `${JSON.stringify(copyAll, null, 2)}\n`);
 
     const zhN = fieldCopy.filter((x) => x.zh).length;
     const enN = fieldCopy.filter((x) => x.en).length;
@@ -434,7 +566,9 @@ async function main() {
     report.push({ id: bird.id, name: bird.name, sci, zh: zhN, en: enN, doc: `${zhN}/${enN}`, pageid: zh?.pageid || en?.pageid || '' });
   }
 
-  fs.writeFileSync(COPY_F, `${JSON.stringify(copyAll, null, 2)}\n`);
+  if (!flag('--dry-run')) fs.writeFileSync(writeF, `${JSON.stringify(copyAll, null, 2)}\n`);
+  console.log(`\n💾 已寫入 ${path.relative(ROOT, writeF)}`);
+  console.log('   交回工作流程：把這個檔案上傳／貼回對話，或直接覆蓋 src/data/cardCopy.json');
 
   const md = ['# 中英雙語抽取報告', '', `- 執行：${new Date().toISOString()}`, `- 目標：${targets.length} 張`,
     '', '| 編號 | 中文名 | 學名 | 中文欄 | 英文欄 | pageid |', '|---|---|---|---|---|---|'];

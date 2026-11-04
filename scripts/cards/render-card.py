@@ -1163,14 +1163,14 @@ def render_dexcard(f, lang="zh"):
         tax_rows = [("Order", f["order"] or PEND), ("Family", f["family"] or PEND),
                     ("Genus", (f["sci"].split()[0] if f["sci"] else PEND)),
                     ("Species", f["sci"] or PEND),
-                    ("IUCN", c.get("iucn") or PEND),
+                    ("IUCN", (c.get("iucnEn") or c.get("iucn")) or PEND),
                     ("eBird", f["code"] or PEND)]
     else:
         tax_rows = [("界", "動物界 Animalia"), ("門", "脊索動物門 Chordata"), ("綱", "鳥綱 Aves"),
                     ("目", f"{f['orderZh']} {f['order']}"), ("科", f"{f['familyZh']} {f['family']}"),
                     ("屬", (f["sci"].split()[0] if f["sci"] else PEND)),
                     ("種", f["sci"] or PEND),
-                    ("IUCN", c.get("iucn") or PEND),
+                    ("IUCN", (c.get("iucnEn") or c.get("iucn")) or PEND),
                     ("eBird", f["code"] or PEND)]
 
     picks = choose_fields(c, lang=lang)

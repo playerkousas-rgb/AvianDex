@@ -44,6 +44,23 @@ src/data/cardCopy.json
 **鐵律**：中文版只放中文原文、英文版只放英文原文。英文卡遇到冇英文原文的欄位會印
 `Data pending`——**不會**把中文塞進去，也**不會**即時機翻（機翻就等於 AI 寫字，破壞可追溯性）。
 
+## 2.5 本機抽取（建議做法）
+
+沙盒連不到維基，你本機快得多。詳情見 **`scripts/cards/local-fetch.md`**，三步：
+
+```bash
+# ① 先試 5 張
+node scripts/cards/extract-bilingual.mjs --ids 0008,0001,0002 --out data/cardCopy.local.json
+
+# ② 全量跑（可斷線續跑，每張即時寫檔）
+node scripts/cards/extract-bilingual.mjs --resume --out data/cardCopy.local.json
+
+# ③ 把 data/cardCopy.local.json 上傳回對話
+```
+
+v3.1 新增：infobox 直讀（`length`／`weight`／`status`／`別名`）、`--resume`、`--out`、
+每張即時寫檔、IUCN 中英分開存（`iucn` / `iucnEn`）。
+
 ## 3. 指令
 
 ```bash

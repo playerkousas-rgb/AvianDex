@@ -16,6 +16,7 @@ import path from 'node:path';
 
 import {
   extractFields, pickSentence, contaminated, trimToLength, sentences,
+  parseLength, parseWeight, parseIucn, parseAliases,
 } from '../scripts/cards/extract-bilingual.mjs';
 import {
   FIELDS, MAX_PICKS, chooseFields, has, normalizeCopy,
@@ -179,4 +180,38 @@ test('每個欄位都有中英標題與字數上限', () => {
     assert.ok(f.tier && f.icon, `${f.id} 缺 tier／icon`);
   }
   assert.ok(has('文字') && !has('') && !has([]));
+});
+
+/* ---------------- 5. infobox 數字欄位 ---------------- */
+test('infobox：長度／體重（連 {{convert}} 寫法）', () => {
+  assert.equal(parseLength('{{Speciesbox|length = 19-21 cm}}'), '19–21 cm');
+  assert.equal(parseLength('{{Speciesbox|length={{convert|19|cm|in}}}}'), '19 cm');
+  assert.equal(parseLength('{{Speciesbox|length={{convert|19|to|21|cm|in}}}}'), '19–21 cm');
+  assert.equal(parseLength('{{Speciesbox|weight = 29-51.3 g}}'), '');
+  assert.equal(parseWeight('{{Speciesbox|weight = 29-51.3 g}}'), '29–51.3 g');
+  assert.equal(parseWeight('{{Speciesbox|weight={{convert|29|to|51|g|oz}}}}'), '29–51 g');
+  assert.equal(parseLength('{{Speciesbox}}'), '', '冇 length 一定要空，唔可以作');
+});
+
+test('infobox：IUCN 只認標準代碼，中英各一套寫法', () => {
+  assert.equal(parseIucn('{{Speciesbox|status = LC}}'), '無危 LC');
+  assert.equal(parseIucn('{{Speciesbox|status = LC}}', 'en'), 'Least Concern (LC)');
+  assert.equal(parseIucn('{{Speciesbox|status = VU}}'), '易危 VU');
+  assert.equal(parseIucn('{{Speciesbox}}'), '', '冇 status 應該留空（卡面印資料待查）');
+  assert.equal(parseIucn('{{Speciesbox|status = 無危}}'), '', '中文寫法唔算標準代碼');
+});
+
+test('infobox：別名唔會夾到模板殘骸', () => {
+  const al = parseAliases('{{Speciesbox|別名 = 豬屎渣、四喜、吱渣 }}');
+  assert.deepEqual(al, ['豬屎渣', '四喜', '吱渣']);
+  assert.deepEqual(parseAliases('{{Speciesbox}}'), []);
+});
+
+test('extractFields 會把 infobox 數字放入輸出', () => {
+  const wt = '{{Speciesbox|status=NT|length={{convert|19|to|21|cm|in}}|weight={{convert|29|to|51|g|oz}}}}\n'
+    + '==Description==\nThis species is 19 cm long with black upperparts and white underparts.\n';
+  const e = extractFields(wt, { lang: 'en', ownName: 'Oriental magpie-robin' });
+  assert.equal(e.length, '19–21 cm');
+  assert.equal(e.weight, '29–51 g');
+  assert.equal(e.iucn, 'Near Threatened (NT)');
 });

@@ -568,7 +568,8 @@ function render(id) {
   const sprite = spriteUrl
     ? `<div class="sprite-frame"><img alt="" src="${esc(spriteUrl)}"></div>`
     : `<div class="sprite-frame"><div class="ph">${L.noSprite}</div></div>`;
-  const iucn = pick(c.iucn) ? `<span class="iucn">IUCN ${esc(c.iucn)}</span>` : '';
+  const iucnVal = LANG === 'en' ? (pick(c.iucnEn) || pick(c.iucn)) : pick(c.iucn);
+  const iucn = iucnVal ? `<span class="iucn">IUCN ${esc(iucnVal)}</span>` : '';
   const aliases = pick(c.aliases)
     ? `<div class="alabel">${L.aliases}</div><div class="chips">${c.aliases.map(a => `<span class="chip">${esc(a)}</span>`).join('')}</div>`
     : '';
@@ -606,7 +607,7 @@ function render(id) {
   const intro = vo('intro') || c.intro_zh || (LANG === 'en' ? '' : '');
   const taxRows = LANG === 'en'
     ? [['Order', order], ['Family', family], ['Genus', sci ? sci.split(' ')[0] : ''], ['Species', sci],
-      ['IUCN', pick(c.iucn) || ''], ['eBird', code]]
+      ['IUCN', pick(c.iucnEn || c.iucn) || ''], ['eBird', code]]
     : [['界', '動物界 Animalia'], ['門', '脊索動物門 Chordata'], ['綱', '鳥綱 Aves'],
       ['目', [orderZh, order].filter(Boolean).join(' ')], ['科', [familyZh, family].filter(Boolean).join(' ')],
       ['屬', sci ? sci.split(' ')[0] : ''], ['種', sci], ['IUCN', pick(c.iucn) || ''], ['eBird', code]];
