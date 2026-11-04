@@ -261,6 +261,218 @@ def render_bird(f):
     return img.resize((900, 1200), Image.LANCZOS)
 
 
+def render_pokedex(f):
+    """資訊圖卡（寶可夢圖鑑機造型）。
+
+    造型：紅色機身、左上大鏡頭（藍鏡 + 白高光）、三顆指示燈、機鉸、
+    銀灰屏幕框，屏幕內由上至下：資料卡晶片 → 名稱 → 分類 → 插畫＋側欄 → 四格 → 狀態列。
+    所有文字由字型渲染；資料由 birdTaxonomy.json（eBird）＋ cardCopy.json 讀入。
+    """
+    Wp, Hp = 1200, 1600
+    w, h = Wp * SS, Hp * SS
+
+    img = Image.new("RGB", (w, h), (24, 28, 34))
+    d = ImageDraw.Draw(img)
+
+    # ── 機身（紅色）──
+    body = [30 * SS, 24 * SS, w - 30 * SS, h - 18 * SS]
+    rounded(d, body, 56 * SS, fill=RED_DARK)
+    rounded(d, [body[0], body[1], body[2], body[1] + 300 * SS], 56 * SS, fill=RED)
+    rounded(d, [body[0] + 12 * SS, body[1] + 12 * SS, body[0] + 30 * SS, body[3] - 16 * SS], 16 * SS,
+            fill=(255, 116, 92))
+
+    # ── 左上：大鏡頭 ──
+    cx, cy, r = 150 * SS, 132 * SS, 66 * SS
+    d.ellipse([cx - r - 10 * SS, cy - r - 10 * SS, cx + r + 10 * SS, cy + r + 10 * SS], fill=(240, 234, 216))
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(26, 32, 38))
+    d.ellipse([cx - r * 0.8, cy - r * 0.8, cx + r * 0.8, cy + r * 0.8], fill=TEAL)
+    d.ellipse([cx - r * 0.46, cy - r * 0.46, cx + r * 0.46, cy + r * 0.46], fill=(16, 70, 112))
+    d.ellipse([cx - r * 0.22, cy - r * 0.3, cx + r * 0.08, cy - r * 0.04], fill=(240, 250, 255))
+
+    # ── 三顆指示燈（鏡頭右上）──
+    for i, col in enumerate([(232, 68, 52), (240, 202, 66), (92, 204, 124)]):
+        lx = 268 * SS + i * 26 * SS
+        d.ellipse([lx, 44 * SS, lx + 18 * SS, 62 * SS], fill=col, outline=(96, 16, 8), width=2 * SS)
+
+    # ── 名牌 ──
+    d.text((268 * SS, 92 * SS), "AvianDex", font=font(FONT_BLACK, 50 * SS), fill=CREAM,
+           shadow=(2 * SS, 2 * SS, (120, 20, 6)))
+    d.text((270 * SS, 150 * SS), "HONG KONG FIELD GUIDE", font=font(FONT_BOLD, 16 * SS), fill=(255, 214, 200))
+
+    # ── 右上：NO. 牌 ──
+    pl = [w - 356 * SS, 40 * SS, w - 84 * SS, 168 * SS]
+    rounded(d, pl, 18 * SS, fill=(24, 10, 8), outline=YELLOW, width=3 * SS)
+    d.text(((pl[0] + pl[2]) / 2, pl[1] + 34 * SS), "NO.", font=font(FONT_BOLD, 22 * SS), fill=YELLOW, anchor="mm")
+    d.text(((pl[0] + pl[2]) / 2, pl[1] + 88 * SS), f["id"], font=font(FONT_BLACK, 50 * SS), fill=CREAM,
+           anchor="mm", tracking=3 * SS)
+
+    # ── 機鉸 ──
+    for hx in (44 * SS, w - 132 * SS):
+        rounded(d, [hx, 196 * SS, hx + 88 * SS, 220 * SS], 8 * SS, fill=(120, 26, 10), outline=(70, 14, 6), width=2 * SS)
+
+    # ── 銀灰屏幕框 ──
+    sc = [60 * SS, 240 * SS, w - 60 * SS, h - 160 * SS]
+    rounded(d, [sc[0] + 5 * SS, sc[1] + 9 * SS, sc[2] + 5 * SS, sc[3] + 9 * SS], 30 * SS, fill=(104, 24, 12))
+    rounded(d, sc, 30 * SS, fill=(222, 226, 230))
+    # 屏幕上方指示燈帶
+    for i in range(2):
+        bx = sc[0] + 26 * SS + i * 24 * SS
+        rounded(d, [bx, sc[1] + 11 * SS, bx + 16 * SS, sc[1] + 19 * SS], 4 * SS, fill=(250, 190, 80))
+
+    # ── 屏幕（深綠）──
+    ie = [sc[0] + 20 * SS, sc[1] + 30 * SS, sc[2] - 20 * SS, sc[3] - 20 * SS]
+    rounded(d, ie, 22 * SS, fill=DEEP)
+
+    # 屏幕細格紋
+    grid = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    gd = ImageDraw.Draw(grid)
+    for gx in range(int(ie[0]), int(ie[2]), 44 * SS):
+        gd.line([(gx, ie[1]), (gx, ie[3])], fill=(255, 255, 255, 6), width=1)
+    for gy in range(int(ie[1]), int(ie[3]), 44 * SS):
+        gd.line([(ie[0], gy), (ie[2], gy)], fill=(255, 255, 255, 6), width=1)
+    img = Image.alpha_composite(img.convert("RGBA"), grid).convert("RGB")
+    d = ImageDraw.Draw(img)
+
+    L = ie[0] + 30 * SS
+    R = ie[2] - 30 * SS
+    inner_w = R - L
+
+    # 版面預算：所有固定高度先扣，剩下全給插畫窗
+    y = ie[1] + 22 * SS
+    H_CHIP, H_TITLE, H_CHIPS, H_BOTTOM = 38 * SS, 150 * SS, 46 * SS, 88 * SS
+    GAP = 16 * SS
+    cells_h = 104 * SS
+    fixed = H_CHIP + 14 * SS + H_TITLE + 10 * SS + H_CHIPS + GAP + (cells_h * 2 + 14 * SS) + GAP + H_BOTTOM + 10 * SS
+    art_h = (ie[3] - 16 * SS) - y - fixed
+
+    # 資料卡晶片
+    rounded(d, [L, y, L + 116 * SS, y + H_CHIP], 8 * SS, fill=(38, 116, 176))
+    d.text((L + 58 * SS, y + H_CHIP / 2), "資料卡 DATA", font=font(FONT_BOLD, 17 * SS), fill=WHITE, anchor="mm")
+    y += H_CHIP + 14 * SS
+
+    # 名稱
+    d.text((L, y), f["zh"], font=font(FONT_BLACK, 62 * SS), fill=CREAM,
+           shadow=(3 * SS, 3 * SS, (0, 0, 0, 150)))
+    ty = y + 74 * SS
+    if f["sci"]:
+        d.text((L, ty), f["sci"], font=font(FONT_REG, 27 * SS), fill=(178, 214, 200))
+        ty += 34 * SS
+    d.text((L, ty), f["en"], font=font(FONT_BOLD, 27 * SS), fill=YELLOW)
+    y += H_TITLE
+
+    # 分類標籤
+    order_zh = (f["copy"].get("orderZh") or "").strip()
+    family_zh = (f["copy"].get("familyZh") or "").strip()
+    chips = []
+    if f["order"]:
+        chips.append((f"{order_zh} {f['order']}".strip(), (38, 116, 176)))
+    if f["family"]:
+        chips.append((f"{family_zh} {f['family']}".strip(), (32, 148, 120)))
+    if f["code"]:
+        chips.append((f["code"], (58, 58, 64)))
+    cx = L
+    for label, bgc in chips:
+        fc = font(FONT_BOLD, 18 * SS)
+        cw = d.textlength(label, font=fc) + 30 * SS
+        rounded(d, [cx, y, cx + cw, y + H_CHIPS], H_CHIPS / 2, fill=bgc)
+        d.text((cx + cw / 2, y + H_CHIPS / 2), label, font=fc, fill=WHITE, anchor="mm")
+        cx += cw + 10 * SS
+    y += H_CHIPS + GAP
+
+    # 插畫窗（左）＋ 側欄（右）
+    art_w = inner_w * 0.52
+    rounded(d, [L, y, L + art_w, y + art_h], 16 * SS, fill=CREAM)
+    art_path = os.path.join(ART_DIR, f"{f['id']}.png")
+    if os.path.exists(art_path):
+        pic = card_art(art_path, art_w * 0.94, art_h * 0.94)
+        img.paste(pic, (int(L + (art_w - pic.width) / 2), int(y + (art_h - pic.height) / 2)))
+    else:
+        d.text((L + art_w / 2, y + art_h / 2), "（未提供插畫）", font=font(FONT_BOLD, 24 * SS),
+               fill=(160, 140, 96), anchor="mm")
+
+    sx = L + art_w + 16 * SS
+    sw = R - sx
+    marks = f["copy"].get("callouts") or []
+    box_h = art_h * 0.50
+    rounded(d, [sx, y, R, y + box_h], 16 * SS, fill=(9, 42, 33), outline=(46, 104, 86), width=2 * SS)
+    d.text((sx + 16 * SS, y + 12 * SS), "特徵標註", font=font(FONT_BLACK, 22 * SS), fill=CREAM)
+    my = y + 46 * SS
+    for i, m in enumerate(marks[:3]):
+        d.ellipse([sx + 16 * SS, my + 3 * SS, sx + 36 * SS, my + 23 * SS], fill=YELLOW)
+        d.text((sx + 26 * SS, my + 13 * SS), str(i + 1), font=font(FONT_BLACK, 14 * SS), fill=DEEP, anchor="mm")
+        d.text((sx + 46 * SS, my - 2 * SS), m.get("label", ""), font=font(FONT_BOLD, 17 * SS), fill=YELLOW)
+        ty2 = my + 22 * SS
+        for ln in wrap(d, m.get("text", ""), font(FONT_REG, 16 * SS), sw - 62 * SS)[:2]:
+            d.text((sx + 46 * SS, ty2), ln, font=font(FONT_REG, 16 * SS), fill=(214, 232, 224))
+            ty2 += 20 * SS
+        my = ty2 + 8 * SS
+    if not marks:
+        d.text((sx + 16 * SS, my), "（未提供）", font=font(FONT_REG, 16 * SS), fill=MUTED)
+
+    fy = y + box_h + 12 * SS
+    rounded(d, [sx, fy, R, y + art_h], 16 * SS, fill=(26, 76, 60), outline=(46, 104, 86), width=2 * SS)
+    d.text((sx + 16 * SS, fy + 10 * SS), "冷知識 TRIVIA", font=font(FONT_BOLD, 15 * SS), fill=YELLOW)
+    fy2 = fy + 34 * SS
+    trivia_font = font(FONT_REG, 18 * SS)
+    max_lines = max(2, int((y + art_h - fy2 - 8 * SS) / (23 * SS)))
+    for ln in wrap(d, (f["copy"].get("funFact") or PENDING), trivia_font, sw - 32 * SS)[:max_lines]:
+        d.text((sx + 16 * SS, fy2), ln, font=trivia_font, fill=(224, 238, 231))
+        fy2 += 23 * SS
+
+    y += art_h + GAP
+
+    # 四格資料
+    cw2 = (inner_w - 14 * SS) / 2
+    cells = [
+        ("食 性 · DIET", pick(f["copy"], "diet"), (250, 204, 21)),
+        ("分 佈 · RANGE", pick(f["copy"], "range"), TEAL),
+        ("外形特徵 · MARKS", pick(f["copy"], "look"), (126, 214, 150)),
+        ("棲 地 · HABITAT", pick(f["copy"], "habitat"), (250, 170, 120)),
+    ]
+    for i, (label, text, accent) in enumerate(cells):
+        cxx = L + (i % 2) * (cw2 + 14 * SS)
+        cyy = y + (i // 2) * (cells_h + 14 * SS)
+        rounded(d, [cxx, cyy, cxx + cw2, cyy + cells_h], 12 * SS, fill=(9, 42, 33), outline=(46, 104, 86), width=2 * SS)
+        rounded(d, [cxx, cyy + 10 * SS, cxx + 7 * SS, cyy + cells_h - 10 * SS], 3 * SS, fill=accent)
+        d.text((cxx + 18 * SS, cyy + 9 * SS), label, font=font(FONT_BOLD, 16 * SS), fill=accent)
+        by = cyy + 36 * SS
+        for ln in wrap(d, text, font(FONT_REG, 18 * SS), cw2 - 36 * SS)[:3]:
+            d.text((cxx + 18 * SS, by), ln, font=font(FONT_REG, 18 * SS), fill=(224, 238, 231))
+            by += 22 * SS
+
+    y += cells_h * 2 + 14 * SS + GAP
+
+    # 狀態列
+    rounded(d, [L, y, R, y + H_BOTTOM], 12 * SS, fill=(8, 34, 27), outline=(46, 104, 86), width=2 * SS)
+    d.text((L + 20 * SS, y + 10 * SS), "保育狀況 · IUCN", font=font(FONT_BOLD, 15 * SS), fill=MUTED)
+    status = f["copy"].get("iucn") or PENDING
+    d.text((L + 20 * SS, y + 32 * SS), status, font=font(FONT_BLACK, 28 * SS),
+           fill=(126, 214, 150) if status != PENDING else MUTED)
+
+    fields2 = ["diet", "range", "look", "habitat", "funFact", "iucn"]
+    have = sum(1 for k in fields2 if (f["copy"].get(k) or "").strip())
+    ratio = have / len(fields2)
+    bx1, bx2 = L + 380 * SS, R - 22 * SS
+    d.text((bx1, y + 10 * SS), f"資料完整度 · DATA {have}/{len(fields2)}", font=font(FONT_BOLD, 15 * SS), fill=MUTED)
+    rounded(d, [bx1, y + 34 * SS, bx2, y + 50 * SS], 8 * SS, fill=(22, 56, 46))
+    if ratio > 0:
+        rounded(d, [bx1 + 2 * SS, y + 36 * SS, bx1 + 2 * SS + (bx2 - bx1 - 4 * SS) * ratio, y + 48 * SS],
+                6 * SS, fill=YELLOW if ratio >= 0.9 else TEAL)
+    d.text((bx2, y + 62 * SS), (f["copy"].get("source") or "eBird / Clements Checklist")[:74],
+           font=font(FONT_REG, 14 * SS), fill=(110, 140, 130), anchor="ra")
+
+    # ── 機身上：左下螺絲、右下喇叭孔、底部銘牌 ──
+    for sx_, sy_ in [(52 * SS, h - 46 * SS), (w - 52 * SS, h - 46 * SS), (52 * SS, 236 * SS), (w - 52 * SS, 236 * SS)]:
+        d.ellipse([sx_ - 8 * SS, sy_ - 8 * SS, sx_ + 8 * SS, sy_ + 8 * SS], fill=(150, 34, 16), outline=(88, 16, 8), width=2 * SS)
+        d.line([(sx_ - 5 * SS, sy_), (sx_ + 5 * SS, sy_)], fill=(196, 96, 70), width=2 * SS)
+    for i in range(8):
+        d.ellipse([w - 300 * SS + i * 24 * SS, h - 116 * SS, w - 284 * SS + i * 24 * SS, h - 100 * SS], fill=(150, 34, 16))
+    d.text((90 * SS, h - 108 * SS), "AVIANDEX · 香港鳥類圖鑑", font=font(FONT_BOLD, 18 * SS), fill=(255, 206, 190))
+    d.text((90 * SS, h - 80 * SS), "分類以 eBird/Clements 為權威", font=font(FONT_REG, 14 * SS), fill=(255, 176, 156))
+
+    return img.resize((Wp, Hp), Image.LANCZOS)
+
+
 def render_info(f):
     w, h = W * SS, H * SS
     img = Image.new("RGB", (w, h), INK)
@@ -497,6 +709,8 @@ def main():
     ap = argparse.ArgumentParser(description="AvianDex 圖卡排版（文字由字型渲染，非 AI 生成）")
     ap.add_argument("ids", nargs="*", help="卡片編號，例如 0290")
     ap.add_argument("--all", action="store_true", help="處理 cards/art/ 內所有插畫")
+    ap.add_argument("--layout", choices=["pokedex", "grid"], default="pokedex",
+                    help="info 卡版式：pokedex=圖鑑機造型（預設）；grid=格仔卡片")
     ap.add_argument("--kind", choices=["bird", "info"], default="info",
                     help="bird=簡單鳥卡（R2 aviandex/）；info=詳細資訊圖卡（R2 aviandex/info/）")
     ap.add_argument("--preview", action="store_true", help="只出 PNG")
@@ -541,7 +755,10 @@ def main():
             continue
         bird_id = bird_id.zfill(4)
         f = build_facts(bird_id)
-        img = render_info(f) if args.kind == "info" else render_bird(f)
+        if args.kind == "info":
+            img = render_info(f) if args.layout == "grid" else render_pokedex(f)
+        else:
+            img = render_bird(f)
         png_path = os.path.join(out_dir, f"{bird_id}.png")
         img.save(png_path, optimize=True)
         if args.preview:

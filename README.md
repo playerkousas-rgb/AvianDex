@@ -74,8 +74,9 @@ Hub 圖片：存放於 public/images/，命名為 hub_wiki.jpg, hub_radar.jpg �
 | | 鳥卡（簡單） | 資訊圖卡（詳細） |
 |---|---|---|
 | 內容 | 插畫 + NO. + 中文名 + 英文名 + 學名 | 分類、特徵標註、食性、分佈、外形、棲地、IUCN、來源 |
+| 造型 | 米色收藏卡 | **寶可夢圖鑑機**：紅色機身、大鏡頭、機鉸、銀灰熒幕框、熒幕內分欄 |
 | 指令 | `npm run cards:render -- 0289 --kind bird` | `npm run cards:render -- 0289` |
-| 輸出 | `cards/out/0289.avif`（35 KB） | `cards/out/info/0289.avif`（70–74 KB） |
+| 輸出 | `cards/out/0289.avif`（35 KB） | `cards/out/info/0289.avif`（57–61 KB） |
 | R2 | `aviandex/0289.avif` | `aviandex/info/0289.avif` |
 
 ```bash
@@ -91,7 +92,7 @@ python3 scripts/cards/render-card.py --from-image <圖.png> --kind info
 
 兩種方法的實測比較（尺寸、字型、風險、建議用法）見 **[docs/CARD_METHODS.md](./docs/CARD_METHODS.md)**。
 
-- 鳥卡 900×1200、資訊圖卡 1400×1867（都係 3:4），實測 AVIF **35 KB / 70–74 KB**，比同尺寸 PNG 細 **87–90%**
+- 鳥卡 900×1200、資訊圖卡 1200×1600（都係 3:4），實測 AVIF **35 KB / 57–61 KB**，比同尺寸 PNG 細 **86–92%**
 - 分類（目／科／學名／英文名／排序號）全部由 `birdTaxonomy.json`（eBird）讀入，唔會手打
 - 卡面文案在 `src/data/cardCopy.json`，每欄要有 `source`，冇就印「資料待查」
 - 版面：紅色機頭 + 中文名／學名／英文名 + 分類標籤 + 插畫窗（右側特徵標註＋冷知識）+ 食性／分佈／外形／棲地 + 保育狀況／資料完整度／來源
