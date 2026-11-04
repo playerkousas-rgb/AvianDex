@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1f18">
+<title>AvianDex · 出圖工作室</title>
+<!--
+  這一支只做一件事：用 Gemini 出「無字」的圖。
+  為什麼一定要無字：實測（docs/CARD_AI_VS_TEMPLATE.md）證明 AI 畫中文長段落會出假字，
+  「保護關注度」變「保護關注」、地名亂作。所以文字一律留給 DOM 排版，
+  這裏只出四種東西：①真雀相風格圖 ②像素圖 ③圓形特寫（由真圖裁）④欄底小插圖。
+
+  架構沿用你兩份 HTML：
+    · 漫畫.html      → callGemini / 模型降級 / describeError / safeStore / API key 自動掃描
+    · ai_scout_app   → 「只准用檔案內容」的原則：prompt 由資料 + 固定板模組合而成，不由 AI 自由發揮
+-->
+<style>
+:root{
+  color-scheme:dark;
+  --ink:#07140f; --panel:rgba(13,34,26,.86); --line:#1d3d2f; --line2:#2f6049;
+  --tx:#eaf5ef; --mu:#8aa79a; --mu2:#5f7a6d; --g1:#6ee7b7; --g2:#0ea472;
+  --gold:#e8c981; --bad:#ff9d94; --warn:#ffd479;
+  --shadow:0 18px 44px -18px rgba(0,0,0,.85),0 2px 8px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100%;color:var(--tx);
+  font:15px/1.7 system-ui,-apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  background:var(--ink);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;z-index:-2;pointer-events:none;border-radius:50%;
+  filter:blur(90px);width:760px;height:760px;left:-220px;top:-360px;
+  background:radial-gradient(circle,rgba(14,164,114,.30),transparent 66%)}
+body::after{content:"";position:fixed;z-index:-1;pointer-events:none;inset:0;
+  background-image:linear-gradient(rgba(110,231,183,.04) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(110,231,183,.04) 1px,transparent 1px);
+  background-size:52px 52px;
+  mask-image:radial-gradient(circle at 50% 0%,#000,transparent 72%);
+  -webkit-mask-image:radial-gradient(circle at 50% 0%,#000,transparent 72%)}
+.wrap{max-width:1320px;margin:0 auto;padding:0 16px 70px}
+/* ── 頁首 ── */
+.top{position:sticky;top:0;z-index:40;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:linear-gradient(180deg,rgba(7,20,15,.95),rgba(7,20,15,.66));border-bottom:1px solid var(--line)}
+.topin{max-width:1320px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{width:42px;height:42px;flex:0 0 42px;border-radius:13px;display:grid;place-items:center;
+  background:radial-gradient(120% 120% at 30% 10%,#14372a,#08160f 70%);
+  border:1px solid var(--line2);box-shadow:0 8px 22px -10px rgba(14,164,114,.9),inset 0 1px 0 rgba(255,255,255,.07)}
+.logo svg{width:24px;height:24px}
+.brand b{font-size:15px;letter-spacing:.02em}
+.brand span{display:block;font-size:11.5px;color:var(--mu2);letter-spacing:.06em}
+.spacer{flex:1}
+/* ── 通用元件 ── */
+.card-panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px;
+  box-shadow:var(--shadow);backdrop-filter:blur(10px)}
+.card-panel+.card-panel{margin-top:12px}
+.ttl{font-weight:700;font-size:13.5px;letter-spacing:.04em;color:var(--g1)}
+.f{display:block;font-size:11.5px;color:var(--mu2);letter-spacing:.04em;margin-bottom:4px}
+input[type=text],input[type=password],input[type=number],select,textarea{
+  width:100%;background:#08190f;color:var(--tx);border:1px solid var(--line2);border-radius:10px;
+  padding:8px 10px;font:inherit;font-size:13.5px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--g2);box-shadow:0 0 0 3px rgba(14,164,114,.18)}
+textarea{resize:vertical;line-height:1.65}
+button{cursor:pointer;font:inherit;font-size:13px;border-radius:10px;padding:8px 14px;
+  border:1px solid var(--line2);background:#0c2418;color:var(--tx);transition:.15s}
+button:hover:not(:disabled){border-color:var(--g2);background:#0f2f20}
+button:disabled{opacity:.45;cursor:not-allowed}
+button.primary{background:linear-gradient(180deg,#12b981,#0a8a5f);border-color:#1ad39a;font-weight:700;color:#03130d}
+button.primary:hover:not(:disabled){filter:brightness(1.08)}
+button.ghost{background:transparent}
+button.sm{padding:5px 10px;font-size:12px;border-radius:8px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.chk{display:flex;gap:6px;align-items:center;font-size:12.5px;color:var(--mu)}
+.chk input{width:auto}
+.hint{font-size:11.5px;color:var(--mu2);line-height:1.6;margin-top:6px}
+.hint code{background:#0b2417;padding:1px 5px;border-radius:5px;color:var(--g1);font-size:11px}
+.pill{font-size:10.5px;padding:2px 8px;border-radius:999px;border:1px solid var(--line2);color:var(--mu);letter-spacing:.05em}
+.pill.ok{border-color:#1c7a55;color:var(--g1);background:rgba(14,164,114,.14)}
+.pill.bad{border-color:#7a3a34;color:var(--bad);background:rgba(255,90,80,.10)}
+.pill.warn{border-color:#7a6a2e;color:var(--warn);background:rgba(255,212,121,.10)}
+/* ── 版面：左設定 右輸出 ── */
+.grid{display:grid;grid-template-columns:minmax(320px,400px) 1fr;gap:16px;align-items:start;margin-top:16px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}}
+/* ── 參考圖 ── */
+.refbox{position:relative;border:1.5px dashed var(--line2);border-radius:14px;padding:10px;
+  background:#08190f;text-align:center;transition:.2s}
+.refbox.hot{border-color:var(--g1);background:#0c2418}
+.refbox img{max-width:100%;max-height:300px;border-radius:10px;display:block;margin:0 auto}
+.refbox .empty{color:var(--mu2);font-size:12.5px;padding:28px 8px;line-height:1.8}
+.refdrop{display:flex;gap:8px;margin-top:8px}
+/* ── 任務卡 ── */
+.task{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:520px){.task{grid-template-columns:1fr}}
+.tk{border:1px solid var(--line2);border-radius:12px;padding:10px 12px;background:#0a1f15;text-align:left;line-height:1.45}
+.tk b{display:block;font-size:13px;color:var(--tx)}
+.tk span{font-size:11px;color:var(--mu2)}
+.tk[aria-pressed=true]{border-color:var(--g1);background:linear-gradient(180deg,rgba(18,185,129,.22),rgba(10,31,21,.9));
+  box-shadow:0 0 0 3px rgba(14,164,114,.14)}
+/* ── prompt ── */
+#prompt{min-height:210px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;line-height:1.75}
+.count{font-size:11px;color:var(--mu2)}
+/* ── 輸出 ── */
+.outgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:12px}
+.shot{background:#0a1f15;border:1px solid var(--line2);border-radius:14px;overflow:hidden;position:relative}
+.shot img{display:block;width:100%;background:#06120c}
+.shot .cap{display:flex;gap:6px;align-items:center;justify-content:space-between;padding:7px 9px;font-size:11px;color:var(--mu)}
+.shot .cap b{color:var(--g1);font-size:11px;font-weight:600}
+.shot .acts{display:flex;gap:5px}
+.shot .acts button{padding:3px 8px;font-size:11px;border-radius:7px}
+.shot.busy::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(100deg,transparent 20%,rgba(110,231,183,.10) 50%,transparent 80%);
+  background-size:220% 100%;animation:sweep 1.3s linear infinite}
+@keyframes sweep{0%{background-position:120% 0}100%{background-position:-120% 0}}
+.skel{aspect-ratio:3/4;display:grid;place-items:center;color:var(--mu2);font-size:12px;
+  background:repeating-linear-gradient(45deg,#08190f,#08190f 10px,#0a1f15 10px,#0a1f15 20px)}
+/* ── log ── */
+#log{background:#050f0a;border:1px solid var(--line);border-radius:12px;padding:10px;
+  font-family:ui-monospace,Menlo,monospace;font-size:11.5px;line-height:1.7;color:var(--mu);
+  max-height:220px;overflow:auto;white-space:pre-wrap;margin-top:10px}
+#log .e{color:var(--bad)} #log .w{color:var(--warn)} #log .o{color:var(--g1)}
+/* ── 錯誤卡 ── */
+.err{display:none;border:1px solid #7a3a34;background:rgba(255,90,80,.09);border-radius:12px;padding:10px 12px;margin-top:10px}
+.err.on{display:block}
+.err b{color:var(--bad);font-size:13px}
+.err p{margin:4px 0 0;font-size:12px;color:var(--mu);line-height:1.65}
+/* ── 進度條 ── */
+.bar{height:6px;border-radius:999px;background:#0a1f15;overflow:hidden;margin-top:10px}
+.bar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,#0ea472,#6ee7b7);transition:width .3s}
+/* ── 對照表 ── */
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+th{color:var(--mu2);font-weight:600;font-size:11px;letter-spacing:.04em}
+td code{font-size:11px;color:var(--g1)}
+details{margin-top:10px}
+summary{cursor:pointer;font-size:12.5px;color:var(--mu);letter-spacing:.03em}
+summary:hover{color:var(--g1)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="topin">
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2.5" y="4.5" width="19" height="15" rx="3.5"/><circle cx="8.5" cy="10" r="1.6" fill="#6ee7b7" stroke="none"/>
+        <path d="M4 17l4.5-4.2 3 2.6 3.2-3.4L20 17"/></svg>
+    </div>
+    <div class="brand">
+      <b>AvianDex · 出圖工作室</b>
+      <span>參考圖 ＋ 板模 prompt ＋ 卡面資料 → Gemini 出「無字」圖</span>
+    </div>
+    <div class="spacer"></div>
+    <span id="apiBadge" class="pill warn">API：檢查中</span>
+    <span class="pill" id="verPill">v1.0</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ══════ 兩欄 ══════ -->
+  <div class="grid">
+
+    <!-- ══ 左：設定 ══ -->
+    <div>
+      <!-- 0. API -->
+      <div class="card-panel">
+        <div class="ttl">① API</div>
+        <div class="row" style="margin-top:8px">
+          <select id="mode" style="flex:1">
+            <option value="canvas">Gemini Canvas（平台自動加 key）</option>
+            <option value="own">自己貼 API key</option>
+            <option value="off">唔用 AI（只用參考圖／裁相）</option>
+          </select>
+        </div>
+        <div class="row" id="keyRow" style="margin-top:8px;display:none">
+          <input type="password" id="key" placeholder="AIza…（只存在你部機的 localStorage）">
+          <button class="sm" id="btnKeySave">記住</button>
+        </div>
+        <div class="hint">在 Gemini Canvas 貼上本檔時，平台會自動代你加認證，<b>唔需要貼 key</b>。
+          本機雙擊開啟（<code>file://</code>）就要自己貼一條（<code>aistudio.google.com/apikey</code>）。
+          兩者都唔得時會用 <code>credentials:'include'</code> 再試一次。</div>
+      </div>
+
+      <!-- 1. 參考圖 -->
+      <div class="card-panel">
+        <div class="ttl">② 參考圖</div>
+        <div class="hint" style="margin:0 0 8px">你給的 <code>NO.0008 鵲鴝</code> 成品卡。它只做兩件事：
+          <b>鎖定版面氣質</b>（深綠白卡、圓形特寫、四欄資訊盒）＋ <b>鎖定畫風</b>（真雀攝影 vs 像素圖）。
+          它<b>不會</b>被要求照抄文字——因為文字由 DOM 排版，AI 一個字都唔准寫。</div>
+        <div class="refbox" id="refbox">
+          <div class="empty" id="refEmpty">拖入／貼上（Ctrl+V）你的成品卡<br>或按下面「用內建 0008 參考卡」</div>
+          <img id="refImg" alt="參考圖" style="display:none">
+        </div>
+        <div class="refdrop">
+          <button class="sm primary" id="btnRefBuiltin">用內建 0008 參考卡</button>
+          <button class="sm" id="btnRefPick">選檔…</button>
+          <button class="sm ghost" id="btnRefClear">清除</button>
+          <input type="file" id="refFile" accept="image/*" hidden>
+        </div>
+        <div class="row" style="margin-top:8px">
+          <label class="chk"><input type="checkbox" id="useRef" checked> 送出時附上參考圖</label>
+          <label class="chk"><input type="checkbox" id="refStyleOnly" checked> 只參考畫風／版面，不照抄文字</label>
+        </div>
+      </div>
+
+      <!-- 2. 這張卡 -->
+      <div class="card-panel">
+        <div class="ttl">③ 這張卡</div>
+        <div class="row" style="margin-top:8px">
+          <input type="text" id="num" inputmode="numeric" maxlength="4" placeholder="0008" style="width:96px;text-align:center;font-weight:700;letter-spacing:.1em">
+          <select id="jump" style="flex:1"></select>
+        </div>
+        <div class="hint" id="birdLine">—</div>
+      </div>
+
+      <!-- 3. 任務 -->
+      <div class="card-panel">
+        <div class="ttl">④ 要出什麼圖</div>
+        <div class="task" style="margin-top:8px" id="tasks">
+          <button class="tk" data-task="photo" aria-pressed="true"><b>真雀相風格圖</b><span>右欄大圖 3:4</span></button>
+          <button class="tk" data-task="sprite" aria-pressed="false"><b>像素圖</b><span>左欄小圖 1:1</span></button>
+          <button class="tk" data-task="closeup" aria-pressed="false"><b>圓形特寫</b><span>由真圖裁 5 個圈</span></button>
+          <button class="tk" data-task="icon" aria-pressed="false"><b>欄底小插圖</b><span>5 格裝飾 1:1</span></button>
+        </div>
+        <div class="row" style="margin-top:10px">
+          <label class="chk"><input type="checkbox" id="useLook" checked> 把「外形特徵」寫入 prompt</label>
+        </div>
+        <div class="hint">AI 只會收到「畫什麼」的描述（外形／棲地／食物），<b>唔會</b>收到要佢寫的字。
+          所有中文由卡面工作室的 DOM 排版，所以永遠準確。</div>
+      </div>
+
+      <!-- 4. prompt -->
+      <div class="card-panel">
+        <div class="ttl">⑤ Prompt（可改）</div>
+        <textarea id="prompt" spellcheck="false" style="margin-top:8px"></textarea>
+        <div class="row" style="margin-top:8px">
+          <span class="count" id="pcount">0 字</span>
+          <div class="spacer"></div>
+          <button class="sm" id="btnPromptReset">重新組合</button>
+          <button class="sm" id="btnPromptCopy">複製</button>
+        </div>
+      </div>
+
+      <!-- 5. 出圖 -->
+      <div class="card-panel">
+        <div class="row">
+          <button class="primary" id="btnGen" style="flex:1">出圖（1 張）</button>
+          <button id="btnGenAll">一鍵出齊</button>
+        </div>
+        <div class="bar"><i id="progBar"></i></div>
+        <div class="hint" id="progTxt">—</div>
+        <div class="err" id="errBox"><b id="errTitle">出圖失敗</b><p id="errHint"></p></div>
+        <div id="log"></div>
+      </div>
+    </div>
+
+    <!-- ══ 右：輸出 ══ -->
+    <div>
+      <div class="card-panel">
+        <div class="row" style="justify-content:space-between">
+          <div class="ttl">輸出</div>
+          <div class="row">
+            <span class="pill" id="outCount">0 張</span>
+            <button class="sm" id="btnDownloadAll">全部下載</button>
+            <button class="sm ghost" id="btnClearOut">清空</button>
+          </div>
+        </div>
+        <div class="outgrid" id="out"></div>
+      </div>
+
+      <div class="card-panel">
+        <div class="ttl">⑥ 這張圖之後去哪裡</div>
+        <table style="margin-top:8px">
+          <tr><th>檔案</th><th>用途</th><th>放去</th></tr>
+          <tr><td><code>NNNN-photo.png</code></td><td>卡面右欄真雀相</td><td><code>cards/art/</code></td></tr>
+          <tr><td><code>NNNN-sprite.png</code></td><td>卡面左欄像素圖</td><td><code>cards/art/</code></td></tr>
+          <tr><td><code>icons/&lt;欄名&gt;.png</code></td><td>四欄底部小插圖</td><td><code>cards/art/icons/</code></td></tr>
+        </table>
+        <div class="hint">下載後重跑 <code>node scripts/cards/build-studio-data.mjs</code>，
+          或者用 <code>python3 scripts/cards/render-card.py NNNN</code> 直接出整張卡。</div>
+
+        <details>
+          <summary>⚠️ 授權：AI 圖不可以當成「真雀相」</summary>
+          <div class="hint" style="margin-top:6px">
+            本工具出的相片風格圖，<b>不是</b>真實觀察紀錄，也不能證明該鳥在香港出現。
+            正式對外版本應該用有授權的照片（Wikimedia Commons／iNaturalist／Macaulay Library），
+            並把作者、授權、原始網址記入 <code>cards/art/Credits.md</code>。
+            AI 圖只宜作版面測試、草稿、以及小朋友的「猜猜我是誰」練習。
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     資料注入：由 scripts/cards/build-image-studio.mjs 寫入
+     window.AVIANDEX_STUDIO  = { cards, tax }     （與卡面工作室共用格式）
+     window.AVIANDEX_ASSETS  = { 'photo:0008': dataURL, 'refcard': dataURL }
+     ══════════════════════════════════════════════════════ -->
+<script>
+const GH_CFG = { owner: 'playerkousas-rgb', repo: 'AvianDex', branch: 'main', dir: 'src/data' };
+</script>
+<script>
+/* ============================================================
+ *  AvianDex 出圖工作室  v1.0
+ *  ------------------------------------------------------------
+ *  設計原則（全部來自實測，不是喜好）：
+ *   1) 圖上不可有字。實測 AI 寫中文長段落必出錯字／自創事實。
+ *   2) 圖要「準」不是靠 AI 記得，是靠 (a) 參考圖鎖風格 (b) 資料鎖外形描述。
+ *   3) 每張圖都要可以追溯：prompt 由哪個編號、哪一格、哪一句話組合而成。
+ *   4) 失敗要講人話（HTTP 碼 → 中文建議），唔好叫用戶自己查。
+ * ============================================================ */
+'use strict';
+
+/* ---------- 0. 小工具 ---------- */
+const $ = id => document.getElementById(id);
+const PNG_W = 1200, PNG_H = 1600;
+const LOGS = [];
+function log(msg, cls) {
+  const line = new Date().toISOString().slice(11, 19) + '  ' + msg;
+  LOGS.push(cls ? { line, cls } : { line });
+  if (LOGS.length > 200) LOGS.shift();
+  const box = $('log');
+  box.innerHTML = LOGS.map(o => o.cls
+    ? `<span class="${o.cls}">${esc(o.line)}</span>` : esc(o.line)).join('\n');
+  box.scrollTop = box.scrollHeight;
+}
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const pick = v => {
+  if (Array.isArray(v)) return v.filter(Boolean).length ? v : null;
+  const s = String(v == null ? '' : v).trim();
+  return s ? s : null;
+};
+
+/* Canvas／iframe 沙盒會禁 localStorage（漫畫.html 曾因此整個程式停擺）→ 一律 try-catch */
+const LS = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : v; } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } },
+  del(k) { try { localStorage.removeItem(k); } catch (e) {} },
+};
+
+/* ---------- 1. 資料 ---------- */
+let BIRDS = {};      /* 由 build-image-studio.mjs 注入：{ id: {name,en,sci,...,copy} } */
+let TAX = {};
+const A = Object.assign({}, window.AVIANDEX_ASSETS || {});   /* 內嵌資產 + 生成結果 */
+
+const PENDING = '資料待查';
+function birdOf(id) {
+  const b = BIRDS[id];
+  const t = TAX[id] || {};
+  if (b) return Object.assign({}, t, b);
+  return { name: t.zh || '', en: t.comName || '', sci: t.sciName || '',
+    order: t.order || '', family: t.family || '', orderZh: t.orderZh || '', familyZh: t.familyZh || '' };
+}
+function copyOf(id) { return (BIRDS[id] && BIRDS[id].copy) || {}; }
+
+/* ---------- 2. API ---------- */
+const API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
+/* 生圖模型候選：上面唔得（404／唔支援／已下架）就自動試下一個（抄 漫畫.html 的做法） */
+const IMAGE_MODEL_FALLBACKS = [
+  'gemini-3.1-flash-image-preview',
+  'gemini-2.5-flash-image',
+  'gemini-3-pro-image-preview',
+  'gemini-nano-banana-2.1',
+  'gemini-2.5-flash-image-preview',
+];
+const IMAGE_GEN_CONFIG = { responseModalities: ['IMAGE'] };
+const ASPECT = { photo: '3:4', sprite: '1:1', closeup: '1:1', icon: '1:1' };
+const badModels = new Set();
+
+function resolveKey() {
+  try {
+    const k = $('key').value.trim();
+    if (k) return k;
+  } catch (e) {}
+  const stored = LS.get('avx_key', '');
+  if (/^AIza[0-9A-Za-z_\-]{30,}$/.test(stored)) return stored;
+  /* 掃 window 上所有可能的名（Canvas 有時注入到不同名） */
+  try {
+    for (const k of Object.keys(window)) {
+      const v = window[k];
+      if (typeof v === 'string' && /^AIza[0-9A-Za-z_\-]{30,}$/.test(v)) return v.trim();
+    }
+  } catch (e) {}
+  try {
+    for (const m of document.querySelectorAll('meta[content]')) {
+      if (/^AIza[0-9A-Za-z_\-]{30,}$/.test((m.content || '').trim())) return m.content.trim();
+    }
+  } catch (e) {}
+  return '';
+}
+
+function apiUrl(model) {
+  const key = resolveKey();
+  const base = `${API_BASE}/${model}:generateContent`;
+  return key ? `${base}?key=${encodeURIComponent(key)}` : base;
+}
+const isModelUnavailable = (status, message = '') =>
+  status === 404 || (status === 400 && /model|not (found|supported)/i.test(message));
+
+async function callGemini(model, body, { signal, retries = 2 } = {}) {
+  let wait = 1800;
+  for (let attempt = 1; ; attempt++) {
+    try {
+      const res = await fetch(apiUrl(model), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        credentials: 'include',
+        signal,
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        const err = new Error((data.error && data.error.message) || 'API 錯誤：' + res.status);
+        err.status = res.status;
+        err.retryable = res.status === 429 || res.status >= 500;
+        err.modelUnavailable = isModelUnavailable(res.status, err.message);
+        throw err;
+      }
+      if (data.promptFeedback && data.promptFeedback.blockReason) {
+        const err = new Error('內容被安全機制阻擋，請調整描述後再試');
+        err.status = 200; err.retryable = false;
+        throw err;
+      }
+      return data;
+    } catch (err) {
+      if (err.name === 'AbortError' || err.retryable === false || attempt >= retries) throw err;
+      log(`[${model}] 第 ${attempt} 次失敗，${Math.round(wait / 1000)} 秒後重試`, 'w');
+      await sleep(wait);
+      wait *= 2;
+    }
+  }
+}
+
+/* HTTP 碼 → 中文建議（抄 describeError 的思路，改成生圖專用） */
+function describeError(err) {
+  const msg = String((err && err.message) || err || '未知錯誤');
+  const status = (err && err.status) || 0;
+  if (/API key|permission|unauthenticated|401|403/i.test(msg) || status === 401 || status === 403) {
+    return { title: '認證失敗', hint: '在 Gemini Canvas 開啟時，平台應該自動代你加認證；若沒有，請在左邊貼上自己的 key（aistudio.google.com/apikey）。本機雙擊開啟則一定要貼 key。' };
+  }
+  if (status === 429 || /quota|resource_exhausted|rate limit/i.test(msg)) {
+    return { title: '已達額度／速率上限', hint: '等一兩分鐘再試，或改用另一個 Google 帳號的 key。一次出太多張（尤其「一鍵出齊」）特別容易撞到。' };
+  }
+  if (status === 404 || /not found|not supported|unsupported/i.test(msg)) {
+    return { title: '這個模型不支援', hint: '系統會自動改用下一個候選模型。若全部都試完仍然失敗，代表你的 key 未開通圖片模型。' };
+  }
+  if (status === 400 && /image|inline|blob|too large|size/i.test(msg)) {
+    return { title: '送出的內容太大', hint: '把「參考圖」換細一點（長邊 ≤ 1600px），或者取消附上參考圖再試。' };
+  }
+  if (/safety|block|filter/i.test(msg)) {
+    return { title: '被安全機制阻擋', hint: '把外形描述改得中性一點（例如把「血」改成「紅色」），或者分兩次出。' };
+  }
+  if (/fetch|network|load failed|failed to fetch/i.test(msg)) {
+    return { title: '網絡或跨域問題', hint: '確認網絡正常。本機用 file:// 開啟時，瀏覽器可能封鎖請求，改用 Canvas 或本機小伺服器（python3 -m http.server）。' };
+  }
+  if (/沒有回傳圖片/.test(msg)) {
+    return { title: '模型只回了文字', hint: '通常係 prompt 被當成「講嘢」而非「畫圖」。把第一句改成「生成一張照片：」再試。' };
+  }
+  return { title: '出圖失敗', hint: msg };
+}
+function showErr(err) {
+  const d = describeError(err);
+  $('errTitle').textContent = d.title;
+  $('errHint').textContent = d.hint;
+  $('errBox').classList.add('on');
+  log('✗ ' + d.title + '：' + ((err && err.message) || err), 'e');
+}
+function clearErr() { $('errBox').classList.remove('on'); }
+
+/* 圖片抽取 */
+function extractImage(data) {
+  const content = data && data.candidates && data.candidates[0] && data.candidates[0].content;
+  const part = content && (content.parts || []).find(p => p.inlineData);
+  if (!part) throw new Error('AI 沒有回傳圖片（可能被安全機制過濾，或模型只回了文字）');
+  return `data:${part.inlineData.mimeType};base64,${part.inlineData.data}`;
+}
+
+/* ---------- 3. 任務定義 ---------- */
+/* 每個任務＝一段「畫什麼」的固定板模。資料只填空位，唔會自由發揮。 */
+const TASKS = {
+  photo: {
+    name: '真雀相風格圖', size: '3:4', file: 'photo',
+    frame: (b, c) => [
+      `請生成一張「${b.name || b.en}（${b.sci || b.en}）」的真實生態攝影風格照片，直式 3:4。`,
+      c.habitat ? `場景：${c.habitat}` : '',
+      c.look ? `鳥的外形（必須一致）：${c.look}` : '',
+      '構圖：整隻鳥清楚可見，站姿自然，旁邊有樹枝／葉片作為前景，背景柔焦（散景），光線為清晨或黃昏的柔和側光。',
+    ],
+  },
+  sprite: {
+    name: '像素圖', size: '1:1', file: 'sprite',
+    frame: (b, c) => [
+      `請生成一張「${b.name || b.en}」的 16-bit 像素藝術（pixel art）圖，正方形 1:1。`,
+      c.look ? `鳥的外形（必須一致）：${c.look}` : '',
+      '風格：可愛但比例正確的圖鑑像素圖，粗黑描邊、有限色盤、乾淨的淺米色背景、無陰影投射、無格線、無文字。',
+      '構圖：鳥側身站立，全身完整入鏡，四周留白約 8%。',
+    ],
+  },
+  closeup: {
+    name: '圓形特寫', size: '1:1', file: 'callout',
+    frame: (b, c) => {
+      const marks = (c.callouts || []).slice(0, 5).map(m => `· ${m.label || ''}：${m.text || ''}`);
+      return [
+        `請生成一張「${b.name || b.en}」的頭部與上半身特寫照片，正方形 1:1，用於卡面的圓形放大鏡。`,
+        c.look ? `外形（必須一致）：${c.look}` : '',
+        marks.length ? '要清楚看到的特徵：\n' + marks.join('\n') : '',
+        '構圖：鳥位於正中，眼睛清晰對焦，背景單一柔和色（淺綠），無文字、無邊框、無圓形遮罩（圓形由程式裁）。',
+      ];
+    },
+  },
+  icon: {
+    name: '欄底小插圖', size: '1:1', file: 'icon',
+    frame: (b, c) => {
+      const theme = c.habitat || c.range || '';
+      return [
+        `請生成一張扁平插畫（flat vector illustration），正方形 1:1，作為資訊卡欄目底部的小裝飾。`,
+        `主題：${b.name || b.en} 的生態環境${theme ? '（' + theme + '）' : ''}。`,
+        '風格：柔和綠色調、簡潔線條、少量細節、無文字、無邊框、白色或淺米色背景，適合縮到 40px 仍看得清。',
+        '內容：只畫環境元素（樹、水、草、昆蟲等），不要畫整隻鳥。',
+      ];
+    },
+  },
+};
+
+/* ---------- 4. prompt 組合 ---------- */
+function styleBlock() {
+  const useRef = $('useRef').checked && $('refImg').src;
+  const styleOnly = $('refStyleOnly').checked;
+  if (!useRef) return '';
+  return [
+    '【參考圖】上面附上的是 AvianDex 資訊卡的成品，只用作參考，請注意：',
+    styleOnly
+      ? '· 只參考它的「畫風、色調、光線、質感」，不要照抄它的文字、編號、條碼、評分。'
+      : '· 參考它的版面與畫風。',
+    '· 圖上不需要亦不可以出現任何文字（包括中文字、英文字、數字、假字）。',
+  ].join('\n');
+}
+function buildPrompt(taskKey) {
+  const id = curId();
+  const b = birdOf(id), c = copyOf(id);
+  const t = TASKS[taskKey];
+  const body = t.frame(b, c).filter(Boolean).join('\n');
+  const tail = [
+    '',
+    '【硬性要求】',
+    '· 不要有任何文字、字母、數字、水印、logo、框線、箭嘴、編號。',
+    '· 只畫一隻鳥（欄底小插圖除外），不要拼貼、不要多格、不要分割畫面。',
+    '· 相片風格要像真實生態攝影，不要 CG、不要卡通化（像素圖任務除外）。',
+  ].join('\n');
+  return [styleBlock(), body, tail].filter(Boolean).join('\n\n');
+}
+function resetPrompt() {
+  const prompt = buildPrompt(curTask());
+  $('prompt').value = prompt;
+  $('pcount').textContent = prompt.length + ' 字';
+}
+/* 有人手改過就唔好覆蓋（避免出圖前被偷走修改） */
+let promptDirty = false;
+
+/* ---------- 5. 出圖 ---------- */
+let busy = false;
+function refPart() {
+  if (!$('useRef').checked) return null;
+  const src = $('refImg').src;
+  if (!src || !/^data:image\//.test(src)) return null;
+  const comma = src.indexOf(',');
+  const head = src.slice(0, comma);
+  return { inlineData: {
+    mimeType: (head.slice(head.indexOf(':') + 1, head.indexOf(';')) || 'image/jpeg'),
+    data: src.slice(comma + 1),
+  } };
+}
+async function genOne(taskKey, id) {
+  const t = TASKS[taskKey];
+  const prompt = (promptDirty && taskKey === curTask()) ? $('prompt').value : buildPrompt(taskKey);
+  const parts = [];
+  const ref = refPart();
+  if (ref) parts.push(ref);
+  parts.push({ text: prompt });
+
+  const body = {
+    contents: [{ role: 'user', parts }],
+    generationConfig: Object.assign({}, IMAGE_GEN_CONFIG, { imageConfig: { aspectRatio: t.size } }),
+  };
+
+  let lastErr = null;
+  for (const model of IMAGE_MODEL_FALLBACKS) {
+    if (badModels.has(model)) continue;
+    const t0 = performance.now();
+    try {
+      log(`→ ${model} · ${t.name} · ${t.size}`);
+      const data = await callGemini(model, body);
+      const url = extractImage(data);
+      log(`✓ ${t.name} 完成（${Math.round(performance.now() - t0)} ms）`, 'o');
+      return { url, model };
+    } catch (err) {
+      lastErr = err;
+      if (err.modelUnavailable) {
+        badModels.add(model);
+        log(`✗ ${model} 不可用，改下一個`, 'w');
+        continue;
+      }
+      if (err.status === 429 || err.status >= 500) {
+        /* 額度／伺服器問題：換模型都無用，直接報 */
+        throw err;
+      }
+      log(`✗ ${model}：${err.message}`, 'w');
+      continue;
+    }
+  }
+  throw lastErr || new Error('所有圖片模型都不可用');
+}
+
+function shotEl(id, taskKey, state) {
+  const t = TASKS[taskKey];
+  return `<div class="shot ${state === 'busy' ? 'busy' : ''}" data-k="${taskKey}" data-id="${id}">
+    ${state === 'busy' ? `<div class="skel">${t.name} 生成中…</div>` : ''}
+  </div>`;
+}
+function renderOut(list) {
+  const host = $('out');
+  host.innerHTML = list.map(s => {
+    if (s.url) {
+      return `<div class="shot" data-k="${s.task}" data-id="${s.id}">
+        <img src="${s.url}" alt="${esc(TASKS[s.task].name)}">
+        <div class="cap"><b>${esc(TASKS[s.task].name)}</b>
+          <div class="acts">
+            <button data-dl="${s.task}">下載</button>
+            <button data-send="${s.task}" title="套用到卡面工作室">套用</button>
+          </div>
+        </div>
+      </div>`;
+    }
+    if (s.state === 'busy') return shotEl(s.id, s.task, 'busy');
+    return `<div class="shot" data-k="${s.task}" data-id="${s.id}">
+      <div class="skel" style="color:var(--bad)">失敗<br><span style="font-size:10.5px">${esc(s.msg || '')}</span></div>
+      <div class="cap"><b>${esc(TASKS[s.task].name)}</b><div class="acts"><button data-retry="${s.task}">重試</button></div></div>
+    </div>`;
+  }).join('');
+  $('outCount').textContent = list.filter(s => s.url).length + ' 張';
+}
+
+let RESULTS = [];   /* [{task, id, url, model, state, msg}] */
+function setResults(list) { RESULTS = list; renderOut(list); }
+
+async function runTasks(taskKeys, { sequential = true } = {}) {
+  if (busy) return;
+  if ($('mode').value === 'off') {
+    log('模式設為「唔用 AI」，請先在 ① 選一個 API 模式', 'w');
+    return;
+  }
+  if (!resolveKey() && $('mode').value === 'own') {
+    showErr(Object.assign(new Error('未貼 API key'), { status: 401 }));
+    return;
+  }
+  const id = curId();
+  busy = true; clearErr(); badModels.clear();
+  $('btnGen').disabled = true; $('btnGenAll').disabled = true;
+  const plan = taskKeys.map(k => ({ task: k, id }));
+  setResults(plan.map(p => ({ ...p, state: 'busy' })));
+  let done = 0;
+  const total = plan.length;
+  const tick = () => {
+    const pct = total ? Math.round((done / total) * 100) : 0;
+    $('progBar').style.width = pct + '%';
+    $('progTxt').textContent = `${done}/${total} 完成`;
+  };
+  tick();
+
+  const next = async (p) => {
+    try {
+      const r = await genOne(p.task, p.id);
+      const i = RESULTS.findIndex(x => x.task === p.task && x.id === p.id);
+      if (i >= 0) RESULTS[i] = { ...p, url: r.url, model: r.model };
+    } catch (err) {
+      const i = RESULTS.findIndex(x => x.task === p.task && x.id === p.id);
+      const d = describeError(err);
+      if (i >= 0) RESULTS[i] = { ...p, state: 'error', msg: d.title };
+      showErr(err);
+      if (err.status === 429) throw err;   /* 撞額度就停，唔好白燒 */
+    }
+    done++; tick(); renderOut(RESULTS);
+  };
+
+  try {
+    if (sequential) {
+      for (const p of plan) {
+        await next(p);
+        if (done < total) await sleep(1200);   /* 避免速率限制 */
+      }
+    } else {
+      await Promise.all(plan.map(p => next(p)));
+    }
+  } catch (e) {
+    log('已中止：' + e.message, 'e');
+  } finally {
+    busy = false;
+    $('btnGen').disabled = false; $('btnGenAll').disabled = false;
+    log(`── 完成 ${done}/${total} ──`);
+  }
+}
+
+/* ---------- 6. 卡面／編號 ---------- */
+function curId() {
+  const v = $('num').value.replace(/\D/g, '').padStart(4, '0').slice(-4);
+  return v === '0000' ? '0001' : v;
+}
+function curTask() {
+  const on = [...document.querySelectorAll('#tasks .tk')].find(b => b.getAttribute('aria-pressed') === 'true');
+  return on ? on.dataset.task : 'photo';
+}
+function refreshBird() {
+  const id = curId();
+  const b = birdOf(id);
+  const c = copyOf(id);
+  const bits = [b.name || PENDING, b.sci || '', b.en || ''].filter(Boolean);
+  const have = ['look', 'habitat', 'diet', 'range', 'funFact'].filter(k => pick(c[k]));
+  $('birdLine').innerHTML = `${esc(bits.join(' · ') || '（此編號未載入資料）')}
+    <br>有資料可寫入 prompt：${have.length ? have.map(h => `<span class="pill ok">${h}</span>`).join(' ') : '<span class="pill bad">冇</span>'}`;
+  if (!$('jump').value || $('jump').value !== id) $('jump').value = id;
+  resetPrompt();
+}
+
+/* ---------- 7. 參考圖 ---------- */
+function setRef(url, note) {
+  if (!url) {
+    $('refImg').style.display = 'none';
+    $('refImg').removeAttribute('src');
+    $('refEmpty').style.display = '';
+    return;
+  }
+  $('refImg').src = url;
+  $('refImg').style.display = 'block';
+  $('refEmpty').style.display = 'none';
+  if (note) log('參考圖：' + note);
+}
+/* 參考圖太大會令請求被拒 → 一律縮到長邊 1400、JPEG 82 */
+function shrink(dataUrl) {
+  return new Promise(resolve => {
+    const im = new Image();
+    im.onload = () => {
+      const max = 1400;
+      const scale = Math.min(1, max / Math.max(im.width, im.height));
+      if (scale >= 1 && dataUrl.length < 900000) return resolve(dataUrl);
+      const cv = document.createElement('canvas');
+      cv.width = Math.round(im.width * scale);
+      cv.height = Math.round(im.height * scale);
+      cv.getContext('2d').drawImage(im, 0, 0, cv.width, cv.height);
+      resolve(cv.toDataURL('image/jpeg', 0.82));
+    };
+    im.onerror = () => resolve(dataUrl);
+    im.src = dataUrl;
+  });
+}
+function fileToRef(file) {
+  if (!file || !/^image\//.test(file.type)) return;
+  const r = new FileReader();
+  r.onload = async () => {
+    const small = await shrink(r.result);
+    setRef(small, file.name + `（${Math.round(small.length / 1024)} KB）`);
+  };
+  r.readAsDataURL(file);
+}
+
+/* ---------- 8. 下載 ---------- */
+function download(url, filename) {
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+function filenameFor(id, task) {
+  const t = TASKS[task];
+  return t.file === 'photo' ? `${id}-photo.png`
+    : t.file === 'sprite' ? `${id}-sprite.png`
+    : t.file === 'callout' ? `${id}-closeup.png`
+    : `${id}-icon.png`;
+}
+
+/* ---------- 9. 開機 ---------- */
+function boot() {
+  /* 資料 */
+  if (window.AVIANDEX_STUDIO) { BIRDS = window.AVIANDEX_STUDIO.cards || {}; TAX = window.AVIANDEX_STUDIO.tax || {}; }
+  else if (window.AVIANDEX_CARDS) { BIRDS = window.AVIANDEX_CARDS; TAX = window.AVIANDEX_TAX || {}; }
+
+  /* 編號下拉 */
+  const ids = Object.keys(BIRDS).sort();
+  const all = Object.keys(TAX).sort();
+  const list = ids.length ? ids : all;
+  $('jump').innerHTML = list.map(id => {
+    const b = birdOf(id);
+    const n = pick(copyOf(id).look) || pick(copyOf(id).habitat) ? '' : '（資料少）';
+    return `<option value="${id}">${id}　${esc(b.name || b.en || '')}${n}</option>`;
+  }).join('');
+
+  /* 起始編號：有圖的 0008，否則第一張 */
+  const start = A['photo:0008'] || ids.includes('0008') ? '0008' : (list[0] || '0001');
+  $('num').value = start;
+  $('jump').value = start;
+
+  /* 內建參考卡 */
+  if (A['refcard']) setRef(A['refcard'], '內建 0008 成品卡');
+
+  /* API 徽章 */
+  const key = resolveKey();
+  const badge = $('apiBadge');
+  if (key) { badge.className = 'pill ok'; badge.textContent = 'API：已找到 key'; }
+  else { badge.className = 'pill warn'; badge.textContent = 'API：等 Canvas 注入'; }
+
+  refreshBird();
+  log('AvianDex 出圖工作室 v1.0 已載入');
+  if (list.length) log(`可用編號：${list.length} 個`);
+  else log('冇載入到任何編號：請用 build-image-studio.mjs 產生的版本，或拖入 cardCopy.json', 'w');
+
+  /* 之前貼過的 key */
+  const stored = LS.get('avx_key', '');
+  if (stored) { $('key').value = stored; }
+  if ($('mode').value === 'own') $('keyRow').style.display = 'flex';
+}
+
+/* ---------- 10. 事件 ---------- */
+$('mode').addEventListener('change', () => {
+  $('keyRow').style.display = $('mode').value === 'own' ? 'flex' : 'none';
+  if ($('mode').value === 'own' && !$('key').value) $('key').focus();
+});
+$('btnKeySave').addEventListener('click', () => {
+  const k = $('key').value.trim();
+  if (!/^AIza[0-9A-Za-z_\-]{30,}$/.test(k)) { log('key 格式唔似 Google API key（應該 AIza 開頭、39 字）', 'w'); return; }
+  LS.set('avx_key', k);
+  $('apiBadge').className = 'pill ok';
+  $('apiBadge').textContent = 'API：已存 key';
+  log('key 已存在本機（唔會上載到任何地方）');
+});
+
+$('num').addEventListener('input', () => {
+  const v = $('num').value.replace(/\D/g, '').slice(-4);
+  $('num').value = v;
+  if (v.length === 4) { promptDirty = false; refreshBird(); }
+});
+$('jump').addEventListener('change', () => {
+  $('num').value = $('jump').value;
+  promptDirty = false;
+  refreshBird();
+});
+
+document.querySelectorAll('#tasks .tk').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const multi = btn.getAttribute('aria-pressed') === 'true';
+    /* 真雀相是主圖，唔可以被取消；其他可多選 */
+    if (btn.dataset.task === 'photo') return;
+    btn.setAttribute('aria-pressed', String(!multi));
+    promptDirty = false;
+    resetPrompt();
+  });
+});
+
+$('prompt').addEventListener('input', () => {
+  promptDirty = true;
+  $('pcount').textContent = $('prompt').value.length + ' 字';
+});
+$('btnPromptReset').addEventListener('click', () => { promptDirty = false; resetPrompt(); log('prompt 已重新由資料組合'); });
+$('btnPromptCopy').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText($('prompt').value); log('prompt 已複製'); }
+  catch (e) { $('prompt').select(); log('請按 Ctrl+C 複製（瀏覽器封鎖了自動複製）', 'w'); }
+});
+$('useLook').addEventListener('change', () => { promptDirty = false; resetPrompt(); });
+$('useRef').addEventListener('change', () => { promptDirty = false; resetPrompt(); });
+$('refStyleOnly').addEventListener('change', () => { promptDirty = false; resetPrompt(); });
+
+$('btnGen').addEventListener('click', () => {
+  const keys = ['photo', ...['sprite', 'closeup', 'icon'].filter(k =>
+    document.querySelector(`#tasks .tk[data-task="${k}"]`).getAttribute('aria-pressed') === 'true')];
+  runTasks(promptDirty ? [curTask()] : keys);
+});
+$('btnGenAll').addEventListener('click', () => runTasks(['photo', 'sprite', 'closeup', 'icon']));
+
+$('btnRefBuiltin').addEventListener('click', () => {
+  if (A['refcard']) setRef(A['refcard'], '內建 0008 成品卡');
+  else log('這個版本冇內嵌參考卡，請按「選檔…」或直接貼上圖片', 'w');
+});
+$('btnRefPick').addEventListener('click', () => $('refFile').click());
+$('refFile').addEventListener('change', e => fileToRef(e.target.files[0]));
+$('btnRefClear').addEventListener('click', () => setRef(null));
+
+$('refbox').addEventListener('dragover', e => { e.preventDefault(); $('refbox').classList.add('hot'); });
+$('refbox').addEventListener('dragleave', () => $('refbox').classList.remove('hot'));
+$('refbox').addEventListener('drop', e => {
+  e.preventDefault(); $('refbox').classList.remove('hot');
+  fileToRef(e.dataTransfer.files[0]);
+});
+window.addEventListener('paste', e => {
+  const it = [...(e.clipboardData ? e.clipboardData.items : [])].find(i => /^image\//.test(i.type));
+  if (it) { fileToRef(it.getAsFile()); log('已由剪貼板貼入參考圖'); }
+});
+
+$('out').addEventListener('click', e => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  const shot = b.closest('.shot');
+  const task = shot.dataset.k, id = shot.dataset.id;
+  const r = RESULTS.find(x => x.task === task && x.id === id);
+  if (b.dataset.dl && r && r.url) download(r.url, filenameFor(id, task));
+  if (b.dataset.retry) { promptDirty = false; runTasks([task]); }
+  if (b.dataset.send && r && r.url) {
+    /* 同時開兩個 tab 時，用 localStorage 傳圖（超過 4MB 會失敗 → 退回下載） */
+    const ok = LS.set('avx_handoff', JSON.stringify({ id, task, url: r.url, at: Date.now() }));
+    if (ok) log('已放入交接區：切到卡面工作室的「套用出圖」即可');
+    else { download(r.url, filenameFor(id, task)); log('圖太大，改為直接下載', 'w'); }
+  }
+});
+$('btnDownloadAll').addEventListener('click', () => {
+  const done = RESULTS.filter(r => r.url);
+  if (!done.length) { log('未有圖可下載', 'w'); return; }
+  done.forEach((r, i) => setTimeout(() => download(r.url, filenameFor(r.id, r.task)), i * 350));
+  log(`開始下載 ${done.length} 張`);
+});
+$('btnClearOut').addEventListener('click', () => { setResults([]); $('progBar').style.width = '0'; $('progTxt').textContent = '—'; });
+
+boot();
+</script>
+</body>
+</html>

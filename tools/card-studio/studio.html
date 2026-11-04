@@ -269,6 +269,7 @@ details.more[open] summary::before{content:"▾ "}
         <label class="f">匯入／匯出</label>
         <div class="tools" style="margin-top:0">
           <button id="btnEdit" class="primary">編輯這一張</button>
+          <button id="btnPull" title="從出圖工作室接收 AI 圖">套用出圖</button>
           <button id="btnLoad">載入 JSON</button>
           <button id="btnSave">儲存 JSON</button>
           <button id="btnPng" class="primary">輸出 PNG</button>
@@ -854,6 +855,36 @@ $('btnNew').addEventListener('click', () => {
   buildEditor();
 });
 
+/* ---------- 9.6 由出圖工作室接收 AI 圖 ---------- */
+/* 出圖工作室按「套用」時會寫入 localStorage 的 avx_handoff（圖片太大時會改為直接下載）。 */
+const HANDOFF_TASK = { photo: 'photo', sprite: 'sprite', callout: 'closeup', icon: 'icon' };
+function pullFromImageStudio(quiet) {
+  let raw = null;
+  try { raw = localStorage.getItem('avx_handoff'); } catch (e) {
+    if (!quiet) log('此瀏覽器封鎖了 localStorage，無法接收（請直接下載圖片）');
+    return false;
+  }
+  if (!raw) { if (!quiet) log('交接區冇圖：請先在出圖工作室按「套用」'); return false; }
+  let o;
+  try { o = JSON.parse(raw); } catch (e) { log('交接資料損壞'); return false; }
+  if (!o || !o.url || !o.id) { log('交接資料不完整'); return false; }
+  if (Date.now() - (o.at || 0) > 6 * 3600 * 1000) { log('交接圖已超過 6 小時，請重新出圖'); return false; }
+
+  const key = o.task === 'photo' ? 'photo:' + o.id
+    : o.task === 'sprite' ? 'sprite:' + o.id
+    : o.task === 'photo' ? 'photo:' + o.id : null;
+  if (key) {
+    A[key] = o.url;
+  } else {
+    /* 圓形特寫同欄底插圖暫存到 callout/icon 池，等日後有人工選圖流程再用 */
+    A['last:' + o.task + ':' + o.id] = o.url;
+  }
+  if (el.num.value !== o.id) el.num.value = o.id;
+  render(o.id);
+  log('已套用 ' + o.task + ' 圖到 NO.' + o.id + '（只在這部機、這個瀏覽器，未寫入 repo）');
+  return true;
+}
+
 /* ---------- 10. 事件 ---------- */
 el.num.addEventListener('change', () => show(el.num.value));
 el.num.addEventListener('input', () => { if (el.num.value.length === 4) show(el.num.value); });
@@ -904,6 +935,7 @@ function refreshJump() {
     : '<option value="">（尚未載入資料）</option>';
 }
 
+$('btnPull').addEventListener('click', () => pullFromImageStudio(false));
 $('btnLoad').addEventListener('click', () => $('file').click());
 $('btnSave').addEventListener('click', () => {
   /* 主檔：cardCopy.json 相容格式（可直接覆蓋 repo 內同名檔案） */
@@ -969,6 +1001,16 @@ async function gen(kind) {
 
 /* ---------- 11. 啟動 ---------- */
 function boot() {
+  /* 由出圖工作室過來的圖：30 分鐘內自動套用，唔需要按掣 */
+  setTimeout(() => {
+    let raw = null;
+    try { raw = localStorage.getItem('avx_handoff'); } catch (e) { return; }
+    if (!raw) return;
+    try {
+      const o = JSON.parse(raw);
+      if (o && o.url && Date.now() - (o.at || 0) < 30 * 60 * 1000) pullFromImageStudio(true);
+    } catch (e) {}
+  }, 60);
   if (window.AVIANDEX_STUDIO) loadData(window.AVIANDEX_STUDIO);
   else if (window.AVIANDEX_CARDS) loadData({ cards: window.AVIANDEX_CARDS, tax: window.AVIANDEX_TAX || {} });
   else {

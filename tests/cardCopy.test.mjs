@@ -67,9 +67,11 @@ test('callouts 格式：最多 3 點、label 寬 ≤ 13、text 寬 ≤ 24', () =
 });
 
 test('不准出現簡體字（香港繁體介面）', () => {
+  // source 記錄的是維基「條目標題」，原文本身可能是簡體（例如「黑鸢」），
+  // 那是出處的事實記錄、卡面不會印出，所以不列入檢查。
   const texts = [];
   for (const [id, c] of entries) {
-    texts.push([id, c.diet, c.range, c.look, c.habitat, c.funFact, c.source, c.orderZh, c.familyZh]);
+    texts.push([id, c.diet, c.range, c.look, c.habitat, c.funFact, c.orderZh, c.familyZh]);
   }
   for (const [id, ...values] of texts) {
     for (const v of values) {
@@ -177,15 +179,17 @@ test('dexcard：圓形標註要有對焦點（否則 5 個圈會係同一格）'
   }
 });
 
-test('dexcard：冇真雀相就唔應該有圓形標註（避免空圈）', () => {
-  // TODO(photos): 全部真雀相補齊前，舊資料（callouts 只作文字備註）暫時豁免；
-  // 一有 photo 就必須同時有 callouts，反之亦然。
-  const PENDING_PHOTO = new Set(['0289', '0290', '0291', '0292', '0293', '0294', '0295',
-    '0296', '0297', '0298', '0299', '0288']);
+test('dexcard：冇真雀相時，右欄要夠料改印「外形特徵」（唔可以兩頭空）', () => {
+  // 排版引擎的行為（render-card.py 3b/3c）：
+  //   有 photo → 圓形特寫 callouts；冇 photo → 圓圈唔印，右欄改印 look。
+  // 所以「有 callouts 但冇 photo」唔算錯（callout 內容只作備註），
+  // 但此時絕對唔可以連 look 都冇，否則右欄會變成「資料待查」而白白浪費已查到的特徵。
   for (const [id, c] of entries) {
-    if (PENDING_PHOTO.has(id)) continue;
-    if ((c.callouts || []).length && !(c.photo || '').trim()) {
-      assert.fail(`${id} 有 callouts 但冇 photo，卡面右邊會出現空圈`);
+    const hasPhoto = Boolean((c.photo || '').trim());
+    if (hasPhoto) continue;
+    if ((c.callouts || []).length) {
+      assert.ok((c.look || '').trim(),
+        `${id} 有 callouts 但冇 photo 又冇 look：卡面右欄會空白（callouts 只會在有相時才印）`);
     }
   }
 });

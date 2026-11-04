@@ -103,3 +103,63 @@ node scripts/cards/build-studio-data.mjs
 - `commonness`（常見度）、Top5、小貼士、注意事項、生態價值 5 項評分屬**編者主觀**，
   卡底一定有聲明；這不是科學數據。
 - 「資料待查」是刻意設計，不是 bug。
+
+---
+
+## 8. 三個檔案，三個崗位
+
+```
+tools/card-studio/
+├── studio.html                 ← 卡面「母版」（DOM 版 dexcard；改版式改這裏）
+├── imagestudio.html            ← 出圖母版（參考圖 + 板模 prompt + API 自動注入）
+├── aviandex-studio.html        ← ✅ 成品：卡面工作室（已注入 548 張文案 + 分類，雙擊即用）
+└── aviandex-image-studio.html  ← ✅ 成品：出圖工作室（已注入 548 張文案 + 內建參考卡）
+```
+
+`*.html` 母版由 `build-*.mjs` 注入資料後產生 `aviandex-*.html`。**日常只需要用成品那兩個。**
+
+### 工作流（建議）
+
+```
+① 出圖工作室 aviandex-image-studio.html
+     打編號 → 按「出圖」→ 得到無字真雀相／像素圖
+        ↓（按「套用」）
+② 卡面工作室 aviandex-studio.html
+     自動收到圖 → 同一頁看到整張卡 → 改字／排版
+        ↓（按「輸出 PNG」或「PDF／列印」）
+③ 交給學校／團體
+```
+
+「套用」是經 `localStorage` 傳圖（同一部機、同一個瀏覽器），並且**不會自動寫入 repo**——
+正式版仍然要人手把有授權的照片放去 `cards/art/NNNN-photo.png`，
+再跑 `python3 scripts/cards/render-card.py NNNN` 出 AVIF。
+
+## 9. 出圖工作室的四個任務
+
+| 任務 | 尺寸 | 產出檔名 | 用在哪一格 |
+|---|---|---|---|
+| 真雀相風格圖 | 3:4 | `NNNN-photo.png` | 卡面中間大圖 |
+| 像素圖 | 1:1 | `NNNN-sprite.png` | 卡面左邊小圖 |
+| 圓形特寫 | 1:1 | `NNNN-closeup.png` | 右邊放大鏡（程式裁圓） |
+| 欄底小插圖 | 1:1 | `NNNN-icon.png` | 四欄底部裝飾 |
+
+全部都有**硬性要求：不可出現任何文字**。理由見 `docs/CARD_AI_VS_TEMPLATE.md`：
+實測 AI 寫中文長段落會出錯字、自創地名與事實（英文更差）。文字交給 DOM 排版，永遠準確。
+
+## 10. 資料品質：先核對，後出卡
+
+文案是由中文維基抽取的**原文句子**。抽取器一旦認錯條目，整格就會變成另一隻雀的描述，
+而且看起來完全正常——比「資料待查」危險得多。
+
+```bash
+node scripts/cards/audit-copy.mjs      # 產生 docs/CARD_DATA_AUDIT.md
+```
+
+它用三種訊號找問題：
+
+1. 🔴 **句首就是別隻雀的名字**（「普通鵟體重約759克…」放在暗綠繡眼鳥卡上）
+2. 🟡 **來源條目名與 eBird 中文名不符**（可能只是別名，要人手看一眼）
+3. 🟢 **正常比較句**（「與大嘴烏鴉相比，本物種喙形較細」）→ 不算錯
+
+第一輪結果：548 張之中 7 張抓錯條目（已清空＋記錄在 `notes`）、1 張句子主語不清（已暫緩），
+其餘 150 張屬「命名差異待查」。報告在 `docs/CARD_DATA_AUDIT.md`。
