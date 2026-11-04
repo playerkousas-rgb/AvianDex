@@ -149,6 +149,7 @@ summary:hover{color:var(--g1)}
       <span>參考圖 ＋ 板模 prompt ＋ 卡面資料 → Gemini 出「無字」圖</span>
     </div>
     <div class="spacer"></div>
+    <button id="btnLang" class="sm ghost" title="中文／English 出圖">🌐 中文</button>
     <span id="apiBadge" class="pill warn">API：檢查中</span>
     <span class="pill" id="verPill">v1.0</span>
   </div>
@@ -187,7 +188,7 @@ summary:hover{color:var(--g1)}
           <b>鎖定版面氣質</b>（深綠白卡、圓形特寫、四欄資訊盒）＋ <b>鎖定畫風</b>（真雀攝影 vs 像素圖）。
           它<b>不會</b>被要求照抄文字——因為文字由 DOM 排版，AI 一個字都唔准寫。</div>
         <div class="refbox" id="refbox">
-          <div class="empty" id="refEmpty">拖入／貼上（Ctrl+V）你的成品卡<br>或按下面「用內建 0008 參考卡」</div>
+          <div class="empty" id="refEmpty"><span id="refTxt">拖入／貼上（Ctrl+V）你的成品卡<br>或按下面「用內建 0008 參考卡」</span></div>
           <img id="refImg" alt="參考圖" style="display:none">
         </div>
         <div class="refdrop">
@@ -356,7 +357,15 @@ function birdOf(id) {
   return { name: t.zh || '', en: t.comName || '', sci: t.sciName || '',
     order: t.order || '', family: t.family || '', orderZh: t.orderZh || '', familyZh: t.familyZh || '' };
 }
-function copyOf(id) { return (BIRDS[id] && BIRDS[id].copy) || {}; }
+function copyOf(id) {
+  const c = (BIRDS[id] && BIRDS[id].copy) || {};
+  /* 英文 prompt 用：由 fieldCopy 取 en 版本，唔會把中文塞進英文 prompt */
+  const fc = c.fieldCopy || [];
+  const en = (fid) => (fc.find((x) => x && x.id === fid) || {}).en || '';
+  return Object.assign({}, c, {
+    enLook: en('look'), enHabitat: en('habitat'), enDiet: en('diet'), enRange: en('range'),
+  });
+}
 
 /* ---------- 2. API ---------- */
 const API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
@@ -482,29 +491,60 @@ function extractImage(data) {
 
 /* ---------- 3. 任務定義 ---------- */
 /* 每個任務＝一段「畫什麼」的固定板模。資料只填空位，唔會自由發揮。 */
+/* 出圖語言：中文版 → 中文 prompt + 中文字形要求；英文版 → 英文 prompt。
+ * 注意：兩個版本都要求「圖上不可有字」，語言只影響 prompt 與 UI。 */
+let LANG = (() => { try { return localStorage.getItem('avx_lang') === 'en' ? 'en' : 'zh'; } catch (e) { return 'zh'; } })();
+const UI = {
+  zh: { photo: '真雀相風格圖', sprite: '像素圖', closeup: '圓形特寫', icon: '欄底小插圖',
+    gen: '出圖（1 張）', genAll: '一鍵出齊', ready: 'API：等 Canvas 注入', keyOk: 'API：已找到 key',
+    refBuiltin: '內建 0008 參考卡', need: '有資料可寫入 prompt' },
+  en: { photo: 'Realistic photo', sprite: 'Pixel sprite', closeup: 'Circular close-up', icon: 'Section icon',
+    gen: 'Generate (1)', genAll: 'Generate all', ready: 'API: awaiting Canvas', keyOk: 'API: key found',
+    refBuiltin: 'Built-in 0008 ref', need: 'fields usable in prompt' },
+};
+
 const TASKS = {
   photo: {
-    name: '真雀相風格圖', size: '3:4', file: 'photo',
-    frame: (b, c) => [
+    name: '真雀相風格圖', nameEn: 'Realistic photo', size: '3:4', file: 'photo',
+    frame: (b, c) => (LANG === 'en' ? [
+      `Generate a realistic wildlife photograph of the ${b.en || b.sci} (${b.sci}), vertical 3:4.`,
+      c.enHabitat ? `Setting: ${c.enHabitat}` : '',
+      c.enLook ? `Bird appearance (must match exactly): ${c.enLook}` : '',
+      'Composition: the whole bird clearly visible, natural posture, a branch or leaves in the foreground, soft background bokeh, gentle early-morning or late-afternoon side light.',
+    ] : [
       `請生成一張「${b.name || b.en}（${b.sci || b.en}）」的真實生態攝影風格照片，直式 3:4。`,
       c.habitat ? `場景：${c.habitat}` : '',
       c.look ? `鳥的外形（必須一致）：${c.look}` : '',
       '構圖：整隻鳥清楚可見，站姿自然，旁邊有樹枝／葉片作為前景，背景柔焦（散景），光線為清晨或黃昏的柔和側光。',
-    ],
+    ]),
   },
   sprite: {
-    name: '像素圖', size: '1:1', file: 'sprite',
-    frame: (b, c) => [
+    name: '像素圖', nameEn: 'Pixel sprite', size: '1:1', file: 'sprite',
+    frame: (b, c) => (LANG === 'en' ? [
+      `Generate a 16-bit pixel art sprite of the ${b.en || b.sci}, square 1:1.`,
+      c.enLook ? `Bird appearance (must match): ${c.enLook}` : '',
+      'Style: cute but anatomically correct dex sprite, thick dark outline, limited palette, plain cream background, no drop shadow, no grid, no text.',
+      'Composition: bird standing in side view, fully in frame, about 8% margin.',
+    ] : [
       `請生成一張「${b.name || b.en}」的 16-bit 像素藝術（pixel art）圖，正方形 1:1。`,
       c.look ? `鳥的外形（必須一致）：${c.look}` : '',
       '風格：可愛但比例正確的圖鑑像素圖，粗黑描邊、有限色盤、乾淨的淺米色背景、無陰影投射、無格線、無文字。',
       '構圖：鳥側身站立，全身完整入鏡，四周留白約 8%。',
-    ],
+    ]),
   },
   closeup: {
-    name: '圓形特寫', size: '1:1', file: 'callout',
+    name: '圓形特寫', nameEn: 'Circular close-up', size: '1:1', file: 'callout',
     frame: (b, c) => {
       const marks = (c.callouts || []).slice(0, 5).map(m => `· ${m.label || ''}：${m.text || ''}`);
+      if (LANG === 'en') {
+        const mEn = (c.callouts || []).slice(0, 5).map(m => `· ${m.label || ''}: ${m.text || ''}`);
+        return [
+          `Generate a close-up photograph of the head and upper body of the ${b.en || b.sci}, square 1:1, for the circular magnifier on an info card.`,
+          c.enLook ? `Appearance (must match): ${c.enLook}` : '',
+          mEn.length ? 'Features that must be visible:\n' + mEn.join('\n') : '',
+          'Composition: bird centred, eye sharply in focus, single soft background colour (pale green), no text, no frame, no circular mask (masked by code later).',
+        ];
+      }
       return [
         `請生成一張「${b.name || b.en}」的頭部與上半身特寫照片，正方形 1:1，用於卡面的圓形放大鏡。`,
         c.look ? `外形（必須一致）：${c.look}` : '',
@@ -514,9 +554,18 @@ const TASKS = {
     },
   },
   icon: {
-    name: '欄底小插圖', size: '1:1', file: 'icon',
+    name: '欄底小插圖', nameEn: 'Section icon', size: '1:1', file: 'icon',
     frame: (b, c) => {
       const theme = c.habitat || c.range || '';
+      if (LANG === 'en') {
+        const th = c.enHabitat || c.enRange || '';
+        return [
+          'Generate a flat vector illustration, square 1:1, used as a small decorative band at the bottom of an info-card section.',
+          `Subject: the habitat of the ${b.en || b.sci}${th ? ' (' + th + ')' : ''}.`,
+          'Style: soft greens, clean lines, few details, no text, no border, white or pale cream background, recognisable at 40px.',
+          'Content: environment elements only (trees, water, grass, insects) — do not draw the whole bird.',
+        ];
+      }
       return [
         `請生成一張扁平插畫（flat vector illustration），正方形 1:1，作為資訊卡欄目底部的小裝飾。`,
         `主題：${b.name || b.en} 的生態環境${theme ? '（' + theme + '）' : ''}。`,
@@ -532,6 +581,15 @@ function styleBlock() {
   const useRef = $('useRef').checked && $('refImg').src;
   const styleOnly = $('refStyleOnly').checked;
   if (!useRef) return '';
+  if (LANG === 'en') {
+    return [
+      'The attached image is a finished AvianDex info card, used only as a reference:',
+      styleOnly
+        ? '· borrow only its visual style, palette, lighting and texture — do NOT copy its text, numbers, barcode or score stars.'
+        : '· use it as a reference for layout and style.',
+      '· The output must contain no text at all (no Chinese, no English, no numbers, no gibberish glyphs).',
+    ].join('\n');
+  }
   return [
     '【參考圖】上面附上的是 AvianDex 資訊卡的成品，只用作參考，請注意：',
     styleOnly
@@ -545,19 +603,42 @@ function buildPrompt(taskKey) {
   const b = birdOf(id), c = copyOf(id);
   const t = TASKS[taskKey];
   const body = t.frame(b, c).filter(Boolean).join('\n');
-  const tail = [
+  const tail = (LANG === 'en' ? [
+    '',
+    'Hard requirements:',
+    '· No text, letters, numbers, watermark, logo, frame, arrows or labels of any kind.',
+    '· One bird only (except the section icon), no collage, no panels, no split screen.',
+    '· Photo style must look like real wildlife photography — not CG, not cartoon (except the pixel-sprite task).',
+  ] : [
     '',
     '【硬性要求】',
     '· 不要有任何文字、字母、數字、水印、logo、框線、箭嘴、編號。',
     '· 只畫一隻鳥（欄底小插圖除外），不要拼貼、不要多格、不要分割畫面。',
     '· 相片風格要像真實生態攝影，不要 CG、不要卡通化（像素圖任務除外）。',
-  ].join('\n');
+  ]).join('\n');
   return [styleBlock(), body, tail].filter(Boolean).join('\n\n');
 }
+function taskName(k) { return LANG === 'en' ? (TASKS[k].nameEn || TASKS[k].name) : TASKS[k].name; }
+
+function applyLang() {
+  $('btnLang').textContent = LANG === 'en' ? '🌐 English' : '🌐 中文';
+  $('btnGen').textContent = UI[LANG].gen;
+  $('btnGenAll').textContent = UI[LANG].genAll;
+  $('refTxt').textContent = LANG === 'en'
+    ? 'Drop / paste (Ctrl+V) your finished card, or press “Built-in 0008” below.'
+    : '拖入／貼上（Ctrl+V）你的成品卡，或按下面「用內建 0008 參考卡」';
+  document.querySelectorAll('#tasks .tk').forEach(b => {
+    b.querySelector('b').textContent = taskName(b.dataset.task);
+  });
+  document.documentElement.lang = LANG === 'en' ? 'en' : 'zh-Hant';
+  promptDirty = false;
+  resetPrompt();
+}
+
 function resetPrompt() {
   const prompt = buildPrompt(curTask());
   $('prompt').value = prompt;
-  $('pcount').textContent = prompt.length + ' 字';
+  $('pcount').textContent = prompt.length + (LANG === 'en' ? ' chars' : ' 字');
 }
 /* 有人手改過就唔好覆蓋（避免出圖前被偷走修改） */
 let promptDirty = false;
@@ -627,8 +708,8 @@ function renderOut(list) {
   host.innerHTML = list.map(s => {
     if (s.url) {
       return `<div class="shot" data-k="${s.task}" data-id="${s.id}">
-        <img src="${s.url}" alt="${esc(TASKS[s.task].name)}">
-        <div class="cap"><b>${esc(TASKS[s.task].name)}</b>
+        <img src="${s.url}" alt="${esc(taskName(s.task))}">
+        <div class="cap"><b>${esc(taskName(s.task))}</b>
           <div class="acts">
             <button data-dl="${s.task}">下載</button>
             <button data-send="${s.task}" title="套用到卡面工作室">套用</button>
@@ -638,8 +719,8 @@ function renderOut(list) {
     }
     if (s.state === 'busy') return shotEl(s.id, s.task, 'busy');
     return `<div class="shot" data-k="${s.task}" data-id="${s.id}">
-      <div class="skel" style="color:var(--bad)">失敗<br><span style="font-size:10.5px">${esc(s.msg || '')}</span></div>
-      <div class="cap"><b>${esc(TASKS[s.task].name)}</b><div class="acts"><button data-retry="${s.task}">重試</button></div></div>
+      <div class="skel" style="color:var(--bad)">FAILED<br><span style="font-size:10.5px">${esc(s.msg || '')}</span></div>
+      <div class="cap"><b>${esc(taskName(s.task))}</b><div class="acts"><button data-retry="${s.task}">重試</button></div></div>
     </div>`;
   }).join('');
   $('outCount').textContent = list.filter(s => s.url).length + ' 張';
@@ -814,8 +895,9 @@ function boot() {
   if (key) { badge.className = 'pill ok'; badge.textContent = 'API：已找到 key'; }
   else { badge.className = 'pill warn'; badge.textContent = 'API：等 Canvas 注入'; }
 
+  applyLang();
   refreshBird();
-  log('AvianDex 出圖工作室 v1.0 已載入');
+  log('AvianDex 出圖工作室 v1.1 已載入');
   if (list.length) log(`可用編號：${list.length} 個`);
   else log('冇載入到任何編號：請用 build-image-studio.mjs 產生的版本，或拖入 cardCopy.json', 'w');
 
@@ -826,6 +908,13 @@ function boot() {
 }
 
 /* ---------- 10. 事件 ---------- */
+$('btnLang').addEventListener('click', () => {
+  LANG = LANG === 'zh' ? 'en' : 'zh';
+  LS.set('avx_lang', LANG);
+  applyLang();
+  log(LANG === 'en' ? 'Prompt language: English' : 'Prompt 語言：中文');
+});
+
 $('mode').addEventListener('change', () => {
   $('keyRow').style.display = $('mode').value === 'own' ? 'flex' : 'none';
   if ($('mode').value === 'own' && !$('key').value) $('key').focus();

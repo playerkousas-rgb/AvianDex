@@ -35,7 +35,10 @@
     "cards:studio": "node scripts/cards/build-studio-data.mjs",
     "cards:image-studio": "node scripts/cards/build-image-studio.mjs",
     "cards:audit": "node scripts/cards/audit-copy.mjs",
-    "cards:preview": "node scripts/cards/export-card-html.mjs"
+    "cards:preview": "node scripts/cards/export-card-html.mjs",
+    "cards:extract-bi": "node scripts/cards/extract-bilingual.mjs",
+    "cards:schema": "node scripts/cards/field-schema.mjs --json",
+    "test:bi": "node --test tests/bilingual.test.mjs"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",

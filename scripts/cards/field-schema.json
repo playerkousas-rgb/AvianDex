@@ -1,0 +1,140 @@
+{
+  "maxPicks": 7,
+  "fields": [
+    {
+      "id": "range",
+      "zh": "分佈地區",
+      "en": "Distribution",
+      "tier": "core",
+      "slot": "grid4",
+      "icon": "分",
+      "kind": "para"
+    },
+    {
+      "id": "habitat",
+      "zh": "棲息環境",
+      "en": "Habitat",
+      "tier": "core",
+      "slot": "grid4",
+      "icon": "居",
+      "kind": "para"
+    },
+    {
+      "id": "diet",
+      "zh": "食物",
+      "en": "Diet",
+      "tier": "core",
+      "slot": "grid4",
+      "icon": "食",
+      "kind": "para"
+    },
+    {
+      "id": "highlights",
+      "zh": "Top 5 特色亮點",
+      "en": "Top 5 Highlights",
+      "tier": "core",
+      "slot": "grid4",
+      "icon": "五",
+      "kind": "list"
+    },
+    {
+      "id": "look",
+      "zh": "外形特徵",
+      "en": "Appearance",
+      "tier": "strong",
+      "slot": "grid4",
+      "icon": "形",
+      "kind": "para"
+    },
+    {
+      "id": "breeding",
+      "zh": "成長與繁殖",
+      "en": "Breeding",
+      "tier": "strong",
+      "slot": "grid4",
+      "icon": "育",
+      "kind": "para"
+    },
+    {
+      "id": "funFact",
+      "zh": "有趣冷知識",
+      "en": "Fun Fact",
+      "tier": "strong",
+      "slot": "grid4",
+      "icon": "知",
+      "kind": "para"
+    },
+    {
+      "id": "tips",
+      "zh": "觀察小貼士",
+      "en": "Field Tips",
+      "tier": "strong",
+      "slot": "grid4",
+      "icon": "貼",
+      "kind": "list"
+    },
+    {
+      "id": "voice",
+      "zh": "鳴聲",
+      "en": "Voice",
+      "tier": "extra",
+      "slot": "grid4",
+      "icon": "聲",
+      "kind": "para"
+    },
+    {
+      "id": "behavior",
+      "zh": "行為習性",
+      "en": "Behaviour",
+      "tier": "extra",
+      "slot": "grid4",
+      "icon": "行",
+      "kind": "para"
+    },
+    {
+      "id": "migration",
+      "zh": "遷徙",
+      "en": "Migration",
+      "tier": "extra",
+      "slot": "grid4",
+      "icon": "遷",
+      "kind": "para"
+    },
+    {
+      "id": "conservation",
+      "zh": "保育現況",
+      "en": "Conservation",
+      "tier": "extra",
+      "slot": "grid4",
+      "icon": "保",
+      "kind": "para"
+    },
+    {
+      "id": "humanRelation",
+      "zh": "人與鳥",
+      "en": "Birds & People",
+      "tier": "extra",
+      "slot": "grid4",
+      "icon": "人",
+      "kind": "para"
+    },
+    {
+      "id": "etymology",
+      "zh": "名稱由來",
+      "en": "Name Origin",
+      "tier": "extra",
+      "slot": "grid4",
+      "icon": "名",
+      "kind": "para"
+    },
+    {
+      "id": "caution",
+      "zh": "注意事項",
+      "en": "Watch Out",
+      "tier": "extra",
+      "slot": "grid4",
+      "icon": "注",
+      "kind": "list"
+    }
+  ]
+}

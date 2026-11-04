@@ -719,6 +719,8 @@ def main():
     ap.add_argument("--kind", choices=["bird", "info"], default="info",
                     help="bird=簡單鳥卡（R2 aviandex/）；info=詳細資訊圖卡（R2 aviandex/info/）")
     ap.add_argument("--preview", action="store_true", help="只出 PNG")
+    ap.add_argument("--lang", choices=["zh", "en"], default="zh",
+                    help="卡面語言（zh＝中文版，en＝English 版；文字一律來自資料，不即時翻譯）")
     ap.add_argument("--quality", type=int, default=58, help="AVIF 品質（預設 58，約 100–200 KB）")
     ap.add_argument("--from-image", metavar="FILE",
                     help="把一張現成 PNG（例如 AI 一次生成的整張卡）轉成 AVIF，唔做排版")
@@ -761,17 +763,20 @@ def main():
         bird_id = bird_id.zfill(4)
         f = build_facts(bird_id)
         if args.kind == "info":
-            img = {"dexcard": render_dexcard, "grid": render_info,
-                   "pokedex": render_pokedex}[args.layout](f)
+            if args.layout == "dexcard":
+                img = render_dexcard(f, lang=args.lang)
+            else:
+                img = {"grid": render_info, "pokedex": render_pokedex}[args.layout](f)
         else:
             img = render_bird(f)
-        png_path = os.path.join(out_dir, f"{bird_id}.png")
+        suffix = "" if args.lang == "zh" else "-en"
+        png_path = os.path.join(out_dir, f"{bird_id}{suffix}.png")
         img.save(png_path, optimize=True)
         if args.preview:
             print(f"🖼  {bird_id} {f['zh']} → {os.path.relpath(png_path, ROOT)}")
             continue
 
-        avif_path = os.path.join(out_dir, f"{bird_id}.avif")
+        avif_path = os.path.join(out_dir, f"{bird_id}{suffix}.avif")
         # 用 ImageMagick 寫 AVIF（libheif 1.15，支援 AV1）；比 Pillow plugin 穩定
         subprocess.run(
             ["convert", png_path, "-quality", str(args.quality), "-define", "heic:speed=6", avif_path],
@@ -892,7 +897,91 @@ def stars(d, canvas, x, y, score, size=17, gap=3):
             d.polygon(pts, fill=(228, 232, 226), outline=(206, 214, 206))
 
 
-def render_dexcard(f):
+FIELD_SCHEMA_CACHE = {}
+
+
+def _load_field_schema():
+    """讀 scripts/cards/field-schema.json（由 field-schema.mjs --json 產生）。
+
+    Python 唔想為一份欄位表再寫一次規則（兩邊走樣就會出現「HTML 版印 A、Pillow 印 B」），
+    所以選欄只在 JS 寫一次；執行時若有人改過 .mjs 而未重新產生 .json，就自動重跑一次 node。
+    """
+    src = os.path.join(ROOT, "scripts", "cards", "field-schema.mjs")
+    out = os.path.join(ROOT, "scripts", "cards", "field-schema.json")
+    try:
+        if not os.path.exists(out) or os.path.getmtime(src) > os.path.getmtime(out):
+            subprocess.run(["node", src, "--json"], check=True, capture_output=True, timeout=60)
+        with open(out, encoding="utf-8") as fh:
+            return json.load(fh)
+    except Exception as e:                                    # 冇 node／冇檔案 → 用後備順序
+        print(f"   ⚠️ 讀不到 field-schema.json（{e}），改用固定欄位順序")
+        return None
+
+
+def choose_fields(c, lang="zh", max_picks=7):
+    """回傳要印在四欄區的欄位 id（最多 7 個；有幾多印幾多）。"""
+    if not FIELD_SCHEMA_CACHE:
+        FIELD_SCHEMA_CACHE["data"] = _load_field_schema()
+    schema = FIELD_SCHEMA_CACHE["data"]
+    fc = c.get("fieldCopy")
+    if isinstance(fc, dict):
+        fc = [dict(v, id=k) for k, v in fc.items()]
+
+    def val(fid):
+        if isinstance(fc, list):
+            hit = next((x for x in fc if x.get("id") == fid), None)
+            if hit is not None:
+                v = hit.get(lang) or (hit.get("zh") if lang == "zh" else "")
+                return [str(v)] if v else []
+        v = c.get(fid)
+        return v if isinstance(v, list) else ([v] if v else [])
+
+    if schema:
+        ids = [f["id"] for f in schema["fields"] if f.get("slot") == "grid4"]
+        tier = {f["id"]: f["tier"] for f in schema["fields"]}
+        max_picks = schema.get("maxPicks", max_picks)
+    else:
+        ids = ["range", "habitat", "diet", "highlights", "look", "breeding", "funFact",
+               "tips", "voice", "behavior", "migration", "conservation", "humanRelation",
+               "etymology", "caution"]
+        tier = {k: ("core" if k in ("range", "habitat", "diet", "highlights") else "extra") for k in ids}
+    weight = {"core": 30, "strong": 20, "extra": 10}
+    scored = []
+    for i, fid in enumerate(ids):
+        v = val(fid)
+        if not v:
+            continue
+        score = weight.get(tier.get(fid, "extra"), 10)
+        score += min(len(v), 5) if isinstance(c.get(fid), list) else 0
+        scored.append((-score, i, fid))
+    scored.sort()
+    return [fid for _, _, fid in scored[:max_picks]]
+
+
+def chosen_of(picks, fid, c):
+    """列表欄位在唔入選時回傳 None（唔會印）。"""
+    return c.get(fid) if fid in picks else None
+
+
+def render_dexcard(f, lang="zh"):
+    EN = lang == "en"
+    PEND = "Data pending" if EN else PENDING
+    def V(fid):
+        """取欄位值。英文版只接受英文原文（fieldCopy.en），冇就印 pending——
+        絕對唔會把中文塞進英文卡，亦唔會臨時機翻。"""
+        fc = c.get("fieldCopy")
+        if isinstance(fc, dict):
+            fc = [dict(v, id=k) for k, v in fc.items()]
+        if isinstance(fc, list):
+            hit = next((x for x in fc if isinstance(x, dict) and x.get("id") == fid), None)
+            if hit is not None:
+                want = hit.get("en") if EN else hit.get("zh")
+                if isinstance(want, str) and want.strip():
+                    return want
+                if EN:
+                    return ""
+        return "" if EN else c.get(fid)
+
     """滿版資訊圖卡（1200×1600）。"""
     c = f["copy"]
     Wc, Hc = 1200, 1600
@@ -936,11 +1025,11 @@ def render_dexcard(f):
 
     # 1d. 身長／體重／常見度
     bx1, bx2 = Wc * S - M - 300 * S, Wc * S - M - 16 * S
-    d.text((bx1, M + 92 * S), "身長", font=F("bold", 18), fill=SUB, anchor="la")
-    d.text((bx2, M + 92 * S), c.get("length") or PENDING, font=F("bold", 19), fill=INK2, anchor="ra")
-    d.text((bx1, M + 122 * S), "體重", font=F("bold", 18), fill=SUB, anchor="la")
-    d.text((bx2, M + 122 * S), c.get("weight") or PENDING, font=F("bold", 19), fill=INK2, anchor="ra")
-    d.text((bx1, M + 154 * S), "常見度", font=F("bold", 18), fill=SUB, anchor="la")
+    d.text((bx1, M + 92 * S), ("Length" if EN else "身長"), font=F("bold", 18), fill=SUB, anchor="la")
+    d.text((bx2, M + 92 * S), c.get("length") or PEND, font=F("bold", 19), fill=INK2, anchor="ra")
+    d.text((bx1, M + 122 * S), ("Weight" if EN else "體重"), font=F("bold", 18), fill=SUB, anchor="la")
+    d.text((bx2, M + 122 * S), c.get("weight") or PEND, font=F("bold", 19), fill=INK2, anchor="ra")
+    d.text((bx1, M + 154 * S), ("Commonness" if EN else "常見度"), font=F("bold", 18), fill=SUB, anchor="la")
     rarity = int(c.get("rarity") or 0)
     if rarity:
         for i in range(5):
@@ -948,7 +1037,7 @@ def render_dexcard(f):
             d.ellipse([cx - 9 * S, M + 156 * S, cx + 9 * S, M + 174 * S],
                       fill=GREEN if i < rarity else (226, 232, 226), outline=GREEN_L, width=1 * S)
     else:
-        d.text((bx2, M + 156 * S), PENDING, font=F("r", 16), fill=SUB, anchor="ra")
+        d.text((bx2, M + 156 * S), PEND, font=F("r", 16), fill=SUB, anchor="ra")
 
     # 2. 名稱分隔列（對齊參考卡的主名字距離）
     y = M + head_h + 14 * S
@@ -1003,14 +1092,14 @@ def render_dexcard(f):
         d.rounded_rectangle([px1, y, px2, y + row_h], 18 * S, outline=(255, 255, 255), width=3 * S)
     else:
         d.rounded_rectangle([px1, y, px2, y + row_h], 18 * S, fill=(232, 238, 233))
-        d.text(((px1 + px2) / 2, y + row_h / 2), "（未提供真雀相）", font=F("r", 20), fill=SUB, anchor="mm")
+        d.text(((px1 + px2) / 2, y + row_h / 2), ("(no photo yet)" if EN else "（未提供真雀相）"), font=F("r", 20), fill=SUB, anchor="mm")
 
     if not has_photo:
         # 冇相時右邊改為顯示「資料待查」清單，唔好留白
         d.rounded_rectangle([px2 + 12 * S, y, Wc * S - M, y + row_h], 18 * S,
                             fill=(255, 255, 255), outline=LINE, width=2 * S)
-        section_head(d, px2 + 24 * S, y + 12 * S, "外形特徵", "形")
-        para(d, px2 + 24 * S, y + 52 * S, c.get("look") or PENDING,
+        section_head(d, px2 + 24 * S, y + 12 * S, (EN and "Appearance" or "外形特徵"), "形")
+        para(d, px2 + 24 * S, y + 52 * S, V("look") or PEND,
              Wc * S - M - px2 - 48 * S, F("r", 15), INK2, 1.6)
 
     # 3c. 圓形特寫標註
@@ -1018,7 +1107,7 @@ def render_dexcard(f):
     calls = ([m for m in (c.get("callouts") or [])][:5]) if has_photo else []
     if calls:
         # 先量「名稱由來」需要幾高，再用剩餘空間排 5 個圓形標註
-        ety_txt = c.get("etymology") or PENDING
+        ety_txt = c.get("etymology") or PEND
         ety_w = Wc * S - M - cx1 - 24 * S
         ety_lines = wrap(d, ety_txt, F("r", 13), ety_w)
         ety_h = 44 * S + len(ety_lines) * 13 * S * 1.5 + 12 * S
@@ -1051,7 +1140,7 @@ def render_dexcard(f):
         ey = y + calls_h + 10 * S
         d.rounded_rectangle([cx1, ey, Wc * S - M, y + row_h], 18 * S, fill=(243, 248, 243),
                             outline=LINE, width=2 * S)
-        section_head(d, cx1 + 12 * S, ey + 8 * S, "名稱由來", "名")
+        section_head(d, cx1 + 12 * S, ey + 8 * S, (EN and "Name Origin" or "名稱由來"), "名")
         para(d, cx1 + 12 * S, ey + 44 * S, ety_txt, ety_w, F("r", 13), INK2, 1.5)
     elif has_photo:
         pass
@@ -1065,25 +1154,72 @@ def render_dexcard(f):
     col_w = (grid_w - 3 * 10.0) / 4
     top_px = M + head_h + 52 * S + row_h + 14 * S     # 四欄起始（px，含超取樣）
     foot_px = Hc * S - M - 34 * S                     # 底欄上緣
-    budget = (foot_px - 40 * S - 10 * S - 140 * S - 10 * S - top_px) / S
+    score_h_pt = 140.0
+    budget = (foot_px - top_px) / S - score_h_pt - 10.0
     print(f"   四欄可用高度 {budget:.0f}pt")
 
-    intro_txt = c.get("intro_zh") or PENDING
-    tax_rows = [("界", "動物界 Animalia"), ("門", "脊索動物門 Chordata"), ("綱", "鳥綱 Aves"),
-                ("目", f"{f['orderZh']} {f['order']}"), ("科", f"{f['familyZh']} {f['family']}"),
-                ("屬", (f["sci"].split()[0] if f["sci"] else PENDING)),
-                ("種", f["sci"] or PENDING),
-                ("IUCN", c.get("iucn") or PENDING),
-                ("eBird", f["code"] or PENDING)]
+    intro_txt = (c.get("intro_en") if EN else c.get("intro_zh")) or PEND
+    if EN:
+        tax_rows = [("Order", f["order"] or PEND), ("Family", f["family"] or PEND),
+                    ("Genus", (f["sci"].split()[0] if f["sci"] else PEND)),
+                    ("Species", f["sci"] or PEND),
+                    ("IUCN", c.get("iucn") or PEND),
+                    ("eBird", f["code"] or PEND)]
+    else:
+        tax_rows = [("界", "動物界 Animalia"), ("門", "脊索動物門 Chordata"), ("綱", "鳥綱 Aves"),
+                    ("目", f"{f['orderZh']} {f['order']}"), ("科", f"{f['familyZh']} {f['family']}"),
+                    ("屬", (f["sci"].split()[0] if f["sci"] else PEND)),
+                    ("種", f["sci"] or PEND),
+                    ("IUCN", c.get("iucn") or PEND),
+                    ("eBird", f["code"] or PEND)]
 
-    ROW1 = [("分佈地區", "分", "p", c.get("range")),
-            ("棲息環境", "居", "p", c.get("habitat")),
-            ("食物", "食", "p", c.get("diet")),
-            ("Top 5 特色亮點", "五", "l", c.get("highlights"))]
-    ROW2 = [("成長與繁殖", "育", "p", c.get("breeding")),
-            ("觀察小貼士", "貼", "l", c.get("tips")),
-            ("有趣冷知識", "知", "p", c.get("funFact")),
-            ("注意事項", "注", "l", c.get("caution"))]
+    picks = choose_fields(c, lang=lang)
+    # 英文版：欄目標題與固定字都用英文（值已經由 fieldCopy 取 en）
+    T = {"Range": "分佈地區", "Habitat": "棲息環境", "Diet": "食物", "Top 5": "Top 5 特色亮點"}
+    def L_(fid, title_zh, title_en, icon, kind="p"):
+        """列表用：英文版取 fieldCopy.en（陣列），中文版取 c[fid]；唔入選就回 None。"""
+        if fid not in picks:
+            return None
+        if EN:
+            fc = c.get("fieldCopy")
+            if isinstance(fc, dict):
+                fc = [dict(v, id=k) for k, v in fc.items()]
+            hit = next((x for x in fc if isinstance(x, dict) and x.get("id") == fid), None) if isinstance(fc, list) else None
+            v = (hit or {}).get("en")
+            if isinstance(v, str) and v.strip():
+                return [v]
+            return None
+        return c.get(fid)
+
+    all_specs = {
+        "range": ("Distribution" if EN else "分佈地區", "分", "p", V("range")),
+        "habitat": ("Habitat" if EN else "棲息環境", "居", "p", V("habitat")),
+        "diet": ("Diet" if EN else "食物", "食", "p", V("diet")),
+        "highlights": ("Top 5 Highlights" if EN else "Top 5 特色亮點", "五", "l", L_("highlights", "Top 5", "Top 5", "五")),
+        "look": ("Appearance" if EN else "外形特徵", "形", "p", V("look")),
+        "breeding": ("Breeding" if EN else "成長與繁殖", "育", "p", V("breeding")),
+        "funFact": ("Fun Fact" if EN else "有趣冷知識", "知", "p", V("funFact")),
+        "tips": ("Field Tips" if EN else "觀察小貼士", "貼", "l", L_("tips", "觀察小貼士", "Field Tips", "貼")),
+        "voice": ("Voice" if EN else "鳴聲", "聲", "p", V("voice")),
+        "behavior": ("Behaviour" if EN else "行為習性", "行", "p", V("behavior")),
+        "migration": ("Migration" if EN else "遷徙", "遷", "p", V("migration")),
+        "conservation": ("Conservation" if EN else "保育現況", "保", "p", V("conservation")),
+        "humanRelation": ("Birds & People" if EN else "人與鳥", "人", "p", V("humanRelation")),
+        "etymology": ("Name Origin" if EN else "名稱由來", "名", "p", V("etymology")),
+        "caution": ("Watch Out" if EN else "注意事項", "注", "l", L_("caution", "注意事項", "Watch Out", "注")),
+    }
+    # 選欄結果（field-schema.mjs）：有幾多印幾多，最多 7 格；主圖區已用嘅格子唔重複
+    used_main = {"look"} if not has_photo else {"etymology"}
+    grid_ids = [f for f in picks if f not in used_main and f in all_specs][:8]
+    # 英文版：已入選但暫無英文原文 → 保留格位並印 "Data pending"（版面穩定，一眼看出缺什麼）
+    grid_specs = [all_specs[f] for f in grid_ids] or [all_specs["range"], all_specs["diet"]]
+    ROW1 = grid_specs[:4]
+    ROW2 = grid_specs[4:8]
+    # 唔夠 8 格時，用「隱形格」填滿，令四欄寬度唔會變（同 HTML 版一致）
+    while len(ROW1) < 4:
+        ROW1.append(("", "", "p", ""))
+    while len(ROW2) < 4:
+        ROW2.append(("", "", "p", ""))
 
     ICONS = {"分佈地區": "icons/range-asia.png", "棲息環境": "icons/habitat-park.png",
              "食物": "icons/food-insects.png", "成長與繁殖": "icons/nest-eggs.png",
@@ -1102,7 +1238,7 @@ def render_dexcard(f):
                 lines = wrap(d, it, fnt, inner)
                 h += len(lines) * fnt.size * 1.5 / S + 3
         else:
-            lines = wrap(d, payload or PENDING, fnt, inner)
+            lines = wrap(d, payload or PEND, fnt, inner)
             h += len(lines) * fnt.size * 1.58 / S + 2
         if title in ICONS:
             h += ART_H + ART_GAP
@@ -1111,23 +1247,54 @@ def render_dexcard(f):
     def row_need(row, size):
         return max(need(sp, size) for sp in row)
 
+    ROW1_REAL = [sp for sp in ROW1 if sp[0]] or ROW1[:1]
+    ROW2_REAL = [sp for sp in ROW2 if sp[0]]
+
+    # 左欄「分類資訊」一定要有位（9 行 × 約 22pt + 標題）；先留起，其餘才給四欄
+    gap_v = 10.0
+    # 標題 44pt + 每行最少 20.5pt + 底部留白 8pt（之前寫死 210，9 行會爆出框外）
+    tax_min = 44.0 + 20.5 * len(tax_rows) + 8.0
+    if not ROW2_REAL:
+        grid_budget = budget - gap_v - tax_min        # 只有一排：其餘全給它
+    else:
+        grid_budget = (budget - 2 * gap_v - tax_min) * 0.66
     size = 15.0
-    while size > 11.0:
-        n1, n2 = row_need(ROW1, size), row_need(ROW2, size)
-        if n1 + n2 + 10 <= budget:
+    while size > 10.5:
+        n1 = row_need(ROW1_REAL, size) if ROW1_REAL else 0
+        n2 = row_need(ROW2_REAL, size) if ROW2_REAL else 0
+        if n1 + ((n2 + gap_v) if ROW2_REAL else 0) <= grid_budget:
             break
         size -= 0.5
-    n1, n2 = row_need(ROW1, size), row_need(ROW2, size)
-    extra = max(0.0, budget - (n1 + n2 + 10))
-    r1_h = n1 + extra * 0.42
-    r2_h = n2 + extra * 0.58
+    n1 = row_need(ROW1_REAL, size) if ROW1_REAL else 0
+    n2 = row_need(ROW2_REAL, size) if ROW2_REAL else 0
+    need_total = n1 + ((n2 + gap_v) if ROW2_REAL else 0)
+    extra = max(0.0, grid_budget - need_total)
+    if not ROW2_REAL:
+        # 只有一排：四欄區同左欄「分類資訊」對齊同高，右邊唔會留下一大片空白
+        total = budget - gap_v
+        r1_h = max(n1 + 24.0, total * 0.46)
+        tax_h = total - r1_h
+        if tax_h < tax_min:                            # 分類資訊優先保住
+            tax_h = tax_min
+            r1_h = total - tax_h
+        if r1_h < n1 + 12.0:                           # 文字優先，勉強夠位就夠
+            r1_h = n1 + 12.0
+            tax_h = max(total - r1_h, 140.0)
+        r2_h = 0.0
+    else:
+        r1_h = n1 + extra * 0.42
+        r2_h = n2 + extra * 0.58
+        tax_h = r1_h + gap_v + r2_h                   # 左欄同右邊兩排對齊
+    tax_h = max(tax_h, tax_min)
     print(f"   字級 {size}pt｜第一行 {n1:.0f}pt／第二行 {n2:.0f}pt／預算 {budget:.0f}pt｜"
-          f"top_y={top_px / S:.0f} r1={r1_h:.0f} r2={r2_h:.0f} col_w={col_w:.0f}")
+          f"top_y={top_px / S:.0f} r1={r1_h:.0f} r2={r2_h:.0f} tax={tax_h:.0f} col_w={col_w:.0f}")
 
     def box(spec, i, y0, h, y_pt_scale=1.0):
         title, icon, kind, payload = spec
         bx = (grid_x + i * (col_w + 10.0)) * S
         bw = col_w * S
+        if not title:
+            return bx          # 隱形格：只留位置，唔畫框（同 HTML 版 visibility:hidden 一致）
         d.rounded_rectangle([bx, y0, bx + bw, y0 + h * S], 16 * S, fill=(255, 255, 255),
                             outline=LINE, width=2 * S)
         section_head(d, bx + 12 * S, y0 + 10 * S, title, icon)
@@ -1139,7 +1306,7 @@ def render_dexcard(f):
                 d.text((bx + 21 * S, by + 12 * S), str(n), font=F("bold", 13), fill=(255, 255, 255), anchor="mm")
                 by = para(d, bx + 36 * S, by, it, bw - 48 * S, fnt, INK2, 1.5) + 3 * S
         else:
-            para(d, bx + 12 * S, by, payload or PENDING, bw - 24 * S, fnt, INK2, 1.58)
+            para(d, bx + 12 * S, by, payload or PEND, bw - 24 * S, fnt, INK2, 1.58)
         art = ICONS.get(title)
         if art:
             aw = int(bw - 16 * S)
@@ -1155,38 +1322,47 @@ def render_dexcard(f):
     d.rounded_rectangle([M, top_y, M + left_w * S, top_y + r1_h * S], 18 * S,
                         fill=(255, 255, 255), outline=LINE, width=2 * S)
     d.rounded_rectangle([M, top_y, M + left_w * S, top_y + 34 * S], 18 * S, fill=GREEN)
-    d.text((M + 52 * S, top_y + 17 * S), "基本介紹", font=F("b", 20), fill=(255, 255, 255), anchor="lm")
+    d.text((M + 52 * S, top_y + 17 * S), (EN and "Introduction" or "基本介紹"), font=F("b", 20), fill=(255, 255, 255), anchor="lm")
     d.ellipse([M + 12 * S, top_y + 6 * S, M + 40 * S, top_y + 34 * S], fill=(255, 255, 255))
     para(d, M + 14 * S, top_y + 46 * S, intro_txt, (left_w - 28) * S, F("r", 17), INK2, 1.62)
 
-    y2 = top_y + r1_h * S + 10 * S
-    d.rounded_rectangle([M, y2, M + left_w * S, y2 + r2_h * S], 18 * S,
+    y2 = top_y + r1_h * S + (10 * S if tax_h else 0)
+    d.rounded_rectangle([M, y2, M + left_w * S, y2 + tax_h * S], 18 * S,
                         fill=(255, 255, 255), outline=LINE, width=2 * S)
     d.rounded_rectangle([M, y2, M + left_w * S, y2 + 34 * S], 18 * S, fill=GREEN)
-    d.text((M + 52 * S, y2 + 17 * S), "分類資訊", font=F("b", 20), fill=(255, 255, 255), anchor="lm")
+    d.text((M + 52 * S, y2 + 17 * S), (EN and "Taxonomy" or "分類資訊"), font=F("b", 20), fill=(255, 255, 255), anchor="lm")
     d.ellipse([M + 12 * S, y2 + 6 * S, M + 40 * S, y2 + 34 * S], fill=(255, 255, 255))
-    step = min(30.0, max(21.0, (r2_h - 60) / len(tax_rows)))
-    ty = y2 + (44 + max(0.0, (r2_h - 52 - step * len(tax_rows)) / 2)) * S
+    step = min(30.0, max(18.5, (tax_h - 56) / max(len(tax_rows), 1)))
+    ty = y2 + (44 + max(0.0, (tax_h - 52 - step * len(tax_rows)) / 2)) * S
+    sep = ": " if EN else "："
     for k, v in tax_rows:
-        d.text((M + 16 * S, ty), f"● {k}：", font=F("bold", 16), fill=GREEN_D, anchor="la")
-        d.text((M + 76 * S, ty), v, font=F("r", 16), fill=INK2, anchor="la")
+        lab = f"● {k}{sep}"
+        d.text((M + 16 * S, ty), lab, font=F("bold", 16), fill=GREEN_D, anchor="la")
+        lab_w = d.textlength(lab, font=F("bold", 16))
+        d.text((M + 16 * S + lab_w, ty), v, font=F("r", 16), fill=INK2, anchor="la")
         ty += step * S
 
     # ── 6. 兩排四欄 ─────────────────────────────────────────
     for i, sp in enumerate(ROW1):
         box(sp, i, top_y, r1_h)
-    y3 = top_y + r1_h * S + 10 * S
+    y3 = top_y + r1_h * S + (10 * S if r2_h else 0)
     for i, sp in enumerate(ROW2):
         box(sp, i, y3, r2_h)
 
     # ── 7. 生態價值評分卡 ────────────────────────────────────
-    y4 = y3 + r2_h * S + 10 * S
-    score_h = 140 * S
+    # 位置要避開「左欄分類資訊」與「四欄」兩者中較低的一個
+    grid_bottom = y3 + r2_h * S
+    left_bottom = top_y + (r1_h + (gap_v if tax_h else 0) + tax_h) * S
+    y4 = max(grid_bottom, left_bottom) + 10 * S
+    # 評分卡高度自適應：填滿到底欄為止（最少 140pt，最多 200pt），避免底部一大片空白
+    foot_top = Hc * S - M - 34 * S - 8 * S
+    score_h = max(140 * S, min(200 * S, foot_top - y4))
     right_w = 236 * S
     d.rounded_rectangle([M, y4, Wc * S - M - right_w - 10 * S, y4 + score_h], 18 * S,
                         fill=(255, 255, 255), outline=LINE, width=2 * S)
-    d.rounded_rectangle([M, y4, M + 190 * S, y4 + 34 * S], 18 * S, fill=GREEN)
-    d.text((M + 60 * S, y4 + 17 * S), "生態價值評分卡", font=F("b", 19), fill=(255, 255, 255), anchor="lm")
+    bar_w = (250 if EN else 190) * S
+    d.rounded_rectangle([M, y4, M + bar_w, y4 + 34 * S], 18 * S, fill=GREEN)
+    d.text((M + 60 * S, y4 + 17 * S), ("Ecological Value" if EN else "生態價值評分卡"), font=F("b", 19), fill=(255, 255, 255), anchor="lm")
     scores = c.get("scores") or {}
     notes = c.get("score_notes") or {}
     keys = list(scores.keys())[:5]
@@ -1202,21 +1378,24 @@ def render_dexcard(f):
     rx1 = Wc * S - M - right_w
     avg = round(sum(float(v) for v in scores.values()) / len(scores), 1) if scores else 0
     d.rounded_rectangle([rx1, y4, Wc * S - M, y4 + score_h], 18 * S, fill=GREEN, outline=GREEN_D, width=2 * S)
-    d.text((rx1 + right_w / 2, y4 + 22 * S), "綜合評分", font=F("b", 20), fill=(255, 255, 255), anchor="mm")
+    d.text((rx1 + right_w / 2, y4 + 22 * S), (EN and "Overall" or "綜合評分"), font=F("b", 20), fill=(255, 255, 255), anchor="mm")
     if scores:
         d.text((rx1 + 96 * S, y4 + 78 * S), f"{avg}", font=F("b", 50), fill=(240, 200, 40), anchor="mm")
         d.text((rx1 + 150 * S, y4 + 92 * S), "/ 5", font=F("bold", 18), fill=(220, 238, 230), anchor="lm")
         stars(d, img, rx1 + 96 * S - 2.5 * 22 * S, y4 + 106 * S, avg, 19, 4)
     else:
-        d.text((rx1 + right_w / 2, y4 + 86 * S), PENDING, font=F("b", 22), fill=(240, 200, 40), anchor="mm")
+        d.text((rx1 + right_w / 2, y4 + 86 * S), PEND, font=F("b", 22), fill=(240, 200, 40), anchor="mm")
 
     # ── 8. 底欄 ─────────────────────────────────────────────
     y5 = Hc * S - M - 34 * S
     d.rounded_rectangle([M, y5, Wc * S - M, Hc * S - M], 10 * S, fill=GREEN)
-    d.text((M + 16 * S, y5 + 17 * S), f"圖鑑編號  NO.{f['id']}", font=F("bold", 15), fill=(255, 255, 255), anchor="lm")
-    d.text((Wc * S / 2, y5 + 17 * S), f"名稱：{f['zh']}（{f['sci']}）", font=F("bold", 15),
-           fill=(255, 255, 255), anchor="mm")
-    d.text((Wc * S - M - 140 * S, y5 + 17 * S), "圖鑑版本：v1.8", font=F("r", 14), fill=(222, 238, 230), anchor="rm")
+    d.text((M + 16 * S, y5 + 17 * S), (f"Dex no.  NO.{f['id']}" if EN else f"圖鑑編號  NO.{f['id']}"),
+           font=F("bold", 15), fill=(255, 255, 255), anchor="lm")
+    name_txt = (f"{f['en']} ({f['sci']})" if EN else f"{f['zh']}（{f['sci']}）")
+    d.text((Wc * S / 2, y5 + 17 * S), (f"Name: {name_txt}" if EN else f"名稱：{name_txt}"),
+           font=F("bold", 15), fill=(255, 255, 255), anchor="mm")
+    d.text((Wc * S - M - 140 * S, y5 + 17 * S), ("Dex version: v1.8" if EN else "圖鑑版本：v1.8"),
+           font=F("r", 14), fill=(222, 238, 230), anchor="rm")
     bx = Wc * S - M - 128 * S
     seed = sum(ord(ch) for ch in f["id"] + f["code"])
     for i in range(26):

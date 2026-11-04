@@ -102,6 +102,11 @@ details.more[open] summary::before{content:"▾ "}
   border-radius:50%;background:#d9ded7;box-shadow:0 0 0 .12em #fff}
 .dex .names{min-width:0}
 .dex .zh{font-size:3.6em;font-weight:900;line-height:1.05;letter-spacing:.01em}
+.dex[lang="en"] .zh{font-size:2.35em;letter-spacing:-.01em;text-transform:none}
+.dex[lang="en"] .sci{font-size:1.15em}
+.dex[lang="en"] .p{font-size:.9em;line-height:1.5}
+.dex[lang="en"] .head .t{font-size:1.12em}
+.dex[lang="en"] ol.list li{font-size:.86em}
 .dex .sci{font-size:1.35em;color:#43544b;margin-top:.25em;font-style:italic}
 .dex .pill-en{display:inline-block;background:var(--G);color:#fff;font-weight:700;font-size:1.15em;
   padding:.28em .85em;border-radius:999em;margin-left:.75em;vertical-align:.12em;max-width:100%}
@@ -268,6 +273,7 @@ details.more[open] summary::before{content:"▾ "}
       <div class="card-panel" style="margin-top:12px">
         <label class="f">匯入／匯出</label>
         <div class="tools" style="margin-top:0">
+          <button id="btnLang" class="ghost" title="中文／English 卡面">🌐 中文</button>
           <button id="btnEdit" class="primary">編輯這一張</button>
           <button id="btnPull" title="從出圖工作室接收 AI 圖">套用出圖</button>
           <button id="btnLoad">載入 JSON</button>
@@ -275,6 +281,7 @@ details.more[open] summary::before{content:"▾ "}
           <button id="btnPng" class="primary">輸出 PNG</button>
           <button id="btnPdf" class="ghost">PDF／列印</button>
         </div>
+        <div class="hint" id="pickInfo" style="margin-top:6px">—</div>
         <input id="file" type="file" accept=".json,application/json" style="display:none">
         <div class="chk" style="margin-top:10px">
           <input id="autoSave" type="checkbox" checked><label for="autoSave">自動儲存在這個瀏覽器</label>
@@ -401,8 +408,8 @@ function stars(score) {
   }
   return h + '</span>';
 }
-function head(title) {
-  return '<div class="head"><span class="ic">' + esc(GLYPH[title] || '·') + '</span>' +
+function head(title, icon) {
+  return '<div class="head"><span class="ic">' + esc(icon || GLYPH[title] || '·') + '</span>' +
     '<span class="t">' + esc(title) + '</span></div>';
 }
 function para(txt, dim) {
@@ -422,7 +429,105 @@ function artBand(title) {
   return '<img class="artband" alt="" src="' + esc(url) + '">';
 }
 
+/* ---------- 2.5 語言與欄位選擇 ---------- */
+let LANG = (() => { try { return localStorage.getItem('avx_lang') === 'en' ? 'en' : 'zh'; } catch (e) { return 'zh'; } })();
+const TXT = {
+  zh: { length: '身長', weight: '體重', rarity: '常見度', intro: '基本介紹', taxonomy: '分類資訊',
+    aliases: '別名', scores: '生態價值評分卡', overall: '綜合評分', noPhoto: '（未提供真雀相）<br><span style="font-size:.85em">右邊改印外形特徵</span>',
+    noSprite: '未提供像素圖', footNo: '圖鑑編號', footName: '名稱：', ver: '圖鑑版本：v1.9',
+    footNote: '「常見度」「Top 5」「小貼士」「注意事項」及「生態價值評分」屬編者主觀評分，非科學數據；其餘文字來源：' },
+  en: { length: 'Length', weight: 'Weight', rarity: 'Commonness', intro: 'Introduction', taxonomy: 'Taxonomy',
+    aliases: 'Also known as', scores: 'Ecological Value', overall: 'Overall', noPhoto: '(no photo yet)',
+    noSprite: 'no pixel sprite', footNo: 'Dex no.', footName: 'Name: ', ver: 'Dex version: v1.9',
+    footNote: 'Commonness, Top 5, tips and the ecological score are editorial judgements, not scientific data. Sources: ' },
+};
+
+/* 同 scripts/cards/field-schema.mjs 一致的選欄（有測試防止走樣） */
+function chooseFields(id) {
+  const c = copyOf(id);
+  const fc = Array.isArray(c.fieldCopy) ? c.fieldCopy : [];
+  const valOf = (fid) => {
+    const hit = fc.find(x => x && x.id === fid);
+    if (hit) return { zh: pick(hit.zh), en: pick(hit.en) };
+    return { zh: pick(c[fid]), en: null };
+  };
+  const order = CARDF.map(f => f.id);
+  const scored = [];
+  for (const f of CARDF) {
+    const v = valOf(f.id);
+    if (!v.zh && !v.en) continue;
+    let score = { core: 30, strong: 20, extra: 10 }[f.tier];
+    if (v.zh && v.en) score += 4;
+    if (Array.isArray(v.zh)) score += Math.min(v.zh.length, 5);
+    const len = String(Array.isArray(v.zh) ? v.zh.join('') : (v.zh || v.en || '')).length;
+    if (len < 12) score -= 3;
+    if (f.id === 'look' && !(A['photo:' + id] || c.photo)) score += 2;
+    scored.push({ id: f.id, score });
+  }
+  scored.sort((a, b) => b.score - a.score);
+  const picks = scored.slice(0, MAX_PICKS).map(x => x.id)
+    .sort((a, b) => order.indexOf(a) - order.indexOf(b));
+  return { picks, dropped: scored.slice(MAX_PICKS).map(x => x.id), total: scored.length };
+}
+
+/* 一格內容（供 grid4 與右欄共用） */
+function boxInner(fid, forcePara) {
+  const f = CARDF.find(x => x.id === fid) || { zh: fid, en: fid, icon: '·' };
+  const v = vo(fid);
+  const title = LANG === 'en' ? f.en : f.zh;
+  const body = Array.isArray(v) ? listItems(v) : para(v, forcePara);
+  const band = artBand(f.zh) || artBand(title);
+  return head(title, f.icon) + body + band;
+}
+
 /* ---------- 3. 卡面 ---------- */
+/* 欄位表（與 scripts/cards/field-schema.mjs 保持一致；有測試防止走樣） */
+const CARDF = [
+  { id: 'range', zh: '分佈地區', en: 'Distribution', tier: 'core', icon: '分' },
+  { id: 'habitat', zh: '棲息環境', en: 'Habitat', tier: 'core', icon: '居' },
+  { id: 'diet', zh: '食物', en: 'Diet', tier: 'core', icon: '食' },
+  { id: 'highlights', zh: 'Top 5 特色亮點', en: 'Top 5 Highlights', tier: 'core', icon: '五' },
+  { id: 'look', zh: '外形特徵', en: 'Appearance', tier: 'strong', icon: '形' },
+  { id: 'breeding', zh: '成長與繁殖', en: 'Breeding', tier: 'strong', icon: '育' },
+  { id: 'funFact', zh: '有趣冷知識', en: 'Fun Fact', tier: 'strong', icon: '知' },
+  { id: 'tips', zh: '觀察小貼士', en: 'Field Tips', tier: 'strong', icon: '貼' },
+  { id: 'voice', zh: '鳴聲', en: 'Voice', tier: 'extra', icon: '聲' },
+  { id: 'behavior', zh: '行為習性', en: 'Behaviour', tier: 'extra', icon: '行' },
+  { id: 'migration', zh: '遷徙', en: 'Migration', tier: 'extra', icon: '遷' },
+  { id: 'conservation', zh: '保育現況', en: 'Conservation', tier: 'extra', icon: '保' },
+  { id: 'humanRelation', zh: '人與鳥', en: 'Birds & People', tier: 'extra', icon: '人' },
+  { id: 'etymology', zh: '名稱由來', en: 'Name Origin', tier: 'extra', icon: '名' },
+  { id: 'caution', zh: '注意事項', en: 'Watch Out', tier: 'extra', icon: '注' },
+];
+const MAX_PICKS = 7;
+const LANG_TAG = { zh: 'zh-Hant', en: 'en' };
+
+/* 文案取值：優先用 fieldCopy[{id,zh,en}] ，否則用舊欄位。永遠唔會中英夾雜。 */
+function vo(id) {
+  const c = copyOf(id);
+  let fc = c.fieldCopy;
+  if (fc && !Array.isArray(fc) && typeof fc === 'object') {          /* { id: {zh,en} } 亦可 */
+    fc = Object.keys(fc).map(k => Object.assign({ id: k }, fc[k]));
+  }
+  if (Array.isArray(fc)) {
+    const hit = fc.find(x => x && x.id === id);
+    if (hit) {
+      const v = hit[LANG] != null ? hit[LANG] : hit.zh;   /* 英文版缺 → 印「資料待查」而非中文 */
+      if (pick(v)) return v;
+      return null;
+    }
+  }
+  return c[id] || null;
+}
+/* 英文卡的名稱：英文名做主標題，學名做副題 */
+function nameBlock(bird, c, lang) {
+  if (lang === 'en') {
+    return { main: (c.en || bird.en || '').toUpperCase() ? (c.en || bird.en || '') : (bird.en || ''),
+      sub: bird.sci || '', pill: bird.name || '' };
+  }
+  return { main: bird.name || bird.en || '', sub: bird.sci || '', pill: c.en || bird.en || '' };
+}
+
 function render(id) {
   const bird = birdOf(id);
   const c = copyOf(id);
@@ -434,40 +539,43 @@ function render(id) {
   const orderZh = c.orderZh || bird.orderZh || tax.orderZh || '';
   const familyZh = c.familyZh || bird.familyZh || tax.familyZh || '';
   const code = bird.code || tax.speciesCode || '';
+  const nm = nameBlock(bird, c, LANG);
+  const L = TXT[LANG];
+  el.card.setAttribute('lang', LANG_TAG[LANG]);
 
-  /* ①② 標題列 */
+  /* ① 標題列 */
   const hdr = `
   <div class="hdr">
     <div class="idcol">
       <span class="pill-no"><span class="ball"></span>NO.${esc(id)}</span>
     </div>
     <div class="names">
-      <div class="zh">${esc(bird.name || en || PENDING)}</div>
-      <div class="sci">${esc(sci || '')}<span class="pill-en">${esc(en || PENDING)}</span></div>
+      <div class="zh${LANG === 'en' ? ' en' : ''}">${esc(nm.main || PENDING)}</div>
+      <div class="sci">${esc(nm.sub || '')}${nm.pill ? `<span class="pill-en">${esc(nm.pill)}</span>` : ''}</div>
     </div>
     <div class="meta">
       <div class="tag">${esc((orderZh ? orderZh + ' ' : '') + (order || ''))}</div>
       <div class="tag">${esc((familyZh ? familyZh + ' ' : '') + (family || ''))}</div>
-      <div class="factline"><b>身長</b><span>${esc(pick(c.length) || PENDING)}</span></div>
-      <div class="factline"><b>體重</b><span>${esc(pick(c.weight) || PENDING)}</span></div>
-      <div class="factline"><b>常見度</b>${dots(c.rarity)}</div>
+      <div class="factline"><b>${L.length}</b><span>${esc(pick(c.length) || PENDING)}</span></div>
+      <div class="factline"><b>${L.weight}</b><span>${esc(pick(c.weight) || PENDING)}</span></div>
+      <div class="factline"><b>${L.rarity}</b>${dots(c.rarity)}</div>
     </div>
   </div>`;
 
-  /* ③ 主圖列：像素圖 | 真雀相 | 圓形標註 */
+  /* ② 主圖列：像素圖 | 真雀相 | 圓形標註（或外形特徵） */
   const spriteUrl = A['sprite:' + id] || c.sprite || '';
   const photoUrl = A['photo:' + id] || c.photo || '';
   const sprite = spriteUrl
-    ? `<div class="sprite-frame"><img alt="像素圖" src="${esc(spriteUrl)}"></div>`
-    : `<div class="sprite-frame"><div class="ph">未提供像素圖</div></div>`;
+    ? `<div class="sprite-frame"><img alt="" src="${esc(spriteUrl)}"></div>`
+    : `<div class="sprite-frame"><div class="ph">${L.noSprite}</div></div>`;
   const iucn = pick(c.iucn) ? `<span class="iucn">IUCN ${esc(c.iucn)}</span>` : '';
   const aliases = pick(c.aliases)
-    ? `<div class="alabel">別名</div><div class="chips">${c.aliases.map(a => `<span class="chip">${esc(a)}</span>`).join('')}</div>`
+    ? `<div class="alabel">${L.aliases}</div><div class="chips">${c.aliases.map(a => `<span class="chip">${esc(a)}</span>`).join('')}</div>`
     : '';
 
   const photo = photoUrl
-    ? `<div class="photo"><img alt="真雀相" src="${esc(photoUrl)}"></div>`
-    : `<div class="photo"><div class="empty">（未提供真雀相）<br><span style="font-size:.85em">右邊改印外形特徵</span></div></div>`;
+    ? `<div class="photo"><img alt="" src="${esc(photoUrl)}"></div>`
+    : `<div class="photo"><div class="empty">${L.noPhoto}</div></div>`;
 
   let right;
   const calls = (pick(c.callouts) || []).slice(0, 5);
@@ -478,12 +586,12 @@ function render(id) {
           <div class="thumb"><img alt="" src="${esc(photoUrl)}" style="object-position:${(m.fx != null ? m.fx * 100 : 50)}% ${(m.fy != null ? m.fy * 100 : 42)}%;transform:scale(${m.zoom ? (1 / Math.max(0.15, m.zoom)) : 1.6})"></div>
           <div class="ct"><div class="cl">${esc(m.label || '')}</div><div class="cv">${esc(m.text || '')}</div></div>
         </div>`).join('')}</div>
-      <div class="box ety">${head('名稱由來')}${para(c.etymology, true)}</div>
+      <div class="ety">${boxInner('etymology')}</div>
     </div>`;
   } else {
     right = `<div class="rightcol">
-      <div class="box" style="flex:1 1 auto">${head('外形特徵')}${para(c.look)}</div>
-      <div class="box ety">${head('名稱由來')}${para(c.etymology, true)}</div>
+      <div class="box" style="flex:1 1 auto">${boxInner('look', true)}</div>
+      <div class="ety">${boxInner('etymology')}</div>
     </div>`;
   }
 
@@ -494,34 +602,38 @@ function render(id) {
     ${right}
   </div>`;
 
-  /* ④ 左欄：基本介紹 + 分類資訊 */
-  const taxRows = [
-    ['界', '動物界 Animalia'], ['門', '脊索動物門 Chordata'], ['綱', '鳥綱 Aves'],
-    ['目', [orderZh, order].filter(Boolean).join(' ') || PENDING],
-    ['科', [familyZh, family].filter(Boolean).join(' ') || PENDING],
-    ['屬', sci ? sci.split(' ')[0] : PENDING],
-    ['種', sci || PENDING],
-    ['IUCN', pick(c.iucn) || PENDING],
-    ['eBird', code || PENDING],
-  ];
+  /* ③ 左欄：基本介紹 + 分類資訊 */
+  const intro = vo('intro') || c.intro_zh || (LANG === 'en' ? '' : '');
+  const taxRows = LANG === 'en'
+    ? [['Order', order], ['Family', family], ['Genus', sci ? sci.split(' ')[0] : ''], ['Species', sci],
+      ['IUCN', pick(c.iucn) || ''], ['eBird', code]]
+    : [['界', '動物界 Animalia'], ['門', '脊索動物門 Chordata'], ['綱', '鳥綱 Aves'],
+      ['目', [orderZh, order].filter(Boolean).join(' ')], ['科', [familyZh, family].filter(Boolean).join(' ')],
+      ['屬', sci ? sci.split(' ')[0] : ''], ['種', sci], ['IUCN', pick(c.iucn) || ''], ['eBird', code]];
   const left = `
   <div class="col leftcol">
     <div class="box" style="flex:1 1 auto">
-      <div class="greenbar">基本介紹</div>
-      ${para(c.intro_zh)}
+      <div class="greenbar">${L.intro}</div>
+      ${para(intro)}
     </div>
     <div class="box">
-      <div class="greenbar">分類資訊</div>
-      ${taxRows.map(([k, v]) => `<div class="taxrow"><span class="k">${esc(k)}：</span><span class="v">${esc(v)}</span></div>`).join('')}
+      <div class="greenbar">${L.taxonomy}</div>
+      ${taxRows.map(([k, v]) => `<div class="taxrow"><span class="k">${esc(k)}：</span><span class="v">${esc(v || PENDING)}</span></div>`).join('')}
     </div>
   </div>`;
 
-  /* ⑤ 兩排四欄 */
-  const row1 = [['分佈地區', c.range], ['棲息環境', c.habitat], ['食物', c.diet], ['Top 5 特色亮點', c.highlights]];
-  const row2 = [['成長與繁殖', c.breeding], ['觀察小貼士', c.tips], ['有趣冷知識', c.funFact], ['注意事項', c.caution]];
-  const boxOf = ([t, v]) => `<div class="box">${head(t)}${Array.isArray(v) ? listItems(v) : para(v)}${artBand(t)}</div>`;
+  /* ④ 兩排四欄：由 field-schema 的選擇結果決定印邊幾格 */
+  const sel = chooseFields(id);
+  const picks = sel.picks.slice(0, MAX_PICKS);
+  /* 主圖區已經用了 look／etymology 就唔再重複印 */
+  const usedInMain = new Set(['look', 'etymology']);
+  const gridPicks = picks.filter(f => !(usedInMain.has(f) && (f === 'look' ? !photoUrl : true)));
+  const cells = gridPicks.map(f => `<div class="box">${boxInner(f)}</div>`);
+  const row1 = cells.slice(0, 4);
+  const row2 = cells.slice(4, 8);
+  const pad = n => new Array(Math.max(0, n)).fill('<div class="box" style="visibility:hidden"></div>').join('');
 
-  /* ⑥ 評分卡 */
+  /* ⑤ 評分卡 */
   const sc = c.scores || {};
   const notes = c.score_notes || {};
   const keys = Object.keys(sc).length ? Object.keys(sc) : SCORE_KEYS;
@@ -531,7 +643,7 @@ function render(id) {
   const scoreBlock = `
   <div class="scores">
     <div class="left">
-      <div class="greenbar">生態價值評分卡</div>
+      <div class="greenbar">${L.scores}</div>
       <div class="scoregrid">${keys.slice(0, 5).map(k => `
         <div class="s">
           <div class="note">${esc(notes[k] || '')}</div>
@@ -541,14 +653,14 @@ function render(id) {
         </div>`).join('')}</div>
     </div>
     <div class="overall">
-      <div class="lab">綜合評分</div>
+      <div class="lab">${L.overall}</div>
       ${avg != null
         ? `<div class="num">${avg.toFixed(1)}<small>/ 5</small></div>${stars(avg)}`
         : `<div class="num" style="font-size:1.1em">${PENDING}</div>`}
     </div>
   </div>`;
 
-  /* ⑦ 底欄 */
+  /* ⑥ 底欄 */
   const seed = (id + code).split('').reduce((a, ch) => a + ch.charCodeAt(0), 0);
   let bars = '';
   for (let i = 0; i < 34; i++) {
@@ -556,11 +668,11 @@ function render(id) {
     bars += '<i style="width:' + (0.09 * w) + 'em"></i>';
   }
   const foot = `
-  <div class="note">${esc(pick(c.facts_note) || '「常見度」「Top 5」「小貼士」「注意事項」及「生態價值評分」屬編者主觀評分，非科學數據；其餘文字來源：' + (pick(c.source) || '待補'))}</div>
+  <div class="note">${esc(pick(c.facts_note) || L.footNote + (pick(c.source) || '—'))}</div>
   <div class="foot">
-    <div>圖鑑編號　NO.${esc(id)}</div>
-    <div class="fname">名稱：${esc(bird.name || '')}${sci ? '（' + esc(sci) + '）' : ''}</div>
-    <div class="fright"><span>圖鑑版本：v1.8</span><span class="barcode">${bars}</span></div>
+    <div>${L.footNo}　NO.${esc(id)}</div>
+    <div class="fname">${L.footName}${esc(nm.main || '')}${sci ? '（' + esc(sci) + '）' : ''}</div>
+    <div class="fright"><span>${L.ver}</span><span class="barcode">${bars}</span></div>
   </div>`;
 
   el.card.innerHTML = hdr + `
@@ -568,8 +680,8 @@ function render(id) {
       ${left}
       <div class="col">
         ${mainRow}
-        <div class="grid4" style="flex:0 0 auto">${row1.map(boxOf).join('')}</div>
-        <div class="grid4" style="flex:1 1 auto">${row2.map(boxOf).join('')}</div>
+        <div class="grid4" style="flex:0 0 auto">${row1.join('')}${pad(4 - row1.length)}</div>
+        <div class="grid4" style="flex:1 1 auto">${row2.join('')}${pad(4 - row2.length)}</div>
         ${scoreBlock}
       </div>
     </div>
@@ -577,8 +689,8 @@ function render(id) {
 
   fitStage();
   updateBadges();
+  updatePickInfo();
 }
-
 /* ---------- 4. 顯示縮放 ---------- */
 function fitStage() {
   const avail = el.stage.clientWidth - 26;
@@ -592,11 +704,25 @@ window.addEventListener('resize', fitStage);
 
 /* ---------- 5. 狀態列 ---------- */
 function updateBadges() {
-  const c = copyOf(el.num.value.trim().padStart(4, '0'));
-  const filled = ['intro_zh', 'length', 'weight', 'range', 'habitat', 'diet', 'breeding']
-    .filter(k => pick(c[k])).length;
-  el.curBird.value = (birdOf(el.num.value.trim().padStart(4, '0')).name || '—') +
-    '（資料 ' + filled + '/7）';
+  const id = el.num.value.trim().padStart(4, '0');
+  const b = birdOf(id);
+  el.curBird.value = (LANG === 'en' ? (b.en || b.name) : b.name) || '—';
+}
+
+/* 選欄說明：印哪幾格、為何以不印其他 */
+function updatePickInfo() {
+  const box = $('pickInfo');
+  if (!box) return;
+  const sel = chooseFields(el.num.value);
+  const label = f => {
+    const hit = CARDF.find(x => x.id === f);
+    return hit ? (LANG === 'en' ? hit.en : hit.zh) : f;
+  };
+  box.innerHTML = `<b>印 ${sel.picks.length} 格</b>（現有 ${sel.total} 項資料）` +
+    (sel.picks.length ? '：' + sel.picks.map(label).join('、') : '') +
+    (sel.dropped.length
+      ? `<br><span style="color:#5f7a6d">今次冇位印：` + sel.dropped.map(label).join('、') + '（改語言或加資料會自動重新排）</span>'
+      : '');
 }
 
 /* ---------- 6. 切換卡 ---------- */
@@ -842,6 +968,18 @@ function applyScore(inp) {
   else rec.copy.scores[inp.dataset.score] = v;
   render(id);
 }
+
+function setLang(lang) {
+  LANG = lang === 'en' ? 'en' : 'zh';
+  LS.set('avx_lang', LANG);
+  $('btnLang').textContent = LANG === 'en' ? '🌐 English' : '🌐 中文';
+  el.card.setAttribute('lang', LANG_TAG[LANG]);
+  document.documentElement.lang = LANG_TAG[LANG];
+  render(el.num.value);
+  if ($('editor') && $('editor').style.display === 'block') buildEditor();
+  log('卡面語言：' + (LANG === 'en' ? 'English' : '中文'));
+}
+$('btnLang').addEventListener('click', () => setLang(LANG === 'zh' ? 'en' : 'zh'));
 
 $('btnEdit').addEventListener('click', buildEditor);
 $('btnCloseEdit').addEventListener('click', () => { $('editor').style.display = 'none'; });
