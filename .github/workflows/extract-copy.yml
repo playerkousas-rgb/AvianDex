@@ -1,0 +1,206 @@
+# ============================================================
+#  AvianDex — 由中文維基原文補齊卡面文案（手動觸發）
+# ============================================================
+#  為什麼在 GitHub Actions 跑：
+#    開發沙盒／部分網絡封鎖 zh.wikipedia.org（SSL_ERROR_SYSCALL），
+#    但 GitHub runner 可以正常連維基。所以把「抓原文」放在這裡跑。
+#
+#  安全性（重要）：
+#    · 只讀維基 + 寫 src/data/cardCopy.json，不接觸任何 secret
+#    · 不用 peter-evans/create-pull-request 等第三方 action，一律用 gh CLI + git
+#    · 只在「手動觸發」或「手動觸發的後續」執行，不會在 push 時自動跑
+#    · 抽唔到的欄位一律留空（卡面印「資料待查」），永不生成文字
+#
+#  用法：
+#    Actions →「補齊卡面文案（維基原文抽取）」→ Run workflow
+#      ids        : 可留空（＝全部）；例：0288,0289
+#      from / to  : 編號範圍；例 288 到 320
+#      delay      : 每頁之間等幾毫秒（禮貌抓取，預設 600）
+#      dry_run    : true 就只統計、不建 PR
+# ============================================================
+name: 補齊卡面文案（維基原文抽取）
+
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: '只做指定編號（逗號分隔，例：0288,0289）；留空＝全部'
+        required: false
+        default: ''
+      from:
+        description: '起始編號（例：288）；留空＝不限'
+        required: false
+        default: ''
+      to:
+        description: '結束編號（例：559）；留空＝不限'
+        required: false
+        default: ''
+      delay:
+        description: '每頁之間等幾毫秒（禮貌抓取）'
+        required: false
+        default: '600'
+      only_missing:
+        description: '只補「未齊四欄」的卡'
+        type: boolean
+        required: false
+        default: true
+      dry_run:
+        description: '只跑統計，不建 PR'
+        type: boolean
+        required: false
+        default: false
+
+# 同時只准一個跑，避免兩個 job 同時改 cardCopy.json
+concurrency:
+  group: extract-copy
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  extract:
+    name: 抽取維基原文 → cardCopy.json
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - name: 取出 repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: 安裝 Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 只要 opencc-js（字形轉換）。唔用 `npm ci`：lockfile 常變，會令 workflow 因為
+      # 「lock 唔同步」而失敗，而同 workflow 只需一個細 dependency。
+      - name: 安裝抽取器所需依賴
+        run: npm install --no-save --no-audit --no-fund opencc-js@1
+
+      - name: 建分支
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          BRANCH="cards/extract-copy-${{ github.run_number }}"
+          echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
+          git checkout -b "$BRANCH"
+
+      # ── 步驟 1：先驗證抽取器本身（fixture 測試，不需網路）──
+      - name: 驗證抽取器（離線測試）
+        run: node --test tests/extractCopy.test.mjs
+
+      # ── 步驟 2：真的去抓維基（有網路）──
+      - name: 連線檢查（維基 API 是否可達）
+        run: |
+          set -e
+          code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 \
+            -A "AvianDex-CopyExtractor/2.0 (educational; contact: ai@skwscout.org.hk)" \
+            "https://zh.wikipedia.org/w/api.php?action=query&format=json&meta=siteinfo")
+          echo "HTTP $code"
+          if [ "$code" != "200" ]; then
+            echo "::error::連不到 zh.wikipedia.org（HTTP $code）。可能是 runner 網絡政策，請重跑。"
+            exit 1
+          fi
+
+      - name: 抽取原文
+        run: |
+          set -e
+          ARGS=""
+          if [ -n "${{ inputs.ids }}" ]; then
+            ARGS="$ARGS --ids ${{ inputs.ids }}"
+          else
+            if [ -n "${{ inputs.from }}" ]; then ARGS="$ARGS --from ${{ inputs.from }}"; fi
+            if [ -n "${{ inputs.to }}" ];   then ARGS="$ARGS --to ${{ inputs.to }}";     fi
+          fi
+          if [ "${{ inputs.only_missing }}" = "true" ]; then ARGS="$ARGS --missing-only"; fi
+          ARGS="$ARGS --delay ${{ inputs.delay }}"
+          echo "執行：node scripts/cards/extract-copy.mjs $ARGS"
+          node scripts/cards/extract-copy.mjs $ARGS
+
+      # ── 步驟 3：品質關卡（卡片文字不可超長／不可簡體／不可冇 source）──
+      - name: 文案品質檢查
+        run: npm run test:copy
+
+      - name: 覆蓋率報告
+        run: |
+          node scripts/cards/copy-stats.mjs --markdown > /tmp/stats.md
+          cat /tmp/stats.md
+          cat /tmp/stats.md >> "$GITHUB_STEP_SUMMARY"
+
+      # ── 步驟 4：冇改動就完結，唔會開空 PR ──
+      - name: 檢查有無改動
+        id: diff
+        run: |
+          if git diff --quiet -- src/data/cardCopy.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "cardCopy.json 冇改動（可能全部卡已齊，或者維基抽唔到新內容）。"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat -- src/data/cardCopy.json
+          fi
+
+      # ── 步驟 5：commit / push / 開 PR（dry_run 就停手）──
+      - name: Commit
+        if: steps.diff.outputs.changed == 'true' && inputs.dry_run == false
+        run: |
+          git add src/data/cardCopy.json
+          git commit -m "chore(cards): 由中文維基原文補齊卡面文案（自動抽取，附 pageid）"
+          git push origin "$BRANCH"
+
+      - name: 開 Pull Request
+        if: steps.diff.outputs.changed == 'true' && inputs.dry_run == false
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "由 GitHub Actions 自動執行 \`scripts/cards/extract-copy.mjs\` 的結果。"
+            echo
+            echo "**這個 PR 只改 \`src/data/cardCopy.json\`**，每一欄都是中文維基原文整句，附 pageid；抽唔到就留空。"
+            echo "沒有 AI 生成文字、沒有改寫、沒有簡體字（只做 cn→hk 字形轉換）。"
+            echo
+            cat /tmp/stats.md
+            echo
+            echo "---"
+            echo "審核提示："
+            echo "1. 睇 Files changed：只應該有 cardCopy.json 的變動。"
+            echo "2. 任何一句都可以用 source 內的 pageid 回到維基核對。"
+            echo "3. 有 \`notes\` 的卡代表原文本身有問題（矛盾／[來源請求]／翻譯品質），已在檔內註明理由。"
+          } > /tmp/pr-body.md
+          gh pr create \
+            --base "${{ github.event.repository.default_branch }}" \
+            --head "$BRANCH" \
+            --title "chore(cards): 補齊卡面文案（維基原文抽取 · run #${{ github.run_number }}）" \
+            --body-file /tmp/pr-body.md
+
+      - name: 上載進度報告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: copy-extract-report-${{ github.run_number }}
+          path: |
+            reports/copy-extract.md
+            src/data/cardCopy.json
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: 結果摘要
+        if: always()
+        run: |
+          {
+            echo "### 執行結果"
+            echo ""
+            echo "- 分支：\`${{ env.BRANCH }}\`"
+            echo "- cardCopy.json 有改動：**${{ steps.diff.outputs.changed }}**"
+            echo "- dry run：**${{ inputs.dry_run }}**"
+            if [ "${{ steps.diff.outputs.changed }}" = "true" ] && [ "${{ inputs.dry_run }}" = "false" ]; then
+              echo "- 已開 PR（見上方連結）"
+            elif [ "${{ inputs.dry_run }}" = "true" ]; then
+              echo "- dry run：**沒有** push、**沒有** 開 PR"
+            else
+              echo "- 沒有改動，所以沒有開 PR"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

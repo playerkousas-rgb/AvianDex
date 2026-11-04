@@ -92,3 +92,41 @@ npm run cards:render -- 0288 0289 0290
 抽唔到嘅原因幾乎都一樣：**中文維基該物種條目只有一句「某某為翠鳥科的一種鳥類」**，
 沒有食性／外形／棲地段落。這不是程式問題，是來源本身冇料——
 所以下一步只能是「換來源」（HKBWS 名錄、香港鳥類圖鑑），而**不是叫 AI 自己寫**。
+
+---
+
+## 6. 一鍵補齊 559 張（GitHub Actions）
+
+開發沙盒禁止連 `zh.wikipedia.org`（`SSL_ERROR_SYSCALL`），所以「抓原文」放在 GitHub runner 做。
+Workflow 檔案：`.github/workflows/extract-copy.yml`。
+
+**怎樣跑（不需要寫程式）**
+
+1. 開 repo → **Actions** → 左邊選「**補齊卡面文案（維基原文抽取）**」
+2. 右邊 **Run workflow**，參數可以全部留空：
+   - `only_missing` 勾住（預設已勾）＝ 只補未齊的卡
+   - `dry_run` 勾住 ＝ 只統計、不開 PR（第一次建議先試這個）
+3. 等約 30–45 分鐘（559 頁 × 0.6 秒禮貌間隔 + 分析）
+4. 完成後會自動開一個 PR，標題 `chore(cards): 補齊卡面文案（維基原文抽取 · run #N）`
+5. PR 內只會改 `src/data/cardCopy.json`，描述會附覆蓋率表
+
+**安全性**
+
+- 只用 repo 內建 `GITHUB_TOKEN`（`contents: write`、`pull-requests: write`），不接觸任何 secret
+- 不用第三方 PR action，一律 `git` + `gh` CLI
+- 任何一句都可以用 `source` 內的 pageid 回維基核對
+- 抽唔到就留空 → 卡面印「資料待查」，**沒有 AI 代寫**
+
+**跑完之後看什麼**
+
+- PR 描述內的「仍缺張數」表：如果 `look`／`habitat` 缺得特別多，代表很多中文維基條目本身只有一句
+  「某某為某科的一種鳥類」，那段要換來源（HKBWS 名錄／香港鳥類圖鑑），不是程式問題
+- Artifact `copy-extract-report-N`：完整的 `reports/copy-extract.md`（逐張卡：抽到什麼、取自哪個章節、仍缺什麼）
+
+**本機也可以跑**（有網即可）：
+
+```bash
+npm install
+npm run copy:extract -- --all --missing-only --delay 600
+npm run copy:stats
+```

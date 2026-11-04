@@ -503,8 +503,15 @@ async function main() {
     out.orderZh = out.orderZh || tax.orderZh || '';
     out.familyZh = out.familyZh || tax.familyZh || '';
 
-    copyAll[bird.id] = out;
-    if (added.length || !hadSource) filled += 1;
+    // 只有「真的抽到內容」或者「本身已有文案」才寫入檔：
+    // 避免一口氣寫入 559 個只有 source、冇內容的空殼（會令報告失真）
+    const hadContent = ['diet', 'range', 'look', 'habitat', 'funFact', 'iucn']
+      .some((k) => String(existing[k] || '').trim());
+    const store = added.length > 0 || hadContent;
+    if (store) {
+      copyAll[bird.id] = out;
+    }
+    if (added.length || (!hadSource && store)) filled += 1;
 
     const missing = ['diet', 'range', 'look', 'habitat', 'funFact', 'iucn'].filter((k) => !String(out[k] || '').trim());
     console.log(
@@ -514,7 +521,7 @@ async function main() {
       id: bird.id,
       name: bird.name,
       sci: tax.sciName,
-      status: added.length ? 'filled' : 'unchanged',
+      status: added.length ? 'filled' : store ? 'unchanged' : 'no-content',
       pageid: hit.pageid,
       title: hit.title,
       added,
@@ -535,6 +542,7 @@ async function main() {
     `- ✅ 有新內容：${okList.length}`,
     `- ➖ 無新內容（已齊或原文無相關句）：${report.filter((r) => r.status === 'unchanged').length}`,
     `- ❓ 維基無對應條目：${report.filter((r) => r.status === 'no-page').length}`,
+    `- ⬜ 有條目但抽唔到任何一段（條目本身太短）：${report.filter((r) => r.status === 'no-content').length}`,
     '',
     '| 編號 | 中文名 | 學名 | 條目 | pageid | 補到 | 取自 | 仍缺 |',
     '|---|---|---|---|---|---|---|---|',
@@ -550,6 +558,17 @@ async function main() {
       ),
     '',
   ];
+  const noContent = report.filter((r) => r.status === 'no-content');
+  if (noContent.length) {
+    md.push(
+      '## ⬜ 有維基條目，但抽唔到任何一段（條目太短，需換來源）',
+      '',
+      '| 編號 | 中文名 | 學名 | 條目 | pageid |',
+      '|---|---|---|---|---|',
+    );
+    noContent.forEach((r) => md.push(`| ${r.id} | ${r.name} | ${r.sci} | ${r.title} | ${r.pageid} |`));
+    md.push('');
+  }
   const noPage = report.filter((r) => r.status === 'no-page');
   if (noPage.length) {
     md.push('## ❓ 維基找不到條目（需另找來源：HKBWS 名錄／香港鳥類圖鑑）', '', '| 編號 | 中文名 | 學名 |', '|---|---|---|');
