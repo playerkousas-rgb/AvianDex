@@ -81,6 +81,30 @@ set "WORKTREE=D:\AvianDex-work"     ← 你的工作副本（做法 1 clone 出�
 
 ---
 
+## 4.5 常見錯誤（實戰紀錄）
+
+| 你打咗 | 出咗咩錯 | 真正原因 | 正確做法 |
+|---|---|---|---|
+| `git fetch https://... +refs/heads/*:refs/heads/` | `fatal: invalid refspec` | 貼上時尾隨 `*` 被吃掉（`refs/heads/` 少了 `*`） | 一定要有 **兩邊** `*`：`"+refs/heads/*:refs/heads/*"` |
+| 下一行單獨貼 `+refs/heads/*:refs/heads/*` | `'...' 不是內部或外部命令` | CMD 把整行當程式名 | 它必須是同一個指令的參數，不能分開貼 |
+| `git fetch https://...` | 只印 `branch HEAD -> FETCH_HEAD` | **冇 refspec 只拿 HEAD**，分支全部不會更新 | 先 `git remote set-url origin ...` 再 `git fetch --prune origin` |
+| `git clone <bundle>` 後工作區是空的 | `remote HEAD refers to nonexistent ref` | bare mirror 的 `HEAD` 指向不存在的 `refs/heads/master` | 修正：`git symbolic-ref HEAD refs/heads/main`（腳本已自動做） |
+
+**一鍵修復**：
+
+```bat
+D:\AvianDex-work\tools\backup\fix-mirror.bat check   :: 只檢查
+D:\AvianDex-work\tools\backup\fix-mirror.bat         :: 修復 + 立即 fetch
+```
+
+修復後，每日只要一句（唔會再撞到 refspec 問題）：
+
+```bat
+git -C D:\GITBACKUP\AvianDex.git fetch --prune origin
+```
+
+---
+
 ## 5. 還原（三個情境）
 
 **A. GitHub 帳戶被封，想繼續工作**
@@ -95,8 +119,12 @@ npm install
 ```bat
 git clone D:\GITBACKUP\snapshots\AvianDex-2026-11-09.bundle D:\AvianDex-restored
 cd /d D:\AvianDex-restored
+git checkout arena/3be6342b-aviandex
 git remote set-url origin https://github.com/playerkousas-rgb/AvianDex.git
 ```
+> 注意：由 bundle clone 出來時，`HEAD` 可能指向不存在的分支，工作區會是空的。
+> **一定要**手動 `git checkout <分支>`；如果報 `did not match any file(s) known to git`，
+> 先 `git branch -a` 看清楚有沒有 `remotes/origin/...`。
 
 **C. 每季驗證一次備份真係得**（很重要，備份沒驗證過等於沒有）
 ```bat

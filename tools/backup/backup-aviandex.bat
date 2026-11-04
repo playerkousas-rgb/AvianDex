@@ -45,12 +45,15 @@ if not exist "%MIRROR%" (
 
 pushd "%MIRROR%"
 echo [1/3] 更新 mirror ... >> "%LOG%"
+REM HEAD 必須指向存在的分支，否則 bundle 還原會失敗
+git symbolic-ref HEAD refs/heads/main >nul 2>&1 || git symbolic-ref HEAD refs/heads/master >nul 2>&1
 REM 先確認係 bare + mirror，否則用錯方法會搞亂工作區
 for /f %%b in ('git rev-parse --is-bare-repository 2^>nul') do set "ISBARE=%%b"
 if /i not "!ISBARE!"=="true" (
   echo [警告] %MIRROR% 唔係 bare repo，跳過 mirror 更新 >> "%LOG%"
 ) else (
-  git fetch --prune --tags origin >> "%LOG%" 2>&1
+  REM 明寫 refspec：`git fetch` 冇 refspec 時只拿 HEAD，分支唔會更新
+  git fetch --prune origin "+refs/heads/*:refs/heads/*" "+refs/tags/*:refs/tags/*" >> "%LOG%" 2>&1
   if errorlevel 1 (
     echo [警告] fetch 失敗（網絡或認證問題），本機舊資料仍然保留 >> "%LOG%"
   ) else (
