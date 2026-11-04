@@ -44,6 +44,40 @@ function toDataUrl(file, { maxEdge = MAX_EDGE, q = JPEG_Q } = {}) {
   return { url: 'data:image/jpeg;base64,' + b.toString('base64'), bytes: b.length };
 }
 
+/* 沿用舊成品的內嵌資產（參考卡）。cards/art/ 冇資產時（新 clone／CI），
+ * 直接重建會把 5.2 MB 成品換成「冇參考卡」版；圖看起來還在，但其實消失了。 */
+function existingAssets(file) {
+  try {
+    if (!exists(file)) return {};
+    const s2 = fs.readFileSync(file, 'utf8');
+    const i = s2.indexOf('window.AVIANDEX_ASSETS=');
+    if (i < 0) return {};
+    const start = i + 'window.AVIANDEX_ASSETS='.length;
+    let depth = 0;
+    let inStr = false;
+    let esc = false;
+    let end = -1;
+    for (let k = start; k < s2.length; k += 1) {
+      const ch = s2[k];
+      if (inStr) {
+        if (esc) esc = false;
+        else if (ch === '\\') esc = true;
+        else if (ch === '"') inStr = false;
+        continue;
+      }
+      if (ch === '"') { inStr = true; continue; }
+      if (ch === '{') depth += 1;
+      else if (ch === '}') { depth -= 1; if (depth === 0) { end = k + 1; break; } }
+    }
+    if (end < 0) return {};
+    const o = JSON.parse(s2.slice(start, end));
+    return o && typeof o === 'object' ? o : {};
+  } catch (e) {
+    console.warn('⚠️  讀不到舊成品資產：' + e.message);
+    return {};
+  }
+}
+
 function main() {
   const args = process.argv.slice(2);
   const refIdx = args.indexOf('--ref');
@@ -93,8 +127,9 @@ function main() {
     };
   }
 
-  /* 參考圖 */
-  const assets = {};
+  /* 參考圖（沿用舊成品資產，再用 cards/art/ 的新圖覆蓋） */
+  const outFile = path.join(STUDIO, 'aviandex-image-studio.html');
+  const assets = noRef ? {} : existingAssets(outFile);
   if (!noRef) {
     let refFile = refIdx >= 0 ? path.resolve(args[refIdx + 1]) : DEFAULT_REF.find(exists);
     if (refFile && exists(refFile)) {
@@ -106,8 +141,12 @@ function main() {
         console.warn('⚠️  參考卡未能內嵌：' + e.message);
       }
     } else {
-      console.warn('⚠️  找不到參考卡（' + DEFAULT_REF.map((p) => path.relative(ROOT, p)).join(' / ') +
-        '）。工作室仍可用，但要自己拖入圖片。');
+      if (assets.refcard) {
+        console.log('ℹ️  cards/art/ 冇參考卡檔，沿用舊成品內嵌的參考卡');
+      } else {
+        console.warn('⚠️  找不到參考卡（' + DEFAULT_REF.map((p) => path.relative(ROOT, p)).join(' / ') +
+          '）。工作室仍可用，但要自己拖入圖片。');
+      }
     }
   }
 
@@ -139,7 +178,7 @@ function main() {
   if (!shell.includes(marker)) throw new Error('喺 imagestudio.html 搵唔到注入點');
   shell = shell.replace(marker, payload + marker);
 
-  const out = path.join(STUDIO, 'aviandex-image-studio.html');
+  const out = outFile;
   fs.writeFileSync(out, shell, 'utf8');
   const kb = (fs.statSync(out).size / 1024).toFixed(0);
   console.log(`✅ ${path.relative(ROOT, out)}（${kb} KB）`);
