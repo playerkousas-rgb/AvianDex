@@ -67,6 +67,24 @@ Hub 圖片：存放於 public/images/，命名為 hub_wiki.jpg, hub_radar.jpg �
 配 `public/manifest.webmanifest`，Android／iOS 可「加到主畫面」全螢幕使用；貼連結到 WhatsApp／Signal 會有預覽圖。
 規範依 `readme` 的 G11（見該 repo `docs/33-icon-standard.md`），**換圖標時記得改檔名，不要原地覆蓋**（有長快取）。
 
+🎨 圖卡設計 v2（AVIF · 文字 100% 準確）
+
+**AI 只畫鳥，文字由排版引擎寫** —— 所以卡上唔會有錯字、亂碼或假數據。
+
+```bash
+npm run cards:render -- 0289        # 出 cards/out/0289.avif（連預覽 PNG）
+npm run cards:render -- --all       # cards/art/ 內全部
+npm run test:copy                   # 檢查文案：長度／簡體字／有無 source
+```
+
+- 尺寸 1400×1867（3:4），實測 **AVIF 70–74 KB**，比同尺寸 PNG 細 **87–88%**
+- 分類（目／科／學名／英文名／排序號）全部由 `birdTaxonomy.json`（eBird）讀入，唔會手打
+- 卡面文案在 `src/data/cardCopy.json`，每欄要有 `source`，冇就印「資料待查」
+- 版面：紅色機頭 + 中文名／學名／英文名 + 分類標籤 + 插畫窗（右側特徵標註＋冷知識）+ 食性／分佈／外形／棲地 + 保育狀況／資料完整度／來源
+- 完整說明（含插畫提示詞範本）見 **[docs/CARD_STYLE_V2.md](./docs/CARD_STYLE_V2.md)**
+
+已完成樣卡：`cards/out/0289.avif`（普通翠鳥）、`cards/out/0290.avif`（三趾翠鳥）→ 上傳到 R2 `aviandex/` 即生效。
+
 🔠 排序與搜尋（v1.8.0）
 
 - **預設次序跟 eBird / Clements 演化排序**（目 → 科 → 種），唔再係舊嘅 NO.0001→0569。

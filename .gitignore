@@ -56,3 +56,6 @@ reports/
 
 # 資料工具產生的備份檔（不要在 repo 內留兩份 569 行 JSON）
 src/data/birds.json.bak
+
+# 圖卡插畫（大檔，只作本機素材；成品 AVIF 一律上傳 R2，不入 repo）
+cards/art/

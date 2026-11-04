@@ -1,0 +1,62 @@
+{
+  "_readme": {
+    "用途": "圖卡上會印出的文案。每一個欄位都要有出處，冇出處就留空（卡上會顯示「資料待查」），不准憑印象填。",
+    "規則": [
+      "中文一律香港繁體（不可以簡體字）",
+      "分類欄位（目／科／學名／英文名）不要寫在這裡，一律由 birdTaxonomy.json（eBird）讀取",
+      "diet / range / look / habitat / funFact：每個最多 46 個中文字，超出會被截斷",
+      "callouts：最多 3 點，每點 label ≤ 6 字、text ≤ 12 字，用於插畫旁的特徵標註",
+      "source：維基條目 URL 或 pageid；沒有 source 的欄位視為未查證"
+    ]
+  },
+  "0290": {
+    "orderZh": "佛法僧目",
+    "familyZh": "翠鳥科",
+    "iucn": "無危 LC",
+    "diet": "昆蟲、蜘蛛、蠕蟲為主，亦捕食小魚、蟹、蛙及蜥蜴",
+    "range": "印度次大陸至中南半島，棲於低地森林近溪流池塘",
+    "look": "喙鮮珊瑚紅呈匕首狀；上身淡紫赤褐、背藍黑有光澤；下身橙黃",
+    "habitat": "熱帶低地常綠林，多在水邊陰暗處伏擊",
+    "funFact": "體型只有麻雀大小，是香港體型最小的翠鳥之一；腳只有三趾，故名",
+    "callouts": [
+      {
+        "label": "喙 BILL",
+        "text": "珊瑚紅·匕首形"
+      },
+      {
+        "label": "背 BACK",
+        "text": "藍黑·帶光澤"
+      },
+      {
+        "label": "腳 FEET",
+        "text": "三趾（故名）"
+      }
+    ],
+    "source": "zh.wikipedia 三趾翠鳥 · pageid 1021708（variant=zh-hk）· 分類：eBird/Clements"
+  },
+  "0289": {
+    "orderZh": "佛法僧目",
+    "familyZh": "翠鳥科",
+    "iucn": "無危 LC",
+    "diet": "小魚為主，亦捕食水生昆蟲、蝦及蛙類",
+    "range": "歐亞大陸至東南亞；香港常見留鳥，多在水邊",
+    "look": "上身金屬藍綠帶光澤，下身橙紅；喙長黑呈匕首形，尾短",
+    "habitat": "溪流、池塘、濕地及海邊石堤；站在突出枝頭或石上守候",
+    "funFact": "俯衝入水捕魚，入水前會先瞄準折射後的位置；香港市區公園水池亦常見",
+    "callouts": [
+      {
+        "label": "喙 BILL",
+        "text": "長而黑·匕首形"
+      },
+      {
+        "label": "背 BACK",
+        "text": "金屬藍綠"
+      },
+      {
+        "label": "下身 BELLY",
+        "text": "橙紅·無斑"
+      }
+    ],
+    "source": "zh.wikipedia 普通翠鳥 · pageid 34390（variant=zh-hk）· 分類：eBird/Clements"
+  }
+}
