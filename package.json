@@ -39,7 +39,8 @@
     "cards:extract-bi": "node scripts/cards/extract-bilingual.mjs",
     "cards:schema": "node scripts/cards/field-schema.mjs --json",
     "test:bi": "node --test tests/bilingual.test.mjs",
-    "cards:photos": "node scripts/cards/download-macaulay.mjs"
+    "cards:photos": "node scripts/cards/download-macaulay.mjs",
+    "cards:picks": "node scripts/cards/show-picks.mjs"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",

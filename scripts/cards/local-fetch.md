@@ -97,7 +97,44 @@ node scripts/cards/download-macaulay.mjs --all
 
 ---
 
-## 3. 交回對話（三個方法，任選）
+## 3. 文字寫到哪？（你問的這一步）
+
+檔案一定在你的 repo 內，兩個都在：
+
+| 檔案 | Windows 完整路徑 | 內容 |
+|---|---|---|
+| **成品（要交回）** | `D:\AvianDex-work\AvianDex\data\cardCopy.local.json` | 548 張，其中你抽的 5 張有中英文案 |
+| 報告 | `D:\AvianDex-work\AvianDex\reports\copy-bilingual.md` | 每張幾多欄、pageid |
+
+**唔想上傳都可以先睇**（新增！）：
+
+```bat
+node scripts/cards/show-picks.mjs --file data/cardCopy.local.json --ids 0008 0001 0002 0003 0007
+```
+
+會直接印出：
+```
+0008 鵲鴝　中 13 欄／英 12 欄　印 7 格
+  來源：zh.wikipedia 鵲鴝 · pageid 219197 ｜ en.wikipedia Oriental magpie-robin · pageid 43235520
+■ 分佈地區　　　 分布於…
+■ 棲息環境　　　 …
+□ 成長與繁殖　　（有資料但今次唔印）
+  ■ = 會印在卡面　□ = 有資料但今次不印
+```
+
+- 加 `--lang en` 看英文版
+- 加 `--md` 寫一份 `reports/copy-review.md`
+- 確認無誤後 **一鍵合併**：`--write`（會先備份 `cardCopy.json.bak`）
+```bat
+node scripts/cards/show-picks.mjs --file data/cardCopy.local.json --write
+```
+- 只想合併，不想覆蓋整個檔：把 `--ids` 也加上
+
+> 由 `data\cardCopy.local.json` 到 `src/data/cardCopy.json` 的關係：
+> 前者是「本機工作檔」，後者才是「出圖讀的檔」。`--write` 只會覆蓋
+> **本次有文案的那幾張**，其餘 543 張原封不動。
+
+## 4. 交回對話（三個方法，任選）
 
 | 方法 | 做法 |
 |---|---|
@@ -110,7 +147,7 @@ node scripts/cards/download-macaulay.mjs --all
 
 ---
 
-## 4. 常見錯誤
+## 5. 常見錯誤
 
 | 訊息 | 原因 | 解法 |
 |---|---|---|
@@ -125,7 +162,7 @@ node scripts/cards/download-macaulay.mjs --all
 
 ---
 
-## 5. 我收到之後會做
+## 6. 我收到之後會做
 
 1. 合併 `cardCopy.local.json` → `src/data/cardCopy.json`，跑 69 項測試 + 跨物種核對
 2. 把 `cards/art/NNNN-photo.jpg` 接上卡面（有相就印圓形特寫，冇相就印外形特徵）

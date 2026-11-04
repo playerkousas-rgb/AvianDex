@@ -53,6 +53,17 @@ const API_EN = arg('--api-en', process.env.AVIANDEX_WIKI_EN || 'https://en.wikip
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+/** 用方框印出「檔案在哪」，方便唔熟路徑的人照抄 */
+function printBox(lines) {
+  const w = Math.max(...lines.map(([a, b]) => (a.length + (b ? 3 + b.length : 0)))) + 2;
+  console.log('\n┌' + '─'.repeat(w) + '┐');
+  for (const [a, b] of lines) {
+    const pad = ' '.repeat(Math.max(0, w - a.length - (b ? 3 + b.length : 0)));
+    console.log('│ ' + a + pad + (b ? '  ' + b : '') + ' │');
+  }
+  console.log('└' + '─'.repeat(w) + '┘');
+}
+
 /* ------------------------------------------------------------------
  * 一、wikitext → 純文字（純函數，可離線測試）
  * ------------------------------------------------------------------ */
@@ -575,8 +586,18 @@ async function main() {
   }
 
   if (!flag('--dry-run')) fs.writeFileSync(writeF, `${JSON.stringify(copyAll, null, 2)}\n`);
-  console.log(`\n💾 已寫入 ${path.relative(ROOT, writeF)}（${Object.keys(copyAll).filter((k) => !k.startsWith('_')).length} 張）`);
+  const total = Object.keys(copyAll).filter((k) => !k.startsWith('_')).length;
+  const gotN = report.filter((r) => r.zh || r.en).length;
+  console.log(`\n💾 已寫入 ${path.relative(ROOT, writeF)}（檔案共 ${total} 張，本次有更新 ${gotN} 張）`);
+  console.log(`   絕對路徑：${writeF}`);
   console.log('   交回工作流程：把這個檔案上傳／貼回對話，或直接覆蓋 src/data/cardCopy.json');
+  printBox([
+    ['① 這兩個檔案就是成品', ''],
+    ['   ' + writeF, '（要上傳給我）'],
+    ['   ' + REPORT_F, '（可以不上傳）'],
+    ['② 想即時睇結果', `   node scripts/cards/show-picks.mjs --file ${path.relative(ROOT, writeF)} --ids 0008`],
+    ['③ 想合併入 repo', '   node scripts/cards/show-picks.mjs --file ' + path.relative(ROOT, writeF) + ' --write'],
+  ]);
 
   const md = ['# 中英雙語抽取報告', '', `- 執行：${new Date().toISOString()}`, `- 目標：${targets.length} 張`,
     '', '| 編號 | 中文名 | 學名 | 中文欄 | 英文欄 | pageid |', '|---|---|---|---|---|---|'];
