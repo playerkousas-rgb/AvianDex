@@ -81,7 +81,15 @@ Hub 圖片：存放於 public/images/，命名為 hub_wiki.jpg, hub_radar.jpg �
 ```bash
 npm run cards:render -- --all       # cards/art/ 內全部（出資訊圖卡）
 npm run test:copy                   # 檢查文案：長度／簡體字／有無 source
+
+# 想 AI 一次生成整張卡（連文字）？prompt 已備好：
+npm run cards:prompt -- 0289 --style onepass              # 資訊圖卡
+npm run cards:prompt -- 0289 --style onepass --layout bird # 簡單鳥卡
+# 出完圖再轉 AVIF：
+python3 scripts/cards/render-card.py --from-image <圖.png> --kind info
 ```
+
+兩種方法的實測比較（尺寸、字型、風險、建議用法）見 **[docs/CARD_METHODS.md](./docs/CARD_METHODS.md)**。
 
 - 鳥卡 900×1200、資訊圖卡 1400×1867（都係 3:4），實測 AVIF **35 KB / 70–74 KB**，比同尺寸 PNG 細 **87–90%**
 - 分類（目／科／學名／英文名／排序號）全部由 `birdTaxonomy.json`（eBird）讀入，唔會手打

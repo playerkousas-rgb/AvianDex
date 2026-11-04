@@ -501,10 +501,35 @@ def main():
                     help="bird=簡單鳥卡（R2 aviandex/）；info=詳細資訊圖卡（R2 aviandex/info/）")
     ap.add_argument("--preview", action="store_true", help="只出 PNG")
     ap.add_argument("--quality", type=int, default=58, help="AVIF 品質（預設 58，約 100–200 KB）")
+    ap.add_argument("--from-image", metavar="FILE",
+                    help="把一張現成 PNG（例如 AI 一次生成的整張卡）轉成 AVIF，唔做排版")
     args = ap.parse_args()
 
     out_dir = os.path.join(OUT_ROOT, "info") if args.kind == "info" else OUT_ROOT
     os.makedirs(out_dir, exist_ok=True)
+
+    # ── 模式 0：只轉檔（AI 一次生成 → AVIF）──
+    if args.from_image:
+        src = os.path.abspath(args.from_image)
+        if not os.path.exists(src):
+            raise SystemExit(f"找不到 {src}")
+        target = (1400, 1867) if args.kind == "info" else (900, 1200)
+        im = Image.open(src).convert("RGB")
+        # 等比放到目標框再置中填滿（避免張力變形）
+        ratio = max(target[0] / im.width, target[1] / im.height)
+        im = im.resize((int(im.width * ratio + 0.5), int(im.height * ratio + 0.5)), Image.LANCZOS)
+        left = (im.width - target[0]) // 2
+        top = (im.height - target[1]) // 2
+        im = im.crop((left, top, left + target[0], top + target[1]))
+        name = os.path.splitext(os.path.basename(src))[0].split("-")[0]
+        png_path = os.path.join(out_dir, f"{name}.png")
+        avif_path = os.path.join(out_dir, f"{name}.avif")
+        im.save(png_path, optimize=True)
+        subprocess.run(["convert", png_path, "-quality", str(args.quality),
+                        "-define", "heic:speed=6", avif_path], check=True)
+        print(f"✅ [{args.kind}] {os.path.basename(src)} → {os.path.relpath(avif_path, ROOT)}"
+              f"（{os.path.getsize(avif_path) / 1024:.0f} KB）")
+        return
     ids = list(args.ids)
     if args.all:
         ids = sorted(p[:-4] for p in os.listdir(ART_DIR) if p.endswith(".png"))
