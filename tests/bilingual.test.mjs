@@ -17,7 +17,7 @@ import path from 'node:path';
 
 import {
   extractFields, pickSentence, contaminated, trimToLength, sentences,
-  parseLength, parseWeight, parseIucn, parseAliases,
+  parseLength, parseWeight, parseIucn, parseAliases, stripWiki, stripFileLinks,
 } from '../scripts/cards/extract-bilingual.mjs';
 import {
   FIELDS, MAX_PICKS, chooseFields, has, normalizeCopy,
@@ -231,4 +231,36 @@ test('輸出：原子寫入（.tmp → rename），中途斷電不會留半個�
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
+});
+
+/* ---------------- 6. 圖說／檔名污染 ---------------- */
+test('stripWiki：內嵌 File: 連結（含嵌套）整個拆走，圖說唔會混入正文', () => {
+  const wt = 'Body text before.\n[[File:Example.jpg|thumb|A bird [[File:Inner.jpg]] here]]\nThe real sentence is here, and it should survive.\n'
+    + '[[Image:Two.png|left|female, Odisha, India]]';
+  const out = stripWiki(wt);
+  assert.ok(!out.includes('.jpg'), '殘留 .jpg：' + out);
+  assert.ok(!out.includes('.png'), '殘留 .png：' + out);
+  assert.ok(!out.includes('thumb'));
+  assert.ok(out.includes('The real sentence is here'), '正文被誤刪');
+});
+
+test('切句：圖說／檔名碎片一律丟棄，唔會變成卡面文案', () => {
+  const en = 'Eurasian teal (Anas crecca) is a dabbling duck species that breeds across the Palearctic. '
+    + 'crecca carolinensis) drake in breeding plumage, showing white stripe Eurasian teal Photograph by Someone.jpg|Wintering male '
+    + 'It feeds mainly on aquatic plants and small invertebrates in shallow water.';
+  const list = sentences(en, 'en');
+  /* 註：混合了圖說的「句段」會整段丟（寧缺勿錯），所以只要求乾淨句仍保留 */
+  assert.ok(list.length >= 1);
+  for (const s of list) {
+    assert.ok(!/\.jpg|Photograph by/i.test(s), '圖說混入：' + s);
+  }
+});
+
+test('中文句含整段英文（多數係圖說殘留）→ 唔會入選', () => {
+  const zh = '赤翡翠體長約二十五厘米，羽色鮮艷。\n'
+    + 'The ruddy kingfisher (Halcyon coromanda) is a medium-sized tree kingfisher found in east and southeast Asia.\n'
+    + '牠偏好茂密的森林，常在水邊活動。';
+  const out = extractFields(zh, { lang: 'zh', sciName: 'Halcyon coromanda', ownName: '赤翡翠' });
+  const all = Object.values(out).map((v) => (Array.isArray(v) ? v.join(' ') : String(v))).join('\n');
+  assert.ok(!/[A-Za-z]{3,}\s+[A-Za-z]{3,}\s+[A-Za-z]{3,}/.test(all), '中文欄位出現整句英文：' + all);
 });

@@ -40,7 +40,9 @@
     "cards:schema": "node scripts/cards/field-schema.mjs --json",
     "test:bi": "node --test tests/bilingual.test.mjs",
     "cards:photos": "node scripts/cards/download-macaulay.mjs",
-    "cards:picks": "node scripts/cards/show-picks.mjs"
+    "cards:picks": "node scripts/cards/show-picks.mjs",
+    "cards:lint-copy": "python3 scripts/cards/lint-copy.py",
+    "cards:zh-hk": "python3 scripts/cards/zh-hk.py --write"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",

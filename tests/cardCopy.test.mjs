@@ -42,8 +42,11 @@ test('每個文案都要有 source（可追溯）', () => {
 });
 
 test('欄位長度唔可以超出排版上限', () => {
+  /* source 係內部記錄（中英維基條目名＋pageid），卡面唔會印；限死佢只會迫人
+   * 刪走可追溯性。真正要驗的是卡面文字 → fieldCopy 逐格驗雙語上限。 */
+  const CHECK = Object.fromEntries(Object.entries(LIMITS).filter(([k]) => k !== 'source'));
   for (const [id, c] of entries) {
-    for (const [key, max] of Object.entries(LIMITS)) {
+    for (const [key, max] of Object.entries(CHECK)) {
       const v = c[key];
       if (!v) continue;
       assert.ok([...v].length <= max, `${id} 的 ${key} 有 ${[...v].length} 字，超出 ${max} 字上限（會被截斷）`);
@@ -72,6 +75,14 @@ test('不准出現簡體字（香港繁體介面）', () => {
   const texts = [];
   for (const [id, c] of entries) {
     texts.push([id, c.diet, c.range, c.look, c.habitat, c.funFact, c.orderZh, c.familyZh]);
+  }
+  for (const [id, c] of entries) {
+    for (const cell of c.fieldCopy || []) {
+      const v = cell.zh;
+      if (typeof v !== 'string' || !v) continue;
+      const bad = SIMPLIFIED.filter((ch) => v.includes(ch));
+      assert.equal(bad.length, 0, `${id} ${cell.id}.zh 出現簡體字：${bad.join('')}（${v.slice(0, 40)}）`);
+    }
   }
   for (const [id, ...values] of texts) {
     for (const v of values) {
@@ -150,10 +161,16 @@ test('dexcard：文字欄位長度唔可以爆格（超出會被截斷＝漏字�
   }
 });
 
-test('dexcard：清單欄位要有足夠項數（Top5 要 5 條）', () => {
+test('dexcard：清單欄位項數（有幾多印幾多，最多 5 條）', () => {
+  /* 設計決定（2026-11）：欄位池有幾多資料就印幾多，「有 7 項就剛好，
+   * 不怕資料不夠」。所以唔再強迫湊夠 5 條——湊出來的第 5 條一定係硬填。 */
   for (const [id, c] of entries) {
     if (c.highlights) {
-      assert.equal(c.highlights.length, 5, `${id} highlights 要剛好 5 條（現有 ${c.highlights.length}）`);
+      assert.ok(c.highlights.length >= 2 && c.highlights.length <= 5,
+        `${id} highlights 有 ${c.highlights.length} 條（要 2–5 條）`);
+      for (const it of c.highlights) {
+        assert.ok(String(it).trim(), `${id} highlights 有空白項`);
+      }
     }
     for (const [f, cap] of Object.entries(DEX_LIST)) {
       const arr = c[f];

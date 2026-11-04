@@ -713,6 +713,8 @@ def main():
     ap = argparse.ArgumentParser(description="AvianDex 圖卡排版（文字由字型渲染，非 AI 生成）")
     ap.add_argument("ids", nargs="*", help="卡片編號，例如 0290")
     ap.add_argument("--all", action="store_true", help="處理 cards/art/ 內所有插畫")
+    ap.add_argument("--all-birds", action="store_true",
+                    help="處理 src/data/birds.json 內全部編號（唔靠 cards/art/，適合無插畫時全量出圖）")
     ap.add_argument("--layout", choices=["dexcard", "pokedex", "grid"], default="dexcard",
                     help="info 卡版式：dexcard=滿版資料卡（預設，依 2026-11 成品規格）；"
                          "pokedex/grid=舊版式（保留但不再使用）")
@@ -754,6 +756,10 @@ def main():
     ids = list(args.ids)
     if args.all:
         ids = sorted(p[:-4] for p in os.listdir(ART_DIR) if p.endswith(".png"))
+    if args.all_birds:
+        birds_all = load("birds.json")
+        ids = sorted({str(b["id"]).zfill(4) for b in birds_all if str(b.get("id", "")).isdigit()})
+        print(f"🖼  全量出圖：{len(ids)} 張（來源 src/data/birds.json）")
 
     for raw in ids:
         bird_id = str(raw).strip()
@@ -918,23 +924,44 @@ def _load_field_schema():
         return None
 
 
-def choose_fields(c, lang="zh", max_picks=7):
-    """回傳要印在四欄區的欄位 id（最多 7 個；有幾多印幾多）。"""
-    if not FIELD_SCHEMA_CACHE:
-        FIELD_SCHEMA_CACHE["data"] = _load_field_schema()
-    schema = FIELD_SCHEMA_CACHE["data"]
+def _cell(c, fid):
+    """取 fieldCopy 內某一格（回傳 dict）或者舊格式的中文 key 值。"""
     fc = c.get("fieldCopy")
     if isinstance(fc, dict):
         fc = [dict(v, id=k) for k, v in fc.items()]
+    if isinstance(fc, list):
+        hit = next((x for x in fc if isinstance(x, dict) and x.get("id") == fid), None)
+        if hit is not None:
+            return hit
+    return None
 
-    def val(fid):
-        if isinstance(fc, list):
-            hit = next((x for x in fc if x.get("id") == fid), None)
-            if hit is not None:
-                v = hit.get(lang) or (hit.get("zh") if lang == "zh" else "")
-                return [str(v)] if v else []
+
+def _txt(v):
+    if isinstance(v, list):
+        return " ".join(str(x) for x in v if str(x).strip())
+    return str(v or "").strip()
+
+
+def choose_fields(c, lang="zh", max_picks=7):
+    """回傳要印在四欄區的欄位 id（最多 7 個；有幾多印幾多）。
+
+    評分規則必須與 scripts/cards/field-schema.mjs 的 chooseFields 完全一致，
+    否則工作室（JS）同 Pillow（Python）會揀到唔同嘅 7 格。
+    """
+    if not FIELD_SCHEMA_CACHE:
+        FIELD_SCHEMA_CACHE["data"] = _load_field_schema()
+    schema = FIELD_SCHEMA_CACHE["data"]
+
+    def val(fid, which="zh"):
+        hit = _cell(c, fid)
+        if hit is not None:
+            v = hit.get("zh") if which == "zh" else hit.get("en")
+            if _txt(v):
+                return v
+            if which == "en":
+                return None            # 英文版：冇英文原文就當冇（唔會印中文）
         v = c.get(fid)
-        return v if isinstance(v, list) else ([v] if v else [])
+        return v if _txt(v) else None
 
     if schema:
         ids = [f["id"] for f in schema["fields"] if f.get("slot") == "grid4"]
@@ -948,11 +975,19 @@ def choose_fields(c, lang="zh", max_picks=7):
     weight = {"core": 30, "strong": 20, "extra": 10}
     scored = []
     for i, fid in enumerate(ids):
-        v = val(fid)
-        if not v:
+        v = val(fid, lang)
+        if v is None:
             continue
         score = weight.get(tier.get(fid, "extra"), 10)
-        score += min(len(v), 5) if isinstance(c.get(fid), list) else 0
+        # 中英同步 +4、列表項數 +項數（與 field-schema.mjs 一致）
+        if val(fid, "zh") is not None and val(fid, "en") is not None:
+            score += 4
+        if isinstance(v, list):
+            score += min(len([x for x in v if str(x).strip()]), 5)
+        if len(_txt(v)) < 12:
+            score -= 3
+        if fid == "look" and not c.get("photo"):
+            score += 2
         scored.append((-score, i, fid))
     scored.sort()
     return [fid for _, _, fid in scored[:max_picks]]

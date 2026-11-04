@@ -91,6 +91,10 @@ function dropTemplates(wt = '') {
 
 export function stripWiki(wt = '') {
   let s = wt;
+  /* 0) 先整個拆掉內嵌檔案／圖片連結（含嵌套 [[...]] 的說明）。
+   * 舊版逐個 [[...]] 拆，嵌套寫法（File:A.jpg|thumb|見 [[B.jpg]]）會漏，
+   * 結果「xxx.jpg|female, India」這類圖說混入正文，變成卡面文案。 */
+  s = stripFileLinks(s);
   s = s.replace(/<!--[\s\S]*?-->/g, ' ');
   s = s.replace(/<ref[^>]*\/>/gi, ' ');
   s = s.replace(/<ref[^>]*>[\s\S]*?<\/ref>/gi, ' ');
@@ -142,9 +146,11 @@ export function sentences(text = '', lang = 'zh') {
     : clean.split(/(?<=[.!?])\s+/);
   return parts
     .map((s) => s.trim())
+    .filter((s) => !MEDIA_JUNK.test(s))          /* 圖說／檔名碎片 → 丟 */
+    .map((s) => (lang === 'en' ? s.replace(/^[)"'\]\s]+/, '') : s))
     .filter((s) => (lang === 'zh'
-      ? s.length >= 8 && /[。！？；]$/.test(s)
-      : s.length >= 15 && /[.!?]$/.test(s) && /[a-z]/i.test(s) && /\s/.test(s)));
+      ? s.length >= 8 && /[。！？；]$/.test(s) && !/[A-Za-z]{3,}\s+[A-Za-z]{3,}\s+[A-Za-z]{3,}/.test(s)
+      : s.length >= 15 && /[.!?]["')\]]?$/.test(s) && /[a-z]/i.test(s) && /\s/.test(s)));
 }
 
 /** 砍到上限（只砍在完整分句／子句邊界，不留半句） */
@@ -339,6 +345,7 @@ export function pickSentence(list, rule, maxLen, lang = 'zh', ownName = '', know
   let bestScore = 0;
   for (const s of list) {
     if (contaminated(s, lang, ownName, knownNames)) continue;
+    if (lang === 'zh' && /[A-Za-z]{3,}\s+[A-Za-z]{3,}\s+[A-Za-z]{3,}/.test(s)) continue;
     if (!anyOf(s, rule.must)) continue;
     let score = rule.weight;
     for (const w of rule.any) if (s.includes(w)) score += 2;
@@ -350,6 +357,26 @@ export function pickSentence(list, rule, maxLen, lang = 'zh', ownName = '', know
   }
   return best;
 }
+
+/**
+ * 拆掉 [[File:...]]／[[Image:...]]／[[文件:...]]，支援一層或多層嵌套。
+ * 由內而外逐層拆，最後連殘留的檔名尾巴都唔會剩。
+ */
+export function stripFileLinks(wt = '') {
+  const FILE = /\[\[(?:File|Image|文件|檔案|图像|圖像|媒體|媒体)\s*:[\s\S]*?\]\]/gi;
+  let s = wt;
+  for (let i = 0; i < 12; i += 1) {
+    const next = s.replace(FILE, ' ');
+    if (next === s) break;
+    s = next;
+  }
+  /* 中文維基間中用「檔案:」全形冒號 / 無連結的檔名行 */
+  s = s.split('\n').filter((ln) => !/^\s*(?:File|Image|文件|檔案|图像|圖像)\s*[:：]/i.test(ln)).join('\n');
+  return s;
+}
+
+/** 殘留的圖說／檔名碎片（保險網：任何欄位都唔應該含這些） */
+const MEDIA_JUNK = /\.(?:jpe?g|png|gif|svg|tiff?|webp)\b|\bPhotograph by\b|\bthumb\b|\|\s*$|\bFile:/i;
 
 /** 由整頁 wikitext 抽 15 個欄位（純函數） */
 export function extractFields(wt, { lang = 'zh', sciName = '', ownName = '', knownNames = null, maxPicks = 7, only = null } = {}) {
