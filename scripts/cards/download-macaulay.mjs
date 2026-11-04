@@ -49,7 +49,9 @@ const ARGS = process.argv.slice(2);
 const arg = (n, d) => { const i = ARGS.indexOf(n); return i >= 0 ? ARGS[i + 1] : d; };
 const flag = (n) => ARGS.includes(n);
 const DELAY = Number(arg('--delay', 1200));
-const MAX_W = 1600;
+const MAX_W = Number(arg('--max-w', 1600));
+/* 卡面右欄約 900px 高 → 原圖短邊太細會糊；低於此值唔用 */
+const MIN_W = Number(arg('--min-w', 900));
 const OK_LICENCE = /^(cc0|cc by|cc-by|public domain|pd)/i;
 const NC_LICENCE = /nc/i;
 
@@ -72,20 +74,39 @@ async function get(url, asJson = true) {
  *      3) 兩者都失敗 → 報告寫「此編號需人手處理」，不會靜靜當成功
  * ------------------------------------------------------------------ */
 
+/** 把各種寫法的授權統一成一個短標籤；認不出就原樣返回 */
+function normaliseLicence(v) {
+  const s = String(v || '').toLowerCase();
+  if (!s) return '';
+  if (/cc0|public domain|cc-zero/.test(s)) return /public domain/.test(s) ? 'Public Domain' : 'CC0';
+  const by = /\bby\b|attribution/.test(s);
+  const nc = /\bnc\b|non-?commercial/.test(s);
+  const sa = /\bsa\b|share-?alike/.test(s);
+  const nd = /\bnd\b|no-?deriv/.test(s);
+  if (by) return 'CC BY' + (nc ? '-NC' : '') + (sa ? '-SA' : '') + (nd ? '-ND' : '');
+  if (/all rights reserved|copyright|©/.test(s)) return 'All rights reserved';
+  return String(v).trim();
+}
+
 /** 第一步：試 JSON API */
 async function viaApi(code) {
   const url = `https://search.macaulaylibrary.org/api/v1/search?taxonCode=${encodeURIComponent(code)}`
     + '&mediaType=photo&sort=rating_rank_desc&count=12';
   const data = await get(url);
   const items = data.results?.content || data.content || data.results || [];
-  return (Array.isArray(items) ? items : []).map((it) => ({
-    assetId: it.assetId || it.id || '',
-    author: it.userDisplayName || it.observer || '',
-    licence: it.licenseName || it.license || '',
-    pageUrl: it.assetId ? `https://macaulaylibrary.org/asset/${it.assetId}` : '',
-    imageUrl: it.previewUrl || it.mediaUrl || it.largeUrl || '',
-    width: it.width || it.originalWidth || 0,
-  })).filter((x) => x.imageUrl);
+  return (Array.isArray(items) ? items : []).map((it) => {
+    const assetId = String(it.assetId || it.id || it.assetID || '');
+    return {
+      assetId,
+      author: it.userDisplayName || it.observer || it.authorName || it.photographer || '',
+      licence: normaliseLicence(it.licenseName || it.license || it.licence || it.mediaLicense || ''),
+      pageUrl: assetId ? `https://macaulaylibrary.org/asset/${assetId}` : '',
+      /* 圖片欄名各版本不同，逐個試；最後才用 CDN 前綴拼 */
+      imageUrl: it.previewUrl || it.mediaUrl || it.medUrl || it.largeUrl || it.imageUrl
+        || (it.assetId ? `https://cdn.download.ams.birds.cornell.edu/api/v1/asset/${it.assetId}/1200` : ''),
+      width: it.width || it.originalWidth || 0,
+    };
+  }).filter((x) => x.assetId || x.imageUrl);
 }
 
 /** 第二步：退回抓 HTML（只拿 asset id 與圖片網址） */
@@ -96,7 +117,7 @@ async function viaHtml(code) {
   const html = await res.text();
   const ids = [...new Set([...html.matchAll(/\/asset\/(\d{6,})/g)].map((m) => m[1]))].slice(0, 12);
   const imgs = [...html.matchAll(/https:\/\/cdn\.download\.ams\.birds\.cornell\.edu\/[^"'\s]+/g)].map((m) => m[0]);
-  return ids.map((id, i) => ({
+  const list = ids.map((id, i) => ({
     assetId: id,
     author: '',
     licence: '',
@@ -104,6 +125,9 @@ async function viaHtml(code) {
     imageUrl: imgs[i] || '',
     width: 0,
   }));
+  /* 零結果 = 版式改了，不是「這隻雀冇相」——要分得清，唔好靜靜當成功 */
+  if (!list.length) throw new Error('HTML 頁面找不到 /asset/ 連結（版式可能已改）');
+  return list;
 }
 
 /** 第三步：取單張照片的授權／作者（asset 頁） */
@@ -119,8 +143,8 @@ async function assetMeta(assetId) {
       if (u.includes('/api/')) {
         const j = JSON.parse(txt);
         return {
-          author: j.userDisplayName || j.photographer || '',
-          licence: j.licenseName || j.license || '',
+          author: j.userDisplayName || j.photographer || j.authorName || '',
+          licence: normaliseLicence(j.licenseName || j.license || j.licence || ''),
           imageUrl: j.previewUrl || j.mediaUrl || j.largeUrl || '',
         };
       }
@@ -141,16 +165,44 @@ function licenceAllows(lic) {
   return OK_LICENCE.test(lic.trim());
 }
 
+/** 讀圖片的寬高（用 ImageMagick identify；裝唔到就當未知） */
+function imageSize(file) {
+  const r = spawnSync('identify', ['-format', '%w %h', file], { encoding: 'utf8' });
+  if (r.status !== 0) return null;
+  const [w, h] = String(r.stdout).trim().split(/\s+/).map(Number);
+  return w && h ? { w, h } : null;
+}
+
+function hasMagick() {
+  const r = spawnSync('convert', ['-version'], { encoding: 'utf8' });
+  if (r.status === 0) return 'convert';
+  const r2 = spawnSync('magick', ['-version'], { encoding: 'utf8' });
+  return r2.status === 0 ? 'magick' : '';
+}
+
 async function downloadTo(url, dest) {
-  const buf = await get(url, false);
+  const bin = hasMagick();
+  if (!bin) throw new Error('找不到 ImageMagick（convert / magick）');
+  /* 支援 file:// 或本機路徑（離線測試用）；其餘照抓網 */
+  const local = url.startsWith('file://') ? url.slice(7) : (/^[a-z]+:\/\//i.test(url) ? '' : url);
+  const buf = local && fs.existsSync(local) ? fs.readFileSync(local) : await get(url, false);
   const tmp = dest + '.orig';
   fs.writeFileSync(tmp, buf);
-  /* 統一裁成 3:4、長邊 1600（卡面右欄就是 3:4） */
-  const r = spawnSync('convert', [tmp, '-auto-orient',
-    '-resize', `${MAX_W}x${MAX_W}>`, '-gravity', 'center',
-    '-crop', '3:4', '+repage', '-quality', '86', dest]);
+
+  const size = imageSize(tmp);
+  if (!size) { fs.unlinkSync(tmp); throw new Error('下載到的檔案唔似圖片（可能係錯誤頁）'); }
+  const shortEdge = Math.min(size.w, size.h);
+  if (shortEdge < MIN_W) {
+    fs.unlinkSync(tmp);
+    throw new Error(`解析度太低（${size.w}×${size.h}，短邊 < ${MIN_W}）`);
+  }
+
+  /* 統一裁成 3:4、長邊 ≤1600（卡面右欄就是 3:4） */
+  const args = [tmp, '-auto-orient', '-resize', `${MAX_W}x${MAX_W}>`,
+    '-gravity', 'center', '-crop', '3:4', '+repage', '-quality', '86', dest];
+  const r = spawnSync(bin, args);
   fs.unlinkSync(tmp);
-  if (r.status !== 0) throw new Error('convert 失敗（請確認已安裝 ImageMagick）');
+  if (r.status !== 0) throw new Error('ImageMagick 轉檔失敗');
   return fs.statSync(dest).size;
 }
 
@@ -188,19 +240,22 @@ async function main() {
     if (!one) { console.log('冇目標'); return; }
     const code = tax[one.id].speciesCode;
     console.log(`🔎 檢查 ${one.id} ${one.name}（eBird code: ${code}）`);
+    console.log(`   ImageMagick：${hasMagick() || '❌ 未安裝（下載時會失敗，請先安裝）'}`);
     try {
       const list = await viaApi(code);
       console.log(`   JSON API：${list.length} 張`);
       console.log(JSON.stringify(list.slice(0, 2), null, 2));
-      if (list[0]?.assetId) console.log('   授權：', JSON.stringify(await assetMeta(list[0].assetId)));
+      if (list[0]?.assetId) console.log('   單張授權：', JSON.stringify(await assetMeta(list[0].assetId)));
     } catch (e) {
-      console.log('   JSON API 失敗：' + e.message + '（會改用 HTML）');
+      console.log('   JSON API 失敗：' + e.message + '（改用 HTML）');
       try {
         const list = await viaHtml(code);
         console.log(`   HTML：${list.length} 張`);
         console.log(JSON.stringify(list.slice(0, 2), null, 2));
+        if (list[0]?.assetId) console.log('   單張授權：', JSON.stringify(await assetMeta(list[0].assetId)));
       } catch (e2) { console.log('   HTML 也失敗：' + e2.message); }
     }
+    console.log('\n   ↳ 請把以上輸出（尤其 JSON 的欄位名）貼回對話，我會按真實結構修正解析。');
     return;
   }
 
@@ -230,44 +285,56 @@ async function main() {
     }
     await sleep(DELAY);
 
-    /* 逐張檢查授權，取第一張可用的 */
+    /* 大圖優先；再逐張補授權／作者，試到成功為止。
+     * 只試第一張就一定失敗的物種會白白浪費一整輪，所以放寬到 MAX_TRY 張。 */
+    const MAX_TRY = 6;
+    const cands = [...list]
+      .sort((a, b) => (b.width || 0) - (a.width || 0))
+      .slice(0, MAX_TRY);
     let picked = null;
-    for (const cand of list.slice(0, 8)) {
-      const meta = cand.licence ? cand : (await assetMeta(cand.assetId).catch(() => null) || cand);
-      const photo = { ...cand, ...meta };
-      if (!photo.imageUrl) continue;
+    const why = [];
+    for (const cand of cands) {
+      const meta = cand.licence ? null : await assetMeta(cand.assetId).catch(() => null);
+      const photo = { ...cand, ...(meta || {}) };
+      if (!photo.imageUrl) { why.push(`${cand.assetId || '?'} 無圖片網址`); continue; }
       if (!licenceAllows(photo.licence)) {
-        console.log(`     · ${cand.assetId} 授權「${photo.licence || '未標明'}」→ 跳過`);
+        why.push(`${cand.assetId || '?'} 授權「${photo.licence || '未標明'}」`);
         continue;
       }
-      picked = photo;
-      break;
+      if (photo.width && photo.width < MIN_W) { why.push(`${cand.assetId} 太細（${photo.width}px）`); continue; }
+      if (flag('--dry-run')) {
+        picked = photo;
+        break;
+      }
+      try {
+        const bytes = await downloadTo(photo.imageUrl, dest);
+        picked = photo;
+        why.length = 0;
+        got += 1;
+        appendCredit(bird.id, bird.name, t.sciName, picked);
+        console.log(`   ✅ ${bird.id} ${bird.name} → ${path.basename(dest)}（${Math.round(bytes / 1024)} KB，${picked.licence}，${picked.author || '未標明作者'}）`);
+        rows.push({ id: bird.id, name: bird.name, status: 'downloaded', n: list.length });
+        break;
+      } catch (e) {
+        why.push(`${cand.assetId || '?'} 下載／轉檔失敗：${e.message}`);
+        picked = null;
+      }
     }
 
-    if (!picked) {
-      console.log(`   ⚠️ ${bird.id} ${bird.name}：找不到可再用的授權相片（只記錄連結）`);
-      rows.push({ id: bird.id, name: bird.name, status: 'no-licensed-photo', n: list.length });
-      if (list[0]) {
+    if (!picked && !rows.some((r) => r.id === bird.id && r.status === 'downloaded')) {
+      const allLicence = cands.every((c) => c.licence) &&
+        cands.filter((c) => c.licence).length > 0 &&
+        cands.every((c) => !licenceAllows(c.licence));
+      const status = allLicence ? 'no-licensed-photo' : 'download-failed';
+      console.log(`   ⚠️ ${bird.id} ${bird.name}：${allLicence ? '冇可再用授權（只記錄連結）' : '下載失敗'}`);
+      for (const w of why.slice(0, 6)) console.log(`     · ${w}`);
+      rows.push({ id: bird.id, name: bird.name, status, n: list.length });
+      if (allLicence && list[0]) {
         appendCredit(bird.id, bird.name, t.sciName, { ...list[0], licence: list[0].licence || '（需人手核對）' });
       }
-      continue;
-    }
-
-    if (flag('--dry-run')) {
-      console.log(`   ✓ ${bird.id} ${bird.name} → 可用（${picked.licence}，${picked.author}）`);
+    } else if (picked && flag('--dry-run')) {
+      console.log(`   ✓ ${bird.id} ${bird.name} → 可用（${picked.licence}，${picked.author || '未標明作者'}）`);
       rows.push({ id: bird.id, name: bird.name, status: 'dry-run', n: list.length });
-      continue;
-    }
-
-    try {
-      const bytes = await downloadTo(picked.imageUrl, dest);
-      appendCredit(bird.id, bird.name, t.sciName, picked);
-      got += 1;
-      console.log(`   ✅ ${bird.id} ${bird.name} → ${path.basename(dest)}（${Math.round(bytes / 1024)} KB，${picked.licence}）`);
-      rows.push({ id: bird.id, name: bird.name, status: 'downloaded', n: list.length });
-    } catch (e) {
-      console.log(`   ❌ ${bird.id} 下載失敗：${e.message}`);
-      rows.push({ id: bird.id, name: bird.name, status: 'download-failed', n: list.length });
     }
     await sleep(DELAY);
   }
@@ -282,4 +349,8 @@ async function main() {
   console.log(got ? `\n✅ 完成 ${got} 張，已寫入 ${path.relative(ROOT, ART)}` : '\n⚠️ 冇下載到相片，請看報告');
 }
 
-main().catch((e) => { console.error('✗ ' + e.message); process.exit(1); });
+/* 只有直接執行才跑主流程；被測試 import 時唔會亂跑（亦唔會誤抓網） */
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isMain) main().catch((e) => { console.error('✗ ' + e.message); process.exit(1); });
+
+export { normaliseLicence, licenceAllows, imageSize, hasMagick, downloadTo, MAX_W, MIN_W };

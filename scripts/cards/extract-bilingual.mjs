@@ -451,7 +451,15 @@ async function main() {
   const OUT_F = arg('--out', '');
   const readF = IN_F ? path.resolve(IN_F) : COPY_F;
   const writeF = OUT_F ? path.resolve(OUT_F) : COPY_F;
-  const copyAll = fs.existsSync(readF) ? JSON.parse(fs.readFileSync(readF, 'utf8')) : { _readme: {} };
+  /* 輸出目錄可能未存在（例如全新 clone 冇 data/ 目錄）→ 先建立，免得第一張就 ENOENT */
+  fs.mkdirSync(path.dirname(writeF), { recursive: true });
+  /* --out 指定新檔案但未存在時，用 src/data/cardCopy.json 做底稿：
+   * 咁樣 --out 唔會由零開始，舊資料（中文欄）都保留得住 */
+  const baseF = fs.existsSync(readF) ? readF : (OUT_F && fs.existsSync(COPY_F) ? COPY_F : '');
+  const copyAll = baseF ? JSON.parse(fs.readFileSync(baseF, 'utf8')) : { _readme: {} };
+  if (baseF && baseF !== readF) {
+    console.log(`📋 底稿：${path.relative(ROOT, baseF)}（--out 係新檔，先以現有資料做底）`);
+  }
   const noCache = flag('--no-cache');
   const lang = arg('--lang', 'zh') === 'en' ? 'en' : 'zh';
   const missingOnly = flag('--missing-only');
@@ -567,7 +575,7 @@ async function main() {
   }
 
   if (!flag('--dry-run')) fs.writeFileSync(writeF, `${JSON.stringify(copyAll, null, 2)}\n`);
-  console.log(`\n💾 已寫入 ${path.relative(ROOT, writeF)}`);
+  console.log(`\n💾 已寫入 ${path.relative(ROOT, writeF)}（${Object.keys(copyAll).filter((k) => !k.startsWith('_')).length} 張）`);
   console.log('   交回工作流程：把這個檔案上傳／貼回對話，或直接覆蓋 src/data/cardCopy.json');
 
   const md = ['# 中英雙語抽取報告', '', `- 執行：${new Date().toISOString()}`, `- 目標：${targets.length} 張`,

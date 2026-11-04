@@ -23,6 +23,16 @@ node -v      # 需要 18 以上（20 / 22 最好）
 
 ---
 
+## ⚠️ 先看這個：`ENOENT ... data\cardCopy.local.json`
+
+你遇到的是**舊版程式的 bug**（寫檔前沒有建 `data/` 目錄；新 clone 沒有這個資料夾）。
+已修好，請先 `git pull` 再跑。順帶修好：`--out` 指向新檔案時，會自動用
+`src/data/cardCopy.json` 做底稿（不會把已有 548 張資料由零開始覆蓋）。
+
+```bash
+git pull
+```
+
 ## 1. 文字資料：中英維基原文（15 欄）
 
 ### 1a. 先試 5 張（1 分鐘）
@@ -106,7 +116,9 @@ node scripts/cards/download-macaulay.mjs --all
 |---|---|---|
 | `Client network socket disconnected` | VPN／公司網絡攔截 | 關 VPN，或用手機熱點 |
 | 連續 `429` | 抓太快 | `--delay 900` |
-| `convert 失敗` | 未裝 ImageMagick | macOS：`brew install imagemagick`；Windows：`winget install ImageMagick.ImageMagick` |
+| `找不到 ImageMagick（convert / magick）` | 未裝 | Windows：`winget install ImageMagick.ImageMagick`；macOS：`brew install imagemagick` |
+| `ENOENT ... data\cardCopy.local.json` | 舊版未建 `data/` 目錄 | `git pull` 後再跑（已修） |
+| 卡面照片好模糊 | 只抓到細圖 | 工具已擋短邊 < 900px；如全部被擋，加 `--min-w 700` 放寬 |
 | `❓ 找不到學名` | 維基用舊學名／重定向 | 記下編號貼回，我人手指定 pageid |
 | `no-licensed-photo` | 該物種在 Macaulay 只有 NC／版權所有 | 正常。之後可以用 Wikimedia Commons 補（授權通常 CC BY-SA） |
 | 英文欄位比中文少 | 中文維基有「文化」章節，英文維基冇 | 正常，英文卡缺的格印 `Data pending`，不會用中文填 |
