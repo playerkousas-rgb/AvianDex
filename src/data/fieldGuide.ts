@@ -212,8 +212,22 @@ const GEAR: Record<Lang, Guide> = {
         ],
       },
       {
+        id: 'wear',
+        title: '四、衣著與鞋（香港實戰）',
+        lead: '觀鳥不需要迷彩，但顏色與鞋底會直接影響你看到多少。',
+        items: [
+          { title: '顏色：大地色、不要螢光', body: '綠、卡其、灰、深藍最實用；螢光黃、純白、大紅在林地反光，遠處雀鳥較易警覺。不需要買迷彩，普通素色長袖已經夠。' },
+          { title: '長袖長褲（防蚊＋防刮）', body: '香港郊野有蚊子、蜱蟲與有刺植物；薄身快乾長袖＋長褲比短褲實用，夏天也建議這樣穿。' },
+          { title: '帽：寬邊遮陽帽', body: '遮太陽亦可以遮住你抬頭時的面部動作；深色帽檐比白色更不反光。冬天加一頂薄冷帽，清晨山上差幾度。' },
+          { title: '鞋：防水行山鞋或水鞋', body: '泥灘、魚塘邊要水鞋或防水行山鞋；林道要抓地力好的鞋底。拖鞋、涼鞋在濕滑石面非常危險。' },
+          { title: '雨具：輕便雨衣優於雨傘', body: '雨傘要一隻手，等於廢掉一半裝備；輕便雨衣可以同時拿望遠鏡。背囊加防水套。' },
+          { title: '背囊：貼身、雙肩、有腰帶', body: '單肩袋行山會勞損；雙肩背囊加腰帶可以長時間背單筒。相機與望遠鏡用快拆帶，不要長時間掛頸。' },
+          { title: '防曬與驅蚊', body: 'SPF50 防曬、含 DEET 或派卡瑞丁（Picaridin）的驅蚊劑；先塗防曬，後塗驅蚊。' },
+        ],
+      },
+      {
         id: 'care',
-        title: '四、保養與安全',
+        title: '五、保養與安全',
         lead: '裝備壞在現場，比沒帶更煩。',
         items: [
           { title: '望遠鏡保養', body: '用吹球除塵，再用鏡頭布由中心向外抹；不要用衣服。潮濕天氣後放防潮箱或加防潮珠。' },
@@ -264,8 +278,22 @@ const GEAR: Record<Lang, Guide> = {
         ],
       },
       {
+        id: 'wear',
+        title: '4. Clothing and footwear (Hong Kong reality)',
+        lead: 'You do not need camouflage, but colour and soles decide how much you see.',
+        items: [
+          { title: 'Colour: earth tones, no neon', body: 'Olive, khaki, grey and navy work best. Neon yellow, pure white and bright red flare in woodland and spook birds at distance. Camouflage is unnecessary — plain long sleeves are enough.' },
+          { title: 'Long sleeves and trousers', body: 'Mosquitoes, ticks and thorns are real here. Thin quick-dry long sleeves beat shorts, even in summer.' },
+          { title: 'A wide-brim hat', body: 'Shades your eyes and hides the head-tilt that gives you away. A dark brim reflects less than white. Add a thin beanie for cold dawns on the hills.' },
+          { title: 'Waterproof walking shoes or wellingtons', body: 'Wellingtons for mudflats and fish-pond bunds; grippy soles for trails. Flip-flops on wet rocks are how people get hurt.' },
+          { title: 'A light rain jacket beats an umbrella', body: 'An umbrella costs you a hand, which costs you half your optics. A jacket keeps both hands free; add a pack cover.' },
+          { title: 'A two-shoulder pack with a hip belt', body: 'Single-shoulder bags wreck your back on long walks. A hip belt carries a scope properly. Use a quick-release strap rather than hanging binoculars on your neck all day.' },
+          { title: 'Sun and mosquitoes', body: 'SPF50 sunscreen and a DEET or Picaridin repellent. Sunscreen first, repellent second.' },
+        ],
+      },
+      {
         id: 'care',
-        title: '4. Care and safety',
+        title: '5. Care and safety',
         lead: 'Gear that fails in the field is worse than gear you left at home.',
         items: [
           { title: 'Binocular care', body: 'Blow off dust first, then wipe from the centre outwards with a lens cloth — never your shirt. Store with desiccant in humid weather.' },
