@@ -2,6 +2,36 @@
 
 格式依 `readme` 的 V1 雙版號規範：版號同內文一齊改。
 
+## v1.9.0 — 2026-11-04（多線索圖鑑・中英分開・觀鳥禮儀與裝備）
+
+### 新增
+- **多線索搜尋**（`src/lib/explorer.ts` ＋ `src/components/ExplorerPanel.tsx`）：
+  中文名／英文名／學名／目／科／eBird 代碼／編號／食乜／住邊，一次過搜。
+  頂欄「多線索」掣打開面板，屬性標籤可「任一／全部」組合，結果即時過濾卡片網格。
+- **相似鳥類**：同科 40／同目 15／同屬 10／共同食物每個 8／共同環境每個 6／體型 ±20% 得 6；
+  每隻都列明原因（例如「同科・食昆蟲・住森林」）。在詳細資料頁一撳即跳去該張卡。
+- **詳細資料頁重寫**（`src/components/BirdDetailPage.tsx`）：12 個資料欄＋體長體重＋屬性標籤＋
+  相似鳥類＋觀鳥禮儀／裝備入口＋四個外部權威連結（eBird／Macaulay／Xeno-canto／All About Birds）。
+- **觀鳥禮儀 / 觀鳥裝備**（`src/data/fieldGuide.ts` ＋ `src/components/FieldGuideModal.tsx`）：
+  中英各一套，六節禮儀＋四節裝備，附香港觀鳥會、漁護署、eBird 敏感物種政策連結。
+- **全中文／全英文介面**：頂欄 `中文`／`EN` 掣（＋手機選單），記住選擇並同步 `<html lang>`。
+  卡面主標題、圖鑑機、詳細資料、屬性標籤、指南全部跟住轉。
+- `npm run cards:explorer` → `src/data/explorerIndex.json`（120 KB）
+- `npm run cards:details` → `src/data/cardDetails.zh.json`（597 KB）、`cardDetails.en.json`（638 KB）
+- `tests/explorer.test.mjs`（7 項）：索引覆蓋、五條搜尋線索、相似鳥原因、英文不得含中文、中文不得有簡體字。
+
+### 改動
+- 詳細資料文案改為**按語言分檔＋`import()` 延遲載入**，首頁不再需要載入 2.8 MB 的 `cardCopy.json`。
+- 舊的六宮格「科學研究中心」收起（外部連結移到詳細資料頁底部），避免「撳完冇嘢睇」。
+- `FieldGuideModal` 的頁籤由父層 `guideKind` 單一來源控制，唔會有兩個 state 不同步。
+
+### 文件
+- `docs/MULTI_FIELD_GUIDE.md`：設計理由、計分表、覆蓋率、為何唔拆兩個網站。
+
+### 已知限制
+- 食乜標籤覆蓋 380/559、住邊 391/559（其餘卡片本身冇該欄文案）。
+- 8 張卡（0236・0239・0269・0270・0379・0382・0423・0430）冇中文文案，詳細資料頁會明講並給外部連結。
+
 ## v1.6.0 — 2026-11-04（圖卡修復 + 對標 readme 規範）
 
 ### 修復

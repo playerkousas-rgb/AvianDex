@@ -6,11 +6,14 @@ import { RecognitionResultModal, Candidate } from './components/RecognitionResul
 import { MediaCapturePanel, MediaKind } from './components/MediaCapturePanel.tsx';
 import { BirdingMapModal } from './components/BirdingMapModal.tsx';
 import { CardLoadDiagnostics } from './components/CardLoadDiagnostics.tsx';
+import { ExplorerPanel } from './components/ExplorerPanel.tsx';
+import { FieldGuideModal, type GuideKind } from './components/FieldGuideModal.tsx';
 import { useBirds } from './hooks/useBirds';
 import { useCardStats } from './hooks/useCardStats';
 import { getLoadedIds, resetAll, requestCard } from './lib/cardImage';
 import { APP_VERSION, CARDS_PER_PAGE, DEFAULT_SORT_MODE } from './config';
 import { sortBirds, searchBirds, type SortMode } from './lib/pokedexOrder';
+import { filterByFacets, emptyFacets, type Facets, type Lang } from './lib/explorer';
 import { resolveBirdId } from './data/nameAliases';
 import { useBirdNetLocal } from './hooks/useBirdNetLocal';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -26,6 +29,10 @@ import {
   Map as MapIcon,
   Menu,
   X as XIcon,
+  Footprints,
+  Backpack,
+  Layers,
+  Languages,
 } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -53,6 +60,30 @@ function App() {
   const cardStats = useCardStats();
 
   const [globalCaptureKind, setGlobalCaptureKind] = useState<MediaKind | null>(null);
+
+  // 介面語言：'zh' ＝ 全中文（香港繁體）；'en' ＝ 全英文。
+  // 選擇會記住；卡面文案、搜尋排序、觀鳥禮儀／裝備都會跟住轉。
+  const [lang, setLang] = useState<Lang>(() => {
+    try {
+      const v = localStorage.getItem('aviandex.lang');
+      if (v === 'en' || v === 'zh') return v;
+    } catch { /* 私隱模式 */ }
+    return 'zh';
+  });
+  useEffect(() => {
+    try { localStorage.setItem('aviandex.lang', lang); } catch { /* ignore */ }
+    document.documentElement.lang = lang === 'en' ? 'en' : 'zh-Hant-HK';
+  }, [lang]);
+
+  /** 介面文字：'en' 時全英文，唔會中英夾雜 */
+  const L = useCallback((zh: string, en: string) => (lang === 'en' ? en : zh), [lang]);
+
+  // 多線索搜尋面板（屬性篩選）；同一個 query 亦餵落卡片網格
+  const [showExplorer, setShowExplorer] = useState(false);
+  const [facets] = useState<Facets>(emptyFacets);
+
+  // 觀鳥禮儀 / 觀鳥裝備
+  const [guideKind, setGuideKind] = useState<GuideKind | null>(null);
   const [recogOpen, setRecogOpen] = useState(false);
   const [recogLoading, setRecogLoading] = useState(false);
 
@@ -211,10 +242,10 @@ function App() {
 
   useEffect(() => {
     const anyModalOpen =
-      selectedBirdId !== null || showMap || recogOpen || !!globalCaptureKind;
+      selectedBirdId !== null || showMap || recogOpen || !!globalCaptureKind || !!guideKind;
     document.body.style.overflow = anyModalOpen ? 'hidden' : 'unset';
     return () => { document.body.style.overflow = 'unset'; };
-  }, [selectedBirdId, showMap, recogOpen, globalCaptureKind]);
+  }, [selectedBirdId, showMap, recogOpen, globalCaptureKind, guideKind]);
 
   const filteredBirds = useMemo(() => {
     // 搜尋以英文名為主（見 src/lib/pokedexOrder.ts 的評分表），中文名仍可搜但排後
@@ -224,10 +255,14 @@ function App() {
       base = base.filter((b) => loaded.has(b.id));
     }
     // 有搜尋關鍵字時保留「相關度」次序（英文命中優先），否則跟所選分類次序
-    return query.trim() ? base : sortBirds(base, sortMode);
+    const ordered = query.trim() ? base : sortBirds(base, sortMode);
+    // 多線索搜尋的屬性標籤（食乜／住邊）：用 id 過濾再對回 Bird 物件，保持原本次序
+    if (!facets.diet.length && !facets.habitat.length) return ordered;
+    const keep = new Set(filterByFacets(ordered.map((b) => b.id), facets));
+    return ordered.filter((b) => keep.has(b.id));
     // cardStats 只係用作「圖片狀態已變」的觸發器，令「只看有圖」跟得上載入進度
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [birds, query, onlyUnlocked, sortMode, cardStats]);
+  }, [birds, query, onlyUnlocked, sortMode, cardStats, facets]);
 
   // 只 render 首 N 張；其餘靠「載入更多」逐批出現（避免一次性打爆 R2）
   const pagedBirds = useMemo(
@@ -329,7 +364,21 @@ function App() {
                   className="flex items-center gap-1.5 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-lg px-3 py-2 border border-yellow-400/20 text-yellow-200 font-black text-xs tracking-wider transition-all active:scale-95"
                   title="香港觀鳥地圖"
                 >
-                  <MapIcon className="w-4 h-4" /> 觀鳥地圖
+                  <MapIcon className="w-4 h-4" /> {lang === 'en' ? 'Map' : '觀鳥地圖'}
+                </button>
+                <button
+                  onClick={() => setGuideKind('etiquette')}
+                  className="flex items-center gap-1.5 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-lg px-3 py-2 border border-emerald-400/25 text-emerald-200 font-black text-xs tracking-wider transition-all active:scale-95"
+                  title={lang === 'en' ? 'Birding etiquette' : '觀鳥禮儀'}
+                >
+                  <Footprints className="w-4 h-4" /> {lang === 'en' ? 'Etiquette' : '觀鳥禮儀'}
+                </button>
+                <button
+                  onClick={() => setGuideKind('gear')}
+                  className="flex items-center gap-1.5 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-lg px-3 py-2 border border-amber-400/25 text-amber-200 font-black text-xs tracking-wider transition-all active:scale-95"
+                  title={lang === 'en' ? 'Birding gear' : '觀鳥裝備'}
+                >
+                  <Backpack className="w-4 h-4" /> {lang === 'en' ? 'Gear' : '觀鳥裝備'}
                 </button>
                 <div className="flex gap-1.5 bg-black/30 backdrop-blur-sm rounded-full px-2.5 py-1.5 border border-white/10">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-500 border border-red-900 shadow-[0_0_8px_rgba(239,68,68,0.8)] animate-pulse" />
@@ -343,6 +392,16 @@ function App() {
                   <BatteryFull className="w-3 h-3" />
                   <span>100%</span>
                 </div>
+                {/* 全中文 / 全英文：一撳即刻換整個介面＋卡面文案，不是逐段機翻 */}
+                <button
+                  onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}
+                  title={lang === 'en' ? 'Switch to 全中文' : 'Switch to English only'}
+                  aria-label="切換語言 / Switch language"
+                  className="flex items-center gap-1 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-lg px-2.5 py-2 border border-cyan-300/30 text-cyan-200 font-black text-[11px] tracking-wider transition-all active:scale-95"
+                >
+                  <Languages className="w-4 h-4" />
+                  {lang === 'en' ? 'EN' : '中文'}
+                </button>
               </div>
 
               <button
@@ -370,6 +429,27 @@ function App() {
                     >
                       <MapIcon className="w-4 h-4 shrink-0" /> 觀鳥地圖
                     </button>
+                    <div className="grid grid-cols-2 gap-2">
+                      <button
+                        onClick={() => { setGuideKind('etiquette'); setMobileMenuOpen(false); }}
+                        className="flex items-center justify-center gap-1.5 bg-black/40 active:bg-yellow-500/20 rounded-lg px-2 py-3 border border-emerald-400/30 text-emerald-200 font-black text-[11px] tracking-wider active:scale-95"
+                      >
+                        <Footprints className="w-4 h-4 shrink-0" /> {lang === 'en' ? 'Etiquette' : '觀鳥禮儀'}
+                      </button>
+                      <button
+                        onClick={() => { setGuideKind('gear'); setMobileMenuOpen(false); }}
+                        className="flex items-center justify-center gap-1.5 bg-black/40 active:bg-yellow-500/20 rounded-lg px-2 py-3 border border-amber-400/30 text-amber-200 font-black text-[11px] tracking-wider active:scale-95"
+                      >
+                        <Backpack className="w-4 h-4 shrink-0" /> {lang === 'en' ? 'Gear' : '觀鳥裝備'}
+                      </button>
+                      <button
+                        onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}
+                        className="col-span-2 flex items-center justify-center gap-1.5 bg-black/40 active:bg-cyan-500/20 rounded-lg px-2 py-3 border border-cyan-300/30 text-cyan-200 font-black text-[11px] tracking-wider active:scale-95"
+                      >
+                        <Languages className="w-4 h-4 shrink-0" />
+                        {lang === 'en' ? 'Switch to 全中文' : 'Switch to English only'}
+                      </button>
+                    </div>
                     <button
                       onClick={() => window.open(BIRDDEX2_URL, '_blank')}
                       className="flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-800 rounded-lg px-3 py-3 border border-red-400/50 text-white font-black text-xs tracking-wider transition-all active:scale-95 shadow-lg shadow-red-900/50"
@@ -389,11 +469,11 @@ function App() {
                   <BirdIcon className="w-4 h-4 sm:w-5 sm:h-5 text-red-900 shrink-0" strokeWidth={2.5} />
                   <div className="flex flex-col leading-none">
                     <span className="font-mono text-[8px] sm:text-[9px] text-red-900 font-black tracking-widest">
-                      圖鑑收錄 · SPECIES
+                      {L('圖鑑收錄 · SPECIES', 'SPECIES IN DEX')}
                     </span>
                     <span className="font-black text-gray-900 text-sm sm:text-base md:text-lg leading-tight">
                       {speciesCount}
-                      <span className="text-gray-700 text-[10px] sm:text-xs font-mono"> 種</span>
+                      <span className="text-gray-700 text-[10px] sm:text-xs font-mono"> {L('種', 'spp.')}</span>
                     </span>
                   </div>
                 </div>
@@ -406,13 +486,13 @@ function App() {
                   <span className="text-base leading-none">🖼️</span>
                   <div className="flex flex-col leading-none">
                     <span className="font-mono text-[8px] sm:text-[9px] text-red-900 font-black tracking-widest">
-                      已解鎖圖卡 · CARDS
+                      {L('已解鎖圖卡 · CARDS', 'CARDS LOADED')}
                     </span>
                     <span className="font-black text-gray-900 text-sm sm:text-base md:text-lg leading-tight">
                       {cardStats.loaded}
-                      <span className="text-gray-700 text-[10px] sm:text-xs font-mono"> 張</span>
+                      <span className="text-gray-700 text-[10px] sm:text-xs font-mono"> {L('張', 'cards')}</span>
                       {cardStats.error > 0 && (
-                        <span className="ml-1.5 text-[9px] font-mono text-red-800">⚠ {cardStats.error} 失敗</span>
+                        <span className="ml-1.5 text-[9px] font-mono text-red-800">⚠ {cardStats.error} {L('失敗', 'failed')}</span>
                       )}
                     </span>
                   </div>
@@ -424,10 +504,10 @@ function App() {
                     // 重新排隊：由第一張開始逐張 revalidate
                   birds.slice(0, visibleCount).forEach((b) => requestCard(b.id));
                   }}
-                  title="重新向 R2 探測所有圖卡（剛上傳完圖可按）"
+                  title={L('重新向 R2 探測所有圖卡（剛上傳完圖可按）', 'Re-check every card on R2 (use after uploading art)')}
                   className="shrink-0 flex items-center gap-1.5 bg-white/70 hover:bg-white border-2 border-black/50 rounded-lg px-2.5 py-2 font-black text-[10px] text-gray-900 tracking-wider active:scale-95 transition-all"
                 >
-                  <RefreshCw className="w-3.5 h-3.5" /> 重新掃描
+                  <RefreshCw className="w-3.5 h-3.5" /> {L('重新掃描', 'Rescan')}
                 </button>
 
                 <label className="shrink-0 flex items-center gap-2 bg-white/60 border-2 border-black/40 rounded-lg px-2.5 py-2 font-black text-[10px] text-gray-900 tracking-wider cursor-pointer select-none">
@@ -440,18 +520,18 @@ function App() {
                     }}
                     className="w-3.5 h-3.5 accent-red-700"
                   />
-                  只看有圖
+                  {L('只看有圖', 'With image only')}
                 </label>
 
                 <div className="shrink-0 flex items-center bg-white/70 border-2 border-black/50 rounded-lg overflow-hidden">
                   <span className="px-1.5 font-mono text-[8px] font-black text-gray-700 tracking-wider border-r border-black/20 py-2">
-                    排序
+                    {L('排序', 'SORT')}
                   </span>
                   {(
                     [
-                      { key: 'ebird', label: 'eBird', title: '跟 eBird/Clements 演化排序（目 → 科 → 種）' },
-                      { key: 'pokedex', label: 'NO.', title: '原本 NO.0001 → NO.0569 次序' },
-                      { key: 'chinese', label: '中文', title: '按中文名排序' },
+                      { key: 'ebird', label: 'eBird', title: L('跟 eBird/Clements 演化排序（目 → 科 → 種）', 'eBird/Clements order (order → family → species)') },
+                      { key: 'pokedex', label: 'NO.', title: L('原本 NO.0001 → NO.0569 次序', 'Original NO.0001 → NO.0569 order') },
+                      { key: 'chinese', label: '中文', title: L('按中文名排序', 'Sort by Chinese name') },
                     ] as const
                   ).map((m) => (
                     <button
@@ -477,11 +557,30 @@ function App() {
                 <input
                   type="text"
                   value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  placeholder="英文名 / 學名 / 中文 / 編號…"
+                  onChange={(e) => { setQuery(e.target.value); setVisibleCount(CARDS_PER_PAGE); }}
+                  placeholder={lang === 'en'
+                    ? 'English / scientific / Chinese / no.…'
+                    : '英文名 / 學名 / 中文 / 編號…'}
                   className="bg-transparent px-2.5 py-1.5 text-sm font-bold text-gray-900 placeholder:text-gray-500 outline-none w-full sm:w-44"
                 />
               </div>
+              <button
+                onClick={() => setShowExplorer((v) => !v)}
+                title={lang === 'en' ? 'Filter by diet and habitat, and find look-alikes' : '用「食乜／住邊」篩選，並找相似鳥類'}
+                className={`shrink-0 flex items-center gap-1.5 border-2 border-black rounded-lg px-2.5 py-2 font-black text-[10px] tracking-wider shadow-[0_3px_0_rgba(0,0,0,0.4)] active:translate-y-0.5 active:shadow-none transition-all ${
+                  showExplorer || facets.diet.length || facets.habitat.length
+                    ? 'bg-cyan-700 text-white'
+                    : 'bg-white/70 text-gray-900 hover:bg-white'
+                }`}
+              >
+                <Layers className="w-3.5 h-3.5" />
+                {lang === 'en' ? 'Diet & habitat' : '多線索'}
+                {(facets.diet.length + facets.habitat.length) > 0 && (
+                  <span className="bg-yellow-400 text-gray-900 rounded-full px-1.5">
+                    {facets.diet.length + facets.habitat.length}
+                  </span>
+                )}
+              </button>
             </div>
           </div>
         </header>
@@ -501,20 +600,50 @@ function App() {
               </p>
             </div>
           ) : filteredBirds.length === 0 ? (
-            <div className="flex flex-col items-center justify-center py-24 sm:py-32 text-center">
-              <BirdIcon className="w-20 h-20 sm:w-24 sm:h-24 text-yellow-300/40 mb-4" strokeWidth={1.5} />
-              <p className="text-yellow-200/80 font-black text-lg sm:text-xl">沒有找到符合的鳥種</p>
-              <p className="text-white/40 font-mono text-xs mt-2">Try a different search term</p>
+            <div>
+              {showExplorer && (
+                <ExplorerPanel
+                  lang={lang}
+                  query={query}
+                  onQueryChange={(q) => { setQuery(q); setVisibleCount(CARDS_PER_PAGE); }}
+                  orderedIds={birds.map((b) => b.id)}
+                  onPick={(id) => { setSelectedBirdId(id); }}
+                />
+              )}
+              <div className="flex flex-col items-center justify-center py-16 sm:py-24 text-center">
+                <BirdIcon className="w-20 h-20 sm:w-24 sm:h-24 text-yellow-300/40 mb-4" strokeWidth={1.5} />
+                <p className="text-yellow-200/80 font-black text-lg sm:text-xl">
+                  {L('沒有找到符合的鳥種', 'No species matched')}
+                </p>
+                <p className="text-white/40 font-mono text-xs mt-2">
+                  {L('試下換個關鍵字，或用「多線索」揀食乜／住邊', 'Try another keyword, or filter by diet / habitat')}
+                </p>
+              </div>
             </div>
           ) : (
             <>
+              {showExplorer && (
+                <ExplorerPanel
+                  lang={lang}
+                  query={query}
+                  onQueryChange={(q) => { setQuery(q); setVisibleCount(CARDS_PER_PAGE); }}
+                  orderedIds={filteredBirds.map((b) => b.id)}
+                  onPick={(id) => { setSelectedBirdId(id); }}
+                />
+              )}
               <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 flex-wrap">
                 <div className="flex-1 h-1 bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent rounded min-w-[20px]" />
                 <h2 className="text-yellow-300 font-black text-xs sm:text-sm tracking-[0.3em] sm:tracking-[0.4em] flex items-center gap-1.5 sm:gap-2">
                   <BirdIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   SPECIMEN ARCHIVE
                   <span className="font-mono text-[9px] tracking-widest text-yellow-200/50 normal-case">
-                    {query.trim() ? '· SEARCH' : sortMode === 'ebird' ? '· eBird 分類序' : sortMode === 'chinese' ? '· 中文名序' : '· NO. 編號序'}
+                    {query.trim()
+                      ? L('· 搜尋結果', '· SEARCH')
+                      : sortMode === 'ebird'
+                        ? L('· eBird 分類序', '· eBird order')
+                        : sortMode === 'chinese'
+                          ? L('· 中文名序', '· Chinese name')
+                          : L('· NO. 編號序', '· Dex number')}
                   </span>
                 </h2>
                 <div className="flex-1 h-1 bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent rounded min-w-[20px]" />
@@ -526,6 +655,7 @@ function App() {
                     key={bird.id}
                     bird={bird}
                     listPosition={filteredBirds.length > 1 ? pos + 1 : undefined}
+                    lang={lang}
                     isActive={selectedBirdId === bird.id}
                     onClick={() => setSelectedBirdId(bird.id)}
                   />
@@ -539,13 +669,13 @@ function App() {
                     onClick={() => setVisibleCount((n) => n + CARDS_PER_PAGE)}
                     className="bg-gradient-to-b from-yellow-300 to-yellow-500 text-gray-900 font-black px-8 py-3 rounded-xl border-[3px] border-black shadow-[0_4px_0_rgba(0,0,0,0.6)] active:translate-y-1 active:shadow-none transition-all"
                   >
-                    載入更多 · LOAD MORE（{pagedBirds.length} / {filteredBirds.length}）
+                    {L('載入更多 · LOAD MORE', 'LOAD MORE')}（{pagedBirds.length} / {filteredBirds.length}）
                   </button>
                   <button
                     onClick={() => setVisibleCount(filteredBirds.length)}
                     className="text-yellow-200/60 font-mono text-[10px] tracking-widest underline underline-offset-2"
                   >
-                    全部顯示（{filteredBirds.length} 張，圖片會排隊慢慢載入）
+                    {L(`全部顯示（${filteredBirds.length} 張，圖片會排隊慢慢載入）`, `Show all ${filteredBirds.length} cards (images load in a queue)`)}
                   </button>
                 </div>
               )}
@@ -556,12 +686,12 @@ function App() {
         <div className="fixed bottom-5 right-3 sm:bottom-6 sm:right-6 z-30 flex flex-col gap-2.5 sm:gap-3">
           <button
             onClick={() => setGlobalCaptureKind('image')}
-            title="看圖認雀"
+            title={L('看圖認雀', 'Identify from a photo')}
             className="group relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-700 border-[3px] sm:border-[4px] border-gray-900 shadow-[0_5px_0_rgba(0,0,0,0.7),0_8px_20px_rgba(232,121,249,0.5)] active:translate-y-1 active:shadow-[0_2px_0_rgba(0,0,0,0.7)] transition-all flex items-center justify-center"
           >
             <CameraIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white drop-shadow-[0_2px_0_rgba(0,0,0,0.5)]" />
             <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-black/80 text-white text-xs font-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-              看圖認雀
+              {L('看圖認雀', 'Photo ID')}
             </span>
             <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-[8px] font-black px-1 rounded border border-black">
               AI
@@ -569,12 +699,12 @@ function App() {
           </button>
           <button
             onClick={() => setGlobalCaptureKind('audio')}
-            title="聽聲認雀"
+            title={L('聽聲認雀', 'Identify from a sound')}
             className="group relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-cyan-300 to-cyan-700 border-[3px] sm:border-[4px] border-gray-900 shadow-[0_5px_0_rgba(0,0,0,0.7),0_8px_20px_rgba(34,211,238,0.5)] active:translate-y-1 active:shadow-[0_2px_0_rgba(0,0,0,0.7)] transition-all flex items-center justify-center"
           >
             <Mic className="w-6 h-6 sm:w-7 sm:h-7 text-white drop-shadow-[0_2px_0_rgba(0,0,0,0.5)]" />
             <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-black/80 text-white text-xs font-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-              聽聲認雀
+              {L('聽聲認雀', 'Sound ID')}
             </span>
             <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-[8px] font-black px-1 rounded border border-black">
               AI
@@ -630,6 +760,7 @@ function App() {
       </div>
 
       <PokedexDevice
+        lang={lang}
         birds={dexBirds}
         initialIndex={dexIndex}
         isOpen={selectedBirdId !== null}
@@ -654,6 +785,14 @@ function App() {
       />
 
       <BirdingMapModal isOpen={showMap} onClose={() => setShowMap(false)} />
+
+      <FieldGuideModal
+        open={guideKind !== null}
+        kind={guideKind || 'etiquette'}
+        lang={lang}
+        onClose={() => setGuideKind(null)}
+        onSwitchKind={(k) => setGuideKind(k)}
+      />
 
       {globalCaptureKind && (
         <MediaCapturePanel
