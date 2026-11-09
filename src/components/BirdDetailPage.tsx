@@ -283,6 +283,19 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({ bird, lang, onBa
         ))}
       </div>
 
+      {/* 資料來源說明：哪一個來源負責哪一種資料，避免「只有一個連結就不夠權威」 */}
+      <div className="bg-black/25 border border-white/10 rounded-xl p-2.5">
+        <p className="text-white/45 font-black text-[10px] tracking-[0.2em] mb-1">
+          {t('資料來源分工', 'WHERE EACH FACT COMES FROM')}
+        </p>
+        <ul className="text-[10.5px] text-white/55 leading-relaxed space-y-0.5">
+          <li>{t('分類／學名／分佈代碼：eBird–Clements（Cornell Lab）', 'Taxonomy, scientific names, species codes: eBird–Clements (Cornell Lab)')}</li>
+          <li>{t('文字內容：中文維基百科（原文抽取，不改寫）＋英文維基百科（英文原文）', 'Text: Chinese Wikipedia (extracted verbatim) and English Wikipedia')}</li>
+          <li>{t('相片：Macaulay Library（Cornell Lab，由生圖流程引用）', 'Photos: Macaulay Library (Cornell Lab)')}</li>
+          <li>{t('鳥聲：Xeno-canto；香港名錄次序：香港觀鳥會', 'Sound: Xeno-canto; Hong Kong checklist order: HKBWS')}</li>
+        </ul>
+      </div>
+
       <button
         onClick={onBack}
         className="w-full bg-red-900/60 hover:bg-red-800 text-white font-black py-4 rounded-2xl border-b-4 border-red-950 active:translate-y-1 active:border-b-0 transition-all flex items-center justify-center gap-2"
