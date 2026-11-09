@@ -8,6 +8,8 @@ import {
 import { similarBirds, dietLabel, habitatLabel, ENTRIES, type Lang } from '../lib/explorer';
 import type { GuideKind } from './FieldGuideModal';
 import type { Bird } from '../types';
+import { getOfflineBird } from '../lib/fieldPack';
+import { FieldPackPanel } from './FieldPackPanel';
 
 /**
  * 第 2 頁：詳細資料。
@@ -93,7 +95,13 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
   }, [lang, onLoaded]);
 
   const entry = ENTRIES[bird.id];
-  const fields = React.useMemo<DetailFields>(() => (data ? data[bird.id] ?? {} : {}), [data, bird.id]);
+  const offline = React.useMemo(() => getOfflineBird(bird.id), [bird.id]);
+  const fields = React.useMemo<DetailFields>(() => {
+    if (data && data[bird.id]) return data[bird.id];
+    // 冇網絡／未載入到 JSON 時，用野外離線包（已在野外下載過就一定有）
+    return (offline?.t ?? {}) as DetailFields;
+  }, [data, bird.id, offline]);
+  const usingOffline = !data && !!offline;
   const similar = React.useMemo(() => similarBirds(bird.id, 4, lang), [bird.id, lang]);
 
   const zhName = bird.name;
@@ -140,6 +148,12 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
           )}
         </div>
       </div>
+
+      {usingOffline && (
+        <p className="text-emerald-300/70 text-[10px] bg-emerald-900/20 border border-emerald-400/20 rounded px-2 py-1">
+          {t('離線模式：顯示已下載的野外離線包（文字已截短）', 'Offline: showing the downloaded field pack (text is abridged)')}
+        </p>
+      )}
 
       {/* 體長 / 體重：一列，唔再各自一個大方框 */}
       <div className="grid grid-cols-2 gap-2">
@@ -281,6 +295,8 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
           <Backpack className="w-3.5 h-3.5" /> {t('觀鳥裝備', 'Gear')}
         </button>
       </div>
+
+      <FieldPackPanel lang={lang} compact />
 
       {/* 極簡頁腳：文字來源只留一句，其餘去第 3 頁 */}
       <div className="flex items-center justify-between gap-2 text-[9.5px] text-white/30 border-t border-white/8 pt-2">
