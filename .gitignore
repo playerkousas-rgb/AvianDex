@@ -67,3 +67,9 @@ cards/art/
 # 本機抽取的中間檔（由你電腦跑 extract-bilingual.mjs --out 產生；唔入 Git）
 data/cardCopy.local.json
 data/*.local.json
+
+# 批量文案工作檔（本機用，不入 Git）
+data/batches/
+
+# 卡面試作素材（AI 圖，不入 Git；成品 PNG 另外交付）
+data/card-demo/

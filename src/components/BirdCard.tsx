@@ -11,6 +11,8 @@ interface BirdCardProps {
   isActive?: boolean;
   /** 目前排序下排第幾（1-based）；唔顯示就傳 undefined */
   listPosition?: number;
+  /** 'en' ＝ 卡面只出英文（主標題英文名、副題中文名）；'zh' ＝ 相反 */
+  lang?: 'zh' | 'en';
 }
 
 /**
@@ -24,10 +26,15 @@ export const BirdCard: React.FC<BirdCardProps> = ({
   onClick,
   isActive = false,
   listPosition,
+  lang = 'zh',
 }) => {
   const image = useCardImage(bird.id);
   const [imgReady, setImgReady] = useState(false);
   const hasName = bird.name && bird.name !== '???';
+  /* 全英文模式：主標題用英文俗名，副題才出中文名；中文模式相反 */
+  const enName = bird.taxonomy?.comName || (bird.englishName && bird.englishName !== '???' ? bird.englishName : '');
+  const title = lang === 'en' ? enName || bird.name : bird.name;
+  const subName = lang === 'en' ? bird.name : enName;
 
   // 圖片已載入（onLoad 觸發）才算「已發現」；名字只用於顯示標題
   const showArtwork = image.status === 'loaded' && imgReady;
@@ -89,11 +96,11 @@ export const BirdCard: React.FC<BirdCardProps> = ({
       {showArtwork && hasName && (
         <div className="absolute bottom-0 inset-x-0 z-20 bg-gradient-to-t from-black/95 via-black/70 to-transparent p-2 pt-6">
           <p className="text-white font-black text-xs sm:text-sm tracking-tight truncate drop-shadow-lg text-center">
-            {bird.name}
+            {title}
           </p>
-          {(bird.taxonomy?.comName || (bird.englishName && bird.englishName !== '???')) && (
+          {subName && (
             <p className="text-yellow-200/80 font-mono text-[8px] sm:text-[9px] tracking-tight truncate text-center leading-tight">
-              {bird.taxonomy?.comName || bird.englishName}
+              {subName}
             </p>
           )}
           {bird.taxonomy?.sciName && (
@@ -140,11 +147,11 @@ export const BirdCard: React.FC<BirdCardProps> = ({
           </div>
 
           <p className="mt-3 text-yellow-300 font-black text-[11px] tracking-[0.25em] uppercase drop-shadow-md">
-            {hasName ? bird.name : '? ? ?'}
+            {hasName ? title : '? ? ?'}
           </p>
-          {(bird.taxonomy?.comName || (bird.englishName && bird.englishName !== '???')) && (
+          {subName && (
             <p className="mt-0.5 text-yellow-100/70 font-mono text-[7px] tracking-wide text-center px-2 truncate max-w-full">
-              {bird.taxonomy?.comName || bird.englishName}
+              {subName}
             </p>
           )}
           {bird.taxonomy?.sciName && (
