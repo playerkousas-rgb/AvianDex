@@ -209,13 +209,14 @@ def render(bird_id, out_path):
         img.paste(contain(sp, 78, 78, DEEP), (M, (head_h - 78) // 2))
     hx = M + 92
     d.text((hx, 16), f'NO.{bird_id}', font=font(22, 'bold'), fill=GOLD)
+    mid_x = M + 300
     f_zh = font(56, 'black', serif=True)
-    while tw(d, zh, f_zh) > 330 and f_zh.size > 30:
+    # 中文名唔可以撞到右邊的學名／英文 pill：可用寬度 = mid_x - hx
+    while tw(d, zh, f_zh) > (mid_x - hx - 14) and f_zh.size > 26:
         f_zh = font(f_zh.size - 2, 'black', serif=True)
-    d.text((hx - 2, 40), zh, font=f_zh, fill=WHITE)
+    d.text((hx - 2, 40 + max(0, (56 - f_zh.size) // 3)), zh, font=f_zh, fill=WHITE)
 
     # 學名 / 英文（中文名右邊）
-    mid_x = M + 300
     d.text((mid_x, 40), sci, font=font(17, 'regular', serif=True), fill=(190, 212, 194))
     pw = tw(d, en, font(16, 'bold')) + 22
     d.rounded_rectangle((mid_x, 68, mid_x + pw, 68 + 28), radius=14, fill=WHITE)
@@ -454,7 +455,9 @@ def render(bird_id, out_path):
 
 
 def clean(s):
+    import re as _re
     s = (s or '').replace('\n', ' ').strip()
+    s = _re.sub(r'^[\]\uFF3D\u3011\>\uFF09\)]+\s*', '', s)
     for sep in ('。', '；'):
         i = s.find(sep)
         if 0 < i < 40:
