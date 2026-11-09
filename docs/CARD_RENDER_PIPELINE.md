@@ -100,3 +100,26 @@ done
 | `render-card-info.py` | **資訊圖卡（定案）** | 卡面主線 |
 | `render-card-encyclopedia.py` | 圖鑑跨頁（多圖） | 詳細資料頁／海報 |
 | `render-card-kid.py` | 任務卡（親子活動） | 活動單張 |
+
+---
+
+## 八、量度值（mm／g）流程 —— 用戶指示：不換算
+
+用戶決定：**不換算**，直接輸出 AVONET 的 mm／g。
+
+- 腳本：`scripts/cards/measure-batch.mjs`（`npm run cards:measure`）
+- 資料檔：`src/data/measurements.json`（每隻 5 項：wing／tail／tarsus／bill／mass + source）
+- 卡面書眉：翼長 mm／體重 g；詳細頁：五格量度條，標明來源與「未換算」
+- 防呆：超出鳥類合理範圍的數值一律拒絕（例如 wing < 30 mm 代表把 cm 當 mm）
+- 只接受 source = `AVONET` 或 `BoW`；冇 source 的數字作廢
+
+批次流程：
+
+```bash
+npm run cards:measure -- --count 40                       # 產生 data/batches/measure-XXXX-YYYY.md
+#   上載給 Gemini（用你本機那套），回傳 JSON 存成 measure-out.json
+npm run cards:measure -- --apply measure-out.json --dry   # 先看會改什麼
+npm run cards:measure -- --apply measure-out.json         # 寫入
+npm run cards:measure -- --report                         # 覆蓋率
+npm run cards:info -- 0013                                # 重新出卡
+```

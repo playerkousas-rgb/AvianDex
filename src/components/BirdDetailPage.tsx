@@ -96,6 +96,20 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
 
   const entry = ENTRIES[bird.id];
   const offline = React.useMemo(() => getOfflineBird(bird.id), [bird.id]);
+
+  // 量度值（AVONET／BoW，mm／g，按用戶指示不換算）
+  const [meas, setMeas] = React.useState<Record<string, string> | null>(null);
+  React.useEffect(() => {
+    let alive = true;
+    import('../data/measurements.json')
+      .then((m) => {
+        if (!alive) return;
+        const all = (m as { default: Record<string, Record<string, string>> }).default;
+        setMeas(all[bird.id] ?? {});
+      })
+      .catch(() => { if (alive) setMeas(null); });
+    return () => { alive = false; };
+  }, [bird.id]);
   const fields = React.useMemo<DetailFields>(() => {
     if (data && data[bird.id]) return data[bird.id];
     // 冇網絡／未載入到 JSON 時，用野外離線包（已在野外下載過就一定有）
@@ -155,17 +169,33 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
         </p>
       )}
 
-      {/* 體長 / 體重：一列，唔再各自一個大方框 */}
-      <div className="grid grid-cols-2 gap-2">
-        <div className="bg-black/30 border border-white/10 rounded-lg px-2.5 py-1.5 flex items-baseline justify-between gap-2">
-          <span className="text-white/40 text-[9.5px] tracking-widest">{t('體長', 'LENGTH')}</span>
-          <span className="text-white/90 font-black text-[12px]">{fields.length || bird.height || PENDING}</span>
-        </div>
-        <div className="bg-black/30 border border-white/10 rounded-lg px-2.5 py-1.5 flex items-baseline justify-between gap-2">
-          <span className="text-white/40 text-[9.5px] tracking-widest">{t('體重', 'WEIGHT')}</span>
-          <span className="text-white/90 font-black text-[12px]">{fields.weight || bird.weight || PENDING}</span>
-        </div>
+      {/* 量度值：用戶指示「不換算，直接用 mm／g」 */}
+      <div className="grid grid-cols-2 sm:grid-cols-5 gap-1.5">
+        {[
+          { k: 'wing', zh: '翼長', en: 'WING', u: 'mm' },
+          { k: 'tail', zh: '尾長', en: 'TAIL', u: 'mm' },
+          { k: 'tarsus', zh: '跗跖', en: 'TARSUS', u: 'mm' },
+          { k: 'bill', zh: '喙長', en: 'BILL', u: 'mm' },
+          { k: 'mass', zh: '體重', en: 'MASS', u: 'g' },
+        ].map((row) => {
+          const v = meas?.[row.k];
+          const shown = v ? `${v} ${row.u}` : (row.k === 'mass' ? (fields.weight || bird.weight || '') : '');
+          return (
+            <div key={row.k} className="bg-black/30 border border-white/10 rounded px-2 py-1.5">
+              <p className="text-white/35 text-[9px] tracking-widest">{lang === 'en' ? row.en : row.zh}</p>
+              <p className={`text-[12px] font-black ${shown ? 'text-white/90' : 'text-white/25'}`}>
+                {shown || PENDING}
+              </p>
+            </div>
+          );
+        })}
       </div>
+      {meas?.source && (
+        <p className="text-white/25 text-[9px] -mt-1">
+          {t(`量度來源：${meas.source === 'AVONET' ? 'AVONET（Tobias et al. 2022）' : 'Birds of the World'}，單位 mm／g，未換算`,
+            `Measurements: ${meas.source}, mm / g, not converted`)}
+        </p>
+      )}
 
       {/* 屬性標籤：唔用 emoji，用細色點 */}
       {(dietTags.length > 0 || habTags.length > 0) && (

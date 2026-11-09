@@ -174,6 +174,13 @@ def render(bird_id, out_path):
     tax = load('birdTaxonomy.json')
     copy = load('cardCopy.json')
 
+    # 量度值（AVONET／BoW，單位 mm／g，不換算）
+    meas = {}
+    mp = os.path.join(DATA, 'measurements.json')
+    if os.path.exists(mp):
+        with open(mp, encoding='utf-8') as f:
+            meas = json.load(f).get(bird_id, {})
+
     b = next((x for x in birds if x['id'] == bird_id), {})
     t = tax.get(bird_id, {})
     c = copy.get(bird_id, {})
@@ -229,7 +236,16 @@ def render(bird_id, out_path):
         line = f'{zhv} {lv}'.strip()
         d.text((rx - tw(d, line, f_small), 12 + i * 21), line, font=f_small, fill=(178, 202, 182))
 
-    stats = [('身長', c.get('length')), ('體重', c.get('weight'))]
+    def mm(k):
+        v = str(meas.get(k, '') or '').strip()
+        return f'{v} mm' if v else ''
+
+    def g(k='mass'):
+        v = str(meas.get(k, '') or '').strip()
+        return f'{v} g' if v else ''
+
+    # 用戶指示：不換算，直接印 mm／g
+    stats = [('翼長', mm('wing') or c.get('length')), ('體重', g() or c.get('weight'))]
     sy = 54
     for label, val in stats:
         d.text((rx - 250, sy), label, font=font(12, 'bold'), fill=(150, 178, 156))
