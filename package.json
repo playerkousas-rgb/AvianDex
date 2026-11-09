@@ -16,6 +16,7 @@
     "cards:explorer": "node scripts/cards/build-explorer-data.mjs",
     "cards:extract-bi": "node scripts/cards/extract-bilingual.mjs",
     "cards:generate": "node scripts/cards/generate.mjs",
+    "cards:kid": "python3 scripts/cards/render-card-kid.py",
     "cards:image-studio": "node scripts/cards/build-image-studio.mjs",
     "cards:lint-copy": "python3 scripts/cards/lint-copy.py",
     "cards:photos": "node scripts/cards/download-macaulay.mjs",
