@@ -20,6 +20,7 @@
     "cards:enc": "python3 scripts/cards/render-card-encyclopedia.py",
     "cards:kid": "python3 scripts/cards/render-card-kid.py",
     "cards:image-studio": "node scripts/cards/build-image-studio.mjs",
+    "cards:measure:avonet": "node scripts/cards/measure-avonet.mjs",
     "cards:measure": "node scripts/cards/measure-batch.mjs",
     "cards:lint-copy": "python3 scripts/cards/lint-copy.py",
     "cards:photos": "node scripts/cards/download-macaulay.mjs",
