@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { similarBirds, dietLabel, habitatLabel, ENTRIES, type Lang } from '../lib/explorer';
 import type { GuideKind } from './FieldGuideModal';
+import { ResearchHub } from './ResearchHub';
 import type { Bird } from '../types';
 
 type DetailFields = Record<string, string | string[]>;
@@ -152,6 +153,13 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({ bird, lang, onBa
         </div>
       )}
 
+      {/* 科學研究中心：六格各有分工（文字／紀錄／相片／影片／聲音／工具） */}
+      <ResearchHub
+        sciQuery={enName || sciName || zhName}
+        speciesCode={entry?.code}
+        lang={lang}
+      />
+
       {/* 資料卡 */}
       {failed ? (
         <p className="text-red-200/80 text-[12px] bg-red-900/30 border border-red-500/30 rounded-xl p-3">
@@ -263,13 +271,12 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({ bird, lang, onBa
         </button>
       </div>
 
-      {/* 外部權威連結 */}
+      {/* 補充連結：六宮格已覆蓋 Cornell／Macaulay／Xeno／Merlin，這裡只補文字來源與下載 */}
       <div className="flex flex-wrap gap-1.5">
         {[
-          { label: t('eBird 物種頁', 'eBird species'), url: `https://ebird.org/species/${encodeURIComponent(entry?.code || '')}`, show: !!entry?.code },
-          { label: t('Macaulay 相片', 'Macaulay photos'), url: `https://search.macaulaylibrary.org/catalog?taxonCode=${encodeURIComponent(entry?.code || '')}`, show: !!entry?.code },
-          { label: t('Xeno-canto 鳥聲', 'Xeno-canto audio'), url: `https://xeno-canto.org/explore?query=${encodeURIComponent(sciName)}`, show: !!sciName },
-          { label: t('All About Birds', 'All About Birds'), url: `https://www.allaboutbirds.org/guide/${encodeURIComponent((enName || '').replace(/\\s+/g, '_'))}`, show: !!enName },
+          { label: t('中文維基', 'Wikipedia (zh)'), url: `https://zh.wikipedia.org/wiki/${encodeURIComponent(zhName)}`, show: !!zhName },
+          { label: t('英文維基', 'Wikipedia (en)'), url: `https://en.wikipedia.org/wiki/${encodeURIComponent((enName || '').replace(/\s+/g, '_'))}`, show: !!enName },
+          { label: t('香港觀鳥會', 'HKBWS'), url: 'https://www.hkbws.org.hk/', show: true },
         ].filter((x) => x.show).map((x) => (
           <a
             key={x.label}

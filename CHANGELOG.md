@@ -25,6 +25,14 @@
 - 舊的六宮格「科學研究中心」收起（外部連結移到詳細資料頁底部），避免「撳完冇嘢睇」。
 - `FieldGuideModal` 的頁籤由父層 `guideKind` 單一來源控制，唔會有兩個 state 不同步。
 
+### 修正（用戶指出）
+- **原本的「科學研究中心」六宮格被我誤刪**：已完整還原，並改為「六格各有分工」：
+  1 深度百科＝文字資料（All About Birds）／2 觀察雷達＝出現紀錄（eBird 物種頁，帶 `siteLanguage=zh`）／
+  3 視覺圖庫＝相片（**Macaulay Library**，原本誤指 Flickr 且會查無此鳥）／4 影片中心＝動態行為／
+  5 鳴聲資料＝鳥聲（Xeno-canto）／6 辨識裝備＝工具（Merlin）。
+  六格全部保留，URL 用 eBird speciesCode 組成；`src/lib/researchHub.ts` 有測試可直接驗 URL。
+- 詳細資料頁下方只補「中文維基／英文維基／香港觀鳥會」三個連結，不再重複六宮格已有的來源。
+
 ### 新增（同日追加）
 - 觀鳥裝備加「**衣著與鞋**」一節（中英各一）：顏色、長袖長褲、帽子、防水鞋、雨衣、背包、防曬驅蚊。
 - `npm run cards:batch`（`scripts/cards/batch-copy.mjs`）：批量產生 Gemini 用的 .md 清單、
