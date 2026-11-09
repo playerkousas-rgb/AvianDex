@@ -4,6 +4,7 @@ import {
   IMAGE_TIMEOUT_MS,
   cardProxyUrl,
   cardUrl,
+  birdex2CardUrls,
 } from '../config';
 
 // ============================================================
@@ -16,6 +17,14 @@ import {
 //  3) 舊版只試 .avif，有人上傳 .webp／.jpg 就永遠讀不到
 //
 // 本模組：單一快取 + 併發上限 + 副檔名自動試 + 可重試
+//
+// 【外觀來源】BIRD-DEX 2（https://skw-birdex2.vercel.app）
+//   569 隻雀已經有齊圖卡。本 app 的「外觀」直接用 BIRD-DEX 2 的圖，
+//   唔再自己等 559 張相片／插畫。
+//   做法：用同一份 birds.json 的 NO. 編號，先試 BIRD-DEX 2 的靜態圖，
+//   唔得（404／被擋）才回退 R2，最後才顯示「未發現」。
+//   資訊（文字／分類／詳細資料）仍然 100% 由本 repo 的 JSON 提供，
+//   所以就算 BIRD-DEX 2 改版，資訊都唔會失真。
 // ============================================================
 
 export type CardImageStatus = 'idle' | 'queued' | 'loading' | 'loaded' | 'missing' | 'error';
@@ -152,7 +161,16 @@ async function load(id: string): Promise<void> {
   await ensureManifest();
   patch(id, { status: 'loading' });
 
-  /* 先試本機試作卡：新卡面未上 R2 時都可以即刻睇到 */
+  /* ① 外觀來源：BIRD-DEX 2（569 隻齊圖） */
+  for (const url of birdex2CardUrls(id)) {
+    const r = await probeOnce(url);
+    if (r === 'ok') {
+      patch(id, { status: 'loaded', url, tried: ['birdex2'], error: undefined });
+      return;
+    }
+  }
+
+  /* ② 本機試作卡：新卡面未上 R2 時都可以即刻睇到 */
   if (localMisses < LOCAL_MISS_BUDGET) {
     const local = localCardUrl(id);
     const localResult = await probeOnce(local);
