@@ -16,6 +16,7 @@
     "cards:explorer": "node scripts/cards/build-explorer-data.mjs",
     "cards:extract-bi": "node scripts/cards/extract-bilingual.mjs",
     "cards:generate": "node scripts/cards/generate.mjs",
+    "cards:info": "python3 scripts/cards/render-card-info.py",
     "cards:enc": "python3 scripts/cards/render-card-encyclopedia.py",
     "cards:kid": "python3 scripts/cards/render-card-kid.py",
     "cards:image-studio": "node scripts/cards/build-image-studio.mjs",
