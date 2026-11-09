@@ -1,26 +1,27 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
   ChevronLeft, ExternalLink, Utensils, Trees, MapPin, Feather,
   Baby, Lightbulb, Volume2, Footprints, Shield, Users, BookMarked, Telescope,
-  Footprints as EtiquetteIcon, Backpack,
+  Backpack, ChevronDown, ChevronUp,
 } from 'lucide-react';
 import { similarBirds, dietLabel, habitatLabel, ENTRIES, type Lang } from '../lib/explorer';
 import type { GuideKind } from './FieldGuideModal';
-import { ResearchHub } from './ResearchHub';
 import type { Bird } from '../types';
 
+/**
+ * 第 2 頁：詳細資料。
+ *
+ * 只放「文字」。外部連結（相片／聲音／影片／紀錄）全部搬去第 3 頁「科學研究中心」，
+ * 唔會再同文字資料搶位置。
+ *
+ * 兩個原則不變：
+ *  1. 中英分開兩個檔（cardDetails.zh.json / cardDetails.en.json），只在撳入這一頁時才載入。
+ *  2. 英文版缺資料就印 "Data pending"，不用中文頂替、不機翻。
+ */
 type DetailFields = Record<string, string | string[]>;
 type DetailMap = Record<string, DetailFields>;
 
-/**
- * 詳細資料頁。
- *
- * 兩個原則：
- *  1. 中英分開兩個檔（cardDetails.zh.json / cardDetails.en.json），
- *     只在撳「詳細資料」時才 dynamic import，首頁唔會多載 1.2 MB。
- *  2. 英文版缺資料就印 “Data pending”，絕不用中文頂替、不機翻。
- */
 const CACHE = new Map<Lang, Promise<DetailMap>>();
 
 async function loadDetails(lang: Lang): Promise<DetailMap> {
@@ -55,182 +56,192 @@ const FIELDS: FieldDef[] = [
   { id: 'etymology', zh: '名稱由來', en: 'Name Origin', Icon: BookMarked },
 ];
 
+/** 一頁只顯示前 6 欄，其餘收埋，避免一路拉到尾 */
+const FIRST_FIELDS = 6;
+
 interface BirdDetailPageProps {
   bird: Bird;
   lang: Lang;
-  onBack: () => void;
-  /** 跳去同一個圖鑑機另一隻雀（相似鳥類） */
+  /** 由外部（PokedexDevice）控制返回哪一頁 */
+  onBack?: () => void;
   onJump: (id: string) => void;
   onOpenGuide: (kind: GuideKind) => void;
+  /** 這隻雀有冇已載入／下載中的圖卡 */
+  hasCard?: boolean;
+  /** 通知外層「詳細資料已載入完成」（給分頁上的小點用） */
+  onLoaded?: () => void;
 }
 
-export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({ bird, lang, onBack, onJump, onOpenGuide }) => {
-  /* 用 key = lang 記住載入結果，語言一轉就係「另一個檔」，
-     唔需要在 effect 裡面先 setState(null) 再載入（會多一次 render）。 */
-  const [loaded, setLoaded] = useState<{ lang: Lang; map: DetailMap } | null>(null);
-  const [failed, setFailed] = useState(false);
+export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
+  bird, lang, onBack, onJump, onOpenGuide, onLoaded,
+}) => {
+  const [data, setData] = React.useState<DetailMap | null>(null);
+  const [failed, setFailed] = React.useState(false);
+  const [showAll, setShowAll] = React.useState(false);
+
   const t = (zh: string, en: string) => (lang === 'en' ? en : zh);
   const PENDING = t('資料待查', 'Data pending');
 
-  useEffect(() => {
+  React.useEffect(() => {
     let cancelled = false;
     loadDetails(lang)
-      .then((m) => { if (!cancelled) setLoaded({ lang, map: m }); })
+      .then((d) => {
+        if (!cancelled) { setData(d); onLoaded?.(); }
+      })
       .catch(() => { if (!cancelled) setFailed(true); });
     return () => { cancelled = true; };
-  }, [lang]);
-
-  const data = loaded && loaded.lang === lang ? loaded.map : null;
+  }, [lang, onLoaded]);
 
   const entry = ENTRIES[bird.id];
-  const fields = data ? data[bird.id] || {} : {};
-  const similar = useMemo(() => similarBirds(bird.id, 6, lang), [bird.id, lang]);
+  const fields = React.useMemo<DetailFields>(() => (data ? data[bird.id] ?? {} : {}), [data, bird.id]);
+  const similar = React.useMemo(() => similarBirds(bird.id, 4, lang), [bird.id, lang]);
 
-  const zhName = entry?.z || bird.name;
-  const enName = entry?.e || bird.taxonomy?.comName || bird.englishName || '';
-  const sciName = entry?.s || bird.taxonomy?.sciName || bird.scientificName || '';
-  const title = lang === 'en' ? enName || zhName : zhName;
-  const subtitle = lang === 'en' ? zhName : enName;
-
+  const zhName = bird.name;
+  const enName = bird.englishName && bird.englishName !== '???' ? bird.englishName : '';
+  const sciName = entry?.s || bird.scientificName || enName;
+  const title = lang === 'en' ? enName || sciName : zhName;
+  const subtitle = lang === 'en' ? '' : enName;
   const dietTags = (entry?.d || []).map((id) => dietLabel(id, lang));
   const habTags = (entry?.h || []).map((id) => habitatLabel(id, lang));
+
+  const visibleFields = showAll ? FIELDS : FIELDS.slice(0, FIRST_FIELDS);
+  const pendingCount = FIELDS.filter(({ id }) => {
+    const raw = fields[id];
+    const val = Array.isArray(raw) ? raw.filter(Boolean).join('；') : raw;
+    return !val || !String(val).trim();
+  }).length;
 
   return (
     <motion.div
       key="detail-page"
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 20 }}
-      className="flex flex-col gap-3 relative z-10 pb-10 w-full"
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -8 }}
+      transition={{ duration: 0.16 }}
+      className="flex flex-col gap-2.5 relative z-10 pb-8 w-full"
     >
-      {/* 標題 */}
-      <div className="bg-black/45 border-2 border-amber-500/30 rounded-2xl p-3">
+      {/* 標題：編號 + 名稱 + 學名 + 目科 */}
+      <div className="bg-[#1b1a17]/85 border border-amber-500/25 rounded-lg p-3">
         <div className="flex items-baseline gap-2 flex-wrap">
           <span className="font-mono text-[10px] text-yellow-300/80 bg-black/50 rounded px-1.5 py-0.5">NO.{bird.id}</span>
-          <h3 className="text-white font-black text-xl leading-tight">{title || PENDING}</h3>
-          {subtitle && <span className="text-yellow-200/60 text-[11px] font-mono">{subtitle}</span>}
+          <h3 className="text-white font-black text-lg leading-tight">{title || PENDING}</h3>
+          {subtitle && <span className="text-yellow-200/60 text-[11px]">{subtitle}</span>}
         </div>
-        <p className="text-white/45 font-mono text-[10px] italic mt-0.5">{sciName}</p>
+        <p className="text-white/45 text-[10.5px] italic mt-0.5">{sciName}</p>
         <div className="flex flex-wrap gap-1.5 mt-2">
-          {/* 全英文模式只出拉丁目／科，唔會中英夾雜；中文模式先出中文目／科 */}
-          {lang === 'zh' &&
-            [entry?.oz, entry?.fz].filter(Boolean).map((v) => (
-              <span key={v} className="bg-emerald-500/15 border border-emerald-400/25 text-emerald-200 text-[10px] font-bold rounded-full px-2 py-0.5">
-                {v}
-              </span>
-            ))}
+          {lang === 'zh' && [entry?.oz, entry?.fz].filter(Boolean).map((v) => (
+            <span key={v} className="bg-emerald-500/12 border border-emerald-400/20 text-emerald-200/90 text-[10px] rounded px-1.5 py-0.5">{v}</span>
+          ))}
           {bird.taxonomy?.order && (
-            <span className="bg-white/5 border border-white/15 text-white/45 font-mono text-[10px] rounded-full px-2 py-0.5">
-              {bird.taxonomy.order}
-            </span>
+            <span className="bg-white/5 border border-white/12 text-white/45 font-mono text-[10px] rounded px-1.5 py-0.5">{bird.taxonomy.order}</span>
           )}
           {bird.taxonomy?.family && (
-            <span className="bg-white/5 border border-white/15 text-white/45 font-mono text-[10px] rounded-full px-2 py-0.5">
-              {bird.taxonomy.family}
-            </span>
+            <span className="bg-white/5 border border-white/12 text-white/45 font-mono text-[10px] rounded px-1.5 py-0.5">{bird.taxonomy.family}</span>
           )}
         </div>
       </div>
 
-      {/* 屬性標籤：即刻見到「食乜／住邊」，撳落去跳到同類 */}
+      {/* 體長 / 體重：一列，唔再各自一個大方框 */}
+      <div className="grid grid-cols-2 gap-2">
+        <div className="bg-black/30 border border-white/10 rounded-lg px-2.5 py-1.5 flex items-baseline justify-between gap-2">
+          <span className="text-white/40 text-[9.5px] tracking-widest">{t('體長', 'LENGTH')}</span>
+          <span className="text-white/90 font-black text-[12px]">{fields.length || bird.height || PENDING}</span>
+        </div>
+        <div className="bg-black/30 border border-white/10 rounded-lg px-2.5 py-1.5 flex items-baseline justify-between gap-2">
+          <span className="text-white/40 text-[9.5px] tracking-widest">{t('體重', 'WEIGHT')}</span>
+          <span className="text-white/90 font-black text-[12px]">{fields.weight || bird.weight || PENDING}</span>
+        </div>
+      </div>
+
+      {/* 屬性標籤：唔用 emoji，用細色點 */}
       {(dietTags.length > 0 || habTags.length > 0) && (
-        <div className="bg-black/35 border border-cyan-300/25 rounded-2xl p-3">
-          <p className="text-cyan-200/80 font-black text-[10px] tracking-[0.2em] mb-1.5">
-            {t('屬性 · 撳一下就係同類', 'ATTRIBUTES · TAP TO MATCH')}
+        <div className="bg-black/25 border border-white/10 rounded-lg px-2.5 py-2">
+          <p className="text-white/40 text-[9.5px] tracking-[0.14em] mb-1">
+            {t('食性 · 生境', 'DIET · HABITAT')}
           </p>
           <div className="flex flex-wrap gap-1.5">
             {dietTags.map((v) => (
-              <span key={v} className="bg-amber-400/20 border border-amber-300/40 text-amber-100 text-[11px] font-bold rounded-full px-2 py-0.5">
-                🍽 {v}
+              <span key={`d-${v}`} className="inline-flex items-center gap-1 border border-amber-300/30 text-amber-100/90 text-[10.5px] rounded px-1.5 py-0.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />{v}
               </span>
             ))}
             {habTags.map((v) => (
-              <span key={v} className="bg-emerald-400/15 border border-emerald-300/35 text-emerald-100 text-[11px] font-bold rounded-full px-2 py-0.5">
-                🌿 {v}
+              <span key={`h-${v}`} className="inline-flex items-center gap-1 border border-emerald-300/30 text-emerald-100/90 text-[10.5px] rounded px-1.5 py-0.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />{v}
               </span>
             ))}
           </div>
         </div>
       )}
 
-      {/* 科學研究中心：六格各有分工（文字／紀錄／相片／影片／聲音／工具） */}
-      <ResearchHub
-        sciQuery={enName || sciName || zhName}
-        speciesCode={entry?.code}
-        lang={lang}
-      />
-
-      {/* 資料卡 */}
+      {/* 文字欄目 */}
       {failed ? (
-        <p className="text-red-200/80 text-[12px] bg-red-900/30 border border-red-500/30 rounded-xl p-3">
+        <p className="text-red-200/80 text-[12px] bg-red-900/25 border border-red-500/25 rounded-lg p-3">
           {t('詳細資料載入失敗，請重新整理。', 'Could not load the details file. Please reload.')}
         </p>
       ) : !data ? (
-        <div className="flex items-center gap-2 text-white/50 text-[12px] py-6 justify-center">
+        <div className="flex items-center gap-2 text-white/45 text-[12px] py-6 justify-center">
           <div className="w-4 h-4 border-2 border-white/20 border-t-yellow-300 rounded-full animate-spin" />
           {t('載入詳細資料…', 'Loading details…')}
         </div>
       ) : Object.keys(fields).length === 0 ? (
-        <div className="bg-amber-900/25 border border-amber-500/30 rounded-xl p-3">
+        <div className="bg-amber-900/20 border border-amber-500/25 rounded-lg p-3">
           <p className="text-amber-100 font-black text-[12px]">
             {t('這張卡暫時只有上面的基本資料', 'This card only has the basics for now')}
           </p>
           <p className="text-amber-100/60 text-[11px] mt-1 leading-relaxed">
-            {t(
-              '未查到可靠的中文原文，所以唔會亂填。你可以用下面 eBird／Macaulay 的連結自己核對。',
-              'No reliable source was found, so nothing is filled in. Use the eBird / Macaulay links below to check yourself.',
-            )}
+            {t('未查到可靠原文，所以唔會亂填。可以去第 3 頁「科學研究中心」用 eBird／Macaulay 自己核對。',
+              'No reliable source was found, so nothing is filled in. Use page 3 (Research) to check eBird / Macaulay.')}
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          {FIELDS.map(({ id, zh, en, Icon }) => {
-            const raw = fields[id];
-            const val = Array.isArray(raw) ? raw.filter(Boolean).join('；') : raw;
-            const missing = !val || !String(val).trim();
-            return (
-              <div
-                key={id}
-                className={`rounded-xl p-2.5 border ${missing ? 'bg-black/20 border-white/10' : 'bg-black/40 border-amber-500/20'}`}
-              >
-                <div className="flex items-center gap-1.5 mb-1">
-                  <Icon className={`w-3.5 h-3.5 ${missing ? 'text-white/25' : 'text-yellow-300/80'}`} />
-                  <span className={`font-black text-[11px] tracking-wide ${missing ? 'text-white/35' : 'text-yellow-200'}`}>
-                    {lang === 'en' ? en : zh}
-                  </span>
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+            {visibleFields.map(({ id, zh, en, Icon }) => {
+              const raw = fields[id];
+              const val = Array.isArray(raw) ? raw.filter(Boolean).join('；') : raw;
+              const missing = !val || !String(val).trim();
+              return (
+                <div key={id} className="bg-black/25 border border-white/8 rounded-lg p-2">
+                  <div className="flex items-center gap-1.5 mb-0.5">
+                    <Icon className={`w-3 h-3 ${missing ? 'text-white/20' : 'text-yellow-300/70'}`} />
+                    <span className={`text-[10.5px] font-black ${missing ? 'text-white/30' : 'text-yellow-200/90'}`}>
+                      {lang === 'en' ? en : zh}
+                    </span>
+                  </div>
+                  <p className={`text-[11px] leading-[1.6] ${missing ? 'text-white/22 italic' : 'text-white/72'}`}>
+                    {missing ? PENDING : String(val)}
+                  </p>
                 </div>
-                <p className={`text-[11.5px] leading-relaxed ${missing ? 'text-white/25 italic' : 'text-white/75'}`}>
-                  {missing ? PENDING : String(val)}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+
+          {FIELDS.length > FIRST_FIELDS && (
+            <button
+              type="button"
+              onClick={() => setShowAll((v) => !v)}
+              className="w-full flex items-center justify-center gap-1 bg-black/25 hover:bg-black/40 border border-white/10 text-white/65 text-[11px] font-bold py-2 rounded-lg"
+            >
+              {showAll
+                ? <><ChevronUp className="w-3.5 h-3.5" />{t('收起', 'Show less')}</>
+                : <><ChevronDown className="w-3.5 h-3.5" />{t(`其餘 ${FIELDS.length - FIRST_FIELDS} 欄（另有 ${pendingCount} 欄待查）`, `Show ${FIELDS.length - FIRST_FIELDS} more fields`)}</>}
+            </button>
+          )}
+        </>
       )}
 
-      {/* 體長 / 體重 */}
-      <div className="grid grid-cols-2 gap-2">
-        <div className="bg-black/40 border border-white/10 rounded-xl p-2.5">
-          <p className="text-white/40 font-mono text-[9px] tracking-widest">{t('體長', 'LENGTH')}</p>
-          <p className="text-white font-black text-sm">{fields.length || bird.height || PENDING}</p>
-        </div>
-        <div className="bg-black/40 border border-white/10 rounded-xl p-2.5">
-          <p className="text-white/40 font-mono text-[9px] tracking-widest">{t('體重', 'WEIGHT')}</p>
-          <p className="text-white font-black text-sm">{fields.weight || bird.weight || PENDING}</p>
-        </div>
-      </div>
-
       {/* 相似鳥類 */}
-      <div className="bg-gradient-to-b from-cyan-950/70 to-black/60 border-2 border-cyan-400/30 rounded-2xl p-3">
-        <div className="flex items-center gap-1.5 mb-2">
-          <Telescope className="w-4 h-4 text-cyan-300" />
-          <h4 className="text-cyan-200 font-black text-sm">{t('相似鳥類', 'Look-alikes')}</h4>
-          <span className="text-white/35 text-[10px]">
+      <div className="bg-black/30 border border-cyan-400/20 rounded-lg p-2.5">
+        <div className="flex items-center gap-1.5 mb-1.5">
+          <Telescope className="w-3.5 h-3.5 text-cyan-300/80" />
+          <h4 className="text-cyan-100/90 font-black text-[12px]">{t('相似鳥類', 'Look-alikes')}</h4>
+          <span className="text-white/30 text-[9.5px]">
             {t('同科／同屬／同食物／同環境／體型接近', 'same family, genus, diet, habitat or size')}
           </span>
         </div>
         {similar.length === 0 ? (
-          <p className="text-white/35 text-[11px]">{t('暫時冇足夠資料找相似鳥。', 'Not enough data to match look-alikes yet.')}</p>
+          <p className="text-white/30 text-[11px]">{t('暫時冇足夠資料找相似鳥。', 'Not enough data yet.')}</p>
         ) : (
           <div className="grid grid-cols-2 gap-1.5">
             {similar.map((s) => {
@@ -241,13 +252,13 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({ bird, lang, onBa
                 <button
                   key={s.id}
                   onClick={() => onJump(s.id)}
-                  className="text-left bg-white/5 hover:bg-cyan-500/15 border border-white/10 hover:border-cyan-300/40 rounded-lg px-2 py-1.5 transition-colors"
+                  className="text-left bg-white/5 hover:bg-cyan-500/12 border border-white/10 hover:border-cyan-300/30 rounded-md px-2 py-1.5 transition-colors"
                 >
                   <div className="flex items-baseline gap-1">
                     <span className="font-mono text-[9px] text-yellow-300/70">NO.{s.id}</span>
-                    <span className="text-white font-bold text-[11.5px] truncate">{nm}</span>
+                    <span className="text-white/90 font-bold text-[11px] truncate">{nm}</span>
                   </div>
-                  <p className="text-cyan-300/70 text-[9px] truncate">{s.reasons.join('・')}</p>
+                  <p className="text-cyan-300/60 text-[9px] truncate">{s.reasons.join('・')}</p>
                 </button>
               );
             })}
@@ -259,56 +270,41 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({ bird, lang, onBa
       <div className="grid grid-cols-2 gap-2">
         <button
           onClick={() => onOpenGuide('etiquette')}
-          className="flex items-center justify-center gap-1.5 bg-emerald-800/60 hover:bg-emerald-700 text-white font-black py-3 rounded-xl border-b-4 border-emerald-950 active:translate-y-0.5 active:border-b-0 text-[12px]"
+          className="flex items-center justify-center gap-1.5 bg-emerald-900/50 hover:bg-emerald-800/70 border border-emerald-400/25 text-white/85 font-bold py-2.5 rounded-lg text-[11.5px]"
         >
-          <EtiquetteIcon className="w-4 h-4" /> {t('觀鳥禮儀', 'Etiquette')}
+          <Users className="w-3.5 h-3.5" /> {t('觀鳥禮儀', 'Etiquette')}
         </button>
         <button
           onClick={() => onOpenGuide('gear')}
-          className="flex items-center justify-center gap-1.5 bg-amber-800/60 hover:bg-amber-700 text-white font-black py-3 rounded-xl border-b-4 border-amber-950 active:translate-y-0.5 active:border-b-0 text-[12px]"
+          className="flex items-center justify-center gap-1.5 bg-amber-900/45 hover:bg-amber-800/65 border border-amber-400/25 text-white/85 font-bold py-2.5 rounded-lg text-[11.5px]"
         >
-          <Backpack className="w-4 h-4" /> {t('觀鳥裝備', 'Gear')}
+          <Backpack className="w-3.5 h-3.5" /> {t('觀鳥裝備', 'Gear')}
         </button>
       </div>
 
-      {/* 補充連結：六宮格已覆蓋 Cornell／Macaulay／Xeno／Merlin，這裡只補文字來源與下載 */}
-      <div className="flex flex-wrap gap-1.5">
-        {[
-          { label: t('中文維基', 'Wikipedia (zh)'), url: `https://zh.wikipedia.org/wiki/${encodeURIComponent(zhName)}`, show: !!zhName },
-          { label: t('英文維基', 'Wikipedia (en)'), url: `https://en.wikipedia.org/wiki/${encodeURIComponent((enName || '').replace(/\s+/g, '_'))}`, show: !!enName },
-          { label: t('香港觀鳥會', 'HKBWS'), url: 'https://www.hkbws.org.hk/', show: true },
-        ].filter((x) => x.show).map((x) => (
-          <a
-            key={x.label}
-            href={x.url}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="flex items-center gap-1 bg-black/40 hover:bg-black/60 border border-white/15 rounded-lg px-2 py-1.5 text-[10.5px] text-white/70 hover:text-white"
-          >
-            <ExternalLink className="w-3 h-3" /> {x.label}
-          </a>
-        ))}
+      {/* 極簡頁腳：文字來源只留一句，其餘去第 3 頁 */}
+      <div className="flex items-center justify-between gap-2 text-[9.5px] text-white/30 border-t border-white/8 pt-2">
+        <span>{t('文字：維基百科原文抽取（不改寫）· 分類：eBird–Clements', 'Text: Wikipedia (verbatim) · Taxonomy: eBird–Clements')}</span>
+        <a
+          href={`https://zh.wikipedia.org/wiki/${encodeURIComponent(zhName)}`}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="inline-flex items-center gap-0.5 text-white/45 hover:text-white/80 shrink-0"
+        >
+          <ExternalLink className="w-2.5 h-2.5" />{t('維基', 'Wiki')}
+        </a>
       </div>
 
-      {/* 資料來源說明：哪一個來源負責哪一種資料，避免「只有一個連結就不夠權威」 */}
-      <div className="bg-black/25 border border-white/10 rounded-xl p-2.5">
-        <p className="text-white/45 font-black text-[10px] tracking-[0.2em] mb-1">
-          {t('資料來源分工', 'WHERE EACH FACT COMES FROM')}
-        </p>
-        <ul className="text-[10.5px] text-white/55 leading-relaxed space-y-0.5">
-          <li>{t('分類／學名／分佈代碼：eBird–Clements（Cornell Lab）', 'Taxonomy, scientific names, species codes: eBird–Clements (Cornell Lab)')}</li>
-          <li>{t('文字內容：中文維基百科（原文抽取，不改寫）＋英文維基百科（英文原文）', 'Text: Chinese Wikipedia (extracted verbatim) and English Wikipedia')}</li>
-          <li>{t('相片：Macaulay Library（Cornell Lab，由生圖流程引用）', 'Photos: Macaulay Library (Cornell Lab)')}</li>
-          <li>{t('鳥聲：Xeno-canto；香港名錄次序：香港觀鳥會', 'Sound: Xeno-canto; Hong Kong checklist order: HKBWS')}</li>
-        </ul>
-      </div>
-
-      <button
-        onClick={onBack}
-        className="w-full bg-red-900/60 hover:bg-red-800 text-white font-black py-4 rounded-2xl border-b-4 border-red-950 active:translate-y-1 active:border-b-0 transition-all flex items-center justify-center gap-2"
-      >
-        <ChevronLeft className="w-4 h-4" /> {t('返回基礎數據面板', 'Back to the main panel')}
-      </button>
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="w-full bg-black/30 hover:bg-black/50 border border-white/12 text-white/70 font-bold py-2.5 rounded-lg text-[11.5px] flex items-center justify-center gap-1.5"
+        >
+          <ChevronLeft className="w-3.5 h-3.5" /> {t('返回基礎數據', 'Back to basics')}
+        </button>
+      )}
     </motion.div>
   );
 };
+
+export default BirdDetailPage;

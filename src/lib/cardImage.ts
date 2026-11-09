@@ -53,6 +53,17 @@ const PROXY_AFTER_FAILURES = 3;
 let networkFailures = 0;
 let useProxy = false;
 
+/**
+ * 本機試作卡（public/demo/card-0013.png）。
+ * 用來在未上傳 R2 之前預覽新卡面；連續幾張都冇就自動關掉，唔會拖慢正式環境。
+ */
+let localMisses = 0;
+const LOCAL_MISS_BUDGET = 3;
+
+function localCardUrl(id: string): string {
+  return `${import.meta.env.BASE_URL}demo/card-${id.padStart(4, '0')}.png`;
+}
+
 let manifest: Record<string, string> | null = null;
 let manifestPromise: Promise<void> | null = null;
 
@@ -140,6 +151,17 @@ function probeOnce(url: string, proxy = false): Promise<'ok' | 'missing' | 'erro
 async function load(id: string): Promise<void> {
   await ensureManifest();
   patch(id, { status: 'loading' });
+
+  /* 先試本機試作卡：新卡面未上 R2 時都可以即刻睇到 */
+  if (localMisses < LOCAL_MISS_BUDGET) {
+    const local = localCardUrl(id);
+    const localResult = await probeOnce(local);
+    if (localResult === 'ok') {
+      patch(id, { status: 'loaded', url: local, tried: ['local-png'], error: undefined });
+      return;
+    }
+    if (localResult === 'missing') localMisses += 1;
+  }
 
   const fromManifest = manifest?.[id];
   const exts: string[] = fromManifest
