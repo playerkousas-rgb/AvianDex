@@ -35,6 +35,8 @@
     "cards:studio": "node scripts/cards/build-studio-data.mjs",
     "cards:worklist": "node scripts/make-card-worklist.mjs",
     "cards:zh-hk": "python3 scripts/cards/zh-hk.py --write",
+    "cards:hk": "node scripts/cards/zh-hk-fix.mjs",
+    "cards:hk:check": "node scripts/cards/zh-hk-fix.mjs --check",
     "copy:extract": "node scripts/cards/extract-copy.mjs",
     "copy:stats": "node scripts/cards/copy-stats.mjs",
     "dev": "vite",

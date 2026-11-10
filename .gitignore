@@ -73,3 +73,6 @@ data/batches/
 
 # 卡面試作素材（AI 圖，不入 Git；成品 PNG 另外交付）
 data/card-demo/
+
+# 中文繁體轉換備份（npm run cards:hk）
+src/data/cardCopy.json.prehk

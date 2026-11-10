@@ -36,6 +36,7 @@ import http from 'node:http';
 import https from 'node:https';
 import { fileURLToPath } from 'node:url';
 import { FIELDS, FIELD_IDS, LIMITS, has, chooseFields } from './field-schema.mjs';
+import { toHk } from './zh-hk.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const BIRDS_F = path.join(ROOT, 'src/data/birds.json');
@@ -153,14 +154,28 @@ export function sentences(text = '', lang = 'zh') {
       : s.length >= 15 && /[.!?]["')\]]?$/.test(s) && /[a-z]/i.test(s) && /\s/.test(s)));
 }
 
-/** 砍到上限（只砍在完整分句／子句邊界，不留半句） */
+/**
+ * 砍到上限。只砍在完整分句邊界，唔留半句。
+ *
+ * ⚠️ 舊版門檻係「截斷點要過 50%」，結果一整類條目永遠抽唔到：
+ *    「分布于阿富汗、巴基斯坦、…、北京等地，主要栖息于海拔350-2800米间开阔沟谷…」
+ *    這句 122 字，range 上限 46 字，46 字內只到「青海」（約 37%）→ 舊版整句丟棄，
+ *    明明寫了分佈卻變成「資料待查」。
+ *    改為 35%，並且截到最後一個完整分句（唔會留「、」或「，」尾巴）。
+ *    截短時句尾加分號，令讀者知這句未完（卡面唔會假裝是完整句）。
+ */
 export function trimToLength(s, max) {
   if (s.length <= max) return s;
   const cut = s.slice(0, max);
-  const stops = ['。', '；', '，', '. ', '; ', ', '];
+  const stops = ['。', '；', '，', '、', '. ', '; ', ', '];
   let best = -1;
   for (const d of stops) best = Math.max(best, cut.lastIndexOf(d));
-  if (best > max * 0.5) return cut.slice(0, best + (cut[best] === ' ' ? 0 : 1)).trim();
+  if (best > max * 0.35) {
+    const kept = cut.slice(0, best + (cut[best] === ' ' ? 0 : 1)).trim()
+      .replace(/[，、；,;]$/, '');
+    if (kept.length < 10) return '';
+    return /[。！？.]$/.test(kept) ? kept : `${kept}…`;
+  }
   return '';
 }
 
@@ -340,19 +355,68 @@ export function contaminated(sentence, lang, ownName = '', knownNames = null) {
 }
 
 /** 在候選句中挑一句：規則命中 → 分數最高；句子長度要在上限內或可截 */
+/** 遮住雀名（同一長度，位置不變），避免雀名內的「腹／尾／頭」被當成外形關鍵詞 */
+const NAME_MASK = '\u0000';
+const maskOwnName = (s, ownName) =>
+  (ownName ? s.split(ownName).join(NAME_MASK.repeat(ownName.length)) : s);
+const unmaskOwnName = (s) => s.split(NAME_MASK).join('');
+
+/**
+ * 分類學首句（「XX（學名：Abc def）又名YY，為X科Y屬的鳥類。」）唔係「有趣冷知識」，
+ * 但入面嘅別名（又名／俗名）係真資料。只抽別名那一段，其餘丟棄；
+ * 冇別名就回空 → 卡面印「資料待查」，好過印一句分類學廢話。
+ */
+export function leadNameFragment(s) {
+  if (!/學名[:：]/.test(s)) return '';
+  const m = s.match(/(?:又名|俗名|別名)[：: ]?([^，。；]{1,12})/);
+  return m ? `${m[0].replace(/[：: ]/g, '')}` : '';
+}
+
+/**
+ * 長句只抽「命中關鍵詞之後那一截」。
+ *
+ * 例：「棕腹大仙鶲（学名：Niltava davidi）为鶲科仙鶲属的鸟类，分布于四川、云南…」
+ *    抽 range 時如果照頭截 46 字，會抽到「棕腹大仙鶲（學名：Niltava davidi）為鶲科
+ *    仙鶲屬的鳥類，」——一句分類學廢話，完全唔係分佈。
+ *    所以要由最左邊一個命中詞（「分布于」）開始抽，並退到前一個分句邊界。
+ *
+ * @param {string} s 原句
+ * @param {{must: string[]}} rule 欄位規則
+ * @param {number} maxLen 上限
+ * @returns {string} 由命中處開始的片段（可能仍然過長，交 trimToLength 處理）
+ */
+export function excerptAround(s, rule, maxLen) {
+  if (s.length <= maxLen) return s;
+  const at = rule.must
+    .map((w) => s.indexOf(w))
+    .filter((i) => i > 0)
+    .sort((a, b) => a - b)[0];
+  if (at === undefined) return s;                 /* 關鍵詞在句首 → 照原句處理 */
+  const head = s.slice(0, at);
+  const boundary = Math.max(head.lastIndexOf('，'), head.lastIndexOf('、'),
+    head.lastIndexOf('；'), head.lastIndexOf('。'));
+  return s.slice(boundary >= 0 ? boundary + 1 : at).trim();
+}
+
 export function pickSentence(list, rule, maxLen, lang = 'zh', ownName = '', knownNames = null) {
   let best = '';
   let bestScore = 0;
   for (const s of list) {
     if (contaminated(s, lang, ownName, knownNames)) continue;
     if (lang === 'zh' && /[A-Za-z]{3,}\s+[A-Za-z]{3,}\s+[A-Za-z]{3,}/.test(s)) continue;
-    if (!anyOf(s, rule.must)) continue;
+    /* 用「遮住自己名字」的版本做關鍵詞比對：
+       雀名本身可能含「腹／尾／頭／腳」（棕腹大仙鶲、白頭鵯），
+       唔遮住就會把「棕腹大仙鶲（學名…）為鶲科…」當成『外形特徵』。 */
+    const masked = maskOwnName(s, ownName);
+    if (!anyOf(masked, rule.must)) continue;
+    const base = unmaskOwnName(excerptAround(masked, rule, maxLen));
+    if (!anyOf(base, rule.must)) continue;        /* 抽完冇關鍵詞 → 唔用 */
     let score = rule.weight;
-    for (const w of rule.any) if (s.includes(w)) score += 2;
-    const t = trimToLength(s, maxLen);
+    for (const w of rule.any) if (base.includes(w)) score += 2;
+    const t = trimToLength(base, maxLen);
     if (!t) continue;                         /* 截唔到完整句 → 唔用 */
     if (s.length > maxLen * 2) score -= 6;
-    if (s.length < (lang === 'zh' ? 16 : 40)) score -= 1;
+    if (base.length < (lang === 'zh' ? 16 : 40)) score -= 1;
     if (score > bestScore) { bestScore = score; best = t; }
   }
   return best;
@@ -379,7 +443,12 @@ export function stripFileLinks(wt = '') {
 const MEDIA_JUNK = /\.(?:jpe?g|png|gif|svg|tiff?|webp)\b|\bPhotograph by\b|\bthumb\b|\|\s*$|\bFile:/i;
 
 /** 由整頁 wikitext 抽 15 個欄位（純函數） */
-export function extractFields(wt, { lang = 'zh', sciName = '', ownName = '', knownNames = null, maxPicks = 7, only = null } = {}) {
+export function extractFields(wtRaw, { lang = 'zh', sciName = '', ownName = '', knownNames = null, maxPicks = 7, only = null } = {}) {
+  /* 簡體 → 香港繁體，在「抽取之前」做：
+     1) 規則表寫的是繁體（棲息／分佈），原文若是簡體（栖息／分布）就永遠對不上；
+     2) 卡面本來就要香港繁體，與其出圖前再轉，不如入庫前轉一次；
+     3) toHk 只轉字形（不改詞、不改句、不動英文／學名），可逐句對回原文。 */
+  const wt = lang === 'zh' ? toHk(wtRaw) : wtRaw;
   const sections = splitSections(wt);
   const sectionMatch = lang === 'zh' ? SECTIONS_ZH : SECTIONS_EN;
   const rules = lang === 'zh' ? RULES_ZH : RULES_EN;
@@ -398,6 +467,10 @@ export function extractFields(wt, { lang = 'zh', sciName = '', ownName = '', kno
       .flatMap((s) => sentences(s.body, lang));
     let val = focused.length ? pickSentence(focused, rules[id], limits[id], lang, ownName, knownNames) : '';
     if (!val) val = pickSentence(all, rules[id], limits[id], lang, ownName, knownNames);
+    /* 冷知識／名稱由來如果抽到的只是分類學首句，只保留別名那一段 */
+    if (val && (id === 'funFact' || id === 'etymology') && /學名[:：]/.test(val)) {
+      val = leadNameFragment(val);
+    }
     if (val) out[id] = val;
   }
 
