@@ -332,7 +332,7 @@
       "funFact": "(born , 13 February 1964) is a Japanese vocalist and visual artist, best known as a member of Boredoms, Hanatarash and Naked City.",
       "voice": "(born , 13 February 1964) is a Japanese vocalist and visual artist, best known as a member of Boredoms, Hanatarash and Naked City.",
       "humanRelation": "Eye and Zorn also recorded the album Zohar as the \"Mystic Fugu Orchestra.\" This latter compilation, which both commemorates and satirizes Jewish culture, also draws strength from Eye's earlier influence from the Oomoto religion in Japan,",
-      "etymology": "He has changed his stage name three times, from Yamatsuka Eye, to Yamantaka Eye, to Yamataka Eye, and sometimes calls himself eYe or EYヨ."
+      "etymology": "He has changed his stage name three times, from Yamatsuka Eye, to Yamantaka Eye, to Yamataka Eye, and sometimes calls himself eYe or EY."
     },
     "0015": {
       "range": "The red-billed blue magpie occurs in a broad swath from the northern parts of the Indian subcontinent, and further eastwards.",
@@ -6754,10 +6754,12 @@
       "range": "The species has an extremely large range throughout Asia; there are breeding populations from India to Indonesia.",
       "habitat": "The species can be difficult to see, given their skulking lifestyle and reed bed habitat, but tend to emerge at dusk,",
       "diet": "Cinnamon bitterns feed on insects, fish, molluscs, and amphibians.",
+      "breeding": "The cinnamon bittern (Botaurus cinnamomeus) or chestnut bittern is a small Old World bittern, breeding in tropical and subtropical Asia from India east to China and Indonesia.",
       "funFact": "The fledging period is unknown.",
       "voice": "Possessing a short neck and longish bill, the male is uniformly cinnamon above and buff below.",
       "behavior": "The species can be difficult to see, given their skulking lifestyle and reed bed habitat, but tend to emerge at dusk, when they can be seen creeping almost cat-like in search of frogs.",
       "migration": "It is mainly resident, but some northern birds migrate short distances.",
+      "conservation": "Global population estimates are uncertain and range from 130,000 to 2,000,000 individuals.",
       "etymology": "The genus name Botaurus is Medieval Latin for a bittern.",
       "length": "49.5 cm",
       "iucn": "Least Concern (LC)"
@@ -6840,6 +6842,122 @@
       "behavior": "These vary much in size and colour pattern, but also lack chestnut wing patches and have a strong contrast between the usually dark head sides and the white or whitish throat.",
       "migration": "This small passerine bird is strongly migratory, wintering in Africa just south of the Sahara, Arabia and India.",
       "etymology": "The lesser whitethroat was formally described by the Swedish naturalist Carl Linnaeus in 1758 in the tenth edition of his Systema Naturae under the binomial name Motacilla curruca.",
+      "iucn": "Least Concern (LC)"
+    },
+    "0009": {
+      "range": "The masked laughingthrush (Pterorhinus perspicillatus) is a species of laughingthrush found in China, Vietnam, Hong Kong and Macau.",
+      "habitat": "The masked laughingthrush (Pterorhinus perspicillatus) is a species of laughingthrush found in China, Vietnam, Hong Kong and Macau.",
+      "voice": "Its vocalisations consist of a strident \"pew!\" call and various chattering noises.",
+      "behavior": "This bird, like most others in its family, can often be seen foraging through undergrowth, especially in bamboo groves.",
+      "etymology": "The specific epithet perspicillatus is Modern Latin meaning \"spectacled\".",
+      "iucn": "Least Concern (LC)"
+    },
+    "0016": {
+      "range": "The breeding season is summer and but dates vary across their range.",
+      "diet": "They forage mainly by gleaning, capturing insects (mainly caterpillars, bugs and beetles) that are disturbed and will also feeding on buds and fruits.",
+      "breeding": "The calling is particularly persistent during the breeding season.",
+      "funFact": "These birds have also been shown to create mental images for the call used to signal the presence of a snake, a cognitive ability that had previously been only attested in humans.",
+      "voice": "The Japanese tit was lumped with the cinereous tit based on molecular phylogenetic studies that found it is more appropriate to consider the Parus major complex as comprising two species,",
+      "behavior": "These birds are usually seen in pairs or small groups that sometimes join mixed-species foraging flocks.",
+      "conservation": "This species is made up of several populations that were earlier treated as subspecies of the great tit (Parus major).",
+      "humanRelation": "The order of these messages is meaningful, which has led researchers to liken the ordering of calls to syntax and grammar in human language.",
+      "etymology": "The cinereous tit was formally described in 1818 by the French ornithologist Louis Vieillot under the binomial name Parus cinereus."
+    },
+    "0120": {
+      "range": ", Gujarat, India]] It breeds discontinuously across bare coastal plains in north-eastern Siberia, with the Mongolian plover in the eastern part of the range;",
+      "diet": ", Odisha, India]] The Siberian sand plover feeds on insects, crustaceans and annelid worms, which are obtained by a run-and-pause technique,",
+      "breeding": "This chunky plover is long-legged and long-billed.",
+      "funFact": "The Siberian sand plover and the Tibetan sand plover were previously considered to belong to the same species known as the \"lesser sand plover\", consisting of five races within the species complex.",
+      "voice": "The flight call is a hard trill.",
+      "behavior": "The lesser usually has darker legs, a white forehead, and a more even white wing bar than the greater.",
+      "migration": "This species is strongly migratory, wintering on sandy beaches in east and southeast Asia and Australia.",
+      "humanRelation": "The International Ornithologists' Union split the Tibetan sand plover from the lesser sand plover and changed its vernacular name to Siberian sand plover.",
+      "etymology": "This means that the lesser sand plover is paraphyletic.",
+      "iucn": "Endangered (EN)"
+    },
+    "0196": {
+      "range": "In their winter range they are typically found in harbours, on rocky shores and at river mouths.",
+      "habitat": "In their winter range they are typically found in harbours, on rocky shores and at river mouths.",
+      "diet": "It is variously treated as a separate species, as a subspecies of the American herring gull (L.",
+      "breeding": "The Vega gull, East Siberian gull, or East Siberian herring gull (Larus vegae) is a large gull of the herring gull/lesser black-backed gull complex which breeds in Northeast Asia.",
+      "funFact": "First- and second-winter Vega gulls are darker than the similar Mongolian gull, notably on the crown of the head where Mongolian gulls even in first- and second-winter are a bit paler.",
+      "voice": "In their winter range they are typically found in harbours, on rocky shores and at river mouths.",
+      "behavior": "Adult Vega gulls in winter can often be mistaken for the very similar-looking slaty-backed gull (L.",
+      "migration": "Vega gulls breed in northeastern Siberia, and migrate south to winter in Japan, Korea, eastern China, and Taiwan.",
+      "etymology": "They are sometimes considered to be a separate subspecies named Birula's gull (Larus vegae birulai)."
+    },
+    "0235": {
+      "range": "capensis is endemic to southern Africa, where it is found sparingly in marshes near the east coast,",
+      "habitat": "It typically inhabits reed beds (Phragmites) and swamps, as well as lakes, lagoons and sluggish rivers fringed by rank vegetation.",
+      "diet": "Ruler is marked in millimeters.] Eurasian bitterns feed on fish, small mammals, birds and their nestlings, snakes, lizards,",
+      "breeding": "The female incubates the clutch of eggs and feeds the young chicks, which leave the nest when about two weeks old.",
+      "funFact": "It is a shy bird, and if disturbed, often points its bill directly upwards and freezes in that position, causing its cryptic plumage to blend into the surrounding reeds, an action known as bitterning.",
+      "voice": "The mating call or contact call of the male is a deep, sighing fog-horn or bull-like boom with a quick rise and an only slightly longer fall, easily audible from a distance of on a calm night.",
+      "behavior": "It is most active at dawn and dusk, but also sometimes forages by day.",
+      "migration": "More northerly populations usually migrate to warmer regions but some birds often remain; birds in northern Europe tend to move south and west to southern Europe, northern and central Africa,",
+      "conservation": "The Eurasian bittern has a very wide range and a large total population, estimated to be 110,000 to 340,000 individuals.",
+      "humanRelation": "However the decline is slow, and the International Union for Conservation of Nature has assessed its overall conservation status as being of \"least concern\".",
+      "etymology": "The generic name Botaurus was given by the English naturalist James Francis Stephens, and is derived from Medieval Latin butaurus, \"bittern\", itself constructed from the Middle English name for the bird, botor.",
+      "length": "69–81 cm",
+      "weight": "0.87–1.94 kg",
+      "iucn": "Least Concern (LC)"
+    },
+    "0237": {
+      "range": "A molecular phylogenetic study of the heron family Ardeidae published in 2023 found that Ixobrychus was paraphyletic.",
+      "diet": "It winters from the Malay Peninsula to the Greater Sunda Islands, Sulawesi and the Philippines.",
+      "breeding": "It breeds in southeast Siberia, east China, the Korean Peninsula and Japan.",
+      "funFact": "Von Schrenck's bittern or Schrenck's bittern (Botaurus eurhythmus) is a small bittern named after Leopold von Schrenck, the 19th-century Russian zoologist.",
+      "voice": "It winters in Indonesia, the Philippines, Singapore, Laos, passing through the rest of Southeast Asia.",
+      "migration": "It winters from the Malay Peninsula to the Greater Sunda Islands, Sulawesi and the Philippines.",
+      "conservation": "A secretive and hard to find species, Schrenck's bittern has an estimated population of 2,500 – 25,000 mature individuals as of 2025, which is believed to be decreasing.",
+      "etymology": "The genus name Botaurus is Medieval Latin for a bittern.",
+      "iucn": "Near Threatened (NT)"
+    },
+    "0247": {
+      "range": "The expansion of the eastern cattle egret's range is due to its relationship with humans and their domesticated animals.",
+      "habitat": "Although the cattle egret sometimes feeds in shallow water, unlike most herons it is typically found in fields and dry grassy habitats,",
+      "diet": "The cattle egret feeds on a wide range of prey, particularly insects, especially grasshoppers, crickets, flies (adults and maggots), and moths,",
+      "breeding": "The breeding season varies within South Asia.",
+      "funFact": "Formerly, most taxonomic authorities lumped this species and the western cattle egret together (called the cattle egret), but the two cattle egrets are now treated as separate species.",
+      "voice": "Formerly, most taxonomic authorities lumped this species and the western cattle egret together (called the cattle egret), but the two cattle egrets are now treated as separate species.",
+      "behavior": "The male displays in a tree in the colony, using a range of ritualised behaviours such as shaking a twig and sky-pointing (raising his bill vertically upwards),",
+      "migration": "In the northern hemisphere, migration is from cooler climes to warmer areas, but cattle egrets nesting in Australia migrate to cooler Tasmania and New Zealand in the winter and return in the spring.",
+      "conservation": "Some populations of the cattle egret are migratory and others show post-breeding dispersal.",
+      "humanRelation": "Not all interactions between humans and eastern cattle egrets are beneficial.",
+      "etymology": "The genus name Ardea is the Latin word for a \"heron\".",
+      "length": "88–96 cm",
+      "weight": "270–512 g"
+    },
+    "0332": {
+      "range": "Outside the breeding season it migrates to China, Thailand, Laos, Vietnam, other parts of the Philippines, Malaysia, Singapore, and Sumatra, Indonesia.",
+      "habitat": "In Jeju-do of South Korea, Gotjawal Forest, a forest formed on a rocky area of volcanic AA Lava,",
+      "diet": "The tail has extremely long black central feathers, which are shorter in immature males.",
+      "breeding": "Outside the breeding season it migrates to China, Thailand, Laos, Vietnam, other parts of the Philippines, Malaysia, Singapore, and Sumatra, Indonesia.",
+      "funFact": "The black paradise flycatcher (Terpsiphone atrocaudata), also known as the Japanese paradise flycatcher, is a medium-sized passerine bird native to southeastern Asia.",
+      "voice": "The song is rendered in Japanese as tsuki-hi-hoshi, hoi-hoi-hoi, which translates to Moon-Sun-Stars and gives the Japanese name of the bird sankōchō (literally, bird of three lights,",
+      "migration": "atrocaudata - (Eyton, 1839) : Breeds in central and southern Korea and Japan, wintering in Southeast Asia from Philippines to Sumatra.",
+      "conservation": "A recent survey detected a steep decline in part of the Japanese breeding population which has presumably occurred because of forest loss and degradation in its winter range.",
+      "etymology": "The song is rendered in Japanese as tsuki-hi-hoshi, hoi-hoi-hoi, which translates to Moon-Sun-Stars and gives the Japanese name of the bird sankōchō (literally, bird of three lights, i.e.",
+      "iucn": "Near Threatened (NT)"
+    },
+    "0386": {
+      "range": "It is found from Central Asia to southeastern China.",
+      "habitat": "It is found in open habitats such as farmland, grassland and savannah, usually near water.",
+      "funFact": "The species was formerly considered a subspecies of the sand martin.",
+      "behavior": "It is found in open habitats such as farmland, grassland and savannah, usually near water.",
+      "iucn": "Least Concern (LC)"
+    },
+    "0388": {
+      "range": "It is found in open, often hilly, areas with clearings and cultivation across eastern and southeastern Asia to north-eastern India and Taiwan.",
+      "habitat": "It is found in open, often hilly, areas with clearings and cultivation across eastern and southeastern Asia to north-eastern India and Taiwan.",
+      "diet": "The eastern red-rumped swallow feeds low over the ground or at cliff faces on flying insects.",
+      "breeding": "The eastern red-rumped swallow breeds from April to July alone or semi-colonially with scattered nests.",
+      "funFact": "The European red-rumped swallow and the African red-rumped swallow were formerly considered as subspecies of the eastern red-rumped swallow.",
+      "voice": "The eastern red-rumped swallow was formally described in 1769 by the Finnish-Swedish clergyman, explorer and natural scientist Erik Laxmann as Hirundo daurica, using a specimen from Mount Schlangen,",
+      "behavior": "It is found in open, often hilly, areas with clearings and cultivation across eastern and southeastern Asia to north-eastern India and Taiwan.",
+      "migration": "japonica are long-distance migrants, wintering in Indonesia and Malaysia, and even northern Australia in small numbers.",
+      "conservation": "This population has the rump paler with dark shaft streaks.",
+      "etymology": "Boie's genus name Cecropis is from the Ancient Greek for an Athenian woman.",
       "iucn": "Least Concern (LC)"
     }
   }
