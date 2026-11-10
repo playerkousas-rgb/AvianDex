@@ -76,3 +76,6 @@ data/card-demo/
 
 # 中文繁體轉換備份（npm run cards:hk）
 src/data/cardCopy.json.prehk
+
+# 補欄位建議（本機工作檔，唔入版控；要保留就自行 commit）
+data/gapfill/

@@ -37,6 +37,8 @@
     "cards:zh-hk": "python3 scripts/cards/zh-hk.py --write",
     "cards:hk": "node scripts/cards/zh-hk-fix.mjs",
     "cards:hk:check": "node scripts/cards/zh-hk-fix.mjs --check",
+    "cards:gaps": "node scripts/cards/fill-gaps.mjs",
+    "cards:gaps:apply": "node scripts/cards/fill-gaps.mjs --apply",
     "cards:tw": "node scripts/cards/tw-list.mjs",
     "cards:tw:check": "node scripts/cards/tw-list.mjs --check",
     "copy:extract": "node scripts/cards/extract-copy.mjs",
