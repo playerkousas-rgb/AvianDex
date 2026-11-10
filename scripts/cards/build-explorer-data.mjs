@@ -111,6 +111,12 @@ function main() {
   const aliases = fs.existsSync(path.join(DATA, 'name-aliases.generated.json'))
     ? readJson(path.join(DATA, 'name-aliases.generated.json'))
     : {};
+  /* 台灣鳥類名錄的中文名（npm run cards:tw 產生）：
+     只做「搜尋別名」，唔會取代卡面的香港慣用名。
+     兩套名字都是華文圈通行叫法，打邊一個都應該搵得到隻雀。 */
+  const twNames = fs.existsSync(path.join(DATA, 'twNames.json'))
+    ? readJson(path.join(DATA, 'twNames.json')).names || {}
+    : {};
 
   const byId = new Map(birds.map((b) => [b.id, b]));
   const entries = {};
@@ -138,6 +144,11 @@ function main() {
       (a) => a && a !== en && a.toLowerCase() !== en.toLowerCase() && a !== t.sciName,
     );
 
+    /* 台灣名錄的中文名加入別名（同卡面名相同的唔重複加） */
+    const twRec = twNames[id] || {};
+    const tw = twRec.zh;
+    if (tw && tw !== zh && !alias.includes(tw)) alias.push(tw);
+
     entries[id] = {
       z: zh,
       e: en,
@@ -151,6 +162,10 @@ function main() {
       d: [...new Set(diet)],
       h: [...new Set(habitat)],
       len: parseLength(c.length),
+      /* 台灣鳥類名錄的事實欄位（臺灣的數據，唔係香港的；UI 必須標明「臺灣」）。
+         港、台兩地季候不同，直接當成本地數據會誤導。 */
+      tws: twRec.status || '',
+      twp: twRec.protect || '',
     };
   }
 

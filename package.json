@@ -37,6 +37,8 @@
     "cards:zh-hk": "python3 scripts/cards/zh-hk.py --write",
     "cards:hk": "node scripts/cards/zh-hk-fix.mjs",
     "cards:hk:check": "node scripts/cards/zh-hk-fix.mjs --check",
+    "cards:tw": "node scripts/cards/tw-list.mjs",
+    "cards:tw:check": "node scripts/cards/tw-list.mjs --check",
     "copy:extract": "node scripts/cards/extract-copy.mjs",
     "copy:stats": "node scripts/cards/copy-stats.mjs",
     "dev": "vite",
@@ -82,6 +84,7 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.48.0",
     "vite": "^7.3.1",
+    "xlsx": "^0.18.5",
     "yaml": "^2.9.1"
   }
 }

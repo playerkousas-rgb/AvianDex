@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { CREDIT_LINE_ZH, CREDIT_LINE_EN } from '../lib/credits';
 import {
   ChevronLeft, ExternalLink, Utensils, Trees, MapPin, Feather,
   Baby, Lightbulb, Volume2, Footprints, Shield, Users, BookMarked, Telescope,
@@ -123,6 +124,10 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
   const sciName = entry?.s || bird.scientificName || enName;
   const title = lang === 'en' ? enName || sciName : zhName;
   const subtitle = lang === 'en' ? '' : enName;
+  const altNames = (entry?.n || []).filter((n) => n && n !== zhName);
+  /* 臺灣鳥類名錄的事實欄位：一定要標明「臺灣」，否則會被當成香港季候 */
+  const twStatus = entry?.tws || '';
+  const twProtect = entry?.twp || '';
   const dietTags = (entry?.d || []).map((id) => dietLabel(id, lang));
   const habTags = (entry?.h || []).map((id) => habitatLabel(id, lang));
 
@@ -150,6 +155,13 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
           {subtitle && <span className="text-yellow-200/60 text-[11px]">{subtitle}</span>}
         </div>
         <p className="text-white/45 text-[10.5px] italic mt-0.5">{sciName}</p>
+        {/* 台灣名錄的中文名：只作別名顯示，唔改主名。兩套叫法都通行，見得到就好。 */}
+        {lang === 'zh' && altNames.length > 0 && (
+          <p className="text-white/35 text-[10px] mt-0.5">
+            {t('台灣名錄作', 'TW list: ')}
+            <span className="text-amber-200/70">{altNames.join('、')}</span>
+          </p>
+        )}
         <div className="flex flex-wrap gap-1.5 mt-2">
           {lang === 'zh' && [entry?.oz, entry?.fz].filter(Boolean).map((v) => (
             <span key={v} className="bg-emerald-500/12 border border-emerald-400/20 text-emerald-200/90 text-[10px] rounded px-1.5 py-0.5">{v}</span>
@@ -167,6 +179,26 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
         <p className="text-emerald-300/70 text-[10px] bg-emerald-900/20 border border-emerald-400/20 rounded px-2 py-1">
           {t('離線模式：顯示已下載的野外離線包（文字已截短）', 'Offline: showing the downloaded field pack (text is abridged)')}
         </p>
+      )}
+
+      {/* 臺灣鳥類名錄的遷徙屬性／保育等級：標明「臺灣」，不冒充香港數據 */}
+      {(twStatus || twProtect) && (
+        <div className="bg-black/25 border border-white/10 rounded-lg px-2 py-1.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+          <span className="text-white/35 text-[9px] tracking-wide">
+            {t('臺灣鳥類名錄', 'Taiwan checklist')}
+          </span>
+          {twStatus && (
+            <span className="text-white/70 text-[10px]">
+              {t('季候', 'Status')} <span className="text-amber-200/85 font-bold">{twStatus}</span>
+              <span className="text-white/30 text-[9px]"> {t('（臺灣）', '(TW)')}</span>
+            </span>
+          )}
+          {twProtect && (
+            <span className="text-white/70 text-[10px]">
+              {t('保育等級', 'Conservation')} <span className="text-amber-200/85 font-bold">{twProtect}</span>
+            </span>
+          )}
+        </div>
       )}
 
       {/* 量度值：用戶指示「不換算，直接用 mm／g」 */}
@@ -330,7 +362,7 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
 
       {/* 極簡頁腳：文字來源只留一句，其餘去第 3 頁 */}
       <div className="flex items-center justify-between gap-2 text-[9.5px] text-white/30 border-t border-white/8 pt-2">
-        <span>{t('文字：維基百科原文抽取（不改寫）· 分類：eBird–Clements', 'Text: Wikipedia (verbatim) · Taxonomy: eBird–Clements')}</span>
+        <span className="leading-tight">{t(CREDIT_LINE_ZH, CREDIT_LINE_EN)}</span>
         <a
           href={`https://zh.wikipedia.org/wiki/${encodeURIComponent(zhName)}`}
           target="_blank"
