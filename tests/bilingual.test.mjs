@@ -22,6 +22,7 @@ import {
 import {
   FIELDS, MAX_PICKS, chooseFields, has, normalizeCopy,
 } from '../scripts/cards/field-schema.mjs';
+import { toHk } from '../scripts/cards/zh-hk.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 
@@ -58,7 +59,10 @@ test('中文抽取：七個核心欄位都抽到，且全部是原文完整句',
   const z = extractFields(ZH, { lang: 'zh', sciName: 'Copsychus saularis', ownName: '鵲鴝' });
   for (const k of ['look', 'habitat', 'diet', 'breeding']) {
     assert.ok(z[k], `${k} 冇抽到`);
-    assert.ok(ZH.includes(z[k].slice(0, 12)), `${k} 唔係原文：「${z[k]}」`);
+    /* 抽出來的必須是原文的子字串（簡→繁只轉字形，長度不變，
+       所以先用同一支轉換器轉原文再比對） */
+    assert.ok(toHk(ZH).includes(z[k].slice(0, 12)) || ZH.includes(z[k].slice(0, 12)),
+      `${k} 唔係原文：「${z[k]}」`);
     assert.match(z[k], /[。！？；]$/, `${k} 唔係完整句：${z[k]}`);
   }
 });
