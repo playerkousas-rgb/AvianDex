@@ -1,1 +1,4314 @@
-{}
+{
+  "0001": {
+    "source": "AVONET",
+    "wing": "138.8",
+    "tail": "127.3",
+    "tarsus": "19.9",
+    "bill": "19.9",
+    "mass": "159"
+  },
+  "0002": {
+    "source": "AVONET",
+    "wing": "457.4",
+    "tail": "269.5",
+    "tarsus": "51.4",
+    "bill": "40",
+    "mass": "734.1"
+  },
+  "0003": {
+    "source": "AVONET",
+    "wing": "219.6",
+    "tail": "105.5",
+    "tarsus": "26.5",
+    "bill": "23.2",
+    "mass": "354.2"
+  },
+  "0004": {
+    "source": "AVONET",
+    "wing": "221.2",
+    "tail": "99.5",
+    "tarsus": "21.4",
+    "bill": "37.4",
+    "mass": "303.3"
+  },
+  "0005": {
+    "source": "AVONET",
+    "wing": "196.4",
+    "tail": "179.7",
+    "tarsus": "31",
+    "bill": "32.1",
+    "mass": "194.9"
+  },
+  "0006": {
+    "source": "AVONET",
+    "wing": "86.8",
+    "tail": "88.1",
+    "tarsus": "20.5",
+    "bill": "17.5",
+    "mass": "29.5"
+  },
+  "0007": {
+    "source": "AVONET",
+    "wing": "86.7",
+    "tail": "82.1",
+    "tarsus": "21.6",
+    "bill": "17.9",
+    "mass": "34.2"
+  },
+  "0008": {
+    "source": "AVONET",
+    "wing": "97.5",
+    "tail": "84",
+    "tarsus": "29.5",
+    "bill": "23.2",
+    "mass": "36"
+  },
+  "0010": {
+    "source": "AVONET",
+    "wing": "114.8",
+    "tail": "40.6",
+    "tarsus": "32.9",
+    "bill": "37.4",
+    "mass": "116"
+  },
+  "0011": {
+    "source": "AVONET",
+    "wing": "67.9",
+    "tail": "51",
+    "tarsus": "16.4",
+    "bill": "13.2",
+    "mass": "21.4"
+  },
+  "0012": {
+    "source": "AVONET",
+    "wing": "158.1",
+    "tail": "95.4",
+    "tarsus": "41.7",
+    "bill": "32.4",
+    "mass": "156.9"
+  },
+  "0013": {
+    "source": "AVONET",
+    "wing": "134",
+    "tail": "81.2",
+    "tarsus": "38.1",
+    "bill": "27.1",
+    "mass": "116.3"
+  },
+  "0014": {
+    "source": "AVONET",
+    "wing": "193.3",
+    "tail": "242.1",
+    "tarsus": "47.2",
+    "bill": "40.8",
+    "mass": "217.5"
+  },
+  "0015": {
+    "source": "AVONET",
+    "wing": "181.3",
+    "tail": "366.3",
+    "tarsus": "45.3",
+    "bill": "38.7",
+    "mass": "151.5"
+  },
+  "0017": {
+    "source": "AVONET",
+    "wing": "395",
+    "tail": "212",
+    "tarsus": "77",
+    "bill": "34.5",
+    "mass": "759.1"
+  },
+  "0018": {
+    "source": "AVONET",
+    "wing": "92.4",
+    "tail": "104.1",
+    "tarsus": "36.4",
+    "bill": "23.9",
+    "mass": "62.8"
+  },
+  "0019": {
+    "source": "AVONET",
+    "wing": "47.8",
+    "tail": "39.5",
+    "tarsus": "13.8",
+    "bill": "17.5",
+    "mass": "5.2"
+  },
+  "0020": {
+    "source": "AVONET",
+    "wing": "45.5",
+    "tail": "47.7",
+    "tarsus": "19.3",
+    "bill": "15.5",
+    "mass": "7.5"
+  },
+  "0022": {
+    "source": "AVONET",
+    "wing": "193.8",
+    "tail": "51.2",
+    "tarsus": "41.6",
+    "bill": "43.5",
+    "mass": "519.6"
+  },
+  "0023": {
+    "source": "AVONET",
+    "wing": "435.7",
+    "tail": "136.1",
+    "tarsus": "76.2",
+    "bill": "61.2",
+    "mass": "3302.4"
+  },
+  "0024": {
+    "source": "AVONET",
+    "wing": "408.2",
+    "tail": "123.5",
+    "tarsus": "65",
+    "bill": "48.7",
+    "mass": "2506.4"
+  },
+  "0025": {
+    "source": "AVONET",
+    "wing": "369",
+    "tail": "112.4",
+    "tarsus": "61.2",
+    "bill": "40.9",
+    "mass": "1755.5"
+  },
+  "0026": {
+    "source": "AVONET",
+    "wing": "452.8",
+    "tail": "143",
+    "tarsus": "77.8",
+    "bill": "76.3",
+    "mass": "2754.7"
+  },
+  "0028": {
+    "source": "AVONET",
+    "wing": "582",
+    "tail": "171.5",
+    "tarsus": "102",
+    "bill": "102.4",
+    "mass": "9350"
+  },
+  "0029": {
+    "source": "AVONET",
+    "wing": "355.5",
+    "tail": "124.7",
+    "tarsus": "54.5",
+    "bill": "47",
+    "mass": "1235"
+  },
+  "0030": {
+    "source": "AVONET",
+    "wing": "313.9",
+    "tail": "109.9",
+    "tarsus": "51.6",
+    "bill": "54.2",
+    "mass": "1146.8"
+  },
+  "0031": {
+    "source": "AVONET",
+    "wing": "158.5",
+    "tail": "64.5",
+    "tarsus": "23.6",
+    "bill": "26.6",
+    "mass": "391.3"
+  },
+  "0032": {
+    "source": "AVONET",
+    "wing": "222.2",
+    "tail": "94.6",
+    "tarsus": "34.8",
+    "bill": "33",
+    "mass": "567"
+  },
+  "0033": {
+    "source": "AVONET",
+    "wing": "206",
+    "tail": "77.2",
+    "tarsus": "32.1",
+    "bill": "37.9",
+    "mass": "434"
+  },
+  "0034": {
+    "source": "AVONET",
+    "wing": "188.2",
+    "tail": "64.2",
+    "tarsus": "26",
+    "bill": "39.2",
+    "mass": "325.6"
+  },
+  "0035": {
+    "source": "AVONET",
+    "wing": "226.4",
+    "tail": "75.1",
+    "tarsus": "33.8",
+    "bill": "68.8",
+    "mass": "612.6"
+  },
+  "0036": {
+    "source": "AVONET",
+    "wing": "251.3",
+    "tail": "83",
+    "tarsus": "36.5",
+    "bill": "48.7",
+    "mass": "915.6"
+  },
+  "0037": {
+    "source": "AVONET",
+    "wing": "238.3",
+    "tail": "63.7",
+    "tarsus": "36.4",
+    "bill": "46.1",
+    "mass": "645.8"
+  },
+  "0038": {
+    "source": "AVONET",
+    "wing": "250.6",
+    "tail": "89.7",
+    "tarsus": "35.5",
+    "bill": "38.5",
+    "mass": "770"
+  },
+  "0039": {
+    "source": "AVONET",
+    "wing": "253.2",
+    "tail": "93.8",
+    "tarsus": "34.6",
+    "bill": "44.9",
+    "mass": "754.6"
+  },
+  "0040": {
+    "source": "AVONET",
+    "wing": "237",
+    "tail": "84.2",
+    "tarsus": "39.2",
+    "bill": "54.6",
+    "mass": "832"
+  },
+  "0041": {
+    "source": "AVONET",
+    "wing": "272",
+    "tail": "99.6",
+    "tarsus": "43.5",
+    "bill": "61.9",
+    "mass": "1000"
+  },
+  "0042": {
+    "source": "AVONET",
+    "wing": "268.2",
+    "tail": "87.2",
+    "tarsus": "39.8",
+    "bill": "59.9",
+    "mass": "1156"
+  },
+  "0043": {
+    "source": "AVONET",
+    "wing": "263.4",
+    "tail": "86.9",
+    "tarsus": "40.6",
+    "bill": "58.5",
+    "mass": "843.4"
+  },
+  "0044": {
+    "source": "AVONET",
+    "wing": "256.7",
+    "tail": "124.7",
+    "tarsus": "36.9",
+    "bill": "48.1",
+    "mass": "944.6"
+  },
+  "0045": {
+    "source": "AVONET",
+    "wing": "178.8",
+    "tail": "61.5",
+    "tarsus": "26.4",
+    "bill": "36.2",
+    "mass": "341.9"
+  },
+  "0046": {
+    "source": "AVONET",
+    "wing": "258.3",
+    "tail": "69.3",
+    "tarsus": "37.2",
+    "bill": "49.9",
+    "mass": "1118"
+  },
+  "0047": {
+    "source": "AVONET",
+    "wing": "208.6",
+    "tail": "53.7",
+    "tarsus": "35",
+    "bill": "50.5",
+    "mass": "823"
+  },
+  "0048": {
+    "source": "AVONET",
+    "wing": "182.5",
+    "tail": "53",
+    "tarsus": "28.6",
+    "bill": "41.2",
+    "mass": "574"
+  },
+  "0049": {
+    "source": "AVONET",
+    "wing": "201.8",
+    "tail": "58.2",
+    "tarsus": "31.7",
+    "bill": "44.7",
+    "mass": "681.2"
+  },
+  "0050": {
+    "source": "AVONET",
+    "wing": "196.9",
+    "tail": "53.4",
+    "tarsus": "31.3",
+    "bill": "43.9",
+    "mass": "701.2"
+  },
+  "0051": {
+    "source": "AVONET",
+    "wing": "213.5",
+    "tail": "53.5",
+    "tarsus": "34.2",
+    "bill": "47.8",
+    "mass": "1005.4"
+  },
+  "0052": {
+    "source": "AVONET",
+    "wing": "259.2",
+    "tail": "74.7",
+    "tarsus": "42",
+    "bill": "49.9",
+    "mass": "1800.2"
+  },
+  "0053": {
+    "source": "AVONET",
+    "wing": "270",
+    "tail": "76.5",
+    "tarsus": "42.8",
+    "bill": "46.8",
+    "mass": "1800.2"
+  },
+  "0054": {
+    "source": "AVONET",
+    "wing": "267.2",
+    "tail": "69",
+    "tarsus": "43",
+    "bill": "56.5",
+    "mass": "1800.2"
+  },
+  "0055": {
+    "source": "AVONET",
+    "wing": "208.7",
+    "tail": "82",
+    "tarsus": "34.1",
+    "bill": "38.1",
+    "mass": "918.6"
+  },
+  "0056": {
+    "source": "AVONET",
+    "wing": "187.3",
+    "tail": "70.3",
+    "tarsus": "30.2",
+    "bill": "32",
+    "mass": "608.6"
+  },
+  "0057": {
+    "source": "AVONET",
+    "wing": "233.6",
+    "tail": "76.2",
+    "tarsus": "45.5",
+    "bill": "65",
+    "mass": "1015.2"
+  },
+  "0058": {
+    "source": "AVONET",
+    "wing": "256.2",
+    "tail": "99",
+    "tarsus": "43.5",
+    "bill": "60.1",
+    "mass": "1234"
+  },
+  "0059": {
+    "source": "AVONET",
+    "wing": "128.4",
+    "tail": "90.4",
+    "tarsus": "36.7",
+    "bill": "19.9",
+    "mass": "264.8"
+  },
+  "0060": {
+    "source": "AVONET",
+    "wing": "149.4",
+    "tail": "72.4",
+    "tarsus": "37.9",
+    "bill": "26.9",
+    "mass": "310"
+  },
+  "0061": {
+    "source": "AVONET",
+    "wing": "97",
+    "tail": "35.4",
+    "tarsus": "24.3",
+    "bill": "14.6",
+    "mass": "94.8"
+  },
+  "0062": {
+    "source": "AVONET",
+    "wing": "100",
+    "tail": "29.1",
+    "tarsus": "35.4",
+    "bill": "23.9",
+    "mass": "169.4"
+  },
+  "0063": {
+    "source": "AVONET",
+    "wing": "137.8",
+    "tail": "33.2",
+    "tarsus": "42.9",
+    "bill": "30.2",
+    "mass": "453"
+  },
+  "0064": {
+    "source": "AVONET",
+    "wing": "183.6",
+    "tail": "40.7",
+    "tarsus": "60.9",
+    "bill": "57.5",
+    "mass": "731"
+  },
+  "0065": {
+    "source": "AVONET",
+    "wing": "127.2",
+    "tail": "28",
+    "tarsus": "39.6",
+    "bill": "26.2",
+    "mass": "412.4"
+  },
+  "0066": {
+    "source": "AVONET",
+    "wing": "176.5",
+    "tail": "127.2",
+    "tarsus": "25.5",
+    "bill": "21.9",
+    "mass": "232.9"
+  },
+  "0067": {
+    "source": "AVONET",
+    "wing": "174.6",
+    "tail": "132.3",
+    "tarsus": "22.1",
+    "bill": "21.5",
+    "mass": "149"
+  },
+  "0068": {
+    "source": "AVONET",
+    "wing": "134.8",
+    "tail": "82.3",
+    "tarsus": "17.1",
+    "bill": "15.7",
+    "mass": "103"
+  },
+  "0069": {
+    "source": "AVONET",
+    "wing": "174.8",
+    "tail": "166.4",
+    "tarsus": "21.9",
+    "bill": "22.1",
+    "mass": "168"
+  },
+  "0070": {
+    "source": "AVONET",
+    "wing": "143.9",
+    "tail": "83.9",
+    "tarsus": "25.8",
+    "bill": "20.9",
+    "mass": "136.5"
+  },
+  "0071": {
+    "source": "AVONET",
+    "wing": "156.2",
+    "tail": "89.9",
+    "tarsus": "21.2",
+    "bill": "18.3",
+    "mass": "174"
+  },
+  "0072": {
+    "source": "AVONET",
+    "wing": "135.9",
+    "tail": "73.9",
+    "tarsus": "19.9",
+    "bill": "19.4",
+    "mass": "134.5"
+  },
+  "0073": {
+    "source": "AVONET",
+    "wing": "170.7",
+    "tail": "117",
+    "tarsus": "22.3",
+    "bill": "20.3",
+    "mass": "210"
+  },
+  "0074": {
+    "source": "AVONET",
+    "wing": "182.6",
+    "tail": "118",
+    "tarsus": "23.3",
+    "bill": "22.7",
+    "mass": "245"
+  },
+  "0075": {
+    "source": "AVONET",
+    "wing": "195.1",
+    "tail": "127",
+    "tarsus": "27.5",
+    "bill": "23.3",
+    "mass": "140"
+  },
+  "0076": {
+    "source": "AVONET",
+    "wing": "212.4",
+    "tail": "260.9",
+    "tarsus": "55.6",
+    "bill": "46.6",
+    "mass": "280.7"
+  },
+  "0077": {
+    "source": "AVONET",
+    "wing": "154.6",
+    "tail": "185.2",
+    "tarsus": "39.3",
+    "bill": "28.2",
+    "mass": "148.9"
+  },
+  "0078": {
+    "source": "AVONET",
+    "wing": "159.8",
+    "tail": "212.4",
+    "tarsus": "23.1",
+    "bill": "31.4",
+    "mass": "74.6"
+  },
+  "0079": {
+    "source": "AVONET",
+    "wing": "104.2",
+    "tail": "103.7",
+    "tarsus": "15.5",
+    "bill": "20.8",
+    "mass": "25.3"
+  },
+  "0080": {
+    "source": "AVONET",
+    "wing": "119",
+    "tail": "112.8",
+    "tarsus": "15.6",
+    "bill": "23.8",
+    "mass": "29.7"
+  },
+  "0081": {
+    "source": "AVONET",
+    "wing": "235",
+    "tail": "207.6",
+    "tarsus": "24.6",
+    "bill": "30.3",
+    "mass": "151"
+  },
+  "0082": {
+    "source": "AVONET",
+    "wing": "198.5",
+    "tail": "148.8",
+    "tarsus": "21.6",
+    "bill": "25.4",
+    "mass": "79.7"
+  },
+  "0083": {
+    "source": "AVONET",
+    "wing": "176",
+    "tail": "144.2",
+    "tarsus": "18.9",
+    "bill": "24.1",
+    "mass": "79.7"
+  },
+  "0084": {
+    "source": "AVONET",
+    "wing": "175.2",
+    "tail": "137.4",
+    "tarsus": "19",
+    "bill": "28.3",
+    "mass": "79.7"
+  },
+  "0085": {
+    "source": "AVONET",
+    "wing": "154",
+    "tail": "131.8",
+    "tarsus": "18.2",
+    "bill": "22.2",
+    "mass": "46.6"
+  },
+  "0086": {
+    "source": "AVONET",
+    "wing": "196.3",
+    "tail": "146.1",
+    "tarsus": "19.5",
+    "bill": "30.3",
+    "mass": "88.8"
+  },
+  "0087": {
+    "source": "AVONET",
+    "wing": "192",
+    "tail": "158.1",
+    "tarsus": "21.4",
+    "bill": "26",
+    "mass": "111.4"
+  },
+  "0089": {
+    "source": "AVONET",
+    "wing": "203.4",
+    "tail": "130.6",
+    "tarsus": "13",
+    "bill": "22.1",
+    "mass": "91.6"
+  },
+  "0090": {
+    "source": "AVONET",
+    "wing": "159.6",
+    "tail": "94.4",
+    "tarsus": "17.8",
+    "bill": "20.6",
+    "mass": "58.7"
+  },
+  "0091": {
+    "source": "AVONET",
+    "wing": "206",
+    "tail": "49.8",
+    "tarsus": "18.5",
+    "bill": "12.9",
+    "mass": "95.5"
+  },
+  "0092": {
+    "source": "AVONET",
+    "wing": "183.2",
+    "tail": "52.4",
+    "tarsus": "16.3",
+    "bill": "11.8",
+    "mass": "83.8"
+  },
+  "0093": {
+    "source": "AVONET",
+    "wing": "203.1",
+    "tail": "61.7",
+    "tarsus": "17.8",
+    "bill": "10.1",
+    "mass": "127"
+  },
+  "0094": {
+    "source": "AVONET",
+    "wing": "122.9",
+    "tail": "51.6",
+    "tarsus": "9.9",
+    "bill": "6.6",
+    "mass": "13.4"
+  },
+  "0095": {
+    "source": "AVONET",
+    "wing": "161.3",
+    "tail": "67.4",
+    "tarsus": "8.8",
+    "bill": "10.2",
+    "mass": "37.6"
+  },
+  "0096": {
+    "source": "AVONET",
+    "wing": "173",
+    "tail": "71.8",
+    "tarsus": "12.9",
+    "bill": "8",
+    "mass": "39.4"
+  },
+  "0097": {
+    "source": "AVONET",
+    "wing": "130",
+    "tail": "48",
+    "tarsus": "11.3",
+    "bill": "8.9",
+    "mass": "29.8"
+  },
+  "0098": {
+    "source": "AVONET",
+    "wing": "114.1",
+    "tail": "51",
+    "tarsus": "38.4",
+    "bill": "42",
+    "mass": "110.7"
+  },
+  "0099": {
+    "source": "AVONET",
+    "wing": "124",
+    "tail": "48.5",
+    "tarsus": "39",
+    "bill": "40.2",
+    "mass": "104.5"
+  },
+  "0100": {
+    "source": "AVONET",
+    "wing": "165.5",
+    "tail": "69",
+    "tarsus": "45.9",
+    "bill": "33.9",
+    "mass": "339.6"
+  },
+  "0101": {
+    "source": "AVONET",
+    "wing": "198.2",
+    "tail": "53.9",
+    "tarsus": "57",
+    "bill": "37.7",
+    "mass": "717.1"
+  },
+  "0103": {
+    "source": "AVONET",
+    "wing": "185.9",
+    "tail": "73.2",
+    "tarsus": "64.4",
+    "bill": "42.8",
+    "mass": "390.4"
+  },
+  "0104": {
+    "source": "AVONET",
+    "wing": "147",
+    "tail": "57.6",
+    "tarsus": "50.8",
+    "bill": "37.1",
+    "mass": "180"
+  },
+  "0105": {
+    "source": "AVONET",
+    "wing": "125.8",
+    "tail": "61.2",
+    "tarsus": "42.2",
+    "bill": "25.3",
+    "mass": "109"
+  },
+  "0106": {
+    "source": "AVONET",
+    "wing": "126.4",
+    "tail": "53.4",
+    "tarsus": "35.8",
+    "bill": "28.5",
+    "mass": "111"
+  },
+  "0107": {
+    "source": "AVONET",
+    "wing": "119.2",
+    "tail": "54",
+    "tarsus": "47.6",
+    "bill": "31.8",
+    "mass": "131.4"
+  },
+  "0108": {
+    "source": "AVONET",
+    "wing": "84.4",
+    "tail": "32.2",
+    "tarsus": "25",
+    "bill": "17.4",
+    "mass": "35.4"
+  },
+  "0109": {
+    "source": "AVONET",
+    "wing": "579.2",
+    "tail": "198.5",
+    "tarsus": "274.2",
+    "bill": "194.5",
+    "mass": "5913.4"
+  },
+  "0110": {
+    "source": "AVONET",
+    "wing": "540.6",
+    "tail": "193.4",
+    "tarsus": "234.4",
+    "bill": "108.1",
+    "mass": "5500"
+  },
+  "0111": {
+    "source": "AVONET",
+    "wing": "256.5",
+    "tail": "105.2",
+    "tarsus": "85.5",
+    "bill": "75.4",
+    "mass": "790"
+  },
+  "0112": {
+    "source": "AVONET",
+    "wing": "225.6",
+    "tail": "78.6",
+    "tarsus": "115.8",
+    "bill": "64.7",
+    "mass": "176.8"
+  },
+  "0113": {
+    "source": "AVONET",
+    "wing": "217.9",
+    "tail": "79.4",
+    "tarsus": "86.9",
+    "bill": "83.7",
+    "mass": "304"
+  },
+  "0114": {
+    "source": "AVONET",
+    "wing": "250.3",
+    "tail": "106",
+    "tarsus": "49.9",
+    "bill": "76.1",
+    "mass": "526"
+  },
+  "0115": {
+    "source": "AVONET",
+    "wing": "184.4",
+    "tail": "71.4",
+    "tarsus": "44.5",
+    "bill": "32",
+    "mass": "250"
+  },
+  "0116": {
+    "source": "AVONET",
+    "wing": "181.2",
+    "tail": "70.2",
+    "tarsus": "38",
+    "bill": "25",
+    "mass": "214"
+  },
+  "0117": {
+    "source": "AVONET",
+    "wing": "181.8",
+    "tail": "65.8",
+    "tarsus": "39.9",
+    "bill": "26.3",
+    "mass": "151.5"
+  },
+  "0118": {
+    "source": "AVONET",
+    "wing": "159",
+    "tail": "58.4",
+    "tarsus": "40.2",
+    "bill": "25.2",
+    "mass": "134.9"
+  },
+  "0119": {
+    "source": "AVONET",
+    "wing": "222.5",
+    "tail": "103.2",
+    "tarsus": "48.3",
+    "bill": "28.1",
+    "mass": "218.4"
+  },
+  "0125": {
+    "source": "AVONET",
+    "wing": "126",
+    "tail": "60.2",
+    "tarsus": "25.3",
+    "bill": "16.1",
+    "mass": "64"
+  },
+  "0129": {
+    "source": "AVONET",
+    "wing": "127.6",
+    "tail": "42",
+    "tarsus": "44.4",
+    "bill": "52",
+    "mass": "121"
+  },
+  "0130": {
+    "source": "AVONET",
+    "wing": "194.4",
+    "tail": "69.5",
+    "tarsus": "52.9",
+    "bill": "32.8",
+    "mass": "160"
+  },
+  "0131": {
+    "source": "AVONET",
+    "wing": "233",
+    "tail": "99.8",
+    "tarsus": "59.9",
+    "bill": "92.1",
+    "mass": "364.6"
+  },
+  "0132": {
+    "source": "AVONET",
+    "wing": "175",
+    "tail": "75.6",
+    "tarsus": "47.6",
+    "bill": "46.4",
+    "mass": "173"
+  },
+  "0133": {
+    "source": "AVONET",
+    "wing": "305.2",
+    "tail": "114.2",
+    "tarsus": "93.2",
+    "bill": "184.2",
+    "mass": "792"
+  },
+  "0134": {
+    "source": "AVONET",
+    "wing": "292.2",
+    "tail": "111.3",
+    "tarsus": "82.7",
+    "bill": "145.8",
+    "mass": "803"
+  },
+  "0135": {
+    "source": "AVONET",
+    "wing": "210.1",
+    "tail": "74",
+    "tarsus": "53.2",
+    "bill": "92.5",
+    "mass": "291.7"
+  },
+  "0136": {
+    "source": "AVONET",
+    "wing": "215.6",
+    "tail": "78",
+    "tarsus": "78",
+    "bill": "113.5",
+    "mass": "288.4"
+  },
+  "0137": {
+    "source": "AVONET",
+    "wing": "148.8",
+    "tail": "61",
+    "tarsus": "25.5",
+    "bill": "25.4",
+    "mass": "136"
+  },
+  "0138": {
+    "source": "AVONET",
+    "wing": "175.6",
+    "tail": "63.8",
+    "tarsus": "34.4",
+    "bill": "45",
+    "mass": "192"
+  },
+  "0139": {
+    "source": "AVONET",
+    "wing": "164.4",
+    "tail": "60.4",
+    "tarsus": "29.9",
+    "bill": "37.5",
+    "mass": "141.9"
+  },
+  "0140": {
+    "source": "AVONET",
+    "wing": "163.7",
+    "tail": "60",
+    "tarsus": "42.9",
+    "bill": "37.6",
+    "mass": "131.7"
+  },
+  "0141": {
+    "source": "AVONET",
+    "wing": "99.2",
+    "tail": "36.6",
+    "tarsus": "21.1",
+    "bill": "32.8",
+    "mass": "37.1"
+  },
+  "0142": {
+    "source": "AVONET",
+    "wing": "128.8",
+    "tail": "53.4",
+    "tarsus": "28.7",
+    "bill": "27.4",
+    "mass": "66.1"
+  },
+  "0143": {
+    "source": "AVONET",
+    "wing": "129",
+    "tail": "48.6",
+    "tarsus": "29.1",
+    "bill": "38.5",
+    "mass": "58.1"
+  },
+  "0144": {
+    "source": "AVONET",
+    "wing": "96.7",
+    "tail": "46.2",
+    "tarsus": "17.8",
+    "bill": "19",
+    "mass": "23"
+  },
+  "0145": {
+    "source": "AVONET",
+    "wing": "88.2",
+    "tail": "35.8",
+    "tarsus": "21.5",
+    "bill": "20.1",
+    "mass": "30.2"
+  },
+  "0146": {
+    "source": "AVONET",
+    "wing": "99.4",
+    "tail": "37.2",
+    "tarsus": "22.5",
+    "bill": "22.9",
+    "mass": "31.7"
+  },
+  "0147": {
+    "source": "AVONET",
+    "wing": "99.5",
+    "tail": "43.5",
+    "tarsus": "18.8",
+    "bill": "19",
+    "mass": "26.8"
+  },
+  "0148": {
+    "source": "AVONET",
+    "wing": "119.6",
+    "tail": "50.2",
+    "tarsus": "23.1",
+    "bill": "30",
+    "mass": "51.7"
+  },
+  "0149": {
+    "source": "AVONET",
+    "wing": "115.1",
+    "tail": "48.6",
+    "tarsus": "24.7",
+    "bill": "36.9",
+    "mass": "51.9"
+  },
+  "0150": {
+    "source": "AVONET",
+    "wing": "93.2",
+    "tail": "35.6",
+    "tarsus": "21.5",
+    "bill": "20.4",
+    "mass": "21.1"
+  },
+  "0151": {
+    "source": "AVONET",
+    "wing": "128.4",
+    "tail": "55.3",
+    "tarsus": "29.2",
+    "bill": "22.6",
+    "mass": "62.1"
+  },
+  "0152": {
+    "source": "AVONET",
+    "wing": "125.2",
+    "tail": "54.4",
+    "tarsus": "26",
+    "bill": "32.1",
+    "mass": "79.7"
+  },
+  "0153": {
+    "source": "AVONET",
+    "wing": "174.2",
+    "tail": "61.2",
+    "tarsus": "49.4",
+    "bill": "86.5",
+    "mass": "212"
+  },
+  "0154": {
+    "source": "AVONET",
+    "wing": "145.5",
+    "tail": "56.5",
+    "tarsus": "38.6",
+    "bill": "70.7",
+    "mass": "104.4"
+  },
+  "0155": {
+    "source": "AVONET",
+    "wing": "192.4",
+    "tail": "84.8",
+    "tarsus": "34.2",
+    "bill": "76.7",
+    "mass": "308.3"
+  },
+  "0156": {
+    "source": "AVONET",
+    "wing": "93.6",
+    "tail": "71.4",
+    "tarsus": "17.6",
+    "bill": "24.7",
+    "mass": "32.3"
+  },
+  "0157": {
+    "source": "AVONET",
+    "wing": "127.9",
+    "tail": "54",
+    "tarsus": "30",
+    "bill": "69.7",
+    "mass": "112.9"
+  },
+  "0158": {
+    "source": "AVONET",
+    "wing": "126.8",
+    "tail": "44",
+    "tarsus": "30.5",
+    "bill": "65.7",
+    "mass": "113"
+  },
+  "0159": {
+    "source": "AVONET",
+    "wing": "134.6",
+    "tail": "56.4",
+    "tarsus": "32.2",
+    "bill": "68.4",
+    "mass": "121"
+  },
+  "0160": {
+    "source": "AVONET",
+    "wing": "127.4",
+    "tail": "55",
+    "tarsus": "28.2",
+    "bill": "46.8",
+    "mass": "78.8"
+  },
+  "0161": {
+    "source": "AVONET",
+    "wing": "109",
+    "tail": "50.6",
+    "tarsus": "18.8",
+    "bill": "24.4",
+    "mass": "36.7"
+  },
+  "0162": {
+    "source": "AVONET",
+    "wing": "126.3",
+    "tail": "51.8",
+    "tarsus": "26.9",
+    "bill": "31.4",
+    "mass": "55.6"
+  },
+  "0163": {
+    "source": "AVONET",
+    "wing": "109.9",
+    "tail": "57.4",
+    "tarsus": "22.4",
+    "bill": "30.1",
+    "mass": "48"
+  },
+  "0164": {
+    "source": "AVONET",
+    "wing": "137.8",
+    "tail": "59.5",
+    "tarsus": "32.9",
+    "bill": "37.4",
+    "mass": "71.4"
+  },
+  "0165": {
+    "source": "AVONET",
+    "wing": "157.8",
+    "tail": "68.2",
+    "tarsus": "32.9",
+    "bill": "41.8",
+    "mass": "127"
+  },
+  "0166": {
+    "source": "AVONET",
+    "wing": "163.4",
+    "tail": "63.4",
+    "tarsus": "57.2",
+    "bill": "63",
+    "mass": "158"
+  },
+  "0167": {
+    "source": "AVONET",
+    "wing": "185.4",
+    "tail": "74.8",
+    "tarsus": "58",
+    "bill": "63.6",
+    "mass": "187"
+  },
+  "0168": {
+    "source": "AVONET",
+    "wing": "171.2",
+    "tail": "61",
+    "tarsus": "42.9",
+    "bill": "57.4",
+    "mass": "158"
+  },
+  "0169": {
+    "source": "AVONET",
+    "wing": "152.6",
+    "tail": "65.6",
+    "tarsus": "49.6",
+    "bill": "41.4",
+    "mass": "77.5"
+  },
+  "0170": {
+    "source": "AVONET",
+    "wing": "133.4",
+    "tail": "56.2",
+    "tarsus": "49.9",
+    "bill": "42.5",
+    "mass": "77.5"
+  },
+  "0171": {
+    "source": "AVONET",
+    "wing": "124",
+    "tail": "49.2",
+    "tarsus": "35.1",
+    "bill": "32.5",
+    "mass": "62.1"
+  },
+  "0172": {
+    "source": "AVONET",
+    "wing": "156.9",
+    "tail": "64.1",
+    "tarsus": "47.3",
+    "bill": "45.1",
+    "mass": "129"
+  },
+  "0173": {
+    "source": "AVONET",
+    "wing": "83.8",
+    "tail": "42",
+    "tarsus": "21.9",
+    "bill": "14",
+    "mass": "52.7"
+  },
+  "0174": {
+    "source": "AVONET",
+    "wing": "77.6",
+    "tail": "24.8",
+    "tarsus": "22",
+    "bill": "12.7",
+    "mass": "52.8"
+  },
+  "0175": {
+    "source": "AVONET",
+    "wing": "82.8",
+    "tail": "25.1",
+    "tarsus": "24.6",
+    "bill": "15.8",
+    "mass": "49.1"
+  },
+  "0176": {
+    "source": "AVONET",
+    "wing": "176.2",
+    "tail": "78.4",
+    "tarsus": "32.1",
+    "bill": "18.5",
+    "mass": "75.2"
+  },
+  "0177": {
+    "source": "AVONET",
+    "wing": "146.6",
+    "tail": "51.4",
+    "tarsus": "21",
+    "bill": "13.1",
+    "mass": "39.8"
+  },
+  "0178": {
+    "source": "AVONET",
+    "wing": "350.8",
+    "tail": "175.6",
+    "tarsus": "52",
+    "bill": "45.8",
+    "mass": "692.5"
+  },
+  "0179": {
+    "source": "AVONET",
+    "wing": "310.5",
+    "tail": "172",
+    "tarsus": "41.5",
+    "bill": "36.1",
+    "mass": "444.3"
+  },
+  "0180": {
+    "source": "AVONET",
+    "wing": "301.7",
+    "tail": "245.5",
+    "tarsus": "40.7",
+    "bill": "32.9",
+    "mass": "287.9"
+  },
+  "0181": {
+    "source": "AVONET",
+    "wing": "135.5",
+    "tail": "35.5",
+    "tarsus": "25.9",
+    "bill": "23.6",
+    "mass": "217.7"
+  },
+  "0182": {
+    "source": "AVONET",
+    "wing": "120.2",
+    "tail": "50",
+    "tarsus": "24",
+    "bill": "23.4",
+    "mass": "198"
+  },
+  "0183": {
+    "source": "AVONET",
+    "wing": "301",
+    "tail": "116",
+    "tarsus": "33.9",
+    "bill": "44.5",
+    "mass": "416"
+  },
+  "0184": {
+    "source": "AVONET",
+    "wing": "274.2",
+    "tail": "95.6",
+    "tarsus": "38.9",
+    "bill": "33.3",
+    "mass": "198"
+  },
+  "0188": {
+    "source": "AVONET",
+    "wing": "218.9",
+    "tail": "88.8",
+    "tarsus": "25.9",
+    "bill": "26.6",
+    "mass": "118"
+  },
+  "0192": {
+    "source": "AVONET",
+    "wing": "364.2",
+    "tail": "135.4",
+    "tarsus": "53.4",
+    "bill": "58.7",
+    "mass": "561"
+  },
+  "0193": {
+    "source": "AVONET",
+    "wing": "351",
+    "tail": "133.8",
+    "tarsus": "49.4",
+    "bill": "47.8",
+    "mass": "412.5"
+  },
+  "0195": {
+    "source": "AVONET",
+    "wing": "366",
+    "tail": "133.2",
+    "tarsus": "51.2",
+    "bill": "48.1",
+    "mass": "516.3"
+  },
+  "0197": {
+    "source": "AVONET",
+    "wing": "427.2",
+    "tail": "161.8",
+    "tarsus": "66.9",
+    "bill": "65.2",
+    "mass": "1111.9"
+  },
+  "0198": {
+    "source": "AVONET",
+    "wing": "395.8",
+    "tail": "157.1",
+    "tarsus": "58.3",
+    "bill": "59",
+    "mass": "693.3"
+  },
+  "0199": {
+    "source": "AVONET",
+    "wing": "412.2",
+    "tail": "147",
+    "tarsus": "61.5",
+    "bill": "62.3",
+    "mass": "762.4"
+  },
+  "0200": {
+    "source": "AVONET",
+    "wing": "435",
+    "tail": "171.5",
+    "tarsus": "68.2",
+    "bill": "68.1",
+    "mass": "1323"
+  },
+  "0201": {
+    "source": "AVONET",
+    "wing": "411.8",
+    "tail": "166",
+    "tarsus": "65.2",
+    "bill": "69.8",
+    "mass": "1056.5"
+  },
+  "0202": {
+    "source": "AVONET",
+    "wing": "463",
+    "tail": "188.2",
+    "tarsus": "71.2",
+    "bill": "76.5",
+    "mass": "1529"
+  },
+  "0203": {
+    "source": "AVONET",
+    "wing": "265.4",
+    "tail": "145.2",
+    "tarsus": "25.8",
+    "bill": "45.6",
+    "mass": "177.8"
+  },
+  "0204": {
+    "source": "AVONET",
+    "wing": "280.7",
+    "tail": "152.1",
+    "tarsus": "21",
+    "bill": "47.9",
+    "mass": "185.7"
+  },
+  "0205": {
+    "source": "AVONET",
+    "wing": "273.6",
+    "tail": "182.8",
+    "tarsus": "20.6",
+    "bill": "45.5",
+    "mass": "119.4"
+  },
+  "0206": {
+    "source": "AVONET",
+    "wing": "262.2",
+    "tail": "152.4",
+    "tarsus": "17.3",
+    "bill": "37.3",
+    "mass": "120"
+  },
+  "0207": {
+    "source": "AVONET",
+    "wing": "307.7",
+    "tail": "121.5",
+    "tarsus": "31.9",
+    "bill": "43.9",
+    "mass": "218.3"
+  },
+  "0208": {
+    "source": "AVONET",
+    "wing": "410.7",
+    "tail": "148.7",
+    "tarsus": "42.6",
+    "bill": "78.7",
+    "mass": "655"
+  },
+  "0209": {
+    "source": "AVONET",
+    "wing": "208.2",
+    "tail": "75.4",
+    "tarsus": "18.7",
+    "bill": "30",
+    "mass": "54.2"
+  },
+  "0210": {
+    "source": "AVONET",
+    "wing": "231.8",
+    "tail": "85.8",
+    "tarsus": "23",
+    "bill": "35",
+    "mass": "83.7"
+  },
+  "0211": {
+    "source": "AVONET",
+    "wing": "223.8",
+    "tail": "165.8",
+    "tarsus": "19.7",
+    "bill": "45.3",
+    "mass": "112"
+  },
+  "0212": {
+    "source": "AVONET",
+    "wing": "215.5",
+    "tail": "120.5",
+    "tarsus": "18.5",
+    "bill": "39.1",
+    "mass": "106"
+  },
+  "0213": {
+    "source": "AVONET",
+    "wing": "253.3",
+    "tail": "129.8",
+    "tarsus": "19.5",
+    "bill": "44.5",
+    "mass": "129.2"
+  },
+  "0214": {
+    "source": "AVONET",
+    "wing": "357.8",
+    "tail": "172.4",
+    "tarsus": "30",
+    "bill": "68.6",
+    "mass": "328"
+  },
+  "0215": {
+    "source": "AVONET",
+    "wing": "269.4",
+    "tail": "108.2",
+    "tarsus": "20.6",
+    "bill": "54.7",
+    "mass": "328"
+  },
+  "0216": {
+    "source": "AVONET",
+    "wing": "275.4",
+    "tail": "45.6",
+    "tarsus": "66.1",
+    "bill": "63.1",
+    "mass": "1486"
+  },
+  "0217": {
+    "source": "AVONET",
+    "wing": "291.2",
+    "tail": "48.4",
+    "tarsus": "72.8",
+    "bill": "71.9",
+    "mass": "2251.1"
+  },
+  "0218": {
+    "source": "AVONET",
+    "wing": "371.4",
+    "tail": "60.8",
+    "tarsus": "84.6",
+    "bill": "104.8",
+    "mass": "4944.3"
+  },
+  "0219": {
+    "source": "AVONET",
+    "wing": "203.2",
+    "tail": "110.8",
+    "tarsus": "26.9",
+    "bill": "21.6",
+    "mass": "99"
+  },
+  "0220": {
+    "source": "AVONET",
+    "wing": "319.2",
+    "tail": "131.8",
+    "tarsus": "48.2",
+    "bill": "48.9",
+    "mass": "580"
+  },
+  "0221": {
+    "source": "AVONET",
+    "wing": "310.2",
+    "tail": "110.2",
+    "tarsus": "52.1",
+    "bill": "47.8",
+    "mass": "609"
+  },
+  "0222": {
+    "source": "AVONET",
+    "wing": "296.8",
+    "tail": "130.4",
+    "tarsus": "46.9",
+    "bill": "40.9",
+    "mass": "388"
+  },
+  "0223": {
+    "source": "AVONET",
+    "wing": "262.2",
+    "tail": "82.8",
+    "tarsus": "49.3",
+    "bill": "37.2",
+    "mass": "559"
+  },
+  "0224": {
+    "source": "AVONET",
+    "wing": "529.5",
+    "tail": "235.6",
+    "tarsus": "192.6",
+    "bill": "184.5",
+    "mass": "2926"
+  },
+  "0225": {
+    "source": "AVONET",
+    "wing": "602.4",
+    "tail": "228",
+    "tarsus": "254.5",
+    "bill": "225.2",
+    "mass": "4847.7"
+  },
+  "0226": {
+    "source": "AVONET",
+    "wing": "513",
+    "tail": "277",
+    "tarsus": "14.9",
+    "bill": "91.4",
+    "mass": "804.3"
+  },
+  "0227": {
+    "source": "AVONET",
+    "wing": "618.8",
+    "tail": "401.8",
+    "tarsus": "29.1",
+    "bill": "124.8",
+    "mass": "1473.1"
+  },
+  "0228": {
+    "source": "AVONET",
+    "wing": "567.8",
+    "tail": "396.5",
+    "tarsus": "19.6",
+    "bill": "116.8",
+    "mass": "1274.7"
+  },
+  "0229": {
+    "source": "AVONET",
+    "wing": "412.2",
+    "tail": "171.2",
+    "tarsus": "54",
+    "bill": "96",
+    "mass": "1732.1"
+  },
+  "0230": {
+    "source": "AVONET",
+    "wing": "388.6",
+    "tail": "204.4",
+    "tarsus": "35.7",
+    "bill": "100.9",
+    "mass": "1288.8"
+  },
+  "0231": {
+    "source": "AVONET",
+    "wing": "366.8",
+    "tail": "193.8",
+    "tarsus": "35.2",
+    "bill": "79.3",
+    "mass": "1031.1"
+  },
+  "0232": {
+    "source": "AVONET",
+    "wing": "340.2",
+    "tail": "148.2",
+    "tarsus": "64.2",
+    "bill": "82.7",
+    "mass": "2529"
+  },
+  "0233": {
+    "source": "AVONET",
+    "wing": "314.5",
+    "tail": "142",
+    "tarsus": "63.8",
+    "bill": "77.2",
+    "mass": "2801.8"
+  },
+  "0234": {
+    "source": "AVONET",
+    "wing": "687",
+    "tail": "197.9",
+    "tarsus": "115.2",
+    "bill": "414",
+    "mass": "9512.1"
+  },
+  "0240": {
+    "source": "AVONET",
+    "wing": "441",
+    "tail": "169.1",
+    "tarsus": "137.9",
+    "bill": "138.9",
+    "mass": "1443"
+  },
+  "0241": {
+    "source": "AVONET",
+    "wing": "349.7",
+    "tail": "113.2",
+    "tarsus": "117.5",
+    "bill": "125.9",
+    "mass": "1064.5"
+  },
+  "0242": {
+    "source": "AVONET",
+    "wing": "378.8",
+    "tail": "140.5",
+    "tarsus": "141.6",
+    "bill": "126.3",
+    "mass": "871.3"
+  },
+  "0243": {
+    "source": "AVONET",
+    "wing": "298.8",
+    "tail": "117.2",
+    "tarsus": "105.3",
+    "bill": "81.5",
+    "mass": "458.8"
+  },
+  "0244": {
+    "source": "AVONET",
+    "wing": "250.6",
+    "tail": "86.4",
+    "tarsus": "81.6",
+    "bill": "80.4",
+    "mass": "461.8"
+  },
+  "0245": {
+    "source": "AVONET",
+    "wing": "252.5",
+    "tail": "94.2",
+    "tarsus": "98.8",
+    "bill": "94.6",
+    "mass": "312"
+  },
+  "0246": {
+    "source": "AVONET",
+    "wing": "262.6",
+    "tail": "86.4",
+    "tarsus": "67.5",
+    "bill": "82.5",
+    "mass": "502"
+  },
+  "0248": {
+    "source": "AVONET",
+    "wing": "213",
+    "tail": "73.4",
+    "tarsus": "56.2",
+    "bill": "72.9",
+    "mass": "304.9"
+  },
+  "0249": {
+    "source": "AVONET",
+    "wing": "285.7",
+    "tail": "95.8",
+    "tarsus": "69.2",
+    "bill": "80.5",
+    "mass": "810"
+  },
+  "0250": {
+    "source": "AVONET",
+    "wing": "256.8",
+    "tail": "93.2",
+    "tarsus": "68",
+    "bill": "49.4",
+    "mass": "527"
+  },
+  "0251": {
+    "source": "AVONET",
+    "wing": "255.2",
+    "tail": "95.6",
+    "tarsus": "62.3",
+    "bill": "60.3",
+    "mass": "412.3"
+  },
+  "0252": {
+    "source": "AVONET",
+    "wing": "349.9",
+    "tail": "148.2",
+    "tarsus": "103.6",
+    "bill": "158.1",
+    "mass": "1303"
+  },
+  "0253": {
+    "source": "AVONET",
+    "wing": "361.6",
+    "tail": "118.4",
+    "tarsus": "129",
+    "bill": "190.3",
+    "mass": "1868"
+  },
+  "0254": {
+    "source": "AVONET",
+    "wing": "356.8",
+    "tail": "99.8",
+    "tarsus": "125.5",
+    "bill": "179.5",
+    "mass": "1228"
+  },
+  "0255": {
+    "source": "AVONET",
+    "wing": "468.4",
+    "tail": "201.3",
+    "tarsus": "49.8",
+    "bill": "47",
+    "mass": "1483.2"
+  },
+  "0256": {
+    "source": "AVONET",
+    "wing": "286.3",
+    "tail": "127.7",
+    "tarsus": "32.1",
+    "bill": "30.9",
+    "mass": "259.8"
+  },
+  "0257": {
+    "source": "AVONET",
+    "wing": "413.6",
+    "tail": "263.8",
+    "tarsus": "49",
+    "bill": "55.9",
+    "mass": "1141.1"
+  },
+  "0258": {
+    "source": "AVONET",
+    "wing": "230.6",
+    "tail": "124",
+    "tarsus": "25",
+    "bill": "24.6",
+    "mass": "194"
+  },
+  "0259": {
+    "source": "AVONET",
+    "wing": "734.2",
+    "tail": "371",
+    "tarsus": "134.2",
+    "bill": "87.8",
+    "mass": "9320.6"
+  },
+  "0260": {
+    "source": "AVONET",
+    "wing": "373.7",
+    "tail": "237.4",
+    "tarsus": "82.2",
+    "bill": "45.6",
+    "mass": "597.7"
+  },
+  "0261": {
+    "source": "AVONET",
+    "wing": "510.6",
+    "tail": "261.4",
+    "tarsus": "96.8",
+    "bill": "50.2",
+    "mass": "2154.3"
+  },
+  "0262": {
+    "source": "AVONET",
+    "wing": "582.2",
+    "tail": "316.2",
+    "tarsus": "93.7",
+    "bill": "59",
+    "mass": "3125.2"
+  },
+  "0263": {
+    "source": "AVONET",
+    "wing": "486.8",
+    "tail": "260",
+    "tarsus": "93.2",
+    "bill": "45.7",
+    "mass": "1936.5"
+  },
+  "0264": {
+    "source": "AVONET",
+    "wing": "407.2",
+    "tail": "241.2",
+    "tarsus": "86.3",
+    "bill": "38.3",
+    "mass": "558.8"
+  },
+  "0265": {
+    "source": "AVONET",
+    "wing": "352.4",
+    "tail": "131.7",
+    "tarsus": "72.1",
+    "bill": "30.1",
+    "mass": "393"
+  },
+  "0266": {
+    "source": "AVONET",
+    "wing": "352.6",
+    "tail": "214",
+    "tarsus": "72.5",
+    "bill": "29.9",
+    "mass": "336.3"
+  },
+  "0271": {
+    "source": "AVONET",
+    "wing": "207.4",
+    "tail": "155.5",
+    "tarsus": "53.6",
+    "bill": "19.6",
+    "mass": "220.8"
+  },
+  "0273": {
+    "source": "AVONET",
+    "wing": "399.8",
+    "tail": "203.8",
+    "tarsus": "48.2",
+    "bill": "48.8",
+    "mass": "529"
+  },
+  "0275": {
+    "source": "AVONET",
+    "wing": "383.2",
+    "tail": "214.4",
+    "tarsus": "75.8",
+    "bill": "35.9",
+    "mass": "759.1"
+  },
+  "0276": {
+    "source": "AVONET",
+    "wing": "312.5",
+    "tail": "116.2",
+    "tarsus": "84.1",
+    "bill": "36.1",
+    "mass": "423.5"
+  },
+  "0277": {
+    "source": "AVONET",
+    "wing": "155.8",
+    "tail": "81.2",
+    "tarsus": "33.8",
+    "bill": "21.2",
+    "mass": "139"
+  },
+  "0278": {
+    "source": "AVONET",
+    "wing": "144.7",
+    "tail": "69.1",
+    "tarsus": "27.4",
+    "bill": "25.3",
+    "mass": "115"
+  },
+  "0279": {
+    "source": "AVONET",
+    "wing": "142.5",
+    "tail": "62",
+    "tarsus": "23.9",
+    "bill": "18.4",
+    "mass": "78.1"
+  },
+  "0280": {
+    "source": "AVONET",
+    "wing": "140.4",
+    "tail": "76.8",
+    "tarsus": "28.4",
+    "bill": "17.9",
+    "mass": "67.5"
+  },
+  "0281": {
+    "source": "AVONET",
+    "wing": "438.5",
+    "tail": "244.5",
+    "tarsus": "79.9",
+    "bill": "50.4",
+    "mass": "2668.5"
+  },
+  "0282": {
+    "source": "AVONET",
+    "wing": "381.1",
+    "tail": "187.5",
+    "tarsus": "71.2",
+    "bill": "49.7",
+    "mass": "1105"
+  },
+  "0283": {
+    "source": "AVONET",
+    "wing": "147.8",
+    "tail": "81",
+    "tarsus": "23.4",
+    "bill": "20.7",
+    "mass": "198.2"
+  },
+  "0285": {
+    "source": "AVONET",
+    "wing": "313",
+    "tail": "157",
+    "tarsus": "40.2",
+    "bill": "42.3",
+    "mass": "970"
+  },
+  "0286": {
+    "source": "AVONET",
+    "wing": "297.2",
+    "tail": "146.5",
+    "tarsus": "42.5",
+    "bill": "27.3",
+    "mass": "322.6"
+  },
+  "0287": {
+    "source": "AVONET",
+    "wing": "181.5",
+    "tail": "99.2",
+    "tarsus": "22",
+    "bill": "28.2",
+    "mass": "191"
+  },
+  "0288": {
+    "source": "AVONET",
+    "wing": "142.3",
+    "tail": "96.9",
+    "tarsus": "21.1",
+    "bill": "55.8",
+    "mass": "66.9"
+  },
+  "0289": {
+    "source": "AVONET",
+    "wing": "73.3",
+    "tail": "32.3",
+    "tarsus": "9.9",
+    "bill": "42.2",
+    "mass": "31.1"
+  },
+  "0290": {
+    "source": "AVONET",
+    "wing": "58.2",
+    "tail": "22.6",
+    "tarsus": "8.2",
+    "bill": "36.4",
+    "mass": "17.8"
+  },
+  "0291": {
+    "source": "AVONET",
+    "wing": "113.7",
+    "tail": "66.3",
+    "tarsus": "17.1",
+    "bill": "60.4",
+    "mass": "77.5"
+  },
+  "0292": {
+    "source": "AVONET",
+    "wing": "113.2",
+    "tail": "78.3",
+    "tarsus": "15",
+    "bill": "59.8",
+    "mass": "91.4"
+  },
+  "0293": {
+    "source": "AVONET",
+    "wing": "124",
+    "tail": "80.3",
+    "tarsus": "14.2",
+    "bill": "65.9",
+    "mass": "84"
+  },
+  "0294": {
+    "source": "AVONET",
+    "wing": "107.3",
+    "tail": "67.3",
+    "tarsus": "15.7",
+    "bill": "50.5",
+    "mass": "66.1"
+  },
+  "0295": {
+    "source": "AVONET",
+    "wing": "136.2",
+    "tail": "75.7",
+    "tarsus": "11",
+    "bill": "64.2",
+    "mass": "84.4"
+  },
+  "0296": {
+    "source": "AVONET",
+    "wing": "111.6",
+    "tail": "75.8",
+    "tarsus": "9.7",
+    "bill": "35.1",
+    "mass": "34.8"
+  },
+  "0297": {
+    "source": "AVONET",
+    "wing": "129.5",
+    "tail": "106",
+    "tarsus": "13",
+    "bill": "42.1",
+    "mass": "34"
+  },
+  "0298": {
+    "source": "AVONET",
+    "wing": "190.8",
+    "tail": "122.6",
+    "tarsus": "23.7",
+    "bill": "40.2",
+    "mass": "146"
+  },
+  "0299": {
+    "source": "AVONET",
+    "wing": "186.2",
+    "tail": "98",
+    "tarsus": "16.8",
+    "bill": "32",
+    "mass": "143"
+  },
+  "0300": {
+    "source": "AVONET",
+    "wing": "138.4",
+    "tail": "100.5",
+    "tarsus": "33.4",
+    "bill": "44",
+    "mass": "202"
+  },
+  "0301": {
+    "source": "AVONET",
+    "wing": "103.2",
+    "tail": "63.5",
+    "tarsus": "25",
+    "bill": "24.3",
+    "mass": "87.7"
+  },
+  "0302": {
+    "source": "AVONET",
+    "wing": "87.4",
+    "tail": "68.2",
+    "tarsus": "19.6",
+    "bill": "17.3",
+    "mass": "35"
+  },
+  "0303": {
+    "source": "AVONET",
+    "wing": "53.4",
+    "tail": "29.4",
+    "tarsus": "12",
+    "bill": "12.1",
+    "mass": "10.2"
+  },
+  "0304": {
+    "source": "AVONET",
+    "wing": "115.8",
+    "tail": "69.8",
+    "tarsus": "19.3",
+    "bill": "25.2",
+    "mass": "46.5"
+  },
+  "0305": {
+    "source": "AVONET",
+    "wing": "147.5",
+    "tail": "90.2",
+    "tarsus": "26",
+    "bill": "45.7",
+    "mass": "132"
+  },
+  "0306": {
+    "source": "AVONET",
+    "wing": "118.2",
+    "tail": "66",
+    "tarsus": "20",
+    "bill": "28",
+    "mass": "85.9"
+  },
+  "0307": {
+    "source": "AVONET",
+    "wing": "143.1",
+    "tail": "103.2",
+    "tarsus": "26.4",
+    "bill": "39.3",
+    "mass": "137"
+  },
+  "0308": {
+    "source": "AVONET",
+    "wing": "241.8",
+    "tail": "158.1",
+    "tarsus": "38.4",
+    "bill": "20.8",
+    "mass": "183.2"
+  },
+  "0309": {
+    "source": "AVONET",
+    "wing": "234.2",
+    "tail": "121.5",
+    "tarsus": "28.5",
+    "bill": "17.2",
+    "mass": "141.9"
+  },
+  "0310": {
+    "source": "AVONET",
+    "wing": "260.7",
+    "tail": "129.2",
+    "tarsus": "31.7",
+    "bill": "17.9",
+    "mass": "208.2"
+  },
+  "0311": {
+    "source": "AVONET",
+    "wing": "314.7",
+    "tail": "143",
+    "tarsus": "45.1",
+    "bill": "31.1",
+    "mass": "760"
+  },
+  "0314": {
+    "source": "AVONET",
+    "wing": "122.1",
+    "tail": "40.6",
+    "tarsus": "41.2",
+    "bill": "27.9",
+    "mass": "76"
+  },
+  "0315": {
+    "source": "AVONET",
+    "wing": "121.4",
+    "tail": "39.1",
+    "tarsus": "40.8",
+    "bill": "25.3",
+    "mass": "88.3"
+  },
+  "0316": {
+    "source": "AVONET",
+    "wing": "84.6",
+    "tail": "91.6",
+    "tarsus": "15.8",
+    "bill": "15",
+    "mass": "14.5"
+  },
+  "0318": {
+    "source": "AVONET",
+    "wing": "86",
+    "tail": "95.6",
+    "tarsus": "16.5",
+    "bill": "16.9",
+    "mass": "21"
+  },
+  "0319": {
+    "source": "AVONET",
+    "wing": "95.7",
+    "tail": "90.5",
+    "tarsus": "15.8",
+    "bill": "17.5",
+    "mass": "24.6"
+  },
+  "0320": {
+    "source": "AVONET",
+    "wing": "88.4",
+    "tail": "90.5",
+    "tarsus": "15.2",
+    "bill": "16.2",
+    "mass": "16.3"
+  },
+  "0321": {
+    "source": "AVONET",
+    "wing": "87.9",
+    "tail": "90.4",
+    "tarsus": "15.4",
+    "bill": "16.5",
+    "mass": "19.2"
+  },
+  "0322": {
+    "source": "AVONET",
+    "wing": "117.9",
+    "tail": "95.7",
+    "tarsus": "22.5",
+    "bill": "21.4",
+    "mass": "43"
+  },
+  "0323": {
+    "source": "AVONET",
+    "wing": "66.4",
+    "tail": "44",
+    "tarsus": "16.7",
+    "bill": "15.4",
+    "mass": "11.8"
+  },
+  "0324": {
+    "source": "AVONET",
+    "wing": "150.9",
+    "tail": "98.8",
+    "tarsus": "26.8",
+    "bill": "35.8",
+    "mass": "82.6"
+  },
+  "0325": {
+    "source": "AVONET",
+    "wing": "142.9",
+    "tail": "102",
+    "tarsus": "25.5",
+    "bill": "32",
+    "mass": "73.7"
+  },
+  "0326": {
+    "source": "AVONET",
+    "wing": "144.8",
+    "tail": "106",
+    "tarsus": "25.1",
+    "bill": "29",
+    "mass": "93"
+  },
+  "0327": {
+    "source": "AVONET",
+    "wing": "141",
+    "tail": "145.6",
+    "tarsus": "22.2",
+    "bill": "25.4",
+    "mass": "48.3"
+  },
+  "0328": {
+    "source": "AVONET",
+    "wing": "134.8",
+    "tail": "134.7",
+    "tarsus": "18.6",
+    "bill": "25.4",
+    "mass": "37.6"
+  },
+  "0329": {
+    "source": "AVONET",
+    "wing": "143.2",
+    "tail": "110.6",
+    "tarsus": "21.6",
+    "bill": "30.2",
+    "mass": "44"
+  },
+  "0330": {
+    "source": "AVONET",
+    "wing": "152.8",
+    "tail": "138.4",
+    "tarsus": "25",
+    "bill": "36.7",
+    "mass": "79.2"
+  },
+  "0331": {
+    "source": "AVONET",
+    "wing": "69.8",
+    "tail": "75.2",
+    "tarsus": "15.8",
+    "bill": "11.8",
+    "mass": "11.1"
+  },
+  "0333": {
+    "source": "AVONET",
+    "wing": "91.3",
+    "tail": "110.2",
+    "tarsus": "16.9",
+    "bill": "21.4",
+    "mass": "19.2"
+  },
+  "0334": {
+    "source": "AVONET",
+    "wing": "82.4",
+    "tail": "66.6",
+    "tarsus": "23.2",
+    "bill": "19.5",
+    "mass": "30.1"
+  },
+  "0335": {
+    "source": "AVONET",
+    "wing": "84.1",
+    "tail": "87.3",
+    "tarsus": "25.5",
+    "bill": "20",
+    "mass": "39.4"
+  },
+  "0336": {
+    "source": "AVONET",
+    "wing": "93.7",
+    "tail": "75.9",
+    "tarsus": "23.8",
+    "bill": "18.7",
+    "mass": "28.4"
+  },
+  "0337": {
+    "source": "AVONET",
+    "wing": "85",
+    "tail": "79.9",
+    "tarsus": "23.8",
+    "bill": "19.3",
+    "mass": "32.2"
+  },
+  "0338": {
+    "source": "AVONET",
+    "wing": "92.4",
+    "tail": "123.3",
+    "tarsus": "29.2",
+    "bill": "21.8",
+    "mass": "51.5"
+  },
+  "0339": {
+    "source": "AVONET",
+    "wing": "98.6",
+    "tail": "109",
+    "tarsus": "28.5",
+    "bill": "21.6",
+    "mass": "46.4"
+  },
+  "0340": {
+    "source": "AVONET",
+    "wing": "120",
+    "tail": "142.2",
+    "tarsus": "29.2",
+    "bill": "22.8",
+    "mass": "92.1"
+  },
+  "0341": {
+    "source": "AVONET",
+    "wing": "181.4",
+    "tail": "147.1",
+    "tarsus": "40.6",
+    "bill": "33.7",
+    "mass": "159.5"
+  },
+  "0342": {
+    "source": "AVONET",
+    "wing": "141.3",
+    "tail": "212",
+    "tarsus": "35.6",
+    "bill": "29.1",
+    "mass": "95.9"
+  },
+  "0343": {
+    "source": "AVONET",
+    "wing": "144.4",
+    "tail": "144.9",
+    "tarsus": "44.3",
+    "bill": "38.9",
+    "mass": "125"
+  },
+  "0346": {
+    "source": "AVONET",
+    "wing": "258.2",
+    "tail": "151.9",
+    "tarsus": "45.9",
+    "bill": "49.7",
+    "mass": "292.6"
+  },
+  "0347": {
+    "source": "AVONET",
+    "wing": "312.3",
+    "tail": "166.8",
+    "tarsus": "55.7",
+    "bill": "59.5",
+    "mass": "452.1"
+  },
+  "0348": {
+    "source": "AVONET",
+    "wing": "333.5",
+    "tail": "192.9",
+    "tarsus": "59.1",
+    "bill": "55.3",
+    "mass": "570"
+  },
+  "0349": {
+    "source": "AVONET",
+    "wing": "318.6",
+    "tail": "182.9",
+    "tarsus": "57",
+    "bill": "62",
+    "mass": "513.1"
+  },
+  "0351": {
+    "source": "AVONET",
+    "wing": "58.4",
+    "tail": "48.4",
+    "tarsus": "12.2",
+    "bill": "11.7",
+    "mass": "7.7"
+  },
+  "0352": {
+    "source": "AVONET",
+    "wing": "59.5",
+    "tail": "32.3",
+    "tarsus": "12.5",
+    "bill": "8.4",
+    "mass": "7"
+  },
+  "0354": {
+    "source": "AVONET",
+    "wing": "73.8",
+    "tail": "51.3",
+    "tarsus": "18.5",
+    "bill": "12.2",
+    "mass": "17"
+  },
+  "0355": {
+    "source": "AVONET",
+    "wing": "55.4",
+    "tail": "43.6",
+    "tarsus": "13.1",
+    "bill": "10.5",
+    "mass": "9.1"
+  },
+  "0356": {
+    "source": "AVONET",
+    "wing": "93.5",
+    "tail": "59.8",
+    "tarsus": "19.8",
+    "bill": "12.6",
+    "mass": "21.1"
+  },
+  "0357": {
+    "source": "AVONET",
+    "wing": "106.7",
+    "tail": "67.6",
+    "tarsus": "23.6",
+    "bill": "14.6",
+    "mass": "37.3"
+  },
+  "0358": {
+    "source": "AVONET",
+    "wing": "86.4",
+    "tail": "52.2",
+    "tarsus": "23.3",
+    "bill": "14.8",
+    "mass": "26.3"
+  },
+  "0359": {
+    "source": "AVONET",
+    "wing": "45.4",
+    "tail": "62.6",
+    "tarsus": "20.9",
+    "bill": "14",
+    "mass": "7"
+  },
+  "0360": {
+    "source": "AVONET",
+    "wing": "50.4",
+    "tail": "70.8",
+    "tarsus": "18.1",
+    "bill": "12.2",
+    "mass": "7"
+  },
+  "0361": {
+    "source": "AVONET",
+    "wing": "48.9",
+    "tail": "40.3",
+    "tarsus": "17.7",
+    "bill": "12.1",
+    "mass": "6.8"
+  },
+  "0362": {
+    "source": "AVONET",
+    "wing": "45.2",
+    "tail": "40.8",
+    "tarsus": "17.4",
+    "bill": "11.6",
+    "mass": "7"
+  },
+  "0363": {
+    "source": "AVONET",
+    "wing": "78.4",
+    "tail": "78.6",
+    "tarsus": "26",
+    "bill": "17.8",
+    "mass": "22.4"
+  },
+  "0364": {
+    "source": "AVONET",
+    "wing": "59.4",
+    "tail": "45.6",
+    "tarsus": "19.3",
+    "bill": "12",
+    "mass": "8.9"
+  },
+  "0365": {
+    "source": "AVONET",
+    "wing": "60.6",
+    "tail": "52",
+    "tarsus": "18.5",
+    "bill": "17.8",
+    "mass": "9.3"
+  },
+  "0366": {
+    "source": "AVONET",
+    "wing": "52.7",
+    "tail": "50.4",
+    "tarsus": "20.1",
+    "bill": "13.4",
+    "mass": "8.7"
+  },
+  "0367": {
+    "source": "AVONET",
+    "wing": "55.2",
+    "tail": "54.9",
+    "tarsus": "21.1",
+    "bill": "13.6",
+    "mass": "9.6"
+  },
+  "0368": {
+    "source": "AVONET",
+    "wing": "55.6",
+    "tail": "56",
+    "tarsus": "22",
+    "bill": "13.7",
+    "mass": "8.3"
+  },
+  "0369": {
+    "source": "AVONET",
+    "wing": "53.5",
+    "tail": "53.2",
+    "tarsus": "21.6",
+    "bill": "14.5",
+    "mass": "8"
+  },
+  "0370": {
+    "source": "AVONET",
+    "wing": "62.1",
+    "tail": "53.1",
+    "tarsus": "22.3",
+    "bill": "16.4",
+    "mass": "11.2"
+  },
+  "0371": {
+    "source": "AVONET",
+    "wing": "79",
+    "tail": "69.2",
+    "tarsus": "26.5",
+    "bill": "20.8",
+    "mass": "23.5"
+  },
+  "0377": {
+    "source": "AVONET",
+    "wing": "54.6",
+    "tail": "48.5",
+    "tarsus": "18.1",
+    "bill": "12.3",
+    "mass": "10.6"
+  },
+  "0378": {
+    "source": "AVONET",
+    "wing": "51.6",
+    "tail": "55",
+    "tarsus": "19",
+    "bill": "12.6",
+    "mass": "13.2"
+  },
+  "0379": {
+    "source": "AVONET",
+    "wing": "56.1",
+    "tail": "58.5",
+    "tarsus": "19.1",
+    "bill": "13.2",
+    "mass": "14"
+  },
+  "0380": {
+    "source": "AVONET",
+    "wing": "53.2",
+    "tail": "43.2",
+    "tarsus": "18.5",
+    "bill": "12.1",
+    "mass": "10"
+  },
+  "0381": {
+    "source": "AVONET",
+    "wing": "50",
+    "tail": "55",
+    "tarsus": "17.8",
+    "bill": "13",
+    "mass": "11.3"
+  },
+  "0382": {
+    "source": "AVONET",
+    "wing": "53.5",
+    "tail": "62.5",
+    "tarsus": "21.8",
+    "bill": "13.6",
+    "mass": "11.3"
+  },
+  "0383": {
+    "source": "AVONET",
+    "wing": "50",
+    "tail": "18.6",
+    "tarsus": "18.6",
+    "bill": "12.1",
+    "mass": "12"
+  },
+  "0384": {
+    "source": "AVONET",
+    "wing": "89.9",
+    "tail": "42",
+    "tarsus": "11.3",
+    "bill": "9",
+    "mass": "9.8"
+  },
+  "0385": {
+    "source": "AVONET",
+    "wing": "101.8",
+    "tail": "47.2",
+    "tarsus": "10.5",
+    "bill": "9.4",
+    "mass": "12.7"
+  },
+  "0387": {
+    "source": "AVONET",
+    "wing": "115.8",
+    "tail": "70.4",
+    "tarsus": "11.7",
+    "bill": "12.4",
+    "mass": "17.9"
+  },
+  "0389": {
+    "source": "AVONET",
+    "wing": "108.1",
+    "tail": "61.3",
+    "tarsus": "11.3",
+    "bill": "10.7",
+    "mass": "14.5"
+  },
+  "0390": {
+    "source": "AVONET",
+    "wing": "102.8",
+    "tail": "46.6",
+    "tarsus": "10.7",
+    "bill": "9.3",
+    "mass": "18"
+  },
+  "0391": {
+    "source": "AVONET",
+    "wing": "91.8",
+    "tail": "82.4",
+    "tarsus": "21.9",
+    "bill": "19.4",
+    "mass": "44.3"
+  },
+  "0392": {
+    "source": "AVONET",
+    "wing": "117.8",
+    "tail": "97.8",
+    "tarsus": "18",
+    "bill": "25.2",
+    "mass": "51.8"
+  },
+  "0393": {
+    "source": "AVONET",
+    "wing": "128.3",
+    "tail": "120.6",
+    "tarsus": "21.6",
+    "bill": "29.8",
+    "mass": "70.9"
+  },
+  "0394": {
+    "source": "AVONET",
+    "wing": "97.4",
+    "tail": "89.9",
+    "tarsus": "17.4",
+    "bill": "19.8",
+    "mass": "35.3"
+  },
+  "0395": {
+    "source": "AVONET",
+    "wing": "106",
+    "tail": "107.8",
+    "tarsus": "18.3",
+    "bill": "26",
+    "mass": "32.5"
+  },
+  "0396": {
+    "source": "AVONET",
+    "wing": "75.8",
+    "tail": "50.7",
+    "tarsus": "18",
+    "bill": "13.2",
+    "mass": "9.2"
+  },
+  "0397": {
+    "source": "AVONET",
+    "wing": "58.4",
+    "tail": "37.8",
+    "tarsus": "16.8",
+    "bill": "9.9",
+    "mass": "6.6"
+  },
+  "0398": {
+    "source": "AVONET",
+    "wing": "54.6",
+    "tail": "39.6",
+    "tarsus": "17.5",
+    "bill": "10",
+    "mass": "6"
+  },
+  "0399": {
+    "source": "AVONET",
+    "wing": "52.2",
+    "tail": "37",
+    "tarsus": "15.4",
+    "bill": "9.8",
+    "mass": "6"
+  },
+  "0400": {
+    "source": "AVONET",
+    "wing": "51.2",
+    "tail": "38.2",
+    "tarsus": "16.4",
+    "bill": "9.7",
+    "mass": "6"
+  },
+  "0401": {
+    "source": "AVONET",
+    "wing": "63.2",
+    "tail": "50.2",
+    "tarsus": "21.3",
+    "bill": "12.2",
+    "mass": "11.4"
+  },
+  "0402": {
+    "source": "AVONET",
+    "wing": "61.2",
+    "tail": "50.8",
+    "tarsus": "20.6",
+    "bill": "11.8",
+    "mass": "9.4"
+  },
+  "0403": {
+    "source": "AVONET",
+    "wing": "65.9",
+    "tail": "52.3",
+    "tarsus": "19.3",
+    "bill": "12.8",
+    "mass": "8.7"
+  },
+  "0404": {
+    "source": "AVONET",
+    "wing": "53.4",
+    "tail": "44.4",
+    "tarsus": "17.9",
+    "bill": "10.9",
+    "mass": "7.5"
+  },
+  "0405": {
+    "source": "AVONET",
+    "wing": "58.8",
+    "tail": "48.5",
+    "tarsus": "19.7",
+    "bill": "11.6",
+    "mass": "8.3"
+  },
+  "0406": {
+    "source": "AVONET",
+    "wing": "61.3",
+    "tail": "47.4",
+    "tarsus": "16.6",
+    "bill": "13",
+    "mass": "10.1"
+  },
+  "0407": {
+    "source": "AVONET",
+    "wing": "63",
+    "tail": "50.5",
+    "tarsus": "18.8",
+    "bill": "13.9",
+    "mass": "8.7"
+  },
+  "0408": {
+    "source": "AVONET",
+    "wing": "54.6",
+    "tail": "46.4",
+    "tarsus": "17.5",
+    "bill": "11.7",
+    "mass": "7.3"
+  },
+  "0409": {
+    "source": "AVONET",
+    "wing": "54.8",
+    "tail": "46.4",
+    "tarsus": "17.4",
+    "bill": "11.6",
+    "mass": "7.3"
+  },
+  "0410": {
+    "source": "AVONET",
+    "wing": "56.7",
+    "tail": "48.3",
+    "tarsus": "17.2",
+    "bill": "12.1",
+    "mass": "7.3"
+  },
+  "0411": {
+    "source": "AVONET",
+    "wing": "55.6",
+    "tail": "46.5",
+    "tarsus": "16.5",
+    "bill": "12.4",
+    "mass": "7.3"
+  },
+  "0412": {
+    "source": "AVONET",
+    "wing": "61.3",
+    "tail": "48.4",
+    "tarsus": "18.7",
+    "bill": "11.3",
+    "mass": "8.1"
+  },
+  "0413": {
+    "source": "AVONET",
+    "wing": "56.5",
+    "tail": "40.6",
+    "tarsus": "16.5",
+    "bill": "9.9",
+    "mass": "10.5"
+  },
+  "0414": {
+    "source": "AVONET",
+    "wing": "59.9",
+    "tail": "49.5",
+    "tarsus": "17.5",
+    "bill": "12.2",
+    "mass": "11.8"
+  },
+  "0415": {
+    "source": "AVONET",
+    "wing": "62.2",
+    "tail": "50.7",
+    "tarsus": "17.8",
+    "bill": "11.9",
+    "mass": "9.8"
+  },
+  "0416": {
+    "source": "AVONET",
+    "wing": "66.2",
+    "tail": "47",
+    "tarsus": "17.9",
+    "bill": "13.5",
+    "mass": "10.9"
+  },
+  "0417": {
+    "source": "AVONET",
+    "wing": "66.2",
+    "tail": "47",
+    "tarsus": "17.9",
+    "bill": "13.5",
+    "mass": "10.9"
+  },
+  "0418": {
+    "source": "AVONET",
+    "wing": "48.8",
+    "tail": "37.2",
+    "tarsus": "15.4",
+    "bill": "9.6",
+    "mass": "5.3"
+  },
+  "0419": {
+    "source": "AVONET",
+    "wing": "55.7",
+    "tail": "40",
+    "tarsus": "16.3",
+    "bill": "12",
+    "mass": "6.3"
+  },
+  "0420": {
+    "source": "AVONET",
+    "wing": "59.9",
+    "tail": "47",
+    "tarsus": "16.2",
+    "bill": "11.2",
+    "mass": "7.6"
+  },
+  "0421": {
+    "source": "AVONET",
+    "wing": "58.4",
+    "tail": "44.5",
+    "tarsus": "15.6",
+    "bill": "11.4",
+    "mass": "7.6"
+  },
+  "0422": {
+    "source": "AVONET",
+    "wing": "52",
+    "tail": "41.4",
+    "tarsus": "17",
+    "bill": "10.5",
+    "mass": "6.4"
+  },
+  "0423": {
+    "source": "AVONET",
+    "wing": "49.1",
+    "tail": "41",
+    "tarsus": "19.1",
+    "bill": "13",
+    "mass": "10"
+  },
+  "0424": {
+    "source": "AVONET",
+    "wing": "51",
+    "tail": "31",
+    "tarsus": "18",
+    "bill": "13.2",
+    "mass": "9.3"
+  },
+  "0425": {
+    "source": "AVONET",
+    "wing": "43.4",
+    "tail": "38.7",
+    "tarsus": "15.3",
+    "bill": "9",
+    "mass": "4.8"
+  },
+  "0426": {
+    "source": "AVONET",
+    "wing": "44.9",
+    "tail": "45.3",
+    "tarsus": "19.4",
+    "bill": "16.2",
+    "mass": "5.9"
+  },
+  "0427": {
+    "source": "AVONET",
+    "wing": "71.6",
+    "tail": "70.8",
+    "tarsus": "26.6",
+    "bill": "16.7",
+    "mass": "22.3"
+  },
+  "0428": {
+    "source": "AVONET",
+    "wing": "52.7",
+    "tail": "44.2",
+    "tarsus": "21.1",
+    "bill": "13.5",
+    "mass": "9.6"
+  },
+  "0429": {
+    "source": "AVONET",
+    "wing": "48.6",
+    "tail": "46.8",
+    "tarsus": "15.5",
+    "bill": "7.4",
+    "mass": "6.1"
+  },
+  "0431": {
+    "source": "AVONET",
+    "wing": "85.2",
+    "tail": "107.2",
+    "tarsus": "27.5",
+    "bill": "18",
+    "mass": "26"
+  },
+  "0434": {
+    "source": "AVONET",
+    "wing": "55.2",
+    "tail": "39.4",
+    "tarsus": "14.9",
+    "bill": "12.5",
+    "mass": "9.5"
+  },
+  "0435": {
+    "source": "AVONET",
+    "wing": "60.8",
+    "tail": "42",
+    "tarsus": "15.2",
+    "bill": "13.7",
+    "mass": "11"
+  },
+  "0436": {
+    "source": "AVONET",
+    "wing": "53.5",
+    "tail": "36.5",
+    "tarsus": "15.4",
+    "bill": "13.3",
+    "mass": "11.3"
+  },
+  "0437": {
+    "source": "AVONET",
+    "wing": "55",
+    "tail": "47",
+    "tarsus": "19.6",
+    "bill": "15",
+    "mass": "10.3"
+  },
+  "0438": {
+    "source": "AVONET",
+    "wing": "78.8",
+    "tail": "85.4",
+    "tarsus": "28",
+    "bill": "22.5",
+    "mass": "31.6"
+  },
+  "0439": {
+    "source": "AVONET",
+    "wing": "56.2",
+    "tail": "73.8",
+    "tarsus": "23.6",
+    "bill": "14.9",
+    "mass": "14.6"
+  },
+  "0442": {
+    "source": "AVONET",
+    "wing": "68.2",
+    "tail": "59.2",
+    "tarsus": "23.7",
+    "bill": "13.7",
+    "mass": "21.4"
+  },
+  "0443": {
+    "source": "AVONET",
+    "wing": "73.5",
+    "tail": "75.4",
+    "tarsus": "25",
+    "bill": "17.1",
+    "mass": "28.4"
+  },
+  "0448": {
+    "source": "AVONET",
+    "wing": "72.7",
+    "tail": "38",
+    "tarsus": "16",
+    "bill": "14.3",
+    "mass": "16.5"
+  },
+  "0449": {
+    "source": "AVONET",
+    "wing": "128.3",
+    "tail": "65.8",
+    "tarsus": "29",
+    "bill": "30.2",
+    "mass": "77.1"
+  },
+  "0450": {
+    "source": "AVONET",
+    "wing": "105.6",
+    "tail": "51.4",
+    "tarsus": "25.4",
+    "bill": "18.2",
+    "mass": "49.4"
+  },
+  "0451": {
+    "source": "AVONET",
+    "wing": "105.2",
+    "tail": "49",
+    "tarsus": "24",
+    "bill": "17.5",
+    "mass": "28.8"
+  },
+  "0452": {
+    "source": "AVONET",
+    "wing": "100.9",
+    "tail": "59.2",
+    "tarsus": "24.4",
+    "bill": "21.4",
+    "mass": "39.6"
+  },
+  "0453": {
+    "source": "AVONET",
+    "wing": "120.6",
+    "tail": "71.8",
+    "tarsus": "29.9",
+    "bill": "26.8",
+    "mass": "65"
+  },
+  "0454": {
+    "source": "AVONET",
+    "wing": "127.5",
+    "tail": "63.8",
+    "tarsus": "31.7",
+    "bill": "29.4",
+    "mass": "83"
+  },
+  "0455": {
+    "source": "AVONET",
+    "wing": "139.8",
+    "tail": "84.8",
+    "tarsus": "38.6",
+    "bill": "26.8",
+    "mass": "116.4"
+  },
+  "0456": {
+    "source": "AVONET",
+    "wing": "141.4",
+    "tail": "98",
+    "tarsus": "33.2",
+    "bill": "27",
+    "mass": "134.1"
+  },
+  "0457": {
+    "source": "AVONET",
+    "wing": "141.4",
+    "tail": "98",
+    "tarsus": "33.2",
+    "bill": "27",
+    "mass": "134.1"
+  },
+  "0458": {
+    "source": "AVONET",
+    "wing": "119",
+    "tail": "87.8",
+    "tarsus": "28.5",
+    "bill": "22.4",
+    "mass": "75.5"
+  },
+  "0459": {
+    "source": "AVONET",
+    "wing": "118.2",
+    "tail": "73.4",
+    "tarsus": "31.1",
+    "bill": "21.7",
+    "mass": "53.3"
+  },
+  "0461": {
+    "source": "AVONET",
+    "wing": "128.4",
+    "tail": "106.3",
+    "tarsus": "33.6",
+    "bill": "28.5",
+    "mass": "102.7"
+  },
+  "0462": {
+    "source": "AVONET",
+    "wing": "146.6",
+    "tail": "105",
+    "tarsus": "35.7",
+    "bill": "30.9",
+    "mass": "102.7"
+  },
+  "0463": {
+    "source": "AVONET",
+    "wing": "115",
+    "tail": "76.9",
+    "tarsus": "29.4",
+    "bill": "23.5",
+    "mass": "58.9"
+  },
+  "0464": {
+    "source": "AVONET",
+    "wing": "115.8",
+    "tail": "83",
+    "tarsus": "31.3",
+    "bill": "23.3",
+    "mass": "66.7"
+  },
+  "0465": {
+    "source": "AVONET",
+    "wing": "119.8",
+    "tail": "81.5",
+    "tarsus": "29.6",
+    "bill": "22",
+    "mass": "62.6"
+  },
+  "0466": {
+    "source": "AVONET",
+    "wing": "119.4",
+    "tail": "86.9",
+    "tarsus": "30.9",
+    "bill": "24.3",
+    "mass": "65.4"
+  },
+  "0467": {
+    "source": "AVONET",
+    "wing": "125.6",
+    "tail": "89.2",
+    "tarsus": "31",
+    "bill": "24.5",
+    "mass": "72.1"
+  },
+  "0468": {
+    "source": "AVONET",
+    "wing": "133.2",
+    "tail": "97.8",
+    "tarsus": "32.4",
+    "bill": "24.2",
+    "mass": "106"
+  },
+  "0469": {
+    "source": "AVONET",
+    "wing": "134.2",
+    "tail": "97.1",
+    "tarsus": "31.7",
+    "bill": "24.4",
+    "mass": "80.6"
+  },
+  "0470": {
+    "source": "AVONET",
+    "wing": "127.1",
+    "tail": "87.3",
+    "tarsus": "30.7",
+    "bill": "23.7",
+    "mass": "73.2"
+  },
+  "0471": {
+    "source": "AVONET",
+    "wing": "128.7",
+    "tail": "90.4",
+    "tarsus": "31.6",
+    "bill": "22.9",
+    "mass": "73.2"
+  },
+  "0472": {
+    "source": "AVONET",
+    "wing": "84.5",
+    "tail": "47",
+    "tarsus": "14.4",
+    "bill": "11.9",
+    "mass": "15.9"
+  },
+  "0473": {
+    "source": "AVONET",
+    "wing": "75.5",
+    "tail": "45.7",
+    "tarsus": "13.1",
+    "bill": "11.7",
+    "mass": "13.2"
+  },
+  "0474": {
+    "source": "AVONET",
+    "wing": "70",
+    "tail": "45.6",
+    "tarsus": "11.6",
+    "bill": "11.6",
+    "mass": "12"
+  },
+  "0475": {
+    "source": "AVONET",
+    "wing": "70.5",
+    "tail": "49.5",
+    "tarsus": "14.4",
+    "bill": "12.8",
+    "mass": "9.8"
+  },
+  "0476": {
+    "source": "AVONET",
+    "wing": "71.4",
+    "tail": "55",
+    "tarsus": "13.1",
+    "bill": "14.9",
+    "mass": "12"
+  },
+  "0478": {
+    "source": "AVONET",
+    "wing": "68.4",
+    "tail": "59",
+    "tarsus": "16.2",
+    "bill": "13.9",
+    "mass": "14.4"
+  },
+  "0479": {
+    "source": "AVONET",
+    "wing": "78.6",
+    "tail": "65",
+    "tarsus": "17.5",
+    "bill": "13.9",
+    "mass": "14.2"
+  },
+  "0481": {
+    "source": "AVONET",
+    "wing": "77.8",
+    "tail": "58.8",
+    "tarsus": "16.2",
+    "bill": "16.2",
+    "mass": "18.1"
+  },
+  "0482": {
+    "source": "AVONET",
+    "wing": "63.2",
+    "tail": "52.8",
+    "tarsus": "16.8",
+    "bill": "11.7",
+    "mass": "12"
+  },
+  "0483": {
+    "source": "AVONET",
+    "wing": "90.8",
+    "tail": "68.2",
+    "tarsus": "20.2",
+    "bill": "15.5",
+    "mass": "24.2"
+  },
+  "0484": {
+    "source": "AVONET",
+    "wing": "90.5",
+    "tail": "59.2",
+    "tarsus": "14.7",
+    "bill": "14.6",
+    "mass": "22.5"
+  },
+  "0485": {
+    "source": "AVONET",
+    "wing": "90.5",
+    "tail": "59.2",
+    "tarsus": "14.7",
+    "bill": "14.6",
+    "mass": "22.5"
+  },
+  "0486": {
+    "source": "AVONET",
+    "wing": "76.2",
+    "tail": "61",
+    "tarsus": "13.8",
+    "bill": "12",
+    "mass": "18.1"
+  },
+  "0487": {
+    "source": "AVONET",
+    "wing": "56.6",
+    "tail": "34.5",
+    "tarsus": "26",
+    "bill": "13.5",
+    "mass": "15.8"
+  },
+  "0488": {
+    "source": "AVONET",
+    "wing": "68.2",
+    "tail": "50.2",
+    "tarsus": "24.8",
+    "bill": "14",
+    "mass": "16.7"
+  },
+  "0489": {
+    "source": "AVONET",
+    "wing": "71.1",
+    "tail": "53",
+    "tarsus": "27.7",
+    "bill": "14.9",
+    "mass": "17"
+  },
+  "0490": {
+    "source": "AVONET",
+    "wing": "74.4",
+    "tail": "46.4",
+    "tarsus": "24.7",
+    "bill": "15",
+    "mass": "14.8"
+  },
+  "0492": {
+    "source": "AVONET",
+    "wing": "169.4",
+    "tail": "119.4",
+    "tarsus": "49.9",
+    "bill": "33.3",
+    "mass": "158"
+  },
+  "0493": {
+    "source": "AVONET",
+    "wing": "93.6",
+    "tail": "97.2",
+    "tarsus": "28.5",
+    "bill": "21.4",
+    "mass": "33.8"
+  },
+  "0494": {
+    "source": "AVONET",
+    "wing": "90",
+    "tail": "121",
+    "tarsus": "25.3",
+    "bill": "20.5",
+    "mass": "31"
+  },
+  "0495": {
+    "source": "AVONET",
+    "wing": "78.2",
+    "tail": "63.4",
+    "tarsus": "28.8",
+    "bill": "16.2",
+    "mass": "18.5"
+  },
+  "0496": {
+    "source": "AVONET",
+    "wing": "90.8",
+    "tail": "72.6",
+    "tarsus": "27.2",
+    "bill": "17",
+    "mass": "26.8"
+  },
+  "0497": {
+    "source": "AVONET",
+    "wing": "78.5",
+    "tail": "60.4",
+    "tarsus": "21.3",
+    "bill": "11.8",
+    "mass": "13.4"
+  },
+  "0498": {
+    "source": "AVONET",
+    "wing": "67.9",
+    "tail": "49.8",
+    "tarsus": "14.8",
+    "bill": "13.1",
+    "mass": "12.1"
+  },
+  "0499": {
+    "source": "AVONET",
+    "wing": "75.2",
+    "tail": "47.4",
+    "tarsus": "16.2",
+    "bill": "14",
+    "mass": "13.1"
+  },
+  "0500": {
+    "source": "AVONET",
+    "wing": "75.2",
+    "tail": "47.4",
+    "tarsus": "16.2",
+    "bill": "14",
+    "mass": "13.1"
+  },
+  "0501": {
+    "source": "AVONET",
+    "wing": "75.2",
+    "tail": "47.4",
+    "tarsus": "16.2",
+    "bill": "14",
+    "mass": "13.1"
+  },
+  "0502": {
+    "source": "AVONET",
+    "wing": "72.4",
+    "tail": "49.4",
+    "tarsus": "15.7",
+    "bill": "11.9",
+    "mass": "11.7"
+  },
+  "0503": {
+    "source": "AVONET",
+    "wing": "70.3",
+    "tail": "55.4",
+    "tarsus": "15.7",
+    "bill": "10.9",
+    "mass": "10"
+  },
+  "0504": {
+    "source": "AVONET",
+    "wing": "71.2",
+    "tail": "56.6",
+    "tarsus": "18.2",
+    "bill": "12.3",
+    "mass": "12.8"
+  },
+  "0505": {
+    "source": "AVONET",
+    "wing": "63",
+    "tail": "48.5",
+    "tarsus": "16.4",
+    "bill": "11.8",
+    "mass": "8"
+  },
+  "0506": {
+    "source": "AVONET",
+    "wing": "68.4",
+    "tail": "49.9",
+    "tarsus": "16.4",
+    "bill": "12.1",
+    "mass": "10.8"
+  },
+  "0507": {
+    "source": "AVONET",
+    "wing": "67",
+    "tail": "52.8",
+    "tarsus": "15.4",
+    "bill": "12.8",
+    "mass": "10.8"
+  },
+  "0508": {
+    "source": "AVONET",
+    "wing": "73.6",
+    "tail": "52.8",
+    "tarsus": "22.7",
+    "bill": "13.1",
+    "mass": "20.3"
+  },
+  "0509": {
+    "source": "AVONET",
+    "wing": "82",
+    "tail": "68.2",
+    "tarsus": "23.2",
+    "bill": "14.5",
+    "mass": "17"
+  },
+  "0510": {
+    "source": "AVONET",
+    "wing": "83.1",
+    "tail": "60.4",
+    "tarsus": "22.4",
+    "bill": "15.4",
+    "mass": "16.5"
+  },
+  "0511": {
+    "source": "AVONET",
+    "wing": "72.5",
+    "tail": "65.9",
+    "tarsus": "22.2",
+    "bill": "14",
+    "mass": "16.2"
+  },
+  "0512": {
+    "source": "AVONET",
+    "wing": "120.8",
+    "tail": "98.2",
+    "tarsus": "26.6",
+    "bill": "25.9",
+    "mass": "53.2"
+  },
+  "0513": {
+    "source": "AVONET",
+    "wing": "97",
+    "tail": "64.2",
+    "tarsus": "23.8",
+    "bill": "20.4",
+    "mass": "34.6"
+  },
+  "0514": {
+    "source": "AVONET",
+    "wing": "121.1",
+    "tail": "84.6",
+    "tarsus": "28.3",
+    "bill": "28.1",
+    "mass": "53.7"
+  },
+  "0516": {
+    "source": "AVONET",
+    "wing": "66.3",
+    "tail": "59.4",
+    "tarsus": "20.8",
+    "bill": "14.5",
+    "mass": "14.7"
+  },
+  "0517": {
+    "source": "AVONET",
+    "wing": "92.8",
+    "tail": "60.4",
+    "tarsus": "22.6",
+    "bill": "16.4",
+    "mass": "19.4"
+  },
+  "0518": {
+    "source": "AVONET",
+    "wing": "107.2",
+    "tail": "54",
+    "tarsus": "17.3",
+    "bill": "15.8",
+    "mass": "42.3"
+  },
+  "0519": {
+    "source": "AVONET",
+    "wing": "44",
+    "tail": "20.9",
+    "tarsus": "10",
+    "bill": "10.9",
+    "mass": "6.2"
+  },
+  "0520": {
+    "source": "AVONET",
+    "wing": "46.8",
+    "tail": "24.6",
+    "tarsus": "11.7",
+    "bill": "9.4",
+    "mass": "5.7"
+  },
+  "0521": {
+    "source": "AVONET",
+    "wing": "47.3",
+    "tail": "25",
+    "tarsus": "12",
+    "bill": "11",
+    "mass": "5.6"
+  },
+  "0522": {
+    "source": "AVONET",
+    "wing": "54.5",
+    "tail": "57.6",
+    "tarsus": "13.9",
+    "bill": "17.9",
+    "mass": "5"
+  },
+  "0523": {
+    "source": "AVONET",
+    "wing": "70.2",
+    "tail": "45.9",
+    "tarsus": "20.6",
+    "bill": "17.9",
+    "mass": "28.2"
+  },
+  "0524": {
+    "source": "AVONET",
+    "wing": "52.6",
+    "tail": "39",
+    "tarsus": "14",
+    "bill": "11.8",
+    "mass": "13.6"
+  },
+  "0525": {
+    "source": "AVONET",
+    "wing": "51.7",
+    "tail": "33.5",
+    "tarsus": "15",
+    "bill": "11.3",
+    "mass": "12.4"
+  },
+  "0526": {
+    "source": "AVONET",
+    "wing": "74.9",
+    "tail": "57.2",
+    "tarsus": "17.9",
+    "bill": "13.5",
+    "mass": "26.5"
+  },
+  "0527": {
+    "source": "AVONET",
+    "wing": "78.4",
+    "tail": "67",
+    "tarsus": "20.5",
+    "bill": "17.5",
+    "mass": "16.4"
+  },
+  "0528": {
+    "source": "AVONET",
+    "wing": "82.8",
+    "tail": "94.4",
+    "tarsus": "18.2",
+    "bill": "17.4",
+    "mass": "17.2"
+  },
+  "0529": {
+    "source": "AVONET",
+    "wing": "79.5",
+    "tail": "70.6",
+    "tarsus": "23.1",
+    "bill": "16",
+    "mass": "17.7"
+  },
+  "0530": {
+    "source": "AVONET",
+    "wing": "78.8",
+    "tail": "66.5",
+    "tarsus": "24.3",
+    "bill": "15.9",
+    "mass": "18.5"
+  },
+  "0531": {
+    "source": "AVONET",
+    "wing": "85.5",
+    "tail": "82.8",
+    "tarsus": "25.3",
+    "bill": "16.2",
+    "mass": "19.1"
+  },
+  "0532": {
+    "source": "AVONET",
+    "wing": "87",
+    "tail": "86.8",
+    "tarsus": "23.4",
+    "bill": "16.1",
+    "mass": "23.9"
+  },
+  "0533": {
+    "source": "AVONET",
+    "wing": "92",
+    "tail": "71.6",
+    "tarsus": "29.2",
+    "bill": "18",
+    "mass": "32.2"
+  },
+  "0534": {
+    "source": "AVONET",
+    "wing": "89.8",
+    "tail": "71.4",
+    "tarsus": "25.5",
+    "bill": "15",
+    "mass": "25.3"
+  },
+  "0535": {
+    "source": "AVONET",
+    "wing": "80.4",
+    "tail": "67.6",
+    "tarsus": "22.7",
+    "bill": "16.1",
+    "mass": "31"
+  },
+  "0536": {
+    "source": "AVONET",
+    "wing": "82.8",
+    "tail": "60.6",
+    "tarsus": "21.5",
+    "bill": "13.7",
+    "mass": "20.6"
+  },
+  "0537": {
+    "source": "AVONET",
+    "wing": "86.1",
+    "tail": "59.9",
+    "tarsus": "20.6",
+    "bill": "15.7",
+    "mass": "23.3"
+  },
+  "0538": {
+    "source": "AVONET",
+    "wing": "81",
+    "tail": "58.4",
+    "tarsus": "20.2",
+    "bill": "14.1",
+    "mass": "21.3"
+  },
+  "0539": {
+    "source": "AVONET",
+    "wing": "80.5",
+    "tail": "57.3",
+    "tarsus": "22.2",
+    "bill": "15.4",
+    "mass": "19.8"
+  },
+  "0540": {
+    "source": "AVONET",
+    "wing": "83.3",
+    "tail": "56.6",
+    "tarsus": "21.7",
+    "bill": "14.1",
+    "mass": "20.9"
+  },
+  "0541": {
+    "source": "AVONET",
+    "wing": "86.9",
+    "tail": "63.3",
+    "tarsus": "22.9",
+    "bill": "16.4",
+    "mass": "23.9"
+  },
+  "0542": {
+    "source": "AVONET",
+    "wing": "85",
+    "tail": "67.6",
+    "tarsus": "21.2",
+    "bill": "14.5",
+    "mass": "20.7"
+  },
+  "0543": {
+    "source": "AVONET",
+    "wing": "89.3",
+    "tail": "61.7",
+    "tarsus": "19",
+    "bill": "14.4",
+    "mass": "23.2"
+  },
+  "0544": {
+    "source": "AVONET",
+    "wing": "102",
+    "tail": "57.2",
+    "tarsus": "21",
+    "bill": "23",
+    "mass": "56.6"
+  },
+  "0545": {
+    "source": "AVONET",
+    "wing": "97.4",
+    "tail": "75.8",
+    "tarsus": "21.1",
+    "bill": "21.8",
+    "mass": "46.9"
+  },
+  "0546": {
+    "source": "AVONET",
+    "wing": "108.7",
+    "tail": "80.4",
+    "tarsus": "22",
+    "bill": "25.6",
+    "mass": "80"
+  },
+  "0547": {
+    "source": "AVONET",
+    "wing": "80.2",
+    "tail": "58.6",
+    "tarsus": "16.4",
+    "bill": "12",
+    "mass": "24"
+  },
+  "0548": {
+    "source": "AVONET",
+    "wing": "76.1",
+    "tail": "48.3",
+    "tarsus": "14.5",
+    "bill": "13.8",
+    "mass": "18.6"
+  },
+  "0549": {
+    "source": "AVONET",
+    "wing": "71.6",
+    "tail": "46.4",
+    "tarsus": "12.7",
+    "bill": "12.8",
+    "mass": "13.2"
+  },
+  "0550": {
+    "source": "AVONET",
+    "wing": "94.9",
+    "tail": "67.8",
+    "tarsus": "21.1",
+    "bill": "12.3",
+    "mass": "27.8"
+  },
+  "0551": {
+    "source": "AVONET",
+    "wing": "79.9",
+    "tail": "68.8",
+    "tarsus": "20.5",
+    "bill": "15.3",
+    "mass": "21.9"
+  },
+  "0552": {
+    "source": "AVONET",
+    "wing": "94.3",
+    "tail": "72.2",
+    "tarsus": "21.3",
+    "bill": "16.8",
+    "mass": "28.3"
+  },
+  "0553": {
+    "source": "AVONET",
+    "wing": "86.1",
+    "tail": "68.1",
+    "tarsus": "20.1",
+    "bill": "15.8",
+    "mass": "24.8"
+  },
+  "0554": {
+    "source": "AVONET",
+    "wing": "73.6",
+    "tail": "58",
+    "tarsus": "20.5",
+    "bill": "13.1",
+    "mass": "19.8"
+  },
+  "0555": {
+    "source": "AVONET",
+    "wing": "91.6",
+    "tail": "77.8",
+    "tarsus": "19.1",
+    "bill": "15",
+    "mass": "28.5"
+  },
+  "0556": {
+    "source": "AVONET",
+    "wing": "85.6",
+    "tail": "65.9",
+    "tarsus": "18.6",
+    "bill": "15.7",
+    "mass": "19.9"
+  },
+  "0557": {
+    "source": "AVONET",
+    "wing": "67.3",
+    "tail": "55.1",
+    "tarsus": "19",
+    "bill": "12",
+    "mass": "20"
+  },
+  "0558": {
+    "source": "AVONET",
+    "wing": "74.2",
+    "tail": "60.2",
+    "tarsus": "20.3",
+    "bill": "12.1",
+    "mass": "16.8"
+  },
+  "0559": {
+    "source": "AVONET",
+    "wing": "66.6",
+    "tail": "60.2",
+    "tarsus": "19.3",
+    "bill": "11.1",
+    "mass": "13.5"
+  },
+  "0560": {
+    "source": "AVONET",
+    "wing": "70.8",
+    "tail": "61.7",
+    "tarsus": "17.8",
+    "bill": "12.9",
+    "mass": "14"
+  },
+  "0561": {
+    "source": "AVONET",
+    "wing": "77.9",
+    "tail": "63.6",
+    "tarsus": "19.3",
+    "bill": "11.3",
+    "mass": "18.4"
+  },
+  "0562": {
+    "source": "AVONET",
+    "wing": "75.3",
+    "tail": "55.4",
+    "tarsus": "20.5",
+    "bill": "13.2",
+    "mass": "19.6"
+  },
+  "0563": {
+    "source": "AVONET",
+    "wing": "70.3",
+    "tail": "55.5",
+    "tarsus": "18",
+    "bill": "10.7",
+    "mass": "14.6"
+  },
+  "0564": {
+    "source": "AVONET",
+    "wing": "78.4",
+    "tail": "62.8",
+    "tarsus": "20.5",
+    "bill": "12.1",
+    "mass": "20.5"
+  },
+  "0565": {
+    "source": "AVONET",
+    "wing": "68.1",
+    "tail": "54.9",
+    "tarsus": "18",
+    "bill": "12.4",
+    "mass": "14.9"
+  },
+  "0566": {
+    "source": "AVONET",
+    "wing": "69.6",
+    "tail": "61.8",
+    "tarsus": "20.1",
+    "bill": "12.5",
+    "mass": "18.5"
+  },
+  "0567": {
+    "source": "AVONET",
+    "wing": "74.8",
+    "tail": "56.9",
+    "tarsus": "18.9",
+    "bill": "12",
+    "mass": "17.5"
+  },
+  "0568": {
+    "source": "AVONET",
+    "wing": "77",
+    "tail": "59",
+    "tarsus": "18.5",
+    "bill": "13.2",
+    "mass": "18"
+  },
+  "0569": {
+    "source": "AVONET",
+    "wing": "69.6",
+    "tail": "55",
+    "tarsus": "19.4",
+    "bill": "12.2",
+    "mass": "18"
+  },
+  "0021": {
+    "source": "AVONET",
+    "wing": "209.9",
+    "tail": "289.2",
+    "tarsus": "18.4",
+    "bill": "37.6",
+    "mass": "214"
+  },
+  "0027": {
+    "source": "AVONET",
+    "wing": "432.2",
+    "tail": "140.6",
+    "tarsus": "74",
+    "bill": "48.9",
+    "mass": "2668"
+  },
+  "0088": {
+    "source": "AVONET",
+    "wing": "182.6",
+    "tail": "146.4",
+    "tarsus": "21.6",
+    "bill": "24.8",
+    "mass": "87"
+  },
+  "0102": {
+    "source": "AVONET",
+    "wing": "94",
+    "tail": "48.8",
+    "tarsus": "32.3",
+    "bill": "24.8",
+    "mass": "52.1"
+  },
+  "0185": {
+    "source": "AVONET",
+    "wing": "300.8",
+    "tail": "110.2",
+    "tarsus": "49.4",
+    "bill": "52.1",
+    "mass": "281"
+  },
+  "0186": {
+    "source": "AVONET",
+    "wing": "291.2",
+    "tail": "109.8",
+    "tarsus": "41.4",
+    "bill": "43.4",
+    "mass": "284"
+  },
+  "0187": {
+    "source": "AVONET",
+    "wing": "333.9",
+    "tail": "125.7",
+    "tarsus": "49.5",
+    "bill": "47.4",
+    "mass": "569.3"
+  },
+  "0189": {
+    "source": "AVONET",
+    "wing": "279.4",
+    "tail": "95.2",
+    "tarsus": "39.9",
+    "bill": "39.8",
+    "mass": "280"
+  },
+  "0190": {
+    "source": "AVONET",
+    "wing": "335.2",
+    "tail": "128.8",
+    "tarsus": "54.7",
+    "bill": "47.5",
+    "mass": "490.2"
+  },
+  "0191": {
+    "source": "AVONET",
+    "wing": "470.8",
+    "tail": "172.8",
+    "tarsus": "71.5",
+    "bill": "73",
+    "mass": "1378.8"
+  },
+  "0194": {
+    "source": "AVONET",
+    "wing": "351",
+    "tail": "133.8",
+    "tarsus": "49.4",
+    "bill": "47.8",
+    "mass": "412.5"
+  },
+  "0284": {
+    "source": "AVONET",
+    "wing": "92.6",
+    "tail": "50.4",
+    "tarsus": "16.7",
+    "bill": "20.5",
+    "mass": "59.4"
+  },
+  "0312": {
+    "source": "AVONET",
+    "wing": "209.9",
+    "tail": "289.2",
+    "tarsus": "18.4",
+    "bill": "37.6",
+    "mass": "214"
+  },
+  "0313": {
+    "source": "AVONET",
+    "wing": "155.8",
+    "tail": "215.2",
+    "tarsus": "13.8",
+    "bill": "25.4",
+    "mass": "116.1"
+  },
+  "0317": {
+    "source": "AVONET",
+    "wing": "94.2",
+    "tail": "87.6",
+    "tarsus": "17.2",
+    "bill": "19.1",
+    "mass": "23.3"
+  },
+  "0344": {
+    "source": "AVONET",
+    "wing": "193.3",
+    "tail": "242.1",
+    "tarsus": "47.2",
+    "bill": "40.8",
+    "mass": "217.5"
+  },
+  "0353": {
+    "source": "AVONET",
+    "wing": "63.2",
+    "tail": "34.5",
+    "tarsus": "7.2",
+    "bill": "11.8",
+    "mass": "10.6"
+  },
+  "0372": {
+    "source": "AVONET",
+    "wing": "75.5",
+    "tail": "66",
+    "tarsus": "25.5",
+    "bill": "20.5",
+    "mass": "27.1"
+  },
+  "0373": {
+    "source": "AVONET",
+    "wing": "52.2",
+    "tail": "52.8",
+    "tarsus": "20.6",
+    "bill": "12.1",
+    "mass": "14.2"
+  },
+  "0374": {
+    "source": "AVONET",
+    "wing": "61.4",
+    "tail": "53.6",
+    "tarsus": "20.9",
+    "bill": "14.1",
+    "mass": "14.4"
+  },
+  "0375": {
+    "source": "AVONET",
+    "wing": "69.5",
+    "tail": "58.2",
+    "tarsus": "24.4",
+    "bill": "16.2",
+    "mass": "18.5"
+  },
+  "0376": {
+    "source": "AVONET",
+    "wing": "70",
+    "tail": "65",
+    "tarsus": "23.9",
+    "bill": "17.6",
+    "mass": "20"
+  },
+  "0430": {
+    "source": "AVONET",
+    "wing": "65.1",
+    "tail": "56.9",
+    "tarsus": "19.1",
+    "bill": "12.4",
+    "mass": "11.4"
+  },
+  "0433": {
+    "source": "AVONET",
+    "wing": "63.8",
+    "tail": "59",
+    "tarsus": "18",
+    "bill": "11.4",
+    "mass": "11.8"
+  },
+  "0440": {
+    "source": "AVONET",
+    "wing": "60.9",
+    "tail": "52.4",
+    "tarsus": "19.2",
+    "bill": "12.3",
+    "mass": "15.3"
+  },
+  "0441": {
+    "source": "AVONET",
+    "wing": "65.3",
+    "tail": "69.7",
+    "tarsus": "21.9",
+    "bill": "14.7",
+    "mass": "17"
+  },
+  "0444": {
+    "source": "AVONET",
+    "wing": "96.3",
+    "tail": "118.4",
+    "tarsus": "34.5",
+    "bill": "23.4",
+    "mass": "67.8"
+  },
+  "0445": {
+    "source": "AVONET",
+    "wing": "123.6",
+    "tail": "147.1",
+    "tarsus": "41.9",
+    "bill": "28.6",
+    "mass": "117.8"
+  },
+  "0446": {
+    "source": "AVONET",
+    "wing": "141.6",
+    "tail": "135.5",
+    "tarsus": "46.2",
+    "bill": "33.1",
+    "mass": "145.1"
+  },
+  "0447": {
+    "source": "AVONET",
+    "wing": "95.4",
+    "tail": "122",
+    "tarsus": "35.2",
+    "bill": "27.8",
+    "mass": "80.5"
+  },
+  "0477": {
+    "source": "AVONET",
+    "wing": "95.6",
+    "tail": "121.8",
+    "tarsus": "27",
+    "bill": "20.7",
+    "mass": "29.2"
+  },
+  "0480": {
+    "source": "AVONET",
+    "wing": "71.8",
+    "tail": "53",
+    "tarsus": "15.7",
+    "bill": "14.9",
+    "mass": "14.5"
+  },
+  "0491": {
+    "source": "AVONET",
+    "wing": "73.1",
+    "tail": "50",
+    "tarsus": "26.3",
+    "bill": "15.1",
+    "mass": "17.2"
+  },
+  "0515": {
+    "source": "AVONET",
+    "wing": "69.4",
+    "tail": "48.9",
+    "tarsus": "21.3",
+    "bill": "14.8",
+    "mass": "12.6"
+  }
+}
