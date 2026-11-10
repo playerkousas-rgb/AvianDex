@@ -10540,7 +10540,7 @@
     "fieldCopy": [
       {
         "id": "range",
-        "zh": "它們分佈在泰國南部、馬來半島和大巽他群島。",
+        "zh": "它们分布在泰国南部、马来半岛和大巽他群岛。",
         "en": "The Malayan hawk-cuckoo is found in far southern Burma, southern Thailand, Malaya, Singapore, Borneo, Sumatra and western Java."
       },
       {
@@ -10550,12 +10550,12 @@
       },
       {
         "id": "diet",
-        "zh": "馬來棕腹鷹鵑是留鳥，棲息在森林，它們是食肉動物，主要以昆蟲、蜘蛛等陸生無脊椎動物為食。",
+        "zh": "马来棕腹鹰鹃是留鸟，栖息在森林，它们是食肉动物，主要以昆虫、蜘蛛等陆生无脊椎动物为食。",
         "en": "Active in bushes and understorey, gleaning prey from foliage."
       },
       {
         "id": "look",
-        "zh": "馬來棕腹鷹鵑體重約79.7克，翼長約17.52釐米，喙寬度約8.3毫米，喙厚度約8.7毫米，嘴峯長約28.3毫米，跗蹠長約19毫米，",
+        "zh": "马来棕腹鹰鹃体重约79.7克，翼长约17.52厘米，喙宽度约8.3毫米，喙厚度约8.7毫米，嘴峰长约28.3毫米，跗蹠长约19毫米，",
         "en": "Hawk-cuckoos are brood parasites and recorded hosts include the white-rumped shama and the grey-headed canary-flycatcher."
       }
     ],
@@ -10571,7 +10571,7 @@
       "diet",
       "look"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0085": {
     "range": "分佈於東抵日本、西經喜馬拉雅山脈及印度至阿富汗、非洲、南經緬甸、中南半島。",
@@ -35863,7 +35863,7 @@
     "fieldCopy": [
       {
         "id": "look",
-        "zh": "雄鳥體長30釐米，成年雄鳥的頭、頸和羽冠具有深藍輝光，身體其餘部分為白色，具黑色羽幹紋。",
+        "zh": "雄鸟体长30厘米，成年雄鸟的头、颈和羽冠具有深蓝辉光，身体其余部分为白色，具黑色羽干纹。",
         "en": "Otherwise, all adult males have black hoods, white underparts, small crests, and blue eye rings."
       },
       {
@@ -35893,7 +35893,7 @@
       "look",
       "migration"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0334": {
     "diet": "牠主要以昆蟲為食，尤其是蚱蜢、蟋蟀、甲蟲、半翅目昆蟲、蝴蝶及蛾類。",
@@ -38448,7 +38448,7 @@
     "fieldCopy": [
       {
         "id": "range",
-        "zh": "在中國大陸，分佈於貴州、廣西、廣東、海南、福建等地。",
+        "zh": "在中国大陆，分布于贵州、广西、广东、海南、福建等地。",
         "en": "It is found in Pakistan, the southern Himalayan foothills, the northeastern Indian subcontinent, and Southeast Asia."
       },
       {
@@ -38458,12 +38458,12 @@
       },
       {
         "id": "look",
-        "zh": "黃腹鷦鶯，又名黃腹鷦鶯，為扇尾鶯科鷦鶯屬的鳥類。",
+        "zh": "黄腹鹪莺，又名黃腹鷦鶯，为扇尾鶯科鹪莺属的鸟类。",
         "en": ""
       },
       {
         "id": "funFact",
-        "zh": "黃腹鷦鶯，又名黃腹鷦鶯，為扇尾鶯科鷦鶯屬的鳥類。",
+        "zh": "黄腹鹪莺，又名黃腹鷦鶯，为扇尾鶯科鹪莺属的鸟类。",
         "en": ""
       }
     ],
@@ -38479,7 +38479,7 @@
       "look",
       "funFact"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0360": {
     "diet": "與大多數鶯類一樣，褐頭鷦鶯是食蟲性鳥類。",
@@ -40579,7 +40579,7 @@
     "picks": [
       "range"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0384": {
     "diet": "褐喉沙燕是部分遷徙的鳥類，其棲息在開放的野地，如農田，草原和熱帶草原，通常靠近水域。",
@@ -43907,7 +43907,7 @@
     "picks": [
       "habitat"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0420": {
     "diet": "冠紋柳鶯是部分遷徙的鳥類，其棲息在半開放的高大樹木組成的森林中，食性為肉食性。",
@@ -44237,7 +44237,7 @@
     "fieldCopy": [
       {
         "id": "range",
-        "zh": "這種鳥類分佈於孟加拉、不丹、中國、印度、寮國、緬甸、尼泊爾、台灣、泰國及越南。",
+        "zh": "這種鳥類分布於孟加拉、不丹、中國、印度、寮國、緬甸、尼泊爾、台灣、泰國及越南。",
         "en": "It is found in Bangladesh, Bhutan, China, India, Laos, Myanmar, Nepal, Taiwan, Thailand, and Vietnam."
       },
       {
@@ -44247,7 +44247,7 @@
       },
       {
         "id": "funFact",
-        "zh": "棕臉鶲鶯，又名棕臉鶲鶯、棕面鶲鶯，為樹鶯科擬鶲鶯屬下的一個種。",
+        "zh": "棕脸鹟莺，又名棕脸鶲鶯、棕面鹟莺，为樹鶯科擬鶲鶯屬下的一个种。",
         "en": ""
       },
       {
@@ -44268,7 +44268,7 @@
       "funFact",
       "behavior"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0426": {
     "range": "在中國大陸，分佈於雲南、廣西等地。",
@@ -44614,7 +44614,7 @@
     "fieldCopy": [
       {
         "id": "range",
-        "zh": "分佈於雲南等地。",
+        "zh": "分布于云南等地。",
         "en": "It is found in Bangladesh, China, India, Laos, Myanmar, Thailand, and Vietnam."
       },
       {
@@ -44624,7 +44624,7 @@
       },
       {
         "id": "look",
-        "zh": "點胸鴉雀為鴉雀科鴉雀屬的鳥類，俗名黃嘴鴉雀華南亞種、斑喉鴉雀。",
+        "zh": "点胸鸦雀为鸦雀科鸦雀属的鸟类，俗名黄嘴鸦雀华南亚种、斑喉鸦雀。",
         "en": "The spot-breasted parrotbill (Paradoxornis guttaticollis) is a species of bird in the family Paradoxornithidae."
       }
     ],
@@ -44639,7 +44639,7 @@
       "range",
       "look"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0432": {
     "look": "原短尾鴉雀屬（Neosuthora），僅包含短尾鴉雀一個物種。",
@@ -44777,7 +44777,7 @@
     "fieldCopy": [
       {
         "id": "range",
-        "zh": "分佈於緬甸、老撾、越南以及中國大陸的四川、湖北、雲南、西藏等地。",
+        "zh": "分布于缅甸、老挝、越南以及中国大陆的四川、湖北、云南、西藏等地。",
         "en": "It is found in the Indian subcontinent from the Himalayas eastwards to contiguous hilly regions of Southeast Asia."
       },
       {
@@ -44787,7 +44787,7 @@
       },
       {
         "id": "behavior",
-        "zh": "分佈於印度、緬甸、老撾、越南以及中國大陸的西藏、四川、湖北、貴州、雲南、廣西、廣東、福建等地，",
+        "zh": "分布于印度、缅甸、老挝、越南以及中国大陆的西藏、四川、湖北、贵州、云南、广西、广东、福建等地，",
         "en": "Its natural habitats are subtropical or tropical moist lowland forests, as well as subtropical or tropical moist montane forests."
       }
     ],
@@ -44802,7 +44802,7 @@
       "range",
       "behavior"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0435": {
     "range": "分佈於前蘇聯、朝鮮、緬甸、中南半島以及中國大陸的黑龍江、吉林、河北、遼寧、山西、陝西、甘肅。",
@@ -46057,7 +46057,7 @@
     "fieldCopy": [
       {
         "id": "range",
-        "zh": "分佈於日本、菲律賓、加里曼丹島、台灣島以及中國大陸的江蘇、浙江、福建等地，一般棲息於樹枝間。",
+        "zh": "分布于日本、菲律宾、加里曼丹岛、台湾岛以及中国大陆的江苏、浙江、福建等地，一般栖息于树枝间。",
         "en": ""
       },
       {
@@ -46088,7 +46088,7 @@
       "breeding",
       "migration"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0452": {
     "range": "分佈於印度、不丹、尼泊爾、孟加拉、緬甸、泰國、寮國、越南、台灣以及中國大陸的西藏、四川。",
@@ -48740,7 +48740,7 @@
     "fieldCopy": [
       {
         "id": "range",
-        "zh": "牠分佈於柬埔寨、中國、香港、老撾、緬甸、泰國和越南。",
+        "zh": "牠分布於柬埔寨、中國、香港、老撾、緬甸、泰國和越南。",
         "en": ""
       },
       {
@@ -48770,7 +48770,7 @@
       "range",
       "funFact"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0479": {
     "diet": "中華仙鶲在其分佈區內為留鳥，其棲息在半開放的高大樹木組成的森林中，食性為肉食性。",
@@ -48856,7 +48856,7 @@
     "fieldCopy": [
       {
         "id": "range",
-        "zh": "在中國大陸，分佈於四川、雲南、貴州等地。",
+        "zh": "在中国大陆，分布于四川、云南、贵州等地。",
         "en": "It is found in southern China, northeastern India and Southeast Asia."
       },
       {
@@ -48866,12 +48866,12 @@
       },
       {
         "id": "diet",
-        "zh": "山藍仙鶲在其分佈區內為留鳥，其棲息在密集的高大樹木組成的森林中，食性為肉食性，",
+        "zh": "山蓝仙鹟在其分布区内为留鸟，其栖息在密集的高大树木组成的森林中，食性为肉食性，",
         "en": "It was treated as a subspecies of Cyornis banyumas before molecular phylogenetic studies found them to be distinct."
       },
       {
         "id": "look",
-        "zh": "山藍仙鶲體重約14.5克，翼長約71.8毫米，嘴峯長約14.9毫米，喙寬度約4.6毫米，喙厚度約3.7毫米，跗蹠長約15.7毫米，尾長約53毫米。",
+        "zh": "山蓝仙鹟体重约14.5克，翼长约71.8毫米，嘴峰长约14.9毫米，喙宽度约4.6毫米，喙厚度约3.7毫米，跗蹠长约15.7毫米，尾长约53毫米。",
         "en": ""
       }
     ],
@@ -48887,7 +48887,7 @@
       "diet",
       "look"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0481": {
     "diet": "白喉林鶲主要以小型無脊椎動物為食，常在樹冠下層與灌木叢中捕食，有時也會在翻揀落葉堆。",
@@ -49007,7 +49007,7 @@
     "fieldCopy": [
       {
         "id": "range",
-        "zh": "在中國大陸，分佈於西藏、雲南、貴州、廣西、廣東等地。",
+        "zh": "在中国大陆，分布于西藏、云南、贵州、广西、广东等地。",
         "en": "It is found in Bangladesh, Bhutan, India, Laos, Myanmar, Nepal, Thailand, Tibet and Vietnam."
       },
       {
@@ -49036,7 +49036,7 @@
     "picks": [
       "range"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0483": {
     "range": "棕腹大仙鶲為鶲科仙鶲屬的鳥類，分佈於四川、雲南、福建、海南、廣西、越南、泰國、台灣等地。",
@@ -49047,7 +49047,7 @@
     "fieldCopy": [
       {
         "id": "range",
-        "zh": "棕腹大仙鶲為鶲科仙鶲屬的鳥類，分佈於四川、雲南、福建、海南、廣西、越南、泰國、台灣等地。",
+        "zh": "棕腹大仙鶲为鶲科仙鶲属的鸟类，分布于四川、云南、福建、海南、广西、越南、泰國、台灣等地。",
         "en": "It is found in Cambodia, southern China (including Hong Kong), Laos, Thailand, and Vietnam."
       },
       {
@@ -49057,7 +49057,7 @@
       },
       {
         "id": "look",
-        "zh": "棕腹大仙鶲為鶲科仙鶲屬的鳥類，分佈於四川、雲南、福建、海南、廣西、越南、泰國、台灣等地。",
+        "zh": "棕腹大仙鶲为鶲科仙鶲属的鸟类，分布于四川、云南、福建、海南、广西、越南、泰國、台灣等地。",
         "en": ""
       },
       {
@@ -49077,7 +49077,7 @@
       "range",
       "look"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0484": {
     "diet": "主要以昆蟲為食。",
@@ -49363,7 +49363,7 @@
     "fieldCopy": [
       {
         "id": "range",
-        "zh": "在中國大陸，分佈於雲南、廣西、湖南、東至福建西北部等地。",
+        "zh": "在中国大陆，分布于云南、广西、湖南、东至福建西北部等地。",
         "en": "It is found in south-eastern Asia, Sumatra, Java and the Lesser Sundas."
       },
       {
@@ -49378,7 +49378,7 @@
       },
       {
         "id": "behavior",
-        "zh": "分佈於尼泊爾、不丹、印度、中南半島、印度尼西亞以及中國大陸的從四川、雲南、東至福建西北部等地，",
+        "zh": "分布于尼泊尔、不丹、印度、中南半岛、印度尼西亚以及中国大陆的从四川、云南、东至福建西北部等地，",
         "en": "Its natural habitat is subtropical or tropical moist montane forests."
       }
     ],
@@ -49393,7 +49393,7 @@
       "range",
       "behavior"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0488": {
     "diet": "屬名Larvivora來自新拉丁語larva（毛毛蟲）和-vorus（食用），意指食毛毛蟲。",
@@ -52193,7 +52193,7 @@
     "fieldCopy": [
       {
         "id": "range",
-        "zh": "分佈於阿富汗、巴基斯坦、印度、中國南疆諸鄰國以及中國大陸的雲南、西藏等地。",
+        "zh": "分布于阿富汗、巴基斯坦、印度、中国南疆诸邻国以及中国大陆的云南、西藏等地。",
         "en": "It is found in the Himalayas, southern China, Taiwan, Nepal and mainland Southeast Asia."
       },
       {
@@ -52218,7 +52218,7 @@
       "range",
       "funFact"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0517": {
     "diet": "白頂䳭是候鳥，其棲息在開放的岩石之上，食性為肉食性，主要食物來源是陸生無脊椎動物。",
@@ -54210,7 +54210,7 @@
     "picks": [
       "range"
     ],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0537": {
     "diet": "林鷚主要以無脊椎動物為食，通常是昆蟲，但也會喫一些植物材料。",
@@ -58668,6 +58668,7 @@
     "0009",
     "0016",
     "0021",
+    "0084",
     "0120",
     "0189",
     "0196",
@@ -58675,12 +58676,27 @@
     "0312",
     "0318",
     "0332",
+    "0333",
+    "0359",
     "0379",
+    "0383",
     "0386",
     "0388",
     "0399",
+    "0419",
     "0423",
-    "0430"
+    "0425",
+    "0430",
+    "0431",
+    "0434",
+    "0451",
+    "0478",
+    "0480",
+    "0482",
+    "0483",
+    "0487",
+    "0516",
+    "0536"
   ],
   "0009": {
     "habitat": "偏好有枯枝落叶的稀疏包含阔叶树的林。",
