@@ -293,6 +293,15 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
             })}
           </div>
 
+          {pendingCount > 0 && (
+            <p className="text-white/30 text-[9.5px] leading-relaxed px-1">
+              {t(
+                `這張卡有 ${pendingCount} 欄是「資料待查」。留空是刻意的——寧願空，都不要寫一句查不到出處的話。`,
+                `${pendingCount} field(s) still pending. They are left blank on purpose: blank beats an unsourced guess.`,
+              )}
+            </p>
+          )}
+
           {FIELDS.length > FIRST_FIELDS && (
             <button
               type="button"
