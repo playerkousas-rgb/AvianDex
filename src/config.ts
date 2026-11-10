@@ -19,8 +19,31 @@ export const R2_BASE_URL: string =
   (import.meta.env.VITE_R2_BASE_URL as string | undefined)?.replace(/\/+$/, '') ||
   'https://pub-a9333a974e814ccba1994639b6e79266.r2.dev';
 
-/** R2 內的圖卡資料夾（不是 repo，亦不是 public/） */
-export const CARD_FOLDER = 'aviandex';
+/**
+ * R2 上**兩個**資料夾，裝住兩種完全不同的東西。不要當它們是同一種。
+ *
+ *   aviandex/    資訊圖卡（排版好的文字卡）。已完成 21 張：0001–0021 有，其餘 404。
+ *   birdcards/   BIRD-DEX 2 的插畫卡（整張畫好的鳥，1:1 正方形）。569 張齊。
+ *
+ * 卡面設計：正面 = birdcards 插畫；翻轉 = aviandex 資訊卡，
+ * 該張未做就由 app 用文字欄位即時砌（見 CardInfoFace）。
+ *
+ * ⚠️ 之前程式用 'aviandex' 去找插畫，所以 569 張插畫全部 404，
+ *    卡面永遠「未發現」。根因就是這一個字串。
+ */
+export const CARD_FOLDER = 'birdcards';
+
+/** 插畫卡（正面）—— 569 張齊 */
+export const ART_FOLDER = 'birdcards';
+
+/** 資訊圖卡（翻轉後）—— 完成了的才存在 */
+export const INFO_FOLDER = 'aviandex';
+
+/** 插畫卡的嘗試次序（birdcards 優先，aviandex 作後備） */
+export const CARD_FOLDERS = [ART_FOLDER, INFO_FOLDER] as const;
+
+/** 資訊圖卡副檔名：已完成的 21 張實測是 avif */
+export const INFO_EXTENSIONS = ['avif', 'webp', 'jpg', 'png'] as const;
 
 /**
  * 圖卡副檔名嘗試順序。
@@ -88,17 +111,35 @@ export const IMAGE_CONCURRENCY = 6;
 /** 單張圖卡載入逾時（毫秒） */
 export const IMAGE_TIMEOUT_MS = 15000;
 
-export function cardBaseUrl(): string {
-  return `${R2_BASE_URL}/${CARD_FOLDER}`;
+export function cardBaseUrl(folder: string = CARD_FOLDER): string {
+  return `${R2_BASE_URL}/${folder}`;
+}
+
+/** 代理網址（後備用） */
+export function cardProxyUrl(id: string, ext: string = 'avif', folder: string = CARD_FOLDER): string {
+  return (
+    `${CARD_PROXY_PATH}?id=${encodeURIComponent(id.padStart(4, '0'))}` +
+    `&ext=${encodeURIComponent(ext)}&folder=${encodeURIComponent(folder)}`
+  );
 }
 
 /** 依編號＋副檔名組出圖卡網址（編號固定 4 位） */
-/** 代理網址（後備用） */
-export function cardProxyUrl(id: string, ext: string = 'avif'): string {
-  return `${CARD_PROXY_PATH}?id=${encodeURIComponent(id.padStart(4, '0'))}&ext=${encodeURIComponent(ext)}`;
+export function cardUrl(id: string, ext: string = 'avif', alt = false, folder: string = CARD_FOLDER): string {
+  const padded = id.padStart(4, '0');
+  return `${cardBaseUrl(folder)}/${padded}${alt ? CARD_ALT_SUFFIX : ''}.${ext}`;
 }
 
-export function cardUrl(id: string, ext: string = 'avif', alt = false): string {
-  const padded = id.padStart(4, '0');
-  return `${cardBaseUrl()}/${padded}${alt ? CARD_ALT_SUFFIX : ''}.${ext}`;
+/** 插畫卡（正面）：birdcards/0008.avif */
+export function artUrl(id: string, ext: string = 'avif'): string {
+  return cardUrl(id, ext, false, ART_FOLDER);
+}
+
+/** 資訊圖卡（翻轉後）：aviandex/0008.avif */
+export function infoCardUrl(id: string, ext: string = 'avif'): string {
+  return cardUrl(id, ext, false, INFO_FOLDER);
+}
+
+/** 插畫的所有候選網址（birdcards 先、aviandex 後備） */
+export function cardUrlCandidates(id: string, ext: string = 'avif', alt = false): string[] {
+  return CARD_FOLDERS.map((f) => cardUrl(id, ext, alt, f));
 }

@@ -60,23 +60,22 @@ export const ResearchHubPage: React.FC<ResearchHubPageProps> = ({
       transition={{ duration: 0.16 }}
       className="flex flex-col gap-2.5 relative z-10 pb-8 w-full"
     >
-      <div className="bg-[#1b1a17]/85 border border-amber-500/25 rounded-lg p-3">
+      {/* 標題：一行講完。
+          之前是三行（標題 + 兩句說明 + 鳴謝），一頁未開始就一堆字。
+          小朋友不會讀那兩句，所以收成一句可以講出口的：
+          「想知多啲？揀一個地方去睇。」 */}
+      <div className="flex items-baseline gap-2 px-0.5">
         <h3 className="text-amber-100 font-black text-[15px] leading-tight">
-          {t('科學研究中心', 'Research centre')}
+          {t('去邊度搵資料', 'Where to look')}
         </h3>
-        <p className="text-white/45 text-[10.5px] mt-1 leading-relaxed">
-          {t('六個入口，各找一種資料。全部用同一隻雀的英文俗名／eBird 代碼查，唔會查錯雀。',
-            'Six doors, six kinds of evidence. All keyed to this bird’s English name / eBird code.')}
-        </p>
-        <p className="text-[9px] text-amber-300/60 mt-1">
-          {t('鳴謝：Cornell Lab（eBird／Macaulay）、Xeno-canto、Merlin',
-            'Credit: Cornell Lab (eBird / Macaulay), Xeno-canto, Merlin')}
-        </p>
+        <span className="text-white/30 text-[9.5px]">
+          {t('已用這隻雀的名字接好', 'pre-filled with this bird')}
+        </span>
       </div>
 
       {/* 六格：一列式清單（唔再做 icon-topped 卡片陣） */}
       <div className="flex flex-col gap-1">
-        {sources.map((s, i) => {
+        {sources.map((s) => {
           const Icon = ICONS[s.key];
           return (
             <a
@@ -84,22 +83,20 @@ export const ResearchHubPage: React.FC<ResearchHubPageProps> = ({
               href={s.url}
               target="_blank"
               rel="noreferrer noopener"
-              className="group flex items-center gap-2.5 bg-black/25 hover:bg-black/40 border border-white/10 hover:border-amber-400/35 rounded-lg px-2.5 py-2 transition-colors"
+              className="group flex items-center gap-3 bg-black/25 hover:bg-black/45 border border-white/10 hover:border-amber-400/40 rounded-xl px-3 py-3 transition-colors active:scale-[0.99]"
             >
-              <span className="font-mono text-[9px] text-amber-300/45 w-3 shrink-0">{i + 1}</span>
-              <Icon className="w-4 h-4 text-amber-200/70 shrink-0" />
+              <span className="w-9 h-9 rounded-full bg-amber-400/12 border border-amber-400/25 flex items-center justify-center shrink-0">
+                <Icon className="w-5 h-5 text-amber-200/85" />
+              </span>
               <span className="flex-1 min-w-0">
-                <span className="block text-white/90 font-bold text-[12px] leading-tight truncate">
+                <span className="block text-white font-black text-[13.5px] leading-tight truncate">
                   {lang === 'en' ? s.en : s.zh}
                 </span>
-                <span className="block text-white/40 text-[9.5px] leading-tight truncate">
+                <span className="block text-white/45 text-[10px] leading-tight truncate mt-0.5">
                   {lang === 'en' ? s.enNote : s.zhNote}
                 </span>
               </span>
-              <span className="hidden xs:block sm:block font-mono text-[8.5px] text-white/25 shrink-0">
-                {s.host}
-              </span>
-              <ArrowUpRight className="w-3 h-3 text-white/30 group-hover:text-amber-300 shrink-0" />
+              <ArrowUpRight className="w-4 h-4 text-white/25 group-hover:text-amber-300 shrink-0" />
             </a>
           );
         })}

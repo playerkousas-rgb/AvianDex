@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, ShieldCheck, Info } from 'lucide-react';
+import { ExternalLink, ShieldCheck, Info, ChevronDown } from 'lucide-react';
 import type { Lang } from '../lib/explorer';
 import { CARD_CREDITS, MEDIA_CREDIT } from '../lib/credits';
 
@@ -27,6 +27,19 @@ export const SourcesPage: React.FC<SourcesPageProps> = ({ lang }) => {
   const t = (zh: string, en: string) => (lang === 'en' ? en : zh);
   const all = [...CARD_CREDITS, MEDIA_CREDIT];
 
+  /**
+   * 預設收起。
+   *
+   * 為甚麼？這頁是「有需要查才看」的資訊，不是每隻雀都要讀的東西。
+   * 一拉開就六個來源、十幾行授權條文，會把整個詳細資料頁壓到很長 ——
+   * 而且用戶（尤其小朋友）根本不會讀完，只是覺得「好多字」。
+   * 所以只留一行摘要 + 一個展開掣；要查的人自己開。
+   *
+   * 但收起不等於隱藏：摘要那行照樣寫明名稱／內文／分類三個出處，
+   * 鳴謝的法律意義（署名）仍然在畫面上。
+   */
+  const [open, setOpen] = React.useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 6 }}
@@ -49,6 +62,20 @@ export const SourcesPage: React.FC<SourcesPageProps> = ({ lang }) => {
         </p>
       </div>
 
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex items-center gap-1.5 text-white/45 hover:text-white/80 text-[10px] font-bold w-full text-left"
+      >
+        <ChevronDown className={`w-3 h-3 transition-transform ${open ? '' : '-rotate-90'}`} />
+        {open
+          ? t('收起來源詳情', 'Hide sources')
+          : t(`展開來源詳情（${all.length} 個來源）`, `Show sources (${all.length})`)}
+      </button>
+
+      {open && (
+      <>
       <div className="bg-amber-900/15 border border-amber-500/25 rounded-lg p-2.5">
         <div className="flex items-start gap-1.5">
           <Info className="w-3 h-3 text-amber-300/70 mt-0.5 shrink-0" />
@@ -94,6 +121,8 @@ export const SourcesPage: React.FC<SourcesPageProps> = ({ lang }) => {
           'This app is a personal, non-commercial field notebook. Reuse of its content must also comply with each source’s licence (Wikipedia: attribution + share-alike).',
         )}
       </p>
+      </>
+      )}
     </motion.div>
   );
 };

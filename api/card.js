@@ -14,7 +14,12 @@
 // ============================================================
 
 const R2_BASE_URL = (process.env.R2_BASE_URL || 'https://pub-a9333a974e814ccba1994639b6e79266.r2.dev').replace(/\/+$/, '');
-const CARD_FOLDER = process.env.R2_CARD_FOLDER || 'aviandex';
+/* 兩個資料夾，兩種圖：
+     birdcards/  BIRD-DEX 插畫（569 張，卡面正面）
+     aviandex/   資訊圖卡（已完成 21 張，翻轉面）
+   之前預設 'aviandex' 令 569 張插畫全部 404 —— 呢個係「張張都未發現」的根因。 */
+const CARD_FOLDER = process.env.R2_CARD_FOLDER || 'birdcards';
+const ALLOWED_FOLDERS = new Set(['birdcards', 'aviandex']);
 const ALLOWED_EXT = new Set(['avif', 'webp', 'jpg', 'jpeg', 'png']);
 
 function bad(res, status, message) {
@@ -33,7 +38,7 @@ export default async function handler(req, res) {
     return bad(res, 405, '請使用 GET 請求');
   }
 
-  const { id, ext } = req.query || {};
+  const { id, ext, folder } = req.query || {};
   const idStr = String(id || '').trim();
 
   // fail closed：只接受 1–4 位純數字，統一補成 4 位
@@ -43,7 +48,11 @@ export default async function handler(req, res) {
   const extStr = String(ext || 'avif').trim().toLowerCase();
   if (!ALLOWED_EXT.has(extStr)) return bad(res, 400, '不支援的圖片格式');
 
-  const target = `${R2_BASE_URL}/${CARD_FOLDER}/${paddedId}.${extStr}`;
+  /* fail closed：folder 只准白名單，防止用參數亂讀 R2 其他路徑 */
+  const folderStr = String(folder || CARD_FOLDER).trim();
+  if (!ALLOWED_FOLDERS.has(folderStr)) return bad(res, 400, '不支援的資料夾');
+
+  const target = `${R2_BASE_URL}/${folderStr}/${paddedId}.${extStr}`;
 
   let upstream;
   try {
