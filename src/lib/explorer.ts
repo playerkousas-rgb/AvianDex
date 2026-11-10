@@ -24,6 +24,10 @@ export interface ExplorerEntry {
   d: string[];
   h: string[];
   len: number;
+  /** 臺灣鳥類名錄．遷徙屬性（臺灣的季候，不是香港的；顯示時要標明「臺灣」） */
+  tws?: string;
+  /** 臺灣鳥類名錄．保育等級 */
+  twp?: string;
 }
 
 export interface TagDef {

@@ -62,3 +62,32 @@ test('別名表有出處（可回查）', () => {
   assert.match(f._readme.來源, /臺灣鳥類名錄|台灣鳥類名錄/);
   assert.match(f._readme.取得, /^https?:\/\//);
 });
+
+/* ------------------------------------------------------------------
+ * 鳴謝：用了人家的東西就要講，而且要講清楚用了哪一部分
+ * ------------------------------------------------------------------ */
+test('每個資料來源都寫齊：機構、用了哪部分、授權條件、網址', async () => {
+  const { CARD_CREDITS, MEDIA_CREDIT } = await import('../src/lib/credits.ts');
+  for (const c of [...CARD_CREDITS, MEDIA_CREDIT]) {
+    assert.ok(c.zh && c.en, `缺少中英文機構名：${c.zh}`);
+    assert.ok(c.usedZh && c.usedEn, `${c.zh} 未寫「用了哪一部分」`);
+    assert.ok(c.termsZh && c.termsEn, `${c.zh} 未寫授權條件`);
+    assert.match(c.url, /^https?:\/\//, `${c.zh} 網址無效`);
+  }
+});
+
+test('兩個鳥會都有鳴謝，且分別講明用途', async () => {
+  const { CARD_CREDITS, NAME_HK_CREDIT, NAME_TW_CREDIT, CREDIT_LINE_ZH } = await import('../src/lib/credits.ts');
+  const zh = CARD_CREDITS.map((c) => c.zh).join('｜');
+  assert.match(zh, /香港觀鳥會/, '卡面鳴謝沒有香港觀鳥會');
+  assert.match(zh, /中華民國野鳥學會/, '卡面鳴謝沒有台灣野鳥學會');
+
+  // 香港：只核對名稱，不轉載內文 —— 這句一定要在，否則等於宣稱有授權
+  assert.match(NAME_HK_CREDIT.usedZh, /只用來核對|只作人手核對/);
+  assert.match(NAME_HK_CREDIT.termsZh, /不得複製|版權保留/);
+  // 台灣：用事實欄位，不搬解說文字
+  assert.match(NAME_TW_CREDIT.termsZh, /不轉載|只取事實欄位/);
+
+  assert.match(CREDIT_LINE_ZH, /香港觀鳥會/);
+  assert.match(CREDIT_LINE_ZH, /臺灣鳥類名錄/);
+});

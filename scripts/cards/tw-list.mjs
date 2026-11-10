@@ -145,7 +145,10 @@ function diff(rows) {
     }
     if (!hit) { unmatched.push({ id: b.id, name: ourZh, sci, why: '台灣名錄對唔上' }); continue; }
 
-    matched.push({ id: b.id, name: ourZh, sci, twZh: hit.zh, twSci: hit.sci, via });
+    matched.push({
+      id: b.id, name: ourZh, sci, twZh: hit.zh, twSci: hit.sci, via,
+      twStatus: hit.status, twProtect: hit.protect, twEndemic: hit.endemic,
+    });
 
     /* 中文名不同：唔改卡面，只記錄＋做別名 */
     const a = ourZh.replace(/臺/g, '台');
@@ -173,19 +176,31 @@ function diff(rows) {
 /* ------------------------------------------------------------------
  * 三、輸出 twNames.json（別名表，唔取代任何現有名）
  * ------------------------------------------------------------------ */
-function buildAliasFile(nameDiff) {
+function buildAliasFile(matched) {
   const out = {
     _readme: {
-      用途: '台灣鳥類名錄的中文名，只作「搜尋別名」用，唔會取代卡面名稱。',
+      用途: '台灣鳥類名錄的事實欄位（中文名、遷徙屬性、保育等級、特有性）。中文名作搜尋別名，唔會取代卡面名稱。',
       來源: '社團法人中華民國野鳥學會《2026 年臺灣鳥類名錄》(0820 修正) 正表',
       取得: 'https://www.bird.org.tw/download/5698',
-      規則: '兩套中文名並存：卡面用香港慣用名，搜尋時打台灣名一樣搵得到。沒有任何一方更權威。',
+      授權: '只取事實欄位（名稱／學名／科名／遷徙屬性／保育等級），不轉載名錄的解說文字、圖表。',
+      命名規則: '兩套中文名並存：卡面用香港慣用名，搜尋時打台灣名一樣搵得到。沒有任何一方更權威。',
+      屬性規則: 'status／protect 是「臺灣」的遷徙屬性與保育等級，不是香港的；介面必須標明來源地區，不可當成香港數據。',
       更新: '名錄出新版時，重跑 npm run cards:tw -- --xlsx <新檔>',
     },
     names: {},
   };
-  for (const d of nameDiff) {
-    out.names[d.id] = { zh: d.twZh, twSci: d.twSci, kind: d.kind };
+  /* 每一隻對上的雀都記（唔止名不同的）：
+     台灣名錄是我們目前唯一拿到授權使用事實欄位的正式名錄，
+     所以遷徙屬性／保育等級也用它的，並在介面標明「臺灣」，不冒充香港數據。 */
+  for (const m of matched) {
+    out.names[m.id] = {
+      zh: m.twZh,
+      sci: m.twSci,
+      status: m.twStatus || '',
+      protect: m.twProtect || '',
+      endemic: m.twEndemic || '',
+      nameDiffers: m.twZh !== m.name,
+    };
   }
   return out;
 }
@@ -261,7 +276,7 @@ console.log(`\n📄 ${path.relative(ROOT, REPORT)}`);
 if (CHECK) {
   console.log('（--check：冇寫入 twNames.json）');
 } else {
-  fs.writeFileSync(OUT, `${JSON.stringify(buildAliasFile(nameDiff), null, 2)}\n`);
-  console.log(`📄 src/data/twNames.json（${nameDiff.length} 個台灣別名）`);
+  fs.writeFileSync(OUT, `${JSON.stringify(buildAliasFile(matched), null, 2)}\n`);
+  console.log(`📄 src/data/twNames.json（${matched.length} 筆台灣資料，其中 ${nameDiff.length} 個名不同）`);
   console.log('   下一步：npm run cards:explorer && npm test');
 }

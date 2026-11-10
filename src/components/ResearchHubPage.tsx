@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import type { Lang } from '../lib/explorer';
 import { CARD_SOURCES, type CardSourceKey } from '../lib/cardSources';
+import { SourcesPage } from './SourcesPage';
 
 /**
  * 第 3 頁：科學研究中心。
@@ -145,6 +146,9 @@ export const ResearchHubPage: React.FC<ResearchHubPageProps> = ({
           </button>
         )}
       </div>
+
+      {/* 第 8 格：來源與鳴謝（名稱／內文／分類／量度各有出處，逐項列明） */}
+      <SourcesPage lang={lang} />
     </motion.div>
   );
 };

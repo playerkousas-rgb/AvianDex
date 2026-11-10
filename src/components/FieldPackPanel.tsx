@@ -5,6 +5,7 @@ import { ENTRIES } from '../lib/explorer';
 import {
   buildPack, savePack, readMeta, clearPack, type FieldPackMeta,
 } from '../lib/fieldPack';
+import { CREDIT_LINE_ZH, CREDIT_LINE_EN } from '../lib/credits';
 
 /**
  * 野外離線包下載按鈕。
@@ -112,6 +113,11 @@ export const FieldPackPanel: React.FC<FieldPackPanelProps> = ({ lang, compact })
           {t('完成。下次冇網絡時，詳細資料會直接用這份。', 'Done. Next time you are offline, details load from this.')}
         </p>
       )}
+
+      {/* 離線之後就看不到「來源與鳴謝」頁，所以把署名一併印在這裡 */}
+      <p className="text-white/25 text-[9px] leading-relaxed mt-2 pt-1.5 border-t border-white/8">
+        {t(CREDIT_LINE_ZH, CREDIT_LINE_EN)}
+      </p>
     </div>
   );
 };

@@ -145,7 +145,8 @@ function main() {
     );
 
     /* 台灣名錄的中文名加入別名（同卡面名相同的唔重複加） */
-    const tw = twNames[id] && twNames[id].zh;
+    const twRec = twNames[id] || {};
+    const tw = twRec.zh;
     if (tw && tw !== zh && !alias.includes(tw)) alias.push(tw);
 
     entries[id] = {
@@ -161,6 +162,10 @@ function main() {
       d: [...new Set(diet)],
       h: [...new Set(habitat)],
       len: parseLength(c.length),
+      /* 台灣鳥類名錄的事實欄位（臺灣的數據，唔係香港的；UI 必須標明「臺灣」）。
+         港、台兩地季候不同，直接當成本地數據會誤導。 */
+      tws: twRec.status || '',
+      twp: twRec.protect || '',
     };
   }
 
