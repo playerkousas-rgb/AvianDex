@@ -1,0 +1,81 @@
+{
+  "_readme": {
+    "用途": "人手核定的卡片覆寫表：當 eBird/Clements 自動對照對不上（例如 birds.json 的英文名空白、或香港慣用中文名與英文名指向不同種），在這裡逐張指定物種。",
+    "規則": [
+      "每筆必須有 speciesCode、來源（evidence）、以及一句話理由（note）。",
+      "speciesCode 必須存在於 src/data/ebird-taxonomy.csv；build 時會驗證，錯字會直接報錯。",
+      "只寫人手核實過的；不確定就不要寫，寧願留空由 enrich 報告列為「對不上」。",
+      "這裡只決定『是哪一種鳥』（分類對照）；卡面文字仍然只可由維基原文抽取，兩者分開。"
+    ]
+  },
+  "0009": {
+    "speciesCode": "maslau1",
+    "nameZh": "黑臉噪鶥",
+    "evidence": "HKBWS Avifauna / eBird：Masked Laughingthrush = Pterorhinus perspicillatus（香港常見留鳥）；卡片中文名寫成「黑臉噪眉」，與 0445「黑臉噪鶥」同一種。",
+    "note": "birds.json 英文名為 Unknown Species，需指定"
+  },
+  "0016": {
+    "speciesCode": "cintit13",
+    "nameZh": "大山雀",
+    "sciName": "Parus cinereus",
+    "evidence": "Avibase：Clements 2024/2025 與 eBird 2024/2025 已把東亞的 Japanese Tit 併入 Asian Tit Parus cinereus；香港的族群（commixtus）現行分類為 Parus cinereus。HKBWS 名錄另用「遠東山雀 Parus minor」。",
+    "note": "採用 Clements/eBird 現行處理（Asian Tit）；如要跟 HKBWS 名錄寫遠東山雀，改 speciesCode 亦可，但兩者現時並非 eBird 的兩個 speciesCode",
+    "caveat": "分類處理未統一（IOC 仍分 P. minor），卡面文字要避免把兩種說法混寫"
+  },
+  "0120": {
+    "speciesCode": "lessap2",
+    "nameZh": "蒙古沙鴴",
+    "sciName": "Anarhynchus mongolus",
+    "evidence": "eBird/Clements：Mongolian Plover 已拆分，香港／華南一帶為 Siberian Sand-Plover Anarhynchus mongolus（中文名「蒙古沙鴴」）；Tibetan Sand-Plover 為 A. atrifrons。",
+    "note": "birds.json 英文名 Lesser Sand-Plover 已非 eBird 現用名，屬名亦由 Charadrius 改為 Anarhynchus"
+  },
+  "0196": {
+    "speciesCode": "veggul1",
+    "nameZh": "銀鷗",
+    "sciName": "Larus vegae",
+    "evidence": "HKBWS Avifauna《Vega Gull 織女銀鷗 Larus vegae》：香港冬季所見的「銀鷗」屬此種（含 vegae／mongolicus 兩個亞種）。",
+    "note": "香港慣稱「銀鷗」＝ Vega Gull；不是歐洲的 Larus argentatus。卡面英文名宜用 Vega Gull"
+  },
+  "0235": {
+    "speciesCode": "grebit1",
+    "nameZh": "大麻鳽",
+    "sciName": "Botaurus stellaris",
+    "evidence": "eBird/Clements：Eurasian Bittern Botaurus stellaris，中文名大麻鳽。",
+    "note": "英文名 Great Bittern 已改為 Eurasian Bittern"
+  },
+  "0237": {
+    "speciesCode": "schbit1",
+    "nameZh": "紫背葦鳽",
+    "sciName": "Botaurus eurhythmus",
+    "evidence": "eBird/Clements：Schrenck's Bittern Botaurus eurhythmus（原 Ixobrychus eurhythmus），中文名紫背葦鳽。",
+    "note": "birds.json 英文名寫成學名大小寫『Ixobrychus Eurhythmus』，且屬已併入 Botaurus"
+  },
+  "0247": {
+    "speciesCode": "categr2",
+    "nameZh": "牛背鷺",
+    "sciName": "Ardea coromanda",
+    "evidence": "eBird/Clements：Eastern Cattle-Egret Ardea coromanda（原 Bubulcus ibis 拆分，東方族群為此種）。",
+    "note": "牛背鷺在港為 Eastern Cattle-Egret"
+  },
+  "0332": {
+    "speciesCode": "japfly1",
+    "nameZh": "紫壽帶",
+    "sciName": "Terpsiphone atrocaudata",
+    "evidence": "eBird/Clements：Black Paradise-Flycatcher Terpsiphone atrocaudata（中文名紫壽帶／日本壽帶）。",
+    "note": "英文名 Japanese Paradise-Flycatcher 已改為 Black Paradise-Flycatcher"
+  },
+  "0386": {
+    "speciesCode": "pasmar1",
+    "nameZh": "淡色沙燕",
+    "sciName": "Riparia diluta",
+    "evidence": "eBird/Clements：Pale Martin Riparia diluta（原 Pale Sand Martin），中文名淡色沙燕。",
+    "note": "英文名 Pale Sand Martin 已改為 Pale Martin"
+  },
+  "0388": {
+    "speciesCode": "y00621",
+    "nameZh": "金腰燕",
+    "sciName": "Cecropis daurica",
+    "evidence": "eBird/Clements：Eastern Red-rumped Swallow Cecropis daurica（中文名金腰燕）。",
+    "note": "英文名 Red-Rumped Swallow 已改為 Eastern Red-rumped Swallow；此 code 為 eBird 過渡代碼"
+  }
+}

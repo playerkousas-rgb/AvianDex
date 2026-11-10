@@ -30,6 +30,7 @@ const ROOT = path.resolve(__dirname, '../..');
 const BIRDS = path.join(ROOT, 'src/data/birds.json');
 const TAXONOMY = path.join(ROOT, 'src/data/ebird-taxonomy.csv');
 const ALIASES = path.join(ROOT, 'src/data/name-aliases.generated.json');
+const OVERRIDES = path.join(ROOT, 'src/data/taxonomyOverrides.json');
 const TAXONOMY_ZH = path.join(ROOT, 'src/data/taxonomyZh.json');
 const OUT_TAXONOMY = path.join(ROOT, 'src/data/birdTaxonomy.json');
 const OUT_AUDIT = path.join(ROOT, 'reports/enrich-birds.json');
@@ -88,13 +89,27 @@ function main() {
   const birds = JSON.parse(fs.readFileSync(BIRDS, 'utf8'));
   const tax = loadTaxonomy();
   const aliases = fs.existsSync(ALIASES) ? JSON.parse(fs.readFileSync(ALIASES, 'utf8')) : {};
+  /* 人手核定的覆寫（英文名空白／中英指向不同種時用）。物種代碼先驗證，錯字即刻報錯，
+     唔會靜靜當「對唔上」。 */
+  const overrides = fs.existsSync(OVERRIDES) ? JSON.parse(fs.readFileSync(OVERRIDES, 'utf8')) : {};
+  const badOverride = [];
+  for (const [id, o] of Object.entries(overrides)) {
+    if (id.startsWith('_')) continue;
+    if (!o || !o.speciesCode) badOverride.push(`${id}（冇 speciesCode）`);
+    else if (!tax.byCode.has(o.speciesCode)) badOverride.push(`${id}（代碼 ${o.speciesCode} 唔在 ebird-taxonomy.csv）`);
+  }
+  if (badOverride.length) {
+    console.error(`✗ taxonomyOverrides.json 有問題：${badOverride.join('、')}`);
+    process.exit(1);
+  }
   const zhTax = fs.existsSync(TAXONOMY_ZH) ? JSON.parse(fs.readFileSync(TAXONOMY_ZH, 'utf8')) : { orders: {}, families: {} };
 
   const taxonomy = {};
   const fixes = [];
+  const fixesName = [];
   const unresolved = [];
   const conflicts = [];
-  const counts = { direct: 0, format: 0, 'sci-in-en': 0, 'zh-alias': 0 };
+  const counts = { direct: 0, format: 0, 'sci-in-en': 0, 'zh-alias': 0, override: 0 };
 
   for (const bird of birds) {
     const en = (bird.en || '').trim();
@@ -148,12 +163,25 @@ function main() {
       via = 'zh-alias';
     }
 
+    // D) 人手覆寫最優先（核實過的物種代碼）
+    const ov = overrides[bird.id];
+    if (ov && ov.speciesCode) {
+      rec = tax.byCode.get(ov.speciesCode) || null;
+      via = 'override';
+      zhMismatch = null;
+      if (!rec) {
+        unresolved.push({ id: bird.id, name: bird.name, en, note: 'override code 唔存在' });
+        continue;
+      }
+    }
+
     if (!rec) {
       unresolved.push({ id: bird.id, name: bird.name, en });
       continue;
     }
 
-    counts[via.startsWith('zh-alias') ? 'zh-alias' : via] = (counts[via.startsWith('zh-alias') ? 'zh-alias' : via] || 0) + 1;
+    const bucket = via.startsWith('zh-alias') ? 'zh-alias' : via;
+    counts[bucket] = (counts[bucket] || 0) + 1;
     taxonomy[bird.id] = {
       speciesCode: rec.SPECIES_CODE,
       comName: rec.PRIMARY_COM_NAME,
@@ -173,6 +201,10 @@ function main() {
     if (zhMismatch) conflicts.push({ id: bird.id, name: bird.name, en, ...zhMismatch });
 
     // 是否需要改英文名
+    if (via === 'override' && ov.nameZh && ov.nameZh !== bird.name) {
+      /* 中文名以覆寫表為準（例如「黑臉噪眉」→「黑臉噪鶥」）；--apply 才寫入 */
+      fixesName.push({ id: bird.id, name: bird.name, to: ov.nameZh, via: 'override' });
+    }
     if (via === 'direct' && !zhMismatch) continue;
     if (zhMismatch && enVia !== 'sci-in-en') continue; // 有衝突就不自動改
     const target = rec.PRIMARY_COM_NAME;
@@ -202,13 +234,15 @@ function main() {
 
   // ── 必要時寫回 birds.json ──
   let applied = 0;
-  if (APPLY && fixes.length) {
+  if (APPLY && (fixes.length || fixesName.length)) {
     const fixById = new Map(fixes.map((f) => [f.id, f]));
+    const nameById = new Map(fixesName.map((f) => [f.id, f]));
     const next = birds.map((b) => {
       const f = fixById.get(b.id);
-      if (!f) return b;
+      const n = nameById.get(b.id);
+      if (!f && !n) return b;
       applied += 1;
-      return { ...b, en: f.to };
+      return { ...b, ...(f ? { en: f.to } : {}), ...(n ? { name: n.to } : {}) };
     });
     fs.writeFileSync(`${BIRDS}.bak`, `${JSON.stringify(birds, null, 2)}\n`);
     fs.writeFileSync(BIRDS, `${JSON.stringify(next, null, 2)}\n`);
@@ -225,6 +259,7 @@ function main() {
     `- ✅ 已對上 eBird：${resolved}`,
     `- ❓ 對不上：${unresolved.length}`,
     `- ✏️ 需要修正英文名：${fixes.length}（${APPLY ? `已寫入 ${applied} 筆` : '未寫入（--dry-run）'}）`,
+    `- 🈶 需要修正中文名：${fixesName.length}`,
     `- ⚠️ 中英名衝突（不自動改）：${conflicts.length}`,
     '',
     '| 比對途徑 | 數量 |',
@@ -233,12 +268,19 @@ function main() {
     `| 只有大小寫／連字號不同 | ${counts.format} |`,
     `| 英文名欄位放的是學名 | ${counts['sci-in-en']} |`,
     `| 用中文名別名表（eBird CODE）救回 | ${counts['zh-alias']} |`,
+    `| 人手核定覆寫（taxonomyOverrides.json） | ${counts.override || 0} |`,
     '',
   ];
 
   if (fixes.length) {
     md.push('## ✏️ 英文名修正', '', '| 編號 | 中文名 | 現值 | 應為（eBird） | 學名 | 途徑 |', '|---|---|---|---|---|---|');
     for (const f of fixes) md.push(`| ${f.id} | ${f.name} | ${f.from || '（空）'} | **${f.to}** | ${f.sciName} | ${f.via} |`);
+    md.push('');
+  }
+
+  if (fixesName.length) {
+    md.push('## 🈶 中文名修正（taxonomyOverrides.json 指定）', '', '| 編號 | 現值 | 應為 |', '|---|---|---|');
+    for (const f of fixesName) md.push(`| ${f.id} | ${f.name} | **${f.to}** |`);
     md.push('');
   }
 
