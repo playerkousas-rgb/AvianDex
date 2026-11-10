@@ -111,6 +111,12 @@ function main() {
   const aliases = fs.existsSync(path.join(DATA, 'name-aliases.generated.json'))
     ? readJson(path.join(DATA, 'name-aliases.generated.json'))
     : {};
+  /* 台灣鳥類名錄的中文名（npm run cards:tw 產生）：
+     只做「搜尋別名」，唔會取代卡面的香港慣用名。
+     兩套名字都是華文圈通行叫法，打邊一個都應該搵得到隻雀。 */
+  const twNames = fs.existsSync(path.join(DATA, 'twNames.json'))
+    ? readJson(path.join(DATA, 'twNames.json')).names || {}
+    : {};
 
   const byId = new Map(birds.map((b) => [b.id, b]));
   const entries = {};
@@ -137,6 +143,10 @@ function main() {
     const alias = (aliasRaw.aliases || []).filter(
       (a) => a && a !== en && a.toLowerCase() !== en.toLowerCase() && a !== t.sciName,
     );
+
+    /* 台灣名錄的中文名加入別名（同卡面名相同的唔重複加） */
+    const tw = twNames[id] && twNames[id].zh;
+    if (tw && tw !== zh && !alias.includes(tw)) alias.push(tw);
 
     entries[id] = {
       z: zh,

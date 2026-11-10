@@ -123,6 +123,7 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
   const sciName = entry?.s || bird.scientificName || enName;
   const title = lang === 'en' ? enName || sciName : zhName;
   const subtitle = lang === 'en' ? '' : enName;
+  const altNames = (entry?.n || []).filter((n) => n && n !== zhName);
   const dietTags = (entry?.d || []).map((id) => dietLabel(id, lang));
   const habTags = (entry?.h || []).map((id) => habitatLabel(id, lang));
 
@@ -150,6 +151,13 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
           {subtitle && <span className="text-yellow-200/60 text-[11px]">{subtitle}</span>}
         </div>
         <p className="text-white/45 text-[10.5px] italic mt-0.5">{sciName}</p>
+        {/* 台灣名錄的中文名：只作別名顯示，唔改主名。兩套叫法都通行，見得到就好。 */}
+        {lang === 'zh' && altNames.length > 0 && (
+          <p className="text-white/35 text-[10px] mt-0.5">
+            {t('台灣名錄作', 'TW list: ')}
+            <span className="text-amber-200/70">{altNames.join('、')}</span>
+          </p>
+        )}
         <div className="flex flex-wrap gap-1.5 mt-2">
           {lang === 'zh' && [entry?.oz, entry?.fz].filter(Boolean).map((v) => (
             <span key={v} className="bg-emerald-500/12 border border-emerald-400/20 text-emerald-200/90 text-[10px] rounded px-1.5 py-0.5">{v}</span>
