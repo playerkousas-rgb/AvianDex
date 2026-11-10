@@ -643,16 +643,26 @@ async function main() {
   if (!flag('--dry-run')) saveAll(copyAll, writeF);
   const total = Object.keys(copyAll).filter((k) => !k.startsWith('_')).length;
   const gotN = report.filter((r) => r.zh || r.en).length;
+  const inPlace = path.resolve(writeF) === path.resolve(COPY_F);
   console.log(`\n💾 已寫入 ${path.relative(ROOT, writeF)}（檔案共 ${total} 張，本次有更新 ${gotN} 張）`);
   console.log(`   絕對路徑：${writeF}`);
-  console.log('   交回工作流程：把這個檔案上傳／貼回對話，或直接覆蓋 src/data/cardCopy.json');
-  printBox([
-    ['① 這兩個檔案就是成品', ''],
-    ['   ' + writeF, '（要上傳給我）'],
-    ['   ' + REPORT_F, '（可以不上傳）'],
-    ['② 想即時睇結果', `   node scripts/cards/show-picks.mjs --file ${path.relative(ROOT, writeF)} --ids 0008`],
-    ['③ 想合併入 repo', '   node scripts/cards/show-picks.mjs --file ' + path.relative(ROOT, writeF) + ' --write'],
-  ]);
+  if (inPlace) {
+    /* 直接寫入 cardCopy.json：唔需要再上傳、唔需要第二個 --write 步驟 */
+    printBox([
+      ['✅ 文案已經入到 src/data/cardCopy.json', '（唔使上傳任何檔案）'],
+      ['① 重算覆蓋率', '   npm run cards:report'],
+      ['② 重出詳細資料', '   npm run cards:data'],
+      ['③ 存檔', '   git add src/data/cardCopy.json && git commit -m "copy: 補 25 張中文文案"'],
+    ]);
+  } else {
+    printBox([
+      ['① 這兩個檔案就是成品', ''],
+      ['   ' + writeF, '（要上傳給我）'],
+      ['   ' + REPORT_F, '（可以不上傳）'],
+      ['② 想即時睇結果', `   node scripts/cards/show-picks.mjs --file ${path.relative(ROOT, writeF)} --ids 0008`],
+      ['③ 想合併入 repo', '   node scripts/cards/show-picks.mjs --file ' + path.relative(ROOT, writeF) + ' --write'],
+    ]);
+  }
 
   const zero = report.filter((r) => !r.zh && !r.en);
   const halfZh = report.filter((r) => r.zh && !r.en);
