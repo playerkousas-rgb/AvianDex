@@ -3551,7 +3551,7 @@
     "weight": "200–300 g",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0022": {
     "diet": "牠們是夜行性覓食的鳥類，白天時通常成群棲息在湖泊和濕潤的稻田周圍。",
@@ -22492,7 +22492,7 @@
     "weight": "",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0190": {
     "range": "遺鷗（Ichthyaetus relictus），鷗科鷗屬瀕危候鳥。",
@@ -33907,7 +33907,7 @@
     "weight": "200–300 g",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0313": {
     "diet": "紅領綠鸚鵡為雜食性，但主要以榕果、木棉等植物果實與種子為食，也喫穀物、花朵。",
@@ -34534,7 +34534,7 @@
     "weight": "",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0319": {
     "range": "分佈於中南半島、蘇門答臘、加里曼丹、菲律賓、朝鮮、日本、台灣島以及中國大陸的內蒙古、東北。",
@@ -41963,7 +41963,7 @@
     "weight": "",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0400": {
     "diet": "黃腰柳鶯是食蟲性的，主要以小型昆蟲及蜘蛛的成蟲、幼蟲和蛹為食。",
@@ -57987,7 +57987,7 @@
     "weight": "1 g",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0187": {
     "breeding": "＊本港所有野生的鳥類(包括外來種）都受香港法例第170章《野生動物保護條例》所保護，捕捉或滋擾牠們以及牠們的卵或巢均屬違法。",
@@ -58109,7 +58109,7 @@
     "weight": "",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0238": {
     "fieldCopy": [
@@ -58146,7 +58146,7 @@
       {
         "id": "breeding",
         "zh": "",
-        "en": ""
+        "en": "The cinnamon bittern (Botaurus cinnamomeus) or chestnut bittern is a small Old World bittern, breeding in tropical and subtropical Asia from India east to China and Indonesia."
       },
       {
         "id": "funFact",
@@ -58171,7 +58171,7 @@
       {
         "id": "conservation",
         "zh": "",
-        "en": ""
+        "en": "Global population estimates are uncertain and range from 130,000 to 2,000,000 individuals."
       },
       {
         "id": "etymology",
@@ -58188,7 +58188,7 @@
     "weight": "",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0239": {
     "fieldCopy": [
@@ -58261,7 +58261,7 @@
     "weight": "",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0269": {
     "fieldCopy": [
@@ -58346,7 +58346,7 @@
     "weight": "",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0270": {
     "fieldCopy": [
@@ -58415,7 +58415,7 @@
     "weight": "",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0379": {
     "fieldCopy": [
@@ -58454,7 +58454,7 @@
     "weight": "",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0382": {
     "fieldCopy": [
@@ -58513,7 +58513,7 @@
     "weight": "",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0423": {
     "fieldCopy": [
@@ -58588,7 +58588,7 @@
     "weight": "",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
   },
   "0430": {
     "fieldCopy": [
@@ -58662,6 +58662,939 @@
     "weight": "",
     "iucnEn": "Least Concern (LC)",
     "picks": [],
-    "fetchedAt": "2026-11-04"
+    "fetchedAt": "2026-11-10"
+  },
+  "_done": [
+    "0009",
+    "0016",
+    "0021",
+    "0120",
+    "0189",
+    "0196",
+    "0235",
+    "0312",
+    "0318",
+    "0332",
+    "0379",
+    "0386",
+    "0388",
+    "0399",
+    "0423",
+    "0430"
+  ],
+  "0009": {
+    "habitat": "偏好有枯枝落叶的稀疏包含阔叶树的林。",
+    "diet": "杂食，繁殖季节主要食物是昆虫，非繁殖季节主要食用果实。",
+    "look": "背部与翅膀呈灰褐色，胸腹部呈浅棕色，喙呈暗褐色，脚黄褐色。",
+    "breeding": "每窝产卵三至五枚，孵壳期十七八天，哺雏期二十天左右。",
+    "behavior": "性隐蔽，经常数只结群在林中飞行。",
+    "humanRelation": "杂食，繁殖季节主要食物是昆虫，非繁殖季节主要食用果实。",
+    "highlights": [
+      "背部与翅膀呈灰褐色，胸腹部呈浅棕色，喙呈暗褐色，脚黄褐色。",
+      "性隐蔽，经常数只结群在林中飞行。",
+      "偏好有枯枝落叶的稀疏包含阔叶树的林。",
+      "杂食，繁殖季节主要食物是昆虫，非繁殖季节主要食用果实。"
+    ],
+    "fieldCopy": [
+      {
+        "id": "range",
+        "zh": "",
+        "en": "The masked laughingthrush (Pterorhinus perspicillatus) is a species of laughingthrush found in China, Vietnam, Hong Kong and Macau."
+      },
+      {
+        "id": "habitat",
+        "zh": "偏好有枯枝落叶的稀疏包含阔叶树的林。",
+        "en": "The masked laughingthrush (Pterorhinus perspicillatus) is a species of laughingthrush found in China, Vietnam, Hong Kong and Macau."
+      },
+      {
+        "id": "diet",
+        "zh": "杂食，繁殖季节主要食物是昆虫，非繁殖季节主要食用果实。",
+        "en": ""
+      },
+      {
+        "id": "highlights",
+        "zh": [
+          "背部与翅膀呈灰褐色，胸腹部呈浅棕色，喙呈暗褐色，脚黄褐色。",
+          "性隐蔽，经常数只结群在林中飞行。",
+          "偏好有枯枝落叶的稀疏包含阔叶树的林。",
+          "杂食，繁殖季节主要食物是昆虫，非繁殖季节主要食用果实。"
+        ],
+        "en": [
+          "Its vocalisations consist of a strident \"pew!\" call and various chattering noises.",
+          "This bird, like most others in its family, can often be seen foraging through undergrowth,",
+          "The masked laughingthrush (Pterorhinus perspicillatus) is a species of laughingthrush found in China,"
+        ]
+      },
+      {
+        "id": "look",
+        "zh": "背部与翅膀呈灰褐色，胸腹部呈浅棕色，喙呈暗褐色，脚黄褐色。",
+        "en": "The masked laughingthrush was formerly placed in the genus Garrulax but following the publication of a comprehensive molecular phylogenetic study of the laughingthrushes in 2018,"
+      },
+      {
+        "id": "breeding",
+        "zh": "每窝产卵三至五枚，孵壳期十七八天，哺雏期二十天左右。",
+        "en": ""
+      },
+      {
+        "id": "voice",
+        "zh": "",
+        "en": "Its vocalisations consist of a strident \"pew!\" call and various chattering noises."
+      },
+      {
+        "id": "behavior",
+        "zh": "性隐蔽，经常数只结群在林中飞行。",
+        "en": "This bird, like most others in its family, can often be seen foraging through undergrowth, especially in bamboo groves."
+      },
+      {
+        "id": "humanRelation",
+        "zh": "杂食，繁殖季节主要食物是昆虫，非繁殖季节主要食用果实。",
+        "en": ""
+      },
+      {
+        "id": "etymology",
+        "zh": "",
+        "en": "The specific epithet perspicillatus is Modern Latin meaning \"spectacled\"."
+      }
+    ],
+    "lang": {
+      "zh": true,
+      "en": true
+    },
+    "source": "zh.wikipedia 黑脸噪鹛 · pageid 87948 ｜ en.wikipedia Masked laughingthrush · pageid 1647956 · 分類：eBird/Clements",
+    "length": "",
+    "weight": "",
+    "iucn": "無危 LC",
+    "iucnEn": "Least Concern (LC)",
+    "picks": [
+      "habitat",
+      "diet",
+      "highlights",
+      "look",
+      "breeding",
+      "behavior",
+      "humanRelation"
+    ],
+    "fetchedAt": "2026-11-10"
+  },
+  "0016": {
+    "range": "它主要分佈于西亞到南亞及東南亞的廣大地區。",
+    "look": "其特征為白腹灰背，而大山雀則是黃腹綠背。",
+    "fieldCopy": [
+      {
+        "id": "range",
+        "zh": "它主要分佈于西亞到南亞及東南亞的廣大地區。",
+        "en": "The breeding season is summer and but dates vary across their range."
+      },
+      {
+        "id": "diet",
+        "zh": "",
+        "en": "They forage mainly by gleaning, capturing insects (mainly caterpillars, bugs and beetles) that are disturbed and will also feeding on buds and fruits."
+      },
+      {
+        "id": "highlights",
+        "zh": "",
+        "en": [
+          "The underparts are white with the black central stripe running along the length.",
+          "These birds are usually seen in pairs or small groups that sometimes join mixed-species foraging flocks.",
+          "They forage mainly by gleaning, capturing insects (mainly caterpillars,"
+        ]
+      },
+      {
+        "id": "look",
+        "zh": "其特征為白腹灰背，而大山雀則是黃腹綠背。",
+        "en": "The underparts are white with the black central stripe running along the length."
+      },
+      {
+        "id": "breeding",
+        "zh": "",
+        "en": "The calling is particularly persistent during the breeding season."
+      },
+      {
+        "id": "funFact",
+        "zh": "",
+        "en": "These birds have also been shown to create mental images for the call used to signal the presence of a snake, a cognitive ability that had previously been only attested in humans."
+      },
+      {
+        "id": "voice",
+        "zh": "",
+        "en": "The Japanese tit was lumped with the cinereous tit based on molecular phylogenetic studies that found it is more appropriate to consider the Parus major complex as comprising two species,"
+      },
+      {
+        "id": "behavior",
+        "zh": "",
+        "en": "These birds are usually seen in pairs or small groups that sometimes join mixed-species foraging flocks."
+      },
+      {
+        "id": "conservation",
+        "zh": "",
+        "en": "This species is made up of several populations that were earlier treated as subspecies of the great tit (Parus major)."
+      },
+      {
+        "id": "humanRelation",
+        "zh": "",
+        "en": "The order of these messages is meaningful, which has led researchers to liken the ordering of calls to syntax and grammar in human language."
+      },
+      {
+        "id": "etymology",
+        "zh": "",
+        "en": "The cinereous tit was formally described in 1818 by the French ornithologist Louis Vieillot under the binomial name Parus cinereus."
+      }
+    ],
+    "lang": {
+      "zh": true,
+      "en": true
+    },
+    "source": "zh.wikipedia 苍背山雀 · pageid 6145280 ｜ en.wikipedia Cinereous tit · pageid 23214369 · 分類：eBird/Clements",
+    "length": "",
+    "weight": "",
+    "picks": [
+      "range",
+      "look"
+    ],
+    "fetchedAt": "2026-11-10"
+  },
+  "0120": {
+    "range": "，古吉拉特邦, 印度]] 蒙古沙鴴在東北西伯利亞的光禿沿海平原上不連續地繁殖，",
+    "diet": "，奧裡薩邦, 印度]] 蒙古沙鴴主要以昆蟲、甲殼類和環節動物為食，通過跑停結合的方式捕食，",
+    "look": "繁殖期的雄鳥背部呈灰色，腹部呈白色。",
+    "breeding": "繁殖期的雄鳥背部呈灰色，腹部呈白色。",
+    "funFact": "其特定名稱mongolus來自拉丁文，指的是蒙古，在命名時該名稱所指的範圍比現在的國家更大。",
+    "voice": "其飛行叫聲為一種硬顫音。",
+    "behavior": "在所有羽色中，這個物種與鐵嘴沙鴴（Charadrius leschenaultii）非常相似。",
+    "migration": "它是高度遷徙的物種，在東亞和東南亞的沙灘上過冬。",
+    "etymology": "其特定名稱mongolus來自拉丁文，指的是蒙古，在命名時該名稱所指的範圍比現在的國家更大。",
+    "highlights": [
+      "繁殖期的雄鳥背部呈灰色，腹部呈白色。",
+      "其飛行叫聲為一種硬顫音。",
+      "，奧裡薩邦, 印度]] 蒙古沙鴴主要以昆蟲、甲殼類和環節動物為食，",
+      "它是高度遷徙的物種，在東亞和東南亞的沙灘上過冬。"
+    ],
+    "fieldCopy": [
+      {
+        "id": "range",
+        "zh": "，古吉拉特邦, 印度]] 蒙古沙鴴在東北西伯利亞的光禿沿海平原上不連續地繁殖，",
+        "en": ", Gujarat, India]] It breeds discontinuously across bare coastal plains in north-eastern Siberia, with the Mongolian plover in the eastern part of the range;"
+      },
+      {
+        "id": "diet",
+        "zh": "，奧裡薩邦, 印度]] 蒙古沙鴴主要以昆蟲、甲殼類和環節動物為食，通過跑停結合的方式捕食，",
+        "en": ", Odisha, India]] The Siberian sand plover feeds on insects, crustaceans and annelid worms, which are obtained by a run-and-pause technique,"
+      },
+      {
+        "id": "highlights",
+        "zh": [
+          "繁殖期的雄鳥背部呈灰色，腹部呈白色。",
+          "其飛行叫聲為一種硬顫音。",
+          "，奧裡薩邦, 印度]] 蒙古沙鴴主要以昆蟲、甲殼類和環節動物為食，",
+          "它是高度遷徙的物種，在東亞和東南亞的沙灘上過冬。"
+        ],
+        "en": [
+          "Breeding males have grey backs and white underparts.",
+          "The flight call is a hard trill.",
+          "The lesser usually has darker legs, a white forehead, and a more even white wing bar than the greater.",
+          ", Odisha, India]] The Siberian sand plover feeds on insects, crustaceans and annelid worms,",
+          "This species is strongly migratory, wintering on sandy beaches in east and southeast Asia and Australia."
+        ]
+      },
+      {
+        "id": "look",
+        "zh": "繁殖期的雄鳥背部呈灰色，腹部呈白色。",
+        "en": "Breeding males have grey backs and white underparts."
+      },
+      {
+        "id": "breeding",
+        "zh": "繁殖期的雄鳥背部呈灰色，腹部呈白色。",
+        "en": "This chunky plover is long-legged and long-billed."
+      },
+      {
+        "id": "funFact",
+        "zh": "其特定名稱mongolus來自拉丁文，指的是蒙古，在命名時該名稱所指的範圍比現在的國家更大。",
+        "en": "The Siberian sand plover and the Tibetan sand plover were previously considered to belong to the same species known as the \"lesser sand plover\", consisting of five races within the species complex."
+      },
+      {
+        "id": "voice",
+        "zh": "其飛行叫聲為一種硬顫音。",
+        "en": "The flight call is a hard trill."
+      },
+      {
+        "id": "behavior",
+        "zh": "在所有羽色中，這個物種與鐵嘴沙鴴（Charadrius leschenaultii）非常相似。",
+        "en": "The lesser usually has darker legs, a white forehead, and a more even white wing bar than the greater."
+      },
+      {
+        "id": "migration",
+        "zh": "它是高度遷徙的物種，在東亞和東南亞的沙灘上過冬。",
+        "en": "This species is strongly migratory, wintering on sandy beaches in east and southeast Asia and Australia."
+      },
+      {
+        "id": "humanRelation",
+        "zh": "",
+        "en": "The International Ornithologists' Union split the Tibetan sand plover from the lesser sand plover and changed its vernacular name to Siberian sand plover."
+      },
+      {
+        "id": "etymology",
+        "zh": "其特定名稱mongolus來自拉丁文，指的是蒙古，在命名時該名稱所指的範圍比現在的國家更大。",
+        "en": "This means that the lesser sand plover is paraphyletic."
+      }
+    ],
+    "lang": {
+      "zh": true,
+      "en": true
+    },
+    "source": "zh.wikipedia 蒙古沙鸻 · pageid 1021514 ｜ en.wikipedia Siberian sand plover · pageid 371039 · 分類：eBird/Clements",
+    "length": "",
+    "weight": "",
+    "iucn": "無危 LC",
+    "iucnEn": "Endangered (EN)",
+    "picks": [
+      "range",
+      "diet",
+      "highlights",
+      "look",
+      "breeding",
+      "funFact",
+      "voice"
+    ],
+    "fetchedAt": "2026-11-10"
+  },
+  "0196": {
+    "range": "西伯利亞銀鷗繁殖於西伯利亞的東北部，冬季棲息於日本、韓國、中國的南部和東部以及台灣。",
+    "habitat": "西伯利亞銀鷗繁殖於西伯利亞的東北部，冬季棲息於日本、韓國、中國的南部和東部以及台灣。",
+    "look": "嘴巴是黃色的，有一個紅點，除了第一和第二個冬季的海鷗，嘴巴幾乎完全是深灰色/黑色，隨著成熟，灰色部分逐漸減少。",
+    "breeding": "西伯利亞銀鷗繁殖於西伯利亞的東北部，冬季棲息於日本、韓國、中國的南部和東部以及台灣。",
+    "funFact": "西伯利亞銀鷗（Vega Gull，學名：Larus vegae）又名紅腳銀鷗及織女銀鷗。",
+    "behavior": "第一和第二個冬季的西伯利亞銀鷗比相似的蒙古鷗更深，尤其是在頭頂上，蒙古鷗即使在第一和第二個冬季也會略顯淺色。",
+    "migration": "它向東南遷徙至中國南部和東部以及韓國過冬，少數達到日本。",
+    "conservation": "嘴巴是黃色的，有一個紅點，除了第一和第二個冬季的海鷗，嘴巴幾乎完全是深灰色/黑色，隨著成熟，灰色部分逐漸減少。",
+    "etymology": "西伯利亞銀鷗（Vega Gull，學名：Larus vegae）又名紅腳銀鷗及織女銀鷗。",
+    "highlights": [
+      "嘴巴是黃色的，有一個紅點，除了第一和第二個冬季的海鷗，",
+      "第一和第二個冬季的西伯利亞銀鷗比相似的蒙古鷗更深，尤其是在頭頂上，",
+      "它向東南遷徙至中國南部和東部以及韓國過冬，少數達到日本。"
+    ],
+    "fieldCopy": [
+      {
+        "id": "range",
+        "zh": "西伯利亞銀鷗繁殖於西伯利亞的東北部，冬季棲息於日本、韓國、中國的南部和東部以及台灣。",
+        "en": "In their winter range they are typically found in harbours, on rocky shores and at river mouths."
+      },
+      {
+        "id": "habitat",
+        "zh": "西伯利亞銀鷗繁殖於西伯利亞的東北部，冬季棲息於日本、韓國、中國的南部和東部以及台灣。",
+        "en": "In their winter range they are typically found in harbours, on rocky shores and at river mouths."
+      },
+      {
+        "id": "diet",
+        "zh": "",
+        "en": "It is variously treated as a separate species, as a subspecies of the American herring gull (L."
+      },
+      {
+        "id": "highlights",
+        "zh": [
+          "嘴巴是黃色的，有一個紅點，除了第一和第二個冬季的海鷗，",
+          "第一和第二個冬季的西伯利亞銀鷗比相似的蒙古鷗更深，尤其是在頭頂上，",
+          "它向東南遷徙至中國南部和東部以及韓國過冬，少數達到日本。"
+        ],
+        "en": [
+          "In their winter range they are typically found in harbours, on rocky shores and at river mouths.",
+          "Adult Vega gulls in winter can often be mistaken for the very similar-looking slaty-backed gull (L.",
+          "It is variously treated as a separate species, as a subspecies of the American herring gull (L.",
+          "Vega gulls breed in northeastern Siberia, and migrate south to winter in Japan, Korea, eastern China,"
+        ]
+      },
+      {
+        "id": "look",
+        "zh": "嘴巴是黃色的，有一個紅點，除了第一和第二個冬季的海鷗，嘴巴幾乎完全是深灰色/黑色，隨著成熟，灰色部分逐漸減少。",
+        "en": "The bill is yellow with a red spot except for first- and second-winter gulls where the bill can be almost entirely dark grey to black, with the grey portion shrinking until it reaches maturity."
+      },
+      {
+        "id": "breeding",
+        "zh": "西伯利亞銀鷗繁殖於西伯利亞的東北部，冬季棲息於日本、韓國、中國的南部和東部以及台灣。",
+        "en": "The Vega gull, East Siberian gull, or East Siberian herring gull (Larus vegae) is a large gull of the herring gull/lesser black-backed gull complex which breeds in Northeast Asia."
+      },
+      {
+        "id": "funFact",
+        "zh": "西伯利亞銀鷗（Vega Gull，學名：Larus vegae）又名紅腳銀鷗及織女銀鷗。",
+        "en": "First- and second-winter Vega gulls are darker than the similar Mongolian gull, notably on the crown of the head where Mongolian gulls even in first- and second-winter are a bit paler."
+      },
+      {
+        "id": "voice",
+        "zh": "",
+        "en": "In their winter range they are typically found in harbours, on rocky shores and at river mouths."
+      },
+      {
+        "id": "behavior",
+        "zh": "第一和第二個冬季的西伯利亞銀鷗比相似的蒙古鷗更深，尤其是在頭頂上，蒙古鷗即使在第一和第二個冬季也會略顯淺色。",
+        "en": "Adult Vega gulls in winter can often be mistaken for the very similar-looking slaty-backed gull (L."
+      },
+      {
+        "id": "migration",
+        "zh": "它向東南遷徙至中國南部和東部以及韓國過冬，少數達到日本。",
+        "en": "Vega gulls breed in northeastern Siberia, and migrate south to winter in Japan, Korea, eastern China, and Taiwan."
+      },
+      {
+        "id": "conservation",
+        "zh": "嘴巴是黃色的，有一個紅點，除了第一和第二個冬季的海鷗，嘴巴幾乎完全是深灰色/黑色，隨著成熟，灰色部分逐漸減少。",
+        "en": ""
+      },
+      {
+        "id": "etymology",
+        "zh": "西伯利亞銀鷗（Vega Gull，學名：Larus vegae）又名紅腳銀鷗及織女銀鷗。",
+        "en": "They are sometimes considered to be a separate subspecies named Birula's gull (Larus vegae birulai)."
+      }
+    ],
+    "lang": {
+      "zh": true,
+      "en": true
+    },
+    "source": "zh.wikipedia 西伯利亞銀鷗 · pageid 5549877 ｜ en.wikipedia Vega gull · pageid 7081214 · 分類：eBird/Clements",
+    "length": "",
+    "weight": "",
+    "iucn": "未評估 NE",
+    "picks": [
+      "range",
+      "habitat",
+      "highlights",
+      "look",
+      "breeding",
+      "funFact",
+      "behavior"
+    ],
+    "fetchedAt": "2026-11-10"
+  },
+  "0235": {
+    "range": "B. s. stellaris 的繁殖範圍從不列顛群島、瑞典和芬蘭，",
+    "habitat": "它通常棲息在蘆葦灘（Phragmites）和沼澤，",
+    "diet": "牠以魚、小型哺乳動物、雛鳥、兩棲動物、甲殼類和昆蟲為食。",
+    "look": "頭部有一道黃褐色的眉紋和一道棕黑色的髭紋。",
+    "breeding": "在春天繁殖季節，雄鳥發出的低沉而響亮的鳴聲，可以表明其存在。",
+    "funFact": "大麻𫛚为鹭科麻𫛚属的鸟类，又名大麻鳽，俗名蒲鸡、大水骆驼。",
+    "voice": "這種叫聲主要在一月至四月的繁殖季節發出。",
+    "behavior": "牠在黎明和黃昏最為活躍，但有時也會在白天覓食。",
+    "migration": "較北的族群通常會遷徙到較溫暖的地區，但有些鳥類經常留下；",
+    "conservation": "由於其特定的棲地需求和全球範圍內濕地的減少，該種群被認為在全球範圍內呈下降趨勢。",
+    "humanRelation": "在歐洲大陸，牠們食用超過二十個甲蟲科的成員，以及蜻蜓、蜜蜂、蚱蜢和蠼螋。",
+    "etymology": "英國博物學家 給予其屬名Botaurus，源自中世紀拉丁語butaurus，意為“麻鳽”，這個詞本身源自中古英語對該鳥的稱呼，botor。",
+    "highlights": [
+      "頭部有一道黃褐色的眉紋和一道棕黑色的髭紋。",
+      "這種叫聲主要在一月至四月的繁殖季節發出。",
+      "牠在黎明和黃昏最為活躍，但有時也會在白天覓食。",
+      "它通常棲息在蘆葦灘（Phragmites）和沼澤，",
+      "牠以魚、小型哺乳動物、雛鳥、兩棲動物、甲殼類和昆蟲為食。"
+    ],
+    "fieldCopy": [
+      {
+        "id": "range",
+        "zh": "B. s. stellaris 的繁殖範圍從不列顛群島、瑞典和芬蘭，",
+        "en": "capensis is endemic to southern Africa, where it is found sparingly in marshes near the east coast,"
+      },
+      {
+        "id": "habitat",
+        "zh": "它通常棲息在蘆葦灘（Phragmites）和沼澤，",
+        "en": "It typically inhabits reed beds (Phragmites) and swamps, as well as lakes, lagoons and sluggish rivers fringed by rank vegetation."
+      },
+      {
+        "id": "diet",
+        "zh": "牠以魚、小型哺乳動物、雛鳥、兩棲動物、甲殼類和昆蟲為食。",
+        "en": "Ruler is marked in millimeters.] Eurasian bitterns feed on fish, small mammals, birds and their nestlings, snakes, lizards,"
+      },
+      {
+        "id": "highlights",
+        "zh": [
+          "頭部有一道黃褐色的眉紋和一道棕黑色的髭紋。",
+          "這種叫聲主要在一月至四月的繁殖季節發出。",
+          "牠在黎明和黃昏最為活躍，但有時也會在白天覓食。",
+          "它通常棲息在蘆葦灘（Phragmites）和沼澤，",
+          "牠以魚、小型哺乳動物、雛鳥、兩棲動物、甲殼類和昆蟲為食。"
+        ],
+        "en": [
+          "The wings are pale rusty-brown irregularly barred, streaked and mottled with black.",
+          "It is most active at dawn and dusk, but also sometimes forages by day.",
+          "It typically inhabits reed beds (Phragmites) and swamps, as well as lakes,",
+          "Ruler is marked in millimeters.] Eurasian bitterns feed on fish, small mammals, birds and their nestlings,",
+          "More northerly populations usually migrate to warmer regions but some birds often remain;"
+        ]
+      },
+      {
+        "id": "look",
+        "zh": "頭部有一道黃褐色的眉紋和一道棕黑色的髭紋。",
+        "en": "The wings are pale rusty-brown irregularly barred, streaked and mottled with black."
+      },
+      {
+        "id": "breeding",
+        "zh": "在春天繁殖季節，雄鳥發出的低沉而響亮的鳴聲，可以表明其存在。",
+        "en": "The female incubates the clutch of eggs and feeds the young chicks, which leave the nest when about two weeks old."
+      },
+      {
+        "id": "funFact",
+        "zh": "大麻𫛚为鹭科麻𫛚属的鸟类，又名大麻鳽，俗名蒲鸡、大水骆驼。",
+        "en": "It is a shy bird, and if disturbed, often points its bill directly upwards and freezes in that position, causing its cryptic plumage to blend into the surrounding reeds, an action known as bitterning."
+      },
+      {
+        "id": "voice",
+        "zh": "這種叫聲主要在一月至四月的繁殖季節發出。",
+        "en": "The mating call or contact call of the male is a deep, sighing fog-horn or bull-like boom with a quick rise and an only slightly longer fall, easily audible from a distance of on a calm night."
+      },
+      {
+        "id": "behavior",
+        "zh": "牠在黎明和黃昏最為活躍，但有時也會在白天覓食。",
+        "en": "It is most active at dawn and dusk, but also sometimes forages by day."
+      },
+      {
+        "id": "migration",
+        "zh": "較北的族群通常會遷徙到較溫暖的地區，但有些鳥類經常留下；",
+        "en": "More northerly populations usually migrate to warmer regions but some birds often remain; birds in northern Europe tend to move south and west to southern Europe, northern and central Africa,"
+      },
+      {
+        "id": "conservation",
+        "zh": "由於其特定的棲地需求和全球範圍內濕地的減少，該種群被認為在全球範圍內呈下降趨勢。",
+        "en": "The Eurasian bittern has a very wide range and a large total population, estimated to be 110,000 to 340,000 individuals."
+      },
+      {
+        "id": "humanRelation",
+        "zh": "在歐洲大陸，牠們食用超過二十個甲蟲科的成員，以及蜻蜓、蜜蜂、蚱蜢和蠼螋。",
+        "en": "However the decline is slow, and the International Union for Conservation of Nature has assessed its overall conservation status as being of \"least concern\"."
+      },
+      {
+        "id": "etymology",
+        "zh": "英國博物學家 給予其屬名Botaurus，源自中世紀拉丁語butaurus，意為“麻鳽”，這個詞本身源自中古英語對該鳥的稱呼，botor。",
+        "en": "The generic name Botaurus was given by the English naturalist James Francis Stephens, and is derived from Medieval Latin butaurus, \"bittern\", itself constructed from the Middle English name for the bird, botor."
+      }
+    ],
+    "lang": {
+      "zh": true,
+      "en": true
+    },
+    "source": "zh.wikipedia 大麻鳽 · pageid 1021335 ｜ en.wikipedia Eurasian bittern · pageid 220003 · 分類：eBird/Clements",
+    "length": "69–81 cm",
+    "weight": "0.87–1.94 kg",
+    "iucn": "無危 LC",
+    "iucnEn": "Least Concern (LC)",
+    "aliases": [
+      "1758"
+    ],
+    "picks": [
+      "range",
+      "habitat",
+      "diet",
+      "highlights",
+      "look",
+      "breeding",
+      "funFact"
+    ],
+    "fetchedAt": "2026-11-10"
+  },
+  "0237": {
+    "fieldCopy": [
+      {
+        "id": "range",
+        "zh": "",
+        "en": "A molecular phylogenetic study of the heron family Ardeidae published in 2023 found that Ixobrychus was paraphyletic."
+      },
+      {
+        "id": "diet",
+        "zh": "",
+        "en": "It winters from the Malay Peninsula to the Greater Sunda Islands, Sulawesi and the Philippines."
+      },
+      {
+        "id": "highlights",
+        "zh": "",
+        "en": [
+          "When in flight, it shows black flight feathers and tail.",
+          "It winters in Indonesia, the Philippines, Singapore, Laos, passing through the rest of Southeast Asia.",
+          "It winters from the Malay Peninsula to the Greater Sunda Islands, Sulawesi and the Philippines."
+        ]
+      },
+      {
+        "id": "look",
+        "zh": "",
+        "en": "When in flight, it shows black flight feathers and tail."
+      },
+      {
+        "id": "breeding",
+        "zh": "",
+        "en": "It breeds in southeast Siberia, east China, the Korean Peninsula and Japan."
+      },
+      {
+        "id": "funFact",
+        "zh": "",
+        "en": "Von Schrenck's bittern or Schrenck's bittern (Botaurus eurhythmus) is a small bittern named after Leopold von Schrenck, the 19th-century Russian zoologist."
+      },
+      {
+        "id": "voice",
+        "zh": "",
+        "en": "It winters in Indonesia, the Philippines, Singapore, Laos, passing through the rest of Southeast Asia."
+      },
+      {
+        "id": "migration",
+        "zh": "",
+        "en": "It winters from the Malay Peninsula to the Greater Sunda Islands, Sulawesi and the Philippines."
+      },
+      {
+        "id": "conservation",
+        "zh": "",
+        "en": "A secretive and hard to find species, Schrenck's bittern has an estimated population of 2,500 – 25,000 mature individuals as of 2025, which is believed to be decreasing."
+      },
+      {
+        "id": "etymology",
+        "zh": "",
+        "en": "The genus name Botaurus is Medieval Latin for a bittern."
+      }
+    ],
+    "lang": {
+      "zh": false,
+      "en": true
+    },
+    "source": "en.wikipedia Von Schrenck's bittern · pageid 7756839 · 分類：eBird/Clements",
+    "length": "",
+    "weight": "",
+    "iucnEn": "Near Threatened (NT)",
+    "picks": [],
+    "fetchedAt": "2026-11-10"
+  },
+  "0247": {
+    "fieldCopy": [
+      {
+        "id": "range",
+        "zh": "",
+        "en": "The expansion of the eastern cattle egret's range is due to its relationship with humans and their domesticated animals."
+      },
+      {
+        "id": "habitat",
+        "zh": "",
+        "en": "Although the cattle egret sometimes feeds in shallow water, unlike most herons it is typically found in fields and dry grassy habitats,"
+      },
+      {
+        "id": "diet",
+        "zh": "",
+        "en": "The cattle egret feeds on a wide range of prey, particularly insects, especially grasshoppers, crickets, flies (adults and maggots), and moths,"
+      },
+      {
+        "id": "highlights",
+        "zh": "",
+        "en": [
+          "The non-breeding adult has mainly white plumage, a yellow bill and greyish-yellow legs.",
+          "Although the cattle egret sometimes feeds in shallow water,",
+          "The cattle egret feeds on a wide range of prey, particularly insects, especially grasshoppers, crickets,",
+          "In the northern hemisphere, migration is from cooler climes to warmer areas,"
+        ]
+      },
+      {
+        "id": "look",
+        "zh": "",
+        "en": "The non-breeding adult has mainly white plumage, a yellow bill and greyish-yellow legs."
+      },
+      {
+        "id": "breeding",
+        "zh": "",
+        "en": "The breeding season varies within South Asia."
+      },
+      {
+        "id": "funFact",
+        "zh": "",
+        "en": "Formerly, most taxonomic authorities lumped this species and the western cattle egret together (called the cattle egret), but the two cattle egrets are now treated as separate species."
+      },
+      {
+        "id": "voice",
+        "zh": "",
+        "en": "Formerly, most taxonomic authorities lumped this species and the western cattle egret together (called the cattle egret), but the two cattle egrets are now treated as separate species."
+      },
+      {
+        "id": "behavior",
+        "zh": "",
+        "en": "The male displays in a tree in the colony, using a range of ritualised behaviours such as shaking a twig and sky-pointing (raising his bill vertically upwards),"
+      },
+      {
+        "id": "migration",
+        "zh": "",
+        "en": "In the northern hemisphere, migration is from cooler climes to warmer areas, but cattle egrets nesting in Australia migrate to cooler Tasmania and New Zealand in the winter and return in the spring."
+      },
+      {
+        "id": "conservation",
+        "zh": "",
+        "en": "Some populations of the cattle egret are migratory and others show post-breeding dispersal."
+      },
+      {
+        "id": "humanRelation",
+        "zh": "",
+        "en": "Not all interactions between humans and eastern cattle egrets are beneficial."
+      },
+      {
+        "id": "etymology",
+        "zh": "",
+        "en": "The genus name Ardea is the Latin word for a \"heron\"."
+      }
+    ],
+    "lang": {
+      "zh": false,
+      "en": true
+    },
+    "source": "en.wikipedia Eastern cattle egret · pageid 43696990 · 分類：eBird/Clements",
+    "length": "88–96 cm",
+    "weight": "270–512 g",
+    "picks": [],
+    "fetchedAt": "2026-11-10"
+  },
+  "0332": {
+    "range": "琉球綬帶（西北太平洋亞種，T. a. illex）分布於琉球群島和部分東南亞地區；",
+    "habitat": "名字分别叫喜悦（1993年出生）和喜美（2003年出生） 近期的研究發現紫壽帶鳥急遽減少，",
+    "look": "成年雄鳥胸部的羽毛呈黑灰色，有紫藍色的光澤，下身則是白色。",
+    "breeding": "尾巴中央有極長的黑色尾羽，雄雛鳥的此尾羽則較短。",
+    "funFact": "紫壽帶鳥，又名紫壽帶鳥、黑綬帶鳥，是中型的雀形目王鶲科鳥類。",
+    "voice": "紫壽帶鳥的叫聲像「月－日－星」的日文發音（tsuki-hi-hoshi），故在日本亦被稱為「三光鳥」。",
+    "behavior": "牠們遷徙經過亦會在中國東部、澳門、香港，南遷至泰國、老撾、越南、菲律賓、馬來西亞、新加坡及蘇門答臘等地越冬。",
+    "migration": "紫壽帶鳥是候鳥，於日本、南韓、台灣及菲律賓北部的陰涼闊葉森林中繁殖。",
+    "conservation": "名字分别叫喜悦（1993年出生）和喜美（2003年出生） 近期的研究發現紫壽帶鳥急遽減少，這可能是由於森林的消失及冬天棲息地的退化所致。",
+    "highlights": [
+      "成年雄鳥胸部的羽毛呈黑灰色，有紫藍色的光澤，下身則是白色。",
+      "紫壽帶鳥的叫聲像「月－日－星」的日文發音（tsuki-hi-hoshi），",
+      "紫壽帶鳥是候鳥，於日本、南韓、台灣及菲律賓北部的陰涼闊葉森林中繁殖。"
+    ],
+    "fieldCopy": [
+      {
+        "id": "range",
+        "zh": "琉球綬帶（西北太平洋亞種，T. a. illex）分布於琉球群島和部分東南亞地區；",
+        "en": "Outside the breeding season it migrates to China, Thailand, Laos, Vietnam, other parts of the Philippines, Malaysia, Singapore, and Sumatra, Indonesia."
+      },
+      {
+        "id": "habitat",
+        "zh": "名字分别叫喜悦（1993年出生）和喜美（2003年出生） 近期的研究發現紫壽帶鳥急遽減少，",
+        "en": "In Jeju-do of South Korea, Gotjawal Forest, a forest formed on a rocky area of volcanic AA Lava,"
+      },
+      {
+        "id": "diet",
+        "zh": "",
+        "en": "The tail has extremely long black central feathers, which are shorter in immature males."
+      },
+      {
+        "id": "highlights",
+        "zh": [
+          "成年雄鳥胸部的羽毛呈黑灰色，有紫藍色的光澤，下身則是白色。",
+          "紫壽帶鳥的叫聲像「月－日－星」的日文發音（tsuki-hi-hoshi），",
+          "紫壽帶鳥是候鳥，於日本、南韓、台灣及菲律賓北部的陰涼闊葉森林中繁殖。"
+        ],
+        "en": [
+          "It has black legs and feet, a large black eye with a blue eye-ring, and a short blue bill.",
+          "The song is rendered in Japanese as tsuki-hi-hoshi, hoi-hoi-hoi,",
+          "In Jeju-do of South Korea, Gotjawal Forest, a forest formed on a rocky area of volcanic AA Lava,",
+          "The tail has extremely long black central feathers, which are shorter in immature males.",
+          "atrocaudata - (Eyton, 1839) : Breeds in central and southern Korea and Japan,"
+        ]
+      },
+      {
+        "id": "look",
+        "zh": "成年雄鳥胸部的羽毛呈黑灰色，有紫藍色的光澤，下身則是白色。",
+        "en": "It has black legs and feet, a large black eye with a blue eye-ring, and a short blue bill."
+      },
+      {
+        "id": "breeding",
+        "zh": "尾巴中央有極長的黑色尾羽，雄雛鳥的此尾羽則較短。",
+        "en": "Outside the breeding season it migrates to China, Thailand, Laos, Vietnam, other parts of the Philippines, Malaysia, Singapore, and Sumatra, Indonesia."
+      },
+      {
+        "id": "funFact",
+        "zh": "紫壽帶鳥，又名紫壽帶鳥、黑綬帶鳥，是中型的雀形目王鶲科鳥類。",
+        "en": "The black paradise flycatcher (Terpsiphone atrocaudata), also known as the Japanese paradise flycatcher, is a medium-sized passerine bird native to southeastern Asia."
+      },
+      {
+        "id": "voice",
+        "zh": "紫壽帶鳥的叫聲像「月－日－星」的日文發音（tsuki-hi-hoshi），故在日本亦被稱為「三光鳥」。",
+        "en": "The song is rendered in Japanese as tsuki-hi-hoshi, hoi-hoi-hoi, which translates to Moon-Sun-Stars and gives the Japanese name of the bird サンコウチョウ (三光鳥) sankōchō (literally, bird of three lights,"
+      },
+      {
+        "id": "behavior",
+        "zh": "牠們遷徙經過亦會在中國東部、澳門、香港，南遷至泰國、老撾、越南、菲律賓、馬來西亞、新加坡及蘇門答臘等地越冬。",
+        "en": ""
+      },
+      {
+        "id": "migration",
+        "zh": "紫壽帶鳥是候鳥，於日本、南韓、台灣及菲律賓北部的陰涼闊葉森林中繁殖。",
+        "en": "atrocaudata - (Eyton, 1839) : Breeds in central and southern Korea and Japan, wintering in Southeast Asia from Philippines to Sumatra."
+      },
+      {
+        "id": "conservation",
+        "zh": "名字分别叫喜悦（1993年出生）和喜美（2003年出生） 近期的研究發現紫壽帶鳥急遽減少，這可能是由於森林的消失及冬天棲息地的退化所致。",
+        "en": "A recent survey detected a steep decline in part of the Japanese breeding population which has presumably occurred because of forest loss and degradation in its winter range."
+      },
+      {
+        "id": "etymology",
+        "zh": "",
+        "en": "The song is rendered in Japanese as tsuki-hi-hoshi, hoi-hoi-hoi, which translates to Moon-Sun-Stars and gives the Japanese name of the bird サンコウチョウ (三光鳥) sankōchō (literally, bird of three lights, i.e."
+      }
+    ],
+    "lang": {
+      "zh": true,
+      "en": true
+    },
+    "source": "zh.wikipedia 紫寿带鸟 · pageid 765085 ｜ en.wikipedia Black paradise flycatcher · pageid 11184361 · 分類：eBird/Clements",
+    "length": "",
+    "weight": "",
+    "iucn": "近危 NT",
+    "iucnEn": "Near Threatened (NT)",
+    "aliases": [
+      "1839"
+    ],
+    "picks": [
+      "range",
+      "habitat",
+      "highlights",
+      "look",
+      "breeding",
+      "funFact",
+      "voice"
+    ],
+    "fetchedAt": "2026-11-10"
+  },
+  "0386": {
+    "range": "淡色沙燕（Pale Martin，學名：Riparia diluta）又名灰沙燕，",
+    "look": "喉部至尾下覆羽白色，胸部沾灰褐色，黑色細嘴短而尖。",
+    "funFact": "淡色沙燕（Pale Martin，學名：Riparia diluta）又名灰沙燕，是屬於燕科的一種雀鳥，是沙燕屬的一種，",
+    "behavior": "通常一小群出現，有時會跟其他雨燕或燕子混在一起。",
+    "etymology": "淡色沙燕（Pale Martin，學名：Riparia diluta）又名灰沙燕，是屬於燕科的一種雀鳥，是沙燕屬的一種，分佈於亞洲。",
+    "fieldCopy": [
+      {
+        "id": "range",
+        "zh": "淡色沙燕（Pale Martin，學名：Riparia diluta）又名灰沙燕，",
+        "en": "It is found from Central Asia to southeastern China."
+      },
+      {
+        "id": "habitat",
+        "zh": "",
+        "en": "It is found in open habitats such as farmland, grassland and savannah, usually near water."
+      },
+      {
+        "id": "look",
+        "zh": "喉部至尾下覆羽白色，胸部沾灰褐色，黑色細嘴短而尖。",
+        "en": ""
+      },
+      {
+        "id": "funFact",
+        "zh": "淡色沙燕（Pale Martin，學名：Riparia diluta）又名灰沙燕，是屬於燕科的一種雀鳥，是沙燕屬的一種，",
+        "en": "The species was formerly considered a subspecies of the sand martin."
+      },
+      {
+        "id": "behavior",
+        "zh": "通常一小群出現，有時會跟其他雨燕或燕子混在一起。",
+        "en": "It is found in open habitats such as farmland, grassland and savannah, usually near water."
+      },
+      {
+        "id": "etymology",
+        "zh": "淡色沙燕（Pale Martin，學名：Riparia diluta）又名灰沙燕，是屬於燕科的一種雀鳥，是沙燕屬的一種，分佈於亞洲。",
+        "en": ""
+      }
+    ],
+    "lang": {
+      "zh": true,
+      "en": true
+    },
+    "source": "zh.wikipedia 淡色沙燕 · pageid 5549543 ｜ en.wikipedia Pale martin · pageid 13442922 · 分類：eBird/Clements",
+    "length": "",
+    "weight": "",
+    "iucn": "無危 LC",
+    "iucnEn": "Least Concern (LC)",
+    "picks": [
+      "range",
+      "look",
+      "funFact",
+      "behavior",
+      "etymology"
+    ],
+    "fetchedAt": "2026-11-10"
+  },
+  "0388": {
+    "range": "金腰燕的繁殖範圍涵蓋南歐及亞洲東至西伯利亞南部和日本。",
+    "look": "印度大陸的族群C. d. erythropygia有一塊均勻的深栗色尾巴斑，沒有深色軸紋，尾叉較淺，外側尾羽內緣的白色斑點不明顯。",
+    "breeding": "有人提出，封閉巢的發展減少了雄鳥之間為交配而競爭的情況。",
+    "funFact": "金腰燕最早於1769年由芬蘭-瑞典牧師、探險家及自然科學家 正式描述，命名為Hirundo daurica，",
+    "behavior": "牠們有時會利用草原火災或放牧的牛群，因為這些因素會驚動昆蟲飛入空中。",
+    "migration": "C. d. japonica在東亞繁殖，冬季遷徙至泰國、緬甸、印度和北部澳大利亞。",
+    "conservation": "國際自然保護聯盟（IUCN）負責評估物種的保護狀況。",
+    "etymology": "博伊創建的屬名Cecropis來自古希臘語，意指雅典女子。",
+    "fieldCopy": [
+      {
+        "id": "range",
+        "zh": "金腰燕的繁殖範圍涵蓋南歐及亞洲東至西伯利亞南部和日本。",
+        "en": "It is found in open, often hilly, areas with clearings and cultivation across eastern and southeastern Asia to north-eastern India and Taiwan."
+      },
+      {
+        "id": "habitat",
+        "zh": "",
+        "en": "It is found in open, often hilly, areas with clearings and cultivation across eastern and southeastern Asia to north-eastern India and Taiwan."
+      },
+      {
+        "id": "diet",
+        "zh": "",
+        "en": "The eastern red-rumped swallow feeds low over the ground or at cliff faces on flying insects."
+      },
+      {
+        "id": "highlights",
+        "zh": "",
+        "en": [
+          "It has blue upperparts other than a reddish collar (sometimes absent) and streaked chestnut rump.",
+          "The eastern red-rumped swallow was formally described in 1769 by the Finnish-Swedish clergyman,",
+          "The eastern red-rumped swallow feeds low over the ground or at cliff faces on flying insects.",
+          "japonica are long-distance migrants, wintering in Indonesia and Malaysia,"
+        ]
+      },
+      {
+        "id": "look",
+        "zh": "印度大陸的族群C. d. erythropygia有一塊均勻的深栗色尾巴斑，沒有深色軸紋，尾叉較淺，外側尾羽內緣的白色斑點不明顯。",
+        "en": "It has blue upperparts other than a reddish collar (sometimes absent) and streaked chestnut rump."
+      },
+      {
+        "id": "breeding",
+        "zh": "有人提出，封閉巢的發展減少了雄鳥之間為交配而競爭的情況。",
+        "en": "The eastern red-rumped swallow breeds from April to July alone or semi-colonially with scattered nests."
+      },
+      {
+        "id": "funFact",
+        "zh": "金腰燕最早於1769年由芬蘭-瑞典牧師、探險家及自然科學家 正式描述，命名為Hirundo daurica，",
+        "en": "The European red-rumped swallow and the African red-rumped swallow were formerly considered as subspecies of the eastern red-rumped swallow."
+      },
+      {
+        "id": "voice",
+        "zh": "",
+        "en": "The eastern red-rumped swallow was formally described in 1769 by the Finnish-Swedish clergyman, explorer and natural scientist Erik Laxmann as Hirundo daurica, using a specimen from Mount Schlangen,"
+      },
+      {
+        "id": "behavior",
+        "zh": "牠們有時會利用草原火災或放牧的牛群，因為這些因素會驚動昆蟲飛入空中。",
+        "en": "It is found in open, often hilly, areas with clearings and cultivation across eastern and southeastern Asia to north-eastern India and Taiwan."
+      },
+      {
+        "id": "migration",
+        "zh": "C. d. japonica在東亞繁殖，冬季遷徙至泰國、緬甸、印度和北部澳大利亞。",
+        "en": "japonica are long-distance migrants, wintering in Indonesia and Malaysia, and even northern Australia in small numbers."
+      },
+      {
+        "id": "conservation",
+        "zh": "國際自然保護聯盟（IUCN）負責評估物種的保護狀況。",
+        "en": "This population has the rump paler with dark shaft streaks."
+      },
+      {
+        "id": "etymology",
+        "zh": "博伊創建的屬名Cecropis來自古希臘語，意指雅典女子。",
+        "en": "Boie's genus name Cecropis is from the Ancient Greek for an Athenian woman."
+      }
+    ],
+    "lang": {
+      "zh": true,
+      "en": true
+    },
+    "source": "zh.wikipedia 金腰燕 · pageid 1021809 ｜ en.wikipedia Eastern red-rumped swallow · pageid 5270966 · 分類：eBird/Clements",
+    "length": "",
+    "weight": "",
+    "iucn": "無危 LC",
+    "iucnEn": "Least Concern (LC)",
+    "picks": [
+      "range",
+      "look",
+      "breeding",
+      "funFact",
+      "behavior",
+      "migration",
+      "conservation"
+    ],
+    "fetchedAt": "2026-11-10"
   }
 }
