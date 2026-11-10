@@ -1,9 +1,11 @@
 import {
   CARD_EXTENSIONS,
+  INFO_EXTENSIONS,
   IMAGE_CONCURRENCY,
   IMAGE_TIMEOUT_MS,
+  infoCardUrl,
   cardProxyUrl,
-  cardUrl,
+  cardUrlCandidates,
   birdex2CardUrls,
 } from '../config';
 
@@ -18,13 +20,12 @@ import {
 //
 // 本模組：單一快取 + 併發上限 + 副檔名自動試 + 可重試
 //
-// 【外觀來源】BIRD-DEX 2（https://skw-birdex2.vercel.app）
-//   569 隻雀已經有齊圖卡。本 app 的「外觀」直接用 BIRD-DEX 2 的圖，
-//   唔再自己等 559 張相片／插畫。
-//   做法：用同一份 birds.json 的 NO. 編號，先試 BIRD-DEX 2 的靜態圖，
-//   唔得（404／被擋）才回退 R2，最後才顯示「未發現」。
-//   資訊（文字／分類／詳細資料）仍然 100% 由本 repo 的 JSON 提供，
-//   所以就算 BIRD-DEX 2 改版，資訊都唔會失真。
+// 【兩種圖，兩條通道】
+//   插畫（正面）  birdcards/<NO>.avif   —— BIRD-DEX 2 的整張畫，569 張齊
+//   資訊卡（翻轉） aviandex/<NO>.avif    —— 排版好的文字卡，目前 21 張
+//   兩者編號相同、尺寸不同（插畫 1:1，資訊卡 A4 直向），所以分開載、
+//   分開快取，任何一邊失敗都不會影響另一邊。
+//   資訊卡未做的雀 → 翻轉面由 React 用 cardCopy 的欄位即時砌（CardInfoFace）。
 // ============================================================
 
 export type CardImageStatus = 'idle' | 'queued' | 'loading' | 'loaded' | 'missing' | 'error';
@@ -40,7 +41,10 @@ export interface CardImageEntry {
 
 const IDLE: CardImageEntry = { status: 'idle', tried: [] };
 
+/** 插畫（正面） */
 const entries = new Map<string, CardImageEntry>();
+/** 資訊卡（翻轉面；只有做了的 21 張會有） */
+const infoEntries = new Map<string, CardImageEntry>();
 const listeners = new Set<() => void>();
 const queue: string[] = [];
 const scheduled = new Set<string>();
@@ -93,6 +97,59 @@ export function subscribe(fn: () => void): () => void {
 
 export function getEntry(id: string): CardImageEntry {
   return entries.get(id) ?? IDLE;
+}
+
+/* ------------------------------------------------------------------
+ * 資訊卡（翻轉面）
+ * ------------------------------------------------------------------ */
+
+export function getInfoEntry(id: string): CardImageEntry {
+  return infoEntries.get(id) ?? IDLE;
+}
+
+function patchInfo(id: string, next: Partial<CardImageEntry>) {
+  infoEntries.set(id, { ...(infoEntries.get(id) ?? IDLE), ...next });
+  emit();
+}
+
+/**
+ * 探測 aviandex/<ID>.avif 是否存在。
+ * 只有用戶真正翻開那張卡時才呼叫 —— 569 張全部預探 = 569 個 404，
+ * 白白拖慢首屏，而且 r2.dev 會限流。
+ */
+export async function requestInfoCard(id: string): Promise<void> {
+  const current = infoEntries.get(id);
+  if (current && (current.status === 'loaded' || current.status === 'missing')) return;
+  if (current && current.status === 'loading') return;
+  patchInfo(id, { status: 'loading' });
+
+  const tried: string[] = [];
+  let networkFailed = false;
+
+  for (const ext of INFO_EXTENSIONS) {
+    tried.push(ext);
+    const url = infoCardUrl(id, ext);
+    const result = useProxy ? 'error' : await probeOnce(url);
+    if (result === 'ok') {
+      patchInfo(id, { status: 'loaded', url, tried, error: undefined });
+      return;
+    }
+    if (result === 'missing') continue;          /* 404 → 呢個格式冇，試下一個 */
+    networkFailed = true;
+
+    const proxied = cardProxyUrl(id, ext, 'aviandex');
+    if (await probeOnce(proxied, true) === 'ok') {
+      useProxy = true;
+      patchInfo(id, { status: 'loaded', url: proxied, tried, error: undefined });
+      return;
+    }
+  }
+
+  patchInfo(id, {
+    status: networkFailed ? 'error' : 'missing',
+    tried,
+    error: networkFailed ? '網絡問題，未能讀取資訊卡' : '這張卡還未做資訊圖卡',
+  });
 }
 
 function patch(id: string, next: Partial<CardImageEntry>) {
@@ -190,18 +247,20 @@ async function load(id: string): Promise<void> {
 
   const tried: string[] = [];
   for (const ext of exts) {
-    const direct = cardUrl(id, ext);
     tried.push(ext);
-
-    const result = useProxy ? 'error' : await probeOnce(direct);
-    if (result === 'ok') {
-      consecutiveMisses = 0;
-      networkFailures = 0;
-      patch(id, { status: 'loaded', url: direct, tried, error: undefined });
-      return;
+    let result = 'missing';
+    for (const candidate of cardUrlCandidates(id, ext)) {
+      result = useProxy ? 'error' : await probeOnce(candidate);
+      if (result === 'ok') {
+        consecutiveMisses = 0;
+        networkFailures = 0;
+        patch(id, { status: 'loaded', url: candidate, tried, error: undefined });
+        return;
+      }
+      if (result === 'error') break;   /* 網絡問題 → 唔使再試另一個資料夾 */
     }
 
-    if (result === 'missing') continue; // R2 真係冇呢個格式，試下一個
+    if (result === 'missing') continue; // 兩個資料夾都冇呢個格式，試下一個
 
     // 網絡／CORS 失敗：先試代理，成功就記住以後都用代理
     const proxied = cardProxyUrl(id, ext);

@@ -171,7 +171,16 @@ test('設定檔的圖卡網址格式正確（4 位補零、可換網域）', asy
   const src = readFileSync(out, 'utf8');
   assert.ok(src.includes('https://cdn.example.com'), '應讀到環境變數覆寫網域');
   const mod = await import(pathToFileURL(out).href);
-  assert.equal(mod.cardUrl('21'), `${mod.R2_BASE_URL}/aviandex/0021.avif`);
-  assert.equal(mod.cardProxyUrl('21'), '/api/card?id=0021&ext=avif');
+  /* 卡面正面用插畫（birdcards），翻轉面才用資訊圖卡（aviandex）。
+     這兩個資料夾不可以再混 —— 混錯就是「569 張全部未發現」的那個 bug。 */
+  assert.equal(mod.cardUrl('21'), `${mod.R2_BASE_URL}/birdcards/0021.avif`);
+  assert.equal(mod.artUrl('21'), `${mod.R2_BASE_URL}/birdcards/0021.avif`);
+  assert.equal(mod.infoCardUrl('21'), `${mod.R2_BASE_URL}/aviandex/0021.avif`);
+  assert.equal(mod.cardProxyUrl('21'), '/api/card?id=0021&ext=avif&folder=birdcards');
+  // 兩個資料夾都要在候選名單內（插畫先，資訊卡後備）
+  assert.deepEqual(mod.cardUrlCandidates('21'), [
+    `${mod.R2_BASE_URL}/birdcards/0021.avif`,
+    `${mod.R2_BASE_URL}/aviandex/0021.avif`,
+  ]);
   assert.equal(mod.TOTAL_SLOTS, 569, '槽位數要同 birds.json 一致');
 });

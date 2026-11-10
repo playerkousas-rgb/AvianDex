@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { BirdCard } from './components/BirdCard.tsx';
+import { FlipCard } from './components/FlipCard.tsx';
 import { PokedexDevice } from './components/PokedexDevice.tsx';
 import { WelcomeScreen } from './components/WelcomeScreen.tsx';
 import { RecognitionResultModal, Candidate } from './components/RecognitionResultModal.tsx';
@@ -651,13 +651,13 @@ function App() {
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5 sm:gap-4 md:gap-5 relative z-10">
                 {pagedBirds.map((bird, pos) => (
-                  <BirdCard
+                  <FlipCard
                     key={bird.id}
                     bird={bird}
                     listPosition={filteredBirds.length > 1 ? pos + 1 : undefined}
                     lang={lang}
                     isActive={selectedBirdId === bird.id}
-                    onClick={() => setSelectedBirdId(bird.id)}
+                    onOpen={() => setSelectedBirdId(bird.id)}
                   />
                 ))}
               </div>

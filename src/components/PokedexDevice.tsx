@@ -9,17 +9,19 @@ import {
   BookOpen, 
   Mic,      // 加入這一個
   Camera,     // 視覺圖庫
+  Maximize2,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MediaCapturePanel, MediaKind } from './MediaCapturePanel.tsx';
 import { BirdSilhouette } from './BirdSilhouette';
-import { useCardImage } from '../hooks/useCardImage';
+import { useCardImage, useInfoCard } from '../hooks/useCardImage';
 import { searchBirds } from '../lib/pokedexOrder';
 import { BirdDetailPage } from './BirdDetailPage';
 import { ResearchHubPage } from './ResearchHubPage';
 import { PokedexTabs, type PokedexPage } from './PokedexTabs';
 import type { GuideKind } from './FieldGuideModal';
 import { ENTRIES, type Lang } from '../lib/explorer';
+import { loadDetails, useCardDetail } from '../lib/cardDetailsStore';
 
 // 捕精靈 App（BIRD-DEX 2）網址
 const BIRDDEX2_URL = 'https://skw-birdex2.vercel.app';
@@ -191,6 +193,28 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   const currentBird = birds[Math.min(currentIndex, birds.length - 1)] ?? birds[0];
   // 圖卡狀態（與首頁卡片共用同一個載入器，已載入的圖即時顯示，不會再請求一次）
   const currentImage = useCardImage(currentBird?.id ?? '0001');
+  // 資訊圖卡（翻轉面）：只有用戶真的翻開才探測，避免 569 次 404
+  const infoImage = useInfoCard(currentBird?.id ?? '0001');
+  const [screenFlipped, setScreenFlipped] = useState(false);
+  const screenDetail = useCardDetail(currentBird?.id ?? '0001', lang);
+
+  useEffect(() => {
+    if (screenFlipped) void infoImage.probe();
+  }, [screenFlipped, infoImage]);
+
+  // 未做資訊圖卡的雀：翻轉面用文字欄位砌，文字同樣來自維基原文
+  useEffect(() => {
+    if (screenFlipped) loadDetails(lang);
+  }, [screenFlipped, lang]);
+
+  /* 換雀就轉回正面，否則會停在上次的背面。
+     用 render 期間比對而不是 useEffect：換雀是「衍生狀態」，
+     用 effect 會先畫一格舊背面再翻返，閃一下。 */
+  const [flippedFor, setFlippedFor] = React.useState(currentBird.id);
+  if (flippedFor !== currentBird.id) {
+    setFlippedFor(currentBird.id);
+    setScreenFlipped(false);
+  }
   // 科研終端的外部網站（All About Birds / Flickr / Xeno-canto）只認英文俗名，
   // 用中文名搜尋等於一定查無此鳥 —— 呢個就係舊版六宮格「撳完冇嘢睇」的原因。
   const sciQuery = currentBird
@@ -395,21 +419,78 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
         <div className="w-1.5 h-1.5 rounded-full bg-red-600/80" />
       </div>
 
-      <div 
-        className="flex-1 bg-[#12100d] rounded-md border border-black/70 relative overflow-hidden flex items-center justify-center cursor-zoom-in group"
-        onClick={() => setIsFullscreen(true)}
-      >
-        {currentImage.url ? (
-          <motion.img
-            key={currentImage.url}
-            src={currentImage.url}
-            alt={currentBird.name}
-            referrerPolicy="no-referrer"
-            className="w-full h-full object-contain p-1"
-          />
-        ) : (
-          <CardImageFallback id={currentBird.id} status={currentImage.status} onRetry={currentImage.retry} compact />
-        )}
+      {/* 螢幕：先見鳥，點一下翻轉看資料。
+          跟圖鑑格仔同一套規矩 —— 正面插畫（birdcards），背面資訊卡（aviandex）；
+          未做資訊卡就用文字欄位即時砌，所以不會翻出一個空盒。 */}
+      <div className="flex-1 bg-[#12100d] rounded-md border border-black/70 relative overflow-hidden flex flex-col group">
+        <div
+          className="flex-1 relative flex items-center justify-center [perspective:1200px] cursor-pointer"
+          onClick={() => setScreenFlipped((v) => !v)}
+        >
+          <motion.div
+            animate={{ rotateY: screenFlipped ? 180 : 0 }}
+            transition={{ type: 'spring', stiffness: 190, damping: 22 }}
+            className="relative w-full h-full [transform-style:preserve-3d]"
+          >
+            {/* 正面：插畫 */}
+            <div className="absolute inset-0 flex items-center justify-center [backface-visibility:hidden]">
+              {currentImage.url ? (
+                <img
+                  key={currentImage.url}
+                  src={currentImage.url}
+                  alt={currentBird.name}
+                  referrerPolicy="no-referrer"
+                  className="max-w-full max-h-full object-contain p-1"
+                />
+              ) : (
+                <CardImageFallback id={currentBird.id} status={currentImage.status} onRetry={currentImage.retry} compact />
+              )}
+            </div>
+
+            {/* 背面：資訊圖卡 → 冇就用文字簡版 */}
+            <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden bg-[#f7f4ea]">
+              {infoImage.status === 'loaded' && infoImage.url ? (
+                <img
+                  src={infoImage.url}
+                  alt={`${currentBird.name} 資訊圖卡`}
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-contain"
+                />
+              ) : (
+                <div className="w-full h-full bg-[#171512] p-3 flex flex-col">
+                  <p className="text-white font-black text-[14px] leading-tight">{currentBird.name}</p>
+                  <p className="text-white/40 font-mono text-[9px] italic">{entry?.s}</p>
+                  <div className="mt-2 grid grid-cols-2 gap-1.5 overflow-hidden">
+                    {(['range', 'habitat', 'diet', 'look'] as const).map((k) => {
+                      const raw = (screenDetail as Record<string, string | string[]> | null)?.[k];
+                      const val = Array.isArray(raw) ? raw.filter(Boolean).join('；') : String(raw ?? '').trim();
+                      const labels: Record<string, string> = { range: '分佈', habitat: '環境', diet: '食物', look: '外形' };
+                      return (
+                        <div key={k} className="bg-black/30 rounded p-1.5 leading-tight">
+                          <p className="text-amber-300/80 text-[9px] font-black">{labels[k]}</p>
+                          <p className="text-white/60 text-[9.5px] mt-0.5">
+                            {val || '資料待查'}
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p className="mt-auto text-white/25 text-[8px]">按一下返回插畫</p>
+                </div>
+              )}
+            </div>
+          </motion.div>
+
+          {/* 放大鏡：細細一粒，避免搶走翻轉點擊 */}
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setIsFullscreen(true); }}
+            className="absolute bottom-1.5 right-1.5 z-10 bg-black/60 hover:bg-black/85 text-white/70 rounded-full w-6 h-6 flex items-center justify-center"
+            aria-label={t('放大', 'Expand')}
+          >
+            <Maximize2 className="w-3 h-3" />
+          </button>
+        </div>
       </div>
 
       {/* 右下角喇叭孔 */}
