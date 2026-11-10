@@ -16,7 +16,7 @@
  *    npm run cards:measure:avonet -- "C:\...\AVONET_BirdLife.csv" --report
  *
  *  ⚠️ 規則（與 measure-batch 一致）
- *    · 單位不換算：Wing.Length / Tail.Length / Tarsus.Length / Bill.Length 係 mm，Mass 係 g
+ *    · 單位不換算：Wing.Length / Tail.Length / Tarsus.Length / Beak.Length_Culmen 係 mm，Mass 係 g
  *    · 只填 AVONET 有值的物種；學名對不上就跳過，不會用近親代替
  *    · 數值超出鳥類合理範圍一律拒絕（防單位錯誤）
  *    · 每次寫入前自動備份 src/data/measurements.json
@@ -75,7 +75,7 @@ if (grid.length < 2) {
 
 const header = grid[0].map((h) => h.trim());
 const col = (name) => header.findIndex((h) => h.toLowerCase() === name.toLowerCase());
-const need = ['Species1', 'Wing.Length', 'Tail.Length', 'Tarsus.Length', 'Bill.Length', 'Mass'];
+const need = ['Species1', 'Wing.Length', 'Tail.Length', 'Tarsus.Length', 'Beak.Length_Culmen', 'Mass'];
 const missing = need.filter((n) => col(n) < 0);
 if (missing.length) {
   console.error(`✗ 這個 CSV 缺少欄位：${missing.join('、')}`);
@@ -89,7 +89,7 @@ const idx = {
   wing: col('Wing.Length'),
   tail: col('Tail.Length'),
   tarsus: col('Tarsus.Length'),
-  bill: col('Bill.Length'),
+  bill: col('Beak.Length_Culmen'),
   mass: col('Mass'),
   species2: col('Species2') >= 0 ? col('Species2') : -1,
   species3: col('Species3') >= 0 ? col('Species3') : -1,
