@@ -13,7 +13,10 @@ import { getOfflineBird } from '../lib/fieldPack';
 import { FieldPackPanel } from './FieldPackPanel';
 import { useCardImage, useInfoCard } from '../hooks/useCardImage';
 import { BirdSilhouette } from './BirdSilhouette';
-import { RotateCw, Loader2, ScanLine } from 'lucide-react';
+import { RotateCw, Loader2, ScanLine, Download, Image as ImageIcon } from 'lucide-react';
+import { DexCard } from './DexCard';
+import { exportDexCardPng, downloadBlob } from '../lib/dexCardExport';
+import { useDexCardInput } from '../hooks/useDexCardInput';
 
 /**
  * 第 2 頁：詳細資料。
@@ -108,6 +111,30 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
 
   const t = (zh: string, en: string) => (lang === 'en' ? en : zh);
   const PENDING = t('資料待查', 'Data pending');
+
+  /* 資訊圖卡：由 repo 內已核實的 JSON 即時砌（1200×1600），
+     唔再用「文字簡版」代替 —— 569 隻每一隻都砌得出同一套版式。
+     插畫跟卡面正面同一張（R2 birdcards），所以翻轉前後是同一隻雀。 */
+  const cardLang = lang === 'en' ? 'en' : 'both';
+  const cardData = useDexCardInput(bird.id, CREDIT_LINE_ZH, art.url ?? null, cardLang);
+  const [exporting, setExporting] = React.useState(false);
+  const [exportError, setExportError] = React.useState<string | null>(null);
+
+  const onSavePng = React.useCallback(async () => {
+    if (!cardData.input) return;
+    setExporting(true);
+    setExportError(null);
+    try {
+      const blob = await exportDexCardPng(cardData.input, { scale: 2 });
+      downloadBlob(blob, `AvianDex-${bird.id}-${cardData.input.enName || 'card'}.png`.replace(/\s+/g, '-'));
+    } catch {
+      setExportError(lang === 'en'
+        ? 'PNG export unavailable here — use Print / Save as PDF'
+        : '這部裝置未能匯出 PNG，可用「列印／儲存為 PDF」');
+    } finally {
+      setExporting(false);
+    }
+  }, [cardData.input, bird.id, lang]);
 
   React.useEffect(() => {
     let cancelled = false;
@@ -230,7 +257,13 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
 
             {/* 背面：資訊圖卡；未做的雀用文字即時砌（不造假、不留白） */}
             <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-xl overflow-hidden border-2 border-amber-500/30 bg-[#f7f4ea]">
-              {info.status === 'loaded' && info.url ? (
+              {/* 新卡優先（由 repo 內資料即時砌），R2 舊 avif 只作後備。
+                  之前次序相反，所以 0001–0021 一直顯示舊卡，用戶看不到新版。 */}
+              {cardData.input ? (
+                <div className="absolute inset-0 overflow-auto bg-[#f7f4ea] flex items-start justify-center">
+                  <DexCard data={cardData.input} lang={cardLang} width={520} />
+                </div>
+              ) : info.status === 'loaded' && info.url ? (
                 <img
                   src={info.url}
                   alt={t(`${bird.name} 資訊圖卡`, `${bird.name} info card`)}
@@ -241,29 +274,18 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
                 <div className="absolute inset-0 flex items-center justify-center bg-[#171512]">
                   <Loader2 className="w-5 h-5 text-white/30 animate-spin" />
                 </div>
+              ) : cardData.failed ? (
+                <div className="w-full h-full bg-[#f7f4ea] p-4 flex flex-col items-center justify-center gap-2 text-center">
+                  <ScanLine className="w-5 h-5 text-[#17553c]/40" />
+                  <p className="text-[#3a4a42] text-[11.5px] font-bold">{t('這一隻的圖卡未能砌出', 'Card could not be built')}</p>
+                  <p className="text-[#6b7c73] text-[10px] leading-relaxed">
+                    {t('詳細資料載入失敗，請檢查網絡後再翻一次', 'Details failed to load — check your connection and flip again')}
+                  </p>
+                </div>
               ) : (
-                <div className="w-full h-full bg-[#171512] p-3 flex flex-col gap-1.5">
-                  <div className="flex items-baseline gap-2">
-                    <span className="font-mono text-[10px] text-yellow-300/80">NO.{bird.id}</span>
-                    <span className="text-white font-black text-[15px] leading-tight truncate">{title}</span>
-                  </div>
-                  <p className="text-white/40 font-mono text-[9px] italic truncate">{sciName}</p>
-                  <div className="mt-1 flex-1 grid grid-cols-2 gap-1.5 content-start overflow-hidden">
-                    {FIELDS.slice(0, 6).map(({ id: fid, zh, en }) => {
-                      const raw = fields[fid];
-                      const val = Array.isArray(raw) ? raw.filter(Boolean).join('；') : String(raw ?? '').trim();
-                      return (
-                        <div key={fid} className="bg-black/35 rounded p-1.5 leading-tight">
-                          <p className="text-amber-300/80 text-[9px] font-black">{lang === 'en' ? en : zh}</p>
-                          <p className="text-white/70 text-[9.5px] mt-0.5 line-clamp-3">{val || PENDING}</p>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <div className="flex items-center justify-between text-[8px] text-white/25">
-                    <span>{t('資訊圖卡未完成，以上為文字簡版', 'Info card not ready — text version')}</span>
-                    <ScanLine className="w-2.5 h-2.5" />
-                  </div>
+                <div className="w-full h-full bg-[#f7f4ea] flex flex-col items-center justify-center gap-2">
+                  <Loader2 className="w-5 h-5 text-[#17553c]/40 animate-spin" />
+                  <p className="text-[#6b7c73] text-[10px]">{t('正在砌圖卡…', 'Building card…')}</p>
                 </div>
               )}
               <span className="absolute top-1.5 right-1.5 bg-black/70 text-amber-200 text-[9px] font-bold px-2 py-1 rounded flex items-center gap-1 pointer-events-none">
@@ -274,6 +296,28 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
           </motion.div>
         </div>
       </div>
+
+      {/* 下載：卡面本身就是成品，所以按一下就拿走 PNG（1200×1600 @2x＝2400×3200） */}
+      {cardData.input && (
+        <div className="flex items-center gap-2 justify-end -mt-1">
+          <button
+            type="button"
+            onClick={onSavePng}
+            disabled={exporting}
+            className="flex items-center gap-1.5 bg-[#17553c] hover:bg-[#1c6a4e] disabled:opacity-50 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg border border-emerald-400/30"
+          >
+            {exporting ? <Loader2 className="w-3 h-3 animate-spin" /> : <Download className="w-3 h-3" />}
+            {t('儲存圖卡 PNG', 'Save card PNG')}
+          </button>
+          <span className="text-white/35 text-[10px] flex items-center gap-1">
+            <ImageIcon className="w-3 h-3" />
+            {t('1200×1600', '1200×1600')}
+          </span>
+        </div>
+      )}
+      {exportError && (
+        <p className="text-amber-300/80 text-[10px] text-right -mt-1">{exportError}</p>
+      )}
 
       {/* 標題：編號 + 名稱 + 學名 + 目科 */}
       <div className="bg-[#1b1a17]/85 border border-amber-500/25 rounded-lg p-3">

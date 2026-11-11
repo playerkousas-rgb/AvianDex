@@ -76,3 +76,9 @@ data/card-demo/
 
 # 中文繁體轉換備份（npm run cards:hk）
 src/data/cardCopy.json.prehk
+
+# 卡面成品（569 張會爆 Git）：成品圖一律放 deliver/cards 或 R2，不進 Git
+# 只保留少量樣本圖於 docs/card-samples
+public/demo/card-*.png
+public/demo/source-*.png
+deliver/cards/

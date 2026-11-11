@@ -12,6 +12,7 @@ import {
   RotateCw,   // 翻轉（放大檢視／螢幕）
   FileText,   // 詳細資料（文字）
   Compass,    // 科學研究中心
+  Layers,     // 打開圖卡（1200×1600）
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MediaCapturePanel, MediaKind } from './MediaCapturePanel.tsx';
@@ -20,6 +21,13 @@ import { useCardImage, useInfoCard } from '../hooks/useCardImage';
 import { searchBirds } from '../lib/pokedexOrder';
 import { BirdDetailPage } from './BirdDetailPage';
 import { ResearchHubPage } from './ResearchHubPage';
+
+/** 圖鑑評分（32 KB，隨主 bundle 載入；與詳細頁、卡面讀同一個檔） */
+import dexScoresRaw from '../data/dexScores.json';
+type ScoreRec = { i?: number; a?: number; v?: number; r?: number; c?: number; o?: number };
+const DEX_SCORES = (dexScoresRaw as unknown as { scores: Record<string, ScoreRec> }).scores;
+const scoreOf = (id: string): ScoreRec | undefined => DEX_SCORES[id];
+
 import { PokedexTabs, type PokedexPage } from './PokedexTabs';
 import type { GuideKind } from './FieldGuideModal';
 import { ENTRIES, type Lang } from '../lib/explorer';
@@ -660,6 +668,54 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                       </p>
                       <p className="text-white/40 text-[11px] italic mt-0.5">{sciQuery}</p>
                     </div>
+
+                    {/* 2.4 圖鑑評分 + 「打開圖卡」——用戶反映「找不到新卡在哪看」，
+                        所以評分與入口直接放在基礎數據頁第一屏，不用先翻轉才發現。
+                        分數由 src/data/dexScores.json 提供（自訂指標，非學術評分）。 */}
+                    {scoreOf(currentBird.id) && (
+                      <button
+                        type="button"
+                        onClick={() => setPage(2)}
+                        className="w-full text-left bg-black/35 border border-emerald-400/25 rounded-xl px-3 py-2.5 active:scale-[0.99] transition"
+                      >
+                        <div className="flex items-baseline justify-between">
+                          <span className="text-emerald-300/90 font-black text-[11px] tracking-widest">
+                            {t('圖鑑評分', 'DEX RATING')}
+                          </span>
+                          <span className="text-white/30 text-[9px]">
+                            {t('自訂指標·非學術評分', 'custom index')}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-2 mt-1">
+                          <span className="text-white font-black text-2xl leading-none font-mono">
+                            {scoreOf(currentBird.id)!.o?.toFixed(1) ?? '—'}
+                          </span>
+                          <span className="text-white/30 text-[10px]">/ 5</span>
+                          <span className="flex gap-0.5 ml-1 text-amber-300">
+                            {Array.from({ length: 5 }).map((_, i) => {
+                              const v = scoreOf(currentBird.id)!.o ?? 0;
+                              const full = v >= i + 1;
+                              const half = !full && v >= i + 0.5;
+                              return (
+                                <svg key={i} viewBox="0 0 24 24" className="w-3.5 h-3.5">
+                                  <polygon
+                                    points="12,2 15,9 22,9.5 16.5,14 18.5,21 12,17 5.5,21 7.5,14 2,9.5 9,9"
+                                    fill={full ? 'currentColor' : 'none'}
+                                    stroke="currentColor"
+                                    strokeWidth="1.6"
+                                    opacity={half ? 0.55 : 1}
+                                  />
+                                </svg>
+                              );
+                            })}
+                          </span>
+                        </div>
+                        <p className="text-cyan-200/80 text-[10px] font-bold mt-1.5 flex items-center gap-1">
+                          <Layers className="w-3 h-3" />
+                          {t('打開圖卡（1200×1600 · 可儲存 PNG）', 'Open the card (1200×1600 · save PNG)')}
+                        </p>
+                      </button>
+                    )}
 
                     {/* 2.5 未有自己圖卡時：一鍵去 Google 圖片／eBird 睇真身 */}
                     {!currentImage.url && (

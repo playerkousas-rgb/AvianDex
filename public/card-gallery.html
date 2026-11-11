@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<title>圖鑑資訊卡 · 成品圖預覽</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>
+  :root{ --bg:#14180f; --ink:#eef2ea; --dim:#9aa892; --acc:#d8a21c; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+    -webkit-text-size-adjust:100%}
+  header{padding:16px 16px 10px;border-bottom:1px solid rgba(255,255,255,.1);position:sticky;top:0;
+    background:rgba(20,24,15,.94);backdrop-filter:blur(8px);z-index:2}
+  h1{margin:0;font-size:16px;letter-spacing:.02em}
+  header p{margin:4px 0 0;font-size:12px;color:var(--dim);line-height:1.5}
+  main{padding:14px 12px 48px;display:flex;flex-direction:column;gap:22px}
+  figure{margin:0}
+  figure a{display:block}
+  img{display:block;width:100%;height:auto;border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,.45);background:#0b0d08}
+  figcaption{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;
+    font-size:12px;color:var(--dim);padding:8px 2px 0}
+  figcaption b{font-family:ui-monospace,monospace;color:var(--acc);font-size:12px}
+  figcaption .zh{color:var(--ink);font-weight:700;font-size:13px}
+  .empty{padding:32px 16px;color:var(--dim);font-size:13px;line-height:1.7}
+  @media (min-width:760px){
+    main{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+      gap:22px;max-width:1200px;margin:0 auto}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>圖鑑資訊卡 · 成品圖</h1>
+  <p>1200×1600 原始尺寸 · 點圖可放大或另存 · 一套版式按「目」換色</p>
+</header>
+<main>
+  <figure>
+    <a href="/demo/card-0013-new.jpg" target="_blank" rel="noopener">
+      <img src="/demo/card-0013-new.jpg" alt="八哥 資訊卡" loading="lazy" decoding="async">
+    </a>
+    <figcaption>
+      <b>NO.0013</b>
+      <span class="zh">八哥</span>
+      <span>Crested Myna</span>
+      <span>雀形目 · 椋鳥科</span>
+    </figcaption>
+  </figure>
+</main>
+</body></html>

@@ -4,6 +4,8 @@ import { Loader2, Info, ScanLine, RotateCw, Maximize2 } from 'lucide-react';
 import type { Lang } from '../lib/explorer';
 import { ENTRIES } from '../lib/explorer';
 import { useCardImage, useInfoCard } from '../hooks/useCardImage';
+import { useDexCardInput } from '../hooks/useDexCardInput';
+import { DexCard } from './DexCard';
 import { loadDetails, useCardDetail } from '../lib/cardDetailsStore';
 import { BirdSilhouette } from './BirdSilhouette';
 import type { Bird } from '../types';
@@ -127,6 +129,12 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPo
     if (flipped) void info.probe();
   }, [flipped, info]);
 
+  /* 即時砌卡：只在真正翻開之後才開始砌（避免 48 格一齊拉兩個 600 KB 的語言檔）。
+     砌法與詳細頁、PNG 匯出完全一樣，三處不會走樣。 */
+  const ownCard = useDexCardInput(
+    bird.id, '', art.url ?? null, lang === 'en' ? 'en' : 'both', flipped,
+  );
+
   const enName = bird.taxonomy?.comName || (bird.englishName && bird.englishName !== '???' ? bird.englishName : '');
   const title = lang === 'en' ? enName || bird.name : bird.name;
 
@@ -222,14 +230,23 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPo
 
         {/* 背面：資訊卡。rotateY(180deg) 反轉，令文字不會左右倒轉 */}
         <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-2xl overflow-hidden border-[4px] border-gray-900 bg-[#171512] shadow-[0_5px_0_rgba(0,0,0,0.55)]">
-          {info.status === 'loaded' && info.url ? (
+          {/* 次序很重要（用戶反映「只看到 v2.0 舊卡，看不到新版」）：
+              1) 先顯示由 git 內資料即時砌的新卡（1200×1600，按目換色）
+              2) 只有新卡砌唔到（資料檔載入失敗）才退回 R2 上那張舊 avif
+              3) 兩樣都冇才退回文字簡版
+              舊版次序相反，所以 0001–0021 那 21 隻一直被舊卡蓋住。 */}
+          {ownCard.input ? (
+            <div className="absolute inset-0 overflow-auto bg-[#f7f4ea] flex items-start justify-center">
+              <DexCard data={ownCard.input} lang={lang === 'en' ? 'en' : 'both'} width={520} />
+            </div>
+          ) : info.status === 'loaded' && info.url ? (
             <img
               src={info.url}
               alt={t(`${bird.name} 資訊圖卡`, `${bird.name} info card`)}
               referrerPolicy="no-referrer"
               className="w-full h-full object-contain bg-[#f7f4ea]"
             />
-          ) : info.status === 'loading' ? (
+          ) : ownCard.loading || info.status === 'loading' ? (
             <div className="absolute inset-0 flex items-center justify-center">
               <Loader2 className="w-5 h-5 text-white/30 animate-spin" />
             </div>

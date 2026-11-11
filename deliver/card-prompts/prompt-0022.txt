@@ -1,0 +1,93 @@
+Create ONE finished bird encyclopedia information card, front side only, 2:3 portrait, perfectly flat and facing the camera like a clean scan of a real printed card. No table, no hand, no tilt, no mockup, no watermark, no page curl.
+
+IMAGE 1 — LAYOUT TEMPLATE (supplied by me).
+  Copy ONLY its layout: warm cream paper background, thin olive-green rounded outer frame, the exact grid of panels, the position and size of every panel, the small circular pictogram icons, the four magnifier circles down the right edge, the green radar chart, the bottom footer strip, and the typographic hierarchy.
+  EVERY WORD, NUMBER, NAME, SPECIES, CAPTION AND LABEL INSIDE IMAGE 1 IS PLACEHOLDER NOISE belonging to a different species. None of it may appear on the finished card — not in the magnifier captions, not in the similar-species boxes, not in the reproduction panel, not in the footer. Do not translate it, do not keep it as decoration. Replace 100% of the text with the PRINTED TEXT block below.
+
+THE BIRD — paint ONE photorealistic 栗樹鴨 (Lesser Whistling-Duck, Dendrocygna javanica), natural posture, complete body, clear head, correct plumage and bare-part colours for this species. Also paint a small pixel-art version of the same bird for the top-left box.
+
+PRINTED TEXT — fill the card with EXACTLY these strings, cell by cell. Print nothing else:
+  [Z01 top title band]
+      NO.0022
+      栗樹鴨
+      Lesser Whistling-Duck
+      Dendrocygna javanica
+      分類：雁形目 鴨科
+  [Z02 under pixel-art box]
+      ▲ 像素圖鑑 / PIXEL ART
+  [Z03 three stat boxes]
+      身長 資料待查
+      體重 519.6 g
+      保育級別 無危 LC
+  [Z04 profile paragraph]
+      圖鑑介紹 / PROFILE
+      這隻栗色鴨子與草黃樹鴨（D. bicolor）容易混淆，但牠的上尾覆羽是栗色的。
+  [Z05 classification, 7 lines]
+      界：動物界 Animalia
+      門：脊索動物門 Chordata
+      綱：鳥綱 Aves
+      目：雁形目 Anseriformes
+      科：鴨科 Anatidae
+      屬：Dendrocygna 屬
+      種：栗樹鴨 D. javanica
+  [Z06 ecological habits, 4 lines]
+      活動：日行性，清晨與黃昏最活躍
+      棲地：水邊、草地農田
+      行為：牠們在圈養下會變得非常馴服，會在地上行走並對口哨聲做出反應。
+      食性：種子穀物
+  [Z07 food panel]
+      牠們是夜行性覓食的鳥類，白天時通常成群棲息在湖泊和濕潤的稻田周圍。
+  [Z08 distribution panel]
+      這是一種廣泛分佈於印度次大陸和東南亞低地濕地的定居物種。
+  [Z09 growth & reproduction]
+      牠們能夠棲息在樹上，有時會在樹洞中築巢。
+  [Z10 key knowledge, numbered 1–5]
+      1 這隻栗色鴨子與草黃樹鴨（D. bicolor）容易混淆，但牠的上尾覆羽是栗色的，
+      2 這種棕色且頸部修長的鴨子有寬大的翅膀，在飛行時顯而易見，
+      3 牠們在圈養下會變得非常馴服，會在地上行走並對口哨聲做出反應。
+      4 牠們是夜行性覓食的鳥類，白天時通常成群棲息在湖泊和濕潤的稻田周圍。
+      5 牠們有時會根據天氣和水資源的變化進行局部遷移，北方的鳥類則會在冬季遷徙至更南方。
+  [Z11 trivia, 3 star bullets]
+      ★ 慄樹鴨為鴨科樹鴨屬的鳥類，又名慄樹鴨，俗名尼鴨、嘯鴨。
+      ★ 這種棕色且頸部修長的鴨子有寬大的翅膀，在飛行時顯而易見，並發出響亮的兩音節尖銳叫聲。
+      ★ 在印度，當地名稱如sili和silhahi源自於牠們的尖銳兩音節叫聲。
+  [Z12 score card (radar + total)]
+      生物重要性 2.0/5
+      物種適應力 3.3/5
+      觀賞價值 4.0/5
+      保育關注度 1.2/5
+      研究價值 4.8/5
+      總評分 ★★★☆☆ 3.1 / 5
+  [Z13 observation tips, 4 lines]
+      最佳觀察時間：清晨與黃昏
+      建議地點：水邊、草地農田
+      觀察重點：這隻栗色鴨子與草黃樹鴨（D. bicolor）容易混淆
+      建議裝備：雙筒望遠鏡
+  [Z14 precautions, 3 lines]
+      切勿捕捉或非法飼養
+      勿餵食人類食物
+      觀察時保持距離
+  [Z15 four magnifier circles (title + caption each)]
+      第 1 個（頭部）：「頭部／額羽」— 這種棕色且頸部修長的鴨子有寬大的翅膀
+      第 2 個（羽色）：「羽色」— 但牠的上尾覆羽是栗色的
+      第 3 個（翼部）：「翼部」— 在飛行時顯而易見
+      第 4 個（腳部）：「腳部」— 資料待查
+  [Z16 similar species, 2 boxes]
+      第一個物種名：資料待查
+      第二個物種名：資料待查
+  [Z17 conservation status]
+      IUCN 無危 LC · Least Concern (LC)
+      由於其分佈範圍廣，約在1至1000萬平方公里之間，牠們的全球種群數量被認為在兩百萬至兩千萬隻…
+  [Z18 call caption]
+      這種棕色且頸部修長的鴨子有寬大的翅膀，在飛行時顯而易見，並發出響亮的兩音節尖銳叫聲。
+
+CELL RULES
+1. All 18 cells must be filled from above. No cell may be left blank and no cell may keep template text.
+2. Render numbers exactly as written. Never round, convert or invent a number. If a cell says 資料待查, print 資料待查 exactly, in the same size and style as neighbouring text.
+3. Each of the four magnifier circles needs its own title and one short caption from Z15.
+4. Traditional Chinese only. No simplified characters, no extra English sentences beyond the given names, no slogans, no QR code, no barcode, no price, no advertisement, no second bird species.
+
+STYLE
+  Warm cream paper with very fine fibre texture, thin olive/sage-green panel borders, flat matte print, crisp sharp type, tiny dark-green pictogram icons. No glow, no gradient mesh, no drop shadow, no foil.
+
+FINAL CHECK — re-read every printed string on your card and confirm that (a) no word from IMAGE 1 survived, (b) all 18 cells are present, (c) every number matches PRINTED TEXT. Silently repair anything that fails.

@@ -1,0 +1,93 @@
+Create ONE finished bird encyclopedia information card, front side only, 2:3 portrait, perfectly flat and facing the camera like a clean scan of a real printed card. No table, no hand, no tilt, no mockup, no watermark, no page curl.
+
+IMAGE 1 — LAYOUT TEMPLATE (supplied by me).
+  Copy ONLY its layout: warm cream paper background, thin olive-green rounded outer frame, the exact grid of panels, the position and size of every panel, the small circular pictogram icons, the four magnifier circles down the right edge, the green radar chart, the bottom footer strip, and the typographic hierarchy.
+  EVERY WORD, NUMBER, NAME, SPECIES, CAPTION AND LABEL INSIDE IMAGE 1 IS PLACEHOLDER NOISE belonging to a different species. None of it may appear on the finished card — not in the magnifier captions, not in the similar-species boxes, not in the reproduction panel, not in the footer. Do not translate it, do not keep it as decoration. Replace 100% of the text with the PRINTED TEXT block below.
+
+THE BIRD — paint ONE photorealistic 小白鷺 (Little Egret, Egretta garzetta), natural posture, complete body, clear head, correct plumage and bare-part colours for this species. Also paint a small pixel-art version of the same bird for the top-left box.
+
+PRINTED TEXT — fill the card with EXACTLY these strings, cell by cell. Print nothing else:
+  [Z01 top title band]
+      NO.0245
+      小白鷺
+      Little Egret
+      Egretta garzetta
+      分類：鵜形目 鷺科
+  [Z02 under pixel-art box]
+      ▲ 像素圖鑑 / PIXEL ART
+  [Z03 three stat boxes]
+      身長 60 cm
+      體重 312 g
+      保育級別 無危 LC
+  [Z04 profile paragraph]
+      圖鑑介紹 / PROFILE
+      幼鳥類似於非繁殖期的成鳥，但腿是綠黑色，腳較為暗淡的黃色， 可能有一定比例的灰色或棕色羽毛。
+  [Z05 classification, 7 lines]
+      界：動物界 Animalia
+      門：脊索動物門 Chordata
+      綱：鳥綱 Aves
+      目：鵜形目 Pelecaniformes
+      科：鷺科 Ardeidae
+      屬：Egretta 屬
+      種：小白鷺 E. garzetta
+  [Z06 ecological habits, 4 lines]
+      活動：日行性，清晨與黃昏最活躍
+      棲地：森林、濕地、水邊
+      行為：小白鷺是群居鳥類，常常成群結隊。
+      食性：昆蟲
+  [Z07 food panel]
+      在陸地上，牠們會在追逐獵物時步行或奔跑，喫由放牧的牲畜驚動的生物和牲畜上的蜱蟲。
+  [Z08 distribution panel]
+      西部種群（E. g. garzetta）的繁殖範圍包括南歐、中東、大部分非洲和南亞。
+  [Z09 growth & reproduction]
+      三到五枚蛋由雌雄孵化21到25天後孵化。
+  [Z10 key knowledge, numbered 1–5]
+      1 幼鳥類似於非繁殖期的成鳥，但腿是綠黑色，腳較為暗淡的黃色，
+      2 小白鷺大多數時候並不鳴叫，但在繁殖地會發出各種呱呱和咕嚕聲，
+      3 小白鷺是群居鳥類，常常成群結隊。
+      4 在海岸地區，牠棲息於紅樹林地區、沼澤、泥灘、沙灘和礁石。
+      5 牠們在淺水中潛行獵物，經常以翅膀高高揚起跑動或拖曳腳步以驚動小魚，
+  [Z11 trivia, 3 star bullets]
+      ★ 1954年首次在巴巴多斯被發現，並於1994年首次在該地有繁殖紀錄。
+      ★ 小白鷺大多數時候並不鳴叫，但在繁殖地會發出各種呱呱和咕嚕聲，受到驚擾時會發出刺耳的警告叫…
+      ★ 小白鷺由瑞典博物學家卡爾·林奈於1766年在其Systema Naturae的 中做物種…
+  [Z12 score card (radar + total)]
+      生物重要性 2.0/5
+      物種適應力 3.8/5
+      觀賞價值 4.4/5
+      保育關注度 3.0/5
+      研究價值 4.8/5
+      總評分 ★★★★☆ 3.6 / 5
+  [Z13 observation tips, 4 lines]
+      最佳觀察時間：清晨與黃昏
+      建議地點：森林、濕地
+      觀察重點：幼鳥類似於非繁殖期的成鳥
+      建議裝備：雙筒望遠鏡
+  [Z14 precautions, 3 lines]
+      切勿捕捉或非法飼養
+      勿餵食人類食物
+      觀察時保持距離
+  [Z15 four magnifier circles (title + caption each)]
+      第 1 個（頭部）：「頭部／額羽」— 資料待查
+      第 2 個（羽色）：「羽色」— 但腿是綠黑色
+      第 3 個（翼部）：「翼部」— 經常以翅膀高高揚起跑動或拖曳腳步以驚動小魚
+      第 4 個（腳部）：「腳部」— 腳較為暗淡的黃色
+  [Z16 similar species, 2 boxes]
+      第一個物種名：資料待查
+      第二個物種名：資料待查
+  [Z17 conservation status]
+      IUCN 無危 LC · Least Concern (LC)
+      全球範圍內，小白鷺並未被列為受威脅物種，事實上，過去幾十年來牠們的分佈範圍有所擴大。
+  [Z18 call caption]
+      小白鷺大多數時候並不鳴叫，但在繁殖地會發出各種呱呱和咕嚕聲，受到驚擾時會發出刺耳的警告叫聲。
+
+CELL RULES
+1. All 18 cells must be filled from above. No cell may be left blank and no cell may keep template text.
+2. Render numbers exactly as written. Never round, convert or invent a number. If a cell says 資料待查, print 資料待查 exactly, in the same size and style as neighbouring text.
+3. Each of the four magnifier circles needs its own title and one short caption from Z15.
+4. Traditional Chinese only. No simplified characters, no extra English sentences beyond the given names, no slogans, no QR code, no barcode, no price, no advertisement, no second bird species.
+
+STYLE
+  Warm cream paper with very fine fibre texture, thin olive/sage-green panel borders, flat matte print, crisp sharp type, tiny dark-green pictogram icons. No glow, no gradient mesh, no drop shadow, no foil.
+
+FINAL CHECK — re-read every printed string on your card and confirm that (a) no word from IMAGE 1 survived, (b) all 18 cells are present, (c) every number matches PRINTED TEXT. Silently repair anything that fails.
