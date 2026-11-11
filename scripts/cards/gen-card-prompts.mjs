@@ -41,6 +41,38 @@ const clauses = (s, max) =>
     .filter((x) => x.length >= 2)
     .slice(0, max);
 
+
+/* 體長文字：優先用 Wikipedia 區間；否則用 AVONET 估算單值並標「約」 */
+function lenText(e, c) {
+  const raw = c && c.length ? String(c.length).trim() : '';
+  // 只接受 cm 或純數字；in / mm 之類不印在卡面，改用 AVONET 單值
+  const m = raw.match(/^(\d+(?:\.\d+)?(?:\s*[–-]\s*\d+(?:\.\d+)?)?)\s*(cm)?$/i);
+  if (m) {
+    let v = m[1].replace(/\s*[–-]\s*/, '–');
+    // 明顯倒轉的區間（如 48–33）視為無效
+    const rr = v.split('–').map(Number);
+    if (rr.length === 2 && rr[0] > rr[1]) v = '';
+    if (v) return v + ' cm';
+  }
+  if (e && e.len) return '約 ' + e.len + ' cm';
+  return '資料待查';
+}
+
+/* 同科近緣種：同科、體長最接近、且在本圖鑑內 */
+function similarSpecies(id) {
+  const e = idx.birds[id] || {};
+  const fam = e.fz || '';
+  if (!fam) return ['第一個物種名：資料待查', '第二個物種名：資料待查'];
+  const self = Number(e.len) || Number((copy[id] || {}).length?.replace(/\D.*/, '')) || 0;
+  const peers = Object.keys(idx.birds)
+    .filter((k) => k !== id && idx.birds[k].fz === fam && idx.birds[k].len)
+    .map((k) => ({ k, z: idx.birds[k].z, d: Math.abs(Number(idx.birds[k].len) - self) }))
+    .sort((a, b) => a.d - b.d)
+    .slice(0, 2);
+  if (!peers.length) return ['第一個物種名：資料待查', '第二個物種名：資料待查'];
+  return peers.map((p, i) => (i === 0 ? '第一個' : '第二個') + '：同科近緣 ' + p.z);
+}
+
 function cells(id) {
   const e = idx.birds[id], c = copy[id] || {}, m = meas[id] || {};
   const sc = scores[id] || {}, t = tax[id] || {};
@@ -63,7 +95,7 @@ function cells(id) {
   ]);
   add('Z02 under pixel-art box', ['▲ 像素圖鑑 / PIXEL ART']);
   add('Z03 three stat boxes', [
-    '身長 ' + (e.len ? e.len + ' cm' : '資料待查'),
+    '身長 ' + lenText(e, c),
     '體重 ' + (m.mass ? m.mass + ' g' : '資料待查'),
     '保育級別 ' + (c.iucn || '資料待查'),
   ]);
@@ -138,7 +170,7 @@ function cells(id) {
     '第 3 個（翼部）：' + mags[2],
     '第 4 個（腳部）：' + mags[3],
   ]);
-  add('Z16 similar species, 2 boxes', ['第一個物種名：資料待查', '第二個物種名：資料待查']);
+  add('Z16 similar species, 2 boxes', similarSpecies(id));
   add('Z17 conservation status', [
     'IUCN ' + (c.iucn || '資料待查') + (c.iucnEn ? ' · ' + c.iucnEn : ''),
     sent(c.conservation, 46) || '資料待查',
