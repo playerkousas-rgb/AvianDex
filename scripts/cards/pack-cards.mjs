@@ -4,8 +4,10 @@
  * ------------------------------------------------------------
  * 卡面成品不應該進 Git（569 張原圖約 900 MB，Git 會爆）。
  * 正確做法：
- *   ① 卡面壓成 WebP（quality 86，長邊 1400px）→ 每張約 200–300 KB
- *   ② 每 50 張打包一個 zip → 約 12–15 MB 一卷，易上傳
+ *   ① 卡面壓成 AVIF（quality 50、effort 5、長邊 1400px）
+ *      實測 848×1264：AVIF 83 KB vs WebP 178 KB vs PNG 1.9 MB
+ *      AVIF 對細字仍然清晰（已用局部放大核對）
+ *   ② 每 50 張打包一個 zip → 約 4–6 MB 一卷，易上傳
  *   ③ 生成 manifest.json（編號、尺寸、bytes、sha256）＋ SHA256SUMS
  *
  * 上傳去 Google Drive / R2 之後，app 只需要讀 manifest.json。
@@ -29,13 +31,14 @@ const inDir = opt('in', 'data/card-demo/out');
 const outDir = opt('out', 'deliver/cards');
 const per = Number(opt('per', 50));
 const longEdge = Number(opt('long', 1400));
-const quality = Number(opt('q', 86));
+const quality = Number(opt('q', 50));       // AVIF 預設質素
+const effort = Number(opt('effort', 5));    // 1–9，5 為速度/體積平衡
 
 if (!existsSync(inDir)) {
   console.error('找不到輸入目錄：' + inDir);
   process.exit(1);
 }
-mkdirSync(path.join(outDir, 'webp'), { recursive: true });
+mkdirSync(path.join(outDir, 'avif'), { recursive: true });
 mkdirSync(path.join(outDir, 'zips'), { recursive: true });
 
 const files = readdirSync(inDir)
@@ -54,27 +57,24 @@ let total = 0;
 for (const f of files) {
   const id = (f.match(/(\d{3,4})/) || [])[1] || f.replace(/\.[^.]+$/, '');
   const src = path.join(inDir, f);
-  const dst = path.join(outDir, 'webp', 'aviandex-' + id + '.webp');
+  const dst = path.join(outDir, 'avif', 'aviandex-' + id + '.avif');
 
-  // 用 sharp 轉檔（有就用，冇就 fallback 到 cwebp 或直接複製）
+  // AVIF 轉檔（sharp / libvips）
   let ok = false;
   try {
     execFileSync('node', ['-e', `
       const sharp = require('sharp');
       sharp(${JSON.stringify(src)})
         .resize({ width: ${longEdge}, height: ${longEdge}, fit: 'inside', withoutEnlargement: true })
-        .webp({ quality: ${quality} })
+        .avif({ quality: ${quality}, effort: ${effort}, chromaSubsampling: '4:4:4' })
         .toFile(${JSON.stringify(dst)}).then(() => process.exit(0)).catch(e => { console.error(e.message); process.exit(1); });
-    `], { stdio: 'pipe' });
+    `], { stdio: 'pipe', timeout: 300000 });
     ok = true;
-  } catch {
-    try {
-      execFileSync('cwebp', ['-q', String(quality), '-resize', String(longEdge), '0', src, '-o', dst], { stdio: 'pipe' });
-      ok = true;
-    } catch { ok = false; }
+  } catch (e) {
+    console.warn('⚠️ AVIF 轉檔失敗：' + String(e.message).slice(0, 80));
   }
   if (!ok) {
-    console.warn('⚠️ 轉檔失敗，跳過：' + f);
+    console.warn('跳過：' + f);
     continue;
   }
 
@@ -82,7 +82,7 @@ for (const f of files) {
   total += buf.length;
   manifest.push({
     id,
-    file: 'webp/aviandex-' + id + '.webp',
+    file: 'avif/aviandex-' + id + '.avif',
     bytes: buf.length,
     sha256: sha(buf),
   });
@@ -108,8 +108,10 @@ for (let i = 0; i < manifest.length; i += per) {
 writeFileSync(path.join(outDir, 'manifest.json'), JSON.stringify({
   generatedAt: new Date().toISOString(),
   count: manifest.length,
+  format: 'avif',
   longEdge,
   quality,
+  effort,
   totalBytes: total,
   cards: manifest,
   zips: zipGroups,
@@ -120,6 +122,6 @@ writeFileSync(path.join(outDir, 'SHA256SUMS'),
 
 const mb = (n) => (n / 1048576).toFixed(1) + ' MB';
 console.log(`完成 ${manifest.length} 張`);
-console.log(`WebP 合計 ${mb(total)}（平均 ${Math.round(total / manifest.length / 1024)} KB/張）`);
+console.log(`AVIF 合計 ${mb(total)}（平均 ${Math.round(total / manifest.length / 1024)} KB/張）`);
 zipGroups.forEach((g) => console.log(`  ${g.file}  ${g.count} 張  ${mb(g.bytes)}`));
 console.log(`manifest.json + SHA256SUMS 已寫入 ${outDir}`);
