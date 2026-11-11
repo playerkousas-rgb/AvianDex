@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-把圖鑑資訊卡真正畫成 PNG —— 給「我睇極都係舊卡」的情況用。
+把圖鑑資訊卡畫成一張「卡」—— 不是一張網頁排版。
 
-為甚麼要有這支？
-  用戶反映他一直只看到部署在 main 的舊卡，看不到分支上的新版。
-  HTML 預覽在沙盒裡也看不到，所以我直接把卡**畫成圖片**，
-  一眼就見到排版，不需要任何瀏覽器。
+為甚麼重寫？
+  上一版把卡排成「上圖 + 資料帶 + 三欄 + 五格 + 評分帶 + 底欄」，
+  用戶一看就說：「似真係一個網頁版面，完全唔似一張卡」。
+  所以整張重做，這次守三條規矩：
 
-做法：
-  · 版面數字與 src/lib/dexCardLayout.ts 對齊（1200×1600）
-  · 文字全部來自 repo 內已核實的 JSON，一個字都不改寫
-  · 插畫用 R2 birdcards（拿不到就用編號佔位，不畫假鳥）
-  · 中文字型用 Noto Sans TC（400/700/900）
+  1. 卡是**一件實物**：有厚外框、有卡紙底、有金屬邊；
+     所有內容都收在框裡面，不外露、不漂浮。
+  2. 只有**一個主圖窗**（圓角相框），鳥是主角，佔卡面三分之一以上。
+  3. 其餘資料是**卡的背面資訊**，用細字、成組、貼邊排，
+     不是「欄位」。
 
-用法：python3 scripts/render-card-png.py 0013 [輸出路徑]
+資料仍然全部照抄 repo 內已核實的 JSON，一個字都不改寫。
+插畫來源：R2 birdcards/<NO>.avif（沙盒連不到就報告並用編號佔位）。
+
+用法：python3 scripts/render-card-png.py 0013 [輸出.jpg] [插畫代號]
 """
 import json
 import math
@@ -22,7 +25,7 @@ import os
 import sys
 import urllib.request
 
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FONT_DIR = "/tmp/fonts"
@@ -85,6 +88,10 @@ def hx(c):
     return tuple(int(c[i:i + 2], 16) for i in (0, 2, 4))
 
 
+def mix(c1, c2, t):
+    return tuple(int(c1[i] * (1 - t) + c2[i] * t) for i in range(3))
+
+
 def font(size, weight=400):
     name = {400: "400Regular", 700: "700Bold", 900: "900Black"}.get(weight, "400Regular")
     return ImageFont.truetype(os.path.join(FONT_DIR, f"NotoSansTC_{name}.ttf"), size)
@@ -123,8 +130,8 @@ def wrap(text, fnt, max_w, draw):
     return lines
 
 
-def bullets(text, max_chars=110, max_points=3):
-    """收到句末的列點；不改寫、不刪字（原文照登，超出才收在句末）"""
+def bullets(text, max_chars=110, max_points=2):
+    """收到句末的列點；不改寫、不刪字"""
     text = (text or "").strip()
     if not text:
         return []
@@ -150,29 +157,26 @@ def bullets(text, max_chars=110, max_points=3):
     return out
 
 
-LOCAL_ART = "/tmp/arena-coding-uploads/八哥.png"   # 用戶原版卡（1024×1536）作離線插畫來源
+LOCAL_ART = "/tmp/arena-coding-uploads/八哥.png"   # 用戶原版卡（1024×1536），作離線插畫來源
 
 
-def art_from_local(bird_id, key=None):
+def art_from_local(key):
     """
-    沙盒連不到 r2.dev，但用戶的原版卡就在手邊。
-    從原版卡裁出「主插畫」那一塊（左上像素圖與中間相片之間的那張），
-    只用來做版面預覽，不會當成新素材上線。
+    沙盒連不到 r2.dev。原版卡中間那張相片就是同一隻雀，
+    裁出「整隻雀、連腳」那一塊（右邊四個特徵圈與引線不入鏡），只用於版面預覽。
     """
     if key != "0013" or not os.path.exists(LOCAL_ART):
         return None
     try:
         im = Image.open(LOCAL_ART).convert("RGB")
         sx, sy = im.width / 1024, im.height / 1536
-        # 原版主相片區：x 到 690 就停，否則會把右邊 4 個特徵圓圈與引線一齊裁入
-        box = (int(302 * sx), int(186 * sy), int(600 * sx), int(806 * sy))
-        return im.crop(box)
+        return im.crop((int(300 * sx), int(200 * sy), int(531 * sx), int(810 * sy)))
     except Exception:  # noqa: BLE001
         return None
 
 
-def art_image(bird_id, key=None):
-    url = f"https://pub-a9333a974e814ccba1994639b6e79266.r2.dev/birdcards/{bird_id}.avif"
+def art_image(key):
+    url = f"https://pub-a9333a974e814ccba1994639b6e79266.r2.dev/birdcards/{key}.avif"
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "AvianDex/1.0"})
         data = urllib.request.urlopen(req, timeout=25).read()
@@ -180,9 +184,9 @@ def art_image(bird_id, key=None):
         im = Image.open(BytesIO(data)).convert("RGB")
         return im
     except Exception as e:  # noqa: BLE001
-        local = art_from_local(bird_id, key)
+        local = art_from_local(key)
         if local is not None:
-            print(f"  · r2 拿不到（{e.__class__.__name__}），改用用戶原版卡的插畫位置")
+            print(f"  · r2 拿不到（{e.__class__.__name__}），用原版卡的相片作示範")
             return local
         print(f"  ⚠ 插畫拿不到（{e.__class__.__name__}），用編號佔位")
         return None
@@ -200,12 +204,20 @@ def draw_star(d, cx, cy, r, filled, color, outline):
 
 
 def draw_pokeball(d, cx, cy, r, color, white="white"):
-    d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=color, width=6, fill=white)
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=color, width=max(3, r // 4), fill=white)
     d.pieslice([cx - r, cy - r, cx + r, cy + r], 180, 360, fill=color)
-    d.rectangle([cx - r, cy - 4, cx + r, cy + 4], fill=color)
+    d.rectangle([cx - r, cy - r * 0.16, cx + r, cy + r * 0.16], fill=color)
     d.ellipse([cx - r * .34, cy - r * .34, cx + r * .34, cy + r * .34],
-              fill=white, outline=color, width=5)
+              fill=white, outline=color, width=max(3, r // 5))
     d.ellipse([cx - r * .12, cy - r * .12, cx + r * .12, cy + r * .12], fill=color)
+
+
+# ══════════════════════════════════════════════════════════
+#  卡的幾何（固定像素，全部收在厚框內）
+# ══════════════════════════════════════════════════════════
+FRAME = 26          # 外框厚度
+BEVEL = 7           # 外框內側的金屬倒角
+PAD = 30            # 卡紙內邊距
 
 
 def render(bird_id, out_path, imagekey=None):
@@ -219,339 +231,246 @@ def render(bird_id, out_path, imagekey=None):
 
     c, t, a = ORDER_THEME.get(e["o"], FALLBACK)
     C, T, A = hx(c), hx(t), hx(a)
+    INK = (26, 38, 32)
+    SUB = (96, 112, 104)
+    LINE = (214, 218, 210)
 
-    img = Image.new("RGB", (W, H), T)
+    # 卡紙底（略帶纖維感的米白），外圍先鋪深色邊
+    img = Image.new("RGB", (W, H), mix(C, (0, 0, 0), 0.55))
     d = ImageDraw.Draw(img)
 
-    # ══════════ ① 主圖：插畫在左、文字在右 ══════════
-    POSTER_H = 754
-    SPLIT = 700                       # 插畫佔 0..SPLIT；文字由 SPLIT 起
-    art = art_image(key, key)
-    d.rectangle([0, 0, W, POSTER_H], fill=C)
-    if art is not None:
-        # 插畫是直幅：以寬度貼合，垂直對齊偏上（保住頭部與身體）
-        ratio = max(SPLIT / art.width, POSTER_H / art.height)
-        aw, ah = int(art.width * ratio) + 1, int(art.height * ratio) + 1
-        art = art.resize((aw, ah), Image.LANCZOS)
-        left = max(0, (aw - SPLIT) // 2)
-        top = int((ah - POSTER_H) * 0.18)
-        img.paste(art.crop((left, top, left + SPLIT, top + POSTER_H)), (0, 0))
-        # 相片右邊漸層，令文字欄同相片無縫
-        FW = 300                     # 由 SPLIT-FW 開始淡入文字欄底色
-        seam = Image.new("RGBA", (FW + 10, POSTER_H), (0, 0, 0, 0))
-        sd = ImageDraw.Draw(seam)
-        for x in range(FW + 10):
-            sd.line([(x, 0), (x, POSTER_H)],
-                    fill=(C[0], C[1], C[2], int(255 * (x / FW) ** 0.62)))
-        img.paste(Image.alpha_composite(
-            img.crop((SPLIT - FW, 0, SPLIT + 10, POSTER_H)).convert("RGBA"), seam).convert("RGB"),
-            (SPLIT - FW, 0))
-    else:
-        d.text((SPLIT // 2, POSTER_H // 2), f"NO.{bird_id}", font=font(46, 900),
-               fill=(255, 255, 255), anchor="mm")
+    # ── 厚外框：外深內亮，做出「膠殼」的厚度 ──
+    d.rounded_rectangle([0, 0, W - 1, H - 1], 30, fill=mix(C, (0, 0, 0), 0.62))
+    d.rounded_rectangle([6, 6, W - 7, H - 7], 26, fill=mix(C, (0, 0, 0), 0.42))
+    d.rounded_rectangle([FRAME - BEVEL, FRAME - BEVEL, W - FRAME + BEVEL, H - FRAME + BEVEL],
+                        FRAME - 4, fill=mix(C, (255, 255, 255), 0.30))
+    d.rounded_rectangle([FRAME, FRAME, W - FRAME, H - FRAME], FRAME - 8, fill=C)
 
-    # 文字欄底色漸層（右邊要夠暗）
-    veil = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    vd = ImageDraw.Draw(veil)
-    for x in range(W):
-        p = x / W
-        alpha = 0 if p < 0.28 else int(255 * min(1, (p - 0.28) / 0.24) ** 1.0)
-        vd.line([(x, 0), (x, POSTER_H)], fill=(C[0] // 3, C[1] // 3, C[2] // 3, int(alpha * 0.95)))
-    # 底部一小段，令主圖與資料帶接順
-    for y in range(int(POSTER_H * 0.86), POSTER_H):
-        q = max(0.0, (y - POSTER_H * 0.86) / (POSTER_H * 0.14))
-        vd.line([(0, y), (W, y)], fill=(C[0] // 3, C[1] // 3, C[2] // 3, int(120 * q ** 1.4)))
-    img = Image.alpha_composite(img.convert("RGBA"), veil).convert("RGB")
-    d = ImageDraw.Draw(img)
+    # 卡紙
+    card = [FRAME + BEVEL + 4, FRAME + BEVEL + 4, W - FRAME - BEVEL - 4, H - FRAME - BEVEL - 4]
+    d.rounded_rectangle(card, 16, fill=T)
+    # 卡紙內側幼線（印刷品感覺）
+    d.rounded_rectangle([card[0] + 3, card[1] + 3, card[2] - 3, card[3] - 3], 14,
+                        outline=mix(C, T, 0.55), width=2)
 
-    # 品牌 + 目徽章 + 編號
-    draw_pokeball(d, 52, 47, 15, (255, 255, 255), white=(255, 255, 255))
-    d.text((78, 47), "AVIANDEX", font=font(13, 900), fill="white", anchor="lm")
-    bx, by = 196, 47
-    d.ellipse([bx - 22, by - 22, bx + 22, by + 22], fill="white")
-    d.text((bx, by), e["oz"][:1], font=font(22, 900), fill=C, anchor="mm")
-    d.text((bx + 30, by), e["oz"], font=font(13, 700), fill=(228, 236, 231), anchor="lm")
-    d.text((W - 40, 47), f"NO.{bird_id}", font=font(19, 900), fill="white", anchor="rm")
+    IL, IT, IR, IB = card[0] + PAD, card[1] + PAD, card[2] - PAD, card[3] - PAD
+    IW = IR - IL
 
-    # 名稱區（右欄，垂直居中）
-    TX = SPLIT + 44
-    NAME_Y = POSTER_H // 2 - 160
-    d.text((TX, NAME_Y), e["z"], font=font(72, 900), fill="white")
-    d.text((TX + 2, NAME_Y + 84), e["s"], font=font(17, 400), fill=(226, 234, 229))
+    # ══════ ① 卡頂：名牌 ══════
+    NAME_TOP = IT - 12
+    f_no, f_zh, f_sci = font(19, 900), font(58, 900), font(16, 400)
+    bb_zh = d.textbbox((0, 0), e["z"], font=f_zh)
+    bb_sci = d.textbbox((0, 0), e["s"], font=f_sci)
+    zh_h = bb_zh[3] - bb_zh[1]
+    sci_h = bb_sci[3] - bb_sci[1]
+    name_h = 10 + 22 + 4 + zh_h + 6 + sci_h + 12
+    d.rounded_rectangle([IL, NAME_TOP, IR, NAME_TOP + name_h], 14, fill=C)
+    d.text((IL + 22, NAME_TOP + 10), f"NO.{bird_id}", font=f_no,
+           fill=mix(A, (255, 255, 255), 0.1))
+    d.text((IL + 22, NAME_TOP + 34 - bb_zh[1]), e["z"], font=f_zh, fill="white")
+    d.text((IL + 24, NAME_TOP + 34 + zh_h + 6 - bb_sci[1]), e["s"], font=f_sci,
+           fill=mix(C, (255, 255, 255), 0.74))
     en_txt = e["e"]
     tw = d.textlength(en_txt, font=font(17, 700))
-    d.rounded_rectangle([TX, NAME_Y + 120, TX + tw + 34, NAME_Y + 154], 17, fill="white")
-    d.text((TX + 17, NAME_Y + 137), en_txt, font=font(17, 700), fill=C, anchor="lm")
+    d.rounded_rectangle([IR - tw - 46, NAME_TOP + 14, IR - 12, NAME_TOP + 48], 17, fill="white")
+    d.text((IR - tw - 29, NAME_TOP + 31), en_txt, font=font(17, 700), fill=C, anchor="lm")
     tag = f"{e['oz']} · {e['fz']}"
-    tw2 = d.textlength(tag, font=font(14, 700))
-    d.rounded_rectangle([TX + tw + 44, NAME_Y + 120, TX + tw + 44 + tw2 + 24, NAME_Y + 154],
-                        17, outline=(255, 255, 255), width=2)
-    d.text((TX + tw + 56, NAME_Y + 137), tag, font=font(14, 700), fill="white", anchor="lm")
+    tw2 = d.textlength(tag, font=font(13, 700))
+    d.rounded_rectangle([IR - tw2 - 38, NAME_TOP + 56, IR - 12, NAME_TOP + 86], 15,
+                        outline=mix(C, (255, 255, 255), 0.55), width=2)
+    d.text((IR - tw2 - 25, NAME_TOP + 71), tag, font=font(13, 700),
+           fill=mix(C, (255, 255, 255), 0.9), anchor="lm")
 
-    # 引言（原文第一句，不改寫）
-    quote = (zh.get("look") or zh.get("range") or "").strip()
-    if quote:
-        first = quote.split("。")[0]
-        if len(first) > 40:
-            first = first[:40] + "…"
-        else:
-            first += "。"
-        qy = NAME_Y + 182
-        d.rectangle([TX, qy, TX + 5, qy + 88], fill=A)
-        for i, line in enumerate(wrap(first, font(14, 400), W - TX - 46, d)[:4]):
-            d.text((TX + 18, qy + i * 22), line, font=font(14, 400), fill=(240, 245, 241))
+    # ══════ ② 下方：左直幅相片窗 + 右資料欄 ══════
+    BOTTOM_H = 132                      # 卡底 chips／評分／出處
+    PY = NAME_TOP + name_h + 18
+    BOTTOM_Y = IB - BOTTOM_H
+    PH = BOTTOM_Y - PY - 16
+    PW = int(PH * (240 / 610))          # 直幅相片比例，跟插畫一致
+    PW = min(PW, 470)
 
-    # 文字欄底部：插畫與資料出處（真實來源）
-    d.text((TX, POSTER_H - 40), "插畫 ILLUSTRATION · BIRD-DEX 2", font=font(10, 700),
-           fill=(168, 190, 176))
-    d.text((TX, POSTER_H - 25), "資料 zh / en.wikipedia · eBird/Clements", font=font(10, 400),
-           fill=(140, 164, 150))
+    # 相框（雙層：外厚內幼）
+    d.rounded_rectangle([IL - 7, PY - 7, IL + PW + 7, PY + PH + 7], 18, fill=mix(C, T, 0.84))
+    d.rounded_rectangle([IL - 7, PY - 7, IL + PW + 7, PY + PH + 7], 18,
+                        outline=mix(C, (0, 0, 0), 0.2), width=3)
+    art = art_image(key)
+    if art is not None:
+        ratio = max(PW / art.width, PH / art.height)
+        aw, ah = int(art.width * ratio) + 1, int(art.height * ratio) + 1
+        art = art.resize((aw, ah), Image.LANCZOS)
+        left = max(0, (aw - PW) // 2)
+        top = max(0, int((ah - PH) * 0.05))
+        tile = art.crop((left, top, left + PW, top + PH))
+        mask = Image.new("L", tile.size, 0)
+        ImageDraw.Draw(mask).rounded_rectangle([0, 0, PW - 1, PH - 1], 12, fill=255)
+        img.paste(tile, (IL, PY), mask)
+        d.rounded_rectangle([IL, PY, IL + PW - 1, PY + PH - 1], 12,
+                            outline=mix(C, (0, 0, 0), 0.4), width=2)
+    else:
+        d.rounded_rectangle([IL, PY, IL + PW, PY + PH], 12, fill=mix(C, T, 0.74))
+        d.text((IL + PW // 2, PY + PH // 2), f"NO.{bird_id}", font=font(48, 900),
+               fill=mix(C, (255, 255, 255), 0.5), anchor="mm")
 
-    # ══════════ ② 資料帶 ══════════
-    STAT_H = 96
-    y0 = POSTER_H
-    d.rectangle([0, y0, W, y0 + STAT_H], fill="white")
-    d.line([0, y0 + STAT_H, W, y0 + STAT_H], fill=(230, 232, 228), width=2)
-    bw = W // 4
-    len_txt = f"{e['len']}" if e.get("len") else PENDING
-    mass_txt = str(m.get("mass", "—")).rstrip("g ").strip() or "—"
+    # 相片左上：IUCN 圓標（真實級別）
     iucn_raw = zh.get("iucn", "")
-    iucn_hit = next((x for x in IUCN if x[1] in iucn_raw or x[0] in iucn_raw), None)
+    hit = next((x for x in IUCN if x[1] in iucn_raw or x[0] in iucn_raw), None)
+    if hit and art is not None:
+        lc = hx(hit[3])
+        d.rounded_rectangle([IL + 12, PY + 12, IL + 132, PY + 50], 19, fill=lc)
+        d.ellipse([IL + 24, PY + 23, IL + 39, PY + 38], fill="white")
+        d.text((IL + 47, PY + 31), hit[1], font=font(16, 900), fill="white", anchor="lm")
+    # 相片底：插畫出處（細字，貼在圖上）
+    if art is not None:
+        d.rounded_rectangle([IL + 12, PY + PH - 34, IL + 268, PY + PH - 12], 11, fill=(0, 0, 0))
+        d.text((IL + 22, PY + PH - 23), "插畫 BIRD-DEX 2 · 相片示意",
+               font=font(9, 400), fill=(235, 240, 236), anchor="lm")
 
-    cells = [
-        ("身長  LENGTH", f"{len_txt}", "cm", None),
-        ("體重  MASS", mass_txt, "g", None),
-        ("保育級別  IUCN", (iucn_hit[1] if iucn_hit else PENDING), "", iucn_hit),
-        ("圖鑑評分  DEX RATING", f"{score.get('o', '—')}", "/5", "stars"),
+    # ── 右資料欄 ──
+    RX = IL + PW + 26
+    RW = IR - RX
+
+    # 四個數字：2×2
+    cellw, cellh = (RW - 12) // 2, 78
+    nums = [
+        ("身長", "LENGTH", (f"{e['len']}" if e.get("len") else PENDING), "cm", None),
+        ("體重", "MASS", (str(m.get("mass", "")).rstrip("g ").strip() or PENDING), "g", None),
+        ("保育級別", "IUCN", (hit[1] if hit else PENDING), "", (hx(hit[3]) if hit else None)),
+        ("圖鑑評分", "DEX RATING", (f"{score['o']:.1f}" if score.get("o") else PENDING), "/5", "stars"),
     ]
-    for i, (lab, val, unit, extra) in enumerate(cells):
-        x = i * bw + 22
-        d.text((x, y0 + 18), lab, font=font(11, 700), fill=(125, 141, 133))
-        if extra is None:
-            fs = 30 if len(str(val)) <= 5 else 21
-            d.text((x, y0 + 38 + (30 - fs) // 2), val, font=font(fs, 900), fill=C)
-            if unit:
-                d.text((x + d.textlength(val, font=font(30, 900)) + 6, y0 + 54),
-                       unit, font=font(12, 700), fill=(147, 160, 153))
-        elif extra == "stars":
-            d.text((x, y0 + 36), val, font=font(30, 900), fill=C)
-            d.text((x + 52, y0 + 58), "/5", font=font(12, 700), fill=(147, 160, 153))
-            star_y = y0 + 78
-            try:
-                ov = float(val)
-            except ValueError:
-                ov = 0
-            for s in range(5):
-                draw_star(d, x + 120 + s * 17, star_y, 7,
-                          ov >= s + 1, A, (200, 200, 195))
+    for i, (kz, ke, v, unit, extra) in enumerate(nums):
+        cx = RX + (i % 2) * (cellw + 12)
+        cy = PY + (i // 2) * (cellh + 10)
+        d.rounded_rectangle([cx, cy, cx + cellw, cy + cellh], 12, fill=mix(C, T, 0.9))
+        d.text((cx + 12, cy + 8), f"{kz} {ke}", font=font(10, 700), fill=SUB)
+        if extra == "stars":
+            fs = 30 if len(str(v)) <= 5 else 18
+            d.text((cx + 12, cy + 24), v, font=font(fs, 900), fill=C)
+            d.text((cx + 18 + d.textlength(v, font=font(fs, 900)), cy + 42),
+                   unit, font=font(11, 700), fill=SUB)
+            ov = score.get("o")
+            if ov is not None:
+                for st in range(5):
+                    draw_star(d, cx + 12 + 96 + st * 16, cy + 44, 6, ov >= st + 0.85, A,
+                              mix(A, T, 0.5))
+        elif extra is not None:
+            d.ellipse([cx + 12, cy + 34, cx + 24, cy + 46], fill=extra)
+            d.text((cx + 32, cy + 24), v, font=font(24, 900), fill=extra)
         else:
-            d.ellipse([x, y0 + 46, x + 13, y0 + 59], fill=hx(extra[3]))
-            d.text((x + 20, y0 + 36), val, font=font(24, 900), fill=hx(extra[3]))
+            fs = 30 if len(str(v)) <= 5 else 17
+            d.text((cx + 12, cy + 24), v, font=font(fs, 900), fill=C)
+            if unit:
+                d.text((cx + 18 + d.textlength(v, font=font(fs, 900)), cy + 24 + fs - 12),
+                       unit, font=font(11, 700), fill=SUB)
 
-    # ══════════ ③ 三欄：棲地食性 / 量度 / 分佈 ══════════
-    ROW2_Y = y0 + STAT_H + 16
-    ROW2_H = 250
-    M = 26
-    gap = 14
-    w1 = int((W - M * 2 - gap * 2) * 0.36)
-    w2 = int((W - M * 2 - gap * 2) * 0.28)
-    w3 = W - M * 2 - gap * 2 - w1 - w2
+    # ── 文字組：按剩餘高度自動排，字級放大 ──
+    ty = PY + 2 * cellh + 18
+    avail = BOTTOM_Y - 18 - ty
+    zf, ef = font(13, 400), font(11, 400)
+    head_f, head_ef = font(15, 900), font(9, 700)
 
-    def pane(x, y, w, h, title):
-        d.rounded_rectangle([x, y, x + w, y + h], 14, fill="white",
-                            outline=(232, 234, 230), width=2)
-        d.rectangle([x + 14, y + 36, x + w - 14, y + 38], fill=(238, 240, 236))
-        d.text((x + 16, y + 12), title, font=font(15, 900), fill=C)
-
-    # ── 棲地 + 食性 + 分類
-    x1 = M
-    pane(x1, ROW2_Y, w1, ROW2_H, "棲地與食性  HABITAT & DIET")
-    yy = ROW2_Y + 50
-    for label, ids, table in (("住", e.get("h", []), HABITAT_ZH), ("食", e.get("d", []), DIET_ZH)):
-        d.text((x1 + 16, yy + 4), label, font=font(12, 900), fill=(150, 164, 156))
-        cx, cy = x1 + 46, yy
-        for tid in ids:
-            name = table.get(tid, tid)
-            tw = d.textlength(name, font=font(13, 700))
-            if cx + tw + 24 > x1 + w1 - 14:
-                cx, cy = x1 + 46, cy + 30
-            d.rounded_rectangle([cx, cy, cx + tw + 22, cy + 26], 13, fill=C)
-            d.text((cx + 11, cy + 13), name, font=font(13, 700), fill="white", anchor="lm")
-            cx += tw + 30
-        yy = cy + 34
-    # 食物（真實欄位 zh.diet，之前未用過）
-    food = (zh.get("diet") or "").strip()
-    if food:
-        fy = yy + 2
-        d.text((x1 + 16, fy), "食物 FOOD", font=font(10, 900), fill=(150, 164, 156))
-        fy += 14
-        for line in wrap(food[:46], font(10, 400), w1 - 32, d)[:2]:
-            d.text((x1 + 16, fy), line, font=font(10, 400), fill=(70, 92, 82))
-            fy += 13
-        yy = fy + 2
-
-    # 遷徙 / 人與鳥（真實欄位，二選一，標題跟住內容換）
-    mig = (zh.get("migration") or "").strip()
-    hum = (zh.get("humanRelation") or "").strip()
-    note_title, note = ("遷徙 MIGRATION", mig) if mig else ("人與鳥 PEOPLE", hum)
-    LIMIT = ROW2_Y + ROW2_H - 50      # 唔可以踩到下面的目／科／屬
-    if note and yy + 40 < LIMIT:
-        ny = yy + 2
-        d.text((x1 + 16, ny), note_title, font=font(10, 900), fill=(150, 164, 156))
-        ny += 14
-        for line in wrap(note[:64], font(10, 400), w1 - 32, d)[:3]:
-            if ny + 13 > LIMIT:
-                break
-            d.text((x1 + 16, ny), line, font=font(10, 400), fill=(52, 72, 63))
-            ny += 13
-
-    # 分類：目科屬種
-    d.line([x1 + 14, ROW2_Y + ROW2_H - 74, x1 + w1 - 14, ROW2_Y + ROW2_H - 74],
-           fill=(226, 229, 224), width=2)
-    tax = [("目", e["oz"]), ("科", e["fz"]), ("屬", e["s"].split()[0])]
-    tx = x1 + 16
-    ty = ROW2_Y + ROW2_H - 62
-    for k, v in tax:
-        d.text((tx, ty), k, font=font(11, 700), fill=(163, 176, 168))
-        d.text((tx + 14, ty - 2), v, font=font(13, 900), fill=(36, 58, 47))
-        tx += 20 + d.textlength(v, font=font(13, 900)) + 16
-
-    # ── 量度
-    x2 = x1 + w1 + gap
-    pane(x2, ROW2_Y, w2, ROW2_H, "量度  MEASUREMENTS")
-    defs = [("翼長", "wing"), ("尾長", "tail"), ("嘴峰", "bill"), ("跗蹠", "tarsus")]
-    vals = []
-    for _, k in defs:
-        try:
-            vals.append(float(str(m.get(k, 0)).replace("mm", "").strip() or 0))
-        except ValueError:
-            vals.append(0)
-    mx = max(vals + [1])
-    my = ROW2_Y + 54
-    for (lab, _), v in zip(defs, vals):
-        d.text((x2 + 16, my), lab, font=font(12, 700), fill=(74, 96, 87))
-        bx0 = x2 + 62
-        bx1 = x2 + w2 - 62
-        d.rounded_rectangle([bx0, my + 3, bx1, my + 11], 4, fill=(236, 238, 234))
-        if v:
-            d.rounded_rectangle([bx0, my + 3, bx0 + int((bx1 - bx0) * v / mx), my + 11], 4, fill=C)
-        d.text((x2 + w2 - 14, my - 1), f"{v:g}" if v else "—", font=font(12, 900),
-               fill=(61, 84, 73), anchor="ra")
-        my += 32
-    d.text((x2 + 16, ROW2_Y + ROW2_H - 30), "AVONET · BIRD-DEX 2",
-           font=font(9, 400), fill=(168, 178, 172))
-
-    # ── 分佈示意
-    x3 = x2 + w2 + gap
-    pane(x3, ROW2_Y, w3, ROW2_H, "分佈  RANGE")
-    mapy = ROW2_Y + 46
-    maph = 104
-    d.rounded_rectangle([x3 + 14, mapy, x3 + w3 - 14, mapy + maph], 10, fill=(233, 239, 234))
-    # 唔畫假的地理剪影；只標一句可追溯的來源
-    d.text((x3 + 22, mapy + 16), "分佈文字據 zh / en wikipedia ·",
-           font=font(10, 400), fill=(150, 166, 156))
-    d.text((x3 + 22, mapy + 32), "地圖待接 eBird 觀測網格",
-           font=font(10, 400), fill=(150, 166, 156))
-    # 香港永遠在中心
-    hkx = x3 + 14 + int((w3 - 28) * 0.70)
-    hky = mapy + int(maph * 0.46)
-    d.ellipse([hkx - 7, hky - 7, hkx + 7, hky + 7], fill="white", outline=C, width=2)
-    d.ellipse([hkx - 3, hky - 3, hkx + 3, hky + 3], fill=A)
-    d.text((hkx, hky - 15), "HK", font=font(11, 900), fill=(61, 75, 68), anchor="mm")
-    # range 原文
-    ry = mapy + maph + 8
-    for line in wrap(zh.get("range", "")[:90] or PENDING, font(12, 400), w3 - 28, d)[:4]:
-        d.text((x3 + 14, ry), line, font=font(12, 400), fill=(29, 43, 37))
-        ry += 17
-    ry += 3
-    for line in wrap(en.get("range", "")[:150], font(10, 400), w3 - 28, d)[:4]:
-        d.text((x3 + 14, ry), line, font=font(10, 400), fill=(122, 138, 130))
-        ry += 14
-
-    # ══════════ ④ 四格 ══════════
-    ROW3_Y = ROW2_Y + ROW2_H + 14
-    ROW3_H = 214
-    n = 5
-    pw = (W - M * 2 - gap * (n - 1)) // n
-    panes = [
-        ("外形  LOOK", zh.get("look"), en.get("look")),
-        ("繁殖  BREEDING", zh.get("breeding"), en.get("breeding")),
-        ("行為  BEHAVIOUR", zh.get("behavior"), en.get("behavior")),
-        ("鳴聲  VOICE", zh.get("voice"), en.get("voice")),
-        ("冷知識  FUN FACT", zh.get("funFact"), en.get("funFact")),
+    blocks = [
+        ("外形", "LOOK", zh.get("look"), en.get("look")),
+        ("習性", "HABITS", zh.get("behavior"), en.get("behavior")),
+        ("繁殖", "BREEDING", zh.get("breeding"), en.get("breeding")),
+        ("鳴聲", "VOICE", zh.get("voice"), en.get("voice")),
+        ("冷知識", "FACT", zh.get("funFact"), en.get("funFact")),
+        ("分佈", "RANGE", zh.get("range"), en.get("range")),
+        ("食物", "DIET", zh.get("diet"), en.get("diet")),
+        ("遷徙", "MIGRATION", zh.get("migration"), en.get("migration")),
+        ("人與鳥", "PEOPLE", zh.get("humanRelation"), en.get("humanRelation")),
+        ("詞源", "ETYMOLOGY", zh.get("etymology"), en.get("etymology")),
+        ("保育", "CONSERVATION", zh.get("conservation"), en.get("conservation")),
+        ("特色", "HIGHLIGHTS",
+         "；".join(zh.get("highlights") or []) or None,
+         "；".join(en.get("highlights") or []) or None),
     ]
-    for i, (title, zv, ev) in enumerate(panes):
-        px = M + i * (pw + gap)
-        pane(px, ROW3_Y, pw, ROW3_H, title)
-        ty = ROW3_Y + 48
-        # 中文列點（原文）
-        for item in bullets(zv or "", max_chars=64, max_points=3):
-            for line in wrap(item, font(13, 400), pw - 40, d)[:5]:
-                if ty > ROW3_Y + ROW3_H - 66:
-                    break
-                d.ellipse([px + 16, ty + 8, px + 22, ty + 14], fill=C)
-                d.text((px + 27, ty), line, font=font(13, 400), fill=(29, 43, 37))
-                ty += 19
-            ty += 2
-        if not zv:
-            d.text((px + 16, ty), PENDING, font=font(13, 400), fill=(141, 141, 134))
-            ty += 20
-        # 英文（較淺、較細）
-        ty += 4
-        for item in bullets(ev or "", max_chars=100, max_points=2):
-            for line in wrap(item, font(11, 400), pw - 40, d)[:6]:
-                if ty > ROW3_Y + ROW3_H - 20:
-                    break
-                d.text((px + 16, ty), line, font=font(11, 400), fill=(107, 125, 117))
-                ty += 15
 
-    # ══════════ ⑤ 評分帶 ══════════
-    SCORE_Y = ROW3_Y + ROW3_H + 16
-    SCORE_H = 170
-    d.rounded_rectangle([M, SCORE_Y, W - M, SCORE_Y + SCORE_H], 16, fill=C)
-    d.text((M + 20, SCORE_Y + 16), "圖鑑評分  DEX RATING", font=font(15, 900), fill="white")
-    d.text((M + 210, SCORE_Y + 19), "自訂指標，非學術評分", font=font(10, 400), fill=(180, 200, 190))
-    rows = [
-        ("生物重要性", "i"), ("適應力", "a"), ("觀賞價值", "v"),
-        ("研究價值", "r"), ("保育關注度", "c"),
-    ]
-    ry = SCORE_Y + 48
-    for label, k in rows:
+    def measure(bz, be):
+        h = 22
+        for item in bullets(bz or "", max_chars=60, max_points=2):
+            h += 18 * len(wrap(item, zf, RW - 10, d)[:3])
+        if not bz and not be:
+            h += 18
+        if be:
+            for item in bullets(be, max_chars=130, max_points=1):
+                h += 14 * len(wrap(item, ef, RW - 10, d)[:2])
+        return h + 14
+
+    y = ty
+    for tz, te, bz, be in blocks:
+        need = measure(bz, be)
+        if y + need > BOTTOM_Y - 20:
+            break
+        d.text((RX, y), tz, font=head_f, fill=C)
+        d.text((RX + d.textlength(tz, head_f) + 8, y + 4), te, font=head_ef,
+               fill=mix(C, SUB, 0.4))
+        yy = y + 24
+        for item in bullets(bz or "", max_chars=60, max_points=2):
+            for line in wrap(item, zf, RW - 10, d)[:3]:
+                d.ellipse([RX, yy + 8, RX + 5, yy + 13], fill=C)
+                d.text((RX + 13, yy), line, font=zf, fill=INK)
+                yy += 18
+        if not bz and not be:
+            d.text((RX + 13, yy), PENDING, font=zf, fill=mix(SUB, T, 0.2))
+            yy += 18
+        if be:
+            for item in bullets(be, max_chars=130, max_points=1):
+                for line in wrap(item, ef, RW - 10, d)[:2]:
+                    d.text((RX, yy + 2), line, font=ef, fill=SUB)
+                    yy += 14
+        y = yy + 14
+
+    # ══════ ③ 卡底：棲地／食性 chips、評分、出處 ══════
+    d.line([IL, BOTTOM_Y, IR, BOTTOM_Y], fill=mix(C, T, 0.6), width=2)
+    by = BOTTOM_Y + 16
+    d.text((IL, by + 6), "住", font=font(12, 900), fill=SUB)
+    cx = IL + 24
+    for tid in e.get("h", [])[:3]:
+        nm = HABITAT_ZH.get(tid, tid)
+        tw3 = d.textlength(nm, font=font(12, 700))
+        d.rounded_rectangle([cx, by, cx + tw3 + 20, by + 26], 13, fill=C)
+        d.text((cx + 10, by + 13), nm, font=font(12, 700), fill="white", anchor="lm")
+        cx += tw3 + 26
+    cx += 12
+    d.text((cx, by + 6), "食", font=font(12, 900), fill=SUB)
+    cx += 24
+    for tid in e.get("d", [])[:3]:
+        nm = DIET_ZH.get(tid, tid)
+        tw3 = d.textlength(nm, font=font(12, 700))
+        d.rounded_rectangle([cx, by, cx + tw3 + 20, by + 26], 13, fill=C)
+        d.text((cx + 10, by + 13), nm, font=font(12, 700), fill="white", anchor="lm")
+        cx += tw3 + 26
+
+    # 評分五條（有名字、有數）
+    ry = by + 40
+    d.text((IL, ry), "圖鑑評分", font=font(11, 900), fill=C)
+    d.text((IL + 56, ry + 2), "自訂指標 · 非學術評分", font=font(8, 400), fill=SUB)
+    bars = [("i", "生物重要性"), ("a", "適應力"), ("v", "觀賞價值"),
+            ("r", "研究價值"), ("c", "保育關注度")]
+    bx0, bx1 = IL + 190, IR - 30
+    seg = (bx1 - bx0) // 5
+    for i, (k, lab) in enumerate(bars):
         v = score.get(k)
-        d.text((M + 22, ry), label, font=font(12, 700), fill=(226, 234, 228))
-        bx0, bx1 = M + 130, W - M - 260
-        d.rounded_rectangle([bx0, ry + 3, bx1, ry + 12], 5, fill=(255, 255, 255, 60))
+        x = bx0 + i * seg
+        d.rounded_rectangle([x, ry + 1, x + seg - 18, ry + 8], 3, fill=mix(C, T, 0.8))
         if v is not None:
-            d.rounded_rectangle([bx0, ry + 3, bx0 + int((bx1 - bx0) * v / 5), ry + 12], 5, fill=A)
-        d.text((bx1 + 8, ry - 1), "—" if v is None else f"{v:.1f}",
-               font=font(12, 900), fill="white")
-        ry += 24
-    # 精靈球總分
-    d.line([W - M - 246, SCORE_Y + 24, W - M - 246, SCORE_Y + SCORE_H - 24],
-           fill=(120, 150, 135), width=2)
-    draw_pokeball(d, W - M - 196, SCORE_Y + SCORE_H // 2 - 12, 22, (255, 255, 255),
-                  white=(255, 255, 255))
-    ov = score.get("o")
-    d.text((W - M - 160, SCORE_Y + 50), "—" if ov is None else f"{ov:.1f}",
-           font=font(48, 900), fill="white")
-    d.text((W - M - 74, SCORE_Y + 92), "/ 5", font=font(14, 700), fill=(196, 214, 204))
+            d.rounded_rectangle([x, ry + 1, x + int((seg - 18) * v / 5), ry + 8], 3, fill=A)
+        d.text((x, ry + 11), lab, font=font(8, 400), fill=mix(SUB, T, 0.1))
+        if v is not None:
+            d.text((x + seg - 18, ry + 11), f"{v:.1f}", font=font(8, 700),
+                   fill=mix(C, SUB, 0.3), anchor="ra")
 
-    # ══════════ ⑥ 底欄 ══════════
-    FOOT_Y = H - 70
-    d.rectangle([0, FOOT_Y, W, H], fill=(18, 39, 31))
-    d.text((M, FOOT_Y + 22), f"NO.{bird_id}", font=font(15, 900), fill=A)
-    d.text((M + 90, FOOT_Y + 20), f"{e['z']}", font=font(14, 700), fill="white")
-    d.text((M + 90 + d.textlength(e["z"], font=font(14, 700)) + 8, FOOT_Y + 21),
-           e["s"], font=font(12, 400), fill=(170, 190, 180))
+    # 出處
     src = data["src"].get(bird_id, PENDING)
-    one_line = src.replace("｜", "｜").strip()
-    if d.textlength(one_line, font=font(9, 400)) > W - 420:
-        while d.textlength(one_line, font=font(9, 400)) > W - 430 and len(one_line) > 20:
-            one_line = one_line[:-2]
-        one_line = one_line.rstrip(" ·，") + " …"
-    d.text((M, FOOT_Y + 42), one_line, font=font(9, 400), fill=(150, 172, 160))
-    d.text((W - M, FOOT_Y + 30), f"v{data['pkg']}", font=font(10, 700),
-           fill=(130, 155, 142), anchor="rm")
+    one = src.replace("｜", " · ").strip()
+    f9 = font(9, 400)
+    if d.textlength(one, f9) > IW - 96:
+        while d.textlength(one, f9) > IW - 106 and len(one) > 20:
+            one = one[:-2]
+        one = one.rstrip(" ·，") + " …"
+    d.text((IL, IB - 16), one, font=f9, fill=mix(SUB, T, 0.18))
+    d.text((IR, IB - 16), f"v{data['pkg']}", font=font(9, 700),
+           fill=mix(SUB, T, 0.22), anchor="ra")
 
     img.save(out_path, quality=95)
     print(f"已輸出 {out_path}  ({W}×{H})")
@@ -561,5 +480,5 @@ if __name__ == "__main__":
     bid = sys.argv[1] if len(sys.argv) > 1 else "0013"
     bid = bid.zfill(4)
     out = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ROOT, f"public/demo/card-{bid}-new.jpg")
-    imgkey = sys.argv[3] if len(sys.argv) > 3 else None   # 示範第二隻時，可借用已下載到的插畫
+    imgkey = sys.argv[3] if len(sys.argv) > 3 else None
     render(bid, out, imgkey)
