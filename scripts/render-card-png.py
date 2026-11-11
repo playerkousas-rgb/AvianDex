@@ -153,25 +153,25 @@ def bullets(text, max_chars=110, max_points=3):
 LOCAL_ART = "/tmp/arena-coding-uploads/八哥.png"   # 用戶原版卡（1024×1536）作離線插畫來源
 
 
-def art_from_local(bird_id):
+def art_from_local(bird_id, key=None):
     """
     沙盒連不到 r2.dev，但用戶的原版卡就在手邊。
     從原版卡裁出「主插畫」那一塊（左上像素圖與中間相片之間的那張），
     只用來做版面預覽，不會當成新素材上線。
     """
-    if bird_id != "0013" or not os.path.exists(LOCAL_ART):
+    if key != "0013" or not os.path.exists(LOCAL_ART):
         return None
     try:
         im = Image.open(LOCAL_ART).convert("RGB")
         sx, sy = im.width / 1024, im.height / 1536
         # 原版主相片區：x 到 690 就停，否則會把右邊 4 個特徵圓圈與引線一齊裁入
-        box = (int(316 * sx), int(196 * sy), int(560 * sx), int(800 * sy))
+        box = (int(302 * sx), int(186 * sy), int(600 * sx), int(806 * sy))
         return im.crop(box)
     except Exception:  # noqa: BLE001
         return None
 
 
-def art_image(bird_id):
+def art_image(bird_id, key=None):
     url = f"https://pub-a9333a974e814ccba1994639b6e79266.r2.dev/birdcards/{bird_id}.avif"
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "AvianDex/1.0"})
@@ -180,7 +180,7 @@ def art_image(bird_id):
         im = Image.open(BytesIO(data)).convert("RGB")
         return im
     except Exception as e:  # noqa: BLE001
-        local = art_from_local(bird_id)
+        local = art_from_local(bird_id, key)
         if local is not None:
             print(f"  · r2 拿不到（{e.__class__.__name__}），改用用戶原版卡的插畫位置")
             return local
@@ -208,7 +208,8 @@ def draw_pokeball(d, cx, cy, r, color, white="white"):
     d.ellipse([cx - r * .12, cy - r * .12, cx + r * .12, cy + r * .12], fill=color)
 
 
-def render(bird_id, out_path):
+def render(bird_id, out_path, imagekey=None):
+    key = imagekey or bird_id
     data = load()
     e = data["idx"]["birds"][bird_id]
     zh = data["zh"].get(bird_id, {})
@@ -222,89 +223,89 @@ def render(bird_id, out_path):
     img = Image.new("RGB", (W, H), T)
     d = ImageDraw.Draw(img)
 
-    # ══════════ ① 主圖：左邊文字、右邊相片（相片完整不裁走頭部）══════════
+    # ══════════ ① 主圖：插畫在左、文字在右 ══════════
     POSTER_H = 754
-    SPLIT = 560                     # 左欄寬度：文字區
-    art = art_image(bird_id)
+    SPLIT = 700                       # 插畫佔 0..SPLIT；文字由 SPLIT 起
+    art = art_image(key, key)
     d.rectangle([0, 0, W, POSTER_H], fill=C)
     if art is not None:
-        # 相片等比鋪滿右半，靠上對齊（頭部一定見到）
-        rw, rh = W - SPLIT, POSTER_H
-        ratio = max(rw / art.width, rh / art.height)
+        # 插畫是直幅：以寬度貼合，垂直對齊偏上（保住頭部與身體）
+        ratio = max(SPLIT / art.width, POSTER_H / art.height)
         aw, ah = int(art.width * ratio) + 1, int(art.height * ratio) + 1
         art = art.resize((aw, ah), Image.LANCZOS)
-        left = max(0, (aw - rw) // 2)
-        top = 0
-        img.paste(art.crop((left, top, left + rw, top + rh)), (SPLIT, 0))
-        # 相片左邊加一條漸層，令文字欄與相片無縫
-        seam = Image.new("RGBA", (160, POSTER_H), (0, 0, 0, 0))
+        left = max(0, (aw - SPLIT) // 2)
+        top = int((ah - POSTER_H) * 0.18)
+        img.paste(art.crop((left, top, left + SPLIT, top + POSTER_H)), (0, 0))
+        # 相片右邊漸層，令文字欄同相片無縫
+        FW = 300                     # 由 SPLIT-FW 開始淡入文字欄底色
+        seam = Image.new("RGBA", (FW + 10, POSTER_H), (0, 0, 0, 0))
         sd = ImageDraw.Draw(seam)
-        for x in range(160):
-            alpha = int(255 * (1 - x / 160) ** 1.2)
-            sd.line([(x, 0), (x, POSTER_H)], fill=(C[0], C[1], C[2], alpha))
+        for x in range(FW + 10):
+            sd.line([(x, 0), (x, POSTER_H)],
+                    fill=(C[0], C[1], C[2], int(255 * (x / FW) ** 0.62)))
         img.paste(Image.alpha_composite(
-            img.crop((SPLIT - 160, 0, SPLIT, POSTER_H)).convert("RGBA"), seam).convert("RGB"),
-            (SPLIT - 160, 0))
+            img.crop((SPLIT - FW, 0, SPLIT + 10, POSTER_H)).convert("RGBA"), seam).convert("RGB"),
+            (SPLIT - FW, 0))
     else:
-        d.text((SPLIT + (W - SPLIT) // 2, POSTER_H // 2), f"NO.{bird_id}",
-               font=font(46, 900), fill=(255, 255, 255))
+        d.text((SPLIT // 2, POSTER_H // 2), f"NO.{bird_id}", font=font(46, 900),
+               fill=(255, 255, 255), anchor="mm")
 
-    # 由下往上的暗幕（令白字讀得到）
-    # 暗幕只鋪在主圖那一段，所以要整張卡大小的透明層
+    # 文字欄底色漸層（右邊要夠暗）
     veil = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     vd = ImageDraw.Draw(veil)
-    for y in range(POSTER_H):
-        p = y / POSTER_H
-        alpha = 0 if p < 0.30 else int(255 * min(1, (p - 0.30) / 0.62) ** 1.35)
-        vd.line([(0, y), (W, y)], fill=(C[0] // 3, C[1] // 3, C[2] // 3, int(alpha * 0.94)))
+    for x in range(W):
+        p = x / W
+        alpha = 0 if p < 0.28 else int(255 * min(1, (p - 0.28) / 0.24) ** 1.0)
+        vd.line([(x, 0), (x, POSTER_H)], fill=(C[0] // 3, C[1] // 3, C[2] // 3, int(alpha * 0.95)))
+    # 底部一小段，令主圖與資料帶接順
+    for y in range(int(POSTER_H * 0.86), POSTER_H):
+        q = max(0.0, (y - POSTER_H * 0.86) / (POSTER_H * 0.14))
+        vd.line([(0, y), (W, y)], fill=(C[0] // 3, C[1] // 3, C[2] // 3, int(120 * q ** 1.4)))
     img = Image.alpha_composite(img.convert("RGBA"), veil).convert("RGB")
     d = ImageDraw.Draw(img)
 
     # 品牌 + 目徽章 + 編號
-    draw_pokeball(d, 52, 46, 15, (255, 255, 255), white=(255, 255, 255))
-    d.text((78, 46), "AVIANDEX", font=font(13, 900), fill="white", anchor="lm")
-    d.text((W - 40, 46), f"NO.{bird_id}", font=font(19, 900), fill="white", anchor="rm")
-    # 目徽章放在品牌之後（原本放在 NO. 左邊會撞埋一齊）
-    bx, by = 190, 46
+    draw_pokeball(d, 52, 47, 15, (255, 255, 255), white=(255, 255, 255))
+    d.text((78, 47), "AVIANDEX", font=font(13, 900), fill="white", anchor="lm")
+    bx, by = 196, 47
     d.ellipse([bx - 22, by - 22, bx + 22, by + 22], fill="white")
     d.text((bx, by), e["oz"][:1], font=font(22, 900), fill=C, anchor="mm")
     d.text((bx + 30, by), e["oz"], font=font(13, 700), fill=(228, 236, 231), anchor="lm")
+    d.text((W - 40, 47), f"NO.{bird_id}", font=font(19, 900), fill="white", anchor="rm")
 
-    # 名稱區（左欄，垂直居中）
-    NAME_Y = POSTER_H // 2 - 150
-    d.text((40, NAME_Y), e["z"], font=font(74, 900), fill="white")
-    d.text((42, NAME_Y + 84), e["s"], font=font(18, 400), fill=(222, 231, 225))
-    # 英文膠囊
+    # 名稱區（右欄，垂直居中）
+    TX = SPLIT + 44
+    NAME_Y = POSTER_H // 2 - 160
+    d.text((TX, NAME_Y), e["z"], font=font(72, 900), fill="white")
+    d.text((TX + 2, NAME_Y + 84), e["s"], font=font(17, 400), fill=(226, 234, 229))
     en_txt = e["e"]
     tw = d.textlength(en_txt, font=font(17, 700))
-    d.rounded_rectangle([42, NAME_Y + 118, 42 + tw + 34, NAME_Y + 152], 17, fill="white")
-    d.text((59, NAME_Y + 135), en_txt, font=font(17, 700), fill=C, anchor="lm")
-    # 目 · 科
+    d.rounded_rectangle([TX, NAME_Y + 120, TX + tw + 34, NAME_Y + 154], 17, fill="white")
+    d.text((TX + 17, NAME_Y + 137), en_txt, font=font(17, 700), fill=C, anchor="lm")
     tag = f"{e['oz']} · {e['fz']}"
     tw2 = d.textlength(tag, font=font(14, 700))
-    d.rounded_rectangle([42 + tw + 46, NAME_Y + 118, 42 + tw + 46 + tw2 + 26, NAME_Y + 152],
+    d.rounded_rectangle([TX + tw + 44, NAME_Y + 120, TX + tw + 44 + tw2 + 24, NAME_Y + 154],
                         17, outline=(255, 255, 255), width=2)
-    d.text((42 + tw + 59, NAME_Y + 135), tag, font=font(14, 700), fill="white", anchor="lm")
+    d.text((TX + tw + 56, NAME_Y + 137), tag, font=font(14, 700), fill="white", anchor="lm")
 
     # 引言（原文第一句，不改寫）
     quote = (zh.get("look") or zh.get("range") or "").strip()
     if quote:
         first = quote.split("。")[0]
-        if len(first) > 42:
-            first = first[:42] + "…"
+        if len(first) > 40:
+            first = first[:40] + "…"
         else:
             first += "。"
-        qy = NAME_Y + 184
-        d.rectangle([40, qy, 45, qy + 92], fill=A)
-        qlines = wrap(first, font(14, 400), SPLIT - 90, d)[:5]
-        for i, line in enumerate(qlines):
-            d.text((58, qy + i * 22), line, font=font(14, 400), fill=(238, 244, 240))
+        qy = NAME_Y + 182
+        d.rectangle([TX, qy, TX + 5, qy + 88], fill=A)
+        for i, line in enumerate(wrap(first, font(14, 400), W - TX - 46, d)[:4]):
+            d.text((TX + 18, qy + i * 22), line, font=font(14, 400), fill=(240, 245, 241))
 
-    # 左欄底部：插畫出處（真實來源）
-    d.text((40, POSTER_H - 32), "插畫 ILLUSTRATION · BIRD-DEX 2", font=font(10, 700),
-           fill=(150, 176, 162))
-    d.text((40, POSTER_H - 18), "資料 zh.wikipedia · en.wikipedia · eBird/Clements",
-           font=font(10, 400), fill=(120, 148, 134))
+    # 文字欄底部：插畫與資料出處（真實來源）
+    d.text((TX, POSTER_H - 40), "插畫 ILLUSTRATION · BIRD-DEX 2", font=font(10, 700),
+           fill=(168, 190, 176))
+    d.text((TX, POSTER_H - 25), "資料 zh / en.wikipedia · eBird/Clements", font=font(10, 400),
+           fill=(140, 164, 150))
 
     # ══════════ ② 資料帶 ══════════
     STAT_H = 96
@@ -560,4 +561,5 @@ if __name__ == "__main__":
     bid = sys.argv[1] if len(sys.argv) > 1 else "0013"
     bid = bid.zfill(4)
     out = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ROOT, f"public/demo/card-{bid}-new.jpg")
-    render(bid, out)
+    imgkey = sys.argv[3] if len(sys.argv) > 3 else None   # 示範第二隻時，可借用已下載到的插畫
+    render(bid, out, imgkey)
