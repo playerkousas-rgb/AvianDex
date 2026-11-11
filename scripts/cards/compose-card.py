@@ -35,6 +35,8 @@ CREAM = (247, 242, 228)
 INK = (48, 60, 46)
 WHITE = (252, 251, 246)
 GREEN = (47, 93, 58)
+# 頂部標題列配色：純裝飾，不代表分類（每塊用不同顏色，較吸睛）
+HDR = {'no': (62, 78, 170), 'title': (47, 93, 58), 'tax': (236, 170, 10), 'zoom': (13, 140, 150)}
 
 COL = {k: tuple(v) for k, v in json.load(open(os.path.join(ICON_DIR, 'colors.json'))).items()}
 COL['zoom'] = (39, 101, 62)
@@ -271,19 +273,19 @@ def compose(f, art, out_scale=None):
     cur = dict(SCALE).get(code)
 
     # 編號
-    cv.rr((30, 24, 246, 100), 12, fill=GREEN)
+    cv.rr((30, 24, 246, 100), 12, fill=HDR['no'])
     cv.circ(60, 62, 17, outline=WHITE, width=4)
     cv.line([(43, 62), (77, 62)], WHITE, 4)
-    cv.circ(60, 62, 6, fill=GREEN, outline=WHITE, width=3)
+    cv.circ(60, 62, 6, fill=HDR['no'], outline=WHITE, width=3)
     cv.text(86, 63, 'NO.' + f['id'], 34, WHITE, anchor='lm', maxw=150)
     # 名稱帶
-    cv.rr((256, 20, 744, 128), 12, fill=GREEN)
+    cv.rr((256, 20, 744, 128), 12, fill=HDR['title'])
     cv.text(500, 50, f['z'], 46, WHITE, anchor='mm', maxw=440)
     cv.text(500, 88, f['e'], 22, (236, 244, 230), bold=True, anchor='mm', maxw=450)
     cv.text(500, 112, f['s'], 20, (200, 224, 196), bold=False, anchor='mm', maxw=450, italic=True)
     # 目／科
-    c = COL['tax']
-    cv.rr((766, 20, 1004, 128), 12, fill=tint(c, 0.9), outline=c, width=3)
+    c = HDR['tax']
+    cv.rr((766, 20, 1004, 128), 12, fill=tint(c, 0.85), outline=c, width=3)
     for i, (lab, v) in enumerate([('目', f['order'][0]), ('科', f['family'][0])]):
         y = 56 + i * 44
         cv.text(784, y, lab, 25, dark(c, 0.15))
@@ -297,7 +299,7 @@ def compose(f, art, out_scale=None):
     cv.rr((PHOTO[0] - 3, PHOTO[1] - 3, PHOTO[2] + 3, PHOTO[3] + 3), 16, outline=GREEN, width=3)
     # 特徵放大鏡
     c = COL['zoom']
-    cv.rr((766, 140, 1004, 176), 10, fill=dark(c, 0.15))
+    cv.rr((766, 140, 1004, 176), 10, fill=HDR['zoom'])
     cv.text(782, 158, '特徵放大鏡', 21, WHITE)
     cv.icon('zoom', 976, 158, 46)
     for (cx, cy, r), lab in zip(ZOOM_C, ZOOM_LABELS):

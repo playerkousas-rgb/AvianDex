@@ -214,3 +214,12 @@ npm run cards:maker      # → tools/card-studio/aviandex-card-maker.html（約 
 - 2026-11-11 追加：輸出改為 2048×3072（`AVX_OUT_SCALE`，預設 2）；AI 圖位從原始解析度一次縮放貼入；
   棲息環境改為只放圖（不印標籤）；雷達圖外框加深。環境重置後需重裝：`pip install pillow numpy scipy`、
   Noto Sans TC 字體（`npm i @expo-google-fonts/noto-sans-tc` 後複製 ttf 到 `~/.fonts`）。
+
+### 12.x 頂部標題列配色（2026-11-11）
+- 編號塊（靛藍）、名稱帶（森林綠）、目／科標籤（琥珀黃）、特徵放大鏡條（青藍）各用不同顏色，**純裝飾、不代表分類**；顏色集中在 `compose-card.py` 的 `HDR`。
+- 同一張卡可輸出 2048×3072（預設）與 1024×1536（`AVX_OUT_SCALE=1`）；範例見 `docs/card-samples/composed-0058.webp` 與 `composed-0058-1024.webp`。
+
+### 12.y 香港鳥種數對照（569 vs 580／588／590）
+- 本 app 569 個「編號」＝566 個不同學名（0021/0312、0009/0445、0456/0457 為重複編號）。
+- 對照 HKBWS《香港鳥類名錄》（Cat I+II，網頁列 584 種，官方公告 588）：學名相同 535 種，加上中文名相同約 548 種；香港名錄有約 36 種我們沒有，我們有約 21–29 個編號不在香港名錄。
+- 另發現多個中文名與英文名／學名不一致的編號（如 0097、0199、0204、0321、0439、0477），需人手核對；見 docs/DATA_ISSUES.md。
