@@ -39,7 +39,21 @@ for (const id of Object.keys(idx.birds).sort()) {
   prompts[id] = buildAgentPrompt(id);
 }
 
-const data = { version: VERSION, zonemap, refcard, ids, prompts };
+/* 縮體積：所有 prompt 共用頭尾，只存每隻鳥不同的中段（4 MB → 約 1.3 MB） */
+const all = Object.values(prompts);
+let pre = all[0], suf = all[0];
+for (const t of all) {
+  let i = 0; while (i < pre.length && i < t.length && pre[i] === t[i]) i++;
+  pre = pre.slice(0, i);
+  let j = 0; while (j < suf.length && j < t.length && suf[suf.length - 1 - j] === t[t.length - 1 - j]) j++;
+  suf = suf.slice(suf.length - j);
+}
+const mids = {};
+for (const [id, t] of Object.entries(prompts)) {
+  if (!t.startsWith(pre) || !t.endsWith(suf) || pre.length + suf.length > t.length) throw new Error('prompt 頭尾切分失敗：' + id);
+  mids[id] = t.slice(pre.length, t.length - suf.length);
+}
+const data = { version: VERSION, zonemap, refcard, ids, pre, suf, mids };
 const json = JSON.stringify(data).replace(/</g, '\\u003c').replace(/\u2028|\u2029/g, '');
 const shell = fs.readFileSync(path.join(root, 'tools/card-studio/cardmaker.html'), 'utf8');
 if (!shell.includes('/*__AVX_DATA__*/')) throw new Error('cardmaker.html 找不到注入點');

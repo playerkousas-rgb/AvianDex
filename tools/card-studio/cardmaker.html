@@ -120,7 +120,7 @@ textarea{width:100%;height:220px;font:12px/1.5 ui-monospace,monospace}
   </div>
   <div class="panel">
     <div class="ttl">之後</div>
-    <div class="hint">① 逐張核對卡面（看每張下面的「必對清單」：編號、名稱、體重、評分）。② 下載 PNG → 用 squoosh 轉 AVIF，檔名四位數（例：0022.avif）。③ 放上 R2 <code>aviandex/cards/</code>。<br>
+    <div class="hint">圖按「下載」沒反應時：按「開新分頁」，或直接對大圖右鍵／長按另存。<br>① 逐張核對卡面（看每張下面的「必對清單」：編號、名稱、體重、評分）。② 下載 PNG → 用 squoosh 轉 AVIF，檔名四位數（例：0022.avif）。③ 放上 R2 <code>aviandex/cards/</code>。<br>
     卡上若出現簡體字、亂碼、Zxx 區碼、第 5 個空放大鏡，請按「重試」。</div>
   </div>
 </div>
@@ -139,6 +139,7 @@ const LS = {
   set(k, v) { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } },
 };
 const IDS = D.ids.map((x) => x.id);
+const promptOf = (id) => D.pre + D.mids[id] + D.suf;
 const INFO = Object.fromEntries(D.ids.map((x) => [x.id, x]));
 const RESULTS = {};          /* id -> {url, model} | {error} */
 const BUSY = new Set();
@@ -201,7 +202,7 @@ function showErr(err) { const [t, h] = describe(err); $('errTitle').textContent 
 const part = (url) => { const c = url.indexOf(','); return { inlineData: { mimeType: url.slice(5, url.indexOf(';')), data: url.slice(c + 1) } }; };
 
 async function genOne(id) {
-  const prompt = (promptDirty && curId() === id) ? $('prompt').value : D.prompts[id];
+  const prompt = (promptDirty && curId() === id) ? $('prompt').value : promptOf(id);
   const parts = [part(D.zonemap), part(D.refcard), { text: prompt }];
   const baseCfg = { responseModalities: ['IMAGE'] };
   let last = null;
@@ -234,7 +235,7 @@ function refreshBird() {
   $('jump').value = id;
   $('birdLine').innerHTML = `<b style="color:var(--tx)">${esc(b.z)}</b> · ${esc(b.e)} · <i>${esc(b.s)}</i><br>卡面 18 格中有 <b style="color:${b.missing > 4 ? 'var(--warn)' : 'var(--g1)'}">${b.missing}</b> 處印「資料待查」`;
   $('facts').innerHTML = '必對清單：' + b.facts.map((f) => `<b>${esc(f)}</b>`).join('　');
-  if (!promptDirty) { $('prompt').value = D.prompts[id]; }
+  if (!promptDirty) { $('prompt').value = promptOf(id); }
   $('pcount').textContent = $('prompt').value.length + ' 字';
 }
 function render() {
@@ -245,12 +246,34 @@ function render() {
     if (r.error) return `<div class="shot"><div class="skel" style="color:var(--bad)">${id} ${esc(b.z)}<br>失敗：${esc(r.error)}</div><div class="cap"><div class="acts"><button class="sm" data-retry="${id}">重試</button></div></div></div>`;
     return `<div class="shot"><img src="${r.url}" data-zoom="1" alt="${id}"><div class="cap"><b>${id} ${esc(b.z)}</b> <span class="hint">${esc(r.model)}</span>
       <div class="facts">${b.facts.map(esc).join(' ｜ ')}</div>
-      <div class="acts"><button class="sm" data-dl="${id}">下載</button><button class="sm" data-retry="${id}">重試</button></div></div></div>`;
+      <div class="acts"><button class="sm" data-dl="${id}">下載</button><button class="sm" data-tab="${id}">開新分頁</button><button class="sm" data-retry="${id}">重試</button></div></div></div>`;
   }).join('');
   $('outCount').textContent = ids.filter((i) => RESULTS[i].url).length + ' 張';
 }
 function ext(url) { return /jpeg/.test(url.slice(0, 20)) ? 'jpg' : /webp/.test(url.slice(0, 20)) ? 'webp' : 'png'; }
-function dl(id) { const r = RESULTS[id]; if (!r || !r.url) return; const a = document.createElement('a'); a.href = r.url; a.download = `${id}.${ext(r.url)}`; document.body.appendChild(a); a.click(); a.remove(); }
+async function dl(id) {
+  const r = RESULTS[id]; if (!r || !r.url) return;
+  const name = `${id}.${ext(r.url)}`;
+  try {
+    /* Canvas／iframe 常擋 data: 網址下載 → 轉 Blob 網址再下載 */
+    const blob = await (await fetch(r.url)).blob();
+    const href = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = href; a.download = name; a.rel = 'noopener';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(href), 60000);
+    log(`已嘗試下載 ${name}（若沒有出現，請用圖片下面的「開新分頁」再另存）`);
+  } catch (e) {
+    log('下載被瀏覽器擋住：' + e.message + '。請按「開新分頁」，再右鍵／長按圖片另存', 'w');
+  }
+}
+async function openTab(id) {
+  const r = RESULTS[id]; if (!r || !r.url) return;
+  try {
+    const blob = await (await fetch(r.url)).blob();
+    const w = window.open(URL.createObjectURL(blob), '_blank');
+    if (!w) log('彈出視窗被擋，請允許此頁彈出視窗，或直接對大圖右鍵／長按另存', 'w');
+  } catch (e) { log('開新分頁失敗：' + e.message, 'w'); }
+}
 
 async function run(ids) {
   if (running) return;
@@ -294,7 +317,7 @@ $('btnClear').onclick = () => { Object.keys(RESULTS).forEach((k) => { if (!RESUL
 $('out').addEventListener('click', (e) => {
   const b = e.target.closest('button'), im = e.target.closest('img[data-zoom]');
   if (im) { $('zoom').querySelector('img').src = im.src; $('zoom').classList.add('on'); return; }
-  if (!b) return; if (b.dataset.dl) dl(b.dataset.dl); if (b.dataset.retry) { promptDirty = false; run([b.dataset.retry]); }
+  if (!b) return; if (b.dataset.dl) dl(b.dataset.dl); if (b.dataset.tab) openTab(b.dataset.tab); if (b.dataset.retry) { promptDirty = false; run([b.dataset.retry]); }
 });
 $('zoom').onclick = () => $('zoom').classList.remove('on');
 function badge() { const k = resolveKey(); $('apiBadge').className = 'pill ' + (k ? 'ok' : 'warn'); $('apiBadge').textContent = k ? 'API：已找到 key' : 'API：等 Canvas 注入'; }
