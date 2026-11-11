@@ -256,13 +256,15 @@ export function liteFields(id) {
   };
 }
 
+export const REF_NOTE = 'IMAGE 2 (if attached) is the original AvianDex card, supplied ONLY as a visual style reference: copy its colour palette, green title bars, Pokéball emblem, rounded frames, dark-green line-icon style, and the realistic-photo + pixel-art look. EVERY word, number, name, species, caption, date, footer and score printed on IMAGE 2 is placeholder noise for another species and must NOT appear on the new card. Never copy anything from IMAGE 2 except style.';
+
 export function buildLitePrompt(id) {
   const f = liteFields(id);
   const { e, c, sc } = f;
   const slotList = (arr, n) => !arr.length ? 'NO DATA: erase all four circles and tag boxes, and print the single word 資料待查 centred in the panel' : Array.from({ length: n }, (_, i) => (arr[i] ? `circle ${i + 1}: icon of "${arr[i]}", tag text: ${arr[i]}` : `circle ${i + 1}: NOT USED — erase this circle and its tag box completely`)).join('\n      ');
   return [
     'Create ONE finished bird info card, front side only, 2:3 portrait, flat like a clean scan. No table, no hand, no mockup, no watermark.',
-    'IMAGE 1 is the card TEMPLATE. Keep its layout, panels, colours, frame, and ALL text already printed on it EXACTLY as is (titles like 身長, 體重, 分類資訊, 棲息環境, 食物, 分佈地區, 成長與繁殖, 生態價值評分, 叫聲, 可混淆物種, 保育狀態, 頭部/羽色/翼部/腳部, 界/門/綱/目/科/屬/種, radar axis names, IUCN, NO.). Do NOT redraw, retype, translate or restyle those printed words. Your job is only to fill the empty light-outlined SLOTS and the empty picture frames, and then remove the slot outlines.',
+    'IMAGE 1 is the card TEMPLATE. Keep its layout, panels, colours, frame, and ALL text already printed on it EXACTLY as is (titles like 身長, 體重, 分類資訊, 棲息環境, 食物, 分佈地區, 成長與繁殖, 生態價值評分, 可混淆物種, 保育狀態, 頭部/羽色/翼部/腳部, 界/門/綱/目/科/屬/種, radar axis names, IUCN, NO.). Do NOT redraw, retype, translate or restyle those printed words. Your job is only to fill the empty light-outlined SLOTS and the empty picture frames, and then remove the slot outlines.',
     'THE BIRD — ' + e.z + ' (' + e.e + ', ' + e.s + '). Correct plumage and bare-part colours for this species. One bird species only.',
     'FILL THE PICTURE FRAMES (no text inside any picture):\n' +
       '  · Pixel-art frame (top-left): small 16-bit pixel art of the bird, side view.\n' +
@@ -271,7 +273,7 @@ export function buildLitePrompt(id) {
       '  · 分佈地區 panel: a flat world/regional map with the species range shaded green. Guide (do NOT print): ' + (String(c.range || '').slice(0, 120) || 'unknown, leave a plain map') + '\n' +
       '  · 成長與繁殖 panel: three small icons in the three circles: nest, eggs, chick (draw typical for this species; no text). Guide (do NOT print): ' + (String(c.breeding || '').slice(0, 100) || 'generic') + '\n' +
       '  · 可混淆物種 panel: two small bird portraits in the two circles.\n' +
-      '  · 叫聲 panel: keep the waveform as printed.',
+      '',
     'PRINT EXACTLY THESE STRINGS IN THE EMPTY SLOTS — nothing else:\n' +
       '  [Header chip] the prefix "NO." is ALREADY printed — keep it and add only the four digits right after it, so it reads: NO.' + id + '\n' +
       '  [Dark green name band] line 1 large: ' + e.z + '   line 2: ' + e.e + '   line 3 italic: ' + e.s + '\n' +

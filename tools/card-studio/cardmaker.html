@@ -105,7 +105,7 @@ textarea{width:100%;height:220px;font:12px/1.5 ui-monospace,monospace}
     </details>
     <details style="margin-top:8px"><summary>內嵌的兩張參考圖</summary>
       <div class="row" style="margin-top:6px" id="refs"></div>
-      <div class="hint">精簡卡：只送 1 張版位圖（固定標題已寫死在圖上）。完整卡：去字位圖 ＋ 樣本卡。</div>
+      <div class="hint">精簡卡：只送 1 張版位圖（固定標題已寫死在圖上，版面最準）。「＋原卡參考」會多送一張原卡，畫風較似但版面可能偏離。</div>
     </details>
     <div id="log"></div>
   </div>
@@ -141,7 +141,7 @@ const LS = {
 };
 const IDS = D.ids.map((x) => x.id);
 const M = () => D.modes[$('layout').value];
-const promptOf = (id) => { const m = M(); return m.pre + m.mids[id] + m.suf; };
+const promptOf = (id) => { const m = M(), b = m.same ? D.modes[m.same] : m; return (m.refNote ? m.refNote + '\n\n' : '') + b.pre + b.mids[id] + b.suf; };
 const INFO = Object.fromEntries(D.ids.map((x) => [x.id, x]));
 const RESULTS = {};          /* id -> {url, model} | {error} */
 const BUSY = new Set();

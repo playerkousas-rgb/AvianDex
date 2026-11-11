@@ -70,6 +70,7 @@ rr([20, 20, W - 20, H - 20], 22, outline=(200, 208, 190), width=1)
 rr([30, 24, 246, 100], 12, fill=GREEN)
 d.ellipse([42, 40, 76, 74], outline=WHITE, width=4)
 d.line([(42, 57), (76, 57)], fill=WHITE, width=4)
+d.ellipse([54, 49, 64, 65], fill=GREEN, outline=WHITE, width=3)
 d.text((92, 62), 'NO.', font=font(34), fill=WHITE, anchor='lm')
 # NO. 後面 4 位數字留空（淺色虛位）
 for i in range(4):
@@ -176,23 +177,19 @@ for i, (p, n) in enumerate(zip(pts, names)):
 d.text((COLS[2][0] + 18, Y2E - 20), '總評分', font=font(18), fill=GREEN, anchor='lm')
 slot([COLS[2][0] + 84, Y2E - 34, COLS[2][1] - 14, Y2E - 6], 6)
 
-# ── 底排：叫聲／可混淆物種／保育狀態 ───────────────────────
+# ── 底排：可混淆物種／保育狀態（已移除「叫聲」聲紋圖：小朋友看不懂）────────────
 Y3, Y3E = 1320, 1506
-panel(COLS[0][0], Y3, COLS[0][1], Y3E, '叫聲')
-for i, x in enumerate(range(46, 314, 6)):
-    h = 8 + int(26 * abs(math.sin(i * 0.55)) * (0.4 + 0.6 * abs(math.sin(i * 0.17))))
-    d.line([(x, 1428 - h), (x, 1428 + h)], fill=GREEN, width=3)
-panel(COLS[1][0], Y3, COLS[1][1], Y3E, '可混淆物種')
+panel(28, Y3, 495, Y3E, '可混淆物種')
 for i in range(2):
-    cx = COLS[1][0] + 62 + i * 156
-    icon_circle(cx, 1404, 32)
-    slot([cx - 56, 1442, cx + 56, 1466], 5)
-panel(COLS[2][0], Y3, COLS[2][1], Y3E, '保育狀態')
-d.ellipse([706, 1370, 786, 1450], outline=GREEN, width=4, fill=(238, 244, 232))
-d.text((746, 1388), 'IUCN', font=font(14), fill=INK, anchor='mm')
-slot([716, 1404, 776, 1436], 4)
-slot([806, 1384, 990, 1416], 6)
-slot([806, 1424, 990, 1456], 6)
+    cx = 28 + 120 + i * 230
+    icon_circle(cx, 1404, 34)
+    slot([cx - 70, 1446, cx + 70, 1472], 5)
+panel(515, Y3, 1000, Y3E, '保育狀態')
+d.ellipse([545, 1370, 635, 1460], outline=GREEN, width=4, fill=(238, 244, 232))
+d.text((590, 1388), 'IUCN', font=font(15), fill=INK, anchor='mm')
+slot([558, 1408, 622, 1442], 4)
+slot([660, 1384, 984, 1418], 6)
+slot([660, 1428, 984, 1462], 6)
 
 out = sys.argv[1] if len(sys.argv) > 1 else 'lite-template.png'
 img.save(out)

@@ -12,7 +12,7 @@
  * ============================================================ */
 import fs from 'node:fs';
 import path from 'node:path';
-import { cells, buildAgentPrompt, buildLitePrompt } from './gen-card-prompts.mjs';
+import { cells, buildAgentPrompt, buildLitePrompt, REF_NOTE } from './gen-card-prompts.mjs';
 
 const root = path.resolve(import.meta.dirname, '..', '..');
 const VERSION = '1.1';
@@ -22,6 +22,7 @@ const b64 = (file, mime) => `data:${mime};base64,` + fs.readFileSync(path.join(r
 const zonemap = b64('docs/card-samples/zonemap-naturalist.png', 'image/png');
 const refcard = b64('docs/card-samples/0022-v3.webp', 'image/webp');
 const lite = b64('docs/card-samples/lite-template.png', 'image/png');
+const ref0008 = b64('docs/card-samples/ref-0008.jpg', 'image/jpeg');
 
 const ids = [];
 const prompts = {};
@@ -63,6 +64,7 @@ const data = {
   version: VERSION, ids,
   modes: {
     lite: { label: '精簡圖示卡（只有名稱＋數字＋圖示，推薦）', imgs: [lite], ...pack(liteP) },
+    liteRef: { label: '精簡圖示卡＋原卡參考（畫風較似原卡，但版面可能偏離）', imgs: [lite, ref0008], same: 'lite', refNote: REF_NOTE },
     ...(process.argv.includes('--with-full')
       ? { full: { label: '完整文字卡（18 格，錯字風險高）', imgs: [zonemap, refcard], ...pack(prompts) } }
       : {}),
