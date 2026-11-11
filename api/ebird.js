@@ -5,6 +5,8 @@
 //      GET /api/ebird?region=HK
 //      GET /api/ebird?near=22.47,114.05&dist=25&back=14&max=200   ← 地圖用
 //      GET /api/ebird?hotspots=1&region=HK                         ← 熱點清單
+//      GET /api/ebird?species=bkbkin1&back=30                      ← 某雀在香港邊度出現過
+//      GET /api/ebird?spplist=L922779                              ← 某熱點有咩雀
 //
 // ⚠️ 瘦身守則：本檔只使用 Node 18+ 內建 global fetch，
 //    嚴禁再加回 node-fetch 等第三方依賴。
@@ -35,6 +37,60 @@ export default async function handler(req, res) {
    * 熱點座標比逐點查詢重要 —— 舊版地圖的座標是手寫的近似值，
    * 用官方 hotspot 座標才能與 eBird 的觀察紀錄對得上。
    * ------------------------------------------------------------ */
+  /* ------------------------------------------------------------
+   * 「搵隻雀 → 邊個熱點有」：GET /api/ebird?species=bkbkin1
+   * 用 eBird 的「某地區某物種近期觀察」端點，一次過取全港紀錄，
+   * 前端再把 locName / lat / lng 畫在地圖上。
+   * ------------------------------------------------------------ */
+  const { species, spplist } = req.query || {};
+
+  if (species) {
+    const b = Math.min(30, Math.max(1, Number(back) || Number(days) || 30));
+    try {
+      const r = await fetch(
+        `https://api.ebird.org/v2/data/obs/${encodeURIComponent(region)}/recent/${encodeURIComponent(species)}?back=${b}&maxResults=500`,
+        { headers: { 'X-eBirdApiToken': apiKey } },
+      );
+      const text = await r.text();
+      if (!r.ok) return res.status(r.status).json({ error: 'eBird 物種紀錄 API 錯誤', details: text.slice(0, 300) });
+      const rows = JSON.parse(text);
+      const observations = (rows || []).map((o) => ({
+        locId: o.locId,
+        locName: o.locName,
+        lat: o.lat,
+        lng: o.lng,
+        obsDt: o.obsDt,
+        howMany: o.howMany,
+        comName: o.comName,
+      }));
+      res.setHeader('Cache-Control', 'public, s-maxage=600, stale-while-revalidate=120');
+      return res.status(200).json({ species, region, days: b, count: observations.length, observations });
+    } catch (e) {
+      return res.status(500).json({ error: 'eBird 物種紀錄通訊失敗', details: e.message });
+    }
+  }
+
+  /* ------------------------------------------------------------
+   * 「這個熱點有咩雀」：GET /api/ebird?spplist=L922779
+   * eBird 的 product/spplist 回傳該熱點歷來出現過的物種代碼，
+   * 前端用本地 explorer 資料把代碼譯成中文名（codes 我們已有）。
+   * ------------------------------------------------------------ */
+  if (spplist) {
+    try {
+      const r = await fetch(
+        `https://api.ebird.org/v2/product/spplist/${encodeURIComponent(spplist)}`,
+        { headers: { 'X-eBirdApiToken': apiKey } },
+      );
+      const text = await r.text();
+      if (!r.ok) return res.status(r.status).json({ error: 'eBird 物種清單 API 錯誤', details: text.slice(0, 300) });
+      const codes = JSON.parse(text);
+      res.setHeader('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=3600');
+      return res.status(200).json({ locId: spplist, count: (codes || []).length, speciesCodes: codes || [] });
+    } catch (e) {
+      return res.status(500).json({ error: 'eBird 物種清單通訊失敗', details: e.message });
+    }
+  }
+
   if (hotspots) {
     try {
       const r = await fetch(

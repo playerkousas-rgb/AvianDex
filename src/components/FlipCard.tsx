@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Loader2, Info, ScanLine, RotateCw, Maximize2, ChevronRight } from 'lucide-react';
+import { Loader2, Info, ScanLine, RotateCw, Maximize2 } from 'lucide-react';
 import type { Lang } from '../lib/explorer';
 import { ENTRIES } from '../lib/explorer';
 import { useCardImage, useInfoCard } from '../hooks/useCardImage';
@@ -9,22 +9,26 @@ import { BirdSilhouette } from './BirdSilhouette';
 import type { Bird } from '../types';
 
 /**
- * 圖鑑格仔的「翻轉卡」。
+ * 圖鑑格仔的卡。
+ *
+ * ── 互動設計（2026-11 依用戶指示重做）──────────────────────────
+ * 用戶的原話：
+ *   「應該是看到鳥圖，點 1 下就會詳細資料與放大」
+ *   「點一下鳥圖就會翻轉成資訊圖卡」
+ *
+ * 所以：
+ *   格仔（這一個檔案）  點 1 下        → 開詳細頁（順便把鳥圖放大）
+ *                       右下角 ⟳ 細掣  → 在原地翻轉看資訊卡
+ *   詳細頁（BirdDetailPage）點上方的鳥圖 → 翻轉成資訊卡
+ *
+ * 之前的錯誤：我把「翻轉」當成格仔的主要動作，翻轉吃掉了進入詳細頁的入口。
+ * 用戶要的是「點卡＝入去睇」，翻轉只是順手可以玩的一個小動作。
+ * ────────────────────────────────────────────────────────
  *
  * 兩面分別是甚麼：
- *   正面（art）   birdcards/<NO>.avif —— BIRD-DEX 2 的整張插畫，1:1 正方形。
- *   背面（info）  aviandex/<NO>.avif —— 已排版的資訊圖卡（目前 21 張）。
- *                 未做的雀由 app 用 cardDetails 的文字即時砌簡版，不出現空盒。
- *
- * ⚠️ 2026-11 修正（用戶回報）：之前整個卡面只有「翻轉」一個動作，
- *    翻到背面全部字都細到睇唔到，而「進入詳細資料」的入口又被翻轉吃掉了，
- *    變成「唔知有詳細資料頁就永遠入唔到」。現在改成三個各自獨立、看得見的出口：
- *
- *      1. 卡面本身      翻轉（看插畫 / 看資料）
- *      2. 右上角 ⤢       放大（進入圖鑑機全螢幕檢視，裡面一樣可以翻轉）
- *      3. 背面底部       「詳細資料」大按鈕（進入圖鑑機第 2 頁的文字詳情）
- *
- *    三個動作互不覆蓋，任何一個都不需要用戶先知道另一個存在。
+ *   正面（art）   birdcards/<NO>.avif —— BIRD-DEX 2 的整張插畫，1:1 正方形
+ *   背面（info）  aviandex/<NO>.avif —— 已排版的資訊圖卡（目前 21 張）
+ *                 未做的雀用 cardDetails 的文字即時砌簡版，不出現空盒
  */
 
 interface FlipCardProps {
@@ -32,7 +36,7 @@ interface FlipCardProps {
   lang: Lang;
   isActive?: boolean;
   listPosition?: number;
-  /** 進入全螢幕（圖鑑機放大檢視） */
+  /** 點卡 / 按放大 → 開詳細頁（含放大鳥圖） */
   onOpen: () => void;
 }
 
@@ -69,7 +73,7 @@ const CardInfoFace: React.FC<{ bird: Bird; lang: Lang }> = ({ bird, lang }) => {
     : [];
 
   return (
-    <div className="absolute inset-0 flex flex-col bg-[#171512] p-2.5 pb-9">
+    <div className="absolute inset-0 flex flex-col bg-[#171512] p-2.5">
       <div className="flex items-baseline gap-1.5">
         <span className="font-mono text-[9px] text-yellow-300/70">NO.{bird.id}</span>
         <span className="text-white font-black text-[13px] leading-tight truncate">{bird.name}</span>
@@ -126,19 +130,21 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPo
   const enName = bird.taxonomy?.comName || (bird.englishName && bird.englishName !== '???' ? bird.englishName : '');
   const title = lang === 'en' ? enName || bird.name : bird.name;
 
-  const toggle = () => setFlipped((v) => !v);
+  /* 主動作＝開詳細頁。翻轉只有右下角那個細掣會做，不會搶走主動作。 */
+  const flipOnly = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setFlipped((v) => !v);
+  };
 
   return (
     <div className="relative [perspective:1200px] select-none">
       <motion.div
         role="button"
         tabIndex={0}
-        aria-label={t(`${bird.name}，按一下翻轉看資料`, `${enName || bird.name}, tap to flip`)}
-        onClick={toggle}
+        aria-label={t(`${bird.name}，按一下看詳細資料`, `${enName || bird.name}, open details`)}
+        onClick={onOpen}
         onKeyDown={(e) => {
-          /* Space＝翻轉、Enter＝放大，符合「按鈕」與「連結」的分工 */
-          if (e.key === ' ') { e.preventDefault(); toggle(); }
-          if (e.key === 'Enter') { e.preventDefault(); onOpen(); }
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen(); }
         }}
         animate={{ rotateY: flipped ? 180 : 0 }}
         transition={{ type: 'spring', stiffness: 190, damping: 22 }}
@@ -184,39 +190,44 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPo
           {/* 名稱貼底：插畫滿版，所以用漸層而不是方塊 */}
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent px-2 pt-6 pb-1.5 pointer-events-none">
             <p className="text-white font-black text-[12.5px] leading-tight truncate drop-shadow">{title}</p>
-            <p className="text-white/55 text-[8.5px] leading-tight truncate">{t('按卡面看資料', 'tap card for facts')}</p>
+            <p className="text-white/50 text-[8.5px] leading-tight truncate">{t('按一下看詳細資料', 'tap to open')}</p>
           </div>
 
           <div className="absolute top-1.5 left-1.5 bg-black/75 rounded px-1.5 py-0.5 pointer-events-none">
             <span className="font-mono font-black text-yellow-300 text-[9px] tracking-wide">NO.{bird.id}</span>
           </div>
 
-          {/* 放大：右上角，永遠看得見。這是「進入詳細頁」的入口之一 */}
+          {/* 放大：明確表示「會放大」，跟主動作同一個目的地 */}
+          <span className="absolute top-1 right-1 w-7 h-7 rounded-md bg-black/70 border border-white/25 text-white flex items-center justify-center pointer-events-none">
+            <Maximize2 className="w-3.5 h-3.5" />
+          </span>
+
+          {/* 翻轉：一個細掣，不搶主動作 */}
           <button
             type="button"
-            onClick={(e) => { e.stopPropagation(); onOpen(); }}
-            aria-label={t(`放大 ${bird.name}`, `Open ${bird.name}`)}
-            title={t('放大（全螢幕）', 'Open full screen')}
-            className="absolute top-1 right-1 w-7 h-7 rounded-md bg-black/70 hover:bg-black/90 active:scale-90 border border-white/25 text-white flex items-center justify-center"
+            onClick={flipOnly}
+            aria-label={t('翻轉看資訊卡', 'Flip to info card')}
+            title={t('翻轉看資訊卡', 'Flip to info card')}
+            className="absolute bottom-1.5 right-1.5 w-7 h-7 rounded-full bg-black/70 hover:bg-black/90 active:scale-90 border border-white/25 text-amber-200 flex items-center justify-center"
           >
-            <Maximize2 className="w-3.5 h-3.5" />
+            <RotateCw className="w-3.5 h-3.5" />
           </button>
 
           {listPosition != null && (
-            <div className="absolute bottom-1.5 right-1.5 bg-black/55 rounded px-1.5 py-0.5 pointer-events-none">
+            <div className="absolute top-1.5 right-10 bg-black/55 rounded px-1.5 py-0.5 pointer-events-none">
               <span className="font-mono text-white/60 text-[8px]">#{listPosition}</span>
             </div>
           )}
         </div>
 
-        {/* 背面：資訊。rotateY(180deg) 反轉，令文字不會左右倒轉 */}
+        {/* 背面：資訊卡。rotateY(180deg) 反轉，令文字不會左右倒轉 */}
         <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-2xl overflow-hidden border-[4px] border-gray-900 bg-[#171512] shadow-[0_5px_0_rgba(0,0,0,0.55)]">
           {info.status === 'loaded' && info.url ? (
             <img
               src={info.url}
               alt={t(`${bird.name} 資訊圖卡`, `${bird.name} info card`)}
               referrerPolicy="no-referrer"
-              className="w-full h-full object-contain bg-[#f7f4ea] pb-9"
+              className="w-full h-full object-contain bg-[#f7f4ea]"
             />
           ) : info.status === 'loading' ? (
             <div className="absolute inset-0 flex items-center justify-center">
@@ -226,39 +237,32 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPo
             <CardInfoFace bird={bird} lang={lang} />
           )}
 
-          {/* 背面底部：「詳細資料」大按鈕。
-              之前背面只有一個 8.5px 的「開全圖」細掣，等於冇入口，
-              所以用戶完全唔知道有詳細資料頁。 */}
+          {/* 背面一樣按一下＝開詳細頁（背面才是「詳細資料」的所在） */}
+          <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-black/90 to-transparent flex items-end justify-center pb-1 pointer-events-none">
+            <span className="text-white/70 text-[9px] font-bold">
+              {t('按一下看完整詳細資料', 'tap for full details')}
+            </span>
+          </div>
+
           <button
             type="button"
-            onClick={(e) => { e.stopPropagation(); onOpen(); }}
-            className="absolute inset-x-1.5 bottom-1.5 h-7 rounded-md bg-gradient-to-b from-yellow-400 to-yellow-600 border border-yellow-800 text-gray-900 font-black text-[10.5px] flex items-center justify-center gap-1 active:scale-[0.98]"
+            onClick={flipOnly}
+            aria-label={t('轉回插畫', 'Back to artwork')}
+            className="absolute bottom-1.5 right-1.5 w-7 h-7 rounded-full bg-black/70 hover:bg-black/90 active:scale-90 border border-white/25 text-amber-200 flex items-center justify-center"
           >
-            {t('詳細資料與放大', 'DETAILS & FULL VIEW')}
-            <ChevronRight className="w-3.5 h-3.5" />
+            <RotateCw className="w-3.5 h-3.5" />
           </button>
         </div>
       </motion.div>
 
-      {/* 卡下兩個動作，寫明文字，不用猜 */}
-      <div className="mt-1 flex items-center gap-1">
-        <button
-          type="button"
-          onClick={toggle}
-          className="flex-1 flex items-center justify-center gap-1 rounded bg-black/30 hover:bg-black/55 border border-white/10 text-white/55 hover:text-white text-[8.5px] font-bold py-1"
-        >
-          <RotateCw className="w-2.5 h-2.5" />
-          {flipped ? t('睇插畫', 'Artwork') : t('睇資料', 'Facts')}
-        </button>
-        <button
-          type="button"
-          onClick={onOpen}
-          className="flex-1 flex items-center justify-center gap-1 rounded bg-black/30 hover:bg-black/55 border border-white/10 text-amber-200/80 hover:text-amber-100 text-[8.5px] font-bold py-1"
-        >
-          <Maximize2 className="w-2.5 h-2.5" />
-          {t('放大', 'Open')}
-        </button>
-      </div>
+      {/* 卡下一行：講清楚按卡會去邊 */}
+      <button
+        type="button"
+        onClick={onOpen}
+        className="mt-1 w-full text-[8.5px] text-white/30 hover:text-white/70 font-mono tracking-wide text-center"
+      >
+        {t('按卡面 → 詳細資料 · 右下 ⟳ 翻轉', 'tap → details · ⟳ flips')}
+      </button>
     </div>
   );
 };

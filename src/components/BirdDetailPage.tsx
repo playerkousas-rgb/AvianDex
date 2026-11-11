@@ -11,6 +11,9 @@ import type { GuideKind } from './FieldGuideModal';
 import type { Bird } from '../types';
 import { getOfflineBird } from '../lib/fieldPack';
 import { FieldPackPanel } from './FieldPackPanel';
+import { useCardImage, useInfoCard } from '../hooks/useCardImage';
+import { BirdSilhouette } from './BirdSilhouette';
+import { RotateCw, Loader2, ScanLine } from 'lucide-react';
 
 /**
  * 第 2 頁：詳細資料。
@@ -82,6 +85,27 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
   const [failed, setFailed] = React.useState(false);
   const [showAll, setShowAll] = React.useState(false);
 
+  /* 詳情頁頂部的鳥圖：點一下翻轉成資訊圖卡。
+     用戶要求「進入詳細資料後直接在上圖可以看到鳥圖，點一下鳥圖就會翻轉成資訊圖卡」。
+     翻轉只影響這個圖片區塊，下面的文字資料不會被蓋走。 */
+  const art = useCardImage(bird.id);
+  const info = useInfoCard(bird.id);
+  const [cardFlipped, setCardFlipped] = React.useState(false);
+  const [artReady, setArtReady] = React.useState(false);
+
+  /* 翻了才探測資訊卡（569 張全探＝569 個 404） */
+  React.useEffect(() => {
+    if (cardFlipped) void info.probe();
+  }, [cardFlipped, info]);
+
+  /* 換雀就轉回正面，否則會停留在上一隻雀的資訊卡 */
+  const [flippedFor, setFlippedFor] = React.useState(bird.id);
+  if (flippedFor !== bird.id) {
+    setFlippedFor(bird.id);
+    setCardFlipped(false);
+    setArtReady(false);
+  }
+
   const t = (zh: string, en: string) => (lang === 'en' ? en : zh);
   const PENDING = t('資料待查', 'Data pending');
 
@@ -147,6 +171,110 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
       transition={{ duration: 0.16 }}
       className="flex flex-col gap-2.5 relative z-10 pb-8 w-full"
     >
+      {/* ============================================================
+          頂部鳥圖（1:1 插畫）。點一下翻轉成資訊圖卡，再點一下轉回。
+          用戶原話：「進入詳細資料後直接在上圖可以看到鳥圖」
+                    「點一下鳥圖就會翻轉成資訊圖卡」
+          —— 所以圖放在最頂，而且夠大，不是縮成一個小縮圖。
+          ============================================================ */}
+      <div className="relative [perspective:1200px]">
+        <div
+          role="button"
+          tabIndex={0}
+          aria-label={t('按一下翻轉鳥圖與資訊卡', 'Tap to flip between artwork and info card')}
+          onClick={() => setCardFlipped((v) => !v)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setCardFlipped((v) => !v); }
+          }}
+          className="relative w-full aspect-square max-h-[46vh] mx-auto rounded-xl cursor-pointer [transform-style:preserve-3d]"
+        >
+          <motion.div
+            animate={{ rotateY: cardFlipped ? 180 : 0 }}
+            transition={{ type: 'spring', stiffness: 190, damping: 22 }}
+            className="relative w-full h-full [transform-style:preserve-3d]"
+          >
+            {/* 正面：插畫 */}
+            <div className="absolute inset-0 [backface-visibility:hidden] rounded-xl overflow-hidden border-2 border-amber-500/30 bg-[#0e0d0b]">
+              {art.url ? (
+                <>
+                  {!(art.status === 'loaded' && artReady) && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-7 h-7 border-4 border-amber-500/20 border-t-amber-400 rounded-full animate-spin" />
+                    </div>
+                  )}
+                  <img
+                    key={art.url}
+                    src={art.url}
+                    alt={bird.name}
+                    referrerPolicy="no-referrer"
+                    onLoad={() => setArtReady(true)}
+                    onError={() => setArtReady(false)}
+                    className={`w-full h-full object-contain ${art.status === 'loaded' && artReady ? 'block' : 'hidden'}`}
+                  />
+                </>
+              ) : art.status === 'missing' || art.status === 'error' ? (
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                  <BirdSilhouette id={bird.id} className="w-20 h-20 text-white/15" />
+                  <p className="text-white/30 font-mono text-[10px]">NO.{bird.id}</p>
+                </div>
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Loader2 className="w-6 h-6 text-amber-400/50 animate-spin" />
+                </div>
+              )}
+              <span className="absolute top-1.5 right-1.5 bg-black/70 text-amber-200 text-[9px] font-bold px-2 py-1 rounded flex items-center gap-1 pointer-events-none">
+                <RotateCw className="w-2.5 h-2.5" />
+                {t('按圖翻轉', 'tap to flip')}
+              </span>
+            </div>
+
+            {/* 背面：資訊圖卡；未做的雀用文字即時砌（不造假、不留白） */}
+            <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-xl overflow-hidden border-2 border-amber-500/30 bg-[#f7f4ea]">
+              {info.status === 'loaded' && info.url ? (
+                <img
+                  src={info.url}
+                  alt={t(`${bird.name} 資訊圖卡`, `${bird.name} info card`)}
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-contain"
+                />
+              ) : info.status === 'loading' ? (
+                <div className="absolute inset-0 flex items-center justify-center bg-[#171512]">
+                  <Loader2 className="w-5 h-5 text-white/30 animate-spin" />
+                </div>
+              ) : (
+                <div className="w-full h-full bg-[#171512] p-3 flex flex-col gap-1.5">
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-mono text-[10px] text-yellow-300/80">NO.{bird.id}</span>
+                    <span className="text-white font-black text-[15px] leading-tight truncate">{title}</span>
+                  </div>
+                  <p className="text-white/40 font-mono text-[9px] italic truncate">{sciName}</p>
+                  <div className="mt-1 flex-1 grid grid-cols-2 gap-1.5 content-start overflow-hidden">
+                    {FIELDS.slice(0, 6).map(({ id: fid, zh, en }) => {
+                      const raw = fields[fid];
+                      const val = Array.isArray(raw) ? raw.filter(Boolean).join('；') : String(raw ?? '').trim();
+                      return (
+                        <div key={fid} className="bg-black/35 rounded p-1.5 leading-tight">
+                          <p className="text-amber-300/80 text-[9px] font-black">{lang === 'en' ? en : zh}</p>
+                          <p className="text-white/70 text-[9.5px] mt-0.5 line-clamp-3">{val || PENDING}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="flex items-center justify-between text-[8px] text-white/25">
+                    <span>{t('資訊圖卡未完成，以上為文字簡版', 'Info card not ready — text version')}</span>
+                    <ScanLine className="w-2.5 h-2.5" />
+                  </div>
+                </div>
+              )}
+              <span className="absolute top-1.5 right-1.5 bg-black/70 text-amber-200 text-[9px] font-bold px-2 py-1 rounded flex items-center gap-1 pointer-events-none">
+                <RotateCw className="w-2.5 h-2.5" />
+                {t('按圖轉回', 'tap to go back')}
+              </span>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
       {/* 標題：編號 + 名稱 + 學名 + 目科 */}
       <div className="bg-[#1b1a17]/85 border border-amber-500/25 rounded-lg p-3">
         <div className="flex items-baseline gap-2 flex-wrap">

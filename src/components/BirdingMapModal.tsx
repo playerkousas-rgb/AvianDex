@@ -27,8 +27,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import {
-  X, MapPin, ExternalLink, Loader2, Layers, Search, Bird as BirdIcon,
+  X, MapPin, ExternalLink, Loader2, Layers, Search, Bird as BirdIcon, RotateCw,
 } from 'lucide-react';
+import { ENTRIES } from '../lib/explorer';
+import { codeForId, idForCode } from '../lib/ebirdCode';
 
 const LANDSD = 'https://mapapi.geodata.gov.hk/gs/api/v1.0.0';
 
@@ -81,6 +83,17 @@ interface Hotspot {
   lastObsDt: string | null;
 }
 
+/** 某隻雀在香港的近期紀錄（/api/ebird?species=） */
+interface SpeciesObs {
+  locId: string;
+  locName: string;
+  lat: number;
+  lng: number;
+  obsDt: string;
+  howMany?: number;
+  comName?: string;
+}
+
 interface Observation {
   speciesCode: string;
   comName: string;
@@ -124,6 +137,37 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
   const [showDensity, setShowDensity] = useState(true);
   const [query, setQuery] = useState('');
 
+  /* ────────────────────────────────────────────────────────────
+   * 雙向查詢（用戶要求：搵隻雀→邊度有；點熱點→有咩雀）
+   *
+   *   mode='spot'  搜觀鳥點名稱（原本的行為）
+   *   mode='bird'  搜雀名 → 取該雀在香港的近期紀錄，地圖只顯示那些點
+   *
+   * 兩個方向都靠 eBird：
+   *   雀→點  /api/ebird?species=<code>
+   *   點→雀  /api/ebird?spplist=<locId>
+   * ──────────────────────────────────────────────────────────── */
+  const [mode, setMode] = useState<'spot' | 'bird'>('spot');
+  const [birdPick, setBirdPick] = useState<{ id: string; name: string; code: string } | null>(null);
+  const [birdObs, setBirdObs] = useState<SpeciesObs[]>([]);
+  const [loadingBird, setLoadingBird] = useState(false);
+  const [spotSpecies, setSpotSpecies] = useState<{ code: string; name: string; id: string | null }[] | null>(null);
+  const [loadingSpecies, setLoadingSpecies] = useState(false);
+  const birdLayer = useRef<L.LayerGroup | null>(null);
+
+  /* 全部 569 隻的可搜尋索引（雀名／英文名／學名） */
+  const birdIndex = React.useMemo(
+    () => Object.entries(ENTRIES).map(([id, e]) => ({ id, zh: e.z, en: e.e, sci: e.s, code: e.code || '' })),
+    [],
+  );
+  const suggestions = React.useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return birdIndex
+      .filter((b) => b.zh.includes(query.trim()) || b.en.toLowerCase().includes(q) || b.sci.toLowerCase().includes(q))
+      .slice(0, 8);
+  }, [query, birdIndex]);
+
   /* ---------------- 地圖初始化 ---------------- */
   useEffect(() => {
     if (!isOpen || !mapEl.current || mapRef.current) return;
@@ -147,6 +191,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
 
     hotspotLayer.current = L.layerGroup().addTo(map);
     obsLayer.current = L.layerGroup().addTo(map);
+    birdLayer.current = L.layerGroup().addTo(map);
 
     return () => {
       map.remove();
@@ -155,6 +200,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
       labelLayer.current = null;
       hotspotLayer.current = null;
       obsLayer.current = null;
+      birdLayer.current = null;
     };
   }, [isOpen]);
 
@@ -264,6 +310,100 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
     }
   }, []);
 
+  /* ---------------- 雀 → 點：搵隻雀近期在香港邊度出現 ---------------- */
+  const loadSpecies = useCallback(async (id: string) => {
+    const e = ENTRIES[id];
+    if (!e) return;
+    const code = codeForId(id);
+    setBirdPick({ id, name: e.z, code: code || '' });
+    setMode('bird');
+    setBirdObs([]);
+    setSpotSpecies(null);
+    if (!code) {
+      setApiNote(`《${e.z}》在 eBird 沒有對應代碼，所以查不到紀錄。`);
+      return;
+    }
+    await Promise.resolve();
+    setLoadingBird(true);
+    setApiNote(null);
+    try {
+      const res = await fetch(`/api/ebird?species=${encodeURIComponent(code)}&back=30`);
+      const text = await res.text();
+      let data: { observations?: SpeciesObs[]; error?: string; details?: string } | null = null;
+      try { data = JSON.parse(text); } catch { throw new Error(text.slice(0, 160)); }
+      if (!res.ok) throw new Error(data?.error || data?.details || `HTTP ${res.status}`);
+      const rows = (data?.observations || []).filter((o) => Number.isFinite(o.lat) && Number.isFinite(o.lng));
+      setBirdObs(rows);
+      if (!rows.length) setApiNote(`《${e.z}》最近 30 日 eBird 沒有香港的公開紀錄（可能是罕見、季節性，或只是未有人提交）。`);
+    } catch (err) {
+      setApiNote(`查詢《${e.z}》失敗：${err instanceof Error ? err.message : '未知錯誤'}`);
+    } finally {
+      setLoadingBird(false);
+    }
+  }, []);
+
+  /* 點 → 雀：這個熱點有咩雀 */
+  const loadSpotSpecies = useCallback(async (h: Hotspot) => {
+    setSpotSpecies(null);
+    await Promise.resolve();
+    setLoadingSpecies(true);
+    try {
+      const res = await fetch(`/api/ebird?spplist=${encodeURIComponent(h.locId)}`);
+      const text = await res.text();
+      let data: { speciesCodes?: string[]; error?: string; details?: string } | null = null;
+      try { data = JSON.parse(text); } catch { throw new Error(text.slice(0, 160)); }
+      if (!res.ok) throw new Error(data?.error || data?.details || `HTTP ${res.status}`);
+      const list = (data?.speciesCodes || [])
+        .map((code) => {
+          const id = idForCode(code);
+          return { code, name: id ? ENTRIES[id].z : code, id };
+        })
+        /* 只顯示本圖鑑有的（可以點入去），其餘不列，避免一堆英文 code */
+        .filter((x) => x.id)
+        .slice(0, 60);
+      setSpotSpecies(list);
+    } catch (err) {
+      setApiNote(`讀取熱點物種失敗：${err instanceof Error ? err.message : '未知錯誤'}`);
+    } finally {
+      setLoadingSpecies(false);
+    }
+  }, []);
+
+  /* ---------------- 繪「這隻雀」的紀錄點 ---------------- */
+  useEffect(() => {
+    const g = birdLayer.current;
+    if (!g) return;
+    g.clearLayers();
+    if (!birdObs.length) return;
+    birdObs.forEach((o) => {
+      L.circleMarker([o.lat, o.lng], {
+        radius: 8,
+        color: '#7c2d12',
+        weight: 2,
+        fillColor: '#fbbf24',
+        fillOpacity: 0.95,
+      })
+        .bindTooltip(`${o.locName} · ${fmtObsDate(o.obsDt)}${o.howMany ? ` ×${o.howMany}` : ''}`, { direction: 'top' })
+        .addTo(g);
+    });
+    const map = mapRef.current;
+    if (map && birdObs.length) {
+      const bounds = L.latLngBounds(birdObs.map((o) => [o.lat, o.lng] as [number, number]));
+      map.fitBounds(bounds.pad(0.25), { maxZoom: 14 });
+    }
+  }, [birdObs]);
+
+  /* 熱點相關的圖層：搵雀模式時淡出，避免搶眼 */
+  useEffect(() => {
+    const g = hotspotLayer.current;
+    if (!g) return;
+    // 用 opacity 控制（circleMarker 要逐個設）
+    g.eachLayer((l) => {
+      const cm = l as L.CircleMarker;
+      cm.setStyle({ opacity: mode === 'bird' ? 0.25 : 1, fillOpacity: mode === 'bird' ? 0.2 : 0.95 });
+    });
+  }, [mode, hotspots, query]);
+
   /* ---------------- 繪觀察密度 ---------------- */
   useEffect(() => {
     const g = obsLayer.current;
@@ -290,7 +430,10 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (!selected || !mapRef.current) return;
     mapRef.current.flyTo([selected.lat, selected.lng], 15, { duration: 0.7 });
-  }, [selected]);
+    /* 用戶要求：「點那個熱點就知道會有什麼鳥出沒」
+       → 一選熱點就自動查該點的物種清單（eBird product/spplist） */
+    void loadSpotSpecies(selected);
+  }, [selected, loadSpotSpecies]);
 
   const speciesRank = React.useMemo(() => {
     const counts = new Map<string, { name: string; sci: string; n: number }>();
@@ -357,6 +500,15 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                 {loadingObs ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <BirdIcon className="w-3.5 h-3.5" />}
                 {loadingObs ? '搵緊紀錄…' : '顯示近期出沒'}
               </button>
+              {mode === 'bird' && (
+                <button
+                  onClick={() => { setMode('spot'); setBirdPick(null); setBirdObs([]); setApiNote(null); }}
+                  className="flex items-center gap-1 bg-amber-500/25 hover:bg-amber-500/40 border border-amber-400/50 text-amber-100 text-[11px] font-bold px-2.5 py-1.5 rounded-lg"
+                >
+                  <RotateCw className="w-3.5 h-3.5" />
+                  清除雀鳥篩選
+                </button>
+              )}
               <button
                 onClick={() => setShowDensity((v) => !v)}
                 className={`flex items-center gap-1 border text-[11px] font-bold px-2.5 py-1.5 rounded-lg ${
@@ -367,14 +519,31 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
               >
                 密度點
               </button>
+              {/* 搜尋：一個框同時搜「雀名」與「觀鳥點」。
+                  用戶要求：「我搜尋那隻鳥就看到會在那出沒」。
+                  所以輸入雀名時，下面直接彈出配對的雀，揀一隻就跳去顯示牠的紀錄。 */}
               <div className="relative ml-auto">
                 <Search className="w-3.5 h-3.5 text-white/35 absolute left-2 top-1/2 -translate-y-1/2" />
                 <input
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  placeholder="搵觀鳥點"
-                  className="bg-black/50 border border-white/15 rounded-lg pl-7 pr-2 py-1.5 text-[11px] text-white placeholder:text-white/25 w-[110px] focus:outline-none focus:border-amber-400/50"
+                  placeholder="搵雀名／觀鳥點"
+                  className="bg-black/50 border border-white/15 rounded-lg pl-7 pr-2 py-1.5 text-[11px] text-white placeholder:text-white/25 w-[150px] focus:outline-none focus:border-amber-400/50"
                 />
+                {suggestions.length > 0 && (
+                  <div className="absolute z-[600] mt-1 right-0 w-[240px] bg-[#141311] border border-amber-400/30 rounded-lg overflow-hidden shadow-2xl">
+                    {suggestions.map((b) => (
+                      <button
+                        key={b.id}
+                        onClick={() => { setQuery(''); void loadSpecies(b.id); }}
+                        className="w-full text-left px-2.5 py-1.5 hover:bg-amber-400/15 border-b border-white/5 last:border-0"
+                      >
+                        <p className="text-white text-[11.5px] font-bold truncate">{b.zh}</p>
+                        <p className="text-white/35 text-[9px] truncate">{b.en}</p>
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
 
@@ -426,6 +595,29 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                       <ExternalLink className="w-3 h-3" /> 在 eBird 開啟熱點
                     </a>
 
+                    {/* 這個熱點有咩雀（eBird 歷來紀錄） */}
+                    <h4 className="mt-3 mb-1.5 text-white/70 font-black text-[11px] flex items-center gap-1">
+                      <BirdIcon className="w-3 h-3" /> 這個熱點有咩雀
+                    </h4>
+                    {loadingSpecies && <Loader2 className="w-4 h-4 text-white/30 animate-spin" />}
+                    {!loadingSpecies && spotSpecies && spotSpecies.length > 0 && (
+                      <div className="flex flex-wrap gap-1 mb-2">
+                        {spotSpecies.map((sp) => (
+                          <button
+                            key={sp.code}
+                            onClick={() => sp.id && void loadSpecies(sp.id)}
+                            className="text-[10px] px-1.5 py-0.5 rounded bg-amber-400/12 hover:bg-amber-400/30 border border-amber-400/25 text-amber-100"
+                            title="在地圖上顯示這隻雀的出沒點"
+                          >
+                            {sp.name}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                    {!loadingSpecies && spotSpecies && spotSpecies.length === 0 && (
+                      <p className="text-white/30 text-[10px] mb-2">未能讀取（可能需要 EBIRD_API_KEY）</p>
+                    )}
+
                     <h4 className="mt-3 mb-1.5 text-white/70 font-black text-[11px] flex items-center gap-1">
                       <BirdIcon className="w-3 h-3" /> 近期觀察
                     </h4>
@@ -448,6 +640,46 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                   </>
                 ) : (
                   <>
+                    {mode === 'bird' && birdPick && (
+                      <div className="mb-2.5 bg-amber-400/10 border border-amber-400/30 rounded-lg p-2">
+                        <p className="text-amber-100 font-black text-[12px] leading-tight">
+                          《{birdPick.name}》最近 30 日出沒點
+                        </p>
+                        {loadingBird && (
+                          <div className="flex items-center gap-1 mt-1">
+                            <Loader2 className="w-3 h-3 text-amber-300 animate-spin" />
+                            <span className="text-white/40 text-[9.5px]">查緊 eBird…</span>
+                          </div>
+                        )}
+                        {!loadingBird && birdObs.length > 0 && (
+                          <div className="mt-1.5 space-y-1">
+                            {Object.entries(
+                              birdObs.reduce<Record<string, { name: string; n: number; last: string }>>((acc, o) => {
+                                const k = o.locId;
+                                if (!acc[k]) acc[k] = { name: o.locName, n: 0, last: o.obsDt };
+                                acc[k].n += 1;
+                                if (o.obsDt > acc[k].last) acc[k].last = o.obsDt;
+                                return acc;
+                              }, {}),
+                            )
+                              .sort((a, b) => b[1].n - a[1].n)
+                              .map(([locId, v]) => (
+                                <div key={locId} className="bg-black/35 rounded px-2 py-1 leading-tight">
+                                  <p className="text-white text-[10.5px] font-bold truncate">{v.name}</p>
+                                  <p className="text-white/35 font-mono text-[8.5px]">
+                                    {v.n} 次 · 最後 {fmtObsDate(v.last)}
+                                  </p>
+                                </div>
+                              ))}
+                          </div>
+                        )}
+                        {!loadingBird && birdObs.length === 0 && (
+                          <p className="text-white/35 text-[9.5px] leading-snug mt-1">
+                            沒有紀錄。可能是季節未到、數目稀少，或只是未有人提交。
+                          </p>
+                        )}
+                      </div>
+                    )}
                     <h3 className="text-amber-100 font-black text-[12px] mb-1.5">觀鳥熱點</h3>
                     <p className="text-white/30 text-[9.5px] leading-snug mb-2">
                       按地圖上的黃點看該點資料。
