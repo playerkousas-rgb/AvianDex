@@ -32,7 +32,7 @@ await build({
   bundle: true, format: 'esm', platform: 'neutral', outfile: path.join(outdir, 'layout.mjs'),
 });
 const { dexScore } = await import(pathToFileURL(path.join(outdir, 'score.mjs')).href);
-const { renderDexCard, fit, DEX_CARD_CSS } = await import(pathToFileURL(path.join(outdir, 'layout.mjs')).href);
+const { renderDexCard, fit, DEX_CARD_CSS, LAYOUT } = await import(pathToFileURL(path.join(outdir, 'layout.mjs')).href);
 
 const idx = read('src/data/explorerIndex.json');
 const zhAll = read('src/data/cardDetails.zh.json').birds;
@@ -59,6 +59,10 @@ function cardInput(id) {
     dietEn: (e.d || []).map((t) => diet[t]?.en).filter(Boolean),
     habitatZh: (e.h || []).map((t) => hab[t]?.zh).filter(Boolean),
     habitatEn: (e.h || []).map((t) => hab[t]?.en).filter(Boolean),
+    dietIds: e.d || [],
+    habitatIds: e.h || [],
+    dietLabels: idx.dietTags,
+    habitatLabels: idx.habitatTags,
     meas,
     mass: m.mass ? String(m.mass) : '',
     lengthCm: e.len || 0,
@@ -230,15 +234,35 @@ test('dexScores.json 與公式即時算出的結果一致（防止手改數據�
 /* ------------------------------------------------------------ 6. 版式尺寸 */
 
 test('卡面 CSS 的高度預算對得住 1600（不會印出半格）', () => {
-  assert.ok(DEX_CARD_CSS.includes('height:1600px'));
-  const num = (re) => Number((DEX_CARD_CSS.match(re) || [])[1]);
-  const pad = num(/padding:(\d+)px;display:flex/);
-  const hdr = num(/height:(\d+)px;flex:0 0 216px/);
-  const a = num(/\.dx \.band-a\{height:(\d+)px\}/);
-  const b = num(/\.dx \.band-b\{height:(\d+)px\}/);
-  const c = num(/\.dx \.band-c\{height:(\d+)px\}/);
-  const sc = num(/height:(\d+)px;flex:0 0 164px/);
-  const ft = num(/height:(\d+)px;flex:0 0 104px/);
-  const total = pad * 2 + hdr + a + b + c + sc + ft + 18 * 5;
-  assert.equal(total, 1600, `高度合計 ${total}，不是 1600`);
+  /* 直接讀 LAYOUT 常數，不靠 regex 抓 CSS —— 兩者若不同步，這個測試會同時失敗 */
+  const total = LAYOUT.pad * 2 + LAYOUT.hdr + LAYOUT.bandA + LAYOUT.bandB + LAYOUT.bandC
+    + LAYOUT.score + LAYOUT.foot + LAYOUT.gap * 5;
+  assert.equal(total, LAYOUT.cardH, `高度合計 ${total}，不是 ${LAYOUT.cardH}`);
+  assert.ok(DEX_CARD_CSS.includes(`height:${LAYOUT.cardH}px`));
+  /* 三個區塊高度必須真的寫入 CSS，否則 LAYOUT 只是好看的文件 */
+  assert.ok(DEX_CARD_CSS.includes(`.dx .band-a{height:${LAYOUT.bandA}px}`));
+  assert.ok(DEX_CARD_CSS.includes(`.dx .band-b{height:${LAYOUT.bandB}px}`));
+  assert.ok(DEX_CARD_CSS.includes(`.dx .band-c{height:${LAYOUT.bandC}px}`));
+});
+
+test('卡面：每一格都有圖示（用戶要求「圖多啲、字少啲」）', () => {
+  const html = renderDexCard(cardInput('0013'));
+  /* 13 個區塊 + 評分 5 個維度 = 至少 18 個 inline SVG 圖示 */
+  const icons = (html.match(/<svg class="ic/g) || []).length;
+  assert.ok(icons >= 18, `圖示只有 ${icons} 個，至少要 18 個`);
+  /* 每種食性／棲地 tag 都要有圖，否則會出現「有字冇圖」 */
+  for (const id of ['insect', 'fish', 'fruit', 'seed', 'forest', 'urban', 'wetland']) {
+    assert.ok(renderDexCard({ ...cardInput('0013'), dietIds: [id], habitatIds: [id] }).includes('viewBox'),
+      `${id} 冇圖示`);
+  }
+});
+
+test('卡面：IUCN 五級量尺只認已核實的級別，缺資料不裝有', () => {
+  const lc = renderDexCard(cardInput('0013'));
+  assert.ok(lc.includes('ib-seg'), '應有 IUCN 量尺');
+  assert.ok(lc.includes('無危'), '八哥是無危');
+  const bare = renderDexCard({
+    ...cardInput('0013'), zh: {}, en: {},
+  });
+  assert.ok(bare.includes('iucnbar-miss'), '冇 IUCN 資料就要顯示「資料待查」，不可假裝無危');
 });

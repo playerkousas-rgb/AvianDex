@@ -30,49 +30,66 @@
 .dx *{box-sizing:border-box;margin:0;padding:0}
 .dx .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 .dx .en{font-family:"Helvetica Neue",Arial,system-ui,sans-serif}
-.dx .t-miss{color:#9a9a92;font-style:italic}
+.dx .t-miss{color:#8d8d86;font-style:italic}
+.dx .ic{display:inline-block;flex:0 0 auto;vertical-align:middle}
 
 /* ---------- 標題帶 ---------- */
 .dx .hdr{
-  display:grid;grid-template-columns:196px 1fr 352px;gap:20px;align-items:start;
+  display:grid;grid-template-columns:190px 1fr 366px;gap:18px;align-items:stretch;
   height:216px;flex:0 0 216px;
-  background:#fff;border:2px solid var(--c);border-radius:22px;padding:18px 22px;
+  background:#fff;border:2px solid var(--c);border-radius:22px;padding:16px 20px;
 }
-.dx .hdr-l{display:flex;flex-direction:column;align-items:center;gap:10px}
-.dx .chip-art{width:136px;height:136px;object-fit:cover;border-radius:14px;border:2px solid var(--c);
+.dx .hdr-l{display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:8px}
+.dx .chip-art{width:142px;height:142px;object-fit:cover;border-radius:16px;border:2px solid var(--c);
   background:#0e0d0b;image-rendering:pixelated}
 .dx .chip-art.chip-miss{display:flex;align-items:center;justify-content:center;color:#fff;
   font:700 13px ui-monospace,monospace;background:#2a2a26}
-.dx .no-pill{background:var(--c);color:#fff;font-weight:900;font-size:18px;letter-spacing:.04em;
-  padding:5px 18px;border-radius:999px;font-family:ui-monospace,SFMono-Regular,monospace}
-.dx .hdr-c{padding-top:4px;min-width:0}
-.dx .name{font-size:58px;font-weight:900;line-height:1.04;letter-spacing:.02em;color:#111}
-.dx .sci{font-style:italic;font-size:19px;color:#4a5c54;margin-top:7px;font-family:Georgia,serif}
-.dx .en-pill{display:inline-block;margin-top:10px;background:var(--c);color:#fff;border-radius:999px;
-  padding:4px 16px;font-size:17px;font-weight:700}
-.dx .hdr-r{display:flex;flex-direction:column;gap:7px}
+.dx .no-pill{background:var(--c);color:#fff;font-weight:900;font-size:17px;letter-spacing:.05em;
+  padding:4px 18px;border-radius:999px;font-family:ui-monospace,SFMono-Regular,monospace}
+.dx .hdr-c{padding-top:2px;min-width:0;display:flex;flex-direction:column}
+.dx .name{font-size:56px;font-weight:900;line-height:1.02;letter-spacing:.02em;color:#111}
+.dx .sci{font-style:italic;font-size:18px;color:#4a5c54;margin-top:4px;font-family:Georgia,serif}
+.dx .en-pill{align-self:flex-start;margin-top:8px;background:var(--c);color:#fff;border-radius:999px;
+  padding:3px 15px;font-size:16px;font-weight:700}
+.dx .hdr-tags{display:flex;gap:7px;margin-top:auto}
+.dx .htag{display:inline-flex;align-items:center;gap:5px;background:rgba(0,0,0,.05);
+  border-radius:9px;padding:4px 10px;font-size:12.5px;font-weight:700;color:var(--c)}
+.dx .htag em{font-style:normal;font-size:10px;font-weight:500;opacity:.7}
+.dx .htag b{font-family:ui-monospace,monospace;font-size:14px}
+.dx .hdr-r{display:flex;flex-direction:column;gap:8px;justify-content:center}
+
+/* ---------- IUCN 五級量尺 ---------- */
+.dx .iucnbar{display:flex;flex-direction:column;gap:5px}
+.dx .ib-track{display:flex;gap:4px}
+.dx .ib-seg{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;opacity:.42}
+.dx .ib-seg i{display:block;width:100%;height:8px;border-radius:999px;background:var(--lc)}
+.dx .ib-seg b{font-size:9px;letter-spacing:.06em;color:#5b6b63;
+  font-family:"Helvetica Neue",Arial,sans-serif}
+.dx .ib-seg.on{opacity:1}
+.dx .ib-seg.on i{height:12px;box-shadow:0 0 0 2px #fff,0 0 0 3.5px var(--lc)}
+.dx .ib-seg.on b{color:var(--lc);font-weight:900}
+.dx .ib-now{align-self:flex-start;margin-left:calc(var(--p) * .78);
+  background:var(--lc);color:#fff;font-size:11.5px;font-weight:800;
+  padding:2px 10px;border-radius:999px}
+.dx .iucnbar-miss{background:#ededed;color:#555;border-radius:8px;padding:6px 10px;
+  font-size:12px;font-weight:700}
+
+/* ---------- 目／科 ---------- */
 .dx .taxline{display:flex;flex-direction:column;gap:5px}
-.dx .tag-ord,.dx .tag-fam{border-radius:8px;padding:5px 10px;font-size:14px;font-weight:700;
+.dx .tag-ord,.dx .tag-fam{border-radius:8px;padding:5px 10px;font-size:13px;font-weight:700;
   display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .dx .tag-ord{background:var(--c);color:#fff}
 .dx .tag-fam{color:var(--c);border:1.5px solid var(--c);background:#fff}
 .dx .tag-ord em,.dx .tag-fam em{font-style:normal;font-weight:400;opacity:.75;
-  font-family:"Helvetica Neue",Arial,sans-serif;font-size:11.5px}
-.dx .iucn{display:flex;align-items:center;gap:8px;border-radius:8px;padding:6px 10px;
-  font-weight:800;font-size:14px}
-.dx .iucn-k{font-size:9.5px;letter-spacing:.16em;opacity:.7;font-family:"Helvetica Neue",Arial,sans-serif}
-.dx .iucn-miss{background:#ededed;color:#555}
-.dx .quick{display:flex;gap:8px}
-.dx .q{flex:1;background:rgba(0,0,0,.045);border-radius:8px;padding:5px 10px;
-  display:flex;flex-direction:column;gap:1px}
-.dx .q-k{font-size:10.5px;color:#5b6b63;letter-spacing:.08em}
-.dx .q-v{font-weight:800;font-size:16px;color:#16231e;
-  font-family:ui-monospace,SFMono-Regular,monospace}
+  font-family:"Helvetica Neue",Arial,sans-serif;font-size:11px}
 
 /* ---------- 區塊 ---------- */
 .dx .band{display:flex;gap:18px;flex:0 0 auto}
-.dx .band-a{height:432px}
-.dx .col-l{width:296px;display:flex;flex-direction:column;gap:18px}
+.dx .band-a{height:438px}
+.dx .band-b{height:266px}
+.dx .band-c{height:266px}
+.dx .band-b .pnl,.dx .band-c .pnl{width:0;flex:1 1 0}
+.dx .col-l{width:292px;display:flex;flex-direction:column;gap:18px}
 .dx .col-r{width:322px;display:flex;flex-direction:column;gap:14px}
 .dx .hero{flex:1;position:relative;border-radius:20px;overflow:hidden;border:2px solid var(--c);
   background:#0b0b09;display:flex;align-items:center;justify-content:center}
@@ -81,86 +98,92 @@
   font-family:ui-monospace,monospace;text-align:center;opacity:.5}
 .dx .hero-miss b{font-size:26px}
 .dx .hero-miss small{font-size:12px;font-style:italic;line-height:1.6}
-.dx .hero figcaption{position:absolute;left:0;right:0;bottom:0;padding:7px 12px;
-  background:linear-gradient(transparent,rgba(0,0,0,.74));color:#fff;font-size:10.5px;
+.dx .hero figcaption{position:absolute;left:0;right:0;bottom:0;padding:6px 12px;
+  background:linear-gradient(transparent,rgba(0,0,0,.74));color:#fff;font-size:10px;
   text-align:right;letter-spacing:.03em}
 
 /* ---------- 小卡 ---------- */
-.dx .pnl{background:#fff;border:1.5px solid rgba(0,0,0,.10);border-radius:16px;padding:12px 15px;
-  display:flex;flex-direction:column;gap:7px;flex:1;min-height:0;overflow:hidden}
-.dx .pnl-h{display:flex;align-items:center;gap:7px;font-size:15.5px;font-weight:900;color:var(--c);
-  padding-bottom:6px;border-bottom:2px solid rgba(0,0,0,.07);flex:0 0 auto}
-.dx .pnl-i{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;
-  border-radius:6px;background:var(--c);color:#fff;font-size:10px;flex:0 0 auto}
-.dx .pnl-b{flex:1;min-height:0;display:flex;flex-direction:column;gap:5px}
-.dx .t-zh{font-size:14px;line-height:1.52;color:#1d2b25}
-.dx .t-en{font-size:11.5px;line-height:1.46;color:#61736b}
+.dx .pnl{background:#fff;border:1.5px solid rgba(0,0,0,.10);border-radius:16px;padding:11px 14px;
+  display:flex;flex-direction:column;gap:6px;flex:1;min-height:0;overflow:hidden}
+.dx .pnl-h{display:flex;align-items:center;gap:7px;font-size:14.5px;font-weight:900;color:var(--c);
+  padding-bottom:5px;border-bottom:2px solid rgba(0,0,0,.07);flex:0 0 auto;min-height:30px}
+.dx .pnl-i{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
+  border-radius:8px;background:var(--c);color:#fff;flex:0 0 auto}
+.dx .pnl-i .ic{width:18px;height:18px}
+.dx .pnl-b{flex:1;min-height:0;display:flex;flex-direction:column;gap:4px}
+.dx .t-zh{font-size:13.5px;line-height:1.5;color:#1d2b25}
+.dx .t-en{font-size:11px;line-height:1.44;color:#61736b}
 
 /* ---------- 分類階梯 ---------- */
 .dx .taxlist{list-style:none;display:flex;flex-direction:column;gap:2px}
-.dx .taxlist li{display:flex;gap:8px;font-size:13px;align-items:baseline}
-.dx .taxlist .k{flex:0 0 20px;color:#8a9a92;text-align:center;font-size:12px}
-.dx .taxlist .v{flex:1;color:#22322b;font-weight:600;overflow:hidden;
+.dx .taxlist li{display:flex;gap:7px;font-size:12.5px;align-items:baseline}
+.dx .taxlist .k{flex:0 0 18px;color:#96a49c;text-align:center;font-size:11.5px}
+.dx .taxlist .v{flex:1;color:#22322b;font-weight:700;overflow:hidden;
   text-overflow:ellipsis;white-space:nowrap}
+.dx .taxlist .v em{font-style:italic;font-weight:400;color:#7d8d85;font-size:10.5px;margin-left:5px}
 
 /* ---------- 量度 ---------- */
-.dx .mbs{list-style:none;display:flex;flex-direction:column;gap:7px}
-.dx .mb{display:flex;align-items:center;gap:8px;font-size:12.5px}
-.dx .mb-n{flex:0 0 62px;color:#455c52;font-weight:700}
+.dx .mbs{list-style:none;display:flex;flex-direction:column;gap:6px}
+.dx .mb{display:flex;align-items:center;gap:7px;font-size:12px}
+.dx .mb-n{flex:0 0 60px;color:#455c52;font-weight:700}
 .dx .mb-t{flex:1;height:9px;border-radius:999px;background:rgba(0,0,0,.07);overflow:hidden}
-.dx .mb-t i{display:block;height:100%;background:var(--c);border-radius:999px;opacity:.88}
-.dx .mb-v{flex:0 0 60px;text-align:right;font-family:ui-monospace,monospace;
-  font-size:11px;color:#5b6b63}
+.dx .mb-t i{display:block;height:100%;background:var(--c);border-radius:999px;opacity:.9}
+.dx .mb-v{flex:0 0 56px;text-align:right;font-family:ui-monospace,monospace;
+  font-size:11.5px;color:#41564c;font-weight:700}
+.dx .mb-v em{font-style:normal;font-size:9px;opacity:.6;margin-left:2px}
 
-/* ---------- 標籤 ---------- */
+/* ---------- 屬性 chips（圖示優先） ---------- */
 .dx .chiprow{display:flex;flex-wrap:wrap;gap:6px}
-.dx .chip{font-size:12.5px;font-weight:700;padding:3px 11px;border-radius:999px;
-  background:var(--c);color:#fff}
-.dx .chip-h{background:#2a6b52}
-.dx .chip-d{background:#8a5a1e}
-.dx .chip-miss{background:#e6e6e1;color:#8a8a82;font-weight:400;font-style:italic}
-.dx .chiprow-en{font-size:11px}
+.dx .chip{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;
+  padding:4px 10px 4px 6px;border-radius:999px;background:var(--c);color:#fff}
+.dx .chip .chip-ic{width:17px;height:17px;opacity:.95}
+.dx .chip-miss{background:#e6e6e1;color:#8a8a82;font-weight:400;font-style:italic;padding:4px 10px}
 
-/* ---------- 中段 ---------- */
-.dx .band-b{height:262px}
-.dx .band-c{height:264px}
-.dx .band-b .pnl,.dx .band-c .pnl{width:0;flex:1 1 0}
+/* ---------- 分佈示意 ---------- */
+.dx .range-wrap{border-radius:12px;overflow:hidden;background:var(--t0, #eaf0ec);
+  border:1px solid rgba(0,0,0,.08)}
+.dx .rangesvg{display:block;width:100%;height:auto}
+.dx .rangesvg .land{fill:#c9d6cd}
+.dx .rangesvg .pin circle{fill:#fff;stroke:var(--c);stroke-width:2}
+.dx .rangesvg .pin .core{fill:var(--a);stroke:none}
+.dx .rangesvg .pin text{font-size:11px;fill:#3d4b44;font-weight:700;text-anchor:middle;
+  paint-order:stroke;stroke:#fff;stroke-width:3px}
+.dx .rangesvg .pin.on circle{stroke:var(--c)}
 
 /* ---------- 評分 ---------- */
-.dx .score{height:164px;flex:0 0 164px;display:flex;gap:18px;
-  background:#fff;border:2px solid var(--c);border-radius:18px;padding:12px 18px}
-.dx .score-l{flex:1;display:flex;flex-direction:column;gap:8px;min-width:0}
-.dx .score-h{display:flex;align-items:baseline;gap:8px;font-size:15px;font-weight:900;color:var(--c)}
-.dx .score-h em{font-style:normal;font-size:10.5px;font-weight:500;color:#8a9a92}
-.dx .dims{list-style:none;display:flex;flex-direction:column;gap:5px}
+.dx .score{height:152px;flex:0 0 152px;display:flex;gap:16px;
+  background:#fff;border:2px solid var(--c);border-radius:18px;padding:10px 16px}
+.dx .score-l{flex:1;display:flex;flex-direction:column;gap:6px;min-width:0}
+.dx .score-h{display:flex;align-items:center;gap:6px;font-size:14.5px;font-weight:900;color:var(--c)}
+.dx .score-h em{font-style:normal;font-size:10px;font-weight:500;color:#96a49c}
+.dx .dims{list-style:none;display:flex;flex-direction:column;gap:4px}
 .dx .dim{display:flex;align-items:center;gap:8px}
-.dx .dim-n{flex:0 0 296px;display:flex;align-items:baseline;gap:6px;
-  font-size:12.5px;font-weight:700;color:#26382f}
-.dx .dim-from{font-style:normal;font-size:9.5px;color:#9aa8a1;font-weight:400}
+.dx .dim-n{flex:0 0 132px;display:flex;align-items:center;gap:5px;
+  font-size:12px;font-weight:700;color:#26382f}
+.dx .dim-n .ic{width:15px;height:15px;color:var(--c);opacity:.85}
 .dx .dim-bar{flex:1;height:10px;border-radius:999px;background:rgba(0,0,0,.07);overflow:hidden}
 .dx .dim-bar i{display:block;height:100%;border-radius:999px;
   background:linear-gradient(90deg,var(--c),var(--a))}
-.dx .dim-v{flex:0 0 38px;text-align:right;font-family:ui-monospace,monospace;
-  font-weight:800;font-size:13px;color:var(--c)}
+.dx .dim-v{flex:0 0 34px;text-align:right;font-family:ui-monospace,monospace;
+  font-weight:800;font-size:12.5px;color:var(--c)}
 .dx .dim-miss .dim-n,.dx .dim-miss .dim-v{color:#a8b2ac}
-.dx .score-r{flex:0 0 206px;display:flex;flex-direction:column;align-items:center;
-  justify-content:space-between;border-left:1.5px dashed rgba(0,0,0,.12);padding-left:16px}
-.dx .overall{display:flex;align-items:baseline;gap:5px;color:var(--c)}
-.dx .o-k{font-size:11.5px;font-weight:800;letter-spacing:.1em}
-.dx .o-v{font-size:46px;font-weight:900;line-height:1;
-  font-family:ui-monospace,SFMono-Regular,monospace}
+.dx .score-r{flex:0 0 196px;display:flex;flex-direction:column;align-items:center;
+  justify-content:space-between;border-left:1.5px dashed rgba(0,0,0,.12);padding-left:14px}
+.dx .overall{display:flex;align-items:baseline;gap:4px;color:var(--c)}
+.dx .o-k{font-size:11px;font-weight:800;letter-spacing:.1em}
+.dx .o-v{font-size:44px;font-weight:900;line-height:1;font-family:ui-monospace,SFMono-Regular,monospace}
 .dx .o-max{font-size:13px;color:#7a8a82}
-.dx .bc{display:flex;align-items:flex-end;height:32px;width:100%;justify-content:center}
-.dx .bc i{display:block;height:32px;background:#1b2521}
+.dx .bc{display:flex;align-items:flex-end;height:30px;width:100%;justify-content:center}
+.dx .bc i{display:block;height:30px;background:#1b2521}
 
 /* ---------- 底欄 ---------- */
-.dx .foot{height:104px;flex:0 0 104px;display:flex;align-items:center;gap:18px;
-  background:var(--c);color:#fff;border-radius:16px;padding:12px 22px}
+.dx .foot{height:104px;flex:0 0 104px;display:flex;align-items:center;gap:16px;
+  background:var(--c);color:#fff;border-radius:16px;padding:11px 20px}
 .dx .f-col{display:flex;flex-direction:column;gap:2px;min-width:0}
 .dx .f-wide{flex:1}
 .dx .f-src{flex:0 0 424px;overflow:hidden}
 .dx .f-k{font-size:9.5px;letter-spacing:.14em;opacity:.66}
-.dx .f-v{font-size:15px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dx .f-v{font-size:14.5px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .dx .f-v em{font-style:italic;font-weight:400;opacity:.85}
 .dx .f-v.small{font-size:8.5px;font-weight:400;line-height:1.38;white-space:normal;opacity:.92;
   max-height:30px;overflow:hidden}
@@ -168,10 +191,10 @@
 /* ---------- 語言切換：中欄只放中文、英欄只放英文 ---------- */
 .dx.lang-zh .en{display:none!important}
 .dx.lang-en .zh{display:none!important}
-.dx.lang-en .name{font-size:42px;line-height:1.08}
+.dx.lang-en .name{font-size:40px;line-height:1.06}
 .dx.lang-en .taxlist .k{display:none}
 .dx.lang-en .t-zh{display:none}
-.dx.lang-en .t-en{font-size:14px;line-height:1.5;color:#26382f}
+.dx.lang-en .t-en{font-size:13px;line-height:1.5;color:#26382f}
 
   /* 預覽頁把卡縮到容器寬度；下載用的 PNG 一律用 1200×1600 原尺寸 */
   body{--s:1}
@@ -206,27 +229,40 @@
       <h1 class="name">八哥</h1>
       <div class="sci">Acridotheres cristatellus</div>
       <div class="en-pill"><span class="en en-h">Crested Myna</span></div>
+      <div class="hdr-tags">
+        <span class="htag"><svg class="ic " viewBox="0 0 48 48" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="6" width="14" height="9" rx="2"/><rect x="4" y="33" width="14" height="9" rx="2"/><rect x="30" y="33" width="14" height="9" rx="2"/><path d="M24 15v9M11 33v-9h26v9"/></g></svg><span class="zh">雀形目</span><em>椋鳥科</em></span>
+        <span class="htag"><svg class="ic " viewBox="0 0 48 48" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24h40M4 18v12M44 18v12M14 20v8M24 20v8M34 20v8"/></g></svg><b>—</b><em>cm</em></span>
+        <span class="htag"><svg class="ic " viewBox="0 0 48 48" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16h24l4 24H8z"/><path d="M18 16a6 6 0 0 1 12 0"/><path d="M24 24v8M20 28h8"/></g></svg><b>116.3</b><em>g</em></span>
+      </div>
     </div>
 
     <div class="hdr-r">
+      <div class="iucnbar">
+    <div class="ib-track">
+      
+        <span class="ib-seg on" style="--lc:#1c7a4e">
+          <i></i><b>LC</b>
+        </span>
+        <span class="ib-seg" style="--lc:#8a7c12">
+          <i></i><b>NT</b>
+        </span>
+        <span class="ib-seg" style="--lc:#a87413">
+          <i></i><b>VU</b>
+        </span>
+        <span class="ib-seg" style="--lc:#b04a1e">
+          <i></i><b>EN</b>
+        </span>
+        <span class="ib-seg" style="--lc:#8f1f22">
+          <i></i><b>CR</b>
+        </span>
+    </div>
+    <div class="ib-now" style="--p:0%;--lc:#1c7a4e">
+      無危
+    </div>
+  </div>
       <div class="taxline">
         <span class="tag-ord"><span class="zh">雀形目</span><em>Passeriformes</em></span>
         <span class="tag-fam"><span class="zh">椋鳥科</span><em>Sturnidae</em></span>
-      </div>
-      <div class="iucn" style="color:#1c5c3c;background:#e2f1e7">
-             <span class="iucn-k">IUCN</span>
-             <span class="zh">無危 LC</span>
-             <span class="en en-h">Least Concern LC</span>
-           </div>
-      <div class="quick">
-        <div class="q">
-          <span class="q-k zh">身長</span><span class="q-k en en-h">Length</span>
-          <span class="q-v">—</span>
-        </div>
-        <div class="q">
-          <span class="q-k zh">體重</span><span class="q-k en en-h">Mass</span>
-          <span class="q-v">116.3 g</span>
-        </div>
       </div>
     </div>
   </header>
@@ -235,14 +271,41 @@
   <section class="band band-a">
     <div class="col-l">
       
-  <section class="pnl" style="flex:0 0 206px;height:206px">
-    <h3 class="pnl-h"><span class="pnl-i">◈</span><span class="zh">分類資訊</span><span class="en en-h">Taxonomy</span></h3>
-    <div class="pnl-b"><ul class="taxlist"><li><span class="k">界</span><span class="v">動物界 Animalia</span></li><li><span class="k">門</span><span class="v">脊索動物門 Chordata</span></li><li><span class="k">綱</span><span class="v">鳥綱 Aves</span></li><li><span class="k">目</span><span class="v">雀形目 Passeriformes</span></li><li><span class="k">科</span><span class="v">椋鳥科 Sturnidae</span></li><li><span class="k">屬</span><span class="v">Acridotheres</span></li><li><span class="k">種</span><span class="v">八哥 Acridotheres cristatellus</span></li></ul></div>
+  <section class="pnl" style="flex:0 0 268px;height:268px">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="6" width="14" height="9" rx="2"/><rect x="4" y="33" width="14" height="9" rx="2"/><rect x="30" y="33" width="14" height="9" rx="2"/><path d="M24 15v9M11 33v-9h26v9"/></g></svg></span>
+      <span class="zh">分類資訊</span><span class="en en-h">Taxonomy</span>
+    </h3>
+    <div class="pnl-b"><ul class="taxlist">
+          <li><span class="k">界</span>
+            <span class="v"><span class="zh">動物界</span><span class="en en-h">動物界</span><em>Animalia</em></span>
+          </li>
+          <li><span class="k">門</span>
+            <span class="v"><span class="zh">脊索動物門</span><span class="en en-h">脊索動物門</span><em>Chordata</em></span>
+          </li>
+          <li><span class="k">綱</span>
+            <span class="v"><span class="zh">鳥綱</span><span class="en en-h">鳥綱</span><em>Aves</em></span>
+          </li>
+          <li><span class="k">目</span>
+            <span class="v"><span class="zh">雀形目</span><span class="en en-h">雀形目</span><em>Passeriformes</em></span>
+          </li>
+          <li><span class="k">科</span>
+            <span class="v"><span class="zh">椋鳥科</span><span class="en en-h">椋鳥科</span><em>Sturnidae</em></span>
+          </li>
+          <li><span class="k">屬</span>
+            <span class="v"><span class="zh">Acridotheres</span><span class="en en-h">Acridotheres</span><em></em></span>
+          </li>
+          <li><span class="k">種</span>
+            <span class="v"><span class="zh">Acridotheres cristatellus</span><span class="en en-h">Acridotheres cristatellus</span><em></em></span>
+          </li></ul></div>
   </section>
       
-  <section class="pnl">
-    <h3 class="pnl-h"><span class="pnl-i">✦</span><span class="zh">名稱由來</span><span class="en en-h">Name origin</span></h3>
-    <div class="pnl-b"><p class="t-zh">物種名cristatella是拉丁文cristatus的縮小詞，意為「有冠的」或「有羽飾的」。</p><p class="t-en">The specific epithet cristatella is a Latin diminutive of cristatus meaning “crested“ or “plumed“.</p></div>
+  <section class="pnl" style="flex:1">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 32a12 12 0 1 1 16 0c-2 2-2 4-2 6H18c0-2 0-4-2-6z"/><path d="M19 42h10M20 45h8"/></g></svg></span>
+      <span class="zh">名稱由來</span><span class="en en-h">Name origin</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">物種名cristatella是拉丁文cristatus的縮小詞…</p><p class="t-en">The specific epithet cristatella is a Latin diminutive of cristatus meaning “crested“ or…</p></div>
   </section>
     </div>
 
@@ -253,37 +316,60 @@
 
     <div class="col-r">
       
-  <section class="pnl" style="flex:1.25">
-    <h3 class="pnl-h"><span class="pnl-i">▤</span><span class="zh">量度</span><span class="en en-h">Measurements</span></h3>
+  <section class="pnl" style="flex:1.3">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="18" width="40" height="12" rx="2"/><path d="M12 18v6M20 18v9M28 18v6M36 18v9"/></g></svg></span>
+      <span class="zh">量度</span><span class="en en-h">Measurements</span>
+    </h3>
     <div class="pnl-b"><ul class="mbs"><li class="mb">
         <span class="mb-n"><span class="zh">翼長</span><span class="en en-h">Wing</span></span>
         <span class="mb-t"><i style="width:100%"></i></span>
-        <span class="mb-v">134 mm</span>
+        <span class="mb-v">134<em>mm</em></span>
       </li><li class="mb">
         <span class="mb-n"><span class="zh">尾長</span><span class="en en-h">Tail</span></span>
         <span class="mb-t"><i style="width:61%"></i></span>
-        <span class="mb-v">81.2 mm</span>
+        <span class="mb-v">81.2<em>mm</em></span>
       </li><li class="mb">
         <span class="mb-n"><span class="zh">嘴峰</span><span class="en en-h">Bill</span></span>
         <span class="mb-t"><i style="width:20%"></i></span>
-        <span class="mb-v">27.1 mm</span>
+        <span class="mb-v">27.1<em>mm</em></span>
       </li><li class="mb">
         <span class="mb-n"><span class="zh">跗蹠</span><span class="en en-h">Tarsus</span></span>
         <span class="mb-t"><i style="width:28%"></i></span>
-        <span class="mb-v">38.1 mm</span>
+        <span class="mb-v">38.1<em>mm</em></span>
       </li></ul></div>
   </section>
       
-  <section class="pnl">
-    <h3 class="pnl-h"><span class="pnl-i">▣</span><span class="zh">棲息環境</span><span class="en en-h">Habitat</span></h3>
-    <div class="pnl-b"><div class="chiprow"><span class="chip chip-h">城市公園</span><span class="chip chip-h">開闊地</span></div>
-         <p class="t-en en en-h chiprow-en">Urban &amp; Parks · Open Country</p></div>
+  <section class="pnl" style="flex:1">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8l9 13h-5l7 10H6l7-10h-5z" fill="currentColor"/><path d="M17 31v9M32 14l8 12h-4l6 9H24l5-9h-3z" fill="currentColor"/><path d="M32 35v5M8 44h32"/></g></svg></span>
+      <span class="zh">棲息環境</span><span class="en en-h">Habitat</span>
+    </h3>
+    <div class="pnl-b"><div class="chiprow"><span class="chip" title="城市公園">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 42V22h12v20M18 42V14h13v28M31 42V26h11v16" /><path d="M10 27h4M10 33h4M23 20h3M23 26h3M23 32h3M35 31h3M35 37h3" fill="currentColor"/><path d="M3 44h42"/></g></svg>
+      <span class="zh">城市公園</span>
+      <span class="en en-h">Urban &amp; Parks</span>
+    </span><span class="chip" title="開闊地">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="16" r="6"/><path d="M4 34h40M4 40h40M10 28h28"/><path d="M14 28l4-6M24 28v-6M34 28l-4-6"/></g></svg>
+      <span class="zh">開闊地</span>
+      <span class="en en-h">Open Country</span>
+    </span></div></div>
   </section>
       
-  <section class="pnl">
-    <h3 class="pnl-h"><span class="pnl-i">●</span><span class="zh">食物</span><span class="en en-h">Diet</span></h3>
-    <div class="pnl-b"><div class="chiprow"><span class="chip chip-d">植物藻類</span><span class="chip chip-d">雜食</span></div>
-         <p class="t-en en en-h chiprow-en">Plants &amp; Algae · Omnivore</p></div>
+  <section class="pnl" style="flex:1">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="27" rx="7" ry="9"/><path d="M24 18v18M17.5 21h13M18 27h12M18.5 33l-3 5M29.5 33l3 5M19 22l-7-6M29 22l7-6M21 19l-4-7M27 19l4-7"/></g></svg></span>
+      <span class="zh">食物</span><span class="en en-h">Diet</span>
+    </h3>
+    <div class="pnl-b"><div class="chiprow"><span class="chip" title="植物藻類">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 38c8-2 12-8 14-18 6 4 8 10 6 16-4 4-14 4-20 2z"/><path d="M18 20c2-6 7-9 14-8-1 7-6 11-14 8z" fill="currentColor"/><path d="M24 38v6M16 40v4M32 40v4"/></g></svg>
+      <span class="zh">植物藻類</span>
+      <span class="en en-h">Plants &amp; Algae</span>
+    </span><span class="chip" title="雜食">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 26h32a16 16 0 0 1-32 0z"/><path d="M8 40h32"/><path d="M20 20c-3-3-3-7 0-10 3 3 3 7 0 10z" fill="currentColor"/><path d="M30 20c0-4 2-7 5-8 1 4-1 8-5 8z" fill="currentColor"/></g></svg>
+      <span class="zh">雜食</span>
+      <span class="en en-h">Omnivore</span>
+    </span></div></div>
   </section>
     </div>
   </section>
@@ -292,23 +378,56 @@
   <section class="band band-b">
     
   <section class="pnl">
-    <h3 class="pnl-h"><span class="pnl-i">◉</span><span class="zh">分佈地區</span><span class="en en-h">Range</span></h3>
-    <div class="pnl-b"><p class="t-zh">八哥原本分佈於中國大陸南部及印度支那半島，是典型的東洋界鳥類。</p><p class="t-en">The range spans from southeastern and central China to northern Indochina.</p></div>
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12l12-4 12 4 12-4v28l-12 4-12-4-12 4z"/><path d="M18 8v28M30 12v28"/><circle cx="24" cy="22" r="4" fill="currentColor"/></g></svg></span>
+      <span class="zh">分佈地區</span><span class="en en-h">Range</span>
+    </h3>
+    <div class="pnl-b"><div class="range-wrap"><svg class="rangesvg" viewBox="0 0 200 108" aria-hidden="true">
+    <g class="land">
+    <path d="M18 40c14-6 26-4 34 2 6 4 4 12-4 14-10 2-18-2-26-2S12 50 18 40z" />
+    <path d="M64 28c10 2 16 10 14 20-2 10 6 16 2 24-6 10-20 8-26-2-4-8 2-14 2-22 0-10-2-20 8-20z" />
+    <path d="M96 26c14-4 28 0 34 8 6 8 0 16-8 18-10 4-18 12-28 10-10-4-12-14-6-22 4-6 2-12 8-14z" />
+    <path d="M140 30c12-2 24 4 26 12 2 8-6 12-16 12-12 0-22-4-22-12s2-10 12-12z" />
+    <path d="M126 60c8 0 14 6 12 12-2 6-10 8-16 4-6-6-4-16 4-16z" /></g>
+    
+    <g class="pin on" transform="translate(128 36)">
+      <circle r="7"/><circle r="3" class="core"/>
+      <text y="-12">中國</text>
+    </g>
+    <g class="pin on" transform="translate(104 58)">
+      <circle r="7"/><circle r="3" class="core"/>
+      <text y="-12">印度</text>
+    </g>
+    <g class="pin on" transform="translate(150 54)">
+      <circle r="7"/><circle r="3" class="core"/>
+      <text y="-12">HK</text>
+    </g>
+  </svg></div>
+       <p class="t-zh">八哥原本分佈於中國大陸南部及印度支那半島，是典型的東洋界鳥類。</p><p class="t-en">The range spans from southeastern and central China to northern Indochina.</p></div>
   </section>
     
   <section class="pnl">
-    <h3 class="pnl-h"><span class="pnl-i">◆</span><span class="zh">外形特徵</span><span class="en en-h">Appearance</span></h3>
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M38 8c-14 0-24 10-24 22l-6 10"/><path d="M38 8c2 12-8 24-20 24-4 0-4-4-4-4"/><path d="M36 12l-20 24M33 20l-13 3"/></g></svg></span>
+      <span class="zh">外形特徵</span><span class="en en-h">Appearance</span>
+    </h3>
     <div class="pnl-b"><p class="t-zh">本種鳥類通體黑色，粗看起來頗似烏鴉，但是與烏鴉有着顯著的區別。</p><p class="t-en t-miss">Data pending</p></div>
   </section>
     
   <section class="pnl">
-    <h3 class="pnl-h"><span class="pnl-i">●</span><span class="zh">食物</span><span class="en en-h">Feeding</span></h3>
-    <div class="pnl-b"><p class="t-zh">八哥為雜食性，通過對八哥食物得研究發現植物性食物和動物性食物基本各佔50%的比例。</p><p class="t-en">Although it eats mainly insects, this bird can eat a wide variety of items including fruit, grains, meat, manure and garbage.</p></div>
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26a18 12 0 0 0 36 0z" fill="currentColor"/><ellipse cx="18" cy="20" rx="5" ry="7"/><ellipse cx="27" cy="19" rx="4.4" ry="6"/><path d="M6 26h36"/></g></svg></span>
+      <span class="zh">成長與繁殖</span><span class="en en-h">Breeding</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">本物種繁殖季節為4月－7月大多於5月產卵每巢4－6枚卵，卵的顏色為鮮豔的藍色；</p><p class="t-en">Both the male and the female take part in the construction of the nest.</p></div>
   </section>
     
   <section class="pnl">
-    <h3 class="pnl-h"><span class="pnl-i">▣</span><span class="zh">棲息</span><span class="en en-h">Habitat in detail</span></h3>
-    <div class="pnl-b"><p class="t-zh">八哥通常棲息於靠近城市和農業區的開闊空間。</p><p class="t-en">It is also commonly distributed in grasslands, fields and at the edge of forests.</p></div>
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 20c0-4 4-6 8-6s8 2 8 6c0 6-6 8-6 12"/><circle cx="19" cy="14" r="5"/><circle cx="32" cy="34" r="4"/><circle cx="20" cy="36" r="4"/><circle cx="40" cy="20" r="3"/></g></svg></span>
+      <span class="zh">行為特徵</span><span class="en en-h">Behaviour</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">但非法鳥類貿易使八哥迅速擴散，現在在菲律賓及婆羅洲有引入種群，而在淮河以北的中國北方地區八哥也逐漸成為常見的留鳥。</p><p class="t-en">The crest is usually not well developed at this stage.</p></div>
   </section>
   </section>
 
@@ -316,57 +435,63 @@
   <section class="band band-c">
     
   <section class="pnl">
-    <h3 class="pnl-h"><span class="pnl-i">◈</span><span class="zh">成長與繁殖</span><span class="en en-h">Breeding</span></h3>
-    <div class="pnl-b"><p class="t-zh">本物種繁殖季節為4月－7月大多於5月產卵每巢4－6枚卵，卵的顏色為鮮豔的藍色；</p><p class="t-en">Both the male and the female take part in the construction of the nest.</p></div>
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 34h20a6 6 0 0 0 0-12H14a6 6 0 0 1 0-12h16"/><path d="M26 6l6 4-6 4M22 38l-6 4 6 4" fill="currentColor"/></g></svg></span>
+      <span class="zh">遷徙</span><span class="en en-h">Migration</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh t-miss">資料待查</p><p class="t-en">In the winter months, as insects and fruit are less common, the crested myna eats a lot more garbage (representing about 15% of its diet).</p></div>
   </section>
     
   <section class="pnl">
-    <h3 class="pnl-h"><span class="pnl-i">◇</span><span class="zh">行為特徵</span><span class="en en-h">Behaviour</span></h3>
-    <div class="pnl-b"><p class="t-zh">但非法鳥類貿易使八哥迅速擴散，現在在菲律賓及婆羅洲有引入種群，而在淮河以北的中國北方地區八哥也逐漸成為常見的留鳥。</p><p class="t-en">The crest is usually not well developed at this stage.</p></div>
-  </section>
-    
-  <section class="pnl">
-    <h3 class="pnl-h"><span class="pnl-i">✦</span><span class="zh">有趣小知識</span><span class="en en-h">Fun fact</span></h3>
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 32a12 12 0 1 1 16 0c-2 2-2 4-2 6H18c0-2 0-4-2-6z"/><path d="M19 42h10M20 45h8"/></g></svg></span>
+      <span class="zh">有趣小知識</span><span class="en en-h">Fun fact</span>
+    </h3>
     <div class="pnl-b"><p class="t-zh">八哥現屬於法國鳥類學家路易·皮埃爾·維埃約於1816年引入的八哥屬（Acridotheres）。</p><p class="t-en">The crested myna (Acridotheres cristatellus), also known as the Chinese starling, is a species of starling in the genus Acridotheres native to southeastern China and Indochina.</p></div>
   </section>
     
   <section class="pnl">
-    <h3 class="pnl-h"><span class="pnl-i">◐</span><span class="zh">鳴聲</span><span class="en en-h">Voice</span></h3>
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 30h6l8 8V10l-8 8h-6z" fill="currentColor"/><path d="M32 18c4 3 4 9 0 12M37 13c7 6 7 16 0 22"/></g></svg></span>
+      <span class="zh">鳴聲</span><span class="en en-h">Voice</span>
+    </h3>
     <div class="pnl-b"><p class="t-zh">八哥生活在草原和山區的樹林中，善於鳴叫，也會模仿其他鳥的叫聲，經過訓練，還能模仿人類說話。</p><p class="t-en">The crested myna has a wide array of songs and calls, from whistles to warbles to chortles.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l15 7v11c0 9-6 15-15 17-9-2-15-8-15-17V13z"/><path d="M18 24h12M24 18v12" fill="currentColor"/></g></svg></span>
+      <span class="zh">保育現況</span><span class="en en-h">Conservation</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">在台灣受外來種白尾八哥、家八哥等，在野外到處繁殖競爭棲地和被補獵為寵物鳥影響，造成當地數量大減，2008年起被改列為珍貴稀有保護鳥類。</p><p class="t-en">It has a range that is larger than 20,000 km 2 and therefore, its range is too large for this bird to be considered vulnerable under the criterion of range size.</p></div>
   </section>
   </section>
 
   <!-- ───────── 評分帶 ───────── -->
   <section class="score">
     <div class="score-l">
-      <h3 class="score-h">
-        <span class="zh">圖鑑評分</span><span class="en en-h">Dex rating</span>
+      <h3 class="score-h"><svg class="ic " viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l16 8v11c0 9-7 15-16 17-9-2-16-8-16-17V14z"/><path d="M17 24l5 6 10-11"/></g></svg><span class="zh">圖鑑評分</span><span class="en en-h">Dex rating</span>
         <em class="note-zh">自訂指標，非學術評分</em><em class="note-en en-h">Custom index, not an academic rating</em>
       </h3>
       <ul class="dims">
         <li class="dim">
-            <span class="dim-n"><span class="zh">生物重要性</span><span class="en en-h">Ecological importance</span>
-              <em class="dim-from">IUCN 紅色名錄級別</em></span>
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l16 8v11c0 9-7 15-16 17-9-2-16-8-16-17V14z"/><path d="M17 24l5 6 10-11"/></g></svg><span class="zh">生物重要性</span><span class="en en-h">Ecological importance</span></span>
             <span class="dim-bar"><i style="width:40%"></i></span>
             <span class="dim-v">2.0</span>
           </li><li class="dim">
-            <span class="dim-n"><span class="zh">適應力</span><span class="en en-h">Adaptability</span>
-              <em class="dim-from">食性 × 棲地 tag 數</em></span>
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 20c0-4 4-6 8-6s8 2 8 6c0 6-6 8-6 12"/><circle cx="19" cy="14" r="5"/><circle cx="32" cy="34" r="4"/><circle cx="20" cy="36" r="4"/><circle cx="40" cy="20" r="3"/></g></svg><span class="zh">適應力</span><span class="en en-h">Adaptability</span></span>
             <span class="dim-bar"><i style="width:76%"></i></span>
             <span class="dim-v">3.8</span>
           </li><li class="dim">
-            <span class="dim-n"><span class="zh">觀賞價值</span><span class="en en-h">Showiness</span>
-              <em class="dim-from">體長（AVONET 翼長後備）</em></span>
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M38 8c-14 0-24 10-24 22l-6 10"/><path d="M38 8c2 12-8 24-20 24-4 0-4-4-4-4"/><path d="M36 12l-20 24M33 20l-13 3"/></g></svg><span class="zh">觀賞價值</span><span class="en en-h">Showiness</span></span>
             <span class="dim-bar"><i style="width:72%"></i></span>
             <span class="dim-v">3.6</span>
           </li><li class="dim">
-            <span class="dim-n"><span class="zh">研究價值</span><span class="en en-h">Research value</span>
-              <em class="dim-from">遷徙／語源／要點</em></span>
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 32a12 12 0 1 1 16 0c-2 2-2 4-2 6H18c0-2 0-4-2-6z"/><path d="M19 42h10M20 45h8"/></g></svg><span class="zh">研究價值</span><span class="en en-h">Research value</span></span>
             <span class="dim-bar"><i style="width:66%"></i></span>
             <span class="dim-v">3.3</span>
           </li><li class="dim">
-            <span class="dim-n"><span class="zh">保育關注度</span><span class="en en-h">Conservation concern</span>
-              <em class="dim-from">受脅註記 + IUCN</em></span>
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26a18 12 0 0 0 36 0z" fill="currentColor"/><ellipse cx="18" cy="20" rx="5" ry="7"/><ellipse cx="27" cy="19" rx="4.4" ry="6"/><path d="M6 26h36"/></g></svg><span class="zh">保育關注度</span><span class="en en-h">Conservation concern</span></span>
             <span class="dim-bar"><i style="width:60%"></i></span>
             <span class="dim-v">3.0</span>
           </li>
@@ -395,6 +520,936 @@
     <div class="f-col f-src">
       <span class="f-k zh">資料出處（可追溯）</span><span class="f-k en en-h">Sources</span>
       <span class="f-v small mono">zh.wikipedia 八哥 · pageid 65246 ｜ en.wikipedia Crested myna · pageid 1350552 · 分類：eBird/Clements</span>
+    </div>
+    <div class="f-col">
+      <span class="f-k zh">圖鑑版本</span><span class="f-k en en-h">Version</span>
+      <span class="f-v mono">v1.9.0</span>
+    </div>
+  </footer>
+</div></div></div>
+  </section>
+  <section class="wrap" id="card-0004">
+    <div class="cap">
+      <b>NO.0004</b> 小葵花鳳頭鸚鵡 · Yellow-crested Cockatoo
+      <span class="hint">螢幕上的是 1200×1600 原尺寸（縮放看整張，1:1 看細節）</span>
+    </div>
+    <div class="stage"><div class="scaler">
+<div class="dx lang-both " style="--c:#1f6448;--t:#eef7f1;--a:#e0a92b">
+
+  <!-- ───────── 標題帶 ───────── -->
+  <header class="hdr">
+    <div class="hdr-l">
+      <img class="chip-art" src="https://pub-a9333a974e814ccba1994639b6e79266.r2.dev/birdcards/0004.avif" alt="" referrerpolicy="no-referrer" />
+      <div class="no-pill">NO.0004</div>
+    </div>
+
+    <div class="hdr-c">
+      <h1 class="name">小葵花鳳頭鸚鵡</h1>
+      <div class="sci">Cacatua sulphurea</div>
+      <div class="en-pill"><span class="en en-h">Yellow-crested Cockatoo</span></div>
+      <div class="hdr-tags">
+        <span class="htag"><svg class="ic " viewBox="0 0 48 48" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="6" width="14" height="9" rx="2"/><rect x="4" y="33" width="14" height="9" rx="2"/><rect x="30" y="33" width="14" height="9" rx="2"/><path d="M24 15v9M11 33v-9h26v9"/></g></svg><span class="zh">鸚形目</span><em>鳳頭鸚鵡科</em></span>
+        <span class="htag"><svg class="ic " viewBox="0 0 48 48" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24h40M4 18v12M44 18v12M14 20v8M24 20v8M34 20v8"/></g></svg><b>—</b><em>cm</em></span>
+        <span class="htag"><svg class="ic " viewBox="0 0 48 48" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16h24l4 24H8z"/><path d="M18 16a6 6 0 0 1 12 0"/><path d="M24 24v8M20 28h8"/></g></svg><b>303.3</b><em>g</em></span>
+      </div>
+    </div>
+
+    <div class="hdr-r">
+      <div class="iucnbar">
+    <div class="ib-track">
+      
+        <span class="ib-seg" style="--lc:#1c7a4e">
+          <i></i><b>LC</b>
+        </span>
+        <span class="ib-seg" style="--lc:#8a7c12">
+          <i></i><b>NT</b>
+        </span>
+        <span class="ib-seg" style="--lc:#a87413">
+          <i></i><b>VU</b>
+        </span>
+        <span class="ib-seg" style="--lc:#b04a1e">
+          <i></i><b>EN</b>
+        </span>
+        <span class="ib-seg on" style="--lc:#8f1f22">
+          <i></i><b>CR</b>
+        </span>
+    </div>
+    <div class="ib-now" style="--p:100%;--lc:#8f1f22">
+      極危
+    </div>
+  </div>
+      <div class="taxline">
+        <span class="tag-ord"><span class="zh">鸚形目</span><em>Psittaciformes</em></span>
+        <span class="tag-fam"><span class="zh">鳳頭鸚鵡科</span><em>Cacatuidae</em></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ───────── 上段：左欄 + 主插畫 + 右欄 ───────── -->
+  <section class="band band-a">
+    <div class="col-l">
+      
+  <section class="pnl" style="flex:0 0 268px;height:268px">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="6" width="14" height="9" rx="2"/><rect x="4" y="33" width="14" height="9" rx="2"/><rect x="30" y="33" width="14" height="9" rx="2"/><path d="M24 15v9M11 33v-9h26v9"/></g></svg></span>
+      <span class="zh">分類資訊</span><span class="en en-h">Taxonomy</span>
+    </h3>
+    <div class="pnl-b"><ul class="taxlist">
+          <li><span class="k">界</span>
+            <span class="v"><span class="zh">動物界</span><span class="en en-h">動物界</span><em>Animalia</em></span>
+          </li>
+          <li><span class="k">門</span>
+            <span class="v"><span class="zh">脊索動物門</span><span class="en en-h">脊索動物門</span><em>Chordata</em></span>
+          </li>
+          <li><span class="k">綱</span>
+            <span class="v"><span class="zh">鳥綱</span><span class="en en-h">鳥綱</span><em>Aves</em></span>
+          </li>
+          <li><span class="k">目</span>
+            <span class="v"><span class="zh">鸚形目</span><span class="en en-h">鸚形目</span><em>Psittaciformes</em></span>
+          </li>
+          <li><span class="k">科</span>
+            <span class="v"><span class="zh">鳳頭鸚鵡科</span><span class="en en-h">鳳頭鸚鵡科</span><em>Cacatuidae</em></span>
+          </li>
+          <li><span class="k">屬</span>
+            <span class="v"><span class="zh">Cacatua</span><span class="en en-h">Cacatua</span><em></em></span>
+          </li>
+          <li><span class="k">種</span>
+            <span class="v"><span class="zh">Cacatua sulphurea</span><span class="en en-h">Cacatua sulphurea</span><em></em></span>
+          </li></ul></div>
+  </section>
+      
+  <section class="pnl" style="flex:1">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 32a12 12 0 1 1 16 0c-2 2-2 4-2 6H18c0-2 0-4-2-6z"/><path d="M19 42h10M20 45h8"/></g></svg></span>
+      <span class="zh">名稱由來</span><span class="en en-h">Name origin</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh t-miss">資料待查</p><p class="t-en">He placed it with the parrots in the genus Psittacus and coined the binomial name Psittacus sulphureus.</p></div>
+  </section>
+    </div>
+
+    <figure class="hero">
+      <img src="https://pub-a9333a974e814ccba1994639b6e79266.r2.dev/birdcards/0004.avif" alt="小葵花鳳頭鸚鵡" referrerpolicy="no-referrer" />
+      <figcaption>插畫：BIRD-DEX 2 · Artwork: BIRD-DEX 2</figcaption>
+    </figure>
+
+    <div class="col-r">
+      
+  <section class="pnl" style="flex:1.3">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="18" width="40" height="12" rx="2"/><path d="M12 18v6M20 18v9M28 18v6M36 18v9"/></g></svg></span>
+      <span class="zh">量度</span><span class="en en-h">Measurements</span>
+    </h3>
+    <div class="pnl-b"><ul class="mbs"><li class="mb">
+        <span class="mb-n"><span class="zh">翼長</span><span class="en en-h">Wing</span></span>
+        <span class="mb-t"><i style="width:100%"></i></span>
+        <span class="mb-v">221.2<em>mm</em></span>
+      </li><li class="mb">
+        <span class="mb-n"><span class="zh">尾長</span><span class="en en-h">Tail</span></span>
+        <span class="mb-t"><i style="width:45%"></i></span>
+        <span class="mb-v">99.5<em>mm</em></span>
+      </li><li class="mb">
+        <span class="mb-n"><span class="zh">嘴峰</span><span class="en en-h">Bill</span></span>
+        <span class="mb-t"><i style="width:17%"></i></span>
+        <span class="mb-v">37.4<em>mm</em></span>
+      </li><li class="mb">
+        <span class="mb-n"><span class="zh">跗蹠</span><span class="en en-h">Tarsus</span></span>
+        <span class="mb-t"><i style="width:10%"></i></span>
+        <span class="mb-v">21.4<em>mm</em></span>
+      </li></ul></div>
+  </section>
+      
+  <section class="pnl" style="flex:1">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8l9 13h-5l7 10H6l7-10h-5z" fill="currentColor"/><path d="M17 31v9M32 14l8 12h-4l6 9H24l5-9h-3z" fill="currentColor"/><path d="M32 35v5M8 44h32"/></g></svg></span>
+      <span class="zh">棲息環境</span><span class="en en-h">Habitat</span>
+    </h3>
+    <div class="pnl-b"><div class="chiprow"><span class="chip" title="草地農田">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 40V26M14 40V20M20 40V28M26 40V22M32 40V27M38 40V23"/><path d="M12 20l2-8 2 8M24 16l2-9 2 9" fill="currentColor"/><path d="M4 44h40"/></g></svg>
+      <span class="zh">草地農田</span>
+      <span class="en en-h">Grassland &amp; Farmland</span>
+    </span></div></div>
+  </section>
+      
+  <section class="pnl" style="flex:1">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="27" rx="7" ry="9"/><path d="M24 18v18M17.5 21h13M18 27h12M18.5 33l-3 5M29.5 33l3 5M19 22l-7-6M29 22l7-6M21 19l-4-7M27 19l4-7"/></g></svg></span>
+      <span class="zh">食物</span><span class="en en-h">Diet</span>
+    </h3>
+    <div class="pnl-b"><div class="chiprow"><span class="chip" title="昆蟲">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="27" rx="7" ry="9"/><path d="M24 18v18M17.5 21h13M18 27h12M18.5 33l-3 5M29.5 33l3 5M19 22l-7-6M29 22l7-6M21 19l-4-7M27 19l4-7"/></g></svg>
+      <span class="zh">昆蟲</span>
+      <span class="en en-h">Insects</span>
+    </span><span class="chip" title="種子穀物">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 40V14"/><path d="M24 20c-5 0-9-4-9-9 5 0 9 4 9 9z" fill="currentColor"/><path d="M24 28c5 0 9-4 9-9-5 0-9 4-9 9z" fill="currentColor"/><path d="M24 36c-5 0-9-4-9-9 5 0 9 4 9 9z" fill="currentColor"/></g></svg>
+      <span class="zh">種子穀物</span>
+      <span class="en en-h">Seeds &amp; Grain</span>
+    </span></div></div>
+  </section>
+    </div>
+  </section>
+
+  <!-- ───────── 中段一 ───────── -->
+  <section class="band band-b">
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12l12-4 12 4 12-4v28l-12 4-12-4-12 4z"/><path d="M18 8v28M30 12v28"/><circle cx="24" cy="22" r="4" fill="currentColor"/></g></svg></span>
+      <span class="zh">分佈地區</span><span class="en en-h">Range</span>
+    </h3>
+    <div class="pnl-b"><div class="range-wrap"><svg class="rangesvg" viewBox="0 0 200 108" aria-hidden="true">
+    <g class="land">
+    <path d="M18 40c14-6 26-4 34 2 6 4 4 12-4 14-10 2-18-2-26-2S12 50 18 40z" />
+    <path d="M64 28c10 2 16 10 14 20-2 10 6 16 2 24-6 10-20 8-26-2-4-8 2-14 2-22 0-10-2-20 8-20z" />
+    <path d="M96 26c14-4 28 0 34 8 6 8 0 16-8 18-10 4-18 12-28 10-10-4-12-14-6-22 4-6 2-12 8-14z" />
+    <path d="M140 30c12-2 24 4 26 12 2 8-6 12-16 12-12 0-22-4-22-12s2-10 12-12z" />
+    <path d="M126 60c8 0 14 6 12 12-2 6-10 8-16 4-6-6-4-16 4-16z" /></g>
+    
+    <g class="pin on" transform="translate(150 54)">
+      <circle r="7"/><circle r="3" class="core"/>
+      <text y="-12">HK</text>
+    </g>
+  </svg></div>
+       <p class="t-zh t-miss">資料待查</p><p class="t-en">An introduced population of these birds is found in Hong Kong.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M38 8c-14 0-24 10-24 22l-6 10"/><path d="M38 8c2 12-8 24-20 24-4 0-4-4-4-4"/><path d="M36 12l-20 24M33 20l-13 3"/></g></svg></span>
+      <span class="zh">外形特徵</span><span class="en en-h">Appearance</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">國際自然保護聯盟於2000年將小葵花鳳頭鸚鵡於瀕危物種紅色名錄。</p><p class="t-en t-miss">Data pending</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26a18 12 0 0 0 36 0z" fill="currentColor"/><ellipse cx="18" cy="20" rx="5" ry="7"/><ellipse cx="27" cy="19" rx="4.4" ry="6"/><path d="M6 26h36"/></g></svg></span>
+      <span class="zh">成長與繁殖</span><span class="en en-h">Breeding</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">但因其習性使然，於樹洞築巢，且愛啃食花朵以食用花蜜，有專家擔心樹木健康，但未造成顯著威脅。</p><p class="t-en">The eggs are incubated for about 28 days and the chicks leave the nest about 75 days after hatching.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 20c0-4 4-6 8-6s8 2 8 6c0 6-6 8-6 12"/><circle cx="19" cy="14" r="5"/><circle cx="32" cy="34" r="4"/><circle cx="20" cy="36" r="4"/><circle cx="40" cy="20" r="3"/></g></svg></span>
+      <span class="zh">行為特徵</span><span class="en en-h">Behaviour</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh t-miss">資料待查</p><p class="t-en">The eggs are white and usually two in a clutch.</p></div>
+  </section>
+  </section>
+
+  <!-- ───────── 中段二 ───────── -->
+  <section class="band band-c">
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="15" r="6"/><path d="M6 40c0-7 5-11 11-11s11 4 11 11"/><circle cx="34" cy="18" r="4.5"/><path d="M28 40c0-6 3-9 6-9s6 3 6 9"/></g></svg></span>
+      <span class="zh">人與鳥</span><span class="en en-h">Birds &amp; people</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">但因其習性使然，於樹洞築巢，且愛啃食花朵以食用花蜜，有專家擔心樹木健康，但未造成顯著威脅。</p><p class="t-en">In the 18th century, yellow-crested cockatoos were imported into Europe as pets and these birds were described by various naturalists.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 32a12 12 0 1 1 16 0c-2 2-2 4-2 6H18c0-2 0-4-2-6z"/><path d="M19 42h10M20 45h8"/></g></svg></span>
+      <span class="zh">有趣小知識</span><span class="en en-h">Fun fact</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">原有棲地為印尼中部群島和東帝汶「華萊斯地區」一帶，在香港和新加坡發現野化種群。</p><p class="t-en">The yellow-crested cockatoo (Cacatua sulphurea) also known as the lesser sulphur-crested cockatoo, is a medium-sized (about 34-cm-long) cockatoo with white plumage, bluish-white bare orbital skin,</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 30h6l8 8V10l-8 8h-6z" fill="currentColor"/><path d="M32 18c4 3 4 9 0 12M37 13c7 6 7 16 0 22"/></g></svg></span>
+      <span class="zh">鳴聲</span><span class="en en-h">Voice</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">語言能力一般，叫聲較大。</p><p class="t-en">The yellow-crested cockatoo is critically endangered.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l15 7v11c0 9-6 15-15 17-9-2-15-8-15-17V13z"/><path d="M18 24h12M24 18v12" fill="currentColor"/></g></svg></span>
+      <span class="zh">保育現況</span><span class="en en-h">Conservation</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">國際自然保護聯盟於2000年將小葵花鳳頭鸚鵡於瀕危物種紅色名錄，由瀕危物種升級為極度瀕危物種，甚至比大熊貓、黑麪琵鷺等動物更為珍稀。</p><p class="t-en">Numbers have declined dramatically due to illegal trapping for the cage-bird trade.</p></div>
+  </section>
+  </section>
+
+  <!-- ───────── 評分帶 ───────── -->
+  <section class="score">
+    <div class="score-l">
+      <h3 class="score-h"><svg class="ic " viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l16 8v11c0 9-7 15-16 17-9-2-16-8-16-17V14z"/><path d="M17 24l5 6 10-11"/></g></svg><span class="zh">圖鑑評分</span><span class="en en-h">Dex rating</span>
+        <em class="note-zh">自訂指標，非學術評分</em><em class="note-en en-h">Custom index, not an academic rating</em>
+      </h3>
+      <ul class="dims">
+        <li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l16 8v11c0 9-7 15-16 17-9-2-16-8-16-17V14z"/><path d="M17 24l5 6 10-11"/></g></svg><span class="zh">生物重要性</span><span class="en en-h">Ecological importance</span></span>
+            <span class="dim-bar"><i style="width:100%"></i></span>
+            <span class="dim-v">5.0</span>
+          </li><li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 20c0-4 4-6 8-6s8 2 8 6c0 6-6 8-6 12"/><circle cx="19" cy="14" r="5"/><circle cx="32" cy="34" r="4"/><circle cx="20" cy="36" r="4"/><circle cx="40" cy="20" r="3"/></g></svg><span class="zh">適應力</span><span class="en en-h">Adaptability</span></span>
+            <span class="dim-bar"><i style="width:66%"></i></span>
+            <span class="dim-v">3.3</span>
+          </li><li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M38 8c-14 0-24 10-24 22l-6 10"/><path d="M38 8c2 12-8 24-20 24-4 0-4-4-4-4"/><path d="M36 12l-20 24M33 20l-13 3"/></g></svg><span class="zh">觀賞價值</span><span class="en en-h">Showiness</span></span>
+            <span class="dim-bar"><i style="width:84%"></i></span>
+            <span class="dim-v">4.2</span>
+          </li><li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 32a12 12 0 1 1 16 0c-2 2-2 4-2 6H18c0-2 0-4-2-6z"/><path d="M19 42h10M20 45h8"/></g></svg><span class="zh">研究價值</span><span class="en en-h">Research value</span></span>
+            <span class="dim-bar"><i style="width:36%"></i></span>
+            <span class="dim-v">1.8</span>
+          </li><li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26a18 12 0 0 0 36 0z" fill="currentColor"/><ellipse cx="18" cy="20" rx="5" ry="7"/><ellipse cx="27" cy="19" rx="4.4" ry="6"/><path d="M6 26h36"/></g></svg><span class="zh">保育關注度</span><span class="en en-h">Conservation concern</span></span>
+            <span class="dim-bar"><i style="width:94%"></i></span>
+            <span class="dim-v">4.7</span>
+          </li>
+      </ul>
+    </div>
+    <div class="score-r">
+      <div class="overall">
+        <span class="o-k zh">綜合</span><span class="o-k en en-h">Overall</span>
+        <span class="o-v">3.8</span>
+        <span class="o-max">/ 5</span>
+      </div>
+      <div class="bc" aria-hidden="true"><i style="width:2px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i></div>
+    </div>
+  </section>
+
+  <!-- ───────── 底欄 ───────── -->
+  <footer class="foot">
+    <div class="f-col">
+      <span class="f-k zh">圖鑑編號</span><span class="f-k en en-h">Dex no.</span>
+      <span class="f-v mono">NO.0004</span>
+    </div>
+    <div class="f-col f-wide">
+      <span class="f-k zh">名稱</span><span class="f-k en en-h">Name</span>
+      <span class="f-v">小葵花鳳頭鸚鵡 · <em>Cacatua sulphurea</em></span>
+    </div>
+    <div class="f-col f-src">
+      <span class="f-k zh">資料出處（可追溯）</span><span class="f-k en en-h">Sources</span>
+      <span class="f-v small mono">zh.wikipedia 小葵花凤头鹦鹉 · pageid 611324 ｜ en.wikipedia Yellow-crested cockatoo · pageid 897564 · 分類：eBird/Clements</span>
+    </div>
+    <div class="f-col">
+      <span class="f-k zh">圖鑑版本</span><span class="f-k en en-h">Version</span>
+      <span class="f-v mono">v1.9.0</span>
+    </div>
+  </footer>
+</div></div></div>
+  </section>
+  <section class="wrap" id="card-0049">
+    <div class="cap">
+      <b>NO.0049</b> 青頭潛鴨 · Baer's Pochard
+      <span class="hint">螢幕上的是 1200×1600 原尺寸（縮放看整張，1:1 看細節）</span>
+    </div>
+    <div class="stage"><div class="scaler">
+<div class="dx lang-both " style="--c:#1d5c72;--t:#eef6f8;--a:#2f9fb8">
+
+  <!-- ───────── 標題帶 ───────── -->
+  <header class="hdr">
+    <div class="hdr-l">
+      <img class="chip-art" src="https://pub-a9333a974e814ccba1994639b6e79266.r2.dev/birdcards/0049.avif" alt="" referrerpolicy="no-referrer" />
+      <div class="no-pill">NO.0049</div>
+    </div>
+
+    <div class="hdr-c">
+      <h1 class="name">青頭潛鴨</h1>
+      <div class="sci">Aythya baeri</div>
+      <div class="en-pill"><span class="en en-h">Baer's Pochard</span></div>
+      <div class="hdr-tags">
+        <span class="htag"><svg class="ic " viewBox="0 0 48 48" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="6" width="14" height="9" rx="2"/><rect x="4" y="33" width="14" height="9" rx="2"/><rect x="30" y="33" width="14" height="9" rx="2"/><path d="M24 15v9M11 33v-9h26v9"/></g></svg><span class="zh">雁形目</span><em>鴨科</em></span>
+        <span class="htag"><svg class="ic " viewBox="0 0 48 48" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24h40M4 18v12M44 18v12M14 20v8M24 20v8M34 20v8"/></g></svg><b>44</b><em>cm</em></span>
+        <span class="htag"><svg class="ic " viewBox="0 0 48 48" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16h24l4 24H8z"/><path d="M18 16a6 6 0 0 1 12 0"/><path d="M24 24v8M20 28h8"/></g></svg><b>681.2</b><em>g</em></span>
+      </div>
+    </div>
+
+    <div class="hdr-r">
+      <div class="iucnbar">
+    <div class="ib-track">
+      
+        <span class="ib-seg" style="--lc:#1c7a4e">
+          <i></i><b>LC</b>
+        </span>
+        <span class="ib-seg" style="--lc:#8a7c12">
+          <i></i><b>NT</b>
+        </span>
+        <span class="ib-seg" style="--lc:#a87413">
+          <i></i><b>VU</b>
+        </span>
+        <span class="ib-seg" style="--lc:#b04a1e">
+          <i></i><b>EN</b>
+        </span>
+        <span class="ib-seg on" style="--lc:#8f1f22">
+          <i></i><b>CR</b>
+        </span>
+    </div>
+    <div class="ib-now" style="--p:100%;--lc:#8f1f22">
+      極危
+    </div>
+  </div>
+      <div class="taxline">
+        <span class="tag-ord"><span class="zh">雁形目</span><em>Anseriformes</em></span>
+        <span class="tag-fam"><span class="zh">鴨科</span><em>Anatidae</em></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ───────── 上段：左欄 + 主插畫 + 右欄 ───────── -->
+  <section class="band band-a">
+    <div class="col-l">
+      
+  <section class="pnl" style="flex:0 0 268px;height:268px">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="6" width="14" height="9" rx="2"/><rect x="4" y="33" width="14" height="9" rx="2"/><rect x="30" y="33" width="14" height="9" rx="2"/><path d="M24 15v9M11 33v-9h26v9"/></g></svg></span>
+      <span class="zh">分類資訊</span><span class="en en-h">Taxonomy</span>
+    </h3>
+    <div class="pnl-b"><ul class="taxlist">
+          <li><span class="k">界</span>
+            <span class="v"><span class="zh">動物界</span><span class="en en-h">動物界</span><em>Animalia</em></span>
+          </li>
+          <li><span class="k">門</span>
+            <span class="v"><span class="zh">脊索動物門</span><span class="en en-h">脊索動物門</span><em>Chordata</em></span>
+          </li>
+          <li><span class="k">綱</span>
+            <span class="v"><span class="zh">鳥綱</span><span class="en en-h">鳥綱</span><em>Aves</em></span>
+          </li>
+          <li><span class="k">目</span>
+            <span class="v"><span class="zh">雁形目</span><span class="en en-h">雁形目</span><em>Anseriformes</em></span>
+          </li>
+          <li><span class="k">科</span>
+            <span class="v"><span class="zh">鴨科</span><span class="en en-h">鴨科</span><em>Anatidae</em></span>
+          </li>
+          <li><span class="k">屬</span>
+            <span class="v"><span class="zh">Aythya</span><span class="en en-h">Aythya</span><em></em></span>
+          </li>
+          <li><span class="k">種</span>
+            <span class="v"><span class="zh">Aythya baeri</span><span class="en en-h">Aythya baeri</span><em></em></span>
+          </li></ul></div>
+  </section>
+      
+  <section class="pnl" style="flex:1">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 32a12 12 0 1 1 16 0c-2 2-2 4-2 6H18c0-2 0-4-2-6z"/><path d="M19 42h10M20 45h8"/></g></svg></span>
+      <span class="zh">名稱由來</span><span class="en en-h">Name origin</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">青頭潛鴨由德國學者 命名於1863年，發表於《Reisen im…</p><p class="t-en">The epithet and English common name commemorate the Baltic German naturalist Karl Ernst von…</p></div>
+  </section>
+    </div>
+
+    <figure class="hero">
+      <img src="https://pub-a9333a974e814ccba1994639b6e79266.r2.dev/birdcards/0049.avif" alt="青頭潛鴨" referrerpolicy="no-referrer" />
+      <figcaption>插畫：BIRD-DEX 2 · Artwork: BIRD-DEX 2</figcaption>
+    </figure>
+
+    <div class="col-r">
+      
+  <section class="pnl" style="flex:1.3">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="18" width="40" height="12" rx="2"/><path d="M12 18v6M20 18v9M28 18v6M36 18v9"/></g></svg></span>
+      <span class="zh">量度</span><span class="en en-h">Measurements</span>
+    </h3>
+    <div class="pnl-b"><ul class="mbs"><li class="mb">
+        <span class="mb-n"><span class="zh">翼長</span><span class="en en-h">Wing</span></span>
+        <span class="mb-t"><i style="width:100%"></i></span>
+        <span class="mb-v">201.8<em>mm</em></span>
+      </li><li class="mb">
+        <span class="mb-n"><span class="zh">尾長</span><span class="en en-h">Tail</span></span>
+        <span class="mb-t"><i style="width:29%"></i></span>
+        <span class="mb-v">58.2<em>mm</em></span>
+      </li><li class="mb">
+        <span class="mb-n"><span class="zh">嘴峰</span><span class="en en-h">Bill</span></span>
+        <span class="mb-t"><i style="width:22%"></i></span>
+        <span class="mb-v">44.7<em>mm</em></span>
+      </li><li class="mb">
+        <span class="mb-n"><span class="zh">跗蹠</span><span class="en en-h">Tarsus</span></span>
+        <span class="mb-t"><i style="width:16%"></i></span>
+        <span class="mb-v">31.7<em>mm</em></span>
+      </li></ul></div>
+  </section>
+      
+  <section class="pnl" style="flex:1">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8l9 13h-5l7 10H6l7-10h-5z" fill="currentColor"/><path d="M17 31v9M32 14l8 12h-4l6 9H24l5-9h-3z" fill="currentColor"/><path d="M32 35v5M8 44h32"/></g></svg></span>
+      <span class="zh">棲息環境</span><span class="en en-h">Habitat</span>
+    </h3>
+    <div class="pnl-b"><div class="chiprow"><span class="chip chip-miss">資料待查</span></div></div>
+  </section>
+      
+  <section class="pnl" style="flex:1">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="27" rx="7" ry="9"/><path d="M24 18v18M17.5 21h13M18 27h12M18.5 33l-3 5M29.5 33l3 5M19 22l-7-6M29 22l7-6M21 19l-4-7M27 19l4-7"/></g></svg></span>
+      <span class="zh">食物</span><span class="en en-h">Diet</span>
+    </h3>
+    <div class="pnl-b"><div class="chiprow"><span class="chip chip-miss">資料待查</span></div></div>
+  </section>
+    </div>
+  </section>
+
+  <!-- ───────── 中段一 ───────── -->
+  <section class="band band-b">
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12l12-4 12 4 12-4v28l-12 4-12-4-12 4z"/><path d="M18 8v28M30 12v28"/><circle cx="24" cy="22" r="4" fill="currentColor"/></g></svg></span>
+      <span class="zh">分佈地區</span><span class="en en-h">Range</span>
+    </h3>
+    <div class="pnl-b"><div class="range-wrap"><svg class="rangesvg" viewBox="0 0 200 108" aria-hidden="true">
+    <g class="land">
+    <path d="M18 40c14-6 26-4 34 2 6 4 4 12-4 14-10 2-18-2-26-2S12 50 18 40z" />
+    <path d="M64 28c10 2 16 10 14 20-2 10 6 16 2 24-6 10-20 8-26-2-4-8 2-14 2-22 0-10-2-20 8-20z" />
+    <path d="M96 26c14-4 28 0 34 8 6 8 0 16-8 18-10 4-18 12-28 10-10-4-12-14-6-22 4-6 2-12 8-14z" />
+    <path d="M140 30c12-2 24 4 26 12 2 8-6 12-16 12-12 0-22-4-22-12s2-10 12-12z" />
+    <path d="M126 60c8 0 14 6 12 12-2 6-10 8-16 4-6-6-4-16 4-16z" /></g>
+    
+    <g class="pin on" transform="translate(150 54)">
+      <circle r="7"/><circle r="3" class="core"/>
+      <text y="-12">HK</text>
+    </g>
+  </svg></div>
+       <p class="t-zh">該物種的越冬地近年來同樣大幅收縮，自2010-2011年冬季以來。</p><p class="t-en">Baer's pochard (Aythya baeri) is a diving duck found in eastern Asia.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M38 8c-14 0-24 10-24 22l-6 10"/><path d="M38 8c2 12-8 24-20 24-4 0-4-4-4-4"/><path d="M36 12l-20 24M33 20l-13 3"/></g></svg></span>
+      <span class="zh">外形特徵</span><span class="en en-h">Appearance</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">繁殖期雄性的頭部和頸部近黑色，有綠色光澤，背部黑褐色，胸部暗栗色，脅部淺栗色。</p><p class="t-en t-miss">Data pending</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26a18 12 0 0 0 36 0z" fill="currentColor"/><ellipse cx="18" cy="20" rx="5" ry="7"/><ellipse cx="27" cy="19" rx="4.4" ry="6"/><path d="M6 26h36"/></g></svg></span>
+      <span class="zh">成長與繁殖</span><span class="en en-h">Breeding</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">在孵卵期間，雌性每天在約6:00-20:00之間離巢覓食3次，每次離開27分鐘至4小時，離開前會將巢用植物材料覆蓋，回來後雌性會將覆蓋物蓋在自己身上。</p><p class="t-en">During the hottest days, females often stand on the nest and shelter eggs from the strong sunlight, whilst allowing circulation of air around them.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 20c0-4 4-6 8-6s8 2 8 6c0 6-6 8-6 12"/><circle cx="19" cy="14" r="5"/><circle cx="32" cy="34" r="4"/><circle cx="20" cy="36" r="4"/><circle cx="40" cy="20" r="3"/></g></svg></span>
+      <span class="zh">行為特徵</span><span class="en en-h">Behaviour</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">青頭潛鴨性情膽怯，成對活動，棲息於開闊、水流緩慢的湖泊、沼澤和池塘中，繁殖季築巢於水生植物豐富的水域中，</p><p class="t-en">Baer's pochard is a shy species, that inhabit open, slow-flowing lakes, swamps and ponds.</p></div>
+  </section>
+  </section>
+
+  <!-- ───────── 中段二 ───────── -->
+  <section class="band band-c">
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 34h20a6 6 0 0 0 0-12H14a6 6 0 0 1 0-12h16"/><path d="M26 6l6 4-6 4M22 38l-6 4 6 4" fill="currentColor"/></g></svg></span>
+      <span class="zh">遷徙</span><span class="en en-h">Migration</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">越冬於中國大陸黃河以南的大部分地區，台灣、日本，最南可到東亞和東南亞地區。</p><p class="t-en">It is a bird in North and Central China, and formerly bred in southeast Russia and Northeast China, migrating in winter to southern China, Vietnam, Japan, and India.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 32a12 12 0 1 1 16 0c-2 2-2 4-2 6H18c0-2 0-4-2-6z"/><path d="M19 42h10M20 45h8"/></g></svg></span>
+      <span class="zh">有趣小知識</span><span class="en en-h">Fun fact</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">青頭潛鴨又名東方白眼鴨、白目鳧、青頭鴨， 為鴨科潛鴨屬的鳥類，繁殖於中國華北地區和華中地區。</p><p class="t-en">During winter, Baer's pochard sleeps during the day, leaves for unknown feeding sites with other ducks in the dusk, and returns before dawn.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 30h6l8 8V10l-8 8h-6z" fill="currentColor"/><path d="M32 18c4 3 4 9 0 12M37 13c7 6 7 16 0 22"/></g></svg></span>
+      <span class="zh">鳴聲</span><span class="en en-h">Voice</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">青頭潛鴨是該物種最通用的中文名，在中國大陸、香港及台灣皆相同， 除此之外，青頭潛鴨在中文中還有東方白眼鴨、白目鳧等名，</p><p class="t-en">It is similar and closely related to the ferruginous duck, and they were previously considered to be a single species; Baer's pochard is differentiated by its white flanks when floating on the water,</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l15 7v11c0 9-6 15-15 17-9-2-15-8-15-17V13z"/><path d="M18 24h12M24 18v12" fill="currentColor"/></g></svg></span>
+      <span class="zh">保育現況</span><span class="en en-h">Conservation</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">該物種已被列為IUCN紅色名錄極危物種，並列入台灣珍貴稀有保育類野生動物 與中國大陸國家一級保護動物。</p><p class="t-en">In China, hunting and habitat loss were considered to be the main threats.</p></div>
+  </section>
+  </section>
+
+  <!-- ───────── 評分帶 ───────── -->
+  <section class="score">
+    <div class="score-l">
+      <h3 class="score-h"><svg class="ic " viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l16 8v11c0 9-7 15-16 17-9-2-16-8-16-17V14z"/><path d="M17 24l5 6 10-11"/></g></svg><span class="zh">圖鑑評分</span><span class="en en-h">Dex rating</span>
+        <em class="note-zh">自訂指標，非學術評分</em><em class="note-en en-h">Custom index, not an academic rating</em>
+      </h3>
+      <ul class="dims">
+        <li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l16 8v11c0 9-7 15-16 17-9-2-16-8-16-17V14z"/><path d="M17 24l5 6 10-11"/></g></svg><span class="zh">生物重要性</span><span class="en en-h">Ecological importance</span></span>
+            <span class="dim-bar"><i style="width:100%"></i></span>
+            <span class="dim-v">5.0</span>
+          </li><li class="dim dim-miss">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 20c0-4 4-6 8-6s8 2 8 6c0 6-6 8-6 12"/><circle cx="19" cy="14" r="5"/><circle cx="32" cy="34" r="4"/><circle cx="20" cy="36" r="4"/><circle cx="40" cy="20" r="3"/></g></svg><span class="zh">適應力</span><span class="en en-h">Adaptability</span></span>
+            <span class="dim-bar"><i style="width:0%"></i></span>
+            <span class="dim-v">—</span>
+          </li><li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M38 8c-14 0-24 10-24 22l-6 10"/><path d="M38 8c2 12-8 24-20 24-4 0-4-4-4-4"/><path d="M36 12l-20 24M33 20l-13 3"/></g></svg><span class="zh">觀賞價值</span><span class="en en-h">Showiness</span></span>
+            <span class="dim-bar"><i style="width:82%"></i></span>
+            <span class="dim-v">4.1</span>
+          </li><li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 32a12 12 0 1 1 16 0c-2 2-2 4-2 6H18c0-2 0-4-2-6z"/><path d="M19 42h10M20 45h8"/></g></svg><span class="zh">研究價值</span><span class="en en-h">Research value</span></span>
+            <span class="dim-bar"><i style="width:96%"></i></span>
+            <span class="dim-v">4.8</span>
+          </li><li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26a18 12 0 0 0 36 0z" fill="currentColor"/><ellipse cx="18" cy="20" rx="5" ry="7"/><ellipse cx="27" cy="19" rx="4.4" ry="6"/><path d="M6 26h36"/></g></svg><span class="zh">保育關注度</span><span class="en en-h">Conservation concern</span></span>
+            <span class="dim-bar"><i style="width:94%"></i></span>
+            <span class="dim-v">4.7</span>
+          </li>
+      </ul>
+    </div>
+    <div class="score-r">
+      <div class="overall">
+        <span class="o-k zh">綜合</span><span class="o-k en en-h">Overall</span>
+        <span class="o-v">4.6</span>
+        <span class="o-max">/ 5</span>
+      </div>
+      <div class="bc" aria-hidden="true"><i style="width:3px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i></div>
+    </div>
+  </section>
+
+  <!-- ───────── 底欄 ───────── -->
+  <footer class="foot">
+    <div class="f-col">
+      <span class="f-k zh">圖鑑編號</span><span class="f-k en en-h">Dex no.</span>
+      <span class="f-v mono">NO.0049</span>
+    </div>
+    <div class="f-col f-wide">
+      <span class="f-k zh">名稱</span><span class="f-k en en-h">Name</span>
+      <span class="f-v">青頭潛鴨 · <em>Aythya baeri</em></span>
+    </div>
+    <div class="f-col f-src">
+      <span class="f-k zh">資料出處（可追溯）</span><span class="f-k en en-h">Sources</span>
+      <span class="f-v small mono">zh.wikipedia 青头潜鸭 · pageid 59214 ｜ en.wikipedia Baer's pochard · pageid 1243028 · 分類：eBird/Clements</span>
+    </div>
+    <div class="f-col">
+      <span class="f-k zh">圖鑑版本</span><span class="f-k en en-h">Version</span>
+      <span class="f-v mono">v1.9.0</span>
+    </div>
+  </footer>
+</div></div></div>
+  </section>
+  <section class="wrap" id="card-0008">
+    <div class="cap">
+      <b>NO.0008</b> 鵲鴝 · Oriental Magpie-Robin
+      <span class="hint">螢幕上的是 1200×1600 原尺寸（縮放看整張，1:1 看細節）</span>
+    </div>
+    <div class="stage"><div class="scaler">
+<div class="dx lang-both " style="--c:#17553c;--t:#f3f7f1;--a:#d8a21c">
+
+  <!-- ───────── 標題帶 ───────── -->
+  <header class="hdr">
+    <div class="hdr-l">
+      <img class="chip-art" src="https://pub-a9333a974e814ccba1994639b6e79266.r2.dev/birdcards/0008.avif" alt="" referrerpolicy="no-referrer" />
+      <div class="no-pill">NO.0008</div>
+    </div>
+
+    <div class="hdr-c">
+      <h1 class="name">鵲鴝</h1>
+      <div class="sci">Copsychus saularis</div>
+      <div class="en-pill"><span class="en en-h">Oriental Magpie-Robin</span></div>
+      <div class="hdr-tags">
+        <span class="htag"><svg class="ic " viewBox="0 0 48 48" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="6" width="14" height="9" rx="2"/><rect x="4" y="33" width="14" height="9" rx="2"/><rect x="30" y="33" width="14" height="9" rx="2"/><path d="M24 15v9M11 33v-9h26v9"/></g></svg><span class="zh">雀形目</span><em>鶲科</em></span>
+        <span class="htag"><svg class="ic " viewBox="0 0 48 48" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24h40M4 18v12M44 18v12M14 20v8M24 20v8M34 20v8"/></g></svg><b>19</b><em>cm</em></span>
+        <span class="htag"><svg class="ic " viewBox="0 0 48 48" width="15" height="15" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16h24l4 24H8z"/><path d="M18 16a6 6 0 0 1 12 0"/><path d="M24 24v8M20 28h8"/></g></svg><b>36</b><em>g</em></span>
+      </div>
+    </div>
+
+    <div class="hdr-r">
+      <div class="iucnbar">
+    <div class="ib-track">
+      
+        <span class="ib-seg on" style="--lc:#1c7a4e">
+          <i></i><b>LC</b>
+        </span>
+        <span class="ib-seg" style="--lc:#8a7c12">
+          <i></i><b>NT</b>
+        </span>
+        <span class="ib-seg" style="--lc:#a87413">
+          <i></i><b>VU</b>
+        </span>
+        <span class="ib-seg" style="--lc:#b04a1e">
+          <i></i><b>EN</b>
+        </span>
+        <span class="ib-seg" style="--lc:#8f1f22">
+          <i></i><b>CR</b>
+        </span>
+    </div>
+    <div class="ib-now" style="--p:0%;--lc:#1c7a4e">
+      無危
+    </div>
+  </div>
+      <div class="taxline">
+        <span class="tag-ord"><span class="zh">雀形目</span><em>Passeriformes</em></span>
+        <span class="tag-fam"><span class="zh">鶲科</span><em>Muscicapidae</em></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ───────── 上段：左欄 + 主插畫 + 右欄 ───────── -->
+  <section class="band band-a">
+    <div class="col-l">
+      
+  <section class="pnl" style="flex:0 0 268px;height:268px">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="6" width="14" height="9" rx="2"/><rect x="4" y="33" width="14" height="9" rx="2"/><rect x="30" y="33" width="14" height="9" rx="2"/><path d="M24 15v9M11 33v-9h26v9"/></g></svg></span>
+      <span class="zh">分類資訊</span><span class="en en-h">Taxonomy</span>
+    </h3>
+    <div class="pnl-b"><ul class="taxlist">
+          <li><span class="k">界</span>
+            <span class="v"><span class="zh">動物界</span><span class="en en-h">動物界</span><em>Animalia</em></span>
+          </li>
+          <li><span class="k">門</span>
+            <span class="v"><span class="zh">脊索動物門</span><span class="en en-h">脊索動物門</span><em>Chordata</em></span>
+          </li>
+          <li><span class="k">綱</span>
+            <span class="v"><span class="zh">鳥綱</span><span class="en en-h">鳥綱</span><em>Aves</em></span>
+          </li>
+          <li><span class="k">目</span>
+            <span class="v"><span class="zh">雀形目</span><span class="en en-h">雀形目</span><em>Passeriformes</em></span>
+          </li>
+          <li><span class="k">科</span>
+            <span class="v"><span class="zh">鶲科</span><span class="en en-h">鶲科</span><em>Muscicapidae</em></span>
+          </li>
+          <li><span class="k">屬</span>
+            <span class="v"><span class="zh">Copsychus</span><span class="en en-h">Copsychus</span><em></em></span>
+          </li>
+          <li><span class="k">種</span>
+            <span class="v"><span class="zh">Copsychus saularis</span><span class="en en-h">Copsychus saularis</span><em></em></span>
+          </li></ul></div>
+  </section>
+      
+  <section class="pnl" style="flex:1">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 32a12 12 0 1 1 16 0c-2 2-2 4-2 6H18c0-2 0-4-2-6z"/><path d="M19 42h10M20 45h8"/></g></svg></span>
+      <span class="zh">名稱由來</span><span class="en en-h">Name origin</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">而英國博物學家 猜測鵲鴝的種加詞saularis來自於筆誤…</p><p class="t-en">A male bird was sent with this Hindi name from Madras by surgeon Edward Bulkley to James…</p></div>
+  </section>
+    </div>
+
+    <figure class="hero">
+      <img src="https://pub-a9333a974e814ccba1994639b6e79266.r2.dev/birdcards/0008.avif" alt="鵲鴝" referrerpolicy="no-referrer" />
+      <figcaption>插畫：BIRD-DEX 2 · Artwork: BIRD-DEX 2</figcaption>
+    </figure>
+
+    <div class="col-r">
+      
+  <section class="pnl" style="flex:1.3">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="18" width="40" height="12" rx="2"/><path d="M12 18v6M20 18v9M28 18v6M36 18v9"/></g></svg></span>
+      <span class="zh">量度</span><span class="en en-h">Measurements</span>
+    </h3>
+    <div class="pnl-b"><ul class="mbs"><li class="mb">
+        <span class="mb-n"><span class="zh">翼長</span><span class="en en-h">Wing</span></span>
+        <span class="mb-t"><i style="width:100%"></i></span>
+        <span class="mb-v">97.5<em>mm</em></span>
+      </li><li class="mb">
+        <span class="mb-n"><span class="zh">尾長</span><span class="en en-h">Tail</span></span>
+        <span class="mb-t"><i style="width:86%"></i></span>
+        <span class="mb-v">84<em>mm</em></span>
+      </li><li class="mb">
+        <span class="mb-n"><span class="zh">嘴峰</span><span class="en en-h">Bill</span></span>
+        <span class="mb-t"><i style="width:24%"></i></span>
+        <span class="mb-v">23.2<em>mm</em></span>
+      </li><li class="mb">
+        <span class="mb-n"><span class="zh">跗蹠</span><span class="en en-h">Tarsus</span></span>
+        <span class="mb-t"><i style="width:30%"></i></span>
+        <span class="mb-v">29.5<em>mm</em></span>
+      </li></ul></div>
+  </section>
+      
+  <section class="pnl" style="flex:1">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8l9 13h-5l7 10H6l7-10h-5z" fill="currentColor"/><path d="M17 31v9M32 14l8 12h-4l6 9H24l5-9h-3z" fill="currentColor"/><path d="M32 35v5M8 44h32"/></g></svg></span>
+      <span class="zh">棲息環境</span><span class="en en-h">Habitat</span>
+    </h3>
+    <div class="pnl-b"><div class="chiprow"><span class="chip" title="森林">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8l9 13h-5l7 10H6l7-10h-5z" fill="currentColor"/><path d="M17 31v9M32 14l8 12h-4l6 9H24l5-9h-3z" fill="currentColor"/><path d="M32 35v5M8 44h32"/></g></svg>
+      <span class="zh">森林</span>
+      <span class="en en-h">Forest</span>
+    </span><span class="chip" title="城市公園">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 42V22h12v20M18 42V14h13v28M31 42V26h11v16" /><path d="M10 27h4M10 33h4M23 20h3M23 26h3M23 32h3M35 31h3M35 37h3" fill="currentColor"/><path d="M3 44h42"/></g></svg>
+      <span class="zh">城市公園</span>
+      <span class="en en-h">Urban &amp; Parks</span>
+    </span><span class="chip" title="開闊地">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="16" r="6"/><path d="M4 34h40M4 40h40M10 28h28"/><path d="M14 28l4-6M24 28v-6M34 28l-4-6"/></g></svg>
+      <span class="zh">開闊地</span>
+      <span class="en en-h">Open Country</span>
+    </span></div></div>
+  </section>
+      
+  <section class="pnl" style="flex:1">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="27" rx="7" ry="9"/><path d="M24 18v18M17.5 21h13M18 27h12M18.5 33l-3 5M29.5 33l3 5M19 22l-7-6M29 22l7-6M21 19l-4-7M27 19l4-7"/></g></svg></span>
+      <span class="zh">食物</span><span class="en en-h">Diet</span>
+    </h3>
+    <div class="pnl-b"><div class="chiprow"><span class="chip" title="昆蟲">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="27" rx="7" ry="9"/><path d="M24 18v18M17.5 21h13M18 27h12M18.5 33l-3 5M29.5 33l3 5M19 22l-7-6M29 22l7-6M21 19l-4-7M27 19l4-7"/></g></svg>
+      <span class="zh">昆蟲</span>
+      <span class="en en-h">Insects</span>
+    </span><span class="chip" title="魚類">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 24c5-8 15-9 22-5l8-5v10l8 5-8 5v10l-8-5c-7 4-17 3-22-5a7 7 0 0 1 0 0z" transform="translate(-4 0) scale(.86)"/><circle cx="17" cy="22" r="1.8" fill="currentColor"/></g></svg>
+      <span class="zh">魚</span>
+      <span class="en en-h">Fish</span>
+    </span><span class="chip" title="爬蟲類">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 30c6-10 18-12 25-7 3 2 5 6 5 6M9 30l-3 4M14 26l-4-4M20 23l-2-6M27 22v-6M33 24l3-5"/><circle cx="40" cy="27" r="1.6" fill="currentColor"/></g></svg>
+      <span class="zh">爬蟲</span>
+      <span class="en en-h">Reptiles</span>
+    </span><span class="chip" title="蠕蟲">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30c4-10 10 8 14-2s10 8 14-2"/><path d="M8 38c4-10 10 8 14-2s10 8 14-2"/><circle cx="41" cy="26" r="1.4" fill="currentColor"/></g></svg>
+      <span class="zh">蠕蟲</span>
+      <span class="en en-h">Worms</span>
+    </span><span class="chip" title="花蜜">
+      <svg class="ic chip-ic" viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="20" r="4"/><path d="M24 24c-6 0-10 4-10 8s4 6 10 6 10-2 10-6-4-8-10-8z"/><path d="M24 16V8M17 18l-6-4M31 18l6-4"/></g></svg>
+      <span class="zh">花蜜</span>
+      <span class="en en-h">Nectar</span>
+    </span></div></div>
+  </section>
+    </div>
+  </section>
+
+  <!-- ───────── 中段一 ───────── -->
+  <section class="band band-b">
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12l12-4 12 4 12-4v28l-12 4-12-4-12 4z"/><path d="M18 8v28M30 12v28"/><circle cx="24" cy="22" r="4" fill="currentColor"/></g></svg></span>
+      <span class="zh">分佈地區</span><span class="en en-h">Range</span>
+    </h3>
+    <div class="pnl-b"><div class="range-wrap"><svg class="rangesvg" viewBox="0 0 200 108" aria-hidden="true">
+    <g class="land">
+    <path d="M18 40c14-6 26-4 34 2 6 4 4 12-4 14-10 2-18-2-26-2S12 50 18 40z" />
+    <path d="M64 28c10 2 16 10 14 20-2 10 6 16 2 24-6 10-20 8-26-2-4-8 2-14 2-22 0-10-2-20 8-20z" />
+    <path d="M96 26c14-4 28 0 34 8 6 8 0 16-8 18-10 4-18 12-28 10-10-4-12-14-6-22 4-6 2-12 8-14z" />
+    <path d="M140 30c12-2 24 4 26 12 2 8-6 12-16 12-12 0-22-4-22-12s2-10 12-12z" />
+    <path d="M126 60c8 0 14 6 12 12-2 6-10 8-16 4-6-6-4-16 4-16z" /></g>
+    
+    <g class="pin on" transform="translate(104 58)">
+      <circle r="7"/><circle r="3" class="core"/>
+      <text y="-12">印度</text>
+    </g>
+    <g class="pin on" transform="translate(150 54)">
+      <circle r="7"/><circle r="3" class="core"/>
+      <text y="-12">HK</text>
+    </g>
+  </svg></div>
+       <p class="t-zh">這種鵲鴝是南亞熱帶地區的留鳥，分佈於尼泊爾、孟加拉國、印度…</p><p class="t-en">The Oriental magpie-robin is found in open woodland and cultivated areas often close…</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M38 8c-14 0-24 10-24 22l-6 10"/><path d="M38 8c2 12-8 24-20 24-4 0-4-4-4-4"/><path d="M36 12l-20 24M33 20l-13 3"/></g></svg></span>
+      <span class="zh">外形特徵</span><span class="en en-h">Appearance</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">鵲鴝體長，體重，雄鳥上半部為黑色並帶有藍色光澤，雌鳥則為灰色，兩翼有白斑。</p><p class="t-en t-miss">Data pending</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26a18 12 0 0 0 36 0z" fill="currentColor"/><ellipse cx="18" cy="20" rx="5" ry="7"/><ellipse cx="27" cy="19" rx="4.4" ry="6"/><path d="M6 26h36"/></g></svg></span>
+      <span class="zh">成長與繁殖</span><span class="en en-h">Breeding</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">雌鳥在餵養雛鳥方面付出更多的精力，而雄鳥在繁殖季節相當具有攻擊性，會保衛自己的領地。</p><p class="t-en">The eggs are incubated by the female alone for 8 to 14 days.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 20c0-4 4-6 8-6s8 2 8 6c0 6-6 8-6 12"/><circle cx="19" cy="14" r="5"/><circle cx="32" cy="34" r="4"/><circle cx="20" cy="36" r="4"/><circle cx="40" cy="20" r="3"/></g></svg></span>
+      <span class="zh">行為特徵</span><span class="en en-h">Behaviour</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">這可能表示這些鳥類會四處遷徙，而不是留在出生地。</p><p class="t-en">They nest in tree hollows or niches in walls or building, often adopting nest boxes.</p></div>
+  </section>
+  </section>
+
+  <!-- ───────── 中段二 ───────── -->
+  <section class="band band-c">
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 34h20a6 6 0 0 0 0-12H14a6 6 0 0 1 0-12h16"/><path d="M26 6l6 4-6 4M22 38l-6 4 6 4" fill="currentColor"/></g></svg></span>
+      <span class="zh">遷徙</span><span class="en en-h">Migration</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">這種鵲鴝是南亞熱帶地區的留鳥，分佈於尼泊爾、孟加拉國、印度、斯里蘭卡和巴基斯坦東部，</p><p class="t-en t-miss">Data pending</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 32a12 12 0 1 1 16 0c-2 2-2 4-2 6H18c0-2 0-4-2-6z"/><path d="M19 42h10M20 45h8"/></g></svg></span>
+      <span class="zh">有趣小知識</span><span class="en en-h">Fun fact</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">鵲鴝由卡爾·林奈於1758年在《自然系統》中命名，最初被歸入鷯哥屬，學名為Gracula saularis。</p><p class="t-en">Although mainly insectivorous, they are known to occasionally take flower nectar, geckos, leeches, centipedes and even fish.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 30h6l8 8V10l-8 8h-6z" fill="currentColor"/><path d="M32 18c4 3 4 9 0 12M37 13c7 6 7 16 0 22"/></g></svg></span>
+      <span class="zh">鳴聲</span><span class="en en-h">Voice</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">牠們的鳴唱中可能會模仿其他鳥類的叫聲。</p><p class="t-en">Males sing loudly from the top of trees or other high perches during the breeding season.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h">
+      <span class="pnl-i"><svg class="ic " viewBox="0 0 48 48" width="19" height="19" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l15 7v11c0 9-6 15-15 17-9-2-15-8-15-17V13z"/><path d="M18 24h12M24 18v12" fill="currentColor"/></g></svg></span>
+      <span class="zh">保育現況</span><span class="en en-h">Conservation</span>
+    </h3>
+    <div class="pnl-b"><p class="t-zh">在新加坡，牠們在1920年代十分常見，但在1970年代數量下降，推測是受到外來家八哥競爭的影響。</p><p class="t-en">This species is considered one of “least concern“ globally, but in some areas it is declining.</p></div>
+  </section>
+  </section>
+
+  <!-- ───────── 評分帶 ───────── -->
+  <section class="score">
+    <div class="score-l">
+      <h3 class="score-h"><svg class="ic " viewBox="0 0 48 48" width="17" height="17" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l16 8v11c0 9-7 15-16 17-9-2-16-8-16-17V14z"/><path d="M17 24l5 6 10-11"/></g></svg><span class="zh">圖鑑評分</span><span class="en en-h">Dex rating</span>
+        <em class="note-zh">自訂指標，非學術評分</em><em class="note-en en-h">Custom index, not an academic rating</em>
+      </h3>
+      <ul class="dims">
+        <li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l16 8v11c0 9-7 15-16 17-9-2-16-8-16-17V14z"/><path d="M17 24l5 6 10-11"/></g></svg><span class="zh">生物重要性</span><span class="en en-h">Ecological importance</span></span>
+            <span class="dim-bar"><i style="width:40%"></i></span>
+            <span class="dim-v">2.0</span>
+          </li><li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 20c0-4 4-6 8-6s8 2 8 6c0 6-6 8-6 12"/><circle cx="19" cy="14" r="5"/><circle cx="32" cy="34" r="4"/><circle cx="20" cy="36" r="4"/><circle cx="40" cy="20" r="3"/></g></svg><span class="zh">適應力</span><span class="en en-h">Adaptability</span></span>
+            <span class="dim-bar"><i style="width:100%"></i></span>
+            <span class="dim-v">5.0</span>
+          </li><li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M38 8c-14 0-24 10-24 22l-6 10"/><path d="M38 8c2 12-8 24-20 24-4 0-4-4-4-4"/><path d="M36 12l-20 24M33 20l-13 3"/></g></svg><span class="zh">觀賞價值</span><span class="en en-h">Showiness</span></span>
+            <span class="dim-bar"><i style="width:60%"></i></span>
+            <span class="dim-v">3.0</span>
+          </li><li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 32a12 12 0 1 1 16 0c-2 2-2 4-2 6H18c0-2 0-4-2-6z"/><path d="M19 42h10M20 45h8"/></g></svg><span class="zh">研究價值</span><span class="en en-h">Research value</span></span>
+            <span class="dim-bar"><i style="width:96%"></i></span>
+            <span class="dim-v">4.8</span>
+          </li><li class="dim">
+            <span class="dim-n"><svg class="ic " viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26a18 12 0 0 0 36 0z" fill="currentColor"/><ellipse cx="18" cy="20" rx="5" ry="7"/><ellipse cx="27" cy="19" rx="4.4" ry="6"/><path d="M6 26h36"/></g></svg><span class="zh">保育關注度</span><span class="en en-h">Conservation concern</span></span>
+            <span class="dim-bar"><i style="width:60%"></i></span>
+            <span class="dim-v">3.0</span>
+          </li>
+      </ul>
+    </div>
+    <div class="score-r">
+      <div class="overall">
+        <span class="o-k zh">綜合</span><span class="o-k en en-h">Overall</span>
+        <span class="o-v">3.6</span>
+        <span class="o-max">/ 5</span>
+      </div>
+      <div class="bc" aria-hidden="true"><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i></div>
+    </div>
+  </section>
+
+  <!-- ───────── 底欄 ───────── -->
+  <footer class="foot">
+    <div class="f-col">
+      <span class="f-k zh">圖鑑編號</span><span class="f-k en en-h">Dex no.</span>
+      <span class="f-v mono">NO.0008</span>
+    </div>
+    <div class="f-col f-wide">
+      <span class="f-k zh">名稱</span><span class="f-k en en-h">Name</span>
+      <span class="f-v">鵲鴝 · <em>Copsychus saularis</em></span>
+    </div>
+    <div class="f-col f-src">
+      <span class="f-k zh">資料出處（可追溯）</span><span class="f-k en en-h">Sources</span>
+      <span class="f-v small mono">zh.wikipedia 鵲鴝 · pageid 219197 ｜ en.wikipedia Oriental magpie-robin · pageid 645665 · 分類：eBird/Clements</span>
     </div>
     <div class="f-col">
       <span class="f-k zh">圖鑑版本</span><span class="f-k en en-h">Version</span>

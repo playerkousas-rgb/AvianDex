@@ -33,6 +33,11 @@ export interface DexCardInput {
   dietEn: string[];
   habitatZh: string[];
   habitatEn: string[];
+  /** tag 原始 id（用來選圖示）＋對照表（用來印名字） */
+  dietIds?: string[];
+  habitatIds?: string[];
+  dietLabels?: Array<{ id: string; zh: string; en: string }>;
+  habitatLabels?: Array<{ id: string; zh: string; en: string }>;
   /** AVONET 量度（原字串，mm／g，不換算）。鍵：wing/tail/tarsus/bill/mass */
   meas?: Record<string, string>;
   mass?: string;
@@ -100,11 +105,11 @@ export function orderTheme(orderLatin: string): OrderTheme {
 
 /** 五個維度的定義：單一來源，卡面與測試都讀這裡 */
 export const SCORE_DIMS = [
-  { k: 'i', zh: '生物重要性', en: 'Ecological importance', from: 'IUCN 紅色名錄級別' },
-  { k: 'a', zh: '適應力',     en: 'Adaptability',          from: '食性 × 棲地 tag 數' },
-  { k: 'v', zh: '觀賞價值',   en: 'Showiness',             from: '體長（AVONET 翼長後備）' },
-  { k: 'r', zh: '研究價值',   en: 'Research value',        from: '遷徙／語源／要點' },
-  { k: 'c', zh: '保育關注度', en: 'Conservation concern',  from: '受脅註記 + IUCN' },
+  { k: 'i', zh: '生物重要性', en: 'Ecological importance', from: 'IUCN 紅色名錄級別', icon: 'iucn' },
+  { k: 'a', zh: '適應力',     en: 'Adaptability',          from: '食性 × 棲地 tag 數', icon: 'behaviour' },
+  { k: 'v', zh: '觀賞價值',   en: 'Showiness',             from: '體長（AVONET 翼長後備）', icon: 'feather' },
+  { k: 'r', zh: '研究價值',   en: 'Research value',        from: '遷徙／語源／要點', icon: 'funfact' },
+  { k: 'c', zh: '保育關注度', en: 'Conservation concern',  from: '受脅註記 + IUCN', icon: 'nest' },
 ] as const;
 
 /** 「資料待查」——兩種語言都不准用另一種頂替 */
