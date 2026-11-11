@@ -5,7 +5,7 @@ import {
   ExternalLink, ArrowUpRight,
 } from 'lucide-react';
 import type { Lang } from '../lib/explorer';
-import { CARD_SOURCES, type CardSourceKey } from '../lib/cardSources';
+import { CARD_SOURCES, SOURCE_IMAGES, type CardSourceKey } from '../lib/cardSources';
 import { SourcesPage } from './SourcesPage';
 
 /**
@@ -73,8 +73,11 @@ export const ResearchHubPage: React.FC<ResearchHubPageProps> = ({
         </span>
       </div>
 
-      {/* 六格：一列式清單（唔再做 icon-topped 卡片陣） */}
-      <div className="flex flex-col gap-1">
+      {/* 六格：用已經畫好的六張 HUD 插圖做主體。
+          之前係一列純文字連結（icon 16px + 兩行字），用戶反應「一堆字冇人睇」。
+          六張圖一直在 public/images 但冇被引用 —— 所以不是要另製圖，是接返上去。
+          圖上面只留「類別名 + 一句用途」，其餘交給圖本身講。 */}
+      <div className="grid grid-cols-2 gap-2">
         {sources.map((s) => {
           const Icon = ICONS[s.key];
           return (
@@ -83,20 +86,28 @@ export const ResearchHubPage: React.FC<ResearchHubPageProps> = ({
               href={s.url}
               target="_blank"
               rel="noreferrer noopener"
-              className="group flex items-center gap-3 bg-black/25 hover:bg-black/45 border border-white/10 hover:border-amber-400/40 rounded-xl px-3 py-3 transition-colors active:scale-[0.99]"
+              className="group relative rounded-xl overflow-hidden border border-white/12 hover:border-amber-400/50 transition-colors active:scale-[0.99] bg-[#0d1a24]"
             >
-              <span className="w-9 h-9 rounded-full bg-amber-400/12 border border-amber-400/25 flex items-center justify-center shrink-0">
-                <Icon className="w-5 h-5 text-amber-200/85" />
-              </span>
-              <span className="flex-1 min-w-0">
-                <span className="block text-white font-black text-[13.5px] leading-tight truncate">
-                  {lang === 'en' ? s.en : s.zh}
-                </span>
-                <span className="block text-white/45 text-[10px] leading-tight truncate mt-0.5">
+              <img
+                src={SOURCE_IMAGES[s.key]}
+                alt=""
+                aria-hidden
+                loading="lazy"
+                className="w-full aspect-[3/2] object-cover opacity-85 group-hover:opacity-100 transition-opacity"
+              />
+              {/* 文字壓在圖底部：用漸層，不蓋住圖中央的主體 */}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/92 via-black/70 to-transparent px-2 pt-6 pb-1.5">
+                <div className="flex items-center gap-1">
+                  <Icon className="w-3 h-3 text-amber-300/90 shrink-0" />
+                  <span className="text-white font-black text-[11.5px] leading-tight truncate">
+                    {lang === 'en' ? s.en : s.zh}
+                  </span>
+                  <ArrowUpRight className="w-3 h-3 text-white/40 group-hover:text-amber-300 ml-auto shrink-0" />
+                </div>
+                <span className="block text-white/50 text-[8.5px] leading-tight truncate">
                   {lang === 'en' ? s.enNote : s.zhNote}
                 </span>
-              </span>
-              <ArrowUpRight className="w-4 h-4 text-white/25 group-hover:text-amber-300 shrink-0" />
+              </div>
             </a>
           );
         })}

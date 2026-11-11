@@ -17,6 +17,25 @@
 
 export type CardSourceKey = 'wiki' | 'radar' | 'photo' | 'video' | 'audio' | 'gear';
 
+/**
+ * 六格的插圖（public/images/hub_*.jpg）。
+ *
+ * 這六張圖一直都在 repo 裡，但之前只做過一次九宮格之後就再沒有被引用，
+ * 於是「科學研究中心」變成一列純文字連結 —— 用戶的原話是「一堆字，冇人睇」。
+ * 圖本身已經畫好（全部同一套 HUD 介面風格），所以直接接回去，不要另製新圖。
+ *
+ * gear（Merlin）沒有專屬圖，用 hub_download 的剪影辨識 HUD，
+ * 因為那一格講的正是「影相即時辨識」，畫面內容比類別名更準。
+ */
+export const SOURCE_IMAGES: Record<CardSourceKey, string> = {
+  wiki: '/images/hub_wiki.jpg',
+  radar: '/images/hub_radar.jpg',
+  photo: '/images/hub_photo.jpg',
+  video: '/images/hub_video.jpg',
+  audio: '/images/hub_audio.jpg',
+  gear: '/images/hub_download.jpg',
+};
+
 export interface CardSource {
   key: CardSourceKey;
   /** 中文標題（繁中 zh-HK） */
