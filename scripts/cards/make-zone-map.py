@@ -66,14 +66,17 @@ def main():
     rrect(d, [20, 20, W - 20, H - 20], 22, outline=(200, 208, 190), width=1)
 
     # ── 頂部綠色帶 ───────────────────────────────────────
+    # NO 帶：深綠滿版，只留白色虛線佔位（唔寫字母）
     rrect(d, [30, 24, 246, 78], 10, fill=GREEN)
-    d.text((150, 51), 'NO.', font=font(30, True), fill=CREAM, anchor='mm')
-    d.text((330, 52), 'Z01', font=font(20, True), fill=INK, anchor='lm')
+    for x in range(58, 226, 22):
+        d.line([(x, 51), (min(x + 14, 226), 51)], fill=(214, 232, 210), width=6)
 
-    # 名稱區（虛線框＝要填大字名）
-    d.rounded_rectangle([258, 20, 744, 96], radius=8, outline=(180, 190, 170), width=2)
-    d.text((262, 30), 'Z01 中文大名 / 英文名 / 學名 / 分類', font=font(15), fill=INK)
-    d.text((262, 66), 'Z02 屬性 · Z05 分類', font=font(13), fill=(140, 152, 132))
+    # 名稱區：深綠實心帶（同原卡一致），內裡用白色虛線示範字位
+    rrect(d, [256, 20, 744, 100], 10, fill=GREEN)
+    for x in range(276, 640, 46):
+        d.line([(x, 46), (min(x + 34, 640), 46)], fill=(228, 240, 224), width=14)
+    for x in range(276, 520, 26):
+        d.line([(x, 80), (min(x + 18, 520), 80)], fill=(196, 214, 194), width=8)
 
     # 圖鑑介紹
     d.rounded_rectangle([262, 300, 706, 470], radius=10, outline=(180, 190, 170), width=2)
@@ -91,11 +94,16 @@ def main():
 
     # 左上像素圖框
     rrect(d, [28, 96, 240, 372], 10, fill=(246, 246, 238), outline=GREEN, width=3)
-    d.text((134, 234), 'Z02 PIXEL', font=font(17, True), fill=(150, 162, 142), anchor='mm')
+    # 像素格示意
+    for gx in range(40, 232, 16):
+        d.line([(gx, 104), (gx, 364)], fill=(232, 236, 224), width=1)
+    for gy in range(104, 372, 16):
+        d.line([(36, gy), (232, gy)], fill=(232, 236, 224), width=1)
 
     # ── 右側四個放大鏡 ───────────────────────────────────
     rrect(d, [766, 18, 1004, 58], 10, fill=GREEN)
-    d.text((885, 38), 'Z15 CALL-OUTS ×4', font=font(16, True), fill=CREAM, anchor='mm')
+    for x in range(786, 990, 22):
+        d.line([(x, 38), (min(x + 14, 990), 38)], fill=(214, 232, 210), width=6)
     for i in range(4):
         cy = 118 + i * 152
         d.ellipse([772, cy - 44, 860, cy + 44], fill=(240, 240, 232), outline=GREEN, width=3)
@@ -109,7 +117,6 @@ def main():
 
     # 中間大圖框（鳥）—— 只佔中欄上半，唔壓住下面三個面板
     d.rounded_rectangle([470, 212, 750, 716], radius=14, outline=GREEN, width=3)
-    d.text((610, 470), 'BIRD', font=font(30, True), fill=(206, 198, 178), anchor='mm')
 
     # ── 左欄：分類資訊 ───────────────────────────────────
     rrect(d, [28, 478, 340, 510], 10, fill=GREEN)
@@ -136,7 +143,8 @@ def main():
     d.text((38, 957), 'Z09 GROWTH', font=font(15, True), fill=CREAM, anchor='lm')
     d.rounded_rectangle([28, 974, 340, 1150], radius=10, outline=(180, 190, 170), width=2)
     d.ellipse([212, 1000, 320, 1130], fill=(238, 238, 228), outline=SAGE, width=2)
-    d.text((266, 1065), 'NEST', font=font(14, True), fill=(176, 184, 164), anchor='mm')
+    for rr, cyy in ((44, 1078), (32, 1062), (20, 1046)):
+        d.ellipse([266 - rr, cyy - rr // 2, 266 + rr, cyy + rr // 2], outline=(214, 206, 186), width=2)
     if show_fill:
         for i, y in enumerate(range(996, 1136, 22)):
             d.line([(46, y), (46 + 150 - (i % 3) * 30, y)], fill=(214, 208, 190), width=7)
@@ -151,7 +159,7 @@ def main():
     d.polygon(pts, fill=(240, 240, 230), outline=GREEN, width=2)
     for p in pts:
         d.line([(cx, cy), p], fill=SAGE, width=1)
-    d.text((cx, cy), 'RADAR', font=font(13, True), fill=(160, 170, 148), anchor='mm')
+    d.ellipse([cx - 4, cy - 4, cx + 4, cy + 4], fill=SAGE)
     for i, p in enumerate(pts):
         d.text((p[0], p[1] + (-22 if i == 0 else 22)), str(i + 1),
                font=font(14, True), fill=INK, anchor='mm')
@@ -199,7 +207,7 @@ def main():
     d.text((700, 750), 'Z08 DISTRIBUTION', font=font(15, True), fill=CREAM, anchor='lm')
     d.rounded_rectangle([690, 768, 1000, 932], radius=10, outline=(180, 190, 170), width=2)
     d.rounded_rectangle([706, 824, 900, 916], radius=8, fill=(226, 232, 216), outline=SAGE, width=2)
-    d.text((803, 870), 'MAP', font=font(15, True), fill=(166, 176, 152), anchor='mm')
+    d.ellipse([730, 836, 806, 900], fill=(196, 214, 186), outline=(150, 176, 140), width=2)
     if show_fill:
         d.line([(706, 796), (940, 796)], fill=(214, 208, 190), width=7)
 
@@ -223,7 +231,8 @@ def main():
 
     # ── 頁腳三格 ─────────────────────────────────────────
     rrect(d, [28, 1408, 340, 1436], 8, fill=GREEN)
-    d.text((36, 1422), 'Z18 CALL', font=font(14, True), fill=CREAM, anchor='lm')
+    for x in range(38, 166, 20):
+        d.line([(x, 1422), (min(x + 13, 166), 1422)], fill=(214, 232, 210), width=5)
     d.rounded_rectangle([28, 1438, 340, 1524], radius=8, outline=(180, 190, 170), width=2)
     rng = np.random.default_rng(3)
     for x in range(44, 330, 3):
