@@ -1,0 +1,502 @@
+{
+  "_readme": {
+    "用途": "birds.json 中文名修正對照（只改中文名）。世界權威：eBird/Clements；香港權威：HKBWS 香港鳥類名錄（只核對名稱，名錄文字不入庫）。",
+    "日期": "2026-11-11",
+    "規則": "英文名／學名以 eBird/Clements 為準；中文名以香港名錄為準；香港名錄沒有的種，用不與香港種衝突的通用名並標示待查。",
+    "暫緩": [
+      "0010 白腰文鳥／0014 喜鵲／0017 暗綠繡眼鳥：編號 0001–0021 是「精選區」，中文名可能才是原意，英文名是後來配錯；要先確認 R2 卡面圖畫的是哪一種才可改，見 docs/hk-name-audit-2026-11-11.md"
+    ]
+  },
+  "fixes": {
+    "0011": {
+      "from": "麻雀",
+      "to": "樹麻雀",
+      "en": "Eurasian Tree Sparrow",
+      "sci": "Passer montanus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0039": {
+      "from": "美洲黑海番鴨",
+      "to": "綠眉鴨",
+      "en": "American Wigeon",
+      "sci": "Mareca americana",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0041": {
+      "from": "印缅斑嘴鴨",
+      "to": "印緬斑嘴鴨",
+      "en": "Indian Spot-billed Duck",
+      "sci": "Anas poecilorhyncha",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0052": {
+      "from": "紅胸田雞",
+      "to": "絲絨海番鴨",
+      "en": "Velvet Scoter",
+      "sci": "Melanitta fusca",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0056": {
+      "from": "斑頭秋沙鴨",
+      "to": "白秋沙鴨",
+      "en": "Smew",
+      "sci": "Mergellus albellus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0081": {
+      "from": "鷹鵑",
+      "to": "大鷹鵑",
+      "en": "Large Hawk-Cuckoo",
+      "sci": "Hierococcyx sparverioides",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0083": {
+      "from": "棕腹杜鵑",
+      "to": "霍氏鷹鵑",
+      "en": "Hodgson's Hawk-Cuckoo",
+      "sci": "Hierococcyx nisicolor",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0088": {
+      "from": "中杜鵑",
+      "to": "東方中杜鵑",
+      "en": "Oriental Cuckoo",
+      "sci": "Cuculus optatus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0092": {
+      "from": "白背針尾雨燕",
+      "to": "灰喉針尾雨燕",
+      "en": "Silver-backed Needletail",
+      "sci": "Hirundapus cochinchinensis",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0095": {
+      "from": "樓燕",
+      "to": "普通雨燕",
+      "en": "Common Swift",
+      "sci": "Apus apus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0096": {
+      "from": "雨燕",
+      "to": "白腰雨燕",
+      "en": "Pacific Swift",
+      "sci": "Apus pacificus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0097": {
+      "from": "草原鵰",
+      "to": "小白腰雨燕",
+      "en": "House Swift",
+      "sci": "Apus nipalensis",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0098": {
+      "from": "普通秧雞",
+      "to": "西方秧雞",
+      "en": "Water Rail",
+      "sci": "Rallus aquaticus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0099": {
+      "from": "灰面鷲",
+      "to": "普通秧雞",
+      "en": "Brown-cheeked Rail",
+      "sci": "Rallus indicus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0102": {
+      "from": "灰頭麥雞",
+      "to": "白眉田雞",
+      "en": "White-browed Crake",
+      "sci": "Poliolimnas cinereus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0105": {
+      "from": "白喉斑秧雞",
+      "to": "灰腳秧雞",
+      "en": "Slaty-legged Crake",
+      "sci": "Rallina eurizonoides",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0107": {
+      "from": "紅腳苦惡鳥",
+      "to": "紅腳田雞",
+      "en": "Brown Crake",
+      "sci": "Zapornia akool",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0115": {
+      "from": "灰鴴",
+      "to": "灰斑鴴",
+      "en": "Black-bellied Plover",
+      "sci": "Pluvialis squatarola",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0118": {
+      "from": "金鴴",
+      "to": "太平洋金斑鴴",
+      "en": "Pacific Golden-Plover",
+      "sci": "Pluvialis fulva",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0133": {
+      "from": "大杓鷸",
+      "to": "紅腰杓鷸",
+      "en": "Far Eastern Curlew",
+      "sci": "Numenius madagascariensis",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0151": {
+      "from": "黃胸濱鷸",
+      "to": "飾胸鷸",
+      "en": "Buff-breasted Sandpiper",
+      "sci": "Calidris subruficollis",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0154": {
+      "from": "長嘴半蹼鷸",
+      "to": "長嘴鷸",
+      "en": "Long-billed Dowitcher",
+      "sci": "Limnodromus scolopaceus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0165": {
+      "from": "灰尾鷸",
+      "to": "灰尾漂鷸",
+      "en": "Gray-tailed Tattler",
+      "sci": "Tringa brevipes",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0193": {
+      "from": "海鷗",
+      "to": "普通海鷗",
+      "en": "Common Gull",
+      "sci": "Larus canus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0196": {
+      "from": "銀鷗",
+      "to": "織女銀鷗",
+      "en": "Vega Gull",
+      "sci": "Larus vegae",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0199": {
+      "from": "灰燕鵙",
+      "to": "小黑背鷗",
+      "en": "Lesser Black-backed Gull",
+      "sci": "Larus fuscus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0204": {
+      "from": "褐柳鶯",
+      "to": "烏燕鷗",
+      "en": "Sooty Tern",
+      "sci": "Onychoprion fuscatus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0208": {
+      "from": "紅嘴巨鷗",
+      "to": "紅嘴巨燕鷗",
+      "en": "Caspian Tern",
+      "sci": "Hydroprogne caspia",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0210": {
+      "from": "須浮鷗",
+      "to": "鬚浮鷗",
+      "en": "Whiskered Tern",
+      "sci": "Chlidonias hybrida",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0233": {
+      "from": "綠背鸕鷀",
+      "to": "暗綠背鸕鷀",
+      "en": "Japanese Cormorant",
+      "sci": "Phalacrocorax capillatus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0236": {
+      "from": "黃斑葦鳽",
+      "to": "黃葦鳽",
+      "en": "Yellow Bittern",
+      "sci": "Botaurus sinensis",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0250": {
+      "from": "栗頭鳽",
+      "to": "栗鳽",
+      "en": "Japanese Night Heron",
+      "sci": "Gorsachius goisagi",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0255": {
+      "from": "魚鷹",
+      "to": "鶚",
+      "en": "Osprey",
+      "sci": "Pandion haliaetus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0263": {
+      "from": "白腹隼雕",
+      "to": "白腹隼鵰",
+      "en": "Bonelli's Eagle",
+      "sci": "Aquila fasciata",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0282": {
+      "from": "褐魚鴞",
+      "to": "褐漁鴞",
+      "en": "Brown Fish-Owl",
+      "sci": "Ketupa zeylonensis",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0300": {
+      "from": "大擬鴷",
+      "to": "大擬啄木鳥",
+      "en": "Great Barbet",
+      "sci": "Psilopogon virens",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0309": {
+      "from": "紅腳隼",
+      "to": "阿穆爾隼",
+      "en": "Amur Falcon",
+      "sci": "Falco amurensis",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0321": {
+      "from": "粉紅椋鳥",
+      "to": "粉紅山椒鳥",
+      "en": "Rosy Minivet",
+      "sci": "Pericrocotus roseus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0332": {
+      "from": "紫壽帶",
+      "to": "紫綬帶",
+      "en": "Black Paradise-Flycatcher",
+      "sci": "Terpsiphone atrocaudata",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0333": {
+      "from": "壽帶",
+      "to": "綬帶",
+      "en": "Amur Paradise-Flycatcher",
+      "sci": "Terpsiphone incei",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0355": {
+      "from": "攀雀",
+      "to": "中華攀雀",
+      "en": "Chinese Penduline-Tit",
+      "sci": "Remiz consobrinus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0365": {
+      "from": "賽氏篱鶯",
+      "to": "賽氏籬鶯",
+      "en": "Sykes's Warbler",
+      "sci": "Iduna rama",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0377": {
+      "from": "矛紋蝗鶯",
+      "to": "矛斑蝗鶯",
+      "en": "Lanceolated Warbler",
+      "sci": "Locustella lanceolata",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0378": {
+      "from": "棕褐短翅鶯",
+      "to": "棕褐短翅蝗鶯",
+      "en": "Brown Bush Warbler",
+      "sci": "Locustella luteoventris",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0380": {
+      "from": "北短翅鶯",
+      "to": "北短翅蝗鶯",
+      "en": "Baikal Bush Warbler",
+      "sci": "Locustella davidi",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0381": {
+      "from": "高山短翅鶯",
+      "to": "高山短翅蝗鶯",
+      "en": "Russet Bush Warbler",
+      "sci": "Locustella mandelli",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0383": {
+      "from": "小鷦鶥",
+      "to": "小鱗胸鷦鶥",
+      "en": "Pygmy Cupwing",
+      "sci": "Pnoepyga pusilla",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0393": {
+      "from": "慄耳短腳鵯",
+      "to": "栗耳短腳鵯",
+      "en": "Brown-eared Bulbul",
+      "sci": "Hypsipetes amaurotis",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0410": {
+      "from": "峨眉鶲鶯",
+      "to": "峨嵋鶲鶯",
+      "en": "Martens's Warbler",
+      "sci": "Phylloscopus omeiensis",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0411": {
+      "from": "純色尾鶲鶯",
+      "to": "淡尾鶲鶯",
+      "en": "Alström's Warbler",
+      "sci": "Phylloscopus soror",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0415": {
+      "from": "日本淡腳柳鶯",
+      "to": "庫頁島柳鶯",
+      "en": "Sakhalin Leaf Warbler",
+      "sci": "Phylloscopus borealoides",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0418": {
+      "from": "栗耳鳳鶥",
+      "to": "栗頭鶲鶯",
+      "en": "Chestnut-crowned Warbler",
+      "sci": "Phylloscopus castaniceps",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0426": {
+      "from": "栗頭縫葉鶯",
+      "to": "金頭擬縫葉鶯",
+      "en": "Mountain Tailorbird",
+      "sci": "Phyllergates cucullatus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0433": {
+      "from": "慄頸鳳鶥",
+      "to": "栗頸鳳鶥",
+      "en": "Indochinese Yuhina",
+      "sci": "Staphida torqueola",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0434": {
+      "from": "黑額鳳鶥",
+      "to": "黑頦鳳鶥",
+      "en": "Black-chinned Yuhina",
+      "sci": "Yuhina nigrimenta",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0438": {
+      "from": "棕頸鈎嘴鶥",
+      "to": "棕頸鉤嘴鶥",
+      "en": "Streak-breasted Scimitar-Babbler",
+      "sci": "Pomatorhinus ruficollis",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0439": {
+      "from": "綠鷺",
+      "to": "中華草鶥",
+      "en": "Chinese Grassbird",
+      "sci": "Graminicola striatus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0451": {
+      "from": "紫背椋鳥",
+      "to": "栗頰椋鳥",
+      "en": "Chestnut-cheeked Starling",
+      "sci": "Agropsar philippensis",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0471": {
+      "from": "斑鶇",
+      "to": "紅尾鶇",
+      "en": "Naumann's Thrush",
+      "sci": "Turdus naumanni",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0477": {
+      "from": "灰頭椋鳥",
+      "to": "白腰鵲鴝",
+      "en": "White-rumped Shama",
+      "sci": "Copsychus malabaricus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0484": {
+      "from": "白腹藍姬鶲",
+      "to": "白腹藍鶲",
+      "en": "Blue-and-white Flycatcher",
+      "sci": "Cyanoptila cyanomelana",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0503": {
+      "from": "鏽胸藍姬鶲",
+      "to": "銹胸藍姬鶲",
+      "en": "Slaty-backed Flycatcher",
+      "sci": "Ficedula erithacus",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0529": {
+      "from": "黃鶺鴒",
+      "to": "西黃鶺鴒",
+      "en": "Western Yellow Wagtail",
+      "sci": "Motacilla flava",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0530": {
+      "from": "黃鶺鴒",
+      "to": "東黃鶺鴒",
+      "en": "Eastern Yellow Wagtail",
+      "sci": "Motacilla tschutschensis",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0533": {
+      "from": "田鷚",
+      "to": "理氏鷚",
+      "en": "Richard's Pipit",
+      "sci": "Anthus richardi",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0565": {
+      "from": "硫黃鵐",
+      "to": "硫磺鵐",
+      "en": "Yellow Bunting",
+      "sci": "Emberiza sulphurata",
+      "basis": "HKBWS 香港鳥類名錄（學名相同）"
+    },
+    "0016": {
+      "from": "大山雀",
+      "to": "遠東山雀",
+      "en": "Asian Tit",
+      "sci": "Parus cinereus",
+      "basis": "Clements 併為 Asian Tit（Parus cinereus）；香港名錄稱「遠東山雀」，卡面依香港名"
+    },
+    "0075": {
+      "from": "灰樹鵲",
+      "to": "紅頂綠鳩",
+      "en": "Whistling Green-Pigeon",
+      "sci": "Treron formosae",
+      "basis": "Clements 的 Whistling Green-Pigeon（Treron formosae）涵蓋香港名錄的紅頂綠鳩（T. permagnus）；灰樹鵲是另一種（Grey Treepie）"
+    },
+    "0275": {
+      "from": "普通鵟",
+      "to": "歐亞鵟",
+      "en": "Common Buzzard",
+      "sci": "Buteo buteo",
+      "basis": "Buteo buteo 不在香港名錄；香港「普通鵟」是 Buteo japonicus（0017）"
+    },
+    "0461": {
+      "from": "烏鶇",
+      "to": "歐亞黑鶇",
+      "en": "Eurasian Blackbird",
+      "sci": "Turdus merula",
+      "basis": "Turdus merula 不在香港名錄；香港「烏鶇」是 Turdus mandarinus（0462）"
+    }
+  }
+}

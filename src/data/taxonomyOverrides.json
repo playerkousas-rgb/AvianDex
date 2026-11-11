@@ -16,10 +16,10 @@
   },
   "0016": {
     "speciesCode": "cintit13",
-    "nameZh": "大山雀",
+    "nameZh": "遠東山雀",
     "sciName": "Parus cinereus",
     "evidence": "Avibase：Clements 2024/2025 與 eBird 2024/2025 已把東亞的 Japanese Tit 併入 Asian Tit Parus cinereus；香港的族群（commixtus）現行分類為 Parus cinereus。HKBWS 名錄另用「遠東山雀 Parus minor」。",
-    "note": "採用 Clements/eBird 現行處理（Asian Tit）；如要跟 HKBWS 名錄寫遠東山雀，改 speciesCode 亦可，但兩者現時並非 eBird 的兩個 speciesCode",
+    "note": "採用 Clements/eBird 現行處理（Asian Tit）；如要跟 HKBWS 名錄寫遠東山雀，改 speciesCode 亦可，但兩者現時並非 eBird 的兩個 speciesCode；中文名 2026-11-11 依香港觀鳥會名錄改為「遠東山雀」",
     "caveat": "分類處理未統一（IOC 仍分 P. minor），卡面文字要避免把兩種說法混寫"
   },
   "0120": {
@@ -31,10 +31,10 @@
   },
   "0196": {
     "speciesCode": "veggul1",
-    "nameZh": "銀鷗",
+    "nameZh": "織女銀鷗",
     "sciName": "Larus vegae",
     "evidence": "HKBWS Avifauna《Vega Gull 織女銀鷗 Larus vegae》：香港冬季所見的「銀鷗」屬此種（含 vegae／mongolicus 兩個亞種）。",
-    "note": "香港慣稱「銀鷗」＝ Vega Gull；不是歐洲的 Larus argentatus。卡面英文名宜用 Vega Gull"
+    "note": "香港慣稱「銀鷗」＝ Vega Gull；不是歐洲的 Larus argentatus。卡面英文名宜用 Vega Gull；中文名 2026-11-11 依香港觀鳥會名錄改為「織女銀鷗」"
   },
   "0235": {
     "speciesCode": "grebit1",
@@ -59,10 +59,10 @@
   },
   "0332": {
     "speciesCode": "japfly1",
-    "nameZh": "紫壽帶",
+    "nameZh": "紫綬帶",
     "sciName": "Terpsiphone atrocaudata",
     "evidence": "eBird/Clements：Black Paradise-Flycatcher Terpsiphone atrocaudata（中文名紫壽帶／日本壽帶）。",
-    "note": "英文名 Japanese Paradise-Flycatcher 已改為 Black Paradise-Flycatcher"
+    "note": "英文名 Japanese Paradise-Flycatcher 已改為 Black Paradise-Flycatcher；中文名 2026-11-11 依香港觀鳥會名錄改為「紫綬帶」"
   },
   "0386": {
     "speciesCode": "pasmar1",

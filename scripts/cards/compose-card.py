@@ -27,7 +27,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 ICON_DIR = os.path.join(ROOT, 'docs/card-samples/card-icons')
 FONT_DIR = os.environ.get('AVX_FONT_DIR', os.path.expanduser('~/.fonts'))
 W, H = 1024, 1536
-OUT_SCALE = int(os.environ.get('AVX_OUT_SCALE', '2'))   # 輸出倍率：2 → 2048×3072（文字放大不糊）
+OUT_SCALE = int(os.environ.get('AVX_OUT_SCALE', '1'))   # 輸出倍率：預設 1 → 1024×1536；2 → 2048×3072
 VERBOSE = bool(os.environ.get('AVX_VERBOSE'))
 SS = 2                      # 超取樣倍率（先畫 2 倍再縮小，邊緣才平滑）
 
@@ -35,8 +35,22 @@ CREAM = (247, 242, 228)
 INK = (48, 60, 46)
 WHITE = (252, 251, 246)
 GREEN = (47, 93, 58)
-# 頂部標題列配色：純裝飾，不代表分類（每塊用不同顏色，較吸睛）
-HDR = {'no': (62, 78, 170), 'title': (47, 93, 58), 'tax': (236, 170, 10), 'zoom': (13, 140, 150)}
+# 頂部標題列配色（預設：單一主題色，見 apply_theme）
+HDR = {'no': (190, 94, 18), 'title': (47, 93, 58), 'tax': (47, 93, 58), 'zoom': (47, 93, 58)}
+# 配色（依 playerkousas-rgb/readme 設計指南 + 實體 TCG 做法）：
+#   一張卡只用一個「主題色」（依目分組，同 TCG 的屬性色）＋中性紙色＋一個暖橙強調（只用在編號塊）。
+#   保育等級、雷達圖、圖示維持各自的語意／多彩，不跟主題走。
+#   AVX_PALETTE=multi 可還原舊的「每個框不同顏色」。
+PALETTE = os.environ.get('AVX_PALETTE', 'theme')
+THEMES = {   # 組 → 主題色（白字對比 ≥ 4.5:1）
+    'water': (38, 100, 146),     # 水鳥：雁形／鸛形／鰹鳥／鷺／鷗／鶴等
+    'raptor': (122, 74, 33),     # 猛禽：鷹形／隼形／鴞形
+    'passerine': (44, 90, 60),   # 雀形目
+    'other': (74, 88, 122),      # 其他：鳩／杜鵑／翠鳥／啄木鳥…
+}
+WATER = {'Anseriformes', 'Podicipediformes', 'Suliformes', 'Pelecaniformes', 'Charadriiformes', 'Gruiformes',
+         'Phaethontiformes', 'Procellariiformes', 'Gaviiformes', 'Ciconiiformes', 'Phoenicopteriformes'}
+RAPTOR = {'Accipitriformes', 'Falconiformes', 'Strigiformes'}
 
 COL = {k: tuple(v) for k, v in json.load(open(os.path.join(ICON_DIR, 'colors.json'))).items()}
 COL['zoom'] = (39, 101, 62)
@@ -261,8 +275,25 @@ def draw_guide(f):
     return cv.done(1)
 
 
+def apply_theme(f):
+    """依目決定本卡主題色，改寫 COL / GREEN / HDR（只在 theme 模式）。"""
+    global GREEN
+    if PALETTE != 'theme':
+        return
+    o = (f.get('order') or [None, None])[1] or ''
+    grp = 'water' if o in WATER else 'raptor' if o in RAPTOR else 'passerine' if o == 'Passeriformes' else 'other'
+    mid = THEMES[grp]
+    for k in list(COL):
+        if k not in ('level',):
+            COL[k] = mid
+    COL['level'] = mid
+    GREEN = mid
+    HDR.update({'title': mid, 'tax': mid, 'zoom': mid})
+
+
 # ── 合成卡 ────────────────────────────────────────────
 def compose(f, art, out_scale=None):
+    apply_theme(f)
     art_hi = art.convert('RGB') if art is not None else None
     art = art_hi.resize((W, H), Image.LANCZOS) if art_hi is not None else None   # 只用於對位檢查
     cv = Canvas()
