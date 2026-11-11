@@ -208,11 +208,14 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   }, [screenFlipped, lang]);
 
   /* 換雀就轉回正面，否則會停在上次的背面。
+     ⚠️ 一定要用 currentBird?.id：birds.json 未載入完成時 currentBird 是 undefined，
+        寫 currentBird.id 會即刻拋 TypeError → 整個 React tree 消失 → 一開就白屏。
      用 render 期間比對而不是 useEffect：換雀是「衍生狀態」，
      用 effect 會先畫一格舊背面再翻返，閃一下。 */
-  const [flippedFor, setFlippedFor] = React.useState(currentBird.id);
-  if (flippedFor !== currentBird.id) {
-    setFlippedFor(currentBird.id);
+  const currentId = currentBird?.id ?? '';
+  const [flippedFor, setFlippedFor] = useState(currentId);
+  if (flippedFor !== currentId) {
+    setFlippedFor(currentId);
     setScreenFlipped(false);
   }
   // 科研終端的外部網站（All About Birds / Flickr / Xeno-canto）只認英文俗名，
