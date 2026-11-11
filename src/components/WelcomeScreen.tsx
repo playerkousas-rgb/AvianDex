@@ -38,21 +38,10 @@ export const WelcomeScreen: React.FC<{ onOpen: () => void }> = ({ onOpen }) => {
           <div className="w-2 h-0.5 bg-gray-600 -rotate-45" />
         </div>
 
-        <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-          <div className="flex gap-2">
-            <div className="w-3 h-3 rounded-full bg-yellow-400 border border-yellow-700 shadow-[0_0_8px_rgba(250,204,21,0.5)]" />
-            <div className="w-3 h-3 rounded-full bg-green-500 border border-green-700 shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
-            <div className="w-3 h-3 rounded-full bg-blue-400 border border-blue-700 shadow-[0_0_8px_rgba(96,165,250,0.5)]" />
-          </div>
-          
-          <button 
-            onClick={() => window.open('https://skw-birdex2.vercel.app', '_blank')}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/40 border border-white/20 text-[10px] text-white/90 hover:bg-black/60 transition-colors pointer-events-auto shadow-lg backdrop-blur-sm"
-          >
-            <Sparkles size={12} className="text-yellow-400" />
-            <span>前往 BIRD-DEX 2 捕捉精靈卡</span>
-            <ExternalLink size={10} />
-          </button>
+        <div className="absolute bottom-6 left-6 flex gap-2">
+          <div className="w-3 h-3 rounded-full bg-yellow-400 border border-yellow-700 shadow-[0_0_8px_rgba(250,204,21,0.5)]" />
+          <div className="w-3 h-3 rounded-full bg-green-500 border border-green-700 shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
+          <div className="w-3 h-3 rounded-full bg-blue-400 border border-blue-700 shadow-[0_0_8px_rgba(96,165,250,0.5)]" />
         </div>
 
       </motion.div>
@@ -65,10 +54,19 @@ export const WelcomeScreen: React.FC<{ onOpen: () => void }> = ({ onOpen }) => {
           transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           whileTap={{ scale: 0.93 }}
         >
-          {/* 外圈光暈 */}
+          {/* 外圈光暈。
+              ⚠️ 上一版用 `inset-0 + blur-2xl` 做光暈，在某些手機 GPU 上
+                 blur 的邊界會被畫成一個方形（用戶回報「精靈球中間出現了正方形框」）。
+                 現在改用 box-shadow 光環（本身就是圓的，不會有邊界），
+                 並將「閃」的動畫只放在陰影，不動 scale —— scale 會令圓形在
+                 子像素上被重採樣，是另一個常見的方框來源。 */}
           <motion.div
-            className="absolute inset-0 rounded-full bg-cyan-400/30 blur-2xl"
-            animate={{ opacity: bootStep >= 2 ? [0.3, 0.7, 0.3] : 0.2, scale: bootStep >= 2 ? [1, 1.15, 1] : 1 }}
+            className="absolute inset-2 rounded-full pointer-events-none"
+            animate={{
+              boxShadow: bootStep >= 2
+                ? ['0 0 20px 4px rgba(34,211,238,0.35)', '0 0 46px 14px rgba(34,211,238,0.65)', '0 0 20px 4px rgba(34,211,238,0.35)']
+                : '0 0 14px 2px rgba(255,255,255,0.12)',
+            }}
             transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
           />
 
@@ -149,6 +147,22 @@ export const WelcomeScreen: React.FC<{ onOpen: () => void }> = ({ onOpen }) => {
               )}
             </div>
           </div>
+        </div>
+
+        {/* BIRD-DEX 2 入口。
+            ⚠️ 上一版放在紅色上半部的右下角，位置隨機身邊緣浮動，
+               在小螢幕上容易被切走或被精靈球壓住（用戶回報「指向放的位置很奇怪」）。
+               現在固定在下半白色區域的中間、POWERED BY 之上：
+               手指自然落點，而且不會與開機球重疊。 */}
+        <div className="absolute inset-x-0 bottom-12 flex justify-center px-4">
+          <button
+            onClick={() => window.open('https://skw-birdex2.vercel.app', '_blank')}
+            className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white border-2 border-gray-900 text-[11px] font-black text-gray-900 shadow-[0_3px_0_rgba(0,0,0,0.35)] active:translate-y-0.5 active:shadow-none transition-all"
+          >
+            <Sparkles size={13} className="text-red-600" />
+            <span>前往 BIRD-DEX 2 捕捉精靈卡</span>
+            <ExternalLink size={11} className="text-gray-500" />
+          </button>
         </div>
 
         <div className="absolute bottom-4 w-full text-center">

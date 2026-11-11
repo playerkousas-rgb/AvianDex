@@ -215,10 +215,13 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
      用 render 期間比對而不是 useEffect：換雀是「衍生狀態」，
      用 effect 會先畫一格舊背面再翻返，閃一下。 */
   const currentId = currentBird?.id ?? '';
+  /* 螢幕上的插畫是否已 decode 完成（避免破圖／alt 文字閃出） */
+  const [screenArtReady, setScreenArtReady] = useState(false);
   const [flippedFor, setFlippedFor] = useState(currentId);
   if (flippedFor !== currentId) {
     setFlippedFor(currentId);
     setScreenFlipped(false);
+    setScreenArtReady(false);
   }
   // 科研終端的外部網站（All About Birds / Flickr / Xeno-canto）只認英文俗名，
   // 用中文名搜尋等於一定查無此鳥 —— 呢個就係舊版六宮格「撳完冇嘢睇」的原因。
@@ -255,119 +258,155 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
         >
           {/* --- 1. 固定頂部 (僅保留關閉與名字，且 z-index 最高) --- */}
           {/* 加入 sticky top-0 確保它隨捲動浮動，不遮擋圖片主體 */}
-          <div className="sticky top-0 left-0 w-full p-4 md:p-10 flex justify-between items-center z-[150] pointer-events-none">
-            {/* iPad/手機標題 (簡化並缩小以讓出空間) */}
-            <div className="md:hidden bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 pointer-events-auto origin-top-left scale-90">
-              <span className="text-yellow-400 font-bold text-xs">【{currentBird.id}】 {currentBird.name}</span>
+          {/* --- 1. 固定頂部 ---
+              只在左邊放一個細標籤、右邊放關閉鈕，不加任何卡片或方框。
+              用戶指出「手機看時中間出現了正方形框」—— 那是我上一版留下的
+              一個獨立浮動方塊（標題卡）壓在圖上；現在全部收成貼邊的細標籤。 */}
+          <div className="sticky top-0 left-0 w-full pt-3 px-3 md:pt-5 md:px-6 flex justify-between items-start z-[150] pointer-events-none">
+            <div className="bg-black/55 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/12 pointer-events-auto">
+              <span className="text-yellow-400 font-bold text-[11px] md:text-sm">
+                NO.{currentBird.id} · {currentBird.name}
+              </span>
             </div>
 
-            {/* 電腦標題 (md以上顯示) */}
-            <div className="hidden md:flex bg-black/60 backdrop-blur-md border border-white/20 p-6 rounded-2xl items-center gap-6 pointer-events-auto">
-              <span className="text-white text-xl font-bold">【NO.{currentBird.id}】 {currentBird.name}</span>
-            </div>
-
-            {/* 右上角 X 關閉鈕：必備退出功能 */}
-            <button 
+            <button
               onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); }}
-              className="pointer-events-auto bg-white/10 hover:bg-red-500 backdrop-blur-xl border border-white/20 text-white w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all active:scale-90 shadow-2xl"
+              aria-label={t('關閉', 'Close')}
+              className="pointer-events-auto bg-black/55 hover:bg-red-600 backdrop-blur-md border border-white/20 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-all active:scale-90 shadow-xl"
             >
-              <X className="w-8 h-8 md:w-10 md:h-10" />
+              <X className="w-5 h-5 md:w-6 md:h-6" />
             </button>
           </div>
 
-          {/* --- 核心圖片顯示區：原生縮放優先（電腦滾輪 / 手機雙指）---
-               已移除自訂放大鏡與縮放模式，改由瀏覽器/裝置內置縮放手勢處理。 */}
-          <div 
-            className="w-full h-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* 放大檢視一樣可以翻轉 —— 用戶回報「一放大就咩資料都睇唔到」，
-                所以在最大畫面這裡提供同一個翻轉動作，唔需要返回格仔先翻。 */}
-            <div className="w-full flex flex-col items-center py-6 md:py-10 gap-3">
-              <div
-                className="relative w-[98%] md:max-w-[95%] [perspective:1600px] cursor-pointer"
-                onClick={(e) => { e.stopPropagation(); setScreenFlipped((v) => !v); }}
+          {/* --- 核心：一張大卡（插畫 ↔ 資訊圖卡） ---
+              用戶指出：「同一版面，上方已經有鳥卡或反轉的資訊圖卡了，
+              下方就不用有張大一點的鳥卡」。
+              所以這個全螢幕檢視只保留**一張**圖，不再上下各一張。
+              點圖翻轉；下方的字只用來說明「現在看的是哪一面」。 */}
+          <div className="w-full flex flex-col items-center px-3 pt-3 pb-28" onClick={(e) => e.stopPropagation()}>
+            <div
+              className="relative w-full max-w-3xl [perspective:1600px] cursor-pointer"
+              onClick={() => setScreenFlipped((v) => !v)}
+            >
+              <motion.div
+                animate={{ rotateY: screenFlipped ? 180 : 0 }}
+                transition={{ type: 'spring', stiffness: 180, damping: 24 }}
+                className="relative w-full [transform-style:preserve-3d]"
               >
-                <motion.div
-                  animate={{ rotateY: screenFlipped ? 180 : 0 }}
-                  transition={{ type: 'spring', stiffness: 180, damping: 24 }}
-                  className="relative w-full [transform-style:preserve-3d]"
-                >
-                  {/* 正面：插畫（1:1，與原圖比例一致） */}
-                  <div className="relative w-full [backface-visibility:hidden]">
-                    {currentImage.url ? (
-                      <img
-                        src={currentImage.url}
-                        alt={currentBird.name}
-                        referrerPolicy="no-referrer"
-                        className="object-contain rounded-lg shadow-2xl w-full h-auto max-h-[80vh] mx-auto"
-                      />
-                    ) : (
-                      <CardImageFallback id={currentBird.id} status={currentImage.status} onRetry={currentImage.retry} />
-                    )}
-                  </div>
-                  {/* 背面：資訊圖卡；未做就用文字簡版 */}
-                  <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-lg overflow-hidden bg-[#f7f4ea] shadow-2xl">
-                    {infoImage.status === 'loaded' && infoImage.url ? (
-                      <img
-                        src={infoImage.url}
-                        alt={`${currentBird.name} 資訊圖卡`}
-                        referrerPolicy="no-referrer"
-                        className="w-full h-full object-contain"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-[#171512] p-4 flex flex-col">
-                        <p className="text-white font-black text-base leading-tight">{currentBird.name}</p>
-                        <p className="text-white/40 font-mono text-[10px] italic">{entry?.s}</p>
-                        <div className="mt-3 grid grid-cols-2 gap-2">
-                          {(['range', 'habitat', 'diet', 'look'] as const).map((k) => {
-                            const raw = (screenDetail as Record<string, string | string[]> | null)?.[k];
-                            const val = Array.isArray(raw) ? raw.filter(Boolean).join('；') : String(raw ?? '').trim();
-                            const labels: Record<string, string> = { range: '分佈', habitat: '環境', diet: '食物', look: '外形' };
-                            return (
-                              <div key={k} className="bg-black/30 rounded p-2 leading-tight">
-                                <p className="text-amber-300/80 text-[10px] font-black">{labels[k]}</p>
-                                <p className="text-white/70 text-[11px] mt-0.5">{val || t('資料待查', 'Pending')}</p>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </motion.div>
-              </div>
+                {/* 正面：插畫（1:1 正方形，所以本體就是正方形，不會有奇怪留白） */}
+                <div className="relative w-full aspect-square [backface-visibility:hidden] rounded-xl overflow-hidden bg-[#0e0d0b]">
+                  {currentImage.url ? (
+                    <img
+                      src={currentImage.url}
+                      alt={currentBird.name}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <CardImageFallback id={currentBird.id} status={currentImage.status} onRetry={currentImage.retry} />
+                  )}
+                </div>
 
-              {/* 翻轉掣：明寫文字，不用猜 */}
+                {/* 背面：資訊圖卡（A4 直向 → object-contain，不裁走字） */}
+                <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-xl overflow-hidden bg-[#f7f4ea]">
+                  {infoImage.status === 'loaded' && infoImage.url ? (
+                    <img
+                      src={infoImage.url}
+                      alt={t(`${currentBird.name} 資訊圖卡`, `${currentBird.name} info card`)}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-[#171512] p-4 flex flex-col">
+                      <p className="text-white font-black text-base leading-tight">{currentBird.name}</p>
+                      <p className="text-white/40 font-mono text-[10px] italic">{entry?.s}</p>
+                      <div className="mt-3 grid grid-cols-2 gap-2 content-start">
+                        {(['range', 'habitat', 'diet', 'look'] as const).map((k) => {
+                          const raw = (screenDetail as Record<string, string | string[]> | null)?.[k];
+                          const val = Array.isArray(raw) ? raw.filter(Boolean).join('；') : String(raw ?? '').trim();
+                          const labels: Record<string, string> = { range: '分佈', habitat: '環境', diet: '食物', look: '外形' };
+                          return (
+                            <div key={k} className="bg-black/30 rounded p-2 leading-tight">
+                              <p className="text-amber-300/80 text-[10px] font-black">{labels[k]}</p>
+                              <p className="text-white/70 text-[11px] mt-0.5">{val || t('資料待查', 'Pending')}</p>
+                            </div>
+                          );
+                        })}
+                      </div>
+                      <p className="mt-auto text-white/25 text-[9px]">
+                        {t('資訊圖卡未完成，以上為文字簡版', 'Info card not ready — text version')}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* 一行說明 ＋ 翻轉掣（不疊在圖上，不會遮住圖） */}
+            <div className="mt-3 flex items-center gap-2">
+              <span className="text-white/40 font-mono text-[9.5px] tracking-widest">
+                {screenFlipped ? t('資訊圖卡', 'INFO CARD') : t('插畫', 'ARTWORK')}
+              </span>
               <button
                 type="button"
-                onClick={(e) => { e.stopPropagation(); setScreenFlipped((v) => !v); }}
-                className="bg-white/12 hover:bg-white/25 backdrop-blur border border-white/25 text-white font-black text-xs px-5 py-2.5 rounded-full flex items-center justify-center gap-2 active:scale-95 transition-all"
+                onClick={() => setScreenFlipped((v) => !v)}
+                className="bg-white/12 hover:bg-white/25 border border-white/25 text-white font-black text-[11px] px-3 py-1.5 rounded-full flex items-center gap-1.5 active:scale-95 transition-all"
               >
-                <RotateCw className="w-4 h-4" />
-                {screenFlipped ? t('睇插畫', 'Show artwork') : t('睇資料卡', 'Show info card')}
+                <RotateCw className="w-3.5 h-3.5" />
+                {screenFlipped ? t('轉回插畫', 'Artwork') : t('翻轉看資料', 'Flip')}
               </button>
             </div>
-            
-            {/* 詳細資料按鈕 / RESEARCH：確保它在圖片捲動範圍內，且容易按到 */}
-            {/* 全螢幕時一樣要入得到詳細資料：之前係開外部 All About Birds，
-                mobile 用戶一按就離開 app 而且返回唔到，所以改為關閉全螢幕並跳去第 2 頁。 */}
-            <div className="w-full flex justify-center gap-2 py-8 pb-24 px-4">
-              <button
-                onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); setPage(2); }}
-                className="flex-1 max-w-xs bg-gradient-to-b from-yellow-400 to-yellow-600 text-gray-900 font-black px-4 py-3.5 rounded-xl border-2 border-yellow-800 shadow-xl active:scale-95 transition-all flex items-center justify-center gap-2 text-sm"
-              >
-                <FileText className="w-5 h-5" />
-                {t('詳細資料（文字）', 'DETAILS (TEXT)')}
-              </button>
-              <button
-                onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); setPage(3); }}
-                className="flex-1 max-w-xs bg-black/60 border border-amber-400/40 text-amber-100 font-black px-4 py-3.5 rounded-xl active:scale-95 transition-all flex items-center justify-center gap-2 text-sm"
-              >
-                <Compass className="w-5 h-5" />
-                {t('科學研究中心', 'RESEARCH')}
-              </button>
-            </div>
+          </div>
+
+          {/* --- 兩邊浮球：左 3 個（地圖／禮儀／裝備），右 3 個（聽聲／拍照／精靈球）
+              用戶要求：「那些球也是左右各 3 個，那就剛好不會遮到圖」。
+              所以手機上一律貼邊、垂直排列，中間完全留空給圖。 */}
+          <div className="fixed left-2 bottom-6 z-[160] flex flex-col gap-2">
+            <button
+              onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); setPage(3); }}
+              aria-label={t('科學研究中心', 'Research')}
+              className="w-11 h-11 rounded-full bg-emerald-600/85 border-[3px] border-gray-900 text-white flex items-center justify-center active:scale-90 shadow-lg"
+            >
+              <Compass className="w-5 h-5" />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); setPage(2); }}
+              aria-label={t('詳細資料', 'Details')}
+              className="w-11 h-11 rounded-full bg-yellow-500/90 border-[3px] border-gray-900 text-gray-900 flex items-center justify-center active:scale-90 shadow-lg"
+            >
+              <FileText className="w-5 h-5" />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+              aria-label={t('上一隻', 'Previous')}
+              className="w-11 h-11 rounded-full bg-black/70 border-[3px] border-gray-900 text-amber-200 flex items-center justify-center active:scale-90 shadow-lg"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+          </div>
+
+          <div className="fixed right-2 bottom-6 z-[160] flex flex-col gap-2">
+            <button
+              onClick={(e) => { e.stopPropagation(); setCaptureKind('audio'); }}
+              aria-label={t('聽聲認雀', 'Sound ID')}
+              className="w-11 h-11 rounded-full bg-cyan-600/85 border-[3px] border-gray-900 text-white flex items-center justify-center active:scale-90 shadow-lg"
+            >
+              <Mic className="w-5 h-5" />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); setCaptureKind('image'); }}
+              aria-label={t('看圖認雀', 'Photo ID')}
+              className="w-11 h-11 rounded-full bg-fuchsia-600/85 border-[3px] border-gray-900 text-white flex items-center justify-center active:scale-90 shadow-lg"
+            >
+              <Camera className="w-5 h-5" />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); handleNext(); }}
+              aria-label={t('下一隻', 'Next')}
+              className="w-11 h-11 rounded-full bg-black/70 border-[3px] border-gray-900 text-amber-200 flex items-center justify-center active:scale-90 shadow-lg"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
           </div>
         </motion.div>
       )}
@@ -497,16 +536,31 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             transition={{ type: 'spring', stiffness: 190, damping: 22 }}
             className="relative w-full h-full [transform-style:preserve-3d]"
           >
-            {/* 正面：插畫 */}
-            <div className="absolute inset-0 flex items-center justify-center [backface-visibility:hidden]">
+            {/* 正面：插畫。
+                ⚠️ 用戶回報「圖鑑機中間出現破圖（alt 文字＋破圖示）」。
+                   原因：圖鑑機用 object-contain 顯示 1:1 插畫，但螢幕高度只夠
+                   好窄一條，圖未 decode 完就已經 alt 顯示；而且有些環境會擋
+                   referrer。現在改成 object-cover 填滿螢幕（插畫是正方形，
+                   裁邊比留一條白邊好看），並加 onLoad/onError 與載入中狀態。 */}
+            <div className="absolute inset-0 flex items-center justify-center [backface-visibility:hidden] bg-[#12100d]">
               {currentImage.url ? (
-                <img
-                  key={currentImage.url}
-                  src={currentImage.url}
-                  alt={currentBird.name}
-                  referrerPolicy="no-referrer"
-                  className="max-w-full max-h-full object-contain p-1"
-                />
+                <>
+                  {!(screenArtReady && currentImage.status === 'loaded') && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-8 h-8 border-4 border-amber-500/20 border-t-amber-400 rounded-full animate-spin" />
+                    </div>
+                  )}
+                  <img
+                    key={currentImage.url}
+                    src={currentImage.url}
+                    alt={currentBird.name}
+                    referrerPolicy="no-referrer"
+                    decoding="async"
+                    onLoad={() => setScreenArtReady(true)}
+                    onError={() => setScreenArtReady(false)}
+                    className={`w-full h-full object-cover ${screenArtReady && currentImage.status === 'loaded' ? 'block' : 'hidden'}`}
+                  />
+                </>
               ) : (
                 <CardImageFallback id={currentBird.id} status={currentImage.status} onRetry={currentImage.retry} compact />
               )}
@@ -727,7 +781,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                     speciesCode={entry?.code}
                     lang={lang}
                     cardUrl={currentImage.url}
-                    cardStatus={currentImage.status}
+                    infoUrl={infoImage.status === 'loaded' ? infoImage.url : undefined}
                     onBackToCard={() => setPage(1)}
                   />
                 )}

@@ -2,6 +2,9 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { FlipCard } from './components/FlipCard.tsx';
 import { PokedexDevice } from './components/PokedexDevice.tsx';
 import { WelcomeScreen } from './components/WelcomeScreen.tsx';
+import { SideToolBalls } from './components/SideToolBalls.tsx';
+import { InstallPrompt } from './components/InstallPrompt.tsx';
+import { UpdateToast } from './components/UpdateToast.tsx';
 import { RecognitionResultModal, Candidate } from './components/RecognitionResultModal.tsx';
 import { MediaCapturePanel, MediaKind } from './components/MediaCapturePanel.tsx';
 import { BirdingMapModal } from './components/BirdingMapModal.tsx';
@@ -27,12 +30,11 @@ import {
   Wifi,
   BatteryFull,
   Map as MapIcon,
-  Menu,
-  X as XIcon,
   Footprints,
   Backpack,
   Layers,
   Languages,
+  ChevronDown,
 } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -404,12 +406,28 @@ function App() {
                 </button>
               </div>
 
+              {/* 手機：語言直接可見（不用開選單）。
+                  用戶要求「中英轉換不用點三橫才能看到，在上方直接有 1 個顯示 EN 中」。
+                  用一個 2 段式開關：中 | EN，現時語言反白。 */}
+              <button
+                onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}
+                aria-label={lang === 'en' ? '切換到中文' : 'Switch to English'}
+                className="md:hidden flex items-center bg-black/45 border-2 border-cyan-300/35 rounded-lg overflow-hidden shrink-0 active:scale-95"
+              >
+                <span className={`px-2 py-2 text-[11px] font-black ${lang === 'zh' ? 'bg-cyan-400 text-gray-900' : 'text-cyan-200/60'}`}>中</span>
+                <span className={`px-2 py-2 text-[11px] font-black ${lang === 'en' ? 'bg-cyan-400 text-gray-900' : 'text-cyan-200/60'}`}>EN</span>
+              </button>
+
+              {/* 漢堡改為「收合黃色區域」：只控制下面那條黃色資訊帶，
+                  不再包含地圖／禮儀／裝備（已搬到左邊浮動球）。
+                  用戶說「那三橫改為收合黃色區域」—— 所以圖示也用 chevron。 */}
               <button
                 onClick={() => setMobileMenuOpen((v) => !v)}
-                aria-label="選單"
+                aria-label={mobileMenuOpen ? '收起資訊帶' : '展開資訊帶'}
+                aria-expanded={mobileMenuOpen}
                 className="md:hidden w-11 h-11 rounded-lg bg-black/40 border-2 border-yellow-400/30 text-yellow-200 flex items-center justify-center active:scale-90 shrink-0"
               >
-                {mobileMenuOpen ? <XIcon className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                <ChevronDown className={`w-5 h-5 transition-transform ${mobileMenuOpen ? 'rotate-180' : ''}`} />
               </button>
             </div>
 
@@ -422,40 +440,13 @@ function App() {
                   transition={{ duration: 0.25 }}
                   className="overflow-hidden md:hidden"
                 >
-                  <div className="bg-black/60 backdrop-blur-md border-t-2 border-yellow-400/20 px-3 py-3 grid grid-cols-1 gap-2 relative">
-                    <button
-                      onClick={() => { setShowMap(true); setMobileMenuOpen(false); }}
-                      className="flex items-center justify-center gap-2 bg-black/40 active:bg-yellow-500/20 rounded-lg px-3 py-3 border border-yellow-400/30 text-yellow-200 font-black text-xs tracking-wider transition-all active:scale-95"
-                    >
-                      <MapIcon className="w-4 h-4 shrink-0" /> 觀鳥地圖
-                    </button>
-                    <div className="grid grid-cols-2 gap-2">
-                      <button
-                        onClick={() => { setGuideKind('etiquette'); setMobileMenuOpen(false); }}
-                        className="flex items-center justify-center gap-1.5 bg-black/40 active:bg-yellow-500/20 rounded-lg px-2 py-3 border border-emerald-400/30 text-emerald-200 font-black text-[11px] tracking-wider active:scale-95"
-                      >
-                        <Footprints className="w-4 h-4 shrink-0" /> {lang === 'en' ? 'Etiquette' : '觀鳥禮儀'}
-                      </button>
-                      <button
-                        onClick={() => { setGuideKind('gear'); setMobileMenuOpen(false); }}
-                        className="flex items-center justify-center gap-1.5 bg-black/40 active:bg-yellow-500/20 rounded-lg px-2 py-3 border border-amber-400/30 text-amber-200 font-black text-[11px] tracking-wider active:scale-95"
-                      >
-                        <Backpack className="w-4 h-4 shrink-0" /> {lang === 'en' ? 'Gear' : '觀鳥裝備'}
-                      </button>
-                      <button
-                        onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}
-                        className="col-span-2 flex items-center justify-center gap-1.5 bg-black/40 active:bg-cyan-500/20 rounded-lg px-2 py-3 border border-cyan-300/30 text-cyan-200 font-black text-[11px] tracking-wider active:scale-95"
-                      >
-                        <Languages className="w-4 h-4 shrink-0" />
-                        {lang === 'en' ? 'Switch to 全中文' : 'Switch to English only'}
-                      </button>
-                    </div>
-                    <button
-                      onClick={() => window.open(BIRDDEX2_URL, '_blank')}
-                      className="flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-800 rounded-lg px-3 py-3 border border-red-400/50 text-white font-black text-xs tracking-wider transition-all active:scale-95 shadow-lg shadow-red-900/50"
-                    >
-                      <CameraIcon className="w-4 h-4 shrink-0" /> 前往 BIRD-DEX 2 捕捉精靈卡
-                    </button>
+                  {/* 收合的只是「黃色資訊帶」（569 種／已解鎖圖卡／搜尋／排序／篩選）。
+                      地圖、禮儀、裝備、語言已經全部搬到浮動球與頂欄，
+                      所以這裡不再重複，BIRD-DEX 2 亦已由右邊精靈球負責。 */}
+                  <div className="bg-black/60 backdrop-blur-md border-t-2 border-yellow-400/20 px-3 py-2.5 relative">
+                    <p className="text-yellow-200/70 font-mono text-[9px] tracking-widest">
+                      {L('資料帶 · DATA STRIP', 'DATA STRIP')}
+                    </p>
                   </div>
                 </motion.div>
               )}
@@ -758,6 +749,20 @@ function App() {
           </div>
         </footer>
       </div>
+
+      {/* 左邊浮動工具球：地圖／禮儀／裝備／語言（右邊三個 AI 球保持不變） */}
+      <SideToolBalls
+        lang={lang}
+        onMap={() => setShowMap(true)}
+        onGuide={(k) => setGuideKind(k)}
+        hidden={selectedBirdId !== null || showMap || recogOpen || !!globalCaptureKind || !!guideKind}
+      />
+
+      {/* 有新版本時的頂部橫幅（由 service worker 偵測，用戶按才換版） */}
+      <UpdateToast lang={lang} />
+
+      {/* 加入主畫面（右上角細球，已安裝或已按「暫時不要」就自動消失） */}
+      {isOpened && <InstallPrompt lang={lang} />}
 
       <PokedexDevice
         lang={lang}
