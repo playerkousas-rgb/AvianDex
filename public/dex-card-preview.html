@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="zh-Hant-HK"><head>
+<meta charset="utf-8">
+<title>圖鑑資訊卡預覽 · AvianDex</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+  body{margin:0;background:#20241f;color:#e8ece8;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+  .top{padding:18px 24px;border-bottom:1px solid rgba(255,255,255,.12);display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+  .top h1{font-size:16px;margin:0;letter-spacing:.02em}
+  .top p{margin:0;font-size:12px;color:#9fae9f}
+  .wrap{padding:22px 24px 40px}
+  .cap{font-size:13px;color:#cfd8cf;margin-bottom:10px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+  .cap b{font-family:ui-monospace,monospace;color:#e9c65c}
+  .hint{font-size:11px;color:#7d8a7d}
+  /* 容器永遠是 1200 寬，用 transform 縮到視窗寬度：
+     這樣 1200×1600 的原尺寸版面在窄螢幕上只是縮小，不會被 reflow 打散 */
+  .stage{width:1200px;max-width:100%;height:1600px;overflow:hidden;background:#0e120e;
+         border-radius:14px;transform-origin:top left}
+  .scaler{transform-origin:top left}
+  
+.dx{
+  --c:#17553c;--t:#f3f7f1;--a:#d8a21c;
+  position:relative;width:1200px;height:1600px;box-sizing:border-box;
+  padding:34px;display:flex;flex-direction:column;gap:18px;
+  background:var(--t);color:#182420;
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei","Hiragino Sans",system-ui,sans-serif;
+  font-size:15px;line-height:1.42;overflow:hidden;
+}
+.dx *{box-sizing:border-box;margin:0;padding:0}
+.dx .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.dx .en{font-family:"Helvetica Neue",Arial,system-ui,sans-serif}
+.dx .t-miss{color:#9a9a92;font-style:italic}
+
+/* ---------- 標題帶 ---------- */
+.dx .hdr{
+  display:grid;grid-template-columns:196px 1fr 352px;gap:20px;align-items:start;
+  height:216px;flex:0 0 216px;
+  background:#fff;border:2px solid var(--c);border-radius:22px;padding:18px 22px;
+}
+.dx .hdr-l{display:flex;flex-direction:column;align-items:center;gap:10px}
+.dx .chip-art{width:136px;height:136px;object-fit:cover;border-radius:14px;border:2px solid var(--c);
+  background:#0e0d0b;image-rendering:pixelated}
+.dx .chip-art.chip-miss{display:flex;align-items:center;justify-content:center;color:#fff;
+  font:700 13px ui-monospace,monospace;background:#2a2a26}
+.dx .no-pill{background:var(--c);color:#fff;font-weight:900;font-size:18px;letter-spacing:.04em;
+  padding:5px 18px;border-radius:999px;font-family:ui-monospace,SFMono-Regular,monospace}
+.dx .hdr-c{padding-top:4px;min-width:0}
+.dx .name{font-size:58px;font-weight:900;line-height:1.04;letter-spacing:.02em;color:#111}
+.dx .sci{font-style:italic;font-size:19px;color:#4a5c54;margin-top:7px;font-family:Georgia,serif}
+.dx .en-pill{display:inline-block;margin-top:10px;background:var(--c);color:#fff;border-radius:999px;
+  padding:4px 16px;font-size:17px;font-weight:700}
+.dx .hdr-r{display:flex;flex-direction:column;gap:7px}
+.dx .taxline{display:flex;flex-direction:column;gap:5px}
+.dx .tag-ord,.dx .tag-fam{border-radius:8px;padding:5px 10px;font-size:14px;font-weight:700;
+  display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.dx .tag-ord{background:var(--c);color:#fff}
+.dx .tag-fam{color:var(--c);border:1.5px solid var(--c);background:#fff}
+.dx .tag-ord em,.dx .tag-fam em{font-style:normal;font-weight:400;opacity:.75;
+  font-family:"Helvetica Neue",Arial,sans-serif;font-size:11.5px}
+.dx .iucn{display:flex;align-items:center;gap:8px;border-radius:8px;padding:6px 10px;
+  font-weight:800;font-size:14px}
+.dx .iucn-k{font-size:9.5px;letter-spacing:.16em;opacity:.7;font-family:"Helvetica Neue",Arial,sans-serif}
+.dx .iucn-miss{background:#ededed;color:#555}
+.dx .quick{display:flex;gap:8px}
+.dx .q{flex:1;background:rgba(0,0,0,.045);border-radius:8px;padding:5px 10px;
+  display:flex;flex-direction:column;gap:1px}
+.dx .q-k{font-size:10.5px;color:#5b6b63;letter-spacing:.08em}
+.dx .q-v{font-weight:800;font-size:16px;color:#16231e;
+  font-family:ui-monospace,SFMono-Regular,monospace}
+
+/* ---------- 區塊 ---------- */
+.dx .band{display:flex;gap:18px;flex:0 0 auto}
+.dx .band-a{height:432px}
+.dx .col-l{width:296px;display:flex;flex-direction:column;gap:18px}
+.dx .col-r{width:322px;display:flex;flex-direction:column;gap:14px}
+.dx .hero{flex:1;position:relative;border-radius:20px;overflow:hidden;border:2px solid var(--c);
+  background:#0b0b09;display:flex;align-items:center;justify-content:center}
+.dx .hero img{width:100%;height:100%;object-fit:contain;display:block}
+.dx .hero-miss{color:#fff;display:flex;flex-direction:column;align-items:center;gap:8px;
+  font-family:ui-monospace,monospace;text-align:center;opacity:.5}
+.dx .hero-miss b{font-size:26px}
+.dx .hero-miss small{font-size:12px;font-style:italic;line-height:1.6}
+.dx .hero figcaption{position:absolute;left:0;right:0;bottom:0;padding:7px 12px;
+  background:linear-gradient(transparent,rgba(0,0,0,.74));color:#fff;font-size:10.5px;
+  text-align:right;letter-spacing:.03em}
+
+/* ---------- 小卡 ---------- */
+.dx .pnl{background:#fff;border:1.5px solid rgba(0,0,0,.10);border-radius:16px;padding:12px 15px;
+  display:flex;flex-direction:column;gap:7px;flex:1;min-height:0;overflow:hidden}
+.dx .pnl-h{display:flex;align-items:center;gap:7px;font-size:15.5px;font-weight:900;color:var(--c);
+  padding-bottom:6px;border-bottom:2px solid rgba(0,0,0,.07);flex:0 0 auto}
+.dx .pnl-i{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;
+  border-radius:6px;background:var(--c);color:#fff;font-size:10px;flex:0 0 auto}
+.dx .pnl-b{flex:1;min-height:0;display:flex;flex-direction:column;gap:5px}
+.dx .t-zh{font-size:14px;line-height:1.52;color:#1d2b25}
+.dx .t-en{font-size:11.5px;line-height:1.46;color:#61736b}
+
+/* ---------- 分類階梯 ---------- */
+.dx .taxlist{list-style:none;display:flex;flex-direction:column;gap:2px}
+.dx .taxlist li{display:flex;gap:8px;font-size:13px;align-items:baseline}
+.dx .taxlist .k{flex:0 0 20px;color:#8a9a92;text-align:center;font-size:12px}
+.dx .taxlist .v{flex:1;color:#22322b;font-weight:600;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+
+/* ---------- 量度 ---------- */
+.dx .mbs{list-style:none;display:flex;flex-direction:column;gap:7px}
+.dx .mb{display:flex;align-items:center;gap:8px;font-size:12.5px}
+.dx .mb-n{flex:0 0 62px;color:#455c52;font-weight:700}
+.dx .mb-t{flex:1;height:9px;border-radius:999px;background:rgba(0,0,0,.07);overflow:hidden}
+.dx .mb-t i{display:block;height:100%;background:var(--c);border-radius:999px;opacity:.88}
+.dx .mb-v{flex:0 0 60px;text-align:right;font-family:ui-monospace,monospace;
+  font-size:11px;color:#5b6b63}
+
+/* ---------- 標籤 ---------- */
+.dx .chiprow{display:flex;flex-wrap:wrap;gap:6px}
+.dx .chip{font-size:12.5px;font-weight:700;padding:3px 11px;border-radius:999px;
+  background:var(--c);color:#fff}
+.dx .chip-h{background:#2a6b52}
+.dx .chip-d{background:#8a5a1e}
+.dx .chip-miss{background:#e6e6e1;color:#8a8a82;font-weight:400;font-style:italic}
+.dx .chiprow-en{font-size:11px}
+
+/* ---------- 中段 ---------- */
+.dx .band-b{height:262px}
+.dx .band-c{height:264px}
+.dx .band-b .pnl,.dx .band-c .pnl{width:0;flex:1 1 0}
+
+/* ---------- 評分 ---------- */
+.dx .score{height:164px;flex:0 0 164px;display:flex;gap:18px;
+  background:#fff;border:2px solid var(--c);border-radius:18px;padding:12px 18px}
+.dx .score-l{flex:1;display:flex;flex-direction:column;gap:8px;min-width:0}
+.dx .score-h{display:flex;align-items:baseline;gap:8px;font-size:15px;font-weight:900;color:var(--c)}
+.dx .score-h em{font-style:normal;font-size:10.5px;font-weight:500;color:#8a9a92}
+.dx .dims{list-style:none;display:flex;flex-direction:column;gap:5px}
+.dx .dim{display:flex;align-items:center;gap:8px}
+.dx .dim-n{flex:0 0 296px;display:flex;align-items:baseline;gap:6px;
+  font-size:12.5px;font-weight:700;color:#26382f}
+.dx .dim-from{font-style:normal;font-size:9.5px;color:#9aa8a1;font-weight:400}
+.dx .dim-bar{flex:1;height:10px;border-radius:999px;background:rgba(0,0,0,.07);overflow:hidden}
+.dx .dim-bar i{display:block;height:100%;border-radius:999px;
+  background:linear-gradient(90deg,var(--c),var(--a))}
+.dx .dim-v{flex:0 0 38px;text-align:right;font-family:ui-monospace,monospace;
+  font-weight:800;font-size:13px;color:var(--c)}
+.dx .dim-miss .dim-n,.dx .dim-miss .dim-v{color:#a8b2ac}
+.dx .score-r{flex:0 0 206px;display:flex;flex-direction:column;align-items:center;
+  justify-content:space-between;border-left:1.5px dashed rgba(0,0,0,.12);padding-left:16px}
+.dx .overall{display:flex;align-items:baseline;gap:5px;color:var(--c)}
+.dx .o-k{font-size:11.5px;font-weight:800;letter-spacing:.1em}
+.dx .o-v{font-size:46px;font-weight:900;line-height:1;
+  font-family:ui-monospace,SFMono-Regular,monospace}
+.dx .o-max{font-size:13px;color:#7a8a82}
+.dx .bc{display:flex;align-items:flex-end;height:32px;width:100%;justify-content:center}
+.dx .bc i{display:block;height:32px;background:#1b2521}
+
+/* ---------- 底欄 ---------- */
+.dx .foot{height:104px;flex:0 0 104px;display:flex;align-items:center;gap:18px;
+  background:var(--c);color:#fff;border-radius:16px;padding:12px 22px}
+.dx .f-col{display:flex;flex-direction:column;gap:2px;min-width:0}
+.dx .f-wide{flex:1}
+.dx .f-src{flex:0 0 424px;overflow:hidden}
+.dx .f-k{font-size:9.5px;letter-spacing:.14em;opacity:.66}
+.dx .f-v{font-size:15px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dx .f-v em{font-style:italic;font-weight:400;opacity:.85}
+.dx .f-v.small{font-size:8.5px;font-weight:400;line-height:1.38;white-space:normal;opacity:.92;
+  max-height:30px;overflow:hidden}
+
+/* ---------- 語言切換：中欄只放中文、英欄只放英文 ---------- */
+.dx.lang-zh .en{display:none!important}
+.dx.lang-en .zh{display:none!important}
+.dx.lang-en .name{font-size:42px;line-height:1.08}
+.dx.lang-en .taxlist .k{display:none}
+.dx.lang-en .t-zh{display:none}
+.dx.lang-en .t-en{font-size:14px;line-height:1.5;color:#26382f}
+
+  /* 預覽頁把卡縮到容器寬度；下載用的 PNG 一律用 1200×1600 原尺寸 */
+  body{--s:1}
+  @media (max-width:1290px){
+    body{--s:calc((100vw - 48px) / 1200)}
+    .wrap{padding-bottom:calc(40px + (1600px * (1 - var(--s)) * 0))}
+    .stage{transform:scale(var(--s));margin-bottom:calc(1600px * (var(--s) - 1))}
+  }
+</style>
+</head><body>
+<div class="top">
+  <h1>圖鑑資訊卡 · 預覽</h1>
+  <p>一套版式，按「目」自動換色 · 文字由 git 內 JSON 注入 · 插畫用 BIRD-DEX 2 現成 569 張 · 空欄一律寫「資料待查」</p>
+</div>
+
+  <section class="wrap" id="card-0013">
+    <div class="cap">
+      <b>NO.0013</b> 八哥 · Crested Myna
+      <span class="hint">螢幕上的是 1200×1600 原尺寸（縮放看整張，1:1 看細節）</span>
+    </div>
+    <div class="stage"><div class="scaler">
+<div class="dx lang-both " style="--c:#17553c;--t:#f3f7f1;--a:#d8a21c">
+
+  <!-- ───────── 標題帶 ───────── -->
+  <header class="hdr">
+    <div class="hdr-l">
+      <img class="chip-art" src="https://pub-a9333a974e814ccba1994639b6e79266.r2.dev/birdcards/0013.avif" alt="" referrerpolicy="no-referrer" />
+      <div class="no-pill">NO.0013</div>
+    </div>
+
+    <div class="hdr-c">
+      <h1 class="name">八哥</h1>
+      <div class="sci">Acridotheres cristatellus</div>
+      <div class="en-pill"><span class="en en-h">Crested Myna</span></div>
+    </div>
+
+    <div class="hdr-r">
+      <div class="taxline">
+        <span class="tag-ord"><span class="zh">雀形目</span><em>Passeriformes</em></span>
+        <span class="tag-fam"><span class="zh">椋鳥科</span><em>Sturnidae</em></span>
+      </div>
+      <div class="iucn" style="color:#1c5c3c;background:#e2f1e7">
+             <span class="iucn-k">IUCN</span>
+             <span class="zh">無危 LC</span>
+             <span class="en en-h">Least Concern LC</span>
+           </div>
+      <div class="quick">
+        <div class="q">
+          <span class="q-k zh">身長</span><span class="q-k en en-h">Length</span>
+          <span class="q-v">—</span>
+        </div>
+        <div class="q">
+          <span class="q-k zh">體重</span><span class="q-k en en-h">Mass</span>
+          <span class="q-v">116.3 g</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ───────── 上段：左欄 + 主插畫 + 右欄 ───────── -->
+  <section class="band band-a">
+    <div class="col-l">
+      
+  <section class="pnl" style="flex:0 0 206px;height:206px">
+    <h3 class="pnl-h"><span class="pnl-i">◈</span><span class="zh">分類資訊</span><span class="en en-h">Taxonomy</span></h3>
+    <div class="pnl-b"><ul class="taxlist"><li><span class="k">界</span><span class="v">動物界 Animalia</span></li><li><span class="k">門</span><span class="v">脊索動物門 Chordata</span></li><li><span class="k">綱</span><span class="v">鳥綱 Aves</span></li><li><span class="k">目</span><span class="v">雀形目 Passeriformes</span></li><li><span class="k">科</span><span class="v">椋鳥科 Sturnidae</span></li><li><span class="k">屬</span><span class="v">Acridotheres</span></li><li><span class="k">種</span><span class="v">八哥 Acridotheres cristatellus</span></li></ul></div>
+  </section>
+      
+  <section class="pnl">
+    <h3 class="pnl-h"><span class="pnl-i">✦</span><span class="zh">名稱由來</span><span class="en en-h">Name origin</span></h3>
+    <div class="pnl-b"><p class="t-zh">物種名cristatella是拉丁文cristatus的縮小詞，意為「有冠的」或「有羽飾的」。</p><p class="t-en">The specific epithet cristatella is a Latin diminutive of cristatus meaning “crested“ or “plumed“.</p></div>
+  </section>
+    </div>
+
+    <figure class="hero">
+      <img src="https://pub-a9333a974e814ccba1994639b6e79266.r2.dev/birdcards/0013.avif" alt="八哥" referrerpolicy="no-referrer" />
+      <figcaption>插畫：BIRD-DEX 2 · Artwork: BIRD-DEX 2</figcaption>
+    </figure>
+
+    <div class="col-r">
+      
+  <section class="pnl" style="flex:1.25">
+    <h3 class="pnl-h"><span class="pnl-i">▤</span><span class="zh">量度</span><span class="en en-h">Measurements</span></h3>
+    <div class="pnl-b"><ul class="mbs"><li class="mb">
+        <span class="mb-n"><span class="zh">翼長</span><span class="en en-h">Wing</span></span>
+        <span class="mb-t"><i style="width:100%"></i></span>
+        <span class="mb-v">134 mm</span>
+      </li><li class="mb">
+        <span class="mb-n"><span class="zh">尾長</span><span class="en en-h">Tail</span></span>
+        <span class="mb-t"><i style="width:61%"></i></span>
+        <span class="mb-v">81.2 mm</span>
+      </li><li class="mb">
+        <span class="mb-n"><span class="zh">嘴峰</span><span class="en en-h">Bill</span></span>
+        <span class="mb-t"><i style="width:20%"></i></span>
+        <span class="mb-v">27.1 mm</span>
+      </li><li class="mb">
+        <span class="mb-n"><span class="zh">跗蹠</span><span class="en en-h">Tarsus</span></span>
+        <span class="mb-t"><i style="width:28%"></i></span>
+        <span class="mb-v">38.1 mm</span>
+      </li></ul></div>
+  </section>
+      
+  <section class="pnl">
+    <h3 class="pnl-h"><span class="pnl-i">▣</span><span class="zh">棲息環境</span><span class="en en-h">Habitat</span></h3>
+    <div class="pnl-b"><div class="chiprow"><span class="chip chip-h">城市公園</span><span class="chip chip-h">開闊地</span></div>
+         <p class="t-en en en-h chiprow-en">Urban &amp; Parks · Open Country</p></div>
+  </section>
+      
+  <section class="pnl">
+    <h3 class="pnl-h"><span class="pnl-i">●</span><span class="zh">食物</span><span class="en en-h">Diet</span></h3>
+    <div class="pnl-b"><div class="chiprow"><span class="chip chip-d">植物藻類</span><span class="chip chip-d">雜食</span></div>
+         <p class="t-en en en-h chiprow-en">Plants &amp; Algae · Omnivore</p></div>
+  </section>
+    </div>
+  </section>
+
+  <!-- ───────── 中段一 ───────── -->
+  <section class="band band-b">
+    
+  <section class="pnl">
+    <h3 class="pnl-h"><span class="pnl-i">◉</span><span class="zh">分佈地區</span><span class="en en-h">Range</span></h3>
+    <div class="pnl-b"><p class="t-zh">八哥原本分佈於中國大陸南部及印度支那半島，是典型的東洋界鳥類。</p><p class="t-en">The range spans from southeastern and central China to northern Indochina.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h"><span class="pnl-i">◆</span><span class="zh">外形特徵</span><span class="en en-h">Appearance</span></h3>
+    <div class="pnl-b"><p class="t-zh">本種鳥類通體黑色，粗看起來頗似烏鴉，但是與烏鴉有着顯著的區別。</p><p class="t-en t-miss">Data pending</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h"><span class="pnl-i">●</span><span class="zh">食物</span><span class="en en-h">Feeding</span></h3>
+    <div class="pnl-b"><p class="t-zh">八哥為雜食性，通過對八哥食物得研究發現植物性食物和動物性食物基本各佔50%的比例。</p><p class="t-en">Although it eats mainly insects, this bird can eat a wide variety of items including fruit, grains, meat, manure and garbage.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h"><span class="pnl-i">▣</span><span class="zh">棲息</span><span class="en en-h">Habitat in detail</span></h3>
+    <div class="pnl-b"><p class="t-zh">八哥通常棲息於靠近城市和農業區的開闊空間。</p><p class="t-en">It is also commonly distributed in grasslands, fields and at the edge of forests.</p></div>
+  </section>
+  </section>
+
+  <!-- ───────── 中段二 ───────── -->
+  <section class="band band-c">
+    
+  <section class="pnl">
+    <h3 class="pnl-h"><span class="pnl-i">◈</span><span class="zh">成長與繁殖</span><span class="en en-h">Breeding</span></h3>
+    <div class="pnl-b"><p class="t-zh">本物種繁殖季節為4月－7月大多於5月產卵每巢4－6枚卵，卵的顏色為鮮豔的藍色；</p><p class="t-en">Both the male and the female take part in the construction of the nest.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h"><span class="pnl-i">◇</span><span class="zh">行為特徵</span><span class="en en-h">Behaviour</span></h3>
+    <div class="pnl-b"><p class="t-zh">但非法鳥類貿易使八哥迅速擴散，現在在菲律賓及婆羅洲有引入種群，而在淮河以北的中國北方地區八哥也逐漸成為常見的留鳥。</p><p class="t-en">The crest is usually not well developed at this stage.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h"><span class="pnl-i">✦</span><span class="zh">有趣小知識</span><span class="en en-h">Fun fact</span></h3>
+    <div class="pnl-b"><p class="t-zh">八哥現屬於法國鳥類學家路易·皮埃爾·維埃約於1816年引入的八哥屬（Acridotheres）。</p><p class="t-en">The crested myna (Acridotheres cristatellus), also known as the Chinese starling, is a species of starling in the genus Acridotheres native to southeastern China and Indochina.</p></div>
+  </section>
+    
+  <section class="pnl">
+    <h3 class="pnl-h"><span class="pnl-i">◐</span><span class="zh">鳴聲</span><span class="en en-h">Voice</span></h3>
+    <div class="pnl-b"><p class="t-zh">八哥生活在草原和山區的樹林中，善於鳴叫，也會模仿其他鳥的叫聲，經過訓練，還能模仿人類說話。</p><p class="t-en">The crested myna has a wide array of songs and calls, from whistles to warbles to chortles.</p></div>
+  </section>
+  </section>
+
+  <!-- ───────── 評分帶 ───────── -->
+  <section class="score">
+    <div class="score-l">
+      <h3 class="score-h">
+        <span class="zh">圖鑑評分</span><span class="en en-h">Dex rating</span>
+        <em class="note-zh">自訂指標，非學術評分</em><em class="note-en en-h">Custom index, not an academic rating</em>
+      </h3>
+      <ul class="dims">
+        <li class="dim">
+            <span class="dim-n"><span class="zh">生物重要性</span><span class="en en-h">Ecological importance</span>
+              <em class="dim-from">IUCN 紅色名錄級別</em></span>
+            <span class="dim-bar"><i style="width:40%"></i></span>
+            <span class="dim-v">2.0</span>
+          </li><li class="dim">
+            <span class="dim-n"><span class="zh">適應力</span><span class="en en-h">Adaptability</span>
+              <em class="dim-from">食性 × 棲地 tag 數</em></span>
+            <span class="dim-bar"><i style="width:76%"></i></span>
+            <span class="dim-v">3.8</span>
+          </li><li class="dim">
+            <span class="dim-n"><span class="zh">觀賞價值</span><span class="en en-h">Showiness</span>
+              <em class="dim-from">體長（AVONET 翼長後備）</em></span>
+            <span class="dim-bar"><i style="width:72%"></i></span>
+            <span class="dim-v">3.6</span>
+          </li><li class="dim">
+            <span class="dim-n"><span class="zh">研究價值</span><span class="en en-h">Research value</span>
+              <em class="dim-from">遷徙／語源／要點</em></span>
+            <span class="dim-bar"><i style="width:66%"></i></span>
+            <span class="dim-v">3.3</span>
+          </li><li class="dim">
+            <span class="dim-n"><span class="zh">保育關注度</span><span class="en en-h">Conservation concern</span>
+              <em class="dim-from">受脅註記 + IUCN</em></span>
+            <span class="dim-bar"><i style="width:60%"></i></span>
+            <span class="dim-v">3.0</span>
+          </li>
+      </ul>
+    </div>
+    <div class="score-r">
+      <div class="overall">
+        <span class="o-k zh">綜合</span><span class="o-k en en-h">Overall</span>
+        <span class="o-v">3.1</span>
+        <span class="o-max">/ 5</span>
+      </div>
+      <div class="bc" aria-hidden="true"><i style="width:3px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:3px;margin-right:2px"></i><i style="width:1px;margin-right:1px"></i><i style="width:1px;margin-right:1px"></i><i style="width:2px;margin-right:3px"></i></div>
+    </div>
+  </section>
+
+  <!-- ───────── 底欄 ───────── -->
+  <footer class="foot">
+    <div class="f-col">
+      <span class="f-k zh">圖鑑編號</span><span class="f-k en en-h">Dex no.</span>
+      <span class="f-v mono">NO.0013</span>
+    </div>
+    <div class="f-col f-wide">
+      <span class="f-k zh">名稱</span><span class="f-k en en-h">Name</span>
+      <span class="f-v">八哥 · <em>Acridotheres cristatellus</em></span>
+    </div>
+    <div class="f-col f-src">
+      <span class="f-k zh">資料出處（可追溯）</span><span class="f-k en en-h">Sources</span>
+      <span class="f-v small mono">zh.wikipedia 八哥 · pageid 65246 ｜ en.wikipedia Crested myna · pageid 1350552 · 分類：eBird/Clements</span>
+    </div>
+    <div class="f-col">
+      <span class="f-k zh">圖鑑版本</span><span class="f-k en en-h">Version</span>
+      <span class="f-v mono">v1.9.0</span>
+    </div>
+  </footer>
+</div></div></div>
+  </section>
+</body></html>
