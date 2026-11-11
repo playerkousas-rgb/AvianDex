@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Footprints, Backpack, Languages } from 'lucide-react';
+import { MapPin, Footprints, Backpack } from 'lucide-react';
 import type { Lang } from '../lib/explorer';
 import type { GuideKind } from './FieldGuideModal';
 
@@ -19,24 +19,25 @@ import type { GuideKind } from './FieldGuideModal';
  *     右：聽聲、拍照、前往 BIRD-DEX 2
  *   在手機上（窄螢幕）兩排球都不會蓋到卡面中間，只在邊緣。
  *
- * 為甚麼用 4 個而不是 3 個？
- *   語言切換原本也在漢堡選單內（要點兩下）。用戶要求語言放在上方直接可見，
- *   但頂欄在手機上已經很擠，所以把語言併入左排球 —— 位置一樣是「一按即到」，
- *   而頂欄只保留一個小小的 EN/中 標示（見 App.tsx）。
+ * 為甚麼是 3 個而不是 4 個？
+ *   用戶後來修正：「語言不用變成球，左 3 右 3 平均點」。
+ *   所以語言只留在頂欄那個「中 | EN」開關，不佔用球的額度；
+ *   左邊剛好 3 個（地圖／禮儀／裝備），右邊 3 個（聽聲／拍照／精靈球），
+ *   兩邊對稱，視覺上不會一邊重一邊輕。
  */
 
 interface Props {
   lang: Lang;
   onMap: () => void;
   onGuide: (kind: GuideKind) => void;
-  onToggleLang: () => void;
   /** 有 modal 打開時隱藏，避免疊在上面 */
   hidden?: boolean;
 }
 
-const BTN = 'group relative w-11 h-11 sm:w-12 sm:h-12 rounded-full border-[3px] border-gray-900 flex items-center justify-center shadow-[0_4px_0_rgba(0,0,0,0.6)] active:translate-y-0.5 active:shadow-[0_1px_0_rgba(0,0,0,0.6)] transition-all';
+/* 手機 44px（手指最小舒適尺寸）；平板／桌機 52px —— 用滑鼠時 44px 仍然偏細。 */
+const BTN = 'group relative w-11 h-11 md:w-[52px] md:h-[52px] lg:w-14 lg:h-14 rounded-full border-[3px] border-gray-900 flex items-center justify-center shadow-[0_4px_0_rgba(0,0,0,0.6)] active:translate-y-0.5 active:shadow-[0_1px_0_rgba(0,0,0,0.6)] transition-all';
 
-export const SideToolBalls: React.FC<Props> = ({ lang, onMap, onGuide, onToggleLang, hidden }) => {
+export const SideToolBalls: React.FC<Props> = ({ lang, onMap, onGuide, hidden }) => {
   const t = (zh: string, en: string) => (lang === 'en' ? en : zh);
 
   const items = [
@@ -61,13 +62,6 @@ export const SideToolBalls: React.FC<Props> = ({ lang, onMap, onGuide, onToggleL
       cls: 'bg-gradient-to-br from-amber-300 to-amber-700 text-white',
       onClick: () => onGuide('gear'),
     },
-    {
-      key: 'lang',
-      label: lang === 'en' ? '中' : 'EN',
-      Icon: Languages,
-      cls: 'bg-gradient-to-br from-slate-200 to-slate-500 text-gray-900',
-      onClick: onToggleLang,
-    },
   ];
 
   if (hidden) return null;
@@ -85,17 +79,11 @@ export const SideToolBalls: React.FC<Props> = ({ lang, onMap, onGuide, onToggleL
           aria-label={label}
           className={`${BTN} ${cls}`}
         >
-          <Icon className="w-5 h-5 sm:w-5.5 sm:h-5.5" strokeWidth={2.6} />
+          <Icon className="w-5 h-5 md:w-6 md:h-6" strokeWidth={2.6} />
           {/* 桌機用 hover 顯示名稱；手機不顯示（沒有 hover，也沒有空間） */}
           <span className="hidden md:block absolute left-full ml-2 top-1/2 -translate-y-1/2 bg-black/85 text-white text-[11px] font-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
             {label}
           </span>
-          {/* 語言球直接印「EN／中」，不用開工具提示都知道係咩 */}
-          {key === 'lang' && (
-            <span className="absolute -bottom-0.5 -right-0.5 bg-black text-amber-300 text-[8px] font-black px-1 rounded border border-amber-400/60 leading-tight">
-              {lang === 'en' ? 'EN' : '中'}
-            </span>
-          )}
         </motion.button>
       ))}
     </div>

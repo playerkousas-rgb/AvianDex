@@ -179,8 +179,28 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
       maxZoom: 19,
       zoomControl: true,
       attributionControl: true,
+      /* 滑鼠「雞爪」補救：滾輪縮放太快會一滾就不知飛到哪裡，
+         改成需要按實 Ctrl／⌘ 才用滾輪縮放；單純滾輪＝捲頁面。
+         桌機用戶可以用左下角的 +/− 按鈕，或雙擊放大。 */
+      scrollWheelZoom: false,
+      doubleClickZoom: true,
+      keyboard: true,
     });
     mapRef.current = map;
+
+    /* 滾輪 + Ctrl 才縮放（Mac 的觸控板 pinch 會自己送 ctrlKey，所以手勢照用） */
+    map.on('wheel', (e) => {
+      const oe = (e as L.LeafletEvent & { originalEvent?: WheelEvent }).originalEvent;
+      if (!oe) return;
+      if (oe.ctrlKey || oe.metaKey) {
+        oe.preventDefault();
+        map.setZoom(map.getZoom() - Math.sign(oe.deltaY));
+      }
+    });
+
+    /* 把縮放鈕搬到左下角：右上角是熱點最密的地方，按鈕會蓋住米埔一帶 */
+    map.zoomControl?.remove();
+    L.control.zoom({ position: 'bottomleft' }).addTo(map);
 
     baseLayer.current = L.tileLayer(BASE_TILES.basemap, {
       maxZoom: 19,
@@ -264,16 +284,35 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
     hotspots
       .filter((h) => !q || h.name.toLowerCase().includes(q))
       .forEach((h) => {
-        const marker = L.circleMarker([h.lat, h.lng], {
+        /* 兩層：
+           1 命中圈 —— 半徑 18px、完全透明，滑鼠/手指只要落在這 36px 內就算中
+           2 可見點 —— 半徑 7px，維持視覺大小
+           為甚麼不用單純加大可見點？因為 18px 的黃色圓會蓋住地圖細節。
+           用戶是用滑鼠（原話「電腦是雞爪」），7px 的圓要精準對中很痛苦。 */
+        const hit = L.circleMarker([h.lat, h.lng], {
+          radius: 18,
+          color: '#000',
+          weight: 0,
+          fillColor: '#000',
+          fillOpacity: 0,
+          bubblingMouseEvents: false,
+        });
+        hit.bindTooltip(h.name, { direction: 'top', offset: [0, -10] });
+        hit.on('click', () => setSelected(h));
+        /* 滑鼠移上去時，可見點變大變亮，讓你知道「現在按得到」 */
+        hit.on('mouseover', () => hit.setStyle({ fillColor: '#facc15', fillOpacity: 0.18 }));
+        hit.on('mouseout', () => hit.setStyle({ fillColor: '#000', fillOpacity: 0 }));
+        hit.addTo(g);
+
+        const dot = L.circleMarker([h.lat, h.lng], {
           radius: 7,
           color: '#0f172a',
           weight: 2,
           fillColor: '#facc15',
           fillOpacity: 0.95,
+          interactive: false,   /* 點擊交給下面的命中圈，避免兩層互相搶 */
         });
-        marker.bindTooltip(h.name, { direction: 'top', offset: [0, -6] });
-        marker.on('click', () => setSelected(h));
-        marker.addTo(g);
+        dot.addTo(g);
       });
   }, [hotspots, query]);
 
@@ -487,7 +526,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
             <div className="flex flex-wrap items-center gap-1.5 px-3 py-2 bg-black/40 border-b border-white/10 shrink-0">
               <button
                 onClick={() => setLayer((v) => (v === 'basemap' ? 'imagery' : 'basemap'))}
-                className="flex items-center gap-1 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-[11px] font-bold px-2.5 py-1.5 rounded-lg"
+                className="flex items-center gap-1.5 bg-white/10 hover:bg-white/25 border border-white/25 text-white text-[12px] font-bold px-3 py-2.5 min-h-[40px] rounded-lg"
               >
                 <Layers className="w-3.5 h-3.5" />
                 {layer === 'basemap' ? '地形圖' : '航空照片'}
@@ -495,7 +534,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
               <button
                 onClick={() => void loadObservations()}
                 disabled={loadingObs}
-                className="flex items-center gap-1 bg-emerald-500/20 hover:bg-emerald-500/35 border border-emerald-400/40 text-emerald-100 text-[11px] font-bold px-2.5 py-1.5 rounded-lg disabled:opacity-50"
+                className="flex items-center gap-1.5 bg-emerald-500/20 hover:bg-emerald-500/40 border border-emerald-400/45 text-emerald-100 text-[12px] font-bold px-3 py-2.5 min-h-[40px] rounded-lg disabled:opacity-50"
               >
                 {loadingObs ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <BirdIcon className="w-3.5 h-3.5" />}
                 {loadingObs ? '搵緊紀錄…' : '顯示近期出沒'}
@@ -503,7 +542,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
               {mode === 'bird' && (
                 <button
                   onClick={() => { setMode('spot'); setBirdPick(null); setBirdObs([]); setApiNote(null); }}
-                  className="flex items-center gap-1 bg-amber-500/25 hover:bg-amber-500/40 border border-amber-400/50 text-amber-100 text-[11px] font-bold px-2.5 py-1.5 rounded-lg"
+                  className="flex items-center gap-1.5 bg-amber-500/25 hover:bg-amber-500/45 border border-amber-400/50 text-amber-100 text-[12px] font-bold px-3 py-2.5 min-h-[40px] rounded-lg"
                 >
                   <RotateCw className="w-3.5 h-3.5" />
                   清除雀鳥篩選
@@ -511,7 +550,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
               )}
               <button
                 onClick={() => setShowDensity((v) => !v)}
-                className={`flex items-center gap-1 border text-[11px] font-bold px-2.5 py-1.5 rounded-lg ${
+                className={`flex items-center gap-1.5 border text-[12px] font-bold px-3 py-2.5 min-h-[40px] rounded-lg ${
                   showDensity
                     ? 'bg-red-500/25 border-red-400/45 text-red-100'
                     : 'bg-white/8 border-white/15 text-white/55'
@@ -528,7 +567,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="搵雀名／觀鳥點"
-                  className="bg-black/50 border border-white/15 rounded-lg pl-7 pr-2 py-1.5 text-[11px] text-white placeholder:text-white/25 w-[150px] focus:outline-none focus:border-amber-400/50"
+                  className="bg-black/50 border border-white/20 rounded-lg pl-8 pr-2 py-2.5 min-h-[40px] text-[12px] text-white placeholder:text-white/30 w-[160px] focus:outline-none focus:border-amber-400/60"
                 />
                 {suggestions.length > 0 && (
                   <div className="absolute z-[600] mt-1 right-0 w-[240px] bg-[#141311] border border-amber-400/30 rounded-lg overflow-hidden shadow-2xl">
@@ -536,7 +575,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                       <button
                         key={b.id}
                         onClick={() => { setQuery(''); void loadSpecies(b.id); }}
-                        className="w-full text-left px-2.5 py-1.5 hover:bg-amber-400/15 border-b border-white/5 last:border-0"
+                        className="w-full text-left px-3 py-2.5 hover:bg-amber-400/20 border-b border-white/5 last:border-0"
                       >
                         <p className="text-white text-[11.5px] font-bold truncate">{b.zh}</p>
                         <p className="text-white/35 text-[9px] truncate">{b.en}</p>
@@ -574,7 +613,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                       </div>
                       <button
                         onClick={() => setSelected(null)}
-                        className="text-white/35 hover:text-white text-[10px] shrink-0"
+                        className="text-white/45 hover:text-white text-[11px] font-bold shrink-0 px-2.5 py-1.5 rounded-md bg-white/8 hover:bg-white/20"
                       >
                         返回
                       </button>
@@ -590,7 +629,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                       href={`https://ebird.org/hotspot/${selected.locId}`}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="mt-2 inline-flex items-center gap-1 text-amber-300/85 hover:text-amber-200 text-[10.5px] underline"
+                      className="mt-2 inline-flex items-center gap-1.5 text-amber-200 hover:text-white text-[11.5px] font-bold bg-amber-500/15 hover:bg-amber-500/30 border border-amber-400/35 rounded-md px-2.5 py-2"
                     >
                       <ExternalLink className="w-3 h-3" /> 在 eBird 開啟熱點
                     </a>
@@ -606,7 +645,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                           <button
                             key={sp.code}
                             onClick={() => sp.id && void loadSpecies(sp.id)}
-                            className="text-[10px] px-1.5 py-0.5 rounded bg-amber-400/12 hover:bg-amber-400/30 border border-amber-400/25 text-amber-100"
+                            className="text-[12px] px-2.5 py-2 rounded-md bg-amber-400/12 hover:bg-amber-400/35 border border-amber-400/30 text-amber-100 font-bold"
                             title="在地圖上顯示這隻雀的出沒點"
                           >
                             {sp.name}
@@ -631,8 +670,8 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                       <div className="space-y-1">
                         {speciesRank.map((s) => (
                           <div key={s.sci} className="bg-black/35 rounded px-2 py-1 leading-tight">
-                            <p className="text-white text-[11px] font-bold truncate">{s.name}</p>
-                            <p className="text-white/35 font-mono text-[8.5px] italic truncate">{s.sci}</p>
+                            <p className="text-white text-[12px] font-bold truncate">{s.name}</p>
+                            <p className="text-white/40 font-mono text-[9.5px] italic truncate">{s.sci}</p>
                           </div>
                         ))}
                       </div>
@@ -692,7 +731,7 @@ export const BirdingMapModal: React.FC<Props> = ({ isOpen, onClose }) => {
                           <button
                             key={h.locId}
                             onClick={() => setSelected(h)}
-                            className="w-full text-left bg-black/30 hover:bg-black/55 border border-white/8 hover:border-amber-400/35 rounded px-2 py-1.5"
+                            className="w-full text-left bg-black/30 hover:bg-black/60 border border-white/10 hover:border-amber-400/45 rounded-lg px-2.5 py-2.5"
                           >
                             <p className="text-white text-[11px] font-bold truncate">{h.name}</p>
                             <p className="text-white/30 font-mono text-[8px]">

@@ -208,9 +208,9 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPo
             onClick={flipOnly}
             aria-label={t('翻轉看資訊卡', 'Flip to info card')}
             title={t('翻轉看資訊卡', 'Flip to info card')}
-            className="absolute bottom-1.5 right-1.5 w-7 h-7 rounded-full bg-black/70 hover:bg-black/90 active:scale-90 border border-white/25 text-amber-200 flex items-center justify-center"
+            className="absolute bottom-1.5 right-1.5 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/70 hover:bg-black/90 active:scale-90 border border-white/30 text-amber-200 flex items-center justify-center"
           >
-            <RotateCw className="w-3.5 h-3.5" />
+            <RotateCw className="w-4 h-4" />
           </button>
 
           {listPosition != null && (
@@ -248,9 +248,9 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPo
             type="button"
             onClick={flipOnly}
             aria-label={t('轉回插畫', 'Back to artwork')}
-            className="absolute bottom-1.5 right-1.5 w-7 h-7 rounded-full bg-black/70 hover:bg-black/90 active:scale-90 border border-white/25 text-amber-200 flex items-center justify-center"
+            className="absolute bottom-1.5 right-1.5 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/70 hover:bg-black/90 active:scale-90 border border-white/30 text-amber-200 flex items-center justify-center"
           >
-            <RotateCw className="w-3.5 h-3.5" />
+            <RotateCw className="w-4 h-4" />
           </button>
         </div>
       </motion.div>
@@ -259,7 +259,7 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPo
       <button
         type="button"
         onClick={onOpen}
-        className="mt-1 w-full text-[8.5px] text-white/30 hover:text-white/70 font-mono tracking-wide text-center"
+        className="mt-1 w-full py-2 text-[10px] text-white/35 hover:text-white/75 font-mono tracking-wide text-center"
       >
         {t('按卡面 → 詳細資料 · 右下 ⟳ 翻轉', 'tap → details · ⟳ flips')}
       </button>

@@ -754,7 +754,6 @@ function App() {
         lang={lang}
         onMap={() => setShowMap(true)}
         onGuide={(k) => setGuideKind(k)}
-        onToggleLang={() => setLang(lang === 'zh' ? 'en' : 'zh')}
         hidden={selectedBirdId !== null || showMap || recogOpen || !!globalCaptureKind || !!guideKind}
       />
 
