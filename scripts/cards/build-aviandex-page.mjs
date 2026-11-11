@@ -57,7 +57,7 @@ const html = `<!doctype html>
 <html lang="zh-Hant-HK">
 <head>
 <meta charset="utf-8">
-<title>AvianDex 資訊卡 · 出圖</title>
+<title>AvianDex 資訊卡 · 出圖 v2</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
 <style>
@@ -173,8 +173,8 @@ const html = `<!doctype html>
 <header>
   <span style="font-size:19px">🪶</span>
   <div>
-    <h1 style="margin:0">AvianDex 資訊卡 · 出圖</h1>
-    <div class="sub">打編號 → 資料定向鎖定 → 出圖</div>
+    <h1 style="margin:0">AvianDex 資訊卡 · 出圖 <span style="color:var(--lime)">v2</span></h1>
+    <div class="sub">打編號 → 資料定向鎖定 → 出圖｜<span id="verStamp">—</span></div>
   </div>
   <span id="keyBadge" class="badge">🔑 檢查金鑰中…</span>
   <div class="gear">
@@ -310,7 +310,22 @@ const html = `<!doctype html>
 
     <div class="work" style="margin-top:12px">
       <div class="step"><span class="n">8</span><b>本頁設定</b></div>
+      <div class="kv"><span>版本</span><b id="vStat">—</b></div>
       <div class="kv"><span>金鑰狀態</span><b id="kStat">—</b></div>
+      <div id="keyBox" class="warn" style="display:none;margin-top:9px">
+        <b>未偵測到 API Key</b><br>
+        Gemini Canvas 會自動注入；用 Vercel／普通瀏覽器開就要貼一次（只存喺你部機）。
+        <div class="row" style="margin-top:7px">
+          <input id="keyInline" type="password" placeholder="貼上 AIza… key"
+                 style="flex:1;min-width:150px;padding:6px 9px;border-radius:8px;
+                        border:1px solid var(--line);background:#090C0A;color:var(--ink);font-size:12px">
+          <button class="mini" id="keySave" type="button">儲存</button>
+        </div>
+        <p class="hint" style="margin-top:6px">
+          Key 喺 <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener"
+          style="color:var(--lime)">aistudio.google.com/apikey</a> 免費攞。
+        </p>
+      </div>
       <div class="kv"><span>卡款</span><b id="sStat">aviandex</b></div>
       <div class="kv"><span>參考圖</span><b id="rStat">無</b></div>
       <div class="kv"><span>編號</span><b id="nStat">0013</b></div>
@@ -669,10 +684,13 @@ function refreshKeyBadge(){
     el.className = "badge on";
     el.textContent = "🔑 已就緒 · " + (src || "已注入");
     $("kStat").textContent = "有（" + src + "）";
+    if ($("keyBox")) $("keyBox").style.display = "none";
   } else {
     el.className = "badge warn";
-    el.textContent = "🔑 未注入 · 可貼 key 或複製 prompt";
+    el.textContent = "🔑 未偵測到 · 貼一次就得";
     $("kStat").textContent = "無";
+    if ($("keyBox")) $("keyBox").style.display = "block";
+    if (!resolveKey() && !lsGet(LS_KEY)) $("apiKey").focus();
   }
 }
 $("apiKey").value = lsGet(LS_KEY) || "";
@@ -682,6 +700,18 @@ $("apiKey").addEventListener("change", function(){
   else { try{ localStorage.removeItem(LS_KEY); }catch(e){} toast("🔑 已清除，用自動注入"); }
   refreshKeyBadge();
 });
+if ($("keySave")) $("keySave").onclick = function(){
+  var v = val("keyInline");
+  if (v.length < 20){ toast("呢個唔似 key（太短）"); return; }
+  lsSet(LS_KEY, v);
+  $("apiKey").value = v;
+  refreshKeyBadge();
+  toast("🔑 已儲存（只存在你部機）");
+};
+$("keyInline") && $("keyInline").addEventListener("keydown", function(e){
+  if (e.key === "Enter") $("keySave").click();
+});
+
 $("keyTest").onclick = async function(){
   var k = resolveKey();
   if (!k){ toast("未找到 key：可貼上，或直接複製 prompt 去 Gemini 網頁"); return; }
@@ -809,8 +839,19 @@ async function generate(){
   var model = val("model") || "gemini-2.5-flash-image";
 
   if (!key && !cleanKey(val("apiKey"))){
-    $("errBox").innerHTML = '<div class="warn">未找到 API Key。你可以：① 貼上 key（右上）；' +
-      '② 或在 Gemini Canvas 開啟本頁（會自動注入）；③ 或按「複製 prompt」去 gemini.google.com 出圖。</div>';
+    $("errBox").innerHTML = '<div class="warn"><b>未找到 API Key</b><br>'
+      + '① 貼上 key（右上或右欄「本頁設定」）就會記住 · '
+      + '② 喺 Gemini Canvas 開啟會自動注入 · '
+      + '③ 或按「複製 prompt」去 gemini.google.com 出圖。'
+      + '<div class="row" style="margin-top:7px">'
+      + '<input id="keyInline2" type="password" placeholder="貼上 AIza… key" style="flex:1;min-width:150px;'
+      + 'padding:6px 9px;border-radius:8px;border:1px solid var(--line);background:#090C0A;'
+      + 'color:var(--ink);font-size:12px"><button class="mini" id="keySave2" type="button">儲存</button></div></div>';
+    $("keySave2").onclick = function(){
+      var v = ($("keyInline2").value || "").trim();
+      if (v.length < 20){ toast("呢個唔似 key（太短）"); return; }
+      lsSet(LS_KEY, v); $("apiKey").value = v; refreshKeyBadge(); toast("🔑 已儲存，可以再按生成");
+    };
     return;
   }
   if (!key) key = val("apiKey");
@@ -874,6 +915,9 @@ $("prompt").addEventListener("input", function(){
 });
 
 /* 啟動 */
+var VER = "${new Date().toISOString().slice(0,10)}-v2";
+$("verStamp").textContent = VER;
+$("vStat").textContent = VER;
 refreshKeyBadge();
 show("0013");
 if (!resolveKey()) {
@@ -888,5 +932,6 @@ setTimeout(refreshKeyBadge, 900);   // Canvas 有時遲少少注入
 `;
 
 writeFileSync(path.join(root, 'public/aviandex-gen.html'), html, 'utf8');
-console.log('已寫入 public/aviandex-gen.html（' + Object.keys(BIRDS).length + ' 隻 · '
+writeFileSync(path.join(root, 'public/aviandex-gen-v2.html'), html, 'utf8');
+console.log('已寫入 public/aviandex-gen.html + public/aviandex-gen-v2.html（' + Object.keys(BIRDS).length + ' 隻 · '
   + Math.round(Buffer.byteLength(html) / 1024) + ' KB）');
