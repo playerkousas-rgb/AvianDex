@@ -89,6 +89,7 @@ textarea{width:100%;height:220px;font:12px/1.5 ui-monospace,monospace}
         <option value="canvas">Gemini Canvas（自動帶 key）</option>
         <option value="own">自己貼 API key</option>
       </select>
+      <select id="layout" style="flex:1 1 100%"></select>
       <select id="quality">
         <option value="pro">質素：高（先試 Pro，失敗自動降級）</option>
         <option value="fast">質素：快（Flash）</option>
@@ -103,8 +104,8 @@ textarea{width:100%;height:220px;font:12px/1.5 ui-monospace,monospace}
       <div class="row" style="margin-top:6px"><button class="sm" id="btnReset">還原</button><button class="sm" id="btnCopy">複製</button><span class="hint" id="pcount"></span></div>
     </details>
     <details style="margin-top:8px"><summary>內嵌的兩張參考圖</summary>
-      <div class="row" style="margin-top:6px"><img id="img1" style="width:48%;border-radius:8px"><img id="img2" style="width:48%;border-radius:8px"></div>
-      <div class="hint">① 去字位圖（只管版面）　② 樣本卡（只管畫風；它的字一律不准出現）</div>
+      <div class="row" style="margin-top:6px" id="refs"></div>
+      <div class="hint">精簡卡：只送 1 張版位圖（固定標題已寫死在圖上）。完整卡：去字位圖 ＋ 樣本卡。</div>
     </details>
     <div id="log"></div>
   </div>
@@ -139,7 +140,8 @@ const LS = {
   set(k, v) { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } },
 };
 const IDS = D.ids.map((x) => x.id);
-const promptOf = (id) => D.pre + D.mids[id] + D.suf;
+const M = () => D.modes[$('layout').value];
+const promptOf = (id) => { const m = M(); return m.pre + m.mids[id] + m.suf; };
 const INFO = Object.fromEntries(D.ids.map((x) => [x.id, x]));
 const RESULTS = {};          /* id -> {url, model} | {error} */
 const BUSY = new Set();
@@ -203,7 +205,7 @@ const part = (url) => { const c = url.indexOf(','); return { inlineData: { mimeT
 
 async function genOne(id) {
   const prompt = (promptDirty && curId() === id) ? $('prompt').value : promptOf(id);
-  const parts = [part(D.zonemap), part(D.refcard), { text: prompt }];
+  const parts = [...M().imgs.map(part), { text: prompt }];
   const baseCfg = { responseModalities: ['IMAGE'] };
   let last = null;
   for (const model of MODELS[$('quality').value]) {
@@ -324,7 +326,11 @@ function badge() { const k = resolveKey(); $('apiBadge').className = 'pill ' + (
 
 /* 開機 */
 $('jump').innerHTML = D.ids.map((x) => `<option value="${x.id}">${x.id}　${esc(x.z)}</option>`).join('');
-$('img1').src = D.zonemap; $('img2').src = D.refcard;
+$('layout').innerHTML = Object.entries(D.modes).map(([k, m]) => `<option value="${k}">${esc(m.label)}</option>`).join('');
+$('layout').value = LS.get('avx_layout', 'lite');
+const showRefs = () => { $('refs').innerHTML = M().imgs.map((u) => `<img src="${u}" style="width:48%;border-radius:8px">`).join(''); };
+$('layout').onchange = () => { LS.set('avx_layout', $('layout').value); promptDirty = false; refreshBird(); showRefs(); };
+showRefs();
 $('mode').value = LS.get('avx_mode', 'canvas'); $('quality').value = LS.get('avx_q', 'pro'); $('mode').onchange();
 if (LS.get('avx_key', '')) $('key').value = LS.get('avx_key', '');
 $('countPill').textContent = `${D.ids.length} 隻 · v${D.version}`;

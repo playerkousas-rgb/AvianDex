@@ -157,3 +157,16 @@ npm run cards:maker      # → tools/card-studio/aviandex-card-maker.html（約 
 - 母版：`tools/card-studio/cardmaker.html`；`aviandex-card-maker.html` 為產物，勿手改。
 - Prompt 新增「SECTION TITLES」：明講各區標題，並禁止印出位圖上的 `Zxx` 區碼。
 - 資料清理：開頭的 `* ` 自動去掉；相似種名稱「缅」自動轉「緬」。
+
+## 11. 精簡圖示卡（只有名稱＋數字＋圖示）— 建議路線
+
+- 動機：整張卡的錯字全出在**長句**（Gemini 版 0022 還把「雀形目／太陽鳥科」、頁腳名稱、日期抄了出來）。
+  所以卡面不放任何句子；詳細文字留給 App 詳細資料頁。
+- 版位圖：`python3 scripts/cards/make-lite-template.py docs/card-samples/lite-template.png`
+  **固定標題（身長、體重、分類資訊、棲息環境…）用真字體寫死在位圖上**，AI 只填空位。
+- prompt：`node scripts/cards/gen-card-prompts.mjs 0023 --lite`（`npm run cards:maker` 預設即用此模式）。
+- 只剩這些變動字：編號、中文名、英文名、學名、目／科、體長、體重、保育級別、
+  目科屬種名、棲息／食物 2–4 字標籤（固定詞彙）、5 個評分數字、相似種名。
+- 常見度：repo 內沒有此資料，所以改放「保育級別」，不得由 AI 自編。
+- 實測（2026-11-11，0023／0024）：所有變動字、數字全對，固定標題 100% 保留；
+  殘留問題＝沒資料的圓圈偶爾沒擦掉、相似種名帶「1:」前綴（已調整 prompt，待再驗）。

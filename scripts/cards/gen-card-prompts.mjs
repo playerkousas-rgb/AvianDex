@@ -239,22 +239,79 @@ export function buildAgentPrompt(id) {
   ].join('\n\n');
 }
 
+/* ── 精簡圖示卡（只有名稱／數字／短標籤＋圖示；固定標題已寫死在 lite-template.png）── */
+export function liteFields(id) {
+  const e = idx.birds[id], c = copy[id] || {}, m = meas[id] || {};
+  const sc = scores[id] || {}, t = tax[id] || {};
+  const genus = (e.s || '').split(' ')[0] || '';
+  const epi = (e.s || '').split(' ').slice(1).join(' ');
+  const hab = (e.h || []).map((x) => idx.habitatTags.find((y) => y.id === x)?.zh).filter(Boolean).slice(0, 4);
+  const diet = (e.d || []).map((x) => idx.dietTags.find((y) => y.id === x)?.zh).filter(Boolean).slice(0, 4);
+  const sim = similarSpecies(id).map((x) => (x.includes('：') ? x.split('：')[1] : x).replace(/^同科近緣 /, ''));
+  const iucnZh = String(c.iucn || '').split(' ')[0] || '資料待查';
+  const code = (String(c.iucn || '').match(/\b([A-Z]{2})\b/) || [])[1] || '';
+  return {
+    e, c, hab, diet, sim, genus, epi, code, iucnZh, sc,
+    len: lenText(e, c), mass: m.mass ? m.mass + ' g' : '資料待查',
+  };
+}
+
+export function buildLitePrompt(id) {
+  const f = liteFields(id);
+  const { e, c, sc } = f;
+  const slotList = (arr, n) => !arr.length ? 'NO DATA: erase all four circles and tag boxes, and print the single word 資料待查 centred in the panel' : Array.from({ length: n }, (_, i) => (arr[i] ? `circle ${i + 1}: icon of "${arr[i]}", tag text: ${arr[i]}` : `circle ${i + 1}: NOT USED — erase this circle and its tag box completely`)).join('\n      ');
+  return [
+    'Create ONE finished bird info card, front side only, 2:3 portrait, flat like a clean scan. No table, no hand, no mockup, no watermark.',
+    'IMAGE 1 is the card TEMPLATE. Keep its layout, panels, colours, frame, and ALL text already printed on it EXACTLY as is (titles like 身長, 體重, 分類資訊, 棲息環境, 食物, 分佈地區, 成長與繁殖, 生態價值評分, 叫聲, 可混淆物種, 保育狀態, 頭部/羽色/翼部/腳部, 界/門/綱/目/科/屬/種, radar axis names, IUCN, NO.). Do NOT redraw, retype, translate or restyle those printed words. Your job is only to fill the empty light-outlined SLOTS and the empty picture frames, and then remove the slot outlines.',
+    'THE BIRD — ' + e.z + ' (' + e.e + ', ' + e.s + '). Correct plumage and bare-part colours for this species. One bird species only.',
+    'FILL THE PICTURE FRAMES (no text inside any picture):\n' +
+      '  · Pixel-art frame (top-left): small 16-bit pixel art of the bird, side view.\n' +
+      '  · Large centre frame: photorealistic ' + e.z + ' in natural habitat, whole bird, natural posture.\n' +
+      '  · Four magnifier circles, top to bottom: (1) close-up of head and bill, (2) close-up of plumage pattern, (3) close-up of folded or spread wing, (4) close-up of feet and legs. Labels beside them are already printed — keep them.\n' +
+      '  · 分佈地區 panel: a flat world/regional map with the species range shaded green. Guide (do NOT print): ' + (String(c.range || '').slice(0, 120) || 'unknown, leave a plain map') + '\n' +
+      '  · 成長與繁殖 panel: three small icons in the three circles: nest, eggs, chick (draw typical for this species; no text). Guide (do NOT print): ' + (String(c.breeding || '').slice(0, 100) || 'generic') + '\n' +
+      '  · 可混淆物種 panel: two small bird portraits in the two circles.\n' +
+      '  · 叫聲 panel: keep the waveform as printed.',
+    'PRINT EXACTLY THESE STRINGS IN THE EMPTY SLOTS — nothing else:\n' +
+      '  [Header chip] the prefix "NO." is ALREADY printed — keep it and add only the four digits right after it, so it reads: NO.' + id + '\n' +
+      '  [Dark green name band] line 1 large: ' + e.z + '   line 2: ' + e.e + '   line 3 italic: ' + e.s + '\n' +
+      '  [Top-right chip] 目: ' + (e.oz || '資料待查') + '   科: ' + (e.fz || '資料待查') + '\n' +
+      '  [身長 slot] ' + f.len + '\n' +
+      '  [體重 slot] ' + f.mass + '\n' +
+      '  [保育級別 slot] ' + f.iucnZh + (f.code ? ' ' + f.code : '') + '\n' +
+      '  [分類資訊 panel: 7 rows top to bottom] rows 1–3 (界 動物界 Animalia / 門 脊索動物門 Chordata / 綱 鳥綱 Aves) are ALREADY PRINTED — keep them untouched. Fill ONLY the four empty slots, each in its own row beside its own label:\n' +
+      '      row 4 slot beside 目: ' + (e.oz || '資料待查') + ' ' + (e.o || '') + '\n' +
+      '      row 5 slot beside 科: ' + (e.fz || '資料待查') + ' ' + (e.f || '') + '\n' +
+      '      row 6 slot beside 屬: ' + (f.genus ? f.genus + ' 屬' : '資料待查') + '\n' +
+      '      row 7 slot beside 種: ' + e.z + ' ' + (f.genus ? f.genus[0] + '. ' + f.epi : '') + '\n' +
+      '  [棲息環境, 2×2 circles + tag boxes]\n      ' + slotList(f.hab, 4) + '\n' +
+      '  [食物, 2×2 circles + tag boxes]\n      ' + slotList(f.diet, 4) + '\n' +
+      '  [生態價值評分 radar, five vertices clockwise from top] 重要性 ' + n1(sc.i) + ' | 適應力 ' + n1(sc.a) + ' | 研究 ' + n1(sc.r) + ' | 保育 ' + n1(sc.c) + ' | 觀賞 ' + n1(sc.v) + ' (print each number in the small box beside its own axis name, and draw the radar polygon to match these values out of 5)\n' +
+      '  [總評分 slot] ' + stars(sc.o) + ' ' + n1(sc.o) + ' / 5\n' +
+      '  [可混淆物種 name boxes] ' + f.sim.map((x, i) => (i ? 'right box' : 'left box') + ' = ' + x).join(' | ') + ' (print only the species name, no numbering)' + '\n' +
+      '  [保育狀態] small badge slot: ' + (f.code || '—') + ' | line 1: ' + f.iucnZh + ' | line 2: ' + (c.iucnEn || ''),
+    'RULES\n1. Print ONLY the strings listed above. No sentences, no extra words, no dates, no version, no footer, no logo, no QR/barcode.\n2. Render every number exactly as written; never round or invent. 資料待查 means print exactly 資料待查.\n3. Traditional Chinese only. Do not print any template/placeholder word that is not in the list.\n4. Any circle marked NOT USED must be painted over with the plain panel background: no circle outline, no empty tag box, and never repeat another circle's tag. Do not add empty boxes under the 成長與繁殖 icons.\n5. Style: warm cream paper, thin olive-green borders, flat matte print, crisp type, dark-green line icons. No glow, no shadows.',
+    'FINAL CHECK — compare every printed string with the list; fix any typo; make sure no pre-printed template word was altered.',
+  ].join('\n\n');
+}
+
 /* CLI */
 const isMain = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
 const args = isMain ? process.argv.slice(2).filter((a) => !a.startsWith('--')) : [];
 const write = process.argv.includes('--write');
 const agent = process.argv.includes('--agent');
+const lite = process.argv.includes('--lite');
 if (write && args.length) {
   const dir = path.join(root, 'deliver/card-prompts');
   mkdirSync(dir, { recursive: true });
   for (const id of args) {
-    writeFileSync(path.join(dir, `prompt-${id}.txt`), (agent ? buildAgentPrompt(id) : buildPrompt(id)), 'utf8');
+    writeFileSync(path.join(dir, `prompt-${id}.txt`), (lite ? buildLitePrompt(id) : agent ? buildAgentPrompt(id) : buildPrompt(id)), 'utf8');
   }
   console.log('已寫入 deliver/card-prompts/ 共 ' + args.length + ' 份');
 } else {
   for (const id of args) {
     if (!idx.birds[id]) { console.error('冇呢個編號：' + id); continue; }
     console.log('════════ NO.' + id + ' ' + idx.birds[id].z + ' ════════');
-    console.log(agent ? buildAgentPrompt(id) : buildPrompt(id));
+    console.log(lite ? buildLitePrompt(id) : agent ? buildAgentPrompt(id) : buildPrompt(id));
   }
 }
