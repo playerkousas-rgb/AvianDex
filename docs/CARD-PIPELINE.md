@@ -127,3 +127,19 @@ r2://…/aviandex/cards/manifest.json        ← 編號 → 檔名、bytes、sha
 3. 要正式上線時：把 AVIF 上傳到 R2 `aviandex/cards/`，連 `manifest.json` 一齊
 
 到時你只需要告訴我「Drive 好了」或「R2 好了」，我就繼續批次出圖。
+
+---
+
+## 9. 實跑紀錄（2026-11-11，由 0022 起）
+
+- 新增 `node scripts/cards/gen-card-prompts.mjs <NO> --agent`：輸出給 `generate_image` 的精簡 prompt
+  （附 2 張圖：`docs/card-samples/zonemap-naturalist.png` ＋ `0022-v3.webp`）。
+- v2 修正：Z10 補滿 5 項（缺的印「資料待查」）、Z12 雷達固定順時針順序
+  （生物重要性→物種適應力→研究價值→保育關注度→觀賞價值）、規定只准 4 個放大鏡。
+- 已出：0022、0023（AVIF ~96 KB），Drive 資料夾 `AvianDex-cards-draft`（待審，未上 R2）。
+- **實測問題（AI 整張出字的天花板）**：
+  1. 小字繁體會出現錯字／亂碼，簡體字會混入（如 0022 保育欄「万平方公里」）。
+  2. 英文小標題偶爾拼錯（ECOLOGICAL → ECOLOGICAL／ECOLDOGICAL）。
+  3. 版面位圖的 `Z06…` 區碼會洩漏成卡面標題（0023）。
+  4. 第 5 個放大鏡空圈／Z10 編號跳號，屢禁不止。
+- 資料源問題：0024 文案帶 `* ` 前綴；0025 相似種「印缅斑嘴鴨」含簡體字「缅」。

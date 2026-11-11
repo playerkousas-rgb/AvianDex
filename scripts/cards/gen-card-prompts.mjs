@@ -121,18 +121,18 @@ function cells(id) {
   add('Z07 food panel', [sent(c.diet, 58) || '資料待查']);
   add('Z08 distribution panel', [sent(c.range, 72) || '資料待查']);
   add('Z09 growth & reproduction', [sent(c.breeding, 84) || '資料待查']);
-  add('Z10 key knowledge, numbered 1–5', hl.slice(0, 5).map((h, i) => i + 1 + ' ' + sent(h, 46)));
+  add('Z10 key knowledge, numbered 1–5', Array.from({ length: 5 }, (_, i) => i + 1 + ' ' + (sent(hl[i], 46) || '資料待查')));
   add('Z11 trivia, 3 star bullets', [
     '★ ' + (sent(c.funFact, 44) || '資料待查'),
     '★ ' + (sent(c.voice, 44) || '資料待查'),
     '★ ' + (sent(c.etymology || c.conservation, 44) || '資料待查'),
   ]);
-  add('Z12 score card (radar + total)', [
+  add('Z12 score card (radar pentagon, vertices clockwise from the top: 生物重要性, 物種適應力, 研究價值, 保育關注度, 觀賞價值; each label sits next to its own vertex)', [
     '生物重要性 ' + n1(sc.i) + '/5',
     '物種適應力 ' + n1(sc.a) + '/5',
-    '觀賞價值 ' + n1(sc.v) + '/5',
-    '保育關注度 ' + n1(sc.c) + '/5',
     '研究價值 ' + n1(sc.r) + '/5',
+    '保育關注度 ' + n1(sc.c) + '/5',
+    '觀賞價值 ' + n1(sc.v) + '/5',
     '總評分 ' + stars(sc.o) + ' ' + n1(sc.o) + ' / 5',
   ]);
   add('Z13 observation tips, 4 lines', [
@@ -210,20 +210,39 @@ export function buildPrompt(id) {
   ].join('\n\n');
 }
 
+/* 精簡版（給 generate_image：附 2 張圖＝去字位圖＋參考卡）。
+ * v2 修正（0023 實測）：只准 4 個放大鏡、雷達標籤固定順時針、Z10 補滿 5 項。 */
+export function buildAgentPrompt(id) {
+  const e = idx.birds[id];
+  const printed = cells(id)
+    .map((x) => '  [' + x.zone + ']\n' + x.lines.map((l) => '      ' + l).join('\n'))
+    .join('\n');
+  return [
+    'Create ONE finished bird encyclopedia information card, front side only, 2:3 portrait, perfectly flat and facing the camera like a clean scan of a real printed card. No table, no hand, no tilt, no mockup, no watermark, no page curl.',
+    'IMAGE 1 = blank LAYOUT ZONE MAP (boxes only, no species text): copy its exact grid of panels, positions and sizes.\nIMAGE 2 = a finished reference card (its species is irrelevant) for visual style, typography, icons, radar chart and magnifier circles ONLY. Paint the new bird fresh; do not copy its bird. EVERY WORD, NUMBER, NAME, CAPTION AND LABEL IN IMAGE 2 IS PLACEHOLDER NOISE for another species and must NOT appear. Replace 100% of the text with the PRINTED TEXT below.',
+    'THE BIRD — paint ONE photorealistic ' + e.z + ' (' + e.e + ', ' + e.s + '), natural posture, complete body, clear head, correct plumage and bare-part colours for this species. Also paint a small pixel-art version of the same bird for the top-left box.',
+    'PRINTED TEXT — fill the card with EXACTLY these strings, cell by cell. Print nothing else:\n' + printed,
+    'CELL RULES\n1. All 18 cells must be filled; none may keep template text.\n2. Render numbers exactly as written. Never round or invent a number. If a cell says 資料待查, print 資料待查 exactly.\n3. EXACTLY FOUR magnifier circles in the right column (頭部, 羽色, 翼部, 腳部), each a close-up painting of that body part of the new bird, each with its own title and one short caption. No fifth circle, no circle numbers, no duplicate titles.\n4. Key knowledge (Z10) has exactly five numbered lines 1,2,3,4,5 in order.\n5. Radar chart: each of the five numbers sits beside its own label exactly as in Z12; do not swap values between labels.\n6. Traditional Chinese only, no simplified characters, no extra English sentences, no slogans, no QR code, no price, no second bird species. Similar-species boxes show only a small icon plus the name.',
+    'STYLE: warm cream paper with fine fibre texture, thin olive/sage-green panel borders, flat matte print, crisp sharp type, tiny dark-green pictogram icons. No glow, no drop shadow, no foil.',
+    'FINAL CHECK — re-read every printed string and confirm no word from IMAGE 2 survived, all 18 cells present, every number matches. Silently repair anything that fails.',
+  ].join('\n\n');
+}
+
 /* CLI */
 const args = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const write = process.argv.includes('--write');
+const agent = process.argv.includes('--agent');
 if (write && args.length) {
   const dir = path.join(root, 'deliver/card-prompts');
   mkdirSync(dir, { recursive: true });
   for (const id of args) {
-    writeFileSync(path.join(dir, `prompt-${id}.txt`), buildPrompt(id), 'utf8');
+    writeFileSync(path.join(dir, `prompt-${id}.txt`), (agent ? buildAgentPrompt(id) : buildPrompt(id)), 'utf8');
   }
   console.log('已寫入 deliver/card-prompts/ 共 ' + args.length + ' 份');
 } else {
   for (const id of args) {
     if (!idx.birds[id]) { console.error('冇呢個編號：' + id); continue; }
     console.log('════════ NO.' + id + ' ' + idx.birds[id].z + ' ════════');
-    console.log(buildPrompt(id));
+    console.log(agent ? buildAgentPrompt(id) : buildPrompt(id));
   }
 }
