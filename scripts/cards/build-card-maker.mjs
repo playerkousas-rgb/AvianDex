@@ -12,21 +12,23 @@
  * ============================================================ */
 import fs from 'node:fs';
 import path from 'node:path';
-import { cells, buildAgentPrompt, buildLitePrompt, REF_NOTE } from './gen-card-prompts.mjs';
+import { cells, buildAgentPrompt, buildLitePrompt, liteFields } from './gen-card-prompts.mjs';
 
 const root = path.resolve(import.meta.dirname, '..', '..');
-const VERSION = '1.1';
+const VERSION = '1.2';
 const idx = JSON.parse(fs.readFileSync(path.join(root, 'src/data/explorerIndex.json'), 'utf8'));
 
 const b64 = (file, mime) => `data:${mime};base64,` + fs.readFileSync(path.join(root, file)).toString('base64');
 const zonemap = b64('docs/card-samples/zonemap-naturalist.png', 'image/png');
 const refcard = b64('docs/card-samples/0022-v3.webp', 'image/webp');
-const lite = b64('docs/card-samples/lite-template.png', 'image/png');
-const ref0008 = b64('docs/card-samples/ref-0008.jpg', 'image/jpeg');
 
+const litDir = path.join(root, 'docs/card-samples/lite');
+const man = JSON.parse(fs.readFileSync(path.join(litDir, 'manifest.json'), 'utf8'));
+const liteCompose = { base: b64('docs/card-samples/lite/lite-template-base.png', 'image/png'), size: man.size, patches: {}, pos: man.patches, meta: null };
 const ids = [];
 const prompts = {};
 const liteP = {};
+const liteMeta = {};      // id → [棲息數, 食物數, IUCN 代號]；瀏覽器端用貼片組出版位圖
 for (const id of Object.keys(idx.birds).sort()) {
   const e = idx.birds[id];
   const c = cells(id);
@@ -41,6 +43,8 @@ for (const id of Object.keys(idx.birds).sort()) {
   ids.push({ id, z: e.z, e: e.e, s: e.s, missing, facts });
   prompts[id] = buildAgentPrompt(id);
   liteP[id] = buildLitePrompt(id);
+  const lf = liteFields(id);
+  liteMeta[id] = [Math.min(4, lf.hab.length), Math.min(4, lf.diet.length), lf.code];
 }
 
 /* 縮體積：所有 prompt 共用頭尾，只存每隻鳥不同的中段 */
@@ -60,11 +64,14 @@ function pack(map) {
   }
   return { pre, suf, mids };
 }
+const need = new Set();
+for (const [h, dd, c] of Object.values(liteMeta)) { need.add('hab-' + h); need.add('diet-' + dd); need.add('badge-' + c); need.add('stat-' + c); }
+for (const n of need) liteCompose.patches[n] = b64(`docs/card-samples/lite/${n}.png`, 'image/png');
+liteCompose.meta = liteMeta;
 const data = {
   version: VERSION, ids,
   modes: {
-    lite: { label: '精簡圖示卡（只有名稱＋數字＋圖示，推薦）', imgs: [lite], ...pack(liteP) },
-    liteRef: { label: '精簡圖示卡＋原卡參考（畫風較似原卡，但版面可能偏離）', imgs: [lite, ref0008], same: 'lite', refNote: REF_NOTE },
+    lite: { label: '精簡圖示卡（名稱＋數字＋彩色圖示＋IUCN 色階，推薦）', compose: liteCompose,  ...pack(liteP) },
     ...(process.argv.includes('--with-full')
       ? { full: { label: '完整文字卡（18 格，錯字風險高）', imgs: [zonemap, refcard], ...pack(prompts) } }
       : {}),

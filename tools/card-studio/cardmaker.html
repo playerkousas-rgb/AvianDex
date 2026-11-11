@@ -105,7 +105,7 @@ textarea{width:100%;height:220px;font:12px/1.5 ui-monospace,monospace}
     </details>
     <details style="margin-top:8px"><summary>內嵌的兩張參考圖</summary>
       <div class="row" style="margin-top:6px" id="refs"></div>
-      <div class="hint">精簡卡：只送 1 張版位圖（固定標題已寫死在圖上，版面最準）。「＋原卡參考」會多送一張原卡，畫風較似但版面可能偏離。</div>
+      <div class="hint">精簡卡：只送 1 張版位圖（標題、IUCN 色階已寫死在圖上，AI 只填空位）。「完整文字卡」錯字風險高，僅供比較。</div>
     </details>
     <div id="log"></div>
   </div>
@@ -141,7 +141,20 @@ const LS = {
 };
 const IDS = D.ids.map((x) => x.id);
 const M = () => D.modes[$('layout').value];
-const promptOf = (id) => { const m = M(), b = m.same ? D.modes[m.same] : m; return (m.refNote ? m.refNote + '\n\n' : '') + b.pre + b.mids[id] + b.suf; };
+const promptOf = (id) => { const m = M(); return m.pre + m.mids[id] + m.suf; };
+const loadImg = (u) => new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => no(new Error('版位圖載入失敗')); i.src = u; });
+const composed = {};
+async function compose(c, id) {
+  if (composed[id]) return composed[id];
+  const [hn, dn, code] = c.meta[id];
+  const names = [`hab-${hn}`, `diet-${dn}`, `badge-${code}`, `stat-${code}`];
+  const cv = document.createElement('canvas'); cv.width = c.size[0]; cv.height = c.size[1];
+  const g = cv.getContext('2d');
+  g.drawImage(await loadImg(c.base), 0, 0);
+  for (const n of names) { const p = c.pos[n]; g.drawImage(await loadImg(c.patches[n]), p[0], p[1]); }
+  return (composed[id] = cv.toDataURL('image/png'));
+}
+const imgsOf = async (id) => { const m = M(); return m.compose ? [await compose(m.compose, id)] : m.imgs; };
 const INFO = Object.fromEntries(D.ids.map((x) => [x.id, x]));
 const RESULTS = {};          /* id -> {url, model} | {error} */
 const BUSY = new Set();
@@ -205,7 +218,7 @@ const part = (url) => { const c = url.indexOf(','); return { inlineData: { mimeT
 
 async function genOne(id) {
   const prompt = (promptDirty && curId() === id) ? $('prompt').value : promptOf(id);
-  const parts = [...M().imgs.map(part), { text: prompt }];
+  const parts = [...(await imgsOf(id)).map(part), { text: prompt }];
   const baseCfg = { responseModalities: ['IMAGE'] };
   let last = null;
   for (const model of MODELS[$('quality').value]) {
@@ -235,6 +248,7 @@ const curId = () => { const v = $('num').value.replace(/\D/g, '').padStart(4, '0
 function refreshBird() {
   const id = curId(), b = INFO[id];
   $('jump').value = id;
+  if (window.__showRefs) window.__showRefs();
   $('birdLine').innerHTML = `<b style="color:var(--tx)">${esc(b.z)}</b> · ${esc(b.e)} · <i>${esc(b.s)}</i><br>卡面 18 格中有 <b style="color:${b.missing > 4 ? 'var(--warn)' : 'var(--g1)'}">${b.missing}</b> 處印「資料待查」`;
   $('facts').innerHTML = '必對清單：' + b.facts.map((f) => `<b>${esc(f)}</b>`).join('　');
   if (!promptDirty) { $('prompt').value = promptOf(id); }
@@ -328,7 +342,8 @@ function badge() { const k = resolveKey(); $('apiBadge').className = 'pill ' + (
 $('jump').innerHTML = D.ids.map((x) => `<option value="${x.id}">${x.id}　${esc(x.z)}</option>`).join('');
 $('layout').innerHTML = Object.entries(D.modes).map(([k, m]) => `<option value="${k}">${esc(m.label)}</option>`).join('');
 $('layout').value = LS.get('avx_layout', 'lite');
-const showRefs = () => { $('refs').innerHTML = M().imgs.map((u) => `<img src="${u}" style="width:48%;border-radius:8px">`).join(''); };
+const showRefs = () => { imgsOf(curId()).then((a) => { $('refs').innerHTML = a.map((u) => `<img src="${u}" style="width:48%;border-radius:8px">`).join(''); }).catch(() => {}); };
+window.__showRefs = showRefs;
 $('layout').onchange = () => { LS.set('avx_layout', $('layout').value); promptDirty = false; refreshBird(); showRefs(); };
 showRefs();
 $('mode').value = LS.get('avx_mode', 'canvas'); $('quality').value = LS.get('avx_q', 'pro'); $('mode').onchange();

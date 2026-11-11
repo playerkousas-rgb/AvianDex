@@ -249,7 +249,7 @@ export function liteFields(id) {
   const diet = (e.d || []).map((x) => idx.dietTags.find((y) => y.id === x)?.zh).filter(Boolean).slice(0, 4);
   const sim = similarSpecies(id).map((x) => (x.includes('：') ? x.split('：')[1] : x).replace(/^同科近緣 /, ''));
   const iucnZh = String(c.iucn || '').split(' ')[0] || '資料待查';
-  const code = (String(c.iucn || '').match(/\b([A-Z]{2})\b/) || [])[1] || '';
+  const code = (String(c.iucn || '').match(/\b([A-Z]{2})\b/) || String(c.iucnEn || '').match(/\(([A-Z]{2})\)/) || [])[1] || 'NONE';
   return {
     e, c, hab, diet, sim, genus, epi, code, iucnZh, sc,
     len: lenText(e, c), mass: m.mass ? m.mass + ' g' : '資料待查',
@@ -261,10 +261,12 @@ export const REF_NOTE = 'IMAGE 2 (if attached) is the original AvianDex card, su
 export function buildLitePrompt(id) {
   const f = liteFields(id);
   const { e, c, sc } = f;
-  const slotList = (arr, n) => !arr.length ? 'NO DATA: erase all four circles and tag boxes, and print the single word 資料待查 centred in the panel' : Array.from({ length: n }, (_, i) => (arr[i] ? `circle ${i + 1}: icon of "${arr[i]}", tag text: ${arr[i]}` : `circle ${i + 1}: NOT USED — erase this circle and its tag box completely`)).join('\n      ');
+  const slotList = (arr) => !arr.length
+    ? 'NO DATA: the panel has ONE empty slot in the middle — print exactly 資料待查 there (no icon)'
+    : 'exactly ' + arr.length + ' circle(s) are drawn, each with its own tag box. Fill them in reading order (left to right, top to bottom):\n      ' + arr.map((x, i) => `${i + 1}. icon of "${x}" in the circle, tag text in the box below it: ${x}`).join('\n      ');
   return [
     'Create ONE finished bird info card, front side only, 2:3 portrait, flat like a clean scan. No table, no hand, no mockup, no watermark.',
-    'IMAGE 1 is the card TEMPLATE. Keep its layout, panels, colours, frame, and ALL text already printed on it EXACTLY as is (titles like 身長, 體重, 分類資訊, 棲息環境, 食物, 分佈地區, 成長與繁殖, 生態價值評分, 可混淆物種, 保育狀態, 頭部/羽色/翼部/腳部, 界/門/綱/目/科/屬/種, radar axis names, IUCN, NO.). Do NOT redraw, retype, translate or restyle those printed words. Your job is only to fill the empty light-outlined SLOTS and the empty picture frames, and then remove the slot outlines.',
+    'IMAGE 1 is the card TEMPLATE. Keep its layout, panels, colours, frame, and ALL text already printed on it EXACTLY as is (titles like 身長, 體重, 分類資訊, 棲息環境, 食物, 分佈地區, 成長與繁殖, 生態價值評分, 可混淆物種, 保育狀態, 頭部/羽色/翼部/腳部, 界/門/綱/目/科/屬/種, radar axis names, IUCN scale). Do NOT redraw, retype, translate or restyle those printed words. Your job is only to fill the empty light-outlined SLOTS and the empty picture frames, and then remove the slot outlines.',
     'THE BIRD — ' + e.z + ' (' + e.e + ', ' + e.s + '). Correct plumage and bare-part colours for this species. One bird species only.',
     'FILL THE PICTURE FRAMES (no text inside any picture):\n' +
       '  · Pixel-art frame (top-left): small 16-bit pixel art of the bird, side view.\n' +
@@ -272,27 +274,27 @@ export function buildLitePrompt(id) {
       '  · Four magnifier circles, top to bottom: (1) close-up of head and bill, (2) close-up of plumage pattern, (3) close-up of folded or spread wing, (4) close-up of feet and legs. Labels beside them are already printed — keep them.\n' +
       '  · 分佈地區 panel: a flat world/regional map with the species range shaded green. Guide (do NOT print): ' + (String(c.range || '').slice(0, 120) || 'unknown, leave a plain map') + '\n' +
       '  · 成長與繁殖 panel: three small icons in the three circles: nest, eggs, chick (draw typical for this species; no text). Guide (do NOT print): ' + (String(c.breeding || '').slice(0, 100) || 'generic') + '\n' +
-      '  · 可混淆物種 panel: two small bird portraits in the two circles.\n' +
+      '  · 可混淆物種 panel: in each of the two circles a realistic head-and-neck portrait of that similar species (bird head close-up, filling the circle, species-accurate colours), name printed in the box under it.\n' +
+      '  · ICON COLOURS: icons in the 棲息環境, 食物 and 成長與繁殖 circles must be colourful flat illustrations (3–4 colours each, like a children\'s sticker book), NOT monochrome green and NOT line-only. 棲息環境 icons use blues/teals/greens fitting the habitat; 食物 icons use natural food colours (oranges, reds, yellows, browns); 成長與繁殖 nest/egg/chick use warm browns, cream and yellow. Keep each circle\'s tinted background and outline colour.\n' +
       '',
     'PRINT EXACTLY THESE STRINGS IN THE EMPTY SLOTS — nothing else:\n' +
-      '  [Header chip] the prefix "NO." is ALREADY printed — keep it and add only the four digits right after it, so it reads: NO.' + id + '\n' +
+      '  [Header chip, dark green, left of the name band] print the whole string, white bold, on the dashed line: NO.' + id + '\n' +
       '  [Dark green name band] line 1 large: ' + e.z + '   line 2: ' + e.e + '   line 3 italic: ' + e.s + '\n' +
       '  [Top-right chip] 目: ' + (e.oz || '資料待查') + '   科: ' + (e.fz || '資料待查') + '\n' +
-      '  [身長 slot] ' + f.len + '\n' +
-      '  [體重 slot] ' + f.mass + '\n' +
-      '  [保育級別 slot] ' + f.iucnZh + (f.code ? ' ' + f.code : '') + '\n' +
+      '  [身長 slot — the empty rounded box UNDER the label 身長] ' + f.len + '\n' +
+      '  [體重 slot — the empty rounded box UNDER the label 體重] ' + f.mass + '\n' +
+      '  [保育級別 box, 保育狀態 panel] ALREADY FULLY PRINTED (coloured IUCN scale + grade name). Keep untouched; add nothing there.\n' +
       '  [分類資訊 panel: 7 rows top to bottom] rows 1–3 (界 動物界 Animalia / 門 脊索動物門 Chordata / 綱 鳥綱 Aves) are ALREADY PRINTED — keep them untouched. Fill ONLY the four empty slots, each in its own row beside its own label:\n' +
       '      row 4 slot beside 目: ' + (e.oz || '資料待查') + ' ' + (e.o || '') + '\n' +
       '      row 5 slot beside 科: ' + (e.fz || '資料待查') + ' ' + (e.f || '') + '\n' +
       '      row 6 slot beside 屬: ' + (f.genus ? f.genus + ' 屬' : '資料待查') + '\n' +
       '      row 7 slot beside 種: ' + e.z + ' ' + (f.genus ? f.genus[0] + '. ' + f.epi : '') + '\n' +
-      '  [棲息環境, 2×2 circles + tag boxes]\n      ' + slotList(f.hab, 4) + '\n' +
-      '  [食物, 2×2 circles + tag boxes]\n      ' + slotList(f.diet, 4) + '\n' +
+      '  [棲息環境]\n      ' + slotList(f.hab) + '\n' +
+      '  [食物]\n      ' + slotList(f.diet) + '\n' +
       '  [生態價值評分 radar, five vertices clockwise from top] 重要性 ' + n1(sc.i) + ' | 適應力 ' + n1(sc.a) + ' | 研究 ' + n1(sc.r) + ' | 保育 ' + n1(sc.c) + ' | 觀賞 ' + n1(sc.v) + ' (print each number in the small box beside its own axis name, and draw the radar polygon to match these values out of 5)\n' +
       '  [總評分 slot] ' + stars(sc.o) + ' ' + n1(sc.o) + ' / 5\n' +
       '  [可混淆物種 name boxes] ' + f.sim.map((x, i) => (i ? 'right box' : 'left box') + ' = ' + x).join(' | ') + ' (print only the species name, no numbering)' + '\n' +
-      '  [保育狀態] small badge slot: ' + (f.code || '—') + ' | line 1: ' + f.iucnZh + ' | line 2: ' + (c.iucnEn || ''),
-    'RULES\n1. Print ONLY the strings listed above. No sentences, no extra words, no dates, no version, no footer, no logo, no QR/barcode.\n2. Render every number exactly as written; never round or invent. 資料待查 means print exactly 資料待查.\n3. Traditional Chinese only. Do not print any template/placeholder word that is not in the list.\n4. Any circle marked NOT USED must be painted over with the plain panel background: no circle outline, no empty tag box, and never repeat another circle tag. Do not add empty boxes under the 成長與繁殖 icons.\n5. Style: warm cream paper, thin olive-green borders, flat matte print, crisp type, dark-green line icons. No glow, no shadows.',
+    'RULES\n1. Print ONLY the strings listed above. No sentences, no extra words, no dates, no version, no footer, no logo, no QR/barcode.\n2. Render every number exactly as written; never round or invent. 資料待查 means print exactly 資料待查.\n3. Traditional Chinese only. Do not print any template/placeholder word that is not in the list.\n4. Draw no extra circles or tag boxes in 棲息環境 and 食物 beyond those already in the template. Do not add empty boxes under the 成長與繁殖 icons.\n5. Style: warm cream paper, thin olive-green borders, flat matte print, crisp type, colourful flat icons. No glow, no shadows.',
     'FINAL CHECK — compare every printed string with the list; fix any typo; make sure no pre-printed template word was altered.',
   ].join('\n\n');
 }
