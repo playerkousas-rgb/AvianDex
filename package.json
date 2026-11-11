@@ -10,6 +10,7 @@
     "birds:enrich": "node scripts/cards/enrich-birds.mjs",
     "build": "tsc -b && vite build",
     "cards:audit": "node scripts/cards/audit-copy.mjs",
+    "cards:maker": "node scripts/cards/build-card-maker.mjs",
     "cards:batch": "node scripts/cards/batch-copy.mjs",
     "cards:data": "node scripts/cards/build-explorer-data.mjs && node scripts/cards/build-details.mjs",
     "cards:details": "node scripts/cards/build-details.mjs",

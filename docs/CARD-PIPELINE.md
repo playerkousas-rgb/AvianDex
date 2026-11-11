@@ -143,3 +143,17 @@ r2://…/aviandex/cards/manifest.json        ← 編號 → 檔名、bytes、sha
   3. 版面位圖的 `Z06…` 區碼會洩漏成卡面標題（0023）。
   4. 第 5 個放大鏡空圈／Z10 編號跳號，屢禁不止。
 - 資料源問題：0024 文案帶 `* ` 前綴；0025 相似種「印缅斑嘴鴨」含簡體字「缅」。
+
+## 10. 一鍵出圖工具（給 Gemini Canvas）
+
+```bash
+npm run cards:maker      # → tools/card-studio/aviandex-card-maker.html（約 4 MB，569 隻）
+```
+
+- 打開（或貼進 Gemini Canvas）→ 選編號 → 按「生成這一張資訊卡」。**不用貼 prompt**。
+- 內嵌：去字位圖（IMAGE 1）＋樣本卡 0022-v3（IMAGE 2）＋每隻鳥已砌好的 18 格鎖死文字 prompt。
+- 「連續生成」可由當前編號起一次出 2–20 張；撞額度（429）會自動停。
+- 每張卡下面有「必對清單」（編號、名稱、體長、體重、保育級別、雷達五數、總評分），人工逐張核對。
+- 母版：`tools/card-studio/cardmaker.html`；`aviandex-card-maker.html` 為產物，勿手改。
+- Prompt 新增「SECTION TITLES」：明講各區標題，並禁止印出位圖上的 `Zxx` 區碼。
+- 資料清理：開頭的 `* ` 自動去掉；相似種名稱「缅」自動轉「緬」。

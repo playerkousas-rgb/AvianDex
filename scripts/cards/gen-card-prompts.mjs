@@ -11,6 +11,7 @@
  * ============================================================ */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 const root = path.resolve(import.meta.dirname, '..', '..');
 const J = (p) => JSON.parse(readFileSync(path.join(root, p), 'utf8'));
@@ -23,12 +24,13 @@ const scores = J('src/data/dexScores.json').scores;
 const tax = J('src/data/birdTaxonomy.json');
 
 const n1 = (v) => (v == null ? '資料待查' : Number(v).toFixed(1));
+const tc = (t) => String(t || '').replace(/缅/g, '緬');
 const stars = (v) => {
   const n = Math.max(0, Math.min(5, Math.round(Number(v) || 0)));
   return '★'.repeat(n) + '☆'.repeat(5 - n);
 };
 const sent = (s, max) => {
-  s = String(s || '').replace(/\s+/g, ' ').trim();
+  s = String(s || '').replace(/\s+/g, ' ').replace(/^[*＊•·\s]+/, '').trim();
   if (!s) return '';
   const i = s.search(/[。；]/);
   const out = i > 0 && i <= max ? s.slice(0, i + 1) : s.slice(0, max);
@@ -66,14 +68,14 @@ function similarSpecies(id) {
   const self = Number(e.len) || Number((copy[id] || {}).length?.replace(/\D.*/, '')) || 0;
   const peers = Object.keys(idx.birds)
     .filter((k) => k !== id && idx.birds[k].fz === fam && idx.birds[k].len)
-    .map((k) => ({ k, z: idx.birds[k].z, d: Math.abs(Number(idx.birds[k].len) - self) }))
+    .map((k) => ({ k, z: tc(idx.birds[k].z), d: Math.abs(Number(idx.birds[k].len) - self) }))
     .sort((a, b) => a.d - b.d)
     .slice(0, 2);
   if (!peers.length) return ['第一個物種名：資料待查', '第二個物種名：資料待查'];
   return peers.map((p, i) => (i === 0 ? '第一個' : '第二個') + '：同科近緣 ' + p.z);
 }
 
-function cells(id) {
+export function cells(id) {
   const e = idx.birds[id], c = copy[id] || {}, m = meas[id] || {};
   const sc = scores[id] || {}, t = tax[id] || {};
   const genus = (e.s || '').split(' ')[0] || '';
@@ -212,6 +214,14 @@ export function buildPrompt(id) {
 
 /* 精簡版（給 generate_image：附 2 張圖＝去字位圖＋參考卡）。
  * v2 修正（0023 實測）：只准 4 個放大鏡、雷達標籤固定順時針、Z10 補滿 5 項。 */
+export const SECTION_TITLES = [
+  ['Z04', '圖鑑介紹 / PROFILE'], ['Z05', '分類資訊 / CLASSIFICATION'], ['Z06', '生態習性 / ECOLOGICAL HABITS'],
+  ['Z07', '食物 / DIET'], ['Z08', '分佈地區 / DISTRIBUTION'], ['Z09', '成長與繁殖 / GROWTH & REPRODUCTION'],
+  ['Z10', '關鍵知識 / KEY KNOWLEDGE'], ['Z11', '趣味冷知識 / TRIVIA'], ['Z12', '生態價值評分卡 / ECOLOGICAL VALUE CARD'],
+  ['Z13', '觀察小貼士 / OBSERVATION TIPS'], ['Z14', '注意事項 / PRECAUTIONS'], ['Z15', '特徵放大鏡 / DETAIL CALL-OUTS'],
+  ['Z16', '可混淆物種 / SIMILAR SPECIES'], ['Z17', '保育狀態 / CONSERVATION STATUS'], ['Z18', '叫聲 / CALL'],
+];
+
 export function buildAgentPrompt(id) {
   const e = idx.birds[id];
   const printed = cells(id)
@@ -222,6 +232,7 @@ export function buildAgentPrompt(id) {
     'IMAGE 1 = blank LAYOUT ZONE MAP (boxes only, no species text): copy its exact grid of panels, positions and sizes.\nIMAGE 2 = a finished reference card (its species is irrelevant) for visual style, typography, icons, radar chart and magnifier circles ONLY. Paint the new bird fresh; do not copy its bird. EVERY WORD, NUMBER, NAME, CAPTION AND LABEL IN IMAGE 2 IS PLACEHOLDER NOISE for another species and must NOT appear. Replace 100% of the text with the PRINTED TEXT below.',
     'THE BIRD — paint ONE photorealistic ' + e.z + ' (' + e.e + ', ' + e.s + '), natural posture, complete body, clear head, correct plumage and bare-part colours for this species. Also paint a small pixel-art version of the same bird for the top-left box.',
     'PRINTED TEXT — fill the card with EXACTLY these strings, cell by cell. Print nothing else:\n' + printed,
+    'SECTION TITLES — print each exactly as written. They REPLACE the grey position labels (such as "Z06 ECOLOGICAL HABITS") on IMAGE 1. Those grey labels, every "Zxx" code and every English word of IMAGE 1 are position markers only and must NEVER appear on the finished card:\n' + SECTION_TITLES.map(([z, t]) => '  ' + z + '  →  ' + t).join('\n'),
     'CELL RULES\n1. All 18 cells must be filled; none may keep template text.\n2. Render numbers exactly as written. Never round or invent a number. If a cell says 資料待查, print 資料待查 exactly.\n3. EXACTLY FOUR magnifier circles in the right column (頭部, 羽色, 翼部, 腳部), each a close-up painting of that body part of the new bird, each with its own title and one short caption. No fifth circle, no circle numbers, no duplicate titles.\n4. Key knowledge (Z10) has exactly five numbered lines 1,2,3,4,5 in order.\n5. Radar chart: each of the five numbers sits beside its own label exactly as in Z12; do not swap values between labels.\n6. Traditional Chinese only, no simplified characters, no extra English sentences, no slogans, no QR code, no price, no second bird species. Similar-species boxes show only a small icon plus the name.',
     'STYLE: warm cream paper with fine fibre texture, thin olive/sage-green panel borders, flat matte print, crisp sharp type, tiny dark-green pictogram icons. No glow, no drop shadow, no foil.',
     'FINAL CHECK — re-read every printed string and confirm no word from IMAGE 2 survived, all 18 cells present, every number matches. Silently repair anything that fails.',
@@ -229,7 +240,8 @@ export function buildAgentPrompt(id) {
 }
 
 /* CLI */
-const args = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+const isMain = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+const args = isMain ? process.argv.slice(2).filter((a) => !a.startsWith('--')) : [];
 const write = process.argv.includes('--write');
 const agent = process.argv.includes('--agent');
 if (write && args.length) {
