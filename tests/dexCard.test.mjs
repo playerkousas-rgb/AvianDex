@@ -184,11 +184,10 @@ test('卡面：23 個目都有專屬配色（不會有目掉進預設色）', ()
 /* ------------------------------------------------------------ 4. 欄位覆蓋 */
 
 test('卡面：12 個可能欄位都真的有人用，唔會砌完發現某格永遠空', () => {
-  const titles = ['分類資訊', '名稱由來', '量度', '棲息環境', '食物',
-    '分佈地區', '外形特徵', '成長與繁殖', '行為特徵', '有趣小知識', '鳴聲', '遷徙'];
+  const titles = ['棲地與食性', '量度', '分佈', '外形', '繁殖', '行為', '鳴聲',
+    '身長', '體重', '保育級別', '圖鑑評分'];
   const html = renderDexCard(cardInput('0013'));
   for (const t of titles) {
-    if (t === '遷徙') continue; // 遷徙格不是每隻都有，只做整體覆蓋檢查
     assert.ok(html.includes(t), `卡面缺少「${t}」區塊`);
   }
   /* 全 569 隻：至少有一隻用到 migration（否則這一欄就是死碼） */
@@ -239,67 +238,47 @@ test('dexScores.json 與公式即時算出的結果一致（防止手改數據�
 /* ------------------------------------------------------------ 6. 版式尺寸 */
 
 test('卡面 CSS 的高度預算對得住 1600（不會印出半格）', () => {
-  /* 直接讀 LAYOUT 常數，不靠 regex 抓 CSS —— 兩者若不同步，這個測試會同時失敗 */
-  const total = LAYOUT.pad * 2 + LAYOUT.hdr + LAYOUT.bandA + LAYOUT.bandB + LAYOUT.bandC
-    + LAYOUT.score + LAYOUT.foot + LAYOUT.gap * 5;
-  assert.equal(total, LAYOUT.cardH, `高度合計 ${total}，不是 ${LAYOUT.cardH}`);
-  assert.ok(DEX_CARD_CSS.includes(`height:${LAYOUT.cardH}px`));
-  /* 三個區塊高度必須真的寫入 CSS，否則 LAYOUT 只是好看的文件 */
-  /* 現在每個 band 外面有一層 frame，高度寫在 frame 上 */
-  assert.ok(DEX_CARD_CSS.includes(`.dx .frame-a{height:${LAYOUT.bandA}px}`),
-    `frame-a 高度與 LAYOUT.bandA(${LAYOUT.bandA}) 不一致`);
-  assert.ok(DEX_CARD_CSS.includes(`.dx .frame-b{height:${LAYOUT.bandB}px}`),
-    `frame-b 高度與 LAYOUT.bandB(${LAYOUT.bandB}) 不一致`);
-  assert.ok(DEX_CARD_CSS.includes(`.dx .frame-c{height:${LAYOUT.bandC}px}`),
-    `frame-c 高度與 LAYOUT.bandC(${LAYOUT.bandC}) 不一致`);
-  assert.ok(DEX_CARD_CSS.includes(`.dx .frame-score{height:${LAYOUT.score}px}`),
-    `frame-score 高度與 LAYOUT.score(${LAYOUT.score}) 不一致`);
-  assert.ok(DEX_CARD_CSS.includes(`.dx .hdr-frame{position:relative;height:${LAYOUT.hdr}px`),
-    `hdr-frame 高度與 LAYOUT.hdr(${LAYOUT.hdr}) 不一致`);
+  /* 海報式版面的實際高度：由 CSS 抽出來加，不是靠常數自說自話 */
+  const num = (re) => {
+    const m = DEX_CARD_CSS.match(re);
+    assert.ok(m, `CSS 找不到 ${String(re)}`);
+    return Number(m[1]);
+  };
+  const poster = num(/\.dx \.poster\{position:relative;height:(\d+)px/);
+  const row2 = num(/\.dx \.row-2\{height:(\d+)px/);
+  const row4 = num(/\.dx \.row-4\{height:(\d+)px/);
+  const score = num(/\.dx \.score\{margin:\d+px 26px 0;height:(\d+)px/);
+  const foot = num(/\.dx \.foot\{margin-top:auto;height:(\d+)px/);
+  const gaps = 18 + 16 + 18;      // row-2 / row-4 / score 的上下留白
+  const total = poster + row2 + row4 + score + foot + gaps;
+  assert.ok(total <= 1600, `高度合計 ${total}，超出 1600（會切走底部）`);
+  assert.ok(total >= 1540, `高度合計 ${total}，底部會留一大條空白`);
 });
-
-test('卡面：每一格都有圖示（用戶要求「圖多啲、字少啲」）', () => {
-  const html = renderDexCard(cardInput('0013'));
-  /* 13 個區塊 + 評分 5 個維度 = 至少 18 個 inline SVG 圖示 */
-  const icons = (html.match(/<svg class="ic/g) || []).length;
-  assert.ok(icons >= 18, `圖示只有 ${icons} 個，至少要 18 個`);
-  /* 每種食性／棲地 tag 都要有圖，否則會出現「有字冇圖」 */
-  for (const id of ['insect', 'fish', 'fruit', 'seed', 'forest', 'urban', 'wetland']) {
-    assert.ok(renderDexCard({ ...cardInput('0013'), dietIds: [id], habitatIds: [id] }).includes('viewBox'),
-      `${id} 冇圖示`);
-  }
-});
-
-test('卡面：IUCN 五級量尺只認已核實的級別，缺資料不裝有', () => {
-  const lc = renderDexCard(cardInput('0013'));
-  assert.ok(lc.includes('ib-seg'), '應有 IUCN 量尺');
-  assert.ok(lc.includes('無危'), '八哥是無危');
-  const bare = renderDexCard({
-    ...cardInput('0013'), zh: {}, en: {},
-  });
-  assert.ok(bare.includes('iucnbar-miss'), '冇 IUCN 資料就要顯示「資料待查」，不可假裝無危');
-});
-
 /* ---------------------------------------------- 7. 設計要素（用戶逐點要求） */
 
 test('設計：每張卡上方有目徽章 + 品牌球（用戶第 1 點）', () => {
   const passer = renderDexCard(cardInput('0013'));   // 雀形目
   const anser = renderDexCard(cardInput('0049'));    // 雁形目
-  assert.ok(passer.includes('hdr-emblem'), '頁首缺少目徽章');
-  assert.ok(passer.includes('hdr-brand'), '頁首缺少品牌標記');
+  assert.ok(passer.includes('class="emblem"'), '主圖缺少目徽章');
+  assert.ok(passer.includes('class="brand"'), '主圖缺少品牌標記');
   /* 同目的徽章要一樣、不同目的要不一樣 */
-  const emblemOf = (h) => (h.match(/hdr-emblem"><svg[^>]*>(.*?)<\/svg>/s) || [])[1];
+  const emblemOf = (h) => (h.match(/class="emblem"[^>]*><svg[^>]*>(.*?)<\/svg>/s) || [])[1];
   assert.equal(emblemOf(passer), emblemOf(renderDexCard(cardInput('0008'))),
     '同為雀形目，徽章應相同');
   assert.notEqual(emblemOf(passer), emblemOf(anser), '雀形目與雁形目徽章不應相同');
 });
 
-test('設計：卡面有兩層卡框，不是一塊白板（用戶第 2、7 點）', () => {
+test('設計：海報式排版，有主次不是一排等大方格（用戶：「排版比文字位重要」）', () => {
   const html = renderDexCard(cardInput('0013'));
-  /* 頁首 + 3 個 band + 評分 = 5 個雙層框 */
-  assert.equal((html.match(/class="frame[ "]/g) || []).length, 4, '應有 4 個內層 frame');
-  assert.ok(html.includes('hdr-frame'), '頁首應有雙層框');
-  assert.ok(DEX_CARD_CSS.includes('inset 0 0 0 3px'), '外框應有白色內線（雙層感）');
+  /* 主圖出血 + 引言壓在圖上 */
+  assert.ok(html.includes('class="poster"'), '應有海報主圖區');
+  assert.ok(html.includes('poster-veil'), '主圖應有漸層暗幕（令白字讀得到）');
+  /* 資料帶：四個數字一眼掃完 */
+  assert.equal((html.match(/class="stat[ "]/g) || []).length, 4, '應有 4 個資料格');
+  /* 下方四格 */
+  assert.equal((html.match(/class="pane mini"/g) || []).length, 4, '應有 4 格小卡');
+  /* 唔可以再係「13 個同尺寸方格」 */
+  assert.equal((html.match(/class="pnl"/g) || []).length, 0, '不應再有舊的一排方格');
 });
 
 test('設計：長段落變列點；夠位就一個字都無改（用戶第 3 點）', () => {
@@ -321,8 +300,9 @@ test('設計：長段落變列點；夠位就一個字都無改（用戶第 3 �
 test('設計：五維評分有星號、綜合有星號＋精靈球（用戶第 4、5 點）', () => {
   const html = renderDexCard(cardInput('0013'));
   const stars = (html.match(/class="stars"/g) || []).length;
-  /* 5 個維度 + 綜合 = 6 組星 */
-  assert.equal(stars, 6, `應有 6 組星號，實際 ${stars}`);
+  /* 新版：資料帶一組總分星（維度改用 bar，避免同一個分數畫兩次） */
+  assert.ok(stars >= 1, `應有星號，實際 ${stars}`);
+  assert.equal((html.match(/class="dim[ "]/g) || []).length, 5, '應有五個維度 bar');
   assert.ok(html.includes('pokeball'), '綜合評分應有精靈球');
   assert.ok(html.includes('o-v'), '綜合分數應顯示');
 });

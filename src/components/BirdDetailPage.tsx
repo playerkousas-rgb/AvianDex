@@ -257,7 +257,13 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
 
             {/* 背面：資訊圖卡；未做的雀用文字即時砌（不造假、不留白） */}
             <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-xl overflow-hidden border-2 border-amber-500/30 bg-[#f7f4ea]">
-              {info.status === 'loaded' && info.url ? (
+              {/* 新卡優先（由 repo 內資料即時砌），R2 舊 avif 只作後備。
+                  之前次序相反，所以 0001–0021 一直顯示舊卡，用戶看不到新版。 */}
+              {cardData.input ? (
+                <div className="absolute inset-0 overflow-auto bg-[#f7f4ea] flex items-start justify-center">
+                  <DexCard data={cardData.input} lang={cardLang} width={520} />
+                </div>
+              ) : info.status === 'loaded' && info.url ? (
                 <img
                   src={info.url}
                   alt={t(`${bird.name} 資訊圖卡`, `${bird.name} info card`)}
@@ -267,12 +273,6 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
               ) : info.status === 'loading' ? (
                 <div className="absolute inset-0 flex items-center justify-center bg-[#171512]">
                   <Loader2 className="w-5 h-5 text-white/30 animate-spin" />
-                </div>
-              ) : cardData.input ? (
-                /* 真正砌出來的資訊圖卡（1200×1600 縮到這個框）。
-                   文字全部由 JSON 注入，插畫用同一張 R2 圖，空白格印「資料待查」。 */
-                <div className="absolute inset-0 overflow-auto bg-[#f7f4ea] flex items-start justify-center">
-                  <DexCard data={cardData.input} lang={cardLang} width={520} />
                 </div>
               ) : cardData.failed ? (
                 <div className="w-full h-full bg-[#f7f4ea] p-4 flex flex-col items-center justify-center gap-2 text-center">

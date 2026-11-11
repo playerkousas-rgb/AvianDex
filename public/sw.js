@@ -17,7 +17,7 @@
    因為 activate 只會刪除「不在此清單內」的快取，而網絡優先的回退
    是由同一份 index.html 提供 —— 若不清舊快取，離線狀態會停在舊版。
    更新流程：改版本 → 部署 → 用戶下次打開時 sw 換新 → 自動清舊。 */
-const SHELL = 'aviandex-shell-v4';
+const SHELL = 'aviandex-shell-v5';
 const CARDS = 'aviandex-cards-v1';  /* 圖卡不動：內容以 URL 區分，不需要清 */
 
 const CARD_HOSTS = ['r2.dev', 'birdex2.vercel.app', 'localhost'];

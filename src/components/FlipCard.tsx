@@ -230,24 +230,27 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPo
 
         {/* 背面：資訊卡。rotateY(180deg) 反轉，令文字不會左右倒轉 */}
         <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-2xl overflow-hidden border-[4px] border-gray-900 bg-[#171512] shadow-[0_5px_0_rgba(0,0,0,0.55)]">
-          {info.status === 'loaded' && info.url ? (
+          {/* 次序很重要（用戶反映「只看到 v2.0 舊卡，看不到新版」）：
+              1) 先顯示由 git 內資料即時砌的新卡（1200×1600，按目換色）
+              2) 只有新卡砌唔到（資料檔載入失敗）才退回 R2 上那張舊 avif
+              3) 兩樣都冇才退回文字簡版
+              舊版次序相反，所以 0001–0021 那 21 隻一直被舊卡蓋住。 */}
+          {ownCard.input ? (
+            <div className="absolute inset-0 overflow-auto bg-[#f7f4ea] flex items-start justify-center">
+              <DexCard data={ownCard.input} lang={lang === 'en' ? 'en' : 'both'} width={520} />
+            </div>
+          ) : info.status === 'loaded' && info.url ? (
             <img
               src={info.url}
               alt={t(`${bird.name} 資訊圖卡`, `${bird.name} info card`)}
               referrerPolicy="no-referrer"
               className="w-full h-full object-contain bg-[#f7f4ea]"
             />
-          ) : info.status === 'loading' ? (
+          ) : ownCard.loading || info.status === 'loading' ? (
             <div className="absolute inset-0 flex items-center justify-center">
               <Loader2 className="w-5 h-5 text-white/30 animate-spin" />
             </div>
-          ) : ownCard.input ? (
-            /* 沒有現成 avif 的 548 隻，用同一套 renderer 即時砌（與詳細頁、下載同一版） */
-            <div className="absolute inset-0 overflow-auto bg-[#f7f4ea] flex items-start justify-center">
-              <DexCard data={ownCard.input} lang={lang === 'en' ? 'en' : 'both'} width={520} />
-            </div>
           ) : (
-            /* 砌唔到（資料檔未載入）才退回文字簡版，並講清楚這是暫時的 */
             <CardInfoFace bird={bird} lang={lang} />
           )}
 
