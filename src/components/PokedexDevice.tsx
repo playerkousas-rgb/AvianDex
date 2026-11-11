@@ -6,10 +6,12 @@ import {
   ChevronLeft, 
   ChevronRight, 
   X, 
-  BookOpen, 
   Mic,      // 加入這一個
   Camera,     // 視覺圖庫
   Maximize2,
+  RotateCw,   // 翻轉（放大檢視／螢幕）
+  FileText,   // 詳細資料（文字）
+  Compass,    // 科學研究中心
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MediaCapturePanel, MediaKind } from './MediaCapturePanel.tsx';
@@ -225,7 +227,6 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
         .replace(/\s+/g, ' ')
         .trim()
     : '';
-  const sciSlug = sciQuery.replace(/ /g, '_');
   // 索引資料（名稱／分類／屬性）—— 幾十 KB，唔會拖慢圖鑑機
   const entry = currentBird ? ENTRIES[currentBird.id] : undefined;
   /** 全中文 / 全英文介面小幫手 */
@@ -280,32 +281,93 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             className="w-full h-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="w-full flex justify-center py-6 md:py-10">
-              {/* 圖片主體 */}
-              {currentImage.url ? (
-                <motion.img
-                  src={currentImage.url}
-                  alt={currentBird.name}
-                  referrerPolicy="no-referrer"
-                  className="object-contain rounded-lg shadow-2xl w-[98%] md:max-w-[95%] h-auto md:max-h-[85vh]"
-                />
-              ) : (
-                <CardImageFallback id={currentBird.id} status={currentImage.status} onRetry={currentImage.retry} />
-              )}
+            {/* 放大檢視一樣可以翻轉 —— 用戶回報「一放大就咩資料都睇唔到」，
+                所以在最大畫面這裡提供同一個翻轉動作，唔需要返回格仔先翻。 */}
+            <div className="w-full flex flex-col items-center py-6 md:py-10 gap-3">
+              <div
+                className="relative w-[98%] md:max-w-[95%] [perspective:1600px] cursor-pointer"
+                onClick={(e) => { e.stopPropagation(); setScreenFlipped((v) => !v); }}
+              >
+                <motion.div
+                  animate={{ rotateY: screenFlipped ? 180 : 0 }}
+                  transition={{ type: 'spring', stiffness: 180, damping: 24 }}
+                  className="relative w-full [transform-style:preserve-3d]"
+                >
+                  {/* 正面：插畫（1:1，與原圖比例一致） */}
+                  <div className="relative w-full [backface-visibility:hidden]">
+                    {currentImage.url ? (
+                      <img
+                        src={currentImage.url}
+                        alt={currentBird.name}
+                        referrerPolicy="no-referrer"
+                        className="object-contain rounded-lg shadow-2xl w-full h-auto max-h-[80vh] mx-auto"
+                      />
+                    ) : (
+                      <CardImageFallback id={currentBird.id} status={currentImage.status} onRetry={currentImage.retry} />
+                    )}
+                  </div>
+                  {/* 背面：資訊圖卡；未做就用文字簡版 */}
+                  <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-lg overflow-hidden bg-[#f7f4ea] shadow-2xl">
+                    {infoImage.status === 'loaded' && infoImage.url ? (
+                      <img
+                        src={infoImage.url}
+                        alt={`${currentBird.name} 資訊圖卡`}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-contain"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-[#171512] p-4 flex flex-col">
+                        <p className="text-white font-black text-base leading-tight">{currentBird.name}</p>
+                        <p className="text-white/40 font-mono text-[10px] italic">{entry?.s}</p>
+                        <div className="mt-3 grid grid-cols-2 gap-2">
+                          {(['range', 'habitat', 'diet', 'look'] as const).map((k) => {
+                            const raw = (screenDetail as Record<string, string | string[]> | null)?.[k];
+                            const val = Array.isArray(raw) ? raw.filter(Boolean).join('；') : String(raw ?? '').trim();
+                            const labels: Record<string, string> = { range: '分佈', habitat: '環境', diet: '食物', look: '外形' };
+                            return (
+                              <div key={k} className="bg-black/30 rounded p-2 leading-tight">
+                                <p className="text-amber-300/80 text-[10px] font-black">{labels[k]}</p>
+                                <p className="text-white/70 text-[11px] mt-0.5">{val || t('資料待查', 'Pending')}</p>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* 翻轉掣：明寫文字，不用猜 */}
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); setScreenFlipped((v) => !v); }}
+                className="bg-white/12 hover:bg-white/25 backdrop-blur border border-white/25 text-white font-black text-xs px-5 py-2.5 rounded-full flex items-center justify-center gap-2 active:scale-95 transition-all"
+              >
+                <RotateCw className="w-4 h-4" />
+                {screenFlipped ? t('睇插畫', 'Show artwork') : t('睇資料卡', 'Show info card')}
+              </button>
             </div>
             
             {/* 詳細資料按鈕 / RESEARCH：確保它在圖片捲動範圍內，且容易按到 */}
-            {currentBird.discovered && (
-               <div className="w-full flex justify-center py-12 pb-24 md:hidden">
-                 <button 
-                   onClick={() => window.open(`https://www.allaboutbirds.org/guide/${encodeURIComponent(sciSlug)}`, '_blank')}
-                   className="bg-blue-600 text-white font-black px-12 py-5 rounded-2xl text-xl shadow-2xl active:scale-95 transition-all flex items-center gap-3"
-                 >
-                   <BookOpen className="w-6 h-6" />
-                   詳細資料 / RESEARCH
-                 </button>
-               </div>
-            )}
+            {/* 全螢幕時一樣要入得到詳細資料：之前係開外部 All About Birds，
+                mobile 用戶一按就離開 app 而且返回唔到，所以改為關閉全螢幕並跳去第 2 頁。 */}
+            <div className="w-full flex justify-center gap-2 py-8 pb-24 px-4">
+              <button
+                onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); setPage(2); }}
+                className="flex-1 max-w-xs bg-gradient-to-b from-yellow-400 to-yellow-600 text-gray-900 font-black px-4 py-3.5 rounded-xl border-2 border-yellow-800 shadow-xl active:scale-95 transition-all flex items-center justify-center gap-2 text-sm"
+              >
+                <FileText className="w-5 h-5" />
+                {t('詳細資料（文字）', 'DETAILS (TEXT)')}
+              </button>
+              <button
+                onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); setPage(3); }}
+                className="flex-1 max-w-xs bg-black/60 border border-amber-400/40 text-amber-100 font-black px-4 py-3.5 rounded-xl active:scale-95 transition-all flex items-center justify-center gap-2 text-sm"
+              >
+                <Compass className="w-5 h-5" />
+                {t('科學研究中心', 'RESEARCH')}
+              </button>
+            </div>
           </div>
         </motion.div>
       )}

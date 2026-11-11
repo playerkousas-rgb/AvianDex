@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Footprints, Backpack, ExternalLink, ShieldCheck } from 'lucide-react';
+import { X, Footprints, Backpack, ExternalLink, ShieldCheck, ChevronDown } from 'lucide-react';
 import { guideFor } from '../data/fieldGuide';
+import { GuidePictogram } from './GuidePictogram';
+import { SECTION_PICTOGRAMS } from '../data/guidePictograms';
 import type { Lang } from '../lib/explorer';
 
 export type GuideKind = 'etiquette' | 'gear';
@@ -29,6 +31,10 @@ export const FieldGuideModal: React.FC<FieldGuideModalProps> = ({
   /* 哪一頁由父層（App 的 guideKind）決定，唔在 modal 內另存一份 state，
      否則「外部撳裝備、modal 仍停禮儀」這類不同步就會出現。 */
   const tab: GuideKind = kind;
+
+  /* 預設全部收起：一開頁就是六／五塊圖，不是幾千字。
+     點哪一節就展開哪一節的詳細文字。 */
+  const [openSection, setOpenSection] = React.useState<string | null>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -96,19 +102,42 @@ export const FieldGuideModal: React.FC<FieldGuideModalProps> = ({
               ))}
             </div>
 
-            <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-5">
+            {/* 圖先、字後。
+                原本每一條都是「標題 + 兩三行文字」，一頁十幾條，等於一份說明書。
+                現在每一節先出一行圖示（只講「做乜／唔好做乜」），
+                詳細文字收在每一節下面，要睇才點開。 */}
+            <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-2.5">
               {guide.sections.map((sec) => (
-                <section key={sec.id} className="bg-black/35 border border-amber-500/20 rounded-xl p-3.5">
-                  <h3 className="text-yellow-300 font-black text-sm tracking-wide">{sec.title}</h3>
-                  <p className="text-amber-100/60 text-[11px] italic mb-2">{sec.lead}</p>
-                  <div className="space-y-2">
-                    {sec.items.map((it) => (
-                      <div key={it.title} className="bg-white/5 rounded-lg p-2.5 border border-white/5">
-                        <p className="text-white font-bold text-[12px] leading-snug">{it.title}</p>
-                        <p className="text-white/65 text-[11.5px] leading-relaxed mt-0.5">{it.body}</p>
-                      </div>
-                    ))}
-                  </div>
+                <section key={sec.id} className="bg-black/35 border border-amber-500/20 rounded-xl overflow-hidden">
+                  <button
+                    type="button"
+                    onClick={() => setOpenSection((v) => (v === sec.id ? null : sec.id))}
+                    className="w-full flex items-center gap-2.5 px-3 py-2.5 text-left hover:bg-white/5"
+                  >
+                    <div className="flex items-center gap-0.5 shrink-0">
+                      {(SECTION_PICTOGRAMS[sec.id] || ['law']).map((pid) => (
+                        <GuidePictogram key={pid} id={pid} className="w-8 h-8" />
+                      ))}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-yellow-300 font-black text-[13px] leading-tight">{sec.title}</h3>
+                      <p className="text-amber-100/60 text-[10.5px] leading-tight italic truncate">{sec.lead}</p>
+                    </div>
+                    <ChevronDown
+                      className={`w-4 h-4 text-white/35 shrink-0 transition-transform ${openSection === sec.id ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+
+                  {openSection === sec.id && (
+                    <div className="px-3 pb-3 space-y-2">
+                      {sec.items.map((it) => (
+                        <div key={it.title} className="bg-white/5 rounded-lg p-2.5 border border-white/5">
+                          <p className="text-white font-bold text-[12px] leading-snug">{it.title}</p>
+                          <p className="text-white/65 text-[11.5px] leading-relaxed mt-0.5">{it.body}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </section>
               ))}
 
