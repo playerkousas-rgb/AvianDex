@@ -28,11 +28,16 @@ await build({
   bundle: true, format: 'esm', platform: 'neutral', outfile: path.join(outdir, 'score.mjs'),
 });
 await build({
+  entryPoints: [path.join(root, 'src/lib/dexCardIcons.ts')],
+  bundle: true, format: 'esm', platform: 'neutral', outfile: path.join(outdir, 'icons.mjs'),
+});
+await build({
   entryPoints: [path.join(root, 'src/lib/dexCardLayout.ts')],
   bundle: true, format: 'esm', platform: 'neutral', outfile: path.join(outdir, 'layout.mjs'),
 });
+const { starsSvg } = await import(pathToFileURL(path.join(outdir, 'icons.mjs')).href);
 const { dexScore } = await import(pathToFileURL(path.join(outdir, 'score.mjs')).href);
-const { renderDexCard, fit, DEX_CARD_CSS, LAYOUT } = await import(pathToFileURL(path.join(outdir, 'layout.mjs')).href);
+const { renderDexCard, fit, bullets, DEX_CARD_CSS, LAYOUT } = await import(pathToFileURL(path.join(outdir, 'layout.mjs')).href);
 
 const idx = read('src/data/explorerIndex.json');
 const zhAll = read('src/data/cardDetails.zh.json').birds;
@@ -240,9 +245,17 @@ test('卡面 CSS 的高度預算對得住 1600（不會印出半格）', () => {
   assert.equal(total, LAYOUT.cardH, `高度合計 ${total}，不是 ${LAYOUT.cardH}`);
   assert.ok(DEX_CARD_CSS.includes(`height:${LAYOUT.cardH}px`));
   /* 三個區塊高度必須真的寫入 CSS，否則 LAYOUT 只是好看的文件 */
-  assert.ok(DEX_CARD_CSS.includes(`.dx .band-a{height:${LAYOUT.bandA}px}`));
-  assert.ok(DEX_CARD_CSS.includes(`.dx .band-b{height:${LAYOUT.bandB}px}`));
-  assert.ok(DEX_CARD_CSS.includes(`.dx .band-c{height:${LAYOUT.bandC}px}`));
+  /* 現在每個 band 外面有一層 frame，高度寫在 frame 上 */
+  assert.ok(DEX_CARD_CSS.includes(`.dx .frame-a{height:${LAYOUT.bandA}px}`),
+    `frame-a 高度與 LAYOUT.bandA(${LAYOUT.bandA}) 不一致`);
+  assert.ok(DEX_CARD_CSS.includes(`.dx .frame-b{height:${LAYOUT.bandB}px}`),
+    `frame-b 高度與 LAYOUT.bandB(${LAYOUT.bandB}) 不一致`);
+  assert.ok(DEX_CARD_CSS.includes(`.dx .frame-c{height:${LAYOUT.bandC}px}`),
+    `frame-c 高度與 LAYOUT.bandC(${LAYOUT.bandC}) 不一致`);
+  assert.ok(DEX_CARD_CSS.includes(`.dx .frame-score{height:${LAYOUT.score}px}`),
+    `frame-score 高度與 LAYOUT.score(${LAYOUT.score}) 不一致`);
+  assert.ok(DEX_CARD_CSS.includes(`.dx .hdr-frame{position:relative;height:${LAYOUT.hdr}px`),
+    `hdr-frame 高度與 LAYOUT.hdr(${LAYOUT.hdr}) 不一致`);
 });
 
 test('卡面：每一格都有圖示（用戶要求「圖多啲、字少啲」）', () => {
@@ -265,4 +278,88 @@ test('卡面：IUCN 五級量尺只認已核實的級別，缺資料不裝有', 
     ...cardInput('0013'), zh: {}, en: {},
   });
   assert.ok(bare.includes('iucnbar-miss'), '冇 IUCN 資料就要顯示「資料待查」，不可假裝無危');
+});
+
+/* ---------------------------------------------- 7. 設計要素（用戶逐點要求） */
+
+test('設計：每張卡上方有目徽章 + 品牌球（用戶第 1 點）', () => {
+  const passer = renderDexCard(cardInput('0013'));   // 雀形目
+  const anser = renderDexCard(cardInput('0049'));    // 雁形目
+  assert.ok(passer.includes('hdr-emblem'), '頁首缺少目徽章');
+  assert.ok(passer.includes('hdr-brand'), '頁首缺少品牌標記');
+  /* 同目的徽章要一樣、不同目的要不一樣 */
+  const emblemOf = (h) => (h.match(/hdr-emblem"><svg[^>]*>(.*?)<\/svg>/s) || [])[1];
+  assert.equal(emblemOf(passer), emblemOf(renderDexCard(cardInput('0008'))),
+    '同為雀形目，徽章應相同');
+  assert.notEqual(emblemOf(passer), emblemOf(anser), '雀形目與雁形目徽章不應相同');
+});
+
+test('設計：卡面有兩層卡框，不是一塊白板（用戶第 2、7 點）', () => {
+  const html = renderDexCard(cardInput('0013'));
+  /* 頁首 + 3 個 band + 評分 = 5 個雙層框 */
+  assert.equal((html.match(/class="frame[ "]/g) || []).length, 4, '應有 4 個內層 frame');
+  assert.ok(html.includes('hdr-frame'), '頁首應有雙層框');
+  assert.ok(DEX_CARD_CSS.includes('inset 0 0 0 3px'), '外框應有白色內線（雙層感）');
+});
+
+test('設計：長段落變列點；夠位就一個字都無改（用戶第 3 點）', () => {
+  const long = '第一句話講完。第二句話也講完。第三句話同樣講完。第四句收尾。';
+  /* 夠位：原文照登，一個字都不改 */
+  const roomy = bullets(long, 3, long.length);
+  assert.deepEqual(roomy, [long], '夠位時不應拆、不應刪字');
+
+  /* 唔夠位：拆成多點，每點都收在句末，不會出現半句 */
+  const tight = bullets(long, 3, 12);
+  assert.ok(tight.length >= 2, `應拆成多點，實際 ${tight.length} 點`);
+  for (const p of tight) {
+    assert.ok(/[。！？]$/.test(p) || p.endsWith('…'), `「${p}」不是收在句末`);
+  }
+  /* 拆唔開的短句保持原樣，不硬切 */
+  assert.deepEqual(bullets('短句。', 3, 100), ['短句。']);
+});
+
+test('設計：五維評分有星號、綜合有星號＋精靈球（用戶第 4、5 點）', () => {
+  const html = renderDexCard(cardInput('0013'));
+  const stars = (html.match(/class="stars"/g) || []).length;
+  /* 5 個維度 + 綜合 = 6 組星 */
+  assert.equal(stars, 6, `應有 6 組星號，實際 ${stars}`);
+  assert.ok(html.includes('pokeball'), '綜合評分應有精靈球');
+  assert.ok(html.includes('o-v'), '綜合分數應顯示');
+});
+
+test('設計：星號由分數換算，不是另外打分', () => {
+  /* 4.3 → 4 粒半（Math.round(4.3*2)/2 = 4.5） */
+  assert.ok(starsSvg(4.3, 14).match(/opacity="\.55"/), '4.3 應顯示半粒星');
+  /* 5.0 → 五粒實心 */
+  assert.equal((starsSvg(5, 14).match(/opacity="\.55"/g) || []).length, 0);
+  /* 無分 → 不畫星，避免「0 分」的錯覺 */
+  assert.equal(starsSvg(undefined, 14), '');
+});
+
+test('設計：列點唔會食走英文空格、唔會切開數字（實測撞過的兩個 bug）', () => {
+  /* 英文逗號後的空格：接返時不可以變成「common,the」 */
+  const en = 'In winter, as insects are less common, the myna eats garbage.';
+  const out = bullets(en, 3, 150, true);
+  assert.equal(out.join(' ').replace(/\s+/g, ' ').includes('common,the'), false,
+    `英文逗號後的空格被食走：${JSON.stringify(out)}`);
+  /* 千位分隔的逗號不是斷句位 */
+  const num = 'Its range is larger than 20,000 km and too large to be vulnerable.';
+  const out2 = bullets(num, 3, 28, true);
+  for (const seg of out2) {
+    assert.equal(/20,$/.test(seg), false, `把 20,000 切開了：${JSON.stringify(out2)}`);
+  }
+});
+
+test('設計：569 隻全砌一次都唔會出現壞字串或空圖示', () => {
+  let bad = [];
+  for (const id of Object.keys(idx.birds)) {
+    const html = renderDexCard(cardInput(id));
+    if (/undefined|NaN|\[object|\$\{/.test(html)) bad.push(id);
+    /* 圖示一定要有內容（空 path 會變成空白圓圈） */
+    for (const m of html.matchAll(/<svg class="ic[^>]*>(.*?)<\/svg>/gs)) {
+      if (m[1].trim().length < 10) { bad.push(`${id}:空圖示`); break; }
+    }
+    if (bad.length > 5) break;
+  }
+  assert.deepEqual(bad, [], `以下雀的卡有問題：${bad.join(', ')}`);
 });

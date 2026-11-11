@@ -187,3 +187,126 @@ export function iucnIndex(raw?: string): number {
   if (s.includes('數據缺乏') || /\bDD\b/.test(s)) return -1;
   return -1;
 }
+
+/* ==================================================================
+ * 以下三組是「卡的裝飾語言」——回應「整體審美同排列」的意見。
+ * 全部是品牌裝飾，不冒充數據：
+ *   · 目徽章：代表「這隻雀屬於哪一目」，不是特徵圖
+ *   · 星星：由分數換算（4.3 → 四粒半），不是另外打分
+ *   · 精靈球：AvianDex 本身的標記，不是 IUCN 等級
+ * ================================================================== */
+
+/**
+ * 目徽章（order emblem）：23 個目 → 14 個可辨識的簡單標記。
+ * 同目用同一個徽章，所以「一排雀」掃過去就知邊幾隻係親戚。
+ */
+export const ORDER_EMBLEMS: Record<string, string> = {
+  /* 鳴禽／雀形目：小鳥剪影 */
+  Passeriformes: 'songbird',
+  /* 鴴形目：長腳涉禽 */
+  Charadriiformes: 'wader',
+  /* 雁形目：水鴨 */
+  Anseriformes: 'duck',
+  /* 鷹形目／隼形目：鉤嘴猛禽 */
+  Accipitriformes: 'raptor',
+  Falconiformes: 'raptor',
+  /* 鴞形目：圓臉夜行 */
+  Strigiformes: 'owl',
+  /* 鸚形目：彎嘴 */
+  Psittaciformes: 'parrot',
+  /* 鴷形目／犀鳥目：鑿樹嘴 */
+  Piciformes: 'woodpecker',
+  Bucerotiformes: 'woodpecker',
+  /* 鵜形目／鸛形目／鰹鳥目／鸌形目／熱帶鳥目：海鳥／大水鳥 */
+  Pelecaniformes: 'seabird',
+  Suliformes: 'seabird',
+  Procellariiformes: 'seabird',
+  Phaethontiformes: 'seabird',
+  Ciconiiformes: 'crane',
+  /* 鶴形目：長頸長腳 */
+  Gruiformes: 'crane',
+  /* 鴿形目：圓身短嘴 */
+  Columbiformes: 'dove',
+  /* 佛法僧目：翠鳥俯衝 */
+  Coraciiformes: 'kingfisher',
+  /* 雨燕目：空中剪尾 */
+  Apodiformes: 'swift',
+  /* 夜鷹目：月亮 */
+  Caprimulgiformes: 'moon',
+  /* 雞形目：扇形尾羽 */
+  Galliformes: 'featherfan',
+  /* 鷉形目／潛鳥目：貼水 */
+  Podicipediformes: 'loon',
+  Gaviiformes: 'loon',
+  /* 杜鵑目：借用鳴禽標記（杜鵑是鳴禽類的近親，形狀也像） */
+  Cuculiformes: 'songbird',
+};
+
+const EMBLEM_PATHS: Record<string, string> = {
+  songbird: `<g ${S}><path d="M12 30c6 0 10-4 12-8s8-4 10 2c2 5-1 10-6 12l-3 6"/><circle cx="30" cy="19" r="1.6" ${F}/><path d="M22 18l-6-5"/></g>`,
+  wader: `<g ${S}><path d="M10 38c0-9 6-15 14-15 6 0 10 3 12 7l6-2-6 6"/><path d="M24 23V9l7 3-7 3"/><path d="M14 38v6M20 38v6"/></g>`,
+  duck: `<g ${S}><path d="M8 30c0-6 5-10 12-10 8 0 14 4 16 10l6 2H10"/><path d="M32 20c0-5-3-8-7-8-3 0-5 2-5 4"/><path d="M8 30c-3 1-4 4-3 7 4 0 6-2 6-5"/></g>`,
+  raptor: `<g ${S}><path d="M14 12c10 0 18 6 18 16 0 6-2 9-2 9"/><path d="M30 28l6 3-6 3"/><path d="M30 37c-8 0-14-5-17-11"/><circle cx="21" cy="17" r="1.6" ${F}/></g>`,
+  owl: `<g ${S}><path d="M10 20c0-9 6-14 14-14s14 5 14 14v10c0 6-6 12-14 12S10 36 10 30z"/><circle cx="18" cy="22" r="4.5"/><circle cx="30" cy="22" r="4.5"/><path d="M24 28l-3 4h6z" ${F}/></g>`,
+  parrot: `<g ${S}><path d="M30 10c0 14-4 22-12 26-4 2-8 1-10-2"/><path d="M30 10c4 0 8 3 9 8 1 4-1 7-4 8"/><path d="M30 14c4 6 4 14 0 20"/><circle cx="24" cy="16" r="1.6" ${F}/></g>`,
+  woodpecker: `<g ${S}><path d="M14 10v30"/><path d="M8 22h12M8 32h12"/><path d="M22 18l14-4-14 10z" ${F}/><circle cx="32" cy="14" r="1.4" ${F}/></g>`,
+  seabird: `<g ${S}><path d="M6 30c6-4 12-4 18 0s12 4 18 0"/><path d="M6 38c6-4 12-4 18 0s12 4 18 0"/><path d="M24 22c-6-8-14-10-18-6 4 6 10 9 18 6z" ${F}/></g>`,
+  crane: `<g ${S}><path d="M18 40c-2-8 2-14 8-16 5-2 8-6 8-10"/><path d="M34 14l6-6-2 8"/><path d="M14 40v6M22 40v6"/><path d="M26 24c-4 2-6 6-6 10"/></g>`,
+  dove: `<g ${S}><ellipse cx="24" cy="28" rx="14" ry="10"/><circle cx="34" cy="19" r="7"/><path d="M41 18l5 2-5 2"/><circle cx="36" cy="17" r="1.2" ${F}/><path d="M10 30l-4 8"/></g>`,
+  kingfisher: `<g ${S}><path d="M14 14c8-4 16 0 18 8 2 8-4 14-11 14"/><path d="M14 14l-8 6 10 2"/><path d="M32 30l6-4-1 8"/><circle cx="22" cy="20" r="1.6" ${F}/><path d="M8 40c4-3 8-3 12 0"/></g>`,
+  swift: `<g ${S}><path d="M6 26c10-10 24-14 36-10-8 2-14 6-18 12"/><path d="M24 28l-8 12 4-12z" ${F}/><path d="M6 26l4 8-6-2"/></g>`,
+  moon: `<g ${S}><path d="M30 8a16 16 0 1 0 10 26A18 18 0 0 1 30 8z" ${F}/><circle cx="38" cy="16" r="1.4" ${F}/><circle cx="42" cy="26" r="1" ${F}/></g>`,
+  featherfan: `<g ${S}><path d="M24 42V14"/><path d="M24 18c-8-2-12-8-12-14 6 2 10 8 12 14z" ${F}/><path d="M24 18c8-2 12-8 12-14-6 2-10 8-12 14z" ${F}/><path d="M24 28c-6-2-9-6-9-11 5 2 7 6 9 11z"/></g>`,
+  loon: `<g ${S}><path d="M12 26c0-6 5-10 12-10s12 4 12 10"/><path d="M36 26l6-4-1 8"/><path d="M6 34c4-3 8-3 12 0s8 3 12 0 8-3 12 0"/><path d="M12 26c-2 4-1 7 2 8"/></g>`,
+};
+
+/** 目前這隻雀的目徽章 id（找唔到就 fallback 鳴禽） */
+export function orderEmblem(order: string): string {
+  return ORDER_EMBLEMS[order] || 'songbird';
+}
+
+/** 直接吐出徽章 SVG */
+export function orderEmblemSvg(order: string, size = 26, cls = ''): string {
+  const key = orderEmblem(order);
+  return `<svg class="ic ${cls}" viewBox="0 0 48 48" width="${size}" height="${size}" aria-hidden="true">${EMBLEM_PATHS[key]}</svg>`;
+}
+
+/* ------------------------------------------------------------------
+ * 星號：由分數換算，支援半粒（4.3 → ★★★★½）。
+ * 用 SVG 畫而不用 ★ 字元，因為 PNG 匯出時字型可能沒有該字符。
+ * ------------------------------------------------------------------ */
+function starPath(): string {
+  const pts: string[] = [];
+  for (let i = 0; i < 10; i += 1) {
+    const r = i % 2 === 0 ? 10 : 4.4;
+    const a = (Math.PI / 5) * i - Math.PI / 2;
+    pts.push(`${(12 + r * Math.cos(a)).toFixed(2)},${(12 + r * Math.sin(a)).toFixed(2)}`);
+  }
+  return pts.join(' ');
+}
+
+export function starsSvg(value: number | undefined, size = 14, cls = ''): string {
+  if (value == null) return '';
+  const half = Math.round(value * 2) / 2;
+  const out: string[] = [];
+  for (let i = 1; i <= 5; i += 1) {
+    const fill = half >= i ? 1 : half >= i - 0.5 ? 0.5 : 0;
+    out.push(`<svg class="ic st ${cls}" viewBox="0 0 24 24" width="${size}" height="${size}" aria-hidden="true">
+      <polygon points="${starPath()}" fill="${fill ? 'currentColor' : 'none'}"
+        stroke="currentColor" stroke-width="1.6" ${fill === 0.5 ? 'opacity=".55"' : ''}/>
+    </svg>`);
+  }
+  return `<span class="stars" aria-label="${half} / 5">${out.join('')}</span>`;
+}
+
+/* ------------------------------------------------------------------
+ * 精靈球：AvianDex 的品牌標記（不是 IUCN、不是分數）。
+ * 綜合評分格用它做「按鈕」的形狀，跟用戶原版一致。
+ * ------------------------------------------------------------------ */
+export const POKEBALL_SVG = `<svg class="pokeball" viewBox="0 0 100 100" aria-hidden="true">
+  <circle cx="50" cy="50" r="46" fill="#fff" stroke="currentColor" stroke-width="7"/>
+  <path d="M4 50a46 46 0 0 1 92 0z" fill="currentColor" opacity=".92"/>
+  <rect x="4" y="45" width="92" height="10" fill="currentColor"/>
+  <circle cx="50" cy="50" r="17" fill="#fff" stroke="currentColor" stroke-width="7"/>
+  <circle cx="50" cy="50" r="7" fill="currentColor" opacity=".35"/>
+</svg>`;

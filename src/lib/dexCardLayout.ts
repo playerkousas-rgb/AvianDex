@@ -21,7 +21,10 @@ import {
   type DexCardInput, type OrderTheme, orderTheme, SCORE_DIMS,
   PENDING_ZH, PENDING_EN, esc, para,
 } from './dexCard';
-import { svgIcon, DIET_ICONS, HABITAT_ICONS, IUCN_LEVELS, iucnIndex } from './dexCardIcons';
+import {
+  svgIcon, DIET_ICONS, HABITAT_ICONS, IUCN_LEVELS, iucnIndex,
+  orderEmblemSvg, starsSvg, POKEBALL_SVG,
+} from './dexCardIcons';
 
 /* ------------------------------------------------------------------
  * 版面幾何：所有高度／寬度只在這裡寫一次。
@@ -32,11 +35,12 @@ export const LAYOUT = {
   cardH: 1600,
   pad: 34,
   gap: 18,
-  hdr: 216,
-  bandA: 438,
-  bandB: 266,
-  bandC: 266,
-  score: 152,
+  /* frame 外層 = 內容 + 4px padding × 2，所以每個數字都是「外框總高」 */
+  hdr: 224,
+  bandA: 434,
+  bandB: 262,
+  bandC: 262,
+  score: 156,
   foot: 104,
   colL: 292,
   colR: 322,
@@ -119,17 +123,133 @@ function panel(
       <span class="pnl-i">${svgIcon(iconId, 19)}</span>
       <span class="zh">${esc(titleZh)}</span><span class="en en-h">${esc(titleEn)}</span>
     </h3>
+    <span class="pnl-wm" aria-hidden="true">${svgIcon(iconId, 88)}</span>
     <div class="pnl-b">${body}</div>
   </section>`;
+}
+
+/**
+ * 列點：把一段文字拆成 2–3 點。
+ *
+ * 用戶原話「列點式內容」——一段 40 字的方塊，讀起來是一團；
+ * 同一堆字分三點，眼睛有落腳點。
+ *
+ * 規矩：
+ *   · 只用原有標點斷句，不改寫、不刪字（第 1–2 點照原文，第 3 點收尾）
+ *   · 真的斷不開（例如只有一句）就照原樣放一點，不會硬切成半句
+ */
+/**
+ * 在原有逗號處斷句（soft 列點用）。
+ *
+ * 兩個陷阱，兩個都在實測中撞過：
+ *   1. 英文「20,000 km」的逗號在數字中間 → 斷開會變成「20,」「000 km」。
+ *      所以前後都是數字就唔當斷點。
+ *   2. 英文逗號後面有一個空格，trim 走之後直接接返會變「common,the」。
+ *      所以英文（非中日韓）用一格空格接返。
+ *
+ * 兩種情況都只是「接返」，一個字元都不會加、不會減。
+ */
+function splitOnCommas(text: string): string[] {
+  /* 用捕獲組切，逗號同後面嘅空格一齊保留喺前一段尾，
+     所以接返嘅時候「common, the」唔會變成「common,the」；
+     而且「20,000」呢類數字中間嘅逗號可以認得出來。 */
+  const parts = text.split(/([，,；;])(\s*)/u);
+  const out: string[] = [];
+  let buf = parts[0] ?? '';
+  for (let i = 1; i < parts.length; i += 3) {
+    const comma = parts[i] + (parts[i + 1] ?? '');
+    const next = parts[i + 2] ?? '';
+    /* 前後都是數字＝千位分隔，唔係斷句位 */
+    if (/\d$/.test(buf) && /^\d/.test(next)) {
+      buf += comma + next;
+      continue;
+    }
+    out.push(buf + comma);
+    buf = next;
+  }
+  out.push(buf);
+  return out.map((x) => x.trim()).filter(Boolean);
+}
+
+export function bullets(text: string, maxPoints = 3, maxChars = 240, soft = false): string[] {
+  const t = (text || '').trim();
+  if (!t) return [];
+  if (t.length <= maxChars) {
+    /* soft：一段長句也拆成兩點，令版面有列點感；
+       只斷在原文已有的逗號，不新增、不刪除任何字元。 */
+    if (soft && maxPoints > 1) {
+      const seg = splitOnCommas(t);
+      if (seg.length > 1 && seg[0].length >= 10 && seg[0].length <= maxChars * 0.72) {
+        /* 接返英文片段要留一格空格，否則會變「common,the」 */
+        const glue = /[\u4e00-\u9fff]/.test(t) ? '' : ' ';
+        return [seg[0], seg.slice(1).join(glue)];
+      }
+    }
+    return [t];
+  }
+  const parts = t
+    .split(/(?<=[。！？!?])/u)
+    .map((x) => x.trim())
+    .filter(Boolean)
+    .reduce<string[]>((acc, seg) => {
+      /* 太短的碎片（例如「」、單字）併回前一點，避免出現「。」獨立成一行的怪象 */
+      if (acc.length && seg.length < 8) acc[acc.length - 1] += seg;
+      else acc.push(seg);
+      return acc;
+    }, []);
+  if (parts.length <= 1) {
+    /* 冇句號可斷 → 退到分號／逗號（同一個 splitter，唔會食走英文空格） */
+    const sub = splitOnCommas(t);
+    if (sub.length > 1) return mergeToLimit(sub, maxPoints, maxChars);
+    return [fit(t, maxChars)];
+  }
+  return mergeToLimit(parts, maxPoints, maxChars);
+}
+
+function mergeToLimit(parts: string[], maxPoints: number, maxChars: number): string[] {
+  /*
+   * 空間夠 → 原文照登，一個字都不改（最重要）。
+   * 空間唔夠才需要在最後一點收尾，而收尾一律收在句末，不會出現半句。
+   */
+  const joined = parts.join('');
+  if (joined.length <= maxChars) return parts;
+  if (parts.length <= maxPoints) {
+    /* 逐點放，放到放唔落為止；最後一點收在句末 */
+    const out: string[] = [];
+    let used = 0;
+    for (const p of parts) {
+      const left = maxChars - used;
+      if (left <= 0) break;
+      if (p.length <= left) { out.push(p); used += p.length; continue; }
+      const cut = fit(p, left);
+      if (cut) out.push(cut);
+      break;
+    }
+    return out;
+  }
+  const head = parts.slice(0, maxPoints - 1);
+  const tail = parts.slice(maxPoints - 1).join('');
+  const budget = Math.max(20, maxChars - head.join('').length);
+  return [...head, fit(tail, budget)];
+}
+
+/** 列點 HTML：中英各自成組 */
+function bulletList(items: string[], cls: string): string {
+  if (!items.length) return '';
+  if (items.length === 1) return `<p class="${cls}">${items[0]}</p>`;
+  return `<ul class="bl ${cls}-bl">${items.map((i) => `<li>${i}</li>`).join('')}</ul>`;
 }
 
 /** 中英兩段：中欄只放中文、英欄只放英文。缺 → 各自的「待查」，互不頂替。 */
 function bi(zh: string, en: string, panelH: number, panelW: number): string {
   const b = textBudget(panelH, panelW, !!zh, !!en);
-  const z = zh ? `<p class="t-zh">${fit(zh, b.zhMax)}</p>`
-               : `<p class="t-zh t-miss">${PENDING_ZH}</p>`;
-  const e = en ? `<p class="t-en">${fit(en, b.enMax)}</p>`
-               : `<p class="t-en t-miss">${PENDING_EN}</p>`;
+  /* 列點有 9px 縮排 + 點距，字數預算收 6%，否則會多出一行爆格 */
+  const zItems = bullets(zh, 3, Math.floor(b.zhMax * 0.94), true);
+  const eItems = bullets(en, 3, Math.floor(b.enMax * 0.96), true);
+  const z = zItems.length ? bulletList(zItems, 't-zh')
+                          : `<p class="t-zh t-miss">${PENDING_ZH}</p>`;
+  const e = eItems.length ? bulletList(eItems, 't-en')
+                          : `<p class="t-en t-miss">${PENDING_EN}</p>`;
   return z + e;
 }
 
@@ -320,7 +440,11 @@ export function renderDexCard(d: DexCardInput, opts: RenderOpts = {}): string {
 <div class="dx lang-${lang} ${opts.extraClass || ''}" style="--c:${th.c};--t:${th.t};--a:${th.a}">
 
   <!-- ───────── 標題帶 ───────── -->
+  <!-- 外層：厚邊 + 內層白卡 = 兩層卡框（用戶原版的「唔似書籤」做法） -->
+  <div class="hdr-frame">
   <header class="hdr">
+    <div class="hdr-brand">${POKEBALL_SVG}<span>AVIANDEX</span></div>
+    <div class="hdr-emblem">${orderEmblemSvg(d.orderLatin, 34)}</div>
     <div class="hdr-l">
       ${d.artUrl
         ? `<img class="chip-art" src="${esc(d.artUrl)}" alt="" referrerpolicy="no-referrer" />`
@@ -347,9 +471,10 @@ export function renderDexCard(d: DexCardInput, opts: RenderOpts = {}): string {
       </div>
     </div>
   </header>
+  </div>
 
   <!-- ───────── 上段：左欄 + 主插畫 + 右欄 ───────── -->
-  <section class="band band-a">
+  <div class="frame frame-a"><section class="band band-a">
     <div class="col-l">
       ${panel('taxonomy', '分類資訊', 'Taxonomy',
         `<ul class="taxlist">${taxRows.map(([k, z, l]) => `
@@ -378,28 +503,28 @@ export function renderDexCard(d: DexCardInput, opts: RenderOpts = {}): string {
         `<div class="chiprow">${taggedRow(d.dietIds || [], d.dietLabels || [], PENDING_ZH)}</div>`,
         { flex: '1' })}
     </div>
-  </section>
+  </section></div>
 
   <!-- ───────── 中段一 ───────── -->
-  <section class="band band-b">
+  <div class="frame frame-b"><section class="band band-b">
     ${panel('map', '分佈地區', 'Range',
       `<div class="range-wrap">${rangeSketch(rangeText)}</div>
        ${bi(para(zh.range), para(en.range), LAYOUT.bandB - 122, BAND_PANEL_W)}`)}
     ${panel('feather', '外形特徵', 'Appearance', bi(para(zh.look), enLook, LAYOUT.bandB, BAND_PANEL_W))}
     ${panel('nest', '成長與繁殖', 'Breeding', bi(para(zh.breeding), para(en.breeding), LAYOUT.bandB, BAND_PANEL_W))}
     ${panel('behaviour', '行為特徵', 'Behaviour', bi(para(zh.behavior), para(en.behavior), LAYOUT.bandB, BAND_PANEL_W))}
-  </section>
+  </section></div>
 
   <!-- ───────── 中段二 ───────── -->
-  <section class="band band-c">
+  <div class="frame frame-c"><section class="band band-c">
     ${panel(migIcon, migTitle[0], migTitle[1], bi(para(migVal[0]), para(migVal[1]), LAYOUT.bandC, BAND_PANEL_W))}
     ${panel('funfact', '有趣小知識', 'Fun fact', bi(para(zh.funFact), para(en.funFact), LAYOUT.bandC, BAND_PANEL_W))}
     ${panel('voice', '鳴聲', 'Voice', bi(para(zh.voice), para(en.voice), LAYOUT.bandC, BAND_PANEL_W))}
     ${panel('shield', '保育現況', 'Conservation', bi(para(zh.conservation), para(en.conservation), LAYOUT.bandC, BAND_PANEL_W))}
-  </section>
+  </section></div>
 
   <!-- ───────── 評分帶 ───────── -->
-  <section class="score">
+  <div class="frame frame-score"><section class="score">
     <div class="score-l">
       <h3 class="score-h">${svgIcon('iucn', 17)}<span class="zh">圖鑑評分</span><span class="en en-h">Dex rating</span>
         <em class="note-zh">自訂指標，非學術評分</em><em class="note-en en-h">Custom index, not an academic rating</em>
@@ -411,6 +536,7 @@ export function renderDexCard(d: DexCardInput, opts: RenderOpts = {}): string {
           return `<li class="dim${v == null ? ' dim-miss' : ''}">
             <span class="dim-n">${svgIcon(dim.icon, 16)}<span class="zh">${dim.zh}</span><span class="en en-h">${dim.en}</span></span>
             <span class="dim-bar"><i style="width:${pct}%"></i></span>
+            <span class="dim-stars">${starsSvg(v ?? undefined, 13)}</span>
             <span class="dim-v">${v == null ? '—' : v.toFixed(1)}</span>
           </li>`;
         }).join('')}
@@ -418,13 +544,19 @@ export function renderDexCard(d: DexCardInput, opts: RenderOpts = {}): string {
     </div>
     <div class="score-r">
       <div class="overall">
-        <span class="o-k zh">綜合</span><span class="o-k en en-h">Overall</span>
-        <span class="o-v">${d.score?.o == null ? '—' : d.score.o.toFixed(1)}</span>
-        <span class="o-max">/ 5</span>
+        <span class="poke">${POKEBALL_SVG}</span>
+        <div class="o-txt">
+          <span class="o-k zh">綜合評分</span><span class="o-k en en-h">Overall</span>
+          <span class="o-line">
+            <b class="o-v">${d.score?.o == null ? '—' : d.score.o.toFixed(1)}</b>
+            <span class="o-max">/ 5</span>
+          </span>
+          ${starsSvg(d.score?.o ?? undefined, 15, 'o-stars')}
+        </div>
       </div>
       ${barcode(id4)}
     </div>
-  </section>
+  </section></div>
 
   <!-- ───────── 底欄 ───────── -->
   <footer class="foot">
@@ -517,9 +649,7 @@ export const DEX_CARD_CSS = `
 
 /* ---------- 區塊 ---------- */
 .dx .band{display:flex;gap:18px;flex:0 0 auto}
-.dx .band-a{height:438px}
-.dx .band-b{height:266px}
-.dx .band-c{height:266px}
+
 .dx .band-b .pnl,.dx .band-c .pnl{width:0;flex:1 1 0}
 .dx .col-l{width:292px;display:flex;flex-direction:column;gap:18px}
 .dx .col-r{width:322px;display:flex;flex-direction:column;gap:14px}
@@ -542,7 +672,11 @@ export const DEX_CARD_CSS = `
 .dx .pnl-i{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
   border-radius:8px;background:var(--c);color:#fff;flex:0 0 auto}
 .dx .pnl-i .ic{width:18px;height:18px}
-.dx .pnl-b{flex:1;min-height:0;display:flex;flex-direction:column;gap:4px}
+.dx .pnl{position:relative}
+.dx .pnl-wm{position:absolute;right:-12px;bottom:-16px;line-height:0;color:var(--c);
+  opacity:.055;pointer-events:none}
+.dx .pnl-wm .ic{width:88px;height:88px}
+.dx .pnl-b{flex:1;min-height:0;display:flex;flex-direction:column;gap:4px;position:relative;z-index:1}
 .dx .t-zh{font-size:13.5px;line-height:1.5;color:#1d2b25}
 .dx .t-en{font-size:11px;line-height:1.44;color:#61736b}
 
@@ -583,7 +717,7 @@ export const DEX_CARD_CSS = `
 .dx .rangesvg .pin.on circle{stroke:var(--c)}
 
 /* ---------- 評分 ---------- */
-.dx .score{height:152px;flex:0 0 152px;display:flex;gap:16px;
+.dx .score{height:100%;display:flex;gap:16px;
   background:#fff;border:2px solid var(--c);border-radius:18px;padding:10px 16px}
 .dx .score-l{flex:1;display:flex;flex-direction:column;gap:6px;min-width:0}
 .dx .score-h{display:flex;align-items:center;gap:6px;font-size:14.5px;font-weight:900;color:var(--c)}
@@ -619,6 +753,59 @@ export const DEX_CARD_CSS = `
 .dx .f-v em{font-style:italic;font-weight:400;opacity:.85}
 .dx .f-v.small{font-size:8.5px;font-weight:400;line-height:1.38;white-space:normal;opacity:.92;
   max-height:30px;overflow:hidden}
+
+
+/* ==========================================================
+ * 兩層卡框（用戶：「太工整像一張書籤」）
+ *   外層：主題色厚邊 + 4px 白線 + 微圓角 → 似一張「卡」
+ *   內層：白／米底 + 幼邊 → 內容有自己的一個框
+ * 每個 band 與評分帶都套同一組 frame，所以整張卡有節奏，
+ * 不是幾個大方塊疊在一起。
+ * ========================================================== */
+.dx .frame{position:relative;border-radius:20px;padding:4px;background:var(--c);
+  box-shadow:0 2px 0 rgba(0,0,0,.08), inset 0 0 0 3px rgba(255,255,255,.9);
+  display:flex;flex:0 0 auto}
+.dx .frame > section,.dx .frame > .band,.dx .frame > .score{flex:1}
+.dx .frame-a{height:434px}
+.dx .frame-b{height:262px}
+.dx .frame-c{height:262px}
+.dx .frame-score{height:156px}
+.dx .frame .band,.dx .frame .score{height:100%;border:none;background:transparent;padding:0}
+.dx .frame .band .pnl:first-child{border-left:none}
+
+/* ---------- 頁首：品牌球 + 目徽章 ---------- */
+.dx .hdr-frame{position:relative;height:224px;flex:0 0 224px;border-radius:22px;padding:4px;
+  background:var(--c);box-shadow:0 2px 0 rgba(0,0,0,.08), inset 0 0 0 3px rgba(255,255,255,.9)}
+.dx .hdr-brand{position:absolute;left:14px;top:-13px;z-index:3;display:flex;align-items:center;gap:5px;
+  background:var(--c);color:#fff;border-radius:999px;padding:3px 12px 3px 8px;
+  box-shadow:0 2px 0 rgba(0,0,0,.12)}
+.dx .hdr-brand .pokeball{width:19px;height:19px;color:#fff}
+.dx .hdr-brand span{font:900 10px/1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.16em}
+.dx .hdr-emblem{position:absolute;right:14px;top:-13px;z-index:3;width:44px;height:44px;
+  border-radius:50%;background:#fff;border:3px solid var(--c);color:var(--c);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 0 rgba(0,0,0,.12)}
+.dx .hdr-emblem .ic{width:26px;height:26px}
+
+/* ---------- 列點 ---------- */
+.dx .bl{list-style:none;display:flex;flex-direction:column;gap:2px}
+.dx .bl li{position:relative;padding-left:9px}
+.dx .bl li::before{content:"";position:absolute;left:0;top:.62em;width:3.5px;height:3.5px;
+  border-radius:50%;background:var(--c);opacity:.55}
+.dx .t-en-bl li::before{background:#8fa29a;opacity:.8}
+
+/* ---------- 星號 ---------- */
+.dx .stars{display:inline-flex;gap:1px;align-items:center;color:var(--a)}
+.dx .st{color:inherit}
+.dx .dim-stars{flex:0 0 auto;display:flex;align-items:center}
+
+/* ---------- 綜合評分：精靈球 + 星 ---------- */
+.dx .overall{display:flex;align-items:center;gap:10px;color:var(--c)}
+.dx .poke{width:52px;height:52px;flex:0 0 auto;display:block;color:var(--c)}
+.dx .poke .pokeball{width:100%;height:100%}
+.dx .o-txt{display:flex;flex-direction:column;gap:1px}
+.dx .o-line{display:flex;align-items:baseline;gap:3px}
+.dx .o-stars{margin-top:1px}
 
 /* ---------- 語言切換：中欄只放中文、英欄只放英文 ---------- */
 .dx.lang-zh .en{display:none!important}
