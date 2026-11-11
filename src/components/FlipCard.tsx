@@ -4,6 +4,8 @@ import { Loader2, Info, ScanLine, RotateCw, Maximize2 } from 'lucide-react';
 import type { Lang } from '../lib/explorer';
 import { ENTRIES } from '../lib/explorer';
 import { useCardImage, useInfoCard } from '../hooks/useCardImage';
+import { useDexCardInput } from '../hooks/useDexCardInput';
+import { DexCard } from './DexCard';
 import { loadDetails, useCardDetail } from '../lib/cardDetailsStore';
 import { BirdSilhouette } from './BirdSilhouette';
 import type { Bird } from '../types';
@@ -127,6 +129,12 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPo
     if (flipped) void info.probe();
   }, [flipped, info]);
 
+  /* 即時砌卡：只在真正翻開之後才開始砌（避免 48 格一齊拉兩個 600 KB 的語言檔）。
+     砌法與詳細頁、PNG 匯出完全一樣，三處不會走樣。 */
+  const ownCard = useDexCardInput(
+    bird.id, '', art.url ?? null, lang === 'en' ? 'en' : 'both', flipped,
+  );
+
   const enName = bird.taxonomy?.comName || (bird.englishName && bird.englishName !== '???' ? bird.englishName : '');
   const title = lang === 'en' ? enName || bird.name : bird.name;
 
@@ -233,7 +241,13 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPo
             <div className="absolute inset-0 flex items-center justify-center">
               <Loader2 className="w-5 h-5 text-white/30 animate-spin" />
             </div>
+          ) : ownCard.input ? (
+            /* 沒有現成 avif 的 548 隻，用同一套 renderer 即時砌（與詳細頁、下載同一版） */
+            <div className="absolute inset-0 overflow-auto bg-[#f7f4ea] flex items-start justify-center">
+              <DexCard data={ownCard.input} lang={lang === 'en' ? 'en' : 'both'} width={520} />
+            </div>
           ) : (
+            /* 砌唔到（資料檔未載入）才退回文字簡版，並講清楚這是暫時的 */
             <CardInfoFace bird={bird} lang={lang} />
           )}
 

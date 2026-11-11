@@ -76,6 +76,8 @@ export function useDexCardInput(
   source: string,
   artUrl: string | null,
   lang: DexCardLang = 'both',
+  /** false＝先不要砌（例如卡面未翻開，避免 48 格一齊拉詳細資料） */
+  enabled = true,
 ): DexCardState {
   const [state, setState] = useState<DexCardState>({ input: null, loading: true, failed: false });
   /* 換雀就即刻回到「載入中」，但不在 effect 內同步 setState（會觸發連鎖 render）。
@@ -84,6 +86,7 @@ export function useDexCardInput(
   const [builtFor, setBuiltFor] = useState(key);
 
   useEffect(() => {
+    if (!enabled) return;
     let alive = true;
 
     /* 單語卡就不要白白下載另一個語言檔（每個 ~600 KB，手機上很痛） */
@@ -147,9 +150,9 @@ export function useDexCardInput(
       });
 
     return () => { alive = false; };
-  }, [key, id, source, artUrl, lang]);
+  }, [key, id, source, artUrl, lang, enabled]);
 
   /* key 變了但新卡未砌好 → 回「載入中」，避免顯示上一隻雀的卡 */
-  if (builtFor !== key) return { input: null, loading: true, failed: false };
+  if (builtFor !== key) return { input: null, loading: enabled, failed: false };
   return state;
 }
