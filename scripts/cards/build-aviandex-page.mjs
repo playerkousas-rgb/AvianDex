@@ -15,7 +15,7 @@
  *    5. 資料：按編號定向鎖定（DIRECTIONAL LOCK），不准亂找
  *
  *  用法：node scripts/cards/build-aviandex-page.mjs
- *  輸出：public/aviandex-gen.html
+ *  輸出：public/aviandex-gen.html（另存 -v2 / -v3 新檔名，避免拿到舊版）
  * ============================================================ */
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
@@ -57,7 +57,7 @@ const html = `<!doctype html>
 <html lang="zh-Hant-HK">
 <head>
 <meta charset="utf-8">
-<title>AvianDex 資訊卡 · 出圖 v2</title>
+<title>AvianDex 資訊卡 · 出圖 v3</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
 <style>
@@ -173,7 +173,7 @@ const html = `<!doctype html>
 <header>
   <span style="font-size:19px">🪶</span>
   <div>
-    <h1 style="margin:0">AvianDex 資訊卡 · 出圖 <span style="color:var(--lime)">v2</span></h1>
+    <h1 style="margin:0">AvianDex 資訊卡 · 出圖 <span style="color:var(--lime)">v3</span></h1>
     <div class="sub">打編號 → 資料定向鎖定 → 出圖｜<span id="verStamp">—</span></div>
   </div>
   <span id="keyBadge" class="badge">🔑 檢查金鑰中…</span>
@@ -312,9 +312,10 @@ const html = `<!doctype html>
       <div class="step"><span class="n">8</span><b>本頁設定</b></div>
       <div class="kv"><span>版本</span><b id="vStat">—</b></div>
       <div class="kv"><span>金鑰狀態</span><b id="kStat">—</b></div>
-      <div id="keyBox" class="warn" style="display:none;margin-top:9px">
-        <b>未偵測到 API Key</b><br>
-        Gemini Canvas 會自動注入；用 Vercel／普通瀏覽器開就要貼一次（只存喺你部機）。
+      <div id="keyBox" class="warn" style="display:block;margin-top:9px;background:#141C16;border-color:#33402F;color:var(--soft)">
+        <b>API Key（選用）</b><br>
+        喺 Gemini Canvas 開：唔使填，Canvas 會代你認證。<br>
+        用 Vercel／瀏覽器直接開：先貼一次（只存喺你部機）。
         <div class="row" style="margin-top:7px">
           <input id="keyInline" type="password" placeholder="貼上 AIza… key"
                  style="flex:1;min-width:150px;padding:6px 9px;border-radius:8px;
@@ -686,11 +687,10 @@ function refreshKeyBadge(){
     $("kStat").textContent = "有（" + src + "）";
     if ($("keyBox")) $("keyBox").style.display = "none";
   } else {
-    el.className = "badge warn";
-    el.textContent = "🔑 未偵測到 · 貼一次就得";
-    $("kStat").textContent = "無";
-    if ($("keyBox")) $("keyBox").style.display = "block";
-    if (!resolveKey() && !lsGet(LS_KEY)) $("apiKey").focus();
+    el.className = "badge";           /* 中性，唔報紅：Canvas 會補認證 */
+    el.textContent = "☁️ 交俾 Canvas 認證";
+    $("kStat").textContent = "未見 key · 直接交俾 Canvas";
+    if ($("keyBox")) $("keyBox").style.display = "none";
   }
 }
 $("apiKey").value = lsGet(LS_KEY) || "";
@@ -838,22 +838,7 @@ async function generate(){
   var aspect = val("aspect") || "2:3";
   var model = val("model") || "gemini-2.5-flash-image";
 
-  if (!key && !cleanKey(val("apiKey"))){
-    $("errBox").innerHTML = '<div class="warn"><b>未找到 API Key</b><br>'
-      + '① 貼上 key（右上或右欄「本頁設定」）就會記住 · '
-      + '② 喺 Gemini Canvas 開啟會自動注入 · '
-      + '③ 或按「複製 prompt」去 gemini.google.com 出圖。'
-      + '<div class="row" style="margin-top:7px">'
-      + '<input id="keyInline2" type="password" placeholder="貼上 AIza… key" style="flex:1;min-width:150px;'
-      + 'padding:6px 9px;border-radius:8px;border:1px solid var(--line);background:#090C0A;'
-      + 'color:var(--ink);font-size:12px"><button class="mini" id="keySave2" type="button">儲存</button></div></div>';
-    $("keySave2").onclick = function(){
-      var v = ($("keyInline2").value || "").trim();
-      if (v.length < 20){ toast("呢個唔似 key（太短）"); return; }
-      lsSet(LS_KEY, v); $("apiKey").value = v; refreshKeyBadge(); toast("🔑 已儲存，可以再按生成");
-    };
-    return;
-  }
+  /* 照 V17：唔檢查 key。冇 key 就唔加 ?key= —— Canvas 內部會補認證 */
   if (!key) key = val("apiKey");
 
   setBusy(true);
@@ -915,23 +900,22 @@ $("prompt").addEventListener("input", function(){
 });
 
 /* 啟動 */
-var VER = "${new Date().toISOString().slice(0,10)}-v2";
+var VER = "${new Date().toISOString().slice(0,10)}-v3";
 $("verStamp").textContent = VER;
 $("vStat").textContent = VER;
 refreshKeyBadge();
 show("0013");
-if (!resolveKey()) {
-  setTimeout(function(){
-    toast("未偵測到 key：在 Gemini Canvas 開啟會自動注入；否則貼上 key 或複製 prompt 去 Gemini", 5200);
-  }, 1200);
-}
+setTimeout(function(){
+  if (!resolveKey()) toast("未見 key：Canvas 會自動認證；本機／Vercel 就要貼一次", 4600);
+}, 1400);
 setTimeout(refreshKeyBadge, 900);   // Canvas 有時遲少少注入
 </script>
 </body>
 </html>
 `;
 
-writeFileSync(path.join(root, 'public/aviandex-gen.html'), html, 'utf8');
-writeFileSync(path.join(root, 'public/aviandex-gen-v2.html'), html, 'utf8');
-console.log('已寫入 public/aviandex-gen.html + public/aviandex-gen-v2.html（' + Object.keys(BIRDS).length + ' 隻 · '
+for (const f of ['aviandex-gen.html', 'aviandex-gen-v2.html', 'aviandex-gen-v3.html']) {
+  writeFileSync(path.join(root, 'public', f), html, 'utf8');
+}
+console.log('已寫入 aviandex-gen{, -v2, -v3}.html（' + Object.keys(BIRDS).length + ' 隻 · '
   + Math.round(Buffer.byteLength(html) / 1024) + ' KB）');
