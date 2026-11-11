@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
+import { markUpdateAvailable } from './lib/updateStore';
 
 /* ============================================================
  *  Service Worker：離線可用 ＋ 一打開就更新
@@ -26,13 +27,25 @@ if ('serviceWorker' in navigator && import.meta.env.PROD) {
         /* 2. 每次開都問一次有沒有新版 */
         void reg.update().catch(() => undefined);
 
-        /* 3. 有新 sw 下載好、正等待接手 → 叫它立即接手，然後重整一次 */
+        /* 3. 有新 sw 下載好、正等待接手 → 記在 store，由 UpdateToast 通知用戶
+              ⚠️ 不再自動 SKIP_WAITING + reload。
+                 用戶的原話是「有更新就即時知道，我就把他加進主畫面」——
+                 要的是「知道」，不是「被換版」。
+                 所以這裡只通知；換版由用戶按橫幅上的「立即更新」觸發。 */
+        const notifyIfWaiting = () => {
+          if (reg.waiting && navigator.serviceWorker.controller) {
+            markUpdateAvailable(reg.waiting);
+          }
+        };
+
+        /* 已在等待（例如上次開 App 時下載好）→ 即刻通知 */
+        notifyIfWaiting();
         reg.addEventListener('updatefound', () => {
           const sw = reg.installing;
           if (!sw) return;
           sw.addEventListener('statechange', () => {
             if (sw.state === 'installed' && navigator.serviceWorker.controller) {
-              sw.postMessage({ type: 'SKIP_WAITING' });
+              markUpdateAvailable(sw);
             }
           });
         });

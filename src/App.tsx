@@ -4,6 +4,7 @@ import { PokedexDevice } from './components/PokedexDevice.tsx';
 import { WelcomeScreen } from './components/WelcomeScreen.tsx';
 import { SideToolBalls } from './components/SideToolBalls.tsx';
 import { InstallPrompt } from './components/InstallPrompt.tsx';
+import { UpdateToast } from './components/UpdateToast.tsx';
 import { RecognitionResultModal, Candidate } from './components/RecognitionResultModal.tsx';
 import { MediaCapturePanel, MediaKind } from './components/MediaCapturePanel.tsx';
 import { BirdingMapModal } from './components/BirdingMapModal.tsx';
@@ -756,6 +757,9 @@ function App() {
         onGuide={(k) => setGuideKind(k)}
         hidden={selectedBirdId !== null || showMap || recogOpen || !!globalCaptureKind || !!guideKind}
       />
+
+      {/* 有新版本時的頂部橫幅（由 service worker 偵測，用戶按才換版） */}
+      <UpdateToast lang={lang} />
 
       {/* 加入主畫面（右上角細球，已安裝或已按「暫時不要」就自動消失） */}
       {isOpened && <InstallPrompt lang={lang} />}
