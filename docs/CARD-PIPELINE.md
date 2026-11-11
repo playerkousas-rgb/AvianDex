@@ -211,3 +211,6 @@ npm run cards:maker      # → tools/card-studio/aviandex-card-maker.html（約 
 - 「空白導引圖」（只有框）AI 會亂擺位置；必須給它看「字已印好的整張卡」，它才會把圖放對位置。
 - `cardCopy` 內體重 `1234 g`（0058）疑似佔位資料，需查證；相似種 0022/0058 為備援規則湊出，需查證。
 - tools/card-studio/aviandex-card-maker.html（舊的 Gemini 版）仍是第 11 節流程，尚未改成合成卡。
+- 2026-11-11 追加：輸出改為 2048×3072（`AVX_OUT_SCALE`，預設 2）；AI 圖位從原始解析度一次縮放貼入；
+  棲息環境改為只放圖（不印標籤）；雷達圖外框加深。環境重置後需重裝：`pip install pillow numpy scipy`、
+  Noto Sans TC 字體（`npm i @expo-google-fonts/noto-sans-tc` 後複製 ttf 到 `~/.fonts`）。

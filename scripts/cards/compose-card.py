@@ -27,6 +27,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 ICON_DIR = os.path.join(ROOT, 'docs/card-samples/card-icons')
 FONT_DIR = os.environ.get('AVX_FONT_DIR', os.path.expanduser('~/.fonts'))
 W, H = 1024, 1536
+OUT_SCALE = int(os.environ.get('AVX_OUT_SCALE', '2'))   # 輸出倍率：2 → 2048×3072（文字放大不糊）
 VERBOSE = bool(os.environ.get('AVX_VERBOSE'))
 SS = 2                      # 超取樣倍率（先畫 2 倍再縮小，邊緣才平滑）
 
@@ -76,7 +77,7 @@ def slots(f):
            ('photo', 'rect', PHOTO, box(PHOTO, 1.5)), ('map', 'rect', MAP, box(MAP, 1.5))]
     out += [(f'zoom{i}', 'circle', c, c[2] + 3.5) for i, c in enumerate(ZOOM_C)]
     hx = COLS[1][0]
-    out += [(f'hab{i}', 'circle', (hx + dx, Y1 + dy, 38), 41.5) for i, (dx, dy) in enumerate(tag_positions(min(4, len(f['hab']))))]
+    out += [(f'hab{i}', 'circle', (hx + dx, Y1 + dy, r), r + 3.5) for i, (dx, dy, r) in enumerate(diet_positions(min(4, len(f['hab']))))]
     dx0 = COLS[2][0]
     out += [(f'diet{i}', 'circle', (dx0 + dx, Y1 + dy, r), r + 3.5) for i, (dx, dy, r) in enumerate(diet_positions(min(4, len(f['diet']))))]
     gx = COLS[1][0]
@@ -205,24 +206,30 @@ class Canvas:
         self.poly(pts, fill=fill, outline=outline, width=1.4)
 
     def paste_art(self, art, kind, geo, sh=(0, 0)):
-        """從 AI 輸出（已縮成 W×H）裁出一個框的內容，貼進卡片"""
+        """從 AI 輸出（原始解析度）裁出一個框的內容，一次縮放貼進卡片（避免二次重採樣變糊）"""
+        ax, ay = art.width / W, art.height / H
         if kind == 'rect':
             x0, y0, x1, y1 = geo
             m = 3
-            crop = art.crop((x0 + m + sh[0], y0 + m + sh[1], x1 - m + sh[0], y1 - m + sh[1])).resize((self.s(x1 - x0), self.s(y1 - y0)), Image.LANCZOS)
+            box = ((x0 + m + sh[0]) * ax, (y0 + m + sh[1]) * ay, (x1 - m + sh[0]) * ax, (y1 - m + sh[1]) * ay)
+            crop = art.resize((self.s(x1 - x0), self.s(y1 - y0)), Image.LANCZOS, box=box)
             mask = Image.new('L', crop.size, 0)
             ImageDraw.Draw(mask).rounded_rectangle([0, 0, crop.size[0] - 1, crop.size[1] - 1], radius=self.s(8), fill=255)
             self.img.paste(crop, (self.s(x0), self.s(y0)), mask)
         else:
             cx, cy, r = geo
             k = 0.9
-            crop = art.crop((round(cx - r * k + sh[0]), round(cy - r * k + sh[1]), round(cx + r * k + sh[0]), round(cy + r * k + sh[1]))).resize((self.s(2 * r), self.s(2 * r)), Image.LANCZOS)
+            box = ((cx - r * k + sh[0]) * ax, (cy - r * k + sh[1]) * ay, (cx + r * k + sh[0]) * ax, (cy + r * k + sh[1]) * ay)
+            crop = art.resize((self.s(2 * r), self.s(2 * r)), Image.LANCZOS, box=box)
             mask = Image.new('L', crop.size, 0)
             ImageDraw.Draw(mask).ellipse([0, 0, crop.size[0] - 1, crop.size[1] - 1], fill=255)
             self.img.paste(crop, (self.s(cx - r), self.s(cy - r)), mask)
 
-    def done(self):
-        return self.img.resize((W, H), Image.LANCZOS)
+    def done(self, scale=None):
+        scale = scale or OUT_SCALE
+        if scale == SS:
+            return self.img
+        return self.img.resize((W * scale, H * scale), Image.LANCZOS)
 
 
 def panel(cv, x0, y0, x1, y1, title, key):
@@ -249,12 +256,13 @@ def draw_guide(f):
             cx, cy, r = geo
             cv.circ(cx, cy, r + 5, fill=tint(col, 0.85), outline=col, width=3)
             cv.circ(cx, cy, r, fill=tint(col, 0.7), outline=dark(col, 0.1), width=2)
-    return cv.done()
+    return cv.done(1)
 
 
 # ── 合成卡 ────────────────────────────────────────────
-def compose(f, art):
-    art = art.convert('RGB').resize((W, H), Image.LANCZOS) if art is not None else None
+def compose(f, art, out_scale=None):
+    art_hi = art.convert('RGB') if art is not None else None
+    art = art_hi.resize((W, H), Image.LANCZOS) if art_hi is not None else None   # 只用於對位檢查
     cv = Canvas()
     cv.rr((12, 12, W - 12, H - 12), 26, outline=GREEN, width=3)
     cv.rr((20, 20, W - 20, H - 20), 22, outline=(200, 208, 190), width=1)
@@ -325,18 +333,15 @@ def compose(f, art):
         cv.text(66, y, k, 20, dark(c, 0.1))
         cv.text(98, y, v, 18, INK, bold=False, maxw=222)
 
-    # 棲息環境（圖＋短標籤）
+    # 棲息環境（只放圖）
     x0, x1 = COLS[1]
     panel(cv, x0, Y1, x1, Y1E, '棲息環境', 'hab')
     c = COL['hab']
     hab = f['hab'][:4]
     if not hab:
         cv.text((x0 + x1) / 2, Y1 + 150, '資料待查', 24, mix(INK, WHITE, 0.2), anchor='mm')
-    for i, (dx, dy) in enumerate(tag_positions(len(hab))):
-        cx, cy = x0 + dx, Y1 + dy
-        cv.circ(cx, cy, 43, fill=tint(c, 0.85), outline=c, width=3)
-        cv.rr((cx - 60, cy + 46, cx + 60, cy + 72), 8, fill=WHITE, outline=mix(c, WHITE, 0.3), width=2)
-        cv.text(cx, cy + 59, hab[i], 17, dark(c, 0.35), anchor='mm', maxw=112)
+    for dx, dy, r in diet_positions(len(hab)):
+        cv.circ(x0 + dx, Y1 + dy, r + 5, fill=tint(c, 0.85), outline=c, width=3)
 
     # 食物（只放圖）
     x0, x1 = COLS[2]
@@ -371,13 +376,14 @@ def compose(f, art):
     names = [('重要性', 'i'), ('適應力', 'a'), ('研究', 'r'), ('保育', 'c'), ('觀賞', 'v')]
     ang = [-math.pi / 2 + i * 2 * math.pi / 5 for i in range(5)]
     for lv in (1, 2, 3, 4, 5):
-        cv.poly([(cx + R * lv / 5 * math.cos(a), cy + R * lv / 5 * math.sin(a)) for a in ang], outline=mix(c, WHITE, 0.6), width=1)
+        cv.poly([(cx + R * lv / 5 * math.cos(a), cy + R * lv / 5 * math.sin(a)) for a in ang],
+                outline=c if lv == 5 else mix(c, WHITE, 0.3), width=2.6 if lv == 5 else 1.3)
     for a in ang:
-        cv.line([(cx, cy), (cx + R * math.cos(a), cy + R * math.sin(a))], mix(c, WHITE, 0.6), 1)
+        cv.line([(cx, cy), (cx + R * math.cos(a), cy + R * math.sin(a))], mix(c, WHITE, 0.3), 1.4)
     pv = [float(sc[k]) if sc[k] else 0 for _, k in names]
     pts = [(cx + R * v / 5 * math.cos(a), cy + R * v / 5 * math.sin(a)) for v, a in zip(pv, ang)]
     ov = Image.new('RGBA', cv.img.size, (0, 0, 0, 0))
-    ImageDraw.Draw(ov).polygon([tuple(cv.s(p)) for p in pts], fill=c + (110,))
+    ImageDraw.Draw(ov).polygon([tuple(cv.s(p)) for p in pts], fill=c + (130,))
     cv.img.paste(ov, (0, 0), ov)
     cv.d = ImageDraw.Draw(cv.img)
     cv.poly(pts, outline=c, width=2.5)
@@ -427,7 +433,7 @@ def compose(f, art):
     # AI 生成的圖貼上（最後貼，蓋在框內）
     base_np = art_np = None
     if art is not None:
-        base_np = np.array(compose(f, None)).astype(float)
+        base_np = np.array(compose(f, None, 1)).astype(float)
         art_np = np.array(art).astype(float)
     for name, kind, geo, ring in slots(f):
         if art is not None:
@@ -435,7 +441,7 @@ def compose(f, art):
             use = c0 > 25 and c < c0 * 0.6 and c < 60          # 只有明顯更準才採用偏移，否則維持原位
             if VERBOSE:
                 print(f'  {name}: shift ({dx:+d},{dy:+d}) cost {c:.0f} (原位 {c0:.0f}){" 採用" if use else ""}')
-            cv.paste_art(art, kind, geo, (dx, dy) if use else (0, 0))
+            cv.paste_art(art_hi, kind, geo, (dx, dy) if use else (0, 0))
         else:   # 空位：給 AI 看的「待填」底色
             key = ''.join(ch for ch in name if not ch.isdigit())
             col = COL[{'pixel': 'tax', 'photo': 'zoom', 'zoom': 'zoom', 'map': 'map', 'hab': 'hab', 'diet': 'diet', 'grow': 'grow', 'sim': 'sim'}[key]]
@@ -443,7 +449,7 @@ def compose(f, art):
                 cv.rr(geo, 8, fill=tint(col, 0.75))
             else:
                 cv.circ(geo[0], geo[1], geo[2], fill=tint(col, 0.75))
-    return cv.done()
+    return cv.done(out_scale)
 
 
 # ── 給生圖 AI 的 prompt：零文字 ─────────────────────────
@@ -477,7 +483,7 @@ def main():
     if mode == 'guide':
         draw_guide(f).save(sys.argv[4])
     elif mode == 'base':       # 給 AI 的輸入：字全部已印好、只留空位
-        compose(f, None).save(sys.argv[4])
+        compose(f, None, 1).save(sys.argv[4])
     elif mode == 'prompt':
         print(art_prompt(f))
     elif mode == 'compose':
