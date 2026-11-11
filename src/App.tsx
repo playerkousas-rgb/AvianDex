@@ -3,8 +3,9 @@ import { FlipCard } from './components/FlipCard.tsx';
 import { PokedexDevice } from './components/PokedexDevice.tsx';
 import { WelcomeScreen } from './components/WelcomeScreen.tsx';
 import { SideToolBalls } from './components/SideToolBalls.tsx';
-import { InstallPrompt } from './components/InstallPrompt.tsx';
+import { TopBar } from './components/TopBar.tsx';
 import { UpdateToast } from './components/UpdateToast.tsx';
+import { BALL_BASE, BALL_SIZE, BALL_ICON, BALL_RAIL_RIGHT, BALL_LABEL } from './components/ballStyles';
 import { RecognitionResultModal, Candidate } from './components/RecognitionResultModal.tsx';
 import { MediaCapturePanel, MediaKind } from './components/MediaCapturePanel.tsx';
 import { BirdingMapModal } from './components/BirdingMapModal.tsx';
@@ -404,6 +405,9 @@ function App() {
                   <Languages className="w-4 h-4" />
                   {lang === 'en' ? 'EN' : '中文'}
                 </button>
+                <div className="hidden md:block">
+                  <TopBar lang={lang} />
+                </div>
               </div>
 
               {/* 手機：語言直接可見（不用開選單）。
@@ -417,6 +421,12 @@ function App() {
                 <span className={`px-2 py-2 text-[11px] font-black ${lang === 'zh' ? 'bg-cyan-400 text-gray-900' : 'text-cyan-200/60'}`}>中</span>
                 <span className={`px-2 py-2 text-[11px] font-black ${lang === 'en' ? 'bg-cyan-400 text-gray-900' : 'text-cyan-200/60'}`}>EN</span>
               </button>
+
+              {/* 「加入主畫面」搬到頂欄（用戶第 2 點：不要浮在右邊球上方，
+                  否則左右兩排球一邊重一邊輕）。 */}
+              <div className="md:hidden shrink-0">
+                <TopBar lang={lang} />
+              </div>
 
               {/* 漢堡改為「收合黃色區域」：只控制下面那條黃色資訊帶，
                   不再包含地圖／禮儀／裝備（已搬到左邊浮動球）。
@@ -674,14 +684,14 @@ function App() {
           )}
         </main>
 
-        <div className="fixed bottom-5 right-3 sm:bottom-6 sm:right-6 z-30 flex flex-col gap-2.5 sm:gap-3">
+        <div className={BALL_RAIL_RIGHT}>
           <button
             onClick={() => setGlobalCaptureKind('image')}
             title={L('看圖認雀', 'Identify from a photo')}
-            className="group relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-700 border-[3px] sm:border-[4px] border-gray-900 shadow-[0_5px_0_rgba(0,0,0,0.7),0_8px_20px_rgba(232,121,249,0.5)] active:translate-y-1 active:shadow-[0_2px_0_rgba(0,0,0,0.7)] transition-all flex items-center justify-center"
+            className={`${BALL_BASE} ${BALL_SIZE} bg-gradient-to-br from-fuchsia-400 to-fuchsia-700`}
           >
-            <CameraIcon className="w-6 h-6 sm:w-7 sm:h-7 text-white drop-shadow-[0_2px_0_rgba(0,0,0,0.5)]" />
-            <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-black/80 text-white text-xs font-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            <CameraIcon className={`${BALL_ICON} text-white drop-shadow-[0_2px_0_rgba(0,0,0,0.5)]`} strokeWidth={2.6} />
+            <span className={BALL_LABEL('right')}>
               {L('看圖認雀', 'Photo ID')}
             </span>
             <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-[8px] font-black px-1 rounded border border-black">
@@ -691,10 +701,10 @@ function App() {
           <button
             onClick={() => setGlobalCaptureKind('audio')}
             title={L('聽聲認雀', 'Identify from a sound')}
-            className="group relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-cyan-300 to-cyan-700 border-[3px] sm:border-[4px] border-gray-900 shadow-[0_5px_0_rgba(0,0,0,0.7),0_8px_20px_rgba(34,211,238,0.5)] active:translate-y-1 active:shadow-[0_2px_0_rgba(0,0,0,0.7)] transition-all flex items-center justify-center"
+            className={`${BALL_BASE} ${BALL_SIZE} bg-gradient-to-br from-cyan-300 to-cyan-700`}
           >
-            <Mic className="w-6 h-6 sm:w-7 sm:h-7 text-white drop-shadow-[0_2px_0_rgba(0,0,0,0.5)]" />
-            <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-black/80 text-white text-xs font-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            <Mic className={`${BALL_ICON} text-white drop-shadow-[0_2px_0_rgba(0,0,0,0.5)]`} strokeWidth={2.6} />
+            <span className={BALL_LABEL('right')}>
               {L('聽聲認雀', 'Sound ID')}
             </span>
             <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-[8px] font-black px-1 rounded border border-black">
@@ -707,7 +717,7 @@ function App() {
             onClick={() => window.open(BIRDDEX2_URL, '_blank')}
             title="前往 BIRD-DEX 2 捕捉精靈"
             aria-label="前往 BIRD-DEX 2 捕捉精靈"
-            className="group relative w-14 h-14 sm:w-16 sm:h-16 rounded-full border-[3px] sm:border-[4px] border-gray-900 shadow-[0_5px_0_rgba(0,0,0,0.7),0_8px_20px_rgba(227,53,13,0.5)] active:translate-y-1 active:shadow-[0_2px_0_rgba(0,0,0,0.7)] transition-all flex items-center justify-center overflow-hidden bg-white"
+            className={`${BALL_BASE} ${BALL_SIZE} overflow-hidden bg-white`}
           >
             {/* 精靈球圖案 */}
             <svg viewBox="0 0 100 100" className="w-full h-full">
@@ -730,7 +740,7 @@ function App() {
               {/* 高光 */}
               <ellipse cx="34" cy="28" rx="11" ry="7" fill="rgba(255,255,255,0.45)" />
             </svg>
-            <span className="hidden md:block absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-black/80 text-white text-xs font-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            <span className={BALL_LABEL('right')}>
               去 BIRD-DEX 2 捕捉精靈
             </span>
             <span className="absolute -top-1 -right-1 bg-emerald-400 text-black text-[8px] font-black px-1 rounded border border-black animate-pulse">
@@ -762,7 +772,6 @@ function App() {
       <UpdateToast lang={lang} />
 
       {/* 加入主畫面（右上角細球，已安裝或已按「暫時不要」就自動消失） */}
-      {isOpened && <InstallPrompt lang={lang} />}
 
       <PokedexDevice
         lang={lang}

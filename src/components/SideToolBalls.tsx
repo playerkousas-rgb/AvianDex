@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Footprints, Backpack } from 'lucide-react';
 import type { Lang } from '../lib/explorer';
 import type { GuideKind } from './FieldGuideModal';
+import { BALL_BASE, BALL_SIZE, BALL_ICON, BALL_RAIL_LEFT, BALL_LABEL } from './ballStyles';
 
 /**
  * 左側浮動工具球（觀鳥地圖 / 觀鳥禮儀 / 觀鳥裝備 / 語言）。
@@ -34,8 +35,10 @@ interface Props {
   hidden?: boolean;
 }
 
-/* 手機 44px（手指最小舒適尺寸）；平板／桌機 52px —— 用滑鼠時 44px 仍然偏細。 */
-const BTN = 'group relative w-11 h-11 md:w-[52px] md:h-[52px] lg:w-14 lg:h-14 rounded-full border-[3px] border-gray-900 flex items-center justify-center shadow-[0_4px_0_rgba(0,0,0,0.6)] active:translate-y-0.5 active:shadow-[0_1px_0_rgba(0,0,0,0.6)] transition-all';
+/* 尺寸與位置全部由 ballStyles.ts 提供 —— 左、右、安裝球三處讀同一組數值。
+   之前左邊寫在這裡、右邊寫在 App.tsx，結果手機上左 44px、右 56px，
+   用戶一眼就看到「兩邊功能球大小不一」。 */
+const BTN = `${BALL_BASE} ${BALL_SIZE}`;
 
 export const SideToolBalls: React.FC<Props> = ({ lang, onMap, onGuide, hidden }) => {
   const t = (zh: string, en: string) => (lang === 'en' ? en : zh);
@@ -67,7 +70,7 @@ export const SideToolBalls: React.FC<Props> = ({ lang, onMap, onGuide, hidden })
   if (hidden) return null;
 
   return (
-    <div className="fixed bottom-5 left-2 sm:bottom-6 sm:left-4 z-30 flex flex-col gap-2 sm:gap-2.5">
+    <div className={BALL_RAIL_LEFT}>
       {items.map(({ key, label, Icon, cls, onClick }, i) => (
         <motion.button
           key={key}
@@ -79,11 +82,9 @@ export const SideToolBalls: React.FC<Props> = ({ lang, onMap, onGuide, hidden })
           aria-label={label}
           className={`${BTN} ${cls}`}
         >
-          <Icon className="w-5 h-5 md:w-6 md:h-6" strokeWidth={2.6} />
+          <Icon className={BALL_ICON} strokeWidth={2.6} />
           {/* 桌機用 hover 顯示名稱；手機不顯示（沒有 hover，也沒有空間） */}
-          <span className="hidden md:block absolute left-full ml-2 top-1/2 -translate-y-1/2 bg-black/85 text-white text-[11px] font-black px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-            {label}
-          </span>
+          <span className={BALL_LABEL('left')}>{label}</span>
         </motion.button>
       ))}
     </div>
