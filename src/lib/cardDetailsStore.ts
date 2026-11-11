@@ -17,6 +17,8 @@ import type { Lang } from './explorer';
 export type DetailFields = Record<string, string | string[]>;
 
 const cache: Partial<Record<Lang, Record<string, DetailFields>>> = {};
+/** 找不到這隻雀時回同一個空物件 —— 一定要穩定，見 useCardDetail 的註解 */
+const EMPTY: DetailFields = {};
 const listeners = new Set<() => void>();
 const loading = new Set<Lang>();
 
@@ -54,12 +56,16 @@ export function loadDetails(lang: Lang): void {
  * 未載入完成 → 回 null（呼叫者自己決定顯示 loading 定係留白）。
  */
 export function useCardDetail(id: string, lang: Lang): DetailFields | null {
+  /* ⚠️ getSnapshot 必須每次都回傳**同一個**引用。
+     useSyncExternalStore 每次 render 都會叫一次 getSnapshot，然後用 Object.is 比對；
+     如果每次都回一個新的 {}，React 會判定「store 又變了」→ 強制重畫 → 又叫 getSnapshot
+     → 無限迴圈 → 整個 App 白屏。 */
   const snap = useSyncExternalStore(
     subscribe,
-    () => (cache[lang] ? cache[lang]![id] ?? {} : null),
-    () => (cache[lang] ? cache[lang]![id] ?? {} : null),
+    () => (cache[lang] ? cache[lang]![id] ?? EMPTY : null),
+    () => (cache[lang] ? cache[lang]![id] ?? EMPTY : null),
   );
-  return snap ?? null;
+  return snap;
 }
 
 /** 已經載入完成沒有（給 UI 判斷是否要繼續轉圈） */
