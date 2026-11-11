@@ -185,3 +185,29 @@ npm run cards:maker      # → tools/card-studio/aviandex-card-maker.html（約 
 - 資料注意：`cardCopy.json` 有 ~60 隻 `iucn`（中文）與 `iucnEn`（英文）等級不一致；
   卡面以 `iucn` 為準，缺則取 `iucnEn` 括號代號，兩者皆無＝資料待查。
 - 實測：0058（EN）、0024（無棲地資料）名稱／數字全對；偶見「目／科」格掉了中文只剩拉丁名。
+
+## 12. 合成卡（AI 只生圖、所有字由程式印）— 取代第 11 節的「AI 印字」
+
+使用者決定：生圖 AI 不准碰任何文字，只負責圖；字、數字、雷達、星星、IUCN 色階、小卡片標題與右上小圖示全部由程式畫。
+
+流程（每隻鳥）：
+1. `node scripts/cards/export-card-fields.mjs fields.json`　輸出每隻鳥要印的資料（全來自 repo，不經 AI）
+2. `python3 scripts/cards/compose-card.py base 0024 fields.json base-0024.png`
+   → 程式畫出「字已全部印好、只留空圖位」的卡（AI 的輸入）
+3. `python3 scripts/cards/compose-card.py prompt 0024 fields.json` → 給生圖 AI 的 prompt（只要求填圖位、圖內不得有字）
+4. 生圖 AI 以 base 為輸入出圖（它即使重畫了文字也沒關係，不會被採用）
+5. `python3 scripts/cards/compose-card.py compose 0024 fields.json art-0024.png card-0024.png`
+   → 依固定座標裁出各圖位（圓形／圓角框），貼回我們自己畫的卡。AI 的文字被整張丟棄。
+   `AVX_VERBOSE=1` 會印出每個圖位的對位檢查。
+
+固定資產（一次生成、全卡共用）：
+- `docs/card-samples/card-iconsheet.png`　AI 一次生成的 12 個彩色圓形圖示（無字）
+- `python3 scripts/cards/make-card-icons.py` 裁成 `docs/card-samples/card-icons/*.png` 並取出各圖示底色，
+  該顏色即對應小卡片的外框／標題條顏色（分類綠、棲息藍、食物橙、分佈青、成長粉、評分紫、相似種金、保育紅褐）。
+- 字體 Noto Sans TC（OFL）放 `~/.fonts` 或 `$AVX_FONT_DIR`，不入庫。
+
+版面決定：食物與成長只放圖不放字；棲息環境保留 2–3 字標籤；名稱、目科屬種、數值全由程式印。
+已知：
+- 「空白導引圖」（只有框）AI 會亂擺位置；必須給它看「字已印好的整張卡」，它才會把圖放對位置。
+- `cardCopy` 內體重 `1234 g`（0058）疑似佔位資料，需查證；相似種 0022/0058 為備援規則湊出，需查證。
+- tools/card-studio/aviandex-card-maker.html（舊的 Gemini 版）仍是第 11 節流程，尚未改成合成卡。
