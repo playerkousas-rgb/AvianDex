@@ -28,10 +28,10 @@ interface ResearchHubPageProps {
   sciName: string;
   speciesCode?: string;
   lang: Lang;
-  /** 本站合成圖卡（有就顯示第 7 格） */
+  /** 插畫原圖（birdcards/），作次要的下載選項 */
   cardUrl?: string;
-  /** 圖卡狀態，用來寫「下載中／未生成」 */
-  cardStatus?: 'idle' | 'queued' | 'loading' | 'loaded' | 'missing' | 'error';
+  /** 資訊圖卡（aviandex/）—— 這是主要的下載目標 */
+  infoUrl?: string;
   onBackToCard?: () => void;
 }
 
@@ -45,7 +45,7 @@ const ICONS: Record<CardSourceKey, React.ComponentType<{ className?: string }>> 
 };
 
 export const ResearchHubPage: React.FC<ResearchHubPageProps> = ({
-  zhName, enName, sciName, speciesCode, lang, cardUrl, cardStatus, onBackToCard,
+  zhName, enName, sciName, speciesCode, lang, cardUrl, infoUrl, onBackToCard,
 }) => {
   const t = (zh: string, en: string) => (lang === 'en' ? en : zh);
   const query = (enName || sciName || zhName).trim();
@@ -113,35 +113,66 @@ export const ResearchHubPage: React.FC<ResearchHubPageProps> = ({
         })}
       </div>
 
-      {/* 第 7 格：本站合成圖卡 */}
-      <div className="bg-black/30 border border-white/12 rounded-lg p-2.5">
-        <p className="text-white/40 text-[9.5px] tracking-[0.14em] mb-1.5">
-          {t('本站合成圖卡', 'THIS APP · COMPOSITE CARD')}
+      {/* 第 7 格：本站圖卡
+          ────────────────────────────────────────────────────────
+          用戶的判斷（2026-11）：
+            「下載我們那張合成圖卡雖然可以但作用不大，
+              反而未來下載我們的資訊圖卡作用大很多」
+          —— 正確。合成圖卡只是插畫加幾行字，玩家真正想收藏／列印的是
+             排版好的資訊圖卡（aviandex/ 那批）。所以這裡的主次對調：
+
+              主  資訊圖卡（aviandex/<NO>.avif）→ 開原圖 / 下載
+              次  插畫（birdcards/<NO>.avif）    → 只有一行細字
+
+          資訊圖卡未做的雀（目前 548 隻）不造假、不留空按鈕，
+          直接寫「未完成」，並指向詳細資料頁看文字版。
+          ──────────────────────────────────────────────────────── */}
+      <div className="bg-black/30 border border-amber-400/25 rounded-lg p-2.5">
+        <p className="text-white/45 text-[9.5px] tracking-[0.14em] mb-1.5">
+          {t('下載這隻雀的資訊圖卡', 'DOWNLOAD THIS BIRD’S INFO CARD')}
         </p>
-        {cardUrl ? (
+
+        {infoUrl ? (
           <div className="flex items-center gap-2">
             <a
-              href={cardUrl}
+              href={infoUrl}
               target="_blank"
               rel="noreferrer noopener"
-              className="flex-1 flex items-center justify-center gap-1.5 bg-amber-900/40 hover:bg-amber-800/60 border border-amber-400/30 text-amber-100 font-bold py-2 rounded-md text-[11.5px]"
+              className="flex-1 flex items-center justify-center gap-1.5 bg-amber-500/25 hover:bg-amber-500/40 border border-amber-400/40 text-amber-100 font-black py-2.5 rounded-md text-[12px]"
             >
-              <ExternalLink className="w-3.5 h-3.5" />{t('開原圖（PNG）', 'Open full-size PNG')}
+              <ExternalLink className="w-3.5 h-3.5" />{t('開原圖', 'Open full size')}
             </a>
             <a
-              href={cardUrl}
-              download={`aviandex-${encodeURIComponent(zhName)}.png`}
-              className="flex items-center justify-center gap-1.5 bg-black/40 hover:bg-black/60 border border-white/15 text-white/70 font-bold py-2 px-3 rounded-md text-[11.5px]"
+              href={infoUrl}
+              download={`aviandex-${encodeURIComponent(zhName)}-info.avif`}
+              className="flex items-center justify-center gap-1.5 bg-black/45 hover:bg-black/65 border border-white/20 text-white/80 font-bold py-2.5 px-3 rounded-md text-[12px]"
             >
               {t('下載', 'Save')}
             </a>
           </div>
         ) : (
-          <p className="text-white/35 text-[11px] leading-relaxed">
-            {cardStatus === 'missing' || cardStatus === 'error'
-              ? t('這隻雀暫時未生成合成圖卡。可用上面第 3 格 Macaulay 的相片自行核對。',
-                'No composite card for this bird yet. Use Macaulay (door 3) to check photos.')
-              : t('圖卡下載中…', 'Card is loading…')}
+          <div className="rounded-md bg-black/35 border border-white/10 px-2.5 py-2">
+            <p className="text-white/45 text-[11px] leading-snug">
+              {t(
+                '這隻雀的資訊圖卡仍在製作。文字版資料在「詳細資料」頁，上面的六格可以去找相片與紀錄。',
+                'This bird’s info card is still being made. Text details are on the Details tab; the six doors above lead to photos and records.',
+              )}
+            </p>
+          </div>
+        )}
+
+        {/* 插畫下載：作用小，所以收成一行細字，不搶位置 */}
+        {cardUrl && (
+          <p className="mt-1.5 text-white/30 text-[9.5px]">
+            {t('只想存插畫？', 'Just the artwork?')}{' '}
+            <a
+              href={cardUrl}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-white/50 hover:text-amber-200 underline underline-offset-2"
+            >
+              {t('開插畫原圖', 'open the illustration')}
+            </a>
           </p>
         )}
         {onBackToCard && (
