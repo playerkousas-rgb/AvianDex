@@ -48,6 +48,8 @@ export const ResearchHubPage: React.FC<ResearchHubPageProps> = ({
   zhName, enName, sciName, speciesCode, lang, cardUrl, infoUrl, onBackToCard,
 }) => {
   const t = (zh: string, en: string) => (lang === 'en' ? en : zh);
+  // Keep the original format: the local 0058 sample is WebP, remote cards may be AVIF.
+  const infoExtension = infoUrl?.split(/[?#]/)[0].match(/\.(avif|webp|png|jpe?g)$/i)?.[1]?.toLowerCase() || 'avif';
   const query = (enName || sciName || zhName).trim();
   const sources = CARD_SOURCES.map((s) => ({ ...s, url: s.url(query, speciesCode) }));
 
@@ -144,7 +146,7 @@ export const ResearchHubPage: React.FC<ResearchHubPageProps> = ({
             </a>
             <a
               href={infoUrl}
-              download={`aviandex-${encodeURIComponent(zhName)}-info.avif`}
+              download={`aviandex-${encodeURIComponent(zhName)}-info.${infoExtension}`}
               className="flex items-center justify-center gap-1.5 bg-black/45 hover:bg-black/65 border border-white/20 text-white/80 font-bold py-2.5 px-3 rounded-md text-[12px]"
             >
               {t('下載', 'Save')}
