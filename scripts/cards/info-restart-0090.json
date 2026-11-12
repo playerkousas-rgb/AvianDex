@@ -1,0 +1,127 @@
+{
+  "id": "0090",
+  "name": "林夜鷹",
+  "scientificName": "Caprimulgus affinis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Caprimulgus affinis adult male",
+  "similarSpecies": [
+    {
+      "zh": "普通夜鷹",
+      "scientificName": "Caprimulgus jotaka",
+      "asset": "0089.png",
+      "framing": "whole-bird",
+      "distinction": "Adult male Grey Nightjar, cryptic dark grey heavily black-centred crown/mantle/scapular feathers and dark shoulder on folded wing. Male small white primary/tail corner patches are flight/spread traits not claimed demonstrated here. Longer tail/narrower wings than Savanna, primaries normally project beyond tail. Breeds Pakistan/Himalayas through China/SE Siberia/Korea/Japan, winters Indian subcontinent/SE Asia/Sumatra/Borneo/Philippines. HK locally common summer visitor to closed-canopy shrubland near streams/reservoirs. LC stable."
+    },
+    {
+      "zh": "歐夜鷹",
+      "scientificName": "Caprimulgus europaeus",
+      "asset": "eurasian.png",
+      "framing": "whole-bird",
+      "distinction": "Male cryptic grey brown Eurasian Nightjar, white primary band/tail corners in flight, churring song vs Grey rapid chuk bursts. Folded art does not demonstrate wing patches. Single resting artwork is not a sufficient identification key."
+    }
+  ],
+  "featureCrops": [
+    [
+      0.64,
+      0.18,
+      0.96,
+      0.48
+    ],
+    [
+      0.43,
+      0.23,
+      0.76,
+      0.53
+    ],
+    [
+      0.29,
+      0.38,
+      0.64,
+      0.66
+    ],
+    [
+      0.01,
+      0.55,
+      0.33,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "大眼細嘴",
+    "灰褐色羽紋",
+    "細斑肩翼",
+    "羽紋長尾"
+  ],
+  "featureNotes": [
+    "大眼細嘴",
+    "灰褐色羽紋",
+    "細斑肩翼",
+    "羽紋長尾"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "MMR",
+      "CHN",
+      "THA",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "TWN"
+    ],
+    "note": "Adult male Savanna Nightjar, relatively uniform grey brown cryptic plumage, no heavy black centres crown/mantle/scapulars of Grey. Primaries end before tail. Male white outermost tail feathers contrasting dark central tail; large white four-outer-primary patches are flight traits not claimed visible on folded wing. Shorter tail/broader blunter wings than Grey. NE Pakistan/S-SEAsia/S China/Taiwan/Sunda islands/Philippines/Sulawesi; HK locally common resident open lowlands/grassland/fire hills mostly below300m. LC stable. World partial native-country overview only; green does not mean entire country occupancy, precise occurrence or complete range.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004000",
+      "use": "Substantive identification/range/conservation read. Adult male Savanna Nightjar, relatively uniform grey brown cryptic plumage, no heavy black centres crown/mantle/scapulars of Grey. Primaries end before tail. Male white outermost tail feathers contrasting dark central tail; large white four-outer-primary patches are flight traits not claimed visible on folded wing. Shorter tail/broader blunter wings than Grey. NE Pakistan/S-SEAsia/S China/Taiwan/Sunda islands/Philippines/Sulawesi; HK locally common resident open lowlands/grassland/fire hills mostly below300m. LC stable."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six scores unchanged; missing pending not zero, vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/003900",
+      "use": "Comparison read. Adult male Grey Nightjar, cryptic dark grey heavily black-centred crown/mantle/scapular feathers and dark shoulder on folded wing. Male small white primary/tail corner patches are flight/spread traits not claimed demonstrated here. Longer tail/narrower wings than Savanna, primaries normally project beyond tail. Breeds Pakistan/Himalayas through China/SE Siberia/Korea/Japan, winters Indian subcontinent/SE Asia/Sumatra/Borneo/Philippines. HK locally common summer visitor to closed-canopy shrubland near streams/reservoirs. LC stable."
+    },
+    {
+      "url": "https://ebird.org/species/eurnig1",
+      "use": "Comparison read. Male cryptic grey brown Eurasian Nightjar, white primary band/tail corners in flight, churring song vs Grey rapid chuk bursts. Folded art does not demonstrate wing patches. Single resting artwork is not a sufficient identification key."
+    }
+  ],
+  "notes": [
+    "New AI illustrations with basic visual review, not independent expert validation or a standalone identification key.",
+    "Comparison whole birds not to scale. World map shows only partial native-country overview, not seasonal/occurrence polygons or whole-country occupancy.",
+    "Image and production JSON synchronized after artwork, not speculative future crop coordinates.",
+    "No UI/runtime/SW/R2/slim registration changes; no ZIP.",
+    "Resting folded-wing art is not evidence for flight-only primary patches. Grey/Eurasian identification also requires calls and multiple field characters; illustrative plumage not a reliable single-image key."
+  ]
+}

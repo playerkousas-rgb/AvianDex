@@ -1,0 +1,130 @@
+{
+  "id": "0039",
+  "name": "綠眉鴨",
+  "scientificName": "Mareca americana",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "local_candidate_not_verified_against_drive",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Mareca americana adult male breeding; fourth feature independently labelled female head",
+  "similarSpecies": [
+    {
+      "zh": "赤頸鴨",
+      "scientificName": "Mareca penelope",
+      "asset": "eurasian-wigeon.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥栗頭黃額、灰脅，沒有綠眉鴨白額冠綠眼後紋。"
+    },
+    {
+      "zh": "赤膀鴨",
+      "scientificName": "Mareca strepera",
+      "asset": "gadwall.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥素褐灰頭、全暗喙及白翼鏡，無白額綠眼後紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.58,
+      0.24,
+      0.96,
+      0.62
+    ],
+    [
+      0.61,
+      0.44,
+      0.85,
+      0.68
+    ],
+    [
+      0.34,
+      0.52,
+      0.6,
+      0.78
+    ],
+    [
+      0.11,
+      0.05,
+      0.97,
+      0.91
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥頭喙",
+    "粉褐胸",
+    "粉褐脅",
+    "雌鳥頭喙"
+  ],
+  "featureNotes": [
+    "白額冠、綠色眼後紋及淡灰黑尖喙",
+    "繁殖羽雄鳥胸帶粉褐調",
+    "雄鳥脅亦粉褐，不是赤頸鴨灰脅",
+    "雌鳥灰頭細斑及短淡灰黑尖喙"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "USA",
+      "CAN",
+      "MEX",
+      "CUB",
+      "COL",
+      "VEN"
+    ],
+    "note": "World view partial native-country overview: Alaska/Aleutians and W Canada with scattered E populations/N USA breeding; western/southern USA/Canada Pacific coast, Mexico/Caribbean to extreme N South America winter. No China highlight for accidental vagrants. Incomplete native-country subset, not whole-country distribution.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001700",
+      "use": "Substantive page read in previous turn and research recorded in docs: male chestnut head/neck with yellow forehead/crown, short pale grey black-tipped bill, pink chest grey flanks; female brown mottling; Iceland/N Europe to Bering breeding, southern Europe/N Africa/Middle East/N Indian subcontinent/E Asia winter; LC decreasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001800",
+      "use": "Full text read previous turn despite embedded-media bot placeholder: male white forehead/crown, green eye-to-nape stripe, pinkish breast/flanks; females difficult and hybrids relevant, head grey fine speckling, no claimed field certainty from portrait; N American native range, HK accidental; LC stable."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001500",
+      "use": "Previously read full Gadwall page: subdued brown-grey male head dark bill, grey vermiculated body, black rear, white inner-secondary speculum."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Illustrated adult male intended pure-type: grey speckled head/green eye stripe/white crown without rufous hybrid contamination. Not a hybrid identification key, and female head alone cannot establish species in the field.",
+    "No claimed depiction of diagnostic white axillaries/underwing coverts on a folded-wing floating bird.",
+    "Handoff: local candidate only; NOT established as provenance of the existing Drive delivery. Do not upload/overwrite or treat crops as delivered truth before comparing actual remote card and source assets."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "female.png"
+  ]
+}

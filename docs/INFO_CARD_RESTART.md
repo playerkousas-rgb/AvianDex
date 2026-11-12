@@ -1,3 +1,5 @@
+> **交接閱讀入口：`docs/INFO_CARD_AGENT_HANDOFF.md`。以下為累積歷史，後文更正取代前文狀態。PR25 的0051–0077紀錄已保留；0078–0081以本分支重製版為準。已完成量及下一批目標請向用戶確認。**
+
 # 資訊卡由 0001 重新開始
 
 ## 最新指示及範圍
@@ -438,6 +440,9 @@ python3 scripts/cards/render-info-restart-0001.py
 - renderer 支援缺失評分待查、featureSources 雌／幼鳥獨立來源、world bounds 檢查、vEst 及 assessmentNote 註明，不再產生 ZIP；不改 UI 或 runtime scores／taxonomy／卡面註冊。
 - 提交前 38 份 JSON 基本結構／名稱／學名／0014+世界 bounds 驗證及 Python compile 通過；新環境首次 build 缺 tsc，安裝 `npm ci --no-audit --no-fund` 後 `npm run build` 通過。
 
+
+## PR25歷史整合（0051–0077保留；其0078–0081舊版已被取代）
+
 ## 0051–0100（另一 Agent）實際製作紀錄
 
 ### 0051 斑背潛鴨：已檢視並直接上載 Google Drive
@@ -662,7 +667,7 @@ python3 scripts/cards/render-info-restart-0001.py
 - 成品 `deliver/cards/info-restart-0077/aviandex/0077.avif`：1024×1536、161,964 bytes，MD5 `fa5b330c6ca7320d06d98341753000cc`，SHA256 `39c8839928c7eb79165516385d5566206926e56969c5394d3c37fbc8510ad646`；AVIF 解碼、runtime 名稱／分類／六項分數、`vEst`、素材尺寸、地圖 ISO3、manifest 核對及 `git diff --check` 通過，`missingScores=[]`。
 - 上載前指定 Drive 資料夾同名查詢為 0；已直傳單張 AVIF，Drive file ID `10brpWCHr_5IMHLQf4jcapV58xe-Yogg4`。`get_file` 及資料夾搜尋核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、161,964 bytes、MD5 均一致。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
 
-### 0078 紅翅鳳頭鵑：已檢視並直接上載 Google Drive
+### 0078 紅翅鳳頭鵑：舊版本紀錄（已被用戶否決及下文重製版取代）
 
 - Runtime：紅翅鳳頭鵑 *Clamator coromandus*（`Chestnut-winged Cuckoo`），鵑形目／杜鵑科。runtime 只定義觀賞 `v=4.1`、研究 `r=4.0`；`i/a/c/o` 缺省保持待查，未推估填入。
 - 已讀 HKBWS `https://avifauna.hkbws.org.hk/species/0040/005000` 與 Cornell eBird `https://ebird.org/species/chwcuc1`。香港 Category I，罕見夏候鳥及稀少過境鳥；成鳥45–47 cm，黑色尖長冠、白色後頸環、橙淡褐喉、栗紅翼、淺色腹部及長黑尾；全球 IUCN LC、趨勢穩定。HKBWS 繁殖調查顯示本地分佈可能下降，與全球趨勢分開標註。
@@ -671,7 +676,7 @@ python3 scripts/cards/render-info-restart-0001.py
 - 最終 `deliver/cards/info-restart-0078/aviandex/0078.avif`：1024×1536、138,537 bytes，MD5 `9c212ffc71ae56ff83050914987758f7`，SHA256 `58633357fac757ed970d479817749efb1ea9a43ba6edd6664dfe3a490a026ae2`；runtime、裁切、素材尺寸、GeoJSON ISO3、AVIF decode、manifest checksum、缺分欄位及 `git diff --check` 驗證通過。
 - Drive 上載前同名搜尋 0；直接上載單張 AVIF 後，`get_file` 與目的資料夾搜尋核實唯一檔案：ID `1jqMo_AVwAELw8_vqGnMeewEY6-T22oZl`，MIME `image/avif`，138,537 bytes，MD5 一致。沒有 ZIP/R2，不覆蓋 app 現有卡片、不修改 UI、Service Worker、slim 註冊或共用 renderer。
 
-### 0079 八聲杜鵑：已檢視並直接上載 Google Drive
+### 0079 八聲杜鵑：舊版本紀錄（已被取代）
 
 - Runtime：八聲杜鵑 *Cacomantis merulinus*（`Plaintive Cuckoo`），鵑形目／杜鵑科；`i=2, a=3.8, v=3.2, r=3.3, c=1.2, o=2.7`。
 - 已讀 HKBWS `https://avifauna.hkbws.org.hk/species/0040/005300` 及 Cornell `https://ebird.org/species/placuc1`。HKBWS：香港低地常見夏候鳥、稀少過境及冬候鳥，部分可能留居；成鳥18–23 cm，灰色頭罩、褐色背翼、無斑橙淡褐下體、長漸層尾白端；全球 IUCN LC、趨勢穩定。地圖只作原生範圍國家概覽。
@@ -679,7 +684,7 @@ python3 scripts/cards/render-info-restart-0001.py
 - AVIF `deliver/cards/info-restart-0079/aviandex/0079.avif`：1024×1536、132,115 bytes，MD5 `3022b768158768e8ce72bbc22eb73ca2`，SHA256 `f7f493110ea9d516b477851c735c050a93d4b796cdf29dfc1d1e6abc30537887`；runtime、scores、素材尺寸、裁切、地圖 ISO3、AVIF decode、manifest 及 `git diff --check` 驗證通過。
 - Drive 上載前同名搜尋 0；直接上載後由 `get_file` 和資料夾搜尋核實唯一檔案 ID `1rovjkGRtX6shgk2R6i_N8hDh3rm96VKn`、MIME、parent、bytes、MD5 一致。沒有 ZIP/R2；不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
 
-### 0080 烏鵑：已檢視並直接上載 Google Drive
+### 0080 烏鵑：舊版本紀錄（已被取代）
 
 - Runtime：烏鵑 *Surniculus lugubris*（`Square-tailed Drongo-Cuckoo`），鵑形目／杜鵑科；`i=2, v=3.4, r=1, c=1.2, o=1.9, vEst=1`；runtime 缺少 `a`，保留待查。
 - 已讀 HKBWS `https://avifauna.hkbws.org.hk/species/0040/005400` 及 Cornell eBird `https://ebird.org/species/asidrc3`。香港 Category I，主要春季在林地出現的稀少過境鳥。成鳥23–25 cm，纖瘦如鵲鴝，身體藍黑帶光澤，纖長弧嘴、微分叉尾，尾下覆羽及最外側尾羽具細白橫斑；幼鳥有不同程度白點。全球 IUCN LC、趨勢下降。
@@ -687,10 +692,274 @@ python3 scripts/cards/render-info-restart-0001.py
 - 最終 `deliver/cards/info-restart-0080/aviandex/0080.avif`：1024×1536、130,812 bytes，MD5 `a275d3e0a96a4d2237def217165b4da7`，SHA256 `2511bd7e44e48ba608ba9282abfb167bdd2819bf0d5d76154263d5ae38c2ed8d`；runtime、缺分、vEst、裁切、素材尺寸、地圖 ISO3、AVIF 解碼、manifest 及 `git diff --check` 驗證通過。
 - Drive 上載前同名搜尋為0；直接上載後 `get_file` 及資料夾搜尋核實唯一檔案 ID `1hQX2M7A0ZfO8lL-3wzUjuI2pFXCLGT3j`、parent、MIME、bytes、MD5 一致。沒有 ZIP/R2；不覆蓋 app 卡片，不改 UI、Service Worker、slim 註冊或共用 renderer。
 
-### 0081 大鷹鵑：已檢視並直接上載 Google Drive
+### 0081 大鷹鵑：舊版本紀錄（已被取代）
 
 - Runtime：大鷹鵑 *Hierococcyx sparverioides*（`Large Hawk-Cuckoo`），鵑形目／杜鵑科；`i=2, a=3.8, v=4.3, r=4.8, c=3, o=3.6, vEst=1`。
 - 已讀 HKBWS `https://avifauna.hkbws.org.hk/species/0040/005500` 及 Cornell eBird `https://ebird.org/species/larhac2`。香港 Category I、常見夏候鳥。成鳥38–40 cm，灰冠與臉側、亮黃眼圈、褐色上體及灰色黑橫帶尾；白色下體胸及頸側有深栗色粗縱斑，下腹及脅具栗褐橫斑。全球 IUCN LC、趨勢穩定。
 - 比較八聲杜鵑成鳥及烏鵑；完整預覽已目視。黃眼圈特徵裁切框上緣擴大後完整呈現，其他特徵圈與全部文字留在面板內。主圖依描述手繪像素風格，非照片，未經獨立專家驗證。
 - 成品 `deliver/cards/info-restart-0081/aviandex/0081.avif`：1024×1536、135,660 bytes，MD5 `3d1a38e3712bebc6a0fb7d8eda0f0697`，SHA256 `f7a1647d61129a8aa9f172f784418bde76c33ee3571d5b7c31bd3a74d8403203`；runtime、scores、vEst、裁切、素材尺寸、ISO3、AVIF decode、manifest 及 `git diff --check` 驗證通過。
 - Drive 上載前同名搜尋 0；上載後 `get_file` 及目的資料夾搜尋核實唯一檔案 ID `1OYAnEE_9W1SrMKMB2CT8RK6JQtPxjcdh` 及 metadata。沒有 ZIP/R2；不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+## 新分支重試 0038–0040：發現 Drive 已有另一版本，停止重複上載
+
+目前分支 arena/ec608ba0-aviandex（base b73ec92）。新分支環境無舊 ignored 素材、venv、fonts；本回合重新建立 venv（Pillow/fonttools/numpy/scipy）、TC 靜態字體，從 GitHub 下載 NaturalEarth geojson，十次生圖全成功，三張本機版已渲染／基本目視／audit。
+
+**但上載前查重發現三個同名 Drive 檔已存在，並且本機 MD5 不同。沒有呼叫 upload/update/delete/move；三個遠端檔完全未改。本機版本不算本回合交付。** 最新 remote main 仍 b73ec92，沒有這三張新交付紀錄可同步。工具 get_file 回傳如下，只有 metadata 檢查，未下載或看遠端二進位，不能聲稱遠端畫面已由本回合審閱：
+
+| Drive 既有檔 | ID | bytes | MD5 | createdTime |
+| --- | --- | ---: | --- | --- |
+| 0038.avif | 1A3jDnwXS1lktH5hvUKx5GBXuhIqIk-75 | 145434 | 28504087333152e6f77d45f3e54d9dd8 | 2026-11-12T10:04:40.674Z |
+| 0039.avif | 1EQNeaI2I9FBkhvNvV66Mt0eSJeAo87vL | 148002 | f6244aebbbcea187f18d683e93131558 | 2026-11-12T10:04:49.881Z |
+| 0040.avif | 1j5yRRDvKZ1H83jKFiaqWrfIEu2VOBq6W | 146953 | 7744c801301fa46d6066153545d3a5be | 2026-11-12T10:04:59.959Z |
+
+三者 parent 都是正確 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。description 分別為赤頸鴨栗頭黃額冠、綠眉鴨雄鳥及獨立雌鳥、棕頸鴨菲律賓原生概覽／比較中華斑嘴鴨及綠頭鴨雌鳥。可能是另一工作階段完成，來源未核實。**先向用戶確認保留現有三檔並從0041接續，不擅自覆蓋或建立重複檔。**
+
+### 本回合本機版本（未上載）
+
+- 十幅：0038 pixel/features/female/gadwall 四張；0039 pixel/features/female 三張；0040 pixel/features/eastern-spot-billed 三張。0038/39互用雄鳥作對照，共用新 Gadwall。Gadwall 原圖細白邊裁去 10px，整鳥保留。0040 因舊素材缺失，用新圖；第二對照改為本批赤膀鴨，而不是舊缺失 female Mallard。沒有重做已交付0001–0037。
+- scripts/cards/info-restart-0038.json、0039.json 新建，0040.json 對應新素材更新；`/home/user/make_specs_38_40.py` 為初始生成器。Renderer 無改，UI／runtime／slim註冊無改。三份 spec 只是本機候選，不代表已有 Drive 版本的來源或裁切。
+- 素材 contact sheet `deliver/cards/batch-0038-0039-art-review.jpg`、0038/39雄鳥原圖、0040三幅原圖、三張完整預覽已看。0038黃額冠明顯，0039灰頭白額綠眼後紋、雌鳥各自標示；0040橙皮黃頭黑冠眼紋灰喙黑甲。AI基本目視非專家驗證。
+- 三張1024×1536 AVIF decode、bytes/SHA256、spec=manifest、runtime taxonomy/六評分、fullworld bounds/ADM0_A3、無ZIP、compile/gitdiff檢查通過。
+- 本機0038 149033 bytes MD5 05215219dc6729f6c98f6b7c75eca87b SHA256 b9fdc0e0683361a0c58d77f9032f0942fa7e2090708b54cb07e2eaf852f58c92。
+- 本機0039 147282 bytes MD5 8c5011c12767895a70a391c51caa5091 SHA256 54c432066f73050d9db52295312561145123a47f26b0088496774742631c2420。
+- 本機0040 150087 bytes MD5 343eb8746262dbd64703c741a79645c3 SHA256 8262f14e0ec5835dd30ad84d58606a36305a1dc2ee5adda2c928836da4132dd7。
+- Manifest 狀態 `local_variant_not_uploaded_existing_drive_conflict`，existingDriveFile.matchesLocal=false，binaryVisuallyReviewed=false。不把遠端檔ID填成自己的成功上載紀錄。
+- 本 Agent仍只做到0050包括後停，另一Agent0051–0100不碰。下回合先核對用戶回覆；如確認保留現有0038–40，就從0041研究／生圖並在生圖前先查Drive防止再碰撞。
+
+## 繼續重試：保留既有0038–0043；新交付0044–0045
+
+用戶指示「繼續try again.try again.」後，採不覆蓋策略續作。新一輪 Drive 查重發現0041–0043亦已有檔案，保留不動、未重新生成；本回合沒有審閱該三個遠端二進位，不把它們冒認作自己的新交付：
+
+| 既有檔 | Drive ID | bytes | MD5 |
+| --- | --- | ---: | --- |
+| 0041.avif | 1eL4ps8zuYz3xswUgMmt2RKtvVquoxZ3L | 146518 | 85d67ac535df2bfe84531395e9240183 |
+| 0042.avif | 1xmoyeaLKIcgLSxTbDHw-eqTK2aJcnklO | 142514 | b31ae9c99943a2c28cb10d8592f94206 |
+| 0043.avif | 1NHgCYu8t_zHTbVubyyFioX3_cP6ozmpx | 145542 | 2b95064b4bcac5d3bfd8766a398b0192 |
+
+
+0044–0050 查重時0044–0050均未有檔。本機ignored素材、venv/fonts再度不在環境，僅新做0044–45，不重做已交付圖。重建venv/字體/NaturalEarth。7次生圖成功：0044 pixel/features/female/wigeon，0045 pixel/features/american-teal。female Pintail 本批未用，保留為素材。兩張完整預覽已讀圖基本審閱；非獨立鳥類專家驗證。
+
+- **0044 針尾鴨 Anas acuta**：HKBWS002300 substantive identification/range/conservation讀取，繁殖雄鳥褐頭白頸紋、細長灰喙暗脊、長中央尾羽、淡邊黑肩羽。對照綠翅鴨及赤頸鴨（先前0038研究來源），全世界底圖部分國家原生概覽。LC，來源族群趨勢下降。四crop為頭喙／白頸紋／針狀尾羽／肩羽；不是飛羽張翼圖。
+- **0045 綠翅鴨 Anas crecca**：HKBWS002400 substantive讀取，LC趨勢未知；34–38cm，栗頭綠眼後斑橙黃窄邊、水平白脅線、尾側暖皮黃。runtime英文仍Green-winged Teal未改，圖像依學名作Eurasian型，非美洲carolinensis。對照美洲綠翅鴨（HKBWS002500 substantive文字已讀，嵌入媒體bot文字非整頁無內容）：垂直胸側白帶、綠眼斑淡邊較少；另對照針尾鴨。vEst原值保留，卡面提示觀賞值含體長估算。
+- 使用既有renderer/compositor，未改UI/runtime/登記，未上R2，無ZIP。生成specs0044/45及ignored art/deliver；1024×1536 AVIF解碼、所有六評分runtime一致、spec=manifest、taxonomy、hash/bytes、世界bounds、ISO3合法、git diff --check通過。
+- 上載前再次查重0044/45無同名檔，才分別upload。回傳parent/bytes/MD5全與本機一致。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0044.avif | 15LVMwAlJSJROAdMv1jLfM7hUHB7ac4XM | 137539 | 1990c23cc2f47679c82492181b6346a9 | 7a21bac179cc3d957e5e9668cea020a19b1610d3b2004bf6111fae4cbadda036 |
+| 0045.avif | 1JBjZPwCSO5Tdw_cK3f-wleAh4DKTe5UL | 147353 | f81403a35a8d99c7b4c8d06e0b798e9c | 2b7af508a30a4e7c855a52b47370b7d0b5ac3dcbff9bc2007041ec8744d2bd14 |
+
+parent均 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。下一張0046赤嘴潛鴨，繼續前先查Drive防撞；做到0050包括後停止。0051–0100由另一Agent，不碰。0038–40本機候選不是遠端來源，不覆蓋。
+
+
+## 0046–0050 完成：到0050停止
+
+用戶指示「繼續」後，先查Drive0046–0050無檔，再研究／生圖／完整預覽審閱／audit；上載前再次查重無檔，才分別上載。10次生圖全部成功，五種各pixel/features；兩個比較圖均取自本批另外物種features，沒有重做先前交付43插圖。AI基本目視檢查，並非獨立鳥類專家驗證。UI/runtime/renderer/compositor未改，沒有R2上載或登記、沒有ZIP。
+
+來源頁substantive identification/range/conservation均已讀，注意HKBWS頁序與runtime ID不同：0046→002600、0047→002700、0048→002900、0049→002800、0050→003000。赤嘴潛鴨頁有嵌入媒體bot段，但辨識及分佈文字完整可讀。
+
+- 0046 Netta rufina：LC（來源趨勢未知）；雄橙圓頭紅眼、紅喙淡端、黑胸、淡脅褐背。比較紅頭潛鴨及白眼潛鴨。runtime vEst=1提示保留。
+- 0047 Aythya ferina：VU（來源快速下降）；雄紅眼橙褐頭、暗喙寬灰帶黑端、黑胸灰脅。比較赤嘴潛鴨及白眼潛鴨。評分保育軸2.2沿用runtime，不能從IUCN私自重算。
+- 0048 Aythya nyroca：NT（來源下降）；雄白眼深栗褐體、翼背較暗及白尾下。比較青頭潛鴨及紅頭潛鴨。runtime vEst=1提示保留。
+- 0049 Aythya baeri：CR；雄綠光暗頭白至淡黃眼、栗胸、栗白脅及白尾下。比較白眼潛鴨及鳳頭潛鴨。runtime適應力缺值保留「待查」，有「待查非零分」提示，沒有補零或重算綜合。世界底圖只標中國作保守部分現況概覽，來源強調歷史範圍收縮、現今境外越冬少，不把歷史俄羅斯／印支／印度次大陸直接標作現況；亦不把來源舊150–700成熟個體估計聲稱為目前數字。
+- 0050 Aythya fuligula：LC（來源穩定）；雄黃眼、下垂長鳳頭、灰喙寬黑端、黑翼背白脅。比較青頭潛鴨及白眼潛鴨。runtime vEst=1提示保留。
+
+五張features/pixel contact review `deliver/cards/review-0046-0050.jpg` 及五張完整1024×1536預覽均已看。四crop與標籤相符，腳在水下，不用折翼圖假稱展示飛行翼帶。世界bounds與部分國家/非全境警語保留，所有ISO3存在於NaturalEarth。五張AVIF解碼、spec=manifest、hash/bytes、taxonomy、六評分（含0049缺值）、無ZIP及Pythoncompile/gitdiff檢查通過。上載回傳bytes/MD5/parent全部與本機一致。
+
+| 已上載 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0046.avif | 1r3QpTx3Tnjl6e3e4lZxQroApHmSIngNZ | 134327 | 3ccf294c6b6ce3d50a8056d5f980959c | bb2a3e12bf057da4aa59a46e6eff302fb087baaa261b0200a56fd0e34e4a2347 |
+| 0047.avif | 16GiFKqi9IK9Yk6OUnLZAoNDO0eORdkhD | 143918 | 428bc526ee15f5716b364b2e5ac6dff6 | 01990f485046a0d3b4b0f90551789500e08b3d0407ba0cb89e55af4415657428 |
+| 0048.avif | 1D0MOy8IDiDiiSmrReHRhEF6zPn2O6woQ | 145781 | 36d580afcc201521b6ffc1ca0e213f7d | 2228b46b774a0c440c08c3135a81c3d79509b9cd3456bd2cd0f6fb79fe091c1a |
+| 0049.avif | 1o1FT8tn-5_WlaWWq3r2KLx3HHWm-XKn2 | 141112 | e4e598d5102c57afa429e9e25d8285bd | e8d28704b81bdc81b9861a892a693104b2428d743e2f7c852904816312f6e747 |
+| 0050.avif | 1X5UsFTg-uHGWo13H-dun67t2g1f4fnZT | 139803 | 20e5c177b9a77447f0da9d311ff4c979 | 7944e074de94a0ffea99f437b7f7c03c42885127413758a4bc5f26723c2939e6 |
+
+全部parent為 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`，manifest標`uploaded_drive_verified`。**本Agent到0050包括已完成並停止，不製作0051。0051–0100仍由另一Agent負責。**0038–0043既有Drive版本未被覆蓋；0038–0040本機候選仍不是其來源，也沒有把候選當成功交付。
+
+
+## 新授權：接手另一Agent餘下0082–0100；特點標籤自適應
+
+用戶提供特徵列截圖，要求接手另一Agent未完成部分，並詢問能否按字數加寬小標籤框，否則退回部位名。**此新授權取代此前本Agent到0050止／不碰0051–0100的限制，僅接手未完成部分。** fetch origin/main後發現 PR25 已合併至 `9aac65a`，該主分支docs/specs記錄交付0051–0081（最後0081大鷹鵑）。本工作分支未切換／未覆蓋local docs，透過git show讀取交接；後續共享合併時要保留PR25交付紀錄，不能用本地較舊docs取代它。
+
+Drive查詢0080/81及0082–84回傳無有效檔，原因未明；不以缺檔為由重做已有主分支成功紀錄的0080/81。0082–84製作前及上載前各查重均為0；本回合不修改已交付0070或其他舊卡。
+
+### 特徵標籤框改進（只改卡片生成器，非app UI）
+
+`compose-card.py` slim新增 `slim_feature_label`：原100px膠囊框按實際Noto字寬加24px內距，自動增至最多210px；每欄中心距238px，所以留在自己的欄內，不碰鄰框或面板邊。短標籤仍22px字及原100px框；極長文字先縮至最低18px，再必要時省略號，絕不無限制擴張。內容仍優先簡短特點／部位名，避免長句。只變slim四個feature膠囊，其他版式不變；現有已上載AVIF不會自動改。
+
+`test-slim-feature-label.py` 4項測試通過：短標籤不變、特點框擴大、中英長字/換行/空字均量度內距及面板邊界/鄰框、過長省略且字≥18px。新三張完整預覽已目視確認6–7字特點在框內。
+
+### 新完成0082–0084
+
+HKBWS substantive辨識/分佈/保育文字已讀：0082 `/0040/005600` 北鷹鵑；0083 `/005700` 霍氏鷹鵑；0084正確 `/005100` 斑翅鳳頭鵑（誤讀過的005200是噪鵑，未用作其來源）。比較用大鷹鵑005500及紅翅鳳頭鵑005000辨識文字已讀。8次生圖成功：三種pixel/features各2張，加兩張比較圖（81/78只作本批比較，不重做/覆蓋其已交付資訊卡）。主圖成鳥代表，非聲稱與香港幼鳥紀錄同個體。
+
+- 0082北鷹鵑 Hierococcyx hyperythrus：LC穩定，成鳥灰粉無明顯斑下體、灰頭黃眼圈及尾窄橫帶。香港資料為秋季幼鳥，本卡明確成鳥不套用幼鳥辨識。部分國家原生概覽合併繁殖及已知婆羅洲/蘇拉威西部分越冬；不捏造完整越冬地。對照霍氏／大鷹鵑。
+- 0083霍氏鷹鵑 H. nisicolor：LC全球下降（香港增加另論）；成鳥白下體淡灰粉縱紋、黃眼圈、白三級飛羽斑、栗色尾端。對照北／大鷹鵑。runtime只有v/r，i/a/c/o均待查，vEst保留。
+- 0084斑翅鳳頭鵑 Clamator jacobinus：LC穩定，成鳥黑白型尖鳳頭、白翼斑、白喉腹及白尾端。部分原生範圍非洲/印度/斯里蘭卡/尼泊爾/緬甸，香港偶見及eBird額外紀錄不直接當正常原生。對照紅翅鳳頭鵑及無冠黃眼圈的北鷹鵑。runtime所有評分缺省保持待查，未從LC補數。
+
+三張1024×1536 AVIF解碼、spec=manifest、SHA256/bytes、runtime taxonomy及六評分含缺值、世界bounds/ISO3、無ZIP、git diff --check皆通過。AI僅基本目視，未經獨立鳥類專家驗證。未改UI/runtime/R2/slim登記/SW。上載回傳MD5/bytes/parent與本機一致。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0082.avif | 1ocykeXSFj_U3Y1alFwikiP06JVHSvaRk | 134052 | 574f485e32e19940723ca6d2bb31f435 | 8b1a8def1032d49d8f0a695d157882199857070affce13bc27bb7b7efe1a5bbb |
+| 0083.avif | 1UH_cug6igQ4pJSjELk4NBGd7ybYrtm_l | 145995 | b270281918fcc37137dc22cdbf268291 | 92f34eb53530eed7bc18f7474cd1f494be770bd8cd23f55da13b5d51c20af769 |
+| 0084.avif | 1PXP6ImFeKBJRxNdr9saiAz3pxT559dH3 | 135511 | cabe94fdd95778c8b2392da17c1583d6 | 21f6c948c9a08e9a97875ea2203b1c3aabd5b4226f0c294c4985f6e023d1475b |
+
+parent均 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`，manifest `uploaded_drive_verified`。新範圍0082–0100尚未全部完成：下一張0085小杜鵑，接著0086–0100，製作前逐批Drive查重。**不能聲稱全部完成；已有0070等卡不因新標籤算法自動更新或覆蓋。**
+
+## 用戶更正：0078–0081亦需重做；完成圖像後優先補齊JSON
+
+用戶明確指出另一Agent的0078–0081做壞，故不得再視為最終可用。新增待重做：0078紅翅鳳頭鵑、0079八聲杜鵑、0080烏鵑、0081大鷹鵑；0082–84本Agent新交付仍保留，0085–0100待完成。用戶要求完成這批生圖後優先把JSON全產出。此紀錄只更新範圍，**尚未重做或替換0078–81**。
+
+每張資訊卡通常對應 `scripts/cards/info-restart-NNNN.json` 一份物種製作spec（名稱、學名、保育級別、特徵文字、裁切、比較物種、分佈及來源）；另有ignored交付manifest記錄實際AVIF hash/bytes等。兩者不是app card-manifest，JSON也不內含AI素材本身。最終需與新圖/裁切逐張對齊，不能先把未知裁切或未查來源當完成。
+
+本輪盤點local與已fetch的origin/main specs聯集：0001–0100缺0041/0042/0043及0085–0100；0078–81舊spec在origin/main（不在本地工作樹），需隨重做更新，不能直接冒認是新圖spec。0041–43只有Drive既有檔的已知交付，本Agent未審閱其遠端二進位；日後若補這三份JSON，應取得來源spec或以實際畫面核對，不能虛構裁切/製作來源。JSON整合時必須保留PR25主分支0051–0081紀錄及spec，不以較舊本地docs覆蓋。
+
+
+## 0078–0081 重做已交付；每張圖完成即同步JSON
+
+用戶最新指示「只能邊完成圖邊弄JSON」：不用等待全批生圖後才批量補JSON；每張生成→審閱→同步spec裁切/特點/比較/來源→渲染及audit→Drive交付。此順序取代先完成全批圖片再處理JSON的舊計劃。
+
+本回合環境ignored舊圖/venv/fonts再次缺失；重建venv(Pillow/fonttools/numpy/scipy)、NotoSansTC400/700與NaturalEarth。8次生圖成功，0078–81每種全新pixel主圖和features；**沒有使用另一Agent被拒絕的手繪/簡陋舊圖**。4份JSON由origin/main舊spec作metadata起點，依新圖重寫裁切、特點、來源、對照資產及notes；不只改status。比較全取本批新features（0078對照0081/0080、0079對照0080/0081、0080對照0079/0081、0081對照0079/0080）。新圖為成鳥；0079為成雄，不混用雌鳥赭色型或幼鳥。
+
+HKBWS identification/range/conservation substantive文字重讀：0078 `/0040/005000`、0079 `/005300`（包括chunk1範圍/保育）、0080 `/005400`、0081 `/005500`。全為LC；0078/79/81來源全球穩定、0080下降。runtime評分原封保留：0078 i/a/c/o待查；0080 a待查；0078/80/81 vEst原值與卡面提示保留。不從LC補缺分或重算綜合。
+
+- 0078：黑尖鳳頭、白後頸環、小橙皮黃喉斑、栗紅翼及大致白腹、黑尾。沒有把整片胸腹塗橙色。
+- 0079：灰頭罩及上胸、灰褐背翼、無斑橙皮黃腹、白端漸層長尾；成人雄鳥。
+- 0080：自然頭頸銜接、藍黑光澤、細弧喙、微叉尾及尾下/最外尾羽腹面細白橫斑，不是幼鳥全身白點型。
+- 0081：灰頭黃眼圈、胸頸深栗粗縱斑及腹脅栗橫斑、褐翼背與灰尾深橫帶，非猛禽鉤喙。
+
+contact `deliver/cards/review-remake-0078-0081.jpg` 及四張完整preview均已讀圖。初檢後0078/79/81的尾部crop移向尾尖重新渲染；`deliver/cards/review-tail-fix-0078-0081.jpg`已讀，白尾端／灰尾帶更完整。動態字寬膠囊標籤均留在欄位內，4項label測試通過。1024×1536 AVIF decode、spec=manifest、runtime分類/名稱/六分含缺值、ISO3、世界bounds、hash/bytes、無ZIP、Pythoncompile、git diff --check全部通過。基本目視檢查非獨立鳥類專家驗證。
+
+製作前與上載前Drive精確0078–81查重均為0（舊版本不在目的資料夾的原因未知），因此新建標準NNNN.avif，**沒有刪除/移動/更新遠端舊檔**。上載回傳parent/bytes/MD5均吻合本機。
+
+| 重做交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0078.avif | 1B9mgzQMJY4U93duC_F1D9BFFYGoxLWiF | 136880 | 36910affb44e1d942e6046abc01b5c8c | 4ff43c03d4dabc0ce40169ea49936f4ae9ed093b6ff5e6c26fa1b2bfce706b33 |
+| 0079.avif | 1iOf4_cR5YNhtivpFhErAy5M-yOxAqLXY | 141384 | 725cce0edfa2f76791daa5a8074b75a8 | 2afe67e64edf257976190ec9e6113f726a1bda97d0d95c89eaf1c0e46983bf87 |
+| 0080.avif | 1v4V1tMwK6F0mCPLuWD9MKbyI6__H92vW | 134603 | 9174e9240bc17e8f23fcd3c77f481df3 | 50febcc92002a6660dc242f36e347bdf47972976cb281ddf42632e42ac598535 |
+| 0081.avif | 19Vat2Bk3ZTa4RtHY0inWgC1Mq_nhckBu | 142698 | 78bed2b95afca4beecb91115993a2829 | 28a18269aa78d1dc06a5bf4a8f561205192d3e5511a0a28ce500c15b7f502501 |
+
+parent全為 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。本回合0078–0081重做完成；0082–84已交付版未改。下一張0085小杜鵑，繼續到0100；每張完成同步JSON，先查重再上載。沒有R2、UI、SW、runtime或slim註冊改動，沒有ZIP。合併時仍須保留PR25主分支0051–77的spec/交付紀錄（本地分支尚未整合）；用本回合新0078–81覆蓋舊spec，而不是復活被拒絕圖像。
+
+
+## 0085–0088 已完成：圖像及JSON同步交付
+
+用戶「繼續完成」後，逐批查重0085–88無檔；8次生圖全成功（每種pixel/features），對照亦用本批已審閱新features。不重做0078–84。四份JSON隨新圖建立且依實際畫面調整。來源HKBWS substantive識別/分佈/保育讀取，外部profile與runtime編號不同：0085 `/0040/005800`、0086 `/005900`、0087大杜鵑 `/006100`、0088東方中杜鵑 `/006000`。全為LC；來源0085/87全球穩定、0086/88下降。
+
+- 0085小杜鵑 Cuculus poliocephalus：代表成雄灰色型，褐眼黃眼圈，疏落/較不完整腹斑、素皮黃尾下及白斑漸層尾。適應力缺分保持待查，vEst原值保留。HKBWS長度38–40cm與該頁稱較小的屬內辨識敘述有疑義，未當新卡體長主張或用來覆寫runtime；spec註明。不混入雌鳥赭色型或幼鳥。
+- 0086四聲杜鵑 C. micropterus：成雄紅褐眼黃眼圈、灰頭/褐翼背、寬疏腹斑，寬黑近尾端帶突出。vEst保留。對照大杜鵑及東方中杜鵑。
+- 0087大杜鵑 C. canorus：成雄指名型代表，黃虹膜黃眼圈、細密腹橫斑、灰翼背及白斑長尾；bakeri背色較暗會重疊，不冒稱香港紀錄亞種已確定。對照東方中及小杜鵑。
+- 0088東方中杜鵑 C. optatus：成雄灰色型、褐虹膜黃眼圈、寬粗腹斑、暗灰翼背，示範有寬斑的尾下個體（不是所有個體皆同）。不宣稱外觀可與喜馬拉雅中杜鵑C.saturatus分開，通常需鳴聲/量度；台灣繁殖族群分類仍有疑義，本部分國家圖不標台灣。vEst保留。對照大及小杜鵑。
+
+四卡完整預覽及 `review-0085-0088.jpg` 均已目視。第一次預覽後將0086–88第三圈標籤改為實際可見的「褐色翼背／灰色翼背／暗灰色翼背」，不聲稱該局部圈含頭胸；重渲染 `review-wing-labels-0086-0088.jpg`已讀。各膠囊字寬自適應且在欄位內，4項label測試通過。屬內辨識需綜合鳴聲/量度/多項特徵，人工插圖不是確定鑑別key；折翼圖不假稱展示飛行時翼下白帶。
+
+AVIF解碼1024×1536、spec=manifest、runtime名稱/學名/六評分含缺分、世界bounds、ISO3、bytes/hash、無ZIP、git diff --check全部通過。AI圖只基本目視，非專家驗證。UI/SW/runtime/R2/slim註冊無改。上載前再查同名0後，逐張upload；回傳parent/bytes/MD5全部吻合本機。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0085.avif | 1odKe1deIroMwnpQf92RB5vJKd7X2Cu0K | 139552 | d12a3942caf9acae9d5620c3c8911471 | 4492af888f54b975135ff38c77acbbf91b17751fd8b82d40f51f8a5312a8a628 |
+| 0086.avif | 11iJKuNy9mznsaec4VEv4yDdNRlJmM1Em | 143060 | de2e3716df526361c5c87e248f2ef514 | 9677e62275c0cb2313a07b6868cfe0bae886fa6f673313b476b6e6ebdb0d7ea8 |
+| 0087.avif | 1KjXax-9VdSxFakgJzdzLyo1DY1PMjJ2o | 141877 | 4c5598113d5aa8702112e4d213e90a9d | aec3591ab771255815cc300a3e4ebcf1f75a16045b263655660131b5a17ca494 |
+| 0088.avif | 1250i9mY3s6LJBcD47RoERI9p0Jlh_i6I | 142505 | b3266d7f066a80eb7c1e632384f10c06 | 3aff446ae3a89a24eb75b9ff585b7124294accd5409a63a1f752f43c3002d49f |
+
+parent全 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。新交付到0088；**尚餘0089–0100，共12張，未聲稱全部完成**。下一張0089普通夜鷹，與0090林夜鷹一起研究/辨識，再續雨燕及秧雞。每張新圖完成同步其JSON，逐批先Drive查重。
+
+
+## 0089–0092 已完成及上載核對；尚餘0093–0100
+
+新圖完成後同步四份production JSON，再依完整預覽修正裁切/標籤。10次AI生圖：四種pixel/features，另歐夜鷹、褐背針尾雨燕對照圖。HKBWS substantive識別/分佈/保育讀取 `/0030/003900`（兩chunk）、`004000`、`004200`、`004300`，對照`004400`及eBird `eurnig1`。四種全球LC穩定；針尾雨燕香港春季紀錄下降不等於全球IUCN下降。
+
+- 0089普通夜鷹：成雄，暗灰羽色、背翼黑色羽心及暗肩翼；長翼/尾端白斑的飛行特徵未假稱折翼圖可示範。對照林夜鷹、歐夜鷹；鳴聲及多項實地特徵仍重要。
+- 0090林夜鷹：成雄，較均勻灰褐細斑、短嘴大眼。尾crop無充分呈現外尾白色，最終標「羽紋長尾」，不是強行宣稱診斷性白尾。對照普通及歐夜鷹。
+- 0091白喉針尾雨燕：白額/白喉、銀灰背鞍、白尾下側腹及短方尾針羽。背鞍圈取上側pixel，喉/尾圈取下側features，JSON featureSources逐圈對齊。
+- 0092灰喉針尾雨燕：暗額灰褐喉、銀灰背鞍、白尾下側腹；針羽在該crop不夠顯著，最終標「短方形尾羽」。兩種針尾雨燕相互對照，另褐背針尾雨燕淡褐背鞍對照；遠距甚難分，需近距頭喉視角，不將人工圖當鑑別key。
+
+四張完整preview、contact及修正後特徵條均讀圖。膠囊無溢出；4項label測試、spec=manifest、runtime學名/名稱/六分、世界bounds、ISO3、AVIF1024×1536解碼、hash/bytes、無ZIP及git diff --check通過。只基本目視非專家驗證。未改UI/runtime/SW/R2/slim註冊。
+
+製作前及上載前Drive精確查重0；四張上載成功，回傳parent/bytes/MD5均吻合本機。manifest top-level uploaded_drive_verified；embedded production spec仍保留製作階段review_before_upload，非交付狀態。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0089.avif | 1XPC0mz89WrN-mFFurCYPVztlIOa-9NOa | 157881 | 17c578f98f551aa62d350f3e116b7696 | d780c088e43d5e7ec1265715d833b2c2ee965014e1832c541eae247ed26824ae |
+| 0090.avif | 1Ip1v8z1kYEYFVMwa4PElNWC0To4CfSk- | 156338 | 40c1ec13e6acee00f55a55551b9028f8 | af0b5427898b790ead81b3b01b41597dc3864cdc20b36d827de97a46091fbb91 |
+| 0091.avif | 1niZtZlciooqbdzuTp23psUMuIC1YbUDd | 130053 | de11fb7505828b869d19f7be589ea969 | 41a23631e9cfec321f52aa7518a8fcba8b76a90f9f82490c3f9305afbe7227d6 |
+| 0092.avif | 1te2ROVx8bnvndWmGqVpa8KE2ppoQUu8D | 132918 | 1ad422a2ac8fc75d34abbeddd4bc6c64 | 37fe14a371ff9b18dd69cfd35161f6b95edf14ed7a54456827ce21e32c8f516f |
+
+parent全 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。目前完成到0092，0093–0100八張未完成；0041–43來源JSON缺口仍待真實來源/畫面核對。不要重複上載0089–92。尚未整合origin/main PR25，合併時保留其0051–77紀錄/spec及本分支重做0078–81。
+
+
+## 0093–0096 圖像/JSON逐種同步完成及Drive核對
+
+用戶「繼續」後先查重0093–96無檔，按每種pixel/features生成→讀圖→製作JSON/裁切→渲染，並非先預填全批未生成的裁切。9次生圖：四種兩圖，另House Swift比較圖。來源HKBWS substantive識別/分佈/保育：0093 `/0030/004400`、0094 `/004100`、0095 `/004500`、0096 `/004600`；比較House `/004700`及eBird `houswi1`。0093全球LC下降，0094–96全球LC穩定；香港局部趨勢不混同全球保育。
+
+- 0093褐背針尾雨燕：adult indicus代表，褐色背鞍（非銀灰）、暗褐頭/淡頦、白後側腹、方尾突出針羽。白眼先斑是已查文字特徵，但AI圖位置不可靠，沒有診斷眼先crop標籤。比較0091/92用已審閱上側pixel，背鞍差異可見。
+- 0094短嘴金絲燕：innominatus代表，暗冠眼區、較淡灰褐頸背、灰褐腰非白腰、尾微凹。腰色會隨光線/族群變異，不能拿單一圖當全屬鑑別key。對照小白腰及灰喉針尾，非等比例。
+- 0095普通雨燕：淡額喉、暗褐腰背、狹長尖翼及深叉尾。初稿第三圈「鐮刀形長翼」改為該局部實際可見的「狹長尖翼」；0096圖/spec完成後換入白腰雨燕比較（另小白腰），重新渲染核對。
+- 0096白腰雨燕：淡喉、鮮明白腰帶位在尾基上方下背（不是針尾銀背鞍）、狹長尖翼及長深叉尾；對照普通及小白腰。kurodae/kanoi來源亞種處理有差別，runtime物種不變。
+
+**來源分類變動注意**：目前HKBWS `/004700` 標頭及eBird `houswi1` 把House/nipalensis群併入Little Swift Apus affinis；runtime仍為Apus nipalensis且本任務凍結taxonomy。比較圖/JSON保留runtime名稱，明確記錄差異，不能以現行合併種廣義分佈直接套用舊nipalensis。下一張0097必須同樣處理，並另核對nipalensis群範圍/保育，不默默改runtime或拿非洲Little Swift冒充。
+
+四張完整preview已讀，特徵圈/膠囊無溢出，四項label測試通過。spec=manifest、runtime名稱/學名/六評分、世界bounds、ISO3、AVIF1024×1536解碼、hash/bytes、無ZIP、git diff --check全部通過。AI圖只有基本目視非獨立專家驗證。0093/94vEst提示保留。上載前再查精確名0後四張新建，回傳parent/bytes/MD5均吻合本機；未覆寫/刪除舊檔。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0093.avif | 1qiVh-8WGJe9se0oSs_iM3M-_aZ7XPC6b | 140819 | fc6c66b9c7b1e7f9bdc953d1304b5115 | b9cf502e59f7b149c735e227f223b57ae3eaa00b73b9a01e2e9ae3bedef5e269 |
+| 0094.avif | 1YJXGrf_ZkMhjLxcWDytFTVePUxMN2DVM | 136147 | 251075fc364a0c7cc64e2155dba99bf8 | 809d889a3208eae9bd089e8fcafcaa8caca80bcf1521a8eb88015d8672d6f21d |
+| 0095.avif | 1Uo0z2KmqCRnKRoIdydDFHirdG6X40kHi | 126875 | 4213fec9bf4110d20757dee74f87066e | f8a4d768a63bc85f5cecd4938d748b0d1ba1a2496a6f07b8ce225a2357147d01 |
+| 0096.avif | 1MzW6lnwFOmNfH_0e4cJd_NXmPSRl9y6i | 126789 | b6d7ea5ee6bcd68428fab8d0684893b1 | 7cc6f35608022ea0ee7358eb4db346b3d469a338f10ea423f4de111e4a451b7a |
+
+parent全 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。交付manifest top-level uploaded_drive_verified；production spec維持製作階段review_before_upload。UI/runtime/SW/R2/slim註冊無變更，無ZIP。完成至0096，**尚餘0097–0100四張**；0041–43來源JSON缺口仍未解決，需實物/來源核對。不要重複上載0093–96；尚未整合PR25，整合時保留其0051–77紀錄及本分支重做0078–81。
+
+
+## 0097–0099 已交付；0100圖/JSON草稿已存但對照素材待生成
+
+本輪按每種新pixel/features→讀圖→同步JSON裁切→渲染工作，未預填其餘物種未知裁切。0097兩張、0098四張（含東方/灰胸秧雞對照）、0099兩張、0100兩張，共10次成功；0100兩個額外對照生圖被工具10張/回合上限拒絕，沒有重試繞過上限。
+
+- 0097小白腰雨燕：白頦喉、白腰帶、暗褐翼羽、短淺叉尾。初稿第三圈「較短寬翼」只見翼羽局部，改「暗褐色翼羽」重渲染。適應力缺分保留待查、vEst提示保留。
+- 外部分類HKBWS `/0030/004700` chunk1明確現在把Oriental birds作A.affinis nipalensis，保留app A.nipalensis。只取該頁明示nipalensis亞洲範圍作部分國家圖，不混用非洲/西南亞Little Swift。LC另以BirdGuides IOC10.2歷史分拆種紀錄核對，卡面註「依分拆分類保育紀錄」，不冒稱最新獨立分拆評估；來源現行合併種全球增加不當作舊nipalensis獨立趨勢。
+- 0098西方秧雞：灰面無明顯眼紋、細長紅嘴、褐背黑羽心及黑白側腹斑；對照普通及灰胸秧雞。HKBWS `/0060/007400` substantive文字可讀（embedded Macaulay bot-block沒有妨礙文字），LC下降。生成尾下斑不夠可靠，不用作診斷crop標籤，也不聲稱專家驗證。
+- 0099普通秧雞：深貫眼紋、白喉、褐背黑羽心、黑白側腹斑。HKBWS名Eastern Water Rail與runtime Brown-cheeked Rail皆R.indicus，runtime不改。`/0060/007500` substantive識別/範圍/保育已讀，LC下降；對照0098新features及灰胸adult素材，vEst保留。
+- 灰胸秧雞對照`/0060/007600`已讀：栗冠後頸、上背細白/黑橫斑、較短厚嘴，成鳥不是幼鳥；全球LC增加與香港下降分開。
+
+0097/98/99完整preview均讀，改標後`review-labels-0097-0099.jpg`已讀，動態膠囊在槽內。4項label測試、spec=manifest、runtime名稱/學名/六評分含缺值、世界bounds、ISO3、AVIF1024×1536解碼、hash/bytes、無ZIP、git diff --check通過。只基本目視非獨立專家驗證。製作前與上載前精確Drive查重均0；三張上載回傳parent/bytes/MD5全部吻合。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0097.avif | 19mM6nfmlx2gg5rvppOToF29AwaLkURqA | 139602 | bc22eb3e8d72b279268e9e3535d87112 | 36841636e7b9a89503ce1b3841335f6b8af6b8e741aa49a678d4d3dbf99d1bdd |
+| 0098.avif | 1pqMZunmrqkaTxD1GIpOv6hiXsE8mUPue | 148281 | 55f9224f8636184e88c56e60a695573b | 8a8b4537118894809dc5967512ec94b0314c89b182bf09022230c890baef74d9 |
+| 0099.avif | 1y0Xl8K3gFENzeMO6QzToCkEOiRAM-68s | 150410 | 9f4c04a2ff7ad35c338e767e6a5fa08c | 906420bbe37a39bb6a50f3966007249c1bff1e9e83974552fe558d8edc386f31 |
+
+parent全 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。manifest top-level uploaded_drive_verified，production spec維持review_before_upload。未改UI/runtime/SW/R2/slim註冊，無ZIP。
+
+**0100尚未完成／未渲染／未上載**：`cards/art/info-restart-0100/pixel.png`、`features.png`已生成，features已讀；`scripts/cards/info-restart-0100.json`隨圖保存真實裁切與研究，status `incomplete_comparison_assets_pending`，兩比較assetStatus `pending_generation`。來源 `/0060/007700`黑水雞、`007800`骨頂雞、`008700`白胸苦惡鳥 substantive識別/範圍/保育皆已讀。下一回合只生成缺的 `eurasian-coot.png`（白額盾白嘴、具瓣大腳）及`white-breasted-waterhen.png`（白面胸腹、栗尾下），審閱後移除pending標記/更新status，再渲染全卡、核對crop/labels、audit/查重/上載。不重生成功主圖、不冒稱0100已交付。基本主圖/特徵為成鳥紅盾黃嘴尖、白側腹線/尾下、黃綠長趾，地圖不包括美洲Common Gallinule。
+
+目前交付至0099，只餘0100一張未完成；0041–43來源JSON仍需來源/實物核對，不能聲稱0001–0100JSON已全齊。origin/main PR25尚未整合，整合時保留0051–77史料及本分支重做0078–81。
+
+
+## 最新交付：0100完成並續至0104（取代上節0100待生成狀態）
+
+用戶授權0101及以後按額度繼續。本輪10次成功生成：0100缺的兩個對照、0101–0104各pixel/features；成功主圖不重生。逐種生成/讀圖後同步JSON裁切，未先填未完成物種spec。生成額度已用完，下一張0105灰腳秧雞，未建立其JSON/新圖。
+
+- 0100黑水雞：兩對照已生成及目視，移除pending；首圈調寬保留黃嘴尖，白側腹線/白尾下/黃綠長趾。現已渲染上載，不再pending。
+- 0101白骨頂：白額盾白嘴、紅虹膜、暗灰體羽、具瓣寬腳趾。保留runtime中文白骨頂，來源別稱骨頂雞；LC全球增加與HK局部下降分開。vEst保留。
+- 0102白眉田雞：白眉及眼下第二白紋、淡灰胸、草褐背黑縱紋及細長趾；LC全球趨勢未知，不作穩定。地圖非完整太平洋島嶼分佈；比較非等比例、非完整田雞鑑別key。vEst保留。
+- 0103董雞：明確繁殖成雄，紅延長額盾黃嘴、炭灰翼背及長趾。雌/幼羽不同；折翼圖不假稱可示範飛行翼緣白色。來源遷徙季峰值摘要/主文矛盾，不任意宣稱春秋排名。LC下降。
+- 0104白胸苦惡鳥：白喉胸、黃嘴紅基部、栗尾下及橙黃長趾；首圈只有喉胸，標籤由白面胸腹改白色喉胸羽後重渲染/讀圖。成鳥外觀非初飛全暗幼鳥；HK下降不套作全球趨勢。vEst保留。
+
+HKBWS substantive來源007700/007800/008500/008600/008700已讀。新圖只有基本目視，非獨立專家驗證。五張完整preview及特徵標籤條已讀；4項label測試、production spec=manifest、runtime名稱學名六分、世界bounds/ISO3、AVIF1024×1536解碼、bytes/SHA256、無ZIP及git diff --check通過。上載前精確Drive查重0（18345c82-c31d-40bc-b3a2-c3034ccd32e6），五張新上載回傳parent/bytes/MD5全部吻合本機，未覆寫/刪舊檔。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0100.avif | 1Cv1EKx0pN57T_UrMBFTCQkANTky23dcb | 142576 | 98e54761b8f1023e7d46e5590d3981b0 | 8a029ea3b1b4f803b134e0b030a2c30cc379c1316c2f1bb6400d16344594f30d |
+| 0101.avif | 1-isSgmcdB0qZMghWLi7u2UUPKg9weT95 | 139830 | 44b8bcf0bc7ca90910733b14c45f5c8c | 44a3058413c07b6d3f5c8a8f640efd9dca17c3de0aa5d0d69d969d66edd9f038 |
+| 0102.avif | 1XPbk2tknN9HvFSZ7FpsShTgSiFppgz-M | 152729 | 08ea698c84258f36b42911b320fdc683 | bafa1cf9fa03216d0ecc52e9ba819dc36004ccd1760c3b344d990fce41ff2446 |
+| 0103.avif | 1SacgcCF-jKdQa5XwjR5IMnzPCS4QYvxF | 140092 | be6424f9ac05eccb39349c2f872612bf | 003e04f6934c42145ba4c06ad872c0872cd6e9cbfc5afe24891342230339d990 |
+| 0104.avif | 1PWbzPZbZYhDFSTdcBFinp62nUdb3VomW | 143052 | 06001911dc0847066d6f884938ed8b1b | a515a42c6bcb8c9004ea217abe1dc5226d2f6194d227585fb6d51b463fedb175 |
+
+parent全 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。top-level uploaded_drive_verified與embedded製作階段review_before_upload區分。交付至0104，下次從0105開始，勿重覆0100–0104。未改UI/runtime/SW/R2/slim註冊，無ZIP。0041–43來源JSON缺口仍未解決，不能聲稱全批JSON齊備。PR25尚未整合；保留其0051–77歷史與本分支重做0078–81。
+
+
+## Main整合交接更正
+
+本次已整合PR25的0051–0077規格及歷史；上述「PR25尚未整合」只描述當時狀態。0078–0081衝突採用用戶要求重做的本分支spec，舊版交付紀錄僅供追溯，不再有效。0038–0040規格加上 `local_candidate_not_verified_against_drive`，不可拿本地候選作Drive舊卡來源證據。0041–0043來源缺口未解決。新Agent先讀交接文件，起點及完成量由用戶指定。生成大圖及AVIF依既有ignore不入Git。

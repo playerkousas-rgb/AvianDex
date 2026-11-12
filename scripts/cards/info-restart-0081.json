@@ -7,74 +7,65 @@
     1024,
     1536
   ],
-  "status": "uploaded_google_drive_verified",
+  "status": "review_before_upload",
   "iucn": {
     "code": "LC",
-    "zh": "無危",
-    "assessmentNote": "全球LC穩定；港常見夏候"
+    "zh": "無危"
   },
-  "illustrationTaxon": "Hierococcyx sparverioides adult: grey crown and face, bright yellow orbital ring, brown mantle and upperwing, white underparts with heavy dark-rufous streaking and bars, grey dark-barred tail, yellow feet",
+  "illustrationTaxon": "Hierococcyx sparverioides adult",
   "similarSpecies": [
     {
-      "zh": "八聲杜鵑（成鳥雄）",
+      "zh": "八聲杜鵑",
       "scientificName": "Cacomantis merulinus",
-      "asset": "plaintive-cuckoo.png",
+      "asset": "0079.png",
       "framing": "whole-bird",
-      "sex": "adult male",
-      "distinction": "八聲杜鵑只有18–23 cm，灰頭、橙腹且體型纖細；大鷹鵑38–40 cm，黃眼圈明顯，白色下體有濃密栗色縱斑。"
+      "distinction": "Adult male18–23cm small slim long graduated tail white terminal underside, grey hood upper breast greybrown back/wings, UNMARKED orangebuff underparts, reddish iris black yellowbase bill yellow feet. Female grey/rufous morph differs not shown. NE India through S China/SEAsia Philippines Greater Sundas to Sulawesi. LC stable."
     },
     {
-      "zh": "烏鵑（成鳥）",
+      "zh": "烏鵑",
       "scientificName": "Surniculus lugubris",
-      "asset": "drongo-cuckoo.png",
+      "asset": "0080.png",
       "framing": "whole-bird",
-      "sex": "adult",
-      "distinction": "烏鵑小而纖瘦，通體藍黑、尾微分叉；大鷹鵑較大型並似猛禽，灰頭黃眼圈、褐色上體及白底栗色條斑。"
+      "distinction": "Adult23–25cm slim glossy blueblack, slightly forked tail slender arched bill, white fine bars only undertail/outermost tail underside; juvenile spotting not shown. barussarum E India/N Myanmar/N Indochina/S China to Malaysia/Greater Sundas winter. LC decreasing, HK scarce passage spring mainly."
     }
   ],
   "featureCrops": [
     [
-      0.25,
-      0.15,
-      0.45,
-      0.4
+      0.54,
+      0.04,
+      0.91,
+      0.38
     ],
     [
-      0.29,
-      0.35,
-      0.55,
-      0.6
+      0.58,
+      0.2,
+      0.84,
+      0.49
     ],
     [
-      0.34,
-      0.29,
-      0.61,
-      0.58
+      0.41,
+      0.38,
+      0.71,
+      0.68
     ],
     [
-      0.53,
-      0.52,
-      0.93,
-      0.82
+      0.01,
+      0.7,
+      0.33,
+      1
     ]
   ],
-  "featureSources": [
-    "pixel.png",
-    "pixel.png",
-    "pixel.png",
-    "pixel.png"
-  ],
   "featureLabels": [
-    "鮮黃眼圈",
-    "胸側栗色縱斑",
-    "褐色上翼",
-    "灰尾黑橫帶"
+    "鮮黃色眼圈",
+    "胸部粗栗縱斑",
+    "腹脅栗色橫斑",
+    "灰尾深色橫帶"
   ],
   "featureNotes": [
-    "所有年齡均有明亮黃色眼圈",
-    "成鳥胸及頸側有粗深栗色縱斑",
-    "上背及上翼呈褐色，羽面有層次",
-    "灰色尾羽具深色橫帶"
+    "成鳥灰頭黃眼圈，非猛禽鉤喙",
+    "白胸及頸側深栗色粗縱斑",
+    "下胸腹及脅部栗褐色橫斑",
+    "灰色長尾帶深色橫帶"
   ],
   "rangeMap": {
     "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
@@ -92,72 +83,44 @@
       "PAK",
       "IND",
       "NPL",
-      "BTN",
-      "BGD",
       "MMR",
       "CHN",
-      "THA",
-      "LAO",
-      "KHM",
       "VNM",
-      "MYS",
-      "BRN",
+      "THA",
       "IDN",
       "PHL",
       "TWN"
     ],
-    "note": "Partial broad range context: breeds from Pakistan and the Himalayas east through Myanmar and China, south through Indochina; some populations winter farther south in India, the Greater Sundas, Philippines and Sulawesi. Hong Kong has a common summer-visiting population; green countries are not wholly occupied, and the map is neither exact range geometry nor local occurrence data.",
+    "note": "World-view partial native-country overview, not whole-country occupancy, complete range or seasonal occurrence polygons. Adult38–40cm grey crown/face yellow orbital ring brown mantle/wings, white underbody HEAVY darkrufous breast/neck streaks RUFOUS BARS lowerbreast/belly/flanks, grey darkbarred tail, dark above/yellowgreen below bill yellow feet. N Pakistan/Himalaya to Myanmar/China/Indochina; winter S India/Greater Sundas/Philippines/Sulawesi. LC stable.",
     "viewport": "world"
   },
   "sources": [
     {
       "url": "https://avifauna.hkbws.org.hk/species/0040/005500",
-      "use": "Full HKBWS Large Hawk-Cuckoo account read: Category I, common summer visitor in Hong Kong. Adult 38–40 cm, grey crown/head, bright yellow orbital ring, white underparts with heavy dark-rufous streaking on breast/neck sides and rufous-brown lower bars, brown mantle/upperwing, grey dark-barred tail. Adults resemble Crested Goshawk; mostly secretive in canopy. Broad range, HK status and IUCN LC/stable."
+      "use": "Substantive identification/range/conservation re-read for remake. Adult38–40cm grey crown/face yellow orbital ring brown mantle/wings, white underbody HEAVY darkrufous breast/neck streaks RUFOUS BARS lowerbreast/belly/flanks, grey darkbarred tail, dark above/yellowgreen below bill yellow feet. N Pakistan/Himalaya to Myanmar/China/Indochina; winter S India/Greater Sundas/Philippines/Sulawesi. LC stable."
     },
     {
-      "url": "https://ebird.org/species/larhac2",
-      "use": "Cornell eBird/Merlin account read: hawk-like appearance, long barred tail, brown upperparts and patterned white underparts, orange chest flush in adults; breeds in hill/montane forest, uses lower forests/edges/scrub during movement."
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative unchanged runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores, missing stays pending, vEst retained."
     },
     {
       "url": "https://avifauna.hkbws.org.hk/species/0040/005300",
-      "use": "HKBWS Plaintive Cuckoo account read for 0079; smaller, gray/orange comparator."
+      "use": "Comparison adult morphology re-read. Adult male18–23cm small slim long graduated tail white terminal underside, grey hood upper breast greybrown back/wings, UNMARKED orangebuff underparts, reddish iris black yellowbase bill yellow feet. Female grey/rufous morph differs not shown. NE India through S China/SEAsia Philippines Greater Sundas to Sulawesi. LC stable."
     },
     {
       "url": "https://avifauna.hkbws.org.hk/species/0040/005400",
-      "use": "HKBWS Square-tailed Drongo-Cuckoo account read for 0080; small blue-black comparator."
-    },
-    {
-      "url": "src/data/birds.json",
-      "use": "Authoritative runtime names."
-    },
-    {
-      "url": "src/data/birdTaxonomy.json",
-      "use": "Authoritative runtime taxonomy."
-    },
-    {
-      "url": "src/data/dexScores.json",
-      "use": "Authoritative runtime scores and vEst flag."
-    },
-    {
-      "path": "cards/art/info-restart-0081/pixel.png",
-      "use": "Custom pixel illustration based on adult features in HKBWS/Cornell descriptions; not a photo."
-    },
-    {
-      "path": "cards/art/info-restart-0081/plaintive-cuckoo.png",
-      "use": "0079 previously reviewed adult male pixel illustration."
-    },
-    {
-      "path": "cards/art/info-restart-0081/drongo-cuckoo.png",
-      "use": "0080 previously reviewed adult Square-tailed Drongo-Cuckoo illustration."
+      "use": "Comparison adult morphology re-read. Adult23–25cm slim glossy blueblack, slightly forked tail slender arched bill, white fine bars only undertail/outermost tail underside; juvenile spotting not shown. barussarum E India/N Myanmar/N Indochina/S China to Malaysia/Greater Sundas winter. LC decreasing, HK scarce passage spring mainly."
     }
   ],
   "notes": [
-    "Adult visual markers include hawk-like profile, yellow orbital ring, rufous streaked breast, brown upperwing and barred grey tail; juveniles are more heavily spotted/streaked.",
-    "Hong Kong common summer visitor; global IUCN LC/stable, with local survey uncertainty documented separately.",
-    "Comparators are adult male Plaintive Cuckoo and adult Square-tailed Drongo-Cuckoo; circles are not to scale.",
-    "Scores follow runtime exactly; vEst=1 means viewing score includes an estimated body-length component. Scores are app entertainment metrics.",
-    "Custom illustration receives basic visual review only and is not independently validated by an ornithologist.",
-    "Range map is only a broad country overview, not exact distribution geometry or HK records.",
-    "Direct standalone AVIF upload only; no ZIP/R2, app card replacement, UI, Service Worker, slim-registration or shared renderer changes."
+    "User explicitly rejected other Agent 0078–0081 and requested new artwork plus matching JSON per completed card. Entire main pixel and feature source newly AI generated; not patched old crude/handdrawn images.",
+    "Basic visual review only, not independent ornithologist verification. Adults represented, male only for0079, not juvenile/female morph identification.",
+    "Full world map only partial native-country highlights; comparison whole birds not to scale.",
+    "Dynamic feature label capsule fits measured text within each column; no app UI/runtime/slim registration/R2/ZIP changes.",
+    "Previous main spec retained only as starting metadata; new crops/comparisons/labels/sources synchronized to new image assets."
   ]
 }

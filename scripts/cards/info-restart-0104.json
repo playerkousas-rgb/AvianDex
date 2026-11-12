@@ -1,0 +1,134 @@
+{
+  "id": "0104",
+  "name": "白胸苦惡鳥",
+  "scientificName": "Amaurornis phoenicurus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Amaurornis phoenicurus adult representative",
+  "similarSpecies": [
+    {
+      "zh": "黑水雞",
+      "scientificName": "Gallinula chloropus",
+      "asset": "comparison-0100.png",
+      "framing": "whole-bird",
+      "distinction": "Substantive identification/range/conservation read. Adult Eurasian/Common Moorhen Gallinula chloropus,30–38cm dark blackish-brown upperparts greyish underparts, WHITE upper-flank line and WHITE undertail often displayed during tail flicking. RED frontal shield and bill base YELLOW tip, yellow legs long unlobed toes. Juveniles dull brown, paler belly/white throat, grey legs and greenish/grey shield not adult features. Nominate Europe/N Africa/WCSAsia to China/HK; other subspecies C/S Africa/Indian Ocean islands/Malay archipelago/Indonesia/Philippines. China S resident NNW/NE summer visitor. LC stable globally despite HK local decline. Omnivorous swimming/walking vegetated wetlands."
+    },
+    {
+      "zh": "白骨頂",
+      "scientificName": "Fulica atra",
+      "asset": "comparison-0101.png",
+      "framing": "whole-bird",
+      "distinction": "Substantive identification/range/conservation read. Adult36–39cm compact broad dark body, white bill/frontal shield and red iris, huge lobed toes yellow legs. Pale trailing secondary edge flight-only not demonstrated. First-winter olivebrown tinged upperparts and white-tipped throat/cheek/underparts different. Europe/Asia south Arctic, northerly populations winter N Africa/S China/SE Asia; residents Java/Bali/NewGuinea/Australasia, nominate Europe/NAfrica to India/Japan/SEAsia/Philippines/Borneo. LC increasing globally despite sharp HK winter declines."
+    }
+  ],
+  "featureCrops": [
+    [
+      0.59,
+      0.2,
+      0.84,
+      0.53
+    ],
+    [
+      0.76,
+      0.22,
+      0.94,
+      0.34
+    ],
+    [
+      0.12,
+      0.36,
+      0.43,
+      0.64
+    ],
+    [
+      0.51,
+      0.7,
+      0.83,
+      0.89
+    ]
+  ],
+  "featureLabels": [
+    "白色喉胸羽",
+    "黃嘴基部帶紅",
+    "栗色尾下羽",
+    "橙黃腳及長趾"
+  ],
+  "featureNotes": [
+    "白色喉胸羽",
+    "黃嘴基部帶紅",
+    "栗色尾下羽",
+    "橙黃腳及長趾"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "CHN",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Adult28–33cm darkbrown-grey midcrown/nape/upperparts/tail, PURE WHITE forecrown/face/throat/breast/belly; bright rust vent/undertail, lime-yellow bill with red upperbase, darkred eyes, orange-yellow legs. Immature duller grey tinges and grey-pink bill; recently fledged all dark unlike adult. Indian subcontinent east SChina/SEAsia Philippines/Indonesia, China summer north YellowRiver, HK resident strongly locally declined. LC globally; local decline NOT inferred global population trend. Full-world partial native-country overview only; not complete range, whole-country occupancy or exact occurrence/season polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008700",
+      "use": "Substantive identification/range/conservation read. Adult28–33cm darkbrown-grey midcrown/nape/upperparts/tail, PURE WHITE forecrown/face/throat/breast/belly; bright rust vent/undertail, lime-yellow bill with red upperbase, darkred eyes, orange-yellow legs. Immature duller grey tinges and grey-pink bill; recently fledged all dark unlike adult. Indian subcontinent east SChina/SEAsia Philippines/Indonesia, China summer north YellowRiver, HK resident strongly locally declined. LC globally; local decline NOT inferred global population trend."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy/name unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Six runtime scores unchanged; missing pending not zero, vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/007700",
+      "use": "Comparison identification/range/conservation read. Substantive identification/range/conservation read. Adult Eurasian/Common Moorhen Gallinula chloropus,30–38cm dark blackish-brown upperparts greyish underparts, WHITE upper-flank line and WHITE undertail often displayed during tail flicking. RED frontal shield and bill base YELLOW tip, yellow legs long unlobed toes. Juveniles dull brown, paler belly/white throat, grey legs and greenish/grey shield not adult features. Nominate Europe/N Africa/WCSAsia to China/HK; other subspecies C/S Africa/Indian Ocean islands/Malay archipelago/Indonesia/Philippines. China S resident NNW/NE summer visitor. LC stable globally despite HK local decline. Omnivorous swimming/walking vegetated wetlands."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/007800",
+      "use": "Comparison identification/range/conservation read. Substantive identification/range/conservation read. Adult36–39cm compact broad dark body, white bill/frontal shield and red iris, huge lobed toes yellow legs. Pale trailing secondary edge flight-only not demonstrated. First-winter olivebrown tinged upperparts and white-tipped throat/cheek/underparts different. Europe/Asia south Arctic, northerly populations winter N Africa/S China/SE Asia; residents Java/Bali/NewGuinea/Australasia, nominate Europe/NAfrica to India/Japan/SEAsia/Philippines/Borneo. LC increasing globally despite sharp HK winter declines."
+    }
+  ],
+  "notes": [
+    "New AI art basic visual review only, not independent expert validation; comparisons not to scale.",
+    "Image and production JSON/crops synchronized per species after generation. No UI/runtime/SW/R2/slim registration change, no ZIP.",
+    "World partial native-country overview; local HK status is not global IUCN category.",
+    "Adult representative only, recently fledged all-dark young not shown. No global decline claimed from HK local decline.",
+    "First crop shows throat/breast feather only; label narrowed from white face/breast-belly to match actual crop."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ]
+}

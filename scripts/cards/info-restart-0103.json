@@ -1,0 +1,135 @@
+{
+  "id": "0103",
+  "name": "董雞",
+  "scientificName": "Gallicrex cinerea",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Gallicrex cinerea adult breeding male representative",
+  "similarSpecies": [
+    {
+      "zh": "黑水雞",
+      "scientificName": "Gallinula chloropus",
+      "asset": "comparison-0100.png",
+      "framing": "whole-bird",
+      "distinction": "Substantive identification/range/conservation read. Adult Eurasian/Common Moorhen Gallinula chloropus,30–38cm dark blackish-brown upperparts greyish underparts, WHITE upper-flank line and WHITE undertail often displayed during tail flicking. RED frontal shield and bill base YELLOW tip, yellow legs long unlobed toes. Juveniles dull brown, paler belly/white throat, grey legs and greenish/grey shield not adult features. Nominate Europe/N Africa/WCSAsia to China/HK; other subspecies C/S Africa/Indian Ocean islands/Malay archipelago/Indonesia/Philippines. China S resident NNW/NE summer visitor. LC stable globally despite HK local decline. Omnivorous swimming/walking vegetated wetlands."
+    },
+    {
+      "zh": "白骨頂",
+      "scientificName": "Fulica atra",
+      "asset": "comparison-0101.png",
+      "framing": "whole-bird",
+      "distinction": "Substantive identification/range/conservation read. Adult36–39cm compact broad dark body, white bill/frontal shield and red iris, huge lobed toes yellow legs. Pale trailing secondary edge flight-only not demonstrated. First-winter olivebrown tinged upperparts and white-tipped throat/cheek/underparts different. Europe/Asia south Arctic, northerly populations winter N Africa/S China/SE Asia; residents Java/Bali/NewGuinea/Australasia, nominate Europe/NAfrica to India/Japan/SEAsia/Philippines/Borneo. LC increasing globally despite sharp HK winter declines."
+    }
+  ],
+  "featureCrops": [
+    [
+      0.7,
+      0.07,
+      0.89,
+      0.27
+    ],
+    [
+      0.79,
+      0.2,
+      0.97,
+      0.37
+    ],
+    [
+      0.25,
+      0.32,
+      0.53,
+      0.54
+    ],
+    [
+      0.53,
+      0.7,
+      0.92,
+      0.94
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥紅色額盾",
+    "黃色嘴部",
+    "炭灰色翼背",
+    "長腳及細長趾"
+  ],
+  "featureNotes": [
+    "雄鳥紅色額盾",
+    "黃色嘴部",
+    "炭灰色翼背",
+    "長腳及細長趾"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "CHN",
+      "KOR",
+      "RUS",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Breeding adult MALE representative41–43cm, charcoal grey upperparts subtle paler grey/brown feather fringes, blackish below, red extended frontal shield above YELLOW bill. Female31–36cm very different warm brown broad feather edges, pale plain head dark crown/hindneck, yellowish small shield/bill. Second-year male incomplete shield/browner edges. Monotypic Indian subcontinent/Indochina/China/Korea/Ussuriland south through SEAsia much Indonesia, northern populations migratory. HK scarce passage/rare summer and strongly declined former breeding lost. LC decreasing globally. Source summary says slightly more spring but occurrence says autumn; do not resolve contradictory seasonal emphasis without evidence. Full-world partial native-country overview only; not complete range, whole-country occupancy or exact occurrence/season polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008600",
+      "use": "Substantive identification/range/conservation read. Breeding adult MALE representative41–43cm, charcoal grey upperparts subtle paler grey/brown feather fringes, blackish below, red extended frontal shield above YELLOW bill. Female31–36cm very different warm brown broad feather edges, pale plain head dark crown/hindneck, yellowish small shield/bill. Second-year male incomplete shield/browner edges. Monotypic Indian subcontinent/Indochina/China/Korea/Ussuriland south through SEAsia much Indonesia, northern populations migratory. HK scarce passage/rare summer and strongly declined former breeding lost. LC decreasing globally. Source summary says slightly more spring but occurrence says autumn; do not resolve contradictory seasonal emphasis without evidence."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy/name unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Six runtime scores unchanged; missing pending not zero, vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/007700",
+      "use": "Comparison identification/range/conservation read. Substantive identification/range/conservation read. Adult Eurasian/Common Moorhen Gallinula chloropus,30–38cm dark blackish-brown upperparts greyish underparts, WHITE upper-flank line and WHITE undertail often displayed during tail flicking. RED frontal shield and bill base YELLOW tip, yellow legs long unlobed toes. Juveniles dull brown, paler belly/white throat, grey legs and greenish/grey shield not adult features. Nominate Europe/N Africa/WCSAsia to China/HK; other subspecies C/S Africa/Indian Ocean islands/Malay archipelago/Indonesia/Philippines. China S resident NNW/NE summer visitor. LC stable globally despite HK local decline. Omnivorous swimming/walking vegetated wetlands."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/007800",
+      "use": "Comparison identification/range/conservation read. Substantive identification/range/conservation read. Adult36–39cm compact broad dark body, white bill/frontal shield and red iris, huge lobed toes yellow legs. Pale trailing secondary edge flight-only not demonstrated. First-winter olivebrown tinged upperparts and white-tipped throat/cheek/underparts different. Europe/Asia south Arctic, northerly populations winter N Africa/S China/SE Asia; residents Java/Bali/NewGuinea/Australasia, nominate Europe/NAfrica to India/Japan/SEAsia/Philippines/Borneo. LC increasing globally despite sharp HK winter declines."
+    }
+  ],
+  "notes": [
+    "New AI art basic visual review only, not independent expert validation; comparisons not to scale.",
+    "Image and production JSON/crops synchronized per species after generation. No UI/runtime/SW/R2/slim registration change, no ZIP.",
+    "World partial native-country overview; local HK status is not global IUCN category.",
+    "Main art explicitly adult breeding MALE only; no claim female/immature has red shield or black plumage. Comparisons dark gallinules for bare-part contrasts, not exhaustive female Watercock key.",
+    "Folded-wing art does not demonstrate female white leading wing edge.",
+    "Source spring/autumn summary/occurrence wording conflict noted rather than copied as definitive season ranking."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ]
+}

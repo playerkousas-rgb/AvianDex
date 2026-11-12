@@ -1,0 +1,132 @@
+{
+  "id": "0098",
+  "name": "西方秧雞",
+  "scientificName": "Rallus aquaticus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Rallus aquaticus adult representative",
+  "similarSpecies": [
+    {
+      "zh": "普通秧雞",
+      "scientificName": "Rallus indicus",
+      "asset": "eastern-water-rail.png",
+      "framing": "whole-bird",
+      "distinction": "Adult Eastern Water Rail R.indicus: dark lores/eye stripe with dull grey supercilium, extensive white throat and brown wash grey breast/upper belly, black-white barred flank/lower belly and barred white undertail; red bill base/lower mandible dark culmen tip. Breeds N Mongolia/E Siberia/NE China/Sakhalin/N Japan winters NE India/Bangladesh/Myanmar/NThailand/NLaos/ESEChina/Korea/SJapan. LC decreasing."
+    },
+    {
+      "zh": "灰胸秧雞",
+      "scientificName": "Lewinia striata",
+      "asset": "slaty-breasted-rail.png",
+      "framing": "whole-bird",
+      "distinction": "Adult Slaty-breasted Rail Lewinia striata rusty chestnut crown/nape and irregular white/black crossbars upperparts vs black-centred streaks of Rallus; shorter deeper bill pink base/dark culmen, grey underparts pale throat. Juvenile/immature differs. LC increasing globally despite local HK decline."
+    }
+  ],
+  "featureCrops": [
+    [
+      0.61,
+      0.14,
+      0.84,
+      0.37
+    ],
+    [
+      0.75,
+      0.21,
+      0.98,
+      0.38
+    ],
+    [
+      0.19,
+      0.24,
+      0.5,
+      0.43
+    ],
+    [
+      0.25,
+      0.36,
+      0.52,
+      0.57
+    ]
+  ],
+  "featureLabels": [
+    "灰面無明顯眼紋",
+    "細長紅嘴",
+    "褐背黑色羽心",
+    "黑白橫斑側腹"
+  ],
+  "featureNotes": [
+    "灰面無明顯眼紋",
+    "細長紅嘴",
+    "褐背黑色羽心",
+    "黑白橫斑側腹"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "ESP",
+      "DEU",
+      "MAR",
+      "RUS",
+      "TUR",
+      "IRN",
+      "KAZ",
+      "CHN",
+      "IND"
+    ],
+    "note": "Adult representative.25–28cm rail with long fine slightly decurved red bill darker culmen/tip, dull red pink legs; no or vestigial dark eye stripe, less extensive white throat and darker grey underparts lacking brown tinge vs R.indicus. Few/no indistinct undertail bars researched but artificial artwork undertail not reliable, do not label that as demonstrated diagnostic. Europe/N Africa through W/CAsia to NW China, breeding Xinjiang, north populations winter N Africa/SW/SAsia. korejewi eastern range presumed HK form not assigned to art. HK accidental. LC decreasing. World partial native-country overview, not complete range or precise occurrence/season polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/007400",
+      "use": "Substantive text read despite embedded Macaulay bot-block. Adult representative.25–28cm rail with long fine slightly decurved red bill darker culmen/tip, dull red pink legs; no or vestigial dark eye stripe, less extensive white throat and darker grey underparts lacking brown tinge vs R.indicus. Few/no indistinct undertail bars researched but artificial artwork undertail not reliable, do not label that as demonstrated diagnostic. Europe/N Africa through W/CAsia to NW China, breeding Xinjiang, north populations winter N Africa/SW/SAsia. korejewi eastern range presumed HK form not assigned to art. HK accidental. LC decreasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/007500",
+      "use": "Comparison identification/range/conservation read. Adult Eastern Water Rail R.indicus: dark lores/eye stripe with dull grey supercilium, extensive white throat and brown wash grey breast/upper belly, black-white barred flank/lower belly and barred white undertail; red bill base/lower mandible dark culmen tip. Breeds N Mongolia/E Siberia/NE China/Sakhalin/N Japan winters NE India/Bangladesh/Myanmar/NThailand/NLaos/ESEChina/Korea/SJapan. LC decreasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/007600",
+      "use": "Comparison substantive identification/range/conservation read. Adult Slaty-breasted Rail Lewinia striata rusty chestnut crown/nape and irregular white/black crossbars upperparts vs black-centred streaks of Rallus; shorter deeper bill pink base/dark culmen, grey underparts pale throat. Juvenile/immature differs. LC increasing globally despite local HK decline."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime authoritative name/scientificName unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Six runtime scores unchanged."
+    }
+  ],
+  "notes": [
+    "New AI adult representative art, basic visual review only not independent expert validation. Comparisons adult, not to scale.",
+    "Rallus identification needs multiple field characters. Undertail bar differences researched but generated undertail not reliable enough for diagnostic label.",
+    "HK accidental status not app IUCN rarity; LC decreasing global retained.",
+    "Image and production JSON/crops synchronized. Full-world partial native-country overview. No UI/runtime/SW/R2/slim registration or ZIP."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ]
+}

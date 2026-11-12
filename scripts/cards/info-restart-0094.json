@@ -1,0 +1,133 @@
+{
+  "id": "0094",
+  "name": "短嘴金絲燕",
+  "scientificName": "Aerodramus brevirostris",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Aerodramus brevirostris innominatus adult representative",
+  "similarSpecies": [
+    {
+      "zh": "小白腰雨燕",
+      "scientificName": "Apus nipalensis",
+      "asset": "house-swift.png",
+      "framing": "whole-bird",
+      "distinction": "Runtime House Swift taxonomy retained. More compact swift with contrasting WHITE RUMP, pale chin/throat and shallow tail fork, unlike grey-brown Himalayan rump. Current external sources lump nipalensis group into Apus affinis; no runtime taxonomic migration authorized."
+    },
+    {
+      "zh": "灰喉針尾雨燕",
+      "scientificName": "Hirundapus cochinchinensis",
+      "asset": "0092.png",
+      "framing": "whole-bird",
+      "distinction": "Larger powerful needletail with silver saddle, short square needle-spined tail and white rear flank/undertail horseshoe, not swiftlet; comparisons not to scale. Substantive identification/range/conservation read. Sexes similar. Dark blue-gloss brown with pale SILVERY GREY SADDLE. ILL-DEFINED DUSKY GREY BROWN THROAT and DARK FOREHEAD unlike white-throated. White horseshoe rear flank/undertail and short square needle-spined tail. Distant birds very hard to separate; close head/throat views important. Monotypic breeds central Nepal/NE India/N Myanmar/S China to E Guangxi/Hainan/Taiwan, winters Thailand/Malay peninsula/Sumatra/W Java. LC stable globally; scarce HK spring passage declined locally since1990s."
+    }
+  ],
+  "featureCrops": [
+    [
+      0.62,
+      0.28,
+      0.81,
+      0.45
+    ],
+    [
+      0.54,
+      0.31,
+      0.73,
+      0.5
+    ],
+    [
+      0.31,
+      0.45,
+      0.51,
+      0.64
+    ],
+    [
+      0.2,
+      0.55,
+      0.41,
+      0.75
+    ]
+  ],
+  "featureLabels": [
+    "暗色頭冠眼區",
+    "較淡灰褐頸背",
+    "灰褐色腰部",
+    "尾端微凹"
+  ],
+  "featureNotes": [
+    "暗色頭冠眼區",
+    "較淡灰褐頸背",
+    "灰褐色腰部",
+    "尾端微凹"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "CHN",
+      "MMR",
+      "THA",
+      "BGD",
+      "MYS",
+      "VNM"
+    ],
+    "note": "13–14cm sexes alike. Representative innominatus blackish brown upperparts with paler GREY BROWN rump not white; dark crown vs paler grey-brown nape and dark eye area; underparts paler grey brown. Blunt wing tips, slightly notched tail closed; more fluttering than House Swift. Rump colour varies, dark-rumped birds within variation, light changes apparent colours. Breeds Himalaya to central China/Myanmar/N Thailand/SW China; winters Bangladesh/Malay peninsula. Regular nonbreeding S China/N Vietnam, vagrants Taiwan/Korea/Japan excluded partial map. LC stable; scarce increasing HK visitors all months. Partial native-country overview only, not complete or exact occurrence/season polygons; green not whole-country occupancy.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004100",
+      "use": "Substantive identification/range/conservation read. 13–14cm sexes alike. Representative innominatus blackish brown upperparts with paler GREY BROWN rump not white; dark crown vs paler grey-brown nape and dark eye area; underparts paler grey brown. Blunt wing tips, slightly notched tail closed; more fluttering than House Swift. Rump colour varies, dark-rumped birds within variation, light changes apparent colours. Breeds Himalaya to central China/Myanmar/N Thailand/SW China; winters Bangladesh/Malay peninsula. Regular nonbreeding S China/N Vietnam, vagrants Taiwan/Korea/Japan excluded partial map. LC stable; scarce increasing HK visitors all months."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Six runtime scores unchanged, vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004700",
+      "use": "Comparison local House swift identification only: compact, white rump, shallow tail fork. Updated header Little Swift A.affinis differs runtime A.nipalensis; do not import broad lumped range or replace runtime taxonomy."
+    },
+    {
+      "url": "https://ebird.org/species/houswi1",
+      "use": "Taxonomy cross-check now Little Swift (House) Apus affinis [nipalensis Group]; runtime A.nipalensis retained by frozen-data policy."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004300",
+      "use": "Substantive identification/range/conservation read. Sexes similar. Dark blue-gloss brown with pale SILVERY GREY SADDLE. ILL-DEFINED DUSKY GREY BROWN THROAT and DARK FOREHEAD unlike white-throated. White horseshoe rear flank/undertail and short square needle-spined tail. Distant birds very hard to separate; close head/throat views important. Monotypic breeds central Nepal/NE India/N Myanmar/S China to E Guangxi/Hainan/Taiwan, winters Thailand/Malay peninsula/Sumatra/W Java. LC stable globally; scarce HK spring passage declined locally since1990s."
+    }
+  ],
+  "notes": [
+    "New AI adult innominatus representative; basic visual review not expert validation. Rump tone variable and lighting dependent; artificial art not diagnostic key.",
+    "Slight tail notch depicted; no claim single illustration reliably distinguishes all Aerodramus swiftlets. Comparisons not to scale.",
+    "External House Swift taxonomic lump noted, runtime A.nipalensis unchanged.",
+    "Image and crop JSON synchronized; full-world partial native-country overview, no UI/runtime/SW/R2/slim registration or ZIP."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ]
+}

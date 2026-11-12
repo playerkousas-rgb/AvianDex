@@ -1,0 +1,128 @@
+{
+  "id": "0045",
+  "name": "綠翅鴨",
+  "scientificName": "Anas crecca",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Anas crecca adult male breeding plumage",
+  "similarSpecies": [
+    {
+      "zh": "美洲綠翅鴨",
+      "scientificName": "Anas carolinensis",
+      "asset": "american-teal.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥胸側為垂直白帶，缺綠翅鴨的水平白脅線，綠眼斑淡邊亦較少。"
+    },
+    {
+      "zh": "針尾鴨",
+      "scientificName": "Anas acuta",
+      "asset": "pintail.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥長頸、褐頭及頸側白紋，中央尾羽細長。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.59,
+      0.26,
+      0.93,
+      0.6
+    ],
+    [
+      0.56,
+      0.25,
+      0.82,
+      0.51
+    ],
+    [
+      0.22,
+      0.39,
+      0.56,
+      0.73
+    ],
+    [
+      0.03,
+      0.43,
+      0.29,
+      0.69
+    ]
+  ],
+  "featureLabels": [
+    "頭喙",
+    "綠色眼斑",
+    "水平白紋",
+    "尾側黃斑"
+  ],
+  "featureNotes": [
+    "栗色頭配短暗灰喙",
+    "眼後綠斑有窄橙黃色邊",
+    "雄鳥灰色脅部上方呈水平白線",
+    "黑色尾下覆羽兩側呈暖皮黃色"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "JPN",
+      "IND",
+      "MNG",
+      "GBR",
+      "FRA",
+      "ESP",
+      "EGY",
+      "TWN",
+      "THA"
+    ],
+    "note": "Full world partial native-country overview only, not complete range, not all national territory occupied; breeding and winter countries combined without seasonal polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002400",
+      "use": "Substantive identification, range, systematics and conservation text read; LC."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six scores unchanged, vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002500",
+      "use": "Substantive text read despite embedded media bot placeholder: American male vertical white breast-side line and less pale head border; Anas carolinensis treated separately."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002300",
+      "use": "Pintail comparison identification read."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Male breeding plumage main image; folded-wing crops do not claim in-flight speculum illustration. No delivered illustrations remade.",
+    "Runtime English Green-winged Teal retained unchanged, but illustration follows authoritative scientific name Anas crecca (Eurasian), NOT carolinensis. Source treats species separately."
+  ]
+}

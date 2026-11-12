@@ -1,0 +1,135 @@
+{
+  "id": "0101",
+  "name": "白骨頂",
+  "scientificName": "Fulica atra",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Fulica atra adult representative",
+  "similarSpecies": [
+    {
+      "zh": "黑水雞",
+      "scientificName": "Gallinula chloropus",
+      "asset": "comparison-0100.png",
+      "framing": "whole-bird",
+      "distinction": "Substantive identification/range/conservation read. Adult Eurasian/Common Moorhen Gallinula chloropus,30–38cm dark blackish-brown upperparts greyish underparts, WHITE upper-flank line and WHITE undertail often displayed during tail flicking. RED frontal shield and bill base YELLOW tip, yellow legs long unlobed toes. Juveniles dull brown, paler belly/white throat, grey legs and greenish/grey shield not adult features. Nominate Europe/N Africa/WCSAsia to China/HK; other subspecies C/S Africa/Indian Ocean islands/Malay archipelago/Indonesia/Philippines. China S resident NNW/NE summer visitor. LC stable globally despite HK local decline. Omnivorous swimming/walking vegetated wetlands."
+    },
+    {
+      "zh": "白胸苦惡鳥",
+      "scientificName": "Amaurornis phoenicurus",
+      "asset": "white-breasted-waterhen.png",
+      "framing": "whole-bird",
+      "distinction": "Adult white face breast/belly, rust undertail, lime bill red base and unlobed toes; unlike coot white bill/shield and lobed toes. LC."
+    }
+  ],
+  "featureCrops": [
+    [
+      0.69,
+      0.1,
+      0.95,
+      0.34
+    ],
+    [
+      0.69,
+      0.13,
+      0.85,
+      0.29
+    ],
+    [
+      0.29,
+      0.32,
+      0.57,
+      0.6
+    ],
+    [
+      0.55,
+      0.72,
+      0.9,
+      0.91
+    ]
+  ],
+  "featureLabels": [
+    "白嘴及白額盾",
+    "紅色虹膜",
+    "暗灰色體羽",
+    "腳趾寬闊瓣膜"
+  ],
+  "featureNotes": [
+    "白嘴及白額盾",
+    "紅色虹膜",
+    "暗灰色體羽",
+    "腳趾寬闊瓣膜"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "ESP",
+      "MAR",
+      "RUS",
+      "CHN",
+      "IND",
+      "JPN",
+      "PHL",
+      "MYS",
+      "IDN",
+      "PNG",
+      "AUS",
+      "NZL"
+    ],
+    "note": "Adult36–39cm compact broad dark body, white bill/frontal shield and red iris, huge lobed toes yellow legs. Pale trailing secondary edge flight-only not demonstrated. First-winter olivebrown tinged upperparts and white-tipped throat/cheek/underparts different. Europe/Asia south Arctic, northerly populations winter N Africa/S China/SE Asia; residents Java/Bali/NewGuinea/Australasia, nominate Europe/NAfrica to India/Japan/SEAsia/Philippines/Borneo. LC increasing globally despite sharp HK winter declines. Full-world partial native-country overview only; not complete range, whole-country occupancy or exact occurrence/season polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/007800",
+      "use": "Substantive identification/range/conservation read. Adult36–39cm compact broad dark body, white bill/frontal shield and red iris, huge lobed toes yellow legs. Pale trailing secondary edge flight-only not demonstrated. First-winter olivebrown tinged upperparts and white-tipped throat/cheek/underparts different. Europe/Asia south Arctic, northerly populations winter N Africa/S China/SE Asia; residents Java/Bali/NewGuinea/Australasia, nominate Europe/NAfrica to India/Japan/SEAsia/Philippines/Borneo. LC increasing globally despite sharp HK winter declines."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy/name unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Six runtime scores unchanged; missing pending not zero, vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/007700",
+      "use": "Comparison identification/range/conservation read. Substantive identification/range/conservation read. Adult Eurasian/Common Moorhen Gallinula chloropus,30–38cm dark blackish-brown upperparts greyish underparts, WHITE upper-flank line and WHITE undertail often displayed during tail flicking. RED frontal shield and bill base YELLOW tip, yellow legs long unlobed toes. Juveniles dull brown, paler belly/white throat, grey legs and greenish/grey shield not adult features. Nominate Europe/N Africa/WCSAsia to China/HK; other subspecies C/S Africa/Indian Ocean islands/Malay archipelago/Indonesia/Philippines. China S resident NNW/NE summer visitor. LC stable globally despite HK local decline. Omnivorous swimming/walking vegetated wetlands."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008700",
+      "use": "Comparison identification/range/conservation read. Adult white face breast/belly, rust undertail, lime bill red base and unlobed toes; unlike coot white bill/shield and lobed toes. LC."
+    }
+  ],
+  "notes": [
+    "New AI art basic visual review only, not independent expert validation; comparisons not to scale.",
+    "Image and production JSON/crops synchronized per species after generation. No UI/runtime/SW/R2/slim registration change, no ZIP.",
+    "World partial native-country overview; local HK status is not global IUCN category.",
+    "Card uses authoritative runtime Chinese 白骨頂; HKBWS alternate 骨頂雞 refers same Fulica atra. Adult art does not represent first-winter plumage."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ]
+}

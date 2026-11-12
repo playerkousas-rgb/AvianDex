@@ -1,0 +1,131 @@
+{
+  "id": "0093",
+  "name": "褐背針尾雨燕",
+  "scientificName": "Hirundapus giganteus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Hirundapus giganteus indicus adult",
+  "similarSpecies": [
+    {
+      "zh": "白喉針尾雨燕",
+      "scientificName": "Hirundapus caudacutus",
+      "asset": "0091.png",
+      "framing": "whole-bird",
+      "distinction": "Substantive identification/range/conservation read. Sexes similar. Dark blue-gloss brown, PALE SILVERY GREY SADDLE on back, broad sharply contrasting WHITE THROAT plus WHITE LORES/FOREHEAD BAND. White horseshoe rear flanks/undertail around dark belly, short square tail tiny needle spines only close views. caudacutus central Siberia to Sakhalin/Kurils/Mongolia/NE China/Korea/Japan breeding, winters S New Guinea/E Australia; nudipes N Pakistan/Himalaya/N Myanmar/SW China, winter poorly known possibly Malaya/Java. LC stable globally; scarce HK spring migrant declined locally since1990s, not a global IUCN trend."
+    },
+    {
+      "zh": "灰喉針尾雨燕",
+      "scientificName": "Hirundapus cochinchinensis",
+      "asset": "0092.png",
+      "framing": "whole-bird",
+      "distinction": "Substantive identification/range/conservation read. Sexes similar. Dark blue-gloss brown with pale SILVERY GREY SADDLE. ILL-DEFINED DUSKY GREY BROWN THROAT and DARK FOREHEAD unlike white-throated. White horseshoe rear flank/undertail and short square needle-spined tail. Distant birds very hard to separate; close head/throat views important. Monotypic breeds central Nepal/NE India/N Myanmar/S China to E Guangxi/Hainan/Taiwan, winters Thailand/Malay peninsula/Sumatra/W Java. LC stable globally; scarce HK spring passage declined locally since1990s."
+    }
+  ],
+  "featureCrops": [
+    [
+      0.37,
+      0.36,
+      0.63,
+      0.61
+    ],
+    [
+      0.57,
+      0.33,
+      0.78,
+      0.53
+    ],
+    [
+      0.27,
+      0.49,
+      0.48,
+      0.66
+    ],
+    [
+      0.2,
+      0.53,
+      0.39,
+      0.71
+    ]
+  ],
+  "featureLabels": [
+    "褐色背鞍",
+    "暗褐頭及淡頦",
+    "白色後側腹",
+    "方尾突出針羽"
+  ],
+  "featureNotes": [
+    "褐色背鞍",
+    "暗褐頭及淡頦",
+    "白色後側腹",
+    "方尾突出針羽"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "LKA",
+      "BGD",
+      "MMR",
+      "THA",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Adult indicus representation; sexes similar. Long full body long broad wings short square tail, prominent projecting needle spines, white horseshoe lower flanks/undertail. Pale BROWN saddle vs SILVERY GREY congeners; dark brown throat with paler chin close-up, indicus white loral spot. Artwork not guaranteed to accurately illustrate loral position; do not label it as diagnostic evidence. indicus mainly resident SW India/Sri Lanka/Andamans/NE India/Bangladesh/Myanmar/Thailand/Cambodia/Vietnam, some northern birds move S Thai-Malay peninsula. Nominate Malay peninsula/Greater Sundas/Palawan. LC decreasing. HK accidental photographed Po Toi24March2012. Partial native-country overview not whole-country occupancy or complete range; world viewport.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004400",
+      "use": "Identification/range/conservation substantive read. Adult indicus representation; sexes similar. Long full body long broad wings short square tail, prominent projecting needle spines, white horseshoe lower flanks/undertail. Pale BROWN saddle vs SILVERY GREY congeners; dark brown throat with paler chin close-up, indicus white loral spot. Artwork not guaranteed to accurately illustrate loral position; do not label it as diagnostic evidence. indicus mainly resident SW India/Sri Lanka/Andamans/NE India/Bangladesh/Myanmar/Thailand/Cambodia/Vietnam, some northern birds move S Thai-Malay peninsula. Nominate Malay peninsula/Greater Sundas/Palawan. LC decreasing. HK accidental photographed Po Toi24March2012."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative taxonomy unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Six runtime scores unchanged, vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004200",
+      "use": "Substantive identification/range/conservation read. Sexes similar. Dark blue-gloss brown, PALE SILVERY GREY SADDLE on back, broad sharply contrasting WHITE THROAT plus WHITE LORES/FOREHEAD BAND. White horseshoe rear flanks/undertail around dark belly, short square tail tiny needle spines only close views. caudacutus central Siberia to Sakhalin/Kurils/Mongolia/NE China/Korea/Japan breeding, winters S New Guinea/E Australia; nudipes N Pakistan/Himalaya/N Myanmar/SW China, winter poorly known possibly Malaya/Java. LC stable globally; scarce HK spring migrant declined locally since1990s, not a global IUCN trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004300",
+      "use": "Substantive identification/range/conservation read. Sexes similar. Dark blue-gloss brown with pale SILVERY GREY SADDLE. ILL-DEFINED DUSKY GREY BROWN THROAT and DARK FOREHEAD unlike white-throated. White horseshoe rear flank/undertail and short square needle-spined tail. Distant birds very hard to separate; close head/throat views important. Monotypic breeds central Nepal/NE India/N Myanmar/S China to E Guangxi/Hainan/Taiwan, winters Thailand/Malay peninsula/Sumatra/W Java. LC stable globally; scarce HK spring passage declined locally since1990s."
+    }
+  ],
+  "notes": [
+    "New AI art basic visual review only, not independent expert validation. Adult indicus representation, not to scale with comparisons.",
+    "Pale brown saddle rather than silvery grey; white loral spot is researched but image position is not reliable, so no diagnostic loral crop label.",
+    "Distant needletails difficult; identification needs multiple field characters not artificial artwork.",
+    "Production JSON synchronized with new image/crops. Full-world partial native-country map, no occurrence/season polygons. No UI/runtime/SW/R2/slim registration or ZIP."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "0085",
+  "name": "小杜鵑",
+  "scientificName": "Cuculus poliocephalus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Cuculus poliocephalus adult male grey morph",
+  "similarSpecies": [
+    {
+      "zh": "大杜鵑",
+      "scientificName": "Cuculus canorus",
+      "asset": "0087.png",
+      "framing": "whole-bird",
+      "distinction": "Adult grey male representative nominate-type: YELLOW iris and eye ring, fine belly crossbars, relatively pale grey mantle vs Oriental but bakeri dark overlaps. No clearcut white UNDERWING bar vs Oriental; folded-wing image does NOT demonstrate this flight trait. Europe/N Africa/SWAsia/Russia/Mongolia/N Central China/Kamchatka/Japan and Himalaya/N Indochina/SChina breeding, winters Africa/S SEAsia. LC stable; HK accidental/rare spring, subspecies uncertain."
+    },
+    {
+      "zh": "東方中杜鵑",
+      "scientificName": "Cuculus optatus",
+      "asset": "0088.png",
+      "framing": "whole-bird",
+      "distinction": "Adult grey male BROWN iris yellow ring, dark grey mantle, much BROADER widely spaced belly bars vs common/lesser; some birds buff undertail broad bars. Broad white underwing bar is flight trait NOT demonstrated in folded-wing art. Visually indistinguishable from Himalayan Cuckoo C.saturatus; usually measurements/song required. Breeds W Russia/Siberia/Kamchatka S Kazakhstan/Altai/Mongolia/NChina/Korea/Japan, winters SEAsia/Australia. Taiwan breeding taxonomy uncertain EXCLUDED map. LC decreasing."
+    }
+  ],
+  "featureCrops": [
+    [
+      0.56,
+      0.06,
+      0.91,
+      0.4
+    ],
+    [
+      0.51,
+      0.32,
+      0.79,
+      0.65
+    ],
+    [
+      0.25,
+      0.51,
+      0.53,
+      0.79
+    ],
+    [
+      0.01,
+      0.69,
+      0.33,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "褐眼黃眼圈",
+    "疏落不全腹斑",
+    "素皮黃色尾下",
+    "白斑漸層長尾"
+  ],
+  "featureNotes": [
+    "褐眼黃眼圈",
+    "疏落不全腹斑",
+    "素皮黃色尾下",
+    "白斑漸層長尾"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "AFG",
+      "PAK",
+      "IND",
+      "NPL",
+      "CHN",
+      "RUS",
+      "KOR",
+      "JPN",
+      "KEN",
+      "TZA"
+    ],
+    "note": "Adult grey morph small slim finebill, brown iris yellow ring, sparser widely-spaced INCOMPLETE blackish lower-chest/belly bars and PLAIN BUFF undertail coverts. Breeds Afghanistan/N Pakistan/Himalayas to SE Tibet/N Indochina/much China/Ussuriland/Korea/Japan, winters India/E Africa. LC stable. Source length38–40cm appears inconsistent with its small-congener description; no new length claim, runtime visibility unchanged. Full-world partial native-country overview only, not whole-country occupancy, precise occurrence/season polygons or complete range.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005800",
+      "use": "Substantive identification/range/conservation read. Adult grey morph small slim finebill, brown iris yellow ring, sparser widely-spaced INCOMPLETE blackish lower-chest/belly bars and PLAIN BUFF undertail coverts. Breeds Afghanistan/N Pakistan/Himalayas to SE Tibet/N Indochina/much China/Ussuriland/Korea/Japan, winters India/E Africa. LC stable. Source length38–40cm appears inconsistent with its small-congener description; no new length claim, runtime visibility unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six scores unchanged; missing pending not zero, vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/006100",
+      "use": "Comparison identification/range read. Adult grey male representative nominate-type: YELLOW iris and eye ring, fine belly crossbars, relatively pale grey mantle vs Oriental but bakeri dark overlaps. No clearcut white UNDERWING bar vs Oriental; folded-wing image does NOT demonstrate this flight trait. Europe/N Africa/SWAsia/Russia/Mongolia/N Central China/Kamchatka/Japan and Himalaya/N Indochina/SChina breeding, winters Africa/S SEAsia. LC stable; HK accidental/rare spring, subspecies uncertain."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/006000",
+      "use": "Comparison identification/range read. Adult grey male BROWN iris yellow ring, dark grey mantle, much BROADER widely spaced belly bars vs common/lesser; some birds buff undertail broad bars. Broad white underwing bar is flight trait NOT demonstrated in folded-wing art. Visually indistinguishable from Himalayan Cuckoo C.saturatus; usually measurements/song required. Breeds W Russia/Siberia/Kamchatka S Kazakhstan/Altai/Mongolia/NChina/Korea/Japan, winters SEAsia/Australia. Taiwan breeding taxonomy uncertain EXCLUDED map. LC decreasing."
+    }
+  ],
+  "notes": [
+    "New AI adult grey-morph male images, basic visual review only, not independent expert validation. Do not use as female hepatic/juvenile identification.",
+    "Cuculus congeners are difficult to identify from a single image; artificial artwork is illustrative not a diagnostic key. Voice/measurements and multiple field characters may be required.",
+    "HKBWS external profiles differ from runtime numbering:0087 common=006100,0088 oriental=006000.",
+    "No in-flight underwing image supplied: no claim folded wings demonstrate diagnostic underwing band.",
+    "Comparison whole birds not to scale; map full world partial native-country overview only. No UI/runtime/SW/R2/slim registration change, no ZIP.",
+    "JSON created and crops reviewed alongside each new species image, not prefilled speculative crops for all remaining birds.",
+    "Source length text appears inconsistent; not copied as a card body-length claim or used to overwrite runtime vEst."
+  ]
+}

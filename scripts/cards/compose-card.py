@@ -170,6 +170,28 @@ def font(sz, bold=True):
     return _fc[key]
 
 
+def slim_feature_label(label):
+    """Fit a feature caption inside its 238px column, without shrinking short labels.
+
+    Grow the original 100px capsule to at most 210px, keeping 24px padding.
+    Overlong captions retain a readable >=18px font and are ellipsized; specs
+    should still prefer concise features or body-part names over sentences.
+    """
+    label = ' '.join(str(label).split())
+    size, padding, maximum = 22, 24, 210
+    def width(text, sz):
+        f = font(sz)
+        box = f.getbbox(text)
+        return max(f.getlength(text), box[2] - box[0]) / SS
+    while size > 18 and width(label, size) + padding > maximum:
+        size -= 1
+    if width(label, size) + padding > maximum:
+        while label and width(label + '…', size) + padding > maximum:
+            label = label[:-1]
+        label += '…'
+    return label, size, min(maximum, max(100, math.ceil(width(label, size) + padding)))
+
+
 class Canvas:
     def __init__(self):
         self.img = Image.new('RGB', (W * SS, H * SS), CREAM)
@@ -729,8 +751,9 @@ def compose_slim(f, art, out_scale=None):
 
     # ── 名牌 ──
     for (cx, cy, r), lab in zip(M_ZOOM, ZOOM_LABELS):
-        cv.rr((cx - 50, cy + r - 6, cx + 50, cy + r + 26), 16, fill=dark(TH, 0.3), outline=GOLD, width=2.5)
-        cv.text(cx, cy + r + 10, lab, 22, cream, anchor='mm')
+        label, label_size, label_width = slim_feature_label(lab)
+        cv.rr((cx - label_width / 2, cy + r - 6, cx + label_width / 2, cy + r + 26), 16, fill=dark(TH, 0.3), outline=GOLD, width=2.5)
+        cv.text(cx, cy + r + 10, label, label_size, cream, anchor='mm')
     for i, (cx, cy, r) in enumerate(M_SIM):
         nm = f['sim'][i] if i < len(f['sim']) else ''
         if nm:

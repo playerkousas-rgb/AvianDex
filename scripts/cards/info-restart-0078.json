@@ -7,74 +7,65 @@
     1024,
     1536
   ],
-  "status": "uploaded_google_drive_verified",
+  "status": "review_before_upload",
   "iucn": {
     "code": "LC",
-    "zh": "無危",
-    "assessmentNote": "全球LC穩定；港罕見夏候"
+    "zh": "無危"
   },
-  "illustrationTaxon": "Clamator coromandus adult breeding plumage: black peaked crest, narrow white hind collar, orange-buff throat, chestnut-red wings, pale belly, long graduated black tail",
+  "illustrationTaxon": "Clamator coromandus adult",
   "similarSpecies": [
     {
-      "zh": "褐翅鴉鵑（成鳥）",
-      "scientificName": "Centropus sinensis",
-      "asset": "greater-coucal.png",
+      "zh": "大鷹鵑",
+      "scientificName": "Hierococcyx sparverioides",
+      "asset": "0081.png",
       "framing": "whole-bird",
-      "sex": "adult",
-      "distinction": "褐翅鴉鵑是體型更大的鴉鵑，黑身與栗褐翼，沒有白色後頸環或尖長冠；紅翅鳳頭鵑較纖長，頭冠、白環及橙喉醒目。"
+      "distinction": "Adult38–40cm grey crown/face yellow orbital ring brown mantle/wings, white underbody HEAVY darkrufous breast/neck streaks RUFOUS BARS lowerbreast/belly/flanks, grey darkbarred tail, dark above/yellowgreen below bill yellow feet. N Pakistan/Himalaya to Myanmar/China/Indochina; winter S India/Greater Sundas/Philippines/Sulawesi. LC stable."
     },
     {
-      "zh": "噪鵑（成鳥雄）",
-      "scientificName": "Eudynamys scolopaceus",
-      "asset": "asian-koel.png",
+      "zh": "烏鵑",
+      "scientificName": "Surniculus lugubris",
+      "asset": "0080.png",
       "framing": "whole-bird",
-      "sex": "adult male",
-      "distinction": "雄噪鵑全身黑亮、紅眼，沒有栗紅翼、白色後頸環與長冠；紅翅鳳頭鵑具黑冠、白環、橙喉和栗紅翼。"
+      "distinction": "Adult23–25cm slim glossy blueblack, slightly forked tail slender arched bill, white fine bars only undertail/outermost tail underside; juvenile spotting not shown. barussarum E India/N Myanmar/N Indochina/S China to Malaysia/Greater Sundas winter. LC decreasing, HK scarce passage spring mainly."
     }
   ],
   "featureCrops": [
     [
-      0.06,
-      0.07,
-      0.41,
-      0.36
+      0.52,
+      0.01,
+      0.89,
+      0.38
     ],
     [
+      0.54,
+      0.19,
+      0.82,
+      0.47
+    ],
+    [
+      0.25,
       0.28,
-      0.21,
-      0.49,
-      0.43
+      0.56,
+      0.62
     ],
     [
-      0.31,
-      0.3,
-      0.66,
-      0.59
-    ],
-    [
-      0.55,
-      0.55,
-      0.94,
-      0.84
+      0,
+      0.69,
+      0.32,
+      1
     ]
   ],
-  "featureSources": [
-    "pixel.png",
-    "pixel.png",
-    "pixel.png",
-    "pixel.png"
-  ],
   "featureLabels": [
-    "黑色尖長冠",
-    "白色後頸環",
+    "黑色尖長鳳頭",
+    "白頸環橙喉",
     "栗紅色翼羽",
-    "長尾黑羽"
+    "黑色漸長尾羽"
   ],
   "featureNotes": [
-    "成鳥冠羽黑色而突出，輪廓尖長",
-    "黑色頭部後方有窄白領環，喉為橙淡褐",
-    "覆羽至飛羽呈醒目的栗紅色",
-    "尾長且漸層，黑色帶細白羽端"
+    "成鳥黑頭及尖長黑冠",
+    "白後頸環，橙皮黃喉斑而腹部大致白色",
+    "成鳥翼栗紅，上背及尾黑色",
+    "長黑尾；全鳥圖保留完整尾尖"
   ],
   "rangeMap": {
     "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
@@ -91,76 +82,45 @@
     "countryIso3": [
       "IND",
       "NPL",
-      "BTN",
-      "BGD",
       "MMR",
-      "THA",
-      "LAO",
-      "KHM",
-      "VNM",
       "CHN",
-      "LKA",
+      "VNM",
+      "THA",
       "MYS",
-      "BRN",
       "IDN",
+      "LKA",
       "PHL"
     ],
-    "note": "Partial native-range overview: breeds from northern India and Nepal east through Myanmar and parts of Indochina to southern/eastern China; winters in central/southern India, Sri Lanka, the Thai-Malay Peninsula and parts of maritime Southeast Asia. Country highlights are a broad seasonal range overview, not nationwide occupancy, precise range polygons, or Hong Kong occurrences. In Hong Kong it is an uncommon summer visitor and scarce passage migrant, using closed-canopy shrubland, forest and other wooded habitats.",
+    "note": "World-view partial native-country overview, not whole-country occupancy, complete range or seasonal occurrence polygons. Adult45–47cm black head/crest white hindcollar black mantle/tail chestnut-red wing, mostly whitish underbody with orange-buff throat patch and blackish vent, dark bill/feet. LC stable. N India/Nepal to Myanmar/Indochina/S E China breeding, winters India/Sri Lanka/Thai Malay/Greater Sundas/Philippines.",
     "viewport": "world"
   },
   "sources": [
     {
       "url": "https://avifauna.hkbws.org.hk/species/0040/005000",
-      "use": "Full HKBWS Chestnut-winged Cuckoo account read: Category I; uncommon summer visitor and scarce passage migrant. Adults 45–47 cm; black head with prominent crest, narrow white hind collar, black mantle/tail, chestnut-red wings, mostly whitish underbody with orange-buff throat patch, reddish-brown iris, black bill/legs. Occurs in wooded habitats; breeding-season survey suggests distributional decline in Hong Kong. Range and local seasonality; IUCN LC, population trend stable."
+      "use": "Substantive identification/range/conservation re-read for remake. Adult45–47cm black head/crest white hindcollar black mantle/tail chestnut-red wing, mostly whitish underbody with orange-buff throat patch and blackish vent, dark bill/feet. LC stable. N India/Nepal to Myanmar/Indochina/S E China breeding, winters India/Sri Lanka/Thai Malay/Greater Sundas/Philippines."
     },
     {
-      "url": "https://ebird.org/species/chwcuc1",
-      "use": "Cornell eBird/Merlin species account read: peaked black crest, bright orange throat, rusty wings, black back, white nape and belly; dense canopy foraging; varied metallic/raspy calls. Used as a cross-check for adult identification."
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative unchanged runtime taxonomy."
     },
     {
-      "url": "https://avifauna.hkbws.org.hk/species/0040/004800",
-      "use": "HKBWS Greater Coucal account (full account previously read for 0076): larger, long-tailed coucal; glossy black body, orange-brown wings and reddish-brown eye; used to distinguish comparator."
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores, missing stays pending, vEst retained."
     },
     {
-      "url": "https://ebird.org/species/grecou1",
-      "use": "Cornell eBird Greater Coucal comparison: large coucal with rusty wings, black body and red eyes."
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005500",
+      "use": "Comparison adult morphology re-read. Adult38–40cm grey crown/face yellow orbital ring brown mantle/wings, white underbody HEAVY darkrufous breast/neck streaks RUFOUS BARS lowerbreast/belly/flanks, grey darkbarred tail, dark above/yellowgreen below bill yellow feet. N Pakistan/Himalaya to Myanmar/China/Indochina; winter S India/Greater Sundas/Philippines/Sulawesi. LC stable."
     },
     {
-      "url": "https://ebird.org/species/asikoe2",
-      "use": "Cornell eBird Asian Koel species account; adult male glossy black, red eye, no chestnut wings or white nape collar; comparator image is the previously reviewed adult male illustration."
-    },
-    {
-      "url": "src/data/birds.json",
-      "use": "Authoritative runtime Chinese and English names."
-    },
-    {
-      "url": "src/data/birdTaxonomy.json",
-      "use": "Authoritative runtime scientific name, order and family."
-    },
-    {
-      "url": "src/data/dexScores.json",
-      "use": "Authoritative runtime score values; only v=4.1 and r=4.0 are defined for 0078. Missing i/a/c/o remain pending and are not inferred."
-    },
-    {
-      "path": "cards/art/info-restart-0078/pixel.png",
-      "use": "Custom locally drawn pixel-art adult based on diagnostic plumage in HKBWS and Cornell references; not a photographic record."
-    },
-    {
-      "path": "cards/art/info-restart-0078/greater-coucal.png",
-      "use": "Previously visually reviewed Greater Coucal illustration, reused for comparison."
-    },
-    {
-      "path": "cards/art/info-restart-0078/asian-koel.png",
-      "use": "Previously visually reviewed adult male Asian Koel illustration, reused for comparison."
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005400",
+      "use": "Comparison adult morphology re-read. Adult23–25cm slim glossy blueblack, slightly forked tail slender arched bill, white fine bars only undertail/outermost tail underside; juvenile spotting not shown. barussarum E India/N Myanmar/N Indochina/S China to Malaysia/Greater Sundas winter. LC decreasing, HK scarce passage spring mainly."
     }
   ],
   "notes": [
-    "Adult breeding-plumage illustration focuses on black peaked crest, white hind collar, orange-buff throat, chestnut-red wings and pale underbody.",
-    "Hong Kong status is uncommon summer visitor and scarce passage migrant; HKBWS breeding surveys suggest local distributional decline, while global IUCN status is LC with stable global trend. Keep local and global trends distinct.",
-    "Comparators are adult Greater Coucal and adult male Asian Koel; illustration circles are not to scale.",
-    "Only score fields that exist in runtime dexScores are displayed: v=4.1 and r=4.0. Missing i/a/c/o remain pending; do not estimate or substitute scores. Scores are app entertainment metrics, not scientific evaluation.",
-    "Custom bird illustration has been visually reviewed for framing and major diagnostic features; not independently validated by an ornithologist.",
-    "Map is a qualified partial native-range country overview, not an exact distribution polygon or Hong Kong occurrence map.",
-    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, app slim-registration or shared renderer change."
+    "User explicitly rejected other Agent 0078–0081 and requested new artwork plus matching JSON per completed card. Entire main pixel and feature source newly AI generated; not patched old crude/handdrawn images.",
+    "Basic visual review only, not independent ornithologist verification. Adults represented, male only for0079, not juvenile/female morph identification.",
+    "Full world map only partial native-country highlights; comparison whole birds not to scale.",
+    "Dynamic feature label capsule fits measured text within each column; no app UI/runtime/slim registration/R2/ZIP changes.",
+    "Previous main spec retained only as starting metadata; new crops/comparisons/labels/sources synchronized to new image assets."
   ]
 }

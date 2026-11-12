@@ -1,0 +1,137 @@
+{
+  "id": "0097",
+  "name": "小白腰雨燕",
+  "scientificName": "Apus nipalensis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "依分拆分類保育紀錄"
+  },
+  "illustrationTaxon": "Apus nipalensis adult representative, runtime taxonomy retained",
+  "similarSpecies": [
+    {
+      "zh": "白腰雨燕",
+      "scientificName": "Apus pacificus",
+      "asset": "0096.png",
+      "framing": "whole-bird",
+      "distinction": "Substantive identification/range/conservation read. 17–20cm sexes alike. Long scythe wings and long relatively deeply forked tail, all blackish brown apart contrasting WHITE RUMP band and indistinct pale throat, pale fringed underparts; substantially larger than House Swift. Nominate breeds Siberia/Kamchatka/NChina/Japan, winters Indonesia/Melanesia/Australia. kurodae (kanoi synonym treatment differs) EChina to Guangdong/SJapan/Taiwan/NPhilippines, winters Malaysia/Indonesia/Philippines. Western Guangdong/E Guangxi boundary obscured by Cook swift; map not occurrence polygon. LC stable globally despite local HK migrant decline, local offshore island breeding."
+    },
+    {
+      "zh": "短嘴金絲燕",
+      "scientificName": "Aerodramus brevirostris",
+      "asset": "0094.png",
+      "framing": "whole-bird",
+      "distinction": "Substantive identification/range/conservation read. 13–14cm sexes alike. Representative innominatus blackish brown upperparts with paler GREY BROWN rump not white; dark crown vs paler grey-brown nape and dark eye area; underparts paler grey brown. Blunt wing tips, slightly notched tail closed; more fluttering than House Swift. Rump colour varies, dark-rumped birds within variation, light changes apparent colours. Breeds Himalaya to central China/Myanmar/N Thailand/SW China; winters Bangladesh/Malay peninsula. Regular nonbreeding S China/N Vietnam, vagrants Taiwan/Korea/Japan excluded partial map. LC stable; scarce increasing HK visitors all months."
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.26,
+      0.79,
+      0.43
+    ],
+    [
+      0.37,
+      0.44,
+      0.55,
+      0.59
+    ],
+    [
+      0.43,
+      0.25,
+      0.64,
+      0.49
+    ],
+    [
+      0.26,
+      0.53,
+      0.46,
+      0.69
+    ]
+  ],
+  "featureLabels": [
+    "白色頦喉",
+    "鮮明白腰帶",
+    "暗褐色翼羽",
+    "短尾淺叉"
+  ],
+  "featureNotes": [
+    "白色頦喉",
+    "鮮明白腰帶",
+    "暗褐色翼羽",
+    "短尾淺叉"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "NPL",
+      "IND",
+      "CHN",
+      "MMR",
+      "THA",
+      "VNM",
+      "JPN"
+    ],
+    "note": "Runtime retains House Swift Apus nipalensis, adult sexes alike, compact/stocky swift, white rump and pale chin/throat, shorter less scythe wings and short shallow forked tail unlike Pacific. Updated HKBWS lumps Oriental birds into Little Swift A.affinis nipalensis; explicitly local mainland-China nipalensis distribution Nepal east to SE China/south via Assam/SEAsia, resident Japan. Map conservatively selected Asian countries of nipalensis group only, NOT Africa/SWAsia of broader affinis. HKBWS global LC increasing pertains current lumped taxon, not asserted as split-nipalensis trend. Split LC independently crosschecked BirdGuides IOC10.2 record. HK local breeding/migrant decline not global IUCN category. World partial native-country overview only not precise occupancy/season or complete range.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004700",
+      "use": "Identification and explicit nipalensis subgroup range read including chunk1. Runtime retains House Swift Apus nipalensis, adult sexes alike, compact/stocky swift, white rump and pale chin/throat, shorter less scythe wings and short shallow forked tail unlike Pacific. Updated HKBWS lumps Oriental birds into Little Swift A.affinis nipalensis; explicitly local mainland-China nipalensis distribution Nepal east to SE China/south via Assam/SEAsia, resident Japan. Map conservatively selected Asian countries of nipalensis group only, NOT Africa/SWAsia of broader affinis. HKBWS global LC increasing pertains current lumped taxon, not asserted as split-nipalensis trend. Split LC independently crosschecked BirdGuides IOC10.2 record. HK local breeding/migrant decline not global IUCN category."
+    },
+    {
+      "url": "https://www.birdguides.com/species-guide/ioc/apus-nipalensis/",
+      "use": "Historical split House Swift A.nipalensis IOC10.2 species-level conservation record LC, not current lumped reassessment."
+    },
+    {
+      "url": "https://ebird.org/species/houswi1",
+      "use": "Previously read taxonomy crosscheck now Little Swift (House) Apus affinis [nipalensis Group]."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Frozen authoritative app taxonomy A.nipalensis unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Six runtime scores unchanged; a missing remains pending, vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004600",
+      "use": "Substantive identification/range/conservation read. 17–20cm sexes alike. Long scythe wings and long relatively deeply forked tail, all blackish brown apart contrasting WHITE RUMP band and indistinct pale throat, pale fringed underparts; substantially larger than House Swift. Nominate breeds Siberia/Kamchatka/NChina/Japan, winters Indonesia/Melanesia/Australia. kurodae (kanoi synonym treatment differs) EChina to Guangdong/SJapan/Taiwan/NPhilippines, winters Malaysia/Indonesia/Philippines. Western Guangdong/E Guangxi boundary obscured by Cook swift; map not occurrence polygon. LC stable globally despite local HK migrant decline, local offshore island breeding."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004100",
+      "use": "Substantive identification/range/conservation read. 13–14cm sexes alike. Representative innominatus blackish brown upperparts with paler GREY BROWN rump not white; dark crown vs paler grey-brown nape and dark eye area; underparts paler grey brown. Blunt wing tips, slightly notched tail closed; more fluttering than House Swift. Rump colour varies, dark-rumped birds within variation, light changes apparent colours. Breeds Himalaya to central China/Myanmar/N Thailand/SW China; winters Bangladesh/Malay peninsula. Regular nonbreeding S China/N Vietnam, vagrants Taiwan/Korea/Japan excluded partial map. LC stable; scarce increasing HK visitors all months."
+    }
+  ],
+  "notes": [
+    "New AI adult art with basic visual review, not independent expert validation. Comparisons not to scale.",
+    "External taxonomy updated to A.affinis nipalensis group, runtime A.nipalensis deliberately unchanged. Historical split LC is labelled; do not imply latest independent split assessment or import global lumped trend.",
+    "Map selected nipalensis subgroup Asia only; no African Little Swift range imported.",
+    "Image and JSON/crops synchronized. Adaptive labels, full-world partial native-country overview. No UI/runtime/SW/R2/slim registration or ZIP."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ]
+}
