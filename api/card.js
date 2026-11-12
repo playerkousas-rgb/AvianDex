@@ -38,7 +38,7 @@ export default async function handler(req, res) {
     return bad(res, 405, '請使用 GET 請求');
   }
 
-  const { id, ext, folder } = req.query || {};
+  const { id, ext, folder, v } = req.query || {};
   const idStr = String(id || '').trim();
 
   // fail closed：只接受 1–4 位純數字，統一補成 4 位
@@ -52,7 +52,10 @@ export default async function handler(req, res) {
   const folderStr = String(folder || CARD_FOLDER).trim();
   if (!ALLOWED_FOLDERS.has(folderStr)) return bad(res, 400, '不支援的資料夾');
 
-  const target = `${R2_BASE_URL}/${folderStr}/${paddedId}.${extStr}`;
+  // A validated revision bypasses stale same-key info-card caches after a replacement.
+  const revision = v == null ? '' : String(v);
+  if (revision && !/^[a-zA-Z0-9_-]{1,64}$/.test(revision)) return bad(res, 400, '不支援的圖片版本');
+  const target = `${R2_BASE_URL}/${folderStr}/${paddedId}.${extStr}` + (revision ? `?v=${encodeURIComponent(revision)}` : '');
 
   let upstream;
   try {

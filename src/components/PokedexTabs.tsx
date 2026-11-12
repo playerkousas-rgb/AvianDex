@@ -46,13 +46,13 @@ export const PokedexTabs: React.FC<PokedexTabsProps> = ({ page, onChange, lang, 
             aria-selected={active}
             type="button"
             onClick={() => onChange(tab.id)}
-            className={`relative flex flex-col items-center justify-center gap-0.5 rounded-lg px-1 py-2 border transition-colors ${
+            className={`relative flex flex-row md:flex-col items-center justify-center gap-1 md:gap-0.5 rounded-lg px-1 py-1.5 md:py-2 border transition-colors ${
               active
                 ? 'bg-[#1b1a17] border-amber-400/60 text-amber-200'
                 : 'bg-black/25 border-white/10 text-white/55 hover:bg-black/40 hover:text-white/80'
             }`}
           >
-            <tab.Icon className="w-3.5 h-3.5" />
+            <tab.Icon className="w-3 h-3 md:w-3.5 md:h-3.5" />
             <span className="text-[10px] font-black leading-none tracking-tight">
               <span className="hidden sm:inline">{lang === 'en' ? tab.en : tab.zh}</span>
               <span className="sm:hidden">{lang === 'en' ? tab.shortEn : tab.shortZh}</span>
