@@ -182,5 +182,5 @@ test('設定檔的圖卡網址格式正確（4 位補零、可換網域）', asy
     `${mod.R2_BASE_URL}/birdcards/0021.avif`,
     `${mod.R2_BASE_URL}/aviandex/0021.avif`,
   ]);
-  assert.equal(mod.TOTAL_SLOTS, 569, '槽位數要同 birds.json 一致');
+  assert.equal(mod.TOTAL_SLOTS, 583, '槽位數要同 birds.json 一致');
 });

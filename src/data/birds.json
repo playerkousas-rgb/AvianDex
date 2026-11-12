@@ -46,12 +46,12 @@
   },
   {
     "id": "0010",
-    "name": "白腰文鳥",
+    "name": "灰胸秧雞",
     "en": "Slaty-Breasted Rail"
   },
   {
     "id": "0011",
-    "name": "麻雀",
+    "name": "樹麻雀",
     "en": "Eurasian Tree Sparrow"
   },
   {
@@ -66,8 +66,8 @@
   },
   {
     "id": "0014",
-    "name": "喜鵲",
-    "en": "Eurasian Magpie"
+    "name": "白腰文鳥",
+    "en": "White-rumped Munia"
   },
   {
     "id": "0015",
@@ -76,12 +76,12 @@
   },
   {
     "id": "0016",
-    "name": "大山雀",
+    "name": "遠東山雀",
     "en": "Asian Tit"
   },
   {
     "id": "0017",
-    "name": "暗綠繡眼鳥",
+    "name": "普通鵟",
     "en": "Eastern Buzzard"
   },
   {
@@ -191,7 +191,7 @@
   },
   {
     "id": "0039",
-    "name": "美洲黑海番鴨",
+    "name": "綠眉鴨",
     "en": "American Wigeon"
   },
   {
@@ -201,7 +201,7 @@
   },
   {
     "id": "0041",
-    "name": "印缅斑嘴鴨",
+    "name": "印緬斑嘴鴨",
     "en": "Indian Spot-Billed Duck"
   },
   {
@@ -256,18 +256,18 @@
   },
   {
     "id": "0052",
-    "name": "紅胸田雞",
+    "name": "絲絨海番鴨",
     "en": "Velvet Scoter"
   },
   {
     "id": "0053",
-    "name": "白翅海番鴨",
-    "en": "White-Winged Scoter"
+    "name": "紅胸田雞",
+    "en": "Ruddy-breasted Crake"
   },
   {
     "id": "0054",
-    "name": "斑臉海番鴨",
-    "en": "Stejneger's Scoter"
+    "name": "黑海番鴨",
+    "en": "Black Scoter"
   },
   {
     "id": "0055",
@@ -276,7 +276,7 @@
   },
   {
     "id": "0056",
-    "name": "斑頭秋沙鴨",
+    "name": "白秋沙鴨",
     "en": "Smew"
   },
   {
@@ -291,8 +291,8 @@
   },
   {
     "id": "0059",
-    "name": "灰胸竹雞",
-    "en": "Chinese Bamboo-Partridge"
+    "name": "紫水雞",
+    "en": "Gray-headed Swamphen"
   },
   {
     "id": "0060",
@@ -371,7 +371,7 @@
   },
   {
     "id": "0075",
-    "name": "灰樹鵲",
+    "name": "紅頂綠鳩",
     "en": "Whistling Green-Pigeon"
   },
   {
@@ -401,7 +401,7 @@
   },
   {
     "id": "0081",
-    "name": "鷹鵑",
+    "name": "大鷹鵑",
     "en": "Large Hawk-Cuckoo"
   },
   {
@@ -411,13 +411,13 @@
   },
   {
     "id": "0083",
-    "name": "棕腹杜鵑",
+    "name": "霍氏鷹鵑",
     "en": "Hodgson's Hawk-Cuckoo"
   },
   {
     "id": "0084",
-    "name": "Malaysian hawk-cuckoo",
-    "en": "Malaysian Hawk-Cuckoo"
+    "name": "斑翅鳳頭鵑",
+    "en": "Pied Cuckoo"
   },
   {
     "id": "0085",
@@ -436,7 +436,7 @@
   },
   {
     "id": "0088",
-    "name": "中杜鵑",
+    "name": "東方中杜鵑",
     "en": "Oriental Cuckoo"
   },
   {
@@ -456,7 +456,7 @@
   },
   {
     "id": "0092",
-    "name": "白背針尾雨燕",
+    "name": "灰喉針尾雨燕",
     "en": "Silver-Backed Needletail"
   },
   {
@@ -471,27 +471,27 @@
   },
   {
     "id": "0095",
-    "name": "樓燕",
+    "name": "普通雨燕",
     "en": "Common Swift"
   },
   {
     "id": "0096",
-    "name": "雨燕",
+    "name": "白腰雨燕",
     "en": "Pacific Swift"
   },
   {
     "id": "0097",
-    "name": "草原鵰",
+    "name": "小白腰雨燕",
     "en": "House Swift"
   },
   {
     "id": "0098",
-    "name": "普通秧雞",
+    "name": "西方秧雞",
     "en": "Water Rail"
   },
   {
     "id": "0099",
-    "name": "灰面鷲",
+    "name": "普通秧雞",
     "en": "Brown-Cheeked Rail"
   },
   {
@@ -506,7 +506,7 @@
   },
   {
     "id": "0102",
-    "name": "灰頭麥雞",
+    "name": "白眉田雞",
     "en": "White-Browed Crake"
   },
   {
@@ -521,7 +521,7 @@
   },
   {
     "id": "0105",
-    "name": "白喉斑秧雞",
+    "name": "灰腳秧雞",
     "en": "Slaty-Legged Crake"
   },
   {
@@ -531,7 +531,7 @@
   },
   {
     "id": "0107",
-    "name": "紅腳苦惡鳥",
+    "name": "紅腳田雞",
     "en": "Brown Crake"
   },
   {
@@ -571,7 +571,7 @@
   },
   {
     "id": "0115",
-    "name": "灰鴴",
+    "name": "灰斑鴴",
     "en": "Black-Bellied Plover"
   },
   {
@@ -581,12 +581,12 @@
   },
   {
     "id": "0117",
-    "name": "美洲金鴴",
-    "en": "American Golden-Plover"
+    "name": "灰頭麥雞",
+    "en": "Gray-headed Lapwing"
   },
   {
     "id": "0118",
-    "name": "金鴴",
+    "name": "太平洋金斑鴴",
     "en": "Pacific Golden-Plover"
   },
   {
@@ -616,8 +616,8 @@
   },
   {
     "id": "0124",
-    "name": "雪鴴",
-    "en": "Snowy Plover"
+    "name": "青藏沙鴴",
+    "en": "Tibetan Sand-Plover"
   },
   {
     "id": "0125",
@@ -661,7 +661,7 @@
   },
   {
     "id": "0133",
-    "name": "大杓鷸",
+    "name": "紅腰杓鷸",
     "en": "Far Eastern Curlew"
   },
   {
@@ -751,7 +751,7 @@
   },
   {
     "id": "0151",
-    "name": "黃胸濱鷸",
+    "name": "飾胸鷸",
     "en": "Buff-Breasted Sandpiper"
   },
   {
@@ -766,7 +766,7 @@
   },
   {
     "id": "0154",
-    "name": "長嘴半蹼鷸",
+    "name": "長嘴鷸",
     "en": "Long-Billed Dowitcher"
   },
   {
@@ -821,7 +821,7 @@
   },
   {
     "id": "0165",
-    "name": "灰尾鷸",
+    "name": "灰尾漂鷸",
     "en": "Gray-Tailed Tattler"
   },
   {
@@ -861,8 +861,8 @@
   },
   {
     "id": "0173",
-    "name": "林三趾鶉",
-    "en": "Small Buttonquail"
+    "name": "拉氏沙錐",
+    "en": "Latham's Snipe"
   },
   {
     "id": "0174",
@@ -961,7 +961,7 @@
   },
   {
     "id": "0193",
-    "name": "海鷗",
+    "name": "普通海鷗",
     "en": "Common Gull"
   },
   {
@@ -976,22 +976,22 @@
   },
   {
     "id": "0196",
-    "name": "銀鷗",
+    "name": "織女銀鷗",
     "en": "Vega Gull"
   },
   {
     "id": "0197",
-    "name": "黃腿銀鷗",
-    "en": "Caspian Gull"
+    "name": "蒙古銀鷗",
+    "en": "Mongolian Gull"
   },
   {
     "id": "0198",
-    "name": "冰島鷗",
-    "en": "Iceland Gull"
+    "name": "玄燕鷗",
+    "en": "Black Noddy"
   },
   {
     "id": "0199",
-    "name": "灰燕鵙",
+    "name": "小黑背鷗",
     "en": "Lesser Black-Backed Gull"
   },
   {
@@ -1016,7 +1016,7 @@
   },
   {
     "id": "0204",
-    "name": "褐柳鶯",
+    "name": "烏燕鷗",
     "en": "Sooty Tern"
   },
   {
@@ -1036,7 +1036,7 @@
   },
   {
     "id": "0208",
-    "name": "紅嘴巨鷗",
+    "name": "紅嘴巨燕鷗",
     "en": "Caspian Tern"
   },
   {
@@ -1046,7 +1046,7 @@
   },
   {
     "id": "0210",
-    "name": "須浮鷗",
+    "name": "鬚浮鷗",
     "en": "Whiskered Tern"
   },
   {
@@ -1161,7 +1161,7 @@
   },
   {
     "id": "0233",
-    "name": "綠背鸕鷀",
+    "name": "暗綠背鸕鷀",
     "en": "Japanese Cormorant"
   },
   {
@@ -1176,7 +1176,7 @@
   },
   {
     "id": "0236",
-    "name": "黃斑葦鳽",
+    "name": "黃葦鳽",
     "en": "Yellow Bittern"
   },
   {
@@ -1246,7 +1246,7 @@
   },
   {
     "id": "0250",
-    "name": "栗頭鳽",
+    "name": "栗鳽",
     "en": "Japanese Night-Heron"
   },
   {
@@ -1271,7 +1271,7 @@
   },
   {
     "id": "0255",
-    "name": "魚鷹",
+    "name": "鶚",
     "en": "Osprey"
   },
   {
@@ -1311,7 +1311,7 @@
   },
   {
     "id": "0263",
-    "name": "白腹隼雕",
+    "name": "白腹隼鵰",
     "en": "Bonelli's Eagle"
   },
   {
@@ -1371,8 +1371,8 @@
   },
   {
     "id": "0275",
-    "name": "普通鵟",
-    "en": "Common Buzzard"
+    "name": "灰臉鵟鷹",
+    "en": "Gray-faced Buzzard"
   },
   {
     "id": "0276",
@@ -1386,8 +1386,8 @@
   },
   {
     "id": "0278",
-    "name": "Sunda scops-owl",
-    "en": "Sunda Scops-Owl"
+    "name": "白頭鷂",
+    "en": "Western Marsh Harrier"
   },
   {
     "id": "0279",
@@ -1406,7 +1406,7 @@
   },
   {
     "id": "0282",
-    "name": "褐魚鴞",
+    "name": "褐漁鴞",
     "en": "Brown Fish-Owl"
   },
   {
@@ -1431,8 +1431,8 @@
   },
   {
     "id": "0287",
-    "name": "鷹鴞",
-    "en": "Brown Boobook"
+    "name": "北鷹鴞",
+    "en": "Northern Boobook"
   },
   {
     "id": "0288",
@@ -1496,7 +1496,7 @@
   },
   {
     "id": "0300",
-    "name": "大擬鴷",
+    "name": "大擬啄木鳥",
     "en": "Great Barbet"
   },
   {
@@ -1541,7 +1541,7 @@
   },
   {
     "id": "0309",
-    "name": "紅腳隼",
+    "name": "阿穆爾隼",
     "en": "Amur Falcon"
   },
   {
@@ -1556,8 +1556,8 @@
   },
   {
     "id": "0312",
-    "name": "亞歷山大鸚鵡",
-    "en": "Alexandrine Parakeet"
+    "name": "冠魚狗",
+    "en": "Crested Kingfisher"
   },
   {
     "id": "0313",
@@ -1601,7 +1601,7 @@
   },
   {
     "id": "0321",
-    "name": "粉紅椋鳥",
+    "name": "粉紅山椒鳥",
     "en": "Rosy Minivet"
   },
   {
@@ -1621,8 +1621,8 @@
   },
   {
     "id": "0325",
-    "name": "朱鸝",
-    "en": "Maroon Oriole"
+    "name": "灰燕鵙",
+    "en": "Ashy Woodswallow"
   },
   {
     "id": "0326",
@@ -1656,12 +1656,12 @@
   },
   {
     "id": "0332",
-    "name": "紫壽帶",
+    "name": "紫綬帶",
     "en": "Black Paradise-Flycatcher"
   },
   {
     "id": "0333",
-    "name": "壽帶",
+    "name": "綬帶",
     "en": "Amur Paradise-Flycatcher"
   },
   {
@@ -1771,7 +1771,7 @@
   },
   {
     "id": "0355",
-    "name": "攀雀",
+    "name": "中華攀雀",
     "en": "Chinese Penduline-Tit"
   },
   {
@@ -1821,7 +1821,7 @@
   },
   {
     "id": "0365",
-    "name": "賽氏篱鶯",
+    "name": "賽氏籬鶯",
     "en": "Sykes's Warbler"
   },
   {
@@ -1856,8 +1856,8 @@
   },
   {
     "id": "0372",
-    "name": "蒼眉蝗鶯",
-    "en": "Gray's Grasshopper Warbler"
+    "name": "亞洲短趾百靈",
+    "en": "Asian Short-toed Lark"
   },
   {
     "id": "0373",
@@ -1881,12 +1881,12 @@
   },
   {
     "id": "0377",
-    "name": "矛紋蝗鶯",
+    "name": "矛斑蝗鶯",
     "en": "Lanceolated Warbler"
   },
   {
     "id": "0378",
-    "name": "棕褐短翅鶯",
+    "name": "棕褐短翅蝗鶯",
     "en": "Brown Bush Warbler"
   },
   {
@@ -1896,22 +1896,22 @@
   },
   {
     "id": "0380",
-    "name": "北短翅鶯",
+    "name": "北短翅蝗鶯",
     "en": "Baikal Bush Warbler"
   },
   {
     "id": "0381",
-    "name": "高山短翅鶯",
+    "name": "高山短翅蝗鶯",
     "en": "Russet Bush Warbler"
   },
   {
     "id": "0382",
-    "name": "Benguet bush warbler",
-    "en": "Benguet Bush Warbler"
+    "name": "褐柳鶯",
+    "en": "Dusky Warbler"
   },
   {
     "id": "0383",
-    "name": "小鷦鶥",
+    "name": "小鱗胸鷦鶥",
     "en": "Pygmy Cupwing"
   },
   {
@@ -1926,8 +1926,8 @@
   },
   {
     "id": "0386",
-    "name": "淡色沙燕",
-    "en": "Pale Martin"
+    "name": "洋燕",
+    "en": "Pacific Swallow"
   },
   {
     "id": "0387",
@@ -1961,7 +1961,7 @@
   },
   {
     "id": "0393",
-    "name": "慄耳短腳鵯",
+    "name": "栗耳短腳鵯",
     "en": "Brown-Eared Bulbul"
   },
   {
@@ -2016,8 +2016,8 @@
   },
   {
     "id": "0404",
-    "name": "中亞嘰喳柳鶯",
-    "en": "Mountain Chiffchaff"
+    "name": "棕腹柳鶯",
+    "en": "Buff-throated Warbler"
   },
   {
     "id": "0405",
@@ -2046,12 +2046,12 @@
   },
   {
     "id": "0410",
-    "name": "峨眉鶲鶯",
+    "name": "峨嵋鶲鶯",
     "en": "Martens's Warbler"
   },
   {
     "id": "0411",
-    "name": "純色尾鶲鶯",
+    "name": "淡尾鶲鶯",
     "en": "Alström's Warbler"
   },
   {
@@ -2071,7 +2071,7 @@
   },
   {
     "id": "0415",
-    "name": "日本淡腳柳鶯",
+    "name": "庫頁島柳鶯",
     "en": "Sakhalin Leaf Warbler"
   },
   {
@@ -2086,7 +2086,7 @@
   },
   {
     "id": "0418",
-    "name": "栗耳鳳鶥",
+    "name": "栗頭鶲鶯",
     "en": "Chestnut-Crowned Warbler"
   },
   {
@@ -2096,8 +2096,8 @@
   },
   {
     "id": "0420",
-    "name": "冠紋柳鶯",
-    "en": "Claudia's Leaf Warbler"
+    "name": "雙斑綠柳鶯",
+    "en": "Two-barred Warbler"
   },
   {
     "id": "0421",
@@ -2126,7 +2126,7 @@
   },
   {
     "id": "0426",
-    "name": "栗頭縫葉鶯",
+    "name": "金頭擬縫葉鶯",
     "en": "Mountain Tailorbird"
   },
   {
@@ -2151,8 +2151,8 @@
   },
   {
     "id": "0431",
-    "name": "點胸鴉雀",
-    "en": "Spot-Breasted Parrotbill"
+    "name": "白眶鶲鶯",
+    "en": "White-spectacled Warbler"
   },
   {
     "id": "0432",
@@ -2161,12 +2161,12 @@
   },
   {
     "id": "0433",
-    "name": "慄頸鳳鶥",
+    "name": "栗頸鳳鶥",
     "en": "Indochinese Yuhina"
   },
   {
     "id": "0434",
-    "name": "黑額鳳鶥",
+    "name": "黑頦鳳鶥",
     "en": "Black-Chinned Yuhina"
   },
   {
@@ -2186,12 +2186,12 @@
   },
   {
     "id": "0438",
-    "name": "棕頸鈎嘴鶥",
+    "name": "棕頸鉤嘴鶥",
     "en": "Streak-Breasted Scimitar-Babbler"
   },
   {
     "id": "0439",
-    "name": "綠鷺",
+    "name": "中華草鶥",
     "en": "Chinese Grassbird"
   },
   {
@@ -2221,8 +2221,8 @@
   },
   {
     "id": "0445",
-    "name": "黑臉噪鶥",
-    "en": "Masked Laughingthrush"
+    "name": "黑喉噪鶥",
+    "en": "Black-throated Laughingthrush"
   },
   {
     "id": "0446",
@@ -2251,7 +2251,7 @@
   },
   {
     "id": "0451",
-    "name": "紫背椋鳥",
+    "name": "栗頰椋鳥",
     "en": "Chestnut-Cheeked Starling"
   },
   {
@@ -2276,13 +2276,13 @@
   },
   {
     "id": "0456",
-    "name": "虎斑地鶇",
-    "en": "Scaly Thrush"
+    "name": "懷氏地鶇",
+    "en": "White's Thrush"
   },
   {
     "id": "0457",
-    "name": "虎斑地鶇",
-    "en": "Scaly Thrush"
+    "name": "灰背椋鳥",
+    "en": "White-shouldered Starling"
   },
   {
     "id": "0458",
@@ -2301,8 +2301,8 @@
   },
   {
     "id": "0461",
-    "name": "烏鶇",
-    "en": "Eurasian Blackbird"
+    "name": "粉紅椋鳥",
+    "en": "Rosy Starling"
   },
   {
     "id": "0462",
@@ -2336,8 +2336,8 @@
   },
   {
     "id": "0468",
-    "name": "黑喉鶇",
-    "en": "Black-Throated Thrush"
+    "name": "戴菊",
+    "en": "Goldcrest"
   },
   {
     "id": "0469",
@@ -2351,7 +2351,7 @@
   },
   {
     "id": "0471",
-    "name": "斑鶇",
+    "name": "紅尾鶇",
     "en": "Naumann's Thrush"
   },
   {
@@ -2381,7 +2381,7 @@
   },
   {
     "id": "0477",
-    "name": "灰頭椋鳥",
+    "name": "白腰鵲鴝",
     "en": "White-Rumped Shama"
   },
   {
@@ -2416,7 +2416,7 @@
   },
   {
     "id": "0484",
-    "name": "白腹藍姬鶲",
+    "name": "白腹藍鶲",
     "en": "Blue-And-White Flycatcher"
   },
   {
@@ -2461,8 +2461,8 @@
   },
   {
     "id": "0493",
-    "name": "白冠燕尾",
-    "en": "White-Crowned Forktail"
+    "name": "黃腹花蜜鳥",
+    "en": "Ornate Sunbird"
   },
   {
     "id": "0494",
@@ -2511,7 +2511,7 @@
   },
   {
     "id": "0503",
-    "name": "鏽胸藍姬鶲",
+    "name": "銹胸藍姬鶲",
     "en": "Slaty-Backed Flycatcher"
   },
   {
@@ -2571,8 +2571,8 @@
   },
   {
     "id": "0515",
-    "name": "黑喉石䳭",
-    "en": "Siberian Stonechat"
+    "name": "東亞石䳭",
+    "en": "Amur Stonechat"
   },
   {
     "id": "0516",
@@ -2641,12 +2641,12 @@
   },
   {
     "id": "0529",
-    "name": "黃鶺鴒",
+    "name": "西黃鶺鴒",
     "en": "Western Yellow Wagtail"
   },
   {
     "id": "0530",
-    "name": "黃鶺鴒",
+    "name": "東黃鶺鴒",
     "en": "Eastern Yellow Wagtail"
   },
   {
@@ -2661,7 +2661,7 @@
   },
   {
     "id": "0533",
-    "name": "田鷚",
+    "name": "理氏鷚",
     "en": "Richard's Pipit"
   },
   {
@@ -2707,7 +2707,7 @@
   {
     "id": "0542",
     "name": "黃腹鷚",
-    "en": "American Pipit"
+    "en": "Siberian Pipit"
   },
   {
     "id": "0543",
@@ -2821,7 +2821,7 @@
   },
   {
     "id": "0565",
-    "name": "硫黃鵐",
+    "name": "硫磺鵐",
     "en": "Yellow Bunting"
   },
   {
@@ -2843,5 +2843,75 @@
     "id": "0569",
     "name": "白眉鵐",
     "en": "Tristram's Bunting"
+  },
+  {
+    "id": "0570",
+    "name": "白額燕鷗",
+    "en": "Little Tern"
+  },
+  {
+    "id": "0571",
+    "name": "黑叉尾海燕",
+    "en": "Swinhoe's Storm-Petrel"
+  },
+  {
+    "id": "0572",
+    "name": "信使圓尾鸌",
+    "en": "Herald Petrel"
+  },
+  {
+    "id": "0573",
+    "name": "彩䴉",
+    "en": "Glossy Ibis"
+  },
+  {
+    "id": "0574",
+    "name": "綠鷺",
+    "en": "Striated Heron"
+  },
+  {
+    "id": "0575",
+    "name": "短趾雕",
+    "en": "Short-toed Snake-Eagle"
+  },
+  {
+    "id": "0576",
+    "name": "鷹鵰",
+    "en": "Mountain Hawk-Eagle"
+  },
+  {
+    "id": "0577",
+    "name": "靴隼雕",
+    "en": "Booted Eagle"
+  },
+  {
+    "id": "0578",
+    "name": "草原鵰",
+    "en": "Steppe Eagle"
+  },
+  {
+    "id": "0579",
+    "name": "褐耳鷹",
+    "en": "Shikra"
+  },
+  {
+    "id": "0580",
+    "name": "大鵑鵙",
+    "en": "Oriental Cuckooshrike"
+  },
+  {
+    "id": "0581",
+    "name": "灰樹鵲",
+    "en": "Gray Treepie"
+  },
+  {
+    "id": "0582",
+    "name": "黃頰山雀",
+    "en": "Yellow-cheeked Tit"
+  },
+  {
+    "id": "0583",
+    "name": "山麻雀",
+    "en": "Russet Sparrow"
   }
 ]

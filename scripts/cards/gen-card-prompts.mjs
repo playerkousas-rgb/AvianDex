@@ -11,6 +11,7 @@
  * ============================================================ */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 const root = path.resolve(import.meta.dirname, '..', '..');
 const J = (p) => JSON.parse(readFileSync(path.join(root, p), 'utf8'));
@@ -23,12 +24,13 @@ const scores = J('src/data/dexScores.json').scores;
 const tax = J('src/data/birdTaxonomy.json');
 
 const n1 = (v) => (v == null ? '資料待查' : Number(v).toFixed(1));
+const tc = (t) => String(t || '').replace(/缅/g, '緬');
 const stars = (v) => {
   const n = Math.max(0, Math.min(5, Math.round(Number(v) || 0)));
   return '★'.repeat(n) + '☆'.repeat(5 - n);
 };
 const sent = (s, max) => {
-  s = String(s || '').replace(/\s+/g, ' ').trim();
+  s = String(s || '').replace(/\s+/g, ' ').replace(/^[*＊•·\s]+/, '').trim();
   if (!s) return '';
   const i = s.search(/[。；]/);
   const out = i > 0 && i <= max ? s.slice(0, i + 1) : s.slice(0, max);
@@ -66,14 +68,14 @@ function similarSpecies(id) {
   const self = Number(e.len) || Number((copy[id] || {}).length?.replace(/\D.*/, '')) || 0;
   const peers = Object.keys(idx.birds)
     .filter((k) => k !== id && idx.birds[k].fz === fam && idx.birds[k].len)
-    .map((k) => ({ k, z: idx.birds[k].z, d: Math.abs(Number(idx.birds[k].len) - self) }))
+    .map((k) => ({ k, z: tc(idx.birds[k].z), d: Math.abs(Number(idx.birds[k].len) - self) }))
     .sort((a, b) => a.d - b.d)
     .slice(0, 2);
   if (!peers.length) return ['第一個物種名：資料待查', '第二個物種名：資料待查'];
   return peers.map((p, i) => (i === 0 ? '第一個' : '第二個') + '：同科近緣 ' + p.z);
 }
 
-function cells(id) {
+export function cells(id) {
   const e = idx.birds[id], c = copy[id] || {}, m = meas[id] || {};
   const sc = scores[id] || {}, t = tax[id] || {};
   const genus = (e.s || '').split(' ')[0] || '';
@@ -121,18 +123,18 @@ function cells(id) {
   add('Z07 food panel', [sent(c.diet, 58) || '資料待查']);
   add('Z08 distribution panel', [sent(c.range, 72) || '資料待查']);
   add('Z09 growth & reproduction', [sent(c.breeding, 84) || '資料待查']);
-  add('Z10 key knowledge, numbered 1–5', hl.slice(0, 5).map((h, i) => i + 1 + ' ' + sent(h, 46)));
+  add('Z10 key knowledge, numbered 1–5', Array.from({ length: 5 }, (_, i) => i + 1 + ' ' + (sent(hl[i], 46) || '資料待查')));
   add('Z11 trivia, 3 star bullets', [
     '★ ' + (sent(c.funFact, 44) || '資料待查'),
     '★ ' + (sent(c.voice, 44) || '資料待查'),
     '★ ' + (sent(c.etymology || c.conservation, 44) || '資料待查'),
   ]);
-  add('Z12 score card (radar + total)', [
+  add('Z12 score card (radar pentagon, vertices clockwise from the top: 生物重要性, 物種適應力, 研究價值, 保育關注度, 觀賞價值; each label sits next to its own vertex)', [
     '生物重要性 ' + n1(sc.i) + '/5',
     '物種適應力 ' + n1(sc.a) + '/5',
-    '觀賞價值 ' + n1(sc.v) + '/5',
-    '保育關注度 ' + n1(sc.c) + '/5',
     '研究價值 ' + n1(sc.r) + '/5',
+    '保育關注度 ' + n1(sc.c) + '/5',
+    '觀賞價值 ' + n1(sc.v) + '/5',
     '總評分 ' + stars(sc.o) + ' ' + n1(sc.o) + ' / 5',
   ]);
   add('Z13 observation tips, 4 lines', [
@@ -210,20 +212,110 @@ export function buildPrompt(id) {
   ].join('\n\n');
 }
 
+/* 精簡版（給 generate_image：附 2 張圖＝去字位圖＋參考卡）。
+ * v2 修正（0023 實測）：只准 4 個放大鏡、雷達標籤固定順時針、Z10 補滿 5 項。 */
+export const SECTION_TITLES = [
+  ['Z04', '圖鑑介紹 / PROFILE'], ['Z05', '分類資訊 / CLASSIFICATION'], ['Z06', '生態習性 / ECOLOGICAL HABITS'],
+  ['Z07', '食物 / DIET'], ['Z08', '分佈地區 / DISTRIBUTION'], ['Z09', '成長與繁殖 / GROWTH & REPRODUCTION'],
+  ['Z10', '關鍵知識 / KEY KNOWLEDGE'], ['Z11', '趣味冷知識 / TRIVIA'], ['Z12', '生態價值評分卡 / ECOLOGICAL VALUE CARD'],
+  ['Z13', '觀察小貼士 / OBSERVATION TIPS'], ['Z14', '注意事項 / PRECAUTIONS'], ['Z15', '特徵放大鏡 / DETAIL CALL-OUTS'],
+  ['Z16', '可混淆物種 / SIMILAR SPECIES'], ['Z17', '保育狀態 / CONSERVATION STATUS'], ['Z18', '叫聲 / CALL'],
+];
+
+export function buildAgentPrompt(id) {
+  const e = idx.birds[id];
+  const printed = cells(id)
+    .map((x) => '  [' + x.zone + ']\n' + x.lines.map((l) => '      ' + l).join('\n'))
+    .join('\n');
+  return [
+    'Create ONE finished bird encyclopedia information card, front side only, 2:3 portrait, perfectly flat and facing the camera like a clean scan of a real printed card. No table, no hand, no tilt, no mockup, no watermark, no page curl.',
+    'IMAGE 1 = blank LAYOUT ZONE MAP (boxes only, no species text): copy its exact grid of panels, positions and sizes.\nIMAGE 2 = a finished reference card (its species is irrelevant) for visual style, typography, icons, radar chart and magnifier circles ONLY. Paint the new bird fresh; do not copy its bird. EVERY WORD, NUMBER, NAME, CAPTION AND LABEL IN IMAGE 2 IS PLACEHOLDER NOISE for another species and must NOT appear. Replace 100% of the text with the PRINTED TEXT below.',
+    'THE BIRD — paint ONE photorealistic ' + e.z + ' (' + e.e + ', ' + e.s + '), natural posture, complete body, clear head, correct plumage and bare-part colours for this species. Also paint a small pixel-art version of the same bird for the top-left box.',
+    'PRINTED TEXT — fill the card with EXACTLY these strings, cell by cell. Print nothing else:\n' + printed,
+    'SECTION TITLES — print each exactly as written. They REPLACE the grey position labels (such as "Z06 ECOLOGICAL HABITS") on IMAGE 1. Those grey labels, every "Zxx" code and every English word of IMAGE 1 are position markers only and must NEVER appear on the finished card:\n' + SECTION_TITLES.map(([z, t]) => '  ' + z + '  →  ' + t).join('\n'),
+    'CELL RULES\n1. All 18 cells must be filled; none may keep template text.\n2. Render numbers exactly as written. Never round or invent a number. If a cell says 資料待查, print 資料待查 exactly.\n3. EXACTLY FOUR magnifier circles in the right column (頭部, 羽色, 翼部, 腳部), each a close-up painting of that body part of the new bird, each with its own title and one short caption. No fifth circle, no circle numbers, no duplicate titles.\n4. Key knowledge (Z10) has exactly five numbered lines 1,2,3,4,5 in order.\n5. Radar chart: each of the five numbers sits beside its own label exactly as in Z12; do not swap values between labels.\n6. Traditional Chinese only, no simplified characters, no extra English sentences, no slogans, no QR code, no price, no second bird species. Similar-species boxes show only a small icon plus the name.',
+    'STYLE: warm cream paper with fine fibre texture, thin olive/sage-green panel borders, flat matte print, crisp sharp type, tiny dark-green pictogram icons. No glow, no drop shadow, no foil.',
+    'FINAL CHECK — re-read every printed string and confirm no word from IMAGE 2 survived, all 18 cells present, every number matches. Silently repair anything that fails.',
+  ].join('\n\n');
+}
+
+/* ── 精簡圖示卡（只有名稱／數字／短標籤＋圖示；固定標題已寫死在 lite-template.png）── */
+export function liteFields(id) {
+  const e = idx.birds[id], c = copy[id] || {}, m = meas[id] || {};
+  const sc = scores[id] || {}, t = tax[id] || {};
+  const genus = (e.s || '').split(' ')[0] || '';
+  const epi = (e.s || '').split(' ').slice(1).join(' ');
+  const hab = (e.h || []).map((x) => idx.habitatTags.find((y) => y.id === x)?.zh).filter(Boolean).slice(0, 4);
+  const diet = (e.d || []).map((x) => idx.dietTags.find((y) => y.id === x)?.zh).filter(Boolean).slice(0, 4);
+  const sim = similarSpecies(id).map((x) => (x.includes('：') ? x.split('：')[1] : x).replace(/^同科近緣 /, ''));
+  const iucnZh = String(c.iucn || '').split(' ')[0] || '資料待查';
+  const code = (String(c.iucn || '').match(/\b([A-Z]{2})\b/) || String(c.iucnEn || '').match(/\(([A-Z]{2})\)/) || [])[1] || 'NONE';
+  return {
+    e, c, hab, diet, sim, genus, epi, code, iucnZh, sc,
+    len: lenText(e, c), mass: m.mass ? m.mass + ' g' : '資料待查',
+  };
+}
+
+export const REF_NOTE = 'IMAGE 2 (if attached) is the original AvianDex card, supplied ONLY as a visual style reference: copy its colour palette, green title bars, Pokéball emblem, rounded frames, dark-green line-icon style, and the realistic-photo + pixel-art look. EVERY word, number, name, species, caption, date, footer and score printed on IMAGE 2 is placeholder noise for another species and must NOT appear on the new card. Never copy anything from IMAGE 2 except style.';
+
+export function buildLitePrompt(id) {
+  const f = liteFields(id);
+  const { e, c, sc } = f;
+  const slotList = (arr) => !arr.length
+    ? 'NO DATA: the panel has ONE empty slot in the middle — print exactly 資料待查 there (no icon)'
+    : 'exactly ' + arr.length + ' circle(s) are drawn, each with its own tag box. Fill them in reading order (left to right, top to bottom):\n      ' + arr.map((x, i) => `${i + 1}. icon of "${x}" in the circle, tag text in the box below it: ${x}`).join('\n      ');
+  return [
+    'Create ONE finished bird info card, front side only, 2:3 portrait, flat like a clean scan. No table, no hand, no mockup, no watermark.',
+    'IMAGE 1 is the card TEMPLATE. Keep its layout, panels, colours, frame, and ALL text already printed on it EXACTLY as is (titles like 身長, 體重, 分類資訊, 棲息環境, 食物, 分佈地區, 成長與繁殖, 生態價值評分, 可混淆物種, 保育狀態, 頭部/羽色/翼部/腳部, 界/門/綱/目/科/屬/種, radar axis names, IUCN scale). Do NOT redraw, retype, translate or restyle those printed words. Your job is only to fill the empty light-outlined SLOTS and the empty picture frames, and then remove the slot outlines.',
+    'THE BIRD — ' + e.z + ' (' + e.e + ', ' + e.s + '). Correct plumage and bare-part colours for this species. One bird species only.',
+    'FILL THE PICTURE FRAMES (no text inside any picture):\n' +
+      '  · Pixel-art frame (top-left): small 16-bit pixel art of the bird, side view.\n' +
+      '  · Large centre frame: photorealistic ' + e.z + ' in natural habitat, whole bird, natural posture.\n' +
+      '  · Four magnifier circles, top to bottom: (1) close-up of head and bill, (2) close-up of plumage pattern, (3) close-up of folded or spread wing, (4) close-up of feet and legs. Labels beside them are already printed — keep them.\n' +
+      '  · 分佈地區 panel: a flat world/regional map with the species range shaded green. Guide (do NOT print): ' + (String(c.range || '').slice(0, 120) || 'unknown, leave a plain map') + '\n' +
+      '  · 成長與繁殖 panel: three small icons in the three circles: nest, eggs, chick (draw typical for this species; no text). Guide (do NOT print): ' + (String(c.breeding || '').slice(0, 100) || 'generic') + '\n' +
+      '  · 可混淆物種 panel: in each of the two circles a realistic head-and-neck portrait of that similar species (bird head close-up, filling the circle, species-accurate colours), name printed in the box under it.\n' +
+      '  · ICON COLOURS: icons in the 棲息環境, 食物 and 成長與繁殖 circles must be colourful flat illustrations (3–4 colours each, like a children\'s sticker book), NOT monochrome green and NOT line-only. 棲息環境 icons use blues/teals/greens fitting the habitat; 食物 icons use natural food colours (oranges, reds, yellows, browns); 成長與繁殖 nest/egg/chick use warm browns, cream and yellow. Keep each circle\'s tinted background and outline colour.\n' +
+      '',
+    'PRINT EXACTLY THESE STRINGS IN THE EMPTY SLOTS — nothing else:\n' +
+      '  [Header chip, dark green, left of the name band] print the whole string, white bold, on the dashed line: NO.' + id + '\n' +
+      '  [Dark green name band] line 1 large: ' + e.z + '   line 2: ' + e.e + '   line 3 italic: ' + e.s + '\n' +
+      '  [Top-right chip] 目: ' + (e.oz || '資料待查') + '   科: ' + (e.fz || '資料待查') + '\n' +
+      '  [身長 slot — the empty rounded box UNDER the label 身長] ' + f.len + '\n' +
+      '  [體重 slot — the empty rounded box UNDER the label 體重] ' + f.mass + '\n' +
+      '  [保育級別 box, 保育狀態 panel] ALREADY FULLY PRINTED (coloured IUCN scale + grade name). Keep untouched; add nothing there.\n' +
+      '  [分類資訊 panel: 7 rows top to bottom] rows 1–3 (界 動物界 Animalia / 門 脊索動物門 Chordata / 綱 鳥綱 Aves) are ALREADY PRINTED — keep them untouched. Fill ONLY the four empty slots, each in its own row beside its own label:\n' +
+      '      row 4 slot beside 目: ' + (e.oz || '資料待查') + ' ' + (e.o || '') + '\n' +
+      '      row 5 slot beside 科: ' + (e.fz || '資料待查') + ' ' + (e.f || '') + '\n' +
+      '      row 6 slot beside 屬: ' + (f.genus ? f.genus + ' 屬' : '資料待查') + '\n' +
+      '      row 7 slot beside 種: ' + e.z + ' ' + (f.genus ? f.genus[0] + '. ' + f.epi : '') + '\n' +
+      '  [棲息環境]\n      ' + slotList(f.hab) + '\n' +
+      '  [食物]\n      ' + slotList(f.diet) + '\n' +
+      '  [生態價值評分 radar, five vertices clockwise from top] 重要性 ' + n1(sc.i) + ' | 適應力 ' + n1(sc.a) + ' | 研究 ' + n1(sc.r) + ' | 保育 ' + n1(sc.c) + ' | 觀賞 ' + n1(sc.v) + ' (print each number in the small box beside its own axis name, and draw the radar polygon to match these values out of 5)\n' +
+      '  [總評分 slot] ' + stars(sc.o) + ' ' + n1(sc.o) + ' / 5\n' +
+      '  [可混淆物種 name boxes] ' + f.sim.map((x, i) => (i ? 'right box' : 'left box') + ' = ' + x).join(' | ') + ' (print only the species name, no numbering)' + '\n' +
+    'RULES\n1. Print ONLY the strings listed above. No sentences, no extra words, no dates, no version, no footer, no logo, no QR/barcode.\n2. Render every number exactly as written; never round or invent. 資料待查 means print exactly 資料待查.\n3. Traditional Chinese only. Do not print any template/placeholder word that is not in the list.\n4. Draw no extra circles or tag boxes in 棲息環境 and 食物 beyond those already in the template. Do not add empty boxes under the 成長與繁殖 icons.\n5. Style: warm cream paper, thin olive-green borders, flat matte print, crisp type, colourful flat icons. No glow, no shadows.',
+    'FINAL CHECK — compare every printed string with the list; fix any typo; make sure no pre-printed template word was altered.',
+  ].join('\n\n');
+}
+
 /* CLI */
-const args = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+const isMain = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+const args = isMain ? process.argv.slice(2).filter((a) => !a.startsWith('--')) : [];
 const write = process.argv.includes('--write');
+const agent = process.argv.includes('--agent');
+const lite = process.argv.includes('--lite');
 if (write && args.length) {
   const dir = path.join(root, 'deliver/card-prompts');
   mkdirSync(dir, { recursive: true });
   for (const id of args) {
-    writeFileSync(path.join(dir, `prompt-${id}.txt`), buildPrompt(id), 'utf8');
+    writeFileSync(path.join(dir, `prompt-${id}.txt`), (lite ? buildLitePrompt(id) : agent ? buildAgentPrompt(id) : buildPrompt(id)), 'utf8');
   }
   console.log('已寫入 deliver/card-prompts/ 共 ' + args.length + ' 份');
 } else {
   for (const id of args) {
     if (!idx.birds[id]) { console.error('冇呢個編號：' + id); continue; }
     console.log('════════ NO.' + id + ' ' + idx.birds[id].z + ' ════════');
-    console.log(buildPrompt(id));
+    console.log(lite ? buildLitePrompt(id) : agent ? buildAgentPrompt(id) : buildPrompt(id));
   }
 }

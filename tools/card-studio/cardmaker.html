@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AvianDex · 資訊卡一鍵出圖</title>
+<!--
+  選編號 → 按「生成」→ 下載。Prompt、去字位圖、參考卡、18 格鎖死文字全部已內嵌，不用貼任何東西。
+  由 scripts/cards/build-card-maker.mjs 注入資料；日常只用產生出來的 aviandex-card-maker.html。
+  圖片只在你的瀏覽器直接送去 Google（Gemini Canvas 自動帶 key，或你自己貼 key）。
+-->
+<style>
+:root{color-scheme:dark;--ink:#07140f;--panel:#0d2219;--line:#1d3d2f;--line2:#2f6049;--tx:#eaf5ef;--mu:#8aa79a;--g1:#6ee7b7;--g2:#0ea472;--gold:#e8c981;--bad:#ff9d94;--warn:#ffd479}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--tx);font:15px/1.65 system-ui,-apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+header{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid var(--line);background:#0a1b14;position:sticky;top:0;z-index:5}
+header h1{font-size:16px;margin:0;flex:1;min-width:180px}
+.pill{font-size:12px;padding:2px 10px;border-radius:99px;border:1px solid var(--line2);color:var(--mu)}
+.pill.ok{color:var(--g1);border-color:var(--g2)}.pill.warn{color:var(--warn);border-color:#6b5a1f}
+main{display:grid;grid-template-columns:minmax(300px,380px) 1fr;gap:14px;padding:14px;max-width:1280px;margin:0 auto}
+@media(max-width:820px){main{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.ttl{font-weight:700;margin-bottom:8px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+input,select,textarea,button{font:inherit;color:var(--tx);background:#08170f;border:1px solid var(--line2);border-radius:10px;padding:8px 10px}
+button{cursor:pointer}button:hover{border-color:var(--g1)}button:disabled{opacity:.45;cursor:not-allowed}
+button.primary{background:linear-gradient(135deg,var(--g2),#0b7a55);border-color:var(--g1);font-weight:800;font-size:17px;padding:13px 16px;width:100%}
+button.sm{padding:5px 10px;font-size:13px}
+#num{width:100px;text-align:center;font-weight:800;letter-spacing:.1em;font-size:20px}
+#jump{flex:1;min-width:0}
+.hint{color:var(--mu);font-size:12.5px}
+.bar{height:6px;background:#0a1d14;border-radius:9px;overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;width:0;background:var(--g1);transition:width .3s}
+.err{display:none;margin-top:10px;padding:10px;border:1px solid #7a3b36;background:#2a1311;border-radius:10px;color:var(--bad);font-size:13px}.err.on{display:block}
+#log{max-height:150px;overflow:auto;font:11.5px/1.5 ui-monospace,monospace;color:var(--mu);margin-top:10px;white-space:pre-wrap}
+#log .w{color:var(--warn)}#log .e{color:var(--bad)}#log .o{color:var(--g1)}
+.outgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.shot{background:#08170f;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.shot img{display:block;width:100%;cursor:zoom-in}
+.shot .cap{padding:8px 10px;font-size:13px}
+.shot .acts{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.skel{aspect-ratio:2/3;display:grid;place-items:center;color:var(--mu);text-align:center;padding:14px;animation:p 1.2s infinite alternate}
+@keyframes p{to{opacity:.45}}
+details summary{cursor:pointer;color:var(--mu);font-size:13px}
+textarea{width:100%;height:220px;font:12px/1.5 ui-monospace,monospace}
+.facts{font-size:12px;color:var(--mu);margin-top:6px}.facts b{color:var(--gold)}
+#zoom{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;place-items:center;z-index:20;cursor:zoom-out}#zoom.on{display:grid}#zoom img{max-height:96vh;max-width:96vw}
+</style>
+</head>
+<body>
+<header>
+  <h1>AvianDex · 資訊卡一鍵出圖</h1>
+  <span class="pill warn" id="apiBadge">API：檢查中</span>
+  <span class="pill" id="countPill"></span>
+</header>
+
+<main>
+<div>
+  <div class="panel">
+    <div class="ttl">① 選編號</div>
+    <div class="row">
+      <button class="sm" id="prev" title="上一隻">‹</button>
+      <input id="num" inputmode="numeric" maxlength="4" value="0022">
+      <button class="sm" id="next" title="下一隻">›</button>
+      <select id="jump"></select>
+    </div>
+    <div class="hint" id="birdLine" style="margin-top:8px"></div>
+    <div class="facts" id="facts"></div>
+  </div>
+
+  <div class="panel">
+    <div class="ttl">② 生成</div>
+    <button class="primary" id="btnGen">生成這一張資訊卡</button>
+    <div class="row" style="margin-top:10px">
+      <span class="hint">由這個編號起連續出</span>
+      <input id="batchN" type="number" min="2" max="20" value="4" style="width:70px">
+      <span class="hint">張</span>
+      <button class="sm" id="btnBatch">連續生成</button>
+      <button class="sm" id="btnStop" disabled>停止</button>
+    </div>
+    <div class="bar"><i id="progBar"></i></div>
+    <div class="hint" id="progTxt">—</div>
+    <div class="err" id="errBox"><b id="errTitle"></b><p id="errHint" style="margin:6px 0 0"></p></div>
+  </div>
+
+  <div class="panel">
+    <div class="ttl">設定</div>
+    <div class="row">
+      <select id="mode" style="flex:1">
+        <option value="canvas">Gemini Canvas（自動帶 key）</option>
+        <option value="own">自己貼 API key</option>
+      </select>
+      <select id="layout" style="flex:1 1 100%"></select>
+      <select id="quality">
+        <option value="pro">質素：高（先試 Pro，失敗自動降級）</option>
+        <option value="fast">質素：快（Flash）</option>
+      </select>
+    </div>
+    <div class="row" id="keyRow" style="margin-top:8px;display:none">
+      <input type="password" id="key" placeholder="AIza…（只存在你部機）" style="flex:1">
+      <button class="sm" id="btnKey">記住</button>
+    </div>
+    <details style="margin-top:10px"><summary>查看／微調這一張的 Prompt（一般唔使開）</summary>
+      <textarea id="prompt" spellcheck="false"></textarea>
+      <div class="row" style="margin-top:6px"><button class="sm" id="btnReset">還原</button><button class="sm" id="btnCopy">複製</button><span class="hint" id="pcount"></span></div>
+    </details>
+    <details style="margin-top:8px"><summary>內嵌的兩張參考圖</summary>
+      <div class="row" style="margin-top:6px" id="refs"></div>
+      <div class="hint">精簡卡：只送 1 張版位圖（標題、IUCN 色階已寫死在圖上，AI 只填空位）。「完整文字卡」錯字風險高，僅供比較。</div>
+    </details>
+    <div id="log"></div>
+  </div>
+</div>
+
+<div>
+  <div class="panel">
+    <div class="row" style="justify-content:space-between">
+      <div class="ttl" style="margin:0">輸出</div>
+      <div class="row"><span class="pill" id="outCount">0 張</span><button class="sm" id="btnDlAll">全部下載</button><button class="sm" id="btnClear">清空</button></div>
+    </div>
+    <div class="outgrid" id="out" style="margin-top:10px"></div>
+  </div>
+  <div class="panel">
+    <div class="ttl">之後</div>
+    <div class="hint">圖按「下載」沒反應時：按「開新分頁」，或直接對大圖右鍵／長按另存。<br>① 逐張核對卡面（看每張下面的「必對清單」：編號、名稱、體重、評分）。② 下載 PNG → 用 squoosh 轉 AVIF，檔名四位數（例：0022.avif）。③ 放上 R2 <code>aviandex/cards/</code>。<br>
+    卡上若出現簡體字、亂碼、Zxx 區碼、第 5 個空放大鏡，請按「重試」。</div>
+  </div>
+</div>
+</main>
+<div id="zoom"><img alt=""></div>
+
+<script>/*__AVX_DATA__*/</script>
+<script>
+'use strict';
+const D = window.AVX;
+const $ = (id) => document.getElementById(id);
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const LS = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : v; } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } },
+};
+const IDS = D.ids.map((x) => x.id);
+const M = () => D.modes[$('layout').value];
+const promptOf = (id) => { const m = M(); return m.pre + m.mids[id] + m.suf; };
+const loadImg = (u) => new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => no(new Error('版位圖載入失敗')); i.src = u; });
+const composed = {};
+async function compose(c, id) {
+  if (composed[id]) return composed[id];
+  const [hn, dn, code] = c.meta[id];
+  const names = [`hab-${hn}`, `diet-${dn}`, `badge-${code}`, `stat-${code}`];
+  const cv = document.createElement('canvas'); cv.width = c.size[0]; cv.height = c.size[1];
+  const g = cv.getContext('2d');
+  g.drawImage(await loadImg(c.base), 0, 0);
+  for (const n of names) { const p = c.pos[n]; g.drawImage(await loadImg(c.patches[n]), p[0], p[1]); }
+  return (composed[id] = cv.toDataURL('image/png'));
+}
+const imgsOf = async (id) => { const m = M(); return m.compose ? [await compose(m.compose, id)] : m.imgs; };
+const INFO = Object.fromEntries(D.ids.map((x) => [x.id, x]));
+const RESULTS = {};          /* id -> {url, model} | {error} */
+const BUSY = new Set();
+let stopFlag = false, running = false, promptDirty = false;
+
+function log(msg, cls) {
+  const d = document.createElement('div'); if (cls) d.className = cls; d.textContent = new Date().toTimeString().slice(0, 8) + ' ' + msg;
+  $('log').appendChild(d); $('log').scrollTop = 1e9;
+}
+
+/* ---------- API ---------- */
+const API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
+const MODELS = {
+  pro: ['gemini-3-pro-image-preview', 'gemini-3.1-flash-image-preview', 'gemini-2.5-flash-image'],
+  fast: ['gemini-3.1-flash-image-preview', 'gemini-2.5-flash-image', 'gemini-3-pro-image-preview'],
+};
+const badModels = new Set();
+function resolveKey() {
+  const k = $('key').value.trim(); if (k) return k;
+  const st = LS.get('avx_key', ''); if (/^AIza[0-9A-Za-z_\-]{30,}$/.test(st)) return st;
+  try { for (const k2 of Object.keys(window)) { const v = window[k2]; if (typeof v === 'string' && /^AIza[0-9A-Za-z_\-]{30,}$/.test(v)) return v.trim(); } } catch (e) {}
+  return '';
+}
+function apiUrl(model) { const key = resolveKey(); const b = `${API_BASE}/${model}:generateContent`; return key ? `${b}?key=${encodeURIComponent(key)}` : b; }
+async function callGemini(model, body) {
+  let wait = 1800;
+  for (let attempt = 1; ; attempt++) {
+    try {
+      const res = await fetch(apiUrl(model), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), credentials: 'include' });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        const e = new Error((data.error && data.error.message) || 'API 錯誤：' + res.status);
+        e.status = res.status; e.retryable = res.status === 429 || res.status >= 500;
+        e.modelUnavailable = res.status === 404 || (res.status === 400 && /model|not (found|supported)/i.test(e.message));
+        throw e;
+      }
+      if (data.promptFeedback && data.promptFeedback.blockReason) { const e = new Error('內容被安全機制阻擋'); e.retryable = false; throw e; }
+      return data;
+    } catch (e) {
+      if (e.retryable === false || e.modelUnavailable || attempt >= 2 || e.status === 400 || e.status === 401 || e.status === 403) throw e;
+      log(`第 ${attempt} 次失敗，${Math.round(wait / 1000)} 秒後重試`, 'w'); await sleep(wait); wait *= 2;
+    }
+  }
+}
+function extractImage(data) {
+  const parts = ((data.candidates || [])[0] || {}).content?.parts || [];
+  const p = parts.find((x) => (x.inlineData || x.inline_data));
+  if (!p) throw new Error('模型沒有回傳圖片（可能被拒絕或只回了文字）');
+  const d = p.inlineData || p.inline_data;
+  return `data:${d.mimeType || d.mime_type || 'image/png'};base64,${d.data}`;
+}
+function describe(err) {
+  const s = err.status || 0, m = String(err.message || err);
+  if (s === 429) return ['額度用完或太密', '等一分鐘再試，或把「連續生成」張數調少。'];
+  if (s === 401 || s === 403) return ['key 無效或沒有權限', '用 Canvas 開，或改選「自己貼 API key」。'];
+  if (/安全|SAFETY|block/i.test(m)) return ['被安全機制擋下', '按「重試」通常會過；仍然不行就換下一隻。'];
+  return ['出圖失敗', m.slice(0, 160)];
+}
+function showErr(err) { const [t, h] = describe(err); $('errTitle').textContent = t; $('errHint').textContent = h; $('errBox').classList.add('on'); }
+const part = (url) => { const c = url.indexOf(','); return { inlineData: { mimeType: url.slice(5, url.indexOf(';')), data: url.slice(c + 1) } }; };
+
+async function genOne(id) {
+  const prompt = (promptDirty && curId() === id) ? $('prompt').value : promptOf(id);
+  const parts = [...(await imgsOf(id)).map(part), { text: prompt }];
+  const baseCfg = { responseModalities: ['IMAGE'] };
+  let last = null;
+  for (const model of MODELS[$('quality').value]) {
+    if (badModels.has(model)) continue;
+    for (const withAspect of [true, false]) {
+      const body = { contents: [{ role: 'user', parts }], generationConfig: withAspect ? { ...baseCfg, imageConfig: { aspectRatio: '2:3' } } : baseCfg };
+      const t0 = performance.now();
+      try {
+        log(`→ ${id} · ${model}${withAspect ? '' : '（不指定比例）'}`);
+        const data = await callGemini(model, body);
+        const url = extractImage(data);
+        log(`✓ ${id} 完成（${Math.round((performance.now() - t0) / 1000)} 秒）`, 'o');
+        return { url, model };
+      } catch (e) {
+        last = e;
+        if (e.modelUnavailable) { badModels.add(model); log(`✗ ${model} 不可用，改下一個`, 'w'); break; }
+        if (e.status === 429 || e.status === 401 || e.status === 403) throw e;
+        log(`✗ ${model}：${e.message.slice(0, 120)}`, 'w');
+      }
+    }
+  }
+  throw last || new Error('所有圖片模型都不可用');
+}
+
+/* ---------- 介面 ---------- */
+const curId = () => { const v = $('num').value.replace(/\D/g, '').padStart(4, '0').slice(-4); return INFO[v] ? v : IDS[0]; };
+function refreshBird() {
+  const id = curId(), b = INFO[id];
+  $('jump').value = id;
+  if (window.__showRefs) window.__showRefs();
+  $('birdLine').innerHTML = `<b style="color:var(--tx)">${esc(b.z)}</b> · ${esc(b.e)} · <i>${esc(b.s)}</i><br>卡面 18 格中有 <b style="color:${b.missing > 4 ? 'var(--warn)' : 'var(--g1)'}">${b.missing}</b> 處印「資料待查」`;
+  $('facts').innerHTML = '必對清單：' + b.facts.map((f) => `<b>${esc(f)}</b>`).join('　');
+  if (!promptDirty) { $('prompt').value = promptOf(id); }
+  $('pcount').textContent = $('prompt').value.length + ' 字';
+}
+function render() {
+  const ids = Object.keys(RESULTS).sort();
+  $('out').innerHTML = ids.map((id) => {
+    const r = RESULTS[id], b = INFO[id];
+    if (r.busy) return `<div class="shot"><div class="skel">${id} ${esc(b.z)}<br>生成中…（約 20–60 秒）</div></div>`;
+    if (r.error) return `<div class="shot"><div class="skel" style="color:var(--bad)">${id} ${esc(b.z)}<br>失敗：${esc(r.error)}</div><div class="cap"><div class="acts"><button class="sm" data-retry="${id}">重試</button></div></div></div>`;
+    return `<div class="shot"><img src="${r.url}" data-zoom="1" alt="${id}"><div class="cap"><b>${id} ${esc(b.z)}</b> <span class="hint">${esc(r.model)}</span>
+      <div class="facts">${b.facts.map(esc).join(' ｜ ')}</div>
+      <div class="acts"><button class="sm" data-dl="${id}">下載</button><button class="sm" data-tab="${id}">開新分頁</button><button class="sm" data-retry="${id}">重試</button></div></div></div>`;
+  }).join('');
+  $('outCount').textContent = ids.filter((i) => RESULTS[i].url).length + ' 張';
+}
+function ext(url) { return /jpeg/.test(url.slice(0, 20)) ? 'jpg' : /webp/.test(url.slice(0, 20)) ? 'webp' : 'png'; }
+async function dl(id) {
+  const r = RESULTS[id]; if (!r || !r.url) return;
+  const name = `${id}.${ext(r.url)}`;
+  try {
+    /* Canvas／iframe 常擋 data: 網址下載 → 轉 Blob 網址再下載 */
+    const blob = await (await fetch(r.url)).blob();
+    const href = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = href; a.download = name; a.rel = 'noopener';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(href), 60000);
+    log(`已嘗試下載 ${name}（若沒有出現，請用圖片下面的「開新分頁」再另存）`);
+  } catch (e) {
+    log('下載被瀏覽器擋住：' + e.message + '。請按「開新分頁」，再右鍵／長按圖片另存', 'w');
+  }
+}
+async function openTab(id) {
+  const r = RESULTS[id]; if (!r || !r.url) return;
+  try {
+    const blob = await (await fetch(r.url)).blob();
+    const w = window.open(URL.createObjectURL(blob), '_blank');
+    if (!w) log('彈出視窗被擋，請允許此頁彈出視窗，或直接對大圖右鍵／長按另存', 'w');
+  } catch (e) { log('開新分頁失敗：' + e.message, 'w'); }
+}
+
+async function run(ids) {
+  if (running) return;
+  if ($('mode').value === 'own' && !resolveKey()) { showErr(Object.assign(new Error('未貼 key'), { status: 401 })); return; }
+  running = true; stopFlag = false; $('errBox').classList.remove('on'); badModels.clear();
+  $('btnGen').disabled = $('btnBatch').disabled = true; $('btnStop').disabled = false;
+  let done = 0; const tick = () => { $('progBar').style.width = Math.round(done / ids.length * 100) + '%'; $('progTxt').textContent = `${done}/${ids.length} 完成`; };
+  tick();
+  try {
+    for (const id of ids) {
+      if (stopFlag) { log('已停止', 'w'); break; }
+      RESULTS[id] = { busy: true }; render();
+      try { const r = await genOne(id); RESULTS[id] = r; }
+      catch (e) { RESULTS[id] = { error: describe(e)[0] }; showErr(e); if (e.status === 429 || e.status === 401 || e.status === 403) { render(); break; } }
+      done++; tick(); render();
+      if (done < ids.length) await sleep(1500);
+    }
+  } finally {
+    running = false; $('btnGen').disabled = $('btnBatch').disabled = false; $('btnStop').disabled = true; render();
+  }
+}
+
+function go(delta) { const i = Math.max(0, Math.min(IDS.length - 1, IDS.indexOf(curId()) + delta)); $('num').value = IDS[i]; promptDirty = false; refreshBird(); }
+$('prev').onclick = () => go(-1); $('next').onclick = () => go(1);
+$('num').addEventListener('input', () => { $('num').value = $('num').value.replace(/\D/g, '').slice(-4); if ($('num').value.length === 4 && INFO[$('num').value]) { promptDirty = false; refreshBird(); } });
+$('jump').onchange = () => { $('num').value = $('jump').value; promptDirty = false; refreshBird(); };
+$('btnGen').onclick = () => run([curId()]);
+$('btnBatch').onclick = () => {
+  const n = Math.max(2, Math.min(20, Number($('batchN').value) || 4)); const i = IDS.indexOf(curId());
+  const ids = IDS.slice(i, i + n).filter((x) => !(RESULTS[x] && RESULTS[x].url)); if (!ids.length) { log('這幾張已經出過了', 'w'); return; } run(ids);
+};
+$('btnStop').onclick = () => { stopFlag = true; };
+$('prompt').addEventListener('input', () => { promptDirty = true; $('pcount').textContent = $('prompt').value.length + ' 字'; });
+$('btnReset').onclick = () => { promptDirty = false; refreshBird(); };
+$('btnCopy').onclick = async () => { try { await navigator.clipboard.writeText($('prompt').value); log('已複製'); } catch (e) { $('prompt').select(); } };
+$('mode').onchange = () => { $('keyRow').style.display = $('mode').value === 'own' ? 'flex' : 'none'; LS.set('avx_mode', $('mode').value); };
+$('quality').onchange = () => LS.set('avx_q', $('quality').value);
+$('btnKey').onclick = () => { const k = $('key').value.trim(); if (!/^AIza[0-9A-Za-z_\-]{30,}$/.test(k)) { log('key 格式不似 Google API key', 'w'); return; } LS.set('avx_key', k); log('key 已存在本機'); badge(); };
+$('btnDlAll').onclick = () => Object.keys(RESULTS).filter((i) => RESULTS[i].url).forEach((id, i) => setTimeout(() => dl(id), i * 350));
+$('btnClear').onclick = () => { Object.keys(RESULTS).forEach((k) => { if (!RESULTS[k].busy) delete RESULTS[k]; }); render(); };
+$('out').addEventListener('click', (e) => {
+  const b = e.target.closest('button'), im = e.target.closest('img[data-zoom]');
+  if (im) { $('zoom').querySelector('img').src = im.src; $('zoom').classList.add('on'); return; }
+  if (!b) return; if (b.dataset.dl) dl(b.dataset.dl); if (b.dataset.tab) openTab(b.dataset.tab); if (b.dataset.retry) { promptDirty = false; run([b.dataset.retry]); }
+});
+$('zoom').onclick = () => $('zoom').classList.remove('on');
+function badge() { const k = resolveKey(); $('apiBadge').className = 'pill ' + (k ? 'ok' : 'warn'); $('apiBadge').textContent = k ? 'API：已找到 key' : 'API：等 Canvas 注入'; }
+
+/* 開機 */
+$('jump').innerHTML = D.ids.map((x) => `<option value="${x.id}">${x.id}　${esc(x.z)}</option>`).join('');
+$('layout').innerHTML = Object.entries(D.modes).map(([k, m]) => `<option value="${k}">${esc(m.label)}</option>`).join('');
+$('layout').value = LS.get('avx_layout', 'lite');
+const showRefs = () => { imgsOf(curId()).then((a) => { $('refs').innerHTML = a.map((u) => `<img src="${u}" style="width:48%;border-radius:8px">`).join(''); }).catch(() => {}); };
+window.__showRefs = showRefs;
+$('layout').onchange = () => { LS.set('avx_layout', $('layout').value); promptDirty = false; refreshBird(); showRefs(); };
+showRefs();
+$('mode').value = LS.get('avx_mode', 'canvas'); $('quality').value = LS.get('avx_q', 'pro'); $('mode').onchange();
+if (LS.get('avx_key', '')) $('key').value = LS.get('avx_key', '');
+$('countPill').textContent = `${D.ids.length} 隻 · v${D.version}`;
+badge(); refreshBird(); render();
+log('AvianDex 資訊卡一鍵出圖已載入：選編號 → 按「生成」');
+</script>
+</body>
+</html>

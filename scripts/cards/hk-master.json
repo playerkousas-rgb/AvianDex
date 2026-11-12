@@ -1,0 +1,3276 @@
+{
+ "_readme": {
+  "用途": "香港名錄對照後的「香港優先」編號表：每個編號＝一種 Clements 物種。",
+  "權威": "英文名／學名：eBird/Clements v2024；中文名／香港類別：香港觀鳥會香港鳥類名錄（只取名稱與類別，2025-05 版）。",
+  "規則": "英文學名優先；香港名錄沒有的種移出（原編號改給香港缺的種），重複編號只留最小號。",
+  "日期": "2026-11-11"
+ },
+ "assigned": {
+  "0014": {
+   "code": "whrmun",
+   "en": "White-rumped Munia",
+   "sci": "Lonchura striata",
+   "order": "Passeriformes",
+   "zh": "白腰文鳥",
+   "cat": "I",
+   "taxonOrder": 30820
+  },
+  "0542": {
+   "code": "sibpip1",
+   "en": "Siberian Pipit",
+   "sci": "Anthus japonicus",
+   "order": "Passeriformes",
+   "zh": "黃腹鷚",
+   "cat": "I",
+   "taxonOrder": 31604
+  },
+  "0456": {
+   "code": "scathr2",
+   "en": "White's Thrush",
+   "sci": "Zoothera aurea",
+   "order": "Passeriformes",
+   "zh": "懷氏地鶇",
+   "cat": "I",
+   "taxonOrder": 27968
+  },
+  "0404": {
+   "code": "butwar1",
+   "en": "Buff-throated Warbler",
+   "sci": "Phylloscopus subaffinis",
+   "order": "Passeriformes",
+   "zh": "棕腹柳鶯",
+   "cat": "I",
+   "taxonOrder": 24609
+  },
+  "0054": {
+   "code": "blksco2",
+   "en": "Black Scoter",
+   "sci": "Melanitta americana",
+   "order": "Anseriformes",
+   "zh": "黑海番鴨",
+   "cat": "I",
+   "taxonOrder": 712
+  },
+  "0197": {
+   "code": "casgul4",
+   "en": "Mongolian Gull",
+   "sci": "Larus mongolicus",
+   "order": "Charadriiformes",
+   "zh": "蒙古銀鷗",
+   "cat": "I",
+   "taxonOrder": 6476
+  },
+  "0287": {
+   "code": "norboo1",
+   "en": "Northern Boobook",
+   "sci": "Ninox japonica",
+   "order": "Strigiformes",
+   "zh": "北鷹鴞",
+   "cat": "I",
+   "taxonOrder": 9260
+  },
+  "0515": {
+   "code": "stonec7",
+   "en": "Amur Stonechat",
+   "sci": "Saxicola stejnegeri",
+   "order": "Passeriformes",
+   "zh": "東亞石䳭",
+   "cat": "I",
+   "taxonOrder": 29418
+  },
+  "0445": {
+   "code": "bltlau1",
+   "en": "Black-throated Laughingthrush",
+   "sci": "Pterorhinus chinensis",
+   "order": "Passeriformes",
+   "zh": "黑喉噪鶥",
+   "cat": "IIA",
+   "taxonOrder": 26542
+  },
+  "0124": {
+   "code": "lessap1",
+   "en": "Tibetan Sand-Plover",
+   "sci": "Anarhynchus atrifrons",
+   "order": "Charadriiformes",
+   "zh": "青藏沙鴴",
+   "cat": "I",
+   "taxonOrder": 5850
+  },
+  "0198": {
+   "code": "blknod",
+   "en": "Black Noddy",
+   "sci": "Anous minutus",
+   "order": "Charadriiformes",
+   "zh": "玄燕鷗",
+   "cat": "I",
+   "taxonOrder": 6569
+  },
+  "0325": {
+   "code": "ashwoo2",
+   "en": "Ashy Woodswallow",
+   "sci": "Artamus fuscus",
+   "order": "Passeriformes",
+   "zh": "灰燕鵙",
+   "cat": "I",
+   "taxonOrder": 19513
+  },
+  "0420": {
+   "code": "grewar2",
+   "en": "Two-barred Warbler",
+   "sci": "Phylloscopus plumbeitarsus",
+   "order": "Passeriformes",
+   "zh": "雙斑綠柳鶯",
+   "cat": "I",
+   "taxonOrder": 24698
+  },
+  "0117": {
+   "code": "gyhlap1",
+   "en": "Gray-headed Lapwing",
+   "sci": "Vanellus cinereus",
+   "order": "Charadriiformes",
+   "zh": "灰頭麥雞",
+   "cat": "I",
+   "taxonOrder": 5821
+  },
+  "0386": {
+   "code": "pacswa1",
+   "en": "Pacific Swallow",
+   "sci": "Hirundo javanica",
+   "order": "Passeriformes",
+   "zh": "洋燕",
+   "cat": "I",
+   "taxonOrder": 23944,
+   "note": "香港名錄沿用舊學名 Hirundo tahitica；Clements 2024 已拆分，香港族群屬 Pacific Swallow（H. javanica）"
+  },
+  "0275": {
+   "code": "gyfbuz1",
+   "en": "Gray-faced Buzzard",
+   "sci": "Butastur indicus",
+   "order": "Accipitriformes",
+   "zh": "灰臉鵟鷹",
+   "cat": "I",
+   "taxonOrder": 8291
+  },
+  "0173": {
+   "code": "latsni1",
+   "en": "Latham's Snipe",
+   "sci": "Gallinago hardwickii",
+   "order": "Charadriiformes",
+   "zh": "拉氏沙錐",
+   "cat": "I",
+   "taxonOrder": 6032
+  },
+  "0084": {
+   "code": "piecuc1",
+   "en": "Pied Cuckoo",
+   "sci": "Clamator jacobinus",
+   "order": "Cuculiformes",
+   "zh": "斑翅鳳頭鵑",
+   "cat": "I",
+   "taxonOrder": 3157
+  },
+  "0457": {
+   "code": "whssta2",
+   "en": "White-shouldered Starling",
+   "sci": "Sturnia sinensis",
+   "order": "Passeriformes",
+   "zh": "灰背椋鳥",
+   "cat": "I",
+   "taxonOrder": 27603
+  },
+  "0278": {
+   "code": "wemhar1",
+   "en": "Western Marsh Harrier",
+   "sci": "Circus aeruginosus",
+   "order": "Accipitriformes",
+   "zh": "白頭鷂",
+   "cat": "I",
+   "taxonOrder": 8211
+  },
+  "0431": {
+   "code": "whswar1",
+   "en": "White-spectacled Warbler",
+   "sci": "Phylloscopus intermedius",
+   "order": "Passeriformes",
+   "zh": "白眶鶲鶯",
+   "cat": "I",
+   "taxonOrder": 24671
+  },
+  "0461": {
+   "code": "rossta2",
+   "en": "Rosy Starling",
+   "sci": "Pastor roseus",
+   "order": "Passeriformes",
+   "zh": "粉紅椋鳥",
+   "cat": "I",
+   "taxonOrder": 27587
+  },
+  "0372": {
+   "code": "lstlar2",
+   "en": "Asian Short-toed Lark",
+   "sci": "Alaudala cheleensis",
+   "order": "Passeriformes",
+   "zh": "亞洲短趾百靈",
+   "cat": "I",
+   "taxonOrder": 22589
+  },
+  "0382": {
+   "code": "duswar",
+   "en": "Dusky Warbler",
+   "sci": "Phylloscopus fuscatus",
+   "order": "Passeriformes",
+   "zh": "褐柳鶯",
+   "cat": "I",
+   "taxonOrder": 24598
+  },
+  "0493": {
+   "code": "olbsun4",
+   "en": "Ornate Sunbird",
+   "sci": "Cinnyris ornatus",
+   "order": "Passeriformes",
+   "zh": "黃腹花蜜鳥",
+   "cat": "I",
+   "taxonOrder": 30179
+  },
+  "0468": {
+   "code": "goldcr1",
+   "en": "Goldcrest",
+   "sci": "Regulus regulus",
+   "order": "Passeriformes",
+   "zh": "戴菊",
+   "cat": "I",
+   "taxonOrder": 26607
+  },
+  "0312": {
+   "code": "crekin1",
+   "en": "Crested Kingfisher",
+   "sci": "Megaceryle lugubris",
+   "order": "Coraciiformes",
+   "zh": "冠魚狗",
+   "cat": "I",
+   "taxonOrder": 10192
+  },
+  "0059": {
+   "code": "purswa3",
+   "en": "Gray-headed Swamphen",
+   "sci": "Porphyrio poliocephalus",
+   "order": "Gruiformes",
+   "zh": "紫水雞",
+   "cat": "I",
+   "taxonOrder": 5476
+  },
+  "0053": {
+   "code": "rubcra1",
+   "en": "Ruddy-breasted Crake",
+   "sci": "Zapornia fusca",
+   "order": "Gruiformes",
+   "zh": "紅胸田雞",
+   "cat": "I",
+   "taxonOrder": 5521
+  },
+  "0570": {
+   "code": "litter1",
+   "en": "Little Tern",
+   "sci": "Sternula albifrons",
+   "order": "Charadriiformes",
+   "zh": "白額燕鷗",
+   "cat": "I",
+   "taxonOrder": 6609
+  },
+  "0571": {
+   "code": "swspet",
+   "en": "Swinhoe's Storm-Petrel",
+   "sci": "Hydrobates monorhis",
+   "order": "Procellariiformes",
+   "zh": "黑叉尾海燕",
+   "cat": "I",
+   "taxonOrder": 6983
+  },
+  "0572": {
+   "code": "herpet2",
+   "en": "Herald Petrel",
+   "sci": "Pterodroma heraldica",
+   "order": "Procellariiformes",
+   "zh": "信使圓尾鸌",
+   "cat": "I",
+   "taxonOrder": 7034
+  },
+  "0573": {
+   "code": "gloibi",
+   "en": "Glossy Ibis",
+   "sci": "Plegadis falcinellus",
+   "order": "Pelecaniformes",
+   "zh": "彩䴉",
+   "cat": "I",
+   "taxonOrder": 7382
+  },
+  "0574": {
+   "code": "strher",
+   "en": "Striated Heron",
+   "sci": "Butorides striata",
+   "order": "Pelecaniformes",
+   "zh": "綠鷺",
+   "cat": "I",
+   "taxonOrder": 7581
+  },
+  "0575": {
+   "code": "shteag1",
+   "en": "Short-toed Snake-Eagle",
+   "sci": "Circaetus gallicus",
+   "order": "Accipitriformes",
+   "zh": "短趾雕",
+   "cat": "I",
+   "taxonOrder": 7898
+  },
+  "0576": {
+   "code": "mouhae1",
+   "en": "Mountain Hawk-Eagle",
+   "sci": "Nisaetus nipalensis",
+   "order": "Accipitriformes",
+   "zh": "鷹鵰",
+   "cat": "I",
+   "taxonOrder": 7908
+  },
+  "0577": {
+   "code": "booeag1",
+   "en": "Booted Eagle",
+   "sci": "Hieraaetus pennatus",
+   "order": "Accipitriformes",
+   "zh": "靴隼雕",
+   "cat": "I",
+   "taxonOrder": 7952
+  },
+  "0578": {
+   "code": "steeag1",
+   "en": "Steppe Eagle",
+   "sci": "Aquila nipalensis",
+   "order": "Accipitriformes",
+   "zh": "草原鵰",
+   "cat": "I",
+   "taxonOrder": 7954
+  },
+  "0579": {
+   "code": "shikra1",
+   "en": "Shikra",
+   "sci": "Tachyspiza badia",
+   "order": "Accipitriformes",
+   "zh": "褐耳鷹",
+   "cat": "I",
+   "taxonOrder": 8069
+  },
+  "0580": {
+   "code": "larcuc11",
+   "en": "Oriental Cuckooshrike",
+   "sci": "Coracina javensis",
+   "order": "Passeriformes",
+   "zh": "大鵑鵙",
+   "cat": "I",
+   "taxonOrder": 18523
+  },
+  "0581": {
+   "code": "grytre1",
+   "en": "Gray Treepie",
+   "sci": "Dendrocitta formosae",
+   "order": "Passeriformes",
+   "zh": "灰樹鵲",
+   "cat": "I",
+   "taxonOrder": 21220
+  },
+  "0582": {
+   "code": "yectit1",
+   "en": "Yellow-cheeked Tit",
+   "sci": "Machlolophus spilonotus",
+   "order": "Passeriformes",
+   "zh": "黃頰山雀",
+   "cat": "IIA",
+   "taxonOrder": 22001
+  },
+  "0583": {
+   "code": "russpa2",
+   "en": "Russet Sparrow",
+   "sci": "Passer cinnamomeus",
+   "order": "Passeriformes",
+   "zh": "山麻雀",
+   "cat": "I",
+   "taxonOrder": 31291
+  }
+ },
+ "kept": {
+  "0001": {
+   "zh": "珠頸斑鳩",
+   "cat": "I",
+   "sci": "Spilopelia chinensis"
+  },
+  "0002": {
+   "zh": "黑鳶",
+   "cat": "I",
+   "sci": "Milvus migrans"
+  },
+  "0003": {
+   "zh": "原鴿",
+   "cat": "IIB",
+   "sci": "Columba livia"
+  },
+  "0004": {
+   "zh": "小葵花鳳頭鸚鵡",
+   "cat": "IIB",
+   "sci": "Cacatua sulphurea"
+  },
+  "0005": {
+   "zh": "噪鵑",
+   "cat": "I",
+   "sci": "Eudynamys scolopaceus"
+  },
+  "0006": {
+   "zh": "紅耳鵯",
+   "cat": "I",
+   "sci": "Pycnonotus jocosus"
+  },
+  "0007": {
+   "zh": "白頭鵯",
+   "cat": "I",
+   "sci": "Pycnonotus sinensis"
+  },
+  "0008": {
+   "zh": "鵲鴝",
+   "cat": "I",
+   "sci": "Copsychus saularis"
+  },
+  "0009": {
+   "zh": "黑臉噪鶥",
+   "cat": "I",
+   "sci": "Pterorhinus perspicillatus"
+  },
+  "0010": {
+   "zh": "灰胸秧雞",
+   "cat": "I",
+   "sci": "Lewinia striata"
+  },
+  "0011": {
+   "zh": "樹麻雀",
+   "cat": "I",
+   "sci": "Passer montanus"
+  },
+  "0012": {
+   "zh": "黑領椋鳥",
+   "cat": "I",
+   "sci": "Gracupica nigricollis"
+  },
+  "0013": {
+   "zh": "八哥",
+   "cat": "I",
+   "sci": "Acridotheres cristatellus"
+  },
+  "0015": {
+   "zh": "紅嘴藍鵲",
+   "cat": "I",
+   "sci": "Urocissa erythroryncha"
+  },
+  "0016": {
+   "zh": "遠東山雀",
+   "cat": "I",
+   "sci": "Parus cinereus"
+  },
+  "0017": {
+   "zh": "普通鵟",
+   "cat": "I",
+   "sci": "Buteo japonicus"
+  },
+  "0018": {
+   "zh": "畫眉",
+   "cat": "I",
+   "sci": "Garrulax canorus"
+  },
+  "0019": {
+   "zh": "叉尾太陽鳥",
+   "cat": "I",
+   "sci": "Aethopyga christinae"
+  },
+  "0020": {
+   "zh": "長尾縫葉鶯",
+   "cat": "I",
+   "sci": "Orthotomus sutorius"
+  },
+  "0021": {
+   "zh": "亞歷山大鸚鵡",
+   "cat": "IIB",
+   "sci": "Psittacula eupatria"
+  },
+  "0022": {
+   "zh": "栗樹鴨",
+   "cat": "I",
+   "sci": "Dendrocygna javanica"
+  },
+  "0023": {
+   "zh": "灰雁",
+   "cat": "I",
+   "sci": "Anser anser"
+  },
+  "0024": {
+   "zh": "白額雁",
+   "cat": "I",
+   "sci": "Anser albifrons"
+  },
+  "0025": {
+   "zh": "小白額雁",
+   "cat": "I",
+   "sci": "Anser erythropus"
+  },
+  "0026": {
+   "zh": "寒林豆雁",
+   "cat": "I",
+   "sci": "Anser fabalis"
+  },
+  "0027": {
+   "zh": "凍原豆雁",
+   "cat": "I",
+   "sci": "Anser serrirostris"
+  },
+  "0028": {
+   "zh": "大天鵝",
+   "cat": "I",
+   "sci": "Cygnus cygnus"
+  },
+  "0029": {
+   "zh": "赤麻鴨",
+   "cat": "I",
+   "sci": "Tadorna ferruginea"
+  },
+  "0030": {
+   "zh": "翹鼻麻鴨",
+   "cat": "I",
+   "sci": "Tadorna tadorna"
+  },
+  "0031": {
+   "zh": "棉鳧",
+   "cat": "I",
+   "sci": "Nettapus coromandelianus"
+  },
+  "0032": {
+   "zh": "鴛鴦",
+   "cat": "I",
+   "sci": "Aix galericulata"
+  },
+  "0033": {
+   "zh": "花臉鴨",
+   "cat": "I",
+   "sci": "Sibirionetta formosa"
+  },
+  "0034": {
+   "zh": "白眉鴨",
+   "cat": "I",
+   "sci": "Spatula querquedula"
+  },
+  "0035": {
+   "zh": "琵嘴鴨",
+   "cat": "I",
+   "sci": "Spatula clypeata"
+  },
+  "0036": {
+   "zh": "赤膀鴨",
+   "cat": "I",
+   "sci": "Mareca strepera"
+  },
+  "0037": {
+   "zh": "羅紋鴨",
+   "cat": "I",
+   "sci": "Mareca falcata"
+  },
+  "0038": {
+   "zh": "赤頸鴨",
+   "cat": "I",
+   "sci": "Mareca penelope"
+  },
+  "0039": {
+   "zh": "綠眉鴨",
+   "cat": "I",
+   "sci": "Mareca americana"
+  },
+  "0040": {
+   "zh": "棕頸鴨",
+   "cat": "I",
+   "sci": "Anas luzonica"
+  },
+  "0041": {
+   "zh": "印緬斑嘴鴨",
+   "cat": "I",
+   "sci": "Anas poecilorhyncha"
+  },
+  "0042": {
+   "zh": "中華斑嘴鴨",
+   "cat": "I",
+   "sci": "Anas zonorhyncha"
+  },
+  "0043": {
+   "zh": "綠頭鴨",
+   "cat": "I",
+   "sci": "Anas platyrhynchos"
+  },
+  "0044": {
+   "zh": "針尾鴨",
+   "cat": "I",
+   "sci": "Anas acuta"
+  },
+  "0045": {
+   "zh": "綠翅鴨",
+   "cat": "I",
+   "sci": "Anas crecca"
+  },
+  "0046": {
+   "zh": "赤嘴潛鴨",
+   "cat": "I",
+   "sci": "Netta rufina"
+  },
+  "0047": {
+   "zh": "紅頭潛鴨",
+   "cat": "I",
+   "sci": "Aythya ferina"
+  },
+  "0048": {
+   "zh": "白眼潛鴨",
+   "cat": "I",
+   "sci": "Aythya nyroca"
+  },
+  "0049": {
+   "zh": "青頭潛鴨",
+   "cat": "I",
+   "sci": "Aythya baeri"
+  },
+  "0050": {
+   "zh": "鳳頭潛鴨",
+   "cat": "I",
+   "sci": "Aythya fuligula"
+  },
+  "0051": {
+   "zh": "斑背潛鴨",
+   "cat": "I",
+   "sci": "Aythya marila"
+  },
+  "0052": {
+   "zh": "絲絨海番鴨",
+   "cat": "I",
+   "sci": "Melanitta fusca"
+  },
+  "0055": {
+   "zh": "鵲鴨",
+   "cat": "I",
+   "sci": "Bucephala clangula"
+  },
+  "0056": {
+   "zh": "白秋沙鴨",
+   "cat": "I",
+   "sci": "Mergellus albellus"
+  },
+  "0057": {
+   "zh": "紅胸秋沙鴨",
+   "cat": "I",
+   "sci": "Mergus serrator"
+  },
+  "0058": {
+   "zh": "中華秋沙鴨",
+   "cat": "I",
+   "sci": "Mergus squamatus"
+  },
+  "0060": {
+   "zh": "中華鷓鴣",
+   "cat": "I",
+   "sci": "Francolinus pintadeanus"
+  },
+  "0061": {
+   "zh": "鵪鶉",
+   "cat": "I",
+   "sci": "Coturnix japonica"
+  },
+  "0062": {
+   "zh": "小鸊鷉",
+   "cat": "I",
+   "sci": "Tachybaptus ruficollis"
+  },
+  "0063": {
+   "zh": "角鸊鷉",
+   "cat": "I",
+   "sci": "Podiceps auritus"
+  },
+  "0064": {
+   "zh": "鳳頭鸊鷉",
+   "cat": "I",
+   "sci": "Podiceps cristatus"
+  },
+  "0065": {
+   "zh": "黑頸鸊鷉",
+   "cat": "I",
+   "sci": "Podiceps nigricollis"
+  },
+  "0066": {
+   "zh": "山斑鳩",
+   "cat": "I",
+   "sci": "Streptopelia orientalis"
+  },
+  "0067": {
+   "zh": "灰斑鳩",
+   "cat": "IIB",
+   "sci": "Streptopelia decaocto"
+  },
+  "0068": {
+   "zh": "火斑鳩",
+   "cat": "I",
+   "sci": "Streptopelia tranquebarica"
+  },
+  "0069": {
+   "zh": "斑尾鵑鳩",
+   "cat": "I",
+   "sci": "Macropygia unchall"
+  },
+  "0070": {
+   "zh": "綠翅金鳩",
+   "cat": "I",
+   "sci": "Chalcophaps indica"
+  },
+  "0071": {
+   "zh": "橙胸綠鳩",
+   "cat": "I",
+   "sci": "Treron bicinctus"
+  },
+  "0072": {
+   "zh": "厚嘴綠鳩",
+   "cat": "I",
+   "sci": "Treron curvirostra"
+  },
+  "0073": {
+   "zh": "楔尾綠鳩",
+   "cat": "I",
+   "sci": "Treron sphenurus"
+  },
+  "0074": {
+   "zh": "紅翅綠鳩",
+   "cat": "I",
+   "sci": "Treron sieboldii"
+  },
+  "0075": {
+   "zh": "紅頂綠鳩",
+   "cat": "I",
+   "sci": "Treron formosae"
+  },
+  "0076": {
+   "zh": "褐翅鴉鵑",
+   "cat": "I",
+   "sci": "Centropus sinensis"
+  },
+  "0077": {
+   "zh": "小鴉鵑",
+   "cat": "I",
+   "sci": "Centropus bengalensis"
+  },
+  "0078": {
+   "zh": "紅翅鳳頭鵑",
+   "cat": "I",
+   "sci": "Clamator coromandus"
+  },
+  "0079": {
+   "zh": "八聲杜鵑",
+   "cat": "I",
+   "sci": "Cacomantis merulinus"
+  },
+  "0080": {
+   "zh": "烏鵑",
+   "cat": "I",
+   "sci": "Surniculus lugubris"
+  },
+  "0081": {
+   "zh": "大鷹鵑",
+   "cat": "I",
+   "sci": "Hierococcyx sparverioides"
+  },
+  "0082": {
+   "zh": "北鷹鵑",
+   "cat": "I",
+   "sci": "Hierococcyx hyperythrus"
+  },
+  "0083": {
+   "zh": "霍氏鷹鵑",
+   "cat": "I",
+   "sci": "Hierococcyx nisicolor"
+  },
+  "0085": {
+   "zh": "小杜鵑",
+   "cat": "I",
+   "sci": "Cuculus poliocephalus"
+  },
+  "0086": {
+   "zh": "四聲杜鵑",
+   "cat": "I",
+   "sci": "Cuculus micropterus"
+  },
+  "0087": {
+   "zh": "大杜鵑",
+   "cat": "I",
+   "sci": "Cuculus canorus"
+  },
+  "0088": {
+   "zh": "東方中杜鵑",
+   "cat": "I",
+   "sci": "Cuculus optatus"
+  },
+  "0089": {
+   "zh": "普通夜鷹",
+   "cat": "I",
+   "sci": "Caprimulgus jotaka"
+  },
+  "0090": {
+   "zh": "林夜鷹",
+   "cat": "I",
+   "sci": "Caprimulgus affinis"
+  },
+  "0091": {
+   "zh": "白喉針尾雨燕",
+   "cat": "I",
+   "sci": "Hirundapus caudacutus"
+  },
+  "0092": {
+   "zh": "灰喉針尾雨燕",
+   "cat": "I",
+   "sci": "Hirundapus cochinchinensis"
+  },
+  "0093": {
+   "zh": "褐背針尾雨燕",
+   "cat": "I",
+   "sci": "Hirundapus giganteus"
+  },
+  "0094": {
+   "zh": "短嘴金絲燕",
+   "cat": "I",
+   "sci": "Aerodramus brevirostris"
+  },
+  "0095": {
+   "zh": "普通雨燕",
+   "cat": "I",
+   "sci": "Apus apus"
+  },
+  "0096": {
+   "zh": "白腰雨燕",
+   "cat": "I",
+   "sci": "Apus pacificus"
+  },
+  "0097": {
+   "zh": "小白腰雨燕",
+   "cat": "I",
+   "sci": "Apus nipalensis"
+  },
+  "0098": {
+   "zh": "西方秧雞",
+   "cat": "I",
+   "sci": "Rallus aquaticus"
+  },
+  "0099": {
+   "zh": "普通秧雞",
+   "cat": "I",
+   "sci": "Rallus indicus"
+  },
+  "0100": {
+   "zh": "黑水雞",
+   "cat": "I",
+   "sci": "Gallinula chloropus"
+  },
+  "0101": {
+   "zh": "白骨頂",
+   "cat": "I",
+   "sci": "Fulica atra"
+  },
+  "0102": {
+   "zh": "白眉田雞",
+   "cat": "I",
+   "sci": "Poliolimnas cinereus"
+  },
+  "0103": {
+   "zh": "董雞",
+   "cat": "I",
+   "sci": "Gallicrex cinerea"
+  },
+  "0104": {
+   "zh": "白胸苦惡鳥",
+   "cat": "I",
+   "sci": "Amaurornis phoenicurus"
+  },
+  "0105": {
+   "zh": "灰腳秧雞",
+   "cat": "I",
+   "sci": "Rallina eurizonoides"
+  },
+  "0106": {
+   "zh": "斑脇田雞",
+   "cat": "I",
+   "sci": "Zapornia paykullii"
+  },
+  "0107": {
+   "zh": "紅腳田雞",
+   "cat": "I",
+   "sci": "Zapornia akool"
+  },
+  "0108": {
+   "zh": "小田雞",
+   "cat": "I",
+   "sci": "Zapornia pusilla"
+  },
+  "0109": {
+   "zh": "白鶴",
+   "cat": "I",
+   "sci": "Leucogeranus leucogeranus"
+  },
+  "0110": {
+   "zh": "灰鶴",
+   "cat": "I",
+   "sci": "Grus grus"
+  },
+  "0111": {
+   "zh": "大石鴴",
+   "cat": "I",
+   "sci": "Esacus recurvirostris"
+  },
+  "0112": {
+   "zh": "黑翅長腳鷸",
+   "cat": "I",
+   "sci": "Himantopus himantopus"
+  },
+  "0113": {
+   "zh": "反嘴鷸",
+   "cat": "I",
+   "sci": "Recurvirostra avosetta"
+  },
+  "0114": {
+   "zh": "蠣鷸",
+   "cat": "I",
+   "sci": "Haematopus ostralegus"
+  },
+  "0115": {
+   "zh": "灰斑鴴",
+   "cat": "I",
+   "sci": "Pluvialis squatarola"
+  },
+  "0116": {
+   "zh": "歐金鴴",
+   "cat": "I",
+   "sci": "Pluvialis apricaria"
+  },
+  "0118": {
+   "zh": "太平洋金斑鴴",
+   "cat": "I",
+   "sci": "Pluvialis fulva"
+  },
+  "0119": {
+   "zh": "鳳頭麥雞",
+   "cat": "I",
+   "sci": "Vanellus vanellus"
+  },
+  "0120": {
+   "zh": "蒙古沙鴴",
+   "cat": "I",
+   "sci": "Anarhynchus mongolus"
+  },
+  "0121": {
+   "zh": "鐵嘴沙鴴",
+   "cat": "I",
+   "sci": "Anarhynchus leschenaultii"
+  },
+  "0122": {
+   "zh": "環頸鴴",
+   "cat": "I",
+   "sci": "Anarhynchus alexandrinus"
+  },
+  "0123": {
+   "zh": "白臉鴴",
+   "cat": "I",
+   "sci": "Anarhynchus dealbatus"
+  },
+  "0125": {
+   "zh": "劍鴴",
+   "cat": "I",
+   "sci": "Charadrius hiaticula"
+  },
+  "0126": {
+   "zh": "長嘴鴴",
+   "cat": "I",
+   "sci": "Thinornis placidus"
+  },
+  "0127": {
+   "zh": "金眶鴴",
+   "cat": "I",
+   "sci": "Thinornis dubius"
+  },
+  "0128": {
+   "zh": "東方鴴",
+   "cat": "I",
+   "sci": "Anarhynchus veredus"
+  },
+  "0129": {
+   "zh": "彩鷸",
+   "cat": "I",
+   "sci": "Rostratula benghalensis"
+  },
+  "0130": {
+   "zh": "水雉",
+   "cat": "I",
+   "sci": "Hydrophasianus chirurgus"
+  },
+  "0131": {
+   "zh": "中杓鷸",
+   "cat": "I",
+   "sci": "Numenius phaeopus"
+  },
+  "0132": {
+   "zh": "小杓鷸",
+   "cat": "I",
+   "sci": "Numenius minutus"
+  },
+  "0133": {
+   "zh": "紅腰杓鷸",
+   "cat": "I",
+   "sci": "Numenius madagascariensis"
+  },
+  "0134": {
+   "zh": "白腰杓鷸",
+   "cat": "I",
+   "sci": "Numenius arquata"
+  },
+  "0135": {
+   "zh": "斑尾塍鷸",
+   "cat": "I",
+   "sci": "Limosa lapponica"
+  },
+  "0136": {
+   "zh": "黑尾塍鷸",
+   "cat": "I",
+   "sci": "Limosa limosa"
+  },
+  "0137": {
+   "zh": "翻石鷸",
+   "cat": "I",
+   "sci": "Arenaria interpres"
+  },
+  "0138": {
+   "zh": "大濱鷸",
+   "cat": "I",
+   "sci": "Calidris tenuirostris"
+  },
+  "0139": {
+   "zh": "紅腹濱鷸",
+   "cat": "I",
+   "sci": "Calidris canutus"
+  },
+  "0140": {
+   "zh": "流蘇鷸",
+   "cat": "I",
+   "sci": "Calidris pugnax"
+  },
+  "0141": {
+   "zh": "闊嘴鷸",
+   "cat": "I",
+   "sci": "Calidris falcinellus"
+  },
+  "0142": {
+   "zh": "尖尾濱鷸",
+   "cat": "I",
+   "sci": "Calidris acuminata"
+  },
+  "0143": {
+   "zh": "彎嘴濱鷸",
+   "cat": "I",
+   "sci": "Calidris ferruginea"
+  },
+  "0144": {
+   "zh": "青腳濱鷸",
+   "cat": "I",
+   "sci": "Calidris temminckii"
+  },
+  "0145": {
+   "zh": "長趾濱鷸",
+   "cat": "I",
+   "sci": "Calidris subminuta"
+  },
+  "0146": {
+   "zh": "勺嘴鷸",
+   "cat": "I",
+   "sci": "Calidris pygmaea"
+  },
+  "0147": {
+   "zh": "紅頸濱鷸",
+   "cat": "I",
+   "sci": "Calidris ruficollis"
+  },
+  "0148": {
+   "zh": "三趾濱鷸",
+   "cat": "I",
+   "sci": "Calidris alba"
+  },
+  "0149": {
+   "zh": "黑腹濱鷸",
+   "cat": "I",
+   "sci": "Calidris alpina"
+  },
+  "0150": {
+   "zh": "小濱鷸",
+   "cat": "I",
+   "sci": "Calidris minuta"
+  },
+  "0151": {
+   "zh": "飾胸鷸",
+   "cat": "I",
+   "sci": "Calidris subruficollis"
+  },
+  "0152": {
+   "zh": "斑胸濱鷸",
+   "cat": "I",
+   "sci": "Calidris melanotos"
+  },
+  "0153": {
+   "zh": "半蹼鷸",
+   "cat": "I",
+   "sci": "Limnodromus semipalmatus"
+  },
+  "0154": {
+   "zh": "長嘴鷸",
+   "cat": "I",
+   "sci": "Limnodromus scolopaceus"
+  },
+  "0155": {
+   "zh": "丘鷸",
+   "cat": "I",
+   "sci": "Scolopax rusticola"
+  },
+  "0156": {
+   "zh": "橙腹葉鵯",
+   "cat": "I",
+   "sci": "Chloropsis hardwickii"
+  },
+  "0157": {
+   "zh": "扇尾沙錐",
+   "cat": "I",
+   "sci": "Gallinago gallinago"
+  },
+  "0158": {
+   "zh": "針尾沙錐",
+   "cat": "I",
+   "sci": "Gallinago stenura"
+  },
+  "0159": {
+   "zh": "大沙錐",
+   "cat": "I",
+   "sci": "Gallinago megala"
+  },
+  "0160": {
+   "zh": "翹嘴鷸",
+   "cat": "I",
+   "sci": "Xenus cinereus"
+  },
+  "0161": {
+   "zh": "紅頸瓣蹼鷸",
+   "cat": "I",
+   "sci": "Phalaropus lobatus"
+  },
+  "0162": {
+   "zh": "灰瓣蹼鷸",
+   "cat": "I",
+   "sci": "Phalaropus fulicarius"
+  },
+  "0163": {
+   "zh": "磯鷸",
+   "cat": "I",
+   "sci": "Actitis hypoleucos"
+  },
+  "0164": {
+   "zh": "白腰草鷸",
+   "cat": "I",
+   "sci": "Tringa ochropus"
+  },
+  "0165": {
+   "zh": "灰尾漂鷸",
+   "cat": "I",
+   "sci": "Tringa brevipes"
+  },
+  "0166": {
+   "zh": "鶴鷸",
+   "cat": "I",
+   "sci": "Tringa erythropus"
+  },
+  "0167": {
+   "zh": "青腳鷸",
+   "cat": "I",
+   "sci": "Tringa nebularia"
+  },
+  "0168": {
+   "zh": "小青腳鷸",
+   "cat": "I",
+   "sci": "Tringa guttifer"
+  },
+  "0169": {
+   "zh": "小黃腳鷸",
+   "cat": "I",
+   "sci": "Tringa flavipes"
+  },
+  "0170": {
+   "zh": "澤鷸",
+   "cat": "I",
+   "sci": "Tringa stagnatilis"
+  },
+  "0171": {
+   "zh": "林鷸",
+   "cat": "I",
+   "sci": "Tringa glareola"
+  },
+  "0172": {
+   "zh": "紅腳鷸",
+   "cat": "I",
+   "sci": "Tringa totanus"
+  },
+  "0174": {
+   "zh": "黃腳三趾鶉",
+   "cat": "I",
+   "sci": "Turnix tanki"
+  },
+  "0175": {
+   "zh": "棕三趾鶉",
+   "cat": "I",
+   "sci": "Turnix suscitator"
+  },
+  "0176": {
+   "zh": "普通燕鴴",
+   "cat": "I",
+   "sci": "Glareola maldivarum"
+  },
+  "0177": {
+   "zh": "灰燕鴴",
+   "cat": "I",
+   "sci": "Glareola lactea"
+  },
+  "0178": {
+   "zh": "中賊鷗",
+   "cat": "I",
+   "sci": "Stercorarius pomarinus"
+  },
+  "0179": {
+   "zh": "短尾賊鷗",
+   "cat": "I",
+   "sci": "Stercorarius parasiticus"
+  },
+  "0180": {
+   "zh": "長尾賊鷗",
+   "cat": "I",
+   "sci": "Stercorarius longicaudus"
+  },
+  "0181": {
+   "zh": "扁嘴海雀",
+   "cat": "I",
+   "sci": "Synthliboramphus antiquus"
+  },
+  "0182": {
+   "zh": "冠海雀",
+   "cat": "I",
+   "sci": "Synthliboramphus wumizusume"
+  },
+  "0183": {
+   "zh": "三趾鷗",
+   "cat": "I",
+   "sci": "Rissa tridactyla"
+  },
+  "0184": {
+   "zh": "黑嘴鷗",
+   "cat": "I",
+   "sci": "Saundersilarus saundersi"
+  },
+  "0185": {
+   "zh": "細嘴鷗",
+   "cat": "I",
+   "sci": "Chroicocephalus genei"
+  },
+  "0186": {
+   "zh": "紅嘴鷗",
+   "cat": "I",
+   "sci": "Chroicocephalus ridibundus"
+  },
+  "0187": {
+   "zh": "棕頭鷗",
+   "cat": "I",
+   "sci": "Chroicocephalus brunnicephalus"
+  },
+  "0188": {
+   "zh": "小鷗",
+   "cat": "I",
+   "sci": "Hydrocoloeus minutus"
+  },
+  "0189": {
+   "zh": "弗氏鷗",
+   "cat": "I",
+   "sci": "Leucophaeus pipixcan"
+  },
+  "0190": {
+   "zh": "遺鷗",
+   "cat": "I",
+   "sci": "Ichthyaetus relictus"
+  },
+  "0191": {
+   "zh": "漁鷗",
+   "cat": "I",
+   "sci": "Ichthyaetus ichthyaetus"
+  },
+  "0192": {
+   "zh": "黑尾鷗",
+   "cat": "I",
+   "sci": "Larus crassirostris"
+  },
+  "0193": {
+   "zh": "普通海鷗",
+   "cat": "I",
+   "sci": "Larus canus"
+  },
+  "0194": {
+   "zh": "美洲海鷗",
+   "cat": "I",
+   "sci": "Larus brachyrhynchus"
+  },
+  "0195": {
+   "zh": "環嘴鷗",
+   "cat": "I",
+   "sci": "Larus delawarensis"
+  },
+  "0196": {
+   "zh": "織女銀鷗",
+   "cat": "I",
+   "sci": "Larus vegae"
+  },
+  "0199": {
+   "zh": "小黑背鷗",
+   "cat": "I",
+   "sci": "Larus fuscus"
+  },
+  "0200": {
+   "zh": "灰背鷗",
+   "cat": "I",
+   "sci": "Larus schistisagus"
+  },
+  "0201": {
+   "zh": "灰翅鷗",
+   "cat": "I",
+   "sci": "Larus glaucescens"
+  },
+  "0202": {
+   "zh": "北極鷗",
+   "cat": "I",
+   "sci": "Larus hyperboreus"
+  },
+  "0203": {
+   "zh": "白頂玄燕鷗",
+   "cat": "I",
+   "sci": "Anous stolidus"
+  },
+  "0204": {
+   "zh": "烏燕鷗",
+   "cat": "I",
+   "sci": "Onychoprion fuscatus"
+  },
+  "0205": {
+   "zh": "褐翅燕鷗",
+   "cat": "I",
+   "sci": "Onychoprion anaethetus"
+  },
+  "0206": {
+   "zh": "白腰燕鷗",
+   "cat": "I",
+   "sci": "Onychoprion aleuticus"
+  },
+  "0207": {
+   "zh": "鷗嘴噪鷗",
+   "cat": "I",
+   "sci": "Gelochelidon nilotica"
+  },
+  "0208": {
+   "zh": "紅嘴巨燕鷗",
+   "cat": "I",
+   "sci": "Hydroprogne caspia"
+  },
+  "0209": {
+   "zh": "白翅浮鷗",
+   "cat": "I",
+   "sci": "Chlidonias leucopterus"
+  },
+  "0210": {
+   "zh": "鬚浮鷗",
+   "cat": "I",
+   "sci": "Chlidonias hybrida"
+  },
+  "0211": {
+   "zh": "粉紅燕鷗",
+   "cat": "I",
+   "sci": "Sterna dougallii"
+  },
+  "0212": {
+   "zh": "黑枕燕鷗",
+   "cat": "I",
+   "sci": "Sterna sumatrana"
+  },
+  "0213": {
+   "zh": "普通燕鷗",
+   "cat": "I",
+   "sci": "Sterna hirundo"
+  },
+  "0214": {
+   "zh": "大鳳頭燕鷗",
+   "cat": "I",
+   "sci": "Thalasseus bergii"
+  },
+  "0215": {
+   "zh": "白尾鸏",
+   "cat": "I",
+   "sci": "Phaethon lepturus"
+  },
+  "0216": {
+   "zh": "紅喉潛鳥",
+   "cat": "I",
+   "sci": "Gavia stellata"
+  },
+  "0217": {
+   "zh": "太平洋潛鳥",
+   "cat": "I",
+   "sci": "Gavia pacifica"
+  },
+  "0218": {
+   "zh": "黃嘴潛鳥",
+   "cat": "I",
+   "sci": "Gavia adamsii"
+  },
+  "0219": {
+   "zh": "褐燕鸌",
+   "cat": "I",
+   "sci": "Bulweria bulwerii"
+  },
+  "0220": {
+   "zh": "白額鸌",
+   "cat": "I",
+   "sci": "Calonectris leucomelas"
+  },
+  "0221": {
+   "zh": "淡足鸌",
+   "cat": "I",
+   "sci": "Ardenna carneipes"
+  },
+  "0222": {
+   "zh": "楔尾鸌",
+   "cat": "I",
+   "sci": "Ardenna pacifica"
+  },
+  "0223": {
+   "zh": "短尾鸌",
+   "cat": "I",
+   "sci": "Ardenna tenuirostris"
+  },
+  "0224": {
+   "zh": "黑鸛",
+   "cat": "I",
+   "sci": "Ciconia nigra"
+  },
+  "0225": {
+   "zh": "東方白鸛",
+   "cat": "I",
+   "sci": "Ciconia boyciana"
+  },
+  "0226": {
+   "zh": "白斑軍艦鳥",
+   "cat": "I",
+   "sci": "Fregata ariel"
+  },
+  "0227": {
+   "zh": "白腹軍艦鳥",
+   "cat": "I",
+   "sci": "Fregata andrewsi"
+  },
+  "0228": {
+   "zh": "黑腹軍艦鳥",
+   "cat": "I",
+   "sci": "Fregata minor"
+  },
+  "0229": {
+   "zh": "藍臉鰹鳥",
+   "cat": "I",
+   "sci": "Sula dactylatra"
+  },
+  "0230": {
+   "zh": "褐鰹鳥",
+   "cat": "I",
+   "sci": "Sula leucogaster"
+  },
+  "0231": {
+   "zh": "紅腳鰹鳥",
+   "cat": "I",
+   "sci": "Sula sula"
+  },
+  "0232": {
+   "zh": "普通鸕鷀",
+   "cat": "I",
+   "sci": "Phalacrocorax carbo"
+  },
+  "0233": {
+   "zh": "暗綠背鸕鷀",
+   "cat": "I",
+   "sci": "Phalacrocorax capillatus"
+  },
+  "0234": {
+   "zh": "卷羽鵜鶘",
+   "cat": "I",
+   "sci": "Pelecanus crispus"
+  },
+  "0235": {
+   "zh": "大麻鳽",
+   "cat": "I",
+   "sci": "Botaurus stellaris"
+  },
+  "0236": {
+   "zh": "黃葦鳽",
+   "cat": "I",
+   "sci": "Botaurus sinensis"
+  },
+  "0237": {
+   "zh": "紫背葦鳽",
+   "cat": "I",
+   "sci": "Botaurus eurhythmus"
+  },
+  "0238": {
+   "zh": "栗葦鳽",
+   "cat": "I",
+   "sci": "Botaurus cinnamomeus"
+  },
+  "0239": {
+   "zh": "黑鳽",
+   "cat": "I",
+   "sci": "Botaurus flavicollis"
+  },
+  "0240": {
+   "zh": "蒼鷺",
+   "cat": "I",
+   "sci": "Ardea cinerea"
+  },
+  "0241": {
+   "zh": "草鷺",
+   "cat": "I",
+   "sci": "Ardea purpurea"
+  },
+  "0242": {
+   "zh": "大白鷺",
+   "cat": "I",
+   "sci": "Ardea alba"
+  },
+  "0243": {
+   "zh": "中白鷺",
+   "cat": "I",
+   "sci": "Ardea intermedia"
+  },
+  "0244": {
+   "zh": "黃嘴白鷺",
+   "cat": "I",
+   "sci": "Egretta eulophotes"
+  },
+  "0245": {
+   "zh": "小白鷺",
+   "cat": "I",
+   "sci": "Egretta garzetta"
+  },
+  "0246": {
+   "zh": "岩鷺",
+   "cat": "I",
+   "sci": "Egretta sacra"
+  },
+  "0247": {
+   "zh": "牛背鷺",
+   "cat": "I",
+   "sci": "Ardea coromanda"
+  },
+  "0248": {
+   "zh": "池鷺",
+   "cat": "I",
+   "sci": "Ardeola bacchus"
+  },
+  "0249": {
+   "zh": "夜鷺",
+   "cat": "I",
+   "sci": "Nycticorax nycticorax"
+  },
+  "0250": {
+   "zh": "栗鳽",
+   "cat": "I",
+   "sci": "Gorsachius goisagi"
+  },
+  "0251": {
+   "zh": "黑冠鳽",
+   "cat": "I",
+   "sci": "Gorsachius melanolophus"
+  },
+  "0252": {
+   "zh": "黑頭白䴉",
+   "cat": "I",
+   "sci": "Threskiornis melanocephalus"
+  },
+  "0253": {
+   "zh": "白琵鷺",
+   "cat": "I",
+   "sci": "Platalea leucorodia"
+  },
+  "0254": {
+   "zh": "黑臉琵鷺",
+   "cat": "I",
+   "sci": "Platalea minor"
+  },
+  "0255": {
+   "zh": "鶚",
+   "cat": "I",
+   "sci": "Pandion haliaetus"
+  },
+  "0256": {
+   "zh": "黑翅鳶",
+   "cat": "I",
+   "sci": "Elanus caeruleus"
+  },
+  "0257": {
+   "zh": "鳳頭蜂鷹",
+   "cat": "I",
+   "sci": "Pernis ptilorhynchus"
+  },
+  "0258": {
+   "zh": "黑冠鵑隼",
+   "cat": "I",
+   "sci": "Aviceda leuphotes"
+  },
+  "0259": {
+   "zh": "禿鷲",
+   "cat": "I",
+   "sci": "Aegypius monachus"
+  },
+  "0260": {
+   "zh": "蛇鵰",
+   "cat": "I",
+   "sci": "Spilornis cheela"
+  },
+  "0261": {
+   "zh": "烏鵰",
+   "cat": "I",
+   "sci": "Clanga clanga"
+  },
+  "0262": {
+   "zh": "白肩鵰",
+   "cat": "I",
+   "sci": "Aquila heliaca"
+  },
+  "0263": {
+   "zh": "白腹隼鵰",
+   "cat": "I",
+   "sci": "Aquila fasciata"
+  },
+  "0264": {
+   "zh": "白腹鷂",
+   "cat": "I",
+   "sci": "Circus spilonotus"
+  },
+  "0265": {
+   "zh": "白尾鷂",
+   "cat": "I",
+   "sci": "Circus cyaneus"
+  },
+  "0266": {
+   "zh": "鵲鷂",
+   "cat": "I",
+   "sci": "Circus melanoleucos"
+  },
+  "0267": {
+   "zh": "鳳頭鷹",
+   "cat": "I",
+   "sci": "Lophospiza trivirgata"
+  },
+  "0268": {
+   "zh": "赤腹鷹",
+   "cat": "I",
+   "sci": "Tachyspiza soloensis"
+  },
+  "0269": {
+   "zh": "日本松雀鷹",
+   "cat": "I",
+   "sci": "Tachyspiza gularis"
+  },
+  "0270": {
+   "zh": "松雀鷹",
+   "cat": "I",
+   "sci": "Tachyspiza virgata"
+  },
+  "0271": {
+   "zh": "雀鷹",
+   "cat": "I",
+   "sci": "Accipiter nisus"
+  },
+  "0272": {
+   "zh": "蒼鷹",
+   "cat": "I",
+   "sci": "Astur gentilis"
+  },
+  "0273": {
+   "zh": "栗鳶",
+   "cat": "I",
+   "sci": "Haliastur indus"
+  },
+  "0274": {
+   "zh": "白腹海鵰",
+   "cat": "I",
+   "sci": "Icthyophaga leucogaster"
+  },
+  "0276": {
+   "zh": "草鴞",
+   "cat": "I",
+   "sci": "Tyto longimembris"
+  },
+  "0277": {
+   "zh": "領角鴞",
+   "cat": "I",
+   "sci": "Otus lettia"
+  },
+  "0279": {
+   "zh": "紅角鴞",
+   "cat": "I",
+   "sci": "Otus sunia"
+  },
+  "0280": {
+   "zh": "黃嘴角鴞",
+   "cat": "I",
+   "sci": "Otus spilocephalus"
+  },
+  "0281": {
+   "zh": "鵰鴞",
+   "cat": "I",
+   "sci": "Bubo bubo"
+  },
+  "0282": {
+   "zh": "褐漁鴞",
+   "cat": "I",
+   "sci": "Ketupa zeylonensis"
+  },
+  "0283": {
+   "zh": "斑頭鵂鶹",
+   "cat": "I",
+   "sci": "Glaucidium cuculoides"
+  },
+  "0284": {
+   "zh": "領鵂鶹",
+   "cat": "I",
+   "sci": "Taenioptynx brodiei"
+  },
+  "0285": {
+   "zh": "褐林鴞",
+   "cat": "I",
+   "sci": "Strix leptogrammica"
+  },
+  "0286": {
+   "zh": "短耳鴞",
+   "cat": "I",
+   "sci": "Asio flammeus"
+  },
+  "0288": {
+   "zh": "戴勝",
+   "cat": "I",
+   "sci": "Upupa epops"
+  },
+  "0289": {
+   "zh": "普通翠鳥",
+   "cat": "I",
+   "sci": "Alcedo atthis"
+  },
+  "0290": {
+   "zh": "三趾翠鳥",
+   "cat": "I",
+   "sci": "Ceyx erithaca"
+  },
+  "0291": {
+   "zh": "赤翡翠",
+   "cat": "I",
+   "sci": "Halcyon coromanda"
+  },
+  "0292": {
+   "zh": "白胸翡翠",
+   "cat": "I",
+   "sci": "Halcyon smyrnensis"
+  },
+  "0293": {
+   "zh": "藍翡翠",
+   "cat": "I",
+   "sci": "Halcyon pileata"
+  },
+  "0294": {
+   "zh": "白領翡翠",
+   "cat": "I",
+   "sci": "Todiramphus chloris"
+  },
+  "0295": {
+   "zh": "斑魚狗",
+   "cat": "I",
+   "sci": "Ceryle rudis"
+  },
+  "0296": {
+   "zh": "藍喉蜂虎",
+   "cat": "I",
+   "sci": "Merops viridis"
+  },
+  "0297": {
+   "zh": "栗喉蜂虎",
+   "cat": "I",
+   "sci": "Merops philippinus"
+  },
+  "0298": {
+   "zh": "藍胸佛法僧",
+   "cat": "I",
+   "sci": "Coracias garrulus"
+  },
+  "0299": {
+   "zh": "三寶鳥",
+   "cat": "I",
+   "sci": "Eurystomus orientalis"
+  },
+  "0300": {
+   "zh": "大擬啄木鳥",
+   "cat": "I",
+   "sci": "Psilopogon virens"
+  },
+  "0301": {
+   "zh": "黑眉擬啄木鳥",
+   "cat": "I",
+   "sci": "Psilopogon faber"
+  },
+  "0302": {
+   "zh": "蟻鴷",
+   "cat": "I",
+   "sci": "Jynx torquilla"
+  },
+  "0303": {
+   "zh": "斑姬啄木鳥",
+   "cat": "I",
+   "sci": "Picumnus innominatus"
+  },
+  "0304": {
+   "zh": "棕腹啄木鳥",
+   "cat": "I",
+   "sci": "Dendrocopos hyperythrus"
+  },
+  "0305": {
+   "zh": "黃嘴栗啄木鳥",
+   "cat": "I",
+   "sci": "Blythipicus pyrrhotis"
+  },
+  "0306": {
+   "zh": "栗啄木鳥",
+   "cat": "I",
+   "sci": "Micropternus brachyurus"
+  },
+  "0307": {
+   "zh": "灰頭綠啄木鳥",
+   "cat": "I",
+   "sci": "Picus canus"
+  },
+  "0308": {
+   "zh": "紅隼",
+   "cat": "I",
+   "sci": "Falco tinnunculus"
+  },
+  "0309": {
+   "zh": "阿穆爾隼",
+   "cat": "I",
+   "sci": "Falco amurensis"
+  },
+  "0310": {
+   "zh": "燕隼",
+   "cat": "I",
+   "sci": "Falco subbuteo"
+  },
+  "0311": {
+   "zh": "遊隼",
+   "cat": "I",
+   "sci": "Falco peregrinus"
+  },
+  "0313": {
+   "zh": "紅領綠鸚鵡",
+   "cat": "IIB",
+   "sci": "Psittacula krameri"
+  },
+  "0314": {
+   "zh": "藍翅八色鶇",
+   "cat": "I",
+   "sci": "Pitta moluccensis"
+  },
+  "0315": {
+   "zh": "仙八色鶇",
+   "cat": "I",
+   "sci": "Pitta nympha"
+  },
+  "0316": {
+   "zh": "灰喉山椒鳥",
+   "cat": "I",
+   "sci": "Pericrocotus solaris"
+  },
+  "0317": {
+   "zh": "赤紅山椒鳥",
+   "cat": "I",
+   "sci": "Pericrocotus speciosus"
+  },
+  "0318": {
+   "zh": "琉球山椒鳥",
+   "cat": "I",
+   "sci": "Pericrocotus tegimae"
+  },
+  "0319": {
+   "zh": "灰山椒鳥",
+   "cat": "I",
+   "sci": "Pericrocotus divaricatus"
+  },
+  "0320": {
+   "zh": "小灰山椒鳥",
+   "cat": "I",
+   "sci": "Pericrocotus cantonensis"
+  },
+  "0321": {
+   "zh": "粉紅山椒鳥",
+   "cat": "I",
+   "sci": "Pericrocotus roseus"
+  },
+  "0322": {
+   "zh": "暗灰鵑鵙",
+   "cat": "I",
+   "sci": "Lalage melaschistos"
+  },
+  "0323": {
+   "zh": "白腹鳳鶥",
+   "cat": "I",
+   "sci": "Erpornis zantholeuca"
+  },
+  "0324": {
+   "zh": "黑枕黃鸝",
+   "cat": "I",
+   "sci": "Oriolus chinensis"
+  },
+  "0326": {
+   "zh": "鵲色鸝",
+   "cat": "I",
+   "sci": "Oriolus mellianus"
+  },
+  "0327": {
+   "zh": "黑卷尾",
+   "cat": "I",
+   "sci": "Dicrurus macrocercus"
+  },
+  "0328": {
+   "zh": "灰卷尾",
+   "cat": "I",
+   "sci": "Dicrurus leucophaeus"
+  },
+  "0329": {
+   "zh": "鴉嘴卷尾",
+   "cat": "I",
+   "sci": "Dicrurus annectens"
+  },
+  "0330": {
+   "zh": "髮冠卷尾",
+   "cat": "I",
+   "sci": "Dicrurus hottentottus"
+  },
+  "0331": {
+   "zh": "黑枕王鶲",
+   "cat": "I",
+   "sci": "Hypothymis azurea"
+  },
+  "0332": {
+   "zh": "紫綬帶",
+   "cat": "I",
+   "sci": "Terpsiphone atrocaudata"
+  },
+  "0333": {
+   "zh": "綬帶",
+   "cat": "I",
+   "sci": "Terpsiphone incei"
+  },
+  "0334": {
+   "zh": "虎紋伯勞",
+   "cat": "I",
+   "sci": "Lanius tigrinus"
+  },
+  "0335": {
+   "zh": "牛頭伯勞",
+   "cat": "I",
+   "sci": "Lanius bucephalus"
+  },
+  "0336": {
+   "zh": "紅背伯勞",
+   "cat": "I",
+   "sci": "Lanius collurio"
+  },
+  "0337": {
+   "zh": "紅尾伯勞",
+   "cat": "I",
+   "sci": "Lanius cristatus"
+  },
+  "0338": {
+   "zh": "棕背伯勞",
+   "cat": "I",
+   "sci": "Lanius schach"
+  },
+  "0339": {
+   "zh": "灰背伯勞",
+   "cat": "I",
+   "sci": "Lanius tephronotus"
+  },
+  "0340": {
+   "zh": "楔尾伯勞",
+   "cat": "I",
+   "sci": "Lanius sphenocercus"
+  },
+  "0341": {
+   "zh": "松鴉",
+   "cat": "I",
+   "sci": "Garrulus glandarius"
+  },
+  "0342": {
+   "zh": "灰喜鵲",
+   "cat": "IIB",
+   "sci": "Cyanopica cyanus"
+  },
+  "0343": {
+   "zh": "印支綠鵲",
+   "cat": "IIB",
+   "sci": "Cissa hypoleuca"
+  },
+  "0344": {
+   "zh": "喜鵲",
+   "cat": "I",
+   "sci": "Pica serica"
+  },
+  "0345": {
+   "zh": "達烏里寒鴉",
+   "cat": "I",
+   "sci": "Coloeus dauuricus"
+  },
+  "0346": {
+   "zh": "家鴉",
+   "cat": "IIB",
+   "sci": "Corvus splendens"
+  },
+  "0347": {
+   "zh": "禿鼻烏鴉",
+   "cat": "I",
+   "sci": "Corvus frugilegus"
+  },
+  "0348": {
+   "zh": "小嘴烏鴉",
+   "cat": "I",
+   "sci": "Corvus corone"
+  },
+  "0349": {
+   "zh": "大嘴烏鴉",
+   "cat": "I",
+   "sci": "Corvus macrorhynchos"
+  },
+  "0350": {
+   "zh": "白頸鴉",
+   "cat": "I",
+   "sci": "Corvus torquatus"
+  },
+  "0351": {
+   "zh": "方尾鶲",
+   "cat": "I",
+   "sci": "Culicicapa ceylonensis"
+  },
+  "0352": {
+   "zh": "火冠雀",
+   "cat": "I",
+   "sci": "Cephalopyrus flammiceps"
+  },
+  "0353": {
+   "zh": "黃腹山雀",
+   "cat": "I",
+   "sci": "Periparus venustulus"
+  },
+  "0354": {
+   "zh": "雜色山雀",
+   "cat": "I",
+   "sci": "Sittiparus varius"
+  },
+  "0355": {
+   "zh": "中華攀雀",
+   "cat": "I",
+   "sci": "Remiz consobrinus"
+  },
+  "0356": {
+   "zh": "蒙古短趾百靈",
+   "cat": "I",
+   "sci": "Calandrella dukhunensis"
+  },
+  "0357": {
+   "zh": "雲雀",
+   "cat": "I",
+   "sci": "Alauda arvensis"
+  },
+  "0358": {
+   "zh": "小雲雀",
+   "cat": "I",
+   "sci": "Alauda gulgula"
+  },
+  "0359": {
+   "zh": "黃腹山鷦鶯",
+   "cat": "I",
+   "sci": "Prinia flaviventris"
+  },
+  "0360": {
+   "zh": "純色山鷦鶯",
+   "cat": "I",
+   "sci": "Prinia inornata"
+  },
+  "0361": {
+   "zh": "棕扇尾鶯",
+   "cat": "I",
+   "sci": "Cisticola juncidis"
+  },
+  "0362": {
+   "zh": "金頭扇尾鶯",
+   "cat": "I",
+   "sci": "Cisticola exilis"
+  },
+  "0363": {
+   "zh": "厚嘴葦鶯",
+   "cat": "I",
+   "sci": "Arundinax aedon"
+  },
+  "0364": {
+   "zh": "靴籬鶯",
+   "cat": "I",
+   "sci": "Iduna caligata"
+  },
+  "0365": {
+   "zh": "賽氏籬鶯",
+   "cat": "I",
+   "sci": "Iduna rama"
+  },
+  "0366": {
+   "zh": "黑眉葦鶯",
+   "cat": "I",
+   "sci": "Acrocephalus bistrigiceps"
+  },
+  "0367": {
+   "zh": "稻田葦鶯",
+   "cat": "I",
+   "sci": "Acrocephalus agricola"
+  },
+  "0368": {
+   "zh": "鈍翅葦鶯",
+   "cat": "I",
+   "sci": "Acrocephalus concinens"
+  },
+  "0369": {
+   "zh": "遠東葦鶯",
+   "cat": "I",
+   "sci": "Acrocephalus tangorum"
+  },
+  "0370": {
+   "zh": "布氏葦鶯",
+   "cat": "I",
+   "sci": "Acrocephalus dumetorum"
+  },
+  "0371": {
+   "zh": "東方大葦鶯",
+   "cat": "I",
+   "sci": "Acrocephalus orientalis"
+  },
+  "0373": {
+   "zh": "斑背大尾鶯",
+   "cat": "I",
+   "sci": "Helopsaltes pryeri"
+  },
+  "0374": {
+   "zh": "小蝗鶯",
+   "cat": "I",
+   "sci": "Helopsaltes certhiola"
+  },
+  "0375": {
+   "zh": "北蝗鶯",
+   "cat": "I",
+   "sci": "Helopsaltes ochotensis"
+  },
+  "0376": {
+   "zh": "史氏蝗鶯",
+   "cat": "I",
+   "sci": "Helopsaltes pleskei"
+  },
+  "0377": {
+   "zh": "矛斑蝗鶯",
+   "cat": "I",
+   "sci": "Locustella lanceolata"
+  },
+  "0378": {
+   "zh": "棕褐短翅蝗鶯",
+   "cat": "I",
+   "sci": "Locustella luteoventris"
+  },
+  "0379": {
+   "zh": "中華短翅蝗鶯",
+   "cat": "I",
+   "sci": "Locustella tacsanowskia"
+  },
+  "0380": {
+   "zh": "北短翅蝗鶯",
+   "cat": "I",
+   "sci": "Locustella davidi"
+  },
+  "0381": {
+   "zh": "高山短翅蝗鶯",
+   "cat": "I",
+   "sci": "Locustella mandelli"
+  },
+  "0383": {
+   "zh": "小鱗胸鷦鶥",
+   "cat": "I",
+   "sci": "Pnoepyga pusilla"
+  },
+  "0384": {
+   "zh": "灰喉沙燕",
+   "cat": "I",
+   "sci": "Riparia chinensis"
+  },
+  "0385": {
+   "zh": "崖沙燕",
+   "cat": "I",
+   "sci": "Riparia riparia"
+  },
+  "0387": {
+   "zh": "家燕",
+   "cat": "I",
+   "sci": "Hirundo rustica"
+  },
+  "0388": {
+   "zh": "金腰燕",
+   "cat": "I",
+   "sci": "Cecropis daurica"
+  },
+  "0389": {
+   "zh": "白腹毛腳燕",
+   "cat": "I",
+   "sci": "Delichon lagopodum"
+  },
+  "0390": {
+   "zh": "煙腹毛腳燕",
+   "cat": "I",
+   "sci": "Delichon dasypus"
+  },
+  "0391": {
+   "zh": "白喉紅臀鵯",
+   "cat": "I",
+   "sci": "Pycnonotus aurigaster"
+  },
+  "0392": {
+   "zh": "黑短腳鵯",
+   "cat": "I",
+   "sci": "Hypsipetes leucocephalus"
+  },
+  "0393": {
+   "zh": "栗耳短腳鵯",
+   "cat": "I",
+   "sci": "Hypsipetes amaurotis"
+  },
+  "0394": {
+   "zh": "栗背短腳鵯",
+   "cat": "I",
+   "sci": "Hemixos castanonotus"
+  },
+  "0395": {
+   "zh": "綠翅短腳鵯",
+   "cat": "I",
+   "sci": "Ixos mcclellandii"
+  },
+  "0396": {
+   "zh": "林柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus sibilatrix"
+  },
+  "0397": {
+   "zh": "黃眉柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus inornatus"
+  },
+  "0398": {
+   "zh": "淡眉柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus humei"
+  },
+  "0399": {
+   "zh": "雲南柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus yunnanensis"
+  },
+  "0400": {
+   "zh": "黃腰柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus proregulus"
+  },
+  "0401": {
+   "zh": "巨嘴柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus schwarzi"
+  },
+  "0402": {
+   "zh": "棕眉柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus armandii"
+  },
+  "0403": {
+   "zh": "歐柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus trochilus"
+  },
+  "0405": {
+   "zh": "嘰喳柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus collybita"
+  },
+  "0406": {
+   "zh": "冕柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus coronatus"
+  },
+  "0407": {
+   "zh": "飯島柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus ijimae"
+  },
+  "0408": {
+   "zh": "灰冠鶲鶯",
+   "cat": "I",
+   "sci": "Phylloscopus tephrocephalus"
+  },
+  "0409": {
+   "zh": "比氏鶲鶯",
+   "cat": "I",
+   "sci": "Phylloscopus valentini"
+  },
+  "0410": {
+   "zh": "峨嵋鶲鶯",
+   "cat": "I",
+   "sci": "Phylloscopus omeiensis"
+  },
+  "0411": {
+   "zh": "淡尾鶲鶯",
+   "cat": "I",
+   "sci": "Phylloscopus soror"
+  },
+  "0412": {
+   "zh": "暗綠柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus trochiloides"
+  },
+  "0413": {
+   "zh": "峨眉柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus emeiensis"
+  },
+  "0414": {
+   "zh": "淡腳柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus tenellipes"
+  },
+  "0415": {
+   "zh": "庫頁島柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus borealoides"
+  },
+  "0416": {
+   "zh": "日本柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus xanthodryas"
+  },
+  "0417": {
+   "zh": "極北柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus borealis"
+  },
+  "0418": {
+   "zh": "栗頭鶲鶯",
+   "cat": "I",
+   "sci": "Phylloscopus castaniceps"
+  },
+  "0419": {
+   "zh": "黑眉柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus ricketti"
+  },
+  "0421": {
+   "zh": "華南冠紋柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus goodsoni"
+  },
+  "0422": {
+   "zh": "白斑尾柳鶯",
+   "cat": "I",
+   "sci": "Phylloscopus ogilviegranti"
+  },
+  "0423": {
+   "zh": "淡腳樹鶯",
+   "cat": "I",
+   "sci": "Hemitesia pallidipes"
+  },
+  "0424": {
+   "zh": "鱗頭樹鶯",
+   "cat": "I",
+   "sci": "Urosphena squameiceps"
+  },
+  "0425": {
+   "zh": "棕臉鶲鶯",
+   "cat": "I",
+   "sci": "Abroscopus albogularis"
+  },
+  "0426": {
+   "zh": "金頭擬縫葉鶯",
+   "cat": "I",
+   "sci": "Phyllergates cucullatus"
+  },
+  "0427": {
+   "zh": "遠東樹鶯",
+   "cat": "I",
+   "sci": "Horornis canturians"
+  },
+  "0428": {
+   "zh": "強腳樹鶯",
+   "cat": "I",
+   "sci": "Horornis fortipes"
+  },
+  "0429": {
+   "zh": "紅頭長尾山雀",
+   "cat": "I",
+   "sci": "Aegithalos concinnus"
+  },
+  "0430": {
+   "zh": "白喉林鶯",
+   "cat": "I",
+   "sci": "Curruca curruca"
+  },
+  "0432": {
+   "zh": "棕頭鴉雀",
+   "cat": "IIA",
+   "sci": "Suthora webbiana"
+  },
+  "0433": {
+   "zh": "栗頸鳳鶥",
+   "cat": "I",
+   "sci": "Staphida torqueola"
+  },
+  "0434": {
+   "zh": "黑頦鳳鶥",
+   "cat": "I",
+   "sci": "Yuhina nigrimenta"
+  },
+  "0435": {
+   "zh": "紅脇繡眼鳥",
+   "cat": "I",
+   "sci": "Zosterops erythropleurus"
+  },
+  "0436": {
+   "zh": "暗綠繡眼鳥",
+   "cat": "I",
+   "sci": "Zosterops simplex"
+  },
+  "0437": {
+   "zh": "紅頭穗鶥",
+   "cat": "IIA",
+   "sci": "Cyanoderma ruficeps"
+  },
+  "0438": {
+   "zh": "棕頸鉤嘴鶥",
+   "cat": "IIA",
+   "sci": "Pomatorhinus ruficollis"
+  },
+  "0439": {
+   "zh": "中華草鶥",
+   "cat": "I",
+   "sci": "Graminicola striatus"
+  },
+  "0440": {
+   "zh": "黑眉雀鶥",
+   "cat": "IIA",
+   "sci": "Alcippe hueti"
+  },
+  "0441": {
+   "zh": "藍翅希鶥",
+   "cat": "IIB",
+   "sci": "Actinodura cyanouroptera"
+  },
+  "0442": {
+   "zh": "紅嘴相思鳥",
+   "cat": "IIA",
+   "sci": "Leiothrix lutea"
+  },
+  "0443": {
+   "zh": "銀耳相思鳥",
+   "cat": "IIB",
+   "sci": "Leiothrix argentauris"
+  },
+  "0444": {
+   "zh": "白頰噪鶥",
+   "cat": "IIA",
+   "sci": "Pterorhinus sannio"
+  },
+  "0446": {
+   "zh": "黑領噪鶥",
+   "cat": "IIA",
+   "sci": "Pterorhinus pectoralis"
+  },
+  "0447": {
+   "zh": "矛紋草鶥",
+   "cat": "IIA",
+   "sci": "Pterorhinus lanceolatus"
+  },
+  "0448": {
+   "zh": "絨額鳾",
+   "cat": "IIB",
+   "sci": "Sitta frontalis"
+  },
+  "0449": {
+   "zh": "紫翅椋鳥",
+   "cat": "I",
+   "sci": "Sturnus vulgaris"
+  },
+  "0450": {
+   "zh": "北椋鳥",
+   "cat": "I",
+   "sci": "Agropsar sturninus"
+  },
+  "0451": {
+   "zh": "栗頰椋鳥",
+   "cat": "I",
+   "sci": "Agropsar philippensis"
+  },
+  "0452": {
+   "zh": "灰頭椋鳥",
+   "cat": "I",
+   "sci": "Sturnia malabarica"
+  },
+  "0453": {
+   "zh": "絲光椋鳥",
+   "cat": "I",
+   "sci": "Spodiopsar sericeus"
+  },
+  "0454": {
+   "zh": "灰椋鳥",
+   "cat": "I",
+   "sci": "Spodiopsar cineraceus"
+  },
+  "0455": {
+   "zh": "家八哥",
+   "cat": "IIB",
+   "sci": "Acridotheres tristis"
+  },
+  "0458": {
+   "zh": "白眉地鶇",
+   "cat": "I",
+   "sci": "Geokichla sibirica"
+  },
+  "0459": {
+   "zh": "橙頭地鶇",
+   "cat": "I",
+   "sci": "Geokichla citrina"
+  },
+  "0460": {
+   "zh": "寶興歌鶇",
+   "cat": "I",
+   "sci": "Turdus mupinensis"
+  },
+  "0462": {
+   "zh": "烏鶇",
+   "cat": "I",
+   "sci": "Turdus mandarinus"
+  },
+  "0463": {
+   "zh": "烏灰鶇",
+   "cat": "I",
+   "sci": "Turdus cardis"
+  },
+  "0464": {
+   "zh": "灰背鶇",
+   "cat": "I",
+   "sci": "Turdus hortulorum"
+  },
+  "0465": {
+   "zh": "白眉鶇",
+   "cat": "I",
+   "sci": "Turdus obscurus"
+  },
+  "0466": {
+   "zh": "赤胸鶇",
+   "cat": "I",
+   "sci": "Turdus chrysolaus"
+  },
+  "0467": {
+   "zh": "白腹鶇",
+   "cat": "I",
+   "sci": "Turdus pallidus"
+  },
+  "0469": {
+   "zh": "赤頸鶇",
+   "cat": "I",
+   "sci": "Turdus ruficollis"
+  },
+  "0470": {
+   "zh": "斑鶇",
+   "cat": "I",
+   "sci": "Turdus eunomus"
+  },
+  "0471": {
+   "zh": "紅尾鶇",
+   "cat": "I",
+   "sci": "Turdus naumanni"
+  },
+  "0472": {
+   "zh": "灰紋鶲",
+   "cat": "I",
+   "sci": "Muscicapa griseisticta"
+  },
+  "0473": {
+   "zh": "烏鶲",
+   "cat": "I",
+   "sci": "Muscicapa sibirica"
+  },
+  "0474": {
+   "zh": "棕尾褐鶲",
+   "cat": "I",
+   "sci": "Muscicapa ferruginea"
+  },
+  "0475": {
+   "zh": "北灰鶲",
+   "cat": "I",
+   "sci": "Muscicapa dauurica"
+  },
+  "0476": {
+   "zh": "褐胸鶲",
+   "cat": "I",
+   "sci": "Muscicapa muttui"
+  },
+  "0477": {
+   "zh": "白腰鵲鴝",
+   "cat": "IIB",
+   "sci": "Copsychus malabaricus"
+  },
+  "0478": {
+   "zh": "海南藍仙鶲",
+   "cat": "I",
+   "sci": "Cyornis hainanus"
+  },
+  "0479": {
+   "zh": "中華仙鶲",
+   "cat": "I",
+   "sci": "Cyornis glaucicomans"
+  },
+  "0480": {
+   "zh": "山藍仙鶲",
+   "cat": "I",
+   "sci": "Cyornis whitei"
+  },
+  "0481": {
+   "zh": "白喉林鶲",
+   "cat": "I",
+   "sci": "Cyornis brunneatus"
+  },
+  "0482": {
+   "zh": "小仙鶲",
+   "cat": "I",
+   "sci": "Niltava macgrigoriae"
+  },
+  "0483": {
+   "zh": "棕腹大仙鶲",
+   "cat": "I",
+   "sci": "Niltava davidi"
+  },
+  "0484": {
+   "zh": "白腹藍鶲",
+   "cat": "I",
+   "sci": "Cyanoptila cyanomelana"
+  },
+  "0485": {
+   "zh": "琉璃藍鶲",
+   "cat": "I",
+   "sci": "Cyanoptila cumatilis"
+  },
+  "0486": {
+   "zh": "銅藍鶲",
+   "cat": "I",
+   "sci": "Eumyias thalassinus"
+  },
+  "0487": {
+   "zh": "白喉短翅鶇",
+   "cat": "I",
+   "sci": "Brachypteryx leucophris"
+  },
+  "0488": {
+   "zh": "紅尾歌鴝",
+   "cat": "I",
+   "sci": "Larvivora sibilans"
+  },
+  "0489": {
+   "zh": "日本歌鴝",
+   "cat": "I",
+   "sci": "Larvivora akahige"
+  },
+  "0490": {
+   "zh": "藍歌鴝",
+   "cat": "I",
+   "sci": "Larvivora cyane"
+  },
+  "0491": {
+   "zh": "藍喉歌鴝",
+   "cat": "I",
+   "sci": "Luscinia svecica"
+  },
+  "0492": {
+   "zh": "紫嘯鶇",
+   "cat": "I",
+   "sci": "Myophonus caeruleus"
+  },
+  "0494": {
+   "zh": "灰背燕尾",
+   "cat": "I",
+   "sci": "Enicurus schistaceus"
+  },
+  "0495": {
+   "zh": "紅喉歌鴝",
+   "cat": "I",
+   "sci": "Calliope calliope"
+  },
+  "0496": {
+   "zh": "白尾藍地鴝",
+   "cat": "I",
+   "sci": "Myiomela leucura"
+  },
+  "0497": {
+   "zh": "紅脇藍尾鴝",
+   "cat": "I",
+   "sci": "Tarsiger cyanurus"
+  },
+  "0498": {
+   "zh": "白眉姬鶲",
+   "cat": "I",
+   "sci": "Ficedula zanthopygia"
+  },
+  "0499": {
+   "zh": "綠背姬鶲",
+   "cat": "I",
+   "sci": "Ficedula elisae"
+  },
+  "0500": {
+   "zh": "黃眉姬鶲",
+   "cat": "I",
+   "sci": "Ficedula narcissina"
+  },
+  "0501": {
+   "zh": "琉球姬鶲",
+   "cat": "I",
+   "sci": "Ficedula owstoni"
+  },
+  "0502": {
+   "zh": "鴝姬鶲",
+   "cat": "I",
+   "sci": "Ficedula mugimaki"
+  },
+  "0503": {
+   "zh": "銹胸藍姬鶲",
+   "cat": "I",
+   "sci": "Ficedula erithacus"
+  },
+  "0504": {
+   "zh": "橙胸姬鶲",
+   "cat": "I",
+   "sci": "Ficedula strophiata"
+  },
+  "0505": {
+   "zh": "白眉藍姬鶲",
+   "cat": "I",
+   "sci": "Ficedula superciliaris"
+  },
+  "0506": {
+   "zh": "紅喉姬鶲",
+   "cat": "I",
+   "sci": "Ficedula albicilla"
+  },
+  "0507": {
+   "zh": "紅胸姬鶲",
+   "cat": "I",
+   "sci": "Ficedula parva"
+  },
+  "0508": {
+   "zh": "紅尾水鴝",
+   "cat": "I",
+   "sci": "Phoenicurus fuliginosus"
+  },
+  "0509": {
+   "zh": "黑喉紅尾鴝",
+   "cat": "I",
+   "sci": "Phoenicurus hodgsoni"
+  },
+  "0510": {
+   "zh": "赭紅尾鴝",
+   "cat": "I",
+   "sci": "Phoenicurus ochruros"
+  },
+  "0511": {
+   "zh": "北紅尾鴝",
+   "cat": "I",
+   "sci": "Phoenicurus auroreus"
+  },
+  "0512": {
+   "zh": "栗腹磯鶇",
+   "cat": "I",
+   "sci": "Monticola rufiventris"
+  },
+  "0513": {
+   "zh": "白喉磯鶇",
+   "cat": "I",
+   "sci": "Monticola gularis"
+  },
+  "0514": {
+   "zh": "藍磯鶇",
+   "cat": "I",
+   "sci": "Monticola solitarius"
+  },
+  "0516": {
+   "zh": "灰林䳭",
+   "cat": "I",
+   "sci": "Saxicola ferreus"
+  },
+  "0517": {
+   "zh": "白頂䳭",
+   "cat": "I",
+   "sci": "Oenanthe pleschanka"
+  },
+  "0518": {
+   "zh": "小太平鳥",
+   "cat": "I",
+   "sci": "Bombycilla japonica"
+  },
+  "0519": {
+   "zh": "純色啄花鳥",
+   "cat": "I",
+   "sci": "Dicaeum minullum"
+  },
+  "0520": {
+   "zh": "紅胸啄花鳥",
+   "cat": "I",
+   "sci": "Dicaeum ignipectus"
+  },
+  "0521": {
+   "zh": "朱背啄花鳥",
+   "cat": "I",
+   "sci": "Dicaeum cruentatum"
+  },
+  "0522": {
+   "zh": "藍喉太陽鳥",
+   "cat": "I",
+   "sci": "Aethopyga gouldiae"
+  },
+  "0523": {
+   "zh": "黃胸織雀",
+   "cat": "IIC",
+   "sci": "Ploceus philippinus"
+  },
+  "0524": {
+   "zh": "斑文鳥",
+   "cat": "I",
+   "sci": "Lonchura punctulata"
+  },
+  "0525": {
+   "zh": "栗腹文鳥",
+   "cat": "IIC",
+   "sci": "Lonchura atricapilla"
+  },
+  "0526": {
+   "zh": "家麻雀",
+   "cat": "I",
+   "sci": "Passer domesticus"
+  },
+  "0527": {
+   "zh": "山鶺鴒",
+   "cat": "I",
+   "sci": "Dendronanthus indicus"
+  },
+  "0528": {
+   "zh": "灰鶺鴒",
+   "cat": "I",
+   "sci": "Motacilla cinerea"
+  },
+  "0529": {
+   "zh": "西黃鶺鴒",
+   "cat": "I",
+   "sci": "Motacilla flava"
+  },
+  "0530": {
+   "zh": "東黃鶺鴒",
+   "cat": "I",
+   "sci": "Motacilla tschutschensis"
+  },
+  "0531": {
+   "zh": "黃頭鶺鴒",
+   "cat": "I",
+   "sci": "Motacilla citreola"
+  },
+  "0532": {
+   "zh": "白鶺鴒",
+   "cat": "I",
+   "sci": "Motacilla alba"
+  },
+  "0533": {
+   "zh": "理氏鷚",
+   "cat": "I",
+   "sci": "Anthus richardi"
+  },
+  "0534": {
+   "zh": "布氏鷚",
+   "cat": "I",
+   "sci": "Anthus godlewskii"
+  },
+  "0535": {
+   "zh": "山鷚",
+   "cat": "I",
+   "sci": "Anthus sylvanus"
+  },
+  "0536": {
+   "zh": "粉紅胸鷚",
+   "cat": "I",
+   "sci": "Anthus roseatus"
+  },
+  "0537": {
+   "zh": "林鷚",
+   "cat": "I",
+   "sci": "Anthus trivialis"
+  },
+  "0538": {
+   "zh": "樹鷚",
+   "cat": "I",
+   "sci": "Anthus hodgsoni"
+  },
+  "0539": {
+   "zh": "北鷚",
+   "cat": "I",
+   "sci": "Anthus gustavi"
+  },
+  "0540": {
+   "zh": "紅喉鷚",
+   "cat": "I",
+   "sci": "Anthus cervinus"
+  },
+  "0541": {
+   "zh": "水鷚",
+   "cat": "I",
+   "sci": "Anthus spinoletta"
+  },
+  "0543": {
+   "zh": "燕雀",
+   "cat": "I",
+   "sci": "Fringilla montifringilla"
+  },
+  "0544": {
+   "zh": "錫嘴雀",
+   "cat": "I",
+   "sci": "Coccothraustes coccothraustes"
+  },
+  "0545": {
+   "zh": "黑尾蠟嘴雀",
+   "cat": "I",
+   "sci": "Eophona migratoria"
+  },
+  "0546": {
+   "zh": "黑頭蠟嘴雀",
+   "cat": "I",
+   "sci": "Eophona personata"
+  },
+  "0547": {
+   "zh": "普通朱雀",
+   "cat": "I",
+   "sci": "Carpodacus erythrinus"
+  },
+  "0548": {
+   "zh": "金翅雀",
+   "cat": "I",
+   "sci": "Chloris sinica"
+  },
+  "0549": {
+   "zh": "黃雀",
+   "cat": "I",
+   "sci": "Spinus spinus"
+  },
+  "0550": {
+   "zh": "鐵爪鵐",
+   "cat": "I",
+   "sci": "Calcarius lapponicus"
+  },
+  "0551": {
+   "zh": "鳳頭鵐",
+   "cat": "I",
+   "sci": "Emberiza lathami"
+  },
+  "0552": {
+   "zh": "黑頭鵐",
+   "cat": "I",
+   "sci": "Emberiza melanocephala"
+  },
+  "0553": {
+   "zh": "褐頭鵐",
+   "cat": "I",
+   "sci": "Emberiza bruniceps"
+  },
+  "0554": {
+   "zh": "栗耳鵐",
+   "cat": "I",
+   "sci": "Emberiza fucata"
+  },
+  "0555": {
+   "zh": "白頭鵐",
+   "cat": "I",
+   "sci": "Emberiza leucocephalos"
+  },
+  "0556": {
+   "zh": "圃鵐",
+   "cat": "I",
+   "sci": "Emberiza hortulana"
+  },
+  "0557": {
+   "zh": "藍鵐",
+   "cat": "I",
+   "sci": "Emberiza siemsseni"
+  },
+  "0558": {
+   "zh": "黃喉鵐",
+   "cat": "I",
+   "sci": "Emberiza elegans"
+  },
+  "0559": {
+   "zh": "紅頸葦鵐",
+   "cat": "I",
+   "sci": "Emberiza yessoensis"
+  },
+  "0560": {
+   "zh": "葦鵐",
+   "cat": "I",
+   "sci": "Emberiza pallasi"
+  },
+  "0561": {
+   "zh": "蘆鵐",
+   "cat": "I",
+   "sci": "Emberiza schoeniclus"
+  },
+  "0562": {
+   "zh": "黃胸鵐",
+   "cat": "I",
+   "sci": "Emberiza aureola"
+  },
+  "0563": {
+   "zh": "小鵐",
+   "cat": "I",
+   "sci": "Emberiza pusilla"
+  },
+  "0564": {
+   "zh": "田鵐",
+   "cat": "I",
+   "sci": "Emberiza rustica"
+  },
+  "0565": {
+   "zh": "硫磺鵐",
+   "cat": "I",
+   "sci": "Emberiza sulphurata"
+  },
+  "0566": {
+   "zh": "灰頭鵐",
+   "cat": "I",
+   "sci": "Emberiza spodocephala"
+  },
+  "0567": {
+   "zh": "栗鵐",
+   "cat": "I",
+   "sci": "Emberiza rutila"
+  },
+  "0568": {
+   "zh": "黃眉鵐",
+   "cat": "I",
+   "sci": "Emberiza chrysophrys"
+  },
+  "0569": {
+   "zh": "白眉鵐",
+   "cat": "I",
+   "sci": "Emberiza tristrami"
+  }
+ },
+ "removed": {
+  "0014": {
+   "zh": "喜鵲",
+   "en": "Eurasian Magpie",
+   "sci": "Pica pica",
+   "reason": "不在香港名錄"
+  },
+  "0053": {
+   "zh": "白翅海番鴨",
+   "en": "White-winged Scoter",
+   "sci": "Melanitta deglandi",
+   "reason": "不在香港名錄"
+  },
+  "0054": {
+   "zh": "斑臉海番鴨",
+   "en": "Stejneger's Scoter",
+   "sci": "Melanitta stejnegeri",
+   "reason": "不在香港名錄"
+  },
+  "0059": {
+   "zh": "灰胸竹雞",
+   "en": "Chinese Bamboo-Partridge",
+   "sci": "Bambusicola thoracicus",
+   "reason": "不在香港名錄"
+  },
+  "0084": {
+   "zh": "Malaysian hawk-cuckoo",
+   "en": "Malaysian Hawk-Cuckoo",
+   "sci": "Hierococcyx fugax",
+   "reason": "不在香港名錄"
+  },
+  "0117": {
+   "zh": "美洲金鴴",
+   "en": "American Golden-Plover",
+   "sci": "Pluvialis dominica",
+   "reason": "不在香港名錄"
+  },
+  "0124": {
+   "zh": "雪鴴",
+   "en": "Snowy Plover",
+   "sci": "Anarhynchus nivosus",
+   "reason": "不在香港名錄"
+  },
+  "0173": {
+   "zh": "林三趾鶉",
+   "en": "Small Buttonquail",
+   "sci": "Turnix sylvaticus",
+   "reason": "不在香港名錄"
+  },
+  "0197": {
+   "zh": "黃腿銀鷗",
+   "en": "Caspian Gull",
+   "sci": "Larus cachinnans",
+   "reason": "不在香港名錄"
+  },
+  "0198": {
+   "zh": "冰島鷗",
+   "en": "Iceland Gull",
+   "sci": "Larus glaucoides",
+   "reason": "不在香港名錄"
+  },
+  "0275": {
+   "zh": "歐亞鵟",
+   "en": "Common Buzzard",
+   "sci": "Buteo buteo",
+   "reason": "不在香港名錄"
+  },
+  "0278": {
+   "zh": "Sunda scops-owl",
+   "en": "Sunda Scops-Owl",
+   "sci": "Otus lempiji",
+   "reason": "不在香港名錄"
+  },
+  "0287": {
+   "zh": "鷹鴞",
+   "en": "Brown Boobook",
+   "sci": "Ninox scutulata",
+   "reason": "不在香港名錄"
+  },
+  "0312": {
+   "zh": "亞歷山大鸚鵡",
+   "en": "Alexandrine Parakeet",
+   "sci": "Psittacula eupatria",
+   "reason": "重複，保留 0021"
+  },
+  "0325": {
+   "zh": "朱鸝",
+   "en": "Maroon Oriole",
+   "sci": "Oriolus traillii",
+   "reason": "不在香港名錄"
+  },
+  "0372": {
+   "zh": "蒼眉蝗鶯",
+   "en": "Gray's Grasshopper Warbler",
+   "sci": "Helopsaltes fasciolatus",
+   "reason": "不在香港名錄"
+  },
+  "0382": {
+   "zh": "Benguet bush warbler",
+   "en": "Benguet Bush Warbler",
+   "sci": "Locustella seebohmi",
+   "reason": "不在香港名錄"
+  },
+  "0386": {
+   "zh": "淡色沙燕",
+   "en": "Pale Martin",
+   "sci": "Riparia diluta",
+   "reason": "不在香港名錄"
+  },
+  "0404": {
+   "zh": "中亞嘰喳柳鶯",
+   "en": "Mountain Chiffchaff",
+   "sci": "Phylloscopus sindianus",
+   "reason": "不在香港名錄"
+  },
+  "0420": {
+   "zh": "冠紋柳鶯",
+   "en": "Claudia's Leaf Warbler",
+   "sci": "Phylloscopus claudiae",
+   "reason": "不在香港名錄"
+  },
+  "0431": {
+   "zh": "點胸鴉雀",
+   "en": "Spot-breasted Parrotbill",
+   "sci": "Paradoxornis guttaticollis",
+   "reason": "不在香港名錄"
+  },
+  "0445": {
+   "zh": "黑臉噪鶥",
+   "en": "Masked Laughingthrush",
+   "sci": "Pterorhinus perspicillatus",
+   "reason": "重複，保留 0009"
+  },
+  "0456": {
+   "zh": "虎斑地鶇",
+   "en": "Scaly Thrush",
+   "sci": "Zoothera dauma",
+   "reason": "不在香港名錄"
+  },
+  "0457": {
+   "zh": "虎斑地鶇",
+   "en": "Scaly Thrush",
+   "sci": "Zoothera dauma",
+   "reason": "不在香港名錄"
+  },
+  "0461": {
+   "zh": "歐亞黑鶇",
+   "en": "Eurasian Blackbird",
+   "sci": "Turdus merula",
+   "reason": "不在香港名錄"
+  },
+  "0468": {
+   "zh": "黑喉鶇",
+   "en": "Black-throated Thrush",
+   "sci": "Turdus atrogularis",
+   "reason": "不在香港名錄"
+  },
+  "0493": {
+   "zh": "白冠燕尾",
+   "en": "White-crowned Forktail",
+   "sci": "Enicurus leschenaulti",
+   "reason": "不在香港名錄"
+  },
+  "0515": {
+   "zh": "黑喉石䳭",
+   "en": "Siberian Stonechat",
+   "sci": "Saxicola maurus",
+   "reason": "不在香港名錄"
+  },
+  "0542": {
+   "zh": "黃腹鷚",
+   "en": "American Pipit",
+   "sci": "Anthus rubescens",
+   "reason": "不在香港名錄"
+  }
+ }
+}

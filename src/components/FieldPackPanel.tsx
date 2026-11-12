@@ -79,8 +79,8 @@ export const FieldPackPanel: React.FC<FieldPackPanelProps> = ({ lang, compact })
 
       <p className="text-white/45 text-[10.5px] leading-relaxed mb-2">
         {t(
-          '下載全部 569 隻的文字重點（每隻約 1–2 KB），冇網絡都用得。圖卡會在你看過之後自動存入快取。',
-          'Saves the key text for all 569 birds (about 1–2 KB each) so it works without a signal. Cards you open are cached automatically.',
+          '下載全部 583 隻的文字重點（每隻約 1–2 KB），冇網絡都用得。圖卡會在你看過之後自動存入快取。',
+          'Saves the key text for all 583 birds (about 1–2 KB each) so it works without a signal. Cards you open are cached automatically.',
         )}
       </p>
 

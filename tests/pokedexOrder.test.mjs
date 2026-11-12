@@ -63,7 +63,7 @@ test('排序唔會改 NO. 編號，亦唔會漏卡／多卡', () => {
       `${mode} 改動了編號集合`,
     );
   }
-  // pokedex 模式必須完全等於原本 0001…0569
+  // pokedex 模式必須完全等於原本 0001…0583
   assert.deepEqual(
     sortBirds(list, 'pokedex').map((b) => b.id),
     list.map((b) => b.id),
