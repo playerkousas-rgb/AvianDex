@@ -1,0 +1,130 @@
+{
+  "id": "0027",
+  "name": "凍原豆雁",
+  "scientificName": "Anser serrirostris",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "LC 依來源豆雁合併評估"
+  },
+  "illustrationTaxon": "Anser serrirostris serrirostris adult eastern form",
+  "similarSpecies": [
+    {
+      "zh": "寒林豆雁",
+      "scientificName": "Anser fabalis",
+      "asset": "taiga-bean-goose.png",
+      "framing": "whole-bird",
+      "distinction": "長而漸尖喙、較順額線、較長頸及身體。"
+    },
+    {
+      "zh": "短嘴雁",
+      "scientificName": "Anser brachyrhynchus",
+      "asset": "pink-footed-goose.png",
+      "framing": "whole-bird",
+      "distinction": "黑喙帶粉紅斑、粉紅腳；不是橙喙斑及橙腳。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.56,
+      0.1,
+      0.94,
+      0.48
+    ],
+    [
+      0.62,
+      0.27,
+      0.86,
+      0.55
+    ],
+    [
+      0.29,
+      0.42,
+      0.61,
+      0.74
+    ],
+    [
+      0.43,
+      0.73,
+      0.73,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "短喙",
+    "短頸",
+    "翼紋",
+    "腳部"
+  ],
+  "featureNotes": [
+    "短厚黑喙，喙尖前具小橙斑",
+    "頭較圓而有角，頸較短厚",
+    "褐色翼具淺色羽緣",
+    "橙色腿及蹼足"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "RUS",
+      "NOR",
+      "SWE",
+      "FIN",
+      "GBR",
+      "NLD",
+      "DEU",
+      "POL",
+      "CHN",
+      "KOR",
+      "JPN"
+    ],
+    "note": "Full world partial native-country subset: northern Russian tundra to Chukotka, winter northern/NW/central Europe and East Asia. Split Tundra Bean Goose range; no complete range or season polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000400",
+      "use": "Full page read: compact, shorter dark bill with small orange near-tip patch, straight/convex culmen, short bulbous nail, short neck, rounded angular head; range. LC explicitly for lumped Bean Goose."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000300",
+      "use": "Taiga long smooth tapered bill, slender neck and longer body; this turn reviewed artwork reused."
+    },
+    {
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/pink-footed-goose",
+      "use": "Pink-footed grey-brown body dark head-neck, short dark bill with pink band, pink legs; not a claim of usual HK occurrence."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Features source is the same reviewed 0023 adult Tundra comparison copied unaltered, not a recoloured Taiga.",
+    "LC is source combined Bean Goose concept, explicitly labelled. Runtime missing i/a remain pending, never filled from IUCN or overall score.",
+    "Pink-footed Goose is an extralimital lookalike comparison, not claimed usual wild HK bird."
+  ]
+}

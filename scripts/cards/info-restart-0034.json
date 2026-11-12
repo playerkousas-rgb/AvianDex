@@ -1,0 +1,145 @@
+{
+  "id": "0034",
+  "name": "白眉鴨",
+  "scientificName": "Spatula querquedula",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Spatula querquedula adult male breeding, fourth feature separately identified adult female",
+  "similarSpecies": [
+    {
+      "zh": "綠翅鴨",
+      "scientificName": "Anas crecca",
+      "asset": "eurasian-teal.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥栗頭綠眼斑，無粗白眉；體側白橫線。"
+    },
+    {
+      "zh": "花臉鴨",
+      "scientificName": "Sibirionetta formosa",
+      "asset": "baikal-teal.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥黃綠黑白臉紋、粉調黑斑胸，不是褐頭白眉。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.58,
+      0.28,
+      0.98,
+      0.68
+    ],
+    [
+      0.64,
+      0.43,
+      0.85,
+      0.64
+    ],
+    [
+      0.25,
+      0.36,
+      0.63,
+      0.74
+    ],
+    [
+      0.12,
+      0.07,
+      0.99,
+      0.94
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥白眉",
+    "褐色胸",
+    "長肩羽",
+    "雌鳥頭喙"
+  ],
+  "featureNotes": [
+    "繁殖羽雄鳥寬白眉向後彎至頸背",
+    "褐色胸與灰色脅部對比",
+    "黑白相間長肩羽，並非展翼圖",
+    "淡眉及頰紋之間為暗眼紋；喉淡色"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "DEU",
+      "POL",
+      "FIN",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "JPN",
+      "IND",
+      "BGD",
+      "MMR",
+      "THA",
+      "VNM",
+      "MYS",
+      "IDN",
+      "KEN",
+      "TZA",
+      "UGA",
+      "TCD",
+      "ETH"
+    ],
+    "note": "Full world intentionally partial native-country overview: Eurasia 40-65N breeding to Hokkaido and Kamchatka, central/east Africa, Indian subcontinent, SE Asia to Kalimantan and W Papua winter. Native-country subset omits many countries; no whole-country or complete global coverage, no season polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001200",
+      "use": "Full page read: male yellow green black white face, pink spotted breast, long multicoloured scapulars; female pale bill-base spot and white throat; Siberian breeding, E Asian winter; LC increasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001300",
+      "use": "Full substantive page read: male broad white curved supercilium, grey flanks, brown breast, long black-white scapulars; female contrasting head, loral spot/pale throat; Eurasia breeding and Africa/S Asia/SE Asia winter; LC decreasing."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Green-winged_Teal/id",
+      "use": "Read search result distinguishing Eurasian horizontal white stripe from American vertical breast bar, chestnut head with green patch. Comparison is Eurasian Anas crecca, not American form."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Male features reuse reviewed Garganey comparison original from 0033, no recolouring. Fourth circle separately sourced female.png and explicitly labelled female.",
+    "Floating birds feet remain underwater, no invented foot closeup. Long shoulder/scapular circle not claimed to display in-flight wing panel. Runtime vEst=1 requires body-length estimation note."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "female.png"
+  ]
+}

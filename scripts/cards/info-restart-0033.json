@@ -1,0 +1,122 @@
+{
+  "id": "0033",
+  "name": "花臉鴨",
+  "scientificName": "Sibirionetta formosa",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Sibirionetta formosa adult male breeding plumage",
+  "similarSpecies": [
+    {
+      "zh": "綠翅鴨",
+      "scientificName": "Anas crecca",
+      "asset": "eurasian-teal.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥栗頭綠眼斑、體側白橫線，沒有黃頰黑淚紋。"
+    },
+    {
+      "zh": "白眉鴨",
+      "scientificName": "Spatula querquedula",
+      "asset": "garganey.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥褐頭配寬白眉，胸褐色；沒有花臉鴨的黃綠黑白臉。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.26,
+      0.98,
+      0.64
+    ],
+    [
+      0.69,
+      0.44,
+      0.89,
+      0.64
+    ],
+    [
+      0.16,
+      0.35,
+      0.54,
+      0.73
+    ],
+    [
+      0.35,
+      0.54,
+      0.59,
+      0.78
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥頭喙",
+    "斑點胸",
+    "長肩羽",
+    "灰色脅部"
+  ],
+  "featureNotes": [
+    "繁殖羽雄鳥黃綠黑白複雜臉紋",
+    "粉紅調胸部帶清楚黑斑",
+    "栗黑白皮黃相間的長肩羽",
+    "細密黑白波紋形成灰色脅部"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "KOR",
+      "JPN",
+      "TWN"
+    ],
+    "note": "Full world partial native-country overview: eastern Siberia Yenisei to Kamchatka/Sea of Okhotsk breeding; Japan/South Korea/mainland China winter, Taiwan rare. Green Russia is not all Russia occupied. Not complete range or seasonal polygon.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001200",
+      "use": "Full page read: male yellow green black white face, pink spotted breast, long multicoloured scapulars; female pale bill-base spot and white throat; Siberian breeding, E Asian winter; LC increasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001300",
+      "use": "Full substantive page read: male broad white curved supercilium, grey flanks, brown breast, long black-white scapulars; female contrasting head, loral spot/pale throat; Eurasia breeding and Africa/S Asia/SE Asia winter; LC decreasing."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Green-winged_Teal/id",
+      "use": "Read search result distinguishing Eurasian horizontal white stripe from American vertical breast bar, chestnut head with green patch. Comparison is Eurasian Anas crecca, not American form."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "All four feature circles and main are breeding male. Female bill-base white spot and throat distinction are in research only, not falsely attributed to male face or unshown female.",
+    "Eurasian Teal comparison is Anas crecca crecca with horizontal scapular stripe, no American vertical breast bar. Runtime r=4 does not alter IUCN LC badge."
+  ]
+}

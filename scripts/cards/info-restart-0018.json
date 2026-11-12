@@ -1,0 +1,120 @@
+{
+  "id": "0018",
+  "name": "畫眉",
+  "scientificName": "Garrulax canorus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Garrulax canorus canorus adult, Hong Kong",
+  "similarSpecies": [
+    {
+      "zh": "台灣畫眉",
+      "scientificName": "Garrulax taewanus",
+      "asset": "taiwan-hwamei.png",
+      "framing": "portrait",
+      "distinction": "灰褐色較重縱紋，沒有畫眉的白色眼圈及延伸白眉。"
+    },
+    {
+      "zh": "黑臉噪鶥",
+      "scientificName": "Pterorhinus perspicillatus",
+      "asset": "masked-laughingthrush.png",
+      "framing": "portrait",
+      "distinction": "黑色眼罩、灰褐頭，沒有白眼圈連白眉；體型及比例也不同。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.56,
+      0,
+      1,
+      0.44
+    ],
+    [
+      0.26,
+      0.3,
+      0.62,
+      0.66
+    ],
+    [
+      0.66,
+      0.2,
+      0.88,
+      0.42
+    ],
+    [
+      0.56,
+      0.7,
+      0.82,
+      0.96
+    ]
+  ],
+  "featureLabels": [
+    "眼眉",
+    "翼部",
+    "胸紋",
+    "腳部"
+  ],
+  "featureNotes": [
+    "白眼圈接長白眉，綠黃虹膜",
+    "暖褐翼，羽色較深",
+    "上胸具細深色縱紋",
+    "強壯粉褐色腳趾"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "CHN",
+      "LAO",
+      "VNM"
+    ],
+    "note": "Full world viewport, partial native-country overview: central/eastern/southern China including Hainan, northern Laos and Vietnam. Not whole countries. Introduced populations in Hawaii, Japan and Taiwan omitted deliberately; Taiwan Hwamei is a different native species.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0370/044200",
+      "use": "White eye-ring/brow, green-yellow iris, yellow bill, pinkish-brown feet; native versus introduced range; LC."
+    },
+    {
+      "url": "https://animalia.bio/taiwan-hwamei",
+      "use": "Taiwan Hwamei greyer heavier-streaked plumage without white eye markings, distinct species Garrulax taewanus."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0370/044500",
+      "use": "Masked Laughingthrush black mask and grey-brown plumage; comparison reused from reviewed 0009 features artwork."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Visibility v=3.1 is existing runtime length-estimated indicator (vEst=1), labelled on card.",
+    "Iris and leg colours use HKBWS, not less precise yellow-legged secondary description."
+  ]
+}

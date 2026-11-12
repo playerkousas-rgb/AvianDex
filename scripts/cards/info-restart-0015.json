@@ -1,0 +1,123 @@
+{
+  "id": "0015",
+  "name": "紅嘴藍鵲",
+  "scientificName": "Urocissa erythroryncha",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Urocissa erythroryncha adult, Hong Kong",
+  "similarSpecies": [
+    {
+      "zh": "黃嘴藍鵲",
+      "scientificName": "Urocissa flavirostris",
+      "asset": "yellow-billed-blue-magpie.png",
+      "framing": "portrait",
+      "distinction": "喙為金黃色，與紅嘴藍鵲的紅喙有別。"
+    },
+    {
+      "zh": "台灣藍鵲",
+      "scientificName": "Urocissa caerulea",
+      "asset": "taiwan-blue-magpie.png",
+      "framing": "portrait",
+      "distinction": "黃虹膜、整個頭頸黑色、腹面藍色；不具白後頸和灰白腹。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.64,
+      0.025,
+      0.96,
+      0.345
+    ],
+    [
+      0.49,
+      0.2,
+      0.75,
+      0.46
+    ],
+    [
+      0.035,
+      0.7,
+      0.305,
+      0.97
+    ],
+    [
+      0.52,
+      0.4,
+      0.72,
+      0.6
+    ]
+  ],
+  "featureLabels": [
+    "頭部",
+    "藍翼",
+    "尾端",
+    "紅腳"
+  ],
+  "featureNotes": [
+    "紅喙，白色羽端集中後冠頸",
+    "藍色翼羽，羽端帶白",
+    "長階梯狀尾具白色寬端斑",
+    "紅色腳及趾"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "BTN",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "CHN"
+    ],
+    "note": "Full world viewport. Partial native-country overview from western Himalayas east through northern Indochina to central/southern/eastern China including Hainan. Shaded countries only partly occupied; not all of India/China, no Taiwan native range asserted. Seasons/subspecies/introduced populations not mapped.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033400",
+      "use": "Adult red bill, white-tipped crown/nape, graduated white-tipped tail; regional range and IUCN LC."
+    },
+    {
+      "url": "https://theworldbirds.org/HTML/Corvidae_Cissinae.htm",
+      "use": "Yellow-billed Blue Magpie golden bill; Taiwan Blue Magpie blue underparts, black head, yellow iris and red bill."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Taiwan_blue_magpie",
+      "use": "Taiwan Blue Magpie identification; yellow eyes and black head/neck with blue body."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; no estimated values added."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range."
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": "0029",
+  "name": "赤麻鴨",
+  "scientificName": "Tadorna ferruginea",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Tadorna ferruginea adult male in breeding plumage",
+  "similarSpecies": [
+    {
+      "zh": "翹鼻麻鴨",
+      "scientificName": "Tadorna tadorna",
+      "asset": "common-shelduck.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥深綠頭、紅喙瘤，白身配栗色胸帶；不是全身橙褐。"
+    },
+    {
+      "zh": "埃及雁",
+      "scientificName": "Alopochen aegyptiaca",
+      "asset": "egyptian-goose.png",
+      "framing": "whole-bird",
+      "distinction": "暗眼斑、深胸斑、粉紅喙腳，身體灰褐。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.03,
+      0.96,
+      0.39
+    ],
+    [
+      0.61,
+      0.21,
+      0.83,
+      0.43
+    ],
+    [
+      0.2,
+      0.45,
+      0.54,
+      0.79
+    ],
+    [
+      0.44,
+      0.72,
+      0.76,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "頭喙",
+    "雄鳥頸環",
+    "翼部",
+    "腳部"
+  ],
+  "featureNotes": [
+    "淡皮黃頭、黑色喙",
+    "繁殖羽雄鳥具黑色頸環",
+    "橙褐背翼，折翼露白及深色羽",
+    "黑色腿及蹼足"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "TUR",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "IND",
+      "PAK",
+      "NPL",
+      "MMR",
+      "VNM",
+      "EGY",
+      "MAR"
+    ],
+    "note": "Full world partial native-country overview: Black Sea to central/east Asia breeding, northern Indochina and Indian subcontinent to northeast Africa winter, NW Africa native resident subset. Deliberately incomplete; no whole-country occurrence or seasonal polygons. NW European introduced/resident populations not mapped as native.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000900",
+      "use": "Full page: rich orange adult body, pale buff head, male breeding black neck ring, female pale face/no ring; white coverts and dark flight feathers; range, LC unknown trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000800",
+      "use": "Common Shelduck adult pattern and male red bill knob."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Egyptian_Goose/id",
+      "use": "Egyptian adult dark eye mask, chest spot, pale iris, pink bill/legs and white forewing."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Male breeding plumage illustrated, not female or all-season male. Folded-wing crop does not pretend to show a fully spread flight pattern.",
+    "Egyptian Goose comparison is an extralimital lookalike, not claimed common wild HK bird."
+  ]
+}

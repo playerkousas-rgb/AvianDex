@@ -1,0 +1,115 @@
+{
+  "id": "0009",
+  "name": "黑臉噪鶥",
+  "scientificName": "Pterorhinus perspicillatus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Pterorhinus perspicillatus adult representative Hong Kong bird",
+  "similarSpecies": [
+    {
+      "zh": "畫眉",
+      "scientificName": "Garrulax canorus",
+      "asset": "chinese-hwamei.png",
+      "distinction": "白眼圈接長白眉，黃喙及綠黃色虹膜，沒有黑臉噪鶥的大片眼罩。"
+    },
+    {
+      "zh": "黑喉噪鶥",
+      "scientificName": "Pterorhinus chinensis",
+      "asset": "black-throated-laughingthrush.png",
+      "distinction": "比較圖為白頰型：白頰與黑喉形成對比；黑臉噪鶥沒有大片白頰，亦無黑喉。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.54,
+      0.02,
+      0.98,
+      0.46
+    ],
+    [
+      0.27,
+      0.29,
+      0.61,
+      0.63
+    ],
+    [
+      0.34,
+      0.51,
+      0.6,
+      0.77
+    ],
+    [
+      0.48,
+      0.62,
+      0.82,
+      0.96
+    ]
+  ],
+  "featureLabels": [
+    "頭部",
+    "翼部",
+    "臀部",
+    "腳部"
+  ],
+  "featureNotes": [
+    "廣闊黑色眼罩、深褐眼及灰褐喙",
+    "灰褐色折翼",
+    "腹部淡皮黃、臀部赭色",
+    "強壯灰粉色長腳"
+  ],
+  "rangeMap": {
+    "type": "partial-native-range-country-overview-not-an-occurrence-polygon",
+    "caption": "亞洲部分分佈國家概覽",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      95,
+      15,
+      125,
+      38
+    ],
+    "countryIso3": [
+      "CHN",
+      "VNM"
+    ],
+    "note": "Native range central/southern China and northern/central Vietnam only, not entire shaded countries. Monotypic. No introduced or vagrant range shown."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0370/044500",
+      "use": "Adult identification, geographic overview and IUCN Least Concern."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0370/044200",
+      "use": "Chinese Hwamei white orbital ring and brow, yellow bill and greenish-yellow iris."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0370/044300",
+      "use": "Nominate Black-throated Laughingthrush white cheek and black throat, not black-cheeked monachus."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime visibility v is absent; retain 待查, do not estimate from bird size. Existing overall 2.2 is retained."
+    }
+  ],
+  "notes": [
+    "Runtime visibility v is absent; retain 待查, do not estimate from bird size. Existing overall 2.2 is retained.",
+    "Missing score axes are labelled 待查, not 0; the existing radar geometry puts missing axes at the centre only as a visual placeholder, explicitly disclaimed on card.",
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change."
+  ]
+}

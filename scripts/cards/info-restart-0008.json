@@ -1,0 +1,126 @@
+{
+  "id": "0008",
+  "name": "鵲鴝",
+  "scientificName": "Copsychus saularis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Copsychus saularis adult male, Hong Kong white-bellied nominate form",
+  "similarSpecies": [
+    {
+      "zh": "白腰鵲鴝",
+      "scientificName": "Copsychus malabaricus",
+      "asset": "white-rumped-shama.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥橙褐腹、白腰及更長尾；鵲鴝雄鳥白腹和白翼帶。"
+    },
+    {
+      "zh": "喜鵲",
+      "scientificName": "Pica serica",
+      "asset": "oriental-magpie.png",
+      "framing": "whole-bird",
+      "distinction": "大型鴉科，粗喙、白肩和極長尾；不是小型鵲鴝，圓圖非同比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.53,
+      0.06,
+      0.91,
+      0.44
+    ],
+    [
+      0.3,
+      0.33,
+      0.65,
+      0.68
+    ],
+    [
+      0.5,
+      0.38,
+      0.8,
+      0.68
+    ],
+    [
+      0.06,
+      0.6,
+      0.4,
+      0.94
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥頭",
+    "白翼帶",
+    "白腹",
+    "尾部"
+  ],
+  "featureNotes": [
+    "雄鳥藍黑色頭胸；雌鳥相應部分為灰色",
+    "雄鳥折翼白帶",
+    "香港雄鳥白腹",
+    "黑尾及白色外側尾羽"
+  ],
+  "rangeMap": {
+    "type": "partial-native-range-country-overview-not-an-occurrence-polygon",
+    "caption": "亞洲部分分佈國家概覽",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      60,
+      -2,
+      124,
+      38
+    ],
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM"
+    ],
+    "note": "Partial South/continental southeast Asian overview only; not complete global distribution. Country-level shading is not whole-country occurrence. This illustration represents adult male white-bellied nominate form; female is greyer and other subspecies differ."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/047400",
+      "use": "Main adult identification, geographic overview and IUCN Least Concern."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Existing application indices, not academic ratings."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/White-rumped_Shama/id",
+      "use": "Shama orange belly, white rump and long tail."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Comparison species names."
+    },
+    {
+      "url": "https://ebird.org/species/orimag1",
+      "use": "Oriental Magpie black-white plumage, long tail and blue-green gloss."
+    }
+  ],
+  "notes": [
+    "AI artwork received basic visual review, not independent ornithologist verification.",
+    "Country overview only, green does not imply whole-country occurrence; see rangeMap.note.",
+    "Comparison circles are not to scale.",
+    "No R2 upload or app UI/layout registration changes; await user upload confirmation."
+  ]
+}

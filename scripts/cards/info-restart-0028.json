@@ -1,0 +1,127 @@
+{
+  "id": "0028",
+  "name": "大天鵝",
+  "scientificName": "Cygnus cygnus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Cygnus cygnus adult, not grey juvenile",
+  "similarSpecies": [
+    {
+      "zh": "小天鵝",
+      "scientificName": "Cygnus columbianus",
+      "asset": "bewicks-swan-portrait.png",
+      "framing": "portrait",
+      "distinction": "圖為 bewickii：喙基黃斑較圓小，不越鼻孔；頭較圓。"
+    },
+    {
+      "zh": "疣鼻天鵝",
+      "scientificName": "Cygnus olor",
+      "asset": "mute-swan-portrait.png",
+      "framing": "portrait",
+      "distinction": "橙喙及明顯黑色喙基瘤，與大天鵝黃黑喙不同。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.59,
+      0,
+      0.85,
+      0.26
+    ],
+    [
+      0.57,
+      0.17,
+      0.73,
+      0.47
+    ],
+    [
+      0.26,
+      0.52,
+      0.54,
+      0.8
+    ],
+    [
+      0.36,
+      0.74,
+      0.66,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "黃黑喙",
+    "長頸",
+    "白翼",
+    "腳部"
+  ],
+  "featureNotes": [
+    "黃色楔形斑延伸超過鼻孔",
+    "頸長，姿態較直",
+    "成鳥白羽及折翼羽片",
+    "黑色腿及蹼足"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "ISL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "GBR",
+      "IRL",
+      "DEU",
+      "POL",
+      "CHN",
+      "KOR",
+      "JPN"
+    ],
+    "note": "Full world partial native-country overview: Iceland and Scandinavia across Eurasia, Kazakhstan/Mongolia to Far East; scattered winter Europe/Black-Caspian Sea area and China/Korea/Japan. No full list, no seasonal polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000700",
+      "use": "Full text read despite embedded media anti-bot placeholder: large white adult, very long neck, black-tipped yellow bill yellow beyond nostril, grey/dull young; range, LC unknown trend."
+    },
+    {
+      "url": "https://www.rspb.org.uk/birds-and-wildlife/identifying-birds/uk-swan-identification",
+      "use": "Whooper yellow triangular wedge past nostrils vs Bewick smaller rounded patch, Mute orange bill black knob."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Bewick comparison is Eurasian Cygnus columbianus bewickii only, not a depiction of North American columbianus bill pattern.",
+    "Adult plumage illustrated. Folded-wing closeup does not claim a flight wing pattern; black webbed feet visible on land."
+  ]
+}

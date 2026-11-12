@@ -10,7 +10,6 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
-from zipfile import ZipFile, ZIP_DEFLATED
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
@@ -41,8 +40,13 @@ def range_map():
     width, height = 976, 596
     image = Image.new('RGB', (width, height), '#d9e9ed')
     draw = ImageDraw.Draw(image)
+    # New production specs explicitly select a full-world viewport. Country
+    # highlighting remains a qualified overview, not an occurrence polygon.
     bounds = SPEC['rangeMap']['bounds']
+    if SPEC['rangeMap'].get('viewport') == 'world':
+        assert bounds == [-180, -90, 180, 90], 'World maps must not use regional bounds'
     west, south, east, north = bounds
+    assert -180 <= west < east <= 180 and -90 <= south < north <= 90
     plot_bottom = height - 110
     def project(pt):
         lon, lat = pt[:2]
@@ -69,19 +73,30 @@ def render():
     birds = json.loads((ROOT / 'src/data/birds.json').read_text())
     bird = next(b for b in birds if b['id'] == SPEC['id'])
     tax = json.loads((ROOT / 'src/data/birdTaxonomy.json').read_text())[SPEC['id']]
-    scores = json.loads((ROOT / 'src/data/dexScores.json').read_text())['scores'][SPEC['id']]
+    # Some species have no score record at all: all axes/overall remain 待查.
+    scores = json.loads((ROOT / 'src/data/dexScores.json').read_text())['scores'].get(SPEC['id'], {})
     assert bird['name'] == SPEC['name'] and tax['sciName'] == SPEC['scientificName']
     genus, epithet = tax['sciName'].split(' ', 1)
     f = {'id': SPEC['id'], 'z': bird['name'], 'e': tax['comName'], 's': tax['sciName'],
          'order': [tax['orderZh'], tax['order']], 'family': [tax['familyZh'], tax['family']],
          'genus': genus, 'epithet': epithet, 'iucn': SPEC['iucn'],
          'sim': [s['zh'] for s in SPEC['similarSpecies']],
-         'score': {k: f'{scores[k]:.1f}' for k in ['i', 'a', 'r', 'c', 'v', 'o']}}
+         'score': {k: f'{scores[k]:.1f}' if scores.get(k) is not None else ''
+                   for k in ['i', 'a', 'r', 'c', 'v', 'o']}}
     # A deterministic working canvas holds separate assets at the exact existing slot coordinates.
     canvas = composer.compose_slim(f, None, 1)
-    pictures = {'pixel': Image.open(ART/'pixel.png').convert('RGB'), 'map': range_map()}
-    with Image.open(ART/'features.png') as image:
-        for i, crop in enumerate(SPEC['featureCrops']):
+    with Image.open(ART/'pixel.png') as image:
+        pixel = image.convert('RGB')
+        side = max(pixel.size)
+        # Models may return portrait assets despite a square prompt: preserve the whole bird.
+        pixel = ImageOps.pad(pixel, (side, side), color=pixel.getpixel((0, 0)), method=Image.Resampling.LANCZOS)
+    pictures = {'pixel': pixel, 'map': range_map()}
+    feature_sources = SPEC.get('featureSources', ['features.png'] * 4)
+    assert len(feature_sources) == 4
+    for i, (crop, source) in enumerate(zip(SPEC['featureCrops'], feature_sources)):
+        assert len(crop) == 4 and 0 <= crop[0] < crop[2] <= 1 and 0 <= crop[1] < crop[3] <= 1
+        # A separately identified female/juvenile source may occupy one feature circle.
+        with Image.open(ART/source) as image:
             pictures[f'zoom{i}'] = image.crop(tuple(round(v*(image.width if j%2 == 0 else image.height)) for j,v in enumerate(crop))).convert('RGB')
     for i, species in enumerate(SPEC['similarSpecies']):
         portrait = Image.open(ART/species['asset']).convert('RGB')
@@ -104,7 +119,18 @@ def render():
     # Explain the existing app score rather than implying an academic/scientific rating.
     draw = ImageDraw.Draw(result)
     font = ImageFont.truetype(str(Path(composer.FONT_DIR)/'NotoSansTC_400Regular.ttf'), 17)
-    draw.text((64,1132), '應用程式趣味指標・非學術評分', font=font, fill='#d1c7a9')
+    missing_scores = [k for k, value in f['score'].items() if not value]
+    caption = '應用程式趣味指標・非學術評分'
+    if missing_scores:
+        caption += '；待查非零分'
+    draw.text((64,1132), caption, font=font, fill='#d1c7a9')
+    if not f['score']['o']:
+        pending_font = ImageFont.truetype(str(Path(composer.FONT_DIR)/'NotoSansTC_400Regular.ttf'), 23)
+        draw.text((84,1040), '綜合評分待查', font=pending_font, fill='#d1c7a9')
+    if scores.get('vEst'):
+        draw.text((64,1104), '觀賞值含體長估算', font=font, fill='#d1c7a9')
+    if SPEC['iucn'].get('assessmentNote'):
+        draw.text((64,1076), SPEC['iucn']['assessmentNote'], font=font, fill='#d1c7a9')
     result.save(OUT/f'preview-{ID}.webp', quality=95, method=6)
     target = OUT/f'aviandex/{ID}.avif'
     target.parent.mkdir(exist_ok=True)
@@ -117,7 +143,7 @@ def render():
               'objectKey':f'aviandex/{ID}.avif','layout':'slim','width':1024,'height':1536,
               'bytes':len(payload),'sha256':hashlib.sha256(payload).hexdigest(),
               'r2UploadPerformed':False,'status':'review_before_upload','score':f['score'],
-              'spec':SPEC}
+              'missingScores':missing_scores,'spec':SPEC}
     (OUT/'manifest.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n')
     (OUT/'SHA256SUMS').write_text(f"{record['sha256']}  aviandex/{ID}.avif\n")
     (OUT/'README-先核對再上載.txt').write_text(f'''AvianDex 資訊卡重新製作 — {ID} {bird['name']}
@@ -137,14 +163,9 @@ def render():
 沒有上載 R2，沒有更改 app 資訊卡註冊或覆蓋現有 {ID}；上載完成後才更新版式註冊。
 manifest.json 是交付核對紀錄，不可直接覆蓋 app 的 card-manifest.json。
 ''')
-    archive = OUT/f'AvianDex-info-restart-{ID}.zip'
-    with ZipFile(archive,'w',ZIP_DEFLATED) as z:
-        for name in [f'aviandex/{ID}.avif',f'preview-{ID}.webp','manifest.json','SHA256SUMS','README-先核對再上載.txt']:
-            z.write(OUT/name,name)
-    with ZipFile(archive) as z:
-        assert z.testzip() is None
-        assert hashlib.sha256(z.read(f'aviandex/{ID}.avif')).hexdigest() == record['sha256']
-    print(json.dumps({'avifBytes':len(payload),'zipBytes':archive.stat().st_size,'archive':str(archive.relative_to(ROOT))}))
+    # User requested direct AVIF delivery: previews/manifests stay local, no ZIP.
+    print(json.dumps({'avifBytes':len(payload),'avif':str(target.relative_to(ROOT)),
+                      'missingScores':missing_scores}))
 
 
 if __name__ == '__main__':

@@ -1,0 +1,129 @@
+{
+  "id": "0024",
+  "name": "白額雁",
+  "scientificName": "Anser albifrons",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Anser albifrons albifrons adult; juveniles lack developed white forehead and belly bars",
+  "similarSpecies": [
+    {
+      "zh": "小白額雁",
+      "scientificName": "Anser erythropus",
+      "asset": "lesser-white-fronted-portrait.png",
+      "framing": "portrait",
+      "distinction": "黃眼圈、較短粉紅喙；成鳥白額延伸至眼上方頭頂。"
+    },
+    {
+      "zh": "灰雁",
+      "scientificName": "Anser anser",
+      "asset": "greylag-goose.png",
+      "framing": "portrait",
+      "distinction": "粗大粉紅喙、粉紅腳，沒有成鳥白額雁的白額及粗黑腹斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.55,
+      0.05,
+      0.88,
+      0.38
+    ],
+    [
+      0.27,
+      0.39,
+      0.59,
+      0.71
+    ],
+    [
+      0.49,
+      0.52,
+      0.81,
+      0.84
+    ],
+    [
+      0.41,
+      0.72,
+      0.71,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "白額",
+    "翼紋",
+    "黑腹斑",
+    "腳部"
+  ],
+  "featureNotes": [
+    "成鳥喙基周圍白色額斑",
+    "褐色翼具淺色羽緣",
+    "成鳥腹部有不規則粗黑斑",
+    "橙色腿及蹼足"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "RUS",
+      "USA",
+      "CAN",
+      "GRL",
+      "GBR",
+      "NLD",
+      "DEU",
+      "IRN",
+      "IND",
+      "CHN",
+      "KOR",
+      "JPN"
+    ],
+    "note": "Full world partial native-country overview: Arctic breeding northern Russia/Alaska/Canada/western Greenland, Eurasian wintering NW Europe/SW Asia/northern Indian subcontinent/E Asia. USA shown for Alaska breeding, not whole USA. Incomplete selected country subset, no breeding/wintering polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000500",
+      "use": "Full page read: adult stocky squared head, white bill base, irregular black belly bars, orange feet; juvenile little/no white and no belly barring. Arctic range and LC unknown trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000600",
+      "use": "Lesser White-front yellow orbital ring, smaller always pink bill, extensive adult forehead white to above eye; juvenile exceptions."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000200",
+      "use": "Greylag pink-billed thick-necked eastern form; reused from reviewed 0023 features head crop."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Features artwork is the same reviewed adult Anser albifrons used for comparison on 0023, copied without recolouring; reuse avoids redundant generation.",
+    "Adult-only features: juvenile white forehead and black belly marks absent or weak. Comparison portraits not to scale."
+  ]
+}

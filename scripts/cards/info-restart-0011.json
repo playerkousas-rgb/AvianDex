@@ -1,0 +1,127 @@
+{
+  "id": "0011",
+  "name": "樹麻雀",
+  "scientificName": "Passer montanus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Passer montanus adult, Hong Kong",
+  "similarSpecies": [
+    {
+      "zh": "家麻雀（雄）",
+      "scientificName": "Passer domesticus",
+      "asset": "house-sparrow.png",
+      "framing": "portrait",
+      "distinction": "雄鳥灰色冠頂、黑喉斑較大，白頰沒有黑斑；雌鳥另有不同羽色。"
+    },
+    {
+      "zh": "山麻雀（雄）",
+      "scientificName": "Passer cinnamomeus",
+      "asset": "russet-sparrow.png",
+      "framing": "portrait",
+      "distinction": "雄鳥栗紅冠及背部、淨白頰，沒有黑頰斑；雌鳥有顯眼眉紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.51,
+      0.08,
+      0.93,
+      0.5
+    ],
+    [
+      0.3,
+      0.3,
+      0.66,
+      0.66
+    ],
+    [
+      0.59,
+      0.39,
+      0.83,
+      0.63
+    ],
+    [
+      0.54,
+      0.57,
+      0.82,
+      0.85
+    ]
+  ],
+  "featureLabels": [
+    "頭部",
+    "翼帶",
+    "腹部",
+    "腳部"
+  ],
+  "featureNotes": [
+    "栗色冠頂，白頰黑斑",
+    "兩道淡色翼帶",
+    "淡皮黃色腹部",
+    "粉褐色腳及短趾"
+  ],
+  "rangeMap": {
+    "type": "partial-native-range-country-overview-not-an-occurrence-polygon",
+    "caption": "亞洲部分分佈國家概覽",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      65,
+      -12,
+      150,
+      60
+    ],
+    "countryIso3": [
+      "CHN",
+      "TWN",
+      "JPN",
+      "KOR",
+      "PRK",
+      "MNG",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Partial Asian native-country overview only, not full Palearctic range. Omitted Europe and much of central/north Asia. Not whole countries; absent from much of Tibet and Xinjiang deserts. Seasonal/subspecies differences and introduced populations not mapped."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/052700",
+      "use": "Adult features, regional native range and IUCN LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/052800",
+      "use": "Male House Sparrow grey forecrown, larger bib, no cheek spot; sexually dimorphic."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/052600",
+      "use": "Male Russet Sparrow rufous crown and upperparts, spotless cheek; sexually dimorphic."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; no estimates added."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change."
+  ]
+}
