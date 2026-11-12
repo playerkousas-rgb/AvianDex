@@ -9,8 +9,6 @@ interface BirdCardProps {
   bird: Bird;
   onClick: () => void;
   isActive?: boolean;
-  /** 目前排序下排第幾（1-based）；唔顯示就傳 undefined */
-  listPosition?: number;
   /** 'en' ＝ 卡面只出英文（主標題英文名、副題中文名）；'zh' ＝ 相反 */
   lang?: 'zh' | 'en';
 }
@@ -25,7 +23,6 @@ export const BirdCard: React.FC<BirdCardProps> = ({
   bird,
   onClick,
   isActive = false,
-  listPosition,
   lang = 'zh',
 }) => {
   const image = useCardImage(bird.id);
@@ -61,11 +58,7 @@ export const BirdCard: React.FC<BirdCardProps> = ({
             NO.{bird.id}
           </span>
         </div>
-        {listPosition != null && (
-          <div className="bg-black/55 backdrop-blur-sm rounded-md px-1.5 py-0.5 border border-white/20 shadow-md">
-            <span className="font-mono text-white/70 text-[8px] tracking-wider">#{listPosition}</span>
-          </div>
-        )}
+
       </div>
       <div className="absolute top-2 right-2 z-30 w-3 h-3 rounded-full bg-red-600 border-2 border-red-900 shadow-inner" />
 

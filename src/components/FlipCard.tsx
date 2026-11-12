@@ -34,12 +34,11 @@ interface FlipCardProps {
   bird: Bird;
   lang: Lang;
   isActive?: boolean;
-  listPosition?: number;
   /** 點卡 / 按放大 → 開詳細頁（含放大鳥圖） */
   onOpen: () => void;
 }
 
-export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPosition, onOpen }) => {
+export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, onOpen }) => {
   const t = (zh: string, en: string) => (lang === 'en' ? en : zh);
   const art = useCardImage(bird.id);
   const info = useInfoCard(bird.id);
@@ -142,11 +141,7 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, listPo
             </button>
           )}
 
-          {listPosition != null && (
-            <div className="absolute top-1.5 right-10 bg-black/55 rounded px-1.5 py-0.5 pointer-events-none">
-              <span className="font-mono text-white/60 text-[8px]">#{listPosition}</span>
-            </div>
-          )}
+
         </div>
 
         {/* 背面：資訊卡（只有名單內的鳥才有）。rotateY(180deg) 反轉，令文字不會左右倒轉 */}

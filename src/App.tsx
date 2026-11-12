@@ -615,11 +615,10 @@ function App() {
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5 sm:gap-4 md:gap-5 relative z-10">
-                {pagedBirds.map((bird, pos) => (
+                {pagedBirds.map((bird) => (
                   <FlipCard
                     key={bird.id}
                     bird={bird}
-                    listPosition={filteredBirds.length > 1 ? pos + 1 : undefined}
                     lang={lang}
                     isActive={selectedBirdId === bird.id}
                     onOpen={() => setSelectedBirdId(bird.id)}
