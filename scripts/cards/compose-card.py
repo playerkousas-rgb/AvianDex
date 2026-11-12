@@ -545,11 +545,11 @@ M_MAPP = (36, 1186, 540, 1500)
 M_MAP = (M_MAPP[0] + 8, M_MAPP[1] + 8, M_MAPP[2] - 8, M_MAPP[3] - 8)
 M_SIMP = (556, 1186, 988, 1500)
 M_SIM = [(668, 1330, 70), (876, 1330, 70)]
-RARE_OF = {'LC': 1, 'NT': 2, 'VU': 3, 'EN': 4, 'CR': 5, 'EW': 5, 'EX': 5}
+RARE_OF = {'LC': 1, 'NT': 2, 'VU': 3, 'EN': 4, 'CR': 5, 'EW': 6, 'EX': 7}   # 用戶 2026-11-12：七星，滅絕 7、野外滅絕 6、極危 5
 
 
 def rarity(f):
-    """卡片稀有度 1–5：取「保育級別」與「常見度」兩者中較稀有的那個（常見度 5＝很常見 → 稀有度 1）。
+    """卡片稀有度 1–7 星：取「保育級別」與「常見度」兩者中較稀有的那個（常見度 5＝很常見 → 1 星；常見度最多把稀有度推到 5 星，6–7 星只留給野外滅絕／滅絕）。
     兩樣都沒有資料時回傳 0（全部不點亮，不亂填）。"""
     tiers = []
     code = (f.get('iucn') or {}).get('code')
@@ -566,6 +566,17 @@ def slim_slots(f):
     out += [(f'zoom{i}', 'circle', (round(c[0]), c[1], c[2]), c[2] + 3.5) for i, c in enumerate(M_ZOOM)]
     out += [(f'sim{i}', 'circle', c, c[2] + 3.5) for i, c in enumerate(M_SIM)]
     return out
+
+
+def sparkle(cv, cx, cy, r, fill, outline):
+    """四角星（✦），像角色面板的星級"""
+    k = 0.34
+    pts = []
+    for i in range(8):
+        a = -math.pi / 2 + i * math.pi / 4
+        rr = r if i % 2 == 0 else r * k
+        pts.append((cx + rr * math.cos(a), cy + rr * math.sin(a)))
+    cv.poly(pts, fill=fill, outline=outline, width=1.6)
 
 
 def diamond(cv, cx, cy, r, fill=None, outline=None, width=2):
@@ -604,15 +615,13 @@ def compose_slim(f, art, out_scale=None):
 
     # ── 稀有度：小標示（5 顆菱形 + 保育級別小章），不佔版面 ──
     n = rarity(f)
-    for i in range(5):
+    ry = (M_RARE[1] + M_RARE[3]) / 2
+    for i in range(7):
         on = i < n
-        diamond(cv, 62 + i * 36, (M_RARE[1] + M_RARE[3]) / 2, 14,
-                fill=GOLD if on else mix(BG, GOLD, 0.12), outline=GOLD if on else GOLD_D, width=2)
-        if on:
-            diamond(cv, 62 + i * 36, (M_RARE[1] + M_RARE[3]) / 2, 5, fill=(255, 250, 225))
+        sparkle(cv, 54 + i * 29, ry, 13.5, GOLD if on else mix(BG, GOLD, 0.14), GOLD if on else GOLD_D)
     col = dict(SCALE).get(code)
     if col:
-        px0, px1 = 252, 354
+        px0, px1 = 262, 354
         py = (M_RARE[1] + M_RARE[3]) / 2
         cv.rr((px0, py - 19, px1, py + 19), 19, fill=col, outline=cream, width=2)
         cv.text((px0 + px1) / 2, py + 1, zh, 22, WHITE if sum(col) < 450 else INK, anchor='mm', maxw=90)
