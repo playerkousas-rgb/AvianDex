@@ -18,7 +18,7 @@ import { useCardStats } from './hooks/useCardStats';
 import { getLoadedIds, resetAll, requestCard } from './lib/cardImage';
 import { APP_VERSION, CARDS_PER_PAGE, DEFAULT_SORT_MODE } from './config';
 import { sortBirds, searchBirds, type SortMode } from './lib/pokedexOrder';
-import { filterByFacets, emptyFacets, type Facets, type Lang } from './lib/explorer';
+import { filterByFacets, searchIndex, emptyFacets, hasActiveFacets, type Facets, type Lang } from './lib/explorer';
 import { resolveBirdId } from './data/nameAliases';
 import { useBirdNetLocal } from './hooks/useBirdNetLocal';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -82,7 +82,8 @@ function App() {
 
   // 多線索搜尋面板（屬性篩選）；同一個 query 亦餵落卡片網格
   const [showExplorer, setShowExplorer] = useState(false);
-  const [facets] = useState<Facets>(emptyFacets);
+  const [facets, setFacets] = useState<Facets>(emptyFacets);
+  const activeFilterCount = facets.diet.length + facets.habitat.length + (facets.size?.length || 0) + (facets.iucn?.length || 0);
 
   // 觀鳥禮儀 / 觀鳥裝備
   const [guideKind, setGuideKind] = useState<GuideKind | null>(null);
@@ -249,28 +250,33 @@ function App() {
     return () => { document.body.style.overflow = 'unset'; };
   }, [selectedBirdId, showMap, recogOpen, globalCaptureKind, guideKind]);
 
-  const filteredBirds = useMemo(() => {
-    // 搜尋以英文名為主（見 src/lib/pokedexOrder.ts 的評分表），中文名仍可搜但排後
+  const candidateBirds = useMemo(() => {
     let base = searchBirds(birds, query);
+    // Retain name-match priority, then add taxonomy/diet/habitat matches from the shared index.
+    if (query.trim()) {
+      const seen = new Set(base.map(b => b.id));
+      const byId = new Map(birds.map(b => [b.id, b]));
+      for (const hit of searchIndex(query, lang)) {
+        const bird = byId.get(hit.id);
+        if (bird && !seen.has(hit.id)) { base.push(bird); seen.add(hit.id); }
+      }
+    }
     if (onlyUnlocked) {
       const loaded = getLoadedIds();
-      base = base.filter((b) => loaded.has(b.id));
+      base = base.filter(b => loaded.has(b.id));
     }
-    // 有搜尋關鍵字時保留「相關度」次序（英文命中優先），否則跟所選分類次序
-    const ordered = query.trim() ? base : sortBirds(base, sortMode);
-    // 多線索搜尋的屬性標籤（食乜／住邊）：用 id 過濾再對回 Bird 物件，保持原本次序
-    if (!facets.diet.length && !facets.habitat.length) return ordered;
-    const keep = new Set(filterByFacets(ordered.map((b) => b.id), facets));
-    return ordered.filter((b) => keep.has(b.id));
-    // cardStats 只係用作「圖片狀態已變」的觸發器，令「只看有圖」跟得上載入進度
+    return query.trim() ? base : sortBirds(base, sortMode);
+    // cardStats is the trigger when loaded-image status changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [birds, query, onlyUnlocked, sortMode, cardStats, facets]);
+  }, [birds, query, lang, onlyUnlocked, sortMode, cardStats]);
 
-  // 只 render 首 N 張；其餘靠「載入更多」逐批出現（避免一次性打爆 R2）
-  const pagedBirds = useMemo(
-    () => filteredBirds.slice(0, visibleCount),
-    [filteredBirds, visibleCount],
-  );
+  const filteredBirds = useMemo(() => {
+    if (!hasActiveFacets(facets)) return candidateBirds;
+    const keep = new Set(filterByFacets(candidateBirds.map(b => b.id), facets));
+    return candidateBirds.filter(b => keep.has(b.id));
+  }, [candidateBirds, facets]);
+
+  const pagedBirds = useMemo(() => filteredBirds.slice(0, visibleCount), [filteredBirds, visibleCount]);
 
   /**
    * 圖鑑機（左右箭頭切換）用的清單。
@@ -533,18 +539,18 @@ function App() {
               </div>
               <button
                 onClick={() => setShowExplorer((v) => !v)}
-                title={lang === 'en' ? 'Filter by diet and habitat, and find look-alikes' : '用「食乜／住邊」篩選，並找相似鳥類'}
+                title={lang === 'en' ? 'Filter by size, IUCN status, diet or habitat' : '按大小、瀕危等級、食物或生境篩選鳥類'}
                 className={`shrink-0 flex items-center gap-1.5 border-2 border-black rounded-lg px-2.5 py-2 font-black text-[10px] tracking-wider shadow-[0_3px_0_rgba(0,0,0,0.4)] active:translate-y-0.5 active:shadow-none transition-all ${
-                  showExplorer || facets.diet.length || facets.habitat.length
+                  showExplorer || hasActiveFacets(facets)
                     ? 'bg-cyan-700 text-white'
                     : 'bg-white/70 text-gray-900 hover:bg-white'
                 }`}
               >
                 <Layers className="w-3.5 h-3.5" />
-                {lang === 'en' ? 'Diet & habitat' : '多線索'}
-                {(facets.diet.length + facets.habitat.length) > 0 && (
+                {lang === 'en' ? 'Filters' : '多線索'}
+                {activeFilterCount > 0 && (
                   <span className="bg-yellow-400 text-gray-900 rounded-full px-1.5">
-                    {facets.diet.length + facets.habitat.length}
+                    {activeFilterCount}
                   </span>
                 )}
               </button>
@@ -555,6 +561,14 @@ function App() {
         <main className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-10 relative z-10">
           {!loading && (
             <CardLoadDiagnostics visibleIds={pagedBirds.map((b) => b.id)} />
+          )}
+          {!loading && showExplorer && (
+            <ExplorerPanel lang={lang} query={query}
+              onQueryChange={(q) => { setQuery(q); setVisibleCount(CARDS_PER_PAGE); }}
+              orderedIds={candidateBirds.map(b => b.id)}
+              facets={facets}
+              onFacetsChange={(next) => { setFacets(next); setVisibleCount(CARDS_PER_PAGE); }}
+              onPick={id => setSelectedBirdId(id)} />
           )}
           {loading ? (
             <div className="flex flex-col items-center justify-center py-24 sm:py-32 bg-black/40 backdrop-blur-md rounded-2xl sm:rounded-3xl border-2 sm:border-4 border-yellow-400/30">
@@ -568,36 +582,20 @@ function App() {
             </div>
           ) : filteredBirds.length === 0 ? (
             <div>
-              {showExplorer && (
-                <ExplorerPanel
-                  lang={lang}
-                  query={query}
-                  onQueryChange={(q) => { setQuery(q); setVisibleCount(CARDS_PER_PAGE); }}
-                  orderedIds={birds.map((b) => b.id)}
-                  onPick={(id) => { setSelectedBirdId(id); }}
-                />
-              )}
+
               <div className="flex flex-col items-center justify-center py-16 sm:py-24 text-center">
                 <BirdIcon className="w-20 h-20 sm:w-24 sm:h-24 text-yellow-300/40 mb-4" strokeWidth={1.5} />
                 <p className="text-yellow-200/80 font-black text-lg sm:text-xl">
                   {L('沒有找到符合的鳥種', 'No species matched')}
                 </p>
                 <p className="text-white/40 font-mono text-xs mt-2">
-                  {L('試下換個關鍵字，或用「多線索」揀食乜／住邊', 'Try another keyword, or filter by diet / habitat')}
+                  {L('試下換個關鍵字，或清除／減少篩選條件', 'Try another keyword, or clear / reduce the filters')}
                 </p>
               </div>
             </div>
           ) : (
             <>
-              {showExplorer && (
-                <ExplorerPanel
-                  lang={lang}
-                  query={query}
-                  onQueryChange={(q) => { setQuery(q); setVisibleCount(CARDS_PER_PAGE); }}
-                  orderedIds={filteredBirds.map((b) => b.id)}
-                  onPick={(id) => { setSelectedBirdId(id); }}
-                />
-              )}
+
               <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 flex-wrap">
                 <div className="flex-1 h-1 bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent rounded min-w-[20px]" />
                 <h2 className="text-yellow-300 font-black text-xs sm:text-sm tracking-[0.3em] sm:tracking-[0.4em] flex items-center gap-1.5 sm:gap-2">

@@ -8,6 +8,7 @@
  * 只有幾十 KB；不要為了搜尋而載入 2.8 MB 的 cardCopy.json。
  */
 import raw from '../data/explorerIndex.json';
+import filterTraitsRaw from '../data/filterTraits.json';
 
 export type Lang = 'zh' | 'en';
 
@@ -51,29 +52,66 @@ export const tagLabel = (id: string, lang: Lang): string => {
 export const dietLabel = (id: string, lang: Lang) => tagLabel(id, lang);
 export const habitatLabel = (id: string, lang: Lang) => tagLabel(id, lang);
 
-/** 屬性篩選：組內 OR、組間 AND（食昆蟲 ＋ 住森林 ＝ 兩樣都要中） */
+/** Size bins are app browsing aids, not taxonomic categories; exact cm limits are shown. */
+export const SIZE_TAGS: TagDef[] = [
+  { id: 'tiny', zh: '極小型 · <15 cm', en: 'Tiny · <15 cm' },
+  { id: 'small', zh: '小型 · 15–<25 cm', en: 'Small · 15–<25 cm' },
+  { id: 'medium', zh: '中型 · 25–<50 cm', en: 'Medium · 25–<50 cm' },
+  { id: 'large', zh: '大型 · 50–<100 cm', en: 'Large · 50–<100 cm' },
+  { id: 'huge', zh: '超大型 · ≥100 cm', en: 'Very large · ≥100 cm' },
+  { id: 'unknown', zh: '體長資料待查', en: 'Length unknown' },
+];
+export const IUCN_TAGS: TagDef[] = [
+  { id: 'LC', zh: '1★ 無危 LC', en: '1★ Least Concern LC' },
+  { id: 'NT', zh: '2★ 近危 NT', en: '2★ Near Threatened NT' },
+  { id: 'VU', zh: '3★ 易危 VU', en: '3★ Vulnerable VU' },
+  { id: 'EN', zh: '4★ 瀕危 EN', en: '4★ Endangered EN' },
+  { id: 'CR', zh: '5★ 極危 CR', en: '5★ Critically Endangered CR' },
+  { id: 'EW', zh: '6★ 野外滅絕 EW', en: '6★ Extinct in the Wild EW' },
+  { id: 'EX', zh: '7★ 滅絕 EX', en: '7★ Extinct EX' },
+  { id: 'DD', zh: '資料缺乏 DD', en: 'Data Deficient DD' },
+  { id: 'NE', zh: '未予評估 NE', en: 'Not Evaluated NE' },
+  { id: 'UNKNOWN', zh: '級別資料待查', en: 'Status unknown' },
+];
+export const FILTER_TRAITS = filterTraitsRaw.birds as Record<string, { lengthCm: number | null; iucn: string }>;
+export function sizeCategory(length: number | null | undefined): string {
+  if (length == null || !Number.isFinite(length) || length < 5 || length > 300) return 'unknown';
+  if (length < 15) return 'tiny';
+  if (length < 25) return 'small';
+  if (length < 50) return 'medium';
+  return length < 100 ? 'large' : 'huge';
+}
+
+/** Group-internal OR, between-group AND. ANY/ALL applies to diet/habitat tags only. */
 export interface Facets {
   diet: string[];
   habitat: string[];
-  /** 'any' = 有任一標籤；'all' = 全部標籤都要中（進階用） */
+  size?: string[];
+  iucn?: string[];
   mode?: 'any' | 'all';
 }
-
-export const emptyFacets = (): Facets => ({ diet: [], habitat: [], mode: 'any' });
-
+export const emptyFacets = (): Facets => ({ diet: [], habitat: [], size: [], iucn: [], mode: 'any' });
+export const hasActiveFacets = (f: Facets) => [f.diet, f.habitat, f.size, f.iucn].some(group => group?.length);
+export function filterFacetLabel(id: string, lang: Lang): string {
+  const tag = [...SIZE_TAGS, ...IUCN_TAGS].find(tag => tag.id === id);
+  return tag ? (lang === 'en' ? tag.en : tag.zh) : tagLabel(id, lang);
+}
 const matchFacet = (have: string[], want: string[], mode: 'any' | 'all') => {
   if (!want.length) return true;
   return mode === 'all' ? want.every((w) => have.includes(w)) : want.some((w) => have.includes(w));
 };
 
-/** 用屬性標籤過濾一組 id；回傳仍然符合的 id（保持原次序） */
+/** Filter IDs while retaining the original sort order. Never estimate missing lengths/status. */
 export function filterByFacets(ids: string[], facets: Facets): string[] {
   const mode = facets.mode || 'any';
-  if (!facets.diet.length && !facets.habitat.length) return ids;
+  if (!hasActiveFacets(facets)) return ids;
   return ids.filter((id) => {
     const e = ENTRIES[id];
     if (!e) return false;
-    return matchFacet(e.d, facets.diet, mode) && matchFacet(e.h, facets.habitat, mode);
+    const traits = FILTER_TRAITS[id];
+    return matchFacet(e.d, facets.diet, mode) && matchFacet(e.h, facets.habitat, mode)
+      && matchFacet([sizeCategory(traits?.lengthCm)], facets.size || [], 'any')
+      && matchFacet([traits?.iucn || 'UNKNOWN'], facets.iucn || [], 'any');
   });
 }
 

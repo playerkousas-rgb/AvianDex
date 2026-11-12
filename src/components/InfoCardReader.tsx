@@ -1,6 +1,6 @@
 import type { Lang } from '../lib/explorer';
 import { useId, useRef, useState, type ReactNode } from 'react';
-import { ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import { Maximize2 } from 'lucide-react';
 import { mobileCardPages, nextMobileCardPage, SLIM_PAGE_BOXES } from '../lib/mobileInfoPages';
 import type { CardImageStatus } from '../lib/cardImage';
 import scoresData from '../data/dexScores.json';
@@ -89,6 +89,12 @@ export function MobileCardPages({ id, name, lang, artwork, infoUrl, infoStatus, 
     if (next > 0) onInfo();
   };
   return <div data-mobile-card-pages className="md:hidden absolute inset-0 flex flex-col bg-[#0c202b] text-amber-100 select-none"
+    tabIndex={0} role="region" aria-label={t('圖卡，可左右掃切換', 'Card: swipe left or right to change section')}
+    onKeyDown={e => {
+      if (e.target !== e.currentTarget || (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight')) return;
+      e.preventDefault(); e.stopPropagation();
+      select(nextMobileCardPage(index, e.key === 'ArrowRight' ? 1 : -1, pages.length));
+    }}
     onClick={e => e.stopPropagation()}
     onTouchStart={e => { const p = e.touches[0]; touch.current = { x: p.clientX, y: p.clientY }; }}
     onTouchEnd={e => {
@@ -102,11 +108,11 @@ export function MobileCardPages({ id, name, lang, artwork, infoUrl, infoStatus, 
       }
     }}>
     <div className="flex items-center justify-between px-2 py-1 shrink-0 gap-2">
-      <span aria-live="polite" className="text-xs font-bold">{index + 1}/{pages.length} · {t(page.zh, page.en)}</span>
+      <span aria-live="polite" className="text-xs font-bold">{t(page.zh, page.en)}</span>
       <button type="button" aria-label={t('放大完整圖卡', 'Expand full card')} onClick={() => onExpand(index > 0)}
         className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10"><Maximize2 className="w-4 h-4" /></button>
     </div>
-    <div id={`mobile-card-panel-${id}`} role="tabpanel" aria-label={t(page.zh, page.en)} data-card-page={page.key}
+    <div id={`mobile-card-panel-${id}`} role="group" aria-label={t(page.zh, page.en)} data-card-page={page.key}
       className="flex-1 min-h-0 relative p-1 overflow-hidden touch-pan-y">
       {index === 0 ? artwork : infoUrl && infoStatus === 'loaded' ? (
         page.key === 'scores' ? <InfoCardScores id={id} lang={lang} compact /> :
@@ -116,20 +122,6 @@ export function MobileCardPages({ id, name, lang, artwork, infoUrl, infoStatus, 
         {infoStatus === 'missing' || infoStatus === 'error' ? <span className="p-3">{t('暫時未能讀取圖卡，請稍後重新開啟。', 'Card unavailable. Please reopen it later.')}</span> : t('載入圖卡…', 'Loading card…')}
       </div>}
     </div>
-    {pages.length > 1 && <nav aria-label={t('圖卡分頁', 'Card pages')} className="flex items-center justify-between gap-1 px-1 py-1 shrink-0 border-t border-white/10">
-      <button type="button" aria-label={t('上一頁圖卡', 'Previous card page')} disabled={index === 0} onClick={() => select(index - 1)} className="w-9 h-9 flex items-center justify-center disabled:opacity-25"><ChevronLeft className="w-5 h-5" /></button>
-      <div role="tablist" aria-label={t('選擇圖卡頁', 'Choose card page')} className="flex flex-1 justify-center gap-1" onKeyDown={e => {
-        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
-        e.preventDefault();
-        const next = nextMobileCardPage(index, e.key === 'ArrowRight' ? 1 : -1, pages.length);
-        select(next);
-        e.currentTarget.querySelectorAll<HTMLButtonElement>('[role="tab"]')[next]?.focus();
-      }}>
-        {pages.map((p, i) => <button key={p.key} type="button" role="tab" aria-controls={`mobile-card-panel-${id}`} aria-selected={i === index}
-          aria-label={t(p.zh, p.en)} tabIndex={i === index ? 0 : -1} onClick={() => select(i)}
-          className={`w-8 h-9 rounded flex items-center justify-center text-xs font-bold ${i === index ? 'bg-amber-300 text-[#102c3d]' : 'bg-white/5 text-amber-100/60'}`}>{i + 1}</button>)}
-      </div>
-      <button type="button" aria-label={t('下一頁圖卡', 'Next card page')} disabled={index === pages.length - 1} onClick={() => select(index + 1)} className="w-9 h-9 flex items-center justify-center disabled:opacity-25"><ChevronRight className="w-5 h-5" /></button>
-    </nav>}
+
   </div>;
 }

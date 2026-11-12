@@ -40,9 +40,12 @@ test('mobile pager has accessible navigation and starts with artwork, not a long
   assert.ok(html.includes('md:hidden'));
   assert.ok(html.includes('data-card-page="artwork"'));
   assert.ok(html.includes('ARTWORK'));
-  assert.equal((html.match(/role="tab"/g) || []).length, 5);
+  assert.equal((html.match(/role="tab"/g) || []).length, 0);
+  assert.equal(html.includes('Previous card page'), false);
+  assert.equal(html.includes('Next card page'), false);
+  assert.equal(html.includes('1/5'), false);
   assert.ok(html.includes('aria-label="Expand full card"'));
-  assert.ok(html.includes('aria-selected="true"'));
+  assert.ok(html.includes('Card: swipe left or right to change section'));
 });
 
 test('radar uses the same score source as the card, with readable live labels and values', () => {

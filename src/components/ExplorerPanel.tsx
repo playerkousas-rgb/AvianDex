@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, X, Layers, Utensils, Trees, Compass, Sparkles, Telescope } from 'lucide-react';
+import { Search, X, Layers, Utensils, Trees, Compass, Sparkles, Telescope, Ruler, Shield } from 'lucide-react';
 import {
-  DIET_TAGS, HABITAT_TAGS, ENTRIES,
-  searchIndex, similarBirds, filterByFacets, emptyFacets, tagLabel,
+  DIET_TAGS, HABITAT_TAGS, SIZE_TAGS, IUCN_TAGS, ENTRIES,
+  similarBirds, filterByFacets, emptyFacets, hasActiveFacets, filterFacetLabel,
   type Facets, type Lang,
 } from '../lib/explorer';
 
@@ -16,6 +16,8 @@ interface ExplorerPanelProps {
   onQueryChange: (q: string) => void;
   /** 已顯示的卡（保留原本 sortMode 次序） */
   orderedIds: string[];
+  facets: Facets;
+  onFacetsChange: (facets: Facets) => void;
 }
 
 /**
@@ -27,31 +29,21 @@ interface ExplorerPanelProps {
  * 不影響 2.8 MB 的卡面文案。
  */
 export const ExplorerPanel: React.FC<ExplorerPanelProps> = ({
-  lang, onPick, query, onQueryChange, orderedIds,
+  lang, onPick, query, onQueryChange, orderedIds, facets, onFacetsChange,
 }) => {
-  const [facets, setFacets] = useState<Facets>(emptyFacets);
-  const [mode, setMode] = useState<'any' | 'all'>('any');
+  const mode = facets.mode || 'any';
   const [similarOf, setSimilarOf] = useState<string | null>(null);
   const t = (zh: string, en: string) => (lang === 'en' ? en : zh);
 
-  const toggle = (group: 'diet' | 'habitat', id: string) => {
-    setFacets((f) => ({
-      ...f,
-      [group]: f[group].includes(id) ? f[group].filter((x) => x !== id) : [...f[group], id],
-    }));
+  const toggle = (group: 'diet' | 'habitat' | 'size' | 'iucn', id: string) => {
+    const selected = facets[group] || [];
+    onFacetsChange({ ...facets, [group]: selected.includes(id) ? selected.filter(x => x !== id) : [...selected, id] });
     setSimilarOf(null);
   };
-
-  const active = facets.diet.length + facets.habitat.length > 0;
-  const clearAll = () => { setFacets(emptyFacets()); setSimilarOf(null); };
-
-  const hits = useMemo(() => {
-    const q = query.trim();
-    const base = q ? searchIndex(q, lang).map((h) => h.id) : orderedIds;
-    /* 搜尋結果先跟相關度；再加屬性篩選 */
-    const filtered = filterByFacets(base, { ...facets, mode });
-    return filtered.slice(0, 60);
-  }, [query, lang, orderedIds, facets, mode]);
+  const active = hasActiveFacets(facets);
+  const clearAll = () => { onFacetsChange(emptyFacets()); setSimilarOf(null); };
+  const matches = useMemo(() => filterByFacets(orderedIds, facets), [orderedIds, facets]);
+  const hits = matches.slice(0, 60);
 
   const similar = useMemo(
     () => (similarOf ? similarBirds(similarOf, 8, lang) : []),
@@ -68,7 +60,7 @@ export const ExplorerPanel: React.FC<ExplorerPanelProps> = ({
           {t('多線索搜尋', 'MULTI-FIELD SEARCH')}
         </h2>
         <span className="text-white/35 font-mono text-[9px] tracking-wider truncate">
-          {t('名・目科・食乜・住邊 → 相似鳥', 'name · order · family · diet · habitat → look-alikes')}
+          {t('名稱・大小・瀕危等級・食物・生境', 'name · size · IUCN · diet · habitat')}
         </span>
         {(active || similarOf) && (
           <button
@@ -100,6 +92,27 @@ export const ExplorerPanel: React.FC<ExplorerPanelProps> = ({
             </button>
           )}
         </div>
+
+        {([
+          { group: 'size' as const, tags: SIZE_TAGS, title: t('鳥類大小（體長）', 'Bird size (body length)'), Icon: Ruler },
+          { group: 'iucn' as const, tags: IUCN_TAGS, title: t('稀有度／瀕危等級（IUCN）', 'Rarity / threat category (IUCN)'), Icon: Shield },
+        ]).map(({ group, tags, title, Icon }) => (
+          <fieldset key={group} className="min-w-0" aria-label={title}>
+            <legend className="text-cyan-200 font-bold text-xs mb-2"><Icon className="w-3.5 h-3.5 inline mr-1" />{title}</legend>
+            <div className="flex flex-wrap gap-1.5">
+              {tags.map(tag => {
+                const selected = (facets[group] || []).includes(tag.id);
+                return <button type="button" key={tag.id} aria-pressed={selected} onClick={() => toggle(group, tag.id)}
+                  className={`px-2.5 py-2 rounded-full border text-xs font-bold transition-colors ${selected ? 'bg-cyan-300 text-gray-900 border-cyan-100' : 'bg-white/5 text-white/75 border-white/15 hover:bg-white/10'}`}>
+                  {lang === 'en' ? tag.en : tag.zh}
+                </button>;
+              })}
+            </div>
+            <p className="text-white/50 text-[11px] mt-1.5">{group === 'size'
+              ? t('按現有體長資料分組；範圍取中位數。缺資料不估算，可選「待查」。', 'Based on recorded body length; ranges use their midpoint. Missing lengths are not estimated.')
+              : t('星級依全球 IUCN 級別，並非香港出現頻率；DD／NE／待查不給星級。', 'Stars follow global IUCN status, not Hong Kong sighting frequency. DD / NE / unknown are not starred.')}</p>
+          </fieldset>
+        ))}
 
         {/* 食乜 */}
         <div>
@@ -165,8 +178,8 @@ export const ExplorerPanel: React.FC<ExplorerPanelProps> = ({
             ]).map((m) => (
               <button
                 key={m.key}
-                onClick={() => setMode(m.key)}
-                title={t('組內標籤：任一＝符合一個就夠；全部＝要全部符合', 'Within a group: ANY = at least one; ALL = every tag')}
+                onClick={() => onFacetsChange({ ...facets, mode: m.key })}
+                title={t('食物／生境組內標籤：任一＝符合一個就夠；全部＝要全部符合', 'Diet/habitat tags: ANY = at least one; ALL = every tag')}
                 className={`px-2.5 py-1 text-[10px] font-black tracking-wider ${
                   mode === m.key ? 'bg-cyan-400 text-gray-900' : 'text-white/60 hover:bg-white/10'
                 }`}
@@ -178,11 +191,11 @@ export const ExplorerPanel: React.FC<ExplorerPanelProps> = ({
           <span className="text-white/45 font-mono text-[10px]">
             {similarOf
               ? t('相似鳥類', 'Look-alikes')
-              : `${t('符合', 'Match')} ${hits.length}${hits.length >= 60 ? '+' : ''} ${t('張', 'cards')}`}
+              : `${t('符合', 'Match')} ${matches.length} ${t('張', 'cards')}`}
           </span>
           {active && !similarOf && (
             <span className="text-cyan-200/60 font-mono text-[10px] truncate">
-              {[...facets.diet, ...facets.habitat].map((id) => tagLabel(id, lang)).join(' ＋ ')}
+              {[...facets.diet, ...facets.habitat, ...(facets.size || []), ...(facets.iucn || [])].map((id) => filterFacetLabel(id, lang)).join(' ＋ ')}
             </span>
           )}
         </div>

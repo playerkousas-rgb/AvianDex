@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Bird } from '../types';
 import { 
   Search, 
@@ -24,6 +24,7 @@ import { BirdDetailPage } from './BirdDetailPage';
 import { ResearchHubPage } from './ResearchHubPage';
 import { PokeballIcon } from './PokeballIcon';
 import { MobileCardPages, OriginalInfoCard } from './InfoCardReader';
+import { BirdNavigator } from './BirdNavigator';
 
 /** 圖鑑評分（32 KB，隨主 bundle 載入；與詳細頁、卡面讀同一個檔） */
 import dexScoresRaw from '../data/dexScores.json';
@@ -125,6 +126,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   const [searchTerm, setSearchTerm] = useState('');
   const [isSearching, setIsSearching] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const detailsPanelRef = useRef<HTMLDivElement>(null);
 
   // 下一隻
   const handleNext = useCallback(() => {
@@ -169,7 +171,9 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
       }
 
       // 如果不是在搜尋狀態，允許左右鍵切換
-      if (!isSearching && !isFullscreen) {
+      const target = e.target as HTMLElement | null;
+      const editing = target?.closest('input, textarea, select, [contenteditable="true"]');
+      if (!isSearching && !isFullscreen && !editing) {
         if (e.key === 'ArrowLeft') handlePrev();
         if (e.key === 'ArrowRight') handleNext();
       }
@@ -229,7 +233,12 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
     setFlippedFor(currentId);
     setScreenFlipped(false);
     setScreenArtReady(false);
+    setDetailReady(false);
   }
+  useEffect(() => {
+    detailsPanelRef.current?.scrollTo({ top: 0 });
+  }, [currentId]);
+
   // 科研終端的外部網站（All About Birds / Flickr / Xeno-canto）只認英文俗名，
   // 用中文名搜尋等於一定查無此鳥 —— 呢個就係舊版六宮格「撳完冇嘢睇」的原因。
   const sciQuery = currentBird
@@ -608,13 +617,18 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 </div> {/* 左面板結束 */}
 
                  {/* --- 右半部分：控制與資料面板 --- */}
-          <div className="w-full md:w-1/2 min-h-[32%] md:min-h-[60%] md:h-full bg-[#221b17] border-[4px] md:border-[6px] border-gray-900 rounded-b-[28px] md:rounded-r-[28px] md:rounded-bl-none flex flex-col p-3 md:p-4 gap-2 relative overflow-y-auto">
+          <div ref={detailsPanelRef} className="w-full md:w-1/2 min-h-[32%] md:min-h-[60%] md:h-full bg-[#221b17] border-[4px] md:border-[6px] border-gray-900 rounded-b-[28px] md:rounded-r-[28px] md:rounded-bl-none flex flex-col p-3 md:p-4 gap-2 relative overflow-y-auto">
+              <div className="sticky top-0 z-30 bg-[#221b17] pb-2 space-y-2 shrink-0">
               <PokedexTabs
                 page={page}
                 onChange={setPage}
                 lang={lang}
                 detailLoading={page !== 2 && !detailReady}
               />
+
+                <BirdNavigator lang={lang} id={currentBird.id} name={lang === 'en' ? (entry?.e || currentBird.name) : currentBird.name}
+                  index={currentIndex} total={birds.length} onPrevious={handlePrev} onNext={handleNext} />
+              </div>
 
               <AnimatePresence mode="wait">
                 {page === 1 && (
@@ -753,17 +767,6 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                       </div>
                     </div>
 
-                    {/* 4. 底部導航按鈕 */}
-                    <div className="flex justify-between items-center gap-2 pt-1">
-                      <button onClick={handlePrev} disabled={currentIndex === 0} className={`w-11 h-11 rounded-full border border-white/15 flex items-center justify-center transition-colors ${currentIndex === 0 ? 'bg-white/5 text-white/20' : 'bg-white/10 hover:bg-white/20 text-amber-200'}`}>
-                        <ChevronLeft className="w-6 h-6" />
-                      </button>
-                      <span className="text-white/25 font-mono text-[9px] tracking-[0.18em]">NAV</span>
-                      <button onClick={handleNext} disabled={currentIndex === birds.length - 1} className={`w-11 h-11 rounded-full border border-white/15 flex items-center justify-center transition-colors ${currentIndex === birds.length - 1 ? 'bg-white/5 text-white/20' : 'bg-white/10 hover:bg-white/20 text-amber-200'}`}>
-                        <ChevronRight className="w-6 h-6" />
-                      </button>
-                    </div>
-
                     {/* 下一頁：詳細資料（文字） */}
                     <button
                       onClick={() => setPage(2)}
@@ -795,7 +798,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 
                 {page === 2 && (
                   /* --- Page 2: 詳細資料（純文字：12 欄 + 相似鳥 + 禮儀／裝備） --- */
-                  <BirdDetailPage
+                  <BirdDetailPage key={currentBird.id}
                     bird={currentBird}
                     lang={lang}
                     onBack={() => setPage(1)}
@@ -807,7 +810,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 
                 {page === 3 && (
                   /* --- Page 3: 科學研究中心（六格分工 + 本站合成圖卡） --- */
-                  <ResearchHubPage
+                  <ResearchHubPage key={currentBird.id}
                     zhName={currentBird.name}
                     enName={currentBird.englishName && currentBird.englishName !== '???' ? currentBird.englishName : ''}
                     sciName={sciQuery}
