@@ -36,7 +36,6 @@ import {
   Backpack,
   Layers,
   Languages,
-  ChevronDown,
 } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 
