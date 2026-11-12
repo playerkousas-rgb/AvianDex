@@ -69,6 +69,7 @@ type Props = {
   name: string;
   lang: Lang;
   artwork: ReactNode;
+  navigation?: ReactNode;
   infoUrl?: string;
   infoStatus: CardImageStatus;
   onInfo: () => void;
@@ -78,42 +79,54 @@ type Props = {
 /** Mobile device only. Expanding exits pagination and opens the untouched portrait card.
  * Parent keys this component by bird ID so navigation always starts at artwork on a new bird.
  */
-export function MobileCardPages({ id, name, lang, artwork, infoUrl, infoStatus, onInfo, onExpand }: Props) {
+export function MobileCardPages({ id, name, lang, artwork, navigation, infoUrl, infoStatus, onInfo, onExpand }: Props) {
   const pages = mobileCardPages(id);
   const [index, setIndex] = useState(0);
   const touch = useRef<{ x: number; y: number } | null>(null);
+  const suppressClickUntil = useRef(0);
   const page = pages[index];
   const t = (zh: string, en: string) => lang === 'en' ? en : zh;
   const select = (next: number) => {
     setIndex(next);
     if (next > 0) onInfo();
   };
-  return <div data-mobile-card-pages className="md:hidden absolute inset-0 flex flex-col bg-[#0c202b] text-amber-100 select-none"
-    tabIndex={0} role="region" aria-label={t('圖卡，可左右掃切換', 'Card: swipe left or right to change section')}
+  const advance = () => select((index + 1) % pages.length);
+  return <div data-mobile-card-pages className="md:hidden absolute inset-0 text-amber-100 select-none"
+    tabIndex={0} role="region" aria-label={t('圖卡：點一下換頁，亦可左右掃', 'Card: tap to change section or swipe left or right')}
     onKeyDown={e => {
-      if (e.target !== e.currentTarget || (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight')) return;
-      e.preventDefault(); e.stopPropagation();
-      select(nextMobileCardPage(index, e.key === 'ArrowRight' ? 1 : -1, pages.length));
+      if (e.target !== e.currentTarget) return;
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault(); e.stopPropagation(); advance();
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+        e.preventDefault(); e.stopPropagation();
+        select(nextMobileCardPage(index, e.key === 'ArrowRight' ? 1 : -1, pages.length));
+      }
     }}
-    onClick={e => e.stopPropagation()}
-    onTouchStart={e => { const p = e.touches[0]; touch.current = { x: p.clientX, y: p.clientY }; }}
+    onClick={e => {
+      e.stopPropagation();
+      if ((e.target as HTMLElement).closest('button, a, input, select, textarea') || Date.now() < suppressClickUntil.current) return;
+      advance();
+    }}
+    onTouchStart={e => {
+      if ((e.target as HTMLElement).closest('button, a, input, select, textarea')) return;
+      const p = e.touches[0]; touch.current = { x: p.clientX, y: p.clientY };
+      suppressClickUntil.current = 0;
+    }}
+    onTouchCancel={() => { touch.current = null; suppressClickUntil.current = Date.now() + 500; }}
     onTouchEnd={e => {
       const start = touch.current;
       touch.current = null;
       if (!start) return;
       const end = e.changedTouches[0];
       const dx = end.clientX - start.x;
-      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(end.clientY - start.y) * 1.5) {
+      const dy = end.clientY - start.y;
+      if (Math.abs(dx) > 10 || Math.abs(dy) > 10) suppressClickUntil.current = Date.now() + 500;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.5) {
         select(nextMobileCardPage(index, dx < 0 ? 1 : -1, pages.length));
       }
     }}>
-    <div className="flex items-center justify-between px-2 py-1 shrink-0 gap-2">
-      <span aria-live="polite" className="text-xs font-bold">{t(page.zh, page.en)}</span>
-      <button type="button" aria-label={t('放大完整圖卡', 'Expand full card')} onClick={() => onExpand(index > 0)}
-        className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10"><Maximize2 className="w-4 h-4" /></button>
-    </div>
     <div id={`mobile-card-panel-${id}`} role="group" aria-label={t(page.zh, page.en)} data-card-page={page.key}
-      className="flex-1 min-h-0 relative p-1 overflow-hidden touch-pan-y">
+      className="absolute inset-0 overflow-hidden touch-pan-y">
       {index === 0 ? artwork : infoUrl && infoStatus === 'loaded' ? (
         page.key === 'scores' ? <InfoCardScores id={id} lang={lang} compact /> :
         page.key === 'original' ? <OriginalInfoCard url={infoUrl} name={name} lang={lang} fitted /> :
@@ -122,6 +135,12 @@ export function MobileCardPages({ id, name, lang, artwork, infoUrl, infoStatus, 
         {infoStatus === 'missing' || infoStatus === 'error' ? <span className="p-3">{t('暫時未能讀取圖卡，請稍後重新開啟。', 'Card unavailable. Please reopen it later.')}</span> : t('載入圖卡…', 'Loading card…')}
       </div>}
     </div>
-
+    <span className="sr-only" aria-live="polite">{t(page.zh, page.en)}</span>
+    {navigation}
+    <button type="button" aria-label={t('放大完整圖卡', 'Expand full card')}
+      onClick={e => { e.stopPropagation(); onExpand(index > 0); }}
+      className="absolute bottom-2 right-2 z-20 w-9 h-9 flex items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-sm border border-white/20">
+      <Maximize2 className="w-4 h-4" />
+    </button>
   </div>;
 }

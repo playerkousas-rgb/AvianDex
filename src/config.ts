@@ -6,6 +6,7 @@
 // ⚠️ 新增或改路徑時，只需改本檔；不要在元件內硬編字串。
 // ============================================================
 import birdsRawData from './data/birds.json';
+import infoCardsData from './data/infoCards.json';
 
 /** 雙版號 V1：檔名／頁面標題／APP_VERSION／頁尾 必須一致 */
 export const APP_VERSION = 'v1.9.0';
@@ -97,7 +98,7 @@ export function cardBaseUrl(folder: string = CARD_FOLDER): string {
 export function cardProxyUrl(id: string, ext: string = 'avif', folder: string = CARD_FOLDER): string {
   return (
     `${CARD_PROXY_PATH}?id=${encodeURIComponent(id.padStart(4, '0'))}` +
-    `&ext=${encodeURIComponent(ext)}&folder=${encodeURIComponent(folder)}`
+    `&ext=${encodeURIComponent(ext)}&folder=${encodeURIComponent(folder)}` + infoRevisionQuery(id, folder, '&')
   );
 }
 
@@ -113,8 +114,14 @@ export function artUrl(id: string, ext: string = 'avif'): string {
 }
 
 /** 資訊圖卡（翻轉後）：aviandex/0008.avif */
+function infoRevisionQuery(id: string, folder: string, separator: '?' | '&'): string {
+  const revisions = infoCardsData.revisions as Record<string, string>;
+  const revision = folder === INFO_FOLDER ? revisions[id.padStart(4, '0')] : undefined;
+  return revision ? `${separator}v=${encodeURIComponent(revision)}` : '';
+}
+
 export function infoCardUrl(id: string, ext: string = 'avif'): string {
-  return cardUrl(id, ext, false, INFO_FOLDER);
+  return cardUrl(id, ext, false, INFO_FOLDER) + infoRevisionQuery(id, INFO_FOLDER, '?');
 }
 
 /** 插畫的所有候選網址（birdcards 先、aviandex 後備） */

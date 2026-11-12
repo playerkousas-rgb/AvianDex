@@ -520,10 +520,15 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
     </div>
   </div>
 
+  <div data-mobile-bird-title className="md:hidden shrink-0 px-10 pt-1 pb-1.5 text-center" aria-live="polite">
+    <p className="text-[10px] font-mono text-yellow-200">NO.{currentBird.id}</p>
+    <p className="text-sm font-black text-white leading-tight truncate">{lang === 'en' ? (entry?.e || currentBird.name) : currentBird.name}</p>
+  </div>
+
   {/* 螢幕核心區域 */}
   <div className="flex-1 p-2 md:p-3 flex flex-col items-center justify-center overflow-hidden">
     <div className="w-full h-full bg-[#f3ecd8] rounded-t-lg rounded-bl-lg rounded-br-[32px] p-1.5 md:p-2 border-2 border-gray-900 relative flex flex-col overflow-hidden">
-      <div className="flex justify-center gap-3 mb-1">
+      <div className="hidden md:flex justify-center gap-3 mb-1">
         <div className="w-1.5 h-1.5 rounded-full bg-red-600/80" />
         <div className="w-1.5 h-1.5 rounded-full bg-red-600/80" />
       </div>
@@ -531,13 +536,15 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
       {/* 螢幕：先見鳥，點一下翻轉看資料。
           跟圖鑑格仔同一套規矩 —— 正面插畫（birdcards），背面資訊卡（aviandex）；
           未做資訊卡就用文字欄位即時砌，所以不會翻出一個空盒。 */}
-      <div className="flex-1 bg-[#12100d] rounded-md border border-black/70 relative overflow-hidden flex flex-col group">
+      <div className="flex-1 bg-transparent md:bg-[#12100d] rounded-md border-0 md:border md:border-black/70 relative overflow-hidden flex flex-col group">
         <div
           className={`flex-1 relative flex items-center justify-center [perspective:1200px] ${canFlip ? 'cursor-pointer' : ''}`}
           onClick={toggleFlip}
         >
           <MobileCardPages key={currentBird.id} id={currentBird.id} name={currentBird.name} lang={lang}
             infoUrl={infoImage.url} infoStatus={infoImage.status} onInfo={() => { void infoImage.probe(); }}
+            navigation={<BirdNavigator overlay lang={lang} id={currentBird.id} name={currentBird.name}
+              index={currentIndex} total={birds.length} onPrevious={handlePrev} onNext={handleNext} />}
             onExpand={(information) => { setScreenFlipped(information); setIsFullscreen(true); }}
             artwork={currentImage.url ? (
               <img src={currentImage.url} alt={currentBird.name} referrerPolicy="no-referrer" className="w-full h-full object-cover" />
@@ -617,8 +624,8 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 </div> {/* 左面板結束 */}
 
                  {/* --- 右半部分：控制與資料面板 --- */}
-          <div ref={detailsPanelRef} className="w-full md:w-1/2 min-h-[32%] md:min-h-[60%] md:h-full bg-[#221b17] border-[4px] md:border-[6px] border-gray-900 rounded-b-[28px] md:rounded-r-[28px] md:rounded-bl-none flex flex-col p-3 md:p-4 gap-2 relative overflow-y-auto">
-              <div className="sticky top-0 z-30 bg-[#221b17] pb-2 space-y-2 shrink-0">
+          <div ref={detailsPanelRef} className="w-full md:w-1/2 min-h-[32%] md:min-h-[60%] md:h-full bg-[#221b17] border-[4px] md:border-[6px] border-gray-900 rounded-b-[28px] md:rounded-r-[28px] md:rounded-bl-none flex flex-col p-2 md:p-4 gap-1 md:gap-2 relative overflow-y-auto">
+              <div className="sticky top-0 z-30 bg-[#221b17] pb-1 md:pb-2 space-y-1 md:space-y-2 shrink-0">
               <PokedexTabs
                 page={page}
                 onChange={setPage}
@@ -626,8 +633,10 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                 detailLoading={page !== 2 && !detailReady}
               />
 
-                <BirdNavigator lang={lang} id={currentBird.id} name={lang === 'en' ? (entry?.e || currentBird.name) : currentBird.name}
-                  index={currentIndex} total={birds.length} onPrevious={handlePrev} onNext={handleNext} />
+                <div className="hidden md:block">
+                  <BirdNavigator lang={lang} id={currentBird.id} name={lang === 'en' ? (entry?.e || currentBird.name) : currentBird.name}
+                    index={currentIndex} total={birds.length} onPrevious={handlePrev} onNext={handleNext} />
+                </div>
               </div>
 
               <AnimatePresence mode="wait">

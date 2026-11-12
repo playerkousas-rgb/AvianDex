@@ -45,7 +45,9 @@ test('mobile pager has accessible navigation and starts with artwork, not a long
   assert.equal(html.includes('Next card page'), false);
   assert.equal(html.includes('1/5'), false);
   assert.ok(html.includes('aria-label="Expand full card"'));
-  assert.ok(html.includes('Card: swipe left or right to change section'));
+  assert.ok(html.includes('Card: tap to change section or swipe left or right'));
+  assert.ok(html.includes('absolute bottom-2 right-2'));
+  assert.equal(html.includes('flex items-center justify-between px-2 py-1'), false);
 });
 
 test('radar uses the same score source as the card, with readable live labels and values', () => {
@@ -61,7 +63,10 @@ test('radar uses the same score source as the card, with readable live labels an
 });
 
 test('unknown legacy layouts are never guessed; unmade cards have artwork only', () => {
-  assert.deepEqual(mobileCardPages('0001').map(p => p.key), ['artwork', 'original']);
+  assert.equal(infoCardLayout('1'), 'slim');
+  assert.equal(localInfoCardUrl('0001'), undefined, 'uploaded 0001 must load from R2, not a local demo');
+  assert.deepEqual(mobileCardPages('0001').map(p => p.key), ['artwork', 'features', 'scores', 'distribution', 'similar']);
+  assert.deepEqual(mobileCardPages('0002').map(p => p.key), ['artwork', 'original']);
   assert.deepEqual(mobileCardPages('0022').map(p => p.key), ['artwork']);
 });
 
