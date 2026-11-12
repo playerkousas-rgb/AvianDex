@@ -73,31 +73,9 @@ export const TOTAL_SLOTS = birdsRawData.length;
  */
 export const CARD_PROXY_PATH = '/api/card';
 
-/**
- * 外觀來源：BIRD-DEX 2（https://skw-birdex2.vercel.app）
- * 569 隻雀已有齊圖卡，本 app 直接借它的圖做「外觀」，
- * 資訊（文字／分類／詳細資料）仍然由本 repo 的 JSON 提供。
- *
- * 為什麼要排多個路徑？
- *   未確定 BIRD-DEX 2 的圖放在哪個資料夾，所以按最常見的幾個約定順序試：
- *   /images/cards/0001.avif、/cards/0001.avif、/0001.avif …
- *   全部 404 的話會自動回退 R2（見 src/lib/cardImage.ts），唔會卡住。
- *   ⚠️ 若 BIRD-DEX 2 用 API／非靜態路徑，只需改這一個函式。
+/** 插畫只從已知的 R2 birdcards 路徑／同源代理載入。
+ * 不向其他網站猜測 /images/cards、/images/birds 等路徑。
  */
-export const BIRDDEX2_BASE = 'https://skw-birdex2.vercel.app';
-
-export function birdex2CardUrls(id: string): string[] {
-  const padded = id.padStart(4, '0');
-  const dirs = ['/images/cards', '/images/birds', '/cards', '/images', ''];
-  const exts = ['avif', 'webp', 'png', 'jpg'];
-  const out: string[] = [];
-  for (const dir of dirs) {
-    for (const ext of exts) {
-      out.push(`${BIRDDEX2_BASE}${dir}/${padded}.${ext}`);
-    }
-  }
-  return out;
-}
 
 /** 可選 manifest（由 `npm run cards:probe` 產生），純加速用，不是必要 */
 export const CARD_MANIFEST_PATH = '/data/card-manifest.json';

@@ -7,7 +7,6 @@ import {
   infoCardUrl,
   cardProxyUrl,
   cardUrlCandidates,
-  birdex2CardUrls,
 } from '../config';
 
 // ============================================================
@@ -66,17 +65,6 @@ let version = 0;
 const PROXY_AFTER_FAILURES = 3;
 let networkFailures = 0;
 let useProxy = false;
-
-/**
- * 本機試作卡（public/demo/card-0013.png）。
- * 用來在未上傳 R2 之前預覽新卡面；連續幾張都冇就自動關掉，唔會拖慢正式環境。
- */
-let localMisses = 0;
-const LOCAL_MISS_BUDGET = 3;
-
-function localCardUrl(id: string): string {
-  return `${import.meta.env.BASE_URL}demo/card-${id.padStart(4, '0')}.png`;
-}
 
 let manifest: Record<string, string> | null = null;
 let manifestPromise: Promise<void> | null = null;
@@ -204,13 +192,18 @@ function probeOnce(url: string, proxy = false): Promise<'ok' | 'missing' | 'erro
     };
     const timer = setTimeout(() => finish('error'), IMAGE_TIMEOUT_MS);
     img.onload = () => finish('ok');
-    // 404 與網絡錯誤在 <img> 都是 onerror，分不清 → 交由 fetch 覆核
+    // A cross-origin <img> failure cannot be classified by a HEAD request
+    // without CORS permission. Let the same-origin proxy classify it instead.
     img.onerror = async () => {
+      const sameOrigin = typeof location === 'undefined'
+        ? /^\/(?!\/)/.test(url)
+        : new URL(url, location.href).origin === location.origin;
+      if (!sameOrigin) { finish('error'); return; }
       try {
         const res = await fetch(url, { method: 'HEAD', cache: 'no-store' });
-        // 代理回 404 一定代表 R2 冇圖；直連回 403 可能係 CORS／權限，當 missing 處理
-        finish(res.ok ? 'ok' : res.status === 404 || res.status === 403 ? 'missing' : 'error');
-        // 代理的 JSON 錯誤也當 missing，避免無限重試
+        // 200 after an image decode failure is NOT a successful image load.
+        // 403 is permission failure, not proof that an image is absent.
+        finish(res.status === 404 ? 'missing' : 'error');
         void proxy;
       } catch {
         finish('error');
@@ -225,26 +218,8 @@ async function load(id: string): Promise<void> {
   await ensureManifest();
   patch(id, { status: 'loading' });
 
-  /* ① 外觀來源：BIRD-DEX 2（569 隻齊圖） */
-  for (const url of birdex2CardUrls(id)) {
-    const r = await probeOnce(url);
-    if (r === 'ok') {
-      patch(id, { status: 'loaded', url, tried: ['birdex2'], error: undefined });
-      return;
-    }
-  }
-
-  /* ② 本機試作卡：新卡面未上 R2 時都可以即刻睇到 */
-  if (localMisses < LOCAL_MISS_BUDGET) {
-    const local = localCardUrl(id);
-    const localResult = await probeOnce(local);
-    if (localResult === 'ok') {
-      patch(id, { status: 'loaded', url: local, tried: ['local-png'], error: undefined });
-      return;
-    }
-    if (localResult === 'missing') localMisses += 1;
-  }
-
+  // Only the configured R2 folders / same-origin proxy are image sources.
+  // Never probe guessed paths on the external BIRD-DEX 2 application.
   const fromManifest = manifest?.[id];
   const exts: string[] = fromManifest
     ? [fromManifest]
@@ -282,6 +257,9 @@ async function load(id: string): Promise<void> {
 
     networkFailures += 1;
     if (networkFailures >= PROXY_AFTER_FAILURES) useProxy = true;
+    // The proxy can distinguish a genuine 404 from a cross-origin error.
+    // Try the next supported format, but never retry this URL indefinitely.
+    if (proxyResult === 'missing') continue;
     patch(id, {
       status: 'error',
       tried,
@@ -344,6 +322,7 @@ export function resetAll(): void {
   consecutiveMisses = 0;
   allExtensions = true;
   networkFailures = 0;
+  useProxy = false;
   manifest = null;
   manifestPromise = null;
   emit();
