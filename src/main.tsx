@@ -22,10 +22,21 @@ import { markUpdateAvailable } from './lib/updateStore';
 if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
-      .register('/sw.js')
+      .register('/sw.js', { scope: '/', updateViaCache: 'none' })
       .then((reg) => {
-        /* 2. 每次開都問一次有沒有新版 */
-        void reg.update().catch(() => undefined);
+        /* 2. 問有沒有新版：開機一次，之後「每次切回前景／重新有網絡／每 30 分鐘」都問。
+              ⚠️ 加到主畫面的 App（尤其 iOS）通常不會重新載入頁面，只是從背景切回來；
+                 只在 load 時查的話，用戶會一直停在舊版 —— 這就是「不能自動更新」的原因。
+                 做法與 SCOUTBOOK／CUBSBOOK 的 pwa.js 相同。 */
+        const check = () => {
+          if (document.visibilityState !== 'visible') return;
+          void reg.update().catch(() => undefined);
+        };
+        check();
+        document.addEventListener('visibilitychange', check);
+        window.addEventListener('focus', check);
+        window.addEventListener('online', check);
+        setInterval(check, 30 * 60 * 1000);
 
         /* 3. 有新 sw 下載好、正等待接手 → 記在 store，由 UpdateToast 通知用戶
               ⚠️ 不再自動 SKIP_WAITING + reload。

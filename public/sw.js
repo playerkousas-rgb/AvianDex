@@ -13,18 +13,29 @@
 //   · 地圖／外部連結：不攔截
 // ============================================================
 
-/* ⚠️ 每次部署改了 HTML/JS/CSS 之外，這個版本號也要 +1。
-   因為 activate 只會刪除「不在此清單內」的快取，而網絡優先的回退
-   是由同一份 index.html 提供 —— 若不清舊快取，離線狀態會停在舊版。
-   更新流程：改版本 → 部署 → 用戶下次打開時 sw 換新 → 自動清舊。 */
-const SHELL = 'aviandex-shell-v5';
+/* 版本號：build 時由 vite.config.ts 的 stampServiceWorker 把 __BUILD_ID__ 換成「部署 commit／時間」。
+   → 每次部署 sw.js 的內容都不同，瀏覽器才會偵測到「有新版 sw」→ 跳出「立即更新」。
+   （舊做法是手動改 v5 → v6，忘記改就永遠不更新，已安裝到主畫面的用戶會一直停在舊版。）
+   快取名跟著版本走：activate 時只保留「這一版的外殼 + 圖卡快取」，舊外殼自動清走。 */
+const BUILD = '__BUILD_ID__';
+const SHELL = 'aviandex-shell-' + BUILD;
 const CARDS = 'aviandex-cards-v1';  /* 圖卡不動：內容以 URL 區分，不需要清 */
+
+const SHELL_URLS = [
+  '/', '/index.html', '/manifest.webmanifest',
+  '/icons/favicon-v2.ico', '/icons/favicon-32-v2.png', '/icons/apple-touch-icon-v2.png',
+  '/icons/icon-192-v2.png', '/icons/icon-512-v2.png', '/icons/icon-maskable-192-v2.png', '/icons/icon-maskable-512-v2.png',
+];
 
 const CARD_HOSTS = ['r2.dev', 'birdex2.vercel.app', 'localhost'];
 
 self.addEventListener('install', (event) => {
-  self.skipWaiting();
-  event.waitUntil(caches.open(SHELL).then((c) => c.addAll(['/', '/index.html']).catch(() => undefined)));
+  /* 不再 skipWaiting：新版先停在 waiting，由畫面彈「立即更新」，用戶按了才接手（跟 SCOUTBOOK 一樣）。
+     預快取用 cache:'reload'，避免拿 HTTP 快取的舊檔填新快取。 */
+  event.waitUntil((async () => {
+    const c = await caches.open(SHELL);
+    await Promise.allSettled(SHELL_URLS.map((u) => c.add(new Request(u, { cache: 'reload' }))));
+  })());
 });
 
 self.addEventListener('activate', (event) => {
