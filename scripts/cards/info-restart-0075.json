@@ -1,0 +1,151 @@
+{
+  "id": "0075",
+  "name": "紅頂綠鳩",
+  "scientificName": "Treron formosae",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危",
+    "assessmentNote": "香港舊錄今歸T. permagnus"
+  },
+  "illustrationTaxon": "Treron formosae formosae adult male (Taiwan population); distinct from split Ryukyu Green Pigeon Treron permagnus",
+  "similarSpecies": [
+    {
+      "zh": "紅翅綠鳩（成鳥雄）",
+      "scientificName": "Treron sieboldii",
+      "asset": "white-bellied-green-pigeon.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "紅翅綠鳩有顯著白腹、腿周白羽和較寬的白色尾下羽緣；紅頂綠鳩台灣亞種雄鳥有橙金冠及紫褐肩斑，腹部偏綠黃且沒有白色腿羽。"
+    },
+    {
+      "zh": "楔尾綠鳩（成鳥雄）",
+      "scientificName": "Treron sphenurus",
+      "asset": "wedge-tailed-green-pigeon.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "楔尾綠鳩有銅金冠胸、栗色肩羽與寬基楔形尾；紅頂綠鳩台灣雄鳥較小、冠橙紅、肩斑紫褐，尾較短。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.13,
+      0.12,
+      0.45,
+      0.43
+    ],
+    [
+      0.33,
+      0.31,
+      0.61,
+      0.59
+    ],
+    [
+      0.3,
+      0.59,
+      0.58,
+      0.87
+    ],
+    [
+      0.58,
+      0.55,
+      0.88,
+      0.85
+    ]
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "featureLabels": [
+    "雄鳥橙金冠",
+    "紫褐肩斑",
+    "綠羽腿紅足",
+    "尾下窄白緣"
+  ],
+  "featureNotes": [
+    "指名亞種雄鳥冠呈深金橙色，雌鳥較黯淡且沒有金冠",
+    "雄鳥內側翼覆羽與肩羽呈紫褐色；雌鳥缺此肩斑",
+    "羽腿為綠色而非白色，足紅；與紅翅綠鳩的白腿羽區別",
+    "尾下覆羽有窄白緣、中央深色縱紋；較紅翅綠鳩白緣窄"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "TWN",
+      "PHL"
+    ],
+    "note": "Current Treron formosae sensu stricto occurs natively in Taiwan and the Batanes/Babuyan islands of the northern Philippines. Highlights indicate broad geographic context only, not nationwide occupancy or exact range polygons. The single Hong Kong record formerly grouped within Whistling Green-Pigeon is now treated by HKBWS as the separate Ryukyu Green Pigeon Treron permagnus, not as a confirmed occurrence of current T. formosae.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/taiwan-green-pigeon-treron-formosae",
+      "use": "BirdLife/IUCN current Taiwan Green-pigeon Treron formosae account read: Near Threatened (2023), population 1,250–2,000 mature individuals, trend decreasing; current range is Taiwan and northern Philippine islands (Batan, Calayan, Camiguin Norte, Sabtang)."
+    },
+    {
+      "url": "https://ebird.org/species/whgpig1",
+      "use": "Cornell eBird/Merlin Whistling Green-Pigeon account read under the broader pre-split taxon concept: lowland broadleaf evergreen forest; Taiwan and Ryukyu forms are sometimes treated separately; Taiwan birds are smaller and have a rufous cap; compared with White-bellied Green-Pigeon, no white feathering around legs, less yellow face and narrower white edges on undertail coverts."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/007300",
+      "use": "Current HKBWS account read: this profile is Ryukyu Green Pigeon Treron permagnus, Category I accidental; the sole HK record was photographed on Po Toi on 14 Nov 2012, subspecies uncertain. HKBWS describes a close resemblance to White-bellied Green Pigeon but no contrasting white belly, broad dark centres and narrow pale fringes on longer undertail coverts. Used only to document the taxonomic reassignment/local record; not as evidence that current T. formosae occurs in HK."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/007200",
+      "use": "HKBWS White-bellied Green Pigeon account used for comparator."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/007100",
+      "use": "HKBWS Wedge-tailed Green Pigeon account used for comparator."
+    },
+    {
+      "url": "src/data/birds.json",
+      "use": "Authoritative AvianDex runtime Chinese and English name (Whistling Green-Pigeon)."
+    },
+    {
+      "url": "src/data/birdTaxonomy.json",
+      "use": "Authoritative AvianDex runtime scientific name Treron formosae, order, and family; not changed despite current split."
+    },
+    {
+      "url": "src/data/dexScores.json",
+      "use": "Authoritative runtime six score values; vEst indicates estimated length-derived viewing score."
+    },
+    {
+      "path": "cards/art/info-restart-0074/pixel.png",
+      "use": "Previously visually checked AI illustration of adult male White-bellied Green Pigeon; comparator only."
+    },
+    {
+      "path": "cards/art/info-restart-0073/pixel.png",
+      "use": "Previously visually checked AI illustration of adult male Wedge-tailed Green Pigeon; comparator only."
+    }
+  ],
+  "notes": [
+    "Main image depicts the nominate Taiwan male formosae (orange-gold crown, purple-brown shoulder patch), not the Ryukyu taxon Treron permagnus shown in the Hong Kong account.",
+    "The current HKBWS Hong Kong occurrence is classified as T. permagnus, which was split from the older T. formosae/Whistling Green-Pigeon complex; it is not presented as a confirmed HK record of runtime T. formosae.",
+    "Current global IUCN status for T. formosae is Near Threatened; do not use the older LC status attached to the former broad complex or current T. permagnus.",
+    "Comparators are adult males; circles illustrative and not to scale.",
+    "Scores are app entertainment metrics, not scientific evaluation; use runtime values exactly and retain the runtime vEst indicator.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial native-range country overview, not an exact distribution polygon or Hong Kong occurrence map.",
+    "Keep runtime name, taxonomy, and score unchanged as directed; record taxonomic mismatch for transparent interpretation.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, app slim-registration or shared renderer change."
+  ]
+}

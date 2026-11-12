@@ -1,0 +1,147 @@
+{
+  "id": "0067",
+  "name": "灰斑鳩",
+  "scientificName": "Streptopelia decaocto",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港IIB局部繁殖留鳥"
+  },
+  "illustrationTaxon": "Streptopelia decaocto adult; main image and diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "山斑鳩（成鳥）",
+      "scientificName": "Streptopelia orientalis",
+      "asset": "oriental-turtle-dove.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "山斑鳩較厚實、尾較短，頸側有黑白斑塊，翼上有醒目栗紅色羽緣；灰斑鳩全身大致素淡粉灰，只在頸後有黑色半環，身形及尾較修長。"
+    },
+    {
+      "zh": "珠頸斑鳩（成鳥）",
+      "scientificName": "Spilopelia chinensis",
+      "asset": "spotted-dove.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "珠頸斑鳩較細、尾更長，頸側深色斑上密佈白點，眼虹膜橙色、喙灰；灰斑鳩較大，頸後只有黑色半環，紅眼及黑喙。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.12,
+      0.13,
+      0.41,
+      0.43
+    ],
+    [
+      0.3,
+      0.3,
+      0.76,
+      0.69
+    ],
+    [
+      0.62,
+      0.5,
+      0.98,
+      0.82
+    ],
+    [
+      0.25,
+      0.64,
+      0.52,
+      0.86
+    ]
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "featureLabels": [
+    "黑色半環僅在頸後",
+    "灰褐翼與淡色中翼帶",
+    "修長尾部與白色尾端",
+    "暗紅腳趾抓枝"
+  ],
+  "featureNotes": [
+    "成鳥頭身素淡粉灰，黑色半環位於頸後；幼鳥沒有此斑",
+    "上翼灰褐，深色飛羽形成對比，中翼可見較淡色面板",
+    "尾相對修長，外側尾羽具顯著白端",
+    "成鳥腿足暗紅；本地野外常見於開闊地及魚塘周邊"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；香港引入族群另計",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "TUR",
+      "IRQ",
+      "IRN",
+      "AFG",
+      "PAK",
+      "IND",
+      "CHN",
+      "KOR"
+    ],
+    "note": "Partial broad native-range country overview: native range runs through the Middle East and Indian subcontinent east to Korea; northern China is included. Eurasian Collared Dove expanded into Europe and North Africa during the 20th century, and was introduced in other regions. Highlights are broad context only, not nationwide occupancy or exact range polygons. Hong Kong is a locally established Category IIB population and is not represented as part of its native range.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006400",
+      "use": "Full HKBWS account read (chunks 0–1): Category IIB; locally common breeding resident in northwest New Territories with scattered records elsewhere, slowly increasing locally. Adult large, relatively long-tailed open-country dove; pale pinkish-gray unmarked head/body except black half-collar at nape, pale gray-brown wing, ruby-red iris, black bill, dull red legs; dark gray flight feathers contrast with a pale middle-wing panel; outer tail feathers extensively white-tipped. First local records in 1999, Category IIB from 2007. Native Eurasian range and introduced/feral expansions distinguished. IUCN LC, global trend increasing. Account scope also distinguishes native range from 20th-century colonization of Europe/North Africa and other introduced populations; local distribution is concentrated in northwest New Territories fishpond areas."
+    },
+    {
+      "url": "https://ebird.org/species/eucdov",
+      "use": "Cornell eBird/Merlin account read: large pale dove with black nape crescent, long square-tipped tail; common across much of Eurasia and North Africa; introduced/established in North America and other areas. Helps define plumage and range caveat."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006300",
+      "use": "Full HKBWS Oriental Turtle Dove account read: 33–35 cm, bulkier and shorter-tailed, adult black-white neck-side patch, rufous-fringed variegated upperparts, orange iris and pink bill/legs; comparator only."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006600",
+      "use": "Full HKBWS Spotted Dove account read: 31 cm, slender with long tail, dark neck patch covered in white spots, orange iris and gray bill; common HK resident, comparator only."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative available score values. Adaptability score a is absent and must remain pending; vEst=1 preserves length-estimate note."
+    },
+    {
+      "path": "cards/art/info-restart-0066/collared-dove.png",
+      "use": "Previously reviewed adult Eurasian Collared Dove comparison illustration, reused only as a small side-by-side adult identification example; asset provenance retained in local art folder."
+    }
+  ],
+  "notes": [
+    "The Hong Kong Category IIB resident population is locally established/introduced, concentrated in northwest New Territories; do not present Hong Kong as part of the species native range.",
+    "Main adult is pale and unmarked apart from the nape half-collar; juveniles lack the collar.",
+    "Comparisons are labelled as adults; circles are illustrative and not to scale.",
+    "Runtime adaptability (a) score is missing and must remain pending; vEst=1 keeps the length-estimate note. Other scores are app entertainment metrics, not scientific evaluation.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial native-range country overview, excludes European/North African 20th-century expansion and the Hong Kong introduced population; not exact range polygons.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, or app slim-registration change."
+  ]
+}

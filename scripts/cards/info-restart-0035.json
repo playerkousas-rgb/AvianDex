@@ -1,0 +1,143 @@
+{
+  "id": "0035",
+  "name": "琵嘴鴨",
+  "scientificName": "Spatula clypeata",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Spatula clypeata adult male breeding with separately labelled female head feature",
+  "similarSpecies": [
+    {
+      "zh": "綠頭鴨",
+      "scientificName": "Anas platyrhynchos",
+      "asset": "mallard.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥黃喙、栗胸、灰脅，沒有琵嘴鴨的長黑匙狀喙及白胸栗脅。"
+    },
+    {
+      "zh": "白眉鴨",
+      "scientificName": "Spatula querquedula",
+      "asset": "garganey.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥褐頭寬白眉，喙較窄而不呈大匙狀。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.52,
+      0.2,
+      1,
+      0.68
+    ],
+    [
+      0.51,
+      0.39,
+      0.81,
+      0.69
+    ],
+    [
+      0.18,
+      0.39,
+      0.54,
+      0.75
+    ],
+    [
+      0.06,
+      0.08,
+      0.98,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥頭喙",
+    "白色胸",
+    "栗色脅",
+    "雌鳥頭喙"
+  ],
+  "featureNotes": [
+    "深綠頭、黃眼及黑色長匙狀喙",
+    "繁殖羽雄鳥胸白色",
+    "栗褐色脅部與白胸對比",
+    "雌鳥褐頭及長喙淡橙色側緣"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "CAN",
+      "USA",
+      "MEX",
+      "COL",
+      "GBR",
+      "FRA",
+      "ESP",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "JPN",
+      "IND",
+      "PAK",
+      "THA",
+      "VNM",
+      "SEN",
+      "NGA",
+      "KEN",
+      "ETH"
+    ],
+    "note": "World view deliberately partial native-country subset: Holarctic breeding except eastern half N America and W Europe, patchy N/E Europe; winters south to N South America and central W/E Africa plus W Europe, S/E Asia. Not whole-country occupancy or complete species range, no breeding/winter polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001400",
+      "use": "Both chunks read: long spatulate bill; male green head yellow eye white chest/mantle chestnut belly/flanks, blue wing coverts; female orange sides to bill; Holarctic and winter range, LC decreasing."
+    },
+    {
+      "url": "https://ebird.org/species/mallar3?siteLanguage=en_GB",
+      "use": "Search identification read: male green head/yellow bill/chestnut breast/grey body, curled central tail, white-bordered blue speculum; wild-type not domestic hybrid."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001300",
+      "use": "Previous batch full substantive page: male Garganey broad curved white supercilium, brown breast grey flank black-white scapulars."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Main male breeding, fourth circle separately sourced female; no invented feet for floating birds. Folded wing not presented as spread flight panel.",
+    "Runtime vEst=1 body-length estimate note is required; app score is unchanged."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "female.png"
+  ]
+}

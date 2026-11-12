@@ -1,0 +1,132 @@
+{
+  "id": "0021",
+  "name": "亞歷山大鸚鵡",
+  "scientificName": "Psittacula eupatria",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Psittacula eupatria adult male, subspecies unspecified (HK introduced population subspecies uncertain)",
+  "similarSpecies": [
+    {
+      "zh": "紅領綠鸚鵡",
+      "scientificName": "Psittacula krameri",
+      "asset": "rose-ringed-parakeet.png",
+      "framing": "portrait",
+      "distinction": "沒有深紅肩斑；喙較小且下喙大部分黑色。"
+    },
+    {
+      "zh": "緋胸鸚鵡",
+      "scientificName": "Psittacula alexandri",
+      "asset": "red-breasted-parakeet.png",
+      "framing": "portrait",
+      "distinction": "灰頭、黑鬚紋及粉紅胸，不是黑粉紅頸環。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.68,
+      0.05,
+      0.91,
+      0.28
+    ],
+    [
+      0.65,
+      0.08,
+      0.84,
+      0.27
+    ],
+    [
+      0.55,
+      0.2,
+      0.76,
+      0.41
+    ],
+    [
+      0.5,
+      0.39,
+      0.72,
+      0.61
+    ]
+  ],
+  "featureLabels": [
+    "頭喙",
+    "頸環",
+    "肩斑",
+    "腳部"
+  ],
+  "featureNotes": [
+    "粗大紅色上、下喙，淡色虹膜",
+    "雄鳥具黑色及粉紅頸環",
+    "深紅色肩斑是重要辨識點",
+    "灰色腳，對趾式抓握"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "PAK",
+      "NPL",
+      "BTN",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN"
+    ],
+    "note": "Full world partial NATIVE-country overview: Indian subcontinent, Myanmar, central Thailand and southern Indochina, marginal Yunnan. Introduced Europe/Middle East/HK/Guangzhou populations not plotted as native. Country highlighting not entire countries.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0220/030200",
+      "use": "Massive all-red bill, maroon shoulder, male neck collar, grey feet; native range distinct from introduced HK; NT decreasing, global assessment not local rarity."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0220/030300",
+      "use": "Rose-ringed male black/pink collar but no maroon shoulder; lower bill largely black, smaller bill; yellow-white iris and yellow eyering."
+    },
+    {
+      "url": "https://ebird.org/species/rebpar4",
+      "use": "Red-breasted male red upper bill, grey-blue head, salmon chest, black moustache."
+    },
+    {
+      "url": "https://biodiversitysg.nparks.gov.sg/our-biodiversity/birds/parakeets/red-breasted-parakeet/",
+      "use": "Red-breasted grey head with black moustache and pink-red breast."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Card IUCN NT is the global native taxon assessment, not a rating of the introduced Hong Kong population. Runtime fun-score rarity r=1 is preserved unchanged, not silently rewritten as IUCN."
+  ]
+}

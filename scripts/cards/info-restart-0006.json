@@ -1,0 +1,123 @@
+{
+  "id": "0006",
+  "name": "紅耳鵯",
+  "scientificName": "Pycnonotus jocosus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Pycnonotus jocosus representative Hong Kong adult",
+  "similarSpecies": [
+    {
+      "zh": "白頭鵯",
+      "scientificName": "Pycnonotus sinensis",
+      "asset": "light-vented-bulbul.png",
+      "distinction": "白色後枕帶，沒有紅耳斑或高尖冠。"
+    },
+    {
+      "zh": "白喉紅臀鵯",
+      "scientificName": "Pycnonotus aurigaster",
+      "asset": "sooty-headed-bulbul.png",
+      "distinction": "黑冠短而蓬鬆，沒有紅耳斑或白色後枕帶；比較圖只示頭胸，不用此圖推斷臀色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.53,
+      0.0,
+      0.95,
+      0.42
+    ],
+    [
+      0.29,
+      0.32,
+      0.61,
+      0.64
+    ],
+    [
+      0.32,
+      0.53,
+      0.57,
+      0.78
+    ],
+    [
+      0.48,
+      0.61,
+      0.76,
+      0.89
+    ]
+  ],
+  "featureLabels": [
+    "頭部",
+    "翼部",
+    "紅臀",
+    "腳部"
+  ],
+  "featureNotes": [
+    "黑色尖冠、紅耳斑及白頰",
+    "暖褐色折翼",
+    "鮮紅色尾下覆羽",
+    "黑色足抓枝"
+  ],
+  "rangeMap": {
+    "type": "partial-native-range-country-overview-not-an-occurrence-polygon",
+    "caption": "亞洲部分分佈國家概覽",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      67,
+      0,
+      123,
+      36
+    ],
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "MYS",
+      "CHN"
+    ],
+    "note": "Partial overview of India and continental southeast Asia/south China, not worldwide. Introduced overseas populations omitted. Origin of southeast China/Hong Kong birds is uncertain per HKBWS; this map does not assert proven native status for the Hong Kong population."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/036000",
+      "use": "Main adult identification, geographic overview and IUCN Least Concern."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Existing application indices, not academic ratings."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/036100",
+      "use": "Sooty-headed Bulbul comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/035900",
+      "use": "Reciprocal bulbul comparison."
+    }
+  ],
+  "notes": [
+    "AI artwork received basic visual review, not independent ornithologist verification.",
+    "Country overview only, green does not imply whole-country occurrence; see rangeMap.note.",
+    "Comparison circles are not to scale.",
+    "No R2 upload or app UI/layout registration changes; await user upload confirmation."
+  ]
+}

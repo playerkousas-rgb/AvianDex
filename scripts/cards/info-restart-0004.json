@@ -1,0 +1,45 @@
+{
+  "id": "0004",
+  "name": "小葵花鳳頭鸚鵡",
+  "scientificName": "Cacatua sulphurea",
+  "layout": "slim",
+  "size": [1024, 1536],
+  "status": "review_before_upload",
+  "iucn": {"code": "CR", "zh": "極危"},
+  "illustrationTaxon": "Cacatua sulphurea, representative yellow-crested bird; Hong Kong introduced population has uncertain subspecific origin",
+  "similarSpecies": [
+    {"zh": "葵花鳳頭鸚鵡", "scientificName": "Cacatua galerita", "asset": "sulphur-crested-cockatoo.png", "distinction": "體形較大，亦具黃色羽冠；不能單靠有黃冠判定為小葵花，需結合大小、眼周和羽色。"},
+    {"zh": "白鳳頭鸚鵡", "scientificName": "Cacatua alba", "asset": "white-cockatoo.png", "distinction": "展開的羽冠呈寬扇形且全白，不是黃色；僅作相似種比較，不代表香港常見。"}
+  ],
+  "featureCrops": [
+    [0.53, 0.00, 0.80, 0.30],
+    [0.59, 0.24, 0.85, 0.50],
+    [0.25, 0.48, 0.58, 0.81],
+    [0.46, 0.73, 0.72, 0.99]
+  ],
+  "featureLabels": ["羽冠", "頭部", "翼部", "腳部"],
+  "featureNotes": ["可豎起的黃色羽冠", "淡黃頰斑與深灰色鉤喙", "白色折翼", "灰色對趾足抓枝"],
+  "rangeMap": {
+    "type": "native-range-country-overview-not-an-occurrence-polygon",
+    "bounds": [105, -14, 132, 8],
+    "countryIso3": ["IDN", "TLS"],
+    "caption": "原生分佈涉及國家概覽",
+    "disclaimer": "非全境；香港屬引入族群",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "note": "Country-level native overview only. Native range is restricted to certain Wallacean islands of Indonesia and Timor-Leste, not all shaded territory; the map is not an occupied-island or occurrence polygon. Hong Kong and Singapore introduced populations are not shown as native. Citron-crested Cockatoo is treated as a separate species. Small islands may be absent at 1:110m."
+  },
+  "sources": [
+    {"url": "https://avifauna.hkbws.org.hk/species/0220/030100", "use": "Yellow erectile crest, pale yellow cheek/undertail, introduced Hong Kong population, uncertain subspecies, native Indonesia/East Timor islands, IUCN CR."},
+    {"url": "https://birdfinding.info/sulphur-crested-cockatoo/", "use": "Large Sulphur-crested Cockatoo comparison; yellow cheek wash can also occur, so cheek colour is not an absolute distinction."},
+    {"url": "https://ebird.org/species/whicoc1", "use": "White Cockatoo entire white umbrella crest comparison."},
+    {"path": "src/data/birdTaxonomy.json", "use": "Runtime scientific name, order and family."},
+    {"path": "src/data/dexScores.json", "use": "Existing app scores i=5.0, a=3.3, r=1.8, c=4.7, v=4.2, overall=3.8; app indices, not academic ratings."}
+  ],
+  "notes": [
+    "Rarity is IUCN CR=5 of 7 stars, not Hong Kong abundance. The app importance index is separate from the rarity scale.",
+    "Text/scores/geography are programmatically typeset; AI pictures received basic visual review, not independent ornithologist verification.",
+    "Two comparison portraits are not to scale; species size distinction must not be inferred from equal-size circles.",
+    "No R2 upload, no app layout registration and no UI changes during this production batch."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "0005",
+  "name": "噪鵑",
+  "scientificName": "Eudynamys scolopaceus",
+  "layout": "slim",
+  "size": [1024, 1536],
+  "status": "review_before_upload",
+  "iucn": {"code": "LC", "zh": "無危"},
+  "illustrationTaxon": "Eudynamys scolopaceus, male main image and one explicitly labelled female close-up; Hong Kong chinensis group",
+  "similarSpecies": [
+    {"zh": "大嘴烏鴉", "scientificName": "Corvus macrorhynchos", "asset": "large-billed-crow.png", "distinction": "粗厚黑喙、深褐眼；噪鵑成鳥為淡色喙及紅眼，體形也較修長。"},
+    {"zh": "烏鵑", "scientificName": "Surniculus lugubris", "asset": "drongo-cuckoo.png", "framing": "whole-bird", "distinction": "較小且細長，黑色細喙，尾端平或略凹，尾下有白斑；不同於雄噪鵑的粗淡色喙。"}
+  ],
+  "featureCrops": [
+    [0.59, 0.08, 0.95, 0.32],
+    [0.30, 0.27, 0.66, 0.51],
+    [0.04, 0.64, 0.44, 0.91],
+    [0.24, 0.12, 0.93, 0.81]
+  ],
+  "featureSources": ["features.png", "features.png", "features.png", "female.png"],
+  "featureLabels": ["雄鳥頭", "雄鳥翼", "長尾", "雌鳥"],
+  "featureNotes": ["雄鳥紅眼、粗淡綠色喙", "雄鳥具藍黑光澤的羽色", "長而末端圓的尾羽", "雌鳥褐底白斑、淡色腹面帶褐色斑紋"],
+  "rangeMap": {
+    "type": "native-range-country-overview-not-an-occurrence-polygon",
+    "bounds": [60, -12, 132, 42],
+    "countryIso3": ["PAK", "IND", "NPL", "BTN", "BGD", "LKA", "CHN", "MMR", "THA", "LAO", "KHM", "VNM", "MYS", "SGP", "IDN", "BRN", "PHL"],
+    "caption": "原生分佈涉及國家概覽",
+    "disclaimer": "綠色非全境；不區分季節",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "note": "Generalized native-range country overview based on south/southeast Asia and China, south to Sumatra/Java/Borneo/Philippines. Indonesia shading does not imply occurrence on Sulawesi or farther east, whose koels are separate taxa; China shading is not whole-country occurrence. Not an occurrence polygon or breeding/wintering map. Small territories may be invisible at 1:110m."
+  },
+  "sources": [
+    {"url": "https://avifauna.hkbws.org.hk/species/0040/005200", "use": "Adult male blue-black, crimson iris, large bill, long tail; female spotted upperparts and barred/streaked underside; current species range and IUCN LC."},
+    {"url": "https://birdsoftheworld.org/bow/species/labcro1/cur/identification", "use": "Large-billed Crow thick arching black bill and dark brown iris."},
+    {"url": "https://birdsoftheworld.org/bow/species/asidrc3/cur/introduction", "use": "Square-tailed Drongo-Cuckoo small black bill, square/slightly forked tail, white leggings and undertail bars; dark brown/grey adult iris, not Koel red."},
+    {"url": "https://ebird.org/species/asidrc3", "use": "Small slim black cuckoo comparison, curved black bill and white undertail barring."},
+    {"path": "src/data/birdTaxonomy.json", "use": "Runtime scientific name, order and family."},
+    {"path": "src/data/dexScores.json", "use": "Existing app scores i=2.0, a=3.3, r=4.8, c=3.0, v=4.0, overall=3.4; app indices, not academic ratings."}
+  ],
+  "notes": [
+    "Female close-up is the same species, explicitly labelled 雌鳥, not a third similar species.",
+    "The generated Drongo-Cuckoo iris was corrected from red to dark brown after source review.",
+    "Text/scores/geography are typeset by code; generated assets received basic visual review, not independent ornithologist verification.",
+    "IUCN LC=1 of 7 rarity stars, not Hong Kong abundance.",
+    "No R2 upload, no app layout registration and no UI changes during this production batch."
+  ]
+}

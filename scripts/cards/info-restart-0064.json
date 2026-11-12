@@ -1,0 +1,150 @@
+{
+  "id": "0064",
+  "name": "鳳頭鸊鷉",
+  "scientificName": "Podiceps cristatus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港常見冬候鳥"
+  },
+  "illustrationTaxon": "Podiceps cristatus adult non-breeding (winter) plumage; main image and diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "小鸊鷉（繁殖羽）",
+      "scientificName": "Tachybaptus ruficollis",
+      "asset": "little-grebe.png",
+      "framing": "whole-bird",
+      "sex": "adult breeding",
+      "distinction": "小鸊鷉小得多（25–29 cm）、頭圓身矮、短鈍喙及淡色眼；繁殖羽有橙褐頰頸。鳳頭鸊鷉大得多（46–61 cm），長頸、長而纖細的淡色喙，冬羽白臉及白前頸。"
+    },
+    {
+      "zh": "黑頸鸊鷉（冬羽）",
+      "scientificName": "Podiceps nigricollis",
+      "asset": "black-necked-grebe.png",
+      "framing": "whole-bird",
+      "sex": "non-breeding adult",
+      "distinction": "黑頸鸊鷉體型較小，頭較大、冠較陡、喙較窄尖、紅眼，身形較短而不如鳳頭鸊鷉細長；鳳頭鸊鷉長喙與長頸明顯。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ]
+  ],
+  "featureSources": [
+    "feature-face.png",
+    "feature-bill.png",
+    "feature-neck-body.png",
+    "feature-flight.png"
+  ],
+  "featureLabels": [
+    "白臉與深色眼線",
+    "長而纖細的淡色喙",
+    "長頸與修長身形",
+    "飛行時白色翼窗"
+  ],
+  "featureNotes": [
+    "冬羽白臉白前頸與暗冠、眼至喙的深色線條分明",
+    "長而纖細、尖端淡色的喙；比例較兩種易混淆種更長",
+    "長身低浮、頸長；與小鸊鷉矮圓體形明顯不同",
+    "飛行時內翼前緣與次級飛羽有大片白色"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-breeding-winter-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分繁殖／越冬國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "ESP",
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "IND",
+      "PAK",
+      "EGY",
+      "JPN",
+      "KOR"
+    ],
+    "note": "Partial broad-range country overview based on HKBWS: breeding across Europe east through western Russia, Central Asia, southern Siberia and Mongolia to northeast China; wintering on open waters around Africa, the Black/Caspian Sea region, northern Indian subcontinent, south China and southern Japan. Highlighted countries are only illustrative broad-range countries, not nationwide occupancy or precise seasonal/subspecies polygons. Hong Kong's winter visitor status is separately described in text.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009100",
+      "use": "Full HKBWS account read: Category I, common winter visitor in Deep Bay and Starling Inlet, numbers may have declined; 46–61 cm, long low body, relatively long neck and long slender largely pale bill. Winter adult face to above eye and fore-neck white, eye-to-bill stripe and crown dark; most Hong Kong birds are in winter plumage. Global IUCN LC, trend unknown. Broad Eurasian breeding and Afro-Eurasian winter range."
+    },
+    {
+      "url": "https://ebird.org/species/grcgre1",
+      "use": "Cornell eBird/Merlin cross-check: large elegant long-necked grebe; breeding plumage has tawny cheeks and black crests; nonbreeding face and neck bright white with dark line through eye."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009000",
+      "use": "Full HKBWS Little Grebe account read: 25–29 cm, round head, short blunt bill; adults have dark crown and pale eyes. Breeding plumage orange-brown cheeks/neck and pale yellow gape mark."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009300",
+      "use": "Full HKBWS Black-necked Grebe account read: 28–34 cm, larger head, steeper crown, narrower pointed bill, red iris, less dumpy shape; white sides of neck/flanks in winter."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six runtime score values."
+    }
+  ],
+  "notes": [
+    "Main illustration is adult winter plumage, matching the usual Hong Kong season.",
+    "Comparisons are labelled by plumage season; circles are illustrative and not to scale.",
+    "Local abundance/trend and global IUCN status are distinct statements.",
+    "Score dimensions and overall score are app entertainment metrics, not scientific evaluation; use runtime values exactly.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial world-country overview, not exact range or local occurrence polygon.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, or app slim-registration change."
+  ]
+}

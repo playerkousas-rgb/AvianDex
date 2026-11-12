@@ -1,0 +1,148 @@
+{
+  "id": "0065",
+  "name": "黑頸鸊鷉",
+  "scientificName": "Podiceps nigricollis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港稀少冬候鳥"
+  },
+  "illustrationTaxon": "Podiceps nigricollis adult non-breeding (winter) plumage; main image and diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "鳳頭鸊鷉（冬羽）",
+      "scientificName": "Podiceps cristatus",
+      "asset": "great-crested-grebe.png",
+      "framing": "whole-bird",
+      "sex": "non-breeding adult",
+      "distinction": "鳳頭鸊鷉大得多（46–61 cm）、身體與頸較長，喙長而纖細；冬羽有清晰白臉白前頸與深色眼線。黑頸鸊鷉較小（28–34 cm）、頭較大冠較陡，頰與頸灰暗。"
+    },
+    {
+      "zh": "角鸊鷉（繁殖羽）",
+      "scientificName": "Podiceps auritus",
+      "asset": "horned-grebe.png",
+      "framing": "whole-bird",
+      "sex": "adult breeding",
+      "distinction": "角鸊鷉繁殖羽有金黃色角狀耳羽及栗色頸胸；本卡黑頸鸊鷉為灰暗冬羽，沒有金色耳羽。角鸊鷉在香港僅有單一偶見紀錄，圖只作異地易混淆種參照。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ]
+  ],
+  "featureSources": [
+    "feature-winter-face.png",
+    "feature-red-eye.png",
+    "feature-crown-bill.png",
+    "feature-flanks.png"
+  ],
+  "featureLabels": [
+    "暗冠連暗頰",
+    "紅眼與灰暗頸",
+    "陡冠與尖細黑喙",
+    "白色頸側與脇"
+  ],
+  "featureNotes": [
+    "冬羽頭頂深色區向下延伸，與暗頰融合、邊界較模糊",
+    "近看可見紅虹膜；頭部較大，頸側呈灰暗色",
+    "冠頂較陡、喙較窄尖；喙端沒有角鸊鷉的淡色區",
+    "頸側及脇通常偏白，與暗冠及上體形成對比"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-breeding-winter-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分繁殖／越冬國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "MNG",
+      "CHN",
+      "JPN",
+      "KOR",
+      "KAZ",
+      "FRA",
+      "ESP",
+      "EGY",
+      "USA",
+      "CAN"
+    ],
+    "note": "Partial broad-range overview. Eurasian nominate taxon breeds from northwestern Europe east to western Mongolia and northeastern China, wintering along coasts in Japan, south China and around the Mediterranean; North American P. n. californicus breeds in Canada/USA and winters in North America, while African P. n. gurneyi is largely resident. Highlighted countries are partial broad-range context only, not nationwide occupancy or exact seasonal/subspecies polygons; Hong Kong is separately identified as a rare winter visitor.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009300",
+      "use": "Full HKBWS account read: Category I, rare winter visitor; Hong Kong records occur 19 November–4 March, all in Deep Bay sites. 28–34 cm; compared with Little Grebe, larger head, steeper crown, narrower pointed bill, less dumpy body, red iris; sides of neck and flanks generally white; diffuse dark area extends behind eye. IUCN LC, trend unknown; Eurasian and American subspecies ranges distinguished."
+    },
+    {
+      "url": "https://ebird.org/species/eargre",
+      "use": "Cornell eBird/Merlin account read: winter birds grayish overall with dark cap blending into dark cheek and smudgy dark neck; red eye visible close up; compared with Horned Grebe, Eared is thinner-necked, smaller-headed, more peaked crown, darker cheek and no pale bill tip."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009100",
+      "use": "Full HKBWS Great Crested Grebe account read for comparator: 46–61 cm, long neck and bill; winter face and fore-neck white with dark crown/eye-bill line."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009200",
+      "use": "Full HKBWS Horned Grebe account read for comparator: Hong Kong has a single accidental record; breeding plumage with golden ear tufts and rich rufous underparts, unlike winter Black-necked Grebe."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six runtime score values."
+    }
+  ],
+  "notes": [
+    "Main illustration and four identifying details show adult winter plumage; Hong Kong status is rare winter visitor, distinct from global IUCN LC.",
+    "Comparators are season-labelled, and the Horned Grebe is an explicitly identified breeding-plumage comparison; circles are not to scale.",
+    "Scores are app entertainment metrics, not scientific evaluation; use runtime values exactly.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial country overview, not an exact species range or local occurrence polygon.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, or app slim-registration change."
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "id": "0013",
+  "name": "八哥",
+  "scientificName": "Acridotheres cristatellus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Acridotheres cristatellus adult, Hong Kong",
+  "similarSpecies": [
+    {
+      "zh": "家八哥",
+      "scientificName": "Acridotheres tristis",
+      "asset": "common-myna.png",
+      "framing": "portrait",
+      "distinction": "褐色身體、黃色喙及眼周裸皮，沒有明顯額冠。"
+    },
+    {
+      "zh": "林八哥",
+      "scientificName": "Acridotheres fuscus",
+      "asset": "jungle-myna.png",
+      "framing": "portrait",
+      "distinction": "灰褐身、淡色虹膜及暗基黃喙；此圖為黃眼型，部分地區族群藍眼。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.5,
+      0.015,
+      0.94,
+      0.455
+    ],
+    [
+      0.27,
+      0.35,
+      0.67,
+      0.75
+    ],
+    [
+      0.03,
+      0.74,
+      0.29,
+      1
+    ],
+    [
+      0.46,
+      0.58,
+      0.87,
+      0.99
+    ]
+  ],
+  "featureLabels": [
+    "頭部",
+    "翼斑",
+    "尾端",
+    "腳部"
+  ],
+  "featureNotes": [
+    "額前羽冠，乳白喙及橙色眼",
+    "黑翼上白色初級飛羽斑",
+    "黑尾具窄白色端斑",
+    "黃橙色腳及趾"
+  ],
+  "rangeMap": {
+    "type": "partial-native-range-country-overview-not-an-occurrence-polygon",
+    "caption": "亞洲部分分佈國家概覽",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      95,
+      10,
+      125,
+      38
+    ],
+    "countryIso3": [
+      "CHN",
+      "TWN",
+      "VNM",
+      "LAO"
+    ],
+    "note": "Partial native-country overview of southern China, Taiwan, Hainan, northeast Indochina and Vietnam. Not whole countries or full global range. Introduced populations not mapped. Northern China records may include ex-captive birds."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0380/045000",
+      "use": "Adult morphology, local status, south China/northeast Indochina range and IUCN LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0380/045100",
+      "use": "Brown body, yellow bare eye-skin and bill comparison."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Jungle_myna",
+      "use": "Forehead tuft, grey-brown body, dark bill base and geographical variation in pale iris."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; no estimates added."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change."
+  ]
+}

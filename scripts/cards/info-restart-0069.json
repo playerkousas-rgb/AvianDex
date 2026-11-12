@@ -1,0 +1,155 @@
+{
+  "id": "0069",
+  "name": "斑尾鵑鳩",
+  "scientificName": "Macropygia unchall",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港稀少冬候／過境"
+  },
+  "illustrationTaxon": "Macropygia unchall adult male; main image and diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "山斑鳩（成鳥）",
+      "scientificName": "Streptopelia orientalis",
+      "asset": "oriental-turtle-dove.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "山斑鳩體型較厚、尾較短，頸側有黑白斑塊，翼上覆羽有栗紅羽緣；斑尾鵑鳩體態修長，頸較長，尾特別長且具栗色橫斑，成年雄鳥上體密佈橫紋。"
+    },
+    {
+      "zh": "珠頸斑鳩（成鳥）",
+      "scientificName": "Spilopelia chinensis",
+      "asset": "spotted-dove.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "珠頸斑鳩較小且尾較短，頸側深色斑佈滿白點；斑尾鵑鳩身形較纖長、尾顯著較長，翼背與尾具密集栗色橫斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.51,
+      0.17,
+      0.74,
+      0.4
+    ],
+    [
+      0.34,
+      0.29,
+      0.7,
+      0.59
+    ],
+    [
+      0.14,
+      0.52,
+      0.49,
+      0.87
+    ],
+    [
+      0.57,
+      0.37,
+      0.78,
+      0.59
+    ]
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "featureLabels": [
+    "粉灰頭與綠光頸側",
+    "栗色羽緣與密集翼紋",
+    "極長栗斑尾",
+    "酒紅色較素淡胸腹"
+  ],
+  "featureNotes": [
+    "雄鳥頭粉灰，頸後及頸側可見金屬綠光",
+    "上體羽深褐並密佈栗色橫斑與羽緣",
+    "長尾深褐底具規則栗色橫斑，整體比例突出",
+    "雄鳥胸腹偏酒紅色而相對平滑，雌鳥頭喉具細暗橫斑、胸具黑色鱗紋"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial broad native-range country overview: from the western Himalayas and northeast India through Myanmar and Indochina to southeast China, and south from the Malay Peninsula to Flores. Selected countries are broad geographic context only, not nationwide occupancy or exact range polygons; Hong Kong is described separately as a scarce winter/passage visitor.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006700",
+      "use": "Full HKBWS account read: Category I, rare-to-scarce winter visitor and passage migrant in wooded habitats; appears to be increasing. Adult male 37–41 cm, slender with long neck and long barred tail; pinkish-gray head, green nape/neck-side sheen, blackish-brown upperparts densely barred and rufous-fringed, blackish-brown tail barred rufous, vinous-brown underparts. Female duller with fine dark bars on head/throat and black breast scales. In HK records are single birds, mainly Nov–Feb and late Mar–early May; woodland and shrubland favored. Global IUCN LC, stable trend. Range from western Himalayas and NE India through Indochina to SE China and Malay Peninsula south to Flores."
+    },
+    {
+      "url": "https://ebird.org/species/bacdov1",
+      "use": "Cornell eBird/Merlin read: shy forest dove with dense understory; dark brown wings/tail, tan-brown body, males boldly barred on chest, bronzy-green nape in both sexes; longer-tailed than Spotted Dove and Turtle Dove; global LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006300",
+      "use": "Full HKBWS Oriental Turtle Dove account read: 33–35 cm, bulky shorter-tailed dove, adult black-and-white neck-side patch and strongly rufous-fringed upperparts; comparison distinction only."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006600",
+      "use": "Full HKBWS Spotted Dove account read: 31 cm, slender but relatively shorter-tailed, dark neck patch with white spots; comparison distinction only."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six available score values; no vEst property, so no length-estimate note."
+    },
+    {
+      "path": "cards/art/info-restart-0066/pixel.png",
+      "use": "Previously reviewed Oriental Turtle Dove adult illustration, reused as a small side-by-side comparator."
+    },
+    {
+      "path": "cards/art/info-restart-0066/spotted-dove.png",
+      "use": "Previously reviewed Spotted Dove adult illustration, reused as a small side-by-side comparator."
+    }
+  ],
+  "notes": [
+    "Main illustration is adult male; do not apply its highly barred upperparts to the entire female plumage. Female has fine dark bars on head and throat and black breast scales.",
+    "HK Category I winter/passage status and global IUCN LC are distinct; do not present the species as a common local resident.",
+    "Comparators are adults; circles are illustrative and not to scale.",
+    "App scores are entertainment metrics, not a scientific assessment; use runtime values exactly.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial broad native-range country overview, not an exact distribution or HK occurrence polygon.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, app slim-registration or shared renderer change."
+  ]
+}

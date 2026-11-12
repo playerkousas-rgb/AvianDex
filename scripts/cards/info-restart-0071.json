@@ -1,0 +1,150 @@
+{
+  "id": "0071",
+  "name": "橙胸綠鳩",
+  "scientificName": "Treron bicinctus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港僅有一次稀有紀錄"
+  },
+  "illustrationTaxon": "Treron bicinctus adult male; main image and diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "粉紅頸綠鳩（成鳥雄）",
+      "scientificName": "Treron vernans",
+      "asset": "pink-necked-green-pigeon.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "粉紅頸綠鳩雄鳥粉紅頸及上胸延至頸側，橙色胸斑位於其下，頭灰藍、腹部黃；橙胸綠鳩雄鳥面喉偏黃綠，粉紫區主要為橙胸斑上方的狹帶，另有灰色後頸。只作相似屬內比較，不代表粉紅頸綠鳩有香港記錄。"
+    },
+    {
+      "zh": "綠翅金鳩（成鳥雄）",
+      "scientificName": "Chalcophaps indica",
+      "asset": "emerald-dove.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "綠翅金鳩體型較小、頭身深灰，翼呈鮮明金屬綠並有銀白額前、紅喙；橙胸綠鳩體型較厚、黃綠色，雄鳥具醒目的粉紫與橙色胸斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.34,
+      0.37,
+      0.55,
+      0.61
+    ],
+    [
+      0.49,
+      0.31,
+      0.76,
+      0.68
+    ],
+    [
+      0.43,
+      0.16,
+      0.61,
+      0.37
+    ],
+    [
+      0.64,
+      0.59,
+      0.88,
+      0.84
+    ]
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "featureLabels": [
+    "粉紫上緣與橙色胸斑",
+    "黃綠色厚實身形",
+    "灰色後頸",
+    "短尾與暗橙尾下覆羽"
+  ],
+  "featureNotes": [
+    "成年雄鳥胸部具醒目的橙色斑塊，上緣由模糊粉紫色帶框出",
+    "典型綠鳩的厚實體形與主要黃綠色羽色",
+    "兩性後頸均呈灰色，與頭頸黃綠色形成對比",
+    "尾相對短；尾下覆羽暗橙，腳紅色"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "LKA",
+      "IND",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial broad native-range country overview: Sri Lanka and India east through Myanmar and Indochina to Hainan, and south to Java and Bali. Selected countries are geographic context only, not nationwide occupancy or exact range polygons. Hong Kong is represented in the text as a single historic accidental occurrence, not as an established range.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006900",
+      "use": "Full HKBWS account read: Category I accidental in HK, only two historical periods of record on Po Toi, involving a male in 2006 and likely the same bird again in late 2006/early 2007. 29 cm, thickset short-tailed green pigeon, mainly yellowish-green; male has a tawny-orange breast patch bordered above by diffuse mauve-pink; both sexes grey nape, dull-orange undertail coverts and reddish legs. Global IUCN LC, stable trend. Range Sri Lanka/India through Myanmar and Indochina to Hainan and south to Java/Bali."
+    },
+    {
+      "url": "https://ebird.org/species/orbpig1",
+      "use": "Cornell eBird/Merlin full account read: male green pigeon with bright orange breast, pink upper quarter and powder-blue nape; female overall green with fainter blue-gray nape patch. Sexes similar to Pink-necked Green-Pigeon; male Orange-breasted has green face and throat; female has weak but distinct nape patch. Global IUCN LC."
+    },
+    {
+      "url": "https://ebird.org/species/pinpig3",
+      "use": "Cornell eBird search result for Pink-necked Green-Pigeon comparator: adult male gray-blue head, pink neck/upper breast, orange breast patch and yellow belly; used only as an explicitly labelled genus-level visual comparison, not a Hong Kong species-status claim."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006800",
+      "use": "Full HKBWS Common Emerald Dove account read: small short-tailed species, dark grey-pink underside, bright iridescent green wings, red bill; comparison only."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six runtime score values; vEst=1 preserves length-estimate note."
+    },
+    {
+      "path": "cards/art/info-restart-0070/pixel.png",
+      "use": "Previously reviewed adult Common Emerald Dove illustration, reused as a small comparator."
+    }
+  ],
+  "notes": [
+    "Hong Kong Category I is accidental, with one historic male bird returning to Po Toi on repeated dates across 2006–07; do not imply a resident population.",
+    "Main image and detail circles depict an adult male. Do not extrapolate its distinctive breast patch to the female; Cornell source describes females as green overall with a fainter blue-gray nape patch.",
+    "Pink-necked Green-Pigeon comparison is a visual close-genus reference only, not a claim of Hong Kong occurrence.",
+    "Comparators are labelled adult males where applicable; circles are illustrative and not to scale.",
+    "App scores are entertainment metrics, not scientific evaluation; use runtime values exactly and preserve vEst note.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial native-range country overview, not an exact range or Hong Kong occurrence polygon.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, app slim-registration or shared renderer change."
+  ]
+}

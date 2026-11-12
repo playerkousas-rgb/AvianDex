@@ -1,0 +1,157 @@
+{
+  "id": "0080",
+  "name": "烏鵑",
+  "scientificName": "Surniculus lugubris",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC下降；港稀少過境"
+  },
+  "illustrationTaxon": "Surniculus lugubris adult: slim drongo-like glossy bluish-black cuckoo, slender arched bill, slightly forked short tail, fine white bars on undertail coverts and outer tail feathers",
+  "similarSpecies": [
+    {
+      "zh": "八聲杜鵑（成鳥雄）",
+      "scientificName": "Cacomantis merulinus",
+      "asset": "plaintive-cuckoo.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "八聲杜鵑頭灰、背褐、腹橙，身形較小而不呈全身藍黑；烏鵑成鳥整體藍黑有光澤，嘴弧形、尾微分叉，尾下有白細橫斑。"
+    },
+    {
+      "zh": "褐翅鴉鵑（成鳥）",
+      "scientificName": "Centropus sinensis",
+      "asset": "greater-coucal.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "褐翅鴉鵑體型大得多、身形厚重、尾極長且翼栗褐；烏鵑僅23–25 cm，細長如鵲鴝，成鳥藍黑而無褐翼。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.17,
+      0.14,
+      0.42,
+      0.37
+    ],
+    [
+      0.08,
+      0.16,
+      0.31,
+      0.31
+    ],
+    [
+      0.51,
+      0.53,
+      0.92,
+      0.83
+    ],
+    [
+      0.34,
+      0.5,
+      0.54,
+      0.66
+    ]
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "featureLabels": [
+    "藍黑色光澤",
+    "纖長弧形嘴",
+    "微分叉尾",
+    "尾下白橫斑"
+  ],
+  "featureNotes": [
+    "成鳥全身藍黑而帶光澤",
+    "喙纖長並呈微弧形",
+    "尾短於鴉鵑，末端略分叉",
+    "尾下覆羽及最外側尾羽有細白橫斑"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "MMR",
+      "CHN",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "BRN",
+      "IDN"
+    ],
+    "note": "Partial range overview: the barussarum population breeds from eastern India through northern Myanmar and northern Indochina to southern China and winters south to Malaysia and the Greater Sundas. Hong Kong has scarce passage migrants in wooded sites, mainly spring; highlighted countries are not wholly occupied and do not show local records or exact polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005400",
+      "use": "Full HKBWS Square-tailed Drongo-Cuckoo account read: Category I, scarce passage migrant mainly in spring to wooded areas. Adult 23–25 cm, slim drongo-like, slightly forked tail, slender arched bill, glossy bluish-black; finely white-barred undertail coverts and outer undertail feathers. Juveniles dull with variable white spots. Hong Kong occurrence and habitat, breeding/wintering range; IUCN LC, global trend decreasing."
+    },
+    {
+      "url": "https://ebird.org/species/asidrc3",
+      "use": "Cornell eBird/Merlin account read: small slim black cuckoo, like a smaller Black Drongo, curved bill, white undertail bars; juveniles have white spots. Lowland/foothill forest scrub and edges; global IUCN LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005300",
+      "use": "HKBWS Plaintive Cuckoo account read for 0079; used to distinguish gray-head/orange-belly comparator."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/004800",
+      "use": "HKBWS Greater Coucal account previously read for 0076; used for size/body-form comparison."
+    },
+    {
+      "url": "src/data/birds.json",
+      "use": "Authoritative runtime names."
+    },
+    {
+      "url": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "url": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores including vEst length estimate flag."
+    },
+    {
+      "path": "cards/art/info-restart-0080/pixel.png",
+      "use": "Custom pixel illustration of adult based on HKBWS and Cornell adult diagnostic field marks; not a photo."
+    },
+    {
+      "path": "cards/art/info-restart-0080/plaintive-cuckoo.png",
+      "use": "0079 reviewed adult male Plaintive Cuckoo pixel illustration reused for comparison."
+    },
+    {
+      "path": "cards/art/info-restart-0080/greater-coucal.png",
+      "use": "Previously visually reviewed adult Greater Coucal illustration reused for comparison."
+    }
+  ],
+  "notes": [
+    "Adult plumage is glossy and mostly unmarked; juveniles are duller and may show white spots rather than adult-like gloss.",
+    "Hong Kong has scarce passage records in wooded areas; global IUCN LC and decreasing trend are separate contextual statements.",
+    "Comparators: adult male Plaintive Cuckoo and adult Greater Coucal; circles are not to scale.",
+    "Runtime scores: i=2, v=3.4, r=1, c=1.2, o=1.9; a is missing and remains pending. vEst=1; viewing score includes length estimate. Scores are app entertainment metrics, not scientific evaluation.",
+    "Custom pixel illustration is only visually reviewed; no independent ornithologist verification.",
+    "Map is a partial country-level range overview, not nationwide occupancy or an exact polygon.",
+    "Direct standalone AVIF upload only; no ZIP/R2, app card replacement, UI, Service Worker, slim-registration or shared renderer changes."
+  ]
+}

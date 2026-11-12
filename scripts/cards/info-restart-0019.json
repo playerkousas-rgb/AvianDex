@@ -1,0 +1,124 @@
+{
+  "id": "0019",
+  "name": "叉尾太陽鳥",
+  "scientificName": "Aethopyga christinae",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Aethopyga christinae latouchii adult male, Hong Kong",
+  "similarSpecies": [
+    {
+      "zh": "藍喉太陽鳥",
+      "scientificName": "Aethopyga gouldiae",
+      "asset": "mrs-gould-sunbird.png",
+      "framing": "portrait",
+      "distinction": "雄鳥藍紫喉、紅背肩、黃腹，延長的是中央尾羽。"
+    },
+    {
+      "zh": "黃腹花蜜鳥",
+      "scientificName": "Cinnyris ornatus",
+      "asset": "ornate-sunbird.png",
+      "framing": "portrait",
+      "distinction": "華南雄鳥喙較粗長，紫藍喉胸、暗胸帶及乳白腹。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.52,
+      0.08,
+      0.94,
+      0.5
+    ],
+    [
+      0.59,
+      0.25,
+      0.83,
+      0.49
+    ],
+    [
+      0.36,
+      0.33,
+      0.66,
+      0.63
+    ],
+    [
+      0.11,
+      0.57,
+      0.39,
+      0.85
+    ]
+  ],
+  "featureLabels": [
+    "頭喙",
+    "喉胸",
+    "翼部",
+    "叉尾"
+  ],
+  "featureNotes": [
+    "雄鳥藍綠頭頸、纖細下彎喙",
+    "胭脂紅喉及上胸",
+    "黃綠背翼、深色飛羽",
+    "外側尾羽尖端延長（像素特寫）"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "CHN",
+      "VNM"
+    ],
+    "note": "Full world viewport; native range largely south China including Hainan, and northern/eastern Vietnam. Highlighted countries only partly occupied; not an exact range.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052500",
+      "use": "Male colours, outermost tail extensions about half the proper tail length, female differences, south China/Vietnam range, LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052400",
+      "use": "Mrs Gould male red mantle, purplish-blue throat and elongated CENTRAL tail feathers."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052300",
+      "use": "Ornate rhizophorae male creamy/off-white belly and dark chest bands, NOT generic yellow-bellied male."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "The realistic features artwork tail extensions were found too long and are NOT used on the card; its three crops include head, throat and wing only. Fourth crop explicitly uses reviewed pixel tail artwork; no female claimed."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ]
+}

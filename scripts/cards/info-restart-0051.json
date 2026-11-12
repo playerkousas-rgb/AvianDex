@@ -1,0 +1,151 @@
+{
+  "id": "0051",
+  "name": "斑背潛鴨",
+  "scientificName": "Aythya marila",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "IUCN全球評級；非香港常見度"
+  },
+  "illustrationTaxon": "Aythya marila adult male in breeding plumage; one separate close-up explicitly identifies the female of the same species",
+  "similarSpecies": [
+    {
+      "zh": "鳳頭潛鴨（雄鳥）",
+      "scientificName": "Aythya fuligula",
+      "asset": "tufted-duck-detail.png",
+      "sex": "male",
+      "distinction": "鳳頭潛鴨雄鳥體形較緊湊並有明顯後垂羽冠；斑背潛鴨頭圓而無冠，雄鳥脅部純白。"
+    },
+    {
+      "zh": "小潛鴨（雄鳥）",
+      "scientificName": "Aythya affinis",
+      "asset": "lesser-scaup-detail.png",
+      "sex": "male",
+      "distinction": "小潛鴨雄鳥頭後有小尖峰、後頂較平；斑背潛鴨頭頂圓。小潛鴨作北美易混種比較，不代表香港出現。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.59,
+      0.17,
+      0.98,
+      0.56
+    ],
+    [
+      0.24,
+      0.41,
+      0.63,
+      0.62
+    ],
+    [
+      0.43,
+      0.53,
+      0.79,
+      0.82
+    ],
+    [
+      0.55,
+      0.12,
+      0.91,
+      0.47
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥頭喙",
+    "細密波斑背",
+    "純白脅羽",
+    "雌鳥頭喙"
+  ],
+  "featureNotes": [
+    "黑頭帶綠光澤、黃眼及藍灰喙；黑色喙甲較小而呈三角形",
+    "繁殖羽雄鳥背肩有細密灰白蟲紋",
+    "雄鳥脅部純白，與藍黑胸及黑色後體對比",
+    "同種雌鳥：喙基白斑較大，脅羽帶灰色"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "female.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "CAN",
+      "USA",
+      "RUS",
+      "ISL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "EST",
+      "GBR",
+      "NLD",
+      "DEU",
+      "POL",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "JPN",
+      "KOR",
+      "PRK",
+      "TWN"
+    ],
+    "note": "Greater Scaup breeds across the Holarctic at high latitudes and winters along North Pacific and Atlantic coasts, northwest Europe, the Black and Caspian Seas and east Asia south to southeast China. Highlighted countries are a selective native-range overview only: green never means the whole country is occupied; it is neither a complete distribution nor a seasonal/occurrence polygon. Hong Kong is a rare winter visitor locality, not an IUCN rarity category.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/003100",
+      "use": "Full page read: 40–51 cm; Hong Kong Category I rare winter visitor concentrated in Deep Bay; adult male green-glossed dark head, blue-black chest, fine grey-white vermiculation on mantle and pure white flanks; female grey-tinged flanks and large white bill-base patch; adult eclipse duller; Greater Scaup has rounder larger head and no tuft compared with Tufted Duck; Holarctic breeding and coastal/east Asian winter distribution; global IUCN LC, trend decreasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/003000",
+      "use": "Full page read for Tufted Duck comparison: compact shape and crest; male black-and-white with yellow eye; female dark brown with smaller variable bill-base white and broad black bill tip."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Lesser_Scaup/id",
+      "use": "Full identification page read: Lesser Scaup adult male black-and-white with finely barred back, bluish bill and yellow eye; small rear crown peak with flatter back of head distinguishes it from Greater Scaup; white wing stripe usually does not reach primaries. Used only for a clearly labelled North American comparison, not Hong Kong occurrence."
+    },
+    {
+      "url": "https://www.iucnredlist.org/species/22680398/132525108",
+      "use": "Global IUCN assessment page: Least Concern, population trend decreasing; assessed 2018. IUCN status is not Hong Kong abundance."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English species name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six application scores; no values recalculated. Runtime vEst is absent for this ID, so no estimated-body-length note applies."
+    }
+  ],
+  "notes": [
+    "The pixel main image and comparison portraits are separately generated, species-specific images; the female feature image is explicitly identified as the same-species female, never as another taxon.",
+    "Four circles identify male head/bill, mantle vermiculation, white flanks, and female head/bill. Do not call the submerged feet a visible feature.",
+    "Comparison circles are not to scale. The Lesser Scaup is a North American confusion comparison and is not presented as a Hong Kong bird.",
+    "Map retains a full-world Natural Earth basemap. Country highlights are partial and not precise occurrence polygons.",
+    "AI artwork receives basic visual review only; it is not independent ornithologist validation.",
+    "Direct standalone AVIF upload to the user-specified Google Drive folder only; no ZIP, R2, UI, Service Worker, or slim-registration change."
+  ]
+}

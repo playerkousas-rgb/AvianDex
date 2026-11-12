@@ -1,0 +1,129 @@
+{
+  "id": "0026",
+  "name": "寒林豆雁",
+  "scientificName": "Anser fabalis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "LC 依來源豆雁合併評估"
+  },
+  "illustrationTaxon": "Anser fabalis middendorffii adult eastern form",
+  "similarSpecies": [
+    {
+      "zh": "凍原豆雁",
+      "scientificName": "Anser serrirostris",
+      "asset": "tundra-bean-goose.png",
+      "framing": "whole-bird",
+      "distinction": "較短厚喙、較短頸及緊湊體型；喙斑變異大。"
+    },
+    {
+      "zh": "灰雁",
+      "scientificName": "Anser anser",
+      "asset": "greylag-goose.png",
+      "framing": "whole-bird",
+      "distinction": "東方型喙腳粉紅，頭頸羽色較一致。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.59,
+      0.04,
+      0.91,
+      0.36
+    ],
+    [
+      0.6,
+      0.19,
+      0.82,
+      0.49
+    ],
+    [
+      0.28,
+      0.43,
+      0.6,
+      0.75
+    ],
+    [
+      0.38,
+      0.73,
+      0.7,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "長喙",
+    "長頸",
+    "翼紋",
+    "腳部"
+  ],
+  "featureNotes": [
+    "長而漸尖黑喙，喙尖前有橙斑",
+    "頭額至喙線較順，頸長而纖細",
+    "褐色翼具淺色羽緣",
+    "橙色腿及蹼足"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "DEU",
+      "POL",
+      "HUN",
+      "KAZ",
+      "CHN",
+      "KOR",
+      "JPN"
+    ],
+    "note": "Full world partial native-country overview of split Taiga Bean Goose: taiga Scandinavia to Chukotka, winter central/southern Europe, Central/East Asia. Eastern form illustrated, map concerns species not just one form. No complete country list or seasonal polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000300",
+      "use": "Full page read: larger long-bodied and slender-necked than Tundra, longer smooth forehead and tapered bill, black bill usually small orange near-tip patch; eastern middendorffii, range. LC explicitly based on lumped Bean Goose assessment."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000400",
+      "use": "Tundra shorter largely dark bill, shorter neck and angular head; reviewed 0023 comparison reused."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000200",
+      "use": "Eastern Greylag pink bill/feet comparison reused from reviewed 0023."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "LC assessment in HKBWS explicitly combines Anser fabalis and A. serrirostris. Card labels that limitation rather than claiming a separate split-taxon assessment.",
+    "Bill patch varies; illustration depicts one eastern adult, not a universally diagnostic orange patch size."
+  ]
+}

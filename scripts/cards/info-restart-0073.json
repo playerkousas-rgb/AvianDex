@@ -1,0 +1,153 @@
+{
+  "id": "0073",
+  "name": "楔尾綠鳩",
+  "scientificName": "Treron sphenurus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC穩定；香港僅一筆偶見"
+  },
+  "illustrationTaxon": "Treron sphenurus adult male representative; the sole Hong Kong record was a first-winter male",
+  "similarSpecies": [
+    {
+      "zh": "紅翅綠鳩（成鳥雄）",
+      "scientificName": "Treron sieboldii",
+      "asset": "white-bellied-green-pigeon.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "紅翅綠鳩有醒目白腹、淡色尾下覆羽及紫紅翼斑；楔尾綠鳩雄鳥有銅金冠胸與栗色肩羽，尾基較寬呈楔形、尾下覆羽淡肉桂色。"
+    },
+    {
+      "zh": "厚嘴綠鳩（成鳥雄）",
+      "scientificName": "Treron curvirostra",
+      "asset": "thick-billed-green-pigeon.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "厚嘴綠鳩喙粗厚且基部紅、眼圈寬闊綠藍並有栗紅肩羽；楔尾綠鳩喙較細、眼圈窄，尾形寬基楔狀。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1,
+      0.1,
+      0.46,
+      0.45
+    ],
+    [
+      0.24,
+      0.26,
+      0.55,
+      0.57
+    ],
+    [
+      0.35,
+      0.29,
+      0.75,
+      0.62
+    ],
+    [
+      0.64,
+      0.55,
+      0.99,
+      0.93
+    ]
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "featureLabels": [
+    "黃額銅金冠",
+    "銅金色胸羽",
+    "雄鳥栗紅肩",
+    "寬基楔形尾"
+  ],
+  "featureNotes": [
+    "雄鳥額黃、冠及胸呈銅金色；雌鳥色彩較黯淡",
+    "雄鳥胸部銅金色；Cornell概述為橙色胸斑",
+    "雄鳥肩羽及翼覆羽帶栗紅色，首冬雄鳥斑塊較少",
+    "尾基寬、呈楔形；尾下覆羽淡肉桂色，與紅翅綠鳩區別"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Broad partial native-range context from the western Himalayas east to southwest China, south through Indochina and parts of the Malay Peninsula, extending to Sumatra, Java, Bali and Lombok. Country highlights are not nationwide occupancy or exact range polygons. Hong Kong is not part of the regular range: HKBWS records a single first-winter male at Pak Sha O, Sai Kung, 6–9 March 2016.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/007100",
+      "use": "Full HKBWS account for Wedge-tailed Green Pigeon read: Category I accidental in Hong Kong; only record was a first-winter male at Pak Sha O, Sai Kung, 6–9 March 2016. 30–33 cm; yellow forehead, coppery-gold crown and breast in males; chestnut scapulars and wing coverts (less developed in first-winter); pale cinnamon undertail-coverts and broad-based wedge-shaped tail. Range from western Himalaya to southwest China and south through Indochina, parts of Malay Peninsula, Sumatra, Java, Bali and Lombok. Global IUCN LC, stable trend."
+    },
+    {
+      "url": "https://ebird.org/species/wetpig1",
+      "use": "Cornell eBird/Merlin account read: lowland and hill forest; both sexes green with red feet and bright blue bill; males have orange chest patch and wine-red wing patches; global IUCN LC. Females can be confused with Pin-tailed Green-Pigeon; Wedge-tailed has shorter rounded tail."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/007200",
+      "use": "HKBWS White-bellied Green Pigeon account read for comparator: green pigeon with grey bill, blue base and narrow blue eye-ring; Wedge-tailed has chestnut upperparts, pale cinnamon undertail-coverts and broad wedge-shaped tail; White-bellied has whiter belly and undertail ground. This HKBWS profile ID is independent of AvianDex runtime ID."
+    },
+    {
+      "url": "https://ebird.org/species/whbpig1",
+      "use": "Cornell eBird/Merlin White-bellied Green-Pigeon comparator account read: green overall, pale belly, males with vivid maroon wing patch."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/007000",
+      "use": "HKBWS Thick-billed Green Pigeon account read for comparator; distinguishes it by thick pale red-based bill, broad blue-green eyering and maroon shoulder patch."
+    },
+    {
+      "url": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "url": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "url": "src/data/dexScores.json",
+      "use": "Authoritative runtime six score values; vEst is 1 and indicates estimated length-derived viewing score."
+    }
+  ],
+  "notes": [
+    "Main artwork depicts an adult male representative, not a reconstruction of the sole Hong Kong first-winter record. Female is greener and lacks the male's orange/copper breast and wine-red/chestnut wing patches.",
+    "Hong Kong Category I accidental status and single 2016 record are local occurrence facts; global IUCN LC and stable trend are separate.",
+    "Comparators are adult males, separately AI-illustrated; circles are illustrative and not to scale.",
+    "Scores are app entertainment metrics, not scientific evaluation; use runtime values exactly and retain the runtime vEst indicator.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial native-range country overview, not an exact distribution polygon or Hong Kong occurrence map.",
+    "HKBWS species profile suffixes do not match AvianDex runtime IDs: Wedge-tailed Green Pigeon is HKBWS /007100; HKBWS /007300 is Ryukyu Green Pigeon and was not used as a source.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, app slim-registration or shared renderer change.",
+    "First feature zoom was widened after visual inspection so the complete bill remains inside its circular crop."
+  ]
+}

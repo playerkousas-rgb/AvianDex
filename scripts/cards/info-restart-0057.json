@@ -1,0 +1,140 @@
+{
+  "id": "0057",
+  "name": "紅胸秋沙鴨",
+  "scientificName": "Mergus serrator",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港稀少冬候／過境"
+  },
+  "illustrationTaxon": "Mergus serrator adult male in breeding plumage, for main art and all four male diagnostic feature crops",
+  "similarSpecies": [
+    {
+      "zh": "白秋沙鴨（雄鳥）",
+      "scientificName": "Mergellus albellus",
+      "asset": "smew.png",
+      "framing": "whole-bird",
+      "sex": "male",
+      "distinction": "白秋沙鴨雄鳥體型較細小，白色頭身具明顯黑眼罩及黑紋；紅胸秋沙鴨雄鳥較大，具長紅喙、深色蓬冠、白領及帶白斑的栗色胸。"
+    },
+    {
+      "zh": "鵲鴨（雄鳥）",
+      "scientificName": "Bucephala clangula",
+      "asset": "common-goldeneye.png",
+      "framing": "whole-bird",
+      "sex": "male",
+      "distinction": "鵲鴨雄鳥頭圓且有單一橢圓白頰斑、淡黃色眼、粗短身形及大白翼窗；紅胸秋沙鴨雄鳥頭具蓬冠、喙長而窄呈紅色、胸側有白斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1,
+      0.25,
+      0.48,
+      0.57
+    ],
+    [
+      0.23,
+      0.24,
+      0.61,
+      0.62
+    ],
+    [
+      0.22,
+      0.43,
+      0.62,
+      0.83
+    ],
+    [
+      0.48,
+      0.4,
+      0.88,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥長紅色狹喙",
+    "雄鳥赤眼與蓬冠",
+    "雄鳥栗胸白斑",
+    "雄鳥灰脅與折翼"
+  ],
+  "featureNotes": [
+    "長而狹的紅色鋸狀喙，適合捕魚",
+    "紅色虹膜及深綠黑色頭部的短蓬冠",
+    "栗色胸部上脅有醒目的大型白斑",
+    "灰色脅部與黑白分段的折翼紋理"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "CAN",
+      "USA",
+      "NOR",
+      "FIN",
+      "RUS",
+      "DEU",
+      "KAZ",
+      "CHN",
+      "JPN"
+    ],
+    "note": "Full-world partial country overview representing selected parts of the Holarctic breeding range and coastal/selected wintering areas described by HKBWS. Highlights are a subset only; green does not mean nationwide occupancy and this is not a complete distribution or precise seasonal occurrence polygon. Hong Kong is a rare wintering and passage visitor area, not a resident-range claim.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/003600",
+      "use": "Full HKBWS species account read: 52–58 cm; male breeding plumage has dark green head, white collar, black-mottled brown chest with large white spots on upper flanks; long narrow red bill, red eyes and short sometimes spiky crest. Hong Kong rare winter visitor/passage migrant, much declined locally since late 1980s/early 1990s; global IUCN LC, stable. Breeds Holarctic and winters in selected North American and Eurasian regions."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/003500",
+      "use": "Full HKBWS Smew account read: male breeding plumage is white with black mask and markings; used as a clearly labelled male comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/003400",
+      "use": "Full HKBWS Common Goldeneye account read: male has green-glossed domed dark head, oval white bill-base spot, pale eye, white neck/chest/flanks and dark upperparts; Hong Kong Category I accidental. Used as a clearly labelled male comparison, not as an abundance assertion."
+    },
+    {
+      "path": "cards/art/info-restart-0056/features.png",
+      "use": "Reviewed exact adult male Smew image reused as the correctly labelled Smew comparison; no recolouring or taxonomic relabelling."
+    },
+    {
+      "path": "cards/art/info-restart-0055/features.png",
+      "use": "Reviewed exact adult male Common Goldeneye image reused as the correctly labelled Goldeneye comparison; no recolouring or taxonomic relabelling."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime values only: i=2, a=3.8, v=4.4, r=4.8, c=3, o=3.6. No score values or overall result recalculated."
+    }
+  ],
+  "notes": [
+    "All four feature crops depict the adult male, named explicitly. Main and features artwork must show a distinctive long red bill, green-black crested head, white collar and chestnut breast with white spots.",
+    "The Smew and Common Goldeneye comparisons are exact, separately species-specific male artworks reused from their reviewed cards, not repainted or relabelled Red-breasted Merganser art.",
+    "AI illustrations receive basic visual review only and are not independent ornithologist validation. Comparison circles are not to scale.",
+    "Map uses a full-world Natural Earth basemap. Selected-country highlights are partial only, not nationwide occupancy, complete distribution or precise seasonal occurrence polygons.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, or app slim-registration change."
+  ]
+}
