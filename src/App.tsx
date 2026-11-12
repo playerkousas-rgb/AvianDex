@@ -450,7 +450,7 @@ function App() {
                   transition={{ duration: 0.25 }}
                   className="overflow-hidden md:hidden"
                 >
-                  {/* 收合的只是「黃色資訊帶」（569 種／已解鎖圖卡／搜尋／排序／篩選）。
+                  {/* 收合的只是「黃色資訊帶」（583 種／已解鎖圖卡／搜尋／排序／篩選）。
                       地圖、禮儀、裝備、語言已經全部搬到浮動球與頂欄，
                       所以這裡不再重複，BIRD-DEX 2 亦已由右邊精靈球負責。 */}
                   <div className="bg-black/60 backdrop-blur-md border-t-2 border-yellow-400/20 px-3 py-2.5 relative">
@@ -531,7 +531,7 @@ function App() {
                   {(
                     [
                       { key: 'ebird', label: 'eBird', title: L('跟 eBird/Clements 演化排序（目 → 科 → 種）', 'eBird/Clements order (order → family → species)') },
-                      { key: 'pokedex', label: 'NO.', title: L('原本 NO.0001 → NO.0569 次序', 'Original NO.0001 → NO.0569 order') },
+                      { key: 'pokedex', label: 'NO.', title: L('原本 NO.0001 → NO.0583 次序', 'Original NO.0001 → NO.0583 order') },
                       { key: 'chinese', label: '中文', title: L('按中文名排序', 'Sort by Chinese name') },
                     ] as const
                   ).map((m) => (
