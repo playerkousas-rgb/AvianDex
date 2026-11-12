@@ -1,0 +1,130 @@
+{
+  "id": "0092",
+  "name": "灰喉針尾雨燕",
+  "scientificName": "Hirundapus cochinchinensis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Hirundapus cochinchinensis adult sexes similar",
+  "similarSpecies": [
+    {
+      "zh": "白喉針尾雨燕",
+      "scientificName": "Hirundapus caudacutus",
+      "asset": "0091.png",
+      "framing": "whole-bird",
+      "distinction": "Sexes similar. Dark blue-gloss brown, PALE SILVERY GREY SADDLE on back, broad sharply contrasting WHITE THROAT plus WHITE LORES/FOREHEAD BAND. White horseshoe rear flanks/undertail around dark belly, short square tail tiny needle spines only close views. caudacutus central Siberia to Sakhalin/Kurils/Mongolia/NE China/Korea/Japan breeding, winters S New Guinea/E Australia; nudipes N Pakistan/Himalaya/N Myanmar/SW China, winter poorly known possibly Malaya/Java. LC stable globally; scarce HK spring migrant declined locally since1990s, not a global IUCN trend."
+    },
+    {
+      "zh": "褐背針尾雨燕",
+      "scientificName": "Hirundapus giganteus",
+      "asset": "brown.png",
+      "framing": "whole-bird",
+      "distinction": "Brown-backed Needletail indicus representation, pale BROWN rather than silvery grey saddle, dark brown throat paler chin, small white loral spot, long full body broad wings short square needle-spined tail and white horseshoe. LC decreasing; not to scale."
+    }
+  ],
+  "featureCrops": [
+    [
+      0.55,
+      0.29,
+      0.81,
+      0.53
+    ],
+    [
+      0.37,
+      0.28,
+      0.67,
+      0.58
+    ],
+    [
+      0.31,
+      0.48,
+      0.56,
+      0.72
+    ],
+    [
+      0.24,
+      0.56,
+      0.48,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "暗額灰褐色喉",
+    "銀灰色背鞍",
+    "白色尾下側腹",
+    "短方形尾羽"
+  ],
+  "featureNotes": [
+    "暗額灰褐色喉",
+    "銀灰色背鞍",
+    "白色尾下側腹",
+    "短方形尾羽"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "NPL",
+      "IND",
+      "MMR",
+      "CHN",
+      "TWN",
+      "THA",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Sexes similar. Dark blue-gloss brown with pale SILVERY GREY SADDLE. ILL-DEFINED DUSKY GREY BROWN THROAT and DARK FOREHEAD unlike white-throated. White horseshoe rear flank/undertail and short square needle-spined tail. Distant birds very hard to separate; close head/throat views important. Monotypic breeds central Nepal/NE India/N Myanmar/S China to E Guangxi/Hainan/Taiwan, winters Thailand/Malay peninsula/Sumatra/W Java. LC stable globally; scarce HK spring passage declined locally since1990s. World partial native-country overview only; green does not mean entire country occupancy, precise occurrence or complete range.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004300",
+      "use": "Substantive identification/range/conservation read. Sexes similar. Dark blue-gloss brown with pale SILVERY GREY SADDLE. ILL-DEFINED DUSKY GREY BROWN THROAT and DARK FOREHEAD unlike white-throated. White horseshoe rear flank/undertail and short square needle-spined tail. Distant birds very hard to separate; close head/throat views important. Monotypic breeds central Nepal/NE India/N Myanmar/S China to E Guangxi/Hainan/Taiwan, winters Thailand/Malay peninsula/Sumatra/W Java. LC stable globally; scarce HK spring passage declined locally since1990s."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six scores unchanged; missing pending not zero, vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004200",
+      "use": "Comparison read. Sexes similar. Dark blue-gloss brown, PALE SILVERY GREY SADDLE on back, broad sharply contrasting WHITE THROAT plus WHITE LORES/FOREHEAD BAND. White horseshoe rear flanks/undertail around dark belly, short square tail tiny needle spines only close views. caudacutus central Siberia to Sakhalin/Kurils/Mongolia/NE China/Korea/Japan breeding, winters S New Guinea/E Australia; nudipes N Pakistan/Himalaya/N Myanmar/SW China, winter poorly known possibly Malaya/Java. LC stable globally; scarce HK spring migrant declined locally since1990s, not a global IUCN trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004400",
+      "use": "Comparison read. Brown-backed Needletail indicus representation, pale BROWN rather than silvery grey saddle, dark brown throat paler chin, small white loral spot, long full body broad wings short square needle-spined tail and white horseshoe. LC decreasing; not to scale."
+    }
+  ],
+  "notes": [
+    "New AI illustrations with basic visual review, not independent expert validation or a standalone identification key.",
+    "Comparison whole birds not to scale. World map shows only partial native-country overview, not seasonal/occurrence polygons or whole-country occupancy.",
+    "Image and production JSON synchronized after artwork, not speculative future crop coordinates.",
+    "No UI/runtime/SW/R2/slim registration changes; no ZIP.",
+    "Upper-side pixel image supplies silver saddle crop; underside painting supplies throat/white horseshoe/tail. Needle spines only visible close, distant congeners very difficult. Local HK decline not confused with global LC stable trend."
+  ],
+  "featureSources": [
+    "features.png",
+    "pixel.png",
+    "features.png",
+    "features.png"
+  ]
+}

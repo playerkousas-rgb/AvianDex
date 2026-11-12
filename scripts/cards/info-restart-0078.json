@@ -1,0 +1,126 @@
+{
+  "id": "0078",
+  "name": "紅翅鳳頭鵑",
+  "scientificName": "Clamator coromandus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Clamator coromandus adult",
+  "similarSpecies": [
+    {
+      "zh": "大鷹鵑",
+      "scientificName": "Hierococcyx sparverioides",
+      "asset": "0081.png",
+      "framing": "whole-bird",
+      "distinction": "Adult38–40cm grey crown/face yellow orbital ring brown mantle/wings, white underbody HEAVY darkrufous breast/neck streaks RUFOUS BARS lowerbreast/belly/flanks, grey darkbarred tail, dark above/yellowgreen below bill yellow feet. N Pakistan/Himalaya to Myanmar/China/Indochina; winter S India/Greater Sundas/Philippines/Sulawesi. LC stable."
+    },
+    {
+      "zh": "烏鵑",
+      "scientificName": "Surniculus lugubris",
+      "asset": "0080.png",
+      "framing": "whole-bird",
+      "distinction": "Adult23–25cm slim glossy blueblack, slightly forked tail slender arched bill, white fine bars only undertail/outermost tail underside; juvenile spotting not shown. barussarum E India/N Myanmar/N Indochina/S China to Malaysia/Greater Sundas winter. LC decreasing, HK scarce passage spring mainly."
+    }
+  ],
+  "featureCrops": [
+    [
+      0.52,
+      0.01,
+      0.89,
+      0.38
+    ],
+    [
+      0.54,
+      0.19,
+      0.82,
+      0.47
+    ],
+    [
+      0.25,
+      0.28,
+      0.56,
+      0.62
+    ],
+    [
+      0,
+      0.69,
+      0.32,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "黑色尖長鳳頭",
+    "白頸環橙喉",
+    "栗紅色翼羽",
+    "黑色漸長尾羽"
+  ],
+  "featureNotes": [
+    "成鳥黑頭及尖長黑冠",
+    "白後頸環，橙皮黃喉斑而腹部大致白色",
+    "成鳥翼栗紅，上背及尾黑色",
+    "長黑尾；全鳥圖保留完整尾尖"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "MMR",
+      "CHN",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "LKA",
+      "PHL"
+    ],
+    "note": "World-view partial native-country overview, not whole-country occupancy, complete range or seasonal occurrence polygons. Adult45–47cm black head/crest white hindcollar black mantle/tail chestnut-red wing, mostly whitish underbody with orange-buff throat patch and blackish vent, dark bill/feet. LC stable. N India/Nepal to Myanmar/Indochina/S E China breeding, winters India/Sri Lanka/Thai Malay/Greater Sundas/Philippines.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005000",
+      "use": "Substantive identification/range/conservation re-read for remake. Adult45–47cm black head/crest white hindcollar black mantle/tail chestnut-red wing, mostly whitish underbody with orange-buff throat patch and blackish vent, dark bill/feet. LC stable. N India/Nepal to Myanmar/Indochina/S E China breeding, winters India/Sri Lanka/Thai Malay/Greater Sundas/Philippines."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative unchanged runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores, missing stays pending, vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005500",
+      "use": "Comparison adult morphology re-read. Adult38–40cm grey crown/face yellow orbital ring brown mantle/wings, white underbody HEAVY darkrufous breast/neck streaks RUFOUS BARS lowerbreast/belly/flanks, grey darkbarred tail, dark above/yellowgreen below bill yellow feet. N Pakistan/Himalaya to Myanmar/China/Indochina; winter S India/Greater Sundas/Philippines/Sulawesi. LC stable."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005400",
+      "use": "Comparison adult morphology re-read. Adult23–25cm slim glossy blueblack, slightly forked tail slender arched bill, white fine bars only undertail/outermost tail underside; juvenile spotting not shown. barussarum E India/N Myanmar/N Indochina/S China to Malaysia/Greater Sundas winter. LC decreasing, HK scarce passage spring mainly."
+    }
+  ],
+  "notes": [
+    "User explicitly rejected other Agent 0078–0081 and requested new artwork plus matching JSON per completed card. Entire main pixel and feature source newly AI generated; not patched old crude/handdrawn images.",
+    "Basic visual review only, not independent ornithologist verification. Adults represented, male only for0079, not juvenile/female morph identification.",
+    "Full world map only partial native-country highlights; comparison whole birds not to scale.",
+    "Dynamic feature label capsule fits measured text within each column; no app UI/runtime/slim registration/R2/ZIP changes.",
+    "Previous main spec retained only as starting metadata; new crops/comparisons/labels/sources synchronized to new image assets."
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "0084",
+  "name": "斑翅鳳頭鵑",
+  "scientificName": "Clamator jacobinus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Clamator jacobinus adult; representative adult plumage, not a specific HK record",
+  "similarSpecies": [
+    {
+      "zh": "紅翅鳳頭鵑",
+      "scientificName": "Clamator coromandus",
+      "asset": "chestnut-winged.png",
+      "framing": "whole-bird",
+      "distinction": "栗紅翼、橙皮黃喉及白後頸環，不是斑翅鳳頭鵑的黑白翼與白喉。"
+    },
+    {
+      "zh": "北鷹鵑",
+      "scientificName": "Hierococcyx hyperythrus",
+      "asset": "northern.png",
+      "framing": "whole-bird",
+      "distinction": "無鳳頭或大白翼斑，具黃眼圈及灰粉色下體，體型亦較大。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.55,
+      0.04,
+      0.89,
+      0.38
+    ],
+    [
+      0.3,
+      0.32,
+      0.63,
+      0.65
+    ],
+    [
+      0.58,
+      0.29,
+      0.84,
+      0.64
+    ],
+    [
+      0.02,
+      0.65,
+      0.34,
+      0.97
+    ]
+  ],
+  "featureLabels": [
+    "黑色尖長鳳頭",
+    "白色翼斑",
+    "潔白喉胸腹",
+    "白端黑色長尾"
+  ],
+  "featureNotes": [
+    "黑色尖長鳳頭",
+    "白色翼斑",
+    "潔白喉胸腹",
+    "白端黑色長尾"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "LKA",
+      "NPL",
+      "MMR",
+      "ZAF",
+      "KEN",
+      "TZA",
+      "NGA"
+    ],
+    "note": "Adult light pied morph black head to below eye and upperparts, white underparts, white primary bases and broad white tail tips, black bill/legs. LC stable. Species native south India/Sri Lanka and subSaharan Africa, NW India/Nepal/Myanmar. HK single accidental record excluded from native-country overview; extra extralimital eBird records not automatically native range. Source 005100 not 005200 (Koel). Full world partial country overview only; not whole-country occupancy or exact seasonal occurrence polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005100",
+      "use": "Substantive identification/range/conservation read: Adult light pied morph black head to below eye and upperparts, white underparts, white primary bases and broad white tail tips, black bill/legs. LC stable. Species native south India/Sri Lanka and subSaharan Africa, NW India/Nepal/Myanmar. HK single accidental record excluded from native-country overview; extra extralimital eBird records not automatically native range. Source 005100 not 005200 (Koel)."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores unchanged, missing stays pending and vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005000",
+      "use": "Substantive comparison identification read. 栗紅翼、橙皮黃喉及白後頸環，不是斑翅鳳頭鵑的黑白翼與白喉。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005600",
+      "use": "Substantive comparison identification read. 無鳳頭或大白翼斑，具黃眼圈及灰粉色下體，體型亦較大。"
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "AI art basic visual review only, not independently validated by ornithologist. Representative adults not juvenile plumage or specific HK recorded birds. Comparison birds not to scale. Slim feature capsules auto-size up to 210px in their own 238px columns, captions kept concise. User now authorizes taking over unfinished 0082–0100; prior stop0050 superseded only for this continuation."
+  ]
+}

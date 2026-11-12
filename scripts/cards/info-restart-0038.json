@@ -1,0 +1,142 @@
+{
+  "id": "0038",
+  "name": "赤頸鴨",
+  "scientificName": "Mareca penelope",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "local_candidate_not_verified_against_drive",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Mareca penelope adult male breeding; fourth feature independently labelled female head",
+  "similarSpecies": [
+    {
+      "zh": "綠眉鴨",
+      "scientificName": "Mareca americana",
+      "asset": "american-wigeon.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥白額冠、灰頭綠眼後紋、粉褐脅；不是栗頭黃額灰脅。"
+    },
+    {
+      "zh": "赤膀鴨",
+      "scientificName": "Mareca strepera",
+      "asset": "gadwall-cropped.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥素褐灰頭、暗喙及白翼鏡，不具栗頭黃額冠。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.57,
+      0.23,
+      0.91,
+      0.57
+    ],
+    [
+      0.58,
+      0.46,
+      0.86,
+      0.74
+    ],
+    [
+      0.27,
+      0.46,
+      0.57,
+      0.76
+    ],
+    [
+      0.13,
+      0.05,
+      0.95,
+      0.87
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥頭喙",
+    "粉色胸",
+    "灰色脅",
+    "雌鳥頭喙"
+  ],
+  "featureNotes": [
+    "栗頭黃額冠及短淡灰黑尖喙",
+    "繁殖羽雄鳥帶粉調胸部",
+    "細密黑白波紋形成灰脅",
+    "雌鳥頭褐色細斑及短淡灰黑尖喙"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "ISL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "GBR",
+      "FRA",
+      "ESP",
+      "MAR",
+      "EGY",
+      "TUR",
+      "KAZ",
+      "IND",
+      "PAK",
+      "CHN",
+      "KOR",
+      "JPN",
+      "TWN"
+    ],
+    "note": "Full world partial native-country overview: Iceland/northern Europe to Bering Sea breeding; winter S Europe/N Africa/Middle East/N Indian subcontinent to Japan; China NE breeding south of Yellow River incl Hainan/Taiwan winter. Not whole-country occupancy, complete range or seasonal polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001700",
+      "use": "Substantive page read in previous turn and research recorded in docs: male chestnut head/neck with yellow forehead/crown, short pale grey black-tipped bill, pink chest grey flanks; female brown mottling; Iceland/N Europe to Bering breeding, southern Europe/N Africa/Middle East/N Indian subcontinent/E Asia winter; LC decreasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001800",
+      "use": "Full text read previous turn despite embedded-media bot placeholder: male white forehead/crown, green eye-to-nape stripe, pinkish breast/flanks; females difficult and hybrids relevant, head grey fine speckling, no claimed field certainty from portrait; N American native range, HK accidental; LC stable."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001500",
+      "use": "Previously read full Gadwall page: subdued brown-grey male head dark bill, grey vermiculated body, black rear, white inner-secondary speculum."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "New artwork replaces prior rejected 0037 Wigeon candidate; yellow forehead/crown now explicit. Not reused from rejected asset. Female head is independently sourced and labelled; portrait not used to claim flight-wing pattern.",
+    "Gadwall comparison narrow white image border trimmed; no bird recolouring or anatomy editing.",
+    "Handoff: local candidate only; NOT established as provenance of the existing Drive delivery. Do not upload/overwrite or treat crops as delivered truth before comparing actual remote card and source assets."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "female.png"
+  ]
+}

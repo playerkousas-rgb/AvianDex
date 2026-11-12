@@ -1,0 +1,122 @@
+{
+  "id": "0082",
+  "name": "北鷹鵑",
+  "scientificName": "Hierococcyx hyperythrus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Hierococcyx hyperythrus adult; representative adult plumage, not a specific HK record",
+  "similarSpecies": [
+    {
+      "zh": "霍氏鷹鵑",
+      "scientificName": "Hierococcyx nisicolor",
+      "asset": "hodgson.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥白色下體有淡灰粉色縱紋，尾端多栗色，與北鷹鵑成鳥無明顯縱紋的灰粉下體不同。"
+    },
+    {
+      "zh": "大鷹鵑",
+      "scientificName": "Hierococcyx sparverioides",
+      "asset": "large-hawk-cuckoo.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥胸部有粗深栗色縱斑，腹脅有栗色橫斑，並非北鷹鵑成鳥素色下體。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.57,
+      0.1,
+      0.91,
+      0.44
+    ],
+    [
+      0.49,
+      0.31,
+      0.76,
+      0.62
+    ],
+    [
+      0.03,
+      0.64,
+      0.36,
+      0.97
+    ],
+    [
+      0.46,
+      0.52,
+      0.75,
+      0.81
+    ]
+  ],
+  "featureLabels": [
+    "鮮黃色眼圈",
+    "灰粉無斑胸腹",
+    "窄橫帶長尾",
+    "黃色足趾"
+  ],
+  "featureNotes": [
+    "鮮黃色眼圈",
+    "灰粉無斑胸腹",
+    "窄橫帶長尾",
+    "黃色足趾"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "JPN",
+      "KOR",
+      "IDN",
+      "MYS"
+    ],
+    "note": "Adult plain grey-pink underparts without obvious streaking; slate grey hood yellow eye-ring, relatively narrow uppertail bars. Source HK records juvenile autumn migrants, adult art is not the HK recorded individual. LC stable. Breeds NE China/Korea/Russian Far East/Sakhalin/Japan; winter grounds poorly known, include parts Borneo/Sulawesi. Map partial combined breeding/winter only; no claim Guangdong/Fujian normal winter. Full world partial country overview only; not whole-country occupancy or exact seasonal occurrence polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005600",
+      "use": "Substantive identification/range/conservation read: Adult plain grey-pink underparts without obvious streaking; slate grey hood yellow eye-ring, relatively narrow uppertail bars. Source HK records juvenile autumn migrants, adult art is not the HK recorded individual. LC stable. Breeds NE China/Korea/Russian Far East/Sakhalin/Japan; winter grounds poorly known, include parts Borneo/Sulawesi. Map partial combined breeding/winter only; no claim Guangdong/Fujian normal winter."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores unchanged, missing stays pending and vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005700",
+      "use": "Substantive comparison identification read. 成鳥白色下體有淡灰粉色縱紋，尾端多栗色，與北鷹鵑成鳥無明顯縱紋的灰粉下體不同。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005500",
+      "use": "Substantive comparison identification read. 成鳥胸部有粗深栗色縱斑，腹脅有栗色橫斑，並非北鷹鵑成鳥素色下體。"
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "AI art basic visual review only, not independently validated by ornithologist. Representative adults not juvenile plumage or specific HK recorded birds. Comparison birds not to scale. Slim feature capsules auto-size up to 210px in their own 238px columns, captions kept concise. User now authorizes taking over unfinished 0082–0100; prior stop0050 superseded only for this continuation."
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "0046",
+  "name": "赤嘴潛鴨",
+  "scientificName": "Netta rufina",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Netta rufina adult male breeding plumage",
+  "similarSpecies": [
+    {
+      "zh": "紅頭潛鴨",
+      "scientificName": "Aythya ferina",
+      "asset": "0047.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥橙褐頭、紅眼，暗喙具寬灰帶，灰脅配黑胸；並非全栗褐體。"
+    },
+    {
+      "zh": "白眼潛鴨",
+      "scientificName": "Aythya nyroca",
+      "asset": "0048.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥栗褐頭胸及白眼，白尾下顯眼；沒有青頭潛鴨的綠光頭及大片白脅。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.54,
+      0.2,
+      0.85,
+      0.51
+    ],
+    [
+      0.71,
+      0.32,
+      0.94,
+      0.55
+    ],
+    [
+      0.61,
+      0.45,
+      0.83,
+      0.7
+    ],
+    [
+      0.23,
+      0.45,
+      0.53,
+      0.75
+    ]
+  ],
+  "featureLabels": [
+    "橙色圓頭",
+    "紅色喙",
+    "黑胸",
+    "淡色脅部"
+  ],
+  "featureNotes": [
+    "雄鳥橙色圓頭，眼紅色",
+    "粉紅至紅色喙具淡色嘴端",
+    "繁殖羽雄鳥胸腹及尾下覆羽黑色",
+    "極淡色脅部配中褐色上體"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "ESP",
+      "FRA",
+      "UKR",
+      "KAZ",
+      "RUS",
+      "MNG",
+      "IRN",
+      "PAK",
+      "IND",
+      "CHN",
+      "EGY"
+    ],
+    "note": "World-view partial native country overview; combined breeding/winter countries, not complete species range, seasonal polygons or whole-country occupancy. 50–54cm. Male round orange head, pinkish red pale-tipped bill, black chest belly undertail, very pale flanks midbrown back. Female contrasting pale face/dark crown. Native core Black Sea to Kazakhstan/W Mongolia adjacent Russia/N Iran, scattered Europe; winter Spain/N Africa/eastern Mediterranean/Pakistan/India; China Xinjiang/Qinghai-Tibet/Inner Mongolia, SW lakes. LC trend unknown. HK accidental not normal range.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002600",
+      "use": "Substantive identification/range/conservation text read. 50–54cm. Male round orange head, pinkish red pale-tipped bill, black chest belly undertail, very pale flanks midbrown back. Female contrasting pale face/dark crown. Native core Black Sea to Kazakhstan/W Mongolia adjacent Russia/N Iran, scattered Europe; winter Spain/N Africa/eastern Mediterranean/Pakistan/India; China Xinjiang/Qinghai-Tibet/Inner Mongolia, SW lakes. LC trend unknown. HK accidental not normal range."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores unchanged; missing stays pending, vEst retained."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002700",
+      "use": "Comparison source read: 42–49cm. Domed crown smooth head-bill junction; male reddish eyes orangebrown head, broad pale greyish band on dark bill, black breast/stern, pale grey vermiculated upperparts/flanks. Breeds E Europe/S Scandinavia to Russia/Kazakhstan/Mongolia/NE China, winters western Europe/N and E Africa/N Indian subcontinent/N Indochina/S China/E Asia/N Philippines. VU rapidly decreasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002900",
+      "use": "Comparison source read: 38–42cm. Steep forehead crown peak intermediate between tufted/common pochard; breeding male dark chestnut, paler flanks darker mantle/back WHITE iris, conspicuous white undertail. Female dull brown dark eye. White flight wingbar not illustrated in folded-wing portraits. Breeds E Europe to western/central Kazakhstan/western Mongolia, disjunct south/N China; China N Xinjiang/N China breeding, Yunnan/Yangtze/Taiwan winter. NT decreasing."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "AI artwork is adult male breeding plumage only, not female/juvenile identification. Feet submerged; no flight-wingbar claim from folded-wing artwork. Comparison birds not to scale. New information-card assets, not remaking delivered 43 illustrations."
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "id": "0095",
+  "name": "普通雨燕",
+  "scientificName": "Apus apus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Apus apus adult representative",
+  "similarSpecies": [
+    {
+      "zh": "小白腰雨燕",
+      "scientificName": "Apus nipalensis",
+      "asset": "house-swift.png",
+      "framing": "whole-bird",
+      "distinction": "Runtime House Swift taxonomy retained. More compact swift with contrasting WHITE RUMP, pale chin/throat and shallow tail fork, unlike grey-brown Himalayan rump. Current external sources lump nipalensis group into Apus affinis; no runtime taxonomic migration authorized."
+    },
+    {
+      "zh": "白腰雨燕",
+      "scientificName": "Apus pacificus",
+      "asset": "0096.png",
+      "framing": "whole-bird",
+      "distinction": "Substantive identification/range/conservation read. 17–20cm sexes alike. Long scythe wings and long relatively deeply forked tail, all blackish brown apart contrasting WHITE RUMP band and indistinct pale throat, pale fringed underparts; substantially larger than House Swift. Nominate breeds Siberia/Kamchatka/NChina/Japan, winters Indonesia/Melanesia/Australia. kurodae (kanoi synonym treatment differs) EChina to Guangdong/SJapan/Taiwan/NPhilippines, winters Malaysia/Indonesia/Philippines. Western Guangdong/E Guangxi boundary obscured by Cook swift; map not occurrence polygon. LC stable globally despite local HK migrant decline, local offshore island breeding."
+    }
+  ],
+  "featureCrops": [
+    [
+      0.58,
+      0.36,
+      0.78,
+      0.52
+    ],
+    [
+      0.32,
+      0.43,
+      0.54,
+      0.64
+    ],
+    [
+      0.22,
+      0.03,
+      0.46,
+      0.28
+    ],
+    [
+      0.1,
+      0.5,
+      0.39,
+      0.75
+    ]
+  ],
+  "featureLabels": [
+    "淡色額喉",
+    "暗褐色腰背",
+    "狹長尖翼",
+    "深叉形尾羽"
+  ],
+  "featureNotes": [
+    "淡色額喉",
+    "暗褐色腰背",
+    "狹長尖翼",
+    "深叉形尾羽"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "ESP",
+      "MAR",
+      "DEU",
+      "RUS",
+      "IRN",
+      "MNG",
+      "CHN",
+      "IND",
+      "KEN",
+      "TZA",
+      "ZAF"
+    ],
+    "note": "16–18cm sexes similar. Large all-dark swift scythe-shaped narrow wings deeply forked tail, dark brown subtly scaled body/mantle, paler forehead/throat, dark rump vs white rump Pacific; smaller slimmer narrower wing than Pacific. Inner flight feathers paler than coverts in good light. apus breeds Europe/NW Africa to Baikal/Iran, winters Africa; pekinensis Iran/west Himalaya/Mongolia/N China, winters E/S Africa with small numbers N India/Arabia. LC stable. HK accidental/very rare migrant, multiple midwinter records. World partial native-country overview only not exact occupancy, season or complete range.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004500",
+      "use": "Substantive identification/range/conservation read. 16–18cm sexes similar. Large all-dark swift scythe-shaped narrow wings deeply forked tail, dark brown subtly scaled body/mantle, paler forehead/throat, dark rump vs white rump Pacific; smaller slimmer narrower wing than Pacific. Inner flight feathers paler than coverts in good light. apus breeds Europe/NW Africa to Baikal/Iran, winters Africa; pekinensis Iran/west Himalaya/Mongolia/N China, winters E/S Africa with small numbers N India/Arabia. LC stable. HK accidental/very rare migrant, multiple midwinter records."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Six runtime scores unchanged."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004700",
+      "use": "Comparison local House swift identification only: compact, white rump, shallow tail fork. Updated header Little Swift A.affinis differs runtime A.nipalensis; do not import broad lumped range or replace runtime taxonomy."
+    },
+    {
+      "url": "https://ebird.org/species/houswi1",
+      "use": "Taxonomy cross-check now Little Swift (House) Apus affinis [nipalensis Group]; runtime A.nipalensis retained by frozen-data policy."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/004600",
+      "use": "Substantive identification/range/conservation read. 17–20cm sexes alike. Long scythe wings and long relatively deeply forked tail, all blackish brown apart contrasting WHITE RUMP band and indistinct pale throat, pale fringed underparts; substantially larger than House Swift. Nominate breeds Siberia/Kamchatka/NChina/Japan, winters Indonesia/Melanesia/Australia. kurodae (kanoi synonym treatment differs) EChina to Guangdong/SJapan/Taiwan/NPhilippines, winters Malaysia/Indonesia/Philippines. Western Guangdong/E Guangxi boundary obscured by Cook swift; map not occurrence polygon. LC stable globally despite local HK migrant decline, local offshore island breeding."
+    }
+  ],
+  "notes": [
+    "New AI adult representative artwork; basic visual review not independent expert validation. Subtle plumage/lighting and multiple field traits needed for Apus identification.",
+    "Dark rump/long scythe wings/forked tail are illustrated, comparisons not to scale.",
+    "House comparison runtime A.nipalensis retained despite external lump with A.affinis; no runtime taxonomic change.",
+    "Image and production JSON synchronized. World partial native-country overview only. No UI/runtime/SW/R2/slim registration, no ZIP."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ]
+}
