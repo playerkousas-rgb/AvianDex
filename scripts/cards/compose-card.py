@@ -245,14 +245,24 @@ class Canvas:
             self.poly(pts, outline=outline, width=width)
 
     def ball(self, cx, cy, r, on=True):
+        """乾淨精靈球：紅上白下、一條粗帶橫貫全球、中央白色按鈕、粗外環。
+        先在小圖上畫好再用圓形 mask 貼上（紅頂與白底之間不會露縫），外環最後畫蓋住接縫。"""
         top = (214, 62, 52) if on else (205, 205, 198)
-        bot = WHITE if on else (236, 236, 230)
+        bot = (250, 250, 244) if on else (236, 236, 230)
         edge = (40, 44, 40) if on else (150, 156, 148)
-        self.circ(cx, cy, r, fill=bot, outline=edge, width=max(1.6, r / 6))
-        box = self.s((cx - r, cy - r, cx + r, cy + r))
-        self.d.pieslice(box, 180, 360, fill=top, outline=edge, width=max(2, self.s(r / 6)))
-        self.line([(cx - r, cy), (cx + r, cy)], edge, max(1.6, r / 6))
-        self.circ(cx, cy, r * 0.34, fill=WHITE if on else (236, 236, 230), outline=edge, width=max(1.4, r / 7))
+        ring = max(2.0, r * 0.24)
+        ri = r - ring / 2
+        bx = self.s((cx - ri, cy - ri, cx + ri, cy + ri))
+        w, h = bx[2] - bx[0], bx[3] - bx[1]
+        tile = Image.new('RGB', (w, h), bot)
+        ImageDraw.Draw(tile).pieslice([0, 0, w - 1, h - 1], 180, 360, fill=top)
+        band = max(3.0, r * 0.44) * SS
+        ImageDraw.Draw(tile).rectangle([0, h // 2 - band // 2, w - 1, h // 2 + band // 2], fill=edge)
+        mask = Image.new('L', (w, h), 0)
+        ImageDraw.Draw(mask).ellipse([0, 0, w - 1, h - 1], fill=255)
+        self.img.paste(tile, (bx[0], bx[1]), mask)
+        self.circ(cx, cy, r * 0.40, fill=bot, outline=edge, width=max(1.6, r * 0.16))
+        self.circ(cx, cy, r, outline=edge, width=ring)
 
     def paste_art(self, art, kind, geo, sh=(0, 0), rad=8):
         """從 AI 輸出（原始解析度）裁出一個框的內容，一次縮放貼進卡片（避免二次重採樣變糊）"""
