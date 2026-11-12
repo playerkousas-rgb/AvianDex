@@ -13,13 +13,14 @@ await build({
     export { createElement } from 'react';
     export { MobileCardPages, OriginalInfoCard, InfoCardScores, CardPanel } from './src/components/InfoCardReader';
     export { ResearchHubPage } from './src/components/ResearchHubPage';
+    export { WelcomeScreen } from './src/components/WelcomeScreen';
     export { infoCardLayout, localInfoCardUrl } from './src/lib/infoCards';
-    export { mobileCardPages, nextMobileCardPage, SLIM_PAGE_BOXES } from './src/lib/mobileInfoPages';`,
+    export { mobileCardPages, nextMobileCardPage, mobileCardAspect, SLIM_PAGE_BOXES } from './src/lib/mobileInfoPages';`,
     resolveDir: root, loader: 'tsx' },
   bundle: true, platform: 'node', format: 'cjs', outfile, jsx: 'automatic',
   define: { 'import.meta.env.BASE_URL': JSON.stringify('/') },
 });
-const { renderToStaticMarkup, createElement, MobileCardPages, OriginalInfoCard, InfoCardScores, CardPanel, ResearchHubPage, infoCardLayout, localInfoCardUrl, mobileCardPages, nextMobileCardPage, SLIM_PAGE_BOXES } = createRequire(import.meta.url)(outfile);
+const { renderToStaticMarkup, createElement, MobileCardPages, OriginalInfoCard, InfoCardScores, CardPanel, ResearchHubPage, WelcomeScreen, infoCardLayout, localInfoCardUrl, mobileCardPages, nextMobileCardPage, mobileCardAspect, SLIM_PAGE_BOXES } = createRequire(import.meta.url)(outfile);
 const render = (component, props) => renderToStaticMarkup(createElement(component, props));
 const rawScores = JSON.parse(readFileSync(path.join(root, 'src/data/dexScores.json'))).scores;
 
@@ -66,7 +67,12 @@ test('unknown legacy layouts are never guessed; unmade cards have artwork only',
   assert.equal(infoCardLayout('1'), 'slim');
   assert.equal(localInfoCardUrl('0001'), undefined, 'uploaded 0001 must load from R2, not a local demo');
   assert.deepEqual(mobileCardPages('0001').map(p => p.key), ['artwork', 'features', 'scores', 'distribution', 'similar']);
-  assert.deepEqual(mobileCardPages('0002').map(p => p.key), ['artwork', 'original']);
+  for (const id of ['0002', '0003']) {
+    assert.equal(localInfoCardUrl(id), undefined);
+    assert.equal(infoCardLayout(id), 'slim');
+    assert.deepEqual(mobileCardPages(id).map(p => p.key), ['artwork', 'features', 'scores', 'distribution', 'similar']);
+  }
+  assert.deepEqual(mobileCardPages('0004').map(p => p.key), ['artwork', 'original']);
   assert.deepEqual(mobileCardPages('0022').map(p => p.key), ['artwork']);
 });
 
@@ -104,4 +110,57 @@ test('panel crops cannot leak other sections into viewport letterboxing', () => 
     assert.ok(html.includes('clip-path="url(#'));
     assert.ok(html.includes(`x="${box[0]}" y="${box[1]}" width="${box[2]}" height="${box[3]}"`));
   }
+});
+
+
+test('mobile screen has no bird-title strip or cream padding; cropped pages extend a dark surface without distorting content', () => {
+  const device = readFileSync(path.join(root, 'src/components/PokedexDevice.tsx'), 'utf8');
+  assert.equal(device.includes('data-mobile-bird-title'), false);
+  assert.ok(device.includes('bg-[#1c212e] md:bg-[#f3ecd8]'));
+  assert.ok(device.includes('p-0 md:p-2'));
+  assert.ok(device.includes('mobileCardAspect(mobilePage)'));
+  assert.equal(device.includes('min-h-[68%]'), false);
+  assert.ok(device.includes('onPageChange={setMobilePage}'));
+  for (const page of ['features', 'distribution', 'similar']) {
+    assert.equal(mobileCardAspect(page), SLIM_PAGE_BOXES[page][2] / SLIM_PAGE_BOXES[page][3]);
+  }
+  assert.equal(mobileCardAspect('artwork'), 1);
+  assert.equal(mobileCardAspect('scores'), 1);
+  assert.equal(mobileCardAspect('original'), 2 / 3);
+  for (const box of Object.values(SLIM_PAGE_BOXES)) {
+    const html = render(CardPanel, { url: '/card.avif', box, label: 'Panel', surface: '#2e1c0c' });
+    assert.ok(html.includes('background-color:#2e1c0c'));
+    assert.ok(html.includes('preserveAspectRatio="xMidYMid meet"'));
+    assert.ok(html.includes('w-full h-full'));
+    assert.ok(html.includes('<clipPath'));
+  }
+});
+
+test('research offers only info-card open/save, never illustration links, in both languages', () => {
+  for (const lang of ['zh', 'en']) {
+    for (const infoUrl of [undefined, '/aviandex/0002.avif?v=restart-0002-v1']) {
+      const html = render(ResearchHubPage, { zhName: 'Bird', enName: 'Bird', sciName: 'Milvus migrans', lang,
+        cardUrl: '/birdcards/0002.avif', infoUrl });
+      assert.equal(html.includes('/birdcards/'), false);
+      assert.equal(html.includes('Just the artwork'), false);
+      assert.equal(html.includes('開插畫原圖'), false);
+      assert.equal((html.match(/download=/g) || []).length, infoUrl ? 1 : 0);
+      if (infoUrl) {
+        assert.ok(html.includes('download="aviandex-Bird-info.avif"'));
+        assert.ok(html.includes('href="/aviandex/0002.avif?v=restart-0002-v1"'));
+      }
+    }
+  }
+});
+
+test('welcome has only the AvianDex boot action; in-device BIRD-DEX ball remains', () => {
+  const html = render(WelcomeScreen, { onOpen() {} });
+  assert.equal((html.match(/<button/g) || []).length, 1);
+  assert.ok(html.includes('開啟 AvianDex 圖鑑'));
+  assert.equal(html.includes('BIRD-DEX'), false);
+  const source = readFileSync(path.join(root, 'src/components/WelcomeScreen.tsx'), 'utf8');
+  assert.equal(source.includes('window.open'), false);
+  assert.equal(source.includes('skw-birdex2'), false);
+  const device = readFileSync(path.join(root, 'src/components/PokedexDevice.tsx'), 'utf8');
+  assert.ok(device.includes('前往 BIRD-DEX 2 捕捉精靈'));
 });

@@ -26,3 +26,12 @@ export const SLIM_PAGE_BOXES = {
   distribution: [36, 1186, 504, 314],
   similar: [556, 1186, 432, 314],
 } as const;
+
+/** Match the phone screen to the active content instead of letterboxing it in a fixed tall box. */
+export function mobileCardAspect(page: MobileCardPage): number {
+  if (page === 'features' || page === 'distribution' || page === 'similar') {
+    const box = SLIM_PAGE_BOXES[page];
+    return box[2] / box[3];
+  }
+  return page === 'original' ? 2 / 3 : 1;
+}

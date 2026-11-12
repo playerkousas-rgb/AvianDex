@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Bird as BirdIcon, Sparkles, Power, ExternalLink } from 'lucide-react';
+import { Bird as BirdIcon, Power } from 'lucide-react';
 
 export const WelcomeScreen: React.FC<{ onOpen: () => void }> = ({ onOpen }) => {
   const [isOpening, setIsOpening] = useState(false);
@@ -48,6 +48,7 @@ export const WelcomeScreen: React.FC<{ onOpen: () => void }> = ({ onOpen }) => {
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
         <motion.button
+          aria-label="開啟 AvianDex 圖鑑"
           onClick={handleOpen}
           className="relative group focus:outline-none"
           animate={{ y: [0, -6, 0] }}
@@ -147,22 +148,6 @@ export const WelcomeScreen: React.FC<{ onOpen: () => void }> = ({ onOpen }) => {
               )}
             </div>
           </div>
-        </div>
-
-        {/* BIRD-DEX 2 入口。
-            ⚠️ 上一版放在紅色上半部的右下角，位置隨機身邊緣浮動，
-               在小螢幕上容易被切走或被精靈球壓住（用戶回報「指向放的位置很奇怪」）。
-               現在固定在下半白色區域的中間、POWERED BY 之上：
-               手指自然落點，而且不會與開機球重疊。 */}
-        <div className="absolute inset-x-0 bottom-12 flex justify-center px-4">
-          <button
-            onClick={() => window.open('https://skw-birdex2.vercel.app', '_blank')}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white border-2 border-gray-900 text-[11px] font-black text-gray-900 shadow-[0_3px_0_rgba(0,0,0,0.35)] active:translate-y-0.5 active:shadow-none transition-all"
-          >
-            <Sparkles size={13} className="text-red-600" />
-            <span>前往 BIRD-DEX 2 捕捉精靈卡</span>
-            <ExternalLink size={11} className="text-gray-500" />
-          </button>
         </div>
 
         <div className="absolute bottom-4 w-full text-center">

@@ -24,6 +24,7 @@ import { BirdDetailPage } from './BirdDetailPage';
 import { ResearchHubPage } from './ResearchHubPage';
 import { PokeballIcon } from './PokeballIcon';
 import { MobileCardPages, OriginalInfoCard } from './InfoCardReader';
+import { mobileCardAspect, type MobileCardPage } from '../lib/mobileInfoPages';
 import { BirdNavigator } from './BirdNavigator';
 
 /** 圖鑑評分（32 KB，隨主 bundle 載入；與詳細頁、卡面讀同一個檔） */
@@ -228,11 +229,13 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   const currentId = currentBird?.id ?? '';
   /* 螢幕上的插畫是否已 decode 完成（避免破圖／alt 文字閃出） */
   const [screenArtReady, setScreenArtReady] = useState(false);
+  const [mobilePage, setMobilePage] = useState<MobileCardPage>('artwork');
   const [flippedFor, setFlippedFor] = useState(currentId);
   if (flippedFor !== currentId) {
     setFlippedFor(currentId);
     setScreenFlipped(false);
     setScreenArtReady(false);
+    setMobilePage('artwork');
     setDetailReady(false);
   }
   useEffect(() => {
@@ -434,7 +437,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             </button>
 
           {/* --- 左半部分：圖鑑顯示面板 (修正版) --- */}
-<div className="w-full md:w-1/2 min-h-[68%] md:min-h-[50%] md:h-full bg-gradient-to-br from-[#E3350D] via-[#c92b0a] to-[#9a2208] border-[6px] md:border-[10px] border-gray-900 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3),inset_0_3px_8px_rgba(255,255,255,0.15)]">
+<div className="w-full md:w-1/2 shrink-0 md:shrink min-h-0 md:min-h-[50%] md:h-full bg-gradient-to-br from-[#E3350D] via-[#c92b0a] to-[#9a2208] border-[6px] md:border-[10px] border-gray-900 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3),inset_0_3px_8px_rgba(255,255,255,0.15)]">
   
   {/* 頂部感應燈區塊 + 電腦版上傳中心 */}
   <div className="flex items-center justify-between p-2 pr-9 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
@@ -520,14 +523,10 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
     </div>
   </div>
 
-  <div data-mobile-bird-title className="md:hidden shrink-0 px-10 pt-1 pb-1.5 text-center" aria-live="polite">
-    <p className="text-[10px] font-mono text-yellow-200">NO.{currentBird.id}</p>
-    <p className="text-sm font-black text-white leading-tight truncate">{lang === 'en' ? (entry?.e || currentBird.name) : currentBird.name}</p>
-  </div>
-
   {/* 螢幕核心區域 */}
-  <div className="flex-1 p-2 md:p-3 flex flex-col items-center justify-center overflow-hidden">
-    <div className="w-full h-full bg-[#f3ecd8] rounded-t-lg rounded-bl-lg rounded-br-[32px] p-1.5 md:p-2 border-2 border-gray-900 relative flex flex-col overflow-hidden">
+  <div className="md:flex-1 p-2 md:p-3 flex flex-col items-center justify-center overflow-hidden">
+    <div style={{ '--mobile-card-aspect': mobileCardAspect(mobilePage) } as React.CSSProperties}
+      className="w-full h-auto md:h-full [aspect-ratio:var(--mobile-card-aspect)] md:[aspect-ratio:auto] max-h-[52dvh] md:max-h-none bg-[#1c212e] md:bg-[#f3ecd8] rounded-t-lg rounded-bl-lg rounded-br-[32px] p-0 md:p-2 border-2 border-gray-900 relative flex flex-col overflow-hidden">
       <div className="hidden md:flex justify-center gap-3 mb-1">
         <div className="w-1.5 h-1.5 rounded-full bg-red-600/80" />
         <div className="w-1.5 h-1.5 rounded-full bg-red-600/80" />
@@ -542,7 +541,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
           onClick={toggleFlip}
         >
           <MobileCardPages key={currentBird.id} id={currentBird.id} name={currentBird.name} lang={lang}
-            infoUrl={infoImage.url} infoStatus={infoImage.status} onInfo={() => { void infoImage.probe(); }}
+            infoUrl={infoImage.url} infoStatus={infoImage.status} onPageChange={setMobilePage} onInfo={() => { void infoImage.probe(); }}
             navigation={<BirdNavigator overlay lang={lang} id={currentBird.id} name={currentBird.name}
               index={currentIndex} total={birds.length} onPrevious={handlePrev} onNext={handleNext} />}
             onExpand={(information) => { setScreenFlipped(information); setIsFullscreen(true); }}
@@ -624,7 +623,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
 </div> {/* 左面板結束 */}
 
                  {/* --- 右半部分：控制與資料面板 --- */}
-          <div ref={detailsPanelRef} className="w-full md:w-1/2 min-h-[32%] md:min-h-[60%] md:h-full bg-[#221b17] border-[4px] md:border-[6px] border-gray-900 rounded-b-[28px] md:rounded-r-[28px] md:rounded-bl-none flex flex-col p-2 md:p-4 gap-1 md:gap-2 relative overflow-y-auto">
+          <div ref={detailsPanelRef} className="w-full md:w-1/2 flex-1 md:flex-none min-h-0 md:min-h-[60%] md:h-full bg-[#221b17] border-[4px] md:border-[6px] border-gray-900 rounded-b-[28px] md:rounded-r-[28px] md:rounded-bl-none flex flex-col p-2 md:p-4 gap-1 md:gap-2 relative overflow-y-auto">
               <div className="sticky top-0 z-30 bg-[#221b17] pb-1 md:pb-2 space-y-1 md:space-y-2 shrink-0">
               <PokedexTabs
                 page={page}
@@ -825,7 +824,6 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                     sciName={sciQuery}
                     speciesCode={entry?.code}
                     lang={lang}
-                    cardUrl={currentImage.url}
                     infoUrl={infoImage.status === 'loaded' ? infoImage.url : undefined}
                     onBackToCard={() => setPage(1)}
                   />

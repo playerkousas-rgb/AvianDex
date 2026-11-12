@@ -32,6 +32,7 @@ test('0001 cycles through all five pages by tap; controls, swipe and vertical sc
   const r = createRoot(el);
   let probes = 0, nextBird = 0, outerClick = 0;
   const expanded = [];
+  const sections = [];
   const page = () => el.querySelector('[data-card-page]').dataset.cardPage;
   const click = async node => act(() => { node.dispatchEvent(new dom.window.MouseEvent('click', { bubbles: true })); });
   let clock = 1000;
@@ -40,7 +41,7 @@ test('0001 cycles through all five pages by tap; controls, swipe and vertical sc
   try {
     await act(() => r.render(createElement('div', { onClick() { outerClick++; } }, createElement(MobileCardPages, {
       id: '0001', name: '珠頸斑鳩', lang: 'en', artwork: createElement('img', { src: '/art.avif', alt: 'Bird artwork' }),
-      infoUrl: infoCardUrl('0001'), infoStatus: 'loaded', onInfo() { probes++; }, onExpand(info) { expanded.push(info); },
+      infoUrl: infoCardUrl('0001'), infoStatus: 'loaded', onInfo() { probes++; }, onExpand(info) { expanded.push(info); }, onPageChange(key) { sections.push(key); },
       navigation: createElement(BirdNavigator, { overlay: true, lang: 'en', id: '0001', name: 'Bird', index: 0, total: 2, onPrevious() {}, onNext() { nextBird++; } }),
     }))));
     const region = el.querySelector('[data-mobile-card-pages]');
@@ -54,6 +55,7 @@ test('0001 cycles through all five pages by tap; controls, swipe and vertical sc
       assert.equal(page(), key);
     }
     assert.equal(probes, 4);
+    assert.deepEqual(sections, ['features', 'scores', 'distribution', 'similar', 'artwork'], 'parent screen resizes to each section including wraparound');
     assert.equal(outerClick, 0, 'never trigger desktop flip handler');
     await click(el.querySelector('[aria-label="Next bird"]'));
     assert.equal(nextBird, 1);
@@ -97,7 +99,11 @@ test('0001 cycles through all five pages by tap; controls, swipe and vertical sc
 test('replacement info card has a cache revision; legacy info and all illustrations keep their URLs', () => {
   assert.equal(infoCardUrl('1'), 'https://cdn.example.test/aviandex/0001.avif?v=restart-0001-v1');
   assert.ok(cardProxyUrl('1', 'avif', 'aviandex').endsWith('&v=restart-0001-v1'));
-  assert.equal(infoCardUrl('2'), 'https://cdn.example.test/aviandex/0002.avif');
+  for (const id of ['0002', '0003']) {
+    assert.equal(infoCardUrl(id), `https://cdn.example.test/aviandex/${id}.avif?v=restart-${id}-v1`);
+    assert.ok(cardProxyUrl(id, 'avif', 'aviandex').endsWith(`&v=restart-${id}-v1`));
+  }
+  assert.equal(infoCardUrl('4'), 'https://cdn.example.test/aviandex/0004.avif');
   assert.equal(artUrl('1'), 'https://cdn.example.test/birdcards/0001.avif');
 });
 

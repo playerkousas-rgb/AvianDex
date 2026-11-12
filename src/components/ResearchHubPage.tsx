@@ -19,7 +19,7 @@ import { SourcesPage } from './SourcesPage';
  *   5 鳴聲資料   鳥聲        Xeno-canto
  *   6 辨識裝備   工具        Merlin Bird ID
  *
- * 第 7 格（新）＝本站合成圖卡：直接開／下載 PNG，一鍵返回第 1 頁。
+ * 第 7 格＝本站資訊圖卡：開啟／下載原始長卡，一鍵返回第 1 頁。
  */
 
 interface ResearchHubPageProps {
@@ -28,8 +28,6 @@ interface ResearchHubPageProps {
   sciName: string;
   speciesCode?: string;
   lang: Lang;
-  /** 插畫原圖（birdcards/），作次要的下載選項 */
-  cardUrl?: string;
   /** 資訊圖卡（aviandex/）—— 這是主要的下載目標 */
   infoUrl?: string;
   onBackToCard?: () => void;
@@ -45,7 +43,7 @@ const ICONS: Record<CardSourceKey, React.ComponentType<{ className?: string }>> 
 };
 
 export const ResearchHubPage: React.FC<ResearchHubPageProps> = ({
-  zhName, enName, sciName, speciesCode, lang, cardUrl, infoUrl, onBackToCard,
+  zhName, enName, sciName, speciesCode, lang, infoUrl, onBackToCard,
 }) => {
   const t = (zh: string, en: string) => (lang === 'en' ? en : zh);
   // Keep the original format: the local 0058 sample is WebP, remote cards may be AVIF.
@@ -115,20 +113,8 @@ export const ResearchHubPage: React.FC<ResearchHubPageProps> = ({
         })}
       </div>
 
-      {/* 第 7 格：本站圖卡
-          ────────────────────────────────────────────────────────
-          用戶的判斷（2026-11）：
-            「下載我們那張合成圖卡雖然可以但作用不大，
-              反而未來下載我們的資訊圖卡作用大很多」
-          —— 正確。合成圖卡只是插畫加幾行字，玩家真正想收藏／列印的是
-             排版好的資訊圖卡（aviandex/ 那批）。所以這裡的主次對調：
-
-              主  資訊圖卡（aviandex/<NO>.avif）→ 開原圖 / 下載
-              次  插畫（birdcards/<NO>.avif）    → 只有一行細字
-
-          資訊圖卡未做的雀（目前 548 隻）不造假、不留空按鈕，
-          直接寫「未完成」，並指向詳細資料頁看文字版。
-          ──────────────────────────────────────────────────────── */}
+      {/* AvianDex only offers the original information card for download.
+          Illustration collecting/downloading belongs to the other app. */}
       <div className="bg-black/30 border border-amber-400/25 rounded-lg p-2.5">
         <p className="text-white/45 text-[9.5px] tracking-[0.14em] mb-1.5">
           {t('下載這隻雀的資訊圖卡', 'DOWNLOAD THIS BIRD’S INFO CARD')}
@@ -163,20 +149,6 @@ export const ResearchHubPage: React.FC<ResearchHubPageProps> = ({
           </div>
         )}
 
-        {/* 插畫下載：作用小，所以收成一行細字，不搶位置 */}
-        {cardUrl && (
-          <p className="mt-1.5 text-white/30 text-[9.5px]">
-            {t('只想存插畫？', 'Just the artwork?')}{' '}
-            <a
-              href={cardUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="text-white/50 hover:text-amber-200 underline underline-offset-2"
-            >
-              {t('開插畫原圖', 'open the illustration')}
-            </a>
-          </p>
-        )}
         {onBackToCard && (
           <button
             type="button"
