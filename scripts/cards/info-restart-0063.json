@@ -1,0 +1,148 @@
+{
+  "id": "0063",
+  "name": "角鸊鷉",
+  "scientificName": "Podiceps auritus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危",
+    "assessmentNote": "全球VU；香港偶見（單一記錄）"
+  },
+  "illustrationTaxon": "Podiceps auritus adult in breeding plumage; main image and diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "小鸊鷉（繁殖羽）",
+      "scientificName": "Tachybaptus ruficollis",
+      "asset": "little-grebe.png",
+      "framing": "whole-bird",
+      "sex": "adult breeding",
+      "distinction": "小鸊鷉較小（25–29 cm）、體形矮圓、深冠淡眼，繁殖羽有橙褐頰頸和黃色嘴角斑；角鸊鷉稍大，頭頂具金黃色角狀耳羽、紅眼及胸栗色頸。"
+    },
+    {
+      "zh": "鳳頭鸊鷉（冬羽）",
+      "scientificName": "Podiceps cristatus",
+      "asset": "great-crested-grebe.png",
+      "framing": "whole-bird",
+      "sex": "non-breeding adult",
+      "distinction": "鳳頭鸊鷉體型大得多（46–61 cm）、長頸、長而纖細的淡色喙，冬羽白臉白前頸與深色冠；角鸊鷉約31–38 cm，繁殖羽有金黃色角狀耳羽及栗色頸胸。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "金黃角狀耳羽",
+    "紅眼與深色頭",
+    "栗色頸胸與黑背",
+    "尖喙帶淡色喙端"
+  ],
+  "featureNotes": [
+    "繁殖羽耳後有明顯金黃角狀羽簇，是名稱特徵",
+    "虹膜紅色，頭部及喉部深色，與栗色頸胸對比",
+    "頭頸胸為濃栗色，背及上體深色",
+    "喙直而尖，尖端帶淡色；頭頂輪廓較平"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-breeding-winter-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分繁殖／越冬國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "RUS",
+      "NOR",
+      "SWE",
+      "FIN",
+      "ISL",
+      "CAN",
+      "USA",
+      "CHN",
+      "JPN",
+      "KOR"
+    ],
+    "note": "Partial overview of countries intersecting the broad Holarctic range: breeding mainly across northern regions of Eurasia and North America, with wintering on coasts of Europe and East Asia and along both North American coasts. The selected countries are only an overview, not nationwide occupancy or exact seasonal/subspecies polygons; Hong Kong's single accidental record is not marked as resident range.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009200",
+      "use": "Full HKBWS account read: Category I accidental in Hong Kong, with a single record off the Mai Po boardwalk on 9 April 1996, in breeding plumage. Adult breeding identification: flat-crowned head, straight pale-tipped bill, red eye, golden-yellow ear tufts, rich rufous-brown underparts and dark upperparts. HKBWS describes winter separation from Black-necked Grebe by a crisp dark-cap/white-cheek boundary and paler fore-neck. IUCN Vulnerable, global population decreasing rapidly; global status and Hong Kong single record are kept distinct. Eurasian breeding/winter range and North American subspecies described separately."
+    },
+    {
+      "url": "https://ebird.org/species/horgre",
+      "use": "Cornell eBird/Merlin account read: compact grebe; golden ear tufts behind red eye and rich chestnut neck/body in breeding plumage; winter birds have black cap and contrasting white cheek. Cross-check for taxon-specific adult art."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009000",
+      "use": "Full HKBWS Little Grebe account read for comparator: 25–29 cm, compact rounded body, dark crown and pale eyes, short blunt bill; adult breeding plumage has orange-brown cheeks/neck and yellow gape mark."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009100",
+      "use": "Full HKBWS Great Crested Grebe account read for comparator: 46–61 cm, much larger long-necked bird with long slender largely pale bill; winter plumage white face/fore-neck and dark crown/eye-bill stripe."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six runtime score values; vEst=1, so preserve renderer's length-estimate annotation exactly as generated."
+    },
+    {
+      "path": "cards/art/info-restart-0062/great-crested-grebe.png",
+      "use": "Reused previously generated and reviewed Great Crested Grebe winter-plumage comparison illustration; correct taxon and seasonal plumage, no new image generated due per-turn image generation limit."
+    }
+  ],
+  "notes": [
+    "Main illustration is the adult breeding plumage. Hong Kong has only a single accepted accidental record, in breeding plumage; the global distribution map does not imply local residency.",
+    "Comparisons are correctly named Little Grebe in breeding plumage and Great Crested Grebe in winter plumage; circles are not to scale.",
+    "Score dimensions and overall score are app entertainment metrics, not scientific evaluation; use runtime values exactly and keep vEst note.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial world-country overview, not exact range or Hong Kong occurrence polygon.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, or app slim-registration change."
+  ],
+  "featureSources": [
+    "feature-ear-tufts.png",
+    "feature-eye.png",
+    "feature-chestnut.png",
+    "feature-bill.png"
+  ]
+}

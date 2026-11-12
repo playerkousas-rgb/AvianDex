@@ -1,0 +1,134 @@
+{
+  "id": "0054",
+  "name": "黑海番鴨",
+  "scientificName": "Melanitta americana",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危",
+    "assessmentNote": "IUCN全球近危；香港僅有偶見記錄"
+  },
+  "illustrationTaxon": "Melanitta americana adult male; all male-specific feature art explicitly identified",
+  "similarSpecies": [
+    {
+      "zh": "普通海番鴨（雄鳥）",
+      "scientificName": "Melanitta nigra",
+      "asset": "common-scoter.png",
+      "sex": "male",
+      "distinction": "普通海番鴨雄鳥全身黑色，喙頂為較平的黃色楔形；沒有黑海番鴨大型橙黃腫瘤狀喙基。"
+    },
+    {
+      "zh": "絲絨海番鴨（雄鳥）",
+      "scientificName": "Melanitta fusca",
+      "asset": "velvet-scoter.png",
+      "framing": "whole-bird",
+      "sex": "male",
+      "distinction": "絲絨海番鴨雄鳥有明顯白色翼斑及眼下白斑；黑海番鴨雄鳥兩者皆無，並具大型橙黃喙瘤。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.15,
+      0.17,
+      0.49,
+      0.51
+    ],
+    [
+      0.43,
+      0.43,
+      0.78,
+      0.78
+    ],
+    [
+      0.46,
+      0.18,
+      0.84,
+      0.56
+    ],
+    [
+      0.12,
+      0.15,
+      0.65,
+      0.68
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥橙黃喙瘤",
+    "雄鳥全暗無白翼斑",
+    "下翼覆羽與飛羽色差",
+    "短頸厚實體型"
+  ],
+  "featureNotes": [
+    "大型亮橙黃色腫瘤位於上喙基部",
+    "休息時全身暗色，折翼沒有白色斑塊",
+    "飛行時下翼覆羽深暗，飛羽底面較淡灰；不代表白色翼斑",
+    "身形厚實、頸短，符合海番鴨外觀"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "flight.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "USA",
+      "CAN",
+      "RUS",
+      "JPN",
+      "CHN"
+    ],
+    "note": "Full-world country overview from the disjunct North American and eastern Siberian breeding range and Pacific coastal winter range described by HKBWS, with China records also noted there. Only selected countries are highlighted; green is not nationwide occupancy and this is not a complete distribution or a precise occurrence polygon. Hong Kong's single accidental record is not plotted as an established range; IUCN NT is a global assessment, not local frequency.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/003300",
+      "use": "Full HKBWS account read: Hong Kong Category I accidental, sole first-winter record at Mai Po on 9 Dec 2007; 45–49 cm; male all dark without white in wing and large bright swollen orange-yellow upper-bill-base knob; female dark brown with dark cap extending behind eye and contrasting pale lower face; underwing coverts very dark against paler grey flight-feather undersides. Male Common Scoter comparison and global IUCN Near Threatened with moderately rapid decline also described."
+    },
+    {
+      "url": "https://ebird.org/species/blksco1",
+      "use": "Cornell eBird Common Scoter profile read: male wholly black with a yellow wedge on the bill top and female dark brown with pale cheeks; used as a clearly named male comparison, not a Hong Kong occurrence claim."
+    },
+    {
+      "url": "https://ebird.org/species/whwsco3",
+      "use": "Cornell eBird Velvet Scoter profile read: male dark with a white mark below the eye, broad white wing patch, yellow bill with dark knob and subtle pink tip; used as a clearly named male comparison."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "No score record exists for 0054; all six component values and overall score remain pending. No value is inferred, filled with zero, or recomputed."
+    }
+  ],
+  "notes": [
+    "AI illustrations are separately generated, species-specific art and receive basic visual review only; no independent ornithologist has validated the artwork.",
+    "Male Black Scoter features use the corrected features.png and flight.png. The earlier generated pair image with an erroneous white wing patch on the purported male is rejected and not referenced.",
+    "The four closeups cover male bill knob, unmarked folded wing, correct underwing tone contrast in flight, and stocky short-necked form. No female is shown or inferred.",
+    "Comparison circles are not to scale. Common and Velvet Scoters are explicitly labelled male comparisons, not Hong Kong abundance claims.",
+    "Map uses a full-world Natural Earth basemap and selected-country overview only; no country is shown as entirely occupied, and no Hong Kong occurrence is implied.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, or app slim-registration change."
+  ]
+}

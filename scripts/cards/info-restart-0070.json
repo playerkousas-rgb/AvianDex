@@ -1,0 +1,157 @@
+{
+  "id": "0070",
+  "name": "綠翅金鳩",
+  "scientificName": "Chalcophaps indica",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港稀疏林地留鳥"
+  },
+  "illustrationTaxon": "Chalcophaps indica adult male; main image and diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "珠頸斑鳩（成鳥）",
+      "scientificName": "Spilopelia chinensis",
+      "asset": "spotted-dove.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "珠頸斑鳩身體褐粉色、尾長，頸側有佈滿白點的黑色斑塊；綠翅金鳩較細短尾，金屬綠翼、紅喙，成雄額前有銀白色斑。"
+    },
+    {
+      "zh": "灰斑鳩（成鳥）",
+      "scientificName": "Streptopelia decaocto",
+      "asset": "collared-dove.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "灰斑鳩較大且身體素淡粉灰、頸後黑半環；綠翅金鳩體型較小，具鮮綠虹彩翼羽、鮮紅喙及銀白額前。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.5,
+      0.16,
+      0.78,
+      0.4
+    ],
+    [
+      0.3,
+      0.32,
+      0.7,
+      0.67
+    ],
+    [
+      0.66,
+      0.16,
+      0.84,
+      0.38
+    ],
+    [
+      0.18,
+      0.2,
+      0.58,
+      0.58
+    ]
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "female.png"
+  ],
+  "featureLabels": [
+    "銀額灰冠",
+    "翠綠翼羽",
+    "紅喙黑眼",
+    "雌額少銀"
+  ],
+  "featureNotes": [
+    "雄鳥銀白色延伸至額前，灰冠與深色後頸清晰對比",
+    "肩羽及翼上覆羽呈亮麗金屬綠，飛羽則暗色",
+    "雄鳥喙鮮紅、虹膜黑色；足灰紅色",
+    "雌鳥頭部較暗，銀白色不明顯延伸至額前；幼鳥較褐且覆羽有栗色羽緣"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "NPL",
+      "IND",
+      "BGD",
+      "BTN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "TWN",
+      "MYS",
+      "SGP",
+      "IDN"
+    ],
+    "note": "Partial broad native-range country overview: Nepal and eastern India east through Southeast Asia to the Lesser Sundas. In China, the range is restricted to southern provinces from Yunnan to Fujian, Zhejiang and Taiwan. Highlights are broad context only, not nationwide occupancy or exact range polygons; Hong Kong local occurrence is described separately.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006800",
+      "use": "Full HKBWS account read (chunks 0–1): Category I, scarce but widespread resident in forest/shrubland; small short-tailed dove. Male: gray crown/nape, silver forecrown, dark grey mantle, bright iridescent green scapulars and coverts, very dark flight feathers/tail, dark greyish-pink underparts paler on belly, bright red bill, greyish-red tarsi, black iris; two white lower-back bars conspicuous in flight. Female duller with silver not markedly extending to forecrown; juvenile browner with rufous covert tips forming wing bar. Widespread but sparse across HK, especially wooded habitats. Global IUCN LC, trend decreasing. Native range Nepal/eastern India to Lesser Sundas; China range southern provinces from Yunnan to Fujian/Zhejiang/Taiwan."
+    },
+    {
+      "url": "https://ebird.org/species/emedov2",
+      "use": "Cornell eBird/Merlin account read: bright green wings, coral-red bill and ash-gray forehead; male has extensive silver cap absent in female; forest-floor dove in wooded habitats."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006600",
+      "use": "Full HKBWS Spotted Dove account read: 31 cm, slender long-tailed urban/rural resident; pinkish-grey underparts and dark neck patch covered in white spots; comparator only."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006400",
+      "use": "Full HKBWS Eurasian Collared Dove account read: larger, pale pink-grey dove with black nape half-collar and long tail; comparator only."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six runtime score values; do not recalculate."
+    },
+    {
+      "path": "cards/art/info-restart-0066/spotted-dove.png",
+      "use": "Previously reviewed adult Spotted Dove illustration, reused as a small comparator."
+    },
+    {
+      "path": "cards/art/info-restart-0067/pixel.png",
+      "use": "Previously reviewed Eurasian Collared Dove illustration, reused as a small comparator."
+    }
+  ],
+  "notes": [
+    "Main image is adult male; preserve sex difference: female is duller and silver on head does not extend markedly to forecrown; juvenile is browner with rufous wing covert tips.",
+    "Hong Kong Category I is scarce but widespread resident in wooded habitats; global LC and global population trend decreasing are separate facts.",
+    "Comparators are labelled as adults; circles are illustrative and not to scale. Species is distinctive when seen well; comparisons provide visual context, not confusion claims.",
+    "Scores are app entertainment metrics, not scientific evaluation; use runtime values exactly.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial native-range country overview, not exact range polygons or local occurrence map.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, app slim-registration or shared renderer change."
+  ]
+}

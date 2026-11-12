@@ -1,0 +1,156 @@
+{
+  "id": "0074",
+  "name": "紅翅綠鳩",
+  "scientificName": "Treron sieboldii",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC趨勢下降；香港稀少冬候／過境"
+  },
+  "illustrationTaxon": "Treron sieboldii adult male; adult male maroon wing patch",
+  "similarSpecies": [
+    {
+      "zh": "楔尾綠鳩（成鳥雄）",
+      "scientificName": "Treron sphenurus",
+      "asset": "wedge-tailed-green-pigeon.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "楔尾綠鳩雄鳥有銅金冠胸及栗色肩羽，尾下覆羽淡肉桂色、尾基寬呈楔形；紅翅綠鳩有更白的腹部與尾下覆羽，雄鳥紫紅翼斑更鮮明。"
+    },
+    {
+      "zh": "厚嘴綠鳩（成鳥雄）",
+      "scientificName": "Treron curvirostra",
+      "asset": "thick-billed-green-pigeon.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "厚嘴綠鳩有粗厚淡色紅基喙、寬闊藍綠眼圈與栗紅肩斑；紅翅綠鳩喙較灰細、眼圈狹窄並有醒目白腹及雄鳥紫紅翼斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.32,
+      0.48,
+      0.56,
+      0.72
+    ],
+    [
+      0.3,
+      0.32,
+      0.64,
+      0.62
+    ],
+    [
+      0.08,
+      0.12,
+      0.46,
+      0.45
+    ],
+    [
+      0.24,
+      0.15,
+      0.42,
+      0.33
+    ]
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "featureLabels": [
+    "醒目白腹",
+    "雄鳥紫紅翼",
+    "灰喙藍基",
+    "窄藍眼圈"
+  ],
+  "featureNotes": [
+    "兩性均有明顯白腹及較淡色尾下覆羽",
+    "成年雄鳥有鮮明紫紅色翼斑；雌鳥缺少此斑",
+    "喙灰色、基部帶藍",
+    "眼圈較楔尾綠鳩狹窄，呈藍色"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "CHN",
+      "TWN",
+      "JPN",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM"
+    ],
+    "note": "Partial broad native-range context from northern Thailand and northern Indochina to central/eastern China, Taiwan and Japan. Mainland Chinese subspecies limits are imperfectly known; highlights are geographic context only and do not imply nationwide occupancy. Hong Kong records are separately described as rare winter visitors and passage migrants.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/007200",
+      "use": "Full HKBWS White-bellied Green Pigeon account read: Category I, rare winter visitor and passage migrant in HK; 33 cm. Grey bill with bluish base and narrow blue eye-ring; compared with Wedge-tailed, has whiter belly and undertail ground and lacks chestnut upperparts. Recorded in central/northwest NT and on Po Toi and Tung Ping Chau; records since 1983, mostly 23 Oct–14 Nov and 25 Dec–3 Feb, plus one 23 Apr. HKBWS reports global IUCN LC, decreasing trend. Native distribution includes northern Thailand, northern Indochina, central/eastern China, Taiwan and Japan; mainland subspecies distribution imperfectly known."
+    },
+    {
+      "url": "https://ebird.org/species/whbpig1",
+      "use": "Cornell eBird/Merlin account read: both sexes green overall with yellowish-green heads (brighter in males), pale belly and olive-green wings; males have vivid maroon wing patch; global IUCN LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/007100",
+      "use": "Full HKBWS Wedge-tailed Green Pigeon account read for comparator: single HK record, 2016; male has coppery-gold crown/breast and chestnut scapulars, with pale cinnamon undertail coverts and broad wedge-shaped tail."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/007000",
+      "use": "Full HKBWS Thick-billed Green Pigeon account read for comparator; adult male has thick pale red-based bill, broad blue-green eyering and maroon shoulder patch."
+    },
+    {
+      "url": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "url": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "url": "src/data/dexScores.json",
+      "use": "Authoritative runtime six score values; no vEst property."
+    },
+    {
+      "path": "cards/art/info-restart-0073/white-bellied-green-pigeon.png",
+      "use": "Previously visually checked AI illustration of adult male White-bellied Green Pigeon; main image, reused for matching species."
+    },
+    {
+      "path": "cards/art/info-restart-0073/pixel.png",
+      "use": "Previously visually checked AI illustration of adult male Wedge-tailed Green Pigeon; comparator only."
+    },
+    {
+      "path": "cards/art/info-restart-0073/thick-billed-green-pigeon.png",
+      "use": "Previously visually checked AI illustration of adult male Thick-billed Green Pigeon; comparator only."
+    }
+  ],
+  "notes": [
+    "Main image and feature circles show an adult male to make the diagnostic maroon wing patch visible; females lack the patch and are more uniformly green.",
+    "HKBWS Category I is local rare winter visitor/passage migrant status; global IUCN LC and decreasing trend are distinct.",
+    "Comparators are adult males; circles illustrative and not to scale.",
+    "Scores are app entertainment metrics, not scientific evaluation; use runtime values exactly.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial native-range country overview, not an exact distribution polygon or Hong Kong occurrence map.",
+    "HKBWS profile suffixes do not match AvianDex runtime IDs: Red-winged/White-bellied Green Pigeon is HKBWS /007200; the same species is runtime 0074.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, app slim-registration or shared renderer change.",
+    "Visual inspection adjusted the white-belly zoom to focus on the diagnostic patch and shifted the bill zoom left so the whole beak stays inside its circle."
+  ]
+}

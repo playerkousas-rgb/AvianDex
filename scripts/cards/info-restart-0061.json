@@ -1,0 +1,135 @@
+{
+  "id": "0061",
+  "name": "鵪鶉",
+  "scientificName": "Coturnix japonica",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危",
+    "assessmentNote": "全球NT；香港稀少過境／冬候鳥"
+  },
+  "illustrationTaxon": "Coturnix japonica adult male; main image and diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "黃腳三趾鶉（雌鳥／幼鳥）",
+      "scientificName": "Turnix tanki",
+      "asset": "yellow-legged-buttonquail.png",
+      "framing": "whole-bird",
+      "sex": "female or immature",
+      "distinction": "黃腳三趾鶉體型更小（15–18 cm，約鵪鶉的75%），喙腳偏黃；飛起時上翼淺色覆羽與深色飛羽反差明顯。鵪鶉稍大（17–19 cm），飛行上翼較素、外側初級飛羽較長。"
+    },
+    {
+      "zh": "中華鷓鴣（雄鳥）",
+      "scientificName": "Francolinus pintadeanus",
+      "asset": "chinese-francolin.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "中華鷓鴣明顯較大型（約31–34 cm）、具黑白面紋框白頰、黑底白點胸脇及栗冠側；鵪鶉只有17–19 cm，雄鳥紅褐臉喉、寬奶油眉紋及淡褐胸脇。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.16,
+      0.89,
+      0.44
+    ],
+    [
+      0.58,
+      0.13,
+      0.83,
+      0.33
+    ],
+    [
+      0.44,
+      0.4,
+      0.78,
+      0.7
+    ],
+    [
+      0.24,
+      0.3,
+      0.63,
+      0.66
+    ]
+  ],
+  "featureLabels": [
+    "紅褐臉喉與奶油眉紋",
+    "暗色頭冠與寬眉紋",
+    "淡褐胸脇與細緻斑駁",
+    "褐色斑駁上翼"
+  ],
+  "featureNotes": [
+    "雄鳥紅褐臉喉，配上寬闊奶油色眉紋與深色頭冠",
+    "淡色眉紋從眼上延伸，與深色冠部形成對比",
+    "胸脇帶暖淡褐色，羽毛有細碎斑駁而非大片白斑",
+    "上翼褐色細紋相對素雅；與三趾鶉飛行時淺覆羽、深飛羽的強烈反差不同"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-seasonal-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分繁殖／越冬國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "JPN",
+      "PRK",
+      "KOR",
+      "MMR",
+      "LAO",
+      "VNM"
+    ],
+    "note": "Partial country overview of broad breeding and wintering range described by HKBWS: breeding from the Lake Baikal area east/southeast to Sakhalin, northeast China and northern Japan; wintering on the Korean Peninsula, southern Japan, much of China south of the Yellow River and northern Indochina west to Myanmar. Selected countries are highlighted only as an overview; green does not mean entire-country occupancy, seasonal boundaries are not distinguished, and this is not a precise range polygon. Hong Kong's passage/winter records are not depicted as resident range.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/003800",
+      "use": "Full HKBWS account read: Japanese Quail 17–19 cm; male rufous face/throat, broad creamy supercilium, dark crown, buff chest/flanks; female duller with dark breast mottling. In Hong Kong scarce autumn migrant, rare winter and spring migrant; most records Oct–Feb, with weak passage to mid-May. IUCN Near Threatened, trend suspected moderately rapid decline due to hunting/agricultural change. Breeding range Lake Baikal east/southeast to Sakhalin, northeast China, northern Japan; winters Korean Peninsula, southern Japan, much of China south of Yellow River, and northern Indochina west to Myanmar. The source notes flight separation from buttonquails: Japanese Quail is slightly larger, has plain upperwings and longer outer wing. Local status and global IUCN are distinct."
+    },
+    {
+      "url": "https://ebird.org/species/japqua",
+      "use": "Cornell eBird/Merlin species account for cross-checking Japanese Quail field marks and species identity."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009400",
+      "use": "Full HKBWS Yellow-legged Buttonquail account read: 15–18 cm, about 75% Japanese Quail size, yellowish bill/legs, patterned upperparts; flushed birds show contrast between pale upperwing coverts and darker flight feathers. Female/immature plumage duller/greyer than orange-brown-headed male. Hong Kong rare passage migrant; global IUCN LC. Supports explicitly labelled extralimital comparator, not conflation with Japanese Quail."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/003700",
+      "use": "Full HKBWS Chinese Francolin account read for comparator: much larger, male black face pattern surrounding white cheeks and throat, rufous crown sides, white-spotted dark body and yellowish-orange legs."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six runtime score values and overall score; includes vEst=1, so retain renderer's body-length estimate note without inventing/replacing its value."
+    }
+  ],
+  "notes": [
+    "AI illustrations depict adult male Japanese Quail as main species; buttonquail and francolin comparisons remain correctly named taxa and are not relabelled as quail.",
+    "Score dimensions are app entertainment metrics, not scientific evaluation; use runtime values exactly and keep vEst note as generated by renderer.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation. Comparison circles are not to scale.",
+    "Map uses Natural Earth world basemap and selected-country seasonal range overview only, not precise seasonal polygons or local Hong Kong occurrence map.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, or app slim-registration change."
+  ]
+}

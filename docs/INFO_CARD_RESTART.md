@@ -1,3 +1,5 @@
+> **交接閱讀入口：`docs/INFO_CARD_AGENT_HANDOFF.md`。以下為累積歷史，後文更正取代前文狀態。PR25 的0051–0077紀錄已保留；0078–0081以本分支重製版為準。已完成量及下一批目標請向用戶確認。**
+
 # 資訊卡由 0001 重新開始
 
 ## 最新指示及範圍
@@ -438,6 +440,266 @@ python3 scripts/cards/render-info-restart-0001.py
 - renderer 支援缺失評分待查、featureSources 雌／幼鳥獨立來源、world bounds 檢查、vEst 及 assessmentNote 註明，不再產生 ZIP；不改 UI 或 runtime scores／taxonomy／卡面註冊。
 - 提交前 38 份 JSON 基本結構／名稱／學名／0014+世界 bounds 驗證及 Python compile 通過；新環境首次 build 缺 tsc，安裝 `npm ci --no-audit --no-fund` 後 `npm run build` 通過。
 
+
+## PR25歷史整合（0051–0077保留；其0078–0081舊版已被取代）
+
+## 0051–0100（另一 Agent）實際製作紀錄
+
+### 0051 斑背潛鴨：已檢視並直接上載 Google Drive
+
+- 規格：`scripts/cards/info-restart-0051.json`；使用 main 的共用 renderer/compositor，1024×1536 slim。沒有改動版式、UI、Service Worker、runtime taxonomy/scores 或 slim 註冊。
+- 依 runtime 確認名稱斑背潛鴨、Aythya marila、雁形目／鴨科；六項 app 分數 i=2.0、a=3.8、r=4.8、c=3.0、v=4.1、o=3.5，沒有重算。vEst 未設，故無體長估算註記；renderer 的缺分相容能力沿用 main。
+- HKBWS Avifauna https://avifauna.hkbws.org.hk/species/0020/003100 全頁已讀：40–51 cm；香港為 Category I、罕見冬候鳥，集中後海灣；雄鳥繁殖羽圓頭無冠、綠光黑頭、藍黑胸、細密灰白蟲紋背及純白脅；雌鳥褐色、喙基白斑較大。IUCN 全球 LC、趨勢下降；香港罕見程度與全球 IUCN 評級分開呈現。
+- 鳳頭潛鴨比較查閱 HKBWS https://avifauna.hkbws.org.hk/species/0020/003000；小潛鴨比較查閱 Cornell All About Birds https://www.allaboutbirds.org/guide/Lesser_Scaup/id。主像為雄鳥；第四特寫清楚標示同種雌鳥。兩個相似種比較分別標示雄鳥，北美小潛鴨只作易混淆比較，不暗示香港出現。
+- 全世界底圖 bounds `[-180,-90,180,90]`；綠色為部分原生分佈國家，卡面明示「綠色非全境；非完整分佈」，不是精確分佈多邊形。小潛鴨雄鳥比較圖已重製，最新圓裁切清楚呈現其後頂小尖峰；與鳳頭潛鴨明顯較長的後垂冠羽可區分。完整預覽、四個特寫圈、比較圈、文字及評分均重新檢查；AI 插圖只作基本目視檢查，未經獨立鳥類專家驗證。
+- 最新成品 `deliver/cards/info-restart-0051/aviandex/0051.avif`：144,270 bytes，SHA256 `b6ac948a4770b4951ca1b9ce6ef43ee0b87cf591ff2ade2f80a2d76061665167`，MD5 `553af7c06b12e512f7b4428964499d49`；AVIF 已解碼確認 1024×1536。
+- 初版 Drive file `1oO6t3D2f-1nIe3LbCVxceIorHzg24nXJ` 因視覺修正已移至垃圾桶。上載前查到此一舊同名檔；先上載修正版再以 `get_file` 核對新 file ID `1LGj1suEbU9Fbm0z3-G6_cy04T-L1WJxM`、parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、144,270 bytes 及 MD5 均相符，之後移除舊檔，目前資料夾只留一個 0051。沒有 ZIP 或 R2，交付 manifest 已更新。
+- 0051 比較圖已修正並重新上載；新 Drive file ID `1LGj1suEbU9Fbm0z3-G6_cy04T-L1WJxM`，舊版已移至垃圾桶，資料夾沒有同名副本。0052、0053 及 0054 的獨立 AVIF 亦已完成上載及 metadata 核對。
+
+### 0052 絲絨海番鴨：已檢視並直接上載 Google Drive
+
+- 規格及來源：`scripts/cards/info-restart-0052.json`。HKBWS 嘗試頁面 `https://avifauna.hkbws.org.hk/species/0020/003200` 只有通用頁殼，沒有物種正文；以 Cornell eBird `https://ebird.org/species/whwsco3` 核對雄鳥單一眼下白斑、黃色喙及白翼鏡、雌鳥褐色及兩個淺色頭斑；IUCN/BirdLife 2020 評估為全球 VU 易危，非香港出現頻度。黑海番鴨比較採 HKBWS `https://avifauna.hkbws.org.hk/species/0020/003300`：雄鳥全黑、無白翼、具橙黃色喙瘤，香港僅有單一記錄。
+- runtime 名稱／分類均相符；runtime `a=2.8, r=1, v=4.4, o=2.7, vEst=1`，`i/c` 缺值保持「待查」，不補零或重算。卡面可見體長估算註記。
+- 主圖是單白眼下斑的雄鳥像素圖；四特徵圈含黃喙、眼下白斑、白翼鏡及明確標示的雌鳥雙頭斑。兩個比較是雄性黑海番鴨及明確標示的同種雌鳥。曾由 `features.png` 裁取雌鳥頭像另存 `female.png`；不是換色冒充另一種。已逐項看完整預覽、特寫及比較圓裁切；AI 插圖僅基本目視檢查，未經獨立鳥類專家驗證。
+- 世界底圖 bounds `[-180,-90,180,90]`；國家高亮僅北歐／西西伯利亞及歐洲、黑海—裏海區域的部分概覽，明示綠色非全境／非完整分佈，不是精確季節多邊形，亦不暗示香港分佈。
+- 成品 `deliver/cards/info-restart-0052/aviandex/0052.avif`：1024×1536、149,054 bytes，SHA256 `a9099e1ffeb168c5193541756db954ab0fbbdea4fd4cd0b02ce0f9051efbbdc9`，MD5 `844119a2756e656c5ce6f534d4fd630f`；AVIF 已解碼。
+- 上載前指定資料夾按 `0052.avif` 查得 0 個同名檔；直傳單張 AVIF，Drive file ID `1r57Uh2fYJ0mD7-rh6kfDeleTFltvP1Ar`。`get_file` 核對 parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、bytes 149,054、MD5 均一致。本機 manifest／README 已更新。無 ZIP、R2、UI、Service Worker、app slim 註冊或 renderer 改動。
+
+### 0053 紅胸田雞：已檢視並直接上載 Google Drive
+
+- runtime 名稱／分類為紅胸田雞 *Zapornia fusca*、鶴形目／秧雞科。`dexScores` 無 0053 記錄，六項及綜合分全數待查；不補零、不推算。
+- HKBWS Avifauna `https://avifauna.hkbws.org.hk/species/0060/008000` 全頁已讀：香港 Category I，稀少過境及冬候鳥，常見於濃密淡水／微鹹濕地；成鳥橙褐額、深紅頰喉胸及上腹、冷褐上體、下腹與尾下稀疏白橫斑、深紅腿腳；IUCN 全球 LC、趨勢下降。香港季節性稀少程度與全球 IUCN 評級分開呈現。
+- 比較紅腳苦惡鳥 *Zapornia akool*（橄欖褐／灰、淡喉、紫紅腿）及小田雞 *Zapornia pusilla*（較小、灰色臉／下體、具白斑褐色上體、脅尾下密集黑白橫斑、黃綠腿），兩者均有 HKBWS 來源記錄於 `scripts/cards/info-restart-0053.json`。
+- 四張獨立素材及完整 preview 已逐項看；主鳥胸色／喙／深紅腿、特寫的尾下白斑及腿腳、兩種比較圈均可辨。AI 插圖只有基本視覺審核，未經獨立鳥類專家驗證。
+- 地圖 bounds `[-180,-90,180,90]`，以部分國家作範圍概覽，清楚標示綠色非全境／非完整分佈。
+- 成品 `deliver/cards/info-restart-0053/aviandex/0053.avif`：1024×1536、174,014 bytes，SHA256 `7b31f4e8151e7bd99be2f494b9f842ea7a4c9796936b129040e5f5184ea742b4`，MD5 `4dc65b76b4de4f907f1541b5d0eca4c2`；Drive file ID `1qTgtskoSQmH2s7qB7Vr4zy-eRfvkkWed`。上載前查 0 同名檔；Drive `get_file` 核對 parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、bytes、MD5 均相符。本機 manifest 已更新；無 ZIP、R2、UI／Service Worker／slim 註冊或共用 renderer 改動。
+
+### 0054 黑海番鴨：已檢視並直接上載 Google Drive
+
+- 規格 `scripts/cards/info-restart-0054.json`，使用 runtime 黑海番鴨 *Melanitta americana*／雁形目／鴨科。`dexScores` 沒有此 ID，六項及綜合分保持待查；不補零、不推算。HKBWS `https://avifauna.hkbws.org.hk/species/0020/003300` 全文已讀：香港 Category I 偶見，僅 2007 年 12 月 Mai Po 一筆記錄；雄鳥全暗、無白翼及大型橙黃喙瘤，雌鳥暗褐、深色頭帽及較淡下半臉，全球 IUCN NT。卡面明確分開全球近危與香港偶見狀態。
+- 比較來源：Cornell eBird Common Scoter `https://ebird.org/species/blksco1`（雄鳥黃楔喙，無大型腫瘤狀橙黃喙瘤）及 Velvet Scoter `https://ebird.org/species/whwsco3`（雄鳥白翼斑及眼下白斑）。兩者均明確標示雄鳥，不暗示香港出現或常見。
+- 最終素材 `pixel.png`、修正後 `features.png`、`flight.png` 及兩種比較圖均已目視。第一版 `features.png` 曾把黑海番鴨雄鳥畫成有白翼斑，與來源矛盾，已排除並重新生成；最終卡沒有引用錯誤版本。四個圈分別是喙瘤、全暗無白翼、飛行時下翼覆羽與較淡飛羽底面、短頸厚實體型。完整預覽已看，標籤與裁切可辨；AI 插圖僅基本目視審核，未經鳥類專家驗證。
+- 地圖全世界 bounds `[-180,-90,180,90]`，只高亮 USA/CAN/RUS/JPN/CHN 的部分範圍，卡面明示綠色非全境／非完整分佈；香港單一偶見記錄沒有當成常態分佈標示。
+- 成品 `deliver/cards/info-restart-0054/aviandex/0054.avif`：1024×1536、151,990 bytes，SHA256 `7aa3ef75290be8271c3781771ce377cb3a6c912ce829ff1852e960561b5938aa`，MD5 `efc313f03da140397b76faa321729dc0`；AVIF 解碼通過。
+- 上載前指定資料夾查得 0 個同名 `0054.avif`；已直傳單張 AVIF，Drive ID `1J251YexXUZpGi_P4a_3bDovT2y88TpVr`。`get_file` 核對 parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、bytes 151,990、MD5 均與本機一致。無 ZIP、R2、UI、Service Worker、app slim 註冊或共用 renderer 改動。
+
+### 0055 鵲鴨：已檢視並直接上載 Google Drive
+
+- 規格 `scripts/cards/info-restart-0055.json`；runtime 名稱為鵲鴨 *Bucephala clangula*，雁形目／鴨科。六項 runtime 分數為 i=2、a=3.3、v=4.2、r=4.8、c=3、o=3.5；沒有重算綜合分。無 `vEst`，故不加體長估算註記。
+- HKBWS Avifauna `https://avifauna.hkbws.org.hk/species/0020/003400` 已讀：香港 Category I 偶見；記錄包括 1981–82 年米埔一隻雌鳥及 1997 年船灣淡水湖五隻，1932 年記錄缺乏佐證。全球 IUCN LC、趨勢穩定，與香港偶見狀態分開表述。雄鳥繁殖羽有綠光暗頭、短喙基部橢圓白斑、淡黃眼、白頸胸脅、深色背尾及大塊白翼；雌鳥褐頭、灰胸脅、褐上體及尾。
+- 比較依據：Cornell Lab 鵲鴨／冰島鵲鴨比較 `https://www.allaboutbirds.org/guide/Barrows_Goldeneye/species-compare/`；冰島鵲鴨雄鳥白斑為新月形，鵲鴨為圓／橢圓形，並可見冰島鵲鴨白脅黑色側突。HKBWS 白秋沙鴨 `https://avifauna.hkbws.org.hk/species/0020/003500`；繁殖羽雄鳥白色頭身具明顯黑眼罩，與鵲鴨不同。比較圖均標明雄鳥；冰島鵲鴨只作北美易混淆比較，不暗示香港出現。第四特徵圈使用獨立雌鳥素材並明示同種雌鳥。
+- 全卡預覽、四個特徵圈、兩個比較圓裁切、標籤、評分及地圖均已目視；重點包含雄鳥圓白頰斑、金黃眼、白翼窗及雌鳥褐頭灰脅。AI 插圖僅基本目視檢查，未經獨立鳥類專家驗證。
+- 世界底圖 bounds `[-180,-90,180,90]`；部分國家概覽，卡面明示「綠色非全境；非完整分佈」，不是精確季節分佈多邊形。香港偶見紀錄未當作已建立的常態分佈。
+- 成品 `deliver/cards/info-restart-0055/aviandex/0055.avif`：1024×1536、165,227 bytes，SHA256 `104eca04bff5c15d18e0be3404b77a749e741198d400601209c4df2da9183f4d`，MD5 `483e2d7e8f8d6b26ec45a66e6c6a5c72`；本機 AVIF 解碼成功。
+- 上載前指定 Drive 資料夾查得 0 個同名檔；已直傳獨立 `0055.avif`，Drive file ID `18i-yTk1pC0XQMSSgvel2R46l72TxA4XK`。`get_file` 及資料夾查詢均核對到唯一一份檔案；parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、165,227 bytes、MD5 均與本機一致。無 ZIP、R2、UI、Service Worker、app slim 註冊或共用 renderer 改動。
+
+### 0056 白秋沙鴨：已檢視並直接上載 Google Drive
+
+- Runtime：白秋沙鴨 *Mergellus albellus*，雁形目／鴨科；i=2、a=4.3、v=4、r=1、c=1.2、o=2.5，沒有重算。HKBWS `https://avifauna.hkbws.org.hk/species/0020/003500` 全文已讀：香港稀少冬候鳥，成年雄鳥繁殖羽白身黑眼罩；雌鳥／幼鳥灰身、栗冠後頸及白喉；全球 IUCN LC、趨勢下降。香港狀態與全球評級分開。
+- 易混淆種來源已核：HKBWS 鵲鴨 `https://avifauna.hkbws.org.hk/species/0020/003400`、紅胸秋沙鴨 `https://avifauna.hkbws.org.hk/species/0020/003600`。兩個比較均標示雄鳥。鵲鴨使用 0055 已審閱、未改色的物種專屬成年雄鳥插圖；紅胸秋沙鴨另生成雄鳥圖。四圈為雄鳥眼罩、肩頸紋、黑翼與脅紋，以及明確標示的雌／幼鳥栗冠白喉。
+- 完整預覽、四個特寫、兩個比較圓裁切、文字評分與全世界地圖均已目視；bounds `[-180,-90,180,90]`，地圖只作部分國家概覽，明示綠色非全境／非完整分佈。AI 插圖只做基本視覺檢查，未經獨立鳥類專家驗證。
+- 初次上載後目視發現 IUCN／本地記錄說明與雷達圖左下標籤過近，已把說明縮短並重渲染、重新上載；舊版 Drive file `1yhjxz776vXSogNa80USmO2uiWf4IEU1k` 已移至垃圾桶。最新 `0056.avif`：1024×1536、157,149 bytes，SHA256 `748f9636bcac1e6a1e86ee44c278e22645a903ea46ef3422051bf2f854a29c87`，MD5 `ff3a64c061227163a9769de0cf714ac0`；Drive file ID `10K-pKwGtIfsUssd5yG26cegH0rlSO8DM`。`get_file` 核對 parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、bytes、MD5；資料夾查詢目前唯一一份。沒有 ZIP、R2、UI、Service Worker、app slim 註冊或共用 renderer 改動。
+
+### 0057 紅胸秋沙鴨：已檢視並直接上載 Google Drive
+
+- Runtime：紅胸秋沙鴨 *Mergus serrator*，雁形目／鴨科；i=2、a=3.8、v=4.4、r=4.8、c=3、o=3.6。HKBWS `https://avifauna.hkbws.org.hk/species/0020/003600` 全文已讀：52–58 cm；雄鳥繁殖羽深綠黑頭、白領、栗色胸與上脅大型白斑，長狹紅喙、紅眼及短蓬冠。香港稀少冬候鳥／過境候鳥且本地數量曾下降；全球 IUCN LC、趨勢穩定，兩者分開呈現。
+- 兩種雄鳥比較為白秋沙鴨及鵲鴨；分別使用 0056／0055 已審閱、物種正確的原圖，沒有換色或冒充紅胸秋沙鴨。四個辨識圈分別為長紅喙、赤眼蓬冠、栗胸白斑、灰脅與折翼。完整預覽、各特寫圈、兩個比較圓裁切、標籤、評分及地圖均已目視；AI 插圖未經獨立鳥類專家驗證。
+- 世界底圖 bounds `[-180,-90,180,90]`；選定繁殖及越冬國家的部分概覽，明示「綠色非全境；非完整分佈」，不是精確季節分佈多邊形。
+- 初次上載後目視發現 IUCN／本地出現說明與雷達圖左下標籤過近，已把說明縮短並重渲染、重新上載；舊版 Drive file `1zX80WDoEIDyGE1YsC-5ft9_wn4FoGmse` 已移至垃圾桶。最新 `0057.avif`：1024×1536、167,911 bytes，SHA256 `3b1128ea70218e20c22c4e0b68c17b0620f270d53b18ea6796663798fe144d54`，MD5 `5ec5fecee38c8ceb68339f4ea964d0cd`；Drive file ID `1pyb_M8rW65beO7hs45mVXUbx6VNbv08s`。`get_file` 核對 parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、bytes、MD5；資料夾查詢目前唯一一份。沒有 ZIP、R2、UI、Service Worker、app slim 註冊或共用 renderer 改動。
+
+### 0058 中華秋沙鴨：已檢視並直接上載 Google Drive
+
+- Runtime：中華秋沙鴨 *Mergus squamatus*，雁形目／鴨科；i=4.4、a=3.3、v=4.4、r=3.3、c=2.5、o=3.6、`vEst=1`，未更改分數並保留體長估算註記。HKBWS 香港鳥類名錄 `https://avifauna.hkbws.org.hk/hk-list` 列 Category I、IUCN EN；Category I 不當成香港常見程度。Cornell eBird `https://ebird.org/species/scsmer1` 核對羽色：雄鳥墨綠頭、紅喙、黑白背翼與黑邊白鱗脅；雌鳥栗褐頭灰背；兩性均有鱗狀脅紋。繁殖範圍補充參考 peer-reviewed Cambridge 調查 `https://www.cambridge.org/core/journals/bird-conservation-international/article/population-size-and-breeding-range-of-the-scalysided-merganser-mergus-squamatus/D4B015ECE8733B20A93C8F8BE9F4B9A2`。
+- 兩個雄鳥比較為紅胸秋沙鴨及普通秋沙鴨。紅胸秋沙鴨使用 0057 已審閱的正確雄鳥原圖；普通秋沙鴨另生成物種專屬圖。四個特徵圈為長紅喙蓬冠、墨綠頭白頸、黑邊白色鱗紋、白翼窗黑背。完整預覽、圓裁切、文字、評分及體長估算標註均已目視。
+- 全世界底圖 bounds `[-180,-90,180,90]`；只作俄羅斯／中國／北韓部分國家概覽，卡面明示綠色非全境、非完整分佈，不冒充河流精確分佈圖。AI 插圖僅基本視覺檢查，未經獨立鳥類專家驗證。
+- 成品 `deliver/cards/info-restart-0058/aviandex/0058.avif`：1024×1536、180,414 bytes，SHA256 `8494fb9e6e4080caaa2376eb829ef7749d2a082f704db0a6f8ee05db1cc1f361`，MD5 `a533499404c8aa15c60b971b0b199337`；AVIF 解碼成功。上載前指定 Drive 資料夾查無同名檔；Drive file ID `1oVUk8A_ISCtFE9wacDLl_naU9CLp2icy`。`get_file` 及資料夾查詢核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、bytes、MD5 均與本機一致。沒有 ZIP、R2、UI、Service Worker、app slim 註冊或共用 renderer 改動。
+
+### 0059 紫水雞：已檢視並直接上載 Google Drive
+
+- Runtime：紫水雞 *Porphyrio poliocephalus*，鶴形目／秧雞科；`dexScores` 沒有 0059，六項分數與綜合分均維持待查，不補零、不重算。HKBWS `https://avifauna.hkbws.org.hk/species/0060/007900` 全頁已讀：香港稀少訪客；成鳥 38–50 cm、紫藍身、較淺灰頭面、紅喙與紅額盾、長紅腿趾、白色尾下覆羽；全球 IUCN LC。香港出現頻率與全球評級分開。
+- 兩個成鳥比較為美洲紫青水雞（紫盾、紅喙黃端、黃腿，外來地區易混淆種，非香港出現聲稱）及黑水雞（較小、深色、黃腿、紅盾與黃喙端）。資料來源分別為 Cornell Lab Purple Gallinule `https://www.allaboutbirds.org/guide/Purple_Gallinule/id` 及 HKBWS Common Moorhen `https://avifauna.hkbws.org.hk/species/0060/007700`。四個特徵圈為紅喙／紅盾、灰頭紫身、長紅腿趾、白尾下覆羽。
+- 完整預覽、四圈、兩個比較圓裁切、缺分顯示、標籤及地圖均已目視；全世界底圖 bounds `[-180,-90,180,90]`，選定分佈國家只作部分概覽，明示綠色非全境／非完整分佈。AI 插圖僅基本目視檢查，未經獨立鳥類專家驗證。
+- 成品 `deliver/cards/info-restart-0059/aviandex/0059.avif`：1024×1536、182,378 bytes，SHA256 `c6f7b913850c41297d8c6f9da4a7856222aa282623c2d2e986e81ac4488e8a78`，MD5 `3a6631d5f8ebac3e34c98cd352373ad2`；AVIF 解碼成功。上載前指定 Drive 資料夾查無同名檔；Drive file ID `17vjl45_zQY8cxiClrK5V0RXWWJY9uCQh`。`get_file` 及資料夾查詢核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、bytes、MD5 均與本機一致。沒有 ZIP、R2、UI、Service Worker、app slim 註冊或共用 renderer 改動。
+
+### 0060 中華鷓鴣：已檢視並直接上載 Google Drive
+
+- Runtime：中華鷓鴣 *Francolinus pintadeanus*，雞形目／雉科；`i=2, a=5, v=3.7, r=1.8, c=1.2, o=2.7`，與 `dexScores` 完全一致，沒有重算。HKBWS `https://avifauna.hkbws.org.hk/species/0030/003700` 全頁已讀：香港草地及疏林山坡局部留鳥，本地分佈與數量因植被演替而大幅下降；全球 IUCN LC。雄鳥黑色面紋框白頰、栗色冠側，黑底白斑胸脇、黃橙腿；雌鳥較淡，腹部有深色橫斑。全球評級與香港局部狀態分開呈現。
+- 比較使用雄性鵪鶉 *Coturnix japonica*（HKBWS `https://avifauna.hkbws.org.hk/species/0030/003800`：17–19 cm、紅褐臉喉、奶油眉紋、淡褐胸脇；香港稀少過境／冬候鳥，全球 NT）及雄性灰胸竹雞 *Bambusicola thoracicus*（Cornell eBird `https://ebird.org/species/chbpar3`：灰藍眉胸、橙栗臉胸帶及黑斑脇）。比較名與主種分清，沒有把比較圖冒稱中華鷓鴣。
+- 完整預覽、四個特徵圈及兩個比較圓裁切經目視；修正特徵裁切後，特寫分別清楚呈現黑白頭紋／栗冠側、白頰白喉／黑面紋、胸脇白斑及黃橙腿。全世界底圖 bounds `[-180,-90,180,90]`，僅為部分國家概覽，明示綠色非全境／非完整分佈，不是精確分佈多邊形。AI 插圖僅基本目視檢查，未經獨立鳥類專家驗證。
+- 成品 `deliver/cards/info-restart-0060/aviandex/0060.avif`：1024×1536、192,153 bytes，SHA256 `5c2faf448e8d0b8fa9856cbbd120a76303c185c2864551301d2a6599db24e2ec`，MD5 `8c434d97d75527c6e6a9a713cf9b3fe3`；AVIF 解碼成功，`missingScores=[]`。上載前指定 Drive 資料夾查無同名檔；Drive file ID `1lEUoP6tofUqTR-ZOBrh_P2gps38udQCO`。`get_file` 及資料夾查詢核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、bytes、MD5 均與本機一致。沒有 ZIP、R2、UI、Service Worker、app slim 註冊或共用 renderer 改動。
+
+### 0061 鵪鶉：已檢視並直接上載 Google Drive
+
+- Runtime：鵪鶉 *Coturnix japonica*，雞形目／雉科；`i=3, a=2.3, v=3.2, r=4.8, c=3.6, o=3.4, vEst=1`，完全照 runtime `dexScores`。HKBWS `https://avifauna.hkbws.org.hk/species/0030/003800` 全頁已讀：雄鳥紅褐臉喉、寬奶油眉紋、暗冠及淡褐胸脇；雌鳥較淡、胸部帶黑色斑紋。香港稀少秋季過境、罕見冬季與春季過境；全球 IUCN NT，趨勢可能因狩獵及農業改變而中度快速下降。香港出現狀態與全球評級分開，保留 renderer 的體長估算註記。
+- 比較為黃腳三趾鶉 *Turnix tanki*（雌鳥／幼鳥）及中華鷓鴣 *Francolinus pintadeanus*（雄鳥）。HKBWS 黃腳三趾鶉 `https://avifauna.hkbws.org.hk/species/0070/009400` 說明其15–18 cm、約鵪鶉75%大小，黃喙黃腿、白虹膜，飛起時淺色覆羽與深色飛羽反差明顯；中華鷓鴣更大且雄鳥黑白臉紋、胸脇白斑明顯。主圖明確呈成年雄鵪鶉；比較圖物種及雌／幼鳥性別狀態有標示。
+- 完整預覽、四個特徵圈及兩個比較裁切已目視；四圈為紅褐臉喉、奶油眉紋暗冠、淡褐胸脇、褐色斑駁上翼。地圖全世界 bounds `[-180,-90,180,90]`，標為部分繁殖／越冬國家概覽，不是精確季節多邊形；AI 插圖僅基本視覺檢查，未經獨立鳥類專家驗證。
+- 成品 `deliver/cards/info-restart-0061/aviandex/0061.avif`：1024×1536、166,558 bytes，SHA256 `9f02ee21c31202c30ce6629f181ae9c5344b5d8996877ce7d2dc3fdf6f4e0185`，MD5 `57218e9f361330351b73c1864102b3e1`；AVIF 解碼成功，`missingScores=[]`。上載前指定 Drive 資料夾查無同名檔；Drive file ID `12CfCtMZoSuEPGZRLeSxsbU4Deplf_HIF`。`get_file` 及資料夾查詢核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、bytes、MD5 均與本機一致。沒有 ZIP、R2、UI、Service Worker、app slim 註冊或共用 renderer 改動。
+
+### 0062 小鸊鷉：已檢視並直接上載 Google Drive
+
+- Runtime：小鸊鷉 *Tachybaptus ruficollis*，鷉形目／鷉科；`i=2, a=4.3, v=3.4, r=4.8, c=3, o=3.5`，與 runtime `dexScores` 一致，`missingScores=[]`。HKBWS `https://avifauna.hkbws.org.hk/species/0070/009000` 全頁已讀：25–29 cm，成鳥全年深冠淡眼；繁殖羽橙褐頰頸及淡黃嘴角斑。香港常見淡水濕地留鳥，邊緣濕地有退縮；全球 IUCN LC、趨勢下降，兩者分開呈現。
+- 比較為黑頸鸊鷉（冬羽）及鳳頭鸊鷉（冬羽）。HKBWS 黑頸鸊鷉 `https://avifauna.hkbws.org.hk/species/0070/009300`：冬羽頭較大、冠較陡、喙較尖、虹膜紅色且身形較修長；HKBWS 鳳頭鸊鷉 `https://avifauna.hkbws.org.hk/species/0070/009100`：46–61 cm、長頸、長淡喙，冬羽白臉白前頸與深冠線。四圈為深冠淡眼、栗色頰頸／黃嘴角、短鈍喙／矮圓身、白色蓬鬆尾下羽。
+- 完整預覽、特徵裁切、兩個比較圓裁切、文字評分及地圖均已目視。全世界底圖 bounds `[-180,-90,180,90]`，部分國家概覽並明示非全境／非完整分佈；不是精確範圍圖。AI 插圖僅基本目視檢查，未經獨立鳥類專家驗證。
+- 成品 `deliver/cards/info-restart-0062/aviandex/0062.avif`：1024×1536、166,689 bytes，SHA256 `79fd7fb47c90af815cb13489ed396e884b07dc0ac4db8b73060971527d6f941f`，MD5 `c69327a3c10caba557a9863b1865a06f`；AVIF 解碼成功。上載前指定 Drive 資料夾查無同名檔；Drive file ID `1Dc3qvhOGIVmTSkgrv7IMZ8_oZvb-nujX`。`get_file` 及資料夾查詢核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、bytes、MD5 均與本機一致。沒有 ZIP、R2、UI、Service Worker、app slim 註冊或共用 renderer 改動。
+
+### 0063 角鸊鷉：已檢視並直接上載 Google Drive
+
+- Runtime：角鸊鷉 *Podiceps auritus*，鷉形目／鷉科；`i=3.8, a=3.3, v=3.6, r=4.8, c=2.2, o=3.5, vEst=1`，完全依照 `dexScores`，`missingScores=[]`。HKBWS `https://avifauna.hkbws.org.hk/species/0070/009200` 全文已讀：香港 Category I 偶見，唯一記錄為 1996-04-09 米埔木板路外繁殖羽個體；全球 IUCN VU、趨勢快速下降，與香港單一紀錄分開呈現。成鳥繁殖羽辨識為金黃色角狀耳羽、紅眼、栗色頸胸及深色上體、直尖淡色喙端；冬羽與黑頸鸊鷉可用深色冠與白頰清楚分界辨別。
+- Cornell eBird `https://ebird.org/species/horgre` 交叉核對繁殖羽耳羽、紅眼、胸栗色與冬羽冠頰等特徵。比較種為小鸊鷉（繁殖羽；HKBWS `https://avifauna.hkbws.org.hk/species/0070/009000`，25–29 cm、圓矮體、短鈍喙、繁殖羽橙褐頰頸及淡黃嘴角斑）及鳳頭鸊鷉（冬羽；HKBWS `https://avifauna.hkbws.org.hk/species/0070/009100`，46–61 cm、長頸長淡喙、白臉白前頸及深冠）。後者冬羽比較圖重用 0062 已檢視的正確物種素材；因本回合 image generation 次數已達工具限制，未另外生成此比較圖。
+- 已目視完整 `deliver/cards/info-restart-0063/preview-0063.webp`、主圖、四個繁殖羽特徵圈及兩個比較裁切；標籤、圖像裁切、分數及估算／評級註記可讀。全世界底圖 bounds `[-180,-90,180,90]`，選定部分繁殖／越冬國家作概覽，明示綠色非全境／非完整分佈；不是精確範圍多邊形，也不把香港單一偶見標成常態分佈。AI 插圖只做基本視覺審核，未經獨立鳥類專家驗證。
+- 成品 `deliver/cards/info-restart-0063/aviandex/0063.avif`：1024×1536、170,969 bytes，MD5 `6343003a79251d40bcc081a296bc6184`，SHA256 `b97d36da663fbbec27568af11565762a5297a4b60ba092f750c270dc792d0c8f`；AVIF 解碼成功。runtime／taxonomy／六項分數、manifest、地圖 ISO3、素材尺寸及 `git diff --check` 均通過。
+- Google Drive 指定目標資料夾上載前同名查詢為 0；已直接上載單張 AVIF，Drive file ID `1ca3DZE9G-Iv_D6LYj5Mehy9fSpb9RBIj`。`get_file` 及資料夾查詢核實目前唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、170,969 bytes、MD5 均與本機一致。無 ZIP／R2，不覆蓋 app 現有卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0064 鳳頭鸊鷉：已檢視並直接上載 Google Drive
+
+- Runtime：鳳頭鸊鷉 *Podiceps cristatus*，鷉形目／鷉科；六項 `i=2, a=4.3, v=4.2, r=1.8, c=1.2, o=2.7`，完全照 `dexScores`。HKBWS `https://avifauna.hkbws.org.hk/species/0070/009100` 全文及 Cornell eBird `https://ebird.org/species/grcgre1` 已讀：香港常見冬候鳥，主要在後海灣及赤門，數量可能下降；46–61 cm，身長而低浮、長頸及長而纖細淡色喙。冬羽白臉／白前頸，眼至喙及冠線深色；繁殖羽栗色扇羽及深色雙冠。全球 IUCN LC、趨勢未知；本地數量變化與全球分類分開呈現。
+- 比較種為小鸊鷉（繁殖羽；HKBWS `https://avifauna.hkbws.org.hk/species/0070/009000`）及黑頸鸊鷉（冬羽；HKBWS `https://avifauna.hkbws.org.hk/species/0070/009300`）。兩張比較圖分別重用 0063、0062 已檢視的物種專屬素材。主圖及四圈皆為鳳頭鸊鷉冬羽；白臉暗眼線、長淡喙、長頸修長身形、飛行時內翼白色區域均清楚可辨。完整預覽、比較圓裁切、標籤、評分及地圖已目視核對。AI 插圖僅基本檢查，未經獨立鳥類專家驗證。
+- 全世界底圖 bounds `[-180,-90,180,90]`；部分繁殖／越冬國家概覽並明示綠色非全境／非完整分佈，不是精確季節範圍。成品 `deliver/cards/info-restart-0064/aviandex/0064.avif`：1024×1536、145,495 bytes，MD5 `db8b3988230bdb4fd660d0170d691994`，SHA256 `c24cc2eae7a0694208179a30e199ae78723c3b31905dd2f0411575052a3515d8`；AVIF 解碼、runtime 名稱／分類／六項分數、素材尺寸、地圖國碼、manifest 對應及 `git diff --check` 均通過。
+- Drive 上載前指定資料夾查無同名檔；已直傳單張 AVIF，Drive file ID `1tg7e8BcYV6hTiPEzMSBr6nCKM4ZH-Tso`。`get_file` 及資料夾查詢核實目前唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、145,495 bytes、MD5 均一致。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0065 黑頸鸊鷉：已檢視並直接上載 Google Drive
+
+- Runtime：黑頸鸊鷉 *Podiceps nigricollis*，鷉形目／鷉科；`i=2, a=2.8, v=3.6, r=4.8, c=1.2, o=2.9`，照 `dexScores`。HKBWS `https://avifauna.hkbws.org.hk/species/0070/009300` 全文及 Cornell eBird `https://ebird.org/species/eargre` 全頁已讀：香港稀少冬候鳥，記錄期 11 月 19 日至 3 月 4 日，主要在後海灣；全球 IUCN LC、趨勢未知。冬羽灰暗頭頰、深冠延伸入頰（邊界較模糊）、灰暗頸、紅虹膜、窄尖黑喙無淡色喙端；雖與小鸊鷉大小近似，但頭較大、冠較陡、體形較修長，頸側及脇通常偏白。全球 LC 與香港稀少冬候狀態分開呈現。
+- 比較為鳳頭鸊鷉（冬羽）與角鸊鷉（繁殖羽）。鳳頭鸊鷉冬羽圖重用 0064 已審素材，角鸊鷉繁殖羽圖重用 0063 主圖；卡面有明確季節標籤，角鸊鷉只作易混淆圖鑑參照，不暗示香港常見。完整預覽、主圖、四個冬羽特徵圈、比較圓裁切、文字評分與地圖均已目視核對；AI 插圖僅基本檢查，未經獨立鳥類專家驗證。
+- 世界底圖 bounds `[-180,-90,180,90]`，選定歐亞及北美部分繁殖／越冬國家作概覽，標示綠色非全境／非完整分佈，且區分歐亞提名亞種、北美亞種及非香港的非洲常駐亞種，不是精確季節多邊形。
+- 成品 `deliver/cards/info-restart-0065/aviandex/0065.avif`：1024×1536、151,056 bytes，MD5 `bbd13f0d4f9830f4cff0c5a3743d82e8`，SHA256 `1ff5255eae6fe6b52a61c88ace3cef902a876de6ae27189363d896b38b237793`；AVIF 解碼、runtime 名稱／分類／六項分數、地圖國碼、manifest 及 `git diff --check` 通過。
+- Drive 指定資料夾上載前同名查詢為 0；已直傳單張 AVIF，Drive file ID `1HMlZ2vPM8nJqTozSP5M7anMXm-ucSWPz`。`get_file` 與資料夾查詢核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、151,056 bytes、MD5 均一致。沒有 ZIP／R2，不改 app 卡片、UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0066 山斑鳩：已檢視並直接上載 Google Drive
+
+- Runtime：山斑鳩 *Streptopelia orientalis*，鴿形目／鳩鴿科；`i=2, a=2.8, v=3.9, r=3.3, c=1.2, o=2.6, vEst=1`。HKBWS `https://avifauna.hkbws.org.hk/species/0050/006300` 全頁已讀：33–35 cm；成鳥淡粉褐頭、黑白頸側斑、黑色上體羽具大片栗紅羽緣、灰尾上尾羽有大片白端、橙眼及粉色喙腿；幼鳥頭色較暗且缺頸側斑。香港以前常見且廣布的冬候鳥／過境鳥，目前較少見且局部，主要在新界西北，少量全年可見；沒有確認的本地繁殖紀錄。全球 IUCN LC、趨勢穩定，與香港局部下降分開表述。
+- 比較為珠頸斑鳩（成鳥；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006600`，31 cm、較纖細長尾、頸側深色斑佈白點）及灰斑鳩（成鳥；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006400`，Category IIB 局部繁殖留鳥，素淡粉灰身及黑半環頸帶）。完整預覽、主圖、四個特徵圈、比較圓裁切、評分及地圖均已目視；黑白頸側斑、栗紅羽緣、灰尾白端及橙眼粉喙清楚可辨。AI 插圖僅基本目視檢查，未經獨立鳥類專家驗證。
+- 世界底圖 bounds `[-180,-90,180,90]`，部分亞洲國家概覽並明示非全境／非完整分佈，不是精確範圍多邊形。成品 `deliver/cards/info-restart-0066/aviandex/0066.avif`：1024×1536、172,570 bytes，MD5 `d2d1404d0a3c29afd34ab90fd268c1f6`，SHA256 `13e66e2401dec8bd0fc16d1472e4a6563fa5b8204bf1a0c7b18c8e706e923089`；AVIF 解碼、runtime 名稱／分類／六項分數、素材尺寸、地圖國碼、manifest 對應及 `git diff --check` 通過。
+- Google Drive 上載前指定資料夾查無同名檔；已直傳單張 AVIF，Drive file ID `16bKRYUS81xc55PYrvpEunK5MV8s8Ole2`。`get_file` 及資料夾查詢核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、172,570 bytes、MD5 均一致。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0067 灰斑鳩：已檢視並直接上載 Google Drive
+
+- Runtime：灰斑鳩 *Streptopelia decaocto*，鴿形目／鳩鴿科；runtime 分數 `i=2, v=3.9, r=1.8, c=1.2, o=2.2, vEst=1`；`a` 缺分，卡面顯示「待查」，未補零或更動綜合分 2.2。全球 IUCN LC 與香港狀態分開呈現。
+- HKBWS `https://avifauna.hkbws.org.hk/species/0050/006400` 全文已讀；本地為 Category IIB 局部繁殖留鳥，集中新界西北魚塘區。成鳥淡粉灰、頭身大致無斑，頸後黑色半環，紅虹膜、黑喙、暗紅腿，灰褐翼具淡色中翼面板，外側尾羽白端；幼鳥缺頸環。HKBWS 同時指出歐洲及北非族群為20世紀擴展，不能把它們冒稱原生範圍。Cornell eBird `https://ebird.org/species/eucdov` 用於交叉核對識別與全球分布。
+- 比較為山斑鳩（成鳥；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006300`）及珠頸斑鳩（成鳥；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006600`）。分別以黑白頸側斑、栗紅羽緣，及佈白點的黑頸斑作區別；比較插圖已視覺檢查並沿用已核對物種素材。完整預覽已目視：四個特徵圈對應頸後半環、中翼淡色帶、長尾白端、暗紅腳趾；主圖成鳥辨識特徵吻合。AI 插圖僅基本檢視，未經獨立鳥類專家驗證。
+- 地圖使用全世界底圖 bounds `[-180,-90,180,90]`，只高亮中東、南亞及東亞部分原生分布國家；不是全境實際分布或精確多邊形，且排除香港引入族群及歐洲／北非20世紀擴展。
+- 成品 `deliver/cards/info-restart-0067/aviandex/0067.avif`：1024×1536、170,062 bytes，SHA256 `72b8c338b0463c6b0937c58bbedefc9b8a36fe4d27ef7a0963d013da3e7008bf`，MD5 `0d4aadcc2f21d5f660efffb1df427235`；AVIF 解碼成功，runtime 名稱／分類／分數與 manifest、素材尺寸及地圖國碼檢查通過；缺分為 `a`。
+- 上載前指定 Drive 資料夾查無同名檔；已直傳單張 AVIF，Drive file ID `17y3BuCwJWqgXoT-WQlTvr_Miv2wyfxMj`。`get_file` 及資料夾搜尋核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、170,062 bytes、MD5 均與本機一致。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0068 火斑鳩：已檢視並直接上載 Google Drive
+
+- Runtime：火斑鳩 *Streptopelia tranquebarica*，鴿形目／鳩鴿科；`i=2, v=3.6, r=1, c=1.2, o=2, vEst=1`，適應力 `a` 缺分，卡面顯示「待查」，未補零或更動 runtime 綜合分 2.0。
+- HKBWS `https://avifauna.hkbws.org.hk/species/0050/006500` 全文已讀：香港 Category I，常見過境（秋季較多）、稀少冬候，主要在后海灣；夏季記錄增加但沒有已確認本地繁殖。成雄 21–23 cm、緊湊短尾，紅粉色上、下體，淡灰頭、頸後黑半環、暗色飛羽、灰臀與白尾下；雌鳥灰褐色且與雌灰斑鳩相似，但明顯較小、尾短。全球 IUCN LC、趨勢下降，與香港過境狀況分開呈現。Cornell eBird `https://ebird.org/species/recdov1` 交叉核對兩性羽色與全球辨識。
+- 比較為灰斑鳩（成鳥；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006400`）及珠頸斑鳩（成鳥；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006600`）。灰斑鳩較大且長尾、素淡粉灰身；珠頸斑鳩頸側有白點黑斑且尾長。主圖、四個特徵圈、兩個比較圓裁切及整卡預覽均已目視；圈出灰藍頭、黑色半環、紅粉身與暗飛羽、短尾白端。因生圖次數限制，特徵圈直接裁自主圖，未另外生成 features 素材；AI 圖只作基本視覺檢查，未經獨立鳥類專家驗證。
+- 地圖使用全世界 bounds `[-180,-90,180,90]`，只作巴基斯坦至南亞、東南亞、菲律賓與中國部分原生分佈國家概覽，不是全境實際分布或精確範圍；香港過境紀錄另行描述。
+- 成品 `deliver/cards/info-restart-0068/aviandex/0068.avif`：1024×1536、170,438 bytes，SHA256 `fbc0c16ef1a323d58a7816b31b4741831601ea2a1da7d43cfb7213bbdc11a96b`，MD5 `98928f098bcf7ec4d003f32c1edf6218`；AVIF 解碼成功、runtime 名稱／分類／分數與 manifest、地圖國碼檢查通過；缺分為 `a`。
+- 上載前指定 Drive 資料夾查無同名檔；已直傳單張 AVIF，Drive file ID `1jeUjfLCLAlL21mJQV861H2Fzao-zk9k9`。`get_file` 及資料夾搜尋核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、170,438 bytes、MD5 均與本機一致。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0069 斑尾鵑鳩：已檢視並直接上載 Google Drive
+
+- Runtime：斑尾鵑鳩 *Macropygia unchall*，鴿形目／鳩鴿科；`i=2, a=3.3, v=3.9, r=1.8, c=1.2, o=2.4`，完全依照 runtime `dexScores`。HKBWS `https://avifauna.hkbws.org.hk/species/0050/006700` 全頁及 Cornell eBird `https://ebird.org/species/bacdov1` 已讀；香港稀少至少見冬候與過境鳥，出現於林地且記錄近年增加；全球 IUCN LC、趨勢穩定，與香港狀態分開呈現。成年雄鳥37–41 cm，身形修長、長頸及特別長的栗色橫斑尾，頭粉灰、頸側帶綠光，上體密佈栗色橫斑與羽緣、胸腹酒紅且較素；雌鳥較暗，頭喉細暗橫斑、胸具黑色鱗紋。
+- 比較為山斑鳩（成鳥；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006300`）及珠頸斑鳩（成鳥；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006600`）。兩個比較素材沿用先前已檢視的正確物種圖。完整預覽、主圖、四特徵圈、比較圓裁切均已目視；圈出粉灰頭與綠光頸側、翼上密集栗斑、極長栗斑尾及雄鳥較素淡酒紅胸腹。AI 圖僅基本視覺檢查，未經獨立鳥類專家驗證。
+- 地圖用全世界 bounds `[-180,-90,180,90]`，只作西喜馬拉雅至東南亞及中國部分原生分佈國家概覽，不表示全境占有或精確範圍；香港零散冬候／過境記錄另行說明。
+- 成品 `deliver/cards/info-restart-0069/aviandex/0069.avif`：1024×1536、175,843 bytes，SHA256 `13b516e236ceec024bf56a6cc9f38daff134588386120b3ad4d414792d853a30`，MD5 `8b1dec5fe8460b4efbad1ee46a60448a`；AVIF 解碼、runtime 名稱／分類／六項分數、地圖 ISO3、manifest 和素材核對通過，`missingScores=[]`。
+- 上載前指定 Drive 資料夾查無同名檔；已直傳單張 AVIF，Drive file ID `1NcEGuBvd2OmmIJVktrmZ6XYO-LvSpllN`。`get_file` 及資料夾搜尋核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、175,843 bytes、MD5 均與本機一致。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0070 綠翅金鳩：已檢視並直接上載 Google Drive
+
+- Runtime：綠翅金鳩 *Chalcophaps indica*，鴿形目／鳩鴿科；`i=2, a=3.8, v=3.4, r=1, c=1.2, o=2.3`。HKBWS `https://avifauna.hkbws.org.hk/species/0050/006800` 全文及 Cornell eBird `https://ebird.org/species/emedov2` 已讀：香港 Category I，森林與灌叢稀少但廣布留鳥；全球 IUCN LC、全球趨勢下降。成年雄鳥小型短尾，灰冠、銀白額前、暗灰上體、鮮綠虹彩肩羽與翼覆羽、深色飛羽尾羽、灰粉色下體、紅喙與黑眼。雌鳥較暗，銀白頭頂不明顯延伸至額前；幼鳥褐色且翼覆羽有栗色端形成翼帶。香港本地狀態與全球分類分開呈現。
+- 比較為珠頸斑鳩（成鳥；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006600`）與灰斑鳩（成鳥；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006400`），以珠綠翼與紅喙、銀白額前，對照兩者較大的體型、素淡身色及不同頸斑。另以同種成年雌鳥素材呈現額前羽色差異。完整預覽、主圖、四個圈、比較圓裁切均已目視。AI 圖僅基本視覺檢查，未經鳥類專家獨立驗證。
+- 世界底圖 bounds `[-180,-90,180,90]`，只作 Nepal/India 至東南亞、南中國與台灣的部分原生分布國家概覽；不是全境占有或精確範圍多邊形，香港出現另述。
+- 原版因特徵標籤出界已被修正版取代；目前交付 `deliver/cards/info-restart-0070/aviandex/0070.avif` 為 1024×1536、164,459 bytes，SHA256 `6e78b3f77e7603f70fd1179e701d0a996eb8078223c1a8302b73f0984d7656ca`，MD5 `5f92808725d58f047aeb39ba75e7776d`；AVIF 解碼及 runtime／地圖核對通過。
+- 修正版直接上載 Drive file ID `1jp5ewq6CwhoXTFPw2N9Gg6el64FVGerJ`；get_file 與資料夾搜尋核實唯一有效檔，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、164,459 bytes、MD5 一致。初版 ID `1OmQcDWYJp5N8kY--AOsjQouzHRushgyd` 已移至垃圾桶。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0071 橙胸綠鳩：已檢視並直接上載 Google Drive
+
+- Runtime：橙胸綠鳩 *Treron bicinctus*，鴿形目／鳩鴿科；`i=2, a=3.3, v=3.8, r=3.3, c=1.2, o=2.7, vEst=1`。HKBWS `https://avifauna.hkbws.org.hk/species/0050/006900` 全文及 Cornell eBird `https://ebird.org/species/orbpig1` 已讀：香港 Category I 偶發，僅 Po Toi 有一次雄鳥記錄（2006至2007多次觀察，被認為可能同一個體）；全球 IUCN LC、趨勢穩定。成鳥雄鳥約29 cm，綠鳩典型厚實體形及短尾、黃綠羽色，灰後頸，胸有橙色斑塊，上緣為模糊粉紫色帶；尾下覆羽暗橙、腿紅。沒有把香港單次紀錄當作留鳥。
+- 比較為粉紅頸綠鳩（成鳥雄；eBird `https://ebird.org/species/pinpig3`）和綠翅金鳩（成鳥雄；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006800`）。前者只作屬內視覺相似比較，不暗示香港有紀錄；綠翅金鳩以小型短尾、銀白額、深灰身與虹彩綠翼作對比。整卡預覽及四圈已目視，分別凸顯粉紫／橙色胸斑、黃綠厚實體形、灰後頸、短尾與暗橙尾下覆羽。AI 插圖僅基本視覺檢查，未經鳥類專家獨立驗證。
+- 地圖 bounds `[-180,-90,180,90]`，只作南亞至東南亞及中國部分原生分布國家概覽，不是全境實際占有或精確多邊形；香港單一偶發紀錄另述。
+- 成品 `deliver/cards/info-restart-0071/aviandex/0071.avif`：1024×1536、175,006 bytes，SHA256 `7f91163024c8bd7bfeb67adfdda593a64490b8ced5bba8130ba505ad7134df1f`，MD5 `e3652b53ab110517db40beefb2fbe56f`；AVIF 解碼、runtime 名稱／分類／六項分數、地圖 ISO3、manifest 核對通過，`missingScores=[]`。
+- 上載前指定 Drive 資料夾查無同名檔；已直傳單張 AVIF，Drive file ID `1popKhrQlKm_Wd42XJCC350QNQfO9QDXL`。`get_file` 及資料夾搜尋核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、175,006 bytes、MD5 均與本機一致。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0072 厚嘴綠鳩：已檢視並直接上載 Google Drive
+
+- Runtime：厚嘴綠鳩 *Treron curvirostra*，鴿形目／鳩鴿科；`i=2, a=2.8, v=3.4, r=1, c=1.2, o=2.1`。HKBWS `https://avifauna.hkbws.org.hk/species/0050/007000` 全頁及 Cornell eBird `https://ebird.org/species/thbpig1` 已讀：香港 Category I 稀少冬候／過境，累計十筆記錄；全球 IUCN LC，全球趨勢下降。辨識重點為紅基部厚淡色喙、寬闊藍綠眼圈、成年雄鳥栗紅肩羽、兩性翼緣鋸齒黃條；兩性皆綠色，雌鳥披肩綠色。香港多在果樹冠層，記錄主要11月至2月，另有一筆4月。
+- 比較為橙胸綠鳩（成鳥雄；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006900`）及綠翅金鳩（成鳥雄；HKBWS `https://avifauna.hkbws.org.hk/species/0050/006800`）。前者以橙色胸斑／粉紫上緣和短尾區別；後者較小，深灰身及虹彩綠翼。完整預覽已目視；首次檢視發現首個特徵圈標籤過長向左溢出，已縮短四個標籤並重新渲染，最終預覽文字居中且完整。AI 圖僅基本檢視，未經獨立鳥類專家驗證。
+- 地圖 bounds `[-180,-90,180,90]`，作中南亞經東南亞至華南、馬來半島及島嶼的部分原生分布國家概覽，不表示整國全境或精確多邊形；香港稀少冬候／過境狀態另述。
+- 成品 `deliver/cards/info-restart-0072/aviandex/0072.avif`：1024×1536、165,898 bytes，SHA256 `4cef29783cba9b785061b565f0e34dac993266aa441834ea231d1d55f67acb11`，MD5 `5cb6fad8ecb428f5faed10caa190b7e7`；AVIF 解碼、runtime 名稱／分類／六項分數、manifest、地圖 ISO3 檢查通過，`missingScores=[]`。
+- 上載前指定 Drive 資料夾查無同名檔；已直傳單張 AVIF，Drive file ID `1EdHOW-t7NiRHMNj_96k5VmbBzvzj_M2D`。`get_file` 及資料夾搜尋核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、165,898 bytes、MD5 均與本機一致。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0070 特徵標籤越界修正
+
+- 用戶指出 0070 特徵列標籤超出小標籤框。已只縮短該卡的四個 `featureLabels`（銀額灰冠／翠綠翼羽／紅喙黑眼／雌額少銀），以保留共用版式與 renderer 不變；完整預覽目視確認各字均在膠囊標籤框內。
+- 修正版 `0070.avif`：1024×1536、164,459 bytes，MD5 `5f92808725d58f047aeb39ba75e7776d`，SHA256 `6e78b3f77e7603f70fd1179e701d0a996eb8078223c1a8302b73f0984d7656ca`。Drive 新 file ID `1jp5ewq6CwhoXTFPw2N9Gg6el64FVGerJ`；get_file 與資料夾搜尋核對 parent、bytes、MD5，最終資料夾僅一份有效檔。舊 ID `1OmQcDWYJp5N8kY--AOsjQouzHRushgyd` 已移至垃圾桶。
+
+### 0073 楔尾綠鳩：已檢視並直接上載 Google Drive
+
+- Runtime：楔尾綠鳩 *Treron sphenurus*（`Wedge-Tailed Green-Pigeon`），鴿形目／鳩鴿科；`i=2, a=2.8, v=3.9, r=1, c=1.2, o=2.2, vEst=1`，與 app runtime 完全一致。HKBWS `https://avifauna.hkbws.org.hk/species/0050/007100` 及 Cornell eBird `https://ebird.org/species/wetpig1` 全頁已讀：全球 IUCN LC、趨勢穩定；香港 Category I 偶見，唯一記錄是 2016 年 3 月 6–9 日西貢北潭凹一隻首冬雄鳥。成年雄鳥黃額、銅金冠與胸，肩羽及翼覆羽有栗色，淡肉桂尾下覆羽及寬基楔形尾；兩性綠身、紅足及藍喙。主圖呈現成鳥雄鳥代表，不冒稱為香港記錄個體。
+- HKBWS profile suffix 不等於 AvianDex runtime ID：本卡 0073 物種的正確 HKBWS 頁為 `/007100`；誤讀過的 `/007300` 是 Ryukyu Green Pigeon，沒有作本卡來源。HKBWS `/007200` 紅翅綠鳩及 `/007000` 厚嘴綠鳩和 Cornell 紅翅綠鳩頁用於比較：紅翅綠鳩以白腹／淡色尾下覆羽及紫紅翼斑對照；厚嘴綠鳩以粗厚紅基部淡喙、寬闊藍綠眼圈及栗紅肩斑對照。
+- 完整預覽、主圖、四個標籤特徵圈、兩個比較圓裁切、分類、六項分數和世界分佈概覽已目視檢查。首次檢查將首個特徵圈的裁切框加寬，避免喙尖被切；修訂預覽確認喙部與標籤均完整在面板／圓框內；分佈圖只作部分原生範圍國家概覽，非精確範圍或香港出現圖。AI 插圖僅基本目視檢查，未經獨立鳥類專家驗證。
+- 成品 `deliver/cards/info-restart-0073/aviandex/0073.avif`：1024×1536、151,575 bytes，MD5 `8821a91404440d25ac3f18f1e66a43e8`，SHA256 `b314d4615ecad58118d734498d25dcfd09ee187e6c82ba6576b6e07152ef9784`；AVIF 解碼、runtime 名稱／分類／六項分數、`vEst`、素材尺寸、地圖 ISO3、manifest 核對及 `git diff --check` 通過，`missingScores=[]`。
+- 上載前指定 Drive 資料夾同名查詢為 0；已直傳單張 AVIF，Drive file ID `1qqYpPZqhVyB0ehoLdCmwdKXkajulguBr`。`get_file` 與最終資料夾搜尋核實唯一有效檔，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、151,575 bytes、MD5 均一致；初版 ID `1VOmkFpP81dIcTyx9vuuK50a0geOj39UG` 因喙部裁切調整已移至垃圾桶。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0074 紅翅綠鳩：已檢視並直接上載 Google Drive
+
+- Runtime：紅翅綠鳩 *Treron sieboldii*（`White-bellied Green-Pigeon`），鴿形目／鳩鴿科；`i=2, a=2.8, v=3.8, r=2.5, c=1.2, o=2.5`，完全依 runtime。HKBWS `https://avifauna.hkbws.org.hk/species/0050/007200` 與 Cornell eBird `https://ebird.org/species/whbpig1` 全頁已讀：香港 Category I 稀少冬候／過境，主要林地；全球 IUCN LC、趨勢下降。兩性綠色且腹部及尾下覆羽較白；雄鳥有紫紅翼斑、黃綠頭、灰喙藍基及窄藍眼圈。HKBWS 記錄集中10月23日至翌年2月初，另有一筆4月紀錄；本地稀少與全球LC分開呈現。
+- 比較為楔尾綠鳩（成鳥雄；HKBWS `https://avifauna.hkbws.org.hk/species/0050/007100`）與厚嘴綠鳩（成鳥雄；HKBWS `https://avifauna.hkbws.org.hk/species/0050/007000`）。前者銅金冠胸、栗色肩羽、淡肉桂尾下及寬基楔尾；後者厚喙紅基部和寬藍綠眼圈。完整預覽、主圖、四個特徵圈、比較圖、分類、分數和地圖均已目視；首輪後已調整白腹圈與喙部圈裁切，最終喙尖完整位於圓圈內，所有標籤完整位於面板內。AI 圖僅基本視覺檢查，未經獨立鳥類專家驗證。
+- HKBWS profile `/007200` 對應 runtime 0074；外部頁面編號不等同本 app 卡片編號。地圖只作北泰、北印支、中／東中國、台灣及日本部分原生範圍概覽，不代表全境占有或精確分佈，也不是香港出現圖。
+- 成品 `deliver/cards/info-restart-0074/aviandex/0074.avif`：1024×1536、152,222 bytes，MD5 `d8ef57f546c48e771b9119282f372edb`，SHA256 `a9aece4297b53947cff6a70456c0514aafa21c0afc8d16a9021a6f391307a9ae`；AVIF 解碼、runtime 名稱／分類／六項分數、素材尺寸、地圖 ISO3、manifest 核對及 `git diff --check` 通過，`missingScores=[]`。
+- 上載前指定 Drive 資料夾同名查詢為 0；已直傳單張 AVIF，Drive file ID `1PU7IMPiDW7FZsOOHiJF-nZiLaCCiLti2`。`get_file` 及資料夾搜尋核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、152,222 bytes、MD5 均一致。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0075 紅頂綠鳩：已檢視並直接上載 Google Drive
+
+- Runtime 依要求保留：紅頂綠鳩 *Treron formosae*（`Whistling Green-Pigeon`），鴿形目／鳩鴿科；`i=3, a=2.8, v=4.0, r=1.8, c=3.6, o=3.0, vEst=1`。BirdLife 現行 *Taiwan Green-pigeon* factsheet `https://datazone.birdlife.org/species/factsheet/taiwan-green-pigeon-treron-formosae`：2023 IUCN 評為 NT 近危、趨勢下降、估計成熟個體1,250–2,000；現行範圍為台灣及北菲律賓群島（Batan、Calayan、Camiguin Norte、Sabtang）。Cornell eBird `https://ebird.org/species/whgpig1`仍以較舊 Whistling Green-Pigeon 複合群頁介紹：台灣型較小、有紅褐冠；與紅翅綠鳩相比，腿周沒有白羽、臉較不黃、尾下覆羽白緣較窄。主圖為台灣指名亞種成雄，呈現金橙冠、紫褐肩斑、綠羽腿與紅足。
+- 分類差異非常重要：HKBWS `https://avifauna.hkbws.org.hk/species/0050/007300` 現行頁已列 Ryukyu Green Pigeon *Treron permagnus*（Category I 偶見；Po Toi 唯一2012-11-14紀錄，亞種不確定），不再是現行 *T. formosae*。較舊來源曾將琉球族群納入 Whistling Green-Pigeon；因此本卡只記錄此重分類，**不宣稱**該香港紀錄屬於 runtime *T. formosae*。未改 app runtime 名稱、taxon 或分數。比較為紅翅綠鳩（HKBWS `/007200`）與楔尾綠鳩（`/007100`）成鳥雄。
+- 完整預覽、主圖、四個特徵圈、兩個比較圓裁切、評分、近危標章及世界地圖已目視核對；標籤均完整在面板內。台灣／菲律賓島嶼分布在世界尺度圖上高亮較細小，未把非分布國家塗色以放大視覺效果。AI 圖僅基本目視檢查，未經獨立鳥類專家驗證。
+- 成品 `deliver/cards/info-restart-0075/aviandex/0075.avif`：1024×1536、163,267 bytes，MD5 `7226c7fd858a8ed9ff7f1433b54100bf`，SHA256 `03c9e3dc8215167a684d19a745f5bc9e370ae09bc116b872b038b1dd82f39e8e`；AVIF 解碼、runtime 名稱／分類／六項分數、`vEst`、素材尺寸、地圖 ISO3、manifest 核對及 `git diff --check` 通過，`missingScores=[]`。
+- 上載前指定 Drive 資料夾同名查詢為 0；已直傳單張 AVIF，Drive file ID `1bFM9gL-JFRuohm0_Q2kGhNdSinKDZkiM`。`get_file` 與資料夾搜尋核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、163,267 bytes、MD5 均一致。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0076 褐翅鴉鵑：已檢視並直接上載 Google Drive
+
+- Runtime：褐翅鴉鵑 *Centropus sinensis*（`Greater Coucal`），鵑形目／杜鵑科；`i=2, a=3.3, v=4.1, r=1, c=1.2, o=2.3, vEst=1`，完全依 runtime。HKBWS `https://avifauna.hkbws.org.hk/species/0040/004800` 及 Cornell eBird `https://ebird.org/species/grecou1` 已讀：香港 Category I，廣布常見留鳥；全球 IUCN LC、趨勢穩定。成年鳥47–56 cm，體型厚重、尾長；頭身尾黑色帶藍紫光，翼及肩羽橙褐，眼紅至褐，喙腿深灰；成鳥無橫斑，幼鳥／換羽個體有淡色橫斑。香港棲地包括灌叢、草地、紅樹林、農地、風水林及花園。
+- 比較為小鴉鵑成鳥（HKBWS `https://avifauna.hkbws.org.hk/species/0040/004900`；較小、頭胸淡羽軸紋、眼暗、喙短）及噪鵑成雄（無橙褐翼、身形較纖長），用於區分同為黑色／紅眼的杜鵑。主圖及特徵圈目視後，將紅眼／喙的首個裁切框向左擴大，完整顯示喙尖；重渲染確認雙足踏枝、長尾、四個特徵圈與全部標籤都完整在框內。AI 插圖僅基本目視檢查，未經獨立鳥類專家驗證。
+- 地圖只作印度次大陸至中國南部、東南亞和大巽他群島部分原生範圍國家概覽，不是精確分佈多邊形或全境占有圖。
+- 成品 `deliver/cards/info-restart-0076/aviandex/0076.avif`：1024×1536、150,246 bytes，MD5 `dd871c536687cc274dce4d2936b81638`，SHA256 `88c8d92ac5afabe386dc4269f3daa8b039dd4e879b0cb3a128ce9bc52021f9d9`；AVIF 解碼、runtime 名稱／分類／六項分數、`vEst`、素材尺寸、地圖 ISO3、manifest 核對及 `git diff --check` 通過，`missingScores=[]`。
+- 上載前指定 Drive 資料夾同名查詢為 0；已直傳單張 AVIF，Drive file ID `1_tQD14HfbvnPqBlrx90VtYudSHC8E4hz`。`get_file` 及資料夾搜尋核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、150,246 bytes、MD5 均一致。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0077 小鴉鵑：已檢視並直接上載 Google Drive
+
+- Runtime：小鴉鵑 *Centropus bengalensis*（`Lesser Coucal`），鵑形目／杜鵑科；`i=2, a=3.3, v=3.7, r=3.3, c=1.2, o=2.7, vEst=1`，完全依 runtime。HKBWS `https://avifauna.hkbws.org.hk/species/0040/004900` 及 Cornell eBird `https://ebird.org/species/lescou1` 全頁已讀：香港 Category I，草地與開闊灌叢常見但愈趨局部化；全球 IUCN LC、趨勢增加。成鳥28–34 cm，較褐翅鴉鵑小，頭、胸與肩羽有淡色羽軸紋，橙褐翼、暗眼、黑喙腿；非繁殖羽較褐，幼鳥及換羽期尾下可見橫斑。
+- 比較為褐翅鴉鵑成鳥（HKBWS `/004800`；體型大、長尾、紅眼、無橫斑、藍紫光黑身及亮橙褐翼）與噪鵑成雄（無褐翼、樹棲且體形較大）。完整預覽、主圖、四個特徵圈、比較圖、分類、評分及地圖已目視；「暗眼短喙」裁切框左移以完整保留喙尖，所有標籤完整在面板內。AI 插圖僅基本目視檢查，未經獨立鳥類專家驗證。
+- 香港本地族群下降與全球評估增加趨勢分開陳述。地圖只作印度、孟加拉、印支、中國南部及東南亞至群島部分原生分佈國家概覽，不表示全境占有或精確多邊形。
+- 成品 `deliver/cards/info-restart-0077/aviandex/0077.avif`：1024×1536、161,964 bytes，MD5 `fa5b330c6ca7320d06d98341753000cc`，SHA256 `39c8839928c7eb79165516385d5566206926e56969c5394d3c37fbc8510ad646`；AVIF 解碼、runtime 名稱／分類／六項分數、`vEst`、素材尺寸、地圖 ISO3、manifest 核對及 `git diff --check` 通過，`missingScores=[]`。
+- 上載前指定 Drive 資料夾同名查詢為 0；已直傳單張 AVIF，Drive file ID `10brpWCHr_5IMHLQf4jcapV58xe-Yogg4`。`get_file` 及資料夾搜尋核實唯一一份，parent `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`、161,964 bytes、MD5 均一致。沒有 ZIP／R2，不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0078 紅翅鳳頭鵑：舊版本紀錄（已被用戶否決及下文重製版取代）
+
+- Runtime：紅翅鳳頭鵑 *Clamator coromandus*（`Chestnut-winged Cuckoo`），鵑形目／杜鵑科。runtime 只定義觀賞 `v=4.1`、研究 `r=4.0`；`i/a/c/o` 缺省保持待查，未推估填入。
+- 已讀 HKBWS `https://avifauna.hkbws.org.hk/species/0040/005000` 與 Cornell eBird `https://ebird.org/species/chwcuc1`。香港 Category I，罕見夏候鳥及稀少過境鳥；成鳥45–47 cm，黑色尖長冠、白色後頸環、橙淡褐喉、栗紅翼、淺色腹部及長黑尾；全球 IUCN LC、趨勢穩定。HKBWS 繁殖調查顯示本地分佈可能下降，與全球趨勢分開標註。
+- 比較褐翅鴉鵑成鳥及雄噪鵑；依資料來源檢視四個特徵圈與完整預覽。標籤／卡面元素均留在面板內。主圖是根據已查診斷特徵手繪像素插圖，非照片，只做基本目視檢查，未經獨立鳥類專家驗證。
+- 分佈為部分原生分佈國家概覽，並非全境占有、精確多邊形或香港出現紀錄。
+- 最終 `deliver/cards/info-restart-0078/aviandex/0078.avif`：1024×1536、138,537 bytes，MD5 `9c212ffc71ae56ff83050914987758f7`，SHA256 `58633357fac757ed970d479817749efb1ea9a43ba6edd6664dfe3a490a026ae2`；runtime、裁切、素材尺寸、GeoJSON ISO3、AVIF decode、manifest checksum、缺分欄位及 `git diff --check` 驗證通過。
+- Drive 上載前同名搜尋 0；直接上載單張 AVIF 後，`get_file` 與目的資料夾搜尋核實唯一檔案：ID `1jqMo_AVwAELw8_vqGnMeewEY6-T22oZl`，MIME `image/avif`，138,537 bytes，MD5 一致。沒有 ZIP/R2，不覆蓋 app 現有卡片、不修改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0079 八聲杜鵑：舊版本紀錄（已被取代）
+
+- Runtime：八聲杜鵑 *Cacomantis merulinus*（`Plaintive Cuckoo`），鵑形目／杜鵑科；`i=2, a=3.8, v=3.2, r=3.3, c=1.2, o=2.7`。
+- 已讀 HKBWS `https://avifauna.hkbws.org.hk/species/0040/005300` 及 Cornell `https://ebird.org/species/placuc1`。HKBWS：香港低地常見夏候鳥、稀少過境及冬候鳥，部分可能留居；成鳥18–23 cm，灰色頭罩、褐色背翼、無斑橙淡褐下體、長漸層尾白端；全球 IUCN LC、趨勢穩定。地圖只作原生範圍國家概覽。
+- 比較褐翅鴉鵑及紅翅鳳頭鵑；完整預覽確認主圖特徵圈及標籤完整落在面板內。插圖為依可靠描述手繪像素風格，非照片，未經專家獨立驗證。
+- AVIF `deliver/cards/info-restart-0079/aviandex/0079.avif`：1024×1536、132,115 bytes，MD5 `3022b768158768e8ce72bbc22eb73ca2`，SHA256 `f7f493110ea9d516b477851c735c050a93d4b796cdf29dfc1d1e6abc30537887`；runtime、scores、素材尺寸、裁切、地圖 ISO3、AVIF decode、manifest 及 `git diff --check` 驗證通過。
+- Drive 上載前同名搜尋 0；直接上載後由 `get_file` 和資料夾搜尋核實唯一檔案 ID `1rovjkGRtX6shgk2R6i_N8hDh3rm96VKn`、MIME、parent、bytes、MD5 一致。沒有 ZIP/R2；不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0080 烏鵑：舊版本紀錄（已被取代）
+
+- Runtime：烏鵑 *Surniculus lugubris*（`Square-tailed Drongo-Cuckoo`），鵑形目／杜鵑科；`i=2, v=3.4, r=1, c=1.2, o=1.9, vEst=1`；runtime 缺少 `a`，保留待查。
+- 已讀 HKBWS `https://avifauna.hkbws.org.hk/species/0040/005400` 及 Cornell eBird `https://ebird.org/species/asidrc3`。香港 Category I，主要春季在林地出現的稀少過境鳥。成鳥23–25 cm，纖瘦如鵲鴝，身體藍黑帶光澤，纖長弧嘴、微分叉尾，尾下覆羽及最外側尾羽具細白橫斑；幼鳥有不同程度白點。全球 IUCN LC、趨勢下降。
+- 比較八聲杜鵑成鳥及褐翅鴉鵑成鳥。修正並目視核實主圖頸部銜接，四個特徵圈與全部文字位於面板內。插圖為據可靠描述手繪像素風格，非照片，未經鳥類專家獨立驗證。地圖是部分原生範圍國家概覽。
+- 最終 `deliver/cards/info-restart-0080/aviandex/0080.avif`：1024×1536、130,812 bytes，MD5 `a275d3e0a96a4d2237def217165b4da7`，SHA256 `2511bd7e44e48ba608ba9282abfb167bdd2819bf0d5d76154263d5ae38c2ed8d`；runtime、缺分、vEst、裁切、素材尺寸、地圖 ISO3、AVIF 解碼、manifest 及 `git diff --check` 驗證通過。
+- Drive 上載前同名搜尋為0；直接上載後 `get_file` 及資料夾搜尋核實唯一檔案 ID `1hQX2M7A0ZfO8lL-3wzUjuI2pFXCLGT3j`、parent、MIME、bytes、MD5 一致。沒有 ZIP/R2；不覆蓋 app 卡片，不改 UI、Service Worker、slim 註冊或共用 renderer。
+
+### 0081 大鷹鵑：舊版本紀錄（已被取代）
+
+- Runtime：大鷹鵑 *Hierococcyx sparverioides*（`Large Hawk-Cuckoo`），鵑形目／杜鵑科；`i=2, a=3.8, v=4.3, r=4.8, c=3, o=3.6, vEst=1`。
+- 已讀 HKBWS `https://avifauna.hkbws.org.hk/species/0040/005500` 及 Cornell eBird `https://ebird.org/species/larhac2`。香港 Category I、常見夏候鳥。成鳥38–40 cm，灰冠與臉側、亮黃眼圈、褐色上體及灰色黑橫帶尾；白色下體胸及頸側有深栗色粗縱斑，下腹及脅具栗褐橫斑。全球 IUCN LC、趨勢穩定。
+- 比較八聲杜鵑成鳥及烏鵑；完整預覽已目視。黃眼圈特徵裁切框上緣擴大後完整呈現，其他特徵圈與全部文字留在面板內。主圖依描述手繪像素風格，非照片，未經獨立專家驗證。
+- 成品 `deliver/cards/info-restart-0081/aviandex/0081.avif`：1024×1536、135,660 bytes，MD5 `3d1a38e3712bebc6a0fb7d8eda0f0697`，SHA256 `f7a1647d61129a8aa9f172f784418bde76c33ee3571d5b7c31bd3a74d8403203`；runtime、scores、vEst、裁切、素材尺寸、ISO3、AVIF decode、manifest 及 `git diff --check` 驗證通過。
+- Drive 上載前同名搜尋 0；上載後 `get_file` 及目的資料夾搜尋核實唯一檔案 ID `1OYAnEE_9W1SrMKMB2CT8RK6JQtPxjcdh` 及 metadata。沒有 ZIP/R2；不覆蓋 app 卡片、不改 UI、Service Worker、slim 註冊或共用 renderer。
+
 ## 新分支重試 0038–0040：發現 Drive 已有另一版本，停止重複上載
 
 目前分支 arena/ec608ba0-aviandex（base b73ec92）。新分支環境無舊 ignored 素材、venv、fonts；本回合重新建立 venv（Pillow/fonttools/numpy/scipy）、TC 靜態字體，從 GitHub 下載 NaturalEarth geojson，十次生圖全成功，三張本機版已渲染／基本目視／audit。
@@ -696,3 +958,8 @@ HKBWS substantive來源007700/007800/008500/008600/008700已讀。新圖只有�
 | 0104.avif | 1PWbzPZbZYhDFSTdcBFinp62nUdb3VomW | 143052 | 06001911dc0847066d6f884938ed8b1b | a515a42c6bcb8c9004ea217abe1dc5226d2f6194d227585fb6d51b463fedb175 |
 
 parent全 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。top-level uploaded_drive_verified與embedded製作階段review_before_upload區分。交付至0104，下次從0105開始，勿重覆0100–0104。未改UI/runtime/SW/R2/slim註冊，無ZIP。0041–43來源JSON缺口仍未解決，不能聲稱全批JSON齊備。PR25尚未整合；保留其0051–77歷史與本分支重做0078–81。
+
+
+## Main整合交接更正
+
+本次已整合PR25的0051–0077規格及歷史；上述「PR25尚未整合」只描述當時狀態。0078–0081衝突採用用戶要求重做的本分支spec，舊版交付紀錄僅供追溯，不再有效。0038–0040規格加上 `local_candidate_not_verified_against_drive`，不可拿本地候選作Drive舊卡來源證據。0041–0043來源缺口未解決。新Agent先讀交接文件，起點及完成量由用戶指定。生成大圖及AVIF依既有ignore不入Git。

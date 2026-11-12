@@ -1,0 +1,160 @@
+{
+  "id": "0068",
+  "name": "火斑鳩",
+  "scientificName": "Streptopelia tranquebarica",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港I類過境為主"
+  },
+  "illustrationTaxon": "Streptopelia tranquebarica adult male; main pixel art and feature crops",
+  "similarSpecies": [
+    {
+      "zh": "灰斑鳩（成鳥）",
+      "scientificName": "Streptopelia decaocto",
+      "asset": "collared-dove.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "灰斑鳩體型較大、尾較長，頭身素淡粉灰且頸後有黑半環；火斑鳩雄鳥體型較小、尾短，身體大部分呈紅粉色、頭灰藍。雌火斑鳩與灰斑鳩雌性羽色相似，體型及尾長有助區分。"
+    },
+    {
+      "zh": "珠頸斑鳩（成鳥）",
+      "scientificName": "Spilopelia chinensis",
+      "asset": "spotted-dove.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "珠頸斑鳩較大、尾較長，頸側深色斑佈滿白點；火斑鳩雄鳥較細短尾、身體紅粉且頸後為狹窄黑半環，雌鳥則全身較均勻灰褐。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.19,
+      0.14,
+      0.44,
+      0.39
+    ],
+    [
+      0.3,
+      0.25,
+      0.5,
+      0.44
+    ],
+    [
+      0.34,
+      0.33,
+      0.75,
+      0.67
+    ],
+    [
+      0.67,
+      0.52,
+      0.96,
+      0.84
+    ]
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "featureLabels": [
+    "淡藍灰頭與黑喙",
+    "頸後黑色半環",
+    "紅粉身與暗色飛羽",
+    "短尾與白色尾端"
+  ],
+  "featureNotes": [
+    "雄鳥頭部淡藍灰，對比紅粉色身體",
+    "頸後具狹窄黑色半環；幼鳥缺此斑",
+    "雄鳥上、下體大致紅粉色，飛羽深色",
+    "尾相對短，尾下覆羽及尾端具大塊白色"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "BTN",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "SGP",
+      "IDN",
+      "PHL",
+      "CHN"
+    ],
+    "note": "Partial broad native-range country overview: from Pakistan east through India and Southeast Asia to the Philippines, south to Singapore; widespread in central and southern China. Highlights are broad context only, not nationwide occupancy or exact range polygons. Hong Kong passage and winter records are described separately and are not a distinct resident breeding population.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006500",
+      "use": "Full HKBWS account read (chunks 0–1): Category I, common passage migrant especially autumn and scarce winter visitor mainly Deep Bay; summer records increasing but no evidence of HK breeding. Male 21–23 cm, compact/short-tailed, pinkish-red upperparts and underparts, pale grey head, black hind collar, dark flight feathers, grey rump/uppertail, white undertail coverts and extensive white undertail tips. Female buffy-grey with black hind collar, similar in plumage to female Eurasian Collared Dove but smaller with markedly shorter tail; juveniles dull brown and lack collar. Global IUCN LC, trend decreasing. Native range from Pakistan across India and Southeast Asia to Philippines/Singapore; China range central/south; China/HK taxon S. t. humilis."
+    },
+    {
+      "url": "https://ebird.org/species/recdov1",
+      "use": "Cornell eBird/Merlin account: LC, sexually dimorphic; male reddish with bluish-gray head, female brown overall; both sexes with dark collar. Open country and agriculture; female may be confused with collared-doves but smaller with shorter tail."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006400",
+      "use": "Full HKBWS account read (chunks 0–1): Eurasian Collared Dove comparison. Larger/bulkier and longer-tailed; pale pinkish-grey unmarked body with nape half-collar, ruby-red iris, black bill, dull red legs; especially similar in plumage to female Red Collared Dove, but distinctly larger and longer-tailed."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006600",
+      "use": "Full HKBWS Spotted Dove account read: 31 cm, slender relatively long tail, pinkish-grey underparts and dark grey neck patch covered in white spots; orange iris and grey bill; comparison only."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative available score values. Adaptability score a is absent and must remain pending; vEst=1 preserves length-estimate note."
+    },
+    {
+      "path": "cards/art/info-restart-0067/pixel.png",
+      "use": "Previously reviewed Eurasian Collared Dove illustration, reused as the whole-bird side-by-side adult comparator."
+    },
+    {
+      "path": "cards/art/info-restart-0066/spotted-dove.png",
+      "use": "Previously reviewed adult Spotted Dove illustration, reused as the whole-bird side-by-side adult comparator."
+    }
+  ],
+  "notes": [
+    "Main image depicts adult male: the species is strongly sexually dimorphic; females are buffy grey and resemble female Eurasian Collared Dove, but are smaller and markedly shorter-tailed. Juveniles lack the collar.",
+    "Hong Kong Category I records describe passage migrant and scarce winter visitor; no confirmed local breeding. Do not imply the global IUCN LC assessment means locally common.",
+    "Comparators are labelled as adults; circles are illustrative and not to scale.",
+    "Runtime adaptability (a) score is missing and must remain pending; vEst=1 keeps the length-estimate note. Other scores are app entertainment metrics, not scientific evaluation.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial native-range country overview, not an exact range or Hong Kong occurrence polygon.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, app slim-registration or shared renderer change.",
+    "Image generation limit was reached after the primary illustration; the same reviewed pixel illustration is also the source for the four detail crops rather than a separately generated feature image."
+  ]
+}

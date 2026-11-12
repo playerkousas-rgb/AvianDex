@@ -1,0 +1,138 @@
+{
+  "id": "0059",
+  "name": "紫水雞",
+  "scientificName": "Porphyrio poliocephalus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港稀少訪客"
+  },
+  "illustrationTaxon": "Porphyrio poliocephalus adult; main image and four adult diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "紫青水雞（成鳥；美洲種）",
+      "scientificName": "Porphyrio martinica",
+      "asset": "purple-gallinule.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "紫青水雞成鳥較小，背翼帶青綠銅色，紅喙有黃色端、額盾淡藍、腳趾黃色；紫水雞體型較大，喙與額盾全紅、腳呈紅色且頭較灰。紫青水雞是美洲比較種，不代表香港出現。"
+    },
+    {
+      "zh": "黑水雞（成鳥）",
+      "scientificName": "Gallinula chloropus",
+      "asset": "common-moorhen.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "黑水雞體型明顯較小、羽色黑褐，具黃腿及紅額盾；喙紅而帶黃色端，體側白線與白色尾下羽常見。紫水雞是大型紫藍色水雞，喙、額盾和腳均偏紅。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.12,
+      0.18,
+      0.52,
+      0.58
+    ],
+    [
+      0.23,
+      0.25,
+      0.62,
+      0.65
+    ],
+    [
+      0.29,
+      0.58,
+      0.7,
+      0.96
+    ],
+    [
+      0.6,
+      0.36,
+      0.98,
+      0.74
+    ]
+  ],
+  "featureLabels": [
+    "紅喙與紅色額盾",
+    "灰色頭部與紫藍身",
+    "紅腿與長趾",
+    "白色尾下覆羽"
+  ],
+  "featureNotes": [
+    "粗大的紅喙與額前紅色盾板連成醒目辨識特徵",
+    "頭面比身體紫藍色明顯淺灰，頸胸亦較淡",
+    "大型秧雞有長紅腿和極長腳趾，涉水時清晰可見",
+    "短尾翹起時露出白色尾下覆羽"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "TUR",
+      "IRN",
+      "PAK",
+      "IND",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "MYS",
+      "CHN"
+    ],
+    "note": "Full-world partial country overview of selected native ranges and subspecies areas described by HKBWS, from the Middle East and Indian subcontinent through south China and mainland Southeast Asia. Highlights are a subset only; green is not nationwide occupancy or a complete distribution, and the map is not a precise subspecies or seasonal polygon. Hong Kong's rare visitor records are not marked as resident range; Florida introductions are excluded.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/007900",
+      "use": "Full HKBWS species account read: Category I rare visitor to densely vegetated wetlands in Hong Kong; 38–50 cm, plump rail with long reddish legs/toes, prominent red bill and frontal shield, mainly purplish-blue with distinctly paler grey face/throat/neck/breast, blackish-green lower back/rump/remiges, and white undertail coverts. Accepted records include Mai Po, Long Valley, Nam Chung, Lok Ma Chau and Hok Tau. Global IUCN LC (the account notes current taxonomy may subsume taxa within Purple Swamphen). Range: Turkey/Middle East through India/Sri Lanka and Myanmar/Thailand to Laos/Vietnam, Malay Peninsula and south China; subspecies ranges described separately. Hong Kong occurrence and global IUCN status are kept distinct."
+    },
+    {
+      "url": "https://ebird.org/species/purswa3",
+      "use": "Cornell Lab eBird/Merlin account read: large bluish-purple waterbird with red bill and forehead shield, red legs/feet and long toes; raised tail reveals fluffy white undertail coverts; juveniles duller and lack the adult red bill/shield. Used to confirm diagnostic illustration details."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Purple_Gallinule/id",
+      "use": "Cornell Lab Purple Gallinule account read: adult Purple Gallinule has purple head/body, greenish wings/back, red bill with yellow tip, pale-blue frontal shield and bright-yellow legs/toes; 33–37 cm, smaller than Grey-headed Swamphen. Used as an explicitly named extralimital American lookalike, not a Hong Kong record."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/007700",
+      "use": "Full HKBWS Common Moorhen account read: adult 30–38 cm, dark blackish-brown above, greyish underparts, red shield/base of bill with yellow bill tip, yellow legs, white flank line and undertail coverts; Hong Kong scarce to uncommon winter visitor and scarce at other times. Used as a local size/colour contrast; local frequency is not equated with IUCN."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "No score record exists for 0059; all six component values and overall score remain pending. No value is inferred, filled with zero, or recomputed."
+    }
+  ],
+  "notes": [
+    "AI illustrations must depict distinct named taxa: the main species, American Purple Gallinule (adult, blue frontal shield/yellow legs), and Common Moorhen (adult, smaller dark bird/yellow legs). No comparison image may be relabelled main-species art.",
+    "All six score dimensions are absent at runtime; preserve 待查 and do not add zeroes or infer an overall score.",
+    "AI illustrations receive basic visual review only and are not independent ornithologist validation. Comparison circles are not to scale.",
+    "Map uses a full-world Natural Earth basemap. Selected-country highlights are partial only, not nationwide occupancy, complete range or precise subspecies polygons.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, or app slim-registration change."
+  ]
+}

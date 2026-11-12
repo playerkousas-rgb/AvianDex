@@ -1,0 +1,133 @@
+{
+  "id": "0060",
+  "name": "中華鷓鴣",
+  "scientificName": "Francolinus pintadeanus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港局部留鳥"
+  },
+  "illustrationTaxon": "Francolinus pintadeanus adult male; main image and four diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "鵪鶉（雄鳥）",
+      "scientificName": "Coturnix japonica",
+      "asset": "japanese-quail.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "鵪鶉體型小得多（17–19 cm），雄鳥紅褐臉喉、奶油色眉紋及暗冠，胸脇偏淡褐而非白點密布。中華鷓鴣約31–34 cm，雄鳥頭部黑白斑紋及黑底白點身體明顯。"
+    },
+    {
+      "zh": "灰胸竹雞（雄鳥）",
+      "scientificName": "Bambusicola thoracicus",
+      "asset": "chinese-bamboo-partridge.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "灰胸竹雞胸前有灰藍色胸帶、栗色喉臉及黃褐底黑斑脅部；中華鷓鴣雄鳥則有白頰白喉、黑色面紋及栗色冠側，胸脇黑底白點。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.18,
+      0.13,
+      0.53,
+      0.49
+    ],
+    [
+      0.19,
+      0.16,
+      0.43,
+      0.42
+    ],
+    [
+      0.32,
+      0.5,
+      0.73,
+      0.84
+    ],
+    [
+      0.34,
+      0.65,
+      0.6,
+      0.91
+    ]
+  ],
+  "featureLabels": [
+    "黑白頭紋與栗色冠側",
+    "白頰白喉及黑面紋",
+    "胸脇黑底白色斑點",
+    "短黃橙腿與斑駁身羽"
+  ],
+  "featureNotes": [
+    "雄鳥頭紋醒目，黑色面紋框住白頰，冠側帶栗色",
+    "白色頰喉與黑色貫眼、頰下紋形成明顯對比",
+    "頸胸與脇部黑底密布大型白點，肩羽帶栗色",
+    "粗壯短腿呈黃橙色；全身為細緻黑白斑駁羽紋"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "CHN"
+    ],
+    "note": "Partial overview of countries intersecting the broad native range described by HKBWS, from northeast India through mainland Southeast Asia to southern China. Highlights are not nationwide occupancy or a complete range polygon; Hong Kong's locally resident status is not represented as a separate occurrence polygon.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/003700",
+      "use": "Full HKBWS Chinese Francolin account read: localised resident of grass-dominated hillsides/open-canopy shrubland; 31–34 cm (source text has reversed '31-24 cm' typo but subsequent distinction and field use support the corrected conventional 31–34 cm); male black pattern surrounding white cheeks, rusty-brown crown sides, white-spotted dark neck/breast/flanks; female duller with barred buff underparts and no chestnut wing patch; yellowish-orange legs. HKBWS describes a substantial local decline in distribution attributed to vegetation succession; global IUCN LC/stable is separately labelled from Hong Kong local status. Broad range from northeast India via mainland Southeast Asia to southern China."
+    },
+    {
+      "url": "https://ebird.org/species/chifra1",
+      "use": "Cornell eBird species account: male white cheeks and rufous crown/shoulders/vent with black-white scaling; female similar but browner and less bright. Used to cross-check male illustration and sex designation."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0030/003800",
+      "use": "Full HKBWS Japanese Quail account read: 17–19 cm; adult male rufous face/throat, broad creamy supercilium, dark crown and buff chest/flanks; female duller with dark breast mottling. Hong Kong scarce autumn migrant, rare winter/spring migrant; global IUCN Near Threatened. Used as a size/plumage comparison, not to conflate its local passage status with the main species."
+    },
+    {
+      "url": "https://ebird.org/species/chbpar3",
+      "use": "Cornell eBird Chinese Bamboo-Partridge account: characteristic grey-blue brow/chest, orange cheeks and breast band, and large black flank spots; used as a clearly named local galliform comparison, adult male."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six runtime score values and overall score."
+    }
+  ],
+  "notes": [
+    "AI illustrations depict the male Chinese Francolin as the main taxon; comparison images are separately named Japanese Quail and Chinese Bamboo-Partridge and must not be relabelled main-species art.",
+    "Score dimensions and overall score are app entertainment metrics, not scientific evaluations; use runtime values exactly.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation. Comparison circles are not to scale.",
+    "Map uses world Natural Earth basemap and selected-country partial overview only, not precise range or Hong Kong occurrence polygon.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, or app slim-registration change."
+  ]
+}
