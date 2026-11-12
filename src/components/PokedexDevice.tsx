@@ -23,6 +23,7 @@ import { searchBirds } from '../lib/pokedexOrder';
 import { BirdDetailPage } from './BirdDetailPage';
 import { ResearchHubPage } from './ResearchHubPage';
 import { PokeballIcon } from './PokeballIcon';
+import { InfoCardReader } from './InfoCardReader';
 
 /** 圖鑑評分（32 KB，隨主 bundle 載入；與詳細頁、卡面讀同一個檔） */
 import dexScoresRaw from '../data/dexScores.json';
@@ -283,6 +284,57 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             </button>
           </div>
 
+          {/* Fullscreen tools occupy their own row, never float over card text. */}
+          <div className="flex justify-between gap-2 px-3 pt-3" onClick={e => e.stopPropagation()}>
+          <div className="flex gap-1.5">
+            <button
+              onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); setPage(3); }}
+              aria-label={t('科學研究中心', 'Research')}
+              className="w-11 h-11 rounded-full bg-emerald-600/85 border-[3px] border-gray-900 text-white flex items-center justify-center active:scale-90 shadow-lg"
+            >
+              <Compass className="w-5 h-5" />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); setPage(2); }}
+              aria-label={t('詳細資料', 'Details')}
+              className="w-11 h-11 rounded-full bg-yellow-500/90 border-[3px] border-gray-900 text-gray-900 flex items-center justify-center active:scale-90 shadow-lg"
+            >
+              <FileText className="w-5 h-5" />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+              aria-label={t('上一隻', 'Previous')}
+              className="w-11 h-11 rounded-full bg-black/70 border-[3px] border-gray-900 text-amber-200 flex items-center justify-center active:scale-90 shadow-lg"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+          </div>
+
+          <div className="flex gap-1.5">
+            <button
+              onClick={(e) => { e.stopPropagation(); setCaptureKind('audio'); }}
+              aria-label={t('聽聲認雀', 'Sound ID')}
+              className="w-11 h-11 rounded-full bg-cyan-600/85 border-[3px] border-gray-900 text-white flex items-center justify-center active:scale-90 shadow-lg"
+            >
+              <Mic className="w-5 h-5" />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); setCaptureKind('image'); }}
+              aria-label={t('看圖認雀', 'Photo ID')}
+              className="w-11 h-11 rounded-full bg-fuchsia-600/85 border-[3px] border-gray-900 text-white flex items-center justify-center active:scale-90 shadow-lg"
+            >
+              <Camera className="w-5 h-5" />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); handleNext(); }}
+              aria-label={t('下一隻', 'Next')}
+              className="w-11 h-11 rounded-full bg-black/70 border-[3px] border-gray-900 text-amber-200 flex items-center justify-center active:scale-90 shadow-lg"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+          </div>
+
           {/* --- 核心：一張大卡（插畫 ↔ 資訊圖卡） ---
               用戶指出：「同一版面，上方已經有鳥卡或反轉的資訊圖卡了，
               下方就不用有張大一點的鳥卡」。
@@ -299,7 +351,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                 className="relative w-full [transform-style:preserve-3d]"
               >
                 {/* 正面：插畫（1:1 正方形，所以本體就是正方形，不會有奇怪留白） */}
-                <div className="relative w-full aspect-square [backface-visibility:hidden] rounded-xl overflow-hidden bg-[#0e0d0b]">
+                <div className={`relative w-full aspect-square [backface-visibility:hidden] rounded-xl overflow-hidden bg-[#0e0d0b] ${screenFlipped ? 'hidden' : ''}`}>
                   {currentImage.url ? (
                     <img
                       src={currentImage.url}
@@ -312,15 +364,10 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                   )}
                 </div>
 
-                {/* 背面：資訊圖卡（A4 直向 → object-contain，不裁走字） */}
-                <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-xl overflow-hidden bg-[#f7f4ea]">
+                {/* Reader grows naturally in fullscreen; never squash a portrait card into a square. */}
+                <div className={`${screenFlipped ? 'relative' : 'absolute inset-0 pointer-events-none'} [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-xl overflow-hidden bg-[#0c202b]`}>
                   {infoImage.status === 'loaded' && infoImage.url ? (
-                    <img
-                      src={infoImage.url}
-                      alt={t(`${currentBird.name} 資訊圖卡`, `${currentBird.name} info card`)}
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-contain"
-                    />
+                    <InfoCardReader id={currentBird.id} url={infoImage.url} name={currentBird.name} lang={lang} />
                   ) : infoImage.status === 'missing' || infoImage.status === 'error' ? (
                     <div className="w-full h-full flex items-center justify-center bg-[#171512] text-white/40 text-[12px]">
                       {t('資訊圖卡暫時讀不到', 'Info card unavailable')}
@@ -352,56 +399,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             )}
           </div>
 
-          {/* --- 兩邊浮球：左 3 個（地圖／禮儀／裝備），右 3 個（聽聲／拍照／精靈球）
-              用戶要求：「那些球也是左右各 3 個，那就剛好不會遮到圖」。
-              所以手機上一律貼邊、垂直排列，中間完全留空給圖。 */}
-          <div className="fixed left-2 bottom-6 z-[160] flex flex-col gap-2">
-            <button
-              onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); setPage(3); }}
-              aria-label={t('科學研究中心', 'Research')}
-              className="w-11 h-11 rounded-full bg-emerald-600/85 border-[3px] border-gray-900 text-white flex items-center justify-center active:scale-90 shadow-lg"
-            >
-              <Compass className="w-5 h-5" />
-            </button>
-            <button
-              onClick={(e) => { e.stopPropagation(); setIsFullscreen(false); setPage(2); }}
-              aria-label={t('詳細資料', 'Details')}
-              className="w-11 h-11 rounded-full bg-yellow-500/90 border-[3px] border-gray-900 text-gray-900 flex items-center justify-center active:scale-90 shadow-lg"
-            >
-              <FileText className="w-5 h-5" />
-            </button>
-            <button
-              onClick={(e) => { e.stopPropagation(); handlePrev(); }}
-              aria-label={t('上一隻', 'Previous')}
-              className="w-11 h-11 rounded-full bg-black/70 border-[3px] border-gray-900 text-amber-200 flex items-center justify-center active:scale-90 shadow-lg"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-          </div>
 
-          <div className="fixed right-2 bottom-6 z-[160] flex flex-col gap-2">
-            <button
-              onClick={(e) => { e.stopPropagation(); setCaptureKind('audio'); }}
-              aria-label={t('聽聲認雀', 'Sound ID')}
-              className="w-11 h-11 rounded-full bg-cyan-600/85 border-[3px] border-gray-900 text-white flex items-center justify-center active:scale-90 shadow-lg"
-            >
-              <Mic className="w-5 h-5" />
-            </button>
-            <button
-              onClick={(e) => { e.stopPropagation(); setCaptureKind('image'); }}
-              aria-label={t('看圖認雀', 'Photo ID')}
-              className="w-11 h-11 rounded-full bg-fuchsia-600/85 border-[3px] border-gray-900 text-white flex items-center justify-center active:scale-90 shadow-lg"
-            >
-              <Camera className="w-5 h-5" />
-            </button>
-            <button
-              onClick={(e) => { e.stopPropagation(); handleNext(); }}
-              aria-label={t('下一隻', 'Next')}
-              className="w-11 h-11 rounded-full bg-black/70 border-[3px] border-gray-900 text-amber-200 flex items-center justify-center active:scale-90 shadow-lg"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
         </motion.div>
       )}
  
@@ -563,15 +561,11 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
               )}
             </div>
 
-            {/* 背面：資訊圖卡 → 冇就用文字簡版 */}
-            <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-hidden bg-[#f7f4ea]">
+            {/* Full-width reader scrolls inside the device; original card stays downloadable. */}
+            <div key={currentBird.id} className={`absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto overscroll-contain touch-pan-y bg-[#0c202b] ${screenFlipped ? '' : 'pointer-events-none'}`}>
+              <button type="button" onClick={(e) => { e.stopPropagation(); toggleFlip(); }} className="w-full bg-[#153c50] text-amber-100 text-sm py-2 font-bold">{t('轉回插畫', 'Back to artwork')}</button>
               {infoImage.status === 'loaded' && infoImage.url ? (
-                <img
-                  src={infoImage.url}
-                  alt={t(`${currentBird.name} 資訊圖卡`, `${currentBird.name} info card`)}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-contain"
-                />
+                <InfoCardReader id={currentBird.id} url={infoImage.url} name={currentBird.name} lang={lang} />
               ) : infoImage.status === 'missing' || infoImage.status === 'error' ? (
                 <div className="w-full h-full flex items-center justify-center bg-[#171512] text-white/40 text-[12px]">
                   {t('資訊圖卡暫時讀不到', 'Info card unavailable')}
@@ -596,8 +590,8 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
         </div>
       </div>
 
-      {/* 右下角喇叭孔 */}
-      <div className="absolute bottom-3 right-6 flex flex-col gap-1 opacity-40">
+      {/* Decorative speaker must not cover text or intercept reader gestures. */}
+      <div className={`absolute bottom-3 right-6 flex flex-col gap-1 opacity-40 pointer-events-none ${screenFlipped ? 'hidden' : ''}`}>
         <div className="w-6 h-1 bg-gray-800 rounded-full" />
         <div className="w-6 h-1 bg-gray-800 rounded-full" />
         <div className="w-6 h-1 bg-gray-800 rounded-full" />
@@ -688,7 +682,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                         </div>
                         <p className="text-cyan-200/80 text-[10px] font-bold mt-1.5 flex items-center gap-1">
                           <Layers className="w-3 h-3" />
-                          {t('打開圖卡（1200×1600 · 可儲存 PNG）', 'Open the card (1200×1600 · save PNG)')}
+                          {t('全螢幕閱讀圖卡', 'Read card in full screen')}
                         </p>
                       </button>
                     )}

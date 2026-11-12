@@ -20,3 +20,8 @@ export function localInfoCardUrl(id: string | undefined | null): string | undefi
 export function hasInfoCard(id: string | undefined | null): boolean {
   return !!id && (SET.has(id.padStart(4, '0')) || !!LOCAL_INFO[id.padStart(4, '0')]);
 }
+
+/** Only cards composed with the slim template may use its panel viewports. */
+export function infoCardLayout(id: string): 'slim' | 'legacy' {
+  return id.padStart(4, '0') === '0058' ? 'slim' : 'legacy';
+}
