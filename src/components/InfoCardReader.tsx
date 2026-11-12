@@ -1,9 +1,10 @@
 import type { Lang } from '../lib/explorer';
 import { useId, useRef, useState, type ReactNode } from 'react';
 import { Maximize2 } from 'lucide-react';
-import { mobileCardPages, nextMobileCardPage, SLIM_PAGE_BOXES } from '../lib/mobileInfoPages';
+import { mobileCardPages, nextMobileCardPage, SLIM_PAGE_BOXES, type MobileCardPage } from '../lib/mobileInfoPages';
 import type { CardImageStatus } from '../lib/cardImage';
 import scoresData from '../data/dexScores.json';
+import { infoCardPanelColor } from '../lib/infoCards';
 
 const AXES = [
   ['i', '重要性', 'Importance'], ['a', '適應力', 'Adaptability'],
@@ -55,9 +56,11 @@ export function OriginalInfoCard({ url, name, lang, fitted = false }: { url: str
     referrerPolicy="no-referrer" className={fitted ? 'block w-full h-full object-contain' : 'block w-full h-auto'} />;
 }
 
-export function CardPanel({ url, box, label }: { url: string; box: readonly number[]; label: string }) {
+export function CardPanel({ url, box, label, surface = '#1c212e' }: { url: string; box: readonly number[]; label: string; surface?: string }) {
   const clipId = useId();
-  return <svg viewBox={box.join(' ')} className="block w-full h-full" role="img" aria-label={label}>
+  return <svg data-mobile-info-panel viewBox={box.join(' ')} preserveAspectRatio="xMidYMid meet"
+    className="block w-full h-full rounded-md ring-1 ring-inset ring-[#debc70]/60"
+    style={{ backgroundColor: surface }} role="img" aria-label={label}>
     {/* viewBox alone does not crop content that lands in letterboxing space. */}
     <defs><clipPath id={clipId}><rect x={box[0]} y={box[1]} width={box[2]} height={box[3]} /></clipPath></defs>
     <image href={url} width="1024" height="1536" clipPath={`url(#${clipId})`} />
@@ -73,13 +76,14 @@ type Props = {
   infoUrl?: string;
   infoStatus: CardImageStatus;
   onInfo: () => void;
+  onPageChange?: (page: MobileCardPage) => void;
   onExpand: (information: boolean) => void;
 };
 
 /** Mobile device only. Expanding exits pagination and opens the untouched portrait card.
  * Parent keys this component by bird ID so navigation always starts at artwork on a new bird.
  */
-export function MobileCardPages({ id, name, lang, artwork, navigation, infoUrl, infoStatus, onInfo, onExpand }: Props) {
+export function MobileCardPages({ id, name, lang, artwork, navigation, infoUrl, infoStatus, onInfo, onPageChange, onExpand }: Props) {
   const pages = mobileCardPages(id);
   const [index, setIndex] = useState(0);
   const touch = useRef<{ x: number; y: number } | null>(null);
@@ -88,10 +92,11 @@ export function MobileCardPages({ id, name, lang, artwork, navigation, infoUrl, 
   const t = (zh: string, en: string) => lang === 'en' ? en : zh;
   const select = (next: number) => {
     setIndex(next);
+    onPageChange?.(pages[next].key);
     if (next > 0) onInfo();
   };
   const advance = () => select((index + 1) % pages.length);
-  return <div data-mobile-card-pages className="md:hidden absolute inset-0 text-amber-100 select-none"
+  return <div data-mobile-card-pages className="md:hidden absolute inset-0 bg-[#1c212e] text-amber-100 select-none"
     tabIndex={0} role="region" aria-label={t('圖卡：點一下換頁，亦可左右掃', 'Card: tap to change section or swipe left or right')}
     onKeyDown={e => {
       if (e.target !== e.currentTarget) return;
@@ -126,11 +131,12 @@ export function MobileCardPages({ id, name, lang, artwork, navigation, infoUrl, 
       }
     }}>
     <div id={`mobile-card-panel-${id}`} role="group" aria-label={t(page.zh, page.en)} data-card-page={page.key}
-      className="absolute inset-0 overflow-hidden touch-pan-y">
+      className="absolute inset-0 overflow-hidden touch-pan-y"
+      style={{ backgroundColor: page.key === 'distribution' ? '#173446' : infoCardPanelColor(id) }}>
       {index === 0 ? artwork : infoUrl && infoStatus === 'loaded' ? (
         page.key === 'scores' ? <InfoCardScores id={id} lang={lang} compact /> :
         page.key === 'original' ? <OriginalInfoCard url={infoUrl} name={name} lang={lang} fitted /> :
-        <CardPanel url={infoUrl} box={SLIM_PAGE_BOXES[page.key as keyof typeof SLIM_PAGE_BOXES]} label={t(page.zh, page.en)} />
+        <CardPanel url={infoUrl} box={SLIM_PAGE_BOXES[page.key as keyof typeof SLIM_PAGE_BOXES]} label={t(page.zh, page.en)} surface={page.key === 'distribution' ? '#173446' : infoCardPanelColor(id)} />
       ) : <div className="h-full flex items-center justify-center text-sm text-center" role="status">
         {infoStatus === 'missing' || infoStatus === 'error' ? <span className="p-3">{t('暫時未能讀取圖卡，請稍後重新開啟。', 'Card unavailable. Please reopen it later.')}</span> : t('載入圖卡…', 'Loading card…')}
       </div>}

@@ -27,3 +27,9 @@ export function infoCardLayout(id: string): 'slim' | 'legacy' {
   const layouts = data.layouts as Record<string, string>;
   return padded === '0058' || layouts[padded] === 'slim' ? 'slim' : 'legacy';
 }
+
+/** Extend the confirmed slim panel surface into mobile letterboxing without stretching art/text. */
+export function infoCardPanelColor(id: string): string {
+  const colors = data.panelColors as Record<string, string>;
+  return colors[id.padStart(4, '0')] || '#102c3d';
+}

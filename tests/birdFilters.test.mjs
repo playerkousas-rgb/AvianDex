@@ -86,7 +86,7 @@ test('shared species navigator handles list boundaries and is mounted above all 
   const src = fs.readFileSync(path.join(root, 'src/components/PokedexDevice.tsx'), 'utf8');
   assert.equal((src.match(/<BirdNavigator /g) || []).length, 2, 'mobile overlay and unchanged desktop navigator');
   assert.ok(src.includes('navigation={<BirdNavigator overlay'));
-  assert.ok(src.includes('data-mobile-bird-title'));
+  assert.equal(src.includes('data-mobile-bird-title'), false);
   assert.ok(src.indexOf('<BirdNavigator ') < src.indexOf('{page === 1 &&'));
   assert.ok(src.includes('sticky top-0'));
   const app = fs.readFileSync(path.join(root, 'src/App.tsx'), 'utf8');
