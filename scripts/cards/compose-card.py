@@ -549,15 +549,9 @@ RARE_OF = {'LC': 1, 'NT': 2, 'VU': 3, 'EN': 4, 'CR': 5, 'EW': 6, 'EX': 7}   # �
 
 
 def rarity(f):
-    """卡片稀有度 1–7 星：取「保育級別」與「常見度」兩者中較稀有的那個（常見度 5＝很常見 → 1 星；常見度最多把稀有度推到 5 星，6–7 星只留給野外滅絕／滅絕）。
-    兩樣都沒有資料時回傳 0（全部不點亮，不亂填）。"""
-    tiers = []
-    code = (f.get('iucn') or {}).get('code')
-    if code in RARE_OF:
-        tiers.append(RARE_OF[code])
-    if f.get('freq') is not None:
-        tiers.append(6 - max(1, min(5, int(f['freq']))))
-    return max(tiers) if tiers else 0
+    """卡片稀有度 1–7 星，只看保育級別（用戶 2026-11-12：常見度不參與）。
+    無危 1、近危 2、易危 3、瀕危 4、極危 5、野外滅絕 6、滅絕 7；未評估／缺資料＝0（全不點亮，不亂填）。"""
+    return RARE_OF.get((f.get('iucn') or {}).get('code'), 0)
 
 
 def slim_slots(f):
