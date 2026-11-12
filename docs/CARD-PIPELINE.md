@@ -218,7 +218,7 @@ npm run cards:maker      # → tools/card-studio/aviandex-card-maker.html（約 
 ### 12.x 配色（2026-11-11，改版）
 - 依 `playerkousas-rgb/readme` 設計指南（`templates/repo-starter/docs/design-styles_v1.0.md` 的 Scout Field：一個主色＋一個暖橙強調；不要成版多色；白字對主色 ≥ 4.5:1）和實體 TCG（一張卡一個屬性色）重做。
 - **一張卡只有一個主題色**，按「目」分四組：水鳥（藍）、猛禽（啡）、雀形目（綠）、其他（灰藍）；編號塊用暖橙作唯一強調。保育等級色、圖示維持語意／多彩。
-- 組別只是配色，不印在卡上；定義在 `compose-card.py` 的 `THEMES`／`WATER`／`RAPTOR`。`AVX_PALETTE=multi` 可還原「每框不同色」。
+- 各框在主題色上做**類似色微調**（`SHIFT`：色相 ±22°、明度 ±12%），整體統一但不單調；組別只是配色，不印在卡上；定義在 `compose-card.py` 的 `THEMES`／`WATER`／`RAPTOR`。`AVX_PALETTE=multi` 可還原「每框不同色」。
 - 輸出預設 1024×1536（用戶確認足夠）；要 2048×3072 設 `AVX_OUT_SCALE=2`。範例：`docs/card-samples/composed-0058.webp`。
 
 ### 12.y 香港鳥種數對照（569 vs 580／588／590）

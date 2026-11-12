@@ -50,6 +50,11 @@ THEMES = {   # 組 → 主題色（白字對比 ≥ 4.5:1）
 }
 WATER = {'Anseriformes', 'Podicipediformes', 'Suliformes', 'Pelecaniformes', 'Charadriiformes', 'Gruiformes',
          'Phaethontiformes', 'Procellariiformes', 'Gaviiformes', 'Ciconiiformes', 'Phoenicopteriformes'}
+SHIFT = {   # key: (色相偏移°, 飽和度倍數, 明度倍數)
+    'tax': (0, 1.0, 1.0), 'hab': (-12, 1.0, 1.12), 'diet': (12, 0.95, 0.98), 'map': (-22, 0.9, 1.12),
+    'grow': (20, 0.9, 1.08), 'radar': (0, 1.1, 0.92), 'sim': (8, 0.95, 1.12), 'cons': (-8, 1.0, 0.96),
+    'zoom': (0, 1.0, 1.0), 'len': (-14, 0.95, 1.1), 'mass': (14, 0.95, 1.0), 'level': (0, 1.0, 1.0),
+}
 RAPTOR = {'Accipitriformes', 'Falconiformes', 'Strigiformes'}
 
 COL = {k: tuple(v) for k, v in json.load(open(os.path.join(ICON_DIR, 'colors.json'))).items()}
@@ -275,6 +280,14 @@ def draw_guide(f):
     return cv.done(1)
 
 
+def hsv_shift(rgb, dh, sm, vm):
+    import colorsys
+    h, sat, v = colorsys.rgb_to_hsv(*[c / 255 for c in rgb])
+    h = (h + dh / 360) % 1.0
+    r, g, b = colorsys.hsv_to_rgb(h, min(1, sat * sm), min(1, v * vm))
+    return (round(r * 255), round(g * 255), round(b * 255))
+
+
 def apply_theme(f):
     """依目決定本卡主題色，改寫 COL / GREEN / HDR（只在 theme 模式）。"""
     global GREEN
@@ -283,10 +296,10 @@ def apply_theme(f):
     o = (f.get('order') or [None, None])[1] or ''
     grp = 'water' if o in WATER else 'raptor' if o in RAPTOR else 'passerine' if o == 'Passeriformes' else 'other'
     mid = THEMES[grp]
+    # 同色系微調：每個框在主題色上轉一點色相／明度（類似色），整體統一又不單調
     for k in list(COL):
-        if k not in ('level',):
-            COL[k] = mid
-    COL['level'] = mid
+        dh, sm, vm = SHIFT.get(k, (0, 1, 1))
+        COL[k] = hsv_shift(mid, dh, sm, vm)
     GREEN = mid
     HDR.update({'title': mid, 'tax': mid, 'zoom': mid})
 
