@@ -31,7 +31,7 @@ const scoreOf = (id: string): ScoreRec | undefined => DEX_SCORES[id];
 import { PokedexTabs, type PokedexPage } from './PokedexTabs';
 import type { GuideKind } from './FieldGuideModal';
 import { ENTRIES, type Lang } from '../lib/explorer';
-import { loadDetails, useCardDetail } from '../lib/cardDetailsStore';
+import { hasInfoCard } from '../lib/infoCards';
 
 // 捕精靈 App（BIRD-DEX 2）網址
 const BIRDDEX2_URL = 'https://skw-birdex2.vercel.app';
@@ -206,16 +206,13 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   // 資訊圖卡（翻轉面）：只有用戶真的翻開才探測，避免 569 次 404
   const infoImage = useInfoCard(currentBird?.id ?? '0001');
   const [screenFlipped, setScreenFlipped] = useState(false);
-  const screenDetail = useCardDetail(currentBird?.id ?? '0001', lang);
+  /* 只有「真的有資訊圖卡」的鳥才可翻轉；沒有就只看插畫，不出翻轉掣、不出文字簡版。 */
+  const canFlip = hasInfoCard(currentBird?.id);
+  const toggleFlip = () => { if (canFlip) setScreenFlipped((v) => !v); };
 
   useEffect(() => {
-    if (screenFlipped) void infoImage.probe();
-  }, [screenFlipped, infoImage]);
-
-  // 未做資訊圖卡的雀：翻轉面用文字欄位砌，文字同樣來自維基原文
-  useEffect(() => {
-    if (screenFlipped) loadDetails(lang);
-  }, [screenFlipped, lang]);
+    if (screenFlipped && canFlip) void infoImage.probe();
+  }, [screenFlipped, canFlip, infoImage]);
 
   /* 換雀就轉回正面，否則會停在上次的背面。
      ⚠️ 一定要用 currentBird?.id：birds.json 未載入完成時 currentBird 是 undefined，
@@ -293,8 +290,8 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
               點圖翻轉；下方的字只用來說明「現在看的是哪一面」。 */}
           <div className="w-full flex flex-col items-center px-3 pt-3 pb-28" onClick={(e) => e.stopPropagation()}>
             <div
-              className="relative w-full max-w-3xl [perspective:1600px] cursor-pointer"
-              onClick={() => setScreenFlipped((v) => !v)}
+              className={`relative w-full max-w-3xl [perspective:1600px] ${canFlip ? 'cursor-pointer' : ''}`}
+              onClick={toggleFlip}
             >
               <motion.div
                 animate={{ rotateY: screenFlipped ? 180 : 0 }}
@@ -324,46 +321,35 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-contain"
                     />
+                  ) : infoImage.status === 'missing' || infoImage.status === 'error' ? (
+                    <div className="w-full h-full flex items-center justify-center bg-[#171512] text-white/40 text-[12px]">
+                      {t('資訊圖卡暫時讀不到', 'Info card unavailable')}
+                    </div>
                   ) : (
-                    <div className="w-full h-full bg-[#171512] p-4 flex flex-col">
-                      <p className="text-white font-black text-base leading-tight">{currentBird.name}</p>
-                      <p className="text-white/40 font-mono text-[10px] italic">{entry?.s}</p>
-                      <div className="mt-3 grid grid-cols-2 gap-2 content-start">
-                        {(['range', 'habitat', 'diet', 'look'] as const).map((k) => {
-                          const raw = (screenDetail as Record<string, string | string[]> | null)?.[k];
-                          const val = Array.isArray(raw) ? raw.filter(Boolean).join('；') : String(raw ?? '').trim();
-                          const labels: Record<string, string> = { range: '分佈', habitat: '環境', diet: '食物', look: '外形' };
-                          return (
-                            <div key={k} className="bg-black/30 rounded p-2 leading-tight">
-                              <p className="text-amber-300/80 text-[10px] font-black">{labels[k]}</p>
-                              <p className="text-white/70 text-[11px] mt-0.5">{val || t('資料待查', 'Pending')}</p>
-                            </div>
-                          );
-                        })}
-                      </div>
-                      <p className="mt-auto text-white/25 text-[9px]">
-                        {t('資訊圖卡未完成，以上為文字簡版', 'Info card not ready — text version')}
-                      </p>
+                    <div className="w-full h-full flex items-center justify-center bg-[#171512]">
+                      <div className="w-6 h-6 border-4 border-white/15 border-t-white/60 rounded-full animate-spin" />
                     </div>
                   )}
                 </div>
               </motion.div>
             </div>
 
-            {/* 一行說明 ＋ 翻轉掣（不疊在圖上，不會遮住圖） */}
-            <div className="mt-3 flex items-center gap-2">
-              <span className="text-white/40 font-mono text-[9.5px] tracking-widest">
-                {screenFlipped ? t('資訊圖卡', 'INFO CARD') : t('插畫', 'ARTWORK')}
-              </span>
-              <button
-                type="button"
-                onClick={() => setScreenFlipped((v) => !v)}
-                className="bg-white/12 hover:bg-white/25 border border-white/25 text-white font-black text-[11px] px-3 py-1.5 rounded-full flex items-center gap-1.5 active:scale-95 transition-all"
-              >
-                <RotateCw className="w-3.5 h-3.5" />
-                {screenFlipped ? t('轉回插畫', 'Artwork') : t('翻轉看資料', 'Flip')}
-              </button>
-            </div>
+            {/* 翻轉掣：只有真的有資訊圖卡才出現（不疊在圖上，不會遮住圖） */}
+            {canFlip && (
+              <div className="mt-3 flex items-center gap-2">
+                <span className="text-white/40 font-mono text-[9.5px] tracking-widest">
+                  {screenFlipped ? t('資訊圖卡', 'INFO CARD') : t('插畫', 'ARTWORK')}
+                </span>
+                <button
+                  type="button"
+                  onClick={toggleFlip}
+                  className="bg-white/12 hover:bg-white/25 border border-white/25 text-white font-black text-[11px] px-3 py-1.5 rounded-full flex items-center gap-1.5 active:scale-95 transition-all"
+                >
+                  <RotateCw className="w-3.5 h-3.5" />
+                  {screenFlipped ? t('轉回插畫', 'Artwork') : t('翻轉看資料', 'Flip')}
+                </button>
+              </div>
+            )}
           </div>
 
           {/* --- 兩邊浮球：左 3 個（地圖／禮儀／裝備），右 3 個（聽聲／拍照／精靈球）
@@ -536,8 +522,8 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
           未做資訊卡就用文字欄位即時砌，所以不會翻出一個空盒。 */}
       <div className="flex-1 bg-[#12100d] rounded-md border border-black/70 relative overflow-hidden flex flex-col group">
         <div
-          className="flex-1 relative flex items-center justify-center [perspective:1200px] cursor-pointer"
-          onClick={() => setScreenFlipped((v) => !v)}
+          className={`flex-1 relative flex items-center justify-center [perspective:1200px] ${canFlip ? 'cursor-pointer' : ''}`}
+          onClick={toggleFlip}
         >
           <motion.div
             animate={{ rotateY: screenFlipped ? 180 : 0 }}
@@ -579,30 +565,17 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
               {infoImage.status === 'loaded' && infoImage.url ? (
                 <img
                   src={infoImage.url}
-                  alt={`${currentBird.name} 資訊圖卡`}
+                  alt={t(`${currentBird.name} 資訊圖卡`, `${currentBird.name} info card`)}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-contain"
                 />
+              ) : infoImage.status === 'missing' || infoImage.status === 'error' ? (
+                <div className="w-full h-full flex items-center justify-center bg-[#171512] text-white/40 text-[12px]">
+                  {t('資訊圖卡暫時讀不到', 'Info card unavailable')}
+                </div>
               ) : (
-                <div className="w-full h-full bg-[#171512] p-3 flex flex-col">
-                  <p className="text-white font-black text-[14px] leading-tight">{currentBird.name}</p>
-                  <p className="text-white/40 font-mono text-[9px] italic">{entry?.s}</p>
-                  <div className="mt-2 grid grid-cols-2 gap-1.5 overflow-hidden">
-                    {(['range', 'habitat', 'diet', 'look'] as const).map((k) => {
-                      const raw = (screenDetail as Record<string, string | string[]> | null)?.[k];
-                      const val = Array.isArray(raw) ? raw.filter(Boolean).join('；') : String(raw ?? '').trim();
-                      const labels: Record<string, string> = { range: '分佈', habitat: '環境', diet: '食物', look: '外形' };
-                      return (
-                        <div key={k} className="bg-black/30 rounded p-1.5 leading-tight">
-                          <p className="text-amber-300/80 text-[9px] font-black">{labels[k]}</p>
-                          <p className="text-white/60 text-[9.5px] mt-0.5">
-                            {val || '資料待查'}
-                          </p>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <p className="mt-auto text-white/25 text-[8px]">按一下返回插畫</p>
+                <div className="w-full h-full flex items-center justify-center bg-[#171512]">
+                  <div className="w-6 h-6 border-4 border-white/15 border-t-white/60 rounded-full animate-spin" />
                 </div>
               )}
             </div>

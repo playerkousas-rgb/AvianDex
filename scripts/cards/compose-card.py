@@ -29,6 +29,7 @@ FONT_DIR = os.environ.get('AVX_FONT_DIR', os.path.expanduser('~/.fonts'))
 W, H = 1024, 1536
 OUT_SCALE = int(os.environ.get('AVX_OUT_SCALE', '1'))   # 輸出倍率：預設 1 → 1024×1536；2 → 2048×3072
 VERBOSE = bool(os.environ.get('AVX_VERBOSE'))
+LAYOUT_MODE = os.environ.get('AVX_LAYOUT', 'mobile')   # mobile＝手機精簡版（預設）；full＝完整版（v3 full-art）
 SS = 2                      # 超取樣倍率（先畫 2 倍再縮小，邊緣才平滑）
 
 CREAM = (247, 242, 228)
@@ -296,7 +297,7 @@ def badge(cv, box, key):
 def draw_guide(f):
     cv = Canvas()
     cv.rr((12, 12, W - 12, H - 12), 26, outline=GREEN, width=3)
-    for name, kind, geo, _r in slots(f):
+    for name, kind, geo, _r in (slim_slots(f) if LAYOUT_MODE == 'mobile' else slots(f)):
         key = ''.join(ch for ch in name if not ch.isdigit())
         col = COL.get({'pixel': 'tax', 'photo': 'zoom', 'zoom': 'zoom', 'map': 'map', 'hab': 'hab', 'diet': 'diet',
                        'grow': 'grow', 'sim': 'sim'}[key], GREEN)
@@ -522,6 +523,191 @@ def compose(f, art, out_scale=None):
     return cv.done(out_scale)
 
 
+
+# ══════════════════════════════════════════════════════════════
+# 手機精簡版（AVX_LAYOUT=mobile，預設）
+#   用戶 2026-11-12：資訊圖卡在手機上太擠。詳細資料頁已經有的東西（編號、名稱、目科、身長體重、
+#   棲地、食性、繁殖、行為）全部拿走，只留「詳細資料頁沒有的」：
+#   像素圖、常見度、分類階層、四個特徵放大圈、分佈圖、評分雷達、保育級別、相似鳥。
+#   → 8 個元素，每個都比完整版大，手機上一眼讀得到。完整版仍可用 AVX_LAYOUT=full。
+# ══════════════════════════════════════════════════════════════
+M_PIXEL_FRAME = (36, 36, 372, 372)
+M_PIXEL = (48, 48, 360, 360)
+M_TAX = (388, 36, 988, 372)
+M_FREQ = (36, 388, 988, 452)
+M_ZOOMP = (36, 468, 988, 740)
+M_ZOOM = [(36 + 238 * (i + 0.5) + 0, 584, 92) for i in range(4)]
+M_MAPP = (36, 756, 536, 1096)
+M_MAP = (M_MAPP[0] + 8, M_MAPP[1] + 8, M_MAPP[2] - 8, M_MAPP[3] - 8)
+M_RADP = (552, 756, 988, 1096)
+M_CONSP = (36, 1112, 988, 1292)
+M_SIMP = (36, 1308, 988, 1500)
+M_SIM = [(290, 1380, 62), (734, 1380, 62)]
+
+
+def slim_slots(f):
+    box = lambda b, k: (b[0] - k, b[1] - k, b[2] + k, b[3] + k)
+    out = [('pixel', 'rect', M_PIXEL, box(M_PIXEL, 1.5)), ('map', 'rect', M_MAP, box(M_MAP, 1.5))]
+    out += [(f'zoom{i}', 'circle', (round(c[0]), c[1], c[2]), c[2] + 3.5) for i, c in enumerate(M_ZOOM)]
+    out += [(f'sim{i}', 'circle', c, c[2] + 3.5) for i, c in enumerate(M_SIM)]
+    return out
+
+
+def compose_slim(f, art, out_scale=None):
+    apply_theme(f)
+    art_hi = art.convert('RGB') if art is not None else None
+    art = art_hi.resize((W, H), Image.LANCZOS) if art_hi is not None else None
+    code = f['iucn']['code']
+    zh, _en = INFO.get(code, ('資料待查', ''))
+    TH = HDR['title']
+    cv = Canvas()
+    cv.rr((8, 8, W - 8, H - 8), 30, outline=TH, width=6)
+
+    # 像素圖貼紙
+    cv.rr(M_PIXEL_FRAME, 22, fill=WHITE, outline=TH, width=4)
+
+    # 分類階層（階梯縮排，只留字、無標題）
+    c = COL['tax']
+    panel(cv, M_TAX, 'tax')
+    g = f['genus']
+    rows = [('界', '動物界 Animalia'), ('門', '脊索動物門 Chordata'), ('綱', '鳥綱 Aves'),
+            ('目', ' '.join(filter(None, f['order'])) or '資料待查'), ('科', ' '.join(filter(None, f['family'])) or '資料待查'),
+            ('屬', (g + ' 屬') if g else '資料待查'),
+            ('種', f['z'] + (' ' + g[0] + '. ' + f['epithet'] if g and f['epithet'] else ''))]
+    for i, (k, v) in enumerate(rows):
+        y = M_TAX[1] + 52 + i * 42
+        x = M_TAX[0] + 26 + i * 12
+        last = i == len(rows) - 1
+        cv.text(x, y, k, 27, dark(c, 0.15))
+        cv.text(x + 38, y, v, 24 if not last else 25, INK if not last else dark(c, 0.2), bold=last, maxw=M_TAX[2] - x - 60)
+
+    # 常見度：5 個精靈球（freq 未有可靠來源時顯示「資料待查」，不填假數）
+    panel(cv, M_FREQ, 'hab', 0.8)
+    cv.text(M_FREQ[0] + 28, (M_FREQ[1] + M_FREQ[3]) / 2, '常見度', 28, dark(COL['hab'], 0.2))
+    fq = f.get('freq')
+    if fq is None:
+        cv.text(M_FREQ[0] + 200, (M_FREQ[1] + M_FREQ[3]) / 2, '資料待查', 26, INK)
+    else:
+        for i in range(5):
+            cv.ball(M_FREQ[0] + 230 + i * 56, (M_FREQ[1] + M_FREQ[3]) / 2, 20, on=i < int(fq))
+
+    # 四個特徵放大圈
+    panel(cv, M_ZOOMP, 'zoom', 0.84)
+    c = COL['zoom']
+    for (cx, cy, r) in M_ZOOM:
+        cv.circ(cx, cy, r + 6, fill=WHITE)
+        cv.circ(cx, cy, r + 4, outline=c, width=3)
+
+    # 分佈圖
+    panel(cv, M_MAPP, 'map', 0.7)
+    cv.rr((M_MAP[0] - 3, M_MAP[1] - 3, M_MAP[2] + 3, M_MAP[3] + 3), 14, outline=COL['map'], width=3)
+
+    # 評分雷達（深色格，五個維度名保留）
+    panel(cv, M_RADP, 'radar', dark_bg=True)
+    c = mix(COL['radar'], WHITE, 0.65)
+    x0, y0, x1, y1 = M_RADP
+    cx, cy, R = (x0 + x1) / 2, y0 + 160, 80
+    sc = f['score']
+    names = [('重要性', 'i'), ('適應力', 'a'), ('研究', 'r'), ('保育', 'c'), ('觀賞', 'v')]
+    ang = [-math.pi / 2 + i * 2 * math.pi / 5 for i in range(5)]
+    soft = mix(c, dark(COL['radar'], 0.28), 0.55)
+    for lv in (1, 2, 3, 4, 5):
+        cv.poly([(cx + R * lv / 5 * math.cos(a), cy + R * lv / 5 * math.sin(a)) for a in ang],
+                outline=c if lv == 5 else soft, width=2.6 if lv == 5 else 1.3)
+    for a in ang:
+        cv.line([(cx, cy), (cx + R * math.cos(a), cy + R * math.sin(a))], soft, 1.3)
+    pv = [float(sc[k]) if sc[k] else 0 for _, k in names]
+    pts = [(cx + R * v / 5 * math.cos(a), cy + R * v / 5 * math.sin(a)) for v, a in zip(pv, ang)]
+    cv.glass(pts, (255, 214, 90), 150)
+    cv.poly(pts, outline=(255, 226, 120), width=3)
+    for q in pts:
+        cv.circ(q[0], q[1], 4, fill=(255, 226, 120))
+    for (nm, k), a in zip(names, ang):
+        lx, ly = cx + (R + 46) * math.cos(a), cy + (R + 32) * math.sin(a)
+        cv.text(lx, ly - 12, nm, 20, WHITE, anchor='mm')
+        v = sc[k] or '待查'
+        cv.rr((lx - 26, ly + 1, lx + 26, ly + 28), 8, fill=WHITE)
+        cv.text(lx, ly + 15, v, 20, dark(COL['radar'], 0.3), anchor='mm')
+    try:
+        n = max(0, min(5, round(float(sc['o']))))
+    except (TypeError, ValueError):
+        n = None
+    yS = y1 - 36
+    for i in range(5):
+        cv.star(x0 + 62 + i * 36, yS, 15, (244, 190, 30) if n is not None and i < n else mix((244, 190, 30), dark(COL['radar'], 0.28), 0.7), (196, 140, 10))
+    cv.text(x0 + 290, yS, sc['o'] or '?', 38, WHITE, anchor='lm', maxw=100)
+
+    # 保育級別（稀有度）
+    panel(cv, M_CONSP, 'cons', 0.8)
+    cy = M_CONSP[1] + 68
+    n_s = len(SCALE)
+    step = (M_CONSP[2] - M_CONSP[0] - 150) / (n_s - 1)
+    for i, (k, col) in enumerate(SCALE):
+        x = M_CONSP[0] + 75 + i * step
+        if k == code:
+            cv.circ(x, cy, 40, fill=col, outline=INK, width=5)
+            cv.text(x, cy + 1, k, 30, WHITE if sum(col) < 450 else INK, anchor='mm')
+            cv.poly([(x - 10, cy + 49), (x + 10, cy + 49), (x, cy + 61)], fill=INK)
+        else:
+            sft = mix(col, WHITE, 0.45)
+            cv.circ(x, cy, 24, fill=sft, outline=(215, 215, 205), width=2)
+            cv.text(x, cy + 1, k, 15, WHITE if sum(sft) < 420 else (90, 100, 88), anchor='mm')
+    cv.text((M_CONSP[0] + M_CONSP[2]) / 2, M_CONSP[3] - 24, zh, 32, INK, anchor='mm', maxw=600)
+
+    # 相似鳥
+    panel(cv, M_SIMP, 'sim')
+    c = COL['sim']
+    cv.icon('sim', (M_SIMP[0] + M_SIMP[2]) / 2, M_SIM[0][1], 64)
+    for i, (cx, cy, r) in enumerate(M_SIM):
+        cv.circ(cx, cy, r + 5, fill=tint(c, 0.7), outline=c, width=3)
+
+    # 貼 AI 圖
+    base_np = art_np = None
+    if art is not None:
+        base_np = np.array(compose_slim(f, None, 1)).astype(float)
+        art_np = np.array(art).astype(float)
+    for name, kind, geo, ring in slim_slots(f):
+        key = ''.join(ch for ch in name if not ch.isdigit())
+        if art is not None:
+            dx, dy, cst, c0 = align(base_np, art_np, kind, geo, ring)
+            use = c0 > 25 and cst < c0 * 0.6 and cst < 60
+            if VERBOSE:
+                print(f'  {name}: shift ({dx:+d},{dy:+d}) cost {cst:.0f} (原位 {c0:.0f}){" 採用" if use else ""}')
+            cv.paste_art(art_hi, kind, geo, (dx, dy) if use else (0, 0), rad=16 if kind == 'rect' else 12)
+        else:
+            col = COL[{'pixel': 'tax', 'zoom': 'zoom', 'map': 'map', 'sim': 'sim'}[key]]
+            if kind == 'rect':
+                cv.rr(geo, 16, fill=tint(col, 0.75))
+            else:
+                cv.circ(geo[0], geo[1], geo[2], fill=tint(col, 0.75))
+
+    # 特徵名牌、相似鳥名牌、圖示章
+    for (cx, cy, r), lab in zip(M_ZOOM, ZOOM_LABELS):
+        cv.rr((cx - 46, cy + r - 10, cx + 46, cy + r + 22), 16, fill=TH, outline=WHITE, width=2)
+        cv.text(cx, cy + r + 6, lab, 22, WHITE, anchor='mm')
+    for i, (cx, cy, r) in enumerate(M_SIM):
+        nm = f['sim'][i] if i < len(f['sim']) else ''
+        if nm:
+            cv.rr((cx - 120, cy + r + 8, cx + 120, cy + r + 40), 12, fill=WHITE)
+            cv.text(cx, cy + r + 24, nm, 23, INK, anchor='mm', maxw=222)
+    badge(cv, M_TAX, 'tax')
+    return cv.done(out_scale)
+
+
+def art_prompt_slim(f):
+    L = [
+        f"IMAGE 1 is a compact mobile bird information card for {f['z']} ({f['e']}, {f['s']}) that is finished except for its EMPTY PICTURE SLOTS (flat pale-coloured rectangles and circles). Fill ONLY those slots with illustrations. Use correct plumage and bare-part colours for this species; one species only.",
+        'Keep everything else in IMAGE 1 exactly as it is: all layout, panels, colours, icons, numbers and text stay untouched at the same positions; do not redraw, move, resize or retype anything. Each picture must fill its slot edge to edge with the subject centred and fully inside the slot (circles: the whole subject inside the circle, nothing cut off by the rim) and contain NO text, letters, numbers or watermarks.',
+        'Slots:',
+        '  · Large square sticker (top-left): 16-bit pixel art of the bird, side view, plain light background.',
+        '  · Four big circles in one row (middle of the card), left to right: close-ups of (1) head and bill, (2) plumage pattern, (3) folded or spread wing, (4) feet and legs.',
+        '  · Wide frame (left, below the circles; the frame itself is the map): flat world map in soft pale colours, no country borders in different colours, with the species range shaded green' + (f" (range: {f.get('range')})" if f.get('range') else '') + '.',
+        '  · Bottom panel: two big circles either side of the small glasses icon: realistic head-and-neck portraits of two different similar species — ' + ' and '.join(f['sim'][:2]) + '.',
+        'Style for pictures: clean, bright, crisp, kid-friendly. Do not add anything outside the slots.',
+    ]
+    return '\n'.join(L)
+
+
 # ── 給生圖 AI 的 prompt：零文字 ─────────────────────────
 def art_prompt(f):
     hab = f['hab'][:4]
@@ -553,11 +739,11 @@ def main():
     if mode == 'guide':
         draw_guide(f).save(sys.argv[4])
     elif mode == 'base':       # 給 AI 的輸入：字全部已印好、只留空位
-        compose(f, None, 1).save(sys.argv[4])
+        (compose_slim if LAYOUT_MODE == 'mobile' else compose)(f, None, 1).save(sys.argv[4])
     elif mode == 'prompt':
-        print(art_prompt(f))
+        print(art_prompt_slim(f) if LAYOUT_MODE == 'mobile' else art_prompt(f))
     elif mode == 'compose':
-        compose(f, Image.open(sys.argv[4])).save(sys.argv[5], optimize=True)
+        (compose_slim if LAYOUT_MODE == 'mobile' else compose)(f, Image.open(sys.argv[4])).save(sys.argv[5], optimize=True)
     else:
         raise SystemExit(__doc__)
 
