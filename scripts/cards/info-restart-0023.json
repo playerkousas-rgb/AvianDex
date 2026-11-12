@@ -1,0 +1,131 @@
+{
+  "id": "0023",
+  "name": "灰雁",
+  "scientificName": "Anser anser",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Anser anser rubrirostris adult wild eastern pink-billed form",
+  "similarSpecies": [
+    {
+      "zh": "凍原豆雁",
+      "scientificName": "Anser serrirostris",
+      "asset": "tundra-bean-goose.png",
+      "framing": "whole-bird",
+      "distinction": "深色頭頸、黑喙帶橙斑、橙腳；與灰雁粉紅喙腳不同。"
+    },
+    {
+      "zh": "白額雁",
+      "scientificName": "Anser albifrons",
+      "asset": "greater-white-fronted-goose.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥白額、腹有粗黑斑及橙腳；幼鳥不一定有白額黑腹紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.55,
+      0.02,
+      0.91,
+      0.38
+    ],
+    [
+      0.56,
+      0.2,
+      0.8,
+      0.44
+    ],
+    [
+      0.28,
+      0.36,
+      0.6,
+      0.68
+    ],
+    [
+      0.42,
+      0.7,
+      0.7,
+      0.98
+    ]
+  ],
+  "featureLabels": [
+    "頭喙",
+    "粗頸",
+    "翼紋",
+    "腳部"
+  ],
+  "featureNotes": [
+    "東方型粗大粉紅喙",
+    "粗頸及頭色較一致",
+    "灰褐翼具淺色羽緣",
+    "粉紅色腿及蹼足"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "ISL",
+      "GBR",
+      "NOR",
+      "SWE",
+      "FIN",
+      "DEU",
+      "POL",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "IRN",
+      "PAK",
+      "IND"
+    ],
+    "note": "Full world partial-country overview of species native breeding/wintering range from Iceland and Europe across Russia/Central Asia/Mongolia to China; eastern winter range Iran/Pakistan/northern subcontinent/south China. Deliberately incomplete country subset, not restricted to the illustrated eastern form; no seasonal polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000200",
+      "use": "Full page read: heavy pink bill, thick neck, plain grey head not markedly darker, pale forewing and rump in flight, eastern HK rubrirostris; Eurasian range, LC increasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000400",
+      "use": "Tundra Bean Goose short largely dark bill with subterminal orange patch, darker head and orange legs; comparison not separate assessment."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000500",
+      "use": "Greater White-front adult white bill-base and irregular black belly bars; juvenile exceptions, orange feet."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Standing folded-wing crop shows feather edges only, not the pale forewing flight character; no claim to display a spread-wing feature.",
+    "Eastern pink-billed form illustrated; western orange-billed Greylag forms are not represented."
+  ]
+}

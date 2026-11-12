@@ -1,0 +1,132 @@
+{
+  "id": "0030",
+  "name": "翹鼻麻鴨",
+  "scientificName": "Tadorna tadorna",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Tadorna tadorna adult male with developed bill knob",
+  "similarSpecies": [
+    {
+      "zh": "赤麻鴨",
+      "scientificName": "Tadorna ferruginea",
+      "asset": "ruddy-shelduck.png",
+      "framing": "whole-bird",
+      "distinction": "橙褐身、淡頭黑喙；雄鳥頸環不是栗色胸帶。"
+    },
+    {
+      "zh": "埃及雁",
+      "scientificName": "Alopochen aegyptiaca",
+      "asset": "egyptian-goose.png",
+      "framing": "whole-bird",
+      "distinction": "暗眼斑、胸斑及粉紅喙腳，沒有深綠頭紅喙瘤。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.57,
+      0.1,
+      0.99,
+      0.52
+    ],
+    [
+      0.63,
+      0.35,
+      0.87,
+      0.63
+    ],
+    [
+      0.26,
+      0.39,
+      0.6,
+      0.73
+    ],
+    [
+      0.41,
+      0.72,
+      0.73,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "頭喙瘤",
+    "栗胸帶",
+    "翼部",
+    "腳部"
+  ],
+  "featureNotes": [
+    "雄鳥深綠頭、紅喙及喙基瘤",
+    "白頸下方寬栗橙色胸帶",
+    "白翼覆羽及深色飛羽",
+    "粉紅色腿及蹼足"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "ISL",
+      "GBR",
+      "NLD",
+      "DEU",
+      "DNK",
+      "POL",
+      "TUR",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "IND",
+      "PAK",
+      "MAR",
+      "TUN"
+    ],
+    "note": "Full world partial native-country subset: Iceland/northern Europe to Black Sea, Central Asia, southern Siberia and Mongolia; winter Europe/northernmost Africa/Asia Minor/Indian subcontinent and China. No full range or seasonal polygons; whole countries not occupied.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000800",
+      "use": "Main page identification/range/conservation read: white body, dark green head/neck, red bill adult male knob, chestnut breast band, black scapulars/belly stripe; female smaller knob, duller bill; juvenile exceptions. LC increasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000900",
+      "use": "Ruddy male orange body, pale head/black bill/neck ring."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Egyptian_Goose/id",
+      "use": "Egyptian comparison eye/chest patches, pink bill/legs."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Main features artwork reuses this turn Common Shelduck comparison for 0029, no recolouring. Ruddy and Egyptian comparison originals also reused.",
+    "Adult male knob, not representative of juvenile white-faced/no-chestnut-band or all females. Runtime vEst=1 length estimate shown without changing score."
+  ]
+}

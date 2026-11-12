@@ -1,0 +1,121 @@
+{
+  "id": "0007",
+  "name": "白頭鵯",
+  "scientificName": "Pycnonotus sinensis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Pycnonotus sinensis representative Hong Kong adult",
+  "similarSpecies": [
+    {
+      "zh": "紅耳鵯",
+      "scientificName": "Pycnonotus jocosus",
+      "asset": "red-whiskered-bulbul.png",
+      "distinction": "高尖黑冠、紅耳斑及紅臀；白頭鵯是白色後枕帶。"
+    },
+    {
+      "zh": "白喉紅臀鵯",
+      "scientificName": "Pycnonotus aurigaster",
+      "asset": "sooty-headed-bulbul.png",
+      "distinction": "黑冠短而蓬鬆，沒有紅耳斑或白色後枕帶；比較圖只示頭胸，不用此圖推斷臀色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.53,
+      0.03,
+      0.89,
+      0.39
+    ],
+    [
+      0.27,
+      0.33,
+      0.6,
+      0.66
+    ],
+    [
+      0.55,
+      0.33,
+      0.84,
+      0.62
+    ],
+    [
+      0.39,
+      0.62,
+      0.73,
+      0.96
+    ]
+  ],
+  "featureLabels": [
+    "頭部",
+    "翼部",
+    "胸部",
+    "腳部"
+  ],
+  "featureNotes": [
+    "黑冠及白色後枕帶",
+    "灰綠色折翼",
+    "褐色胸帶及白腹",
+    "黑色足"
+  ],
+  "rangeMap": {
+    "type": "partial-native-range-country-overview-not-an-occurrence-polygon",
+    "caption": "亞洲部分分佈國家概覽",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      96,
+      15,
+      146,
+      43
+    ],
+    "countryIso3": [
+      "CHN",
+      "TWN",
+      "VNM",
+      "LAO",
+      "JPN"
+    ],
+    "note": "Partial East Asian overview; mainland China, Taiwan, northern Vietnam/Laos and southern Ryukyu islands, not whole countries. Country shading of Japan does not mean all Japan. Does not distinguish residence, migration or recent expansion."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/035900",
+      "use": "Main adult identification, geographic overview and IUCN Least Concern."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Existing application indices, not academic ratings."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/036100",
+      "use": "Sooty-headed Bulbul comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/036000",
+      "use": "Reciprocal bulbul comparison."
+    },
+    {
+      "url": "https://www.hbw.com/species/light-vented-bulbul-pycnonotus-sinensis",
+      "use": "Taiwan, southern Ryukyu and nonbreeding Laos range details."
+    }
+  ],
+  "notes": [
+    "AI artwork received basic visual review, not independent ornithologist verification.",
+    "Country overview only, green does not imply whole-country occurrence; see rangeMap.note.",
+    "Comparison circles are not to scale.",
+    "No R2 upload or app UI/layout registration changes; await user upload confirmation."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "0014",
+  "name": "白腰文鳥",
+  "scientificName": "Lonchura striata",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Lonchura striata adult, Hong Kong",
+  "similarSpecies": [
+    {
+      "zh": "斑文鳥",
+      "scientificName": "Lonchura punctulata",
+      "asset": "scaly-breasted-munia.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥白腹有明顯暗色鱗狀斑，不具白腰；幼鳥較難分。"
+    },
+    {
+      "zh": "栗腹文鳥",
+      "scientificName": "Lonchura atricapilla",
+      "asset": "chestnut-munia.png",
+      "framing": "whole-bird",
+      "distinction": "此圖為黑頭型成鳥，黑頭栗腹而非白腹白腰；台灣型頭部較褐。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.52,
+      0.02,
+      0.97,
+      0.47
+    ],
+    [
+      0.28,
+      0.28,
+      0.66,
+      0.66
+    ],
+    [
+      0.17,
+      0.51,
+      0.43,
+      0.77
+    ],
+    [
+      0.51,
+      0.61,
+      0.81,
+      0.91
+    ]
+  ],
+  "featureLabels": [
+    "頭部",
+    "翼部",
+    "白腰",
+    "腳部"
+  ],
+  "featureNotes": [
+    "深褐頭胸，粗短灰藍喙",
+    "褐翼具淡色羽緣",
+    "白腰在深色尾上方",
+    "灰色腳及抓枝長趾"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "NPL",
+      "IND",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN",
+      "CHN",
+      "TWN",
+      "LKA",
+      "BTN"
+    ],
+    "note": "Full world viewport, but only a partial native-country overview: Nepal/India through Southeast Asia to Sumatra, southern and eastern China and Taiwan, plus Sri Lanka/Bhutan in the broader South Asian range. Native occurrence is local, not the whole shaded country. Indonesia shading does not mean all islands; introduced populations, seasons and subspecies not mapped.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/053100",
+      "use": "Adult white rump and underparts, pointed tail; HK swinhoei; broad native range and IUCN LC."
+    },
+    {
+      "url": "https://www.audubon.org/field-guide/bird/scaly-breasted-munia",
+      "use": "Scaly-breasted Munia adult scale markings; juveniles plainer."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Chestnut_Munia/id",
+      "use": "Chestnut Munia black-headed adult form versus brown-headed formosana."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/White-rumped_munia",
+      "use": "Broader native South Asian range/subspecies including Sri Lanka and Bhutan."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; no estimated values added."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "No runtime score record exists for 0014. All five axes and overall must remain missing, never estimated or set to zero. Centre radar marks are placeholders only, disclaimed on card."
+  ]
+}

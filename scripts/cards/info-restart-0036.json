@@ -1,0 +1,141 @@
+{
+  "id": "0036",
+  "name": "赤膀鴨",
+  "scientificName": "Mareca strepera",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Mareca strepera strepera adult male breeding, separately labelled female bill feature",
+  "similarSpecies": [
+    {
+      "zh": "綠頭鴨",
+      "scientificName": "Anas platyrhynchos",
+      "asset": "mallard.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥綠頭黃喙栗胸，翼鏡藍紫並有白邊，不是赤膀鴨白翼鏡。"
+    },
+    {
+      "zh": "羅紋鴨",
+      "scientificName": "Mareca falcata",
+      "asset": "falcated-duck.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥綠栗羽冠、白喉黑頸環及長鐮刀狀飛羽，並非素褐頭。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.59,
+      0.18,
+      0.99,
+      0.58
+    ],
+    [
+      0.17,
+      0.37,
+      0.55,
+      0.75
+    ],
+    [
+      0.44,
+      0.42,
+      0.78,
+      0.76
+    ],
+    [
+      0.09,
+      0.08,
+      0.99,
+      0.98
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥頭喙",
+    "白色翼鏡",
+    "胸脅羅紋",
+    "雌鳥頭喙"
+  ],
+  "featureNotes": [
+    "素褐灰色頭及暗灰喙",
+    "折翼可見白色內側次級飛羽翼鏡",
+    "灰色胸脅由細密黑白波紋構成",
+    "雌鳥喙側橙色、中央脊深色"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "CAN",
+      "USA",
+      "MEX",
+      "GBR",
+      "FRA",
+      "ESP",
+      "DEU",
+      "POL",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "IND",
+      "PAK",
+      "TUR",
+      "EGY",
+      "MAR",
+      "ETH"
+    ],
+    "note": "Full world partial nominate native-country overview: Holarctic 40-60N central N America and E Europe across Russia/Kazakhstan to NE China/Russian Far East; winter southern N America/northern Central America, W Europe, N/NE Africa, Middle East, N Indian subcontinent, S China. No whole-country or complete range claim.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001500",
+      "use": "Full page read: male subdued brown-grey head/dark bill, vermiculated grey chest/flanks, black rear and white inner-secondary speculum; female orange bill sides dark ridge; Holarctic range, LC increasing."
+    },
+    {
+      "url": "https://ebird.org/species/mallar3?siteLanguage=en_GB",
+      "use": "Search identification read: male green head/yellow bill/chestnut breast/grey body, curled central tail, white-bordered blue speculum; wild-type not domestic hybrid."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001600",
+      "use": "Full page read: male flowing chestnut crest green sides, white bill-base spot/throat black collar, vermiculated chest/body, long pale-edged black secondaries drooping at rear, cream undertail sides; E Asian range; NT decreasing."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Female head/bill uses independent female.png, not recoloured male. White patch is identified as inner secondary speculum, not imaginary white shoulder bar.",
+    "HKBWS global LC increasing is independent of HK winter visitor decline; do not derive IUCN badge from local scarcity."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "female.png"
+  ]
+}

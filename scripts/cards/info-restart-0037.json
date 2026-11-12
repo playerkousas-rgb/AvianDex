@@ -1,0 +1,132 @@
+{
+  "id": "0037",
+  "name": "羅紋鴨",
+  "scientificName": "Mareca falcata",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Mareca falcata adult male breeding",
+  "similarSpecies": [
+    {
+      "zh": "赤膀鴨",
+      "scientificName": "Mareca strepera",
+      "asset": "gadwall.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥素褐灰頭、白翼鏡黑尾端，無綠栗羽冠、白喉及鐮刀狀長飛羽。"
+    },
+    {
+      "zh": "綠頭鴨",
+      "scientificName": "Anas platyrhynchos",
+      "asset": "mallard.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽雄鳥黃喙、栗胸、白頸環及捲曲尾羽；不是黑喙白喉。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.54,
+      0.15,
+      1,
+      0.61
+    ],
+    [
+      0.6,
+      0.32,
+      0.9,
+      0.62
+    ],
+    [
+      0.07,
+      0.4,
+      0.43,
+      0.76
+    ],
+    [
+      0.58,
+      0.44,
+      0.88,
+      0.74
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥頭喙",
+    "白喉黑環",
+    "鐮刀狀羽",
+    "胸脅羅紋"
+  ],
+  "featureNotes": [
+    "栗綠色後垂羽冠、黑喙及喙基上白點",
+    "白色喉部下接黑色頸環",
+    "長而下垂的黑色次級飛羽具淡灰邊",
+    "黑白羅紋胸粗、脅較細密"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "MNG",
+      "RUS",
+      "CHN",
+      "JPN",
+      "KOR",
+      "PRK",
+      "TWN",
+      "IND",
+      "MMR",
+      "VNM"
+    ],
+    "note": "Full world partial native-country overview: N Mongolia, NE China, SE Siberia/Sakhalin/Kuriles/Kamchatka and N Japan breeding; Japan/Korea/E-S China incl Taiwan/Hainan/N Indochina/N India winter. Green is partial within each country, not complete range or seasonal polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001600",
+      "use": "Full page read: male flowing chestnut crest green sides, white bill-base spot/throat black collar, vermiculated chest/body, long pale-edged black secondaries drooping at rear, cream undertail sides; E Asian range; NT decreasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001500",
+      "use": "Full page read: male subdued brown-grey head/dark bill, vermiculated grey chest/flanks, black rear and white inner-secondary speculum; female orange bill sides dark ridge; Holarctic range, LC increasing."
+    },
+    {
+      "url": "https://ebird.org/species/mallar3?siteLanguage=en_GB",
+      "use": "Search identification read: male green head/yellow bill/chestnut breast/grey body, curled central tail, white-bordered blue speculum; wild-type not domestic hybrid."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001700",
+      "use": "Substantive page read for rejected Wigeon comparison: breeding male chestnut head with yellow forehead/crown, small pale grey black-tipped bill; generated image missing clear yellow crown was not used."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Generated eurasion-wigeon comparison was rejected in basic review because the diagnostic yellow forehead/crown was not sufficiently represented. Not used in any rendered slot or delivered file; use Gadwall and Mallard instead.",
+    "Long drooping sickle feathers labelled secondary wing feathers, never central tail streamers. Male breeding illustrated only, no claim female shares crest/sickles.",
+    "Runtime vEst=1 retained with body-length estimation caption. Global IUCN NT shown independently of app r/c scores."
+  ]
+}

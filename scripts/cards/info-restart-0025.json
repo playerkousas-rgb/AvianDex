@@ -1,0 +1,123 @@
+{
+  "id": "0025",
+  "name": "小白額雁",
+  "scientificName": "Anser erythropus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "illustrationTaxon": "Anser erythropus adult, not juvenile",
+  "similarSpecies": [
+    {
+      "zh": "白額雁",
+      "scientificName": "Anser albifrons",
+      "asset": "greater-white-fronted-goose.png",
+      "framing": "whole-bird",
+      "distinction": "較長喙、沒有鮮黃眼圈；成鳥白額較低。"
+    },
+    {
+      "zh": "灰雁",
+      "scientificName": "Anser anser",
+      "asset": "greylag-goose.png",
+      "framing": "whole-bird",
+      "distinction": "東方型粗大粉紅喙、粉紅腳，沒有高白額黃眼圈。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.64,
+      0.01,
+      0.96,
+      0.33
+    ],
+    [
+      0.25,
+      0.36,
+      0.59,
+      0.7
+    ],
+    [
+      0.56,
+      0.48,
+      0.88,
+      0.8
+    ],
+    [
+      0.41,
+      0.72,
+      0.73,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "白額眼圈",
+    "翼紋",
+    "黑腹斑",
+    "腳部"
+  ],
+  "featureNotes": [
+    "高白額、鮮黃眼圈及短粉紅喙",
+    "褐色翼羽具淺色羽緣",
+    "成鳥腹部不規則黑斑",
+    "橙色腿及蹼足"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "NOR",
+      "RUS",
+      "GRC",
+      "IRN",
+      "CHN",
+      "KOR",
+      "JPN"
+    ],
+    "note": "Full world partial native-country subset. Arctic Eurasian breeding Norway to Sea of Okhotsk in discrete areas; winter southeast Europe, south Caspian and East Asia including China/Korea/Japan. No seasonal polygons or whole-country presence.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000600",
+      "use": "Full page read: small pink bill, yellow orbital ring, extensive adult white forehead to above eye, adult belly bars and juvenile exceptions; range, VU decreasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000500",
+      "use": "Greater White-front adult comparison; reused reviewed 0023 image."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000200",
+      "use": "Eastern Greylag heavy pink bill/feet; reused reviewed 0023 image."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Adult-only white forehead and belly barring; fresh juveniles can lack both. Comparison circles not to scale."
+  ]
+}

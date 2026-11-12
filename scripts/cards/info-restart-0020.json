@@ -1,0 +1,128 @@
+{
+  "id": "0020",
+  "name": "長尾縫葉鶯",
+  "scientificName": "Orthotomus sutorius",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Orthotomus sutorius longicauda adult, Hong Kong",
+  "similarSpecies": [
+    {
+      "zh": "黃腹鷦鶯",
+      "scientificName": "Prinia flaviventris",
+      "asset": "yellow-bellied-prinia.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽灰頭、窄白眉、黃腹，沒有橙褐前額。"
+    },
+    {
+      "zh": "純色鷦鶯",
+      "scientificName": "Prinia inornata",
+      "asset": "plain-prinia.png",
+      "framing": "whole-bird",
+      "distinction": "褐背、淡眉連淡眼先、白至皮黃腹，沒有鮮綠背。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.53,
+      0.2,
+      0.99,
+      0.66
+    ],
+    [
+      0.29,
+      0.39,
+      0.59,
+      0.69
+    ],
+    [
+      0.04,
+      0.08,
+      0.36,
+      0.4
+    ],
+    [
+      0.32,
+      0.67,
+      0.72,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "頭喙",
+    "綠翼",
+    "長尾",
+    "腳部"
+  ],
+  "featureNotes": [
+    "橙褐前額，細長喙略下彎",
+    "鮮綠背及翼緣",
+    "長尾常向上翹起",
+    "淡肉色腿及腳趾"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "KHM",
+      "LAO",
+      "VNM",
+      "CHN",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Full world partial-country overview of native Pakistan/Indian subcontinent through Indochina/south China to peninsular Malaysia; disjunct Java population. Country shading not whole-country occurrence.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0350/042800",
+      "use": "Adult 10-11cm, green upperparts, orange-brown forecrown fading grey-brown, pinkish bill/dark culmen, flesh legs, cocked tail; native range; LC stable."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0350/042600",
+      "use": "Yellow-bellied Prinia breeding grey head, narrow brow, yellow belly, reddish-brown iris, orange-flesh legs."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0350/042700",
+      "use": "Plain Prinia plain brown, pale lores joined to broad buff brow, uniform whitish/buff underparts; nonbreeding pale lower mandible base."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range."
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "id": "0031",
+  "name": "棉鳧",
+  "scientificName": "Nettapus coromandelianus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Nettapus coromandelianus coromandelianus adult male breeding; fourth feature separately identified adult female",
+  "similarSpecies": [
+    {
+      "zh": "綠棉鳧",
+      "scientificName": "Nettapus pulchellus",
+      "asset": "green-pygmy-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥深綠頭頸配白頰斑，胸脅密羅紋；不是白面白頸。"
+    },
+    {
+      "zh": "非洲棉鳧",
+      "scientificName": "Nettapus auritus",
+      "asset": "african-pygmy-goose.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥黃喙、綠耳斑及栗紅胸脅；不是棉鳧白身暗喙。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.54,
+      0.25,
+      0.94,
+      0.65
+    ],
+    [
+      0.59,
+      0.46,
+      0.85,
+      0.72
+    ],
+    [
+      0.17,
+      0.4,
+      0.57,
+      0.8
+    ],
+    [
+      0.17,
+      0.03,
+      0.97,
+      0.83
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥頭喙",
+    "頸胸界線",
+    "翼部",
+    "雌鳥"
+  ],
+  "featureNotes": [
+    "繁殖羽雄鳥黑冠、白面及短暗喙",
+    "白頸下方有深色細界線",
+    "暗綠翼及白色次級飛羽羽緣",
+    "深眼紋、喙基偏黃及斑駁胸"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "BGD",
+      "CHN",
+      "MMR",
+      "THA",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "PNG",
+      "AUS"
+    ],
+    "note": "Full world partial native-country overview: Pakistan/India/Bangladesh across SE Asia to Indonesian islands/northern Philippines/New Guinea; NE Australia albipennis; southern China summer visitor. Map represents species, not only illustrated nominate race. No whole-country occurrence or complete distribution.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001100",
+      "use": "Full text read despite embedded media bot placeholder: male black crown white face/neck and dark neck-base border, green upperparts; female dark crown/eye stripe, pale face, yellow bill base, mottled chest; range and LC stable."
+    },
+    {
+      "url": "https://ebird.org/species/grnpyg1",
+      "use": "Male Green Pygmy dark green head/neck and white cheek flash; female dark eye stripe. Not Hong Kong abundance claim."
+    },
+    {
+      "url": "https://www.sierwatervogels.nl/en/birdguide/green-pygmy-goose",
+      "use": "Green Pygmy male scalloped flank/chest, grey bill and dark green upperparts."
+    },
+    {
+      "url": "https://ebird.org/species/afrpyg1",
+      "use": "African Pygmy male yellow bill, green back-of-head patch and rufous underparts, white face."
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=D040868F22DC897B",
+      "use": "Green Pygmy Goose Chinese nomenclature."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Floating male feet remain underwater; no invented foot closeup. Fourth feature is separate female source, explicitly labelled; not recoloured male or claimed juvenile.",
+    "Comparisons are same-genus extralimital species from wider world, not claimed usual wild HK birds; not to scale."
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "female.png"
+  ]
+}

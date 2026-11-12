@@ -1,0 +1,121 @@
+{
+  "id": "0040",
+  "name": "棕頸鴨",
+  "scientificName": "Anas luzonica",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "illustrationTaxon": "Anas luzonica adult; sexes similar",
+  "similarSpecies": [
+    {
+      "zh": "中華斑嘴鴨",
+      "scientificName": "Anas zonorhyncha",
+      "asset": "eastern-spot-billed.png",
+      "framing": "whole-bird",
+      "distinction": "黑喙具鮮黃端，頭較淡、體色向後漸深，並非棕頸鴨的橙皮黃頭頸配灰喙。"
+    },
+    {
+      "zh": "綠頭鴨雌鳥",
+      "scientificName": "Anas platyrhynchos",
+      "asset": "mallard-female.png",
+      "framing": "whole-bird",
+      "sex": "female",
+      "distinction": "雌鳥全身褐色斑駁、喙橙黑相雜，頭頸較淡而非鮮明橙皮黃色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.56,
+      0.25,
+      0.96,
+      0.65
+    ],
+    [
+      0.57,
+      0.29,
+      0.85,
+      0.57
+    ],
+    [
+      0.13,
+      0.4,
+      0.53,
+      0.8
+    ],
+    [
+      0.6,
+      0.43,
+      0.86,
+      0.69
+    ]
+  ],
+  "featureLabels": [
+    "頭喙",
+    "冠及眼紋",
+    "翼部",
+    "棕色頸部"
+  ],
+  "featureNotes": [
+    "橙皮黃面、灰喙具黑中央脊及黑甲",
+    "黑冠及黑眼紋夾橙皮黃色眉紋",
+    "褐翼淺羽緣及藍綠翼鏡；色澤隨角度改變",
+    "上頸橙皮黃色，往下接較淡褐灰胸"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "PHL"
+    ],
+    "note": "World view native range Philippines endemic across major and some smaller islands. Only PHL highlighted, not all national territory occupied; rare vagrant HK and Taiwan records excluded from native range map. No exact occurrence or habitat polygons.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001900",
+      "use": "Full page read: 48-58cm orange-buff eyebrow face/upper neck, black crown/eye stripe, dull brown fringed upperparts paler below, grey bill dark centre/nail; Philippines endemic, HK/Taiwan vagrant records; VU decreasing due hunting/wetland loss."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002100",
+      "use": "Substantive page read: yellow-tipped dark bill, pale head with dark crown/eye stripe, darkening rear body, white tertial edges, blue-green speculum with white borders."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Mallard/id",
+      "use": "Search result identification read: female mottled brown and orange-black bill, white-bordered blue speculum."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Adult plumage, sexes similar; no male-specific green Mallard plumage substituted. Floating bird feet remain submerged, not used for feature circle.",
+    "Four crops show head/bill, crown/eyeline, folded wing and neck. Folded wing is not an in-flight panel illustration.",
+    "Map highlights native Philippines only, does not treat accidental Hong Kong/Taiwan records as normal native range. Runtime vEst=1 displayed.",
+    "LOCAL PREVIEW ONLY: 0038 and 0039 remain incomplete after image tool failures; hold 0040 upload until sequential 0038/0039 delivery is ready."
+  ]
+}

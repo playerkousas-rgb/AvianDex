@@ -1,0 +1,134 @@
+{
+  "id": "0017",
+  "name": "普通鵟",
+  "scientificName": "Buteo japonicus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Buteo japonicus typical pale adult morph, Hong Kong winter visitor; plumage variable",
+  "similarSpecies": [
+    {
+      "zh": "黑鳶",
+      "scientificName": "Milvus migrans",
+      "asset": "black-kite.png",
+      "framing": "whole-bird",
+      "distinction": "飛行尾端淺叉，身形及翼較修長；普通鵟為短而圓的扇尾。"
+    },
+    {
+      "zh": "鳳頭蜂鷹",
+      "scientificName": "Pernis ptilorhynchus",
+      "asset": "oriental-honey-buzzard.png",
+      "framing": "whole-bird",
+      "distinction": "小頭細頸突出、尾較長；此比較圖為典型淡色成年雄鳥，尾帶較寬。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.43,
+      0.26,
+      0.57,
+      0.4
+    ],
+    [
+      0.1,
+      0.32,
+      0.36,
+      0.58
+    ],
+    [
+      0.43,
+      0.39,
+      0.57,
+      0.53
+    ],
+    [
+      0.35,
+      0.5,
+      0.65,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "頭部",
+    "翼底",
+    "腹帶",
+    "尾部"
+  ],
+  "featureNotes": [
+    "鉤喙及黃色蠟膜，頭頸緊湊",
+    "寬翼、腕斑與深色成鳥後緣",
+    "淡底具褐紋及較深腹帶",
+    "短圓扇尾具多條細橫紋"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "IND",
+      "NPL",
+      "BTN",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM"
+    ],
+    "note": "Full world viewport, partial native-country overview. Breeds southeast/east Siberia, northern Mongolia/China, Korea and Japan; winters south China west towards Himalayas and northern Indochina/parts of Southeast Asia; Japanese populations include residents. Country shading merges seasons and does not mean entire countries occupied.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/026500",
+      "use": "Adult broad dark trailing edge versus juvenile diffuse edge; broad wings/short rounded tail, native range and LC."
+    },
+    {
+      "url": "https://digital.lib.hkbu.edu.hk/hkwildtracks/animal_detail.php?ids=HWT-000015",
+      "use": "Eastern Buzzard pale underwing, dark carpal patches and variable brown plumage."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/026100",
+      "use": "Black Kite shallow fork tail and long flexed wings."
+    },
+    {
+      "url": "https://www.birdforum.net/opus/Oriental_Honey_Buzzard",
+      "use": "Oriental Honey-buzzard adult male blue-grey head, range and morphology."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Typical pale adult morph shown; plumage varies and juveniles differ. Not a claim every Eastern Buzzard has identical belly band.",
+    "Runtime adaptability a missing; retain 待查. Visibility v=4.9 is existing length-estimated indicator (vEst=1), labelled as such on card."
+  ]
+}

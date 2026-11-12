@@ -1,0 +1,139 @@
+{
+  "id": "0022",
+  "name": "栗樹鴨",
+  "scientificName": "Dendrocygna javanica",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Dendrocygna javanica adult (sexes similar)",
+  "similarSpecies": [
+    {
+      "zh": "黃樹鴨",
+      "scientificName": "Dendrocygna bicolor",
+      "asset": "fulvous-whistling-duck.png",
+      "framing": "whole-bird",
+      "distinction": "乳白腰及明顯白色脅羽，較大型；不是栗色腰。"
+    },
+    {
+      "zh": "斑胸樹鴨",
+      "scientificName": "Dendrocygna arcuata",
+      "asset": "wandering-whistling-duck.png",
+      "framing": "whole-bird",
+      "distinction": "沒有鮮黃眼圈，脅部有明顯黑白長羽；非香港常見種。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.56,
+      0,
+      0.94,
+      0.38
+    ],
+    [
+      0.3,
+      0.37,
+      0.64,
+      0.71
+    ],
+    [
+      0.08,
+      0.53,
+      0.36,
+      0.81
+    ],
+    [
+      0.35,
+      0.68,
+      0.73,
+      1
+    ]
+  ],
+  "featureLabels": [
+    "頭喙",
+    "翼紋",
+    "栗腰",
+    "腳部"
+  ],
+  "featureNotes": [
+    "黃色眼圈、深灰色喙",
+    "深色羽片具橙褐闊羽緣",
+    "尾上覆羽呈栗紅色",
+    "深灰色腿及蹼足"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "AFG",
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Full world partial native-country overview: Indian subcontinent to southwest China, much of SE Asia to Sumatra, Java and Bali, summer north Pakistan/Afghanistan. Not whole-country presence; not complete range.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0010/000100",
+      "use": "Full page read: 38-42cm, yellow eye ring, dark grey bill/feet, pale brown head-neck, rufescent belly, scalloped mantle and rusty uppertail coverts. Native range, LC decreasing."
+    },
+    {
+      "url": "https://app.birda.org/species-guide/229/Fulvous_Whistling_Duck",
+      "use": "Fulvous whistling duck tawny plumage, grey bill/legs and white rump crescent."
+    },
+    {
+      "url": "https://www.birdfact.com/birds/fulvous-whistling-duck",
+      "use": "Fulvous white rump and whitish flank plumes, versus chestnut-rumped Lesser."
+    },
+    {
+      "url": "https://besgroup.org/2012/07/15/whistling-ducks-and-hybrid-ducklings-2/",
+      "use": "Wandering lacks Lesser yellow eye ring; prominent black/white flank plumes. Comparisons are similar taxa, not claimed Hong Kong wild records."
+    },
+    {
+      "url": "https://singaporebirds.com/species/wandering-whistling-duck/",
+      "use": "Wandering Chinese name, dark nape line and range; not a local HK abundance claim."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores; missing values remain blank; vEst flag means body length used for visibility is estimated."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
+    "Comparison species are morphological lookalikes from wider Asian region, not a claim that either is a usual wild Hong Kong species.",
+    "vEst=1 retained from runtime; estimated-length visibility note displayed."
+  ]
+}
