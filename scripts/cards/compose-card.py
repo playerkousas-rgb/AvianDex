@@ -67,39 +67,46 @@ INFO = {'LC': ('無危', 'Least Concern'), 'NT': ('近危', 'Near Threatened'), 
         'EW': ('野外滅絕', 'Extinct in the Wild'), 'EX': ('滅絕', 'Extinct'), 'NE': ('未評估', 'Not Evaluated')}
 
 # ── 版面（1× 座標，1024×1536）────────────────────────────
-PIXEL = (28, 120, 240, 332)
-PHOTO = (262, 140, 868, 720)
-ZOOM_C = [(940, 212 + i * 145, 56) for i in range(4)]
-COLS = [(28, 330), (350, 660), (690, 1000)]
-Y1, Y1E = 742, 1016
-Y2, Y2E = 1040, 1300
-Y3, Y3E = 1320, 1506
-MAP = (38, Y2 + 10, 320, Y2E - 10)
-STATS = [(346, 'len'), (540, 'mass')]          # (y0, key)，每格高 180；v2：不印欄位名，只靠圖示＋數字
-GROW_Y = Y2 + 134
-SIM_X = (151, 371)
-SIM_Y = 1400
+PHOTO = (24, 24, 1000, 800)                 # v3：滿版主圖（像遊戲卡的 full-art），資訊疊在圖上
+PIXEL_FRAME = (28, 620, 220, 796)
+PIXEL = (36, 628, 212, 788)
+ZOOM_C = [(936, 300 + i * 128, 50) for i in range(4)]
+ZOOM_LABELS = ['頭部', '羽色', '翼部', '腳部']
+# 下方資訊區：大小刻意不一（寬／高都不同）
+R1, R1E = 814, 1058
+R2, R2E = 1070, 1318
+R3, R3E = 1330, 1506
+TAX = (28, R1, 300, R1E)
+HABP = (312, R1, 668, R1E)
+GROWP = (680, R1, 996, R1E)
+MAPP = (28, R2, 396, R2E)
+RADP = (408, R2, 736, R2E)
+DIETP = (748, R2, 996, R2E)
+SIMP = (28, R3, 452, R3E)
+CONSP = (464, R3, 996, R3E)
+MAP = (MAPP[0] + 6, MAPP[1] + 6, MAPP[2] - 6, MAPP[3] - 6)
+HAB = (HABP[0] + 8, HABP[1] + 8, HABP[2] - 8, HABP[3] - 8)
+GROW_C = [(GROWP[0] + 52 + i * 106, R1 + 128, 42) for i in range(3)]
+SIM_X = (128, 352)
+SIM_Y = 1394
 
 
-def diet_positions(n):         # 食物／棲息：只有圖，圓圈放大置中
-    return {1: [(155, 150, 60)], 2: [(78, 150, 52), (232, 150, 52)],
-            3: [(78, 104, 46), (232, 104, 46), (155, 214, 46)],
-            4: [(78, 104, 46), (232, 104, 46), (78, 214, 46), (232, 214, 46)]}.get(n, [])
+def diet_positions(n):         # 食物（相對 DIETP 左上角）
+    return {1: [(124, 124, 70)], 2: [(124, 70, 52), (124, 178, 52)],
+            3: [(72, 74, 44), (176, 74, 44), (124, 180, 44)],
+            4: [(72, 74, 44), (176, 74, 44), (72, 176, 44), (176, 176, 44)]}.get(n, [])
 
 
 def slots(f):
     """所有要請 AI 填圖的位置：(名稱, 'rect'|'circle', 座標, 外框線位置)——外框線用來校正 AI 輸出的偏移"""
     box = lambda b, k: (b[0] - k, b[1] - k, b[2] + k, b[3] + k)
-    out = [('pixel', 'rect', (PIXEL[0] + 8, PIXEL[1] + 8, PIXEL[2] - 8, PIXEL[3] - 8), box(PIXEL, 1.5)),
-           ('photo', 'rect', PHOTO, box(PHOTO, 1.5)), ('map', 'rect', MAP, box(MAP, 1.5))]
+    out = [('photo', 'rect', PHOTO, box(PHOTO, 1.5)),
+           ('pixel', 'rect', PIXEL, box(PIXEL, 1.5)), ('map', 'rect', MAP, box(MAP, 1.5)),
+           ('hab', 'rect', HAB, box(HAB, 1.5))]
     out += [(f'zoom{i}', 'circle', c, c[2] + 3.5) for i, c in enumerate(ZOOM_C)]
-    hx = COLS[1][0]
-    out += [(f'hab{i}', 'circle', (hx + dx, Y1 + dy, r), r + 3.5) for i, (dx, dy, r) in enumerate(diet_positions(min(4, len(f['hab']))))]
-    dx0 = COLS[2][0]
-    out += [(f'diet{i}', 'circle', (dx0 + dx, Y1 + dy, r), r + 3.5) for i, (dx, dy, r) in enumerate(diet_positions(min(4, len(f['diet']))))]
-    gx = COLS[1][0]
-    out += [(f'grow{i}', 'circle', (gx + 55 + i * 100, GROW_Y, 40), 43.5) for i in range(3)]
-    out += [(f'sim{i}', 'circle', (SIM_X[i], SIM_Y, 48), 51.5) for i in range(2)]
+    out += [(f'diet{i}', 'circle', (DIETP[0] + dx, DIETP[1] + dy, r), r + 3.5) for i, (dx, dy, r) in enumerate(diet_positions(min(4, len(f['diet']))))]
+    out += [(f'grow{i}', 'circle', c, c[2] + 3.5) for i, c in enumerate(GROW_C)]
+    out += [(f'sim{i}', 'circle', (SIM_X[i], SIM_Y, 46), 49.5) for i in range(2)]
     return out
 
 
@@ -222,7 +229,31 @@ class Canvas:
             pts.append((cx + rr * math.cos(a), cy + rr * math.sin(a)))
         self.poly(pts, fill=fill, outline=outline, width=1.4)
 
-    def paste_art(self, art, kind, geo, sh=(0, 0)):
+    def glass(self, pts, fill, alpha=225, outline=None, width=0):
+        """半透明色塊（多邊形或矩形）。"""
+        if len(pts) == 4 and not isinstance(pts[0], (tuple, list)):
+            x0, y0, x1, y1 = pts
+            pts = [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
+        ov = Image.new('RGBA', self.img.size, (0, 0, 0, 0))
+        dd = ImageDraw.Draw(ov)
+        sp = [tuple(self.s(p)) for p in pts]
+        dd.polygon(sp, fill=tuple(fill) + (alpha,))
+        self.img.paste(ov, (0, 0), ov)
+        self.d = ImageDraw.Draw(self.img)
+        if outline:
+            self.poly(pts, outline=outline, width=width)
+
+    def ball(self, cx, cy, r, on=True):
+        top = (214, 62, 52) if on else (205, 205, 198)
+        bot = WHITE if on else (236, 236, 230)
+        edge = (40, 44, 40) if on else (150, 156, 148)
+        self.circ(cx, cy, r, fill=bot, outline=edge, width=max(1.6, r / 6))
+        box = self.s((cx - r, cy - r, cx + r, cy + r))
+        self.d.pieslice(box, 180, 360, fill=top, outline=edge, width=max(2, self.s(r / 6)))
+        self.line([(cx - r, cy), (cx + r, cy)], edge, max(1.6, r / 6))
+        self.circ(cx, cy, r * 0.34, fill=WHITE if on else (236, 236, 230), outline=edge, width=max(1.4, r / 7))
+
+    def paste_art(self, art, kind, geo, sh=(0, 0), rad=8):
         """從 AI 輸出（原始解析度）裁出一個框的內容，一次縮放貼進卡片（避免二次重採樣變糊）"""
         ax, ay = art.width / W, art.height / H
         if kind == 'rect':
@@ -231,7 +262,7 @@ class Canvas:
             box = ((x0 + m + sh[0]) * ax, (y0 + m + sh[1]) * ay, (x1 - m + sh[0]) * ax, (y1 - m + sh[1]) * ay)
             crop = art.resize((self.s(x1 - x0), self.s(y1 - y0)), Image.LANCZOS, box=box)
             mask = Image.new('L', crop.size, 0)
-            ImageDraw.Draw(mask).rounded_rectangle([0, 0, crop.size[0] - 1, crop.size[1] - 1], radius=self.s(8), fill=255)
+            ImageDraw.Draw(mask).rounded_rectangle([0, 0, crop.size[0] - 1, crop.size[1] - 1], radius=self.s(rad), fill=255)
             self.img.paste(crop, (self.s(x0), self.s(y0)), mask)
         else:
             cx, cy, r = geo
@@ -249,12 +280,16 @@ class Canvas:
         return self.img.resize((W * scale, H * scale), Image.LANCZOS)
 
 
-def panel(cv, x0, y0, x1, y1, key, icon=True):
-    """v2：整塊平塗淺色底，無標題條、無框線；圖示（可有可無）縮成角落一個小章。"""
+def panel(cv, box, key, shade=0.82, dark_bg=False):
+    """v3：大小不一的平塗格；無標題條、無框線。dark_bg＝深色格（拉開明暗層次）。"""
     col = COL[key]
-    cv.rr((x0, y0, x1, y1), 16, fill=tint(col, 0.82))
-    if icon:
-        cv.icon(key, x0 + 27, y0 + 27, 38)
+    fill = dark(col, 0.28) if dark_bg else tint(col, shade)
+    cv.rr(box, 18, fill=fill)
+
+
+def badge(cv, box, key):
+    """圖示章：半個伸出格子左上角，像貼紙。"""
+    cv.icon(key, box[0] + 8, box[1] + 8, 38)
 
 
 # ── 導引圖：只有空框、零文字 ───────────────────────────
@@ -305,174 +340,185 @@ def compose(f, art, out_scale=None):
     apply_theme(f)
     art_hi = art.convert('RGB') if art is not None else None
     art = art_hi.resize((W, H), Image.LANCZOS) if art_hi is not None else None   # 只用於對位檢查
-    cv = Canvas()
-    cv.rr((12, 12, W - 12, H - 12), 26, outline=GREEN, width=3)
     code = f['iucn']['code']
     zh, en = INFO.get(code, ('資料待查', ''))
-    cur = dict(SCALE).get(code)
+    TH = HDR['title']
+    cv = Canvas()
+    cv.rr((8, 8, W - 8, H - 8), 30, outline=TH, width=6)
 
-    # 編號（全卡唯一的暖色強調）
-    cv.rr((30, 24, 246, 100), 12, fill=HDR['no'])
-    cv.circ(60, 62, 17, outline=WHITE, width=4)
-    cv.line([(43, 62), (77, 62)], WHITE, 4)
-    cv.circ(60, 62, 6, fill=HDR['no'], outline=WHITE, width=3)
-    cv.text(86, 63, 'NO.' + f['id'], 34, WHITE, anchor='lm', maxw=150)
-    # 名稱帶：拉闊到右邊，目／科（重複資訊）移走，名字字級加大
-    cv.rr((256, 20, 1004, 128), 12, fill=HDR['title'])
-    cv.text(630, 47, f['z'], 50, WHITE, anchor='mm', maxw=700)
-    cv.text(630, 85, f['e'], 24, (236, 244, 230), bold=True, anchor='mm', maxw=700)
-    cv.text(630, 110, f['s'], 20, (200, 224, 196), bold=False, anchor='mm', maxw=700, italic=True)
-
-    # 像素圖（不印說明字）
-    cv.rr(PIXEL, 12, fill=(246, 246, 238), outline=GREEN, width=3)
-    # 主照片框
-    cv.rr((PHOTO[0] - 3, PHOTO[1] - 3, PHOTO[2] + 3, PHOTO[3] + 3), 16, outline=GREEN, width=3)
-    # 四個特徵圓：只有圓圈，不印頭部／羽色／翼部／腳部
-    c = COL['zoom']
-    for (cx, cy, r) in ZOOM_C:
-        cv.circ(cx, cy, r + 5, fill=tint(c, 0.8), outline=c, width=3)
-
-    # 身長／體重：圖示＋大數字，不印欄位名
-    vals = {'len': f['len'], 'mass': f['mass']}
-    for y, key in STATS:
-        c0 = COL[key]
-        cv.rr((28, y, 240, y + 180), 16, fill=tint(c0, 0.86))
-        cv.icon(key, 134, y + 58, 68)
-        cv.text(134, y + 130, vals[key], 38, INK, anchor='mm', maxw=190)
-
-    # 分類：不印標題與「界門綱…」字；用縮排階梯表示層級，最後一行（種）加粗
-    x0, x1 = COLS[0]
-    panel(cv, x0, Y1, x1, Y1E, 'tax')
-    g = f['genus']
-    rows = ['動物界 Animalia', '脊索動物門 Chordata', '鳥綱 Aves',
-            ' '.join(filter(None, f['order'])) or '資料待查', ' '.join(filter(None, f['family'])) or '資料待查',
-            (g + ' 屬') if g else '資料待查',
-            f['z'] + (' ' + g[0] + '. ' + f['epithet'] if g and f['epithet'] else '')]
+    # ── 1. 下方資訊區（先畫，圖貼在最後）
     c = COL['tax']
-    for i, v in enumerate(rows):
-        y = Y1 + 66 + i * 29 if i == 0 else Y1 + 66 + i * 29
-        x = x0 + 24 + i * 8
+    panel(cv, TAX, 'tax')
+    g = f['genus']
+    rows = [('界', '動物界 Animalia'), ('門', '脊索動物門 Chordata'), ('綱', '鳥綱 Aves'),
+            ('目', ' '.join(filter(None, f['order'])) or '資料待查'), ('科', ' '.join(filter(None, f['family'])) or '資料待查'),
+            ('屬', (g + ' 屬') if g else '資料待查'),
+            ('種', f['z'] + (' ' + g[0] + '. ' + f['epithet'] if g and f['epithet'] else ''))]
+    for i, (k, v) in enumerate(rows):
+        y = TAX[1] + 62 + i * 28
+        x = TAX[0] + 22 + i * 8
         last = i == len(rows) - 1
-        cv.circ(x, y, 4.5 if not last else 6, fill=mix(c, WHITE, 0.25) if not last else dark(c, 0.1))
-        cv.text(x + 14, y, v, 19 if not last else 21, INK if not last else dark(c, 0.2), bold=last, maxw=x1 - x - 24)
+        cv.text(x, y, k, 19, dark(c, 0.15))
+        cv.text(x + 26, y, v, 17 if not last else 18, INK if not last else dark(c, 0.2), bold=last, maxw=TAX[2] - x - 38)
 
-    # 棲息環境（只放圖）
-    x0, x1 = COLS[1]
-    panel(cv, x0, Y1, x1, Y1E, 'hab')
-    c = COL['hab']
-    hab = f['hab'][:4]
-    if not hab:
-        cv.text((x0 + x1) / 2, Y1 + 150, '資料待查', 24, mix(INK, WHITE, 0.2), anchor='mm')
-    for dx, dy, r in diet_positions(len(hab)):
-        cv.circ(x0 + dx, Y1 + dy, r + 5, fill=tint(c, 0.8), outline=c, width=3)
-
-    # 食物（只放圖）
-    x0, x1 = COLS[2]
-    panel(cv, x0, Y1, x1, Y1E, 'diet')
-    c = COL['diet']
-    diet = f['diet'][:4]
-    if not diet:
-        cv.text((x0 + x1) / 2, Y1 + 150, '資料待查', 24, mix(INK, WHITE, 0.2), anchor='mm')
-    for dx, dy, r in diet_positions(len(diet)):
-        cv.circ(x0 + dx, Y1 + dy, r + 5, fill=tint(c, 0.8), outline=c, width=3)
-
-    # 分佈：整格就是地圖，無標題、無圖示
-    x0, x1 = COLS[0]
-    panel(cv, x0, Y2, x1, Y2E, 'map', icon=False)
-    cv.rr((MAP[0] - 3, MAP[1] - 3, MAP[2] + 3, MAP[3] + 3), 10, outline=COL['map'], width=3)
-
-    # 成長與繁殖（只放圖）
-    x0, x1 = COLS[1]
-    panel(cv, x0, Y2, x1, Y2E, 'grow')
+    panel(cv, HABP, 'hab', 0.78)
+    panel(cv, GROWP, 'grow')
     c = COL['grow']
-    for i in range(3):
-        cv.circ(x0 + 55 + i * 100, GROW_Y, 45, fill=tint(c, 0.8), outline=c, width=3)
+    for i, (cx, cy, r) in enumerate(GROW_C):
+        cv.circ(cx, cy, r + 5, fill=tint(c, 0.7), outline=c, width=3)
         if i < 2:
-            ax = x0 + 55 + i * 100 + 49
-            cv.poly([(ax, GROW_Y - 6), (ax + 6, GROW_Y), (ax, GROW_Y + 6)], fill=mix(c, WHITE, 0.2))
+            ax = cx + r + 12
+            cv.poly([(ax, cy - 7), (ax + 8, cy), (ax, cy + 7)], fill=mix(c, WHITE, 0.1))
+    panel(cv, MAPP, 'map', 0.7)
+    cv.rr((MAP[0] - 3, MAP[1] - 3, MAP[2] + 3, MAP[3] + 3), 12, outline=COL['map'], width=3)
 
-    # 評分（雷達）：不印維度名；頂點只有分數；總分＝星＋數字
-    x0, x1 = COLS[2]
-    panel(cv, x0, Y2, x1, Y2E, 'radar', icon=False)
-    c = COL['radar']
-    cx, cy, R = x0 + 155, Y2 + 112, 66
+    # 評分雷達：深色格（保留五個維度名）
+    panel(cv, RADP, 'radar', dark_bg=True)
+    c = mix(COL['radar'], WHITE, 0.65)
+    x0 = RADP[0]
+    cx, cy, R = x0 + 164, R2 + 112, 58
     sc = f['score']
-    keys = ['i', 'a', 'r', 'c', 'v']
+    names = [('重要性', 'i'), ('適應力', 'a'), ('研究', 'r'), ('保育', 'c'), ('觀賞', 'v')]
     ang = [-math.pi / 2 + i * 2 * math.pi / 5 for i in range(5)]
     for lv in (1, 2, 3, 4, 5):
         cv.poly([(cx + R * lv / 5 * math.cos(a), cy + R * lv / 5 * math.sin(a)) for a in ang],
-                outline=c if lv == 5 else mix(c, WHITE, 0.3), width=2.6 if lv == 5 else 1.3)
+                outline=c if lv == 5 else mix(c, dark(COL['radar'], 0.28), 0.55), width=2.4 if lv == 5 else 1.2)
     for a in ang:
-        cv.line([(cx, cy), (cx + R * math.cos(a), cy + R * math.sin(a))], mix(c, WHITE, 0.3), 1.4)
-    pv = [float(sc[k]) if sc[k] else 0 for k in keys]
+        cv.line([(cx, cy), (cx + R * math.cos(a), cy + R * math.sin(a))], mix(c, dark(COL['radar'], 0.28), 0.55), 1.2)
+    pv = [float(sc[k]) if sc[k] else 0 for _, k in names]
     pts = [(cx + R * v / 5 * math.cos(a), cy + R * v / 5 * math.sin(a)) for v, a in zip(pv, ang)]
-    ov = Image.new('RGBA', cv.img.size, (0, 0, 0, 0))
-    ImageDraw.Draw(ov).polygon([tuple(cv.s(p)) for p in pts], fill=c + (130,))
-    cv.img.paste(ov, (0, 0), ov)
-    cv.d = ImageDraw.Draw(cv.img)
-    cv.poly(pts, outline=c, width=2.5)
+    cv.glass(pts, (255, 214, 90), 150)
+    cv.poly(pts, outline=(255, 226, 120), width=2.6)
     for p in pts:
-        cv.circ(p[0], p[1], 3, fill=c)
-    for k, a in zip(keys, ang):
-        lx, ly = cx + (R + 26) * math.cos(a), cy + (R + 22) * math.sin(a)
-        v = sc[k] or '?'
-        cv.rr((lx - 21, ly - 11, lx + 21, ly + 11), 11, fill=WHITE, outline=c, width=2)
-        cv.text(lx, ly, v, 17, dark(c, 0.25), anchor='mm')
+        cv.circ(p[0], p[1], 3.2, fill=(255, 226, 120))
+    for (nm, k), a in zip(names, ang):
+        lx, ly = cx + (R + 40) * math.cos(a), cy + (R + 26) * math.sin(a)
+        cv.text(lx, ly - 10, nm, 16, WHITE, anchor='mm')
+        v = sc[k] or '待查'
+        cv.rr((lx - 22, ly + 1, lx + 22, ly + 22), 7, fill=WHITE)
+        cv.text(lx, ly + 12, v, 16, dark(COL['radar'], 0.3), anchor='mm')
     try:
         n = max(0, min(5, round(float(sc['o']))))
     except (TypeError, ValueError):
         n = None
-    yS = Y2E - 28
+    yS = R2E - 22
     for i in range(5):
-        cv.star(x0 + 52 + i * 28, yS, 11.5, (244, 190, 30) if n is not None and i < n else tint((244, 190, 30), 0.75), (196, 140, 10))
-    cv.text(x0 + 232, yS, sc['o'] or '?', 28, INK, anchor='lm', maxw=70)
+        cv.star(x0 + 58 + i * 27, yS, 11, (244, 190, 30) if n is not None and i < n else mix((244, 190, 30), dark(COL['radar'], 0.28), 0.7), (196, 140, 10))
+    cv.text(x0 + 214, yS, sc['o'] or '?', 28, WHITE, anchor='lm', maxw=80)
 
-    # 可混淆物種：無標題；兩圓之間放一個「像」符號（沿用眼鏡圖示）
-    panel(cv, 28, Y3, 495, Y3E, 'sim', icon=False)
+    panel(cv, DIETP, 'diet')
+    c = COL['diet']
+    diet = f['diet'][:4]
+    if not diet:
+        cv.text((DIETP[0] + DIETP[2]) / 2, R2 + 124, '資料待查', 24, mix(INK, WHITE, 0.2), anchor='mm')
+    for dx, dy, r in diet_positions(len(diet)):
+        cv.circ(DIETP[0] + dx, DIETP[1] + dy, r + 5, fill=tint(c, 0.7), outline=c, width=3)
+
+    panel(cv, SIMP, 'sim')
     c = COL['sim']
-    cv.icon('sim', 261, SIM_Y, 52)
+    cv.icon('sim', 240, SIM_Y, 52)
     for i in range(2):
         cx = SIM_X[i]
-        cv.circ(cx, SIM_Y, 53, fill=tint(c, 0.8), outline=c, width=3)
+        cv.circ(cx, SIM_Y, 50, fill=tint(c, 0.7), outline=c, width=3)
         nm = f['sim'][i] if i < len(f['sim']) else ''
         if nm:
-            cv.rr((cx - 90, 1462, cx + 90, 1492), 10, fill=WHITE)
-            cv.text(cx, 1477, nm, 20, INK, anchor='mm', maxw=170)
+            cv.rr((cx - 92, 1458, cx + 92, 1488), 10, fill=WHITE)
+            cv.text(cx, 1473, nm, 20, INK, anchor='mm', maxw=172)
 
-    # 保育狀態：IUCN 色階＋中文名（不印英文、不印標題）
-    panel(cv, 515, Y3, 1000, Y3E, 'cons', icon=False)
+    panel(cv, CONSP, 'cons', 0.8)
+    cur = dict(SCALE).get(code)
     cy = 1394
     for i, (k, col) in enumerate(SCALE):
-        x = 566 + i * 64
+        x = 532 + i * 66
         if k == code:
-            cv.circ(x, cy, 35, fill=col, outline=INK, width=5)
-            cv.text(x, cy + 1, k, 27, WHITE if sum(col) < 450 else INK, anchor='mm')
-            cv.poly([(x - 9, cy + 43), (x + 9, cy + 43), (x, cy + 54)], fill=INK)
+            cv.circ(x, cy, 36, fill=col, outline=INK, width=5)
+            cv.text(x, cy + 1, k, 28, WHITE if sum(col) < 450 else INK, anchor='mm')
+            cv.poly([(x - 9, cy + 45), (x + 9, cy + 45), (x, cy + 56)], fill=INK)
         else:
             soft = mix(col, WHITE, 0.45)
-            cv.circ(x, cy, 20, fill=soft, outline=(215, 215, 205), width=2)
+            cv.circ(x, cy, 21, fill=soft, outline=(215, 215, 205), width=2)
             cv.text(x, cy + 1, k, 14, WHITE if sum(soft) < 420 else (90, 100, 88), anchor='mm')
-    cv.text(758, 1478, zh, 30, INK, anchor='mm', maxw=440)
+    cv.text(730, 1481, zh, 28, INK, anchor='mm', maxw=440)
 
-    # AI 生成的圖貼上（最後貼，蓋在框內）
+    # ── 2. 主圖（滿版）與其框
+    shifts = {}
     base_np = art_np = None
     if art is not None:
         base_np = np.array(compose(f, None, 1)).astype(float)
         art_np = np.array(art).astype(float)
-    for name, kind, geo, ring in slots(f):
+
+    def put(name, kind, geo, ring):
+        key = ''.join(ch for ch in name if not ch.isdigit())
         if art is not None:
-            dx, dy, c, c0 = align(base_np, art_np, kind, geo, ring)
-            use = c0 > 25 and c < c0 * 0.6 and c < 60          # 只有明顯更準才採用偏移，否則維持原位
+            dx, dy, cst, c0 = align(base_np, art_np, kind, geo, ring)
+            use = c0 > 25 and cst < c0 * 0.6 and cst < 60
             if VERBOSE:
-                print(f'  {name}: shift ({dx:+d},{dy:+d}) cost {c:.0f} (原位 {c0:.0f}){" 採用" if use else ""}')
-            cv.paste_art(art_hi, kind, geo, (dx, dy) if use else (0, 0))
-        else:   # 空位：給 AI 看的「待填」底色
-            key = ''.join(ch for ch in name if not ch.isdigit())
+                print(f'  {name}: shift ({dx:+d},{dy:+d}) cost {cst:.0f} (原位 {c0:.0f}){" 採用" if use else ""}')
+            cv.paste_art(art_hi, kind, geo, (dx, dy) if use else (0, 0), rad=20 if name == 'photo' else 12)
+        else:
             col = COL[{'pixel': 'tax', 'photo': 'zoom', 'zoom': 'zoom', 'map': 'map', 'hab': 'hab', 'diet': 'diet', 'grow': 'grow', 'sim': 'sim'}[key]]
             if kind == 'rect':
-                cv.rr(geo, 8, fill=tint(col, 0.75))
+                cv.rr(geo, 14, fill=tint(col, 0.75))
             else:
                 cv.circ(geo[0], geo[1], geo[2], fill=tint(col, 0.75))
+
+    allslots = slots(f)
+    for sl in allslots:
+        if sl[0] == 'photo':
+            put(*sl)
+    cv.rr((PHOTO[0] - 3, PHOTO[1] - 3, PHOTO[2] + 3, PHOTO[3] + 3), 22, outline=TH, width=4)
+
+    # ── 3. 疊在圖上的資訊（半透明斜角色塊）
+    # 編號（全卡唯一暖色強調）
+    cv.glass([(34, 34), (246, 34), (232, 104), (34, 104)], HDR['no'], 255)
+    cv.circ(66, 69, 17, outline=WHITE, width=4)
+    cv.line([(49, 69), (83, 69)], WHITE, 4)
+    cv.circ(66, 69, 6, fill=HDR['no'], outline=WHITE, width=3)
+    cv.text(92, 70, 'NO.' + f['id'], 33, WHITE, anchor='lm', maxw=140)
+    # 名稱
+    cv.glass([(254, 34), (706, 34), (690, 130), (254, 130)], TH, 238)
+    cv.text(472, 58, f['z'], 48, WHITE, anchor='mm', maxw=420)
+    cv.text(472, 92, f['e'], 23, (236, 244, 230), anchor='mm', maxw=420)
+    cv.text(472, 114, f['s'], 18, (200, 224, 196), bold=False, anchor='mm', maxw=420, italic=True)
+    # 目／科／身長／體重／常見度：長條
+    sx0, sx1 = 722, 996
+    strips = [(36, 68, '目', f['order'][0]), (72, 104, '科', f['family'][0]),
+              (112, 144, '身長', f['len']), (148, 180, '體重', f['mass'])]
+    for y0, y1, lab, val in strips:
+        cv.glass([(sx0, y0), (sx1, y0), (sx1, y1), (sx0, y1)], (252, 251, 246), 238)
+        cv.rr((sx0, y0, sx0 + 4, y1), 2, fill=TH)
+        cv.text(sx0 + 16, (y0 + y1) / 2, lab, 20, dark(TH, 0.1))
+        cv.text(sx0 + 84, (y0 + y1) / 2, val or '資料待查', 21, INK, maxw=sx1 - sx0 - 94)
+    cv.glass([(sx0, 188), (sx1, 188), (sx1, 222), (sx0, 222)], (252, 251, 246), 238)
+    cv.rr((sx0, 188, sx0 + 4, 222), 2, fill=TH)
+    cv.text(sx0 + 16, 205, '常見度', 20, dark(TH, 0.1))
+    fq = f.get('freq')
+    if fq is None:
+        cv.text(sx0 + 98, 205, '資料待查', 21, INK)
+    else:
+        for i in range(5):
+            cv.ball(sx0 + 110 + i * 30, 205, 11, on=i < int(fq))
+    # 像素圖貼紙
+    cv.rr(PIXEL_FRAME, 16, fill=WHITE, outline=TH, width=3)
+    # 四個特徵圓
+    c = COL['zoom']
+    for (cx, cy, r) in ZOOM_C:
+        cv.circ(cx, cy, r + 6, fill=WHITE)
+        cv.circ(cx, cy, r + 4, outline=c, width=3)
+
+    # ── 4. 其餘圖片
+    for sl in allslots:
+        if sl[0] != 'photo':
+            put(*sl)
+
+    # ── 5. 蓋在圖上的小標：特徵名牌、圖示章
+    for (cx, cy, r), lab in zip(ZOOM_C, ZOOM_LABELS):
+        cv.rr((cx - 38, cy + r - 8, cx + 38, cy + r + 18), 13, fill=TH, outline=WHITE, width=2)
+        cv.text(cx, cy + r + 5, lab, 18, WHITE, anchor='mm')
+    badge(cv, TAX, 'tax')
+    badge(cv, HABP, 'hab')
+    badge(cv, GROWP, 'grow')
+    badge(cv, DIETP, 'diet')
     return cv.done(out_scale)
 
 
@@ -484,16 +530,16 @@ def art_prompt(f):
         f"IMAGE 1 is a bird information card for {f['z']} ({f['e']}, {f['s']}) that is finished except for its EMPTY PICTURE SLOTS (flat pale-coloured rectangles and circles). Fill ONLY those slots with illustrations. Use correct plumage and bare-part colours for this species; one species only.",
         'Keep everything else in IMAGE 1 exactly as it is: all layout, panels, colours, titles, icons, numbers and text stay untouched at the same positions; do not redraw, move, resize or retype anything. Each picture must fill its slot edge to edge with the subject centred and fully inside the slot (circles: the whole subject inside the circle, nothing cut off by the rim) and contain NO text, letters, numbers or watermarks.',
         'Slots:',
-        '  · Top-left square (under the number chip): small 16-bit pixel art of the bird, side view, plain light background.',
-        '  · Large square frame (centre): photorealistic photo of the bird, whole body, in its natural habitat, bird centred.',
-        '  · Right column, 4 circles top to bottom: close-ups of (1) head and bill, (2) plumage pattern, (3) folded or spread wing, (4) feet and legs.',
-        '  · Lower-left square frame (no title; the frame itself is the map): flat world map in soft colours with the species range shaded green' + (f" (range: {f.get('range')})" if f.get('range') else '') + '.',
+        '  · HUGE top frame (almost the whole upper half of the card, full-art style): photorealistic photo of the bird, whole body, in its natural habitat. Keep the bird in the CENTRE of the frame, large, and keep the top strip, the right-hand column and the bottom-left corner as plain background (other panels overlap them).',
+        '  · Small square sticker (bottom-left over the big photo): 16-bit pixel art of the bird, side view, plain light background.',
+        '  · Right column over the photo, 4 circles top to bottom: close-ups of (1) head and bill, (2) plumage pattern, (3) folded or spread wing, (4) feet and legs.',
+        '  · Lower-left wide frame (the frame itself is the map): flat world map in soft pale colours, no country borders in different colours, with the species range shaded green' + (f" (range: {f.get('range')})" if f.get('range') else '') + '.',
     ]
     if hab:
-        L.append('  · Habitat circles (middle panel of the upper row; left to right, top to bottom): ' + '; '.join(f'{i + 1}. {h}' for i, h in enumerate(hab)) + ' — colourful flat sticker-style icons (3–4 colours each).')
+        L.append('  · Habitat: ONE wide panoramic frame (middle of the first lower row) — a single flat colourful illustration scene combining: ' + '; '.join(hab) + '.')
     if diet:
-        L.append('  · Food circles (right panel of the upper row; left to right, top to bottom): ' + '; '.join(f'{i + 1}. {h}' for i, h in enumerate(diet)) + ' — colourful flat sticker-style illustrations of the typical food items in natural food colours.')
-    L.append('  · Growth circles (middle panel of the lower row) three circles left to right: (1) a nest, (2) eggs, (3) a chick — colourful flat sticker style, typical for this species.')
+        L.append('  · Food circles (right panel of the second lower row): ' + '; '.join(f'{i + 1}. {h}' for i, h in enumerate(diet)) + ' — colourful flat sticker-style illustrations of the typical food items in natural food colours.')
+    L.append('  · Growth circles (right panel of the first lower row) three circles left to right: (1) a nest, (2) eggs, (3) a chick — colourful flat sticker style, typical for this species.')
     L.append('  · Bottom-left panel: two circles either side of the small glasses icon: realistic head-and-neck portraits of two different similar species — ' + ' and '.join(f['sim'][:2]) + '.')
     L.append('Style for pictures: clean, bright, crisp, kid-friendly. Do not add anything outside the slots.')
     return '\n'.join(L)
