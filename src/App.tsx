@@ -3,6 +3,7 @@ import { FlipCard } from './components/FlipCard.tsx';
 import { PokedexDevice } from './components/PokedexDevice.tsx';
 import { WelcomeScreen } from './components/WelcomeScreen.tsx';
 import { SideToolBalls } from './components/SideToolBalls.tsx';
+import { PokeballIcon } from './components/PokeballIcon.tsx';
 import { TopBar } from './components/TopBar.tsx';
 import { UpdateToast } from './components/UpdateToast.tsx';
 import { BALL_BASE, BALL_SIZE, BALL_ICON, BALL_RAIL_RIGHT, BALL_LABEL } from './components/ballStyles';
@@ -35,7 +36,6 @@ import {
   Backpack,
   Layers,
   Languages,
-  ChevronDown,
 } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -54,7 +54,6 @@ function App() {
   const [isOpened, setIsOpened] = useState(false);
   const [query, setQuery] = useState('');
   const [showMap, setShowMap] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   // 分頁顯示：一次過 render 569 張卡會同時觸發幾百個圖片請求（r2.dev 會限流）
   const [visibleCount, setVisibleCount] = useState(CARDS_PER_PAGE);
   const [onlyUnlocked, setOnlyUnlocked] = useState(false);
@@ -427,40 +426,7 @@ function App() {
               <div className="md:hidden shrink-0">
                 <TopBar lang={lang} />
               </div>
-
-              {/* 漢堡改為「收合黃色區域」：只控制下面那條黃色資訊帶，
-                  不再包含地圖／禮儀／裝備（已搬到左邊浮動球）。
-                  用戶說「那三橫改為收合黃色區域」—— 所以圖示也用 chevron。 */}
-              <button
-                onClick={() => setMobileMenuOpen((v) => !v)}
-                aria-label={mobileMenuOpen ? '收起資訊帶' : '展開資訊帶'}
-                aria-expanded={mobileMenuOpen}
-                className="md:hidden w-11 h-11 rounded-lg bg-black/40 border-2 border-yellow-400/30 text-yellow-200 flex items-center justify-center active:scale-90 shrink-0"
-              >
-                <ChevronDown className={`w-5 h-5 transition-transform ${mobileMenuOpen ? 'rotate-180' : ''}`} />
-              </button>
             </div>
-
-            <AnimatePresence initial={false}>
-              {mobileMenuOpen && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.25 }}
-                  className="overflow-hidden md:hidden"
-                >
-                  {/* 收合的只是「黃色資訊帶」（583 種／已解鎖圖卡／搜尋／排序／篩選）。
-                      地圖、禮儀、裝備、語言已經全部搬到浮動球與頂欄，
-                      所以這裡不再重複，BIRD-DEX 2 亦已由右邊精靈球負責。 */}
-                  <div className="bg-black/60 backdrop-blur-md border-t-2 border-yellow-400/20 px-3 py-2.5 relative">
-                    <p className="text-yellow-200/70 font-mono text-[9px] tracking-widest">
-                      {L('資料帶 · DATA STRIP', 'DATA STRIP')}
-                    </p>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
           </div>
 
           <div className="bg-gradient-to-b from-yellow-300 to-yellow-400 border-b-[6px] border-black shadow-md relative">
@@ -719,32 +685,9 @@ function App() {
             aria-label="前往 BIRD-DEX 2 捕捉精靈"
             className={`${BALL_BASE} ${BALL_SIZE} overflow-hidden bg-white`}
           >
-            {/* 精靈球圖案 */}
-            <svg viewBox="0 0 100 100" className="w-full h-full">
-              <defs>
-                <linearGradient id="pkb-top" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#ff5b3d" />
-                  <stop offset="100%" stopColor="#d4280a" />
-                </linearGradient>
-                <linearGradient id="pkb-bot" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#ffffff" />
-                  <stop offset="100%" stopColor="#d9d9d9" />
-                </linearGradient>
-              </defs>
-              <circle cx="50" cy="50" r="48" fill="url(#pkb-bot)" />
-              <path d="M2 50a48 48 0 0 1 96 0Z" fill="url(#pkb-top)" />
-              <rect x="2" y="45" width="96" height="10" fill="#111" />
-              <circle cx="50" cy="50" r="15" fill="#111" />
-              <circle cx="50" cy="50" r="11" fill="#fff" />
-              <circle cx="50" cy="50" r="6" fill="#f4f4f4" stroke="#111" strokeWidth="2" />
-              {/* 高光 */}
-              <ellipse cx="34" cy="28" rx="11" ry="7" fill="rgba(255,255,255,0.45)" />
-            </svg>
+            <PokeballIcon className="w-full h-full block" />
             <span className={BALL_LABEL('right')}>
               去 BIRD-DEX 2 捕捉精靈
-            </span>
-            <span className="absolute -top-1 -right-1 bg-emerald-400 text-black text-[8px] font-black px-1 rounded border border-black animate-pulse">
-              GO
             </span>
           </button>
         </div>
@@ -781,6 +724,8 @@ function App() {
         onClose={() => setSelectedBirdId(null)}
         onAnalyze={analyzeAudio}
         onAnalyzeMedia={analyzeMedia}
+        onOpenGuide={(k) => setGuideKind(k)}
+        onOpenMap={() => setShowMap(true)}
       />
 
       <RecognitionResultModal

@@ -13,6 +13,7 @@ import {
   FileText,   // 詳細資料（文字）
   Compass,    // 科學研究中心
   Layers,     // 打開圖卡（1200×1600）
+  MapPin, Footprints, Backpack,   // 頂部球：地圖／禮儀／裝備
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MediaCapturePanel, MediaKind } from './MediaCapturePanel.tsx';
@@ -21,6 +22,7 @@ import { useCardImage, useInfoCard } from '../hooks/useCardImage';
 import { searchBirds } from '../lib/pokedexOrder';
 import { BirdDetailPage } from './BirdDetailPage';
 import { ResearchHubPage } from './ResearchHubPage';
+import { PokeballIcon } from './PokeballIcon';
 
 /** 圖鑑評分（32 KB，隨主 bundle 載入；與詳細頁、卡面讀同一個檔） */
 import dexScoresRaw from '../data/dexScores.json';
@@ -36,15 +38,10 @@ import { hasInfoCard } from '../lib/infoCards';
 // 捕精靈 App（BIRD-DEX 2）網址
 const BIRDDEX2_URL = 'https://skw-birdex2.vercel.app';
 
-// 精靈球小圖示（用於跳轉 BIRD-DEX 2 的按鈕）
-const PokeballIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg viewBox="0 0 100 100" className={className}>
-    <circle cx="50" cy="50" r="46" fill="#fff" stroke="#111" strokeWidth="6" />
-    <path d="M5 50a45 45 0 0 1 90 0Z" fill="#ef4444" stroke="#111" strokeWidth="6" />
-    <line x1="4" y1="50" x2="96" y2="50" stroke="#111" strokeWidth="6" />
-    <circle cx="50" cy="50" r="14" fill="#fff" stroke="#111" strokeWidth="6" />
-  </svg>
-);
+/** 圖鑑機頂部的小球（手機 36px，電腦 32px） */
+const HDR_BALL =
+  'rounded-full border-[2.5px] border-gray-900 shadow-[0_3px_0_rgba(0,0,0,0.55)] active:translate-y-0.5 ' +
+  'active:shadow-[0_1px_0_rgba(0,0,0,0.55)] transition-all flex items-center justify-center shrink-0 w-9 h-9 md:w-8 md:h-8';
 
 // 圖卡未載入／不存在時顯示於螢幕內（不再只是空白或轉圈）
 const CardImageFallback: React.FC<{
@@ -99,6 +96,8 @@ interface PokedexDeviceProps {
   lang?: Lang;
   /** 打開觀鳥禮儀 / 觀鳥裝備 */
   onOpenGuide?: (kind: GuideKind) => void;
+  /** 打開觀鳥地圖 */
+  onOpenMap?: () => void;
 }
 
 export const PokedexDevice: React.FC<PokedexDeviceProps> = ({ 
@@ -110,6 +109,7 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   onAnalyzeMedia, // 新版：可同時做聲音/圖片
   lang = 'zh',
   onOpenGuide,
+  onOpenMap,
 }) => {
   // --- 媒體擷取面板 ---
   const [captureKind, setCaptureKind] = useState<MediaKind | null>(null);
@@ -428,48 +428,51 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
           {/* --- 左半部分：圖鑑顯示面板 (修正版) --- */}
 <div className="w-full md:w-1/2 min-h-[50%] md:h-full bg-gradient-to-br from-[#E3350D] via-[#c92b0a] to-[#9a2208] border-[6px] md:border-[10px] border-gray-900 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3),inset_0_3px_8px_rgba(255,255,255,0.15)]">
   
-  {/* 行動端專用 HUD - 聲音/影像 AI 辨識 + 精靈球跳轉 */}
-  <div className="md:hidden absolute top-20 left-4 right-4 flex justify-between items-center z-30 pointer-events-none">
-    <div className="flex gap-3">
-      <button 
-        onClick={(e) => { e.stopPropagation(); setCaptureKind('audio'); }}
-        title="聲音辨識"
-        className="pointer-events-auto w-12 h-12 rounded-full bg-cyan-500/30 backdrop-blur-md border-2 border-cyan-400/70 flex items-center justify-center text-cyan-300 active:scale-90 active:bg-cyan-400 active:text-black shadow-lg shadow-cyan-500/30"
-      >
-        <Mic className="w-5 h-5" /> 
-      </button>
-      <button 
-        onClick={(e) => { e.stopPropagation(); setCaptureKind('image'); }}
-        title="看圖認雀"
-        className="pointer-events-auto w-12 h-12 rounded-full bg-fuchsia-500/30 backdrop-blur-md border-2 border-fuchsia-400/70 flex items-center justify-center text-fuchsia-300 active:scale-90 active:bg-fuchsia-400 active:text-black shadow-lg shadow-fuchsia-500/30"
-      >
-        <Camera className="w-5 h-5" />
-      </button>
-    </div>
-    {/* 精靈球：跳轉去 BIRD-DEX 2 捕捉精靈 */}
-    <button 
-      onClick={(e) => { e.stopPropagation(); window.open(BIRDDEX2_URL, '_blank'); }}
-      title="前往 BIRD-DEX 2 捕捉精靈"
-      aria-label="前往 BIRD-DEX 2 捕捉精靈"
-      className="pointer-events-auto w-12 h-12 rounded-full bg-white/90 backdrop-blur-md border-2 border-gray-900 flex items-center justify-center p-1.5 active:scale-90 shadow-lg shadow-red-500/30"
-    >
-      <PokeballIcon className="w-full h-full" />
-    </button>
-  </div>
-
   {/* 頂部感應燈區塊 + 電腦版上傳中心 */}
-  <div className="flex items-center justify-between p-2 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
-    <div className="flex items-center gap-4">
+  <div className="flex items-center justify-between p-2 pr-9 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
+    <div className="flex items-center gap-2 md:gap-4">
       <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center border-[3px] border-gray-800 shadow-md">
         <div className="w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#31A5E8] border-[2px] border-white shadow-[0_0_10px_rgba(49,165,232,0.8)] relative overflow-hidden">
           <div className="absolute top-1 left-1 w-2 h-2 bg-white/50 rounded-full blur-[1px]" />
         </div>
       </div>
-      <div className="flex gap-2">
-        <div className="w-3 h-3 rounded-full bg-red-600 border border-black/30 shadow-inner" />
-        <div className="w-3 h-3 rounded-full bg-yellow-400 border border-black/30 shadow-inner" />
-        <div className="w-3 h-3 rounded-full bg-green-500 border border-black/30 shadow-inner" />
+      {/* 左 3 球：地圖／禮儀／裝備（放在圖鑑紅框頂部，不蓋住圖卡；取代原本三粒裝飾燈） */}
+      <div className="flex gap-1.5 md:gap-2">
+        <button type="button" onClick={(e) => { e.stopPropagation(); onOpenMap?.(); }}
+          title={t('觀鳥地圖', 'Map')} aria-label={t('觀鳥地圖', 'Map')}
+          className={`${HDR_BALL} bg-gradient-to-br from-emerald-300 to-emerald-700 text-white`}>
+          <MapPin className="w-4 h-4" strokeWidth={2.6} />
+        </button>
+        <button type="button" onClick={(e) => { e.stopPropagation(); onOpenGuide?.('etiquette'); }}
+          title={t('觀鳥禮儀', 'Etiquette')} aria-label={t('觀鳥禮儀', 'Etiquette')}
+          className={`${HDR_BALL} bg-gradient-to-br from-sky-300 to-sky-700 text-white`}>
+          <Footprints className="w-4 h-4" strokeWidth={2.6} />
+        </button>
+        <button type="button" onClick={(e) => { e.stopPropagation(); onOpenGuide?.('gear'); }}
+          title={t('觀鳥裝備', 'Gear')} aria-label={t('觀鳥裝備', 'Gear')}
+          className={`${HDR_BALL} bg-gradient-to-br from-amber-300 to-amber-700 text-white`}>
+          <Backpack className="w-4 h-4" strokeWidth={2.6} />
+        </button>
       </div>
+    </div>
+
+    {/* 手機：右 3 球（聽聲／拍照／精靈球），同樣在紅框頂部 */}
+    <div className="md:hidden flex gap-1.5">
+      <button type="button" onClick={(e) => { e.stopPropagation(); setCaptureKind('audio'); }}
+        title={t('聽聲認雀', 'Sound ID')} aria-label={t('聽聲認雀', 'Sound ID')}
+        className={`${HDR_BALL} bg-gradient-to-br from-cyan-300 to-cyan-700 text-white`}>
+        <Mic className="w-4 h-4" strokeWidth={2.6} />
+      </button>
+      <button type="button" onClick={(e) => { e.stopPropagation(); setCaptureKind('image'); }}
+        title={t('看圖認雀', 'Photo ID')} aria-label={t('看圖認雀', 'Photo ID')}
+        className={`${HDR_BALL} bg-gradient-to-br from-fuchsia-400 to-fuchsia-700 text-white`}>
+        <Camera className="w-4 h-4" strokeWidth={2.6} />
+      </button>
+      <button type="button" onClick={(e) => { e.stopPropagation(); window.open(BIRDDEX2_URL, '_blank'); }}
+        title="前往 BIRD-DEX 2 捕捉精靈" aria-label="前往 BIRD-DEX 2 捕捉精靈"
+        className={`${HDR_BALL} overflow-hidden bg-white`}>
+        <PokeballIcon className="w-full h-full block" />
+      </button>
     </div>
 
     {/* 電腦版 AI 辨識中心 - ACOUSTIC + VISUAL */}

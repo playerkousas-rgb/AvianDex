@@ -1,3 +1,4 @@
+import { localInfoCardUrl } from './infoCards';
 import {
   CARD_EXTENSIONS,
   INFO_EXTENSIONS,
@@ -121,6 +122,12 @@ export async function requestInfoCard(id: string): Promise<void> {
   const current = infoEntries.get(id);
   if (current && (current.status === 'loaded' || current.status === 'missing')) return;
   if (current && current.status === 'loading') return;
+  /* 本機試做圖卡（public/demo）：不用探測 R2，直接用 */
+  const local = localInfoCardUrl(id);
+  if (local) {
+    patchInfo(id, { status: 'loaded', url: local, tried: ['local'], error: undefined });
+    return;
+  }
   patchInfo(id, { status: 'loading' });
 
   const tried: string[] = [];

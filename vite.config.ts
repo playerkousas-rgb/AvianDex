@@ -1,10 +1,26 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import { readFileSync, writeFileSync, existsSync } from 'node:fs'
+import { resolve } from 'node:path'
+
+/** build 完把 dist/sw.js 裡的 __BUILD_ID__ 換成這次部署的 commit／時間，令每次部署的 sw.js 內容都不同。 */
+function stampServiceWorker() {
+  return {
+    name: 'stamp-service-worker',
+    apply: 'build' as const,
+    closeBundle() {
+      const f = resolve('dist/sw.js')
+      if (!existsSync(f)) return
+      const id = (process.env.VERCEL_GIT_COMMIT_SHA || process.env.GITHUB_SHA || '').slice(0, 8) || 'b' + Date.now().toString(36)
+      writeFileSync(f, readFileSync(f, 'utf8').replace(/__BUILD_ID__/g, id))
+    },
+  }
+}
 
 // https://vite.dev/config/
 export default defineConfig(async () => {
-  const plugins = [react(), tailwindcss()];
+  const plugins = [react(), tailwindcss(), stampServiceWorker()];
   try {
     // .vite-source-tags.js 是預覽環境才會注入的可選 plugin（可能不存在），
     // 所以必須用 @ts-ignore（@ts-expect-error 在檔案存在時反而報錯）
