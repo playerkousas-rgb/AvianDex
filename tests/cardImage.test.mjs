@@ -40,6 +40,7 @@ function buildLoader() {
 /** 安裝假的 Image / fetch，按 scenario 決定邊個網址存在 */
 function installStubs(scenario, { latencyMs = 1 } = {}) {
   const requests = [];
+  const fetchRequests = [];
   let inflightNow = 0;
   let maxInflight = 0;
 
@@ -62,7 +63,8 @@ function installStubs(scenario, { latencyMs = 1 } = {}) {
   }
 
   globalThis.Image = FakeImage;
-  globalThis.fetch = async (url) => {
+  globalThis.fetch = async (url, options) => {
+    fetchRequests.push({ url: String(url), method: options?.method || 'GET' });
     const outcome = scenario(String(url));
     if (outcome === 'network-error') throw new TypeError('fetch failed');
     return {
@@ -75,6 +77,7 @@ function installStubs(scenario, { latencyMs = 1 } = {}) {
 
   return {
     requests,
+    fetchRequests,
     getMaxInflight: () => maxInflight,
   };
 }
@@ -183,4 +186,32 @@ test('設定檔的圖卡網址格式正確（4 位補零、可換網域）', asy
     `${mod.R2_BASE_URL}/aviandex/0021.avif`,
   ]);
   assert.equal(mod.TOTAL_SLOTS, 583, '槽位數要同 birds.json 一致');
+});
+
+
+test('no external-app path guessing, no cross-origin HEAD requests, and bounded negative probes', async () => {
+  const stub = installStubs(url => url.startsWith('/api/card') ? 'missing' : 'network-error');
+  const loader = await import(`${pathToFileURL(buildLoader()).href}?no-external-probes`);
+  loader.requestCard('0043');
+  await new Promise(r => setTimeout(r, 250));
+  assert.equal(loader.getEntry('0043').status, 'missing');
+  assert.ok(stub.requests.every(url => !url.includes('skw-birdex2')));
+  assert.ok(stub.requests.every(url => !url.includes('/demo/card-')));
+  assert.ok(stub.fetchRequests.filter(r => r.method === 'HEAD').every(r => r.url.startsWith('/api/card')));
+  assert.ok(stub.requests.length <= 10, `expected at most 5 formats × direct/proxy, got ${stub.requests.length}`);
+  const count = stub.requests.length;
+  for (let i = 0; i < 10; i++) loader.requestCard('0043');
+  await new Promise(r => setTimeout(r, 50));
+  assert.equal(stub.requests.length, count, 'missing card must not auto-retry forever');
+  loader.resetAll();
+  assert.equal(loader.getStats().useProxy, false);
+});
+
+test('a 200 HEAD after image decode failure must not be marked loaded', async () => {
+  installStubs(url => url.includes('card-manifest') ? 'missing' : 'network-error');
+  globalThis.fetch = async url => ({ ok: true, status: 200, json: async () => ({}) });
+  const loader = await import(`${pathToFileURL(buildLoader()).href}?decode-failure`);
+  loader.requestCard('0044');
+  await new Promise(r => setTimeout(r, 100));
+  assert.equal(loader.getEntry('0044').status, 'error');
 });
