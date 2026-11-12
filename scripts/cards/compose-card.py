@@ -531,18 +531,33 @@ def compose(f, art, out_scale=None):
 #   像素圖、常見度、分類階層、四個特徵放大圈、分佈圖、評分雷達、保育級別、相似鳥。
 #   → 8 個元素，每個都比完整版大，手機上一眼讀得到。完整版仍可用 AVX_LAYOUT=full。
 # ══════════════════════════════════════════════════════════════
-M_PIXEL_FRAME = (36, 36, 372, 372)
-M_PIXEL = (48, 48, 360, 360)
-M_TAX = (388, 36, 988, 372)
-M_FREQ = (36, 388, 988, 452)
-M_ZOOMP = (36, 468, 988, 740)
-M_ZOOM = [(36 + 238 * (i + 0.5) + 0, 584, 92) for i in range(4)]
-M_MAPP = (36, 756, 536, 1096)
+M_BG_K = 0.82           # 底色：主題色壓暗到幾乎黑，保留一點色相
+GOLD = (222, 188, 112)
+GOLD_D = (150, 122, 64)
+M_PIXEL_FRAME = (36, 36, 356, 356)
+M_PIXEL = (46, 46, 346, 346)
+M_RARE = (36, 368, 356, 416)
+M_TAX = (372, 36, 988, 416)
+M_ZOOMP = (36, 432, 988, 660)
+M_ZOOM = [(36 + 238 * (i + 0.5), 536, 88) for i in range(4)]
+M_RADP = (36, 676, 988, 1170)
+M_MAPP = (36, 1186, 540, 1500)
 M_MAP = (M_MAPP[0] + 8, M_MAPP[1] + 8, M_MAPP[2] - 8, M_MAPP[3] - 8)
-M_RADP = (552, 756, 988, 1096)
-M_CONSP = (36, 1112, 988, 1292)
-M_SIMP = (36, 1308, 988, 1500)
-M_SIM = [(290, 1380, 62), (734, 1380, 62)]
+M_SIMP = (556, 1186, 988, 1500)
+M_SIM = [(668, 1330, 70), (876, 1330, 70)]
+RARE_OF = {'LC': 1, 'NT': 2, 'VU': 3, 'EN': 4, 'CR': 5, 'EW': 5, 'EX': 5}
+
+
+def rarity(f):
+    """卡片稀有度 1–5：取「保育級別」與「常見度」兩者中較稀有的那個（常見度 5＝很常見 → 稀有度 1）。
+    兩樣都沒有資料時回傳 0（全部不點亮，不亂填）。"""
+    tiers = []
+    code = (f.get('iucn') or {}).get('code')
+    if code in RARE_OF:
+        tiers.append(RARE_OF[code])
+    if f.get('freq') is not None:
+        tiers.append(6 - max(1, min(5, int(f['freq']))))
+    return max(tiers) if tiers else 0
 
 
 def slim_slots(f):
@@ -553,6 +568,19 @@ def slim_slots(f):
     return out
 
 
+def diamond(cv, cx, cy, r, fill=None, outline=None, width=2):
+    cv.poly([(cx, cy - r), (cx + r, cy), (cx, cy + r), (cx - r, cy)], fill=fill, outline=outline, width=width)
+
+
+def gpanel(cv, box, th, k=0.55, hi=False):
+    """遊戲面板：深色玻璃底 + 金色細框 + 四角小菱形"""
+    x0, y0, x1, y1 = box
+    cv.rr(box, 14, fill=mix(dark(th, 0.62), (0, 0, 0), 0.0) if not hi else dark(th, 0.5), outline=GOLD_D, width=2)
+    cv.rr((x0 + 5, y0 + 5, x1 - 5, y1 - 5), 10, outline=mix(GOLD_D, dark(th, 0.62), 0.55), width=1)
+    for (x, y) in ((x0, y0), (x1, y0), (x0, y1), (x1, y1)):
+        diamond(cv, x, y, 7, fill=GOLD, outline=dark(GOLD, 0.45), width=1.5)
+
+
 def compose_slim(f, art, out_scale=None):
     apply_theme(f)
     art_hi = art.convert('RGB') if art is not None else None
@@ -560,108 +588,113 @@ def compose_slim(f, art, out_scale=None):
     code = f['iucn']['code']
     zh, _en = INFO.get(code, ('資料待查', ''))
     TH = HDR['title']
+    BG = dark(TH, M_BG_K)
     cv = Canvas()
-    cv.rr((8, 8, W - 8, H - 8), 30, outline=TH, width=6)
+    cv.d.rectangle([0, 0, W * SS, H * SS], fill=BG)
+    # 面板底紋：細金線的斜紋，像遊戲面板的暗紋
+    for i in range(-H, W, 46):
+        cv.line([(i, 0), (i + H * 0.55, H)], mix(BG, GOLD, 0.05), 1)
+    cv.rr((8, 8, W - 8, H - 8), 28, outline=GOLD, width=4)
+    cv.rr((16, 16, W - 16, H - 16), 22, outline=GOLD_D, width=1.5)
+    cream = (244, 238, 222)
 
-    # 像素圖貼紙
-    cv.rr(M_PIXEL_FRAME, 22, fill=WHITE, outline=TH, width=4)
+    # ── 像素圖：金色雙框 ──
+    cv.rr(M_PIXEL_FRAME, 18, fill=mix(TH, WHITE, 0.55), outline=GOLD, width=4)
+    cv.rr((M_PIXEL_FRAME[0] + 6, M_PIXEL_FRAME[1] + 6, M_PIXEL_FRAME[2] - 6, M_PIXEL_FRAME[3] - 6), 13, outline=GOLD_D, width=1.5)
 
-    # 分類階層（階梯縮排，只留字、無標題）
-    c = COL['tax']
-    panel(cv, M_TAX, 'tax')
+    # ── 稀有度：小標示（5 顆菱形 + 保育級別小章），不佔版面 ──
+    n = rarity(f)
+    for i in range(5):
+        on = i < n
+        diamond(cv, 62 + i * 36, (M_RARE[1] + M_RARE[3]) / 2, 14,
+                fill=GOLD if on else mix(BG, GOLD, 0.12), outline=GOLD if on else GOLD_D, width=2)
+        if on:
+            diamond(cv, 62 + i * 36, (M_RARE[1] + M_RARE[3]) / 2, 5, fill=(255, 250, 225))
+    col = dict(SCALE).get(code)
+    if col:
+        px0, px1 = 252, 354
+        py = (M_RARE[1] + M_RARE[3]) / 2
+        cv.rr((px0, py - 19, px1, py + 19), 19, fill=col, outline=cream, width=2)
+        cv.text((px0 + px1) / 2, py + 1, zh, 22, WHITE if sum(col) < 450 else INK, anchor='mm', maxw=90)
+
+    # ── 分類階層 ──
+    gpanel(cv, M_TAX, TH)
     g = f['genus']
     rows = [('界', '動物界 Animalia'), ('門', '脊索動物門 Chordata'), ('綱', '鳥綱 Aves'),
             ('目', ' '.join(filter(None, f['order'])) or '資料待查'), ('科', ' '.join(filter(None, f['family'])) or '資料待查'),
             ('屬', (g + ' 屬') if g else '資料待查'),
             ('種', f['z'] + (' ' + g[0] + '. ' + f['epithet'] if g and f['epithet'] else ''))]
     for i, (k, v) in enumerate(rows):
-        y = M_TAX[1] + 52 + i * 42
-        x = M_TAX[0] + 26 + i * 12
+        y = M_TAX[1] + 56 + i * 49
+        x = M_TAX[0] + 34 + i * 12
         last = i == len(rows) - 1
-        cv.text(x, y, k, 27, dark(c, 0.15))
-        cv.text(x + 38, y, v, 24 if not last else 25, INK if not last else dark(c, 0.2), bold=last, maxw=M_TAX[2] - x - 60)
+        cv.text(x, y, k, 30, GOLD)
+        cv.text(x + 44, y, v, 26 if not last else 28, cream if not last else (255, 232, 160), bold=last, maxw=M_TAX[2] - x - 70)
+        if not last:
+            cv.line([(x + 44, y + 25), (M_TAX[2] - 26, y + 25)], mix(BG, GOLD, 0.16), 1)
 
-    # 常見度：5 個精靈球（freq 未有可靠來源時顯示「資料待查」，不填假數）
-    panel(cv, M_FREQ, 'hab', 0.8)
-    cv.text(M_FREQ[0] + 28, (M_FREQ[1] + M_FREQ[3]) / 2, '常見度', 28, dark(COL['hab'], 0.2))
-    fq = f.get('freq')
-    if fq is None:
-        cv.text(M_FREQ[0] + 200, (M_FREQ[1] + M_FREQ[3]) / 2, '資料待查', 26, INK)
-    else:
-        for i in range(5):
-            cv.ball(M_FREQ[0] + 230 + i * 56, (M_FREQ[1] + M_FREQ[3]) / 2, 20, on=i < int(fq))
-
-    # 四個特徵放大圈
-    panel(cv, M_ZOOMP, 'zoom', 0.84)
-    c = COL['zoom']
+    # ── 特徵放大圈（金環 + 菱形節點）──
+    gpanel(cv, M_ZOOMP, TH)
     for (cx, cy, r) in M_ZOOM:
-        cv.circ(cx, cy, r + 6, fill=WHITE)
-        cv.circ(cx, cy, r + 4, outline=c, width=3)
+        cv.circ(cx, cy, r + 9, outline=GOLD_D, width=1.5)
+        cv.circ(cx, cy, r + 5, fill=WHITE)
+        cv.circ(cx, cy, r + 3, outline=GOLD, width=4)
+        for (dx, dy) in ((0, -1), (1, 0), (-1, 0)):
+            diamond(cv, cx + dx * (r + 9), cy + dy * (r + 9), 6, fill=GOLD, outline=dark(GOLD, 0.45), width=1)
 
-    # 分佈圖
-    panel(cv, M_MAPP, 'map', 0.7)
-    cv.rr((M_MAP[0] - 3, M_MAP[1] - 3, M_MAP[2] + 3, M_MAP[3] + 3), 14, outline=COL['map'], width=3)
-
-    # 評分雷達（深色格，五個維度名保留）
-    panel(cv, M_RADP, 'radar', dark_bg=True)
-    c = mix(COL['radar'], WHITE, 0.65)
+    # ── 雷達（主角）：放大、五個菱形節點，像角色面板的五芒共鳴圖 ──
+    gpanel(cv, M_RADP, TH, hi=True)
     x0, y0, x1, y1 = M_RADP
-    cx, cy, R = (x0 + x1) / 2, y0 + 160, 80
+    cx, cy, R = (x0 + x1) / 2 + 80, y0 + 254, 150
+    for rr_ in (R + 150, R + 104, R + 64):
+        cv.circ(cx, cy, rr_, outline=mix(dark(TH, 0.5), GOLD, 0.16), width=1)
+    ang = [-math.pi / 2 + i * 2 * math.pi / 5 for i in range(5)]
+    for a in ang:     # 外圈五角連線
+        pass
     sc = f['score']
     names = [('重要性', 'i'), ('適應力', 'a'), ('研究', 'r'), ('保育', 'c'), ('觀賞', 'v')]
-    ang = [-math.pi / 2 + i * 2 * math.pi / 5 for i in range(5)]
-    soft = mix(c, dark(COL['radar'], 0.28), 0.55)
     for lv in (1, 2, 3, 4, 5):
         cv.poly([(cx + R * lv / 5 * math.cos(a), cy + R * lv / 5 * math.sin(a)) for a in ang],
-                outline=c if lv == 5 else soft, width=2.6 if lv == 5 else 1.3)
+                outline=GOLD if lv == 5 else mix(dark(TH, 0.5), GOLD, 0.30), width=2.6 if lv == 5 else 1.2)
     for a in ang:
-        cv.line([(cx, cy), (cx + R * math.cos(a), cy + R * math.sin(a))], soft, 1.3)
+        cv.line([(cx, cy), (cx + R * math.cos(a), cy + R * math.sin(a))], mix(dark(TH, 0.5), GOLD, 0.30), 1.2)
     pv = [float(sc[k]) if sc[k] else 0 for _, k in names]
     pts = [(cx + R * v / 5 * math.cos(a), cy + R * v / 5 * math.sin(a)) for v, a in zip(pv, ang)]
-    cv.glass(pts, (255, 214, 90), 150)
-    cv.poly(pts, outline=(255, 226, 120), width=3)
+    cv.glass(pts, (255, 206, 90), 140)
+    cv.poly(pts, outline=(255, 226, 130), width=3.4)
     for q in pts:
-        cv.circ(q[0], q[1], 4, fill=(255, 226, 120))
+        diamond(cv, q[0], q[1], 7, fill=(255, 238, 170), outline=(150, 110, 30), width=1.5)
     for (nm, k), a in zip(names, ang):
-        lx, ly = cx + (R + 46) * math.cos(a), cy + (R + 32) * math.sin(a)
-        cv.text(lx, ly - 12, nm, 20, WHITE, anchor='mm')
+        lx, ly = cx + (R + 46) * math.cos(a), cy + (R + 46) * math.sin(a)
+        diamond(cv, lx, ly, 42, fill=dark(TH, 0.35), outline=GOLD, width=2.5)
+        diamond(cv, lx, ly, 36, outline=GOLD_D, width=1)
+        cv.text(lx, ly - 11, nm, 17, cream, anchor='mm', maxw=50)
         v = sc[k] or '待查'
-        cv.rr((lx - 26, ly + 1, lx + 26, ly + 28), 8, fill=WHITE)
-        cv.text(lx, ly + 15, v, 20, dark(COL['radar'], 0.3), anchor='mm')
+        cv.text(lx, ly + 12, v, 24, (255, 226, 130), anchor='mm', maxw=50)
+    # 總分：五星 + 大數字
     try:
-        n = max(0, min(5, round(float(sc['o']))))
+        nstar = max(0, min(5, round(float(sc['o']))))
     except (TypeError, ValueError):
-        n = None
-    yS = y1 - 36
+        nstar = None
+    # 總分放左側當主角：大數字 + 五星（像角色面板的等級／星級）
+    sy = cy - 24
+    cv.text(x0 + 52, sy, sc['o'] or '?', 104, (255, 232, 160), anchor='lm', maxw=170)
     for i in range(5):
-        cv.star(x0 + 62 + i * 36, yS, 15, (244, 190, 30) if n is not None and i < n else mix((244, 190, 30), dark(COL['radar'], 0.28), 0.7), (196, 140, 10))
-    cv.text(x0 + 290, yS, sc['o'] or '?', 38, WHITE, anchor='lm', maxw=100)
+        cv.star(x0 + 70 + i * 40, sy + 78, 17, (244, 190, 30) if nstar is not None and i < nstar else mix(BG, (244, 190, 30), 0.22), (196, 140, 10))
 
-    # 保育級別（稀有度）
-    panel(cv, M_CONSP, 'cons', 0.8)
-    cy = M_CONSP[1] + 68
-    n_s = len(SCALE)
-    step = (M_CONSP[2] - M_CONSP[0] - 150) / (n_s - 1)
-    for i, (k, col) in enumerate(SCALE):
-        x = M_CONSP[0] + 75 + i * step
-        if k == code:
-            cv.circ(x, cy, 40, fill=col, outline=INK, width=5)
-            cv.text(x, cy + 1, k, 30, WHITE if sum(col) < 450 else INK, anchor='mm')
-            cv.poly([(x - 10, cy + 49), (x + 10, cy + 49), (x, cy + 61)], fill=INK)
-        else:
-            sft = mix(col, WHITE, 0.45)
-            cv.circ(x, cy, 24, fill=sft, outline=(215, 215, 205), width=2)
-            cv.text(x, cy + 1, k, 15, WHITE if sum(sft) < 420 else (90, 100, 88), anchor='mm')
-    cv.text((M_CONSP[0] + M_CONSP[2]) / 2, M_CONSP[3] - 24, zh, 32, INK, anchor='mm', maxw=600)
+    # ── 分佈圖 ──
+    gpanel(cv, M_MAPP, TH)
+    cv.rr((M_MAP[0] - 3, M_MAP[1] - 3, M_MAP[2] + 3, M_MAP[3] + 3), 12, outline=GOLD, width=2.5)
 
-    # 相似鳥
-    panel(cv, M_SIMP, 'sim')
-    c = COL['sim']
-    cv.icon('sim', (M_SIMP[0] + M_SIMP[2]) / 2, M_SIM[0][1], 64)
-    for i, (cx, cy, r) in enumerate(M_SIM):
-        cv.circ(cx, cy, r + 5, fill=tint(c, 0.7), outline=c, width=3)
+    # ── 相似鳥 ──
+    gpanel(cv, M_SIMP, TH)
+    cv.icon('sim', (M_SIMP[0] + M_SIMP[2]) / 2, M_SIMP[1] + 44, 46)
+    for (cx, cy, r) in M_SIM:
+        cv.circ(cx, cy, r + 8, outline=GOLD_D, width=1.5)
+        cv.circ(cx, cy, r + 5, fill=WHITE)
+        cv.circ(cx, cy, r + 3, outline=GOLD, width=3.5)
 
-    # 貼 AI 圖
+    # ── 貼 AI 圖 ──
     base_np = art_np = None
     if art is not None:
         base_np = np.array(compose_slim(f, None, 1)).astype(float)
@@ -673,36 +706,35 @@ def compose_slim(f, art, out_scale=None):
             use = c0 > 25 and cst < c0 * 0.6 and cst < 60
             if VERBOSE:
                 print(f'  {name}: shift ({dx:+d},{dy:+d}) cost {cst:.0f} (原位 {c0:.0f}){" 採用" if use else ""}')
-            cv.paste_art(art_hi, kind, geo, (dx, dy) if use else (0, 0), rad=16 if kind == 'rect' else 12)
+            cv.paste_art(art_hi, kind, geo, (dx, dy) if use else (0, 0), rad=14 if kind == 'rect' else 12)
         else:
-            col = COL[{'pixel': 'tax', 'zoom': 'zoom', 'map': 'map', 'sim': 'sim'}[key]]
+            fillc = mix(TH, WHITE, 0.55)
             if kind == 'rect':
-                cv.rr(geo, 16, fill=tint(col, 0.75))
+                cv.rr(geo, 14, fill=fillc)
             else:
-                cv.circ(geo[0], geo[1], geo[2], fill=tint(col, 0.75))
+                cv.circ(geo[0], geo[1], geo[2], fill=fillc)
 
-    # 特徵名牌、相似鳥名牌、圖示章
+    # ── 名牌 ──
     for (cx, cy, r), lab in zip(M_ZOOM, ZOOM_LABELS):
-        cv.rr((cx - 46, cy + r - 10, cx + 46, cy + r + 22), 16, fill=TH, outline=WHITE, width=2)
-        cv.text(cx, cy + r + 6, lab, 22, WHITE, anchor='mm')
+        cv.rr((cx - 50, cy + r - 6, cx + 50, cy + r + 26), 16, fill=dark(TH, 0.3), outline=GOLD, width=2.5)
+        cv.text(cx, cy + r + 10, lab, 22, cream, anchor='mm')
     for i, (cx, cy, r) in enumerate(M_SIM):
         nm = f['sim'][i] if i < len(f['sim']) else ''
         if nm:
-            cv.rr((cx - 120, cy + r + 8, cx + 120, cy + r + 40), 12, fill=WHITE)
-            cv.text(cx, cy + r + 24, nm, 23, INK, anchor='mm', maxw=222)
-    badge(cv, M_TAX, 'tax')
+            cv.rr((cx - 98, cy + r + 14, cx + 98, cy + r + 48), 14, fill=dark(TH, 0.3), outline=GOLD, width=2)
+            cv.text(cx, cy + r + 31, nm, 23, cream, anchor='mm', maxw=180)
     return cv.done(out_scale)
 
 
 def art_prompt_slim(f):
     L = [
-        f"IMAGE 1 is a compact mobile bird information card for {f['z']} ({f['e']}, {f['s']}) that is finished except for its EMPTY PICTURE SLOTS (flat pale-coloured rectangles and circles). Fill ONLY those slots with illustrations. Use correct plumage and bare-part colours for this species; one species only.",
+        f"IMAGE 1 is a compact dark game-style character-panel bird information card for {f['z']} ({f['e']}, {f['s']}) that is finished except for its EMPTY PICTURE SLOTS (flat pale-coloured rectangles and circles). Fill ONLY those slots with illustrations. Use correct plumage and bare-part colours for this species; one species only.",
         'Keep everything else in IMAGE 1 exactly as it is: all layout, panels, colours, icons, numbers and text stay untouched at the same positions; do not redraw, move, resize or retype anything. Each picture must fill its slot edge to edge with the subject centred and fully inside the slot (circles: the whole subject inside the circle, nothing cut off by the rim) and contain NO text, letters, numbers or watermarks.',
         'Slots:',
         '  · Large square sticker (top-left): 16-bit pixel art of the bird, side view, plain light background.',
-        '  · Four big circles in one row (middle of the card), left to right: close-ups of (1) head and bill, (2) plumage pattern, (3) folded or spread wing, (4) feet and legs.',
-        '  · Wide frame (left, below the circles; the frame itself is the map): flat world map in soft pale colours, no country borders in different colours, with the species range shaded green' + (f" (range: {f.get('range')})" if f.get('range') else '') + '.',
-        '  · Bottom panel: two big circles either side of the small glasses icon: realistic head-and-neck portraits of two different similar species — ' + ' and '.join(f['sim'][:2]) + '.',
+        '  · Four big circles in one row (upper-middle of the card), left to right: close-ups of (1) head and bill, (2) plumage pattern, (3) folded or spread wing, (4) feet and legs.',
+        '  · Frame at the bottom-left (the frame itself is the map): flat world map in soft pale colours, no country borders in different colours, with the species range shaded green' + (f" (range: {f.get('range')})" if f.get('range') else '') + '.',
+        '  · Bottom-right panel: two circles below the small glasses icon: realistic head-and-neck portraits of two different similar species — ' + ' and '.join(f['sim'][:2]) + '.',
         'Style for pictures: clean, bright, crisp, kid-friendly. Do not add anything outside the slots.',
     ]
     return '\n'.join(L)
