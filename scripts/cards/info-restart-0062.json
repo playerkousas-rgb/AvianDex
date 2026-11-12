@@ -1,0 +1,138 @@
+{
+  "id": "0062",
+  "name": "小鸊鷉",
+  "scientificName": "Tachybaptus ruficollis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港常見留鳥，邊緣濕地有退縮"
+  },
+  "illustrationTaxon": "Tachybaptus ruficollis adult in breeding plumage; main image and diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "黑頸鸊鷉（冬羽）",
+      "scientificName": "Podiceps nigricollis",
+      "asset": "black-necked-grebe.png",
+      "framing": "whole-bird",
+      "sex": "first-winter/non-breeding",
+      "distinction": "黑頸鸊鷉體型相若或稍大，頭較大、額冠較陡、喙較窄尖、身形較修長且眼虹膜紅色；頸側與脅部多白，頭部深色範圍較廣。小鸊鷉較矮圓，成鳥全年深色頭冠及淡色眼。"
+    },
+    {
+      "zh": "鳳頭鸊鷉（冬羽）",
+      "scientificName": "Podiceps cristatus",
+      "asset": "great-crested-grebe.png",
+      "framing": "whole-bird",
+      "sex": "non-breeding adult",
+      "distinction": "鳳頭鸊鷉大得多（46–61 cm），頸長、身體修長低浮，冬羽眼前至前頸白、冠及眼至喙深色，喙長而纖細偏淡；小鸊鷉只有25–29 cm，圓頭短鈍喙、身形短圓。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.26,
+      0.52,
+      0.52
+    ],
+    [
+      0.2,
+      0.3,
+      0.51,
+      0.57
+    ],
+    [
+      0.17,
+      0.34,
+      0.63,
+      0.69
+    ],
+    [
+      0.56,
+      0.44,
+      0.93,
+      0.75
+    ]
+  ],
+  "featureLabels": [
+    "深冠淡色眼",
+    "栗色頰頸與黃嘴角",
+    "短鈍喙與矮圓身",
+    "白色蓬鬆尾下羽"
+  ],
+  "featureNotes": [
+    "成鳥全年保有深色頭冠與淡色眼，頭部相對圓大",
+    "繁殖羽橙褐頰及頸側醒目，喙基有淡黃嘴角斑",
+    "短而鈍的喙與矮圓體型，和大型長頸鸊鷉易區分",
+    "身體低浮於淡水面，後部羽毛蓬鬆，常潛水覓食"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "ESP",
+      "MAR",
+      "TUR",
+      "IRN",
+      "IND",
+      "CHN",
+      "JPN",
+      "PHL",
+      "IDN",
+      "ZAF",
+      "MDG"
+    ],
+    "note": "Representative subset of the exceptionally broad range described by HKBWS: Europe/northwest Africa through southwest Asia and South Asia, east across southeast Asia to northeast China, Japan, Taiwan/Philippines and parts of Indonesia, with sub-Saharan Africa and Madagascar also occupied. Selected countries are a partial overview, not nationwide occupancy or a precise species/subspecies distribution polygon; the map does not represent Hong Kong's local breeding/winter survey squares.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009000",
+      "use": "Full HKBWS account read: 25–29 cm; compact grebe with round head, short blunt pale-tipped bill, large feet, fluffy rear and dark crown/pale eyes year-round in adults. Non-breeding brown upperparts, grey-buff sides, whitish underparts, mostly pale orange-yellow bill with dark upper ridge and dusky tip; breeding plumage orange-brown cheeks/neck, grey-brown upperparts, buff flanks and underbody, white undertail coverts, pale yellow gape mark and mostly dark bill; juveniles striped black/white head with pink bill. Hong Kong Category I, common in open freshwater wetlands in northwest New Territories, with marginal wetland decline; IUCN LC, trend decreasing. Range broad across Europe, Africa, Asia and parts of Indonesia."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009300",
+      "use": "Full HKBWS Black-necked Grebe account read: winter first-year 28–34 cm, similar/slightly larger than Little Grebe but larger head, steeper crown, narrower pointed bill, less dumpy shape, red iris and white neck-sides/flanks contrasting darker head/upperparts. Rare winter visitor in Hong Kong; IUCN LC, trend unknown."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009100",
+      "use": "Full HKBWS Great Crested Grebe account read: 46–61 cm, much larger, long-bodied/long-necked, long slender largely pale bill; winter adult has white face to above eye and fore-neck, dark crown and dark line from eye to bill. Common winter visitor in Deep Bay; IUCN LC, trend unknown."
+    },
+    {
+      "url": "https://ebird.org/species/litgre1",
+      "use": "Cornell eBird/Merlin species account for cross-checking adult Little Grebe identification."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six runtime score values; no vEst is set."
+    }
+  ],
+  "notes": [
+    "AI illustration main species is an adult Little Grebe in breeding plumage; both comparisons are separate named grebe taxa in winter plumage.",
+    "App score values are entertainment metrics, not scientific conservation scoring; use runtime values exactly.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation. Comparison circles are not to scale.",
+    "World map is a partial country overview only, not an exact range or local Hong Kong occurrence grid.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, or app slim-registration change."
+  ]
+}

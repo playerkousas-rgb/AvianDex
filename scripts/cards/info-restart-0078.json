@@ -1,0 +1,166 @@
+{
+  "id": "0078",
+  "name": "紅翅鳳頭鵑",
+  "scientificName": "Clamator coromandus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC穩定；港罕見夏候"
+  },
+  "illustrationTaxon": "Clamator coromandus adult breeding plumage: black peaked crest, narrow white hind collar, orange-buff throat, chestnut-red wings, pale belly, long graduated black tail",
+  "similarSpecies": [
+    {
+      "zh": "褐翅鴉鵑（成鳥）",
+      "scientificName": "Centropus sinensis",
+      "asset": "greater-coucal.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "褐翅鴉鵑是體型更大的鴉鵑，黑身與栗褐翼，沒有白色後頸環或尖長冠；紅翅鳳頭鵑較纖長，頭冠、白環及橙喉醒目。"
+    },
+    {
+      "zh": "噪鵑（成鳥雄）",
+      "scientificName": "Eudynamys scolopaceus",
+      "asset": "asian-koel.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "雄噪鵑全身黑亮、紅眼，沒有栗紅翼、白色後頸環與長冠；紅翅鳳頭鵑具黑冠、白環、橙喉和栗紅翼。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.06,
+      0.07,
+      0.41,
+      0.36
+    ],
+    [
+      0.28,
+      0.21,
+      0.49,
+      0.43
+    ],
+    [
+      0.31,
+      0.3,
+      0.66,
+      0.59
+    ],
+    [
+      0.55,
+      0.55,
+      0.94,
+      0.84
+    ]
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "featureLabels": [
+    "黑色尖長冠",
+    "白色後頸環",
+    "栗紅色翼羽",
+    "長尾黑羽"
+  ],
+  "featureNotes": [
+    "成鳥冠羽黑色而突出，輪廓尖長",
+    "黑色頭部後方有窄白領環，喉為橙淡褐",
+    "覆羽至飛羽呈醒目的栗紅色",
+    "尾長且漸層，黑色帶細白羽端"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "LKA",
+      "MYS",
+      "BRN",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Partial native-range overview: breeds from northern India and Nepal east through Myanmar and parts of Indochina to southern/eastern China; winters in central/southern India, Sri Lanka, the Thai-Malay Peninsula and parts of maritime Southeast Asia. Country highlights are a broad seasonal range overview, not nationwide occupancy, precise range polygons, or Hong Kong occurrences. In Hong Kong it is an uncommon summer visitor and scarce passage migrant, using closed-canopy shrubland, forest and other wooded habitats.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005000",
+      "use": "Full HKBWS Chestnut-winged Cuckoo account read: Category I; uncommon summer visitor and scarce passage migrant. Adults 45–47 cm; black head with prominent crest, narrow white hind collar, black mantle/tail, chestnut-red wings, mostly whitish underbody with orange-buff throat patch, reddish-brown iris, black bill/legs. Occurs in wooded habitats; breeding-season survey suggests distributional decline in Hong Kong. Range and local seasonality; IUCN LC, population trend stable."
+    },
+    {
+      "url": "https://ebird.org/species/chwcuc1",
+      "use": "Cornell eBird/Merlin species account read: peaked black crest, bright orange throat, rusty wings, black back, white nape and belly; dense canopy foraging; varied metallic/raspy calls. Used as a cross-check for adult identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/004800",
+      "use": "HKBWS Greater Coucal account (full account previously read for 0076): larger, long-tailed coucal; glossy black body, orange-brown wings and reddish-brown eye; used to distinguish comparator."
+    },
+    {
+      "url": "https://ebird.org/species/grecou1",
+      "use": "Cornell eBird Greater Coucal comparison: large coucal with rusty wings, black body and red eyes."
+    },
+    {
+      "url": "https://ebird.org/species/asikoe2",
+      "use": "Cornell eBird Asian Koel species account; adult male glossy black, red eye, no chestnut wings or white nape collar; comparator image is the previously reviewed adult male illustration."
+    },
+    {
+      "url": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English names."
+    },
+    {
+      "url": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name, order and family."
+    },
+    {
+      "url": "src/data/dexScores.json",
+      "use": "Authoritative runtime score values; only v=4.1 and r=4.0 are defined for 0078. Missing i/a/c/o remain pending and are not inferred."
+    },
+    {
+      "path": "cards/art/info-restart-0078/pixel.png",
+      "use": "Custom locally drawn pixel-art adult based on diagnostic plumage in HKBWS and Cornell references; not a photographic record."
+    },
+    {
+      "path": "cards/art/info-restart-0078/greater-coucal.png",
+      "use": "Previously visually reviewed Greater Coucal illustration, reused for comparison."
+    },
+    {
+      "path": "cards/art/info-restart-0078/asian-koel.png",
+      "use": "Previously visually reviewed adult male Asian Koel illustration, reused for comparison."
+    }
+  ],
+  "notes": [
+    "Adult breeding-plumage illustration focuses on black peaked crest, white hind collar, orange-buff throat, chestnut-red wings and pale underbody.",
+    "Hong Kong status is uncommon summer visitor and scarce passage migrant; HKBWS breeding surveys suggest local distributional decline, while global IUCN status is LC with stable global trend. Keep local and global trends distinct.",
+    "Comparators are adult Greater Coucal and adult male Asian Koel; illustration circles are not to scale.",
+    "Only score fields that exist in runtime dexScores are displayed: v=4.1 and r=4.0. Missing i/a/c/o remain pending; do not estimate or substitute scores. Scores are app entertainment metrics, not scientific evaluation.",
+    "Custom bird illustration has been visually reviewed for framing and major diagnostic features; not independently validated by an ornithologist.",
+    "Map is a qualified partial native-range country overview, not an exact distribution polygon or Hong Kong occurrence map.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, app slim-registration or shared renderer change."
+  ]
+}

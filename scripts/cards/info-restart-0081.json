@@ -1,0 +1,163 @@
+{
+  "id": "0081",
+  "name": "大鷹鵑",
+  "scientificName": "Hierococcyx sparverioides",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC穩定；港常見夏候"
+  },
+  "illustrationTaxon": "Hierococcyx sparverioides adult: grey crown and face, bright yellow orbital ring, brown mantle and upperwing, white underparts with heavy dark-rufous streaking and bars, grey dark-barred tail, yellow feet",
+  "similarSpecies": [
+    {
+      "zh": "八聲杜鵑（成鳥雄）",
+      "scientificName": "Cacomantis merulinus",
+      "asset": "plaintive-cuckoo.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "八聲杜鵑只有18–23 cm，灰頭、橙腹且體型纖細；大鷹鵑38–40 cm，黃眼圈明顯，白色下體有濃密栗色縱斑。"
+    },
+    {
+      "zh": "烏鵑（成鳥）",
+      "scientificName": "Surniculus lugubris",
+      "asset": "drongo-cuckoo.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "烏鵑小而纖瘦，通體藍黑、尾微分叉；大鷹鵑較大型並似猛禽，灰頭黃眼圈、褐色上體及白底栗色條斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.15,
+      0.45,
+      0.4
+    ],
+    [
+      0.29,
+      0.35,
+      0.55,
+      0.6
+    ],
+    [
+      0.34,
+      0.29,
+      0.61,
+      0.58
+    ],
+    [
+      0.53,
+      0.52,
+      0.93,
+      0.82
+    ]
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "featureLabels": [
+    "鮮黃眼圈",
+    "胸側栗色縱斑",
+    "褐色上翼",
+    "灰尾黑橫帶"
+  ],
+  "featureNotes": [
+    "所有年齡均有明亮黃色眼圈",
+    "成鳥胸及頸側有粗深栗色縱斑",
+    "上背及上翼呈褐色，羽面有層次",
+    "灰色尾羽具深色橫帶"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "MMR",
+      "CHN",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "BRN",
+      "IDN",
+      "PHL",
+      "TWN"
+    ],
+    "note": "Partial broad range context: breeds from Pakistan and the Himalayas east through Myanmar and China, south through Indochina; some populations winter farther south in India, the Greater Sundas, Philippines and Sulawesi. Hong Kong has a common summer-visiting population; green countries are not wholly occupied, and the map is neither exact range geometry nor local occurrence data.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005500",
+      "use": "Full HKBWS Large Hawk-Cuckoo account read: Category I, common summer visitor in Hong Kong. Adult 38–40 cm, grey crown/head, bright yellow orbital ring, white underparts with heavy dark-rufous streaking on breast/neck sides and rufous-brown lower bars, brown mantle/upperwing, grey dark-barred tail. Adults resemble Crested Goshawk; mostly secretive in canopy. Broad range, HK status and IUCN LC/stable."
+    },
+    {
+      "url": "https://ebird.org/species/larhac2",
+      "use": "Cornell eBird/Merlin account read: hawk-like appearance, long barred tail, brown upperparts and patterned white underparts, orange chest flush in adults; breeds in hill/montane forest, uses lower forests/edges/scrub during movement."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005300",
+      "use": "HKBWS Plaintive Cuckoo account read for 0079; smaller, gray/orange comparator."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/005400",
+      "use": "HKBWS Square-tailed Drongo-Cuckoo account read for 0080; small blue-black comparator."
+    },
+    {
+      "url": "src/data/birds.json",
+      "use": "Authoritative runtime names."
+    },
+    {
+      "url": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime taxonomy."
+    },
+    {
+      "url": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores and vEst flag."
+    },
+    {
+      "path": "cards/art/info-restart-0081/pixel.png",
+      "use": "Custom pixel illustration based on adult features in HKBWS/Cornell descriptions; not a photo."
+    },
+    {
+      "path": "cards/art/info-restart-0081/plaintive-cuckoo.png",
+      "use": "0079 previously reviewed adult male pixel illustration."
+    },
+    {
+      "path": "cards/art/info-restart-0081/drongo-cuckoo.png",
+      "use": "0080 previously reviewed adult Square-tailed Drongo-Cuckoo illustration."
+    }
+  ],
+  "notes": [
+    "Adult visual markers include hawk-like profile, yellow orbital ring, rufous streaked breast, brown upperwing and barred grey tail; juveniles are more heavily spotted/streaked.",
+    "Hong Kong common summer visitor; global IUCN LC/stable, with local survey uncertainty documented separately.",
+    "Comparators are adult male Plaintive Cuckoo and adult Square-tailed Drongo-Cuckoo; circles are not to scale.",
+    "Scores follow runtime exactly; vEst=1 means viewing score includes an estimated body-length component. Scores are app entertainment metrics.",
+    "Custom illustration receives basic visual review only and is not independently validated by an ornithologist.",
+    "Range map is only a broad country overview, not exact distribution geometry or HK records.",
+    "Direct standalone AVIF upload only; no ZIP/R2, app card replacement, UI, Service Worker, slim-registration or shared renderer changes."
+  ]
+}

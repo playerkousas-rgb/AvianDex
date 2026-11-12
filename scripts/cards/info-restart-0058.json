@@ -1,0 +1,139 @@
+{
+  "id": "0058",
+  "name": "中華秋沙鴨",
+  "scientificName": "Mergus squamatus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "EN",
+    "zh": "瀕危",
+    "assessmentNote": "全球IUCN EN；港名錄 I 類"
+  },
+  "illustrationTaxon": "Mergus squamatus adult male in breeding plumage for main image and all male feature crops",
+  "similarSpecies": [
+    {
+      "zh": "紅胸秋沙鴨（雄鳥）",
+      "scientificName": "Mergus serrator",
+      "asset": "red-breasted-merganser.png",
+      "framing": "whole-bird",
+      "sex": "male",
+      "distinction": "紅胸秋沙鴨雄鳥胸部帶栗色及白斑、脅部灰色，沒有中華秋沙鴨雄鳥醒目的黑邊白色鱗紋；兩者均有細長紅喙及蓬冠。"
+    },
+    {
+      "zh": "普通秋沙鴨（雄鳥）",
+      "scientificName": "Mergus merganser",
+      "asset": "common-merganser.png",
+      "framing": "whole-bird",
+      "sex": "male",
+      "distinction": "普通秋沙鴨雄鳥白色脅部平滑、頭部深綠，沒有中華秋沙鴨的黑色魚鱗狀脅紋與更蓬鬆的長冠；兩者身形及長紅喙相近。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.18,
+      0.19,
+      0.56,
+      0.57
+    ],
+    [
+      0.27,
+      0.28,
+      0.65,
+      0.66
+    ],
+    [
+      0.43,
+      0.43,
+      0.83,
+      0.83
+    ],
+    [
+      0.49,
+      0.27,
+      0.89,
+      0.67
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥長紅喙與蓬冠",
+    "雄鳥墨綠頭與白頸",
+    "雄鳥脅部黑色鱗紋",
+    "雄鳥白翼窗與黑背"
+  ],
+  "featureNotes": [
+    "細長紅色喙與明顯延長、蓬鬆的後冠",
+    "成年雄鳥頭頸呈黑綠光，白色前頸與胸部鮮明對比",
+    "白色脅羽具粗黑羽緣，形成魚鱗般重疊圖案，是物種重點特徵",
+    "黑色背翼配白色翼窗，與白身黑鱗脅部相連"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "PRK"
+    ],
+    "note": "Full-world partial overview only. The selected countries represent riverine breeding sites in the Russian Far East, northeast China and DPR Korea and the principal mainland-China wintering range described by the academic range survey. Green is not nationwide occupancy, not complete distribution and not a precise river-level or seasonal polygon. Hong Kong Checklist Category I is not used as a range polygon or local abundance rating.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "HKBWS Hong Kong Birds List 2024 read: Scaly-sided Merganser / 中華秋沙鴨 / Mergus squamatus appears as list no. 37, Category I, IUCN EN. Category I describes checklist status, not local commonness; no numerical Hong Kong abundance is inferred."
+    },
+    {
+      "url": "https://ebird.org/species/scsmer1",
+      "use": "Cornell Lab eBird/Merlin species account read: sleek East Asian endemic with bright orange-red bill and long shaggy crest; male glossy green head and black-white back; female rusty-brown head and grey back; both sexes have prominent dark-edged white flank scales; breeds in forested montane river cavities and winters along rivers/lakes. Page displays BirdLife/IUCN 2025 status EN."
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/bird-conservation-international/article/population-size-and-breeding-range-of-the-scalysided-merganser-mergus-squamatus/D4B015ECE8733B20A93C8F8BE9F4B9A2",
+      "use": "Peer-reviewed breeding-range survey: approximately 7,833 km of 120 suitable rivers across Russia, China and DPR Korea; breeding range concentrated in the Sikhote-Alin and Changbai mountain regions; telemetry and survey discussion describes wintering in mainland China, especially river systems. Used for cautious partial country map, not exact distribution polygons."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/003600",
+      "use": "Full HKBWS Red-breasted Merganser account read: male has long narrow red bill, short sometimes spiky crest, dark green head, white collar, mottled chestnut breast with large white upper-flank spots; Hong Kong rare winter/passage visitor, global IUCN LC. Used as an explicitly labelled male comparison."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Common_Merganser/id",
+      "use": "Cornell Lab Common Merganser identification account read: Eurasian male Goosander has a dark-green head, red bill, crisp white body and black back; females/immatures grey-bodied with rusty head and sharp white throat boundary. Used as a clearly labelled adult male comparison; the smooth white sides contrast with the scaly-sided species."
+    },
+    {
+      "path": "cards/art/info-restart-0057/features.png",
+      "use": "Reviewed exact adult male Red-breasted Merganser illustration reused as the correctly labelled male comparison, without recolouring or relabelling."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime values only: i=4.4, a=3.3, v=4.4, r=3.3, c=2.5, o=3.6, vEst=1. No score values or overall result recalculated; keep the runtime body-length estimate annotation."
+    }
+  ],
+  "notes": [
+    "Main and features art must depict the adult male, not a generic or alternate merganser: green-black crested head, slim reddish bill, white body and distinct black-edged white flank scales.",
+    "Runtime vEst=1 is preserved; the card must retain the renderer's body-length estimate annotation and no length is independently substituted.",
+    "Both comparison birds are distinct named male taxa. The Red-breasted Merganser image is exact species-specific artwork reused from reviewed card 0057; Common Merganser image is a separately generated correct male depiction.",
+    "AI illustrations receive basic visual review only and are not independent ornithologist validation. Comparison circles are not to scale.",
+    "Map uses a full-world Natural Earth basemap. Selected-country highlights are partial only, not nationwide occupancy, complete distribution or precise river/season polygons.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, or app slim-registration change."
+  ]
+}

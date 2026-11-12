@@ -1,0 +1,151 @@
+{
+  "id": "0052",
+  "name": "絲絨海番鴨",
+  "scientificName": "Melanitta fusca",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危",
+    "assessmentNote": "IUCN全球易危；非香港出現頻度"
+  },
+  "illustrationTaxon": "Melanitta fusca adult male; a separate female of the same species is explicitly identified",
+  "similarSpecies": [
+    {
+      "zh": "黑海番鴨（雄鳥）",
+      "scientificName": "Melanitta americana",
+      "asset": "black-scoter.png",
+      "sex": "male",
+      "distinction": "黑海番鴨雄鳥全身黑，沒有白色眼下斑或翼鏡；喙基有醒目的橙黃色腫瘤。香港僅有偶見紀錄，不代表常見。"
+    },
+    {
+      "zh": "絲絨海番鴨雌鳥",
+      "scientificName": "Melanitta fusca",
+      "asset": "female.png",
+      "sex": "female",
+      "sameSpecies": true,
+      "distinction": "同種雌鳥，褐色羽衣，頭側有兩個分開的淺色斑；不是另一物種。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.43,
+      0.38,
+      0.62,
+      0.56
+    ],
+    [
+      0.41,
+      0.37,
+      0.54,
+      0.51
+    ],
+    [
+      0.12,
+      0.48,
+      0.39,
+      0.69
+    ],
+    [
+      0.69,
+      0.36,
+      0.91,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥黃喙瘤",
+    "雄鳥眼下白斑",
+    "白色翼鏡",
+    "雌鳥雙頭斑"
+  ],
+  "featureNotes": [
+    "雄鳥寬黃喙及黑色喙基瘤",
+    "眼下小而清楚的白色淚滴斑",
+    "翼上白色鏡斑，飛行時最明顯",
+    "同種雌鳥頭側有兩個分離的淺色斑"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "RUS",
+      "NOR",
+      "SWE",
+      "FIN",
+      "ISL",
+      "DNK",
+      "EST",
+      "LVA",
+      "LTU",
+      "GBR",
+      "NLD",
+      "DEU",
+      "POL",
+      "FRA",
+      "UKR",
+      "TUR",
+      "AZE",
+      "KAZ"
+    ],
+    "note": "Partial world-view overview of the Velvet Scoter's northern European and western Siberian breeding range and its European/Black-Caspian wintering regions. The selected countries are only a subset; green does not mean the whole country is occupied and this is not a complete distribution or precise seasonal occurrence polygon. No Hong Kong occurrence is implied.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/003200",
+      "use": "Checked first: this HKBWS Avifauna route returns only the generic Species Accounts shell and has no Velvet Scoter species account; it is not treated as a source for identification or Hong Kong status."
+    },
+    {
+      "url": "https://ebird.org/species/whwsco3",
+      "use": "Cornell eBird species profile read: male is darker with a small white mark below the eye, yellow bill with dark knob and white wing speculum; female is browner with two rounded pale head patches; breeding in northern European woodland/tundra wetlands and winter mainly coastal."
+    },
+    {
+      "url": "https://www.iucnredlist.org/species/pdf/183801134",
+      "use": "BirdLife International 2020 global IUCN assessment: Vulnerable; estimated three-generation decline 30–46%. IUCN status is global and does not indicate Hong Kong frequency."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/003300",
+      "use": "Full page read for Black Scoter comparison: adult male all dark with no white wing patch, large orange-yellow bill-base knob; one Hong Kong record at Mai Po in 2007; global IUCN Near Threatened."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English species name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores only: a=2.8, r=1, v=4.4, o=2.7; i and c remain missing; vEst=1 must retain the body-length estimate note. No values or overall score recalculated."
+    }
+  ],
+  "notes": [
+    "The HKBWS Avifauna has no species text at the attempted Velvet Scoter route; identification and IUCN claims instead cite Cornell eBird and BirdLife/IUCN, respectively.",
+    "Pixel main image depicts an adult male with one white eye-under crescent; the female's two pale head patches are shown only in the explicitly labelled female crop/comparison.",
+    "Black Scoter is shown as a male and is a comparison, not evidence of Hong Kong abundance. The same-species female comparison is explicitly labelled and flagged sameSpecies=true.",
+    "Map uses a full-world Natural Earth basemap; country highlights are a partial overview, not precise occurrence geometry.",
+    "AI artwork receives basic visual review only; it is not independent ornithologist validation.",
+    "Direct standalone AVIF delivery to the specified Google Drive folder only; no ZIP, R2, UI, Service Worker, or slim-registration change."
+  ]
+}

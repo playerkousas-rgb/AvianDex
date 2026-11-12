@@ -1,0 +1,154 @@
+{
+  "id": "0072",
+  "name": "厚嘴綠鳩",
+  "scientificName": "Treron curvirostra",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港稀少冬候／過境"
+  },
+  "illustrationTaxon": "Treron curvirostra adult male; main image and diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "橙胸綠鳩（成鳥雄）",
+      "scientificName": "Treron bicinctus",
+      "asset": "orange-breasted-green-pigeon.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "橙胸綠鳩雄鳥有明顯橙胸與粉紫上緣，喙不及厚嘴綠鳩粗厚、缺少寬闊藍綠眼圈；厚嘴綠鳩雄鳥有紅基部的厚淡色喙、藍綠眼圈及栗紅肩羽。"
+    },
+    {
+      "zh": "綠翅金鳩（成鳥雄）",
+      "scientificName": "Chalcophaps indica",
+      "asset": "emerald-dove.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "綠翅金鳩體型較細、頭身暗灰、短尾，翼有金屬綠虹彩且額前銀白；厚嘴綠鳩體型厚實且整體綠色，具粗厚雙色喙及藍綠眼圈。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.18,
+      0.18,
+      0.43,
+      0.39
+    ],
+    [
+      0.38,
+      0.29,
+      0.7,
+      0.56
+    ],
+    [
+      0.48,
+      0.47,
+      0.78,
+      0.73
+    ],
+    [
+      0.66,
+      0.54,
+      0.95,
+      0.81
+    ]
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "featureLabels": [
+    "厚喙與藍綠眼圈",
+    "雄鳥栗紅肩羽",
+    "翼緣鋸齒黃條",
+    "厚實綠身與短尾"
+  ],
+  "featureNotes": [
+    "全屬辨識重點：厚而淡色的喙，基部紅色；眼周寬闊綠藍色裸皮",
+    "成年雄鳥肩羽與披肩羽具實色栗紅斑；雌鳥相同位置為綠色",
+    "兩性翼羽邊緣均呈明顯鋸齒狀亮黃色",
+    "厚實體型與相對短尾；香港記錄多在果樹冠層"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "NPL",
+      "IND",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Partial broad native-range country overview: from central Nepal and northeast India through Myanmar and Indochina to southwest China and Hainan, south to the Malay Peninsula, Sumatra, Borneo and the Philippines. Highlights are broad geographic context only, not nationwide occupancy or exact range polygons. Hong Kong is separately described as a rare winter/passage visitor.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/007000",
+      "use": "Full HKBWS account read: Category I, rare winter visitor/passage migrant. 24–31 cm. Distinctive red-based thick pale bill and broad greenish-blue orbital ring; males have maroon scapulars, females green mantle/scapulars; both sexes grey face/nape/flanks, yellow-edged wings. HK records total ten since 1986, mostly Nov–Feb and one Apr, in fruiting Ficus, wooded or shrub habitats across NT, HK/Lantau islands and Po Toi. Global IUCN LC, trend decreasing. Range Nepal/NE India through Indochina to SW China/Hainan and south to Malay Peninsula, Sumatra, Borneo, Philippines."
+    },
+    {
+      "url": "https://ebird.org/species/thbpig1",
+      "use": "Cornell eBird/Merlin account read: thickset forest-canopy green pigeon with bicolored bill and bright green eyering; males have maroon back, both sexes green, jagged bright yellow wing-edge stripes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006900",
+      "use": "Full HKBWS Orange-breasted Green Pigeon account read: accidental in HK with only a male on Po Toi in 2006 and likely same individual again in 2006–07; orange breast patch with diffuse mauve-pink border, short tail, yellowish-green body. Comparator only."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006800",
+      "use": "Full HKBWS Common Emerald Dove account read: small short-tailed grey/pink dove with bright green iridescent wings, silver forecrown in males, red bill; comparator only."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six runtime score values; no vEst property."
+    },
+    {
+      "path": "cards/art/info-restart-0071/pixel.png",
+      "use": "Previously reviewed adult male Orange-breasted Green-Pigeon illustration, reused as a small comparator."
+    },
+    {
+      "path": "cards/art/info-restart-0070/pixel.png",
+      "use": "Previously reviewed adult male Common Emerald Dove illustration, reused as a small comparator."
+    }
+  ],
+  "notes": [
+    "Main image is an adult male. Adult male scapulars are maroon; females have green mantle/scapulars; first-winter males can show grey tones and incomplete maroon patch.",
+    "Hong Kong Category I is rare winter/passage status, not a resident population. Global IUCN LC and decreasing global trend are distinct from local rarity.",
+    "Comparators are adult males; circles illustrative and not to scale.",
+    "Scores are app entertainment metrics, not scientific evaluation; use runtime values exactly.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial native-range country overview, not an exact distribution polygon or Hong Kong occurrence map.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, app slim-registration or shared renderer change."
+  ]
+}

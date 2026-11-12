@@ -1,0 +1,150 @@
+{
+  "id": "0076",
+  "name": "褐翅鴉鵑",
+  "scientificName": "Centropus sinensis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC穩定；香港常見留鳥"
+  },
+  "illustrationTaxon": "Centropus sinensis adult, plain unbarred adult plumage",
+  "similarSpecies": [
+    {
+      "zh": "小鴉鵑（成鳥）",
+      "scientificName": "Centropus bengalensis",
+      "asset": "lesser-coucal.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "小鴉鵑明顯較小、喙較短，頭胸與肩羽有清晰淡色羽軸紋，背較褐、眼暗；褐翅鴉鵑體型大、尾長，成鳥黑身帶藍紫光，眼紅且翼面橙褐。"
+    },
+    {
+      "zh": "噪鵑（成鳥雄）",
+      "scientificName": "Eudynamys scolopaceus",
+      "asset": "asian-koel.png",
+      "framing": "whole-bird",
+      "sex": "adult male",
+      "distinction": "雄噪鵑全身黑亮、紅眼但沒有橙褐翼，體形較纖長且樹棲；褐翅鴉鵑更厚重、尾長，具醒目的栗橙翼，常在地面或灌叢行走。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.02,
+      0.12,
+      0.39,
+      0.43
+    ],
+    [
+      0.3,
+      0.27,
+      0.68,
+      0.62
+    ],
+    [
+      0.18,
+      0.37,
+      0.52,
+      0.7
+    ],
+    [
+      0.56,
+      0.54,
+      0.97,
+      0.93
+    ]
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "featureLabels": [
+    "紅眼與黑喙",
+    "橙褐色翼羽",
+    "藍紫光黑身",
+    "長黑尾無橫斑"
+  ],
+  "featureNotes": [
+    "成年虹膜紅至褐色，喙與腿深灰",
+    "成鳥肩、覆羽與飛羽橙褐色，飛羽近端灰色",
+    "頭、身及尾呈藍紫金屬光澤，成鳥羽毛素淨",
+    "尾長而厚重；成鳥尾、翼及上體不具幼鳥橫斑"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-range-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分原生分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "LKA",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "BRN",
+      "IDN"
+    ],
+    "note": "Partial broad native-range context across the Indian subcontinent east to south China and south through Southeast Asia to the Greater Sundas; country highlights are not nationwide occupancy or exact range polygons. In Hong Kong it is a widespread common resident, chiefly in lowland shrub, grass-shrub, mangrove, agricultural and garden habitats.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/004800",
+      "use": "Full HKBWS Greater Coucal account read: Category I, widespread common resident throughout Hong Kong; typically lowland mangrove and shrub habitats. 47–56 cm; female larger. Adult plain and unbarred, glossy blue/purple-black head/body/tail, orange-brown mantle/scapulars/wing coverts/remiges, red-brown iris, dark grey bill/legs. HK habitats include grassland, grass-shrub, open shrubland, mangrove, farmland, feng-shui woodland and gardens; little evidence of movement/status change. Global IUCN LC, stable trend."
+    },
+    {
+      "url": "https://ebird.org/species/grecou1",
+      "use": "Cornell eBird/Merlin account read: large crow-like/pheasant-like bird with rusty wings, glossy black underparts, long heavy tail and red eyes; juveniles duller with white barring; Greater Coucal larger and longer-billed than Lesser Coucal. Global IUCN LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0040/004900",
+      "use": "HKBWS Lesser Coucal account read for comparator: 28–34 cm, smaller; pale shaft streaks on head/chest/scapulars, browner and duller back, shorter less deeply based bill, dark eye; common but increasingly localised resident in grass/open shrubland."
+    },
+    {
+      "url": "https://ebird.org/species/lescou1",
+      "use": "Cornell eBird/Merlin Lesser Coucal comparison: significantly smaller, dark eye and duller chestnut wings with silvery streaks; juveniles have barred tail/underparts."
+    },
+    {
+      "url": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "url": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "url": "src/data/dexScores.json",
+      "use": "Authoritative runtime six score values; vEst indicates estimated length-derived viewing score."
+    }
+  ],
+  "notes": [
+    "Main image depicts an adult with plain unbarred glossy plumage; juveniles are paler/barred during molt and should not be mistaken for adults.",
+    "Hong Kong Category I indicates widespread common resident status; global IUCN LC and stable trend are distinct measures.",
+    "Comparators are adult Lesser Coucal and adult male Asian Koel; circles illustrative and not to scale.",
+    "Scores are app entertainment metrics, not scientific evaluation; use runtime values exactly and retain vEst.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial native-range country overview, not an exact distribution polygon or Hong Kong occurrence map.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, app slim-registration or shared renderer change."
+  ]
+}

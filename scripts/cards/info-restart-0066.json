@@ -1,0 +1,143 @@
+{
+  "id": "0066",
+  "name": "山斑鳩",
+  "scientificName": "Streptopelia orientalis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_google_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球LC；香港現較少見且局部"
+  },
+  "illustrationTaxon": "Streptopelia orientalis adult, likely winter visitor plumage; main image and diagnostic features",
+  "similarSpecies": [
+    {
+      "zh": "珠頸斑鳩（成鳥）",
+      "scientificName": "Spilopelia chinensis",
+      "asset": "spotted-dove.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "珠頸斑鳩較纖細，尾較長，頸側有佈滿白點的深色斑塊；山斑鳩體較厚、尾較短，頸側為黑白相間條紋，翼上覆羽有顯著栗紅色羽緣。"
+    },
+    {
+      "zh": "灰斑鳩（成鳥）",
+      "scientificName": "Streptopelia decaocto",
+      "asset": "collared-dove.png",
+      "framing": "whole-bird",
+      "sex": "adult",
+      "distinction": "灰斑鳩頭身大致均勻淡粉灰色，只具黑色半環頸帶，翼上覆羽較素淡；山斑鳩有黑白頸側斑、栗紅羽緣及明顯白色尾端。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ]
+  ],
+  "featureSources": [
+    "feature-neck-patch.png",
+    "feature-wing.png",
+    "feature-tail.png",
+    "feature-head-eye.png"
+  ],
+  "featureLabels": [
+    "黑白相間頸側斑",
+    "栗紅羽緣與斑駁翼",
+    "灰尾與大片白端",
+    "橙眼與粉紅喙"
+  ],
+  "featureNotes": [
+    "成鳥頸側有獨特黑白斑塊；幼鳥較暗且缺少此斑",
+    "肩羽、覆羽黑色羽心具大片栗紅色羽緣，較其他本地斑鳩斑駁",
+    "灰色尾羽，上尾羽大片白端；香港斑鳩中具辨識性",
+    "成鳥虹膜橙色、喙和腿粉紅；腿色亦見主圖"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-breeding-winter-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分繁殖／越冬國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "JPN",
+      "KOR",
+      "IRN",
+      "IND",
+      "THA",
+      "VNM",
+      "LAO"
+    ],
+    "note": "Partial broad range overview based on HKBWS: from central Siberia east of the Urals to Sakhalin and the Kurils, south to eastern Iran, southern India, northern Thailand and northern Vietnam/Laos; occurs widely in China apart from some western/plateau areas. Northern populations are migratory, including northern Xinjiang and Heilongjiang. Highlighted countries are broad-range context only, not nationwide occupancy or exact seasonal/subspecies polygons; Hong Kong status is described separately.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006300",
+      "use": "Full HKBWS account read (chunks 0–1): Category I; formerly common widespread winter visitor/passage migrant, now relatively uncommon/localized, mainly northwest New Territories; small numbers present year-round. 33–35 cm, bulky short-tailed dove, buffy-pink adult head, black-and-white neck-side patch, strongly variegated black upperparts with extensive rufous fringes, gray tail with broad white tips to upper tail feathers, orange iris and pinkish bill/legs. Young duller and lack the neck patch. Global IUCN LC, stable population trend. Broad Eurasian range and migration described.",
+      "evidenceNote": "HKBWS says no confirmed nests/eggs/unfledged young in Hong Kong; juveniles in early summer may have been locally reared, so do not state confirmed local breeding."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006600",
+      "use": "Full HKBWS Spotted Dove account read: common conspicuous resident; 31 cm, slender and longer-tailed, pinkish-grey below, dark grey neck patch with white spots; orange iris, gray bill, dark pink legs. Comparison traits kept distinct from Oriental Turtle Dove's bold black-white patch and rufous-fringed patterned upperparts."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0050/006400",
+      "use": "Full HKBWS Eurasian Collared Dove account read: Category IIB local breeding resident in northwest New Territories, pale unmarked pinkish-gray plumage with a black half-collar, relatively long tail; comparison is labelled distinctly, no implication this species is native or widespread in all Hong Kong."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Authoritative runtime Chinese and English name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Authoritative runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative six runtime score values; vEst=1, preserve renderer's length-estimate note."
+    }
+  ],
+  "notes": [
+    "Adult main image highlights the black-and-white neck patch, rufous-fringed upperparts, orange iris, and white-tipped gray tail; young birds lack the neck patch.",
+    "Hong Kong winter/passage status and possible small summer presence are distinct from global IUCN LC. No confirmed local breeding is claimed.",
+    "Comparators are season/age-labelled; circles are illustrative and not to scale.",
+    "Scores are app entertainment metrics, not scientific evaluation; use runtime values exactly and preserve vEst note.",
+    "AI illustrations receive basic visual review only, not independent ornithologist validation.",
+    "Map is a partial world-country overview, not an exact range or local occurrence polygon.",
+    "Direct standalone AVIF upload to the specified Google Drive folder only; no ZIP, R2 upload, UI, Service Worker, or app slim-registration change."
+  ]
+}
