@@ -99,6 +99,18 @@ test('the whole delivered range 0001–0120 is registered slim, so every page is
     ['artwork', 'features', 'scores', 'distribution', 'similar']);
 });
 
+test('0121–0124 are registered slim too, not only up to 0120', () => {
+  /* 這四張早已交付並上載 Drive，但 registry 當時只擴到 0120，於是它們在 app 裡
+     退回「插畫 + 完整資訊卡」：整張長卡被塞進單一面板，正是 0040–0043 的舊缺陷。 */
+  for (const id of ['0121', '0122', '0123', '0124']) {
+    assert.equal(hasInfoCard(id), true, `${id} must be in infoCards.json`);
+    assert.equal(infoCardLayout(id), 'slim', `${id} is a slim card`);
+    assert.deepEqual(mobileCardPages(id, true).map(p => p.key),
+      ['artwork', 'features', 'scores', 'distribution', 'similar'],
+      `${id} must cut into five pages`);
+  }
+});
+
 test('flip is offered whenever a card may exist, not only when it is registered', () => {
   assert.equal(canFlipInfoCard('0001'), true, 'registered card can flip');
   assert.equal(hasInfoCard('0040'), true, '0040 is registered as slim');
