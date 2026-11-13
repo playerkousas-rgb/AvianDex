@@ -1589,7 +1589,7 @@ HKBWS 0080/011200 內文（Category I 過境遷徙鳥，短草及其他開闊旱
 
 ## 0161 紅頸瓣蹼鷸 _Phalaropus lobatus_（LC 無危）
 
-- Drive：`1hgH4zv47pQEYJi0sNda16v4jXoEAnLmX`，153180 B，MD5 見下（由 upload 回應核對後填寫）。
+- Drive：`1hgH4zv47pQEYJi0sNda16v4jXoEAnLmX`，153180 B，MD5 `a8a443cc7d68e61d26de7cb4bc70af23`。
 - 四部位：細針狀全黑嘴／鏽紅頸側與白喉／背部淡色 V 紋／瓣狀趾；比較鳥 灰瓣蹼鷸 + 紅頸濱鷸；56 ISO3；score 3.0。
 - HKBWS 頁面 `0100/014400`（緊接 0160 翹嘴鷸 `014300`）。
 - **本種幾乎總在水面上**，所以全身圖畫成游泳姿態；四圈也順著「水上先看到甚麼」排序：針狀嘴、鏽紅頸斑、背部淡色 V 紋，最後才是上陸才見得到的瓣狀趾。
