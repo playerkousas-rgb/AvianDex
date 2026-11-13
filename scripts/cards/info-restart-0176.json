@@ -1,0 +1,140 @@
+{
+  "id": "0176",
+  "name": "普通燕鴴",
+  "scientificName": "Glareola maldivarum",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Glareola maldivarum: 23-25 cm, an unusual shorebird that usually forages aerially in the manner of a tern on flying insects, but also runs around on short stiff legs on the ground. Long pointed wings fold well beyond a short forked tail. Adult is olive-brown above with dark uniform wings, buff head, mantle and chest that are brighter on the flanks, a clean white belly and undertail coverts, short grey legs, and a short bill with a red base and a very wide gape. The distinctive head pattern is a black line that runs down from the eye to encircle the buff throat; the male has more distinct black lores and a brighter buff throat. Juveniles are streaked on the head, mottled on the chest, paler-fringed on the mantle, scapulars and wing coverts, and lack the red bill base. In flight from above there is no obvious white trailing edge to the secondaries, and from below the orange-brown underwing coverts show in good light.",
+  "similarSpecies": [
+    {
+      "zh": "灰燕鴴",
+      "scientificName": "Glareola lactea",
+      "asset": "small-pratincole.png",
+      "framing": "whole-bird",
+      "distinction": "灰燕鴴體型明顯較小（15–19 公分）、整體是淡灰沙色而非欖褐色，額與眼先是深色、有一圈在眼後最寬的明顯白眼圈，胸以下乾淨純白，初級飛羽與腿都是對比強烈的深灰；本種背部欖褐、體型大上一截，靠喉部那圈黑線辨認。"
+    },
+    {
+      "zh": "黑翅燕鴴",
+      "scientificName": "Glareola nordmanni",
+      "asset": "black-winged-pratincole.png",
+      "framing": "whole-bird",
+      "distinction": "黑翅燕鴴的翼上覆羽與飛羽全黑、次級飛羽沒有白色後緣，翼下覆羽也是黑色；本種翼色較褐、飛行時翼下覆羽是橙褐色，兩者要看翼面顏色才分得開。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.7,
+      0.2,
+      1.0,
+      0.52
+    ],
+    [
+      0.66,
+      0.24,
+      0.92,
+      0.6
+    ],
+    [
+      0.05,
+      0.46,
+      0.34,
+      0.7
+    ],
+    [
+      0.34,
+      0.5,
+      0.62,
+      0.66
+    ]
+  ],
+  "featureLabels": [
+    "紅色的嘴基",
+    "圈住喉部的黑線",
+    "長翼伸出短尾",
+    "白色的腹部"
+  ],
+  "featureNotes": [
+    "嘴短而嘴基是紅色、嘴裂很寬，這是燕鴴在空中張口捕蟲的構造；幼鳥沒有紅色嘴基，所以這一圈也提醒要看年齡（第1圈取自近景圖，實際可見）。",
+    "由眼向下延伸的黑線繞住淡黃褐色的喉部一圈，像戴了項圈，是普通燕鴴最不容易認錯的特徵；雄鳥的眼先黑得更明顯（第2圈取自近景圖，實際可見）。",
+    "翼尖明顯伸過尾端，尾本身短而微凹；站著時就看得出「長翼配短尾」的燕鴴比例（第3圈取自全身圖，實際可見）。",
+    "胸與腋帶淡黃褐、腹部與尾下覆羽乾淨純白，深色的翼與白色的腹在站立時對比清楚（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "MNG",
+      "RUS",
+      "PRK",
+      "KOR",
+      "IND",
+      "PAK",
+      "NPL",
+      "BTN",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN",
+      "BRN",
+      "PHL",
+      "TLS",
+      "PNG",
+      "AUS"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/015600",
+      "use": "HKBWS substantive read (both chunks): Category I, passage migrant that is common in spring, uncommon in autumn and scarce in summer, occurring in wetland areas; 23-25 cm, unusual shorebird that usually forages aerially like a tern on flying insects but also runs on short stiff legs, with the tail falling substantially short of the wing tips; adult olive-brown above with dark uniform wings, buff head/mantle/chest brighter on the flanks, white belly and undertail coverts, short grey legs and a short bill with a red base and wide gape, plus the black line running down from the eye to encircle the buff throat; juveniles are streaked on the head, mottled on the chest, paler-fringed and lack the red bill base; in flight from above there is no obvious white trailing edge to the secondaries and from below orange-brown underwing coverts show; spring passage runs from early February to May, peaking in the second half of March and first three weeks of April, with the highest spring count since 1999 being 191 on 22 March 2020 and historically 200 at Mai Po on 14 April 1979, while autumn is erratic with a highest count of 250 migrating south on 19 September 2011 and 530 at Mai Po and Tsim Bei Tsui on 5 October 1994; midwinter records are now rare with only one since 1996/97; the first confirmed breeding attempt occurred in 2018 (display 26 May, adults on the nest 3 June, then flooded, with up to 23 birds including 9 juveniles on 9-15 June); monotypic, breeding mainly in northeast China and adjacent parts of eastern Mongolia, southeast Siberia and North Korea, and wintering from southeast Asia and Indonesia to New Guinea and Australia; IUCN Least Concern with a decreasing population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/015700",
+      "use": "HKBWS Small Pratincole page read as the contrast species: 15-19 cm, a small pale grey-sandy pratincole with dark forehead and lores, an obvious white orbital ring broadest behind the eye, contrastingly dark greyish primaries, legs the same, clean white underparts below the chest, base of bill deep red, black underwing coverts and black tail in flight; Hong Kong's sole record was one at San Tin on 4 April 2017; IUCN Least Concern with an unknown trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 普通燕鴴 Glareola maldivarum and 灰燕鴴 Glareola lactea are both Category I and both without an IUCN code (i.e. Least Concern)."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對紅色的嘴基、圈住喉部的黑線、長翼伸出短尾，以及深色翼配白色腹部。",
+    "**第一次生成的全身圖嘴張開**（模型把「wide gape」畫成張口鳴叫），與卡面其餘靜態站姿不一致，已重繪為閉嘴版本；近景圖保留閉嘴的大頭。",
+    "兩隻比較鳥都是本卡新繪：灰燕鴴（淡灰沙色、白眼圈、深灰初級飛羽）與黑翅燕鴴（全黑翼上覆羽、次級飛羽無白後緣），非等比例，僅作外形對照。",
+    "app 分數：i 2／a 2.3／v 3.9／r 4／c 1.2／o 2.7，另有 `vEst: 1`，與 runtime 一致，沒有補值或重算；卡面已標「觀賞值含體長估算」。",
+    "IUCN 無危 LC、趨勢**下降**；香港屬 Category I，春季常見、秋季不常見、夏季稀少。自 1999 年起春季過境期由 2 月初延續至 5 月，高峰在 3 月下半月至 4 月前三週；1999 年後春季最高 191 隻（2020-03-22），歷史最高 200 隻（1979-04-14 米埔）；秋季較不穩定，2011-09-19 單日 250 隻南遷，1994-10-05 米埔與尖鼻嘴 530 隻。",
+    "2018 年首次確認繁殖嘗試：5 月 26 日求偶餵食、6 月 3 日見親鳥在巢，但其後大雨淹沒；同年 6 月 9–15 日最多 23 隻（14 成鳥、9 幼鳥）。卡面如實寫「首次確認繁殖嘗試」，不寫成「已在香港穩定繁殖」。",
+    "燕鴴科雖然歸入鴴形目（涉禽），卻主要在飛行中捕蟲，也會在地面短腿奔跑追捕——這點寫在說明，因為單看站姿圖會誤以為是典型的泥灘涉禽。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形；東北亞繁殖地與東南亞至澳洲越冬地不分工（HKG 與 SGP 不在 110m 底圖，未使用）。",
+    "只交付 aviandex/0176.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
