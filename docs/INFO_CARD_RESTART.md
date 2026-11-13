@@ -1549,7 +1549,7 @@ HKBWS 0080/011200 內文（Category I 過境遷徙鳥，短草及其他開闊旱
 
 ## 0157 扇尾沙錐 _Gallinago gallinago_（LC 無危）
 
-- Drive：`1sxYP2YzG2v3E2zgVfo_GBD7AXMn8KbAd`，148758 B，MD5 `d6ef93fcda7c431f98ac`…（見 Drive 回傳 `d6ef93fcda7c431f98ef4c6accac525c`）。
+- Drive：`1sxYP2YzG2v3E2zgVfo_GBD7AXMn8KbAd`，148758 B，MD5 `d6ef93fcda7c431f98ef4c6accac525c`。
 - 四部位：長而筆直的嘴／頭部縱紋與白頰／對比鮮明的白腹／背部淺色縱紋；比較鳥 針尾沙錐 + 丘鷸；106 ISO3；score 2.8。
 - 全身圖直接複用 0155 已核對的扇尾沙錐（1254×1254），只新生成 `features.png`，省一次生成額度。
 - 比較鳥兩隻都沿用 0155 素材：針尾沙錐（0155 已核對，尾端針狀細羽可見）與丘鷸（0155 已核對，矮胖無頸、後枕黑帶）。
