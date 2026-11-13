@@ -1,0 +1,125 @@
+{
+  "id": "0129",
+  "name": "彩鷸",
+  "scientificName": "Rostratula benghalensis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Rostratula benghalensis adult male: a stocky, rail-like painted-snipe 23-28 cm long with a long, straight-to-slightly-decurved dark bill about 4-5 cm and a pinkish base. The male is the duller sex here: pale buff head with a large pale golden eye-patch and a crown stripe, a bold cream-white stripe running from the eye back over the shoulder with a dark band above it, greyish-brown upperparts finely vermiculated black on coppery-green wing coverts, greyish-mottled pinkish breast crossed by broad white 'braces' on the shoulders, white underparts; large dark eye framed by white 'spectacles' with black borders; yellowish-olive legs. The female is much brighter, with a black crown, a bold white eye-patch and throat, a rufous chest and richly spotted golden-brown upperparts. The bird walks slowly in shallow freshwater marsh and wet agriculture, often under dense aquatic vegetation.",
+  "similarSpecies": [
+    {
+      "zh": "水雉",
+      "scientificName": "Hydrophasianus chirurgus",
+      "asset": "jacana.png",
+      "framing": "whole-bird",
+      "distinction": "水雉有極長而張開的腳趾在浮葉上行走，尾羽特長似雉，繁殖羽全身栗褐配白臉白頸側、黑胸鑲金黃；本種腳較短趾不特長、尾短，雄性有白眼圈及眼後白帶，胸側有白色「吊帶」。"
+    },
+    {
+      "zh": "扇尾沙錐",
+      "scientificName": "Gallinago gallinago",
+      "asset": "snipe.png",
+      "framing": "whole-bird",
+      "distinction": "沙錐嘴長度接近頭長兩倍、頭部縱紋強烈、體型較細長、常在濕泥上蹲伏；本種嘴較短而略下彎、體型矮胖似秧雞、有白眼圈與白色肩帶，多在密生水生植物的淺水田活動。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.586,
+      0.098,
+      0.814,
+      0.42
+    ],
+    [
+      0.247,
+      0.322,
+      0.456,
+      0.625
+    ],
+    [
+      0.163,
+      0.332,
+      0.404,
+      0.586
+    ],
+    [
+      0.42,
+      0.57,
+      0.63,
+      0.88
+    ]
+  ],
+  "featureLabels": [
+    "白眼圈及眼後白帶",
+    "白色肩帶",
+    "金斑翼羽",
+    "淡黃腳"
+  ],
+  "featureNotes": [
+    "眼大而深色，外圍白色「眼鏡」再鑲黑邊；一條乳白色帶由眼後伸過肩部，上方有深色帶，是雄鳥最易辨認處（第1圈取自頭部特寫，實際可見）。",
+    "肩部兩側的寬白色「吊帶」與灰粉色的胸及白腹成對比（第2圈取自近景圖，實際可見）。",
+    "翼覆羽有金黃色斑點與細密黑色蟲蠹紋，是「彩」鷸名稱由來之一；雌鳥金斑更寬更亮（第3圈取自近景圖，實際可見）。",
+    "腳黃綠色，中等長度，適在軟泥及淺水步行，沒有水雉那種特長腳趾（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "TWN",
+      "CHN",
+      "LKA"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011300",
+      "use": "HKBWS substantive read: Category I, present all year in freshwater marsh and wet agriculture, numbers higher in winter due to northern migrants; now almost exclusively a freshwater wetland species concentrated as a breeder at Mai Po NR, Long Valley and the lowland area east of Route 3 bounded by Sha Po, Pat Heung and Tsing Tam; prefers inactive wet agriculture with dense aquatic vegetation; most frequent site away from the northwest and north New Territories is Pui O on Lantau (14 October to 9 December, once 18 April), also Po Toi once on 18 October 2012; most records at these sites in the final three months of the year; highest count 70 at Lok Ma Chau MTRC Ecological Enhancement Area on 13 November 2013; 1970s decline with only 20 bird-days at eight sites in the decade versus 72 bird-days from 14 sites in the 1960s; increased from the mid-1980s; Leader (1999) trapping at Kam Tin and Long Valley 1993-97, of 102 birds trapped in 1996-97 94% were first-years and one moved 9 km Long Valley to Kam Tin; breeding recorded in most years since 1999 at Long Valley, the Sha Po and Kam Tin area and Mai Po NR with active nests 19 April to 22 September though mainly April to June, usual clutch four, dependent young 15 March to 11 October; monotypic, resident in much of Africa south of the Sahara including Madagascar, and the Asian population largely resident from Pakistan east through India to Indochina and south China and south through southeast Asia to Indonesia and the Philippines, with Chinese populations north of the Yangtze as far as Liaoning being summer visitors; IUCN Least Concern with decreasing trend."
+    },
+    {
+      "url": "https://www.wetlandpark.gov.hk/en/biodiversity/beauty-of-wetlands/wildlife/rostratula-benghalensis",
+      "use": "Hong Kong Wetland Park species note: the female is more colourful than the male, an uncommon reversal among birds, but both sexes show distinctive white eye rings; usually appears in flocks and hides in reed marshes."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對白眼圈、眼後白帶與深色上帶、白色肩帶、金斑翼羽及淡黃腳；不是照片，也不是分佈或族群證據。",
+    "本卡主圖繪雄鳥（羽色較暗淡、孵卵育雛的一方）；雌鳥羽色更鮮、黑冠白臉栗胸金斑，卡上文字已註明。",
+    "兩隻比較鳥均為 AI 生成示意（水雉、沙錐各自新繪），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形；本卡只標示亞洲族群（巴基斯坦至東南亞、華南、台灣及菲律賓），HKBWS 記載的撒哈拉以南非洲及馬達加斯加留鳥族群刻在意不另上色。",
+    "IUCN 無危、趨勢下降；香港屬 Category I，全年可見於淡水濕地及濕農地，冬季因北方遷入而數量較高。",
+    "只交付 aviandex/0129.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

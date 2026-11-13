@@ -1310,3 +1310,25 @@ HKBWS 0080/011200 內文（Category I 過境遷徙鳥，短草及其他開闊旱
 | 0128.avif | 1GN3dHBcLncrhN2bbLt_Y0JUzGWIToEFI | 154902 | e6e7c0cfcf0ea17072312258fb965a7c | 94cf696e376f2df5b6e200abacb9c659cc956337b6bc918b0b130abe6ba082f3 |
 
 未改 UI 版面、無 ZIP、未動 R2。下一張 0129 彩鷸（Greater Painted-Snipe，*Rostratula benghalensis*）。
+
+## 0040 分佈圖修復 + 0129／0130 交付（同一輪）
+
+### 0040 分佈圖空白 — 已修好並重新上載
+- 量測：舊 `0040.png` 地圖格 (44,1194)–(532,1492) 內綠色像素只有 **10**（正常卡如 0128 有 4570），色盤只剩底圖，即整塊面板內容在原圖已缺失，不是座標或投影錯位。以 `PHL` 單獨重繪同格作對照，綠色落在 x 402–415 / y 74–88（78 px），與 Natural Earth 幾何吻合。
+- 修正：重繪該格（世界底圖 + 菲律賓綠色 + 黃框放大插圖，保留「世界底圖・部分分佈國家／綠色非全境；非完整分佈」字樣），只貼回同一座標，其餘版面完全未動。
+- 交付：新檔 `0040.avif` = Drive `1A7FRUEvcEprDHt_msPXngKVSkfwAQ7Fp`，146944 B，MD5 `a854ff4a20d3f2abd63ccd4b14a8f726`（本機與下載檔 MD5 一致，卡內綠色像素 16185）。舊檔 `1j5yRRDvKZ1H83jKFiaqWrfIEu2VOBq6W` 已標記作廢並移入垃圾桶，檔名加註「已作廢 — 分佈圖空白」，避免兩個同名檔案混淆。
+- 教訓：只放大單一國家仍不夠看（世界尺度下菲律賓僅約 14×15 px）；大量分佈圖需要放大插圖框，0041–0043 日後比照處理。
+
+### 0129 彩鷸 Rostratula benghalensis
+- 主圖繪**雄鳥**（羽色較暗淡、孵卵育雛的一方）；雌鳥黑冠白臉栗胸金斑更鮮，已在 notes 註明。
+- 四部位：白眼圈及眼後白帶／白色肩帶／金斑翼羽／淡黃腳；比較鳥 水雉 + 沙錐。
+- 15 個 ISO3（亞洲族群）；HKBWS 記載撒哈拉以南非洲留鳥族群刻意不上色，notes 已寫明。
+- Drive `1BK--nxBbgKyia2CqSke8_nXn4scBHXU6`，174277 B，MD5 `b17105fc437ece9dc767c2ec5b25a469`。
+
+### 0130 水雉 Hydrophasianus chirurgus
+- 繁殖羽主圖：白頭白前頸、金黃後頸、黑色胸腹、特長腳趾、雉狀長尾。
+- 四部位：金黃後頸／白頭白前頸／特長腳趾／雉狀長尾；比較鳥 彩鷸 + 白胸苦惡鳥。
+- 17 個 ISO3（東阿富汗至東南亞、華南、台灣；HKG 不在底圖圖層，故不列）。
+- Drive `1ndzbMzmz0jTurQcLUM_Onxltaysj4vlX`，174263 B，MD5 `c8feea36d76dc763d5b960db2e3ec1df`。
+
+兩張卡均已登記 `src/data/infoCards.json`（slim、revision `restart-01NN-v1`、面板色 `#173446`）；只交付單一 AVIF，無 ZIP。
