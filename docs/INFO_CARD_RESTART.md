@@ -1030,3 +1030,10 @@ parent全 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。top-level uploaded_drive_verifie
 | 0112.avif | 1VXx26TSlPDdAd_mQvpsG7OkZrsHHei5R | 130633 | 04cd74451860583fca17b80500efbcdc | 33011cd4ac39e885f020858e0af595a1f9e507783ab350efcecf3f99e804a244 |
 
 0113 反嘴鷸的 HKBWS 0080/009900 內文已讀：42–45cm、黑白羽色配長而上翹的細嘴、淡藍灰腳，雄鳥嘴較長較直、雌鳥頭部花紋有時較淡、幼鳥褐色；單型；西歐經黑海裏海至哈薩克、南西伯利亞、蒙古及中國繁殖，南歐、北非中非、中東及西南亞、華南越冬，東南非留鳥或遊蕩；中國東北西北繁殖、華南越冬（含海南台灣）；IUCN LC、趨勢未知；香港為 Deep Bay 大量越冬鳥（2008-01-13 最高 16,123 隻，2012/13 後回落至少於一半）。未改 UI／runtime／SW／R2／slim 註冊，無 ZIP。
+
+## 0113 反嘴鷸 未完成（生圖額度用盡，如實記錄）
+
+- 已生成並實際讀圖核對：`cards/art/info-restart-0113/pixel.png`。內容為黑冠、黑色後頸、白臉白身、翼上兩道寬黑帶、細長而**向上翹**的黑嘴、淡藍灰腳（含蹼趾），與 HKBWS 0080/009900 描述相符（42–45cm、黑白羽色、上翹細嘴、淡藍灰腳、雄鳥嘴較長較直）。
+- 尚未生成：`features.png`（頭／上翹嘴特寫）及比較鳥 **翹嘴鷸**（Terek Sandpiper，另一種上翹嘴但體型細小的鷸）。本回合 image generation 已達 10 張上限，兩個檔案不存在，因此**沒有寫 spec、沒有渲染、沒有上載 0113**，也沒有用 `pixel.png` 冒充特寫圈或憑空重建比較鳥。
+- 已預備：`cards/art/info-restart-0113/black-winged-stilt.png`（由 0112 全身圖複製，作比較鳥用）及 `countries.geojson`。
+- 下一回合先補 `features.png` 與 `terek-sandpiper.png`，再依第 4 步用圓形遮罩定四圈（草擬方向：上翹長嘴／黑冠白頸／黑白翼帶／藍灰長腳連蹼趾），然後渲染、讀整卡與四圈、上載。runtime 六分：i2 a3.3 v2.9 r3.3 c3 o2.9；IUCN **LC 無危**，趨勢未知；香港為 Deep Bay 大量越冬鳥（2008-01-13 最高 16,123 隻，2012/13 後少於一半，仍屬 Category I）。
