@@ -1,0 +1,193 @@
+{
+  "id": "0125",
+  "name": "劍鴴",
+  "scientificName": "Charadrius hiaticula",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Charadrius hiaticula adult in breeding plumage: a sturdy medium-small plover, 17-19 cm, with slightly longer dull orange legs than Little Ringed Plover, a less finely tipped bill that has an obvious orange base and a dark tip, more extensive dark on the face below and behind the eye, an obvious white wing bar in flight, no yellow orbital ring, and a broader darker chest band. Non-breeding and juvenile birds are duller with a brownish breast band. Three subspecies; C. h. tundrae is presumed to occur in HK.",
+  "similarSpecies": [
+    {
+      "zh": "金眶鴴",
+      "scientificName": "Charadrius dubius",
+      "asset": "little-ringed-plover.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小、腳較短而偏淡黃、嘴全黑而細、有明顯黃色眼圈、胸前黑帶較窄、飛行時無翼帶；本種較大較壯、嘴基橙色、無黃眼圈、胸帶較闊較深、飛行有明顯白翼帶。"
+    },
+    {
+      "zh": "環頸鴴",
+      "scientificName": "Anarhynchus alexandrinus",
+      "asset": "kentish-plover.png",
+      "framing": "whole-bird",
+      "distinction": "完全沒有完整胸帶，胸前只有兩側各一小黑斑、中央白、腳黑色、後頭橙棕；本種有完整黑色胸帶、腳橙、無橙棕後頭。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.0977,
+      0.3711,
+      0.3581,
+      0.7617
+    ],
+    [
+      0.3646,
+      0.1758,
+      0.638,
+      0.5859
+    ],
+    [
+      0.1172,
+      0.3255,
+      0.4102,
+      0.5208
+    ],
+    [
+      0.3711,
+      0.5599,
+      0.7031,
+      0.7812
+    ]
+  ],
+  "featureLabels": [
+    "橙基粗嘴",
+    "黑眼罩",
+    "完整胸帶",
+    "橙色長腳"
+  ],
+  "featureNotes": [
+    "嘴較粗、基部明顯橙色而先端深色，與金眶鴴全黑而細的嘴不同（第1圈取自頭部特寫，實際可見）。",
+    "繁殖羽有一道闊黑帶穿過眼及眼下並伸至耳羽，眼上是白色眉線、眼下是白頰，無黃色眼圈（第2圈取自頭部特寫，實際可見）。",
+    "胸前有一條完整而闊的黑色胸帶橫過整個前胸，白喉與白腹被它分開；環頸鴴的胸帶則是兩側斷開的小黑斑（第3圈取自全身圖，實際可見）。",
+    "腳偏橙而較長，與金眶鴴偏淡黃而較短的腳不同（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CAN",
+      "GRL",
+      "ISL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "EST",
+      "LVA",
+      "LTU",
+      "POL",
+      "DEU",
+      "NLD",
+      "BEL",
+      "FRA",
+      "GBR",
+      "IRL",
+      "DNK",
+      "UKR",
+      "BLR",
+      "TUR",
+      "GEO",
+      "ARM",
+      "AZE",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "TWN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "EGY",
+      "LBY",
+      "TUN",
+      "DZA",
+      "MAR",
+      "MRT",
+      "MLI",
+      "NER",
+      "TCD",
+      "SDN",
+      "ERI",
+      "DJI",
+      "SOM",
+      "ETH",
+      "KEN",
+      "TZA",
+      "SAU",
+      "YEM",
+      "OMN",
+      "ARE",
+      "QAT",
+      "KWT",
+      "IRQ",
+      "IRN",
+      "JOR",
+      "ISR",
+      "LBN",
+      "SYR",
+      "PAK",
+      "IND",
+      "SEN",
+      "GMB",
+      "GNB",
+      "SLE",
+      "LBR",
+      "CIV",
+      "GHA",
+      "TGO",
+      "BEN",
+      "NGA",
+      "CMR",
+      "GAB",
+      "COG",
+      "COD",
+      "AGO",
+      "NAM",
+      "ZAF",
+      "MOZ",
+      "MDG"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010500",
+      "use": "HKBWS substantive identification/range/conservation read: Category I rare winter visitor; 17-19cm; differs from Little Ringed Plover in slightly longer dull orange legs, less finely tipped bill with an orange base, more extensive dark on the face below and behind the eye, obvious white wing bar in flight, no yellowish orbital ring, and a broader darker chest band; generally confined to intertidal mudflat; typical call a disyllabic inflected 'poo-eep'; first recorded 14 April 1979, then 1991 with possibly the same returning individual to 1999, four winter periods during 2000-2012 but not subsequently; extreme dates 24 September to 14 April though most records 21 October to 14 March; breeds north of the Arctic Circle from northeast Canada, Greenland and Iceland across northern Eurasia to the Bering Sea and winters mainly in sub-Saharan Africa, the Middle East and parts of India; three subspecies, C. h. tundrae presumed to occur in HK; IUCN Least Concern with a decreasing trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010700",
+      "use": "HKBWS Little Ringed Plover comparison: obvious yellow orbital ring, all-dark fine bill, narrower breast band, no wing bar in flight, shorter dull yellowish legs."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010800",
+      "use": "HKBWS Kentish Plover comparison: no complete breast band, small lateral breast patches only, blackish legs, warm rufous-brown rear crown."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對橙基粗嘴、黑眼罩、完整胸帶與橙色長腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意，非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地（北極圈以北）與越冬地不分工。",
+    "IUCN 無危、趨勢下降；香港屬稀少冬候鳥，1980 年代後紀錄甚少，2000–2012 年四個冬季有紀錄，之後無再錄得。",
+    "只交付 aviandex/0125.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
