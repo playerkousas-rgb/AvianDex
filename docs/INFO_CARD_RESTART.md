@@ -1401,3 +1401,9 @@ HKBWS 0080/011200 內文（Category I 過境遷徙鳥，短草及其他開闊旱
 - Drive：`1z_sUSPc0Mny9k3E2SXcGF8uCPOdKeHjH`，168638 B，MD5 `0c4af529aae46567d83bd1680ff3716a`。
 - 四部位：闊而下彎的嘴／分叉淡眉紋／栗色羽緣上背／短而黑的腳；比較鳥 紅腹濱鷸 + 翻石鷸；59 ISO3。
 - notes：IUCN VU（三代下降約 30%）；1988 年春季曾達 320 隻（4月16日），近二十年峰值多在 150 以下。
+
+## 0142 尖尾濱鷸 _Calidris acuminata_（**VU 易危**）
+
+- Drive：`1T6WqLB1rw-VSL8wc-UYWCqWYjoh-AqXn`，168151 B，MD5 `543e9640a21ff1bef9ffc0c15b612e5f`。
+- 四部位：黑嘴淡基部／深色頭頂淡眉／密斑胸部／黃褐色腳；比較鳥 闊嘴鷸 + 流蘇鷸；31 ISO3。
+- notes：IUCN VU（三代間約下降 45%）；春季最高 300 隻（2004-05-10，全港最高），秋季僅 48 隻。
