@@ -1,0 +1,168 @@
+{
+  "id": "0141",
+  "name": "闊嘴鷸",
+  "scientificName": "Calidris falcinellus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "illustrationTaxon": "Calidris falcinellus (subspecies C. f. sibirica, which breeds in northeast Siberia and passes through most of Asia including Hong Kong) in breeding plumage: a small sandpiper of 16-18 cm with a fairly long broad bill that is obviously decurved in its distal third, relatively short black legs, and a distinctive head pattern in which a split supercilium stands out against rather dark lateral crown stripes, dark lores and dark ear coverts. In breeding plumage it has chestnut fringes to the upperpart feathers and tertials. Juveniles have broad pale fringes to the upperparts and lack the strong chestnut tones of spring adults, while birds in winter plumage are relatively plain grey above but retain the well-marked head pattern. It forages on intertidal mudflats in a rather slow manner, occasionally probing but more usually picking at the surface of the substrate, and the typical flight call is a low-pitched trilling flat or slightly inflected 'chreep'.",
+  "similarSpecies": [
+    {
+      "zh": "紅腹濱鷸",
+      "scientificName": "Calidris canutus",
+      "asset": "red-knot.png",
+      "framing": "whole-bird",
+      "distinction": "紅腹濱鷸體型大得多、嘴短而約等於頭長、繁殖羽全身橙紅；本種僅 16–18 cm、嘴長而闊且末端明顯下彎、繁殖羽只有栗色羽緣而非橙紅下身。"
+    },
+    {
+      "zh": "翻石鷸",
+      "scientificName": "Arenaria interpres",
+      "asset": "turnstone.png",
+      "framing": "whole-bird",
+      "distinction": "翻石鷸矮壯、嘴短楔形、腳橙紅、繁殖羽黑白加鏽橙拼色；本種嘴細長而下彎、腳短而黑、頭部靠淡色縱紋而非色塊辨認。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.24,
+      0.9,
+      0.54
+    ],
+    [
+      0.64,
+      0.15,
+      0.86,
+      0.37
+    ],
+    [
+      0.76,
+      0.3,
+      0.98,
+      0.56
+    ],
+    [
+      0.33,
+      0.53,
+      0.64,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "闊而下彎的嘴",
+    "分叉淡眉紋",
+    "栗色羽緣上背",
+    "短而黑的腳"
+  ],
+  "featureNotes": [
+    "嘴基部較闊，末端三分之一明顯向下彎，是「闊嘴」之名的由來（第1圈取自全身圖，實際可見）。",
+    "淡色眉紋在眼上前後分成兩段（split supercilium），與深色側冠紋、深色眼光及耳羽形成強烈對比，是最可靠的辨識點（第2圈取自近景圖，實際可見）。",
+    "繁殖羽的上背與三級飛羽有栗色羽緣；秋季幼鳥轉為較闊的淡色羽緣而無栗色調（第3圈取自近景圖，實際可見）。",
+    "腳相對身體短而呈黑色，站姿低矮；本種在泥灘上動作緩慢，多為啄食表面而非深插（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "PNG",
+      "AUS",
+      "NZL",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "MMR",
+      "NPL",
+      "KHM",
+      "LAO",
+      "BRN",
+      "ARE",
+      "OMN",
+      "SAU",
+      "IRN",
+      "KAZ",
+      "SWE",
+      "NOR",
+      "FIN",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "POL",
+      "DEU",
+      "NLD",
+      "BEL",
+      "FRA",
+      "GBR",
+      "IRL",
+      "DNK",
+      "EGY",
+      "SDN",
+      "ETH",
+      "KEN",
+      "TZA",
+      "ZAF",
+      "MOZ",
+      "MDG",
+      "NGA",
+      "GHA",
+      "SEN",
+      "MLI",
+      "MRT",
+      "MAR"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012500",
+      "use": "HKBWS substantive read: Category I, passage migrant uncommon in spring and scarce in autumn and a rare winter visitor to the intertidal mudflats of Deep Bay; 16-18 cm, a small sandpiper with a fairly long broad bill obviously decurved in its distal third, relatively short black legs, and a split supercilium usually fairly obvious against rather dark lateral crown stripes, lores and ear coverts; breeding plumage with chestnut fringes to the upperpart feathers and tertials; juveniles with broad pale fringes to the upperparts and lacking the strong chestnut tones of spring adults; winter plumage relatively plain grey above but retaining the well-marked head pattern; typical flight call a low-pitched trilling flat or slightly inflected 'chreep'; most records from the intertidal mudflats of Inner Deep Bay and adjacent Mai Po roosts with very few on commercial fish ponds and fewer than 30 records since 1972 away from Deep Bay at Kai Tak, Sai Kung, Shuen Wan and Lantau; primarily a passage migrant with most birds in spring, lower numbers in autumn and occasional birds wintering, earliest spring migrants appearing in early March with birds undoubtedly on passage noted from the middle of the month, most birds during the second half of April and first half of May with the peak week the first one of May and a sharp decline in the second half of May; an apparent decline in spring numbers, with standardized counts since 1998 giving most counts lower than 150 and below 100 in 14 out of 23 years whereas in 1986-97 two-thirds of peak counts exceeded 150 with the highest 320 on 16 April 1988, 300 on 1 May 1988 and 250 during 10-11 April 1992; three June records and return passage from about the middle of July but weak, with main autumn passage in the last three weeks of September and the highest autumn count this century 40 on 19 September 2002 compared with 100 on 20 October 1991 and 80 on 1 October 1993; leg-flagged birds usually from northwest Australia and one on 23 April 2021 flagged at Point Calimere, South India on 7 October 2019; forages on intertidal mudflats in a rather slow manner, occasionally probing but more usually picking at the surface of the substrate; two subspecies with C. f. sibirica breeding in northeast Siberia and passing through most of Asia including Hong Kong to winter from northeast India to Australia, while the nominate breeds from north Europe to northwest Siberia and winters from the Middle East to southern India; IUCN Vulnerable with a population decreasing by approximately 30% over three generations."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012300",
+      "use": "HKBWS Red Knot comparison: a much larger, stockier bird with a bill roughly equal to its head length, used here as the size-and-structure contrast."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對闊而下彎的嘴、分叉淡眉紋、栗色羽緣上背及短而黑的腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意（紅腹濱鷸、翻石鷸各自沿用 0139／0137 全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN **易危 VU**（三代間約下降 30%）；香港屬 Category I，春季不常見過境鳥、秋季稀少、冬季罕見，1988 年春季曾達 320 隻（4月16日），近二十年峰值多在 150 以下。",
+    "只交付 aviandex/0141.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
