@@ -1,0 +1,233 @@
+{
+  "id": "0115",
+  "name": "灰斑鴴",
+  "scientificName": "Pluvialis squatarola",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "illustrationTaxon": "Pluvialis squatarola in non-breeding plumage: silvery-grey upperparts with fine pale fringes and spangling, greyish wash on the chest, whitish belly and undertail, stout black bill, large dark eye, dark grey legs. Breeding plumage (black face and underparts, white from forehead over the eye to the chest sides and flanks) is not shown. The Hong Kong taxon is considered to be nominate P. s. squatarola.",
+  "similarSpecies": [
+    {
+      "zh": "太平洋金斑鴴",
+      "scientificName": "Pluvialis fulva",
+      "asset": "pacific-golden-plover.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小、頭較小、嘴較短；上體帶金黃褐色斑點、胸側有暖褐色渲染；本種體型最大、嘴較粗長、整體偏銀灰，胸側不帶金黃色。"
+    },
+    {
+      "zh": "環頸鴴",
+      "scientificName": "Charadrius hiaticula",
+      "asset": "common-ringed-plover.png",
+      "framing": "whole-bird",
+      "distinction": "體型小得多、嘴短而呈橙黃帶黑尖、有粗黑胸帶及橙黃腳；本種無胸帶、嘴全黑、腳深灰、全身灰色斑駁。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2811,
+      0.3826,
+      0.5682,
+      0.8927
+    ],
+    [
+      0.5263,
+      0.0956,
+      0.8134,
+      0.6057
+    ],
+    [
+      0.3815,
+      0.28,
+      0.681,
+      0.5794
+    ],
+    [
+      0.362,
+      0.5404,
+      0.6224,
+      0.8008
+    ]
+  ],
+  "featureLabels": [
+    "粗厚黑嘴",
+    "大眼圓頭",
+    "銀灰斑背",
+    "深灰長腿"
+  ],
+  "featureNotes": [
+    "粗厚而筆直的黑嘴，相對頭部偏長；非繁殖羽嘴色全黑（第1圈取自頭部特寫，實際可見）。",
+    "頭部比例在鴴類中偏大而圓，配深褐色大眼及眼後淡色眉斑（第2圈取自頭部特寫，實際可見；繁殖羽面部會轉為全黑，本圖示非繁殖羽）。",
+    "上體銀灰色，每片羽毛有淡色羽端形成細密斑駁；胸部帶灰色渲染、腹部轉白（第3圈取自全身圖，實際可見；飛行時腋羽全黑、翼上白帶，是另一項野外特徵，插圖為折翼狀態，本圈不代表飛行翼色）。",
+    "深灰至近黑的腳，脛跗細長、後趾退化；本種在泥灘以走走停停啄食的方式覓食（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ISL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "EST",
+      "LVA",
+      "LTU",
+      "POL",
+      "DEU",
+      "NLD",
+      "BEL",
+      "DNK",
+      "GBR",
+      "IRL",
+      "FRA",
+      "ESP",
+      "PRT",
+      "ITA",
+      "GRC",
+      "TUR",
+      "BGR",
+      "ROU",
+      "UKR",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "EGY",
+      "MRT",
+      "SEN",
+      "GMB",
+      "GNB",
+      "GIN",
+      "SLE",
+      "LBR",
+      "CIV",
+      "GHA",
+      "TGO",
+      "BEN",
+      "NGA",
+      "CMR",
+      "GNQ",
+      "GAB",
+      "COG",
+      "COD",
+      "AGO",
+      "NAM",
+      "ZAF",
+      "MOZ",
+      "TZA",
+      "KEN",
+      "SOM",
+      "ERI",
+      "DJI",
+      "SDN",
+      "SAU",
+      "YEM",
+      "OMN",
+      "ARE",
+      "QAT",
+      "IRN",
+      "IRQ",
+      "KWT",
+      "PAK",
+      "IND",
+      "LKA",
+      "BGD",
+      "MMR",
+      "THA",
+      "MYS",
+      "IDN",
+      "VNM",
+      "KHM",
+      "PHL",
+      "CHN",
+      "TWN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "MNG",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "USA",
+      "CAN",
+      "MEX",
+      "GRL",
+      "CUB",
+      "JAM",
+      "HTI",
+      "DOM",
+      "PRI",
+      "VEN",
+      "COL",
+      "ECU",
+      "PER",
+      "CHL",
+      "ARG",
+      "BRA",
+      "URY",
+      "GUY",
+      "SUR",
+      "PAN",
+      "CRI",
+      "NIC",
+      "HND",
+      "GTM",
+      "SLV",
+      "BLZ",
+      "AUS",
+      "NZL",
+      "PNG",
+      "FJI",
+      "MDG"
+    ],
+    "note": "Country overview only: a Holarctic breeder from northern Russia east to Canada that winters on tropical and mild-temperate coasts worldwide; in China a widespread migrant wintering on the south and southeast coasts including Hainan and Taiwan and the lower Yangtze. Nominate P. s. squatarola breeds across northern Eurasia and Alaska, P. s. tomkovichi on Wrangel Island and P. s. cynosurae in Canada. Not an occurrence polygon and not split by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010400",
+      "use": "HKBWS substantive identification/range/conservation read: 26-29cm largest HK plover with relatively large head and bill, distinctive grey in most plumages; non-breeding greyish upperparts with diffuse pale fringes or bars, greyish chest, whitish underparts; juveniles buff-toned; in flight black axillaries and obvious white wing bar; breeding face and underparts black to the vent with white from forehead over eye to chest sides; mournful whistle; Holarctic breeder from northern Russia to Canada wintering worldwide on tropical and mild temperate coasts; China widespread migrant wintering on south and southeast coasts, Hainan, Taiwan, lower Yangtze; three subspecies nominate, tomkovichi (Wrangel Island) and cynosurae (Canada); IUCN Vulnerable, decreasing, >30% decline over three generations; Hong Kong abundant winter visitor mostly on Deep Bay mudflats, peak 881 on 13 March 2016."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 灰斑鴴 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Pluvialis squatarola, Charadriiformes/Charadriidae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six-axis scores, no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對嘴形、頭部比例、上體斑駁及腳色；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例；太平洋金斑鴴與環頸鴴在香港都是常見鴴類，但卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 易危、全球趨勢下降；香港則是最常見的越冬鴴之一，後海灣泥灘曾錄得 881 隻，兩者並不矛盾：全球下降而本地仍有一定數量。",
+    "只交付 aviandex/0115.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

@@ -7,7 +7,7 @@
     1024,
     1536
   ],
-  "status": "local_candidate_not_verified_against_drive",
+  "status": "local_candidate_verified_labels_only_against_drive_card",
   "iucn": {
     "code": "VU",
     "zh": "易危"
@@ -116,6 +116,25 @@
     "Four crops show head/bill, crown/eyeline, folded wing and neck. Folded wing is not an in-flight panel illustration.",
     "Map highlights native Philippines only, does not treat accidental Hong Kong/Taiwan records as normal native range. Runtime vEst=1 displayed.",
     "Unpublished 0040 local artwork missing after branch environment refresh; new 0040 pixel/features/Eastern Spot-billed sources generated and re-reviewed. Second comparison now reviewed Gadwall (not old missing female Mallard). No delivered bird art remade.",
-    "Handoff: local candidate only; NOT established as provenance of the existing Drive delivery. Do not upload/overwrite or treat crops as delivered truth before comparing actual remote card and source assets."
-  ]
+    "2026-11-12: the delivered Drive card was downloaded and read; its labels, comparison labels and map fill were recorded in observedFromDrive. The local artwork and crop coordinates are still unavailable, so this file must not be rendered or uploaded."
+  ],
+  "observedFromDrive": {
+    "verifiedAt": "2026-11-12",
+    "how": "Downloaded the delivered AVIF from Drive, decoded it, read the whole card and each feature circle, and sampled every Natural Earth 110m country polygon against the map panel.",
+    "featureLabelsOnCard": [
+      "頭喙",
+      "冠及眼紋",
+      "翼部",
+      "棕色頸部"
+    ],
+    "comparisonLabelsOnCard": [
+      "中華斑嘴鴨",
+      "綠頭鴨雌鳥"
+    ],
+    "mapCountriesSolidFill": [],
+    "mapCountriesPartialFill": [],
+    "mismatchWithLocalCandidate": "The delivered card has NO country filled: green pixels total 159 and all belong to caption/text anti-aliasing, so the map contradicts its own caption. Local candidate asked for PHL only, and the second comparison differs (candidate: 赤膀鴨; delivered: 綠頭鴨雌鳥). This is a real defect in the delivered file, reported rather than silently overwritten.",
+    "featureCropsUnverified": true,
+    "neverRenderOrUpload": true
+  }
 }

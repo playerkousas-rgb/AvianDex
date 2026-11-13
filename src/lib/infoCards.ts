@@ -1,24 +1,56 @@
 import data from '../data/infoCards.json';
 
 /**
- * 這隻鳥有冇資訊圖卡（翻轉面）？
- * 名單由 src/data/infoCards.json 提供，所以不用逐隻去探測 R2（探測＝一堆 404、r2.dev 會限流）。
- * 沒有資訊圖卡 → 介面完全不出現翻轉掣，也不翻出一個「文字簡版」，只看插圖。
+ * 這隻鳥的資訊圖卡是否已登記（`src/data/infoCards.json`）。
+ *
+ * 名單只影響「用哪個模板顯示」，不再影響「可否翻轉」：
+ *   - 登記 + slim  → 手機分頁（插畫／四部位／能力值／分佈圖／易混鳥）
+ *   - 登記 + 舊版  → 插畫 + 原圖
+ *   - 未登記       → 插畫 + 原圖（照樣可翻，見 canFlipInfoCard）
+ *
+ * 為甚麼不再用名單當閘門？
+ *   2026-11 用戶回報：0022–0100 早已上載 R2，但 0040 等卡連翻轉掣都沒有，
+ *   因為名單只有 0001–0021；名單未更新就等於整批卡「在 app 裡不存在」。
+ *   所以改為「寧願翻開後見到『未上載』，都好過連檢查入口都無」。
  */
 const SET = new Set<string>((data as { ids: string[] }).ids);
 
-/** 試做／預覽用的本機資訊圖卡（public/demo/）。還沒上傳 R2 的新版圖卡先放這裡，翻轉面直接讀本機檔。
- *  新版手機精簡圖卡目前只有 0058 一張樣品；批量出卡上傳 R2 後，改填 infoCards.json，這裡可以清空。 */
+/** 試做／預覽用的本機資訊圖卡（public/demo/）。 */
 const LOCAL_INFO: Record<string, string> = {
   '0058': `${import.meta.env.BASE_URL}demo/info-0058.webp`,
 };
+
+/**
+ * 已確認「R2 上真的沒有」的編號。
+ *
+ * 只有在你確定某隻雀短期內不會有資訊圖卡時才加入，例如剛失敗過的批次。
+ * 名單為空 = 每隻雀都可以翻，翻開後由載入器回報有／無（404 只會試一次，
+ * 結果會記在快取，同一隻雀不會重複打）。
+ */
+const KNOWN_ABSENT = new Set<string>([]);
 
 export function localInfoCardUrl(id: string | undefined | null): string | undefined {
   return id ? LOCAL_INFO[id.padStart(4, '0')] : undefined;
 }
 
+/** 已登記在 infoCards.json（或本機 demo）的卡。 */
 export function hasInfoCard(id: string | undefined | null): boolean {
   return !!id && (SET.has(id.padStart(4, '0')) || !!LOCAL_INFO[id.padStart(4, '0')]);
+}
+
+/**
+ * 可否翻轉看資訊圖卡。
+ *
+ * 原則：有圖就給翻，沒有圖（或已知一定沒有）才不給翻。
+ * 未登記但可能已上載 R2 的卡一律允許翻 —— 翻開後由 requestInfoCard() 判斷
+ * 200 還是 404，並把結果記住。純文字簡版（用 cardCopy 即時砌）已經廢除，
+ * 所以背面不會出現假的「資料卡」。
+ */
+export function canFlipInfoCard(id: string | undefined | null): boolean {
+  if (!id) return false;
+  const padded = id.padStart(4, '0');
+  if (LOCAL_INFO[padded]) return true;
+  return !KNOWN_ABSENT.has(padded);
 }
 
 /** Only cards composed with the slim template may use its panel viewports. */

@@ -1,0 +1,137 @@
+{
+  "id": "0111",
+  "name": "大石鴴",
+  "scientificName": "Esacus recurvirostris",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Esacus recurvirostris adult; monotypic per source. Sources describe no distinct juvenile plumage beyond the adult pattern, so one adult plumage is shown.",
+  "similarSpecies": [
+    {
+      "zh": "石鴴",
+      "scientificName": "Burhinus oedicnemus",
+      "asset": "eurasian-stone-curlew.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小、嘴明顯較短較細，胸前及上背有褐色縱紋，眼先無大片黑色面罩；本種嘴巨大厚實、臉部黑白對比強烈、上身素色。"
+    },
+    {
+      "zh": "海濱石鴴",
+      "scientificName": "Esacus magnirostris",
+      "asset": "beach-stone-curlew.png",
+      "framing": "whole-bird",
+      "distinction": "體型更粗壯、腳極短、嘴更厚更方，翼上有寬闊黑白橫帶；本種腳較長、翼上為無橫帶的沙褐色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.28,
+      0.195,
+      0.56,
+      0.686
+    ],
+    [
+      0.47,
+      0.05,
+      0.79,
+      0.61
+    ],
+    [
+      0.55,
+      0.33,
+      0.89,
+      0.67
+    ],
+    [
+      0.31,
+      0.66,
+      0.79,
+      0.98
+    ]
+  ],
+  "featureLabels": [
+    "巨大厚喙",
+    "黑白臉紋",
+    "沙褐背翼",
+    "淡綠長腿"
+  ],
+  "featureNotes": [
+    "巨大而厚、略向上彎的嘴，黑色為主、嘴角及基部帶黃；這是與石鴴屬最明顯的分野（第1圈取自頭部特寫，實際可見）。",
+    "眼大而淡黃，眼後有黑色寬帶，上方白眉、下方白頰形成黑白相間臉紋，頭頂灰褐帶密斑（第2圈實際可見）。",
+    "背及翼上覆羽為素色沙褐，沒有明顯縱紋或橫帶，只見細微羽緣及折翼邊緣（第3圈實際可見；插圖為折翼狀態，飛行時初級飛羽黑色並有白色翼斑，本圈不代表飛行翼色）。",
+    "腳淡灰綠至淡黃，脛跗關節粗大呈瘤狀，三趾前趾粗壯（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IRN",
+      "PAK",
+      "IND",
+      "LKA",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "CHN"
+    ],
+    "note": "Country overview only: source describes a resident range from southeast Iran east through Pakistan, India, Sri Lanka and northern Bangladesh, through Myanmar to northeast Indochina and south China. Not an occurrence polygon and not split by season. Hong Kong's single 2009 record is not part of the native range and is not highlighted."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/009600",
+      "use": "HKBWS substantive identification/range/conservation read: 41-54cm large long-legged shorebird with huge thick slightly upcurved bill; pied face, grey crown, pale unstreaked upperparts, buff undertail coverts and unstreaked buffish chest; in flight black flight feathers with large white inner-primary patch and black-tipped tail; monotypic; resident southeast Iran through Pakistan, India, Sri Lanka, north Bangladesh and Myanmar to northeast Indochina and south China; NT, declining through riverine habitat loss and dams; Hong Kong single record at Mai Po NR 24 Jun 2009, Category I."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080",
+      "use": "HKBWS species list confirming 大石鴴 = Great Stone-Curlew article 009600, plus neighbouring family entries (黑翅長腳鷸 009800, 反嘴鷸 009900) for the following cards."
+    },
+    {
+      "url": "https://zh.wikipedia.org/wiki/%E7%9F%B3%E9%B4%B4%E7%A7%91",
+      "use": "Chinese vernacular names for the two comparisons: 石鴴 Burhinus oedicnemus and 海濱石鴴 Esacus giganteus (= E. magnirostris)."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 大石鴴 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Esacus recurvirostris, Charadriiformes/Burhinidae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six-axis scores, no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對嘴形、臉部黑白分佈、上身素色及腳色；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例，也不是完整石鴴科鑑別檢索表；石鴴與海濱石鴴在香港均無或極少紀錄。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與非繁殖地不分工。",
+    "IUCN 近危，主因河川生境喪失及水壩建設；香港僅 2009 年一次紀錄（Category I），不代表本地可見。",
+    "只交付 aviandex/0111.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

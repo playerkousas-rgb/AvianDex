@@ -7,7 +7,7 @@
     1024,
     1536
   ],
-  "status": "local_candidate_not_verified_against_drive",
+  "status": "local_candidate_verified_labels_only_against_drive_card",
   "iucn": {
     "code": "LC",
     "zh": "無危"
@@ -131,12 +131,55 @@
     "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
     "New artwork replaces prior rejected 0037 Wigeon candidate; yellow forehead/crown now explicit. Not reused from rejected asset. Female head is independently sourced and labelled; portrait not used to claim flight-wing pattern.",
     "Gadwall comparison narrow white image border trimmed; no bird recolouring or anatomy editing.",
-    "Handoff: local candidate only; NOT established as provenance of the existing Drive delivery. Do not upload/overwrite or treat crops as delivered truth before comparing actual remote card and source assets."
+    "2026-11-12: the delivered Drive card was downloaded and read; its labels, comparison labels and map fill were recorded in observedFromDrive. The local artwork and crop coordinates are still unavailable, so this file must not be rendered or uploaded."
   ],
   "featureSources": [
     "features.png",
     "features.png",
     "features.png",
     "female.png"
-  ]
+  ],
+  "observedFromDrive": {
+    "verifiedAt": "2026-11-12",
+    "how": "Downloaded the delivered AVIF from Drive, decoded it, read the whole card and each feature circle, and sampled every Natural Earth 110m country polygon against the map panel.",
+    "featureLabelsOnCard": [
+      "雄鳥頭喙",
+      "黃色額冠",
+      "粉色胸",
+      "灰色脅"
+    ],
+    "comparisonLabelsOnCard": [
+      "綠眉鴨",
+      "赤膀鴨"
+    ],
+    "mapCountriesSolidFill": [
+      "CHN",
+      "RUS",
+      "IND",
+      "KAZ",
+      "EGY",
+      "FIN",
+      "PAK",
+      "NPL",
+      "FRA",
+      "SWE",
+      "TUR",
+      "ESP",
+      "MAR"
+    ],
+    "mapCountriesPartialFill": [
+      "NOR",
+      "GBR",
+      "JPN",
+      "MNG",
+      "KGZ",
+      "BGD",
+      "GEO",
+      "KOR",
+      "ISL"
+    ],
+    "mismatchWithLocalCandidate": "Delivered card also fills NPL, which the local candidate list omits; NOR/GBR/JPN only partially covered because those polygons are small at 110m. Local candidate crop coordinates cannot be confirmed.",
+    "featureCropsUnverified": true,
+    "neverRenderOrUpload": true
+  }
 }

@@ -1,0 +1,138 @@
+{
+  "id": "0106",
+  "name": "斑脇田雞",
+  "scientificName": "Zapornia paykullii",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Zapornia paykullii adult (monotypic)",
+  "similarSpecies": [
+    {
+      "zh": "灰腳秧雞",
+      "scientificName": "Rallina eurizonoides",
+      "asset": "slaty-legged-crake.png",
+      "framing": "whole-bird",
+      "distinction": "上體較暖橄欖褐、栗色只及頭胸，脅至尾下黑白橫斑較粗而完整；腳暗石板灰、嘴黑。"
+    },
+    {
+      "zh": "紅胸田雞",
+      "scientificName": "Zapornia fusca",
+      "asset": "ruddy-breasted-crake.png",
+      "framing": "whole-bird",
+      "distinction": "體型更小、嘴較短；栗紅較集中於頭胸，翼上沒有本種那些白／暗橫斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.0977,
+      0.0684,
+      0.3451,
+      0.4395
+    ],
+    [
+      0.1953,
+      0.293,
+      0.4688,
+      0.7031
+    ],
+    [
+      0.5469,
+      0.5273,
+      0.8203,
+      0.9375
+    ],
+    [
+      0.5404,
+      0.5859,
+      0.7096,
+      0.8398
+    ]
+  ],
+  "featureLabels": [
+    "冷褐頭頂",
+    "栗紅腹",
+    "翼覆羽橫斑",
+    "橙紅長腳"
+  ],
+  "featureNotes": [
+    "深冷褐頭頂與栗紅面頸對比（第1圈實際可見）。",
+    "大面積栗紅胸腹，僅下脅少量黑白橫斑（第2圈實際可見）。",
+    "翼覆羽上少量白色與暗色橫斑（第3圈實際可見；折翼狀態）。",
+    "偏橙色調的紅色腿（第4圈實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "CHN",
+      "RUS",
+      "PRK",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "MMR",
+      "MYS",
+      "IDN",
+      "BRN"
+    ],
+    "note": "Country overview only, not seasonal areas: source gives breeding in northeast China and adjacent Russian Far East (probably North Korea) and wintering in disjunct parts of southeast Asia, Sumatra, Java and Borneo.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008100",
+      "use": "HKBWS substantive identification/range/conservation read: 20-22cm, darker colder-brown upperparts extending to crown, more extensive chestnut below with less flank-barring, paler orange-toned red legs, greenish bill, some whitish and dark bars on wing coverts; breeds NE China/Russian Far East, winters SE Asia/Sumatra/Java/Borneo; NT, trend no data but suspected decline."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008400",
+      "use": "Slaty-legged Crake comparison text."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008000",
+      "use": "Ruddy-breasted Crake comparison text."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime name 斑脇田雞 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Zapornia paykullii unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores unchanged; adaptability is missing and stays 待查; vEst=1 retained."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap retained; highlighting is a partial country overview, not a complete global range.",
+    "HK has only four records (1977, 1996, 2003, 2009); that rarity is local, not a global status claim.",
+    "The population trend is recorded as unknown/suspected decline; it is not stated as a measured decline."
+  ]
+}

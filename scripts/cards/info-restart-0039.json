@@ -7,7 +7,7 @@
     1024,
     1536
   ],
-  "status": "local_candidate_not_verified_against_drive",
+  "status": "local_candidate_verified_labels_only_against_drive_card",
   "iucn": {
     "code": "LC",
     "zh": "無危"
@@ -119,12 +119,38 @@
     "Full world basemap restored at user request; highlighting is still a partial country overview, not a complete global species range.",
     "Illustrated adult male intended pure-type: grey speckled head/green eye stripe/white crown without rufous hybrid contamination. Not a hybrid identification key, and female head alone cannot establish species in the field.",
     "No claimed depiction of diagnostic white axillaries/underwing coverts on a folded-wing floating bird.",
-    "Handoff: local candidate only; NOT established as provenance of the existing Drive delivery. Do not upload/overwrite or treat crops as delivered truth before comparing actual remote card and source assets."
+    "2026-11-12: the delivered Drive card was downloaded and read; its labels, comparison labels and map fill were recorded in observedFromDrive. The local artwork and crop coordinates are still unavailable, so this file must not be rendered or uploaded."
   ],
   "featureSources": [
     "features.png",
     "features.png",
     "features.png",
     "female.png"
-  ]
+  ],
+  "observedFromDrive": {
+    "verifiedAt": "2026-11-12",
+    "how": "Downloaded the delivered AVIF from Drive, decoded it, read the whole card and each feature circle, and sampled every Natural Earth 110m country polygon against the map panel.",
+    "featureLabelsOnCard": [
+      "雄鳥頭喙",
+      "粉褐色胸",
+      "粉褐色脅",
+      "雌鳥頭喙"
+    ],
+    "comparisonLabelsOnCard": [
+      "赤頸鴨",
+      "赤膀鴨"
+    ],
+    "mapCountriesSolidFill": [
+      "USA",
+      "CAN",
+      "COL",
+      "MEX"
+    ],
+    "mapCountriesPartialFill": [
+      "PAN"
+    ],
+    "mismatchWithLocalCandidate": "Local candidate also lists CUB and VEN, but the delivered card leaves both unfilled (VEN scored 0.00 green, CUB is a few pixels at this scale). Do not treat the candidate list as the delivered map.",
+    "featureCropsUnverified": true,
+    "neverRenderOrUpload": true
+  }
 }

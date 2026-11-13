@@ -1,4 +1,4 @@
-import { hasInfoCard, infoCardLayout } from './infoCards';
+import { canFlipInfoCard, hasInfoCard, infoCardLayout } from './infoCards';
 
 export const MOBILE_CARD_PAGES = [
   { key: 'artwork', zh: '插畫', en: 'Artwork' },
@@ -9,11 +9,26 @@ export const MOBILE_CARD_PAGES = [
 ] as const;
 export type MobileCardPage = typeof MOBILE_CARD_PAGES[number]['key'] | 'original';
 
-/** Only slice templates with confirmed coordinates. Legacy uploads have no layout metadata. */
-export function mobileCardPages(id: string) {
-  if (!hasInfoCard(id)) return [MOBILE_CARD_PAGES[0]];
-  if (infoCardLayout(id) === 'slim') return [...MOBILE_CARD_PAGES];
-  return [MOBILE_CARD_PAGES[0], { key: 'original' as const, zh: '完整資訊卡', en: 'Info card' }];
+/**
+ * 手機分頁。
+ *
+ *  - slim 模板（已登記）→ 插畫／四部位／能力值／分佈圖／易混鳥五頁
+ *  - 舊版完整卡或**未登記但可能已上載**的卡 → 插畫 + 完整資訊卡
+ *  - 只有確認 R2 上沒有（canFlipInfoCard 為 false）→ 只有插畫
+ *
+ * 未登記的卡照樣給「完整資訊卡」一頁，是因為 0022–0100 早已上載 R2 但
+ * infoCards.json 未更新；若照舊只給插畫，用戶連檢查那張卡在不在的入口都沒有。
+ */
+export function mobileCardPages(id: string, infoAvailable = false) {
+  if (!canFlipInfoCard(id)) return [MOBILE_CARD_PAGES[0]];
+  if (hasInfoCard(id) && infoCardLayout(id) === 'slim') return [...MOBILE_CARD_PAGES];
+  /* 已登記的舊版卡，或未登記但已經成功讀到圖的卡 → 多一頁「完整資訊卡」。
+     未登記又未讀到圖時只留插畫，避免每次點圖都翻出一張空頁；要檢查某張卡
+     在不在，用右上角 ⟳／放大掣，讀到就自動多出這一頁。 */
+  if (hasInfoCard(id) || infoAvailable) {
+    return [MOBILE_CARD_PAGES[0], { key: 'original' as const, zh: '完整資訊卡', en: 'Info card' }];
+  }
+  return [MOBILE_CARD_PAGES[0]];
 }
 
 export function nextMobileCardPage(current: number, delta: number, count: number) {

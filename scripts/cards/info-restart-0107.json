@@ -1,0 +1,133 @@
+{
+  "id": "0107",
+  "name": "紅腳田雞",
+  "scientificName": "Zapornia akool",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Zapornia akool adult (eastern Z. a. coccinipes form for the regional range); sexes alike, female slightly smaller",
+  "similarSpecies": [
+    {
+      "zh": "斑脇田雞",
+      "scientificName": "Zapornia paykullii",
+      "asset": "band-bellied-crake.png",
+      "framing": "whole-bird",
+      "distinction": "上體較深冷、栗紅下體範圍大；腳橙紅而嘴帶綠，本種腳深紫紅、嘴灰黑配黃綠嘴基。"
+    },
+    {
+      "zh": "小田雞",
+      "scientificName": "Zapornia pusilla",
+      "asset": "baillons-crake.png",
+      "framing": "whole-bird",
+      "distinction": "體型明顯較小、上體有白斑及暗色三級飛羽；脅部有黑白橫斑，本種脅部素色無橫斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.11,
+      0.02,
+      0.39,
+      0.42
+    ],
+    [
+      0.26,
+      0.22,
+      0.48,
+      0.5
+    ],
+    [
+      0.62,
+      0.3,
+      0.98,
+      0.66
+    ],
+    [
+      0.3,
+      0.68,
+      0.62,
+      0.9
+    ]
+  ],
+  "featureLabels": [
+    "灰黑嘴黃綠基",
+    "淡白喉",
+    "素色橄欖褐翼",
+    "紫紅大腳"
+  ],
+  "featureNotes": [
+    "灰黑嘴配黃綠色嘴基（第1圈實際可見）。",
+    "喉部淡白而不明顯，與橄欖灰下體相接（第2圈實際可見）。",
+    "素色橄欖褐背翼，脅部無黑白橫斑（第3圈實際可見；折翼狀態）。",
+    "深紫紅色腿及特大長趾（第4圈實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "BGD",
+      "MMR",
+      "VNM",
+      "CHN"
+    ],
+    "note": "Country overview only: nominate resident from east Pakistan through India to Bangladesh and west Burma; eastern Z. a. coccinipes in northeast Vietnam and southeast China including HK. More northerly birds are migratory, which the single-season country map does not show.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008200",
+      "use": "HKBWS substantive identification/range/conservation read: 26-28cm, plain olive-brown above and olive-grey below with indistinct whitish throat, deep pinkish-purple legs, yellow/green base to bill, very large feet; sexes alike; resident Pakistan/India/Bangladesh/west Burma and Z.a. coccinipes NE Vietnam/SE China; LC, trend unknown."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008100",
+      "use": "Band-bellied Crake comparison text."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008300",
+      "use": "Baillon's Crake comparison text."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime name 紅腳田雞 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Zapornia akool unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores unchanged; adaptability missing stays 待查; vEst=1 retained."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap retained; highlighting is a partial country overview, not a complete global range.",
+    "Population trend is recorded as unknown, so the card does not claim a stable or increasing trend.",
+    "Juveniles are undescribed in the source and are not depicted."
+  ]
+}

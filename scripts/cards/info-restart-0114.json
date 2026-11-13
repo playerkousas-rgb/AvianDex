@@ -1,0 +1,195 @@
+{
+  "id": "0114",
+  "name": "蠣鷸",
+  "scientificName": "Haematopus ostralegus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Haematopus ostralegus adult: jet black upperparts, head and chest, white underparts and rump, orange-red bill, red eye-ring and pink legs. First-winter birds have duller legs, a dark bill tip and brown-toned worn coverts, and are not shown here. The Hong Kong taxon is considered to be H. o. osculans.",
+  "similarSpecies": [
+    {
+      "zh": "黑翅長腳鷸",
+      "scientificName": "Himantopus himantopus",
+      "asset": "black-winged-stilt.png",
+      "framing": "whole-bird",
+      "distinction": "身形纖細、嘴細長筆直、腳極長粉紅；本種粗壯、嘴厚而呈鑿狀、腳短得多。兩者都是黑白，但本種黑羽覆蓋整個頭頸及胸前。"
+    },
+    {
+      "zh": "反嘴鷸",
+      "scientificName": "Recurvirostra avosetta",
+      "asset": "pied-avocet.png",
+      "framing": "whole-bird",
+      "distinction": "嘴細而明顯向上翹、腳淡藍灰有蹼、翼上有黑帶但頭頂以下多為白色；本種嘴粗厚橙紅、無上翹，頭頸胸前全黑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2148,
+      0.3418,
+      0.6576,
+      0.9961
+    ],
+    [
+      0.5599,
+      0.127,
+      0.9505,
+      0.7129
+    ],
+    [
+      0.362,
+      0.4557,
+      0.6354,
+      0.7292
+    ],
+    [
+      0.4141,
+      0.6445,
+      0.6224,
+      0.8529
+    ]
+  ],
+  "featureLabels": [
+    "橙紅厚喙",
+    "紅眼圈黑頭",
+    "黑白分明",
+    "粉紅壯腳"
+  ],
+  "featureNotes": [
+    "長而厚、末端呈鑿狀的橙紅色嘴，用來撬開貝類（第1圈取自頭部特寫，實際可見）。",
+    "頭、頸及胸前全黑，配鮮紅色眼圈；眼圈是成鳥最搶眼的細節之一（第2圈實際可見；第一年冬羽腳較暗、嘴尖偏深，本圖示成鳥）。",
+    "上體及翼全黑、下體純白，黑白分界利落，胸前黑色與腹部白色交界清楚（第3圈取自全身圖，實際可見；插圖為折翼狀態，飛行時白色的腰、尾及翼基形成另一種黑白圖案，本圈不代表飛行翼色）。",
+    "粗壯的粉紅至淡紅色腳，脛跗短而厚（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ISL",
+      "IRL",
+      "GBR",
+      "FRA",
+      "ESP",
+      "PRT",
+      "NLD",
+      "BEL",
+      "DEU",
+      "DNK",
+      "NOR",
+      "SWE",
+      "FIN",
+      "POL",
+      "EST",
+      "LVA",
+      "LTU",
+      "RUS",
+      "UKR",
+      "ROU",
+      "BGR",
+      "TUR",
+      "GRC",
+      "ITA",
+      "HRV",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "EGY",
+      "MRT",
+      "SEN",
+      "GMB",
+      "GIN",
+      "SLE",
+      "LBR",
+      "CIV",
+      "GHA",
+      "NGA",
+      "CMR",
+      "GAB",
+      "COD",
+      "AGO",
+      "NAM",
+      "ZAF",
+      "MOZ",
+      "TZA",
+      "KEN",
+      "SOM",
+      "ERI",
+      "SDN",
+      "SAU",
+      "YEM",
+      "OMN",
+      "ARE",
+      "IRN",
+      "IRQ",
+      "KWT",
+      "PAK",
+      "IND",
+      "LKA",
+      "BGD",
+      "MMR",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "MNG",
+      "VNM",
+      "PHL"
+    ],
+    "note": "Country overview only: source describes the range from Iceland through Europe to coastal northwest Africa, the Middle East, coastal India, western Russia and Kazakhstan east to northeast and east Asia, largely coastal. H. o. osculans breeds on the Kamchatka and Korean peninsulas and northeast China and is the taxon considered to occur in Hong Kong; H. o. longipes breeds in northern Xinjiang. Not an occurrence polygon and not split by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/009700",
+      "use": "HKBWS substantive identification/range/conservation read: 40-48cm stocky pied shorebird; adult jet black upperparts, head and chest, white underparts, orange to orange-red bill, red orbital ring, pink legs; first-winter dull legs, dark bill tip and brown worn coverts; in flight dark apart from white rump, tail and primary bases; H. o. osculans considered the HK taxon, longipes in northwest China; range Iceland through Europe to coastal northwest Africa, Middle East, coastal India, west Russia and Kazakhstan to northeast and east Asia; IUCN Near-threatened, decreasing; Hong Kong accidental, records 2000-2021 all on Deep Bay mudflats."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080",
+      "use": "HKBWS family list confirming 蠣鷸 009700 and neighbouring stilt/avocet articles."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 蠣鷸 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Haematopus ostralegus, Charadriiformes/Haematopodidae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six-axis scores, no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對嘴形、眼圈顏色、黑白分界及腳色；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例；黑翅長腳鷸與反嘴鷸在香港都是常見濕地鳥，但卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 近危且全球趨勢下降；香港屬偶發（Category I），2000–2021 年僅數次紀錄，全部在 Deep Bay 泥灘，不代表本地可見。",
+    "只交付 aviandex/0114.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

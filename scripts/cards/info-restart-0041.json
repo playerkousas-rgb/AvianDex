@@ -1,0 +1,134 @@
+{
+  "id": "0041",
+  "name": "印緬斑嘴鴨",
+  "scientificName": "Anas poecilorhyncha",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "observed_from_delivered_drive_card_no_local_artwork",
+  "provenance": {
+    "kind": "observed_from_delivered_drive_card",
+    "driveFileId": "1eL4ps8zuYz3xswUgMmt2RKtvVquoxZ3L",
+    "driveParentId": "1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up",
+    "driveBytes": 146518,
+    "driveMd5": "85d67ac535df2bfe84531395e9240183",
+    "driveSha256": "8514f600e80f38b007f4435e97bc9108883f9c17acfb3ecfa6bb201b3375d36f",
+    "decodedSize": [
+      1024,
+      1536
+    ],
+    "decodedFormat": "AVIF",
+    "verifiedAt": "2026-11-12",
+    "verifiedHow": "Downloaded the delivered AVIF, decoded it, read the whole card and each feature circle, and sampled the map at country level against Natural Earth 110m geometry.",
+    "notVerified": "This spec is NOT the original production spec. The original artwork (pixel.png/features.png/comparison assets) and the crop coordinates are not in Git and were not available, so featureCrops are deliberately absent rather than invented. Nothing here can regenerate or overwrite the delivered file.",
+    "neverUpload": true
+  },
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "delivered card main image: adult, sexes similar (no male-specific plumage claimed)",
+  "similarSpecies": [
+    {
+      "zh": "中華斑嘴鴨",
+      "scientificName": "Anas zonorhyncha",
+      "asset": null,
+      "observedLabelOnCard": "中華斑嘴鴨",
+      "distinction": "東亞種：較寬的淡色眉紋、面頰有暗色橫斑、下體較淡；本種體型稍小、體態較單薄。"
+    },
+    {
+      "zh": "綠頭鴨（雌）",
+      "scientificName": "Anas platyrhynchos",
+      "asset": null,
+      "observedLabelOnCard": "綠頭鴨（雌）",
+      "distinction": "雌鳥橙喙帶黑、深色眼紋直達嘴基；本種喙黑而先端寬黃，臉部淡褐對比深色頭頂。"
+    }
+  ],
+  "featureCropsUnavailable": true,
+  "featureNotes": [
+    "嘴基至嘴端：灰黑喙、先端大塊黃斑及黑色嘴甲（卡上第1圈實際可見）。",
+    "淡褐面部、深色頭頂與深色眼紋對比（第2圈實際可見）。",
+    "白色三級飛羽與三級覆羽，深色翼上現出綠色翼鏡（第3圈實際可見；屬折翼狀態，不代表飛行時翼下）。",
+    "淡褐色具深色羽心的胸羽（第4圈實際可見）。"
+  ],
+  "featureLabels": [
+    "頭喙",
+    "面部",
+    "白色翼羽",
+    "胸羽"
+  ],
+  "featureCropsNote": "original crop coordinates unknown; do not fabricate",
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "PAK",
+      "NPL",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN"
+    ],
+    "countryIso3Basis": "Observed on the delivered card (>=0.5 green coverage after masking with Natural Earth 110m geometry): CHN, IND, NPL, MMR, KHM; partial coverage also on LAO, THA, VNM. PHL/CUB/TWN/KOR/NPL are too small at this scale to score reliably and were not claimed.",
+    "note": "Country-level overview only. Source text places the core range from India east through Myanmar to Indochina and southwest China; Hong Kong records were erratic and none since 2012, so HK is not treated as native here.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002000",
+      "use": "HKBWS substantive identification/range/conservation read: 58-63cm, dark crown and eye stripe, broad yellow bill tip with black tip, white tertials and white-tipped greater coverts, white underwing coverts and blue/green speculum in flight; A.p. haringtoni in east Assam/Myanmar/Indochina/south China; LC, decreasing. HK: previously scarce resident, no certain records since 25 Aug 2012, not a current native population."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002100",
+      "use": "Eastern Spot-billed Duck comparison: pale supercilium, dark bar at bill base, bluish/greenish speculum."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002200",
+      "use": "Mallard female comparison: orange bill with black, dark eye stripe to bill base."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime name 印緬斑嘴鴨 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Anas poecilorhyncha unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six scores unchanged (i2 a3.8 v4.4 r1 c1.2 o2.5)."
+    }
+  ],
+  "notes": [
+    "This record was rebuilt on 2026-11-12 from the delivered Drive card only, to close the missing-JSON gap without inventing crops.",
+    "No new artwork was generated, nothing was re-rendered and nothing was uploaded or overwritten for 0041.",
+    "AI artwork on the delivered card was only visually reviewed, never validated by an independent ornithologist.",
+    "Comparison circles are not to scale; the map is a country overview, not an occurrence polygon.",
+    "Folded-wing crop shows tertials/speculum only; it does not demonstrate flight underwing pattern."
+  ],
+  "featureLabelsNote": "Labels as they appear on the delivered card, checked against the circle contents.",
+  "runtimeScoresObserved": {
+    "i": 2,
+    "a": 3.8,
+    "v": 4.4,
+    "r": 1,
+    "c": 1.2,
+    "o": 2.5
+  },
+  "runtimeScoreAuthority": "src/data/dexScores.json (unchanged); absent keys remain 待查 on the delivered card and were not filled in."
+}

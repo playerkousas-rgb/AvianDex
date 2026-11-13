@@ -36,7 +36,7 @@ const scoreOf = (id: string): ScoreRec | undefined => DEX_SCORES[id];
 import { PokedexTabs, type PokedexPage } from './PokedexTabs';
 import type { GuideKind } from './FieldGuideModal';
 import { ENTRIES, type Lang } from '../lib/explorer';
-import { hasInfoCard } from '../lib/infoCards';
+import { canFlipInfoCard } from '../lib/infoCards';
 
 // 捕精靈 App（BIRD-DEX 2）網址
 const BIRDDEX2_URL = 'https://skw-birdex2.vercel.app';
@@ -212,8 +212,9 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
   // 資訊圖卡（翻轉面）：只有用戶真的翻開才探測，避免 569 次 404
   const infoImage = useInfoCard(currentBird?.id ?? '0001');
   const [screenFlipped, setScreenFlipped] = useState(false);
-  /* 只有「真的有資訊圖卡」的鳥才可翻轉；沒有就只看插畫，不出翻轉掣、不出文字簡版。 */
-  const canFlip = hasInfoCard(currentBird?.id);
+  /* 有圖就給翻（含已上載 R2 但 infoCards.json 未登記的卡）；
+     真的沒有圖時，翻開後背面會說明「未上載」，不會造假資料。 */
+  const canFlip = canFlipInfoCard(currentBird?.id);
   const toggleFlip = () => { if (canFlip) setScreenFlipped((v) => !v); };
 
   const probeInfoCard = infoImage.probe;

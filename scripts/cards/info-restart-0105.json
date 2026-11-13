@@ -1,0 +1,141 @@
+{
+  "id": "0105",
+  "name": "灰腳秧雞",
+  "scientificName": "Rallina eurizonoides",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Rallina eurizonoides adult (R. e. telmatophila); sexes alike in the source text",
+  "similarSpecies": [
+    {
+      "zh": "紅胸田雞",
+      "scientificName": "Zapornia fusca",
+      "asset": "ruddy-breasted-crake.png",
+      "framing": "whole-bird",
+      "distinction": "體型更小、尾更短；栗紅只集中於頭胸，脅部黑白橫斑較粗且整體色調更暖；嘴較短。"
+    },
+    {
+      "zh": "斑脇田雞",
+      "scientificName": "Zapornia paykullii",
+      "asset": "band-bellied-crake.png",
+      "framing": "whole-bird",
+      "distinction": "上體較深冷褐、栗色下體範圍更大而脅部橫斑較少；腳橙紅、嘴帶綠，本種則腳暗石板灰、嘴黑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1107,
+      0.0391,
+      0.3516,
+      0.4004
+    ],
+    [
+      0.3385,
+      0.4199,
+      0.5794,
+      0.7812
+    ],
+    [
+      0.72,
+      0.38,
+      0.92,
+      0.68
+    ],
+    [
+      0.4401,
+      0.6865,
+      0.64,
+      0.9863
+    ]
+  ],
+  "featureLabels": [
+    "栗紅頭胸",
+    "黑白腹橫斑",
+    "橄欖褐翼",
+    "暗灰長腳"
+  ],
+  "featureNotes": [
+    "栗紅頭、頸及胸，配黑色直嘴（第1圈實際可見）。",
+    "下胸至腹部粗黑白橫斑（第2圈實際可見）。",
+    "均勻橄欖褐背翼，無白斑（第3圈實際可見；折翼狀態，不代表飛行時翼下）。",
+    "暗石板灰長腿及長趾（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "BTN",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "CHN",
+      "TWN",
+      "JPN",
+      "LKA",
+      "IDN",
+      "MYS",
+      "PHL"
+    ],
+    "note": "Country overview only: source describes breeding from India/Nepal/Bhutan east to north Indochina, southeast China, Taiwan and the Ryukyus, wintering south to Sri Lanka, Sumatra and the Malay Peninsula, and resident in the Philippines, Sulawesi and Sula. Seasons are not separated on the card.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008400",
+      "use": "HKBWS substantive identification/range/conservation read: 21-25cm, chestnut head and breast, uniform olive-brown upperparts without white bars or spots on wing coverts, bold black-and-white bars from lower breast to vent, dark bill, dark slaty legs; India/Nepal/Bhutan to N Indochina, SE China, Taiwan and Ryukyus; LC stable; R.e. telmatophila incl. HK."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008000",
+      "use": "Ruddy-breasted Crake comparison text."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008100",
+      "use": "Band-bellied Crake comparison text (darker colder-brown upperparts, more chestnut below, paler orange-toned red legs, greenish bill)."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime name 灰腳秧雞 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Rallina eurizonoides unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six scores unchanged; vEst=1 note retained."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap retained; highlighting is a partial country overview, not a complete global range.",
+    "HK is a fairly common breeding summer visitor; that local status is not presented as a global trend.",
+    "Sexes are not separated on this card; the deliverable shows one adult plumage, not a sex-specific one."
+  ]
+}

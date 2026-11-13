@@ -1,0 +1,169 @@
+{
+  "id": "0120",
+  "name": "蒙古沙鴴",
+  "scientificName": "Anarhynchus mongolus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "EN",
+    "zh": "瀕危"
+  },
+  "illustrationTaxon": "Anarhynchus mongolus adult male in breeding plumage: fairly dark cold grey-brown upperparts, extensively white forehead, broad cinnamon breast band with a narrow blackish border below the white throat, white belly, irregular dull cinnamon and greyish mottling on the mid to lower flanks, short stubby black bill with a slightly swollen distal half, short olive-grey legs. Non-breeding and juvenile plumage (colder darker upperparts, greyish flank mottling, breast patches often meeting in the centre) is not shown. Two subspecies, the nominate and A. m. stegmanni.",
+  "similarSpecies": [
+    {
+      "zh": "鐵嘴沙鴴",
+      "scientificName": "Anarhynchus leschenaultii",
+      "asset": "greater-sand-plover.png",
+      "framing": "whole-bird",
+      "distinction": "體型較大而腳較長、嘴較長且基部較深而先端較粗鈍、眼較大、上體較淡沙褐；本種較小較緊湊、嘴較短較粗、眼較小、腳較短而偏灰綠。"
+    },
+    {
+      "zh": "青藏沙鴴",
+      "scientificName": "Anarhynchus atrifrons",
+      "asset": "tibetan-sand-plover.png",
+      "framing": "whole-bird",
+      "distinction": "上體較暖較淡的沙褐色、耳羽較淡令白額及白喉對比不強、胸側黑斑多數分離不連接；本種上體較冷較深、耳羽深、白額及白喉對比明顯、胸斑常在中間相接。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2811,
+      0.3188,
+      0.64,
+      0.9564
+    ],
+    [
+      0.5144,
+      0.2444,
+      0.7775,
+      0.712
+    ],
+    [
+      0.5144,
+      0.5526,
+      0.7536,
+      0.9777
+    ],
+    [
+      0.3815,
+      0.5729,
+      0.707,
+      0.8984
+    ]
+  ],
+  "featureLabels": [
+    "粗短黑嘴",
+    "白額深耳羽",
+    "栗紅胸帶",
+    "灰綠短腳"
+  ],
+  "featureNotes": [
+    "嘴短而粗、先端略脹而鈍，基部不如鐵嘴沙鴴深；這是把兩種沙鴴分開的第一個結構特徵（第1圈取自頭部特寫，實際可見）。",
+    "額頭大面積白色，配深色耳羽，令白額與白喉的對比特別明顯；眼亦比鐵嘴沙鴴小（第2圈取自頭部特寫，實際可見；非繁殖羽及幼鳥上體較冷、胸斑較散）。",
+    "繁殖羽胸前有寬闊的栗紅色橫帶，下緣另有一道窄黑邊把它與白喉分開（第3圈取自全身圖，實際可見；冬羽只有胸側斑塊，本圖示雄鳥繁殖羽）。",
+    "腳短而呈灰綠至橄欖色，脛跗明顯比鐵嘴沙鴴短（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "MNG",
+      "KAZ",
+      "JPN",
+      "KOR",
+      "PRK",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "TWN",
+      "PAK",
+      "IRN",
+      "AFG",
+      "LKA",
+      "ARE",
+      "OMN",
+      "YEM",
+      "SAU",
+      "QAT",
+      "KWT",
+      "IRQ",
+      "JOR",
+      "ISR",
+      "EGY",
+      "SDN",
+      "ERI",
+      "DJI",
+      "SOM",
+      "KEN",
+      "TZA",
+      "MOZ",
+      "ZAF",
+      "NAM",
+      "MDG",
+      "AUS",
+      "NZL",
+      "PNG"
+    ],
+    "note": "Country overview only: breeds in scattered areas of southeast and east Siberia from southern Chukotka and Kamchatka south to the Amur River floodplain; winters on coasts from eastern Africa through South and Southeast Asia to Australia. Nominate and A. m. stegmanni are recognised. Not an occurrence polygon and not split by season; the mapped countries combine breeding and wintering range."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/011000b",
+      "use": "HKBWS substantive identification/range/conservation read: Category I common passage migrant in spring and autumn, more numerous in spring, scarce winter visitor, mainly on Deep Bay intertidal mudflats; 18-21cm; separated from Greater Sand Plover by smaller size and neater proportions, less deeply-based bill with less swollen distal half and stubbier tip, smaller eye, shorter legs, mostly greyish legs and darker upperparts, more regular stop-start foraging; separated from Tibetan Sand Plover in non-breeding plumage by colder darker brown upperparts and ear coverts (making white forehead and throat more distinct), greyish flank mottling, more extensive breast patches often meeting in the centre, thicker stubbier bill, bulkier less elegant body and shorter more olive legs; breeding male has extensive cinnamon across the breast usually with a narrow blackish border below the throat, irregular dull cinnamon or greyish mottling on mid to lower flanks, fairly dark cold grey-brown upperparts and extensively white forehead; females have a narrower more broken breast band and browner ear coverts; flight call a trilling note similar to Greater Sand Plover; most records from Deep Bay with roosts at Mai Po and drained fish ponds, also Shui Hau, Sha Tau Kok, Ting Kok, Po Toi, Kai Tak and Chek Lap Kok; spring passage from early March peaking second half of April and petering out in the first week of June, autumn from the final week of July; highest spring counts 500 on 14 Apr 1991 and 300 on 30 Apr 1983, this century 281 on 12 Apr 2020 and 200 on 24 Apr 2003; highest autumn count this century 65 on 14 Oct 2018 against 255 on 15 Nov 1992 historically; up to 150 in Deep Bay in winter in the 1990s, highest since 30 on 13 Dec 2020; decline in spring and especially autumn numbers since the early 1990s; unlike Greater Sand Plover it does not favour crabs and targets worms and other invertebrates; breeds in scattered areas of southeast and east Siberia from southern Chukotka and Kamchatka to the Amur floodplain, two subspecies nominate and stegmanni; IUCN Endangered, steep decline from mudflat loss through reclamation and Spartina invasion."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080",
+      "use": "HKBWS family list confirming 011000b 蒙古沙鴴 alongside 011000a 青藏沙鴴 and 011100 鐵嘴沙鴴."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 蒙古沙鴴 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Anarhynchus mongolus, Charadriiformes/Charadriidae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores i2 a2.3 r4.8 c1.2 o2.6; adaptability, viewing and overall absent stay 待查, no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對嘴形與粗短程度、白額與深耳羽、栗紅胸帶及腳色；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例；鐵嘴沙鴴與青藏沙鴴在香港都有紀錄，但卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 瀕危、全球急速下降（泥灘被填海及互花米草入侵）；香港屬春季常見、秋季及冬季稀少的過境鳥，本地數量自 1990 年代亦見下降。",
+    "只交付 aviandex/0120.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

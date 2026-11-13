@@ -1,0 +1,123 @@
+{
+  "id": "0109",
+  "name": "白鶴",
+  "scientificName": "Leucogeranus leucogeranus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "CR",
+    "zh": "極危"
+  },
+  "illustrationTaxon": "Leucogeranus leucogeranus adult; monotypic per source. Juvenile is extensively ginger on head/neck/upperparts and not shown here.",
+  "similarSpecies": [
+    {
+      "zh": "灰鶴",
+      "scientificName": "Grus grus",
+      "asset": "common-crane.png",
+      "framing": "whole-bird",
+      "distinction": "體羽灰色而非全白；頭頸黑色、頸側有白紋，頭頂紅斑小；嘴偏黃。本種成鳥全身白、臉部大片紅色裸皮。"
+    },
+    {
+      "zh": "丹頂鶴",
+      "scientificName": "Grus japonensis",
+      "asset": "red-crowned-crane.png",
+      "framing": "whole-bird",
+      "distinction": "同為白色身體，但頸及三級飛羽黑色、形成明顯黑色尾塊，頭頂紅斑只限頭頂；本種無黑色尾塊，紅色在臉頰裸皮。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.4,
+      0.1,
+      0.58,
+      0.36
+    ],
+    [
+      0.19,
+      0.14,
+      0.47,
+      0.6
+    ],
+    [
+      0.62,
+      0.38,
+      0.94,
+      0.7
+    ],
+    [
+      0.46,
+      0.74,
+      0.74,
+      1.0
+    ]
+  ],
+  "featureLabels": [
+    "紅色面頰",
+    "淡粉長嘴",
+    "全白身羽",
+    "粉紅長腿"
+  ],
+  "featureNotes": [
+    "眼周至嘴基的大片紅色裸皮，白色頭頸形成對比（第1圈實際可見）。",
+    "細長嘴呈淡粉角質色、帶深色縱紋，嘴基接紅色裸皮；不是灰鶴的黃嘴（第2圈實際可見）。",
+    "全身白羽及折疊的白翼，看不到任何黑色翼尖（第3圈實際可見；折翼狀態，飛行時初級飛羽為黑色，本圈不代表飛行翼色）。",
+    "粉紅色長腿及長趾（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "IND",
+      "JPN",
+      "TWN"
+    ],
+    "note": "Country overview only: the only viable breeding population is in east-central Siberia and the only regular wintering area is along the middle Yangtze in China, mainly Poyang Lake; the species has also been recorded in Japan and Taiwan, and India is retained only as a former/historical wintering country. Seasons are not separated on the card."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/008800",
+      "use": "HKBWS substantive identification/range/conservation read: 140cm, adult at rest all-white apart from reddish face, bill base and legs; juveniles extensively ginger on head, neck, upperparts and primary coverts; in flight black primaries and upperwing lesser coverts; monotypic; only viable breeding population in east-central Siberia, regular wintering middle Yangtze (mainly Poyang Lake), also Japan and Taiwan; IUCN CRITICALLY ENDANGERED, decreasing."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 白鶴 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Leucogeranus leucogeranus, Gruiformes/Gruidae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six-axis scores, no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對羽色、嘴、臉部裸皮及腳顏色；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例，也不是完整鶴科鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 極危只代表全球評估，不代表香港常見程度；香港紀錄屬偶發。",
+    "只交付 aviandex/0109.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

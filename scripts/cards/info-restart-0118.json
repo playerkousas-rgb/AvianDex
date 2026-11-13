@@ -1,0 +1,171 @@
+{
+  "id": "0118",
+  "name": "太平洋金斑鴴",
+  "scientificName": "Pluvialis fulva",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Pluvialis fulva in non-breeding plumage: the smallest of the three Pluvialis species in Hong Kong; upperpart feathers dark with golden-buff or whitish notches around the edges, golden-buff wash to the head, a diffuse dark spot behind and below the eye and a moderately strong capped effect, underparts pale buff with whitish belly to undertail coverts, short black bill, long dark grey legs. Breeding plumage (extensive black below with a white forehead line running round the rear of the face and along the flanks) is not shown. The species is monotypic.",
+  "similarSpecies": [
+    {
+      "zh": "歐金鴴",
+      "scientificName": "Pluvialis apricaria",
+      "asset": "european-golden-plover.png",
+      "framing": "whole-bird",
+      "distinction": "體型較大而粗壯、頭較大、頸較長、腳較短；面部較素淨、沒有明顯深色帽狀對比；本種較纖細、頭較小、腳較長，面部金黃而頭頂深色形成對比。"
+    },
+    {
+      "zh": "灰頭麥雞",
+      "scientificName": "Vanellus cinereus",
+      "asset": "grey-headed-lapwing.png",
+      "framing": "whole-bird",
+      "distinction": "體型大得多、腳鮮黃而長、嘴黃而先端黑、灰胸下有粗黑胸帶；本種全身金黃斑駁、嘴腳皆黑、無胸帶。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2734,
+      0.4102,
+      0.5208,
+      0.7812
+    ],
+    [
+      0.4818,
+      0.1465,
+      0.7682,
+      0.5762
+    ],
+    [
+      0.3906,
+      0.4232,
+      0.6836,
+      0.6185
+    ],
+    [
+      0.4199,
+      0.6315,
+      0.7129,
+      0.8268
+    ]
+  ],
+  "featureLabels": [
+    "短黑嘴",
+    "深帽金面",
+    "金斑上體",
+    "暗灰長腿"
+  ],
+  "featureNotes": [
+    "短而尖的黑嘴，配合相對小的頭部，是與歐金鴴（嘴較粗長、頭較大）分別之一（第1圈取自頭部特寫，實際可見）。",
+    "面部帶金黃色渲染，頭頂及眼後深色形成中等程度的「帽狀」效果，眼後下方另有一團擴散的深色斑（第2圈取自頭部特寫，實際可見；繁殖羽整個面部及下體轉黑，本圖示非繁殖羽）。",
+    "上體每片羽毛中央深色、羽緣帶金黃至淡白缺口斑，形成密集的金黃點斑（第3圈取自全身圖，實際可見；腋羽及內翼下覆羽灰色而非黑色，是與灰斑鴴的分別之一，插圖為折翼狀態，本圈不代表飛行翼色）。",
+    "腳長而呈暗灰至近黑色，脛跗細長；本種比歐金鴴腳更長、體態更纖細（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "USA",
+      "CAN",
+      "EGY",
+      "SDN",
+      "ERI",
+      "DJI",
+      "SOM",
+      "KEN",
+      "TZA",
+      "MOZ",
+      "ZAF",
+      "NAM",
+      "MDG",
+      "SAU",
+      "YEM",
+      "OMN",
+      "ARE",
+      "QAT",
+      "KWT",
+      "IRN",
+      "IRQ",
+      "PAK",
+      "IND",
+      "LKA",
+      "BGD",
+      "MMR",
+      "THA",
+      "MYS",
+      "BRN",
+      "IDN",
+      "TLS",
+      "PHL",
+      "VNM",
+      "KHM",
+      "LAO",
+      "CHN",
+      "TWN",
+      "JPN",
+      "KOR",
+      "PRK",
+      "MNG",
+      "AUS",
+      "NZL",
+      "PNG",
+      "FJI",
+      "SLB",
+      "VUT",
+      "NCL"
+    ],
+    "note": "Country overview only: monotypic. Breeds across the northern Siberian tundra from the Yamal Peninsula east to the Bering Sea and western Alaska, and south to Kamchatka and Magadan; winters along a large swathe of coast from East Africa through India, South China and Southeast Asia to Indonesia and Australasia. In China a migrant through the eastern half of the country and northern Xinjiang, wintering on southern coasts including Hainan and Taiwan. Not an occurrence polygon and not split by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010300",
+      "use": "HKBWS substantive identification/range/conservation read: Category I common passage migrant and abundant winter visitor; 21-25cm, smallest of the three Pluvialis in HK; upperpart feathers dark with golden-buff or whitish notches, axillaries and inner underwing greyish; breeding plumage extensively black below with buff or white forehead becoming white round rear of face and along flanks; autumn and early-winter adults and first calendar-year birds less complex above and without clear streaks or bars below; non-breeding notably brighter and less grey than Grey Plover; underparts pale buff with whitish belly to undertail, golden-buff wash to head, diffuse dark spot behind and below the eye, moderately strong capped effect, juveniles with notched neat upperpart feathers and brownish chest streaks; flight call a sharply downslurred 'tluuee'; great majority of records on Deep Bay intertidal mudflats with roosts at Mai Po and fish ponds, also Kai Tak and Chek Lap Kok grass, highest away from northern NT 200 at Shuen Wan 10 Sep 2002; common in both spring and autumn, peak spring last three weeks of April, autumn peak in October; wintering flock in Deep Bay 400+ since 2007/08, highest winter count 853 on 24 Jan 2011, highest ever 900 on 13 Apr 1992; monotypic, breeds northern Siberia tundra Yamal to Bering Sea and western Alaska south to Kamchatka and Magadan, winters East Africa through India, south China and southeast Asia to Indonesia and Australasia; China migrant through eastern half and northern Xinjiang, wintering southern coasts including Hainan and Taiwan; IUCN Least Concern, decreasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080",
+      "use": "HKBWS family list confirming 010300 太平洋金斑鴴 alongside 010200 歐金鴴 and 010400 灰斑鴴."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 太平洋金斑鴴 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Pluvialis fulva, Charadriiformes/Charadriidae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six-axis scores i2 a3.8 v3.8 r4.8 c3 o3.5 and vEst, no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對嘴形、金黃面部與深色帽狀對比、上體金斑及暗灰長腳；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例；歐金鴴與灰頭麥雞在香港都屬偶然或稀少紀錄，太平洋金斑鴴則是常見過境及大量越冬鳥，卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危但全球趨勢下降；香港則是后海灣常見過境鳥及數量可達數百的越冬鳥，2011-01-24 錄得 853 隻，兩者並不矛盾。",
+    "只交付 aviandex/0118.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": "0042",
+  "name": "中華斑嘴鴨",
+  "scientificName": "Anas zonorhyncha",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "observed_from_delivered_drive_card_no_local_artwork",
+  "provenance": {
+    "kind": "observed_from_delivered_drive_card",
+    "driveFileId": "1xmoyeaLKIcgLSxTbDHw-eqTK2aJcnklO",
+    "driveParentId": "1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up",
+    "driveBytes": 142514,
+    "driveMd5": "b31ae9c99943a2c28cb10d8592f94206",
+    "driveSha256": "84f060effe9e03f2ec1d6c11c4f9809ec2ca45716699117e59ed4a56b6ac2abf",
+    "decodedSize": [
+      1024,
+      1536
+    ],
+    "decodedFormat": "AVIF",
+    "verifiedAt": "2026-11-12",
+    "verifiedHow": "Downloaded the delivered AVIF, decoded it, read the whole card and each feature circle, and sampled the map at country level against Natural Earth 110m geometry.",
+    "notVerified": "This spec is NOT the original production spec. The original artwork and crop coordinates are not in Git and were not available, so featureCrops are deliberately absent rather than invented. Nothing here can regenerate or overwrite the delivered file.",
+    "neverUpload": true
+  },
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "delivered card main image: adult of the monotypic eastern species; female differs only by size and duller colouration",
+  "similarSpecies": [
+    {
+      "zh": "印緬斑嘴鴨",
+      "scientificName": "Anas poecilorhyncha",
+      "asset": null,
+      "observedLabelOnCard": "印緬斑嘴鴨",
+      "distinction": "南亞／印支種：眉紋較窄、面頰無粗暗斑，下體較深；體型亦略小。"
+    },
+    {
+      "zh": "綠頭鴨（雌）",
+      "scientificName": "Anas platyrhynchos",
+      "asset": null,
+      "observedLabelOnCard": "綠頭鴨（雌）",
+      "distinction": "雌鳥橙喙帶黑、無黃嘴尖；本種喙黑配黃端。"
+    }
+  ],
+  "featureCropsUnavailable": true,
+  "featureLabels": [
+    "黃端黑喙",
+    "冠及眼紋",
+    "翼鏡及羽緣",
+    "胸羽"
+  ],
+  "featureLabelsNote": "Labels as they appear on the delivered card, checked against the circle contents.",
+  "featureNotes": [
+    "灰黑喙而先端大塊鮮黃（第1圈實際可見）。",
+    "淡色眉紋、深色頭頂與深色眼紋，嘴基有暗色橫斑（第2圈實際可見）。",
+    "折翼狀態下可見綠藍色翼鏡及淡色羽緣（第3圈實際可見；不代表飛行時翼下）。",
+    "淡褐色胸羽具深色羽心（第4圈實際可見）。"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "CHN",
+      "RUS",
+      "MNG",
+      "VNM",
+      "PRK",
+      "JPN",
+      "KOR"
+    ],
+    "countryIso3Basis": "Observed on the delivered card: CHN/RUS/MNG solid green; VNM/PRK/JPN partial; KOR traced only. The source range (breeds Lake Baikal SE through eastern Mongolia to Ussuriland, Sakhalin, Hokkaido and northern China; winters Japan/Korea to south China incl Taiwan and northern Indochina) is consistent with this, but the card marks countries, not seasonal areas.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002100",
+      "use": "HKBWS substantive identification/range/conservation read: pale supercilium, dark eye stripe, dark bar at bill base, bright yellow bill tip, white tertial edges, bluish/greenish speculum bordered white; monotypic; LC decreasing; HK winter visitor much declined."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002000",
+      "use": "Indian Spot-billed Duck comparison text."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002200",
+      "use": "Mallard female comparison text."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime name 中華斑嘴鴨 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Anas zonorhyncha unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six scores unchanged (i2 a2.3 v4.4 r3.3 c1.2 o2.6)."
+    }
+  ],
+  "notes": [
+    "Rebuilt on 2026-11-12 from the delivered Drive card only, to close the missing-JSON gap without inventing crops.",
+    "No new artwork, rendering, upload or overwrite was performed for 0042.",
+    "AI artwork on the delivered card was only visually reviewed, never validated by an independent ornithologist.",
+    "Comparison circles are not to scale; the map is a country overview, not an occurrence polygon.",
+    "HK status in the source is a scarce winter visitor much declined since the mid-1990s; that local trend is not presented as the global IUCN trend."
+  ],
+  "runtimeScoresObserved": {
+    "i": 2,
+    "a": 2.3,
+    "v": 4.4,
+    "r": 3.3,
+    "c": 1.2,
+    "o": 2.6
+  },
+  "runtimeScoreAuthority": "src/data/dexScores.json (unchanged); absent keys remain 待查 on the delivered card and were not filled in."
+}

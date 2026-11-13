@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Loader2, RotateCw, Maximize2 } from 'lucide-react';
 import type { Lang } from '../lib/explorer';
 import { useCardImage, useInfoCard } from '../hooks/useCardImage';
-import { hasInfoCard } from '../lib/infoCards';
+import { canFlipInfoCard } from '../lib/infoCards';
 import { BirdSilhouette } from './BirdSilhouette';
 import type { Bird } from '../types';
 
@@ -45,8 +45,9 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, onOpen
 
   const [flipped, setFlipped] = React.useState(false);
   const [artReady, setArtReady] = React.useState(false);
-  /* 只有名單內（真的做過資訊圖卡）的鳥才有翻轉掣；其餘只看插畫 */
-  const canFlip = hasInfoCard(bird.id);
+  /* 有圖就給翻：已上載但未登記的卡（例如 0022–0100）一樣要有翻轉掣，
+     否則連「這張卡在不在」都無從檢查。真的沒有圖時翻開會自認沒有。 */
+  const canFlip = canFlipInfoCard(bird.id);
 
   /* 翻開才去載入資訊圖卡（名單內的才會走到這裡，不會有 404 風暴） */
   React.useEffect(() => {
@@ -155,8 +156,11 @@ export const FlipCard: React.FC<FlipCardProps> = ({ bird, lang, isActive, onOpen
                 className="w-full h-full object-contain bg-[#f7f4ea]"
               />
             ) : info.status === 'missing' || info.status === 'error' ? (
-              <div className="absolute inset-0 flex items-center justify-center text-white/40 text-[10px]">
-                {t('資訊圖卡暫時讀不到', 'Info card unavailable')}
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 px-2 text-center text-white/45 text-[10px]">
+                <span>{info.status === 'missing'
+                  ? t('這張卡還未上載資訊圖卡', 'No info card uploaded yet')
+                  : t('資訊圖卡暫時讀不到', 'Info card unavailable')}</span>
+                <span className="text-white/25">NO.{bird.id}</span>
               </div>
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">

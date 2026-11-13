@@ -1,0 +1,194 @@
+{
+  "id": "0112",
+  "name": "黑翅長腳鷸",
+  "scientificName": "Himantopus himantopus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Himantopus himantopus adult male: uniform glossy black mantle, wings and hindneck with pure white face, underparts and tail. Female averages browner mantle and less black on the head; juvenile is brown above with pale feather fringes and duller legs. Neither is shown here.",
+  "similarSpecies": [
+    {
+      "zh": "反嘴鷸",
+      "scientificName": "Recurvirostra avosetta",
+      "asset": "pied-avocet.png",
+      "framing": "whole-bird",
+      "distinction": "嘴明顯向上彎、腳較短且淡藍灰並有蹼；本種嘴長而筆直、腳極長且粉紅。兩者都是黑白相間，但反嘴鷸身體以白為主、黑只在頭頂後頸及翼斑。"
+    },
+    {
+      "zh": "蠣鷸",
+      "scientificName": "Haematopus ostralegus",
+      "asset": "eurasian-oystercatcher.png",
+      "framing": "whole-bird",
+      "distinction": "體型粗壯、嘴粗厚橙紅、腳短而粉紅；本種身形修長、嘴細直黑、腳極長。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.3,
+      0.1,
+      0.6,
+      0.56
+    ],
+    [
+      0.44,
+      0.04,
+      0.76,
+      0.5
+    ],
+    [
+      0.4,
+      0.28,
+      0.78,
+      0.54
+    ],
+    [
+      0.26,
+      0.45,
+      0.7,
+      0.93
+    ]
+  ],
+  "featureLabels": [
+    "長直細喙",
+    "黑冠白臉",
+    "黑白翼背",
+    "粉紅長腿"
+  ],
+  "featureNotes": [
+    "細長而筆直的黑色嘴，配鮮紅色的眼及白色臉（第1圈取自頭部特寫，實際可見）。",
+    "頭頂至後頸黑色，臉及頸側白色；雄鳥黑色部分較多，雌鳥平均較少（第2圈實際可見）。",
+    "背及翼上為有光澤的黑色，與純白下體形成高對比（第3圈取自全身圖，實際可見；插圖為折翼狀態，飛行時翼下亦偏黑並有白色後緣，本圈不代表飛行翼斑）。",
+    "極長的粉紅至橙紅色腳，遠長於體長，脛跗關節明顯（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PRT",
+      "ESP",
+      "FRA",
+      "ITA",
+      "GRC",
+      "BGR",
+      "ROU",
+      "HUN",
+      "SRB",
+      "HRV",
+      "POL",
+      "DEU",
+      "NLD",
+      "BEL",
+      "TUR",
+      "SYR",
+      "ISR",
+      "JOR",
+      "IRQ",
+      "SAU",
+      "ARE",
+      "OMN",
+      "YEM",
+      "IRN",
+      "AFG",
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "LKA",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "RUS",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "EGY",
+      "MLI",
+      "NER",
+      "TCD",
+      "SDN",
+      "ETH",
+      "SOM",
+      "KEN",
+      "TZA",
+      "COD",
+      "ZMB",
+      "ZWE",
+      "MOZ",
+      "ZAF",
+      "NAM",
+      "BWA",
+      "AGO",
+      "NGA",
+      "CMR",
+      "SEN",
+      "MRT"
+    ],
+    "note": "Country overview only: source describes a very wide Eurasian and African range from the Atlantic to the Pacific, including southern Europe, scattered parts of Africa (especially the south), the Middle East, the Indian subcontinent, Central Asia, Indochina, Mongolia, China, Japan and the Philippines. Not an occurrence polygon and not split by season; in China it is a summer visitor in the northwest and northeast, a migrant elsewhere and a winter visitor in the south."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/009800",
+      "use": "HKBWS substantive identification/range/conservation read: 33-36cm excluding legs; extremely long dull orange to pink legs, medium-length fine bill, long wings; all plumages white underparts with dark wings and upperparts; head pattern variable, males blacker, females brown-tinged mantle; juvenile brown above with pale fringes and dull legs; monotypic though taxonomy debated; very wide Eurasian range with China summer/migrant/winter split; IUCN LC, increasing; Hong Kong common to abundant with small breeding numbers since 2003, peak 612 on 11 Nov 2008."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080",
+      "use": "HKBWS family list for neighbouring cards (反嘴鷸 009900, 蠣鷸 009700)."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 黑翅長腳鷸 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Himantopus himantopus."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six-axis scores, no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對黑白分佈、嘴形、眼紅色及腳色；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例；反嘴鷸與蠣鷸在香港均有紀錄，但卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危且趨勢上升；香港屬常見越冬及過境鳥，2003 年起有繁殖紀錄，本地興旺不代表全球狀況。",
+    "只交付 aviandex/0112.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
