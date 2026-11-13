@@ -1037,3 +1037,18 @@ parent全 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。top-level uploaded_drive_verifie
 - 尚未生成：`features.png`（頭／上翹嘴特寫）及比較鳥 **翹嘴鷸**（Terek Sandpiper，另一種上翹嘴但體型細小的鷸）。本回合 image generation 已達 10 張上限，兩個檔案不存在，因此**沒有寫 spec、沒有渲染、沒有上載 0113**，也沒有用 `pixel.png` 冒充特寫圈或憑空重建比較鳥。
 - 已預備：`cards/art/info-restart-0113/black-winged-stilt.png`（由 0112 全身圖複製，作比較鳥用）及 `countries.geojson`。
 - 下一回合先補 `features.png` 與 `terek-sandpiper.png`，再依第 4 步用圓形遮罩定四圈（草擬方向：上翹長嘴／黑冠白頸／黑白翼帶／藍灰長腳連蹼趾），然後渲染、讀整卡與四圈、上載。runtime 六分：i2 a3.3 v2.9 r3.3 c3 o2.9；IUCN **LC 無危**，趨勢未知；香港為 Deep Bay 大量越冬鳥（2008-01-13 最高 16,123 隻，2012/13 後少於一半，仍屬 Category I）。
+
+## 0113 反嘴鷸 已完成並上載（下一張 0114 蠣鷸）
+
+上一回合因生圖額度停在半途的 0113，本回合補齊素材後完成。HKBWS 0080/009900 內文（42–45cm、黑白羽色配長而上翹細嘴、淡藍灰腳、雄鳥嘴較長較直、雌鳥頭部花紋較淡、幼鳥褐色；單型；西歐經黑海裏海至哈薩克、南西伯利亞、蒙古及中國繁殖，南歐／北非中非／中東／西南亞／華南越冬，東南非留鳥或遊蕩；IUCN **LC 無危**、趨勢未知；香港 Deep Bay 大量越冬鳥，2008-01-13 最高 16,123 隻，2012/13 後少於一半）。
+
+- **素材**：`pixel.png`（全身圖，上翹嘴、黑冠黑後頸、翼上兩道黑帶、藍灰蹼足）與 `features.png`（頭／上翹嘴特寫）均已生成並**逐張讀圖**核對；比較鳥 黑翅長腳鷸（沿用 0112 全身圖）與新畫的 翹嘴鷸（另一種上翹嘴的小型鷸）。
+- **四圈反覆修正**：「上翹長喙」最難框——圓形裁切要求近正方形，初版用橫向長條框結果只剩一條黑線，多次以 200px 圓形遮罩測試後定為 `[0.1337,0.0818,0.6312,0.8998]`（取 `features.png` 上翹嘴的中段至嘴尖），現在圈內可清楚看到向上彎的黑嘴。「黑冠白頸」取頭頸直向特寫；「黑白翼帶」取全身圖折翼兩道黑帶；「藍灰長腳」取全身圖兩腿連脛跗關節。
+- **地圖**：世界底圖 + 78 個部分分佈國家（歐洲、中亞、俄蒙、中國、中東、非洲、南亞、東南亞），並在 note 說明繁殖地與越冬地不分工。
+- **驗證**：AVIF 解碼 1024×1536；bytes 127621、MD5 `6a05265444ca346862bbcbc016b8267b`、SHA256 `f8b67aed343e75b03c25c1df7e6a4494f5390d048d1aa19b99e03c29ac5e1f6a`，manifest／SHA256SUMS 一致，`manifest.spec` == `scripts/cards/info-restart-0113.json`，`missingScores` 空；地圖綠色像素 10370；`test-slim-feature-label.py` 4 項通過；`git diff --check` 無問題。上載前 Drive 搜尋 `0113` 0 命中；上載後 parent `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD`，bytes／MD5 與本機一致，未覆寫或刪除既有卡。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0113.avif | 1zRy6bjYA4-HQ_tb-WuvoCDzL1TQ1P3e5 | 127621 | 6a05265444ca346862bbcbc016b8267b | f8b67aed343e75b03c25c1df7e6a4494f5390d048d1aa19b99e03c29ac5e1f6a |
+
+未改 UI／runtime／SW／R2／slim 註冊，無 ZIP。0038–0043 缺口狀態不變，0040 空地圖問題仍待用戶決定。下一張 0114 蠣鷸（HKBWS 0080/009700）。

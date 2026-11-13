@@ -1,0 +1,196 @@
+{
+  "id": "0113",
+  "name": "反嘴鷸",
+  "scientificName": "Recurvirostra avosetta",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Recurvirostra avosetta adult; monotypic. Male averages a longer, straighter bill; female head pattern can be less clear-cut. Juvenile is duller with brownish markings and sullied white areas, and is not shown here.",
+  "similarSpecies": [
+    {
+      "zh": "黑翅長腳鷸",
+      "scientificName": "Himantopus himantopus",
+      "asset": "black-winged-stilt.png",
+      "framing": "whole-bird",
+      "distinction": "嘴長而筆直（不向上翹）、腳極長粉紅；本種嘴明顯上翹、腳較短且淡藍灰有蹼。兩者同為黑白鴴形目，但嘴形是最直接分野。"
+    },
+    {
+      "zh": "翹嘴鷸",
+      "scientificName": "Xenus cinereus",
+      "asset": "terek-sandpiper.png",
+      "framing": "whole-bird",
+      "distinction": "體型細小的鷸，上體褐而有縱紋、腳短橙黃；本種體型大得多、羽色黑白分明、腳長而淡藍灰。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1337,
+      0.0818,
+      0.6312,
+      0.8998
+    ],
+    [
+      0.4042,
+      0.1227,
+      0.8396,
+      0.8384
+    ],
+    [
+      0.4434,
+      0.3158,
+      0.7493,
+      0.6217
+    ],
+    [
+      0.3685,
+      0.5534,
+      0.7591,
+      0.9049
+    ]
+  ],
+  "featureLabels": [
+    "上翹長喙",
+    "黑冠白頸",
+    "黑白翼帶",
+    "藍灰長腳"
+  ],
+  "featureNotes": [
+    "細長而末端明顯向上翹的黑色嘴，整條嘴由基部到尖端都入圈，向上彎的弧度清楚可見（第1圈取自頭部特寫，實際可見）。",
+    "頭頂及後頸黑色，臉、頰及前頸純白，黑白分界清楚（第2圈實際可見；雌鳥頭部花紋有時較淡）。",
+    "折翼上兩道寬黑帶與白色翼羽相間，形成明顯黑白條紋（第3圈取自全身圖，實際可見；插圖為折翼狀態，不代表飛行時的翼上翼下圖案）。",
+    "淡藍灰色長腳，脛跗關節明顯，趾間有蹼（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PRT",
+      "ESP",
+      "FRA",
+      "NLD",
+      "BEL",
+      "DEU",
+      "DNK",
+      "SWE",
+      "POL",
+      "CZE",
+      "AUT",
+      "HUN",
+      "ROU",
+      "BGR",
+      "GRC",
+      "ITA",
+      "TUR",
+      "UKR",
+      "RUS",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "IRN",
+      "IRQ",
+      "SYR",
+      "ISR",
+      "JOR",
+      "SAU",
+      "ARE",
+      "OMN",
+      "YEM",
+      "AFG",
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "VNM",
+      "KHM",
+      "EGY",
+      "LBY",
+      "TUN",
+      "DZA",
+      "MAR",
+      "MRT",
+      "MLI",
+      "NER",
+      "TCD",
+      "SDN",
+      "ETH",
+      "ERI",
+      "SOM",
+      "KEN",
+      "TZA",
+      "UGA",
+      "COD",
+      "ZMB",
+      "ZWE",
+      "MOZ",
+      "ZAF",
+      "NAM",
+      "BWA",
+      "AGO",
+      "NGA",
+      "GHA",
+      "SEN",
+      "CMR"
+    ],
+    "note": "Country overview only: source describes migratory populations breeding in scattered areas of western Europe east through the Black and Caspian Sea regions to Kazakhstan, southern Siberia, Mongolia and China, wintering in southern Europe, north and central Africa, locally the Middle East and southwest Asia, and more widely in south China; resident or nomadic in east and south Africa. Not an occurrence polygon and not split by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/009900",
+      "use": "HKBWS substantive identification/range/conservation read: 42-45cm; unique black-and-white pattern with long fine-tipped upturned bill and pale bluish-grey legs; male bill longer and slightly straighter, female head pattern sometimes less clear; juvenile dull brown with sullied white; monotypic; migratory populations breed western Europe east to Kazakhstan, southern Siberia, Mongolia and China, wintering southern Europe, north and central Africa, Middle East and southwest Asia, and south China, resident/nomadic in east and south Africa; IUCN LC, trend unknown; Hong Kong abundant winter visitor with peak 16123 on 13 Jan 2008, declines since 2012/13."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080",
+      "use": "HKBWS family list confirming 反嘴鷸 009900 and neighbouring 黑翅長腳鷸 009800."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 反嘴鷸 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Recurvirostra avosetta, Charadriiformes/Recurvirostridae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six-axis scores, no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對上翹嘴形、黑白分佈及腳色；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例；翹嘴鷸同為上翹嘴但體型細小得多，卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危但全球趨勢未知；香港屬大量越冬鳥，2008 年 1 月曾達 16,123 隻，2012/13 起回落至少於一半。",
+    "只交付 aviandex/0113.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
