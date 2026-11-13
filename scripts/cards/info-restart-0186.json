@@ -1,0 +1,85 @@
+{
+  "id": "0186",
+  "name": "紅嘴鷗",
+  "scientificName": "Chroicocephalus ridibundus",
+  "layout": "slim",
+  "size": [1024, 1536],
+  "status": "review_before_upload",
+  "iucn": { "code": "LC", "zh": "無危" },
+  "illustrationTaxon": "Chroicocephalus ridibundus: 37-43 cm, the commonest small gull in Hong Kong, separated in flight from all but the rare Slender-billed Gull by the white leading edge to the wing and black-tipped outer primaries. Adult in breeding plumage has a dark chocolate-brown hood (looking black at a distance) with a bold complete white eye ring, a deep red bill and deep red legs, pale grey upperparts and white neck, breast, belly and tail. Adult in non-breeding plumage has a white head with a blackish spot behind the eye and a tapered blackish streak reaching up from the eye, white tail, and duller orange-red bill and legs. First-years have dark brown tertials and median upperwing coverts, a broad blackish trailing edge to the wing in flight, and dull orange legs.",
+  "similarSpecies": [
+    {
+      "zh": "細嘴鷗",
+      "scientificName": "Chroicocephalus genei",
+      "asset": "slender-billed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "細嘴鷗（42–44 公分）**頭更小、前額更長更斜、嘴與腳都更長**，虹膜通常淡黃色，繁殖羽**沒有深褐頭罩**、只有很淡的耳斑；本種的頭較圓、嘴較短較粗、虹膜深色，繁殖羽有整頂深巧克力褐頭罩。兩者在冬季都是白頭，那時就靠嘴的長短與虹膜顏色分。"
+    },
+    {
+      "zh": "棕頭鷗",
+      "scientificName": "Chroicocephalus brunnicephalus",
+      "asset": "brown-headed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "棕頭鷗更大更壯（41–45 公分），嘴更深、頭相對更大、**虹膜淡色**，眼的上方與後方有明顯的白色新月斑；本種的頭罩一直包到後頸、白 eye-ring 完整一圈。飛行時棕頭鷗外側兩枚初級飛羽有**兩個大白斑**（mirrors），本種的黑色翼尖沒有這樣的白斑，只有翼前緣那道白邊。"
+    }
+  ],
+  "featureCrops": [
+    [0.630, 0.300, 0.900, 0.800],
+    [0.690, 0.135, 0.955, 0.495],
+    [0.470, 0.255, 0.655, 0.590],
+    [0.640, 0.430, 0.800, 0.650]
+  ],
+  "featureLabels": [
+    "深巧克力褐頭罩",
+    "完整一圈白眼環",
+    "深紅色的嘴",
+    "翼前緣的白邊"
+  ],
+  "featureNotes": [
+    "繁殖羽的頭罩是深巧克力褐，遠看像黑色，下緣乾淨地止於白色頸部；冬季這片褐色會消失，只剩眼後一塊黑斑（第1圈取自近景大頭圖，實際可見）。",
+    "眼圈是完整的一圈白，把深褐頭罩圍住；棕頭鷗的白新月只出現在眼的上方與後方，不像本種那樣圍成一整圈（第2圈取自近景大頭圖，實際可見）。",
+    "嘴是深紅色，短而結實、尖端略下彎；細嘴鷗的嘴更長更細、黑嘴鷗的嘴又短又厚又是黑的（第3圈取自近景大頭圖，實際可見）。",
+    "翼前緣有一道明顯的白邊，這是 HKBWS 用來在飛行中把本種與（幾乎所有）其他小鷗分開的特徵；配著黑色翼尖一起看（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": ["features.png", "features.png", "features.png", "pixel.png"],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [-180, -90, 180, 90],
+    "viewport": "world",
+    "countryIso3": ["ISL","IRL","GBR","NOR","SWE","FIN","RUS","POL","DEU","FRA","ESP","ITA","TUR","UKR","KAZ","MNG","CHN","JPN","KOR","IND","VNM","PHL","THA"]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016300",
+      "use": "HKBWS substantive read: Category I, abundant winter visitor mainly to the Deep Bay area and scarce to rare at other times; 37-43 cm, the commonest small gull in Hong Kong, separated in flight from all but the rare Slender-billed Gull by the white leading edge to the wing and black-tipped outer primaries; the adult in breeding plumage has a dark brown hood with a red bill and red legs and a bold white eye ring, the adult in non-breeding plumage has a white tail and a blackish spot behind and a tapered blackish streak reaching up from the eye; first-year birds have dark brown tertials and median upperwing coverts, a broad blackish trailing edge to the wing in flight and dull orange legs, and a dark terminal tail band; the call is a down-slurred drawn-out kreeeyah plus a krek when foraging; historically flocks of several hundred occurred at Deep Bay, Victoria Harbour, Tolo Harbour and Starling Inlet, with 2,000 in Victoria Harbour on 6 February 1972, and the wintering population shifted from Victoria Harbour to Deep Bay as sewage outfalls were re-sited; the roost in West Lamma Channel peaked at 6,500 on 23 January 1975, 10,470 on 26 January 1977 and 10,788 on 13 December 1977, and the wintering population was estimated at about 25,000 in 1977/78 and about 20,000 in the mid-1990s; winter counts in Deep Bay from 1996/97 to 2007/08 were generally 10,000-14,000 but the highest count since then is 7,000 on the HK side and 9,000 in the whole bay; it is monotypic, breeding from Iceland and more northerly Europe east through the Black and Caspian Seas, Kazakhstan, sub-Arctic Russia and northeast China to Sakhalin and Kamchatka; IUCN Least Concern with the population trend unknown."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016100",
+      "use": "HKBWS Slender-billed Gull page read as the first contrast species: 42-44 cm, similar to Black-headed Gull but structurally distinct due to a smaller head and longer forehead, bill, legs and neck, usually with a pale iris; lacks a dark hood in breeding plumage, when it has a pinkish wash to the underparts and darker red bill and legs, and has only a faint ear spot in winter; only six Hong Kong records, all in Deep Bay intertidal areas; IUCN Least Concern, trend unknown."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016200",
+      "use": "HKBWS Brown-headed Gull page read as the second contrast species: 41-45 cm, slightly larger and sturdier than Black-headed Gull with a deeper bill, relatively larger head, pale iris and more prominent white crescents around the eye; the adult in breeding plumage has a dark brown hood bordered black and slightly paler at the front, and in flight a distinctive black wingtip with two large mirrors in the outer two primaries; IUCN Least Concern with a stable trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 紅嘴鷗 Chroicocephalus ridibundus is Category I with no IUCN code (i.e. Least Concern); the neighbouring gulls 三趾鷗 Rissa tridactyla and 黑嘴鷗 Saundersilarus saundersi carry VU codes."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對深巧克力褐頭罩、完整一圈白眼環、深紅色的嘴、翼前緣的白邊。",
+    "畫的是**成鳥繁殖羽**（深褐頭罩＋白眼圈＋深紅嘴腳），這是野外最好認的一套；本種在香港主要是**冬候鳥**，冬季成鳥頭上是白的、只有眼後一塊黑斑與一條由眼向上延伸的黑紋，notes 與四圈說明都寫明這個差別。",
+    "全身圖與近景圖皆為本卡新繪（`pixel.png`、`features.png`）；比較鳥細嘴鷗沿用 0185 已核對的全身圖（複製為 `slender-billed-gull.png`），棕頭鷗為本卡新繪；兩者非等比例，只作外形對照。",
+    "身長：`cardDetails.zh.json` 寫 **37–44 cm**，HKBWS 量 **37–43 cm**；卡面照 app 資料顯示，notes 記下兩個數字。體重 `cardDetails` 沒有資料，故不填（依 0014／0053 前例，不以估算補上）。",
+    "app 分數：i 2.0／a 4.3／v 4.0／r 4.8／c 1.2／o 3.3，六軸齊全，無 `vEst`。",
+    "IUCN **無危 LC、趨勢不明**（HKBWS：population trend unknown；全球族群龐大）；香港卻是 **Category I 的常見冬候鳥**，主要在后海灣，其他時間少見至罕見——全球與香港狀態差異大，分開寫。",
+    "香港數字照 HKBWS 寫進 notes：1970 年代多處有數百隻（1972-02-06 維港 2,000 隻）；1977/78 冬季估計約 25,000 隻、1990 年代中期約 20,000 隻；西博寮海峽夜棲地 1975-01-23 6,500 隻、1977-01-26 10,470 隻、1977-12-13 10,788 隻；1996/97–2007/08 后海灣冬季計數多為 10,000–14,000 隻，之後最高只有港方 7,000 隻、全灣 9,000 隻。HKBWS 指出族群下降可能與污水處理改善、以及暖冬令鳥留在更北有關。",
+    "聲音照 HKBWS：飛行時常發出下墜而拖長的「kreeeyah」，覓食時則是「krek」。",
+    "地圖 23 個 ISO3：繁殖地從冰島、不列顛與北歐向東經黑海、裏海、哈薩克、西伯利亞與中國東北到庫頁島與堪察加；度冬沿海地區包括西歐、地中海、中東、印度、東南亞與東亞（最北到北海道）。綠色非全境。",
+    "只交付 aviandex/0186.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
