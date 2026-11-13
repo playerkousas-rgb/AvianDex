@@ -1,0 +1,215 @@
+{
+  "id": "0157",
+  "name": "扇尾沙錐",
+  "scientificName": "Gallinago gallinago",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Gallinago gallinago (nominate subspecies, which occupies most of the range including Hong Kong): 25-27 cm, medium-sized and long-billed with complex largely brown upperparts, a striped head with a whitish cheek stripe, barred flanks and a white belly and vent. It has a rather crouched posture when alert and is often flushed at fairly close range, flying away erratically and showing a narrow white trailing edge to the secondaries. Plumage is very similar across age and sex classes. Compared with Pin-tailed Snipe it is slimmer, has a relatively longer bill and tail, is usually richer brown overall and has a more obvious and contrasting white belly.",
+  "similarSpecies": [
+    {
+      "zh": "針尾沙錐",
+      "scientificName": "Gallinago stenura",
+      "asset": "pintail-snipe.png",
+      "framing": "whole-bird",
+      "distinction": "針尾沙錐整體較暗淡偏沙色、腰部較均勻、腹部白色對比不明顯、尾較短而腳趾伸出尾端更多；本種較纖細、嘴與尾較長、褐色較濃、腹部白色鮮明得多。"
+    },
+    {
+      "zh": "丘鷸",
+      "scientificName": "Scolopax rusticola",
+      "asset": "woodcock.png",
+      "framing": "whole-bird",
+      "distinction": "丘鷸體型大得多且矮胖如球、幾乎看不見頸、眼位高而偏後、背部是斑駁橫紋；本種明顯纖細、頸較長、背部有清楚淺色縱紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.58,
+      0.2,
+      0.92,
+      0.54
+    ],
+    [
+      0.5,
+      0.18,
+      0.72,
+      0.4
+    ],
+    [
+      0.44,
+      0.46,
+      0.68,
+      0.68
+    ],
+    [
+      0.26,
+      0.38,
+      0.5,
+      0.62
+    ]
+  ],
+  "featureLabels": [
+    "長而筆直的嘴",
+    "頭部縱紋與白頰",
+    "對比鮮明的白腹",
+    "背部淺色縱紋"
+  ],
+  "featureNotes": [
+    "嘴很長且筆直，是沙錐類的標誌；本種的嘴相對身體比針尾沙錐更長（第1圈取自全身圖，實際可見）。",
+    "頭頂有深淺相間的縱紋與中央淡色冠紋，下方一道白色頰紋把深色眼線與頰部隔開（第2圈取自全身圖，實際可見）。",
+    "腹部與尾下覆羽是乾淨的白色，與胸側的橫斑形成強烈對比——針尾沙錐的白色就沒這麼突出（第3圈取自全身圖，實際可見）。",
+    "背部有四道鮮明的淺色縱紋夾在深褐羽毛之間，與丘鷸的斑駁橫紋截然不同（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "ISL",
+      "DNK",
+      "GBR",
+      "IRL",
+      "NLD",
+      "BEL",
+      "DEU",
+      "POL",
+      "CZE",
+      "SVK",
+      "AUT",
+      "HUN",
+      "CHE",
+      "FRA",
+      "ESP",
+      "PRT",
+      "ITA",
+      "GRC",
+      "TUR",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "ROU",
+      "BGR",
+      "SRB",
+      "HRV",
+      "SVN",
+      "BIH",
+      "MNE",
+      "MKD",
+      "ALB",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "KGZ",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "IND",
+      "PAK",
+      "NPL",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "VNM",
+      "MYS",
+      "LAO",
+      "KHM",
+      "IDN",
+      "PHL",
+      "BRN",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "JOR",
+      "SYR",
+      "LBN",
+      "SAU",
+      "ARE",
+      "OMN",
+      "YEM",
+      "KWT",
+      "QAT",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "EGY",
+      "SDN",
+      "NGA",
+      "GHA",
+      "SEN",
+      "MRT",
+      "CIV",
+      "GIN",
+      "GMB",
+      "SLE",
+      "LBR",
+      "TGO",
+      "BEN",
+      "CMR",
+      "GAB",
+      "COG",
+      "COD",
+      "KEN",
+      "TZA",
+      "UGA",
+      "ETH",
+      "ERI",
+      "ZAF",
+      "NAM",
+      "BWA",
+      "ZMB",
+      "ZWE",
+      "MWI",
+      "MOZ"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/014200",
+      "use": "HKBWS substantive read: Category I, a common passage migrant and winter visitor to vegetated freshwater wetlands, most numerous in autumn; 25-27 cm, medium-sized and long-billed with complex largely brown upperparts, a striped head with a whitish cheek stripe, barred flanks and a white belly and vent, often flushed at fairly close range when it flies away erratically showing a narrow white trailing edge to the secondaries and giving a distinctive rasping call, with a rather crouched posture when alert; compared with Pin-tailed Snipe it is slimmer, has a relatively longer bill and tail, is usually richer brown overall and has a more obvious and contrasting white belly; the typical flight call when flushed is a harsh sudden 'skarp' sometimes presaged by a more rolling 'skrrrp'; the preferred habitat is vegetated freshwater marsh, the prime site being the wet agricultural fields and freshwater marsh at Long Valley where most records and high counts are made, with other freshwater areas in the northern and northeastern New Territories, Sai Kung and Lantau regularly holding birds and only one record from Hong Kong Island; it is present from September to April and, except during early autumn when it is outnumbered by both Pin-tailed and Swinhoe's Snipes, is the most numerous of the three in Hong Kong; the earliest autumn record is one at Mai Po on 18 August 2018, with the main autumn passage from the third week of September peaking in the third week of October and the highest autumn count 130 at Long Valley on 11 October 2007; counts of 200 on 14 December 1986 and 106 on 12 December 1993 show the wintering population is established by at least mid-December, and the highest count is 212 during Deep Bay winter waterbird counts on 11 January 1987 and 14 January 1990; the highest spring count is 130 on 23 March 1993, numbers decline from the last week of March with few records after the first week of May and the latest record one on 1 June 2019, and there have been no summer records; trapping at Chau Tau in 1989-92 showed the species to be at least partly site-faithful, with birds retrapped in later winters; it forages by probing its bill fairly deeply into soft mud and appears to be crepuscular or to forage at night and roost by day in undisturbed areas of the wetland even if dry; it breeds across the Palearctic from western Europe to Kamchatka between approximately 45 and 70 degrees north, and in China breeds in northern Xinjiang and the northeast and winters south of the Yangtze; the nominate subspecies occupies most of its range including Hong Kong; IUCN Least Concern with a decreasing population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/014000",
+      "use": "HKBWS Pin-tailed Snipe comparison: structurally differs from Common Snipe in having a shorter tail beyond which there is a longer projection of the toes in flight, is generally duller sandier and more uniform, and lacks a clear-cut whitish trailing edge to the secondaries; it has a fully barred underwing and usually lacks notable contrast between the white cheek stripe and the buff supercilium."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖（成鳥，性別與年齡羽色差異極小），經人眼核對長而筆直的嘴、頭部縱紋與白頰、對比鮮明白腹及背部淺色縱紋。",
+    "兩隻比較鳥均為 AI 生成示意（針尾沙錐沿用 0155 全身圖、丘鷸沿用 0155 全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危 LC（趨勢下降）；香港屬 Category I，常見過境鳥兼冬候鳥，秋季最多；最高 212 隻（1987-01-11、1990-01-14 后海灣冬季水鳥普查），秋季最高 130 隻（2007-10-11 塱原）。",
+    "只交付 aviandex/0157.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
