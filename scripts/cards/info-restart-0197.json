@@ -1,0 +1,140 @@
+{
+  "id": "0197",
+  "name": "蒙古銀鷗",
+  "scientificName": "Larus mongolicus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Larus mongolicus adult in non-breeding plumage. Vega Gull and Mongolian Gull cannot be confirmed objectively in the field (Collinson et al. 2008); the bird shown follows the characters HKBWS uses in Hong Kong for mongolicus in winter: larger and deeper-chested with a longer bill and longer wings, pale silvery-grey upperparts, an almost unstreaked white head from November, more extensive black in the primaries, pinkish or peachy legs, and primary moult completed by November so the white primary tips are already worn by late winter. Juveniles and first-winters are not shown.",
+  "similarSpecies": [
+    {
+      "zh": "織女銀鷗",
+      "scientificName": "Larus vegae",
+      "asset": "vega-gull.png",
+      "framing": "whole-bird",
+      "distinction": "體型略小、胸較淺、嘴與翼較短；翼上為較深的中灰而非淡銀灰，初級飛羽黑色範圍較小，腳多為粉紅；初級飛羽換羽遲至十二月或一月，因此冬末白色翼尖仍較完整。"
+    },
+    {
+      "zh": "烏灰銀鷗",
+      "scientificName": "Larus fuscus",
+      "asset": "lesser-black-backed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "翼上為明顯更深的石板灰，體型較修長、翼更長、嘴較小；成鳥腳多為黃色。初級飛羽換羽最遲（二月末至三月初），是本種（十一月前完成）與烏灰銀鷗最實用的時間分野。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.06,
+      0.28,
+      0.62,
+      0.84
+    ],
+    [
+      0.3,
+      0.06,
+      0.86,
+      0.62
+    ],
+    [
+      0.38,
+      0.34,
+      0.74,
+      0.7
+    ],
+    [
+      0.62,
+      0.44,
+      0.84,
+      0.68
+    ]
+  ],
+  "featureLabels": [
+    "長而厚重的黃嘴",
+    "幾乎素白的頭",
+    "淡銀灰的翼上",
+    "黑色初級飛羽"
+  ],
+  "featureNotes": [
+    "黃嘴配下嘴紅斑，嘴形長而厚重；與織女銀鷗並排時嘴的長度與厚度是最直接的結構差別（第1圈取自近景圖，整條嘴連紅斑都入圈）。",
+    "由十一月起成鳥頭部幾乎全白，縱紋至多限於後頸與頸側——這是與織女銀鷗（後頸縱紋較明顯）分辨時看的位置（第2圈取自近景圖，實際可見）。",
+    "翼上為淡銀灰，比織女銀鷗的中灰更淡、比烏灰銀鷗的石板灰淡得多；三種並排時灰階順序最易記（第3圈取自全身圖，實際可見）。",
+    "初級飛羽黑色範圍比織女銀鷗更大，白色翼尖細小而冬末多已磨損；成鳥十一月前已完成換羽，冬末白尖不會像織女銀鷗那樣完整（第4圈取自全身圖，實際可見；停棲折翼狀態，不代表飛行時圖案）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "TWN",
+      "HKG",
+      "VNM",
+      "PHL",
+      "THA",
+      "KAZ"
+    ],
+    "note": "Country overview only: breeds around Lake Baikal from the southeastern Altai and northwestern Mongolia east to northeastern China, and migrates southeast to winter in coastal eastern Asia from Japan to Hong Kong, also along inland waterways and large lakes in China; vagrants reach Thailand and the Philippines. Not an occurrence polygon and not split by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017510",
+      "use": "HKBWS Mongolian Gull (017510) substantive read: 56-68 cm; field separation from Vega Gull cannot be confirmed objectively (Collinson et al. 2008), but in HK mongolicus is larger, deeper in the chest, longer-billed and longer-winged, with paler grey upperparts, more extensive black in the primaries, pinkish or peachy legs, and adult primary moult complete by November (Vega Gull December or January, Lesser Black-backed Gull end February or early March); from November most adults have limited to barely any head streaking, confined to nape and neck sides; first-years pale overall with dark brown primaries and tail tip; most records from the Inner Deep Bay gull roost at the Mai Po boardwalk hides; winter visitor and early spring passage migrant mainly second week of January to end of March, peak count 25 on 13 March 2000; breeds around Lake Baikal from southeastern Altai and northwestern Mongolia east to northeastern China, winters coastal eastern Asia from Japan to Hong Kong, vagrants to Thailand and the Philippines; AviList 2025 treats it as monotypic; IUCN Least Concern, trend stable."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017700",
+      "use": "HKBWS Lesser Black-backed Gull (017700) read as the other contrast species: 51-61 cm, medium-dark grey upperparts, yellow legs, extensive black in P8-P10 with one white mirror, primary moult complete end February or early March; a minority are hybrids with Vega Gull."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017600",
+      "use": "HKBWS Slaty-backed Gull (017600) read to confirm it is a separate species (55-67 cm, slate-grey upperparts, pale iris) and is not what this card illustrates."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 蒙古銀鷗 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Larus mongolicus, Charadriiformes/Laridae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime has NO score record for 0197; all six axes and the overall score are rendered as 待查, nothing is estimated or zeroed."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對淡銀灰翼上、長而厚的黃嘴紅斑、粉紅腳與黑初級飛羽；不是照片，也不是分佈或族群證據。",
+    "蒙古銀鷗與織女銀鷗在野外無法客觀確認（Collinson et al. 2008），本卡只列香港冬季慣用的辨識要點（體型結構、灰階、嘴形、換羽時間、腳色），不宣稱單一特徵足夠斷種。",
+    "比較鳥為 AI 生成示意，非等比例；三種灰階深淺只作對照參考。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "runtime 完全沒有本種的評分記錄，六軸與綜合全部待查，卡面另行標示「綜合評分待查」及「待查非零分」，沒有補零、沒有估算。",
+    "IUCN 無危；HKBWS 頁面註明趨勢穩定（以 Arctic Herring Gull Larus smithsonianus 名義評定）。",
+    "只交付 aviandex/0197.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
