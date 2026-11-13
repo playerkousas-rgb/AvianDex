@@ -1,0 +1,145 @@
+{
+  "id": "0108",
+  "name": "小田雞",
+  "scientificName": "Zapornia pusilla",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Zapornia pusilla adult spring plumage (nominate migratory form)",
+  "similarSpecies": [
+    {
+      "zh": "紅胸田雞",
+      "scientificName": "Zapornia fusca",
+      "asset": "ruddy-breasted-crake.png",
+      "framing": "whole-bird",
+      "distinction": "體型較大而尾較長；栗紅頭胸、臉部不灰，脅部黑白橫斑較粗疏。"
+    },
+    {
+      "zh": "斑脇田雞",
+      "scientificName": "Zapornia paykullii",
+      "asset": "band-bellied-crake.png",
+      "framing": "whole-bird",
+      "distinction": "體型明顯較大；上體深冷褐、下體大片栗紅而橫斑少；腳橙紅、嘴帶綠。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1,
+      0.05,
+      0.45,
+      0.5
+    ],
+    [
+      0.42,
+      0.18,
+      0.72,
+      0.48
+    ],
+    [
+      0.28,
+      0.55,
+      0.72,
+      0.95
+    ],
+    [
+      0.43,
+      0.72,
+      0.69,
+      0.98
+    ]
+  ],
+  "featureLabels": [
+    "褐頰灰眉",
+    "褐色翼斑",
+    "黑白脅橫斑",
+    "黃綠長趾"
+  ],
+  "featureNotes": [
+    "褐色面頰斑與灰色眉紋及臉部（第1圈實際可見）。",
+    "暖褐色背翼配不規則白斑及暗色三級飛羽（第2圈實際可見）。",
+    "下脅黑白橫斑（第3圈實際可見）。",
+    "黃綠色腿及長趾（第4圈取自全身圖；折翼圖未涵蓋腳部）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "ROU",
+      "HUN",
+      "SRB",
+      "HRV",
+      "BGR",
+      "UKR",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "JPN",
+      "IND",
+      "PAK",
+      "NPL",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Country overview only, seasons not separated: source gives patchy breeding in south/southeast Europe east through Central Asia, northern Kazakhstan, southwest Siberia, northern Mongolia and Ussuriland to northeast China and northern Japan, wintering on the Indian subcontinent and southeast Asia. Resident taxa on Borneo/New Guinea/Australasia are separate and are not the migratory form shown.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008300",
+      "use": "HKBWS substantive identification/range/conservation read: 17-19cm spring adult greyish underparts and supercilium with brown cheek patch, black-and-white barred lower flanks and more densely barred undertail coverts, warm brown upperparts with irregular whitish marks, dark-centred tertials with broad brown fringes, yellowish-green legs, large feet, very short primary projection; breeding range and wintering range; LC, trend unknown."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0060/008000",
+      "use": "Ruddy-breasted Crake comparison text."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime name 小田雞 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Zapornia pusilla unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six scores unchanged (all six present)."
+    }
+  ],
+  "notes": [
+    "AI pictures received basic visual review, not independent ornithologist validation.",
+    "Comparison circles not to scale. Map overview is not an occurrence polygon.",
+    "Direct AVIF delivery to Google Drive only; no ZIP, R2 upload or UI/registration change.",
+    "Full world basemap retained; highlighting is a partial country overview, not a complete global range.",
+    "The illustrated bird is spring plumage; autumn young birds are duller with whitish throat and belly, pink legs and no grey face, so the card does not stand for those.",
+    "HK status is a scarce spring and autumn passage migrant; that local status is not a global trend."
+  ]
+}

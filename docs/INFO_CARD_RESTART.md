@@ -963,3 +963,56 @@ parent全 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。top-level uploaded_drive_verifie
 ## Main整合交接更正
 
 本次已整合PR25的0051–0077規格及歷史；上述「PR25尚未整合」只描述當時狀態。0078–0081衝突採用用戶要求重做的本分支spec，舊版交付紀錄僅供追溯，不再有效。0038–0040規格加上 `local_candidate_not_verified_against_drive`，不可拿本地候選作Drive舊卡來源證據。0041–0043來源缺口未解決。新Agent先讀交接文件，起點及完成量由用戶指定。生成大圖及AVIF依既有ignore不入Git。
+
+
+## 0041–0043 JSON缺口已補（只記錄 Drive 實物，不虛構裁切）；0038–0040 已對 Drive 核實
+
+用戶指示先補未解決缺口。本回合先把 Drive 目標資料夾 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up` 內 0038–0043 六張成品逐一用 connector 下載，核對 bytes／MD5（全部與既有紀錄一致）、AVIF 解碼 1024×1536，再逐張讀整卡、四個特徵圈、比較圓框及地圖。
+
+- **0041 印緬斑嘴鴨、0042 中華斑嘴鴨、0043 綠頭鴨**：新增 `scripts/cards/info-restart-004{1,2,3}.json`，status `observed_from_delivered_drive_card_no_local_artwork`。內容只含實際可核實的東西：Drive file id／parent／bytes／MD5／本機 SHA256、卡上實際標籤（0041 頭喙·面部·白色翼羽·胸羽；0042 黃端黑喙·冠及眼紋·翼鏡及羽緣·胸羽；0043 雄鳥頭喙·白色頸環·雄鳥翼鏡·雌鳥頭喙）、比較鳥標籤、以及用 Natural Earth 110m 逐國遮罩量到的地圖綠色覆蓋。**`featureCrops` 一律不寫**（原裁切與素材不在 Git，寫出來就是編造），另設 `featureCropsUnavailable` 及 `neverUpload`。runtime 名稱／學名／六分照抄 `birds.json`、`birdTaxonomy.json`、`dexScores.json`；0043 仍只有 v／r 及 vEst，其餘待查保留。
+- **0038–0040**：本地 JSON 改為 status `local_candidate_verified_labels_only_against_drive_card`，新增 `observedFromDrive`：卡上實際標籤、比較鳥標籤、地圖實測果、與本地候選的差異、`featureCropsUnverified`、`neverRenderOrUpload`。與 Drive 實物的差異已如實記錄：0038 卡上第 2 圈是「黃色額冠」（候選寫粉色胸）、第 3 圈「粉色胸」（候選寫灰色脅），地圖另填 NPL；0039 卡上兩比較圖是赤頸鴨及**赤膀鴨**（候選寫綠眉鴨／赤膀鴨）、地圖無 VEN／CUB；0040 卡上第二比較圖是**綠頭鴨雌鳥**（候選寫赤膀鴨）。
+- **發現 0040 成品地圖全空**：地圖面板內 `#7da688` 綠色像素只有 159 個且全部屬標題文字抗鋸齒，任何國家多邊形都無填色（PHL 亦無）。即卡面寫「世界底圖・部分分佈國家／綠色非全境」但實際沒有填任何國家，屬已交付檔的實質瑕疵。**本回合沒有改寫或重新上載 0040**，因為原始 pixel／features 素材不在本環境，重畫等於以新圖冒充舊交付。此事留待用戶決定（可另行生成新 0040 並以新 hash 上載）。
+- 六張都只做下載／解碼／讀圖，**沒有重新渲染、沒有上載、沒有覆蓋、沒有刪除**，UI／SW／R2／slim 註冊無改動。
+
+
+## 0105–0108 已完成並上載（下一張 0109）
+
+四張秧雞科長卡按 0105 灰腳秧雞、0106 斑脇田雞、0107 紅腳田雞、0108 小田雞次序完成：每種先看生成大圖再寫 spec，其後才渲染，逐張讀整卡及四個特徵圈才上載。
+
+- **0105 灰腳秧雞**：栗紅頭胸、黑白腹橫斑、橄欖褐翼（折翼狀態，不代表飛行翼）、暗灰長腳。首輪第 3 圈為純紋理無翼形，改為取翼後緣及大覆羽輪廓後重渲染；第 4 圈由 `pixel.png` 腿趾位置取代過暗的 `features.png`。
+- **0106 斑脇田雞**：冷褐頭頂、栗紅腹、翼覆羽橫斑、橙紅長腳。地圖為世界底圖部分國家（CHN RUS PRK THA LAO VNM KHM MMR MYS IDN BRN）。IUCN NT 近危；適應力 runtime 無分，維持待查，未以 IUCN 或 vEst 補值。第 4 圈改用全身圖腿位，避免 `features.png` 圓邊只剩腳尖。
+- **0107 紅腳田雞**：灰黑嘴黃綠基、淡白喉、素色橄欖褐翼、紫紅大腳。`pixel.png` 為 1024×1536 直向，渲染時以 ImageOps.pad 保留全鳥；特徵圈全部以分數座標取樣，未混用像素座標。
+- **0108 小田雞**：褐頰灰眉、褐色翼斑、黑白脅橫斑、黃綠長趾。第 4 圈前兩版腳趾被金框切斷，改框後四趾及爪完整入圈。
+
+驗證：四張 AVIF 均解碼為 1024×1536 AVIF，bytes／SHA256 與 manifest、SHA256SUMS 一致，manifest `spec` 與 `scripts/cards/info-restart-01NN.json` 完全相同；四張地圖面板實測 `#7da688` 綠色像素 2240／6661／2147／8053（非空，無 0040 的空地圖問題）；特徵標籤測試 4 項通過。上載前 Drive 搜尋 `0105` 及 `0106/0107/0108` 均 0 命中，上載後回傳 parent 全為 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD`（`已上載R2`），bytes／MD5 與本機一致，未覆寫或刪除任何既有卡。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0105.avif | 1HdULqKOncyEmy4x_XwTPzYRPUCp7Q18X | 146439 | 388a3665b4441f2f8a0fc228a40a699f | 715885cb574626155c7d9a80f31a976a73e66bc2818e05f7ddc6e308a2f4a443 |
+| 0106.avif | 18VuTPaMmra9m5vUDvJkjIx7iuOe-HMMu | 151790 | f00e7e51fa2fbbb59d65b69353318ba4 | 0b334b65d2126e605568d2d620674e3408892437cdcf4b1b9e42d276f604064c |
+| 0107.avif | 1ST2c-VvuxFwISlmYAUeYgRIzQCEm7TVS | 147359 | 23318c0475508ebc34f2fade6eb88b93 | d6ce0d12de6a98a4fa0b8867ec8520e2c035f5ccedcc6135700caef7f148636b |
+| 0108.avif | 1F8xXE1UIfXs1pdiTUrd-xlNFGZlEuNSs | 143332 | 14c0f9f434640977132d87cf7a80f14b | 63e819bc19e0a703089f2a36e2ed37a266aaface7669c61dbbde39ce5213311f |
+
+0105 首次上載為較早一版特徵圈（file id `1OOJFhwPuc1JQ6AD-vHqw2eRIVntoszJK`，146439 bytes 前的 147663 版本），發現第 3 圈仍只看見羽毛紋理後已移至垃圾桶，改上載現版本；資料夾內現時每個編號只有一張。
+
+未改 UI／runtime／SW／R2／slim 註冊，無 ZIP，`a` 軸缺失仍顯示待查。0038–0043 缺口狀態不變，0040 空地圖問題仍待用戶決定。下一張 0109。
+
+
+## 0109–0111 已完成並上載（下一張 0112）
+
+三張鴴形目長卡按 0109 白鶴、0110 灰鶴、0111 大石鴴次序完成：每種先讀 HKBWS 內文，再生成大圖並**實際讀圖**核對羽色／嘴形，之後才寫 spec、渲染、逐張讀整卡及四個特徵圈，最後才上載。三個 spec 的 `featureCrops` 都是用圓形遮罩候選表（178px）反覆比對後才定的真值，不是憑猜。
+
+- **0109 白鶴**：極危（CR）。紅臉、白身、腳紅；特徵圈為 紅臉長喙／白頸白身／翼後黑羽／紅色長腳。比較鳥 灰鶴 與 丹頂鶴。地圖俄羅斯東部至長江中下游越冬區，已標明不含香港偶發紀錄。
+- **0110 灰鶴**：無危（LC）。黑臉白頸紋、頭頂紅斑、灰褐背翼、灰黑長腳；第 2 圈必須避免切到眼，第 4 圈取自 `pixel.png` 才包得住趾。
+- **0111 大石鴴**：近危（NT）。巨大厚喙、黑白臉紋、沙褐背翼、淡綠長腿。首版 `pixel.png`／`features.png` 物種不符（畫成另一種石鴴），已重生成並重新核對：新圖為厚實上翹巨喙、眼後黑帶加白眉白頰、上身素色沙褐、淡綠腿帶瘤狀關節。第 3 圈曾用 0.58 寬框只看到羽毛紋理，收窄至 `[0.55,0.33,0.89,0.67]` 後可辨出背及折翼輪廓（折翼狀態，spec 已聲明不代表飛行翼色）。比較鳥用 石鴴（Burhinus oedicnemus）與 海濱石鴴（Esacus magnirostris），中文名以維基百科石鴴科條目核對。
+- **環境說明**：本回合沙盒是全新 checkout，`/home/user/card-venv`、`~/.fonts`、`cards/art` 舊素材、`deliver/cards` 全部不存在。已重建 venv（Pillow + pillow-avif-plugin + numpy + fonttools）、由 Google Fonts 的 Noto Sans TC 可變字型用 fonttools 產生 `~/.fonts/NotoSansTC_{400Regular,700Bold}.ttf`、重新下載 `ne_110m_admin_0_countries.geojson`，並把比較鳥素材重新生成。0105–0110 的本地 render 不在這台機器，只有已上載的 Drive 成品仍在；本次沒有重渲染或改動它們。
+
+驗證：三張 AVIF 均解碼為 1024×1536 AVIF；0111 bytes 138437、SHA256 `bf7391508c0ea40dca449d26383ef748c804c1be3e0d8b0b0d518f1e45f3531a`，與 manifest、SHA256SUMS 一致，`manifest.spec` 與 `scripts/cards/info-restart-0111.json` 完全相同，`missingScores` 為空；地圖面板綠色像素 2125（tol 10）非空；`test-slim-feature-label.py` 4 項通過；`git diff --check` 無問題。上載前 Drive 搜尋 `0111` 0 命中，上載後 parent 為 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD`（已上載R2），bytes／MD5 與本機一致，未覆寫或刪除任何既有卡。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0109.avif | 11DpOrMMzARxFwR5JbunR-1IFIrSlxPo1 | 129970 | bbff8445d4c61aa6a62f7b60cdcf03f0 | a4a27a364c4e7d9022d4fb49ce0054e3cc8eb70d03c38e51c54b321beef037e0 |
+| 0110.avif | 1AS9jzIExhgY6RUvPEyqC0RpRwyapgx1 | 131267 | b59c88f4e3160dd290c5a634898702ce | 6df924a38e1887a6be109c2682a1922fe14b428a885ad0e05705482b0ba5afc8 |
+| 0111.avif | 1ndDkhDwcP2aF0Oo8b98yMx-iH2a15G72 | 138437 | 77333da44f7616c406350d1ffe77cc8b | bf7391508c0ea40dca449d26383ef748c804c1be3e0d8b0b0d518f1e45f3531a |
+
+未改 UI／runtime／SW／R2／slim 註冊，無 ZIP。0038–0043 缺口狀態不變，0040 空地圖問題仍待用戶決定。下一張 0112 黑翅長腳鷸（HKBWS 0080/009800 內文已讀：體長 33–36cm 不含腳、極長橙粉腳、黑白高對比、雌鳥背沾褐、幼鳥上體褐有淡羽緣及暗腳，HK 屬 passage/越冬/繁殖，2005/06 冬季後大增，最高 612 隻 2008-11-11）。

@@ -1,0 +1,168 @@
+{
+  "id": "0110",
+  "name": "灰鶴",
+  "scientificName": "Grus grus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Grus grus adult; monotypic per source. Juvenile is paler, browner, with a plain buff-tinged head and no red crown, and is not shown here.",
+  "similarSpecies": [
+    {
+      "zh": "白鶴",
+      "scientificName": "Leucogeranus leucogeranus",
+      "asset": "siberian-crane.png",
+      "framing": "whole-bird",
+      "distinction": "全身白羽、臉部大片紅色裸皮、嘴淡粉；本種體羽灰、頭頸黑而頸側有白紋、紅斑只在頭頂。"
+    },
+    {
+      "zh": "丹頂鶴",
+      "scientificName": "Grus japonensis",
+      "asset": "red-crowned-crane.png",
+      "framing": "whole-bird",
+      "distinction": "身體白色、頸黑、三級飛羽黑成明顯黑尾塊；本種全身灰，無白色身體與黑色尾塊對比。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.3,
+      0.14,
+      0.64,
+      0.48
+    ],
+    [
+      0.46,
+      0.07,
+      0.67,
+      0.3
+    ],
+    [
+      0.7,
+      0.6,
+      0.98,
+      0.88
+    ],
+    [
+      0.45,
+      0.78,
+      0.63,
+      0.98
+    ]
+  ],
+  "featureLabels": [
+    "黑臉白頸紋",
+    "紅頭頂斑",
+    "灰褐背翼",
+    "灰黑長腳"
+  ],
+  "featureNotes": [
+    "黑色臉部及前頸，配由眼後沿頸側延伸的白色條紋，嘴長而偏淡黃（第1圈實際可見）。",
+    "頭頂裸露的紅色皮膚，只限頭頂一小片，臉頰及頸側為白色（第2圈實際可見）。",
+    "背及覆羽呈灰褐色，長而蓬鬆的三級飛羽垂在折翼後緣（第3圈實際可見；折翼狀態，飛行時翼羽偏黑，本圈不代表飛行翼色）。",
+    "暗灰黑色長腿及長趾（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "MNG",
+      "CHN",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "AFG",
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KOR",
+      "PRK",
+      "IRN",
+      "IRQ",
+      "TUR",
+      "AZE",
+      "GEO",
+      "ARM",
+      "SYR",
+      "ISR",
+      "EGY",
+      "LBY",
+      "DZA",
+      "TUN",
+      "MAR",
+      "ESP",
+      "FRA",
+      "DEU",
+      "POL",
+      "UKR",
+      "ITA",
+      "GRC",
+      "ETH",
+      "SDN",
+      "TCD",
+      "NER",
+      "MLI",
+      "NGA"
+    ],
+    "note": "Country overview only: source describes breeding from Scandinavia and eastern Europe east across Eurasia to northeast Siberia, wintering south to southwest Europe, north and northeast Africa, the Middle East, the northern Indian subcontinent and south China, with China's breeding birds in the northwest and northeast and wintering along the Yellow and Yangtze floodplains. Seasons are not separated on the card."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/008900",
+      "use": "HKBWS substantive identification/range/conservation read: 95-120cm, largely grey crane with black face and fore neck contrasting white rear face and hind neck, red crown, browner mantle and long bulky tertials beyond the wings, blackish flight feathers in flight; juvenile paler/browner with plain buff-tinged head; monotypic; breeding Scandinavia/eastern Europe to northeast Siberia, wintering southwest Europe, north and northeast Africa, Middle East, northern Indian subcontinent and south China; LC, increasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/008800",
+      "use": "Siberian Crane comparison text (all-white adult, red face, black primaries only in flight)."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 灰鶴 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Grus grus, Gruiformes/Gruidae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six-axis scores, no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對羽色、頭頸黑白分佈、頭頂紅斑及腳色；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例，也不是完整鶴科鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危且全球趨勢上升，但香港紀錄屬偶發，不代表本地常見。",
+    "只交付 aviandex/0110.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "0043",
+  "name": "綠頭鴨",
+  "scientificName": "Anas platyrhynchos",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "observed_from_delivered_drive_card_no_local_artwork",
+  "provenance": {
+    "kind": "observed_from_delivered_drive_card",
+    "driveFileId": "1NHgCYu8t_zHTbVubyyFioX3_cP6ozmpx",
+    "driveParentId": "1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up",
+    "driveBytes": 145542,
+    "driveMd5": "2b95064b4bcac5d3bfd8766a398b0192",
+    "driveSha256": "55127625a0dc5e193eaae4eecf5db7ab18a8bbae261581ec988ec317792a2335",
+    "decodedSize": [
+      1024,
+      1536
+    ],
+    "decodedFormat": "AVIF",
+    "verifiedAt": "2026-11-12",
+    "verifiedHow": "Downloaded the delivered AVIF, decoded it, read the whole card and each feature circle, and sampled the map at country level against Natural Earth 110m geometry.",
+    "notVerified": "This spec is NOT the original production spec. The original artwork and crop coordinates are not in Git and were not available, so featureCrops are deliberately absent rather than invented. Nothing here can regenerate or overwrite the delivered file.",
+    "neverUpload": true
+  },
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "delivered card main image: adult male breeding plumage; the fourth feature circle uses a separately labelled female source",
+  "similarSpecies": [
+    {
+      "zh": "中華斑嘴鴨",
+      "scientificName": "Anas zonorhyncha",
+      "asset": null,
+      "observedLabelOnCard": "中華斑嘴鴨",
+      "distinction": "喙黑配黃端、白色三級飛羽明顯；雄鳥無綠頭及白頸環。"
+    },
+    {
+      "zh": "棕頸鴨",
+      "scientificName": "Anas luzonica",
+      "asset": null,
+      "observedLabelOnCard": "棕頸鴨",
+      "distinction": "橙皮黃面頸配黑冠及黑眼紋、灰喙黑嘴甲；兩性相似。"
+    }
+  ],
+  "featureCropsUnavailable": true,
+  "featureLabels": [
+    "雄鳥頭喙",
+    "白色頸環",
+    "雄鳥翼鏡",
+    "雌鳥頭喙"
+  ],
+  "featureLabelsNote": "Labels as they appear on the delivered card, checked against the circle contents.",
+  "featureNotes": [
+    "繁殖羽雄鳥綠頭、黃喙（第1圈實際可見）。",
+    "白色頸環與深褐色胸部（第2圈實際可見）。",
+    "折翼狀態下藍色翼鏡配前後白邊（第3圈實際可見；不代表飛行時翼下）。",
+    "雌鳥褐頭、橙喙帶黑（第4圈為獨立雌鳥素材並已標示；第1–3圈只示雄鳥）。"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "countryIso3": [
+      "CAN",
+      "USA",
+      "GRL",
+      "KAZ",
+      "RUS",
+      "MNG",
+      "FRA",
+      "DEU",
+      "POL",
+      "ESP",
+      "SWE",
+      "FIN",
+      "NOR",
+      "GBR",
+      "CHN",
+      "IND",
+      "NPL",
+      "JPN",
+      "ITA"
+    ],
+    "countryIso3Basis": "Observed on the delivered card: solid green on CAN/USA/GRL/KAZ/RUS/MNG/FRA/DEU/ESP/SWE/FIN/CHN/IND, partial on POL/NOR/GBR/ITA/JPN. The source describes a Holarctic range breeding from Greenland/Iceland/Europe to the Sea of Okhotsk and in Alaska/much of Canada, wintering in Europe, east Africa, the northern Indian subcontinent and central/south China; the card marks countries only, without seasonal areas.",
+    "viewport": "world"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002200",
+      "use": "HKBWS substantive identification/range/conservation read: male dull yellow bill, green head, narrow white collar, dark brown chest, pearl grey flanks, black undertail coverts; blue speculum bordered white; female orange bill with black, dark eye stripe; Holarctic range; LC increasing; HK now scarce/rare winter visitor."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/002100",
+      "use": "Eastern Spot-billed Duck comparison text."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0020/001900",
+      "use": "Philippine Duck comparison text (orange-buff face, blackish crown and eye stripe, grey bill with black nail)."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime name 綠頭鴨 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Anas platyrhynchos unchanged."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores are partial (v4.4, r3.3, vEst 1) so the card shows 綜合評分待查 for the missing axes; nothing was filled in."
+    }
+  ],
+  "notes": [
+    "Rebuilt on 2026-11-12 from the delivered Drive card only, to close the missing-JSON gap without inventing crops.",
+    "No new artwork, rendering, upload or overwrite was performed for 0043.",
+    "AI artwork on the delivered card was only visually reviewed, never validated by an independent ornithologist.",
+    "Comparison circles are not to scale; the map is a country overview, not an occurrence polygon.",
+    "The delivered card keeps the '待查' state for importance/adaptability/research/conservation and the overall score, with the '觀賞值含體長估算' note; the missing axes were not replaced with zeros or IUCN-derived numbers.",
+    "HK status is a much-declined winter visitor; that local trend is not the global trend."
+  ],
+  "runtimeScoresObserved": {
+    "v": 4.4,
+    "r": 3.3,
+    "vEst": 1
+  },
+  "runtimeScoreAuthority": "src/data/dexScores.json (unchanged); absent keys remain 待查 on the delivered card and were not filled in."
+}
