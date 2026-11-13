@@ -1,0 +1,154 @@
+{
+  "id": "0134",
+  "name": "白腰杓鷸",
+  "scientificName": "Numenius arquata",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Numenius arquata (subspecies N. a. orientalis most likely in Hong Kong) adult in winter plumage: a very large shorebird 50-60 cm long with a long evenly decurved bill, longer in the female, and rather uniform brown plumage with extensive dark bars and streaks. Head is plain brown-grey with only a faint pale crown stripe and no bold dark eye stripe; neck and breast are finely streaked, flanks streaked and barred but lacking the heavy arrowhead marks of Far Eastern Curlew; belly and undertail coverts largely white. In flight the white rump extends up over the lower back and, in orientalis, the underwing coverts are largely white. Legs blue-grey. It feeds almost exclusively on intertidal mudflats, taking crustaceans, molluscs and annelids, and is gregarious, especially at high-tide roosts.",
+  "similarSpecies": [
+    {
+      "zh": "紅腰杓鷸",
+      "scientificName": "Numenius madagascariensis",
+      "asset": "far-eastern-curlew.png",
+      "framing": "whole-bird",
+      "distinction": "紅腰杓鷸更瘦長、嘴基更深而粉紅範圍更大、脅部有明顯深褐箭頭斑、下腹至尾下覆羽褐色（非白色），飛行時腰及尾上覆羽褐色而不是白色；本種較粗壯、腰及下背白色、脅部箭頭斑較弱。"
+    },
+    {
+      "zh": "中杓鷸",
+      "scientificName": "Numenius phaeopus",
+      "asset": "whimbrel.png",
+      "framing": "whole-bird",
+      "distinction": "中杓鷸體型小得多（37–46 cm）、嘴短而基部粗鈍、頭部有強烈淡中央冠紋與深色眼紋、翼覆羽花紋更粗；本種體型巨大、嘴長而彎度均勻、頭部縱紋平淡。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.5,
+      0.13,
+      0.73,
+      0.36
+    ],
+    [
+      0.7,
+      0.1,
+      0.93,
+      0.33
+    ],
+    [
+      0.76,
+      0.33,
+      0.99,
+      0.64
+    ],
+    [
+      0.43,
+      0.56,
+      0.66,
+      0.87
+    ]
+  ],
+  "featureLabels": [
+    "長而下彎的嘴",
+    "平淡頭部縱紋",
+    "密佈橫斑上體",
+    "藍灰長腳"
+  ],
+  "featureNotes": [
+    "嘴長而下彎均勻，沒有中杓鷸下喙的折角，基部粉紅但範圍較紅腰杓鷸小；雌鳥嘴更長（第1圈取自近景圖，實際可見）。",
+    "頭部褐色，只有隱約的淡中央冠紋，沒有深色眼紋或側冠紋，是與中杓鷸最快的分辨點（第2圈取自近景圖，實際可見）。",
+    "上體及翼覆羽布滿深色橫斑與縱紋，整體色調相當均勻；脅部縱紋較細，沒有紅腰杓鷸那種箭頭斑（第3圈取自近景圖，實際可見）。",
+    "腳藍灰色而長；飛行時白色腰及下背延伸至上背，翼下覆羽多為白色（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GBR",
+      "IRL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "DNK",
+      "NLD",
+      "DEU",
+      "POL",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "KOR",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "AUS",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "MMR",
+      "ARE",
+      "OMN",
+      "SAU",
+      "EGY",
+      "KEN",
+      "TZA",
+      "ZAF",
+      "NGA",
+      "GHA",
+      "SEN",
+      "MRT",
+      "MAR",
+      "MDG"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011800",
+      "use": "HKBWS substantive read: Category I, abundant winter visitor and uncommon passage migrant and summer visitor to the Deep Bay area; 50-60 cm, very large shorebird with long decurved bill (longer in female), rather uniform brown plumage with extensive dark bars and streaks, and the commonest of the two curlews at all times of year; in flight white rump extends up the lower back and underwing coverts are largely white indicating subspecies orientalis; calls loud and ringing, a two or three-note 'tyoo-tyoo' and a 'kooolee' rising on the final note, plus a guttural conversational call at high tide roosts; most records from Deep Bay intertidal mudflats and adjacent roosts mainly Mai Po NR, with 56 at Starling Inlet on 8 September 1997 the highest away from Deep Bay and up to 16 at Shuen Wan for a month from 22 January 2003, none modern from commercial fish ponds and only one from Long Valley; up to 40 on migration over southern waters mostly in spring 24 March to 16 May and also 26 August to 12 September, only three records from Kai Tak and Chek Lap Kok, nocturnal migration over Waglan Island and Sai Kung 20 August to 7 October; can be seen all year in Deep Bay though primarily a winter visitor, first autumn arrivals in the last ten days of July with weak passage peaking in September and the main influx in the second half of November and early December; counts have gradually increased since the mid-1980s and most counts since winter 2004/05 exceed 1,000, with the highest 1602 on 16 January 2011, and Sung et al. (2021) concluded the wintering population increased from 1998 to 2017; April numbers generally very low though occasional influxes give up to 90, and usually 30 or fewer remain in summer with 40 the highest; feeds almost exclusively on intertidal mudflats on crustaceans, molluscs and annelids, is gregarious especially at high tide, leaves the mudflats late and prefers to remain if water level allows; three subspecies with N. a. orientalis breeding from west Siberia to Manchuria the most likely in Hong Kong; IUCN Near Threatened with decreasing trend and a moderately rapid estimated global decline."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011700",
+      "use": "HKBWS Far Eastern Curlew comparison: longer and leaner, longer bill with a more extensive pinkish base, obvious dark brown arrowhead marks on the flanks, and brownish-buff rather than white lower belly, rump and undertail coverts."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對長而下彎均勻的嘴、平淡頭部縱紋、密佈橫斑上體及藍灰長腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意（紅腰杓鷸、中杓鷸各自新繪），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 近危 NT、趨勢下降；香港屬 Category I，是后海灣常見越冬鳥，冬季最高紀錄 1602 隻（2011-01-16），近年冬季族群呈上升。",
+    "只交付 aviandex/0134.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
