@@ -1,0 +1,79 @@
+{
+  "id": "0195",
+  "name": "環嘴鷗",
+  "scientificName": "Larus delawarensis",
+  "layout": "slim",
+  "size": [1024, 1536],
+  "status": "review_before_upload",
+  "iucn": {"code": "LC", "zh": "無危"},
+  "illustrationTaxon": "Larus delawarensis: 43-54 cm, slightly larger than Common Gull. Adult upperparts are noticeably paler than Common Gull, with a pale silvery-grey mantle over white underparts. In non-breeding plumage the head and neck carry fine grey-brown streaking. The bill and legs are yellow, with a distinct black subterminal band on the bill, and the irides are obviously pale. The white subterminal spots on the outer one or two primaries are small and close to the tip, and the white trailing edge to the upperwings is less contrasting than on Common Gull. First-winter birds are usually paler overall than kamtschatschensis Common Gull, and moult often produces a pale grey mantle with a few dark crescents by early winter; in flight the upperwing is more contrasting, with blacker outer primaries and paler silvery-grey inner primaries and greater coverts.",
+  "similarSpecies": [
+    {
+      "zh": "普通海鷗",
+      "scientificName": "Larus canus",
+      "asset": "common-gull.png",
+      "framing": "whole-bird",
+      "distinction": "本種（43–54 公分）比普通海鷗（40–46 公分）略大，成鳥的分別最清楚：本種**翼上明顯較淡**、嘴黃而**近尖端有一圈清楚的黑帶**、虹膜**明顯淡色**、腳黃；普通海鷗的嘴沒有這圈粗黑帶（冬季只有模糊暗帶），翼上偏深灰。本種初級飛羽的白色次端斑只出現在最外一至兩枚、而且**貼近尖端**，白色後緣對比亦較弱。"
+    },
+    {
+      "zh": "美洲海鷗",
+      "scientificName": "Larus brachyrhynchus",
+      "asset": "short-billed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "美洲海鷗（40–45 公分）比本種小、嘴**短而小**、頭圓似鴿、停棲時翼尖上翹；本種嘴較粗長、頭較方。第一年冬鳥的分別在尾部：美洲海鷗的尾**全黑**，本種的尾是白色而只有一條深色尾帶；本種第一年冬鳥整體偏淡、翼上對比強（外側初級飛羽較黑、內側銀灰）。"
+    }
+  ],
+  "featureCrops": [
+    [0.05, 0.28, 0.55, 0.78],
+    [0.30, 0.20, 0.80, 0.70],
+    [0.40, 0.30, 0.72, 0.62],
+    [0.610, 0.500, 0.870, 0.700]
+  ],
+  "featureLabels": ["黃嘴黑嘴帶", "淡黃色虹膜", "銀灰翼上", "黑翼尖白斑"],
+  "featureNotes": [
+    "嘴是黃色，**近尖端有一圈清楚完整的黑帶**，黑帶之前還有一小段淡黃尖端——這是本種的名字來源，也是與普通海鷗最直接的分別（普通海鷗冬季只有模糊暗帶、繁殖期完全沒有）。HKBWS 寫 `a distinct black subterminal band`（第1圈取大頭圖，整支嘴由淡色尖端、黑帶到黃色嘴基都在圈內）。",
+    "虹膜**明顯淡黃**，在一片白色的頭頸上非常突出；HKBWS 寫 `the irides are obviously pale`，成鳥尤其容易看到（第2圈取大頭圖，眼、眼周細紋與額部白色都在圈內）。",
+    "翼上（肩羽與覆羽）是**淡銀灰**，比同場的普通海鷗、銀鷗都淺；HKBWS 寫 `upperparts are noticeably paler`、`paler silvery-grey inner primaries and greater coverts`（第3圈取全身圖，銀灰覆羽的疊瓦邊與上方天空交界都在圈內）。",
+    "翼尖黑色，**最外一至兩枚初級飛羽有細小的白色次端斑**，而且貼近尖端、白色後緣對比弱——這正是與普通海鷗的分野。HKBWS 寫 `white subterminal spots on the outer 1-2 primaries are small and closer to the tip than on Common Gull`（第4圈取全身圖，黑翼尖、白斑與白色尾端同時入鏡）。"
+  ],
+  "featureSources": ["features.png", "features.png", "pixel.png", "pixel.png"],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [-180, -90, 180, 90],
+    "viewport": "world",
+    "countryIso3": ["CAN", "USA", "MEX"]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017200",
+      "use": "HKBWS Ring-billed Gull page read in full: Category I, accidental; 43-54 cm and slightly larger than Common Gull; adult plumage similar but upperparts noticeably paler, with fine streaks on the head and neck in non-breeding plumage, yellow legs and bill with a distinct black subterminal band, obviously pale irides, and small white subterminal spots on the outer one or two primaries that sit closer to the tip than on Common Gull, with a less contrasting white trailing edge; first-winters are usually paler overall than kamtschatschensis Common Gull, moulting to a pale grey mantle with a few dark crescents by early winter, and in flight show a more contrasting upperwing with blacker outer primaries and paler silvery-grey inner primaries and greater coverts; calls rather nasal and high-pitched; the sole Hong Kong record was an adult in the gull roost at Mai Po on 20 March 2021, the first for Hong Kong and the Chinese mainland; breeding and wintering range largely in North America between 10 and 60 degrees north, with many vagrant records and occasional breeding in Europe; behaviour, foraging and diet are recorded as no observations; IUCN Least Concern with an increasing population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017000",
+      "use": "HKBWS Common Gull page read as the first contrast species: 40-46 cm, yellow to greenish-yellow bill with only a faint dark band near the tip in winter, grey-streaked winter head, and dull yellowish-green legs."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017100",
+      "use": "HKBWS Short-billed Gull page read as the second contrast species: a small bill, rounded dove-like head, wholly dark tail in first-winters, and a North American breeding range from Alaska to northwest Canada."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 環嘴鷗 Larus delawarensis is listed as Category I, with no IUCN code in the list, i.e. Least Concern, matching the HKBWS species page."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對黃嘴黑嘴帶、淡黃色虹膜、銀灰翼上、黑翼尖白斑。",
+    "畫的是**成鳥非繁殖羽**：HKBWS 明寫香港唯一一筆紀錄是 **2021-03-20 米埔鷗群中的一隻成鳥**（香港與中國大陸首筆），加上本種的辨識要點全部建立在成鳥的嘴帶、淡色虹膜與淡銀灰翼上，所以卡面畫成鳥；頭頸的細灰褐條紋是非繁殖羽（3 月仍是冬羽尾聲）。第一年冬鳥偏淡、翼上對比強的樣子寫在 notes 與比較說明，沒有畫。",
+    "**已修正單位錯誤（身長／體重）**：`cardCopy.json` 0195 原本寫 `length: 16.9–21.3 in`、`weight: 10.6–24.7 oz`，但下游 `build-explorer-data.mjs` 的 `parseLength()` 只抽數字、不理單位，於是把「16.9–21.3」當成**厘米**取中位 19.1 cm——體長被低估一半以上。已換算成 `43–54 cm`（16.9×2.54=42.9、21.3×2.54=54.1）與 `300–700 g`（10.6×28.35=300、24.7×28.35=700），語意與 HKBWS 的 43–54 cm 完全吻合。重跑腳本後 `explorerIndex.len` 19.1→48.5、`filterTraits.lengthCm` 由 `null` 變成 48.5，評分 **`v 3.0→4.2`、`o 3.5→3.7`**，其餘四軸不變。",
+    "**其他卡有同樣的單位問題，但沒有在本回合改**：`cardCopy.json` 另有 0113（16.5–17.75 in）、0151（7.5–8.9 in）、0154（11.4 in、3.1–4.6 oz）、0181（7.9–9.4 in、5.4–8.8 oz）、0385（4.7–5.5 in、0.4–0.7 oz）五張仍是英制，`explorerIndex.len` 一樣把它們當厘米（例如 0385 崖沙燕變成 5.1 cm）。這五張卡面已交付，改動會令它們的 `v`／`o` 分數變動，**需要用戶指示是否一併修正並重印**，所以本回合只在 notes 記錄，沒有動它們的資料。",
+    "**IUCN 正確**：`cardDetails.zh.json` 0195 已是「無危 LC」，與 HKBWS（Least Concern、趨勢 increasing）及 HK List 2024 一致 → 沒有改 IUCN。`c 3.0` 是因為 `conservation` 文案裡有「數量減少」等受脅字眼（公式計分方式），不是 IUCN 推算，照原值保留。",
+    "分數照重算後 **i 2.0／a 4.7／v 4.2／r 4.8／c 3.0／o 3.7**，六軸齊全、**沒有 `vEst`**（體長現在是 43–54 cm 的實測值）。食性 tag `insect／fish／crustacean／worm／seed`、棲地 tag `water` → 適應力 4.7。",
+    "香港紀錄照 HKBWS：**Category I，迷鳥**，唯一一筆是 2021-03-20 后海灣米埔浮橋觀鳥屋外潮間帶鷗群中的成鳥（Lok 2025，香港與中國大陸首筆）；行為、覓食與食性寫「No observations」；叫聲比銀鷗高、沙啞而帶鼻音。全球：繁殖與度冬範圍大致在北美 10°N–60°N，歐洲有為數不少的迷鳥紀錄、偶有繁殖；**IUCN 無危 LC、趨勢增加**。",
+    "地圖 3 個 ISO3：CAN、USA、MEX——本種的繁殖地（加拿大南部與美國北部內陸湖泊）與度冬地（北美東西兩岸、南至墨西哥灣與墨西哥）。香港是 Category I 迷鳥，**HKG 不上綠**（迷鳥紀錄不是原生分佈）。綠色非全境、非完整分佈。",
+    "比較鳥用普通海鷗（沿用 0193 全身圖）與美洲海鷗（沿用剛剛完成的 0194 全身圖）：這兩隻就是 HKBWS 頁面用來對比的兩個物種，也是香港鷗群裡最難分的對象。"
+  ]
+}

@@ -19175,7 +19175,7 @@
         "text": "灰尾漂鷸（學名： 或 ）"
       }
     ],
-    "iucn": "無危 LC",
+    "iucn": "近危 NT",
     "source": "zh.wikipedia 灰尾漂鹬 · pageid 1022543 ｜ en.wikipedia Grey-tailed tattler · pageid 383368 · 分類：eBird/Clements",
     "orderZh": "鴴形目",
     "familyZh": "鷸科",
@@ -19618,7 +19618,7 @@
   },
   "0169": {
     "look": "體長約25公分，腿稍長，呈黃色，體重大多介於60至100公克間。",
-    "iucn": "無危 LC",
+    "iucn": "易危 VU",
     "source": "zh.wikipedia 小黃腳鷸 · pageid 938049 ｜ en.wikipedia Lesser yellowlegs · pageid 302455 · 分類：eBird/Clements",
     "orderZh": "鴴形目",
     "familyZh": "鷸科",
@@ -21440,7 +21440,7 @@
         "text": "身白色而帶點粉紅"
       }
     ],
-    "iucn": "未評估 NE",
+    "iucn": "無危 LC",
     "source": "zh.wikipedia 細嘴鷗 · pageid 5549838 ｜ en.wikipedia Slender-billed gull · pageid 326044 · 分類：eBird/Clements",
     "orderZh": "鴴形目",
     "familyZh": "鷗科",
@@ -21649,7 +21649,7 @@
   },
   "0188": {
     "range": "分佈於歐亞大陸北部，包括中國大陸內蒙古、新疆、江蘇等地。",
-    "iucn": "未評估 NE",
+    "iucn": "無危 LC",
     "source": "zh.wikipedia 小鸥 · pageid 1021595 ｜ en.wikipedia Little gull · pageid 325410 · 分類：eBird/Clements",
     "orderZh": "鴴形目",
     "familyZh": "鷗科",
@@ -21727,7 +21727,7 @@
     "fetchedAt": "2026-11-04"
   },
   "0189": {
-    "iucn": "未評估 NE",
+    "iucn": "無危 LC",
     "source": "zh.wikipedia 弗氏鷗 · pageid 3301413 ｜ en.wikipedia Franklin's gull · pageid 386061 · 分類：eBird/Clements",
     "orderZh": "鴴形目",
     "familyZh": "鷗科",
@@ -22287,6 +22287,8 @@
     },
     "length": "40–45 cm",
     "weight": "",
+    "iucn": "無危 LC",
+    "iucnEn": "Least Concern (LC)",
     "picks": [
       "range",
       "diet",
@@ -22417,8 +22419,8 @@
       "zh": true,
       "en": true
     },
-    "length": "16.9–21.3 in",
-    "weight": "10.6–24.7 oz",
+    "length": "43–54 cm",
+    "weight": "300–700 g",
     "iucnEn": "Least Concern (LC)",
     "picks": [
       "range",
