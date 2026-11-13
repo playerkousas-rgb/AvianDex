@@ -1,0 +1,210 @@
+{
+  "id": "0144",
+  "name": "青腳濱鷸",
+  "scientificName": "Calidris temminckii",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Calidris temminckii in non-breeding plumage: 13-15 cm, a rather plain brown stint, especially across the chest, with white underparts, a distinctive slow creeping foraging action, a fine-tipped slightly decurved bill, pale yellowish-green legs and a neat whitish orbital ring. When flushed it gives a distinctive high-pitched trilling call and the white outer tail feathers are usually prominent. Adults acquiring breeding plumage develop a variable number of dark-centred rufous-edged feathers, and juveniles have pale fringes to the upperpart feathers with a dark subterminal fringe on the scapulars and wing coverts. It forages unobtrusively in muddy areas of fish ponds and intertidal mudflats, and if alarmed may adopt an erratic steeply-rising flight path.",
+  "similarSpecies": [
+    {
+      "zh": "闊嘴鷸",
+      "scientificName": "Calidris falcinellus",
+      "asset": "broad-billed.png",
+      "framing": "whole-bird",
+      "distinction": "闊嘴鷸嘴較長而闊、末端三分一明顯下彎，頭部有分叉淡眉紋與深色側冠紋，繁殖羽上背有栗色羽緣；本種嘴細短而下彎輕微、頭部花紋平淡、胸無縱紋。"
+    },
+    {
+      "zh": "尖尾濱鷸",
+      "scientificName": "Calidris acuminata",
+      "asset": "sharp-tailed.png",
+      "framing": "whole-bird",
+      "distinction": "尖尾濱鷸體型明顯較大、胸部密佈斑點、腳黃褐、繁殖羽上身暖褐；本種僅 13–15 cm、胸幾乎無紋、腳偏黃綠、尾較長而伸出翼端。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.05,
+      0.21,
+      0.3,
+      0.46
+    ],
+    [
+      0.65,
+      0.15,
+      0.87,
+      0.37
+    ],
+    [
+      0.55,
+      0.3,
+      0.95,
+      0.55
+    ],
+    [
+      0.42,
+      0.54,
+      0.68,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "細短微彎嘴",
+    "整齊白眼圈",
+    "長尾伸出翼端",
+    "黃綠短腳"
+  ],
+  "featureNotes": [
+    "嘴細小而下彎極輕微，配合極小的體型；與闊嘴鷸的闊嘴、尖尾濱鷸的長嘴都不同（第1圈取自全身圖，實際可見）。",
+    "眼周有一圈清楚的白眼圈，是這種樸素小濱鷸最容易記住的特徵（第2圈取自近景圖，實際可見）。",
+    "尾較長，站立時明顯伸出摺疊的翼端；被趕飛時白色外側尾羽通常很顯眼（第3圈取自全身圖，實際可見）。",
+    "腳呈淡黃綠色，長度中等；本種覓食動作緩慢而貼地爬行，常在被抽乾的魚塘邊活動（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "BRN",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "MMR",
+      "NPL",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "KGZ",
+      "TJK",
+      "AFG",
+      "IRN",
+      "IRQ",
+      "ARE",
+      "OMN",
+      "SAU",
+      "YEM",
+      "TUR",
+      "SYR",
+      "JOR",
+      "ISR",
+      "EGY",
+      "SDN",
+      "ETH",
+      "ERI",
+      "DJI",
+      "SOM",
+      "KEN",
+      "TZA",
+      "UGA",
+      "RWA",
+      "BDI",
+      "COD",
+      "COG",
+      "CMR",
+      "NGA",
+      "NER",
+      "TCD",
+      "LBY",
+      "DZA",
+      "MAR",
+      "TUN",
+      "MRT",
+      "MLI",
+      "GHA",
+      "CIV",
+      "BFA",
+      "SEN",
+      "GMB",
+      "GNB",
+      "SLE",
+      "LBR",
+      "NOR",
+      "SWE",
+      "FIN",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "POL",
+      "DEU",
+      "NLD",
+      "BEL",
+      "FRA",
+      "GBR",
+      "IRL",
+      "DNK",
+      "ESP",
+      "PRT",
+      "ITA",
+      "GRC",
+      "BGR",
+      "ROU",
+      "MDA",
+      "HUN",
+      "SVK",
+      "CZE",
+      "AUT",
+      "CHE",
+      "SVN",
+      "HRV",
+      "BIH",
+      "SRB",
+      "MNE",
+      "MKD",
+      "ALB"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012800",
+      "use": "HKBWS substantive read: Category I, uncommon passage migrant and winter visitor with numbers in decline; 13-15 cm, a rather plain brown stint especially across the chest with a distinctive slow creeping foraging action, fine-tipped slightly decurved bill, pale legs and neat whitish orbital ring, and when flushed a distinctive trilling call with the white outer tail feathers usually prominent; non-breeding plumage with plain dull brown upperparts and chest and white underparts; adults acquiring breeding plumage develop a variable number of dark-centred rufous-edged feathers; juveniles with pale fringes to the upperpart feathers and a dark subterminal fringe on the scapulars and wing coverts; a distinctive high-pitched trilling given in flight; occurs in freshwater or brackish wetland habitat such as fish ponds, channelised watercourses, managed freshwater wetlands and areas of wet agriculture across northern areas of the New Territories from Nim Wan to Sha Tau Kok, gathering to feed and roost on ponds being drained down and otherwise scattered around the edges of full ponds, and also where freshwater influence is more pervasive on the intertidal mudflat, with some of the highest counts from that habitat including 59 on 1 January 2012; the only other records are from Kai Tak with 24 on 5 May 1976 and three on 3 April 1979 and one at Chek Lap Kok on 24 October 1996; generally recorded from mid-September to the end of April with highest numbers midwinter and extreme dates 6 August 2002 and 27 May 2005; peak seasonal counts in autumn, winter and spring have declined since the 1990s despite increased observer activity; first autumn arrivals usually in the second half of September with main passage from the second week of October to the third week of November and a decline in the last week of November and early December, while systematic monthly counts show a gradual increase from September to a peak in January; highest counts on record 152 at Lin Barn Tsuen on 18 October 1997 and 130 at Mai Po on 20 October 1991 whereas the highest autumn count this century is 46 on 1 November 2017; highest winter counts 118 on 14 January 1979 and 100 on 25 February 1984 but only 59 on 1 January 2012 this century, and the five-year mean of peak winter counts fell from generally 50 or more between 1978/79 and 2001/02 to never exceeding 35 since; the highest spring counts are 80 on 8 April 1987 and 12 April 1993 with 40 on 16 April 2006 the highest since 1999; no summer records; unobtrusively forages in muddy areas of fish ponds and intertidal mudflats and if alarmed may adopt an erratic steeply-rising flight path; monotypic, breeding across most of the Palearctic north of the Arctic Circle from Finland to Chukotka and wintering patchily in southern Europe but primarily in central Africa, parts of the Middle East, the Indian subcontinent, Indochina to southern Japan and Borneo; IUCN Least Concern with an unknown population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012500",
+      "use": "HKBWS Broad-billed Sandpiper comparison: longer broader bill with an obviously decurved distal third and a split supercilium, contrasting with Temminck's Stint's fine short bill and plain face."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對細短微彎嘴、整齊白眼圈、長尾伸出翼端及黃綠短腳；描繪非繁殖羽，未畫繁殖羽的暗心紅邊羽毛。",
+    "兩隻比較鳥均為 AI 生成示意（闊嘴鷸沿用 0141 全身圖、尖尾濱鷸沿用 0142 全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危 LC（趨勢未明）；香港屬 Category I，不常見過境鳥及冬候鳥，數量自 1990 年代持續下降，冬季峰值近二十年未超過 35 隻，最高 152 隻（1997-10-18）。",
+    "只交付 aviandex/0144.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
