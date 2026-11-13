@@ -1,0 +1,129 @@
+{
+  "id": "0168",
+  "name": "小青腳鷸",
+  "scientificName": "Tringa guttifer",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "EN",
+    "zh": "瀕危"
+  },
+  "illustrationTaxon": "Tringa guttifer, monotypic: 28-34 cm. Similar to Common Greenshank but less elegant, stockier and more front-heavy with shorter legs. The bill is relatively longer, blunter and more deeply based, and on a frontal view is more circular. At some distance it resembles a Terek Sandpiper in a way that Common Greenshank does not, owing to its upturned bill, front-heavy silhouette, yellow legs and foraging behaviour when it pursues crabs. Birds in breeding plumage have broad white chevrons around the tips of the upperpart feathers and white V-shaped spots around the edge of the tertials, the overall pattern being less variegated than on breeding-plumage Common Greenshank, with dense blackish spotting below in full breeding plumage. In winter plumage the upperparts are pale grey and uniform, lacking darker subterminal marks on the tertials and coverts, and the underparts are largely white. Compared to Common Greenshank in flight it has a shorter projection of toes beyond the tail, a shorter extension of white up the back that only reaches the mid part of the wings, whitish underwing coverts and slightly broader-based wings.",
+  "similarSpecies": [
+    {
+      "zh": "青腳鷸",
+      "scientificName": "Tringa nebularia",
+      "asset": "greenshank.png",
+      "framing": "whole-bird",
+      "distinction": "青腳鷸身型修長、腿較長而嘴較細，嘴只是微微上翹，背上的白色楔形一直延伸到肩部；本種前重後輕、腿短而嘴厚鈍，背白只到翼的中段。"
+    },
+    {
+      "zh": "澤鷸",
+      "scientificName": "Tringa stagnatilis",
+      "asset": "marsh-sandpiper.png",
+      "framing": "whole-bird",
+      "distinction": "澤鷸身型瘦長得多的、腿極長而細，嘴細直如針而全深色；本種矮壯前重、腿短而偏黃綠，嘴厚而基部深。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.72,
+      0.28,
+      0.99,
+      0.55
+    ],
+    [
+      0.02,
+      0.16,
+      0.34,
+      0.62
+    ],
+    [
+      0.16,
+      0.22,
+      0.54,
+      0.5
+    ],
+    [
+      0.32,
+      0.55,
+      0.6,
+      0.85
+    ]
+  ],
+  "featureLabels": [
+    "厚鈍而嘴基深",
+    "前重後輕的身形",
+    "冬羽素淨的灰背",
+    "黃綠色的短腿"
+  ],
+  "featureNotes": [
+    "嘴相對較長、較鈍，基部厚而深，從正前方看橫切面接近圓形——青腳鷸的嘴則基部較扁、整體較細（第1圈取自近景圖，實際可見）。",
+    "頭大、胸腹圓而沉，重心明顯在前，配上短腿，遠看比青腳鷸「矮一截、胖一號」（第2圈取自近景圖，實際可見）。",
+    "冬天背部是一片均勻的淺灰色，三級飛羽與覆羽上沒有深色的近端橫斑——這是把牠和青腳鷸分開的關鍵冬羽特徵（第3圈取自全身圖，實際可見）。",
+    "腿偏短而呈黃綠或暗黃綠色；覓食時會像翹嘴鷸那樣快速衝刺追捕蟹類（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "TWN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "MNG",
+      "VNM",
+      "THA",
+      "KHM",
+      "LAO",
+      "MYS",
+      "IDN",
+      "PHL",
+      "BRN",
+      "MMR",
+      "BGD",
+      "IND",
+      "LKA",
+      "PAK",
+      "NPL"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/015500",
+      "use": "HKBWS substantive read: Category I, a scarce passage migrant in spring that is rare at other times and possibly in decline, largely occurring in Deep Bay intertidal areas; 28-34 cm, similar to Common Greenshank but less elegant, stockier and more front-heavy with shorter legs, the bill relatively longer blunter and more deeply based and on a frontal view more circular, and at some distance resembling a Terek Sandpiper in a way that Common Greenshank does not owing to its upturned bill, front-heavy silhouette, yellow legs and foraging behaviour when it pursues crabs; breeding-plumage birds have broad white chevrons around the tips of the upperpart feathers and white V-shaped spots around the edge of the tertials with an overall pattern less variegated than on breeding-plumage Common Greenshank, and full breeding plumage has dense blackish spotting below that is rarely seen in HK; in winter plumage the upperparts are pale grey and uniform, lacking darker subterminal marks on the tertials and coverts, and the underparts are largely white; juveniles moulting into first-winter show pale-fringed brown juvenile scapulars and coverts being replaced by grey adult-type feathers; compared to Common Greenshank in flight it has a shorter projection of toes beyond the tail, a shorter extension of white up the back that only reaches the mid part of the wings, whitish rather than grey-barred underwing coverts and slightly broader-based wings, and the typical flight call of a short gwok is very different; almost all records have occurred on the intertidal mudflats of Deep Bay and adjacent roosting areas on Mai Po NR, the sole record away from there being a juvenile moulting into winter plumage at Nai Chung near Ma On Shan on 18 September 2010; it is primarily a spring passage migrant with a small number of autumn and winter records, the earliest spring birds probably in mid-March and passage peaking in the first half of April with the highest counts 58 on 13 April 1993 (with 48 the following day) and 46 on 8 April 1991 and 9 April 2007, a marked decline beginning the middle of the month and a second influx of first-summer birds peaking in the second half of May with the highest count 15 on 17 May 1996, numbers then declining slowly until late May with a less than annual trickle during June, the latest record being 26 June 1989 followed by one on 26 July 2015, peak spring counts since the mid-1980s indicating a possible decline over the past ten years; return passage has been noted from 5 September and is very weak with mainly singles and rarely two birds, and birds are present in most winter periods usually one occasionally two and on one occasion three; the first record was on 8 September 1968 but there were only nine records until spring 1986, after which the publication of Kennerley and Bakewell (1987) enhanced awareness of the identification and led to a significant increase in records from spring 1987; it is active and mobile when foraging on the mudflats, may chase down crabs after a fast and targeted run in the manner of Terek Sandpiper, and also catches small fish; monotypic, breeding in the Far East around the Sea of Okhotsk and on Sakhalin Island and passing through east Asian coastal wetlands to winter mainly in Myanmar, Thailand, peninsular Malaysia, western Indonesia and Bangladesh with small numbers elsewhere in Asia, and in China passing through coastal areas on migration and rarely wintering along the south coast based on Hong Kong records; IUCN ENDANGERED, a very small population estimated at 600-1,300 birds that is declining as a result of coastal development."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對厚鈍而深基的嘴、前重後輕的矮壯身形、冬羽素淨的灰背及黃綠色短腿；單型種。",
+    "兩隻比較鳥為 AI 生成示意（青腳鷸沿用 0167 已核對的全身圖、澤鷸沿用 0166 已核對的全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "插圖取非繁殖羽（冬羽背素淨淺灰、腹白）：繁殖羽的白色 V 形斑與胸腹黑斑在香港幾近見不到。",
+    "飛行時腳伸出尾後較短、背白只到翼中段、翼下覆羽偏白——這些是與青腳鷸的第二層分別，卡面只放靜態站姿。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形；本種分佈極窄（繁殖於鄂霍次克海一帶與庫頁島），綠色只表示有紀錄的國家。",
+    "IUCN 瀕危 EN，全球族群僅估 600–1,300 隻且因沿海開發而下降；香港屬 Category I，春季稀少過境鳥，其他季節罕見，數量可能正在下降。",
+    "覓食時會快速衝刺追捕蟹類，也會捕食小魚——這行為拍不進圓圈，只寫在說明。",
+    "只交付 aviandex/0168.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
