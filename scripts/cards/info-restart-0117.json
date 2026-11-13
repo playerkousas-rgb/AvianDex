@@ -1,0 +1,139 @@
+{
+  "id": "0117",
+  "name": "灰頭麥雞",
+  "scientificName": "Vanellus cinereus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Vanellus cinereus adult breeding plumage: grey head, grey neck and grey breast bordered below by a broad blackish breast band, cold grey-brown upperparts, white belly and undertail coverts, white tail with a broad black subterminal band, yellow bill with a black tip, red eye with a yellow orbital ring, long yellow legs. First-winters are duller brown, with a dark eye, dull bill and legs and little breast band early in winter, and are not shown. The species is monotypic.",
+  "similarSpecies": [
+    {
+      "zh": "鳳頭麥雞",
+      "scientificName": "Vanellus vanellus",
+      "asset": "northern-lapwing.png",
+      "framing": "whole-bird",
+      "distinction": "頭頂有長而向上彎的黑色冠羽、上體帶綠紫金屬光澤、嘴全黑、腳淡粉肉色；本種無冠羽、上體冷灰褐、嘴黃而先端黑、腳鮮黃。"
+    },
+    {
+      "zh": "太平洋金斑鴴",
+      "scientificName": "Pluvialis fulva",
+      "asset": "pacific-golden-plover.png",
+      "framing": "whole-bird",
+      "distinction": "無黑色胸帶、上體金黃斑點、腳暗灰而較短；本種上體冷灰褐、灰胸下有粗黑胸帶、腳鮮黃而長得多。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.3385,
+      0.293,
+      0.5859,
+      0.6641
+    ],
+    [
+      0.625,
+      0.166,
+      0.8724,
+      0.5371
+    ],
+    [
+      0.4557,
+      0.5859,
+      0.7031,
+      0.957
+    ],
+    [
+      0.3555,
+      0.5508,
+      0.6628,
+      0.8581
+    ]
+  ],
+  "featureLabels": [
+    "黃嘴黑尖",
+    "紅眼黃環",
+    "灰胸黑帶",
+    "黃色長腳"
+  ],
+  "featureNotes": [
+    "黃色嘴配分明的黑色先端，是本種一眼可辨的特徵（第1圈取自頭部特寫，實際可見；第一年冬羽嘴色較暗）。",
+    "鮮紅色的虹膜外圍一圈黃色眼圈；這兩種顏色在野外往往比灰色頭部更早被注意到（第2圈取自頭部特寫，實際可見）。",
+    "灰色頭、頸及胸前，下方接一條粗黑褐色胸帶，再往下轉白（第3圈取自頭部特寫，實際可見；第一年冬羽在冬季初期胸帶不明顯，本圖示成鳥繁殖羽）。",
+    "鮮黃色而長的腳，脛跗細長、趾亦黃色，遠看像踩高蹺（第4圈取自全身圖，實際可見；第一年冬羽腳色較暗）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "TWN",
+      "RUS",
+      "JPN",
+      "PRK",
+      "KOR",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "PAK"
+    ],
+    "note": "Country overview only: monotypic. In China breeds from the central northeast south through Hebei to areas south of the Yellow River and the southern edge of the Yangtze floodplain, also Taiwan, and west to the lower Qinghai-Tibet plateau; winters in southwest and southern coastal provinces including Hainan. Some birds breed in Far East Russia and Japan, and the wintering range includes southern Japan, much of Indochina and northern India. Not an occurrence polygon and not split by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010100",
+      "use": "HKBWS substantive identification/range/conservation read: Category I scarce and localised winter visitor and rare migrant; 34-37cm large long-legged plover; black-tipped yellow bill and yellow legs; cold grey-brown upperparts; white belly to undertail; white tail with broad subterminal band; adult grey head and chest bordered below by broad blackish band, yellow orbital ring, red eyes; first-winters dull brown head and upperparts with pale fringes, dull legs and bill, dark eye, little breast band; in flight tri-coloured brown/white/black upperparts, blackish primaries and white secondaries and coverts below, black tail band broad in centre and absent on outer feathers; vocal and loud when disturbed; wintering flock largely dependent on Kam Tin, formerly buffalo fields and Tsim Bei Tsui tidal ponds and Lo Wu marsh, now also Long Valley; main period first week of October to third week of February; highest counts 34 at San Tin 27 Jan 1982, 31 at Kam Tin 12 Nov 2011, 80 at Ha Tsuen 5 Oct 1960; monotypic; China breeding and wintering range as summarised; also Far East Russia, Japan, southern Japan, Indochina, northern India; IUCN Least Concern, decreasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080",
+      "use": "HKBWS family list confirming 010100 灰頭麥雞 and neighbouring lapwing/plover articles."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 灰頭麥雞 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Vanellus cinereus, Charadriiformes/Charadriidae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Species has no score record in runtime data, so all axes stay 待查; no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對嘴色與黑尖、紅色虹膜與黃眼圈、灰胸下黑胸帶及黃色長腳；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例；鳳頭麥雞與太平洋金斑鴴在香港都有紀錄，但卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危但全球趨勢下降；香港的越冬族群高度集中在錦田一帶，屬地區性稀少且依賴單一地點，兩者並不矛盾。",
+    "只交付 aviandex/0117.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
