@@ -1,0 +1,136 @@
+{
+  "id": "0174",
+  "name": "黃腳三趾鶉",
+  "scientificName": "Turnix tanki",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Turnix tanki: 15-18 cm, tiny and rotund, about 75% the size of Japanese Quail, with a very short tail, rounded wings and only three forward toes. Largely yellow bill with a dark tip and yellow legs and feet. A white iris with a prominent dark pupil gives a wide-eyed, surprised expression. Scapulars and coverts have large blackish centres with buff to greyish fringes; mantle feathers have blackish subterminal bands and pale tips. Males are rather orange-brown on the head and underparts with a pale buff throat and scattered round black spots at the sides of the breast; females and immatures are slightly duller and greyer and are larger. Two subspecies: T. t. blanfordii breeds from Myanmar east and south, while the nominate breeds in Pakistan and India.",
+  "similarSpecies": [
+    {
+      "zh": "棕三趾鶉",
+      "scientificName": "Turnix suscitator",
+      "asset": "barred-buttonquail.png",
+      "framing": "whole-bird",
+      "distinction": "棕三趾鶉的嘴與腳都是灰色而非黃色，脅部有黑色橫斑、胸側沒有橙色調，翅覆羽偏沙色，成鳥雌鳥的胸部甚至呈黑色；本種的嘴與腳是鮮黃色、胸側為橙褐色並散佈圓形黑點，整體明顯偏橙。"
+    },
+    {
+      "zh": "鵪鶉",
+      "scientificName": "Coturnix japonica",
+      "asset": "japanese-quail.png",
+      "framing": "whole-bird",
+      "distinction": "鵪鶉體型約大四分之一、身型較修長、尾較長而尖，嘴與腳是暗角質色與淡粉灰色；本種圓滾滾、尾極短幾乎看不到，嘴與腳鮮黃，加上白眼圈造成的「驚訝」表情，比例上一眼可分辨。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.8,
+      0.22,
+      1.0,
+      0.5
+    ],
+    [
+      0.56,
+      0.12,
+      0.78,
+      0.34
+    ],
+    [
+      0.22,
+      0.34,
+      0.46,
+      0.58
+    ],
+    [
+      0.36,
+      0.62,
+      0.62,
+      0.86
+    ]
+  ],
+  "featureLabels": [
+    "黃色的嘴",
+    "白色的虹膜",
+    "黑斑配淡色羽緣",
+    "黃色的腳與三趾"
+  ],
+  "featureNotes": [
+    "嘴大部分是黃色，只有嘴尖是深色；這是與棕三趾鶉（嘴灰色）最直接的分別，配上黃色的腿就很難認錯（第1圈取自近景圖，實際可見）。",
+    "虹膜是白色、瞳孔黑色而大，看上去像睜大眼「嚇了一跳」的表情，是黃腳三趾鶉的招牌；棕三趾鶉與鵪鶉的虹膜都沒有這麼白（第2圈取自全身圖，實際可見）。",
+    "肩羽與翅覆羽有大型黑色羽心、外緣是淡黃至灰色，頸後與背羽則是黑色次端帶配淡色羽端，形成整片「黑斑鑲淡邊」的鱗狀紋（第3圈取自全身圖，實際可見）。",
+    "腿與腳鮮黃色、黑色爪；三趾鶉科沒有後趾，只有三根向前的腳趾，所以叫「三趾鶉」，圖中站在泥地上時三趾張開可見（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "TWN",
+      "KOR",
+      "PRK",
+      "RUS",
+      "MYS",
+      "IDN",
+      "PHL"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009400",
+      "use": "HKBWS substantive read: Category I, a rare passage migrant to open-country grassy areas although distressed birds occur in atypical habitat; 15-18 cm, tiny and rotund at about 75% of the size of Japanese Quail, with a largely yellow bill, yellow legs, and a surprised expression from the white iris and prominent dark pupil; scapulars and coverts have large blackish centres with buff to greyish fringes and the mantle has blackish subterminal bands and pale tips; males are rather orange-brown on head and underparts while females and immatures are duller and greyer; when flushed it shows the yellowish bill, rufous head and neck on males, and marked contrast between pale upperwing coverts and darker flight feathers; autumn passage runs from 20 September to 23 November peaking from the first week of October to the first week of November with only ones or twos, plus three winter records and a single 1962 spring record that may have been ex-captive; it prefers dense grassy or rank vegetation but turns up almost anywhere away from wetlands, has been rescued in a distressed state at Kadoorie Wild Animal Rescue Centre, and is recorded from the Indian subcontinent east through Indochina to much of south, east and northeast China and adjacent Ussuriland and the Korean peninsula; IUCN Least Concern with a stable population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009500",
+      "use": "HKBWS Barred Buttonquail page read as the contrast species: 13-17 cm, similar in structure to Yellow-legged Buttonquail but with a grey bill and legs, no obvious rufous tones to the chest, black barring on the flanks, sandy wing coverts and blackish chest in adult female; approximately 25 Hong Kong records, mostly autumn from late September to the end of November."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 黃腳三趾鶉 Turnix tanki is number 95, Category I, with no IUCN code (i.e. Least Concern); the adjacent 96 棕三趾鶉 Turnix suscitator confirms the Turnicidae pairing."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對鮮黃色的嘴與腳、白色虹膜、黑斑配淡黃羽緣的背部，以及圓胖短尾的三趾鶉身型。",
+    "兩隻比較鳥都是本卡新繪：棕三趾鶉（灰嘴灰腳、脅部黑橫斑、胸部黑）與鵪鶉（暗角質嘴、淡粉灰腳、長而尖的尾），非等比例；日後做 0175 棕三趾鶉時可直接沿用本卡的比較鳥圖。",
+    "卡面採用成鳥雄鳥（頭與下體橙褐、胸側散佈圓形黑點）。雌鳥體型較大、較灰、後頸有一圈寬紅褐色項圈，卡面不細分性別，只寫在說明——因為香港所見多為過境途中撿到的疲弱個體，性別不一定可靠。",
+    "app 分數：i 2／a 3.3／v 2.9／r 3.3／c 3／o 2.9（無 vEst），與 runtime 一致，沒有補值或重算。",
+    "IUCN 無危 LC、趨勢穩定；香港屬 Category I，是稀少的秋季過境鳥，秋季 9 月 20 日至 11 月 23 日、高峰在 10 月第一週至 11 月第一週，多為一兩隻；冬季僅三筆、春季只有 1962 年一筆且可能是逃逸鳥。全球無危與香港稀少要分開寫。",
+    "香港不少紀錄是飛行途中迷失、在草地上或甚至市區被撿到送嘉道理農場暨植物園野生動物拯救中心的疲弱個體，這是本種在香港出現的主要方式之一，寫進說明。",
+    "三趾鶉科雌鳥較大較鮮豔、由雄鳥孵蛋育雛，是與真正鵪鶉（雞形目）完全不同的類群；本卡比較欄用鵪鶉只是外形對照，不代表親緣關係。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形；南亞、東南亞、華南與東北亞一併標示，繁殖地與越冬地不分工（HKG 與 SGP 不在 110m 底圖，未使用）。",
+    "只交付 aviandex/0174.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
