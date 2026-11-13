@@ -1,0 +1,163 @@
+{
+  "id": "0161",
+  "name": "紅頸瓣蹼鷸",
+  "scientificName": "Phalaropus lobatus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Phalaropus lobatus, monotypic: 18-20 cm, similar in size to Curlew Sandpiper, with a rather fine, all dark bill, usually seen on or over the sea where it appears dainty, and often very tame. Adult in breeding plumage has greyish upperparts and rusty-red on the front and side of the neck, which contrasts with a white throat and grey chest and flanks; the female has cleaner-cut and more intense markings, and most birds seen in Hong Kong in spring are in a transitional plumage. Juveniles have rich buff to whitish mantle and scapular Vs and a solid dark cap. Adult winter is grey above with white lines alongside the mantle and a black mask behind the eye that contrasts with a whitish forecrown.",
+  "similarSpecies": [
+    {
+      "zh": "灰瓣蹼鷸",
+      "scientificName": "Phalaropus fulicarius",
+      "asset": "grey-phalarope.png",
+      "framing": "whole-bird",
+      "distinction": "灰瓣蹼鷸嘴短而粗、基部明顯較深，非繁殖羽頭頂淺灰、背部銀灰且翼上白斑粗大，體型也較圓胖；本種嘴細如針且全黑，非繁殖羽背部有兩道白色縱線、眼後有黑斑。"
+    },
+    {
+      "zh": "紅頸濱鷸",
+      "scientificName": "Calidris ferruginea",
+      "asset": "curlew-sandpiper.png",
+      "framing": "whole-bird",
+      "distinction": "紅頸濱鷸同樣細小、體型相近，但嘴明顯下彎、腿長而黑，多在泥灘上行走；本種嘴細直如針，腿短而位置偏後，幾乎總是在水面上游動，趾間有瓣膜。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.7,
+      0.2,
+      1.0,
+      0.46
+    ],
+    [
+      0.54,
+      0.19,
+      0.78,
+      0.51
+    ],
+    [
+      0.3,
+      0.34,
+      0.66,
+      0.62
+    ],
+    [
+      0.26,
+      0.61,
+      0.42,
+      0.81
+    ]
+  ],
+  "featureLabels": [
+    "細針狀全黑嘴",
+    "鏽紅頸側與白喉",
+    "背部淡色 V 紋",
+    "瓣狀趾"
+  ],
+  "featureNotes": [
+    "嘴細長、筆直如針，整根全深色，沒有任何淺色基部——本種與灰瓣蹼鷸最直接的嘴形差別（第1圈取自近景圖，實際可見）。",
+    "頸側與前頸一大片鏽紅色，與純白的喉部及淺灰的胸側形成強烈對比；繁殖期雌鳥的色塊更乾淨濃烈（第2圈取自近景圖，實際可見）。",
+    "灰黑肩羽之間夾著兩道淡色 V 形縱線，是辨識非繁殖羽與過渡羽時的關鍵花紋（第3圈取自全身圖，實際可見）。",
+    "前趾之間有明顯的瓣膜，方便在水面打轉划水；腳位置偏後，所以上岸時步履不穩（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CAN",
+      "USA",
+      "GRL",
+      "ISL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "TWN",
+      "JPN",
+      "KOR",
+      "PRK",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "PHL",
+      "PNG",
+      "AUS",
+      "TLS",
+      "OMN",
+      "YEM",
+      "SAU",
+      "ARE",
+      "IRN",
+      "PAK",
+      "IND",
+      "LKA",
+      "BGD",
+      "MMR",
+      "KHM",
+      "LAO",
+      "NPL",
+      "MEX",
+      "GTM",
+      "SLV",
+      "HND",
+      "NIC",
+      "CRI",
+      "PAN",
+      "COL",
+      "ECU",
+      "PER",
+      "CHL",
+      "SDN",
+      "ERI",
+      "DJI",
+      "SOM",
+      "KEN",
+      "TZA",
+      "MOZ",
+      "ZAF",
+      "EGY"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/014400",
+      "use": "HKBWS substantive read: Category I, a passage migrant, common and sometimes abundant in spring and uncommon in autumn; 18-20 cm, similar in size to Curlew Sandpiper, with a rather fine all dark bill, usually seen on or over the sea when it appears dainty and can be very tame; adult in breeding plumage has greyish upperparts and rusty-red on the front and side of the neck contrasting with a white throat and grey chest and flanks, the female having cleaner-cut and more intense markings, and most birds seen in Hong Kong in spring are in a transitional plumage; juveniles have rich buff to whitish mantle and scapular Vs and a solid dark cap; adult winter is grey above with white lines alongside the mantle and a black mask behind the eye that contrasts with a whitish forecrown; voice a high-pitched thin chit uttered singly or in series; recorded throughout most sea areas of Hong Kong including the centre of Victoria Harbour, with the highest counts along ferry routes, and also in Deep Bay and at low-lying marshy inland areas in small numbers, with influxes associated with tropical storms in autumn and with surges of the northeast monsoon in spring; earliest records 15 February and no records in December or January, first significant numbers usually in the third week of March with main passage from the last week of March to the third week of April and the highest count 2,490 passing Po Toi in two early morning hours on 5 April 2012, the latest spring migrant 31 May 1993, and a small number of summer records in nine years since 1958 all between 7 June and 6 July; earliest autumn record 3 August 1991 with numbers lower and more erratic than in spring, main passage during the middle two weeks of September and the highest single-site count 2,000 at Clearwater Bay on 16 September 2018 during the close approach of a tropical storm, numbers declining sharply after 9 October with the latest autumn records a flock of 60 in Victoria Harbour on 4 November 1964 and two at Long Valley on 26 November 2014; picks small aquatic invertebrates and insects from the surface of both marine and freshwater bodies, is usually encountered at sea in loose scattered rafts of up to fifty birds, flies off low over the water when approached by boats to settle elsewhere, and tired birds on inland water bodies may allow very close approach; monotypic with a circumpolar breeding distribution largely north of the Arctic Circle in Eurasia but down to about 55N in Kamchatka and North America, wintering at sea in three discrete areas off the west coast of central and northern South America, southeast of the Arabian Peninsula, and between the Philippines and Indonesia in the area of the Celebes, Banda and Java Seas; in China a migrant through large areas of the country, wintering off Hainan; IUCN Least Concern with a decreasing population trend."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對細針狀全黑嘴、鏽紅頸側與白喉、背部淡色 V 紋及瓣狀趾；單型種。",
+    "兩隻比較鳥均為 AI 生成示意（灰瓣蹼鷸、紅頸濱鷸，本卡新繪製並已核對），非等比例；卡上不作完整鑑別檢索表。",
+    "春天數量可觀（單次最高 2,490 隻，2012-04-05 於蒲台島兩小時內），秋季較少且起伏大；12 月與 1 月從無紀錄。",
+    "香港紀錄多在海上，包括維多利亞港中央；颱風或東北季風湧至時常帶來大批個體。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬海域不分工。",
+    "IUCN 無危 LC（趨勢下降）；香港屬 Category I，春季常見、秋季不常見的過境鳥。",
+    "只交付 aviandex/0161.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
