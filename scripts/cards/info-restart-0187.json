@@ -1,0 +1,141 @@
+{
+  "id": "0187",
+  "name": "棕頭鷗",
+  "scientificName": "Chroicocephalus brunnicephalus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Chroicocephalus brunnicephalus: 41-45 cm, slightly larger and sturdier than Black-headed Gull with a deeper bill, a relatively larger head, a pale iris and more prominent white crescents around the eye. The adult in breeding plumage has a dark brown hood that is bordered black (the border can be hard to see) and is paler at the front near the bill base, with small narrow white crescents above and behind the eye, a deep dark red bill and deep red legs, pale silvery-grey upperparts and clean white neck, breast, belly and tail; at rest the underside of the outer primary lacks the white wedge outlined in black that Black-headed Gull shows, and in flight the black wingtip has two large mirrors in the outer two primaries. The adult in winter has a small dark patch immediately in front of the eye and an ear patch slightly larger and darker than Black-headed Gull's but less dark on the crown. First-years have extensive dark brown in the primaries, wholly dark brown secondaries, a large pale patch in the outer wing, a broadly dark-tipped tail and brown centres to most lesser and median coverts.",
+  "similarSpecies": [
+    {
+      "zh": "紅嘴鷗",
+      "scientificName": "Chroicocephalus ridibundus",
+      "asset": "black-headed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "紅嘴鷗（37–43 公分）比本種**小一號、嘴較短較薄、頭較小**，虹膜深色、眼周的白圈沒那麼寬；本種嘴更深更厚、頭相對更大、**虹膜淡色**，眼的上方與後方有明顯的白色新月斑。繁殖羽兩者都是深褐頭罩，但紅嘴鷗的頭罩一直包到後頸、整圈白 eye-ring 完整，本種的頭罩後方更黑、前方近嘴基較淡。飛行時本種外側兩枚初級飛羽有**兩個大白斑**（mirrors），紅嘴鷗的黑色翼尖只有一道翼前緣白邊。"
+    },
+    {
+      "zh": "細嘴鷗",
+      "scientificName": "Chroicocephalus genei",
+      "asset": "slender-billed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "細嘴鷗（42–44 公分）雖然一樣有淡色虹膜，但**頭小、前額長而斜、嘴與腳都更長更細**，繁殖羽沒有深褐頭罩、只有很淡的耳斑；本種頭大而圓、嘴深而厚、繁殖羽是整頂深褐（後方轉黑）頭罩。兩者冬季都是白頭，這時就看嘴的厚度與頭的比例：本種的嘴明顯粗短、頭的比例大。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.08,
+      0.99,
+      0.815
+    ],
+    [
+      0.72,
+      0.148,
+      0.87,
+      0.429
+    ],
+    [
+      0.47,
+      0.259,
+      0.68,
+      0.653
+    ],
+    [
+      0.08,
+      0.47,
+      0.29,
+      0.74
+    ]
+  ],
+  "featureLabels": [
+    "深褐繁殖頭罩",
+    "眼上下的白新月",
+    "深紅厚重的嘴",
+    "翼尖兩個大白斑"
+  ],
+  "featureNotes": [
+    "繁殖羽是整頂深褐頭罩，後方轉黑、前方近嘴基較淡，下緣乾淨地止於白色頸部；紅嘴鷗的頭罩較均勻、一直包到後頸（第1圈取自近景大頭圖，實際可見）。",
+    "眼的上方與後方各有一道白色新月，虹膜是淡黃白色；紅嘴鷗是完整一圈白 eye-ring 配深色虹膜（第2圈取自近景大頭圖，實際可見）。",
+    "嘴深紅、厚重，比紅嘴鷗更粗，尖端略帶鉤；細嘴鷗的嘴長而細，是本屬裡另一個極端（第3圈取自近景大頭圖，實際可見）。",
+    "飛行時外側兩枚初級飛羽各有大白斑，合起來是兩個 mirrors；紅嘴鷗的黑色翼尖沒有這樣的白斑。本圈取自全身圖的收翼側面，兩個白斑同時入鏡（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "TJK",
+      "KGZ",
+      "AFG",
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016200",
+      "use": "HKBWS substantive read: Category I, rare winter visitor and scarce passage migrant to Deep Bay; 41-45 cm, slightly larger and sturdier than Black-headed Gull with a deeper bill, relatively larger head, pale iris and more prominent white crescents around the eye; at rest the underside of the outer primary lacks the white wedge outlined in black that Black-headed Gull shows; the adult in winter has a small dark patch in front of the eye and an ear patch slightly larger and darker than Black-headed Gull's but less dark on the crown, with slightly deeper red legs; the adult in breeding plumage has a dark brown hood bordered black, paler at the front, with small narrow white crescents above and behind the eye; in flight the adult has a distinctive black wingtip with two large mirrors in the outer two primaries; first-years have extensive dark brown primaries, wholly dark brown secondaries, a large pale patch in the outer wing, a broadly dark-tipped tail and brown centres to most lesser and median coverts, and dark-winged Black-headed Gulls are separated by the longer white fingers on the outer webs of primaries 6, 7 and 8 (Gibbins 2021); calls are very similar to Black-headed Gull; most pre-1981 reports came from Victoria Harbour and the coast west to Castle Peak Bay, with none from the Harbour since 1981, attributed to loss of feeding areas through industrial development, reclamation and the relocation of sewage disposal into deeper waters; Deep Bay has been the favoured wintering area since the mid-1980s, with only three records elsewhere since 1982 (Starling Inlet 1985, 1990, 1991); the first HK record was an adult off Green Island on 21 November 1974, recorded annually in small numbers since, earliest 21 October 1995 and latest an adult in breeding plumage at Mai Po on 7 May 2017; there appears to have been a fall in midwinter records and most records now fall in March and April, indicating it is largely a spring passage migrant, possibly because milder winters let birds stay further north and west; usually one, occasionally two birds, with six at Starling Inlet and Deep Bay in winter 1990-91 and three adults at Deep Bay on 7 March 1992; no information on behaviour, foraging and diet; monotypic, breeding between 3,000 m and at least 4,500 m in Turkestan and west China south to the Pamirs, Ladakh and Tibet, wintering on coasts of India, Sri Lanka and southeast Asia to southwest China; IUCN Least Concern with a stable population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016300",
+      "use": "HKBWS Black-headed Gull page read as the first contrast species: 37-43 cm, the commonest small gull in Hong Kong, separated in flight from all but Slender-billed Gull by the white leading edge to the wing and black-tipped outer primaries, with a dark brown breeding hood, a bold complete white eye ring, deep red bill and legs, and a white head with a blackish spot behind the eye in winter."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016100",
+      "use": "HKBWS Slender-billed Gull page read as the second contrast species: 42-44 cm, similar to Black-headed Gull but with a smaller head, longer forehead, bill, legs and neck and usually a pale iris, lacking a dark hood in breeding plumage and showing only a faint ear spot."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 棕頭鷗 Chroicocephalus brunnicephalus carries no IUCN code in the list, i.e. Least Concern, matching the HKBWS species page; the nearby 黑嘴鷗 Saundersilarus saundersi is listed VU."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對深褐繁殖頭罩、眼上下的白新月、深紅厚重的嘴、翼尖兩個大白斑。",
+    "畫的是**成鳥繁殖羽**（深褐頭罩＋白新月＋淡色虹膜＋深紅嘴腳）。HKBWS 說本種在香港主要是**春季過境**、冬季罕見，冬季成鳥頭上是白的，只在前眼一小塊黑斑與較大的耳斑（第1、2圈的 notes 有寫）。",
+    "全身圖與近景圖皆為本卡新繪（`pixel.png`、`features.png`，`features.png` 為 1719×915 兩段式：左全身、右大頭）；比較鳥紅嘴鷗沿用 0186 已核對的全身圖（複製為 `black-headed-gull.png`），細嘴鷗沿用 0185 的全身圖（複製為 `slender-billed-gull.png`）；三者非等比例，只作外形對照。",
+    "身長：HKBWS 量 **41–45 cm**；app 的 `explorerIndex.len` 為 0、`cardDetails` 沒有長度欄位，slim 版面亦不顯示身長，故卡面沒有身長數字，notes 只記 HKBWS 的區間，沒有自行補值（0014／0053 前例）。體重兩邊都無資料，不填。",
+    "app 分數：v 4.7／r 1.0／c 3.0／o 2.9，**重要性 i 與適應力 a 都無資料**（`cardDetails` 沒有 iucn、`explorerIndex` 的食性與棲地 tag 都是空的，故 i、a 無值 → `missingScores: [\"i\",\"a\"]`），卡面兩個軸顯示「待查」並加「待查非零分」，沒有補零、沒有重算綜合 2.9；HKBWS 的 LC 只寫在卡面 IUCN 章與本節，沒有回頭改 app 資料。`vEst: 1` 是因為體長由 AVONET 翼長估算，卡面已標「觀賞值含體長估算」。",
+    "IUCN **無危 LC、趨勢穩定**（HKBWS：population trend stable）；香港是 **Category I 的罕見冬候鳥兼少量春季過境鳥**，幾乎只在后海灣——全球與香港狀態分開寫。",
+    "香港紀錄照 HKBWS：1981 年前多來自維多利亞港與西至青山灣的海岸線，1981 年後維港再無紀錄，HKBWS 歸因於九龍半島至青山灣的覓食地因工業發展、填海與污水排放點移往深水而消失；1980 年代中期以後后海灣成為主要越冬地，1982 年後只有三次在其他地點（1985、1990、1991 年各一次於沙頭角海）。首筆紀錄是 1974-11-21 於青洲對出的一隻成鳥；最早 1995-10-21（米埔）、最晚 2017-05-07（米埔，成鳥繁殖羽）；近年 3、4 月紀錄最多，HKBWS 認為本種主要是春季過境鳥，可能與暖冬有關；通常一至兩隻，1990–91 冬曾有六隻（沙頭角海及后海灣），1992-03-07 后海灣有三隻成鳥。",
+    "叫聲照 HKBWS：與紅嘴鷗非常相似（本種沒有獨立描述）。行為、覓食與食性 HKBWS 寫「No information」，卡面不補。",
+    "地圖 19 個 ISO3：繁殖於 Turkestan 與中國西部的高原（3,000 公尺至少到 4,500 公尺），南至帕米爾、拉達克與西藏；度冬於印度、斯里蘭卡與東南亞海岸到中國西南。綠色非全境。",
+    "只交付 aviandex/0187.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
