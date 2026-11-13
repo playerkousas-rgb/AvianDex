@@ -1,0 +1,130 @@
+{
+  "id": "0178",
+  "name": "中賊鷗",
+  "scientificName": "Stercorarius pomarinus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Stercorarius pomarinus: 42-50 cm excluding the tail streamers, a large heavy skua with a large body, rounded head, thick neck and a large bill. Pale morph adults have brown upperparts, a broad dark cap that extends well below the eye line, a strong yellow tone to the sides of the neck, a dark brown heavily spotted breast band that is best marked in males, and a bold white flash across the base of the primaries. The two central tail feathers are broad, rounded and spoon-shaped, projecting well beyond the tail. Juveniles have short rounded streamers and a double pale band on the underwing. Dark morphs are uniformly dark brown. Steady, powerful flight, heavier and slower than Parasitic Jaeger.",
+  "similarSpecies": [
+    {
+      "zh": "短尾賊鷗",
+      "scientificName": "Stercorarius parasiticus",
+      "asset": "parasitic-jaeger.png",
+      "framing": "whole-bird",
+      "distinction": "短尾賊鷗小得多（37–44 公分，不含尾羽延長），頭較小、嘴較細，飛行像隼一樣快；成鳥的深色頭頂較淡、範圍也較窄，不會伸到嘴裂以下，嘴基上方有一小點淡色，胸帶較不明顯、脅部沒有濃密斑點，中央尾羽細長而尖，不是匙狀。"
+    },
+    {
+      "zh": "長尾賊鷗",
+      "scientificName": "Stercorarius longicaudus",
+      "asset": "long-tailed-jaeger.png",
+      "framing": "whole-bird",
+      "distinction": "長尾賊鷗只有 35–41 公分、翼特別細長，頭頂是一塊界線分明的黑色小帽，下腹均勻的灰、翼下沒有淡色區塊，兩根中央尾羽幾乎有尾長的兩倍，細如長針；本種身體厚重得多，下腹白、胸帶滿佈深褐斑點。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.0,
+      0.5,
+      0.3,
+      0.8
+    ],
+    [
+      0.56,
+      0.14,
+      0.86,
+      0.42
+    ],
+    [
+      0.6,
+      0.5,
+      1.0,
+      0.8
+    ],
+    [
+      0.26,
+      0.47,
+      0.47,
+      0.63
+    ]
+  ],
+  "featureLabels": [
+    "匙狀的中央尾羽",
+    "深色頭頂＋黃色的頸側",
+    "深褐斑點的胸帶",
+    "初級飛羽的白色閃光"
+  ],
+  "featureNotes": [
+    "成鳥的兩根中央尾羽又寬又圓，末端像湯匙或槳；圖中兩支槳狀尾端伸到畫面最左邊，框得進去但邊緣略被裁掉一點（第1圈取自全身圖，實際可見）。",
+    "深色頭頂一路蓋到眼下，頸側與後頸帶著明顯的黃褐色調，這是與短尾賊鷗最主要的差別之一（第2圈取自近景圖，實際可見）。",
+    "胸部有一圈深褐色的濃密斑點帶，雄鳥較完整、對比更強，雌鳥常有缺口；淡色型個體佔多數（第3圈取自近景圖，實際可見）。",
+    "初級飛羽基部有一大塊白色，停棲與飛行時都像一道白色閃光；這是淡色型成鳥最好認的翼上特徵（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CAN",
+      "USA",
+      "GRL",
+      "ISL",
+      "NOR",
+      "SWE",
+      "FIN"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019000",
+      "use": "HKBWS substantive read: Category I, a rare spring passage migrant with occasional storm-blown autumn records and one winter record (10 February, eastern waters); 42-50 cm excluding tail streamers, the largest skua in Hong Kong with a large body, rounded head and large bill and a steady powerful flight; adult breeding pale morph has broad rounded central tail feathers, a heavily spotted dark brown breast band (often incomplete in males and with stronger contrast), pale morphs predominating, a more extensive dark cap and a stronger yellow tone to the neck sides than Parasitic Jaeger; juveniles have short rounded streamers and a double pale band on the underwing; all records at sea, mostly from Po Toi and boat-based surveys; spring passage from the third week of March to mid May with the latest on 16 May 2008; autumn records of 26 September 1993 (the first Hong Kong record, Leader and Leven 1995), 47 on 26 October 1998 (the highest count) and 2 on 5 November 1993; monotypic, breeding near-circumpolar north of the Arctic Circle and wintering at sea; IUCN Least Concern with a stable population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019100",
+      "use": "HKBWS Parasitic Jaeger page read as the contrast species: 37-44 cm excluding tail streamers, fast falcon-like flight, a relatively small head and a finer bill than Pomarine Skua, a paler and less extensive dark cap that does not extend below the gape, a small pale spot above the bill base, a less well-marked breast band without heavy spotting on the flanks, and two long thin pointed central tail feathers."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019200",
+      "use": "HKBWS Long-tailed Jaeger page read as the second contrast species: 35-41 cm, a distinct black cap, long slender wings, an evenly greyish lower underbody with no pale underwing area, and streamers nearly twice the length of the tail."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 中賊鷗 Stercorarius pomarinus is number 196, Category I, with no IUCN code (i.e. Least Concern); 短尾賊鷗 is number 195 and 長尾賊鷗 number 194."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對匙狀中央尾羽、深色頭頂與黃色頸側、深褐斑點胸帶、初級飛羽白斑。",
+    "全身圖與近景圖本卡新繪，沒有沿用舊圖；比較鳥短尾賊鷗與長尾賊鷗也是本卡新繪（`parasitic-jaeger.png`、`long-tailed-jaeger.png`），非等比例，只作外形對照。",
+    "身長以 HKBWS 的 42–50 公分（不含尾羽延長）為準；`cardDetails.zh.json` 寫 46–67 公分，是含尾羽延長的量法，兩者不衝突，但卡面與 notes 採 HKBWS 的定義。體重 540–920 公克照 `cardDetails` 保留。",
+    "app 分數：i 2／a 3.3／v 4.4／r 4.8／c 1.2／o 3.1，六軸齊全，無 `vEst`。",
+    "IUCN 無危 LC、趨勢穩定；香港屬 Category I 的**罕見過境鳥**，春季為主，秋季多為颱風吹來的偶發紀錄，另有 2 月 10 日一筆冬季紀錄。全球無危與香港罕見要分開寫。",
+    "數量資料寫進 notes：春季 3 月第三週至 5 月中，最晚 2008-05-16；秋季首筆 1993-09-26（香港第一筆紀錄），1998-10-26 單日 47 隻為最高紀錄，1993-11-05 另有 2 隻。",
+    "notes 寫明：本種幾乎都在海上出現，香港的紀錄主要來自蒲台島一帶與出海調查；卡面為停棲站姿示意，不能當成岸邊可見的鳥。",
+    "淡色型佔多數，深色型全身深褐；卡面插圖取淡色型成鳥，是野外最常遇到、也最容易辨認的型。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形；只標北極圈附近的繁殖國家（RUS、CAN、USA、GRL、ISL、NOR、SWE、FIN），冬季在海上、無國家可標，故不含越冬地。",
+    "只交付 aviandex/0178.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
