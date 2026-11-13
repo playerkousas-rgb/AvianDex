@@ -2108,3 +2108,11 @@ HKBWS 0080/011200 內文（Category I 過境遷徙鳥，短草及其他開闊旱
 - 交付：AVIF 1024×1536、**129632 B**、MD5 `266ba6e216ffc443bb2d6764b4d59746`、SHA256 `2000d01c187302af61320eabc983ad8bf77f9e5178d7874b769f059649bfce5a`；Drive file `1FTzMi2XlgfdjJ4TbNFE0K2V0XAVWs8Ye`，parent `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD`，`get_file` 核對 bytes／MD5／mime `image/avif` 與本機一致。
 - **舊版已移入垃圾桶**（不覆寫）：舊 `0113.avif` file id `1zRy6bjYA4-HQ_tb-WuvoCDzL1TQ1P3e5`、127621 B、MD5 `6a05265444ca346862bbcbc016b8267b`；資料夾現時只有一份 0113。
 - 驗證：`spec == manifest.spec`、AVIF 解碼 1024×1536、bytes／SHA256 與 manifest／SHA256SUMS 一致、`missingScores` 空、`test-slim-feature-label.py` 4/4、地圖面板 `#7da688` 綠色像素 10114（非空）。
+
+### 0151／0154／0181 尚未重出（如實記錄）
+
+- 本回合生圖額度（10 張）在 0113 完成後用盡，`features.png`／比較鳥無法再生成，因此這三張**沒有寫新 spec、沒有渲染、沒有上載**，Drive 上仍然是舊版（英制數字的卡面），不要當成已重出。
+- 已重新下載 `ne_110m_admin_0_countries.geojson`（GitHub API contents base64，838726 B、177 個國家）並放入三張卡的素材目錄；`cards/art/` 不入 Git，環境再重置時要再做一次。`raw.githubusercontent.com` 在此沙盒 SSL 失敗，`api.github.com/.../contents` 可行。
+- **0151 飾胸鷸**：`pixel.png` 已生成並讀圖核對 —— 皮黃色下體、褐色鱗狀上體、大眼配淡色眼圈、短黑嘴、鮮黃長腳都對，但**胸側沒有黑色斑點**（第 3 圈「胸側黑色斑點」缺主體），而且背部比例偏長似鷗。裁切實測：第 1 圈（短黑嘴）`[0.23,0.14,0.45,0.32]` 圈內有嘴、眼與完整淡色眼圈；第 4 圈（黃腳）`[0.37,0.60,0.60,0.97]` 兩腳與蹼趾入圈。**下一回合要重畫 `pixel.png`（胸側加一列黑斑、身形收短）**，並生成 `features.png`（大眼淡眼圈＋短黑嘴）＋比較鳥 流蘇鷸、斑胸濱鷸。
+- **0154 長嘴鷸**、**0181 扁嘴海雀**：完全沒有新素材，`pixel.png`／`features.png`／比較鳥（半蹼鷸、黑尾鷸／冠海雀、三趾鷗）全部要生成。
+- 這三張的舊 `featureCrops` 是指向已消失的舊素材，即使新圖生成後也**不可直接沿用**，要逐圈重新核對。
