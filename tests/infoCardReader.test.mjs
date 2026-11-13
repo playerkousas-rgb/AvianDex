@@ -99,6 +99,30 @@ test('the whole delivered range 0001–0120 is registered slim, so every page is
     ['artwork', 'features', 'scores', 'distribution', 'similar']);
 });
 
+test('panelColors matches each card\'s real theme background, not a hard-coded navy', () => {
+  /* 2026-11：全部 155 張的 panelColors 都寫成 #173446 深藍，但 compose-card.py 的
+     apply_theme() 是按「目」分組上色（水鳥藍／猛禽棕／雀形綠／其他灰藍），底色再由
+     dark(theme, 0.82) 算出來。於是 0156 橙腹葉鵯（雀形目）的卡是深綠，分頁留白卻
+     露深藍邊。這裡照 renderer 的公式重算一次，任何新卡寫死深藍都會被擋下。
+     期望值由 THEMES 四色 × dark(0.82) 得來，與已交付的 0155／0156 實測相差 ≤1
+     （AVIF 有損）。 */
+  const BG = { water: '#06121a', raptor: '#150d05', passerine: '#07100a', other: '#0d0f15' };
+  const WATER = new Set(['Anseriformes', 'Podicipediformes', 'Suliformes', 'Pelecaniformes',
+    'Charadriiformes', 'Gruiformes', 'Phaethontiformes', 'Procellariiformes', 'Gaviiformes',
+    'Ciconiiformes', 'Phoenicopteriformes']);
+  const RAPTOR = new Set(['Accipitriformes', 'Falconiformes', 'Strigiformes']);
+  const taxonomy = JSON.parse(readFileSync(path.join(root, 'src/data/birdTaxonomy.json'), 'utf8'));
+  const cards = JSON.parse(readFileSync(path.join(root, 'src/data/infoCards.json'), 'utf8'));
+  for (const id of cards.ids) {
+    const order = taxonomy[id]?.order ?? '';
+    const group = WATER.has(order) ? 'water' : RAPTOR.has(order) ? 'raptor'
+      : order === 'Passeriformes' ? 'passerine' : 'other';
+    assert.equal(cards.panelColors[id], BG[group], `${id} (${order}) must use the ${group} background`);
+  }
+  assert.equal(cards.panelColors['0156'], BG.passerine, '0156 橙腹葉鵯 is a passerine, so a green card');
+  assert.equal(cards.panelColors['0155'], BG.water, '0155 丘鷸 is a charadriiform, so a blue card');
+});
+
 test('0121–0124 are registered slim too, not only up to 0120', () => {
   /* 這四張早已交付並上載 Drive，但 registry 當時只擴到 0120，於是它們在 app 裡
      退回「插畫 + 完整資訊卡」：整張長卡被塞進單一面板，正是 0040–0043 的舊缺陷。 */
