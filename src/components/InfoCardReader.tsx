@@ -84,7 +84,8 @@ type Props = {
  * Parent keys this component by bird ID so navigation always starts at artwork on a new bird.
  */
 export function MobileCardPages({ id, name, lang, artwork, navigation, infoUrl, infoStatus, onInfo, onPageChange, onExpand }: Props) {
-  const pages = mobileCardPages(id);
+  /* 未登記但已經讀到圖的卡，自動多出「完整資訊卡」一頁，方便逐張檢查。 */
+  const pages = mobileCardPages(id, infoStatus === 'loaded');
   const [index, setIndex] = useState(0);
   const touch = useRef<{ x: number; y: number } | null>(null);
   const suppressClickUntil = useRef(0);
@@ -95,7 +96,12 @@ export function MobileCardPages({ id, name, lang, artwork, navigation, infoUrl, 
     onPageChange?.(pages[next].key);
     if (next > 0) onInfo();
   };
-  const advance = () => select((index + 1) % pages.length);
+  const advance = () => {
+    /* 得插畫一頁＝這張卡未登記。點一下先探測 R2 有沒有這張卡：
+       讀到就自動多出「完整資訊卡」一頁，讀不到就維持插畫（結果會快取）。 */
+    if (pages.length === 1) { onInfo(); return; }
+    select((index + 1) % pages.length);
+  };
   return <div data-mobile-card-pages className="md:hidden absolute inset-0 bg-[#1c212e] text-amber-100 select-none"
     tabIndex={0} role="region" aria-label={t('圖卡：點一下換頁，亦可左右掃', 'Card: tap to change section or swipe left or right')}
     onKeyDown={e => {
@@ -138,7 +144,11 @@ export function MobileCardPages({ id, name, lang, artwork, navigation, infoUrl, 
         page.key === 'original' ? <OriginalInfoCard url={infoUrl} name={name} lang={lang} fitted /> :
         <CardPanel url={infoUrl} box={SLIM_PAGE_BOXES[page.key as keyof typeof SLIM_PAGE_BOXES]} label={t(page.zh, page.en)} surface={page.key === 'distribution' ? '#173446' : infoCardPanelColor(id)} />
       ) : <div className="h-full flex items-center justify-center text-sm text-center" role="status">
-        {infoStatus === 'missing' || infoStatus === 'error' ? <span className="p-3">{t('暫時未能讀取圖卡，請稍後重新開啟。', 'Card unavailable. Please reopen it later.')}</span> : t('載入圖卡…', 'Loading card…')}
+        {infoStatus === 'missing'
+          ? <span className="p-3">{t(`這張卡還未上載資訊圖卡（NO.${id}）`, `No info card uploaded yet (NO.${id})`)}</span>
+          : infoStatus === 'error'
+            ? <span className="p-3">{t('暫時未能讀取圖卡，請稍後重新開啟。', 'Card unavailable. Please reopen it later.')}</span>
+            : t('載入圖卡…', 'Loading card…')}
       </div>}
     </div>
     <span className="sr-only" aria-live="polite">{t(page.zh, page.en)}</span>

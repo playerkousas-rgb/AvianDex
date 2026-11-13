@@ -14,13 +14,13 @@ await build({
     export { MobileCardPages, OriginalInfoCard, InfoCardScores, CardPanel } from './src/components/InfoCardReader';
     export { ResearchHubPage } from './src/components/ResearchHubPage';
     export { WelcomeScreen } from './src/components/WelcomeScreen';
-    export { infoCardLayout, localInfoCardUrl } from './src/lib/infoCards';
+    export { infoCardLayout, localInfoCardUrl, hasInfoCard, canFlipInfoCard } from './src/lib/infoCards';
     export { mobileCardPages, nextMobileCardPage, mobileCardAspect, SLIM_PAGE_BOXES } from './src/lib/mobileInfoPages';`,
     resolveDir: root, loader: 'tsx' },
   bundle: true, platform: 'node', format: 'cjs', outfile, jsx: 'automatic',
   define: { 'import.meta.env.BASE_URL': JSON.stringify('/') },
 });
-const { renderToStaticMarkup, createElement, MobileCardPages, OriginalInfoCard, InfoCardScores, CardPanel, ResearchHubPage, WelcomeScreen, infoCardLayout, localInfoCardUrl, mobileCardPages, nextMobileCardPage, mobileCardAspect, SLIM_PAGE_BOXES } = createRequire(import.meta.url)(outfile);
+const { renderToStaticMarkup, createElement, MobileCardPages, OriginalInfoCard, InfoCardScores, CardPanel, ResearchHubPage, WelcomeScreen, infoCardLayout, localInfoCardUrl, hasInfoCard, canFlipInfoCard, mobileCardPages, nextMobileCardPage, mobileCardAspect, SLIM_PAGE_BOXES } = createRequire(import.meta.url)(outfile);
 const render = (component, props) => renderToStaticMarkup(createElement(component, props));
 const rawScores = JSON.parse(readFileSync(path.join(root, 'src/data/dexScores.json'))).scores;
 
@@ -72,8 +72,22 @@ test('unknown legacy layouts are never guessed; unmade cards have artwork only',
     assert.equal(infoCardLayout(id), 'slim');
     assert.deepEqual(mobileCardPages(id).map(p => p.key), ['artwork', 'features', 'scores', 'distribution', 'similar']);
   }
-  assert.deepEqual(mobileCardPages('0004').map(p => p.key), ['artwork', 'original']);
+  /* 0040 已上載 R2 但未在 infoCards.json：不再硬套 slim 分區，改為成功讀到圖
+     之後才多出「完整資訊卡」一頁。 */
+  assert.deepEqual(mobileCardPages('0040').map(p => p.key), ['artwork']);
+  /* 未登記的卡（例如已上載 R2 但 infoCards.json 未更新的 0022、0040）仍可翻：
+     讀到圖就有「完整資訊卡」一頁，讀不到就只有插畫，不會翻出空頁。 */
   assert.deepEqual(mobileCardPages('0022').map(p => p.key), ['artwork']);
+  assert.deepEqual(mobileCardPages('0022', true).map(p => p.key), ['artwork', 'original']);
+  assert.deepEqual(mobileCardPages('0040', true).map(p => p.key), ['artwork', 'original']);
+});
+
+test('flip is offered whenever a card may exist, not only when it is registered', () => {
+  assert.equal(canFlipInfoCard('0001'), true, 'registered card can flip');
+  assert.equal(hasInfoCard('0040'), false, '0040 is not in infoCards.json');
+  assert.equal(hasInfoCard('0022'), false, '0022 is not in the registry');
+  assert.equal(canFlipInfoCard('0040'), true, 'every card may be flippable; the loader reports whether R2 has the file');
+  assert.equal(canFlipInfoCard('0105'), true, 'newly delivered cards must be inspectable too');
 });
 
 test('desktop and fullscreen show only original images, not cropped sections or added scores', () => {
