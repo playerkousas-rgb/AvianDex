@@ -1,0 +1,133 @@
+{
+  "id": "0146",
+  "name": "勺嘴鷸",
+  "scientificName": "Calidris pygmaea",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "CR",
+    "zh": "極危"
+  },
+  "illustrationTaxon": "Calidris pygmaea in largely non-breeding plumage, as most birds seen in spring in Hong Kong are: 14-16 cm, grey-brown above with white underparts extending onto the fore part of the face and forehead, and the highly distinctive spoon-shaped bill that is diagnostic when seen well (though beware Red-necked Stints with mud on the bill tip). The varying amount of breeding plumage is usually most obvious on the scapulars, and birds in more advanced breeding plumage have dark centres to the scapulars and mantle feathers, orange-brown colouration on the face and chest and streaks on the chest. Juveniles have dark-centred upperpart feathers with broad whitish to buff fringes, a buff-tinged chest with dark streaks at the sides, a dark warm brown central crown area, a white forehead and a dark line through the lores. It forages and roosts with other small waders, in spring generally associating with Red-necked Stints, and feeds on polychaete worms and micro gastropods.",
+  "similarSpecies": [
+    {
+      "zh": "長趾濱鷸",
+      "scientificName": "Calidris subminuta",
+      "asset": "long-toed.png",
+      "framing": "whole-bird",
+      "distinction": "長趾濱鷸嘴短而末端微微下彎、腳趾特長、頸長頭小而胸有細縱紋；本種嘴直而末端擴成扁平匙狀，是唯一的決定性特徵。"
+    },
+    {
+      "zh": "青腳濱鷸",
+      "scientificName": "Calidris temminckii",
+      "asset": "temmincks.png",
+      "framing": "whole-bird",
+      "distinction": "青腳濱鷸嘴細小而下彎輕微、有整齊白眼圈、尾長伸出翼端；本種嘴末端呈匙狀，頭部無醒目眼圈，整體更矮小結實。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.08,
+      0.26,
+      0.34,
+      0.52
+    ],
+    [
+      0.42,
+      0.5,
+      0.74,
+      0.82
+    ],
+    [
+      0.2,
+      0.2,
+      0.44,
+      0.44
+    ],
+    [
+      0.38,
+      0.5,
+      0.72,
+      0.78
+    ]
+  ],
+  "featureLabels": [
+    "匙狀嘴",
+    "匙端近觀",
+    "白前臉淡眉",
+    "黃綠短腳"
+  ],
+  "featureNotes": [
+    "嘴前半段筆直，末端擴展成扁平匙狀，是野外辨識的決定性特徵；注意沾了泥的紅頸濱鷸也會看似有匙端（第1圈取自全身圖，實際可見）。",
+    "近觀可清楚看到匙端的扁平擴展形狀與兩側邊緣，這是本種得名的原因（第2圈取自近景圖，實際可見）。",
+    "白色的前臉與額部延伸自下體白色，配淡色眉紋；本種在香港所見多為非繁殖羽（第3圈取自全身圖，實際可見）。",
+    "腳黃綠色而短，身體矮小結實；本種覓食與休息都與其他小型鷸類混群，春季常與紅頸濱鷸同行（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "MMR",
+      "BGD",
+      "IND",
+      "LKA",
+      "KHM",
+      "LAO",
+      "BRN",
+      "KAZ",
+      "MNG",
+      "ARE",
+      "OMN",
+      "SAU"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/013000",
+      "use": "HKBWS substantive read: Category I, scarce passage migrant in spring and rare in autumn and winter, occurring on the intertidal mudflats of Deep Bay and adjacent roost sites; 14-16 cm, and when seen well the highly distinctive spoon-shaped bill is diagnostic, though beware Red-necked Stints with mud on the end of the bill; most birds seen in spring in Hong Kong are largely in non-breeding plumage and appear grey-brown above with white underparts extending to the fore part of the face and forehead, with the varying amount of breeding plumage usually most obvious on the scapulars, and birds in more advanced breeding plumage have dark centres to the scapulars and mantle feathers, orange-brown colouration on the face and chest and streaks on the chest; juveniles with dark-centred upperpart feathers and broad whitish to buff fringes, a buff-tinged chest with dark streaks at the sides, a dark warm brown central crown area, a white forehead and a dark line through the lores; calls a shrill ascending 'whoeat' in winter and a short 'puree', 'preep' or shrill 'wheet' in flight; all records from the Deep Bay area where birds forage mainly on the intertidal mudflats and roost inland at high tide primarily at Mai Po NR though occasionally on drained fish ponds, generally associating with Red-necked Stints in spring whereas the few winter records have involved a single bird in the wintering flock of Dunlin and Kentish Plover; 'the most charismatic wader on the Hong Kong List', generally recorded on spring passage with a handful of autumn and winter records, the earliest spring record a bird present 8-23 March 2012, main spring passage during the first three weeks of April and records until 8 June, the highest count 13 on 3 April 2005 though generally no more than three birds in a day, and plumage analysis gave 16 individuals in spring 1990 and 12 in 1998; only six autumn records from 6 August to 25 October, and single presumed wintering birds from 11 November to 5 February in seven winter periods though in only two this century; appears to have decreased this century, with four years between 1999 and 2020 having only one or two spring records and none in 2002, the previous blank spring being 1983 when access to the mudflats was very limited and the Mai Po high tide roost was not yet established; first Hong Kong record two at Mai Po on 11 May 1957, and up to 1963 eleven records all in Deep Bay involving one to three birds between 17 April and 30 May and 29 September to 6 October; food items based on one faecal sample were polychaete worms and micro gastropods, and it forages and roosts with other small waders; monotypic, breeding near the coast of the Chukotsky peninsula south to north Kamchatka and wintering coastally from south China through Indochina to Bangladesh south to Sri Lanka, Singapore and the Philippines; IUCN Critically Endangered with an estimated 8% annual population reduction due to habitat loss in its breeding, passage and wintering grounds, disturbance, pollution, climate change and in particular the effects of indiscriminate shorebird hunting."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012900",
+      "use": "HKBWS Long-toed Stint comparison: a short slightly decurved bill, long toes and fine chest streaking, contrasting with the Spoon-billed Sandpiper's diagnostic spatulate bill tip."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對匙狀嘴、白前臉淡眉及黃綠短腳；描繪非繁殖羽，未畫繁殖羽的橙褐色臉胸。",
+    "首版全身圖的嘴向下垂而匙端角度不自然，已重繪為向前平伸的側面輪廓後才使用。",
+    "兩隻比較鳥均為 AI 生成示意（長趾濱鷸沿用 0145 全身圖、青腳濱鷸沿用 0144 全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN **極危 CR**（估計每年下降約 8%，主因包括繁殖、過境及越冬地喪失、干擾、污染、氣候變化與濫捕）；香港屬 Category I，春季稀少過境鳥，最高 13 隻（2005-04-03），一般一日不超過三隻，本世紀記錄減少。",
+    "只交付 aviandex/0146.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
