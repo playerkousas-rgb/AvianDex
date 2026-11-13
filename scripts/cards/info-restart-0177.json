@@ -1,0 +1,134 @@
+{
+  "id": "0177",
+  "name": "灰燕鴴",
+  "scientificName": "Glareola lactea",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Glareola lactea: 15-19 cm, a small pale grey-sandy pratincole. Dark forehead and lores, and an obvious white orbital ring that is broadest at the rear of the eye. Short bill with a deep red base. Primaries contrastingly dark greyish and the legs the same dark grey. Underparts below the chest clean white. Distinctive pattern in flight: black underwing coverts and whitish secondaries with broad grey tips, a black tail, and dark greyish upperwing primary coverts contrasting with the grey-sandy inner wing coverts. The smallest of the pratincoles and the palest, lacking the olive-brown upperparts and buff throat of Oriental Pratincole.",
+  "similarSpecies": [
+    {
+      "zh": "普通燕鴴",
+      "scientificName": "Glareola maldivarum",
+      "asset": "oriental-pratincole.png",
+      "framing": "whole-bird",
+      "distinction": "普通燕鴴體型大得多（23–25 公分）、背與翼是欖褐色，喉部淡黃褐並被一圈黑線圍住，嘴基紅色但整體羽色偏褐；本種小一截、整體淡灰沙色，沒有那圈黑線，靠眼後最寬的白眼圈與深灰初級飛羽辨認。"
+    },
+    {
+      "zh": "黑翅燕鴴",
+      "scientificName": "Glareola nordmanni",
+      "asset": "black-winged-pratincole.png",
+      "framing": "whole-bird",
+      "distinction": "黑翅燕鴴翼上覆羽與飛羽全黑、次級飛羽沒有白色後緣，整體顏色深得多；本種翼上以淡灰沙色為主，只有初級飛羽深灰，兩者顏色深淺差很遠。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.72,
+      0.14,
+      0.99,
+      0.36
+    ],
+    [
+      0.62,
+      0.15,
+      0.84,
+      0.33
+    ],
+    [
+      0.1,
+      0.46,
+      0.44,
+      0.64
+    ],
+    [
+      0.5,
+      0.44,
+      0.8,
+      0.66
+    ]
+  ],
+  "featureLabels": [
+    "深紅色的嘴基",
+    "眼後最寬的白眼圈",
+    "深灰的初級飛羽",
+    "純白的下腹"
+  ],
+  "featureNotes": [
+    "嘴短、嘴基是深紅色，前端黑色；燕鴴科的嘴裂很寬，配合在空中張口捕蟲，但站著時只看得到這截深紅（第1圈取自近景圖，實際可見）。",
+    "白色眼圈完整一圈、而且在眼後最寬，配上深色的額與眼先，是灰燕鴴最好認的頭部特徵；普通燕鴴沒有這圈白（第2圈取自近景圖，實際可見）。",
+    "初級飛羽是明顯較深的灰黑色，與淡灰沙色的內側翼覆羽形成對比，翼尖伸過短短的尾端（第3圈取自全身圖，實際可見）。",
+    "胸以下乾淨純白，沒有任何縱紋或淡黃褐色調；本種是燕鴴裡最小最淡的一種，白得很徹底（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "TWN",
+      "MYS",
+      "IDN",
+      "PHL"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/015700",
+      "use": "HKBWS substantive read: Category I, accidental; 15-19 cm, a small pale grey-sandy pratincole with a dark forehead and lores and an obvious white orbital ring broadest at the rear of the eye; primaries contrastingly dark greyish and the legs the same; underparts below the chest clean white; base of the bill deep red; distinctive flight pattern of black underwing coverts and whitish secondaries with broad grey tips, black tail, and dark greyish upperwing primary coverts contrasting with grey-sandy inner wing coverts; Hong Kong's sole record was one at San Tin on 4 April 2017 at fish ponds in the northwest New Territories (Lee 2019, Hong Kong Bird Report 2017); monotypic, ranging from east Afghanistan and Pakistan through much of the Indian subcontinent to Bangladesh and east to southwest China and south through Myanmar to Thailand, Laos and Cambodia; in China regular in southeast Tibet and western/southern Yunnan and has occurred in Hainan; IUCN Least Concern with an unknown population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/015600",
+      "use": "HKBWS Oriental Pratincole page read as the contrast species: 23-25 cm, olive-brown above with dark uniform wings, buff head/mantle/chest, white belly, short bill with a red base and wide gape, and a black line running down from the eye to encircle the buff throat; common in spring in Hong Kong."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 灰燕鴴 Glareola lactea is number 97, Category I, with no IUCN code (i.e. Least Concern); 普通燕鴴 Glareola maldivarum is number 96."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對深紅色嘴基、眼後最寬的白色眼圈、深灰初級飛羽與純白下腹。",
+    "全身圖沿用 0176 已核對的比較鳥（`0176/small-pratincole.png` 升格為主圖，本卡重新核對白眼圈、深灰初級飛羽與純白下腹），近景圖本卡新繪；兩張卡的淡灰沙色調一致。",
+    "比較鳥：普通燕鴴與黑翅燕鴴都沿用 0176 已核對的圖（`oriental-pratincole.png` = `0176/pixel.png`、`black-winged-pratincole.png` 原檔），非等比例；0176 與 0177 互相把對方當比較鳥，形成一組對照。",
+    "app 分數：i 2／v 3.7／r 4.8／c 1.2／o 2.9，另有 `vEst: 1`；**適應力 a 缺值**，卡面顯示「待查」，沒有補零或重算綜合 2.9。",
+    "IUCN 無危 LC、趨勢未知；香港屬 Category I 的**偶見鳥**，至今只有 2017-04-04 新田魚塘一筆紀錄（Lee 2019《香港鳥類報告 2017》）。全球無危與香港僅一筆要強調分開，不能寫成香港可見的過境鳥。",
+    "notes 寫明：本種是燕鴴裡最小、最淡的一種，飛行時翼下覆羽黑色、次級飛羽白而帶寬灰端、尾黑色——這些要在飛行中才看得清，卡面只放靜態站姿。",
+    "卡片上的 `cardDetails.zh.json` 說「胸呈褐灰色、腹白」大致無誤，但沒有提到白眼圈與深灰初級飛羽這兩個真正的野外重點，故以 HKBWS 頁面為準寫入四部位。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形；南亞為核心，向東延伸至華南與中南半島（HKG 與 SGP 不在 110m 底圖，未使用）。",
+    "只交付 aviandex/0177.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
