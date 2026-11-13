@@ -1,0 +1,148 @@
+{
+ "id": "0191",
+ "name": "漁鷗",
+ "scientificName": "Ichthyaetus ichthyaetus",
+ "layout": "slim",
+ "size": [
+  1024,
+  1536
+ ],
+ "status": "review_before_upload",
+ "iucn": {
+  "code": "LC",
+  "zh": "無危"
+ },
+ "illustrationTaxon": "Ichthyaetus ichthyaetus: 60-72 cm, a large gull with a long forehead and bill. Adult breeding plumage has a black hood, a yellow bill with a black band near the tip and yellow legs, while the adult in winter has a greyish partial hood. Third-winter birds have slightly more extensive black on the wing tip than adults and/or some black in the tail. In flight the wings are relatively slim with a deep chest; adult upperwings are rather pale with limited black subterminal marks in the primaries and there is no tail band and no dark in the wing coverts. Immatures have a dark mask through the eye with white eye crescents; first-winter birds have extensive grey in the mantle contrasting with brownish wings and wing coverts, a white rump and tail with a dark tail band; second-winter birds are similar to adults but have faint brown in the outer wing coverts, more extensive black in the outer primaries and a narrow black tail band. The flight call from the breeding grounds is deep and nasal.",
+ "similarSpecies": [
+  {
+   "zh": "紅嘴鷗",
+   "scientificName": "Chroicocephalus ridibundus",
+   "asset": "black-headed-gull.png",
+   "framing": "whole-bird",
+   "distinction": "紅嘴鷗（37–43 公分）比本種小得多（本種 60–72 公分），**嘴與腳都是深紅**；本種成鳥繁殖羽是**黃嘴配黑帶、黃腳**。紅嘴鷗的頭罩是深褐、眼睛周圍有完整白眼圈；本種的黑頭罩一直包到上頸，嘴明顯更長更厚。"
+  },
+  {
+   "zh": "棕頭鷗",
+   "scientificName": "Chroicocephalus brunnicephalus",
+   "asset": "brown-headed-gull.png",
+   "framing": "whole-bird",
+   "distinction": "棕頭鷗（41–45 公分）同樣比本種小一截，嘴腳深紅、虹膜淡色；本種成鳥繁殖羽嘴黃（近端黑帶）、腳黃、虹膜深。棕頭鷗翼尖外側有兩個大白斑，本種翼上淡灰、外側初級飛羽只有細小的近端黑斑與白端。"
+  }
+ ],
+ "featureCrops": [
+  [
+   0.14,
+   0.05,
+   0.44,
+   0.5
+  ],
+  [
+   0.105,
+   0.3,
+   0.505,
+   0.7
+  ],
+  [
+   0.64,
+   0.5,
+   0.86,
+   0.83
+  ],
+  [
+   0.35,
+   0.62,
+   0.52,
+   0.875
+  ]
+ ],
+ "featureLabels": [
+  "繁殖羽黑頭罩",
+  "黃嘴近尖端黑帶",
+  "黑翼尖小白斑",
+  "粗壯黃腳"
+ ],
+ "featureNotes": [
+  "成鳥繁殖羽是整頂黑色頭罩，一直包到上頸，眼在黑色之中，下頸與胸是白色；HKBWS 明寫**冬季成鳥只有一片灰色的部分頭罩**，所以畫的是繁殖羽這一面（第1圈取全身圖的頭部，黑色頭罩、黃嘴與白色下頸交界都在圈內）。",
+  "嘴是黃色，**靠近尖端有一道粗黑帶（次端帶）**，最前端仍是黃色；HKBWS 寫成「yellow bill with a black tip」。紅嘴鷗與棕頭鷗的嘴是整支深紅，沒有這道黑帶（第2圈取大頭圖，整支嘴由尖端到嘴基、連嘴基與黑頭罩交界都在圈內）。",
+  "翼上淡灰，外側初級飛羽黑色但**只有細小的近端黑斑與白色羽端**，沒有橫越尾部或覆羽的深色帶；HKBWS 形容成鳥翼上偏淡、黑色近端斑有限（第3圈取全身圖，黑翼尖的兩個白斑與白色後緣都在圈內）。",
+  "腳粗壯而鮮黃，連著黃色的蹼；本種體型大（60–72 cm），腿比紅嘴鷗等小型鷗粗得多（第4圈取全身圖，兩腳連蹼與泥灘都在圈內）。"
+ ],
+ "featureSources": [
+  "pixel.png",
+  "features.png",
+  "pixel.png",
+  "pixel.png"
+ ],
+ "rangeMap": {
+  "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+  "caption": "世界底圖・部分分佈國家",
+  "disclaimer": "綠色非全境；非完整分佈",
+  "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+  "geometryLicense": "Natural Earth public domain",
+  "bounds": [
+   -180,
+   -90,
+   180,
+   90
+  ],
+  "viewport": "world",
+  "countryIso3": [
+   "RUS",
+   "UKR",
+   "KAZ",
+   "MNG",
+   "CHN",
+   "TUR",
+   "GEO",
+   "AZE",
+   "IRN",
+   "IRQ",
+   "KWT",
+   "SAU",
+   "YEM",
+   "OMN",
+   "ARE",
+   "EGY",
+   "SDN",
+   "ERI",
+   "TKM",
+   "UZB",
+   "PAK",
+   "IND",
+   "BGD",
+   "LKA",
+   "MMR",
+   "THA",
+   "VNM",
+   "KHM"
+  ]
+ },
+ "sources": [
+  {
+   "url": "https://avifauna.hkbws.org.hk/species/0110/016800",
+   "use": "HKBWS substantive read: Category I, a scarce winter visitor and spring passage migrant to Deep Bay; 60-72 cm, a large gull with a long forehead and bill; adult breeding has a black hood, a black-tipped yellow bill and yellow legs, while adult winter has a greyish partial hood; third-winter birds have slightly more extensive black on the wing tip than adults and/or some black in the tail; in flight the wings are relatively slim with a deep chest, adult upperwings are rather pale with limited black subterminal marks in the primaries and there is no tail band and no dark in the wing coverts; immatures have a dark mask through the eye with white eye crescents, first-winter birds have extensive grey in the mantle contrasting with brownish wings and wing coverts and a white rump and tail with a dark tail band, second-winter birds resemble adults but have faint brown in the outer wing coverts, more extensive black in the outer primaries and a narrow black tail band; the flight call from the breeding grounds is deep and nasal and it appears to call very rarely in Hong Kong; all records since 1999 have occurred on the intertidal mudflats of Deep Bay; extreme dates are 12 November 2016 and 7 April 1995, winter numbers peak in January and passage occurs in March and early April; the first record was on 26 December 1974 (Viney 1975), it stayed rare with only two further records up to 1983, was then recorded nearly annually to the end of 1992, with ten birds in winter 1993/94 and nine in winter 1994/95, generally five or fewer and occasionally none; no observations on behaviour, foraging and diet; monotypic, breeding in scattered areas from the Black Sea east through the north Caspian, Kazakhstan, northwest and north China and western Mongolia, and wintering from the southern Black and Caspian Seas east to western Central Asia and from the Red Sea east through India to northwest Indochina and south China, breeding patchily in the northwest and north of China and wintering coastally in Guangxi and Guangdong; IUCN Least Concern with the population trend increasing."
+  },
+  {
+   "url": "https://avifauna.hkbws.org.hk/species/0110/016300",
+   "use": "HKBWS Black-headed Gull page read as the first contrast species: 37-43 cm, dark brown breeding hood, bold complete white eye ring, deep red bill and legs, black-tipped outer primaries with a white leading edge."
+  },
+  {
+   "url": "https://avifauna.hkbws.org.hk/species/0110/016200",
+   "use": "HKBWS Brown-headed Gull page read as the second contrast species: 41-45 cm, slightly larger and heavier than Black-headed Gull with a deeper bill and relatively large head, pale iris, dark brown breeding hood, and two large white mirrors on the outer primaries."
+  },
+  {
+   "url": "https://avifauna.hkbws.org.hk/hk-list",
+   "use": "Hong Kong List 2024: 漁鷗 Ichthyaetus ichthyaetus is listed as 182, Category I, with no IUCN code in the list, i.e. Least Concern, matching the HKBWS species page."
+  }
+ ],
+ "notes": [
+  "AI 生成插圖，經人眼核對繁殖羽黑頭罩、黃嘴近端黑帶、黑翼尖小白斑、粗壯黃腳。",
+  "畫的是**成鳥繁殖羽**（黑頭罩、黃嘴配近端黑帶、黃腳）。HKBWS 明寫**冬季成鳥只有一片灰色的部分頭罩**，而本種在香港是**罕見冬候鳥兼春季過境鳥**（極端日期 11-12 至 04-07，1 月數量最多、3 月至 4 月初過境）——即香港見到的多不是全黑頭；notes 與第 1 圈說明都寫明這個季節差別，卡面沒有把繁殖羽講成香港常見樣貌。",
+  "身長與體重：`cardDetails` 有 `length` 55–72 cm、`weight` 0.96–2.1 kg，`explorerIndex.len` 為 63.5 cm，`filterTraits` 亦記 `lengthCm: 63.5`；slim 版面不顯示身長，故卡面沒有身長數字，notes 記下 HKBWS 的 **60–72 cm**（與 app 的 55–72 cm 略有出入，以 HKBWS 為準記錄，但**沒有改 app 資料**）。",
+  "**IUCN 正確**：`cardDetails.zh.json` 0191 已是「無危 LC」，與 HKBWS（Least Concern、趨勢 increasing）一致 → 沒有改資料、沒有重跑評分腳本。",
+  "app 分數照 `dexScores` 原值：**i 2.0／a 3.3／v 4.5／r 1.0／c 1.2／o 2.4**，六軸齊全、沒有 `vEst`（體長 63.5 cm 是實際值，不是翼長估算）；食性 tag 有 `insect／fish／crustacean`，棲地 tag 空，適應力 3.3 照原值顯示，沒有替缺資料補值。",
+  "香港紀錄照 HKBWS：1999 年以後全部在后海灣潮間帶泥灘；首筆 1974-12-26（Viney 1975），1983 年前只多兩筆，1984 年後幾乎每年至 1992 年底，1993/94 冬十隻、1994/95 冬九隻，一般五隻以下、偶爾整年沒有紀錄。叫聲：繁殖地是低沉帶鼻音的飛行叫，香港極少鳴叫。行為、覓食與食性 HKBWS 寫「No observations」，卡面不補。",
+  "地圖 28 個 ISO3：繁殖地從黑海北岸（UKR、RUS）經北裏海與哈薩克（KAZ）到蒙古西部與中國西北、北部（MNG、CHN）；度冬地從黑海與裏海南部（TUR、GEO、AZE、IRN）向東到中亞（TKM、UZB），並從紅海（EGY、SDN、ERI、SAU、YEM）經波斯灣（IRQ、KWT、ARE、OMN）向東經南亞（PAK、IND、BGD、LKA）到中南半島與華南（MMR、THA、VNM、KHM、CHN）。香港是 Category I 罕見冬候鳥，HKG 不上綠色；綠色非全境、非完整分佈。",
+  "只交付 aviandex/0191.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+ ]
+}
