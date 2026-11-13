@@ -1,0 +1,134 @@
+{
+  "id": "0126",
+  "name": "長嘴鴴",
+  "scientificName": "Thinornis placidus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Thinornis placidus adult male: like a large, long-billed, long-legged Little Ringed Plover, 18-21 cm; obviously larger with longer bill, legs and wings; ear coverts and lores always brown; adults usually have a broad black band above the white forehead, which appears during moult in the first winter; obvious whitish inner wing bar in flight; tail white-tipped with a black subterminal band; first-winter birds have obvious pale fringes to the upperparts and wing coverts, no black on the head and dull legs. Monotypic.",
+  "similarSpecies": [
+    {
+      "zh": "劍鴴",
+      "scientificName": "Charadrius hiaticula",
+      "asset": "common-ringed-plover.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小、嘴短而基部橙色、眼先及耳羽深黑、腳橙色、胸前黑帶闊而深黑；本種較大、嘴長而全黑、眼先及耳羽褐色、腳淡黃、胸帶褐色較窄。"
+    },
+    {
+      "zh": "金眶鴴",
+      "scientificName": "Charadrius dubius",
+      "asset": "little-ringed-plover.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小、嘴短、腳較短、有明顯黃色眼圈、翼短於尾、胸前黑帶較窄而深；本種明顯較大、嘴長腳長翼長、無黃眼圈、胸帶褐色、後端明顯拉長。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.0586,
+      0.3223,
+      0.3971,
+      0.8301
+    ],
+    [
+      0.3906,
+      0.293,
+      0.651,
+      0.6836
+    ],
+    [
+      0.1953,
+      0.2865,
+      0.5078,
+      0.4948
+    ],
+    [
+      0.3711,
+      0.5729,
+      0.7422,
+      0.8203
+    ]
+  ],
+  "featureLabels": [
+    "長黑嘴",
+    "褐色眼先",
+    "褐色胸帶",
+    "長淡腳"
+  ],
+  "featureNotes": [
+    "嘴明顯長而纖細、全黑，比金眶鴴及劍鴴都長，是第一個結構特徵（第1圈取自頭部特寫，實際可見）。",
+    "眼先與耳羽永遠是褐色而非黑色，配白色眉線與白頰；上方還有一道寬黑帶橫過前額（第2圈取自頭部特寫，實際可見，成鳥才有這道黑帶）。",
+    "胸前帶較窄且偏褐灰，白喉與白腹之間只有一條窄帶，帶的上下都是白色；劍鴴的黑帶則闊而深黑（第3圈取自全身圖，實際可見）。",
+    "腳長而淡黃，脛跗明顯比金眶鴴長，站在河灘卵石上（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "MNG",
+      "PRK",
+      "KOR",
+      "JPN",
+      "TWN",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "PAK",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "MYS",
+      "IDN",
+      "PHL"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010600",
+      "use": "HKBWS substantive identification/range/conservation read: Category I rare winter visitor; 18-21cm; compared to Little Ringed Plover obviously larger with longer bill, legs and wings; ear coverts and lores always brown; adults usually have a broad black band above the white forehead which appears during moult in the first winter; whitish inner wing bar in flight obvious; tail white-tipped with a black subterminal band; first-winter birds have pale fringes to the upperparts and wing coverts, no black on the head and dull legs; recorded in both brackish and freshwater habitat including freshwater marsh, tidal river channel and drained fish pond; records 5 December to 20 March (1994 Kam Tin 20 Feb-20 Mar, 1998 Pak Nai 30 Jan, 1999 near Mai Po village 5 Dec, 2014 Kam Sheung Road 9 Jan-23 Feb, 2015 Lok Ma Chau 4-27 Feb); monotypic, breeds in Ussuriland, northeast and central northern China and Japan, winters in South Korea and south China west to Nepal and southeast to northern Indochina; IUCN Least Concern with a decreasing trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010500",
+      "use": "HKBWS Common Ringed Plover comparison: smaller with a shorter bill with an orange base, dark lores and ear coverts, orange legs, broader blacker breast band."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010700",
+      "use": "HKBWS Little Ringed Plover comparison: smaller, shorter bill and legs, obvious yellow orbital ring, shorter wings, narrower blacker breast band."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對長黑嘴、褐色眼先、褐色胸帶與長淡腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意，非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危、趨勢下降；香港屬稀少冬候鳥，歷年僅數筆紀錄，全部在 12 月至 3 月之間。",
+    "只交付 aviandex/0126.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
