@@ -1,0 +1,153 @@
+{
+  "id": "0152",
+  "name": "斑胸濱鷸",
+  "scientificName": "Calidris melanotos",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Calidris melanotos, monotypic, in breeding plumage as an adult female: 19-23 cm, similar in size and general proportions to a Sharp-tailed Sandpiper. It always has a heavily streaked breast that is sharply divided from the white belly, a duller, poorly marked supercilium showing less contrast with the dull brown crown, and a slightly longer and heavier bill. The bill is dark with a paler base and slightly decurved; the legs are dull yellowish. An adult male in breeding plumage has a coarsely mottled breast while the adult female has the neatly streaked breast illustrated; adult males are noticeably larger than females. Juveniles have neatly fringed rufous upperpart feathers and usually obvious white scapular and mantle V-marks.",
+  "similarSpecies": [
+    {
+      "zh": "尖尾濱鷸",
+      "scientificName": "Calidris acuminata",
+      "asset": "sharp-tailed-sandpiper.png",
+      "framing": "whole-bird",
+      "distinction": "尖尾濱鷸胸腹的縱紋愈往下愈密、沒有清晰分界，且眉紋鮮明、頭頂橙紅；本種胸前深色縱紋在一條近乎水平的線上突然中斷，下方純白，眉紋暗淡。"
+    },
+    {
+      "zh": "飾胸鷸",
+      "scientificName": "Calidris subruficollis",
+      "asset": "buff-breasted.png",
+      "framing": "whole-bird",
+      "distinction": "飾胸鷸整片下體皮黃色、只在胸側有黑點、嘴短而細、腳鮮黃；本種嘴較長較重、胸前深縱紋與白色腹部形成銳利對比。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.58,
+      0.12,
+      0.92,
+      0.46
+    ],
+    [
+      0.66,
+      0.43,
+      0.96,
+      0.77
+    ],
+    [
+      0.7,
+      0.3,
+      0.94,
+      0.58
+    ],
+    [
+      0.34,
+      0.5,
+      0.62,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "略長而微彎的嘴",
+    "胸腹銳利分界",
+    "胸前深色縱紋",
+    "暗黃色腳"
+  ],
+  "featureNotes": [
+    "嘴比尖尾濱鷸略長略重，深色而基部較淺，末端微微下彎（第1圈取自全身圖，實際可見）。",
+    "前胸密密麻麻的深色縱紋在一條近乎水平的線上突然停止，下方腹部純白——這是本種最好認的一點（第2圈取自近景圖，實際可見）。",
+    "縱紋粗而清楚，均勻覆蓋整個前胸，不會像尖尾濱鷸那樣向下愈來愈細碎（第3圈取自近景圖，實際可見）。",
+    "腳暗黃至欖綠色，不像飾胸鷸那樣鮮明深黃（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "USA",
+      "CAN",
+      "MEX",
+      "GTM",
+      "BLZ",
+      "HND",
+      "SLV",
+      "NIC",
+      "CRI",
+      "PAN",
+      "CUB",
+      "DOM",
+      "HTI",
+      "JAM",
+      "TTO",
+      "COL",
+      "VEN",
+      "GUY",
+      "SUR",
+      "BRA",
+      "ARG",
+      "CHL",
+      "PER",
+      "ECU",
+      "URY",
+      "PRY",
+      "BOL",
+      "AUS",
+      "NZL",
+      "PNG",
+      "IDN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "CHN",
+      "TWN",
+      "KOR",
+      "JPN",
+      "IND",
+      "LKA",
+      "MMR",
+      "KHM",
+      "LAO",
+      "BRN",
+      "KAZ",
+      "MNG"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/013600",
+      "use": "HKBWS substantive read: Category I, a passage migrant to wetlands, rare in spring and very rare in autumn; 19-23 cm, similar in size and general proportions to Sharp-tailed Sandpiper but always with a heavily streaked breast sharply divided from the white belly, a duller, poorly marked supercilium showing less contrast with the dull brown crown, and a slightly longer and heavier bill; an adult male in breeding plumage has a coarsely mottled breast whereas the adult female has a neatly streaked one, and adult males are noticeably larger than females; juveniles have neatly fringed rufous upperpart feathers and usually obvious white scapular and mantle V-marks; the typical flight call away from the breeding grounds is a short churring 'chrrrip'; most records have been in the Deep Bay area, mainly on the intertidal mudflats or roosting at Mai Po Nature Reserve, with a few from commercial fish ponds and the managed ponds at the MTRC Lok Ma Chau Ecological Enhancement Area and single records from freshwater marsh at Long Valley and Kam Tin; the first record was a bird trapped on 25 April 1986 and the species occurs on average in one out of two years between 1 April and 23 May and between 19 September and 21 October, with the peak period of occurrence in the first half of April and most records of singles though two have occasionally been noted; monotypic, breeding north of the Arctic Circle from the Taimyr peninsula in northern Siberia east to Chukotka and from west and north Alaska east along the coast to northeast Canada, and wintering largely in the southern half of South America with smaller numbers in southeast Australia including Tasmania and in New Zealand; in China recorded at scattered locations in the eastern half of the country and along the south coast; IUCN Least Concern with a stable population trend."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對略長而微彎的嘴、胸腹銳利分界、胸前深色縱紋及暗黃色腳；描繪成鳥雌鳥的繁殖羽（胸前縱紋整齊），雄性成鳥胸前為粗斑塊且體型明顯較大。",
+    "兩隻比較鳥均為 AI 生成示意（尖尾濱鷸、飾胸鷸），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危 LC（趨勢穩定）；香港屬 Category I，濕地過境鳥，春季罕見、秋季極罕見，平均兩年一筆，高峰在 4 月上半月；首筆 1986-04-25。",
+    "只交付 aviandex/0152.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
