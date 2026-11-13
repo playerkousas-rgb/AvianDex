@@ -1,0 +1,129 @@
+{
+  "id": "0181",
+  "name": "扁嘴海雀",
+  "scientificName": "Synthliboramphus antiquus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Synthliboramphus antiquus: a very small, compact, short-necked auklet with a short, relatively deeply-based and pointed pale bill. In breeding plumage the head, chin, throat and nape are black, with a white supercilium that does not extend in front of the eye, so the lores and forehead stay black, and a pale bill. The upperparts are greyish, finely streaked white on the mantle, and the underparts are white, with a narrow black half-collar on the side of the neck. In flight it shows a white underbody, a largely white underwing and that narrow black half-collar. In non-breeding plumage the black of the head runs from the chin back to the nape, white extends up behind the eye, the upperparts are greyish and the underparts whitish.",
+  "similarSpecies": [
+    {
+      "zh": "冠海雀",
+      "scientificName": "Synthliboramphus wumizusume",
+      "asset": "japanese-murrelet.png",
+      "framing": "whole-bird",
+      "distinction": "冠海雀體型相近（24–26 公分），非繁殖羽的頭部較淡、深色頭頂範圍較小，頭頂兩側還帶著白色；繁殖羽有明顯的冠羽、頭頂兩側白得更多、下喉沒有黑色，嘴也略粗。本種繁殖羽是整片黑頭黑喉，頭頂沒有冠羽。"
+    },
+    {
+      "zh": "三趾鷗",
+      "scientificName": "Rissa tridactyla",
+      "asset": "kittiwake.png",
+      "framing": "whole-bird",
+      "distinction": "三趾鷗是鷗，體型大得多（38–41 公分）、翼窄、腿短，成鳥背部中灰、翼尖界線分明地全黑且沒有白點，嘴黃、腳黑，冬天會出現深色耳斑；本種只有二十多公分，身體短胖、頭黑喉黑、翼短而圓，幾乎不張翼滑翔。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.63,
+      0.24,
+      0.89,
+      0.42
+    ],
+    [
+      0.5,
+      0.31,
+      0.68,
+      0.46
+    ],
+    [
+      0.66,
+      0.5,
+      0.86,
+      0.66
+    ],
+    [
+      0.8,
+      0.5,
+      1.0,
+      0.74
+    ]
+  ],
+  "featureLabels": [
+    "不伸到眼前的白色眉線",
+    "短而尖的灰白嘴",
+    "頸側的黑色半環",
+    "背上的白色縱紋"
+  ],
+  "featureNotes": [
+    "白色眉線很醒目，但只從眼後開始，眼的內側與額頭仍是黑色——這條「不伸到眼前」的白眉就是繁殖羽最重要的辨識點，冠海雀的白則延伸到頭頂兩側（第1圈取自近景圖，實際可見）。",
+    "嘴短、基部厚、末端尖，顏色是淡灰白角質色而不是黑色；配上整顆黑頭，這個淺色嘴在這類小型海雀裡很突出（第2圈取自近景圖，實際可見）。",
+    "頸側有一條窄窄的黑色半環，把白色的頰與白色的胸隔開；飛行時從下方看最清楚，停棲時也看得到（第3圈取自近景圖，實際可見）。",
+    "背部不是單純的灰，而是灰底上一道道細白縱紋，像被雨刷過；這個「條紋灰背」與白腹連在一起就是本種的基本配色（第4圈取自近景圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "USA",
+      "CAN",
+      "JPN",
+      "KOR",
+      "PRK",
+      "CHN"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019300",
+      "use": "HKBWS substantive read: Category I, a scarce passage migrant through offshore waters in spring, rare in autumn and winter when it is more likely to occur in inshore waters; very small, with a short, relatively deeply-based and pointed bill; in non-breeding plumage the head is black from chin back to nape with white extending up behind the eye, greyish upperparts and whitish underparts; in breeding plumage the black head and entire throat, a white supercilium that does not extend in front of the eye, and a pale bill are diagnostic, and birds fly low over the sea showing a white underbody, a largely white underwing and a narrow black half-collar; the 'chirrup' call dominates on the breeding grounds and a variant is given away from the breeding area; most records from offshore waters near Po Toi where migrants fly northeast, plus boat-based surveys and ferries in the same area and a scattering elsewhere, mainly in non-estuarine waters; the first was a breeding-plumage adult off the north coast of Kat O Chau in Mirs Bay on 18 May 1975 (Viney 1976), with 17 records of 30 birds between 26 November and 18 May from 1975 to 1998 including flocks of seven in Mirs Bay on 6 April 1996 and five south of Hong Kong Island on 27 February 1997; about 70 records since 1999, with a highest count of nine in southern waters on 19 February 2006 and up to six a day flying northeast past Po Toi from 23 February to 21 April, extreme dates 26 November and 29 May; occurs singly or in small groups on the sea or migrating north in small parties in spring and is rarely seen foraging, though one stayed in Po Toi harbour for a week diving for prey; breeds in the north Pacific on the Aleutian Islands, the Gulf of Alaska, the Sea of Okhotsk and south of Kamchatka, Peter the Great Bay and the Yellow Sea, and winters in coastal seas of the east and west Pacific including east China (Gaston and Shoji 2020); two subspecies, the nominate over much of the range and microrhynchos on the Commander Islands; IUCN Least Concern with a decreasing population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019400",
+      "use": "HKBWS Japanese Murrelet page read as the primary contrast species: Category I, accidental; 24-26 cm and similar to Ancient Murrelet, but in non-breeding plumage paler on the head with a less extensive dark cap and some white on the sides of the crown, juveniles browner on head and upperparts, and breeding plumage distinguished by a crest, more prominent white on the sides of the crown, no black on the lower throat and a slightly larger bill; two Hong Kong records, both of birds with damaged flight feathers, in southern waters on 5 May 2007 and 21 April 2012; IUCN Vulnerable, declining rapidly through disturbance at breeding sites, predation and drift-net mortality."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016000",
+      "use": "HKBWS Black-legged Kittiwake page read as the second contrast species: Category I, a rare visitor in late winter and spring; 38-41 cm, a medium-sized rather elegant gull with relatively narrow wings and short legs; adults have medium grey upperparts and cleanly demarcated black wingtips with no mirrors, a dark ear spot and dusky hindneck in winter, a yellow bill and black legs; all records from 13 January to 19 April and on 22 May, the first on 20 February 1975, with none since 2014; IUCN Vulnerable with a rapidly decreasing population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 扁嘴海雀 Synthliboramphus antiquus is number 197, Category I, with no IUCN code (i.e. Least Concern); 冠海雀 Synthliboramphus wumizusume is number 198, Category I, carrying a VU code; 三趾鷗 Rissa tridactyla is number 176, Category I, also listed VU."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對不伸到眼前的白色眉線、短而尖的灰白嘴、頸側黑色半環、背上的白色縱紋。",
+    "全身圖與近景圖本卡新繪，沒有沿用舊圖；比較鳥冠海雀與三趾鷗也是本卡新繪（`japanese-murrelet.png`、`kittiwake.png`），非等比例，只作外形對照。",
+    "身長：`cardDetails.zh.json` 只有英制「7.9–9.4 in」（約 20–24 公分），沒有公制數字；卡面照 app 既有資料顯示，notes 補上換算，不另外編造一段公分區間。體重 5.4–8.8 oz（約 153–250 公克）同樣保留原單位。",
+    "app 分數：i 2／a 2.3／v 2.1／r 4.8／c 3／o 2.8，六軸齊全，無 `vEst`。",
+    "IUCN 無危 LC、趨勢**下降**（HKBWS：Least Concern, population trend decreasing）；香港屬 Category I 的**春季海上稀少過境鳥**，秋冬季罕見且較可能在近岸出現。全球無危與香港稀少要分開寫；趨勢下降與無危等級不矛盾，兩個都寫。",
+    "數量資料寫進 notes：首筆 1975-05-18 吉澳洲北岸（Viney 1976）；1975–1998 共 17 筆、30 隻，日期 11 月 26 日至 5 月 18 日，含 1996-04-06 大鵬灣 7 隻、1997-02-27 港島南 5 隻；1999 年後約 70 筆，最高 2006-02-19 南區 9 隻；蒲台島海面觀察 2 月 23 日至 4 月 21 日每天最多 6 隻往東北飛；極端日期 11 月 26 日與 5 月 29 日。",
+    "notes 寫明：本種多為海上過境，蒲台島一帶的「往東北飛」是主要觀察方式；曾有一隻在蒲台島避風塘停留一週潛水覓食。卡面停棲站姿只是示意。",
+    "叫聲照 HKBWS：繁殖地以「chirrup」為主，離開繁殖區也會發出變體（英文音譯保留）。",
+    "地圖 7 個 ISO3：北太平洋的繁殖與越冬國家（RUS、USA、CAN、JPN、KOR、PRK、CHN）；HKBWS 寫明繁殖於阿留申、阿拉斯加灣、鄂霍次克海、堪察加南側、彼得大帝灣與黃海，冬季在東、西太平洋沿岸海域包括華東。",
+    "只交付 aviandex/0181.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
