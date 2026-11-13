@@ -1,0 +1,130 @@
+{
+  "id": "0183",
+  "name": "三趾鷗",
+  "scientificName": "Rissa tridactyla",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "illustrationTaxon": "Rissa tridactyla: 38-41 cm, a medium-sized, rather elegant gull with relatively narrow wings, short legs and a rounded head. Adult breeding plumage has clean white head, neck, breast, belly and tail, medium grey upperparts, and cleanly demarcated solid black wingtips with no white mirrors inside the black; in winter it acquires a dark ear spot and a dusky hindneck. The bill is yellow, duller in winter but with a slightly darker tip, the eye is dark, and the legs and webbed feet are black. First-winter birds show a distinctive blackish M-pattern across the grey upperwings.",
+  "similarSpecies": [
+    {
+      "zh": "紅嘴鷗",
+      "scientificName": "Chroicocephalus ridibundus",
+      "asset": "black-headed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "紅嘴鷗體長 37–43 公分，與本種相當但體態更輕巧；繁殖羽的頭罩是深巧克力褐、嘴與腳都是深紅色，本種的頭是純白、嘴黃、腳黑。飛行時紅嘴鷗靠翼前緣那道白邊認出來，本種的翼前緣是灰的、上翼整片均勻。"
+    },
+    {
+      "zh": "棕頭鷗",
+      "scientificName": "Chroicocephalus brunnicephalus",
+      "asset": "brown-headed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "棕頭鷗略大略壯（41–45 公分），嘴更深、頭相對更大、虹膜淡色、眼的上方與後方有明顯白色新月斑，繁殖羽的深褐頭罩邊緣帶一圈黑；本種的頭純白、眼深色、嘴小而黃。棕頭鷗飛行時外側兩枚初級飛羽有兩個大白斑，本種的黑色翼尖沒有任何白斑，這是兩者最乾淨的分別。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.67,
+      0.545,
+      0.895,
+      0.735
+    ],
+    [
+      0.52,
+      0.36,
+      0.72,
+      0.56
+    ],
+    [
+      0.14,
+      0.58,
+      0.36,
+      0.78
+    ],
+    [
+      0.74,
+      0.66,
+      0.98,
+      0.9
+    ]
+  ],
+  "featureLabels": [
+    "一片全黑的翼尖",
+    "短小的黃色嘴",
+    "黑色的三趾腳",
+    "中灰色的背"
+  ],
+  "featureNotes": [
+    "翼尖是整片乾淨的黑，界線分明，裡面**沒有白斑**；紅嘴鷗與棕頭鷗的黑色翼尖都帶白（紅嘴鷗是一塊白楔、棕頭鷗是兩個大白斑），這是停棲時最好用的分別（第1圈取自全身圖 `pixel.png`，實際可見）。",
+    "嘴短、小而黃，尖端顏色略深；不像紅嘴鷗那樣深紅、也不像棕頭鷗那樣厚。這個小小的黃嘴配上白頭，是野外最快的辨認點（第2圈取自近景圖，實際可見）。",
+    "腳短、黑色，只有三趾（後趾退化），「三趾鷗」之名由此而來；紅嘴鷗與棕頭鷗的腳都是深紅色（第3圈取自近景圖，實際可見）。",
+    "背與翼上是乾淨的中灰色，沒有花紋；與白色的頭、腹、尾形成清楚的兩色對比（第4圈取自近景圖的背翼大特寫，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "USA",
+      "CAN",
+      "GRL",
+      "NOR",
+      "ISL",
+      "GBR",
+      "JPN"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016000",
+      "use": "HKBWS substantive read: Category I, a rare visitor in late winter and spring; 38-41 cm, a medium-sized rather elegant gull with relatively narrow wings and short legs; first-winter birds have a distinctive blackish M-pattern on the grey upperwings; adults have medium grey upperparts and cleanly demarcated black wingtips (apart from a black outer web to the outermost primary visible at close range) with no mirrors, acquire a dark ear spot and dusky hindneck in winter plumage, and have a yellow bill that is duller in winter and black legs; the flight call is a short 'kow' that falls in pitch slightly; recorded either at sea, mainly in southern waters, or roosting with other gulls in the intertidal area of Deep Bay; since the first record on 20 February 1975 (Viney 1976) it has been recorded in about one year in two, most records falling in 2006 to 2014, all in the second half of winter and spring from 13 January to 19 April and on 22 May, with none since 2014; intensified observer activity in southern waters, especially around Po Toi, is responsible for many records; a circumpolar breeding distribution on coasts and islands with concentrations from Novaya Zemlya to the New Siberian Islands, around the Sea of Okhotsk, western Alaska and Greenland, wintering pelagically in both the Atlantic and Pacific south to the Tropic of Cancer and nearly reaching the equator in the eastern Atlantic; in China recorded around the coast with occasional inland records (Liu and Chen 2020); two subspecies, of which R. t. pollicaris breeds from east Siberia to west Alaska and winters in the Pacific including Hong Kong; IUCN Vulnerable, with the population decreasing rapidly over the past three generations, likely through climate-change-related decreases in prey abundance."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016300",
+      "use": "HKBWS Black-headed Gull page read as the primary contrast species: 37-43 cm, the commonest small gull in Hong Kong, separated in flight from all but the rare Slender-billed Gull by the white leading edge to the wing and black-tipped outer primaries; the adult in breeding plumage has a dark brown hood with a red bill and red legs, and in non-breeding plumage a white tail, a blackish spot behind the eye and a tapered blackish streak reaching up from the eye."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016200",
+      "use": "HKBWS Brown-headed Gull page read as the second contrast species: 41-45 cm, slightly larger and sturdier than Black-headed Gull with a deeper bill, relatively larger head, pale iris and more prominent white crescents around the eye; the adult in breeding plumage has a dark brown hood bordered black and slightly paler at the front, and in flight a distinctive black wingtip with two large mirrors in the outer two primaries; the legs are slightly deeper red."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 三趾鷗 Rissa tridactyla is number 176, Category I, carrying a VU code; 紅嘴鷗 Chroicocephalus ridibundus is number 179 and 棕頭鷗 Chroicocephalus brunnicephalus number 180, neither with an IUCN code (i.e. Least Concern)."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對一片全黑的翼尖、短小的黃色嘴、黑色的三趾腳、中灰色的背。",
+    "全身圖與近景圖皆為本卡新繪（`pixel.png`、`features.png`），沒有沿用任何舊卡圖；兩隻比較鳥紅嘴鷗與棕頭鷗也是本卡新繪（`black-headed-gull.png`、`brown-headed-gull.png`），非等比例，只作外形對照。",
+    "身長 37–41 公分、體重 305–525 公克，與 `cardDetails.zh.json` 一致；`cardDetails` 的 IUCN 也是「易危 VU」，與 HKBWS 的 VULNERABLE 一致，不必改。",
+    "app 分數：i 3.8／a 2.3／v 3.9／r 4.8／c 4／o 3.8，六軸齊全，無 `vEst`。",
+    "IUCN **易危 VU、族群快速下降**（HKBWS：climate-change-related decreases in prey abundance）；香港屬 Category I 的**冬末至春季罕見訪客**，1975-02-20 首筆（Viney 1976），約每兩年一筆，多集中在 2006–2014，2014 年後無紀錄。全球易危與香港罕見要分開寫。",
+    "紀錄細節寫進 notes：全部在 1 月 13 日至 4 月 19 日及 5 月 22 日之間，主要在南區海域出海觀察，或在后海灣潮間帶與其他鷗一起棲息；南區（尤其蒲台島一帶）觀察強度提高是紀錄變多的主因。",
+    "叫聲照 HKBWS：飛行叫聲是短促、音高微微下滑的「kow」；名字來自英文「kit-ti-wake」的擬聲，`cardDetails` 的中文說明保留在原文裡，卡面不另造擬聲詞。",
+    "notes 寫明：「三趾」指的是後趾退化、只剩三趾著地，這個特徵在停棲時看不清，需要靠黑色短腳加上黃嘴、全黑翼尖一起判斷。",
+    "地圖 8 個 ISO3：環北極的繁殖海岸（RUS、USA、CAN、GRL、NOR、ISL、GBR、JPN）；HKBWS 寫明本種在香港屬於 _R. t. pollicaris_（東西伯利亞至西阿拉斯加繁殖、在太平洋越冬）；冬季在大洋上、沒有國家可標，故不列越冬海域。",
+    "只交付 aviandex/0183.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
