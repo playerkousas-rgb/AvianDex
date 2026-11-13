@@ -60,6 +60,19 @@ export function infoCardLayout(id: string): 'slim' | 'legacy' {
   return padded === '0058' || layouts[padded] === 'slim' ? 'slim' : 'legacy';
 }
 
+/**
+ * 這張卡在「四部位／易混鳥」兩頁有沒有可信的裁切座標。
+ *
+ * compose-card.py 產生的 slim 卡全部 1024×1536、分區位置固定，所以單看模板
+ * 就夠；例外是 0041–0043：那三張的 spec 是從已交付的原圖反推，找不到可信
+ * 的四部位座標，硬套只會裁到錯位，所以該兩頁改用完整資訊卡代替。
+ */
+const NO_FEATURE_CROPS = new Set<string>(['0041', '0042', '0043']);
+
+export function hasFeatureCrops(id: string | undefined | null): boolean {
+  return !!id && !NO_FEATURE_CROPS.has(id.padStart(4, '0'));
+}
+
 /** Extend the confirmed slim panel surface into mobile letterboxing without stretching art/text. */
 export function infoCardPanelColor(id: string): string {
   const colors = data.panelColors as Record<string, string>;

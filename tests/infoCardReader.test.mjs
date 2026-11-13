@@ -72,20 +72,33 @@ test('unknown legacy layouts are never guessed; unmade cards have artwork only',
     assert.equal(infoCardLayout(id), 'slim');
     assert.deepEqual(mobileCardPages(id).map(p => p.key), ['artwork', 'features', 'scores', 'distribution', 'similar']);
   }
-  /* 0040 已上載 R2 但未在 infoCards.json：不再硬套 slim 分區，改為成功讀到圖
-     之後才多出「完整資訊卡」一頁。 */
-  assert.deepEqual(mobileCardPages('0040').map(p => p.key), ['artwork']);
-  /* 未登記的卡（例如已上載 R2 但 infoCards.json 未更新的 0022、0040）仍可翻：
+  /* 0040 已上載 R2 並已登記 slim：手機照樣切五頁，不再只給一張完整卡。 */
+  assert.deepEqual(mobileCardPages('0040').map(p => p.key), ['artwork', 'features', 'scores', 'distribution', 'similar']);
+  assert.deepEqual(mobileCardPages('0040', true).map(p => p.key), ['artwork', 'features', 'scores', 'distribution', 'similar']);
+  /* 未登記的卡（例如日後新增、infoCards.json 未更新的編號）仍可翻：
      讀到圖就有「完整資訊卡」一頁，讀不到就只有插畫，不會翻出空頁。 */
-  assert.deepEqual(mobileCardPages('0022').map(p => p.key), ['artwork']);
-  assert.deepEqual(mobileCardPages('0022', true).map(p => p.key), ['artwork', 'original']);
-  assert.deepEqual(mobileCardPages('0040', true).map(p => p.key), ['artwork', 'original']);
+  assert.deepEqual(mobileCardPages('0500').map(p => p.key), ['artwork']);
+  assert.deepEqual(mobileCardPages('0500', true).map(p => p.key), ['artwork', 'original']);
+});
+
+test('the whole delivered range 0001–0120 is registered slim, so every page is cut', () => {
+  for (let n = 1; n <= 120; n += 1) {
+    const id = String(n).padStart(4, '0');
+    assert.equal(hasInfoCard(id), true, `${id} must be in infoCards.json`);
+    assert.equal(infoCardLayout(id), 'slim', `${id} is a slim card`);
+  }
+  /* 0041–0043 的來源卡沒有可信四部位座標：該兩頁換完整卡，不硬裁。 */
+  assert.deepEqual(mobileCardPages('0041').map(p => p.key),
+    ['artwork', 'original', 'scores', 'distribution', 'original']);
+  assert.deepEqual(mobileCardPages('0117').map(p => p.key),
+    ['artwork', 'features', 'scores', 'distribution', 'similar']);
 });
 
 test('flip is offered whenever a card may exist, not only when it is registered', () => {
   assert.equal(canFlipInfoCard('0001'), true, 'registered card can flip');
-  assert.equal(hasInfoCard('0040'), false, '0040 is not in infoCards.json');
-  assert.equal(hasInfoCard('0022'), false, '0022 is not in the registry');
+  assert.equal(hasInfoCard('0040'), true, '0040 is registered as slim');
+  assert.equal(hasInfoCard('0100'), true, 'the registry now covers 0001–0120');
+  assert.equal(hasInfoCard('0500'), false, '0500 is not in the registry');
   assert.equal(canFlipInfoCard('0040'), true, 'every card may be flippable; the loader reports whether R2 has the file');
   assert.equal(canFlipInfoCard('0105'), true, 'newly delivered cards must be inspectable too');
 });

@@ -99,11 +99,11 @@ test('0001 cycles through all five pages by tap; controls, swipe and vertical sc
 test('replacement info card has a cache revision; legacy info and all illustrations keep their URLs', () => {
   assert.equal(infoCardUrl('1'), 'https://cdn.example.test/aviandex/0001.avif?v=restart-0001-v1');
   assert.ok(cardProxyUrl('1', 'avif', 'aviandex').endsWith('&v=restart-0001-v1'));
-  for (const id of ['0002', '0003']) {
+  for (const id of ['0002', '0003', '0004', '0100', '0120']) {
     assert.equal(infoCardUrl(id), `https://cdn.example.test/aviandex/${id}.avif?v=restart-${id}-v1`);
     assert.ok(cardProxyUrl(id, 'avif', 'aviandex').endsWith(`&v=restart-${id}-v1`));
   }
-  assert.equal(infoCardUrl('4'), 'https://cdn.example.test/aviandex/0004.avif');
+  assert.equal(infoCardUrl('4'), 'https://cdn.example.test/aviandex/0004.avif?v=restart-0004-v1');
   assert.equal(artUrl('1'), 'https://cdn.example.test/birdcards/0001.avif');
 });
 

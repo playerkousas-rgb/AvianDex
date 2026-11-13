@@ -178,7 +178,8 @@ test('設定檔的圖卡網址格式正確（4 位補零、可換網域）', asy
      這兩個資料夾不可以再混 —— 混錯就是「569 張全部未發現」的那個 bug。 */
   assert.equal(mod.cardUrl('21'), `${mod.R2_BASE_URL}/birdcards/0021.avif`);
   assert.equal(mod.artUrl('21'), `${mod.R2_BASE_URL}/birdcards/0021.avif`);
-  assert.equal(mod.infoCardUrl('21'), `${mod.R2_BASE_URL}/aviandex/0021.avif`);
+  /* 0001–0120 全部已重製，所以網址帶 `?v=restart-NNNN-v1` 快取版本。 */
+  assert.equal(mod.infoCardUrl('21'), `${mod.R2_BASE_URL}/aviandex/0021.avif?v=restart-0021-v1`);
   assert.equal(mod.cardProxyUrl('21'), '/api/card?id=0021&ext=avif&folder=birdcards');
   // 兩個資料夾都要在候選名單內（插畫先，資訊卡後備）
   assert.deepEqual(mod.cardUrlCandidates('21'), [

@@ -1,0 +1,151 @@
+{
+  "id": "0124",
+  "name": "青藏沙鴴",
+  "scientificName": "Anarhynchus atrifrons",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded_drive_verified",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Anarhynchus atrifrons adult male in breeding plumage: smaller than Greater Sand-Plover with neater proportions, a less deeply-based bill without a swollen distal half and with a stubbier tip, a smaller eye and shorter legs; broad dark forehead, dark lores, pale orange-buff chest on a clean white ground, clean white flanks with no grey mottling, warmer sandy-brown upperparts than Siberian Sand-Plover. Non-breeding birds have brownish-buff head and chest, pale supercilium, smaller breast patches that do not meet in the centre, clean flanks and relatively longer legs and bill than Siberian. Three subspecies: pamirensis, atrifrons and schaeferi.",
+  "similarSpecies": [
+    {
+      "zh": "鐵嘴沙鴴",
+      "scientificName": "Anarhynchus leschenaultii",
+      "asset": "greater-sand-plover.png",
+      "framing": "whole-bird",
+      "distinction": "體型明顯較大、嘴長而先端腫脹、眼較大、腳較長偏黃、整體較笨重；本種較小較整齊、嘴基較淺而先端較鈍、眼較小、腳較短偏灰。"
+    },
+    {
+      "zh": "蒙古沙鴴",
+      "scientificName": "Anarhynchus mongolus",
+      "asset": "siberian-sand-plover.png",
+      "framing": "whole-bird",
+      "distinction": "上體及耳羽較冷較深、脇部有灰色斑駁、胸斑較大片常在中央相接、嘴較粗鈍、腳較短較橄欖色；本種上體較暖較沙、脇部乾淨、胸斑較小不在中央相接、腳較長。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.0781,
+      0.3516,
+      0.3255,
+      0.7227
+    ],
+    [
+      0.1953,
+      0.1172,
+      0.5078,
+      0.5859
+    ],
+    [
+      0.4883,
+      0.3255,
+      0.8789,
+      0.5859
+    ],
+    [
+      0.3906,
+      0.599,
+      0.6836,
+      0.7943
+    ]
+  ],
+  "featureLabels": [
+    "淺基短嘴",
+    "黑色前額",
+    "橙褐胸帶",
+    "灰色短腳"
+  ],
+  "featureNotes": [
+    "嘴基部較淺、先端不腫脹而略鈍，是與鐵嘴沙鴴分開的第一個結構特徵（第1圈取自頭部特寫，實際可見）。",
+    "繁殖羽前額有一道橫跨的深色帶並穿過眼部，眼後留一塊白斑；這是與蒙古沙鴴較冷較深的頭部羽色分開的重點（第2圈取自頭部特寫，實際可見）。",
+    "胸前橙褐色由喉部向下漸淡成白色，脇部乾淨無灰色斑駁；蒙古沙鴴的脇部有灰斑、胸斑亦較大片（第3圈取自全身圖，實際可見）。",
+    "腳較短而偏灰，脛跗明顯短於鐵嘴沙鴴，腳趾與泥面比例亦不同（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "MNG",
+      "TJK",
+      "AFG",
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "TWN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "RUS",
+      "KAZ",
+      "UZB",
+      "KGZ",
+      "TKM",
+      "IRN",
+      "OMN",
+      "ARE",
+      "SAU",
+      "YEM",
+      "EGY",
+      "SDN",
+      "ETH",
+      "KEN",
+      "TZA",
+      "SOM"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/011000a",
+      "use": "HKBWS substantive identification/range/conservation read: Category I scarce winter visitor and passage migrant, mainly Deep Bay intertidal mudflats; separated from Greater Sand-Plover by structure (smaller, neater, less deep-based bill without swollen distal half and with stubbier tip, smaller eye, shorter legs), greyish legs and darker upperparts in most birds, and a more regular stop-start foraging motion; versus Siberian Sand-Plover by warmer paler upperparts and ear coverts, clean flanks without grey mottling, smaller breast patches that do not meet centrally, less bulky body and longer, less olive legs; breeding plumage adults paler and more orange on the chest than Siberian, females paler with ear coverts not darker than the crown; juveniles have a pale forehead blending into the brown crown, warmer covert fringes, cleaner flanks and smaller breast patches; flight call a trilling note very similar to Greater Sand-Plover; southward migration peaks early in July and August with small numbers remaining through winter; breeds on the high plateau north and east of the Himalayas to extreme southern Mongolia and west to the Pamirs as pamirensis, atrifrons and schaeferi; IUCN Least Concern with an unknown population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/011100",
+      "use": "HKBWS Greater Sand-Plover comparison: larger, longer-legged, longer bill with swollen distal half, larger eye, more ungainly; favours crabs and long waiting dashes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/011000b",
+      "use": "HKBWS Siberian Sand-Plover comparison: colder darker upperparts and ear coverts, greyish flank mottling, broader breast patches often meeting centrally, thicker stubbier bill, shorter olive legs."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對淺基短嘴、深色前額、橙褐胸帶與灰色短腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意，非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地（青藏高原至帕米爾）與越冬地不分工。",
+    "IUCN 無危、趨勢不明；香港屬稀少冬候鳥及春秋過境鳥，主要在后海灣泥灘，秋季南遷高峰在 7–8 月。",
+    "只交付 aviandex/0124.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

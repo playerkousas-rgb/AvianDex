@@ -1181,3 +1181,61 @@ HKBWS 0080/011000b 內文（Category I 春秋常見過境鳥、春季遠多於�
 - 測試：`tests/infoCardReader.test.mjs` 新增 canFlip 與 `mobileCardPages('0040', true)` 的斷言；全套 `node --test tests/*.test.mjs` 157 pass、`tsc -b` 通過。
 
 仍未做的事（需要你決定）：把 0022–0104 逐張加入 `layouts` 的 slim（手機分區座標要逐張確認，硬套會裁錯位），以及確認 R2 上實際有哪些檔 —— 這個 sandbox 連不到 `r2.dev`，無法代為驗證。
+
+### 手機分頁：0001–0120 全部切四頁（2026-11 用戶回報「現在能翻了，但沒有把他們 CUT 成 4 頁」）
+
+用戶回報：翻得到圖卡之後，只有 0001–0004 真的切成「插畫／四部位／能力值／分佈圖／易混鳥」，
+其餘 0040、0105+ 一翻就直接整張 A4 卡。原因是 `src/data/infoCards.json` 的 `layouts` 只有
+0001–0003 + 0105–0119 登記為 `slim`，其餘全部當成舊版卡，只給「插畫 + 完整資訊卡」兩頁。
+
+- **已確認前提**：`scripts/cards/info-restart-0001.json` … `info-restart-0120.json` 共 117 張
+  全部是 `layout: slim`、`size: 1024×1536`、`featureCrops` 四格齊（0041–0043 除外，見下）。
+  即是同一套 compose-card.py 版面，分區座標固定：四部位 `[36,36,952,624]`、
+  分佈圖 `[36,1186,504,314]`、易混鳥 `[556,1186,432,314]`。所以登記為 slim 不會裁錯位。
+- `src/data/infoCards.json`：`ids`／`layouts`／`revisions` 擴展到 **0001–0120 全部 120 張**，
+  `revisions` 一律 `restart-NNNN-v1`（配合 R2 快取版本，`infoCardUrl()` 會帶 `?v=`）。
+- `panelColors`：120 張全部 `#173446`，即卡面深藍底色，翻頁時 letterbox 不會露出舊的米色。
+- **例外 0041–0043**：這三張的 spec 是從已交付的原圖反推，`featureCropsUnavailable: true`，
+  沒有可信的四部位座標。新增 `hasFeatureCrops()`：這三張仍然登記 slim（能力值／分佈圖照切），
+  但「四部位」與「易混鳥」兩頁改用完整資訊卡，寧可少切一頁，也不要裁到錯位。
+- 測試：`tests/infoCardReader.test.mjs` 新增「0001–0120 全部登記 slim」與 0041 的五頁排列斷言；
+  `tests/cardImage.test.mjs`、`tests/mobileCardInteractions.test.mjs` 改為預期 `?v=restart-0004-v1`。
+  全套 `node --test tests/*.test.mjs` **158 pass / 0 fail**，`tsc -b` 與 `npm run build` 通過。
+- 未改：翻轉鍵判定、R2、SW、後端代理；沒有重新上載任何已交付的 AVIF。
+
+### 0121–0123 的 spec 與日誌（重建記錄）
+
+0121 鐵嘴沙鴴、0122 環頸鴴、0123 白臉鴴 三張**已逐張核對並上載 Drive**（見下表），
+但當時那條分支的 PR 已合併、推送被封鎖，spec 與該段日誌沒有落到 `main`，
+新分支由 `b454373` 開出後只剩 0120 為止。三張卡的 Drive 檔案不受影響；本節保留必要事實，
+避免日後重做時對不上：
+
+| 卡 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0121.avif | 1WXAhTy2RI5N2N65nPxi_3bFEZb4-h5GO | 138678 | b8f4a14ce025c0711a8ce0e7254640fb | bdc403ab892ada5eec79af05b975dec6b831fd5b991edfe425c4d165c67702d4 |
+| 0122.avif | 1bHMmiLCT6E29uOYPVo6_ctlpnBg8wNZA | 150347 | 88b354566d396b80224b917279baa6a4 | 655656caebd00e85de5af94c4d74f0b02f5c3c64a23817730c3c1247cf40d9c3 |
+| 0123.avif | 1N4G73APc50BK7xDB3Y2a-saDqZhDAVsn | 148788 | a92b6ca1f54690ba72bdc533614ccfa0 | d1c5018a98d50091271098f8090209c2e2fa018e15aa4b1ee97ad1804c9c0e7d |
+
+- 0121 四圈：①長嘴腫端（features）②黑面罩（features）③橙紅胸 ④黃色長腳（pixel，
+  `(x+256)/1536` 換算）；目錄 `already verified`，分數 `missingScores: ["v"]`。
+- 0122 四圈：短黑嘴／黑眼紋／白頸環／胸側黑斑；比較鳥白臉鴴、金眶鴴；`missingScores: ["v"]`。
+- 0123 四圈：鈍厚嘴／廣泛白臉／橙黃頭頂／短胸斑；比較鳥環頸鴴、金眶鴴；`missingScores: ["i","c"]`。
+- 三張都是 1024×1536 AVIF、世界底圖加「綠色非全境；非完整分佈」、單檔上載、無 ZIP。
+- **若要重出**：插圖需重新生成（`cards/art/` 不入 Git），三張的裁切框已在本節與各卡 manifest 記錄；
+  重新渲染前必須先讀圖確認圈內真的見到該部位，不可照抄分數重算綜合值。
+
+## 0124 青藏沙鴴 已完成並上載（下一張 0125 劍鴴）
+
+HKBWS 0080/011000a 內文（Category I 稀少冬候鳥及春秋過境鳥，主要在后海灣潮間帶泥灘；與鐵嘴沙鴴先看結構：較小、比例較整齊、嘴基較淺而先端不腫脹、嘴尖較鈍、眼較小、腳較短；多數腳偏灰、上體較深，覓食為較規律的走走停停；與蒙古沙鴴之別：上體及耳羽較暖較淡、脇部乾淨無灰斑、胸斑較小不在中央相接、體態較輕盈、腳較長而不那麼橄欖色；繁殖羽成鳥較淡、胸前較橙，雌鳥胸前橙皮黃而耳羽不比頭頂深；幼鳥額淡與褐色頭頂漸變、覆羽及肩羽羽緣較暖、脇部較乾淨、胸斑不於中央相接、腳與嘴比例較長；飛行叫為顫音，與鐵嘴沙鴴極相似；南遷高峰在 7 月及 8 月初，近年少量留在香港越冬；繁殖於喜馬拉雅山北及東的高原地區，東至蒙古最南、西至帕米爾，三個亞種 `pamirensis`、`atrifrons`、`schaeferi`；IUCN **LC 無危、趨勢不明**）。
+
+- **素材**：`pixel.png`（1024×1536 全身圖：深色前額帶穿過眼部、眼後白斑、橙褐胸漸淡成白腹、上體暖沙褐、腳偏灰）與 `features.png`（1536×1024 頭胸特寫：深色前額、眼周、喉部淡皮黃、上胸橙褐）均已生成並**逐張讀圖**核對；比較鳥 `greater-sand-plover.png`（較大、嘴長而先端腫、腳長偏黃）與 `siberian-sand-plover.png`（上體較冷較深、脇部有灰斑、胸斑較闊、腳短偏橄欖）同樣逐張核對。
+- **四圈**：①淺基短嘴（`features.png` 嘴部）②黑色前額（`features.png` 前額與眼周）③橙褐胸帶（`pixel.png` 橙胸—白腹交界）④灰色短腳（`pixel.png` 兩條脛跗連腳趾與泥面）。第 3、4 圈第一次誤用 `x/1536`（pixel.png 實際 1024 寬）令圓圈整體偏左、圈內只有背景，改回 `x/1024` 後逐圈重新讀圖確認；第 4 圈先後試了五個框，最後用 `(400,920)-(700,1220)` 才同時見到兩腳與腳趾。
+- **評分**：`src/data/dexScores.json` 完全沒有 0124 紀錄，六個值全部「待查」，卡面顯示「綜合評分待查」與「？」；`missingScores` 為全部六項，**沒有補零、沒有自行估算**。這是本批第一張完全無分數的卡，之後如要補分數需另建記錄，不可在渲染器裡硬寫。
+- **地圖**：世界底圖 + 38 個部分分佈國家（中亞、青藏高原、南亞、東南亞、東亞、中東、東非），註明三個亞種且繁殖／越冬不分工；Natural Earth 110m 無 `MDV` 多邊形故未列。
+- **驗證**：AVIF 解碼 1024×1536；bytes 144455、MD5 `7d1b95040cf2e540b3aba77654c6565b`、SHA256 `09a8f5014723f2485a33207edfa79180da52c79ddb9d9d58e5fb8ebcc014195f`，manifest／SHA256SUMS 一致，`manifest.spec` == `scripts/cards/info-restart-0124.json`；地圖綠色像素 4329。上載前 Drive 搜尋 `0124` 0 命中；上載後 parent `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD`，bytes／MD5 與本機一致。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0124.avif | 1oOc-5f-pGK4y2u4jT4_PvAnlRG27pKku | 144455 | 7d1b95040cf2e540b3aba77654c6565b | 09a8f5014723f2485a33207edfa79180da52c79ddb9d9d58e5fb8ebcc014195f |
+
+未改 UI 版面、無 ZIP、未動 R2。下一張 0125 劍鴴（Common Ringed Plover，HKBWS 0080/010500，IUCN LC、趨勢下降；17–19cm，腳橙、嘴基橙、飛行有白翼帶、無黃眼圈）。
