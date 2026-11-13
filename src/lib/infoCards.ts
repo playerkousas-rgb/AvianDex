@@ -64,13 +64,17 @@ export function infoCardLayout(id: string): 'slim' | 'legacy' {
  * 這張卡在「四部位／易混鳥」兩頁有沒有可信的裁切座標。
  *
  * compose-card.py 產生的 slim 卡全部 1024×1536、分區位置固定，所以單看模板
- * 就夠；例外是 0041–0043：那三張的 spec 是從已交付的原圖反推，找不到可信
- * 的四部位座標，硬套只會裁到錯位，所以該兩頁改用完整資訊卡代替。
+ * 就夠 —— 包括 0041–0043。
+ *
+ * 2026-11 用戶回報：0041–0043 翻到「四部位」及「易混鳥」兩頁時，整張長卡被塞
+ * 進那一頁。原因是先前把「這三張沒有本機 spec 的 featureCrops」誤當成「卡上
+ * 沒有那個分區」，於是把該兩頁換成完整資訊卡。實際上三張已交付的卡都是 slim
+ * 版式：地圖／易混鳥模組邊框落在 x 41–987、y 1191–1499，四部位圓圈落在
+ * y 432–660，與 SLIM_PAGE_BOXES 吻合（已逐張量三張卡的邊框位置）。缺的只是
+ * 「重新生成這張卡」所需的座標，不是「顯示這張卡」所需的座標。
  */
-const NO_FEATURE_CROPS = new Set<string>(['0041', '0042', '0043']);
-
 export function hasFeatureCrops(id: string | undefined | null): boolean {
-  return !!id && !NO_FEATURE_CROPS.has(id.padStart(4, '0'));
+  return !!id;
 }
 
 /** Extend the confirmed slim panel surface into mobile letterboxing without stretching art/text. */

@@ -96,6 +96,40 @@ test('0001 cycles through all five pages by tap; controls, swipe and vertical sc
   }
 });
 
+test('0041 renders cropped slim panels, never the whole long card, on all five pages', async () => {
+  const dom = new JSDOM('<div id="root"></div>', { url: 'https://app.example.test/' });
+  const globals = ['window', 'document', 'HTMLElement', 'SVGElement', 'Element', 'Node', 'IS_REACT_ACT_ENVIRONMENT'];
+  const previous = new Map(globals.map(k => [k, Object.getOwnPropertyDescriptor(globalThis, k)]));
+  for (const k of globals) Object.defineProperty(globalThis, k, { configurable: true, writable: true, value: k === 'IS_REACT_ACT_ENVIRONMENT' ? true : k === 'window' ? dom.window : dom.window[k] });
+  const el = dom.window.document.getElementById('root');
+  const r = createRoot(el);
+  const sections = [];
+  const click = async node => act(() => { node.dispatchEvent(new dom.window.MouseEvent('click', { bubbles: true })); });
+  try {
+    await act(() => r.render(createElement(MobileCardPages, {
+      id: '0041', name: '印緬斑嘴鴨', lang: 'zh', artwork: 'ARTWORK', infoUrl: 'https://cdn.example.test/aviandex/0041.avif?v=restart-0041-v1',
+      infoStatus: 'loaded', onInfo() {}, onPageChange: key => sections.push(key), onExpand() {},
+    })));
+    const region = el.querySelector('[data-mobile-card-pages]');
+    const page = () => el.querySelector('[data-card-page]').dataset.cardPage;
+    for (const key of ['features', 'scores', 'distribution', 'similar', 'artwork']) {
+      await click(region);
+      assert.equal(page(), key);
+      if (key !== 'scores' && key !== 'artwork') {
+        assert.ok(el.querySelector('svg[data-mobile-info-panel]'), `${key} must be a cropped panel`);
+        assert.equal(el.querySelector('[data-original-info-card]'), null, `${key} must never show the whole card`);
+      }
+    }
+    assert.deepEqual(sections, ['features', 'scores', 'distribution', 'similar', 'artwork'], '0041 cuts into five pages too');
+  } finally {
+    await act(() => r.unmount());
+    dom.window.close();
+    for (const [key, descriptor] of previous) {
+      if (descriptor) Object.defineProperty(globalThis, key, descriptor); else delete globalThis[key];
+    }
+  }
+});
+
 test('replacement info card has a cache revision; legacy info and all illustrations keep their URLs', () => {
   assert.equal(infoCardUrl('1'), 'https://cdn.example.test/aviandex/0001.avif?v=restart-0001-v1');
   assert.ok(cardProxyUrl('1', 'avif', 'aviandex').endsWith('&v=restart-0001-v1'));

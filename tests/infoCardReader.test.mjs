@@ -87,9 +87,14 @@ test('the whole delivered range 0001–0120 is registered slim, so every page is
     assert.equal(hasInfoCard(id), true, `${id} must be in infoCards.json`);
     assert.equal(infoCardLayout(id), 'slim', `${id} is a slim card`);
   }
-  /* 0041–0043 的來源卡沒有可信四部位座標：該兩頁換完整卡，不硬裁。 */
-  assert.deepEqual(mobileCardPages('0041').map(p => p.key),
-    ['artwork', 'original', 'scores', 'distribution', 'original']);
+  /* 0040–0043 已交付的都是 slim 卡，模組位置與模板一致：一律切五頁。
+     2026-11 用戶回報過這三張翻出整張長卡，所以逐張鎖住。 */
+  for (const id of ['0040', '0041', '0042', '0043']) {
+    assert.deepEqual(mobileCardPages(id).map(p => p.key),
+      ['artwork', 'features', 'scores', 'distribution', 'similar'], `${id} must cut into five pages`);
+    assert.deepEqual(mobileCardPages(id, true).map(p => p.key),
+      ['artwork', 'features', 'scores', 'distribution', 'similar'], `${id} must not add an original page`);
+  }
   assert.deepEqual(mobileCardPages('0117').map(p => p.key),
     ['artwork', 'features', 'scores', 'distribution', 'similar']);
 });
