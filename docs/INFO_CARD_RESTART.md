@@ -1239,3 +1239,20 @@ HKBWS 0080/011000a 內文（Category I 稀少冬候鳥及春秋過境鳥，主�
 | 0124.avif | 1oOc-5f-pGK4y2u4jT4_PvAnlRG27pKku | 144455 | 7d1b95040cf2e540b3aba77654c6565b | 09a8f5014723f2485a33207edfa79180da52c79ddb9d9d58e5fb8ebcc014195f |
 
 未改 UI 版面、無 ZIP、未動 R2。下一張 0125 劍鴴（Common Ringed Plover，HKBWS 0080/010500，IUCN LC、趨勢下降；17–19cm，腳橙、嘴基橙、飛行有白翼帶、無黃眼圈）。
+
+## 0125 劍鴴 已完成並上載（下一張 0126 長嘴鴴）
+
+HKBWS 0080/010500 內文（Category I 稀少冬候鳥；17–19cm；與金眶鴴之別：腳稍長而暗橙、嘴較粗而基部有橙色（可被泥遮）、眼後及眼下深色範圍較大、飛行時有明顯白翼帶、無黃色眼圈，繁殖羽胸帶較闊較深；幾乎只在潮間帶泥灘；典型叫聲為二音節帶轉調的「poo-eep」；1979-04-14 首次紀錄，1991 年再現，疑為同一隻直至 1999 年；2000–2012 年四個冬季有紀錄，之後無；極端日期 9 月 24 日至 4 月 14 日，但多數在 10 月 21 日至 3 月 14 日；繁殖於北極圈以北，由加拿大東北、格陵蘭、冰島橫跨歐亞北部至白令海，越冬主要在撒哈拉以南非洲、中東及印度部分地區；三個亞種，香港相信為 `C. h. tundrae`；IUCN **LC 無危、趨勢下降**）。
+
+- **素材**：`pixel.png`（1024×1536 全身圖：完整黑色胸帶、白喉、黑眼罩、橙基嘴、橙腳）與 `features.png`（1536×1024 頭胸特寫）均已生成並**逐張讀圖**核對；比較鳥 `little-ringed-plover.png`（黃眼圈、全黑細嘴、窄胸帶、淡黃腳）與 `kentish-plover.png`（無完整胸帶、兩側小黑斑、黑腳、橙棕後頭）同樣逐張核對。
+- **四圈**：①橙基粗嘴（`features.png` 嘴部，橙基與深色嘴尖都在圈內）②黑眼罩（`features.png`，第二版把眼部移正，原本鼻樑佔了半個圈）③完整胸帶（`pixel.png` 胸前黑帶橫過整個前胸、上白喉下白腹）④橙色長腳（`pixel.png` 兩條橙腳連腳趾）。
+- **評分**：runtime 六項齊（i2.0 a2.8 v3.0 r4.8 c1.2 o2.8），`missingScores` 空，卡面不再有「待查非零分」註腳，綜合 2.8、四星中的三星。
+- **地圖**：世界底圖 + 80 個部分分佈國家（北美東北、格陵蘭、冰島、全歐、俄哈蒙、中東、全非洲、南亞），註明三個亞種且繁殖／越冬不分工；Natural Earth 110m 無 `MUS`／`SYC` 多邊形故未列。
+- **驗證**：AVIF 解碼 1024×1536；bytes 144389、MD5 `847176b37931a184227490f8c9accfdb`、SHA256 `fb6c7750ee5310a63cea96ebb82fd9e7c9834d5735cf1d5e197f8541d9c52392`，manifest／SHA256SUMS 一致，`manifest.spec` == `scripts/cards/info-restart-0125.json`；地圖綠色像素 6367。上載前 Drive 搜尋 `0125` 0 命中；上載後 parent `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD`，bytes／MD5 與本機一致。
+- `src/data/infoCards.json` 同步加入 `0125`（slim、`restart-0125-v1`、`#173446`），令新卡一上載就可以在 app 切成五頁。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0125.avif | 13KK0Wcsr4AgWCphzUack3bUBtOR0BN_U | 144389 | 847176b37931a184227490f8c9accfdb | fb6c7750ee5310a63cea96ebb82fd9e7c9834d5735cf1d5e197f8541d9c52392 |
+
+下一張 0126 長嘴鴴（Long-billed Plover，*Thinornis placidus*，HKBWS 0080/010600，IUCN LC、趨勢下降；18–21cm，比金眶鴴大、嘴長腳長翼長、耳羽及眼先永遠褐色、成鳥額上有寬黑帶、飛行內翼白帶明顯、尾白而末端有黑色亞端帶；runtime 分數只有 a3.3 v1.0 r1.0 o1.8，i 與 c 待查）。
