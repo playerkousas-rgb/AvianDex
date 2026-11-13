@@ -100,6 +100,6 @@ ${cards.length === 0
 </body></html>
 `;
 
-const out = path.join(root, 'public/card-gallery.html');
+const out = path.join(root, 'tools/card-pages/card-gallery.html');
 writeFileSync(out, html, 'utf8');
-console.log(`已寫入 public/card-gallery.html（${cards.length} 張：${cards.map((c) => c.id).join(', ') || '無'}）`);
+console.log(`已寫入 tools/card-pages/card-gallery.html（${cards.length} 張：${cards.map((c) => c.id).join(', ') || '無'}）`);

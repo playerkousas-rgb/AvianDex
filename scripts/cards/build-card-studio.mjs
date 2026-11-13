@@ -13,7 +13,7 @@
  *    並且 prompt 內明文列出，唔准 AI 補。
  *
  *  用法：node scripts/cards/build-card-studio.mjs
- *  輸出：public/card-studio.html
+ *  輸出：tools/card-pages/card-studio.html
  * ============================================================ */
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
@@ -273,5 +273,5 @@ show('0013');
 </html>
 `;
 
-writeFileSync(path.join(root, 'public/card-studio.html'), html, 'utf8');
-console.log('已寫入 public/card-studio.html（' + Object.keys(BIRDS).length + ' 隻）');
+writeFileSync(path.join(root, 'tools/card-pages/card-studio.html'), html, 'utf8');
+console.log('已寫入 tools/card-pages/card-studio.html（' + Object.keys(BIRDS).length + ' 隻）');

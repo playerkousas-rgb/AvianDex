@@ -15,7 +15,7 @@
  *       冇資料就印「資料待查」——杜絕模型留白抄舊字。
  *
  *  用法：node scripts/cards/build-aviandex-page.mjs
- *  輸出：public/aviandex-gen-v4.html
+ *  輸出：tools/card-pages/aviandex-gen-v4.html
  * ============================================================ */
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
@@ -772,7 +772,7 @@ setTimeout(refreshKeyBadge, 900);
 </html>
 `;
 
-const out = path.join(root, 'public/aviandex-gen-v4.html');
+const out = path.join(root, 'tools/card-pages/aviandex-gen-v4.html');
 writeFileSync(out, html, 'utf8');
-console.log('已寫入 public/aviandex-gen-v4.html（' + Object.keys(BIRDS).length + ' 隻 · '
+console.log('已寫入 tools/card-pages/aviandex-gen-v4.html（' + Object.keys(BIRDS).length + ' 隻 · '
   + Math.round(Buffer.byteLength(html) / 1024) + ' KB）');
