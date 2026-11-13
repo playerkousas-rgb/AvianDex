@@ -1067,3 +1067,18 @@ HKBWS 0080/009700 內文（40–48cm、粗壯黑白相間、成鳥上體頭胸�
 | 0114.avif | 1uJWaCOcqLZqoLLnN4q5KxAZuirkynWtP | 132729 | 84c4f741994e438778e61fbc776da5d9 | abb3e5bd681f22fab67490bed238f75364fd53c2fd9ffd0421539191e95ce93e |
 
 未改 UI／runtime／SW／R2／slim 註冊，無 ZIP。0038–0043 缺口狀態不變，0040 空地圖問題仍待用戶決定。下一張 0115 灰斑鴴（HKBWS Grey Plover，0080/010400，IUCN VU）。
+
+## 0115 灰斑鴴 已完成並上載（下一張 0116 歐金鴴）
+
+HKBWS 0080/010400 內文（26–29cm、香港最大鴴；非繁殖羽上體灰而羽端淡色、胸前灰、腹白；幼鳥帶皮黃色調但本地少見；飛行時黑色腋羽加明顯白翼帶；繁殖羽面及下體黑至泄殖孔，白色由額經眼上至胸側；哀怨哨音；全北界繁殖、全球熱帶及溫帶海岸越冬；中國為廣泛過境鳥，越冬於東南沿岸、海南、台灣及長江下游；三個亞種 nominate／_tomkovichi_／_cynosurae_；IUCN **VU 易危、下降超過 30%**；香港為**豐富越冬鳥**，絕大多數在後海灣泥灘，2016-03-13 錄得 881 隻）。
+
+- **素材**：`pixel.png`（1024×1536 全身圖：銀灰斑駁上體、灰色胸前、白腹、粗黑直嘴、深灰腳，站在濕泥上）與 `features.png`（頭、眼、嘴特寫）均已生成並**逐張讀圖**核對；比較鳥 `pacific-golden-plover.png`（金黃褐色斑點、體小頭小）與 `common-ringed-plover.png`（橙黃短嘴黑尖、粗黑胸帶、橙黃腳）同樣逐張核對。
+- **四圈**：①粗厚黑嘴（`features.png`，含嘴全長及鼻孔）②大眼圓頭（`features.png` 眼周幅面）③銀灰斑背（`pixel.png` 上體羽端斑駁＋白腹交界）④深灰長腿（`pixel.png` 兩脛跗連腳趾與泥面）。前三版 ③ 只框到上體或只框到白腹，最後用 `[0.3815,0.28,0.681,0.5794]`；④ 曾試三組窄框都只有兩條直線，改為 `[0.362,0.5404,0.6224,0.8008]` 連腳趾與泥面才可辨。
+- **地圖**：世界底圖 + 115 個部分分佈國家（全北界繁殖帶、歐洲、非洲西部與南部海岸、中東、南亞、東亞、南北美洲海岸、澳洲與紐西蘭），註明三個亞種分工且不分繁殖／越冬。
+- **驗證**：AVIF 解碼 1024×1536；bytes 138044、MD5 `cfca3818081578c525e6a3bc04340e73`、SHA256 `1326148e5d70c319b9246f78576145904bbda77bd40af6768cbb2405753ff3d7`，manifest／SHA256SUMS 一致，`manifest.spec` == `scripts/cards/info-restart-0115.json`，`missingScores` 空；地圖綠色像素 8562；`test-slim-feature-label.py` 4 項通過。上載前 Drive 搜尋 `0115` 0 命中；上載後 parent `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD`，bytes／MD5 與本機一致。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0115.avif | 1KSP78FS_fVHJU5jhyTs7QLQYx9yVdiZb | 138044 | cfca3818081578c525e6a3bc04340e73 | 1326148e5d70c319b9246f78576145904bbda77bd40af6768cbb2405753ff3d7 |
+
+未改 UI／runtime／SW／R2／slim 註冊，無 ZIP。0038–0043 缺口狀態不變，0040 空地圖問題仍待用戶決定。下一張 0116 歐金鴴（European Golden-Plover，_Pluvialis apricaria_，注意香港紀錄極少）。
