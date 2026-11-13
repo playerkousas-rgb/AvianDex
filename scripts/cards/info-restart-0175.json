@@ -1,0 +1,135 @@
+{
+  "id": "0175",
+  "name": "棕三趾鶉",
+  "scientificName": "Turnix suscitator",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Turnix suscitator: 13-17 cm, similar in size and structure to Yellow-legged Buttonquail, with a very short tail, rounded wings and three forward toes. Diagnostic features are the grey bill and legs, the pale yellowish-white eye, and the sandy tone to the wing coverts. It lacks the obvious rufous tones of Yellow-legged Buttonquail's chest, has fine black barring on the flanks, and the adult female shows blackish on the chest. The subspecies T. s. blakistoni occurs from east Myanmar through north Indochina to south China, including Hong Kong; about 15 other subspecies are recognised.",
+  "similarSpecies": [
+    {
+      "zh": "黃腳三趾鶉",
+      "scientificName": "Turnix tanki",
+      "asset": "yellow-legged-buttonquail.png",
+      "framing": "whole-bird",
+      "distinction": "黃腳三趾鶉的嘴與腳都是鮮黃色，頭與下體是橙褐色、胸側散佈圓形黑點，虹膜白得搶眼；本種的嘴與腳是灰色、身上偏沙色調而沒有整片橙褐，脅部是整齊的黑白橫斑，眼睛是淡黃白色。"
+    },
+    {
+      "zh": "鵪鶉",
+      "scientificName": "Coturnix japonica",
+      "asset": "japanese-quail.png",
+      "framing": "whole-bird",
+      "distinction": "鵪鶉體型較大、身型較修長、尾較長而尖，頭上有明顯白眉與白頰紋、喉部深色鑲白邊；本種圓滾滾、尾極短幾乎看不到，沒有那些白線，靠灰嘴灰腳與脅部橫斑辨認。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.84,
+      0.25,
+      0.99,
+      0.46
+    ],
+    [
+      0.74,
+      0.24,
+      0.88,
+      0.38
+    ],
+    [
+      0.46,
+      0.44,
+      0.66,
+      0.62
+    ],
+    [
+      0.44,
+      0.68,
+      0.68,
+      0.88
+    ]
+  ],
+  "featureLabels": [
+    "灰藍色的嘴",
+    "淡黃色的眼睛",
+    "脅部黑白橫斑",
+    "灰藍色的腿"
+  ],
+  "featureNotes": [
+    "嘴是灰藍色而不是黃色，與黃腳三趾鶉（嘴鮮黃）一眼可分；嘴短而稍下彎，適合在地面啄食種子與昆蟲（第1圈取自近景圖，實際可見）。",
+    "眼睛是淡黃白色，配深色瞳孔，與黃腳三趾鶉偏白的虹膜不同；光線好時這個淡黃的眼在褐色臉上很突出（第2圈取自近景圖，實際可見）。",
+    "脅部與腹側是整齊的黑白細橫斑，成鳥雌鳥的胸部更是一片近黑；黃腳三趾鶉的胸側則是橙褐底加圓形黑點，兩者紋理完全不同（第3圈取自全身圖，實際可見）。",
+    "腿與腳是灰藍色、爪黑色，同樣是三個向前的腳趾；與黃腳三趾鶉的黃腿正好相反，是野外最快的第一印象（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "TWN",
+      "JPN",
+      "MYS",
+      "PHL",
+      "IDN",
+      "BRN"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009500",
+      "use": "HKBWS substantive read: Category I, rare autumn passage migrant with one midwinter record; 13-17 cm, similar in size and structure to the more common Yellow-legged Buttonquail but differing in its grey bill and legs, lack of obvious rufous tones to the chest, black barring on the flanks, sandy tone to the wing coverts and, in adult female, blackish on the chest; a very low frequency continuous rhythmic hooting has been recorded in Taiwan in the breeding season; about 25 Hong Kong records since the first on 6 December 1958, most in autumn from the final week of September to the end of November with most in 1-26 October, two earlier August records and a midwinter record on 4 February 1973; skulking and flushed only when closely approached, flying on whirring wings and running off immediately on landing; the first confirmed breeding was in June 2022 in Tai Lam Country Park when a male with three chicks was photographed by a remote-sensing camera; largely resident from India, Sri Lanka and the Himalayan foothills east to south China and the southern Japanese islands and south through Indochina to Malaysia, the Philippines and much of Indonesia, with T. s. blakistoni occurring from east Myanmar through north Indochina to south China including Hong Kong; IUCN Least Concern with an increasing population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0070/009400",
+      "use": "HKBWS Yellow-legged Buttonquail page read as the contrast species: 15-18 cm with a largely yellow bill and yellow legs, a white iris giving a surprised expression, orange-brown head and underparts in males and large blackish feather centres with buff to greyish fringes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 棕三趾鶉 Turnix suscitator is number 96, Category I, with no IUCN code (i.e. Least Concern), immediately after 95 黃腳三趾鶉 Turnix tanki."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對灰藍色的嘴與腿、淡黃白色眼睛、脅部整齊的黑白橫斑，以及圓胖短尾的三趾鶉身型。",
+    "全身圖沿用 0174 已核對的比較鳥（`0174/barred-buttonquail.png` 升格為主圖，本卡重新核對灰嘴灰腳、脅部橫斑與胸部近黑），近景圖是本卡新繪。兩張的沙色調與黑斑密度一致。",
+    "比較鳥：黃腳三趾鶉與鵪鶉都沿用 0174 已核對的圖（`0166`→…的同一條素材鏈：`0174/pixel.png` 與 `0174/japanese-quail.png`），非等比例。兩張卡互相把對方當比較鳥，形成一組對照。",
+    "卡面採用成鳥雌鳥（胸部近黑、脅部黑白橫斑最清楚）。雄鳥胸部較褐、斑紋較柔；卡面不細分性別，只寫在說明。三趾鶉科雌鳥較大較鮮豔、由雄鳥孵蛋育雛，與真正的鵪鶉（雞形目）親緣很遠，比較欄只是外形對照。",
+    "app 分數：i 2／a 3.3／v 3／r 3.3／c 3／o 2.9，另有 `vEst: 1`，與 runtime 一致，沒有補值或重算；卡面已標「觀賞值含體長估算」。",
+    "IUCN 無危 LC、趨勢**上升**（HKBWS 頁面明寫 increasing，是本批少見的上升趨勢）；香港屬 Category I，是稀少的秋季過境鳥，1958 年首筆至今約 25 筆，多集中在 9 月最後一週至 11 月底、又以 10 月 1–26 日最多。全球無危與香港稀少要分開寫。",
+    "2022 年 6 月在大欖郊野公園首次確認繁殖（紅外相機拍到雄鳥帶三隻雛鳥、另有雌鳥），這是本種在香港最新的重要紀錄，寫進說明；但不因此改寫成「香港常見留鳥」。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形；南亞、東南亞、華南、台灣與日本南部一併標示（HKG 與 SGP 不在 110m 底圖，未使用）。",
+    "只交付 aviandex/0175.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
