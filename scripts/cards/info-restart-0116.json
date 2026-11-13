@@ -1,0 +1,186 @@
+{
+  "id": "0116",
+  "name": "歐金鴴",
+  "scientificName": "Pluvialis apricaria",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Pluvialis apricaria in juvenile / non-breeding plumage: upperpart feathers with dark grey centres and golden-buff to whitish notches along the fringes, plain greyish-buff face without a strong dark cap, whitish underparts with sparse pale barring on the flanks, short black bill, dark grey-green legs. Breeding plumage (black face and underparts, white from the forehead over the eye to the flanks) is not shown. The species is monotypic.",
+  "similarSpecies": [
+    {
+      "zh": "太平洋金斑鴴",
+      "scientificName": "Pluvialis fulva",
+      "asset": "pacific-golden-plover.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小、頭較小、頸較短而腳較長；頭頂深色形成明顯「帽」，眉斑白而對比強；本種體型較粗壯、頭大頸長腳短，面部較素淨、無強烈帽狀對比。"
+    },
+    {
+      "zh": "灰斑鴴",
+      "scientificName": "Pluvialis squatarola",
+      "asset": "grey-plover.png",
+      "framing": "whole-bird",
+      "distinction": "體型更大、嘴相對粗長，整體偏銀灰而非金黃；飛行時腋羽全黑、翼上白帶明顯；本種上體帶金黃色缺口斑、飛行時腋羽白色，腳亦較短。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2983,
+      0.3889,
+      0.5967,
+      0.8803
+    ],
+    [
+      0.5159,
+      0.0921,
+      0.8142,
+      0.5834
+    ],
+    [
+      0.3815,
+      0.3125,
+      0.6419,
+      0.5729
+    ],
+    [
+      0.37,
+      0.58,
+      0.618,
+      0.8274
+    ]
+  ],
+  "featureLabels": [
+    "短黑嘴",
+    "大頭素臉",
+    "金斑上體",
+    "短灰綠腿"
+  ],
+  "featureNotes": [
+    "短而呈錐狀的黑嘴，相對頭部偏短，是本種與灰斑鴴（嘴較粗長）分別之一（第1圈取自頭部特寫，實際可見）。",
+    "頭部比例在鴴類中偏大而圓、頸較長，面部只有淡淡眉斑，沒有太平洋金斑鴴那種明顯深色帽狀對比（第2圈取自頭部特寫，實際可見；繁殖羽整個面部轉黑，本圖示非繁殖／幼鳥羽色）。",
+    "上體每片羽毛中央深灰、羽緣帶金黃至淡白色缺口斑，形成金黃點斑的背面；下體白、胸側只有淡淡渲染（第3圈取自全身圖，實際可見；飛行時白色腋羽及翼上窄白帶是另一項特徵，插圖為折翼狀態，本圈不代表飛行翼色）。",
+    "腳相對短，灰綠至深灰色，脛跗短而結實；飛行時腳趾不伸出尾端（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GRL",
+      "ISL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "POL",
+      "DEU",
+      "NLD",
+      "BEL",
+      "DNK",
+      "GBR",
+      "IRL",
+      "FRA",
+      "CHE",
+      "AUT",
+      "CZE",
+      "SVK",
+      "HUN",
+      "SVN",
+      "HRV",
+      "SRB",
+      "BIH",
+      "MNE",
+      "ALB",
+      "MKD",
+      "GRC",
+      "BGR",
+      "ROU",
+      "MDA",
+      "UKR",
+      "TUR",
+      "CYP",
+      "SYR",
+      "LBN",
+      "ISR",
+      "JOR",
+      "IRQ",
+      "IRN",
+      "SAU",
+      "KWT",
+      "ARE",
+      "OMN",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "EGY",
+      "KAZ",
+      "GEO",
+      "ARM",
+      "AZE",
+      "TKM",
+      "UZB",
+      "MNG",
+      "CHN",
+      "JPN",
+      "KOR",
+      "PRK",
+      "TWN"
+    ],
+    "note": "Country overview only: monotypic; breeds from eastern Greenland and Iceland across northern Eurasia east to about the Khatanga River in Taymyr, and winters in western Europe and around the Mediterranean. In China recorded in Hebei and Shanghai, and also recorded in Japan. Not an occurrence polygon and not split by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010200",
+      "use": "HKBWS substantive identification/range/conservation read: Category I accidental, only two Hong Kong records (one 25 Oct 2015, one 14 Oct-11 Nov 2018), both on Mai Po intertidal mudflats; 26-29cm, intermediate between Grey and Pacific Golden Plovers; upperpart feathers dark grey centres with golden-buff or whitish notches; extensive black below in breeding plumage, whitish in non-breeding; larger and bulkier than Pacific Golden Plover with relatively larger head, longer neck, shorter legs; four primary tips usually visible beyond tertials but shorter primary projection; in flight white axillaries and inner underwing and toes do not project beyond tail; head pattern relatively plain lacking the strong capped effect of Pacific Golden Plover; sparse pale greyish flank bars indicate juvenile; monosyllabic plaintive whistle; monotypic, breeds eastern Greenland and Iceland across northern Eurasia to Khatanga River, winters western Europe and Mediterranean; China Hebei and Shanghai; Japan; IUCN Least Concern, increasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080",
+      "use": "HKBWS family list confirming 010200 歐金鴴 alongside Grey Plover 010400 and Pacific Golden Plover 010300."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 歐金鴴 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Pluvialis apricaria, Charadriiformes/Charadriidae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six-axis scores, no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對嘴形、頭頸比例、上體金斑及腳色；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例；太平洋金斑鴴與灰斑鴴在香港都常見，歐金鴴則只錄得兩次，卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危且全球趨勢上升，但香港屬偶發（Category I），至今只有 2015 及 2018 兩次紀錄，兩次都在米埔后海灣泥灘。",
+    "只交付 aviandex/0116.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
