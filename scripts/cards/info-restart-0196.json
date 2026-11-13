@@ -1,0 +1,140 @@
+{
+  "id": "0196",
+  "name": "織女銀鷗",
+  "scientificName": "Larus vegae",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Larus vegae adult in non-breeding plumage. Vega Gull and Mongolian Gull cannot be separated objectively in the field (Collinson et al. 2008); the bird shown has medium-grey upperparts, an almost unstreaked white head, a heavy yellow bill with a red gonys spot and pink legs, which is how adults are identified in Hong Kong in winter. Juveniles and first-winter birds, which are browner and darker-billed, are not shown.",
+  "similarSpecies": [
+    {
+      "zh": "蒙古銀鷗",
+      "scientificName": "Larus mongolicus",
+      "asset": "mongolian-gull.png",
+      "framing": "whole-bird",
+      "distinction": "體型更大、胸更深、嘴更長、翼更長；翼上為更淡的銀灰色，初級飛羽黑色範圍更大，腳多為粉紅或桃色；成鳥一月前已完成初級飛羽換羽，因此冬末白色翼尖通常已磨損。本種翼上灰較深、換羽遲至十二月或一月。"
+    },
+    {
+      "zh": "烏灰銀鷗",
+      "scientificName": "Larus fuscus",
+      "asset": "lesser-black-backed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "翼上為明顯更深的石板灰（比本種深得多），體型較修長、翼較長、嘴較小；成鳥腳多為黃色，本種為粉紅。香港部分個體被視為與本種的雜交，結構、羽色或換羽居中，腳色由黃至粉紅不等。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1,
+      0.3,
+      0.72,
+      0.92
+    ],
+    [
+      0.46,
+      0.08,
+      0.92,
+      0.54
+    ],
+    [
+      0.48,
+      0.38,
+      0.64,
+      0.54
+    ],
+    [
+      0.7,
+      0.52,
+      0.86,
+      0.68
+    ]
+  ],
+  "featureLabels": [
+    "厚重的黃嘴紅斑",
+    "頭頸後方的淡縱紋",
+    "中灰翼上覆羽",
+    "黑翼尖與白斑"
+  ],
+  "featureNotes": [
+    "粗厚的黃色嘴，下嘴近端有明顯紅斑——成鳥最直接的特徵；第1圈取自近景圖，整條嘴連紅斑與嘴基都入圈。",
+    "成鳥冬季頭部幾乎純白，只在後頸與頸側留下幾道淡灰褐縱紋，這是與蒙古銀鷗（更素淨）分別時要看的位置（第2圈取自近景圖，實際可見）。",
+    "翼上為中等深淺的灰色，覆羽有整齊的疊瓦狀淡邊；與蒙古銀鷗的淡銀灰、烏灰銀鷗的深石板灰放在一起，灰階居中（第3圈取自全身圖，實際可見）。",
+    "初級飛羽黑色而末端有小小白點，最外一枚有白色「鏡斑」（第4圈取自全身圖，實際可見；插圖為停棲折翼狀態，不代表飛行時翼上翼下圖案）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "TWN",
+      "HKG",
+      "VNM",
+      "PHL",
+      "THA",
+      "KAZ"
+    ],
+    "note": "Country overview only: breeds in northeastern Siberia and winters in Japan, Korea, eastern and southern China and Taiwan; Hong Kong is within the winter range. Not an occurrence polygon and not split by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017510",
+      "use": "HKBWS Mongolian Gull (017510) substantive read used as the source for Vega Gull size and separation: 56-68 cm for mongolicus, Vega Gull cannot be separated objectively from Mongolian Gull (Collinson et al. 2008); Mongolian Gull is larger, deeper-chested, longer-billed and longer-winged, paler grey above with more black in the primaries and pinkish/peachy legs, and completes primary moult by November whereas Vega Gull completes in December or January and Lesser Black-backed Gull at the end of February or early March; most Hong Kong records are from the Inner Deep Bay gull roost at Mai Po boardwalk on the falling tide; IUCN Least Concern, trend stable."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017700",
+      "use": "HKBWS Lesser Black-backed Gull (017700) read as the contrast species: 51-61 cm, medium-dark grey upperparts, yellow or predominantly yellow legs, extensive black in P8-P10 with one white mirror, primary moult complete end February/early March, minority are hybrids with Vega Gull; most records from the Inner Deep Bay roost; IUCN Least Concern, trend increasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017600",
+      "use": "HKBWS Slaty-backed Gull (017600) read to confirm it is a separate species (55-67 cm, slate-grey upperparts, pale iris) and is NOT what this card illustrates."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 織女銀鷗 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Larus vegae, Charadriiformes/Laridae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six-axis scores, no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對灰階、黃嘴紅斑、粉紅腳與黑翼尖白斑；不是照片，也不是分佈或族群證據。",
+    "織女銀鷗與蒙古銀鷗在野外無法客觀分開（Collinson et al. 2008），本卡採用香港冬季慣用的辨識要點（灰階、嘴形、換羽時間、腳色），不宣稱單一特徵足夠斷種。",
+    "比較鳥為 AI 生成示意，非等比例；三種灰階深淺只作對照參考。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "app 的 runtime 分數只有 i／r／c／o 四軸，v 與 a 待查，卡面依現有資料顯示「待查」而非零分。",
+    "IUCN 無危；HKBWS 頁面以蒙古銀鷗的名義評定，趨勢穩定。",
+    "只交付 aviandex/0196.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
