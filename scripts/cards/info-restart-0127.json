@@ -1,0 +1,90 @@
+{
+  "id": "0127",
+  "name": "金眶鴴",
+  "scientificName": "Thinornis dubius",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "observed_from_delivered_drive_card_no_local_artwork",
+  "provenance": {
+    "kind": "observed_from_delivered_drive_card",
+    "deliveredBy": "arena/ba0b77a0-aviandex (PR merged to main as 2f05667 + follow-up render)",
+    "driveFileId": "1bNJhfMuWUuZyqI4y9kfQExzJJMfXZFR6",
+    "driveParentId": "1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD",
+    "driveBytes": 144327,
+    "driveMd5": "82fdb27aa23bd49b2bff66e7b0bf8e43",
+    "driveSha256": "0f101d9a75e6b4854b613f3e384a75e5abc4cfe8ce012c104c14ed69775f61d3",
+    "decodedSize": [
+      1024,
+      1536
+    ],
+    "decodedFormat": "AVIF",
+    "verifiedAt": "2026-11-13",
+    "verifiedHow": "Downloaded the delivered AVIF from Drive, checked bytes/MD5/SHA256 against the delivery record, decoded it, and re-read the whole card plus each feature circle, the map and the two comparison circles.",
+    "notVerified": "This is not the production spec that generated the card. The artwork (pixel.png/features.png) and the crop coordinates lived only in the previous branch's ignored folders and were lost with that branch, so featureCrops are deliberately absent rather than invented. Nothing here can regenerate or overwrite the delivered file.",
+    "neverUpload": true
+  },
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "delivered card main image: adult in breeding plumage (yellow orbital ring, black forecrown band, narrow black breast band, dull yellowish-flesh legs)",
+  "similarSpecies": [
+    {
+      "zh": "劍鴴",
+      "scientificName": "Charadrius hiaticula",
+      "asset": null,
+      "observedLabelOnCard": "劍鴴",
+      "distinction": "體型較大較壯、腳較長偏橙、嘴基橙色而較鈍、眼後及眼下黑範圍較大、無黃色眼圈、胸帶較闊較深、飛行時有白翼帶。"
+    },
+    {
+      "zh": "長嘴鴴",
+      "scientificName": "Thinornis placidus",
+      "asset": null,
+      "observedLabelOnCard": "長嘴鴴",
+      "distinction": "體型明顯較大、嘴長而全黑、腳長而淡、眼先及耳羽褐色、翼長尾長；本種較小、嘴短、腳短、眼先深黑、有黃眼圈。"
+    }
+  ],
+  "featureCropsUnavailable": true,
+  "featureNotes": [
+    "黃色眼圈：眼周一圈鮮明黃色眼圈，卡上第1圈可見完整一圈。",
+    "額上黑帶：前額黑色橫帶，上下為白色額斑與深色眼先，形成白—黑—白三段；卡上第2圈可見。",
+    "窄黑胸帶：白喉與白腹之間只有一條窄黑帶；卡上第3圈可見。",
+    "淡黃短腳：腳淡黃而短；卡上第4圈可見。"
+  ],
+  "observedLabels": [
+    "黃色眼圈",
+    "額上黑帶",
+    "窄黑胸帶",
+    "淡黃短腳"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "countryIso3Count": 85,
+    "measuredHow": "Measured the green coverage on the delivered card against Natural Earth 110m country geometry at country level; the count is the overview set drawn on the card, not an occurrence polygon."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010700",
+      "use": "HKBWS Little Ringed Plover: Category I, present all year but primarily an autumn passage migrant and winter visitor to fresh and brackish wetlands, breeding in small numbers; 14-17cm; the default small plover on fish ponds; no wing bar in flight; obvious yellow orbital ring; black forecrown band; narrow complete black breast band; largely black bill; dull yellowish-flesh legs; mid-January counts peaked at 340 on 13 January 1985 with no more than 125 in any winter from 2010/11 to 2020/21; nests and/or eggs 17 April to 20 June; three subspecies; IUCN Least Concern with a stable trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010500",
+      "use": "HKBWS Common Ringed Plover comparison as printed on the card."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010600",
+      "use": "HKBWS Long-billed Plover comparison as printed on the card."
+    }
+  ],
+  "notes": [
+    "此 spec 由已交付的 Drive 成品反推記錄，不是原始製作 spec；`featureCrops` 刻意留空而不虛構，另設 `featureCropsUnavailable` 及 `neverUpload`。",
+    "卡面四圈標籤、比較鳥名稱與 85 個 ISO3 綠色範圍均已對成品逐一核對。",
+    "runtime 名稱／學名／分數照抄 birds.json、birdTaxonomy.json、dexScores.json；本卡 v（觀賞）仍待查。",
+    "只交付 aviandex/0127.avif 單一檔案，不壓縮成 ZIP。"
+  ]
+}

@@ -1272,3 +1272,41 @@ HKBWS 0080/010600 內文（Category I 稀少冬候鳥；18–21cm；比金眶鴴
 | 0126.avif | 1pOFKxKMJfTrmMDAfCzwP_-TrNCwnVKpV | 142861 | 2466597724eaab1d1f2a3cb5eb28a869 | 7c61d70878e232d8cfb334f8bceabf3308c32d62cd8629e602492189dae8e7d7 |
 
 下一張 0127 金眶鴴（Little Ringed Plover，HKBWS 0080/010700，IUCN LC、趨勢穩定；14–17cm，全年可見、主要秋過境及冬候鳥，亦有小量繁殖；眼圈黃、頭部黑紋明顯、嘴全黑、腳淡；曾錄 340 隻（1985-01-13）、2010/11–2020/21 冬季不超過 125 隻）。
+
+## 修正 0041–0043 手機分頁：由「整張卡」改回五頁裁切；新交付 0128 東方鴴
+
+用戶回報「其他都切割好了，但 40–43 的確出現問題了，會出現全圖卡在那 5 頁當中」。排查後確認 **問題在分頁邏輯，不在卡本身**。
+
+### 0041–0043 診斷
+
+- 先把 Drive 上 0040–0043 四張成品重新下載（bytes／MD5 全部與既有紀錄一致）並解碼：四張都是 1024×1536 AVIF，正常。
+- 逐張量邊框位置：地圖／易混鳥模組外框落在 **x 41–987、y 1191–1499**，四部位圓圈落在 **y 432–660**，與 `compose-card.py` 的 slim 分區（map `36,1186–540,1500`、similar `556,1186–988,1500`、feature row `432–660`）完全吻合。
+- 結論：三張卡一直都是標準 slim 版式，`SLIM_PAGE_BOXES` 的 viewBox 本來就對得準。真正的 bug 是 `infoCards.ts` 把「這三張沒有本機 spec 的 `featureCrops`」誤當成「卡上沒有那個分區」，於是 `mobileCardPages()` 把「四部位」「易混鳥」兩頁換成 `original`（整張長卡），用戶就在那兩頁看到整張卡被塞進一個面板。
+- 缺的是「重新生成這張卡」所需的裁切座標，不是「顯示這張卡」所需的座標。
+
+### 修正
+
+- `src/lib/infoCards.ts`：`hasFeatureCrops()` 不再排除 0041–0043，改為只要有序號就 true；同時把上面量到的實際數據寫進註解，解釋兩件事不要混為一談。刪除 `NO_FEATURE_CROPS`。
+- `src/lib/mobileInfoPages.ts`：`mobileCardPages()` 簡化為「已登記 + slim + 有分區座標 → 五頁」，移除臨時把兩頁換成 `original` 的分支。
+- 測試：`tests/infoCardReader.test.mjs` 逐張鎖住 0040–0043 必須是 `['artwork','features','scores','distribution','similar']`（連 `infoAvailable=true` 也不可多加 `original` 頁）；`tests/mobileCardInteractions.test.mjs` 新增 0041 的 DOM 測試，逐頁點過去，確認 `features`／`distribution`／`similar` 出的是 `svg[data-mobile-info-panel]` 裁切面板，且一定不會出現 `[data-original-info-card]`。
+- 全套 `node --test tests/*.test.mjs`：160 項，159 pass、0 fail、1 skip；`tsc -p tsconfig.app.json --noEmit` 無錯。
+
+### 0127 金眶鴴補記
+
+0127 上一輪已上載到 Drive（`1bNJhfMuWUuZyqI4y9kfQExzJJMfXZFR6`，144327 bytes，MD5 `82fdb27aa23bd49b2bff66e7b0bf8e43`），但它的素材與製作 spec 只存在於已合併分支的 ignored 資料夾，隨分支結束而失去。本回合重新由 Drive 下載成品核對（bytes／MD5／SHA256 全部與上輪紀錄一致，AVIF 解碼 1024×1536），逐張重讀整卡、四圈、地圖與兩個比較圓，補寫 `scripts/cards/info-restart-0127.json`，狀態 `observed_from_delivered_drive_card_no_local_artwork`：**不寫 `featureCrops`（沒有原始素材就是編造）**，另設 `featureCropsUnavailable` 與 `neverUpload`，只記錄卡上實際可見的標籤、比較鳥名稱與 85 個 ISO3 綠色範圍。同時把 0127 登記進 `src/data/infoCards.json`（slim、`restart-0127-v1`、`#173446`），令它與其他已交付卡一樣切五頁。
+
+### 0128 東方鴴 已完成並上載
+
+HKBWS 0080/011200 內文（Category I 過境遷徙鳥，短草及其他開闊旱地、后海灣一帶；春季稀少、秋季罕見；22–25cm；繁殖羽雄鳥頭頸近白、後冠褐色、上胸鏽橙而下緣轉黑；高挑、長腳、長翼、優雅，腳黃橙、嘴相對細長；雌鳥及幼鳥頭胸褐黃、眉紋淡、後冠深、腳暗淡，兩者上體都有淡色羽緣而幼鳥更寬；飛行時發出中高音「chip」；1998 年前約 85% 紀錄來自啟德及赤鱲角機場，現多見於新界北部低地，由林村經錦田、尖鼻咀到米埔及附近魚塘，以及落馬洲河套生態改善區；偏好短草，亦見於淡水沼澤；春季主要 3 月下半月至 4 月上半月，最早 2006-03-05、最遲 1978-06-02，最高 18 隻（2000-03-22 赤鱲角）及 11 隻（1979-03-28 啟德）；秋季主要 9 月下半月至 10 月第一週，極端日期 2017-08-27 及 1978-10-27，最高 28 隻（1979-09-24 啟德）；一般不見於潮間帶泥灘；**單型種**，繁殖由南西伯利亞經蒙古至中國東北，越冬於澳洲西北部；IUCN **LC 無危、趨勢未知**）。
+
+- **素材**：`pixel.png`（1254×1254 正方形 16-bit pixel art：淡白頭頸、褐色後冠、鏽橙上胸帶黑邊、淡褐上體、黃橙長腳、旱地短草）與 `features.png`（1536×1024 頭胸特寫）均逐張讀圖核對；比較鳥 `golden-plover.png`（太平洋金斑鴴，金斑黑背、白側帶）與 `sand-plover.png`（鐵嘴沙鴴，粗長嘴、淡綠灰長腳、栗褐胸帶）同樣逐張核對。首版 pixel 是 1024×1536 直幅，補成正方形後出現平色天空邊条，改成正方形重生成後正常。
+- **四圈**：①淡白頭頸（`features.png`，額及眉紋淡白對比褐色後冠）②細長嘴（`features.png`，整條嘴連嘴尖入圈）③鏽橙上胸（`features.png`，鏽橙帶連下緣黑邊）④黃橙長腳（`pixel.png`，兩條黃橙腳連腳趾與爪）。
+- **評分**：runtime 六項中只有 v（觀賞）缺值，`missingScores` 為 `["v"]`，卡面保留「待查非零分」註腳；綜合 2.9、三星。
+- **地圖**：世界底圖 + 29 個部分分佈國家（俄羅斯、蒙古、中國、日韓台、澳洲、東南亞、南亞、中亞），依 HKBWS「繁殖南西伯利亞／蒙古／中國東北，越冬澳洲西北部」而定，註明單型種、繁殖／越冬不分工。
+- **驗證**：AVIF 解碼 1024×1536；bytes 154902、MD5 `e6e7c0cfcf0ea17072312258fb965a7c`、SHA256 `94cf696e376f2df5b6e200abacb9c659cc956337b6bc918b0b130abe6ba082f3`，manifest／SHA256SUMS 一致，`manifest.spec` == `scripts/cards/info-restart-0128.json`；上載前 Drive 搜尋 `0128` 0 命中；上載後 `get_file` 核實 parent `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD`、bytes／MD5 與本機一致。已同步加入 `src/data/infoCards.json`（slim、`restart-0128-v1`、`#173446`）。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0128.avif | 1GN3dHBcLncrhN2bbLt_Y0JUzGWIToEFI | 154902 | e6e7c0cfcf0ea17072312258fb965a7c | 94cf696e376f2df5b6e200abacb9c659cc956337b6bc918b0b130abe6ba082f3 |
+
+未改 UI 版面、無 ZIP、未動 R2。下一張 0129 彩鷸（Greater Painted-Snipe，*Rostratula benghalensis*）。
