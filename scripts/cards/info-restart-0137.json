@@ -1,0 +1,187 @@
+{
+  "id": "0137",
+  "name": "翻石鷸",
+  "scientificName": "Arenaria interpres",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Arenaria interpres (nominate A. i. interpres, breeding from northeast Canada east to west Alaska, presumed in Hong Kong) adult in breeding plumage: 21-26 cm, a very distinctive squat, short-legged wader with a short pointed wedge-shaped black bill and bright orange legs. Adult in breeding plumage has a bold black and white head and breast pattern, orange chestnut on the scapulars and wing coverts mottled with black, and clean white underparts. In flight it shows a distinctive white and dark pattern (black on adults, brown on juveniles). Adults in non-breeding plumage have a similar pattern but are dull grey-brown with pale patches at the sides of the chest, and juveniles are distinguished by well-marked pale fringes to the upperparts and wing coverts. It is more often seen on offshore islands than most other shorebirds and turns over stones and shells to find food, which gives it its name.",
+  "similarSpecies": [
+    {
+      "zh": "灰尾漂鷸",
+      "scientificName": "Tringa brevipes",
+      "asset": "grey-tailed-tattler.png",
+      "framing": "whole-bird",
+      "distinction": "灰尾漂鷸体型較修長、嘴細長而直、腳偏黃綠、全身灰褐無黑白強烈對比亦無鏽橙色肩羽；本種矮壯、嘴短而楔形、腳橙紅、繁殖羽黑白加鏽橙拼色極為醒目。"
+    },
+    {
+      "zh": "環頸鴴",
+      "scientificName": "Charadrius alexandrinus",
+      "asset": "kentish-plover.png",
+      "framing": "whole-bird",
+      "distinction": "環頸鴴體型更小、嘴短而黑色、上體淡灰褐、有白色領環與胸側黑斑，但無橙紅腳與黑白拼色上身；本種腳橙紅、肩羽鏽橙配黑色斑塊。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.54,
+      0.24,
+      0.72,
+      0.43
+    ],
+    [
+      0.64,
+      0.14,
+      0.86,
+      0.38
+    ],
+    [
+      0.85,
+      0.3,
+      1.0,
+      0.62
+    ],
+    [
+      0.22,
+      0.58,
+      0.42,
+      0.79
+    ]
+  ],
+  "featureLabels": [
+    "短楔形尖嘴",
+    "黑白頭頸花紋",
+    "鏽橙拼黑肩羽",
+    "橙紅短腳"
+  ],
+  "featureNotes": [
+    "嘴短、尖而呈楔形，配合矮壯體型；與濱鷸類細長嘴明顯不同（第1圈取自近景圖，實際可見）。",
+    "頭、頸及胸有強烈黑白花紋，白斑集中在臉頰、頸側與後頸，是繁殖羽最好認的特徵（第2圈取自近景圖，實際可見）。",
+    "肩羽及翼覆羽為鏽橙色並雜以黑色斑塊，形成龜甲般的拼色；這是「翻石」之外最搶眼的外觀（第3圈取自近景圖，實際可見）。",
+    "腳短而橙紅色，比例上比大多數濱鷸短；本種常在石灘翻動石塊與貝殼找食物（第4圈取自近景圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "USA",
+      "CAN",
+      "GEO",
+      "NOR",
+      "SWE",
+      "FIN",
+      "DNK",
+      "GBR",
+      "IRL",
+      "NLD",
+      "DEU",
+      "POL",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "KOR",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "AUS",
+      "NZL",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "MMR",
+      "ARE",
+      "OMN",
+      "SAU",
+      "IRN",
+      "EGY",
+      "KEN",
+      "TZA",
+      "ZAF",
+      "NAM",
+      "NGA",
+      "GHA",
+      "SEN",
+      "MRT",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "ESP",
+      "PRT",
+      "FRA",
+      "ITA",
+      "GRC",
+      "TUR",
+      "MDG",
+      "BRA",
+      "ARG",
+      "CHL",
+      "PER",
+      "ECU",
+      "MEX",
+      "PAN",
+      "CRI",
+      "COL",
+      "VEN",
+      "SUR",
+      "GUY",
+      "CUB",
+      "DOM",
+      "HTI",
+      "JAM",
+      "PRI",
+      "TTO"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012100",
+      "use": "HKBWS substantive read: Category I, passage migrant uncommon in spring and scarce in autumn and rare in winter; 21-26 cm, very distinctive squat short-legged wader with a short pointed bill and orange legs, adult breeding plumage with black and white head pattern, orange on scapulars and wing coverts and white underparts, non-breeding adults similar in pattern but dull grey-brown with pale patches at the sides of the chest, juveniles with well-marked pale fringes to the upperparts and wing coverts, and a distinctive white and dark flight pattern (black on adults, brown on juveniles); two typical flight calls a 'tyoo' or 'ch-tyoo' and a rich short rattle; most records from Deep Bay mudflats and adjacent roosts mainly Mai Po NR, with up to nine at Kai Tak during 1975-79, up to eight on Po Toi and seven on Tung Ping Chau, and records at Cape D'Aguilar, Kung Chau, Long Valley, Nai Chung, Shek O, Shui Hau and The Brothers, mostly in spring; now an uncommon spring migrant, scarce autumn migrant and rare winter visitor and formerly more numerous on northward passage; spring passage generally evident by the final week of March with the earliest on 22 March 2016 and earlier records considered wintering birds, no more than 12 up to the end of the third week in April since 1999, peak passage in the last week of April and first half of May, highest count since 1999 is 102 on 20 April 2001 compared with the highest ever 268 on 20 April 1994, 256 on 8 May 1993 and 250 on 2 May 1995, latest spring record one on 13 June 1987; earliest autumn record at Kai Tak on 3 August 1979, autumn passage weak with the highest count only eight on 24 September 1983 and 19 September 2005, typically ceased by early November though up to 40 during 2-26 November 1991; up to two in six winter periods but none since 15 January 2012; the only juvenile record is two on 1 October 1994; a leg flag from Victoria, Australia seen during 13-17 May 1994; since 2007 a decline in spring numbers with a moderate decline from 2008 to 2011 and a more substantial one since, numbers now only about 10% of former levels; first reported in Hong Kong by Dove and Goodhart (1955); more often seen on offshore islands than most other shorebirds; breeds largely north of the Arctic Circle mainly near the coast in Eurasia but also across large areas of northeast Canada and winters coastally in much of the southern hemisphere and southern parts of the northern hemisphere; two subspecies with nominate interpres presumed in Hong Kong; IUCN Near Threatened with a decreasing trend of 20-29% over three generations."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011800",
+      "use": "HKBWS field-guide context for the Deep Bay shorebird assemblage that the turnstone joins; used only for general habitat framing, not for species-specific claims."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對短楔形尖嘴、黑白頭頸花紋、鏽橙拼黑肩羽及橙紅短腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意（灰尾漂鷸、環頸鴴各自新繪），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 近危 NT（三代間下降 20–29%）；香港屬 Category I，春季不常見過境鳥、秋季稀少、冬季罕見，2007 年後春季數量只剩約一成。",
+    "只交付 aviandex/0137.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "id": "0136",
+  "name": "黑尾塍鷸",
+  "scientificName": "Limosa limosa",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Limosa limosa (in Hong Kong the migrant taxon L. l. melanuroides in spring and the larger, longer-billed wintering taxon L. l. bohaii) adult in breeding plumage: 36-44 cm. In breeding plumage melanuroides has rusty-orange on the chest and flanks with a whitish belly, the area below the middle of the chest barred blackish and more broadly on the flanks, males more intensely and extensively rusty-orange, upperpart feathers black and rust, and the basal half of the bill orange with a dark tip. Bill long and straight or nearly straight and shorter in melanuroides; legs proportionately long and dark grey-green. In flight it shows an obvious broad white wing bar across the secondaries and most primaries, and a black tail contrasting with the white rump and white bases to the outer tail feathers. Non-breeding melanuroides is plain grey-brown above and on the chest; juveniles have warm buff tones to the head and chest with pale-fringed wing coverts. It is highly gregarious, forming large roosting and foraging flocks, and probes with a more mobile and less vigorous action than Bar-tailed Godwit.",
+  "similarSpecies": [
+    {
+      "zh": "斑尾塍鷸",
+      "scientificName": "Limosa lapponica",
+      "asset": "bar-tailed-godwit.png",
+      "framing": "whole-bird",
+      "distinction": "斑尾塍鷸體型略大、嘴較長且明顯微微上翹、腳較短而伸出尾端、尾羽密佈橫斑（白只沿上背成尖狀）、飛行時翼帶極窄；本種嘴較短而直、腳比例更長、尾黑而腰白、飛行時有寬闊白翼帶。"
+    },
+    {
+      "zh": "白腰杓鷸",
+      "scientificName": "Numenius arquata",
+      "asset": "eurasian-curlew.png",
+      "framing": "whole-bird",
+      "distinction": "白腰杓鷸體型大得多（50–60 cm）、嘴長而下彎且無橙色基部、全身褐色縱紋；本種中等體型、嘴直而基部橙紅、繁殖羽胸及脅鏽橙色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.48,
+      0.24,
+      0.76,
+      0.6
+    ],
+    [
+      0.69,
+      0.12,
+      0.89,
+      0.33
+    ],
+    [
+      0.7,
+      0.47,
+      0.93,
+      0.8
+    ],
+    [
+      0.44,
+      0.56,
+      0.67,
+      0.87
+    ]
+  ],
+  "featureLabels": [
+    "直嘴橙紅基部",
+    "白眉深色眼線",
+    "鏽橙胸及橫斑",
+    "深綠灰長腳"
+  ],
+  "featureNotes": [
+    "嘴長而直（本地過境亞種 melanuroides 較短），基部一半為橙紅色、末端深色；斑尾塍鷸嘴微上翹而無明顯橙色基部（第1圈取自近景圖，實際可見）。",
+    "頭部鏽橙色，有白色眉紋與一道深色眼線，沒有杓鷸屬那種粗縱紋或明顯中央冠紋（第2圈取自近景圖，實際可見）。",
+    "胸部及脅部鏽橙色，胸中部以下有黑色橫斑而腹部轉白，是繁殖羽最醒目的辨識點（第3圈取自近景圖，實際可見）。",
+    "腳長而深綠灰色，比例上比斑尾塍鷸更長；本種常結成大群在泥灘上探食，動作比斑尾塍鷸輕快（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ISL",
+      "GBR",
+      "IRL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "DNK",
+      "NLD",
+      "BEL",
+      "DEU",
+      "POL",
+      "CZE",
+      "SVK",
+      "AUT",
+      "HUN",
+      "ROU",
+      "BGR",
+      "SRB",
+      "HRV",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "KOR",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "PNG",
+      "AUS",
+      "NZL",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "MMR",
+      "NPL",
+      "IRN",
+      "IRQ",
+      "ARE",
+      "OMN",
+      "SAU",
+      "YEM",
+      "TUR",
+      "EGY",
+      "SDN",
+      "ETH",
+      "KEN",
+      "TZA",
+      "UGA",
+      "ZAF",
+      "NAM",
+      "BWA",
+      "MOZ",
+      "MDG",
+      "NGA",
+      "GHA",
+      "SEN",
+      "MLI",
+      "MRT",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "ESP",
+      "PRT",
+      "FRA",
+      "ITA",
+      "GRC"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012000",
+      "use": "HKBWS substantive read: Category I, abundant winter visitor and passage migrant in spring with different subspecies dominating in each season, L. l. melanuroides passing through in large numbers in spring and small numbers in autumn while L. l. bohaii winters in large numbers but is rare in spring; 36-44 cm, in breeding plumage melanuroides has rusty-orange on the chest and flanks with a whitish belly, the area below the middle of the chest barred blackish and broader on the flanks, males more intensely and extensively rusty-orange, upperpart feathers black and rust, and the basal half of the bill orange; structurally smaller than Bar-tailed Godwit with a shorter straight or nearly straight bill in melanuroides, proportionately longer legs and more mobile, probing and less vigorous foraging action; non-breeding melanuroides plain grey-brown above and on the chest, juveniles with warm buff head and chest and pale-fringed wing coverts; distinguished in flight by an obvious broad white wing bar across the secondaries and most primaries and a black tail contrasting with the white rump and bases to the outer tail feathers; the wintering taxon bohaii is larger and longer-billed than migrant melanuroides; vocal in flight with a moderately high-pitched 'wit-tu wit-tu'; most records from Deep Bay mudflats and adjacent roosts mainly Mai Po NR and very rarely on commercial fish ponds, with few records at Sai Kung, Shuen Wan, Starling Inlet, Long Valley and in flight over Chek Lap Kok; spring passage of melanuroides usually apparent from mid-March with the main period in April and peak numbers in the middle two weeks, the highest count in spring and on record in Hong Kong being 2400 on 4 April 2013, a substantial departure by the end of April and no three-figure counts after the first week of May; up to 40 in June and the first half of July with return passage from the final week of July; wintering numbers increased sustainedly until winter 2010/11 when 1900 were recorded (all on the Shenzhen side of Deep Bay) and the highest winter count in Hong Kong is 895 on 14 February 2016; one ringing recovery of a bird ringed at Mai Po on 16 April 1988 and hunted at the Red River delta, Vietnam in March 1990; first recorded 10 October 1954; highly gregarious, forming large flocks for roosting and foraging from autumn to spring; breeds from Iceland east through northern and eastern Europe, western Russia and northern Kazakhstan to western Mongolia with disjunct populations through eastern Siberia, Kamchatka, Ussuriland and northeast China, and winters around the Mediterranean, sub-Saharan Africa, southwest Asia, the Indian subcontinent, Indochina, south China, Indonesia, New Guinea and Australia; IUCN Near Threatened with decreasing trend, rapidly in parts of its range due to agricultural practices."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011900",
+      "use": "HKBWS Bar-tailed Godwit comparison: slightly larger with a longer bill that is obviously if slightly upturned, relatively shorter legs projecting well beyond a densely barred tail, and a very narrow wing bar in flight."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對直嘴橙紅基部、白眉深色眼線、鏽橙胸及橫斑、深綠灰長腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意（斑尾塍鷸、白腰杓鷸各自新繪），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 近危 NT、部分地區因農業活動急速下降；香港屬 Category I，是后海灣常見越冬鳥及春季大量過境鳥，春季最高 2400 隻（2013-04-04）、冬季最高 895 隻（2016-02-14）。",
+    "只交付 aviandex/0136.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
