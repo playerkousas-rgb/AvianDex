@@ -1,0 +1,179 @@
+{
+  "id": "0162",
+  "name": "灰瓣蹼鷸",
+  "scientificName": "Phalaropus fulicarius",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Phalaropus fulicarius, monotypic: 20-22 cm. Differs from Red-necked Phalarope by its slightly thicker, flattened bill and broader white inner wing bar. Adult winter has very plain grey upperparts, a blackish hind crown, a white fore crown and a pale base to the bill. Juveniles differ from Red-necked Phalarope by the lack of a mantle V, whitish underparts with a buff wash on the chest, and by quickly moulting the scapulars to grey winter feathers. Adults in breeding plumage are rarely seen away from the breeding grounds: females are entirely rusty-orange below with a contrastingly white face and a black-tipped yellow bill, while males are much duller.",
+  "similarSpecies": [
+    {
+      "zh": "紅頸瓣蹼鷸",
+      "scientificName": "Phalaropus lobatus",
+      "asset": "red-necked-phalarope.png",
+      "framing": "whole-bird",
+      "distinction": "紅頸瓣蹼鷸嘴細如針、全黑無淺色基部，翼上白色斑較窄，非繁殖羽背部有兩道白色縱線；本種嘴短而厚、略扁且基部淡黃，翼上白斑更寬，背部素淨灰而無明顯縱線。"
+    },
+    {
+      "zh": "三趾濱鷸",
+      "scientificName": "Calidris alba",
+      "asset": "sanderling.png",
+      "framing": "whole-bird",
+      "distinction": "三趾濱鷸在沙灘上奔跑、後趾缺失，嘴短直而全黑，翼角有明顯黑斑；本種幾乎總在水面游泳，嘴基部淡黃，趾間有瓣膜。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.62,
+      0.15,
+      1.0,
+      0.47
+    ],
+    [
+      0.52,
+      0.09,
+      0.9,
+      0.47
+    ],
+    [
+      0.08,
+      0.42,
+      0.45,
+      0.56
+    ],
+    [
+      0.2,
+      0.62,
+      0.46,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "短厚扁嘴、基部淡黃",
+    "黑色後頭、白色前額",
+    "翼上寬白斑",
+    "瓣狀趾"
+  ],
+  "featureNotes": [
+    "嘴比紅頸瓣蹼鷸短而厚，側面看略扁，基部淡黃、末端深色——HKBWS 把這點列為與紅頸瓣蹼鷸分別的第一個特徵（第1圈取自近景圖，實際可見）。",
+    "黑色的後頭冠與白色的前額形成對比，眼後另有一道深色斑；這是非繁殖羽最容易辨認的頭部花紋（第2圈取自近景圖，實際可見）。",
+    "翼上有一條相當寬的白色翼斑，比紅頸瓣蹼鷸更闊；HKBWS 以此作為兩者的第二個分別點（第3圈取自全身圖，實際可見）。",
+    "前趾之間有瓣膜，方便在水面打轉划水，與同樣在水面活動的紅頸瓣蹼鷸一致（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CAN",
+      "USA",
+      "GRL",
+      "ISL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "JPN",
+      "KOR",
+      "MEX",
+      "GTM",
+      "BLZ",
+      "HND",
+      "NIC",
+      "CRI",
+      "PAN",
+      "COL",
+      "ECU",
+      "PER",
+      "CHL",
+      "ARG",
+      "BRA",
+      "MAR",
+      "MRT",
+      "SEN",
+      "GMB",
+      "GNB",
+      "SLE",
+      "LBR",
+      "CIV",
+      "GHA",
+      "TGO",
+      "BEN",
+      "NGA",
+      "CMR",
+      "GNQ",
+      "GAB",
+      "COG",
+      "COD",
+      "AGO",
+      "NAM",
+      "ZAF",
+      "TZA",
+      "KEN",
+      "SOM",
+      "MDG",
+      "IND",
+      "LKA",
+      "PAK",
+      "VNM",
+      "PHL",
+      "MYS",
+      "IDN",
+      "AUS",
+      "NZL",
+      "GBR",
+      "IRL",
+      "FRA",
+      "DEU",
+      "POL",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "NLD",
+      "DNK",
+      "BEL"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/014500",
+      "use": "HKBWS substantive read: Category I, accidental, with only five Hong Kong records; 20-22 cm, differing from Red-necked Phalarope by its slightly thicker flattened bill and broader white inner wing bar; adult winter has very plain grey upperparts, a blackish hind crown, a white fore crown and a pale base to the bill; juveniles differ from Red-necked Phalarope by the lack of a mantle V, whitish underparts with a buff wash on the chest, and by quickly moulting the scapulars to grey winter feathers; adults in breeding plumage are rarely seen away from the breeding grounds, females being entirely rusty-orange below with a contrastingly white face and a black-tipped yellow bill while males are much duller; voice high-pitched and shrill, a slightly rolling prrt and a short pit; half of the records have been at sea while the remaining ones have been on sheltered inland water including Mai Po NR; the records are four in Mirs Bay on 21 February 1993 and a second calendar-year bird at Mai Po from 4 May to 25 July 1993, one at Mai Po from 26 April to 1 May 1994, one at Sha Chau on 3 December 1996, one on the sea south of Lamma on 17 April 2005 and a second calendar-year bird at Nam Chung from 29 April to 2 May 2008; monotypic, with a nearly circumpolar breeding distribution largely north of the Arctic Circle except in eastern Canada and the far northeast Siberia where it reaches south to about 58N, wintering at sea off the west and east coasts of southern North America, the west coast of South America and the west coast of western and southern Africa; in China there are scattered records across much of the country; IUCN Least Concern with an unknown population trend."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對短厚而基部淡黃的嘴、黑色後頭與白色前額、翼上寬白斑及瓣狀趾；單型種。",
+    "兩隻比較鳥：紅頸瓣蹼鷸沿用 0161 已核對素材，三趾濱鷸為本卡新繪並已核對；均非等比例，卡上不作完整鑑別檢索表。",
+    "全部插圖採用非繁殖羽——香港五筆紀錄都在 12 月至 7 月之間，繁殖羽在繁殖地以外極少見到。",
+    "香港紀錄極少（五筆：1993、1994、1996、2005、2008），一半在海上，其餘在內陸靜水包括米埔自然保護區。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬海域不分工。",
+    "IUCN 無危 LC（趨勢未明）；香港屬 Category I，迷鳥。",
+    "只交付 aviandex/0162.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
