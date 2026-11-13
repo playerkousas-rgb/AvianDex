@@ -1,0 +1,158 @@
+{
+  "id": "0135",
+  "name": "斑尾塍鷸",
+  "scientificName": "Limosa lapponica",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Limosa lapponica (the East Asian-Australasian flyway subspecies L. l. menzbieri and L. l. baueri presumed in Hong Kong) adult male in breeding plumage: 37-39 cm with the female larger and longer-billed. Bill long and straight, obviously if slightly upturned and less so in females; legs long and dark. Adult male breeding plumage has brick-red underparts while females are paler, with a dark bill and blackish and orange scapulars. Head shows a strong pale supercilium and a dark line through the eye. In flight the legs project moderately beyond a densely barred tail, white extends up the back to a point, and there is only a very narrow wing bar largely formed by the tips of the greater primary coverts. Juveniles are notably buff with broad pale fringes to the scapulars and coverts, and non-breeding adults are grey-brown above with narrow pale fringes and dark shaft streaks. Forages with vertical, prolonged probes into mud, moving slowly.",
+  "similarSpecies": [
+    {
+      "zh": "黑尾塍鷸",
+      "scientificName": "Limosa limosa",
+      "asset": "black-tailed-godwit.png",
+      "framing": "whole-bird",
+      "distinction": "黑尾塍鷸嘴較直而基部較粗、腳較長且明顯伸出尾端、飛行時腰及尾上覆羽白色而尾端有寬黑帶、翼上有一道寬白翼帶；本種較矮壯、嘴微上翹、尾密佈橫斑且白只延伸至上背成尖狀、翼帶極窄。"
+    },
+    {
+      "zh": "白腰杓鷸",
+      "scientificName": "Numenius arquata",
+      "asset": "eurasian-curlew.png",
+      "framing": "whole-bird",
+      "distinction": "白腰杓鷸體型大得多（50–60 cm）、嘴長而下彎而非直而上翹、整體褐色縱紋而非繁殖期磚紅色下身；本種體型小、嘴直而微上翹、繁殖羽下身磚紅。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.72,
+      0.12,
+      0.95,
+      0.35
+    ],
+    [
+      0.64,
+      0.04,
+      0.87,
+      0.27
+    ],
+    [
+      0.7,
+      0.56,
+      0.93,
+      0.89
+    ],
+    [
+      0.09,
+      0.5,
+      0.35,
+      0.83
+    ]
+  ],
+  "featureLabels": [
+    "直而微上翹的嘴",
+    "白眉與深色眼線",
+    "密橫斑尾羽",
+    "長而深色腳"
+  ],
+  "featureNotes": [
+    "嘴長而幾乎筆直、末端微微上翹（雌鳥較不明顯），是與黑尾塍鷸（嘴較直而基部粗）及杓鷸屬（嘴下彎）最直接的分別（第1圈取自近景圖，實際可見）。",
+    "頭部有明顯白色眉紋，並有一道深色眼線穿過眼睛；繁殖羽頸及胸為磚紅色（第2圈取自近景圖，實際可見）。",
+    "尾羽密佈黑白橫斑，飛行時白色只沿上背延伸成一個尖狀，翼帶極窄；黑尾塍鷸則是白腰配尾端寬黑帶（第3圈取自近景圖，實際可見）。",
+    "腳長而深色，飛行時伸出尾端少許；本種常以垂直而持久的動作插入泥中覓食，橫移較慢（第4圈取自近景圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "USA",
+      "CAN",
+      "GBR",
+      "IRL",
+      "NLD",
+      "DEU",
+      "DNK",
+      "POL",
+      "EST",
+      "LVA",
+      "LTU",
+      "ISL",
+      "CHN",
+      "KOR",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "BRN",
+      "AUS",
+      "NZL",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "MMR",
+      "ARE",
+      "OMN",
+      "SAU",
+      "IRN",
+      "KEN",
+      "TZA",
+      "ZAF",
+      "NGA",
+      "GHA",
+      "SEN",
+      "MRT",
+      "MAR",
+      "EGY",
+      "SDN",
+      "MDG",
+      "PNG"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011900",
+      "use": "HKBWS substantive read: Category I, uncommon passage migrant and rare winter visitor to intertidal areas of Deep Bay; 37-39 cm with the female larger and longer-billed, larger than the migrant taxon of Black-tailed Godwit L. limosa melanuroides but about the same size as or slightly smaller than the wintering taxon L. l. bohaii; bill obviously if slightly upturned and less obvious on females; adult male breeding plumage brick-red below with females paler, bill darker than in non-breeding plumage and scapulars blackish and orange; fresh juveniles notably buff with broad pale fringes to scapulars and coverts and buff notches at the edges of tertials and scapulars; in flight legs project moderately beyond a densely barred tail, white extends up the back to a point, and there is a very narrow wing bar largely formed by the tips of the greater primary coverts which are otherwise plain and dark; L. l. baueri averages larger with darker rump, uppertail coverts, underwing and axillaries; adults in non-breeding plumage are grey-brown above with dark shaft streaks and much narrower pale fringes than juveniles; typical call a slightly plaintive double note; very rare away from Deep Bay mudflats and adjacent Mai Po roosts with only six records of grounded birds elsewhere (six at Sha Tau Kok on 28 September 1970, four on 23 September 1975 with one remaining to 15 October at Tai Po, two at Kai Tak on 7 and 14 April 1978, one at Shuen Wan on 24 March 1993, seven at Starling Inlet on 6 September 1997 and one at Long Valley on 5 October 2011) and none from commercial fish ponds, plus records of up to 60 on migration over the sea near Po Toi from 26 March to 30 April and off Cape D'Aguilar during tropical storms; uncommon passage migrant with very small numbers in winter, wintering birds remaining into March and the first spring migrants noted in mid-March, main spring passage from the final week of March to the third week of April peaking in the second week of April, peak counts generally 30 or fewer but occasionally much higher presumably when adverse winds force birds west (235 on 11 April 2015, 155 on 12 April 2013, 105 in April 2007 and 2009) and up to four in June and July; autumn migrants from about mid-August with the main passage from the second week of September to the first week of October, highest count 400 on 14 September 1981 and next highest 160 on 20 September 1987 while the highest this century is only 61; juveniles predominate in autumn from 24 August to 26 October and after the end of November usually five or fewer wintering birds remain; first record one at Mai Po on 15 May 1957; foraging differs from Black-tailed Godwit in more vertical and prolonged probes into mud and slower movement across the mudflat; breeds near the coast north of the Arctic Circle from northern Scandinavia to the Sea of Okhotsk and winters coastally through much of Africa, southwest Asia, the Indian subcontinent, southeast Asia, south China and Australasia; four subspecies with the East Asia-Australasian flyway L. l. menzbieri and L. l. baueri presumed in Hong Kong; IUCN Near Threatened with both flyway subspecies undergoing extremely rapid declines probably owing to severe habitat loss in the Yellow Sea."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011800",
+      "use": "HKBWS Eurasian Curlew comparison: much larger at 50-60 cm with a long decurved bill, rather uniform brown barred and streaked plumage, and white rump and lower back in flight."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對直而微上翹的嘴、白眉與深色眼線、密橫斑尾羽及長而深色腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意（黑尾塍鷸新繪、白腰杓鷸沿用 0134 插圖），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 近危 NT；香港屬 Category I，不常見過境鳥、冬季罕見，主要在后海灣泥灘及米埔；后海灣春季高達 235 隻（2015-04-11）。",
+    "只交付 aviandex/0135.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

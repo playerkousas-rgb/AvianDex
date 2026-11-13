@@ -1,0 +1,162 @@
+{
+  "id": "0145",
+  "name": "長趾濱鷸",
+  "scientificName": "Calidris subminuta",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Calidris subminuta in breeding plumage: 13-16 cm, a pale-legged stint with a relatively short, slightly decurved bill, long neck, small head and long toes, particularly the central one. Compared with other stints it appears more elegant and holds its head low with the body tipped forward when foraging. Breeding plumage is rather bright with fairly extensive fine streaking on the chest, a dark crown that extends over the forehead to reach the bill base, and warm brown fringes to the upperpart feathers and tertials. Juveniles are similar to breeding adults but less bright with whiter fringes to the upperpart feathers and little warm colouration around the face and chest, while non-breeding birds have extensive chest streaking and darker grey-brown centres to pale-fringed upperpart feathers, giving a more streaked appearance at a distance. It prefers lightly vegetated freshwater wetlands where it picks unobtrusively for food, readily walking on mats of wet vegetation covering the water surface, and is rare on intertidal mudflats.",
+  "similarSpecies": [
+    {
+      "zh": "青腳濱鷸",
+      "scientificName": "Calidris temminckii",
+      "asset": "temmincks.png",
+      "framing": "whole-bird",
+      "distinction": "青腳濱鷸胸部幾乎無縱紋、全身樸素褐灰、尾長伸出翼端、覓食動作緩慢貼地爬行；本種胸部有明顯細縱紋、頭頂深色延伸至嘴基、頸長頭小而覓食時低頭前傾。"
+    },
+    {
+      "zh": "闊嘴鷸",
+      "scientificName": "Calidris falcinellus",
+      "asset": "broad-billed.png",
+      "framing": "whole-bird",
+      "distinction": "闊嘴鷸嘴較長而闊、末端三分一明顯下彎、頭部有分叉淡眉紋與深色側冠紋；本種嘴短而下彎輕微、頭部是深色頭頂加淡眉，胸部細縱紋而非粗條紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1,
+      0.36,
+      0.36,
+      0.62
+    ],
+    [
+      0.16,
+      0.3,
+      0.42,
+      0.56
+    ],
+    [
+      0.28,
+      0.32,
+      0.56,
+      0.56
+    ],
+    [
+      0.36,
+      0.58,
+      0.76,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "短而微彎嘴",
+    "深頂延伸嘴基",
+    "胸部細縱紋",
+    "特長腳趾"
+  ],
+  "featureNotes": [
+    "嘴相對短，末端微微下彎，配合小巧的頭部；是本種與其他濱鷸屬的基本分別（第1圈取自近景圖，實際可見）。",
+    "頭頂深色並向前延伸至嘴基，上方有淡色眉紋，形成本種特有的頭部圖案（第2圈取自近景圖，實際可見）。",
+    "繁殖羽胸部有相當密集而細的縱紋，是本種在野外最容易看到的特徵之一（第3圈取自全身圖，實際可見）。",
+    "腳淡黃綠色而腳趾特長（尤其是中趾），使牠能在浮於水面的濕植被上行走（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "PNG",
+      "AUS",
+      "NZL",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "MMR",
+      "NPL",
+      "BTN",
+      "KHM",
+      "LAO",
+      "BRN",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "KGZ",
+      "TJK",
+      "AFG",
+      "IRN",
+      "IRQ",
+      "ARE",
+      "OMN",
+      "SAU",
+      "YEM",
+      "FIN",
+      "NOR",
+      "SWE",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "POL",
+      "DEU",
+      "NLD",
+      "BEL",
+      "FRA",
+      "GBR",
+      "IRL",
+      "DNK"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012900",
+      "use": "HKBWS substantive read: Category I, scarce passage migrant and rare winter visitor with numbers apparently in decline; 13-16 cm, a pale-legged stint with a relatively short slightly decurved bill, long neck, small head and long toes particularly the central one, appearing more elegant than other stints and holding its head low with the body tipped forward when foraging; breeding plumage rather bright with fairly extensive fine streaking on the chest, a dark crown extending over the forehead to reach the bill base and warm brown fringes to the upperpart feathers and tertials; juveniles similar but less bright with whiter fringes to the upperpart feathers and little warm colouration around the face and chest; non-breeding plumage with extensive chest streaking and darker grey-brown centres to pale-fringed upperpart feathers giving a more streaked appearance at a distance; flight calls a rolling 'trrrt' or a shorter 'tert'; most records from areas of fish ponds, wet agriculture, freshwater marsh and wet grassy areas in the New Territories, mainly in the Deep Bay area but also Sai Kung, Lam Tsuen, Shuen Wan and on Lantau, Chek Lap Kok, Po Toi and Cheung Chau, with up to 20 at Kai Tak in the 1970s during autumn and up to four there in recent years; a passage migrant with the largest numbers on northward migration from about the middle of March and main passage from the second week of April to the first week of May, the highest count on record 175 on 13 April 1993 with 120 the previous day though the highest this century is 84 on 4 May 2011, numbers tailing off considerably after with a highest of ten after the first week of May, the latest passage bird on 28 May 2015 and only two June records; earliest autumn record 15 July 1999 with autumn passage generally from the last week of July peaking in the second half of August and first half of September and the highest count 49 at San Tin on 18 September 2002, with only single-figure October counts this century whereas counts up to 30 were regular before; the number wintering appears to have fallen considerably, with highest winter counts of 54 on 26 November 1993 and 50 on 18 December 1982 and regular double-figure counts in the 1980s and 1990s, whereas this century the highest is 36 and the next highest in November to February only six; Hong Kong lies at the northern edge of the wintering range and, despite increased availability of suitable freshwater habitat, the lower spring peaks and relatively low October numbers suggest population decrease; prefers lightly vegetated freshwater wetlands, picking unobtrusively for food and readily walking on mats of wet vegetation covering the water surface, and is rare on intertidal mudflats; monotypic with disjunct breeding populations in Russia east of the Urals to the Sea of Okhotsk and the Kuriles, wintering in southeastern areas of the Indian subcontinent, around the Bay of Bengal, Indochina, southeast Asia, Indonesia and Australia with small numbers north to Taiwan; IUCN Least Concern with an unknown population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012800",
+      "use": "HKBWS Temminck's Stint comparison: a plain unstreaked chest, slow creeping foraging action and longer tail projecting beyond the wing tips, which separates it from Long-toed Stint's fine chest streaking and low-headed forward-tilted foraging posture."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對短而微彎嘴、深色頭頂延伸至嘴基、胸部細縱紋及特長腳趾；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意（青腳濱鷸沿用 0144 全身圖、闊嘴鷸沿用 0141 全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危 LC（趨勢未明）；香港屬 Category I，稀少過境鳥及罕見冬候鳥，最高 175 隻（1993-04-13），本世紀最高 84 隻（2011-05-04），冬候數量明顯下降。",
+    "只交付 aviandex/0145.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

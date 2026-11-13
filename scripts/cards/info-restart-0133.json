@@ -1,0 +1,130 @@
+{
+  "id": "0133",
+  "name": "紅腰杓鷸",
+  "scientificName": "Numenius madagascariensis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "EN",
+    "zh": "瀕危"
+  },
+  "illustrationTaxon": "Numenius madagascariensis adult: 53-66 cm, longer and leaner in the body than Eurasian Curlew, with the longest bill of any wader in females (male bill overlaps female Eurasian Curlew). Bill is relatively deeply based and usually has a more extensive pinkish base, and curves down deeply. Head and neck are warm buff-brown and finely streaked with a fairly plain crown. Upperparts warm brown-buff with pale streaking; underparts pale with fine streaking and obvious dark brown arrowhead marks on the flanks; the lower belly to undertail coverts are brownish-buff, not the obvious white ground colour of many Eurasian Curlews. In flight it appears longer-winged, longer-billed and more front-heavy than Eurasian Curlew, with brownish-buff back, rump, tail, ventral area and undertail coverts and pale buff underwing coverts densely barred dark brown. It feeds deliberately on intertidal mudflats, using the bill to extract crabs from their burrows.",
+  "similarSpecies": [
+    {
+      "zh": "白腰杓鷸",
+      "scientificName": "Numenius arquata",
+      "asset": "eurasian-curlew.png",
+      "framing": "whole-bird",
+      "distinction": "白腰杓鷸體型較短較粗壯、嘴彎度較淺而整體偏灰褐，脅部箭頭斑不明顯，下腹至尾下覆羽多為白色，飛行時腰及尾上覆羽偏白；本種更瘦長、嘴基較深色而粉紅範圍更大、脅部箭頭斑明顯、腰及尾下覆羽褐色。"
+    },
+    {
+      "zh": "中杓鷸",
+      "scientificName": "Numenius phaeopus",
+      "asset": "whimbrel.png",
+      "framing": "whole-bird",
+      "distinction": "中杓鷸體型小得多（37–46 cm）、嘴短而基部粗鈍、有醒目淡中央冠紋與深色眼紋、腳藍灰；本種體型巨大、嘴極長、頭部縱紋平淡無粗黑眼紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.47,
+      0.1,
+      0.7,
+      0.33
+    ],
+    [
+      0.64,
+      0.06,
+      0.88,
+      0.32
+    ],
+    [
+      0.7,
+      0.38,
+      0.96,
+      0.7
+    ],
+    [
+      0.39,
+      0.59,
+      0.62,
+      0.88
+    ]
+  ],
+  "featureLabels": [
+    "極長下彎嘴",
+    "平淡頭頸縱紋",
+    "脅部箭頭斑",
+    "灰綠長腳"
+  ],
+  "featureNotes": [
+    "嘴極長而深彎，基部範圍較大且偏粉紅，雌鳥的嘴是全球涉禽中最長；白腰杓鷸嘴彎度較淺（第1圈取自近景圖，實際可見）。",
+    "頭頸淡褐而佈滿細縱紋，中央冠紋不明顯、無中杓鷸那種粗黑眼紋與側冠紋（第2圈取自近景圖，實際可見）。",
+    "脅部有明顯的深褐色箭頭狀斑，下腹至尾下覆羽偏褐色而非白色，是與白腰杓鷸的關鍵分別（第3圈取自近景圖，實際可見）。",
+    "腳長而灰綠色，配合高瘦體態；飛行時腰、尾及尾下覆羽皆褐色，不像白腰杓鷸般偏白（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "BRN",
+      "PNG",
+      "AUS",
+      "NZL",
+      "IND",
+      "BGD",
+      "LKA",
+      "MMR",
+      "KHM",
+      "LAO"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011700",
+      "use": "HKBWS substantive read: Category I, uncommon spring passage migrant and scarce the rest of the year; 53-66 cm, longer and leaner than Eurasian Curlew, female bill the longest of any wader while the male's overlaps female Eurasian Curlew, bill relatively deeply based with a more extensive pinkish base, obvious dark brown arrowhead marks on the flanks, lower belly to undertail lacking the obvious white of many Eurasian Curlews; in flight longer-winged, longer-billed and more front-heavy with brownish-buff back, rump, tail, ventral area and undertail coverts and pale buff underwing coverts densely barred dark brown; flight call an inflected 'koo-lee' slightly deeper, stronger, longer and more obviously disyllabic than Eurasian Curlew; most records from Deep Bay mudflats and adjacent roosts mainly Mai Po NR, the only grounded bird elsewhere at Kai Tak on 21 October 1974, and groups of up to ten in spring over southern waters off Cheung Chau and over Silvermine Bay; spring passage from about mid-March with main passage to the first week of May and peak in the middle two weeks of April, highest counts in spring 1988 with up to 44 on 16 April, next highest 17 on 4 April 2009; summer records mostly 2015-2017 with up to three in June and July; earliest autumn migrants in early August, highest autumn count four on 16 September 2016, rare afterwards, one or occasionally two in some winters with a highest six on 9 December 2007; first records 29 April 1956 and 27 April 1957; remains relatively scarce, indicating Hong Kong lies off its main migration route; forages deliberately on intertidal mudflats, extracting crabs from burrows; monotypic, breeding in east Siberia from northeast Heilongjiang north through Ussuriland around the Sea of Okhotsk to the Arctic Circle, wintering coastally in Japan, China, the Philippines, Borneo, New Guinea and Australia; IUCN Endangered with decreasing trend, undergoing a very rapid decline suspected to be driven mainly by loss and deterioration of habitat in the Yellow Sea region."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011500",
+      "use": "HKBWS Whimbrel comparison: much smaller at 37-46 cm with a shorter, basally thicker and blunter bill and a striking pale central crown stripe with dark eye stripes."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對極長下彎嘴、平淡頭頸縱紋、脅部箭頭斑及灰綠長腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意（白腰杓鷸、中杓鷸各自新繪），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN **瀕危 EN**、趨勢下降（黃海生境喪失為主要疑因）；香港屬 Category I，春季不常見過境鳥，其餘季節稀少，主要在后海灣泥灘及米埔。",
+    "只交付 aviandex/0133.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

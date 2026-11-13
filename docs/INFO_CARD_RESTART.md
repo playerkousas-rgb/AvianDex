@@ -1272,3 +1272,208 @@ HKBWS 0080/010600 內文（Category I 稀少冬候鳥；18–21cm；比金眶鴴
 | 0126.avif | 1pOFKxKMJfTrmMDAfCzwP_-TrNCwnVKpV | 142861 | 2466597724eaab1d1f2a3cb5eb28a869 | 7c61d70878e232d8cfb334f8bceabf3308c32d62cd8629e602492189dae8e7d7 |
 
 下一張 0127 金眶鴴（Little Ringed Plover，HKBWS 0080/010700，IUCN LC、趨勢穩定；14–17cm，全年可見、主要秋過境及冬候鳥，亦有小量繁殖；眼圈黃、頭部黑紋明顯、嘴全黑、腳淡；曾錄 340 隻（1985-01-13）、2010/11–2020/21 冬季不超過 125 隻）。
+
+## 修正 0041–0043 手機分頁：由「整張卡」改回五頁裁切；新交付 0128 東方鴴
+
+用戶回報「其他都切割好了，但 40–43 的確出現問題了，會出現全圖卡在那 5 頁當中」。排查後確認 **問題在分頁邏輯，不在卡本身**。
+
+### 0041–0043 診斷
+
+- 先把 Drive 上 0040–0043 四張成品重新下載（bytes／MD5 全部與既有紀錄一致）並解碼：四張都是 1024×1536 AVIF，正常。
+- 逐張量邊框位置：地圖／易混鳥模組外框落在 **x 41–987、y 1191–1499**，四部位圓圈落在 **y 432–660**，與 `compose-card.py` 的 slim 分區（map `36,1186–540,1500`、similar `556,1186–988,1500`、feature row `432–660`）完全吻合。
+- 結論：三張卡一直都是標準 slim 版式，`SLIM_PAGE_BOXES` 的 viewBox 本來就對得準。真正的 bug 是 `infoCards.ts` 把「這三張沒有本機 spec 的 `featureCrops`」誤當成「卡上沒有那個分區」，於是 `mobileCardPages()` 把「四部位」「易混鳥」兩頁換成 `original`（整張長卡），用戶就在那兩頁看到整張卡被塞進一個面板。
+- 缺的是「重新生成這張卡」所需的裁切座標，不是「顯示這張卡」所需的座標。
+
+### 修正
+
+- `src/lib/infoCards.ts`：`hasFeatureCrops()` 不再排除 0041–0043，改為只要有序號就 true；同時把上面量到的實際數據寫進註解，解釋兩件事不要混為一談。刪除 `NO_FEATURE_CROPS`。
+- `src/lib/mobileInfoPages.ts`：`mobileCardPages()` 簡化為「已登記 + slim + 有分區座標 → 五頁」，移除臨時把兩頁換成 `original` 的分支。
+- 測試：`tests/infoCardReader.test.mjs` 逐張鎖住 0040–0043 必須是 `['artwork','features','scores','distribution','similar']`（連 `infoAvailable=true` 也不可多加 `original` 頁）；`tests/mobileCardInteractions.test.mjs` 新增 0041 的 DOM 測試，逐頁點過去，確認 `features`／`distribution`／`similar` 出的是 `svg[data-mobile-info-panel]` 裁切面板，且一定不會出現 `[data-original-info-card]`。
+- 全套 `node --test tests/*.test.mjs`：160 項，159 pass、0 fail、1 skip；`tsc -p tsconfig.app.json --noEmit` 無錯。
+
+### 0127 金眶鴴補記
+
+0127 上一輪已上載到 Drive（`1bNJhfMuWUuZyqI4y9kfQExzJJMfXZFR6`，144327 bytes，MD5 `82fdb27aa23bd49b2bff66e7b0bf8e43`），但它的素材與製作 spec 只存在於已合併分支的 ignored 資料夾，隨分支結束而失去。本回合重新由 Drive 下載成品核對（bytes／MD5／SHA256 全部與上輪紀錄一致，AVIF 解碼 1024×1536），逐張重讀整卡、四圈、地圖與兩個比較圓，補寫 `scripts/cards/info-restart-0127.json`，狀態 `observed_from_delivered_drive_card_no_local_artwork`：**不寫 `featureCrops`（沒有原始素材就是編造）**，另設 `featureCropsUnavailable` 與 `neverUpload`，只記錄卡上實際可見的標籤、比較鳥名稱與 85 個 ISO3 綠色範圍。同時把 0127 登記進 `src/data/infoCards.json`（slim、`restart-0127-v1`、`#173446`），令它與其他已交付卡一樣切五頁。
+
+### 0128 東方鴴 已完成並上載
+
+HKBWS 0080/011200 內文（Category I 過境遷徙鳥，短草及其他開闊旱地、后海灣一帶；春季稀少、秋季罕見；22–25cm；繁殖羽雄鳥頭頸近白、後冠褐色、上胸鏽橙而下緣轉黑；高挑、長腳、長翼、優雅，腳黃橙、嘴相對細長；雌鳥及幼鳥頭胸褐黃、眉紋淡、後冠深、腳暗淡，兩者上體都有淡色羽緣而幼鳥更寬；飛行時發出中高音「chip」；1998 年前約 85% 紀錄來自啟德及赤鱲角機場，現多見於新界北部低地，由林村經錦田、尖鼻咀到米埔及附近魚塘，以及落馬洲河套生態改善區；偏好短草，亦見於淡水沼澤；春季主要 3 月下半月至 4 月上半月，最早 2006-03-05、最遲 1978-06-02，最高 18 隻（2000-03-22 赤鱲角）及 11 隻（1979-03-28 啟德）；秋季主要 9 月下半月至 10 月第一週，極端日期 2017-08-27 及 1978-10-27，最高 28 隻（1979-09-24 啟德）；一般不見於潮間帶泥灘；**單型種**，繁殖由南西伯利亞經蒙古至中國東北，越冬於澳洲西北部；IUCN **LC 無危、趨勢未知**）。
+
+- **素材**：`pixel.png`（1254×1254 正方形 16-bit pixel art：淡白頭頸、褐色後冠、鏽橙上胸帶黑邊、淡褐上體、黃橙長腳、旱地短草）與 `features.png`（1536×1024 頭胸特寫）均逐張讀圖核對；比較鳥 `golden-plover.png`（太平洋金斑鴴，金斑黑背、白側帶）與 `sand-plover.png`（鐵嘴沙鴴，粗長嘴、淡綠灰長腳、栗褐胸帶）同樣逐張核對。首版 pixel 是 1024×1536 直幅，補成正方形後出現平色天空邊条，改成正方形重生成後正常。
+- **四圈**：①淡白頭頸（`features.png`，額及眉紋淡白對比褐色後冠）②細長嘴（`features.png`，整條嘴連嘴尖入圈）③鏽橙上胸（`features.png`，鏽橙帶連下緣黑邊）④黃橙長腳（`pixel.png`，兩條黃橙腳連腳趾與爪）。
+- **評分**：runtime 六項中只有 v（觀賞）缺值，`missingScores` 為 `["v"]`，卡面保留「待查非零分」註腳；綜合 2.9、三星。
+- **地圖**：世界底圖 + 29 個部分分佈國家（俄羅斯、蒙古、中國、日韓台、澳洲、東南亞、南亞、中亞），依 HKBWS「繁殖南西伯利亞／蒙古／中國東北，越冬澳洲西北部」而定，註明單型種、繁殖／越冬不分工。
+- **驗證**：AVIF 解碼 1024×1536；bytes 154902、MD5 `e6e7c0cfcf0ea17072312258fb965a7c`、SHA256 `94cf696e376f2df5b6e200abacb9c659cc956337b6bc918b0b130abe6ba082f3`，manifest／SHA256SUMS 一致，`manifest.spec` == `scripts/cards/info-restart-0128.json`；上載前 Drive 搜尋 `0128` 0 命中；上載後 `get_file` 核實 parent `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD`、bytes／MD5 與本機一致。已同步加入 `src/data/infoCards.json`（slim、`restart-0128-v1`、`#173446`）。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0128.avif | 1GN3dHBcLncrhN2bbLt_Y0JUzGWIToEFI | 154902 | e6e7c0cfcf0ea17072312258fb965a7c | 94cf696e376f2df5b6e200abacb9c659cc956337b6bc918b0b130abe6ba082f3 |
+
+未改 UI 版面、無 ZIP、未動 R2。下一張 0129 彩鷸（Greater Painted-Snipe，*Rostratula benghalensis*）。
+
+## 0040 分佈圖修復 + 0129／0130 交付（同一輪）
+
+### 0040 分佈圖空白 — 已修好並重新上載
+- 量測：舊 `0040.png` 地圖格 (44,1194)–(532,1492) 內綠色像素只有 **10**（正常卡如 0128 有 4570），色盤只剩底圖，即整塊面板內容在原圖已缺失，不是座標或投影錯位。以 `PHL` 單獨重繪同格作對照，綠色落在 x 402–415 / y 74–88（78 px），與 Natural Earth 幾何吻合。
+- 修正：重繪該格（世界底圖 + 菲律賓綠色 + 黃框放大插圖，保留「世界底圖・部分分佈國家／綠色非全境；非完整分佈」字樣），只貼回同一座標，其餘版面完全未動。
+- 交付：新檔 `0040.avif` = Drive `1A7FRUEvcEprDHt_msPXngKVSkfwAQ7Fp`，146944 B，MD5 `a854ff4a20d3f2abd63ccd4b14a8f726`（本機與下載檔 MD5 一致，卡內綠色像素 16185）。舊檔 `1j5yRRDvKZ1H83jKFiaqWrfIEu2VOBq6W` 已標記作廢並移入垃圾桶，檔名加註「已作廢 — 分佈圖空白」，避免兩個同名檔案混淆。
+- 教訓：只放大單一國家仍不夠看（世界尺度下菲律賓僅約 14×15 px）；大量分佈圖需要放大插圖框，0041–0043 日後比照處理。
+
+### 0129 彩鷸 Rostratula benghalensis
+- 主圖繪**雄鳥**（羽色較暗淡、孵卵育雛的一方）；雌鳥黑冠白臉栗胸金斑更鮮，已在 notes 註明。
+- 四部位：白眼圈及眼後白帶／白色肩帶／金斑翼羽／淡黃腳；比較鳥 水雉 + 沙錐。
+- 15 個 ISO3（亞洲族群）；HKBWS 記載撒哈拉以南非洲留鳥族群刻意不上色，notes 已寫明。
+- Drive `1BK--nxBbgKyia2CqSke8_nXn4scBHXU6`，174277 B，MD5 `b17105fc437ece9dc767c2ec5b25a469`。
+
+### 0130 水雉 Hydrophasianus chirurgus
+- 繁殖羽主圖：白頭白前頸、金黃後頸、黑色胸腹、特長腳趾、雉狀長尾。
+- 四部位：金黃後頸／白頭白前頸／特長腳趾／雉狀長尾；比較鳥 彩鷸 + 白胸苦惡鳥。
+- 17 個 ISO3（東阿富汗至東南亞、華南、台灣；HKG 不在底圖圖層，故不列）。
+- Drive `1ndzbMzmz0jTurQcLUM_Onxltaysj4vlX`，174263 B，MD5 `c8feea36d76dc763d5b960db2e3ec1df`。
+
+兩張卡均已登記 `src/data/infoCards.json`（slim、revision `restart-01NN-v1`、面板色 `#173446`）；只交付單一 AVIF，無 ZIP。
+
+### 0131 中杓鷸 — 進行中（未交付）
+- 已完成並核對：`pixel.png`（全身，頭部縱紋、下彎且下喙有折角的嘴、藍灰腳）、`features.png`（左全身／右特寫）、`curlew.png`（白腰杓鶌比較鳥）。四部位裁切框已驗：頭部縱紋／嘴形／翼覆羽／藍灰腳。
+- 本輪 `generate_image` 額度已滿（10/10），**尚缺第二隻比較鳥 小杓鷸 `little-curlew.png`**，因此未寫 spec、未 render、未上載。
+- 下一輪第一步：生成 `cards/art/info-restart-0131/little-curlew.png`，然後寫 `scripts/cards/info-restart-0131.json`（比較鳥：白腰杓鷸 + 小杓鷸；ISO3 待定；IUCN LC 趨勢下降）並 `render-info-restart.py 0131`。
+- HKBWS 0090/011500 要點已抄入上文待用：全天可見、秋季最多（8 月第二週至 9 月第三週，8 月下半月高峰，2018-08-26 336 隻）；37–46 cm，比白腰杓鷸小、嘴較短而基部粗鈍、頭部縱紋對比強（淡中央冠紋 + 深側冠紋 + 貫穿眼先的深色眼紋）；翼覆羽花紋比白腰杓鶌更粗；飛行時下背多為乾淨白色或淡褐模糊橫斑；幼鳥胸部縱紋更明顯；叫聲為一串急速鈴音；主要在后海灣泥灘及米埔，其他海岸點如船灣（最高 33 隻）、蒲台海面遷徙 320 隻（2012-04-25）；2017-18 冬季高峰 151 隻（2018-02-18）；春季高峰 131 隻（2003-04-24）；過夏鳥通常 20–30 隻，最高 76 隻（2020-07-03）；香港推測亞種 _N. p. variegatus_（東北西伯利亞繁殖）；IUCN LC 趨勢下降。
+
+## 0131–0133 三張交付（下一輪）
+
+| 卡 | 物種 | IUCN | Drive ID | bytes | MD5 |
+| --- | --- | --- | --- | ---: | --- |
+| 0131 | 中杓鷸 _Numenius phaeopus_ | LC | `1oeo_9qANXTX4MQGoff14LXJFw_JgdIRF` | 168166 | 4519a48bb2e967b9f9a085eab4e95090 |
+| 0132 | 小杓鷸 _Numenius minutus_ | LC（趨勢穩定） | `1016VP2iSy4kWL7JmlgxTl5lPH2E1p9CU` | 171386 | 644985e2a1a2d1900ace95f276e330db |
+| 0133 | 紅腰杓鷸 _Numenius madagascariensis_ | **EN 瀕危** | `1a7H_CkziUPDqKu5FXJb3vBtZY_246TSr` | 167942 | d24b97922397bc0d88b11f1df53ff38f |
+
+- 0131 四部位：頭部縱紋／下彎長嘴／粗花紋翼覆羽／藍灰腳；比較鳥 白腰杓鷸 + 小杓鷸；33 ISO3。
+- 0132 四部位：小頭淡冠紋／短嘴粉紅基部／淡羽緣上體／粉紅腳；比較鳥 中杓鷸 + 白腰杓鷸；16 ISO3；notes 註明綠色國家含過境範圍。
+- 0133 四部位：極長下彎嘴／平淡頭頸縱紋／脅部箭頭斑／灰綠長腳；比較鳥 白腰杓鷸 + 中杓鷸；21 ISO3；IUCN EN 已反映在稀有度徽章。
+- 比較鳥的共用做法：0132 用 0131 的 `pixel.png` 當「中杓鷸」，0133 用 0131 的 `curlew.png`（白腰杓鷸）與 `pixel.png`（中杓鷸），避免重複生圖。
+
+## 0134 白腰杓鷸 _Numenius arquata_（NT 近危）
+
+- Drive：`1NTjTf548e0tssNmn4R9S5dL_K-QV05oc`，162705 B，MD5 `b20c533255d637126b1541edfbf74bd7`。
+- 四部位：長而下彎的嘴／平淡頭部縱紋／密佈橫斑上體／藍灰長腳；比較鳥 紅腰杓鷸 + 中杓鷸。
+- 45 ISO3；notes 記下后海灣冬季最高 1602 隻（2011-01-16）。後海灣最常見的杓鷸，全年可見但主要是冬候鳥。
+
+## 0135 斑尾塍鷸 _Limosa lapponica_（NT 近危）
+
+- Drive：`1dAECIlMfgh-ldxd1UHgYE0BPgn1resgJ`，170576 B，MD5 `77b1c4b24b1c30e924e2e84b89ce2201`。
+- 四部位：直而微上翹的嘴／白眉與深色眼線／密橫斑尾羽／長而深色腳；比較鳥 黑尾塍鷸（新繪）+ 白腰杓鷸（沿用 0134）。
+- 49 ISO3；notes 記下春季 235 隻（2015-04-11）與秋季 400 隻（1981-09-14）歷史高點。
+
+## 0136 黑尾塍鷸 _Limosa limosa_（NT 近危）
+
+- Drive：`1ebKIIHnS1y_Sh-C28-tONJt2D3d0nfuB`，164178 B，MD5 `c1fdc54b921ce938eb599ea56d52b03b`。
+- 四部位：直嘴橙紅基部／白眉深色眼線／鏽橙胸及橫斑／深綠灰長腳；比較鳥 斑尾塍鷸 + 白腰杓鷸；77 ISO3。
+- notes：春季最高 2400 隻（2013-04-04，全港紀錄）、冬季最高 895 隻（2016-02-14）。
+
+## 0137 翻石鷸 _Arenaria interpres_（NT 近危）
+
+- Drive：`1LrgT3dWbHH4ysGXNhzEZlCm5A1aDN3L6`，166923 B，MD5 `da7b44d0f2c24ea809a9585fbe8370aa`。
+- 四部位：短楔形尖嘴／黑白頭頸花紋／鏽橙拼黑肩羽／橙紅短腳；比較鳥 灰尾漂鷸 + 環頸鴴；78 ISO3。
+- notes：IUCN NT（三代下降 20–29%）；2007 年後春季過境量只剩約一成，歷史最高 268 隻（1994-04-20）。
+
+## 0138 大濱鷸 _Calidris tenuirostris_（**EN 瀕危**）
+
+- Drive：`1zSoLlcYxGZOVD5twFs4ynW47WJryfRtv`，164996 B，MD5 `16ae78215ace63561ad586365916fef1`。
+- 四部位：厚而較長的嘴／灰色縱紋頭部／橙褐肩羽斑／深色短腳；比較鳥 黑尾塍鷸 + 翻石鷸；35 ISO3。
+- 首版頭部圈裁到眼睛邊緣，已把 `[0.660,0.140,0.880,0.360]` 改為 `[0.630,0.115,0.850,0.335]` 重渲染後上載。
+- notes：IUCN EN（過境停歇地填海為主因）；春季最高 560 隻（2001-04-08）、秋季 98 隻（2009-09-17）、冬季 112 隻（2016-02-11）。
+
+## 0139 紅腹濱鷸 _Calidris canutus_（NT 近危）
+
+- Drive：`1_1mxwoIyMnkuC-1U4fCbWCqA80gEt0Lk`，167951 B，MD5 `6778faf0a3117d4369b3d72e4f344dd0`。
+- 四部位：短嘴約等頭長／橙紅臉頰頸胸／黑鏽相間肩羽／深灰短腳；比較鳥 大濱鷸 + 翻石鷸；88 ISO3。
+- notes：春季最高 148 隻（2020-05-01），1990 年代曾達 200 隻（1990-05-06），長期下降。
+
+## 0140 流蘇鷸 _Calidris pugnax_（LC 無危）
+
+- Drive：`1ifvsC6SdwY3cn6O5yZ11oSp3aXxo2Lr1`，163128 B，MD5 `82c583acba242b139a3ff9ceff06b568`。
+- 四部位：厚基微下彎嘴／小頭長頸／淡羽緣灰褐上體／橙黃色長腳；比較鳥 澤鷸 + 紅腳鷸；80 ISO3。
+- 首版「小頭長頸」圈只裁到眼睛，已改用全身圖 `pixel.png` 的 `[0.16,0.04,0.50,0.42]`（頭頸連身體比例可見）重渲染。
+- 插圖為非繁殖羽雄鳥，notes 已註明未畫繁殖期頸部飾羽；86% 紀錄只有一至兩隻，最高十隻（1999-10-25）。
+
+## 0141 闊嘴鷸 _Calidris falcinellus_（**VU 易危**）
+
+- Drive：`1z_sUSPc0Mny9k3E2SXcGF8uCPOdKeHjH`，168638 B，MD5 `0c4af529aae46567d83bd1680ff3716a`。
+- 四部位：闊而下彎的嘴／分叉淡眉紋／栗色羽緣上背／短而黑的腳；比較鳥 紅腹濱鷸 + 翻石鷸；59 ISO3。
+- notes：IUCN VU（三代下降約 30%）；1988 年春季曾達 320 隻（4月16日），近二十年峰值多在 150 以下。
+
+## 0142 尖尾濱鷸 _Calidris acuminata_（**VU 易危**）
+
+- Drive：`1T6WqLB1rw-VSL8wc-UYWCqWYjoh-AqXn`，168151 B，MD5 `543e9640a21ff1bef9ffc0c15b612e5f`。
+- 四部位：黑嘴淡基部／深色頭頂淡眉／密斑胸部／黃褐色腳；比較鳥 闊嘴鷸 + 流蘇鷸；31 ISO3。
+- notes：IUCN VU（三代間約下降 45%）；春季最高 300 隻（2004-05-10，全港最高），秋季僅 48 隻。
+
+## 0143 彎嘴濱鷸 _Calidris ferruginea_（**VU 易危**）
+
+- Drive：`1OmKGVz1xBVDUPQwAsvb3F8BbscycPugQ`，169538 B，MD5 `444e9080f30ba703bf50002f62307f09`。
+- 四部位：細長下彎嘴／淡眉與白前臉／橙紅肩羽／長而深色腳；比較鳥 尖尾濱鷸 + 闊嘴鷸；76 ISO3。
+- **生圖出錯已重繪**：第一次畫成嘴極長深彎的杓鷸外形，與濱鷸不符；重畫成嘴約頭長 1.5 倍、彎度輕微後才使用，notes 已記錄。
+- notes：IUCN VU（三代下降 30–49%）；春季最高 10,982 隻（2007-04-17），春季最常見過境濱鷸。
+
+## 0144 青腳濱鷸 _Calidris temminckii_（LC 無危）
+
+- Drive：`1UaLeEraimFrMyZjwOWm-e45epyexI7Ek`，161121 B，MD5 `66d579b6778a9eb5742278a8298195c7`。
+- 四部位：細短微彎嘴／整齊白眼圈／長尾伸出翼端／黃綠短腳；比較鳥 闊嘴鷸 + 尖尾濱鷸；101 ISO3。
+- 首版「長尾伸出翼端」只裁到泥地與翼尖，已改為 `[0.55,0.30,0.95,0.55]` 重渲染。
+- notes：IUCN LC（趨勢未明）；數量自 1990 年代下降，冬季峰值近二十年未超過 35 隻，最高 152 隻（1997-10-18）。
+
+## 0145 長趾濱鷸 _Calidris subminuta_（LC 無危）
+
+- Drive：`14-QSEoTrGprnNLhs4gxCdCEw0umAtNat`，170008 B，MD5 `fb21028088187a0e69b3adbb5fc41199`。
+- 四部位：短而微彎嘴／深頂延伸嘴基／胸部細縱紋／特長腳趾；比較鳥 青腳濱鷸 + 闊嘴鷸；53 ISO3。
+- 兩輪裁切修正：第一次「短而微彎嘴」「深頂延伸嘴基」都落在胸部與翼羽上；改用 `pixel.png` 的 `[0.10,0.36,0.36,0.62]` 與 `[0.16,0.30,0.42,0.56]`（頭部連嘴）後正確。教訓：renderer 的圓形視窗比測試縮圖更緊，頭部特寫要用全身圖並留大範圍。
+- notes：IUCN LC（趨勢未明）；最高 175 隻（1993-04-13），本世紀最高 84 隻（2011-05-04），冬候數量明顯下降。
+
+## 0146 勺嘴鷸 _Calidris pygmaea_（**CR 極危**）
+
+- Drive：`1x3C_-BLBLYYdzsnAzZxmVhQR2H1DBLtR`，166522 B，MD5 `376f347253833688a8aaeba8632b3a6c`。
+- 四部位：匙狀嘴／匙端近觀／白前臉淡眉／黃綠短腳；比較鳥 長趾濱鷸 + 青腳濱鷸；23 ISO3；score 4.1，重要性 5.0、保育 4.7。
+- 全身圖第一版嘴向下垂、匙端角度不自然，已重繪為向前平伸的側面輪廓。
+- **新增工具** `scripts/cards/preview-crops.py KKKK`：完全複製 renderer 的 `ImageOps.fit` 圓形裁切，事先看到四圈的真實效果。之前的正方形測試縮圖會誤導——寬框經 `ImageOps.fit` 後左右會被切走。
+- notes：IUCN CR（估計每年下降約 8%）；最高 13 隻（2005-04-03），一般一日不超過三隻，本世紀記錄減少。
+
+## 0147 紅頸濱鷸 _Calidris ruficollis_（NT 近危）
+
+- Drive：`1qM0uPiFAnOF9okOGJ6z0yvqxsVdsLlED`，164513 B，MD5 `68a96fb7c8c92fecfd6f6b0f0409d283`。
+- 四部位：短厚黑嘴／橙紅臉頸／橙紅肩羽／淡色短腳；比較鳥 勺嘴鷸 + 青腳濱鷸；74 ISO3。
+- 比較鳥特意配勺嘴鷸：HKBWS 明言嘴尖沾泥的紅頸濱鷸最易被誤認成勺嘴鷸，卡上已寫明。
+- notes：IUCN NT（黃海停歇地喪失）；春季最高 3,756 隻（2010-04-11）。
+
+## 0148 三趾濱鷸 _Calidris alba_（LC 無危）
+
+- Drive：`11lVn4bNjEApwnc9lDkivy1su7vgDnZI-`，159240 B，MD5 `18c723bf822ffee0fbde97d38906625d`。
+- 四部位：短而直的嘴／淡灰頭臉／翼角黑色斑／黑色無後趾；比較鳥 紅頸濱鷸 + 彎嘴濱鷸；92 ISO3。
+- 插圖為非繁殖羽（香港春季所見多為此），notes 已註明未畫繁殖羽橙褐色。
+- notes：IUCN LC；春季不常見至稀少，九成以上紀錄少於五隻，最高 67 隻（1993-05-04）。
+
+## 0149 黑腹濱鷸 _Calidris alpina_（NT 近危）
+
+- Drive：`1TLtWpSHC4Iwxu0r4IczAT2whydEekmn-`，160770 B，MD5 `7ddf9326d9c041a205a49a6a07364392`。
+- 四部位：嘴長而略下彎／頭頂灰褐縱紋／胸部淡縱紋／黑色較短腳；比較鳥 彎嘴濱鷸 + 尖尾濱鷸；134 ISO3；score 3.1。
+- 全身圖第一版嘴長而明顯下彎，讀起來像彎嘴濱鷸，已重繪成「僅末端微下彎」的側面輪廓。
+- 「胸部淡縱紋」第一版落在純縱紋區，看不出是胸部，改用 `pixel.png [0.44,0.28,0.68,0.52]`（連同胸部邊緣）重渲染。
+- 比較鳥特意配彎嘴濱鷸（HKBWS 明確以腳長、嘴彎度、腰羽是否全白作區分）與尖尾濱鷸（同屬、體型相近，靠眉紋與腳色分辨）。
+- notes：IUCN NT（三代下降 20–29%）；香港最豐富的越冬濱鷸，單日最高 6,070 隻（2020-12-13），冬季棲息地不在米埔自然保護區。
+
+## 0150 小濱鷸 _Calidris minuta_（LC 無危）
+
+- Drive：`1jNKDLCDlWiFIwJofEfYwi0QOprI4KUto`，140295 B，MD5 `203713014959f3fec752e94d50642494`。
+- 四部位：細長針狀黑嘴／小頭淡眉／細長黑腳／挺立而圓的身軀；比較鳥 紅頸濱鷸 + 青腳濱鷸；139 ISO3；score 3.4。
+- `dexScores` 只有 `a=2.3, v=3.1, r=4.8, o=3.4, vEst=1`，重要性 `i` 與保育 `c` 缺值：依既有政策保持「待查」，不補零、不重算綜合，卡面沿用「待查非零分」。
+- 全身圖一次成形（針狀細嘴、細長黑腳、站姿較挺），沒有重繪；四圈第一輪就全都落在特徵上，只把腳部框加大到 `[0.31,0.38,0.75,0.82]` 連趾入鏡。
+- 比較鳥特意配紅頸濱鷸（HKBWS 明確以腳長腳粗、頭大小、嘴粗細、站姿分辨）與青腳濱鷸（同樣小型細嘴，但欖黃腳一望即分）。
+- notes：IUCN LC（趨勢上升）；香港 Category I，春季稀少過境鳥，最高 6 隻（1990-04-13 至 17、2003-04-24、2004-04-25），首筆紀錄 1986-04-26。
+
+## 修補：0121–0124 補登記 slim（同 0040–0043 的舊缺陷）
+
+用戶要求「有圖的卡都要能翻成五頁」。逐張核對 registry 後發現 **0121 鐵嘴沙鴴、0122 環頸鴴、0123 白臉鴴、0124 青藏沙鴴** 四張早已上載 Drive（見本文件上表），但 `src/data/infoCards.json` 當時只擴到 0120，四張從未登記。
+
+- 後果：`mobileCardPages()` 對未登記的卡只給「插畫 + 完整資訊卡」兩頁，整張 1024×1536 長卡被塞進單一面板——正是 2026-11 用戶回報 0040–0043 時的同一個缺陷，只是換了一批編號。
+- 修正：四張補上 `layouts: slim`、`revisions: restart-NNNN-v1`、`panelColors: #173446`，並依編號排序插入 `ids`。registry 現為 **150 張**（0001–0120、0121–0124、0125–0150）。
+- 迴歸測試：`tests/infoCardReader.test.mjs` 新增「0121–0124 are registered slim too, not only up to 0120」。原本只有「0001–0120 全部 slim」的斷言，正是這個上界讓四張漏網；新測試逐張斷言已登記、slim、且切成五頁。
+- 十二張卡的 AVIF 沒有重做、沒有重新上載，只改顯示層登記。

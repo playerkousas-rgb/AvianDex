@@ -82,3 +82,6 @@ src/data/cardCopy.json.prehk
 public/demo/card-*.png
 public/demo/source-*.png
 deliver/cards/
+
+# Drive 交付下載的暫存檔（只作核對，不入 Git）
+google_drive/

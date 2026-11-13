@@ -1,0 +1,183 @@
+{
+  "id": "0147",
+  "name": "紅頸濱鷸",
+  "scientificName": "Calidris ruficollis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Calidris ruficollis in breeding plumage: 13-16 cm, a rather squat stint with a relatively short and thick bill, short neck and large head. In breeding plumage it has an orange face, throat and upper chest, a streaked lower breast, and orange in the scapulars that contrasts with rather plain grey wing coverts and tertials; early in the breeding season pale fringes obscure the orange colour. Juveniles show contrast between greyer, more darkly centred wing coverts and rufous fringes to the upper scapular and mantle feathers, with a fairly uniform crown lacking an obviously dark central area, and the colour tone of juveniles is variable, some being rather greyer. In non-breeding plumage it is grey-brown with pale fringes to the upperpart feathers. It mainly forages in groups, constantly picking at intertidal mudflat or muddy areas at the roost site.",
+  "similarSpecies": [
+    {
+      "zh": "勺嘴鷸",
+      "scientificName": "Calidris pygmaea",
+      "asset": "spoon-billed.png",
+      "framing": "whole-bird",
+      "distinction": "勺嘴鷸嘴末端擴成扁平匙狀，是本種最常被混淆的對象——尤其當紅頸濱鷸嘴尖沾上泥時；本種嘴短而厚、末端正常收尖，繁殖羽臉頸橙紅。"
+    },
+    {
+      "zh": "青腳濱鷸",
+      "scientificName": "Calidris temminckii",
+      "asset": "temmincks.png",
+      "framing": "whole-bird",
+      "distinction": "青腳濱鷸胸部幾乎無縱紋、全身樸素褐灰、腳淡黃綠、尾長伸出翼端；本種矮壯頭大、繁殖羽臉頸橙紅、下胸有縱紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1,
+      0.24,
+      0.4,
+      0.44
+    ],
+    [
+      0.19,
+      0.14,
+      0.47,
+      0.42
+    ],
+    [
+      0.32,
+      0.22,
+      0.66,
+      0.48
+    ],
+    [
+      0.28,
+      0.48,
+      0.8,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "短厚黑嘴",
+    "橙紅臉頸",
+    "橙紅肩羽",
+    "淡色短腳"
+  ],
+  "featureNotes": [
+    "嘴相對短而厚，配合大頭短頸的矮壯體型；注意嘴尖沾泥時容易與勺嘴鷸混淆（第1圈取自全身圖，實際可見）。",
+    "繁殖羽的臉、喉及上胸呈橙紅色，是本種得名的特徵；早季時淡色羽緣會遮住部分橙色（第2圈取自全身圖，實際可見）。",
+    "肩羽橙紅色而翼覆羽與三級飛羽較素灰色，形成明顯對比，是繁殖羽辨識重點（第3圈取自全身圖，實際可見）。",
+    "腳短而淡色，站姿低矮；本種常成群在泥灘或休息地不斷啄食（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "USA",
+      "CAN",
+      "MEX",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "PNG",
+      "AUS",
+      "NZL",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "MMR",
+      "NPL",
+      "KHM",
+      "LAO",
+      "BRN",
+      "KAZ",
+      "MNG",
+      "ARE",
+      "OMN",
+      "SAU",
+      "IRN",
+      "IRQ",
+      "EGY",
+      "SDN",
+      "KEN",
+      "TZA",
+      "ZAF",
+      "NAM",
+      "MOZ",
+      "MDG",
+      "NGA",
+      "GHA",
+      "SEN",
+      "MRT",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "ESP",
+      "PRT",
+      "FRA",
+      "GBR",
+      "IRL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "DNK",
+      "NLD",
+      "DEU",
+      "POL",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "TUR",
+      "GRC",
+      "ITA",
+      "CHE",
+      "AUT",
+      "HUN",
+      "ROU",
+      "BGR"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/013100",
+      "use": "HKBWS substantive read: Category I, abundant spring passage migrant and uncommon or scarce at other times, numbers apparently in decline; 13-16 cm, a rather squat stint with a relatively short and thick bill, short neck and large head; breeding plumage with an orange face, throat and upper chest, streaked lower breast and orange in the scapulars contrasting with rather plain grey wing coverts and tertials, with pale fringes early in the season obscuring the orange; juveniles with greyer more darkly centred wing coverts and rufous fringes to the upper scapular and mantle feathers and a fairly uniform crown lacking an obviously dark central area, their colour tone variable and some rather greyer; non-breeding plumage grey-brown with pale fringes to upperpart feathers; most records from the intertidal mudflats of Deep Bay and adjacent Mai Po roosts with small numbers regularly on drained commercial fish ponds, up to 75 at Shui Hau on Lantau on spring passage, up to 65 at Kai Tak in the 1970s and up to 15 on passage at widespread coastal and inland localities and on Po Toi, Cheung Chau and Tung Ping Chau; a passage migrant abundant in spring but uncommon in autumn and a scarce winter visitor, with the first migrants as early as the first week of March though most years they arrive in numbers during the third week, main passage from the second week of April to the second week of May and peak counts of 3756 on 11 April 2010 and 2700 on 10 April 2009; very few remain at the end of May and June records occur in only one out of two years, and peak spring counts were in general higher from 1998 to 2010 than since; autumn birds apparently first pass in the last week of July with the main period to the first week of October but generally low numbers of 50 or fewer except an exceptional 885 on 23 August 2005; in most years small numbers winter with a highest count of 49 on 21 January 1998; first recorded in 1953; mainly forages in groups constantly picking at intertidal mudflat or muddy areas at the roost site; monotypic, breeding in disjunct areas of north and northeast Siberia from the Taimyr east to the Chukotsky peninsula and south to north Kamchatka, occasionally in west Alaska, and wintering from east India through northern Indochina to south China and south through the Philippines to Indonesia and Australasia; IUCN Near Threatened with a decreasing trend due to loss of key stopover sites in the Yellow Sea."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/013000",
+      "use": "HKBWS Spoon-billed Sandpiper comparison: the diagnostic spoon-shaped bill, and the explicit warning that Red-necked Stints with mud on the bill tip can be mistaken for it, which is why the two are paired on this card."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對短厚黑嘴、橙紅臉頸、橙紅肩羽及淡色短腳；描繪繁殖羽，非繁殖羽為灰褐而無橙紅。",
+    "兩隻比較鳥均為 AI 生成示意（勺嘴鷸沿用 0146 全身圖、青腳濱鷸沿用 0144 全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 近危 NT（黃海關鍵停歇地喪失）；香港屬 Category I，春季大量過境（最高 3,756 隻，2010-04-11），秋季不常見，冬季稀少。",
+    "只交付 aviandex/0147.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

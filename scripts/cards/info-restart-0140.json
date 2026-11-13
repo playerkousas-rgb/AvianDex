@@ -1,0 +1,189 @@
+{
+  "id": "0140",
+  "name": "流蘇鷸",
+  "scientificName": "Calidris pugnax",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Calidris pugnax (Ruff) in non-breeding plumage, a male: males 26-32 cm and females 20-25 cm, so Ruffs approach the size of Common Redshank while Reeves are close to Marsh Sandpiper in body length if not bulk. Structurally distinct in having a large body but a small head and fairly long neck; the bill is moderate in length, fairly deep-based and slightly decurved, and leg colour is variable ranging from yellowish to a quite bright orange that is similar to Common Redshank. In non-breeding plumage it is rather greyish in tone with pale diffuse grey-brown fringes to the upperpart feathers and males usually have pale around the bill base. Juveniles have dark feather centres, some with buff internal markings, with clear cut pale buff fringes on the upperparts and a buff chest and belly. In flight it shows obvious pale sides to the rump, a narrow white inner wing bar and a diffuse pale area at the base of the inner primaries. Males that have begun moulting into breeding plumage show a combination of plain or barred feathers that can be black through rufous to white, and females in breeding plumage are mottled or spotted on the underparts. It forages in intertidal areas but also in grassy areas such as airports and freshwater marshes.",
+  "similarSpecies": [
+    {
+      "zh": "澤鷸",
+      "scientificName": "Tringa stagnatilis",
+      "asset": "marsh-sandpiper.png",
+      "framing": "whole-bird",
+      "distinction": "澤鷸體態纖細、嘴長而細如針、腳極長而偏黃綠，整體線條修長；本種身體大而頭小、嘴中等長度且基部厚、腳橙黃且相對較短。"
+    },
+    {
+      "zh": "紅腳鷸",
+      "scientificName": "Tringa totanus",
+      "asset": "redshank.png",
+      "framing": "whole-bird",
+      "distinction": "紅腳鷸嘴基部橙紅、腳鮮橙紅而較短、上體有明顯深色斑心配淡色斑點、飛行時有白色楔形背斑；本種嘴全深色、腳由黃到橙、飛行時腰側淡色而翼帶窄。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.52,
+      0.26,
+      0.72,
+      0.46
+    ],
+    [
+      0.16,
+      0.04,
+      0.5,
+      0.42
+    ],
+    [
+      0.4,
+      0.23,
+      0.7,
+      0.47
+    ],
+    [
+      0.42,
+      0.55,
+      0.7,
+      0.86
+    ]
+  ],
+  "featureLabels": [
+    "厚基微下彎嘴",
+    "小頭長頸",
+    "淡羽緣灰褐上體",
+    "橙黃色長腳"
+  ],
+  "featureNotes": [
+    "嘴長度中等、基部較厚而微微下彎，是辨認本種的重點；繁殖期雄鳥會長出誇張的頸部飾羽（第1圈取自近景圖，實際可見）。",
+    "身體大但頭明顯細小，頸較長，形成獨特的比例；雌鳥（Reeve）比雄鳥小（第2圈取自近景圖，實際可見）。",
+    "非繁殖羽整體灰褐，上體羽毛有淡色而模糊的羽緣，嘴基周圍通常較淡（第3圈取自全身圖，實際可見）。",
+    "腳色由黃到鮮橙不等，長度中等；本種常在泥灘覓食，也會到機場草地與淡水沼澤（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "SWE",
+      "NOR",
+      "FIN",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "KOR",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "AUS",
+      "NZL",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "MMR",
+      "NPL",
+      "IRN",
+      "IRQ",
+      "ARE",
+      "OMN",
+      "SAU",
+      "YEM",
+      "TUR",
+      "EGY",
+      "SDN",
+      "ETH",
+      "KEN",
+      "TZA",
+      "UGA",
+      "ZAF",
+      "NAM",
+      "BWA",
+      "MOZ",
+      "MDG",
+      "NGA",
+      "GHA",
+      "SEN",
+      "MLI",
+      "MRT",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "ESP",
+      "PRT",
+      "FRA",
+      "ITA",
+      "GRC",
+      "BGR",
+      "ROU",
+      "HUN",
+      "POL",
+      "DEU",
+      "NLD",
+      "BEL",
+      "GBR",
+      "IRL",
+      "DNK",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "SVK",
+      "CZE",
+      "AUT",
+      "CHE",
+      "HRV",
+      "SRB",
+      "MKD",
+      "ALB",
+      "BIH",
+      "SVN"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012400",
+      "use": "HKBWS substantive read: Category I, scarce passage migrant, rare in winter, mainly in intertidal areas of Deep Bay and adjacent roost sites; males 26-32 cm and females 20-25 cm, Ruffs approaching the size of Common Redshank while Reeves are close to Marsh Sandpiper in body length if not bulk; males beginning to moult into breeding plumage show plain or barred feathers from black through rufous to white, and females in breeding plumage are mottled or spotted on the underparts; structurally distinct with a large body but a small head and fairly long neck, the bill moderate in length, fairly deep-based and slightly decurved, and leg colour variable from yellowish to a quite bright orange similar to Common Redshank; non-breeding plumage rather greyish with pale diffuse grey-brown fringes to upperpart feathers and males usually pale around the bill base; juveniles with dark feather centres, some with buff internal markings, clear cut pale buff fringes on the upperparts and a buff chest and belly; in flight obvious pale sides to the rump, a narrow white inner wing bar and a diffuse pale area at the base of the inner primaries; no reports of vocalisations in Hong Kong and the species is only known to utter simple sounds; most records in the Deep Bay area on intertidal mudflats or roosting on adjacent Mai Po ponds, with singles on commercial fish ponds, at Hong Kong Wetland Park, Lok Ma Chau MTRC Ecological Enhancement Area and San Tin East Main Drainage Channel, and away from Deep Bay singles in grassy or freshwater marsh areas at Kai Tak on 20-21 March 1979, Tai Po on 4 October 1981, Kam Tin on 22 October 1995, Chek Lap Kok on 7 September 2001 and Tung Chung on 25 August 2013 plus two at Pui O on 10 May 2019; a scarce passage migrant and rare winter visitor with numbers generally low, usually only one bird, and passage slightly stronger in autumn than spring; earliest autumn record 12 August 2003 with main passage from the second week of September to the end of October peaking in October; appears to have become scarcer in winter than in the 1980s and 1990s; an early spring migrant with passage probably beginning in early March, main passage from the last week of March to the third week of April with numbers slightly higher in the first half of that period, the highest spring count five and the latest spring record one from 21 May to 4 June 1988, plus a single summer record on 1 July 1989; about 86% of records involve one or two birds and the highest count on record is ten on 25 October 1999; first recorded in Hong Kong by Dove and Goodhart (1955) with up to two birds from 17 April to 3 May and on 21 September; although generally in intertidal areas it has been seen foraging in grassy areas such as airports, freshwater marshes and even the edge of urban areas; monotypic, breeding in the taiga zone of the northern Palearctic from Sweden east to northeast Asia with other higher-altitude breeding areas further south including Transbaikalia and northern Kamchatka, wintering largely in sub-Saharan Africa but also along coasts from the Middle East through south Asia to Indochina, Indonesia and the Philippines; IUCN Least Concern with a decreasing trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012500",
+      "use": "HKBWS group context for the Calidris and Tringa shorebirds that share the Deep Bay mudflats, used only for habitat framing rather than species-specific claims."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對厚基微下彎嘴、小頭長頸、淡羽緣灰褐上體及橙黃色長腳；描繪的是非繁殖羽雄鳥，未畫繁殖期頸部飾羽。",
+    "兩隻比較鳥均為 AI 生成示意（澤鷸、紅腳鷸各自新繪），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危 LC、趨勢下降；香港屬 Category I，稀少過境鳥、冬季罕見，86% 紀錄只有一至兩隻，最高十隻（1999-10-25）。",
+    "只交付 aviandex/0140.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

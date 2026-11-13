@@ -1,0 +1,127 @@
+{
+  "id": "0130",
+  "name": "水雉",
+  "scientificName": "Hydrophasianus chirurgus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Hydrophasianus chirurgus adult in breeding plumage: a 30 cm jacana (39-58 cm including the tail in breeding plumage), female larger than male. White head and fore part of the neck separated from a golden-yellow hindneck by a black line that reaches the nape and joins the extensive black of the underparts; dark chocolate-brown upperparts; the long blackish tail trails beyond the feet in flight; extremely long greyish legs with hugely elongated, straight toes that spread the weight across floating lotus and lily leaves. In non-breeding plumage the face has a dark eye stripe running from the base of the bill down the sides of the neck to form a breast band, the upperparts are paler and the tail is short. Juveniles have a rufous-brown crown, broad warm buff fringes to the mantle and scapulars, no yellow on the head and an indistinct breast band. It walks on floating vegetation in shallow freshwater marsh, especially ponds with lotus and lilies.",
+  "similarSpecies": [
+    {
+      "zh": "彩鷸",
+      "scientificName": "Rostratula benghalensis",
+      "asset": "painted-snipe.png",
+      "framing": "whole-bird",
+      "distinction": "彩鷸體型矮胖似秧雞，腳中等長而趾不特長，嘴長而略下彎，雄鳥有白眼圈與眼後白帶、雌鳥黑冠白臉栗胸；本種腳極長、趾特長可在浮葉上行走，繁殖羽白頭金黃後頸配全黑下體與長尾。"
+    },
+    {
+      "zh": "白胸苦惡鳥",
+      "scientificName": "Amaurornis phoenicurus",
+      "asset": "waterhen.png",
+      "framing": "whole-bird",
+      "distinction": "白胸苦惡鳥上體石板灰黑、臉頸胸腹純白、尾下栗紅而尾短，嘴黃綠帶紅基，常在泥岸及蘆葦邊行走；本種繁殖羽有金黃後頸與黑色胸腹、尾羽特長如雉，並在浮葉上活動。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.56,
+      0.06,
+      0.76,
+      0.33
+    ],
+    [
+      0.535,
+      0.045,
+      0.745,
+      0.36
+    ],
+    [
+      0.51,
+      0.64,
+      0.79,
+      0.96
+    ],
+    [
+      0.6,
+      0.29,
+      0.9,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "金黃後頸",
+    "白頭白前頸",
+    "特長腳趾",
+    "雉狀長尾"
+  ],
+  "featureNotes": [
+    "後頸一大片金黃色，前緣以一條黑線與白色的頭及前頸分開，是繁殖羽最搶眼的色塊（第1圈取自近景圖，實際可見）。",
+    "頭與前頸純白，黑線由眼後沿頸側伸至後頸，再與黑色胸腹相連（第2圈取自近景圖，實際可見）。",
+    "腳極長，腳趾細長而直，張開後把體重分散在蓮葉上，是水雉能在浮葉行走的關鍵（第3圈取自近景圖，實際可見）。",
+    "繁殖羽尾羽特長而呈雉狀，飛行時伸出腳後；非繁殖羽尾短得多（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "CHN",
+      "TWN",
+      "HKG"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011400",
+      "use": "HKBWS substantive read: Category I, scarce passage migrant mainly in autumn, much decreased, previously a breeding species; 30 cm (39-58 cm including tail in breeding plumage), female larger than male; breeding plumage white head and foreneck separated from yellow hindneck by a black line that reaches the nape and joins extensive black underparts, dark brown upperparts, long blackish tail trailing beyond the feet in flight; non-breeding plumage dark eye stripe from bill base down the neck sides forming a breast band; juvenile rufous-brown crown and broad warm buff fringes; flight call a wavering note falling slightly in pitch; freshwater wetlands, especially marsh in the lowland northern New Territories with favoured sites Mai Po NR, Long Valley and Lok Ma Chau MTRC EEA, preferring ponds with lotus and lilies rather than Water Hyacinth, also Lantau, Po Toi and even Hong Kong and Victoria Parks; decline may have begun by 1953, and after 1974 the status changed from breeding bird and passage migrant to predominantly a scarce autumn passage migrant; peak day count 15 at Chuk Yuen in June 1969 versus this century's peak of nine on 18 October 2003 at Lok Ma Chau Spur Line mitigation wetland; Carey et al. (2001) passage second half of April to mid June and second half of September to mid December with main passage October and first half of November; creation of wetland at Lok Ma Chau MTRC EEA, Mai Po NR and Long Valley, which hold 60% of records, brought a resurgence, now most numerous in October and November with winter records December to February in most years since 2007 and spring/summer records from the last week of April to mid July; breeding 1968-1974 at what is now Fairview Park and latterly Sha Po, copulation 14 June 1969 and a newly-hatched chick 20 July 1969, polyandrous like Greater Painted-snipe; feeds on insects and small invertebrates gleaned from the water surface and from roots and leaves of aquatic vegetation; monotypic, east Afghanistan east through the Indian subcontinent to south China and through Indochina and southeast Asia to the Philippines, Sumatra and Java, northerly populations migratory including most of the Chinese population from the Yangtze floodplain south including Hainan and Taiwan; IUCN Least Concern with decreasing trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011300",
+      "use": "HKBWS Greater Painted-snipe comparison: stocky rail-like build, white eye ring and shoulder braces, much shorter legs without the jacana's elongated toes."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對白頭白前頸、金黃後頸、黑色胸腹、特長腳趾與雉狀長尾；不是照片，也不是分佈或族群證據。",
+    "本卡主圖繪繁殖羽成鳥；非繁殖羽無金黃後頸、有深色眼紋形成的胸帶、尾短，卡上文字已註明。",
+    "兩隻比較鳥均為 AI 生成示意（彩鷸、白胸苦惡鳥各自新繪），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，留鳥與候鳥族群不分工。",
+    "IUCN 無危、趨勢下降；香港屬 Category I，主要為秋季稀少過境鳥，1974 年後不再繁殖，近年后海灣濕地整治後紀錄回升。",
+    "只交付 aviandex/0130.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

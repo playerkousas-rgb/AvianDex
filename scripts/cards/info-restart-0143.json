@@ -1,0 +1,186 @@
+{
+  "id": "0143",
+  "name": "彎嘴濱鷸",
+  "scientificName": "Calidris ferruginea",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "illustrationTaxon": "Calidris ferruginea in breeding plumage: 18-23 cm, slightly larger and more elegant than Dunlin with longer legs and a longer, more finely-tipped decurved bill. Adult breeding birds are rusty-brown below with large orange areas in the scapulars and white on the fore part of the face and supercilium. Birds in non-breeding plumage are slightly paler than Dunlin with a more pronounced supercilium, a longer more finely-tipped bill and longer legs. Juveniles have a buff-washed breast that is lightly streaked at the sides and uniformly pale-fringed upperpart feathers with a dark subterminal area and shaft. In flight the white rump is usually distinctive although on many adults there are a few darker feathers and on a small number a line of dark feathers down the centre of the rump, while juveniles tend to have pure white rumps. Large flocks forage intensely on the intertidal mudflats on spring passage, picking prey from the surface of the mud or inserting the bill only a short way.",
+  "similarSpecies": [
+    {
+      "zh": "尖尾濱鷸",
+      "scientificName": "Calidris acuminata",
+      "asset": "sharp-tailed.png",
+      "framing": "whole-bird",
+      "distinction": "尖尾濱鷸嘴較短而直、腳黃褐色、胸部密斑而在上腹轉白、繁殖羽上身暖褐而無大片橙紅肩羽；本種嘴較長而下彎、腳深色、繁殖羽胸腹鏽紅而肩羽橙紅。"
+    },
+    {
+      "zh": "闊嘴鷸",
+      "scientificName": "Calidris falcinellus",
+      "asset": "broad-billed.png",
+      "framing": "whole-bird",
+      "distinction": "闊嘴鷸嘴較短而闊、末端明顯下彎、腳短而黑、頭部有分叉淡眉紋；本種體型較大、嘴較細長而下彎均勻、繁殖羽下身鏽紅。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.06,
+      0.16,
+      0.3,
+      0.4
+    ],
+    [
+      0.66,
+      0.13,
+      0.9,
+      0.37
+    ],
+    [
+      0.83,
+      0.28,
+      1.0,
+      0.56
+    ],
+    [
+      0.4,
+      0.56,
+      0.68,
+      0.83
+    ]
+  ],
+  "featureLabels": [
+    "細長下彎嘴",
+    "淡眉與白前臉",
+    "橙紅肩羽",
+    "長而深色腳"
+  ],
+  "featureNotes": [
+    "嘴長而下彎，末端細尖，是與黑腹濱鷸（嘴較短而鈍、下彎較淺）主要的分別；雌鳥嘴更長（第1圈取自全身圖，實際可見）。",
+    "有明顯淡色眉紋與白色前臉，眼圈淺色；非繁殖羽比黑腹濱鷸更淡、眉紋更明顯（第2圈取自近景圖，實際可見）。",
+    "繁殖羽肩羽有大片橙紅羽區並帶黑白色羽緣，與鏽紅色的胸腹連成一氣（第3圈取自近景圖，實際可見）。",
+    "腳較黑腹濱鷸長，站姿較高；飛行時腰多為白色，但部分成鳥腰中央有深色羽毛（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "PNG",
+      "AUS",
+      "NZL",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "MMR",
+      "NPL",
+      "KHM",
+      "LAO",
+      "BRN",
+      "ARE",
+      "OMN",
+      "SAU",
+      "IRN",
+      "IRQ",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "AFG",
+      "NOR",
+      "SWE",
+      "FIN",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "POL",
+      "DEU",
+      "NLD",
+      "BEL",
+      "FRA",
+      "GBR",
+      "IRL",
+      "DNK",
+      "EGY",
+      "SDN",
+      "ETH",
+      "KEN",
+      "TZA",
+      "ZAF",
+      "MOZ",
+      "MDG",
+      "NGA",
+      "GHA",
+      "SEN",
+      "MLI",
+      "MRT",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "TUR",
+      "GRC",
+      "BGR",
+      "ROU",
+      "HUN",
+      "SRB",
+      "HRV",
+      "ITA",
+      "ESP",
+      "PRT"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012700",
+      "use": "HKBWS substantive read: Category I, abundant spring migrant, scarce autumn migrant and rare winter visitor to the Deep Bay area; 18-23 cm, slightly larger and more elegant than Dunlin with longer legs and a longer more finely-tipped decurved bill; adult breeding rusty-brown below with large orange areas in the scapulars and white on the fore part of the face and supercilium; winter plumage slightly paler than Dunlin with a more pronounced supercilium, longer more finely-tipped bill and longer legs; juveniles with a buff-washed breast lightly streaked at the sides and uniformly pale-fringed upperpart feathers with a dark subterminal area and shaft; in flight the white rump is usually distinctive though many adults have a few darker feathers and a small number a line of dark feathers down the centre of the rump, juveniles tending to have pure white rumps; typical flight call fairly high-pitched and trilling; most records from the Deep Bay area feeding on the intertidal mudflats and roosting inland usually at Mai Po NR, with up to 32 on drained fish ponds and the highest counts away from Deep Bay involving migration over the sea in spring including up to 55 off Cape D'Aguilar during a tropical storm, up to 50 off Po Toi and 25 in Mirs Bay; the most abundant migrant shorebird passing through in spring with four-figure totals on most days in April and the first week of May, migrants present as early as the last week of February and the first birds generally in the second week of March with as many as 2080 as early as 21 March; main passage from the first week of April to the first week of May peaking in the second half of April, the highest count 10982 on 17 April 2007, very few remaining by mid-May and the latest three-figure May count on the 23rd; recorded in June and early July in ones or twos in about half of years this century with a highest of 14 though up to 80 summered in 1992; return passage from the second half of July but autumn numbers only a fraction of spring, indicating a different strategy from northward migration, with known non-stop flights from the eastern seaboard of China to Australia; highest autumn counts 379 on 1 August 1993 and 356 on 7 August 1994 with 239 on 23 July 2007 this century, main autumn passage in August and single-figure counts from October; wintering birds rare with only one or two seen and a highest count of three; adults in autumn from 23 July to 27 October and juveniles from 1 August to 23 October with adults predominating over the season as a whole; 2007-10 saw very high numbers with peak counts over 9000, and a recent tendency for very high numbers as early as the last week of March with counts over 2000 in seven years during 2010-20 including over 5000 in three years and a highest of 5794 in 2011 compared with a 1990s peak of 1000; first recorded 5 October 1930; large flocks forage intensely on the intertidal mudflats on spring passage, picking prey from the surface of the mud or inserting the bill only a short way; monotypic, breeding north of the Arctic Circle in Siberia from the Yamal Peninsula east to northern Chukotka and wintering from sub-Saharan Africa through the Middle East to south and southeast Asia and Australasia; IUCN Vulnerable with a decreasing trend of 30-49% over three generations, and the East Asian-Australasian Flyway population thought to be in severe decline owing to habitat loss in the Yellow Sea."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012600",
+      "use": "HKBWS Sharp-tailed Sandpiper comparison: a shorter straighter bill, yellowish legs and chest mottling that thins on the lower chest rather than the Curlew Sandpiper's long decurved bill, dark legs and rusty underparts."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對細長下彎嘴、淡眉與白前臉、橙紅肩羽及長而深色腳；不是照片，也不是分佈或族群證據。",
+    "首版插圖嘴部過長過彎而畫成杓鷸，已重繪為嘴長約頭長 1.5 倍、彎度輕微的濱鷸比例後才使用。",
+    "兩隻比較鳥均為 AI 生成示意（尖尾濱鷸沿用 0142 全身圖、闊嘴鷸沿用 0141 全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN **易危 VU**（三代間下降 30–49%）；香港屬 Category I，春季最常見的過境濱鷸，最高 10,982 隻（2007-04-17），秋季僅為春季一小部分。",
+    "只交付 aviandex/0143.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

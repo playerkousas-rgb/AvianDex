@@ -1,0 +1,125 @@
+{
+  "id": "0132",
+  "name": "小杓鷸",
+  "scientificName": "Numenius minutus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Numenius minutus adult: 28-34 cm, a small slim curlew resembling a miniature Whimbrel but paler overall, with a small head and short neck. Bill is smaller and straighter than a Whimbrel's, with a more extensive pinkish base and a dark tip. Pale lores and pale median crown stripes give a weaker head pattern than Whimbrel; upperparts are warm buff-brown with fine pale streaking and neatly pale-fringed feathers; chest streaking is fine; belly whitish. Legs are pink. In flight the pale belly to undertail coverts and barred underwings are distinctive and it lacks white on the lower back and rump. It forages for invertebrates in short grass and is rarely seen on intertidal mudflats.",
+  "similarSpecies": [
+    {
+      "zh": "中杓鷸",
+      "scientificName": "Numenius phaeopus",
+      "asset": "whimbrel.png",
+      "framing": "whole-bird",
+      "distinction": "中杓鷸體型較大、頭較大、嘴較長而基部粗鈍且下喙有折角，粉紅色基部範圍小，頭部三條深色縱紋對比強，腳藍灰，飛行時下背多為白色；本種體型小、嘴短而直、腳粉紅、飛行時無白色下背。"
+    },
+    {
+      "zh": "白腰杓鷸",
+      "scientificName": "Numenius arquata",
+      "asset": "curlew.png",
+      "framing": "whole-bird",
+      "distinction": "白腰杓鷸體型大得多、嘴極長而下彎均勻、腳藍灰、整體偏灰褐；本種只是小型的杓鷸，嘴短、腳粉紅、體色偏淡皮黃。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.59,
+      0.06,
+      0.8,
+      0.28
+    ],
+    [
+      0.51,
+      0.14,
+      0.72,
+      0.36
+    ],
+    [
+      0.72,
+      0.32,
+      0.96,
+      0.62
+    ],
+    [
+      0.33,
+      0.5,
+      0.63,
+      0.9
+    ]
+  ],
+  "featureLabels": [
+    "小頭淡冠紋",
+    "短嘴粉紅基部",
+    "淡羽緣上體",
+    "粉紅腳"
+  ],
+  "featureNotes": [
+    "頭小而頸短，中央冠紋及眼先都偏淡，整體頭部對比遠弱於中杓鷸（第1圈取自近景圖，實際可見）。",
+    "嘴較短而直，粉紅色基部範圍大、末端深色；中杓鷸的嘴更長、基部粗鈍而下彎更明顯（第2圈取自近景圖，實際可見）。",
+    "上體淡皮黃褐色，羽片有清楚的淡色羽緣與細縱紋，整體比中杓鷸淡（第3圈取自近景圖，實際可見）。",
+    "腳粉紅色，是與中杓鷸（藍灰腳）最直接的野外分辨點（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "KOR",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IND",
+      "IDN",
+      "AUS",
+      "PNG",
+      "KAZ",
+      "UZB"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011600",
+      "use": "HKBWS substantive read: Category I passage migrant, scarce in spring and rare in autumn, with one winter record; 28-34 cm, resembles a small Whimbrel but paler overall with small head, short neck, more extensive pinkish base to a smaller and straighter bill, paler lores, paler median crown stripes, finer chest streaking, dark underwings and pink legs, and in flight the pale belly to undertail coverts plus barred underwings are distinctive while it lacks white on the lower back and rump; flight call higher-pitched and less forceful than Whimbrel in short hesitant bursts of 2-3 notes; almost 50% of records before 1998 were at Kai Tak in 1974-79 surveys of its preferred short grass, only two at Chek Lap Kok since because of much lower survey intensity, and since 1999 the favoured site has been Mai Po NR with most other records at Long Valley and other lowland New Territories sites, and it appears most birds may overfly the south China coast to inland staging areas or migrate east of Hong Kong; most records in spring mainly the second half of April and first half of May with extremes 5 April 2014 and 2 June 1978, autumn records 26 September to 29 October involving up to four birds though only singles this century, and one winter bird on a golf course at Chek Lap Kok 18-25 December 2013; an exceptional 1985 influx gave a peak of 50 at Tsim Bei Tsui on 28 April, next highest 16 at Kai Tak on 12 May 1978, and this century's highest is seven at Mai Po on 1 May 2020; first recorded 11 May 1952 and not again until 1974, then annually at Kai Tak until 1979; forages for invertebrates in grassy areas and is rarely seen on intertidal mudflats; monotypic, breeding in northeast Siberia between about 100E and 165E south to 65N and wintering in Australia, a rare migrant through much of China; IUCN Least Concern with stable trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011500",
+      "use": "HKBWS Eurasian Whimbrel comparison: larger, longer and heavier kinked bill with a smaller pinkish base, strong dark lateral crown stripes and eye stripe, blue-grey legs, white lower back in flight."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對小頭淡冠紋、短嘴大範圍粉紅基部、淡羽緣上體及粉紅腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意（中杓鷸、白腰杓鷸各自新繪），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形；本種只在東北西伯利亞繁殖、在澳洲越冬，中途經過東亞，綠色國家包含過境範圍而非繁殖或越冬專屬。",
+    "IUCN 無危、趨勢穩定；香港屬 Category I，春季（4 月下半月至 5 月上半月）為主、秋季罕見，喜短草草地，歷史上幾乎半數紀錄來自啟德機場。",
+    "只交付 aviandex/0132.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "id": "0142",
+  "name": "尖尾濱鷸",
+  "scientificName": "Calidris acuminata",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "illustrationTaxon": "Calidris acuminata in breeding plumage: 17-22 cm, medium in size with the female slightly smaller; warm brown upperparts with a dark cap and contrasting pale supercilium, rather dense mottling on the breast that thins out on the lower chest and upper belly (not a sharp division as on Pectoral Sandpiper), a neat white orbital ring, yellowish to brownish legs and a paler base to the blackish bill. Juveniles have a bright buff chest, buff flanks and chestnut and whitish fringes on the upperparts, while non-breeding birds are dull and greyish with dense spotting on the chest and a slightly more obvious boundary between the white belly and upper chest. It is unobtrusive, often occurring singly or in small scattered groups, and often forages among vegetation.",
+  "similarSpecies": [
+    {
+      "zh": "闊嘴鷸",
+      "scientificName": "Calidris falcinellus",
+      "asset": "broad-billed.png",
+      "framing": "whole-bird",
+      "distinction": "闊嘴鷸嘴較長而闊、末端明顯下彎，頭部靠分叉淡眉紋與深色側冠紋形成的強烈條紋，腳短而黑；本種嘴較直、腳黃褐、頭部是深色頭頂配單一淡眉紋。"
+    },
+    {
+      "zh": "流蘇鷸",
+      "scientificName": "Calidris pugnax",
+      "asset": "ruff.png",
+      "framing": "whole-bird",
+      "distinction": "流蘇鷸身體大而頭小、頸長、嘴基厚而微下彎、腳由黃到橙；本種比例勻稱、嘴較短直、腳黃褐色，胸部斑點密集而下腹轉白。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.54,
+      0.27,
+      0.78,
+      0.51
+    ],
+    [
+      0.62,
+      0.12,
+      0.86,
+      0.36
+    ],
+    [
+      0.24,
+      0.27,
+      0.56,
+      0.56
+    ],
+    [
+      0.4,
+      0.59,
+      0.7,
+      0.87
+    ]
+  ],
+  "featureLabels": [
+    "黑嘴淡基部",
+    "深色頭頂淡眉",
+    "密斑胸部",
+    "黃褐色腳"
+  ],
+  "featureNotes": [
+    "嘴呈黑色而基部較淡，長度中等、略直；與闊嘴鷸明顯下彎的闊嘴不同（第1圈取自近景圖，實際可見）。",
+    "深色頭頂與淡色眉紋形成對比，眼周有整齊的白色眼圈，是本種最好認的頭部特徵（第2圈取自近景圖，實際可見）。",
+    "胸部斑點密集，向下在胸下部與上腹逐漸稀疏，沒有胸鷸那種刀切般的分界線（第3圈取自全身圖，實際可見）。",
+    "腳黃色至黃褐色，長度中等；本種常單獨或少數散開活動，並多在植被間覓食（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "PNG",
+      "AUS",
+      "NZL",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "MMR",
+      "NPL",
+      "KHM",
+      "LAO",
+      "BRN",
+      "ARE",
+      "OMN",
+      "SAU",
+      "IRN",
+      "KAZ",
+      "USA",
+      "CAN"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012600",
+      "use": "HKBWS substantive read: Category I, passage migrant common in spring but scarce in autumn and less common in spring than formerly; 17-22 cm, medium in size with the female slightly smaller, warm brown upperparts with a dark cap and contrasting pale supercilium, rather dense mottling on the breast that thins out on the lower chest and upper belly rather than forming the sharp division of Pectoral Sandpiper, a neat white orbital ring, yellowish to brownish legs and a paler base to the blackish bill; juveniles with a bright buff chest, buff flanks and chestnut and whitish fringes on the upperparts; non-breeding plumage dull and greyish with dense spotting on the chest and a slightly more obvious boundary between the white belly and upper chest; calls a mono- or multi-syllabic 'chreep' or 'chirireep'; occurs on the intertidal mudflats of Deep Bay and adjacent areas such as Mai Po NR and commercial fish ponds but more than many other shorebird species passing through Hong Kong it uses freshwater wetland habitat such as marsh and wet agricultural areas, and has occurred away from Deep Bay at Long Valley, Chek Lap Kok, the disused Kai Tak runway, Shuen Wan, Pui O, Wang Tong and Shui Hau on Lantau and on Peng Chau, Tung Ping Chau and Po Toi; primarily a spring passage migrant from the last week of March to the first week of June with extreme dates 22 March 1998 and 10 June 2018, main passage during the first three weeks of May peaking in the second week and numbers very low after the third week; from 1998 to 2020 peak spring counts were generally below 100 but in five years ranged from 170 to 300, with the highest count in Hong Kong 300 on 10 May 2004; autumn passage weak and mainly in August and September with the earliest on 17 July 2016 and the latest on 2 December 1994, the highest autumn count 48 on 23 August 2005 although most records are of three birds or fewer; juveniles from 20 August to 26 October and during 9-24 November while adults are generally earlier from 29 July to 1 October; first recorded in April 1953; three birds bearing Australian leg-flags noted up to spring 1998; unobtrusive, often occurring singly or in small scattered groups and often foraging among vegetation; monotypic, breeding in northeast Siberia along the coast of the East Siberian Sea between the Lena and Kolyma River deltas and wintering in Australasia and Papua New Guinea; IUCN Vulnerable with a population decreasing by approximately 45% over three generations due to habitat degradation, pollution and climate change."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012500",
+      "use": "HKBWS Broad-billed Sandpiper comparison: a longer broader bill obviously decurved in its distal third, a split supercilium and short black legs, which contrast with Sharp-tailed Sandpiper's straighter bill, single pale supercilium and yellowish legs."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對黑嘴淡基部、深色頭頂配淡眉、密斑胸部及黃褐色腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意（闊嘴鷸沿用 0141 全身圖、流蘇鷸沿用 0140 全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN **易危 VU**（三代間約下降 45%）；香港屬 Category I，春季常見（5 月第二週高峰）、秋季稀少，最高 300 隻（2004-05-10），近年春季數量下降。",
+    "只交付 aviandex/0142.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

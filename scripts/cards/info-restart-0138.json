@@ -1,0 +1,144 @@
+{
+  "id": "0138",
+  "name": "大濱鷸",
+  "scientificName": "Calidris tenuirostris",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "EN",
+    "zh": "瀕危"
+  },
+  "illustrationTaxon": "Calidris tenuirostris adult in breeding plumage: 26-28 cm, short-legged and rather stocky, with a fairly thick bill longer than the head length. Adult breeding plumage has a uniform grey streaked head, a dark grey breast band breaking up into irregular spots along the flanks, orange-brown blotches in the upper scapulars and grey-brown mottled upperparts. In flight it shows a narrow wing bar, a dark patch on the outer wing formed by the greater primary coverts, and a whitish rump and uppertail coverts. Birds in non-breeding plumage are overall greyish and uniform with coarse chest streaking; juveniles have pale fringes and dark shaft streaks on the wing coverts. Females are less well marked than males. Great Knots are gregarious when numbers allow but can be surprisingly inconspicuous among other shorebirds, and the typical foraging call is a flat or modulated tern-like 'kerrr'.",
+  "similarSpecies": [
+    {
+      "zh": "黑尾塍鷸",
+      "scientificName": "Limosa limosa",
+      "asset": "godwit.png",
+      "framing": "whole-bird",
+      "distinction": "黑尾塍鷸嘴長而直、腳長得多、頸與腳比例修長，繁殖羽胸及脅大片鏽橙色；本種矮壯短腳、嘴較短而厚、上背只有橙褐色斑塊而非大片鏽橙。"
+    },
+    {
+      "zh": "翻石鷸",
+      "scientificName": "Arenaria interpres",
+      "asset": "turnstone.png",
+      "framing": "whole-bird",
+      "distinction": "翻石鷸更矮壯、嘴短而呈楔形、腳橙紅，繁殖羽黑白頭頸配鏽橙肩羽；本種腳深色、嘴較長而厚、頭頸灰色縱紋而無黑白拼色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.52,
+      0.23,
+      0.72,
+      0.43
+    ],
+    [
+      0.63,
+      0.115,
+      0.85,
+      0.335
+    ],
+    [
+      0.8,
+      0.28,
+      1.0,
+      0.56
+    ],
+    [
+      0.31,
+      0.6,
+      0.64,
+      0.86
+    ]
+  ],
+  "featureLabels": [
+    "厚而較長的嘴",
+    "灰色縱紋頭部",
+    "橙褐肩羽斑",
+    "深色短腳"
+  ],
+  "featureNotes": [
+    "嘴比頭長而較厚，是與其他濱鷸屬（多數嘴細短）最直接的分別（第1圈取自近景圖，實際可見）。",
+    "頭部均勻灰色並佈滿細縱紋，沒有明顯冠紋或眉紋（第2圈取自近景圖，實際可見）。",
+    "上背肩羽有橙褐色斑塊，是繁殖羽辨識重點；雌鳥斑紋較弱（第3圈取自近景圖，實際可見）。",
+    "腳相對身體明顯短，站姿低矮結實，配合短頸厚身（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "PNG",
+      "AUS",
+      "NZL",
+      "IND",
+      "BGD",
+      "LKA",
+      "MMR",
+      "KHM",
+      "LAO",
+      "BRN",
+      "ARE",
+      "OMN",
+      "SAU",
+      "IRN",
+      "PAK",
+      "KAZ",
+      "MNG",
+      "USA",
+      "CAN",
+      "GBR",
+      "NLD",
+      "DEU",
+      "FRA",
+      "ESP"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012200",
+      "use": "HKBWS substantive read: Category I, passage migrant and scarce winter visitor; 26-28 cm, short-legged and rather stocky with a fairly thick bill longer than the head length; in flight a narrow wing bar, a dark patch on the outer wing formed by the greater primary coverts and a whitish rump and uppertail coverts; adult breeding plumage with a uniform grey streaked head, a dark grey breast band breaking up into irregular spots along the flanks and orange-brown in the upper scapulars, females less well-marked; non-breeding birds overall greyish and uniform with coarse chest streaking; juveniles with pale fringes and dark shaft streaks on the wing coverts; typical foraging call a flat or modulated tern-like 'kerrr'; most records from Deep Bay mudflats and adjacent Mai Po roosts with only one record on commercial fish ponds, and up to two on nine occasions at Cape D'Aguilar, Castle Peak, Sha Tau Kok, Kai Tak, Shui Hau, Tung Ping Chau and Sai Kung, plus birds in flight over Chek Lap Kok and southern waters with the highest count 49 near Po Toi on 27 April 2011; spring passage relatively early compared with other shorebirds, peaking in the first two weeks of April with the highest count 560 on 8 April 2001, numbers generally low in the last week of April and much of May but a small influx of presumed first-summer birds in the final week of May, Deep Bay not being the preferred spring stopover so many birds make landfall at Hangzhou Bay and the Yangtze delta and the greatest numbers occur here when strong easterly winds affect the region, and rather few spend the whole summer with July records in only two years this century; most autumn birds are juveniles, first appearing in the last week of August, with passage to the third week of October peaking in the middle two weeks of September and the highest count 98 on 17 September 2009; birds present in early November seem to remain for the winter, and since the first winter record in 1985-86 counts have gradually increased with more than 20 birds in most years and a highest winter count of 112 on 11 February 2016, with Sung et al. (2021) concluding the wintering population increased from 1998 to 2017; first noted in Hong Kong on 21 April 1956; gregarious when sufficient numbers are present but can be surprisingly inconspicuous among other shorebirds, occasionally flocks are noted calling and flying off on northward migration in the early evening; monotypic, breeding in a relatively small area of the Chukotka peninsula in northeast Siberia and wintering coastally in southeast Asia, Indonesia, New Guinea and Australia as well as disjunct sites in India and the Middle East; IUCN Endangered with a very rapidly decreasing trend due to reclamation of non-breeding stopover grounds."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/012000",
+      "use": "HKBWS Black-tailed Godwit comparison: a much longer-legged, longer-billed wader of taller build, which is why it serves as the size-and-structure contrast for Great Knot."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對厚而較長的嘴、灰色縱紋頭部、橙褐肩羽斑及深色短腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意（黑尾塍鷸沿用 0136 比較鳥、翻石鷸沿用 0137 全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN **瀕危 EN**、族群急速下降（過境停歇地填海為主因）；香港屬 Category I，春季過境偏早，最高 560 隻（2001-04-08），冬季最高 112 隻（2016-02-11）。",
+    "只交付 aviandex/0138.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

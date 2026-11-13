@@ -1,0 +1,138 @@
+{
+  "id": "0128",
+  "name": "東方鴴",
+  "scientificName": "Anarhynchus veredus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Anarhynchus veredus adult male in breeding plumage: a tall, long-legged, long-winged, elegant plover, 22-25 cm; the male has a very pale, almost whitish head and neck with a brown hind crown, and a rusty upper chest that darkens to a blackish lower border; yellowish-orange legs and a relatively long, slim bill. Females and juveniles are brownish-buff on the head and chest with a pale supercilium, dark crown and dull legs, and both show pale fringes to the upperparts, broader on juveniles. It is a bird of short grass and other dry open country, not normally seen on intertidal mudflats.",
+  "similarSpecies": [
+    {
+      "zh": "太平洋金斑鴴",
+      "scientificName": "Pluvialis fulva",
+      "asset": "golden-plover.png",
+      "framing": "whole-bird",
+      "distinction": "金斑鴴全身密佈金黃斑點的黑背、黑臉黑腹，白側帶由額一直伸延到胸側；本種上體淡褐無斑點，頭頸近白，只有上胸一段鏽橙帶黑邊，下體白。"
+    },
+    {
+      "zh": "鐵嘴沙鴴",
+      "scientificName": "Anarhynchus leschenaultii",
+      "asset": "sand-plover.png",
+      "framing": "whole-bird",
+      "distinction": "鐵嘴沙鴴嘴粗長（長過頭）、腳長而淡綠灰、胸帶栗褐而界線清晰、常在潮間帶泥灘；本種嘴較細、腳黃橙、上胸鏽橙且下緣帶黑、喜短草旱地。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.3255,
+      0.1074,
+      0.5599,
+      0.459
+    ],
+    [
+      0.1139,
+      0.2197,
+      0.3743,
+      0.6104
+    ],
+    [
+      0.3906,
+      0.5859,
+      0.6445,
+      0.9668
+    ],
+    [
+      0.319,
+      0.638,
+      0.622,
+      0.941
+    ]
+  ],
+  "featureLabels": [
+    "淡白頭頸",
+    "細長嘴",
+    "鏽橙上胸",
+    "黃橙長腳"
+  ],
+  "featureNotes": [
+    "頭頸近白、額及眉紋淡白，與褐色後冠成對比；雄鳥繁殖羽最白（第1圈取自頭部特寫，實際可見）。",
+    "嘴細長而全黑，是本種與金斑鴴（嘴較短粗）分別之一（第2圈取自頭部特寫，實際可見）。",
+    "上胸一段鏽橙色，下緣有一條黑色窄邊，是本種最容易一眼認出的特徵（第3圈取自頭部特寫，實際可見）。",
+    "腳黃橙色而長，配合高挑體態；雌鳥及幼鳥腳較暗淡（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "TWN",
+      "AUS",
+      "IDN",
+      "TLS",
+      "PNG",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "LAO",
+      "KHM",
+      "MMR",
+      "BRN",
+      "IND",
+      "BGD",
+      "NPL",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "TJK",
+      "KGZ",
+      "PAK",
+      "AFG"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/011200",
+      "use": "HKBWS substantive identification/range/conservation read: Category I passage migrant in grassland and other dry open country and the Deep Bay area, scarce in spring and rare in autumn; 22-25cm; breeding-plumage male very pale almost whitish head and neck with brown hind crown and rusty upper chest darkening to a blackish lower border; tall long-legged long-winged elegant plover with yellowish-orange legs and relatively long slim bill; female and juvenile brownish-buff on head and chest with pale supercilium, dark crown and dull legs, pale fringes to upperparts broader on juveniles; call a moderately high-pitched 'chip' in flight; up to 1998 about 85% of records from Kai Tak and Chek Lap Kok, now mostly northern New Territories lowlands from Lam Tsuen through Kam Tin and Tsim Bei Tsui to Mai Po and nearby fish ponds plus the Lok Ma Chau MEEA; preferred habitat short grass, also freshwater marsh; spring passage mainly second half of March and first half of April with earliest 5 March 2006 and latest 2 June 1978 and maxima 18 on 22 March 2000 at Chek Lap Kok and 11 on 28 March 1979 at Kai Tak; autumn passage mainly second half of September and first week of October with extremes 27 August 2017 and 27 October 1978 and a maximum of 28 on 24 September 1979 at Kai Tak; not generally seen on intertidal mudflats; monotypic, breeding from southern Siberia through Mongolia to northeast China and wintering in northwest Australia; IUCN Least Concern with unknown trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/011100",
+      "use": "HKBWS Greater Sand-Plover comparison: longer heavier bill, longer pale greenish-grey legs, broad chestnut breast band on the intertidal flats."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對淡白頭頸、細長嘴、鏽橙上胸黑邊與黃橙長腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意（金斑鴴、鐵嘴沙鴴各自新繪），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危、趨勢未知；香港屬 Category I 過境遷徙鳥，春季稀少、秋季罕見，主要見於短草旱地及新界北部低地。",
+    "只交付 aviandex/0128.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

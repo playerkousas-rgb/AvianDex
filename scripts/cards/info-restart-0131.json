@@ -1,0 +1,142 @@
+{
+  "id": "0131",
+  "name": "中杓鷸",
+  "scientificName": "Numenius phaeopus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Numenius phaeopus (presumed subspecies N. p. variegatus in Hong Kong) adult in fresh plumage: a large shorebird 37-46 cm long, smaller than Eurasian Curlew with a shorter, basally thicker and blunter bill that curves down with a slight kink to the lower mandible. Head pattern is striking: a pale central crown stripe between contrastingly dark lateral crown stripes, and a dark eye stripe running across the entire loral area in front of the eye. Upperparts brown-grey with pale fringes, the wing coverts patterned more boldly than Eurasian Curlew; underparts pale with fine brown streaking on the breast and flanks, strongest on juveniles. In flight the lower back is usually clean white or has diffuse pale brown barring, and the underwing is heavily barred. Legs blue-grey. It feeds largely on crabs on intertidal mudflats, usually locating prey visually, and often stays until the incoming tide covers the mud.",
+  "similarSpecies": [
+    {
+      "zh": "白腰杓鷸",
+      "scientificName": "Numenius arquata",
+      "asset": "curlew.png",
+      "framing": "whole-bird",
+      "distinction": "白腰杓鷸體型更大更重，嘴更長而下彎均勻、下喙無折角，頭部縱紋較平淡（淡中央冠紋不明顯、無粗黑眼紋），翼覆羽花紋較細；本種嘴較短而基部粗鈍、頭部三條深色縱紋對比強。"
+    },
+    {
+      "zh": "小杓鷸",
+      "scientificName": "Numenius minutus",
+      "asset": "little-curlew.png",
+      "framing": "whole-bird",
+      "distinction": "小杓鷸體型明顯較小、頭小頸短，嘴較短而直、粉紅色基部範圍大，眼先較淡、中央冠紋較淡，胸縱紋較細，腳粉紅，飛行時無白色下背；本種體型較大、嘴較長而下彎、腳藍灰。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.68,
+      0.07,
+      0.9,
+      0.29
+    ],
+    [
+      0.51,
+      0.17,
+      0.72,
+      0.4
+    ],
+    [
+      0.72,
+      0.3,
+      0.96,
+      0.64
+    ],
+    [
+      0.47,
+      0.56,
+      0.7,
+      0.9
+    ]
+  ],
+  "featureLabels": [
+    "頭部縱紋",
+    "下彎長嘴",
+    "粗花紋翼覆羽",
+    "藍灰腳"
+  ],
+  "featureNotes": [
+    "淡色中央冠紋夾在兩條深色側冠紋之間，再加一條橫過整個眼先的深色眼紋，是本種與白腰杓鷸最容易分辨的地方（第1圈取自近景圖，實際可見）。",
+    "嘴長而下彎，基部較粗鈍，下喙中段有輕微折角；白腰杓鷸的嘴更長而彎度均勻（第2圈取自近景圖，實際可見）。",
+    "翼覆羽有粗而清楚的花紋，比白腰杓鷸更醒目；三級飛羽及肩羽有淡色羽緣（第3圈取自近景圖，實際可見）。",
+    "腳藍灰色，中等長度；小杓鷸的腳偏粉紅（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ISL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "GBR",
+      "IRL",
+      "RUS",
+      "USA",
+      "CAN",
+      "MNG",
+      "CHN",
+      "KOR",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "AUS",
+      "NZL",
+      "IND",
+      "LKA",
+      "BGD",
+      "MMR",
+      "ARE",
+      "OMN",
+      "SAU",
+      "KEN",
+      "ZAF",
+      "MDG",
+      "NGA",
+      "GHA"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011500",
+      "use": "HKBWS substantive read: Category I, present all year, common on autumn (most numerous) and spring migration, scarce in summer and winter, on intertidal mudflats; 37-46 cm, smaller than Eurasian Curlew with shorter basally thicker and blunter bill and more striking head pattern from a pale central crown stripe between contrastingly dark lateral crown stripes plus dark eye stripes across the entire loral area; wing coverts patterned more boldly than Eurasian Curlew; in flight lower back usually clean white or diffusely pale brown barred; juveniles with more distinct chest streaking; flight call a distinctive rapid succession of ringing notes; most records and highest counts from Deep Bay mudflats and adjacent roosts mainly Mai Po NR, regularly at coastal sites such as Shuen Wan (highest 33) and Lantau, migration over the sea with an exceptional 320 on 25 April 2012 and 90 on 24 April 2005 near Po Toi, rare on commercial fish ponds; autumn passage largely second week of August to third week of September with highest numbers in the second half of August and a record 336 on 26 August 2018; by mid-November remaining birds are likely winterers, best winter 2017-18 with a peak of 151 on 18 February 2018 versus a next-highest 31 in 2008-09, with eight or more in most winters since 2010; spring from mid-March with most in the second half of April and first week of May and a highest spring count of 131 on 24 April 2003; usually 20-30 over-summering birds with a maximum of 76 on 3 July 2020 and 81 on 3 June 2021; one ringed at Mai Po was shot on Sakhalin; feeds on crabs, usually locating prey visually; five subspecies with N. p. variegatus of northeast Siberia presumed to occur in Hong Kong; IUCN Least Concern with decreasing trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/011600",
+      "use": "HKBWS Little Curlew comparison: 28-34 cm, resembles a small Whimbrel but paler overall with small head, short neck, more extensive pinkish base to a smaller and straighter bill, paler lores and median crown stripes, finer chest streaking, dark underwings and pink legs, and no white on lower back or rump in flight; IUCN Least Concern with stable trend."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對淡中央冠紋與深色眼紋、下彎且下喙有折角的長嘴、粗花紋翼覆羽及藍灰腳；不是照片，也不是分佈或族群證據。",
+    "兩隻比較鳥均為 AI 生成示意（白腰杓鷸、小杓鷸各自新繪），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工；香港記錄推測屬東北西伯利亞繁殖的 _N. p. variegatus_。",
+    "IUCN 無危、趨勢下降；香港屬 Category I，全年可見，秋季（8 月下半月至 9 月）數量最多，主要在后海灣泥灘及米埔。",
+    "只交付 aviandex/0131.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

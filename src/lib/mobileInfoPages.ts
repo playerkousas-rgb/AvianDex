@@ -13,7 +13,8 @@ export type MobileCardPage = typeof MOBILE_CARD_PAGES[number]['key'] | 'original
  * 手機分頁。
  *
  *  - slim 模板（已登記）→ 插畫／四部位／能力值／分佈圖／易混鳥五頁
- *  - slim 但沒有可信四部位座標（0041–0043）→ 該兩頁換成完整資訊卡
+ *    （0041–0043 也是 slim：三張卡的模組位置與模板一致，照樣切五頁，
+ *      見 infoCards.ts 的 hasFeatureCrops 說明；不要再換成完整資訊卡）
  *  - 舊版完整卡或**未登記但可能已上載**的卡 → 插畫 + 完整資訊卡
  *  - 只有確認 R2 上沒有（canFlipInfoCard 為 false）→ 只有插畫
  *
@@ -22,12 +23,8 @@ export type MobileCardPage = typeof MOBILE_CARD_PAGES[number]['key'] | 'original
  */
 export function mobileCardPages(id: string, infoAvailable = false) {
   if (!canFlipInfoCard(id)) return [MOBILE_CARD_PAGES[0]];
-  if (hasInfoCard(id) && infoCardLayout(id) === 'slim') {
-    if (hasFeatureCrops(id)) return [...MOBILE_CARD_PAGES];
-    /* 0041–0043：座標不可信，四部位與易混鳥兩頁改為整張卡，不硬裁。 */
-    return MOBILE_CARD_PAGES.map(page => page.key === 'features' || page.key === 'similar'
-      ? { key: 'original' as const, zh: '完整資訊卡', en: 'Info card' }
-      : page);
+  if (hasInfoCard(id) && infoCardLayout(id) === 'slim' && hasFeatureCrops(id)) {
+    return [...MOBILE_CARD_PAGES];
   }
   /* 已登記的舊版卡，或未登記但已經成功讀到圖的卡 → 多一頁「完整資訊卡」。
      未登記又未讀到圖時只留插畫，避免每次點圖都翻出一張空頁；要檢查某張卡
