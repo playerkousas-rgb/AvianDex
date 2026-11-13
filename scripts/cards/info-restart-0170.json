@@ -1,0 +1,198 @@
+{
+  "id": "0170",
+  "name": "澤鷸",
+  "scientificName": "Tringa stagnatilis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Tringa stagnatilis, monotypic: 22-26 cm. Slightly larger in body size than Wood Sandpiper but a lot more elegant, with a slim body, longer legs that project well beyond the tail and a longer, finer bill; the plumage most resembles Common Greenshank but the structure differs markedly. The adult in breeding plumage is rather brownish grey above with extensive blackish marks. In winter plumage it is rather plain grey or brownish-grey above, with a generally rather white face whose supercilium extends behind the eye, rather diffusely, highlighting the darker crown. The juvenile has brown upperparts with clear-cut fairly broad pale fringes, notched greater coverts and tertials and white underparts. In flight the white up the back nearly reaches the leading edge of the wing, the feet project substantially behind the tail and the tail is barred more darkly than Common Greenshank's.",
+  "similarSpecies": [
+    {
+      "zh": "青腳鷸",
+      "scientificName": "Tringa nebularia",
+      "asset": "greenshank.png",
+      "framing": "whole-bird",
+      "distinction": "青腳鷸體型大得多、身型結實，嘴較粗厚而微微上翹、基部偏灰，腿較短而偏綠；本種細瘦纖長得多，嘴細直如針而全深色，腿極長，整體像一支插在長腿上的針。"
+    },
+    {
+      "zh": "小黃腳鷸",
+      "scientificName": "Tringa flavipes",
+      "asset": "lesser-yellowlegs.png",
+      "framing": "whole-bird",
+      "distinction": "小黃腳鷸身型較結實、後半身拖得較長，嘴較短而明顯較厚，腳是明亮的黃色；本種身型更單薄、嘴更細長，腳是暗綠灰而不是黃色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.62,
+      0.1,
+      0.95,
+      0.28
+    ],
+    [
+      0.58,
+      0.16,
+      0.9,
+      0.5
+    ],
+    [
+      0.14,
+      0.52,
+      0.52,
+      0.9
+    ],
+    [
+      0.22,
+      0.28,
+      0.58,
+      0.5
+    ]
+  ],
+  "featureLabels": [
+    "細直如針的深色嘴",
+    "偏白的臉與眉紋",
+    "極長的暗綠灰腿",
+    "背上的淡色羽緣"
+  ],
+  "featureNotes": [
+    "嘴細長、筆直，整支都是深色，沒有青腳鷸那種偏灰的基部與微微上翹的弧度——「針」就是本種最好用的第一眼特徵（第1圈取自近景圖，實際可見）。",
+    "臉部整體偏白，白色眉紋延伸到眼後、只是邊緣柔和，因而把較深的頭頂襯托出來；這正是 HKBWS 拿來與青腳鷸比較的一點（第2圈取自近景圖，實際可見）。",
+    "腿極長而細，呈暗綠灰色，站著時明顯伸出尾後，走在水裡像踩高蹺（第3圈取自全身圖，實際可見）。",
+    "非繁殖羽的背部是樸素的褐灰色，肩羽與覆羽只有細淡的羽緣；幼鳥才有較寬較清楚的白邊（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "UKR",
+      "MDA",
+      "ROU",
+      "BGR",
+      "RUS",
+      "KAZ",
+      "CHN",
+      "MNG",
+      "TWN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "VNM",
+      "LAO",
+      "THA",
+      "KHM",
+      "MMR",
+      "MYS",
+      "IDN",
+      "TLS",
+      "PHL",
+      "BRN",
+      "IND",
+      "PAK",
+      "NPL",
+      "BGD",
+      "LKA",
+      "IRN",
+      "IRQ",
+      "SAU",
+      "YEM",
+      "OMN",
+      "ARE",
+      "QAT",
+      "KWT",
+      "JOR",
+      "ISR",
+      "SYR",
+      "TUR",
+      "GEO",
+      "ARM",
+      "AZE",
+      "EGY",
+      "SDN",
+      "ERI",
+      "ETH",
+      "DJI",
+      "SOM",
+      "KEN",
+      "UGA",
+      "TZA",
+      "RWA",
+      "BDI",
+      "COD",
+      "COG",
+      "GAB",
+      "GNQ",
+      "CMR",
+      "NGA",
+      "BEN",
+      "TGO",
+      "GHA",
+      "CIV",
+      "LBR",
+      "SLE",
+      "GIN",
+      "GNB",
+      "SEN",
+      "GMB",
+      "MRT",
+      "MLI",
+      "BFA",
+      "NER",
+      "TCD",
+      "CAF",
+      "ZMB",
+      "ZWE",
+      "MWI",
+      "MOZ",
+      "ZAF",
+      "NAM",
+      "BWA",
+      "AGO",
+      "MDG",
+      "AUS",
+      "PNG",
+      "LBY",
+      "DZA",
+      "MAR",
+      "TUN"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/015100",
+      "use": "HKBWS substantive read: Category I, abundant in autumn, winter and spring though with evidence of a decline in all seasons since 2012, and rare in summer, largely occurring in the Deep Bay area; 22-26 cm, slightly larger in body size than Wood Sandpiper though a lot more elegant with a slim body, longer legs projecting well beyond the tail and a longer finer bill, the plumage most resembling Common Greenshank but the structure differing markedly; the adult in breeding plumage is rather brownish grey above with extensive blackish marks, while in winter plumage it is rather plain grey or brownish-grey above with a generally rather white face and a supercilium that extends behind the eye rather diffusely, highlighting the darker crown; the juvenile has brown upperparts with clear-cut fairly broad pale fringes, notched greater coverts and tertials and white underparts; in flight the white up the back nearly reaches the leading edge of the wing, the feet project substantially behind the tail and the tail is barred more darkly than Common Greenshank; the typical call is a sharp tyoo falling steeply in pitch and reminiscent of Common Redshank, with an agitation or alarm series of notes often given when flushed; the majority of records are from the intertidal mudflats of Deep Bay and adjacent roosting areas primarily at Mai Po NR, also mainly at the freshwater wetland of Long Valley where up to nine are recorded annually though up to 25 historically, frequently in small numbers in commercial fish pond areas such as San Tin, formerly at Shuen Wan with up to three in spring and autumn but not since 2002, up to three on Lantau mainly at Shui Hau, and rarely at Kam Tin, Lam Tsuen, Luk Keng, Sha Tin, Sai Kung, Castle Peak, Po Toi (including a count of 15) and the former Kai Tak airport; it is generally obvious from late August to early May with the highest numbers on passage, autumn migrants present from the second week of August and increasing to peak passage during the second half of October with the highest counts 2,521 on 30 September and 16 October 2008 and numbers falling sharply from the first week of November; the peak winter count on the HK side of Deep Bay is 2,249 on 7 December 2003 and the highest midwinter count for the whole of Deep Bay 2,884 on 16 January 2011, with relatively high numbers wintering from winter 2002/03 to 2011/12 before returning to 1990s levels of usually 700-1,000 birds; spring migration is under way by the second week of March with the main passage from the middle of March to the third week of April and the highest count 3,192 on 10 April 2009, the species being notable for the sharp decrease in numbers after the third week of April, peak spring and autumn counts from systematic surveys since 1998 rising to a peak from autumn 2008 to spring 2011 and then falling steeply to a lower level lasting to autumn 2016 with another fall since, and the highest midsummer count being 29 though most years have only single figures; first reported by Walker (1958) with one on 8 May 1956, and Macfarlane and Macdonald (1966) described it as occurring in small numbers in spring from 9 February to 27 May and in groups of up to 30 between 22 August and 18 December; it usually walks through shallow water picking items from the surface, groups may forage together dashing through the water with bill tip below the surface, forms large flocks at roost on the intertidal mudflat or at inland roosting areas, and is usually one of the last species to leave the intertidal area as the tide rises; monotypic, breeding largely between 40 and 60 degrees north from the Black Sea east through southern Russia, northern Kazakhstan and northeast China to southern Ussuriland, and wintering across much of sub-Saharan Africa, the Middle East, western parts of the Indian subcontinent, northeast India, western Indochina, parts of southeast Asia and Indonesia to Australia; in China it breeds in the northeast and winters along the south coast including Hainan and Taiwan; IUCN Least Concern with a decreasing population trend."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對細直全深色的嘴、眼後柔和延伸的白眉、極長而暗綠灰色的腿及樸素的褐灰背羽；單型種。",
+    "兩隻比較鳥均為 AI 生成示意（青腳鷸沿用 0160／0167 已核對的全身圖、小黃腳鷸沿用 0169 已核對的全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "插圖取非繁殖羽：繁殖羽背部會轉為褐灰並佈滿黑色斑，與青腳鷸更難分；香港見到的也多為非繁殖羽個體。",
+    "飛行時的白色背帶與伸出尾後的長腳、尾羽橫斑較青腳鷸深——這些要在飛行中才看得清，卡面只放靜態站姿。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危 LC，但趨勢為下降；香港屬 Category I，秋季、冬季與春季數量豐富，但 2012 年後各季節都有下降跡象，夏季少見。",
+    "覓食時常走過淺水從水面啄食，成群時會一起低頭衝過水面——這行為拍不進圓圈，只寫在說明。",
+    "只交付 aviandex/0170.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
