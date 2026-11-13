@@ -1,0 +1,135 @@
+{
+  "id": "0165",
+  "name": "灰尾漂鷸",
+  "scientificName": "Tringa brevipes",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Tringa brevipes, monotypic: 23-27 cm, a long-winged, long-bodied but short-legged, rather grey shorebird with yellow legs and an extensive paler base to the bill. Adult breeding has whitish underparts with narrow brown streaks or bars on the supercilium, throat, chest and flanks, greyish upperpart feathers with indistinct paler fringes, a dark eye-stripe from the bill to a short way behind the eye, and a pale, dark-streaked supercilium below a plain grey crown. Juveniles have pale spotting on the scapulars, tertials and wing coverts and a more obvious supercilium. In flight it appears rather plain apart from narrow white tips to the greater coverts and narrowly barred uppertail coverts.",
+  "similarSpecies": [
+    {
+      "zh": "磯鷸",
+      "scientificName": "Actitis hypoleucos",
+      "asset": "common-sandpiper.png",
+      "framing": "whole-bird",
+      "distinction": "磯鷸體型明顯較小，背部暖褐而帶細橫斑，翼與背之間有一塊尖長的白楔，尾長伸出翼尖，覓食時不停上下擺尾；本種背部一片素淨的灰色、翼尖長而齊，站姿低矮，腿短呈黃色。"
+    },
+    {
+      "zh": "青腳鷸",
+      "scientificName": "Tringa nebularia",
+      "asset": "greenshank.png",
+      "framing": "whole-bird",
+      "distinction": "青腳鷸體型大得多、腿很長、頸長而挺，背部有明顯的白色楔形與深色羽心，嘴較粗且微微上翹；本種體型較小、腿短、背部無花紋，嘴基大片淡色、嘴端深色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.62,
+      0.26,
+      1.0,
+      0.5
+    ],
+    [
+      0.6,
+      0.25,
+      0.88,
+      0.47
+    ],
+    [
+      0.24,
+      0.27,
+      0.52,
+      0.47
+    ],
+    [
+      0.36,
+      0.52,
+      0.6,
+      0.74
+    ]
+  ],
+  "featureLabels": [
+    "嘴基大片淡色",
+    "深色眼線與灰眉",
+    "素淨無紋的灰背",
+    "黃色短腿"
+  ],
+  "featureNotes": [
+    "嘴中長，基部一大片淡灰白色、只有末端深色——這種「大比例淡色嘴基」是本種與多數鷸類不同的地方（第1圈取自近景圖，實際可見）。",
+    "一道深色眼線由嘴基延伸到眼後少許即止，其上為淡灰色眉紋，眉紋下方另有細褐縱紋，而頭頂則是素淨的灰色（第2圈取自近景圖，實際可見）。",
+    "背與翼上是一片幾乎無花紋的均勻灰色，只帶極淡的羽緣——與灰尾漂鷸同屬的鷸類中，只有牠與小青腳鷸有這種素淨的灰背（第3圈取自全身圖，實際可見）。",
+    "腿短而呈暗黃色，配上長身長翼的身體，整體顯得低矮、貼近地面（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "TWN",
+      "KOR",
+      "JPN",
+      "PRK",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "BRN",
+      "TLS",
+      "THA",
+      "KHM",
+      "MMR",
+      "IND",
+      "LKA",
+      "BGD",
+      "PAK",
+      "PNG",
+      "AUS",
+      "NZL",
+      "FJI",
+      "SLB",
+      "VUT",
+      "NCL"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/014800",
+      "use": "HKBWS substantive read: Category I, a passage migrant to intertidal mudflats and rocky shores, common in spring but scarce in autumn, with numbers having declined since the mid-1990s; 23-27 cm, a long-winged, long-bodied but short-legged rather grey shorebird with yellow legs and an extensive paler base to the bill; adult breeding has whitish underparts with narrow brown streaks or bars on the supercilium, throat, chest and flanks, greyish upperpart feathers with indistinct paler fringes, a dark eye-stripe from the bill to a short way behind the eye and a pale dark-streaked supercilium below a plain grey crown; juveniles have pale spotting on the scapulars, tertials and wing coverts and a more obvious supercilium; in flight it appears rather plain apart from narrow white tips to the greater coverts and narrowly barred uppertail coverts; a vocal species that readily calls when flushed or in flight, with a drawn out inflected cheeeoo or a shorter chooo uttered two or three times in succession and a shorter more urgent call in rapid succession when agitated; frequently recorded away from the Deep Bay area compared with most migrant shorebirds, with small numbers at widespread coastal localities on soft mud, sand or rocky coast including Sai Kung, Tolo Harbour and Tung Chung plus The Brothers and Tung Ping Chau, and the highest count away from Deep Bay being 52 at Tai Po on 30 April 1976; much more numerous in spring, with the earliest spring record on 31 March 2012 and an average arrival date of 12 April during 1999-2020, making it the latest of the regularly occurring migrant shorebirds to arrive despite the proximity of wintering birds in the South China Sea; single-figure counts only before the middle of April with a maximum of 80 in the second half of that month, main passage in the first three weeks of May peaking in the third week, the highest counts being 554 on 16 May 1987 with 470 four days later and 442 on 17 May 1994, though the highest this century is much lower at 239 on 16 May 2014; numbers since 1995 have generally been lower than in the 1980s and early 1990s especially allowing for increased recording effort from 1998; a few birds remain in most summers with the highest count 58 on 20 June 2003, autumn passage is noted in August and the first three weeks of September with the highest autumn count 35 on 22 August 1987 though only 18 this century, and the latest record is one at Sai Keng in Tolo Harbour on 23 November 2015; flies with powerful and fluid wing beats when flushed from the coast, usually forages singly and generally pecks at the surface of mud between bursts of fast running though it occasionally probes below the shallow water surface and also takes crabs; monotypic, breeding in two disjunct areas in north central and northeast Siberia, the latter larger and extending from Transbaikalia to Kamchatka and the former in the Putorana Mountains, and wintering coastally from islands in the South China Sea south through the Philippines and the Malay peninsula to Indonesia, New Guinea and Australia with a few reaching New Zealand and Fiji; a migrant through the eastern half of China, wintering in south China including Hainan according to Liu and Chen (2020); IUCN Near Threatened with a decreasing population trend."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對大片淡色的嘴基、深色眼線與灰眉、素淨無紋的灰背及黃色短腿；單型種。",
+    "兩隻比較鳥均為 AI 生成示意（磯鷸沿用 0160／0163 已核對素材、青腳鷸沿用 0160 已核對素材），非等比例；卡上不作完整鑑別檢索表。",
+    "**本種是 IUCN 近危 NT**（趨勢下降），卡上星級因此為 2 星；香港的數量亦由 1990 年代中期起下降。",
+    "野外最易混淆的其實是同屬的小青腳鷸（Tringa guttifer，IUCN 瀕危 EN，香港屬 Category I 稀有的過境鳥）——兩者都有素淨灰背與淡色嘴基，小青腳鷸腿較長且偏黃綠、嘴較粗而兩色較鈍；該種尚未交付卡片，暫只在此註明。",
+    "本種是本港最遲抵達的常見過境鷸類，1999–2020 年平均首見日為 4 月 12 日；主群 5 月首三週，高峰在第三週。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 近危 NT（趨勢下降）；香港屬 Category I，春季常見、秋季稀少的過境鳥，主要見於后海灣，但比多數過境鷸更常在離島與岩岸出現。",
+    "只交付 aviandex/0165.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
