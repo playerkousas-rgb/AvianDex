@@ -1052,3 +1052,18 @@ parent全 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`。top-level uploaded_drive_verifie
 | 0113.avif | 1zRy6bjYA4-HQ_tb-WuvoCDzL1TQ1P3e5 | 127621 | 6a05265444ca346862bbcbc016b8267b | f8b67aed343e75b03c25c1df7e6a4494f5390d048d1aa19b99e03c29ac5e1f6a |
 
 未改 UI／runtime／SW／R2／slim 註冊，無 ZIP。0038–0043 缺口狀態不變，0040 空地圖問題仍待用戶決定。下一張 0114 蠣鷸（HKBWS 0080/009700）。
+
+## 0114 蠣鷸 已完成並上載（下一張 0115 灰斑鴴）
+
+HKBWS 0080/009700 內文（40–48cm、粗壯黑白相間、成鳥上體頭胸全黑、下體白、橙至橙紅厚嘴、紅色眼圈、粉紅腳；第一年冬羽腳暗、嘴尖偏深、覆羽三級飛羽磨損帶褐；飛行時除白色腰、尾及初級次級羽基外全暗；香港鳥為 _H. o. osculans_，另有 _H. o. longipes_ 在新疆西北繁殖；分佈由冰島經歐洲至非洲西北沿岸、中東、印度沿岸、西俄羅斯及哈薩克至東北亞；IUCN **NT 近危、趨勢下降**；香港屬偶發 Category I，2000–2021 年僅數次紀錄，全部在 Deep Bay 泥灘）。
+
+- **素材**：`pixel.png`（全身圖：橙紅厚鑿狀嘴、紅眼、全黑頭頸前胸、白腹、粉紅短壯腳）與 `features.png`（嘴及紅眼圈特寫）均已生成並**逐張讀圖**核對；比較鳥 黑翅長腳鷸（0112 全身圖）與 反嘴鷸（0112 比較鳥圖）。
+- **四圈**：①橙紅厚喙（`features.png` 嘴部，整個舌面及鑿狀尖端入圈，但裁切時曾因 y 上界 1.0156 觸發斷言，改為 `[0.2148,0.3418,0.6576,0.9961]`）②紅眼圈黑頭 ③黑白分明（全身圖胸前黑／腹部白交界；前兩版只框到黑羽或切走白腹，最後用 `[0.362,0.4557,0.6354,0.7292]`）④粉紅壯腳（全身圖兩腿連脛跗，腳掌入圈）。
+- **地圖**：世界底圖 + 73 個部分分佈國家（冰島、歐洲、北非沿岸、中東、南亞沿岸、俄哈、東北亞、東南亞），note 說明 _osculans_ 與 _longipes_ 的分工，且不分繁殖／越冬。
+- **驗證**：AVIF 解碼 1024×1536；bytes 132729、MD5 `84c4f741994e438778e61fbc776da5d9`、SHA256 `abb3e5bd681f22fab67490bed238f75364fd53c2fd9ffd0421539191e95ce93e`，manifest／SHA256SUMS 一致，`manifest.spec` == `scripts/cards/info-restart-0114.json`，`missingScores` 空；地圖綠色像素 9883。上載前 Drive 搜尋 `0114` 0 命中；上載後 parent `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD`，bytes／MD5 與本機一致。
+
+| 新交付 | Drive ID | bytes | MD5 | SHA256 |
+| --- | --- | ---: | --- | --- |
+| 0114.avif | 1uJWaCOcqLZqoLLnN4q5KxAZuirkynWtP | 132729 | 84c4f741994e438778e61fbc776da5d9 | abb3e5bd681f22fab67490bed238f75364fd53c2fd9ffd0421539191e95ce93e |
+
+未改 UI／runtime／SW／R2／slim 註冊，無 ZIP。0038–0043 缺口狀態不變，0040 空地圖問題仍待用戶決定。下一張 0115 灰斑鴴（HKBWS Grey Plover，0080/010400，IUCN VU）。
