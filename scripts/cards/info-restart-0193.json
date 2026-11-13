@@ -1,0 +1,151 @@
+{
+  "id": "0193",
+  "name": "普通海鷗",
+  "scientificName": "Larus canus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Larus canus kamtschatschensis: 40-46 cm, a small gull with a rounded head, a slender slightly drooping bill and relatively long wings. Adults have a white head and underparts, a mid-grey mantle, black wingtips with large white mirrors, a yellow to greenish-yellow bill with no mark in the breeding season but a faint dark band near the tip in winter, a grey-streaked winter head, and dull yellowish-green legs. First-winter birds are brown overall with a neat scaly pattern on the upperparts, pale-fringed wing coverts, dark-centred tertials, dark primaries, a blotched head and chest, a dark tail band that is sometimes all dark, and pink legs that turn greyish in the second year and yellow in adulthood. Second-winter birds have a grey mantle, black wingtips with one or two white mirrors and a dark band near the tip of the bill.",
+  "similarSpecies": [
+    {
+      "zh": "紅嘴鷗",
+      "scientificName": "Chroicocephalus ridibundus",
+      "asset": "black-headed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "紅嘴鷗（37–43 公分）比本種細小一點，但**嘴腳深紅**、繁殖期有整頂深褐頭罩、眼周有一圈完整的白眼圈；本種的嘴是**黃綠至綠黃色**、腳黃綠，眼周沒有白圈。兩者的第一年冬鳥都是褐色，本種上體是**整齊的鱗狀花紋**、嘴基淡而嘴尖一段黑；紅嘴鷗上體較均勻、翼覆羽較少明顯鱗狀邊。"
+    },
+    {
+      "zh": "黑尾鷗",
+      "scientificName": "Larus crassirostris",
+      "asset": "black-tailed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "黑尾鷗（43–51 公分）比本種大、翼長而**尾短**，而且**尾在任何年齡都是全黑或大部分黑**；本種的尾是白色，第一年冬鳥只有一條**深色尾帶**，成鳥完全沒有尾帶。黑尾鷗第一年冬鳥的嘴是淡粉灰配**粗黑嘴尖**，本種第一年冬鳥的嘴是淡色配幼細的黑端，成鳥則是黃嘴、冬季近尖端有一條模糊暗帶。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.33,
+      0.3,
+      0.62,
+      0.68
+    ],
+    [
+      0.12,
+      0.34,
+      0.44,
+      0.66
+    ],
+    [
+      0.47,
+      0.42,
+      0.87,
+      0.82
+    ],
+    [
+      0.66,
+      0.52,
+      0.86,
+      0.77
+    ]
+  ],
+  "featureLabels": [
+    "鱗狀褐翼覆羽",
+    "淡嘴黑嘴尖",
+    "頸胸密集斑紋",
+    "深色尾帶"
+  ],
+  "featureNotes": [
+    "第一年冬鳥的上體是**整齊的鱗狀花紋**：每片褐色羽毛都有淡色邊，遠看像一片片瓦；HKBWS 形容 `kamtschatschensis` 的第一年鳥為 brown with brownish coverts and dark-centred tertials（第1圈取全身圖，翼覆羽的鱗狀邊與下方白色腹部的交界都在圈內）。",
+    "嘴是淡角質色、**尖端一段黑色**，其餘部分沒有成鳥的黃色；成鳥是黃綠至綠黃色的嘴，冬季近尖端只有一條模糊暗帶（第2圈取大頭圖，由黑色嘴尖到淡色嘴基與前額都在圈內）。",
+    "頭與頸**密佈褐色縱紋**，胸側亦有一片斑點，與白色的腹部形成對比；這是本種冬季與第一年鳥的特徵，成鳥冬季亦只有較淡的灰褐條紋（第3圈取大頭圖，頸側縱紋與其下褐色肩羽的接縫都在圈內）。",
+    "尾是白色的，但**尾羽末端有一條清楚的深色尾帶**，中央尾羽的深色更粗；HKBWS 寫 `kamtschatschensis` 第一年鳥的尾帶有時整片深色。成鳥**沒有尾帶**，這是與黑尾鷗最直接的分別（第4圈取全身圖，白色尾羽、深色尾帶與上方深色初級飛羽同時入鏡）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ISL",
+      "GBR",
+      "IRL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "EST",
+      "LVA",
+      "LTU",
+      "POL",
+      "DEU",
+      "DNK",
+      "NLD",
+      "BEL",
+      "FRA",
+      "RUS",
+      "MNG",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "TWN",
+      "HKG",
+      "USA",
+      "CAN"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017000",
+      "use": "HKBWS Common Gull page read in full: Category I, a scarce winter visitor and passage migrant in spring to Deep Bay; nearly all records are from the Deep Bay gull roost, with one off The Brothers on 29 January 2013; the taxon is mostly Larus canus kamtschatschensis, whose first-years are brown then largely grey-mantled with brownish coverts, dark-centred tertials, dark primaries, a blotched head and chest and a dark tail band that is sometimes all dark, while second-winters have a grey mantle, black wingtips with one or two white mirrors and a dark-tipped bill; all records since 1999 fall between 7 January and 28 March apart from 15-16 November 2013, and almost all are singles of first-years with only four second-years; heinei has two records, in March 2009 and January 2021; behaviour, foraging and diet are recorded as no information; IUCN Least Concern with an unknown population trend. The page gives no body length."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016300",
+      "use": "HKBWS Black-headed Gull page read as the first contrast species: 37-43 cm, deep red bill and legs, a complete white eye ring, dark brown breeding hood and black-tipped outer primaries."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016900",
+      "use": "HKBWS Black-tailed Gull page read as the second contrast species: 43-51 cm, a short-tailed gull whose tail is all or largely black at every age, with a pale greyish-pink bill and broad black tip in first-winter birds."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 海鷗 Larus canus is listed as 183, Category I, with no IUCN code in the list, i.e. Least Concern, matching the HKBWS species page."
+    },
+    {
+      "url": "https://zh.wikipedia.org/wiki/普通海鸥",
+      "use": "Chinese Wikipedia read only to resolve the length conflict: adults are 40-46 cm with a 110-125 cm wingspan, so the 110-125 cm figure that this app stored as body length is the wingspan. The same page notes that the Chinese name was changed from 海鷗 to 普通海鷗 in the 2022 China Bird List, and describes the nominate race's darker, more extensive wingtip black and dark iris."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對鱗狀褐翼覆羽、淡嘴黑嘴尖、頸胸密集斑紋、深色尾帶。",
+    "畫的是**第一年冬鳥**：HKBWS 明寫 1999 年後香港的紀錄**幾乎全部是第一年鳥**、只有四筆第二個冬季鳥，而 1 月至 3 月是唯一穩定的出現期——所以卡面用第一年冬鳥的褐色鱗狀上體與深色尾帶，而**不是**成鳥的白頭灰背、白尾與黃嘴。成鳥與第二個冬季的樣子寫在 notes 沒有畫。",
+    "**已修正來源錯誤（身長）**：app 原本把 `110–125 cm` 當作體長（`cardCopy.length`、`cardDetails.zh/en.length`、`explorerIndex.len` 117.5），但那是**翼展**；本種成鳥體長是 **40–46 cm**（HKBWS 該頁沒有給體長，中文維基同頁寫明「成年 40–46 cm，翼展 110–125 cm」）。已把 `length` 改為 `40–46 cm`、`explorerIndex.len` 改為 43，並重跑 `build-dex-scores.mjs` 與 `build-filter-traits.mjs`：評分由 **`v 5.0／o 3.1`** 變成 **`v 4.0／o 2.9`**（其餘四軸不變），`filterTraits.lengthCm` 由 117.5 變成 43。**只動 0193 一筆**，其他已修正的 IUCN 沒有被覆蓋。",
+    "**IUCN 正確**：`cardDetails.zh.json` 0193 已是「無危 LC」，與 HKBWS（Least Concern、趨勢 unknown）及 HK List 2024（183 號，無代碼）一致 → 沒有改 IUCN、沒有改 IUCN 相關分數。",
+    "分數照重算後的值：**i 2.0／a 2.3／v 4.0／r 4.8／c 1.2／o 2.9**，六軸齊全、**沒有 `vEst`**（體長現在是實測值而不是由翼長估算，卡面不會出現「觀賞值含體長估算」）。食性 tag `omnivore`、棲地 tag 空，所以適應力只有 2.3；研究值 4.8 是因為遷徙、語源、要點三項都有資料。",
+    "**名稱差異**：app 用「普通海鷗」（跟 2022 年《中國鳥類名錄》的新名），HKBWS 與 HK List 2024 用「海鷗」。卡面照 app 用「普通海鷗」、學名 `Larus canus`，notes 記下這個差異，**沒有改 app 名稱**。",
+    "香港紀錄照 HKBWS：Category I，**后海灣的罕見冬候鳥兼春季過境鳥**；幾乎所有紀錄都來自后海灣的鷗群棲地，只有 2013-01-29 在大欖涌外海（The Brothers）一筆；1999 年後**全部紀錄落在 1 月 7 日至 3 月 28 日**（另有 2013-11-15/16 一筆例外），幾乎全部是單隻的第一年鳥，第二個冬季只有四筆；指名亞種 `heinei` 只有兩筆（2009 年 3 月、2021 年 1 月）。行為、覓食與食性 HKBWS 寫「No information」。",
+    "叫聲照 app／維基：高音的「笑聲」；HKBWS 沒有另記叫聲。體重照 app 為 290–480 g（與 `kamtschatschensis` 較重、可達 586 g 的說法並不衝突，因為這裡照 app 的值，沒有改）。",
+    "地圖 25 個 ISO3：繁殖地 ISL、GBR、IRL、NOR、SWE、FIN、EST、LVA、LTU、POL、DEU、DNK、NLD、BEL、FRA、RUS（俄羅斯西部至西伯利亞、堪察加）與北美洲的 USA、CAN（短嘴亞種，現多視為獨立種 Short-billed Gull，這裡只作廣義 `Larus canus` 分佈），亞洲 MNG、CHN、PRK、KOR、JPN，冬季南延至 TWN、HKG（后海灣度冬邊緣）。綠色非全境、非完整分佈；HKG 只代表本種冬季分佈的南緣，不是常見鳥。",
+    "比較鳥用紅嘴鷗（沿用 0188 全身圖）與黑尾鷗（沿用 0192 全身圖）：兩隻都是香港同時可見、而且最容易與本種混淆的鷗。"
+  ]
+}

@@ -13,7 +13,7 @@
  *    · 出圖後可下載 PNG；亦可一鍵複製 prompt 去 Gemini 網頁慢慢出
  *
  *  用法：node scripts/cards/build-aviandex-gen.mjs
- *  輸出：public/aviandex-gen.html（Vercel 或本機 dev server 都開得）
+ *  輸出：tools/card-pages/aviandex-gen.html（Vercel 或本機 dev server 都開得）
  * ============================================================ */
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
@@ -330,5 +330,5 @@ show('0013');
 </html>
 `;
 
-writeFileSync(path.join(root, 'public/aviandex-gen.html'), html, 'utf8');
-console.log('已寫入 public/aviandex-gen.html（' + Object.keys(BIRDS).length + ' 隻）');
+writeFileSync(path.join(root, 'tools/card-pages/aviandex-gen.html'), html, 'utf8');
+console.log('已寫入 tools/card-pages/aviandex-gen.html（' + Object.keys(BIRDS).length + ' 隻）');

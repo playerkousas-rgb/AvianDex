@@ -1,0 +1,131 @@
+{
+  "id": "0179",
+  "name": "短尾賊鷗",
+  "scientificName": "Stercorarius parasiticus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Stercorarius parasiticus: 37-44 cm excluding the tail streamers, a slender skua with a relatively small head and a finer bill than Pomarine Jaeger and a fast, falcon-like flight. Pale morph adults are dark grey-brown above with a white throat, breast and belly, only a faintly marked breast band and no heavy spotting on the flanks. The dark cap is paler and less extensive than Pomarine's and does not extend below the gape, with a small pale spot at the base of the bill; the sides of the neck carry a wash of warm buff. Two central tail feathers are long, thin and sharply pointed, projecting several centimetres beyond the tail tip. Blue-grey legs with webbed feet.",
+  "similarSpecies": [
+    {
+      "zh": "中賊鷗",
+      "scientificName": "Stercorarius pomarinus",
+      "asset": "pomarine-jaeger.png",
+      "framing": "whole-bird",
+      "distinction": "中賊鷗大得多（42–50 公分，不含尾羽延長），身體厚重、頭圓、嘴粗，飛行沉穩而不是隼一般的急衝；深色頭頂範圍更廣、伸到眼下，頸側的黃褐色更濃，胸帶是濃密的深褐斑點、脅部也有斑，中央尾羽寬圓像湯匙。"
+    },
+    {
+      "zh": "長尾賊鷗",
+      "scientificName": "Stercorarius longicaudus",
+      "asset": "long-tailed-jaeger.png",
+      "framing": "whole-bird",
+      "distinction": "長尾賊鷗更小（35–41 公分）、翼細長，頭頂是一塊界線分明的黑色小帽而不是漸層的深褐，下腹均勻的灰、翼下沒有淡色區塊，兩根中央尾羽細如長針、長度幾乎是尾長的兩倍。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.02,
+      0.47,
+      0.34,
+      0.61
+    ],
+    [
+      0.62,
+      0.13,
+      0.9,
+      0.41
+    ],
+    [
+      0.68,
+      0.24,
+      0.86,
+      0.44
+    ],
+    [
+      0.28,
+      0.43,
+      0.5,
+      0.57
+    ]
+  ],
+  "featureLabels": [
+    "細長而尖的中央尾羽",
+    "頭頂範圍窄＋嘴基淡斑",
+    "頸側的黃褐色調",
+    "翼上的白色閃光"
+  ],
+  "featureNotes": [
+    "兩根中央尾羽細、直、末端尖，比尾端再伸長好幾公分；圖中兩條長針斜過天空，是賊鷗裡最好認的辨識點（第1圈取自全身圖，實際可見）。",
+    "深色頭頂比中賊鷗淡、範圍也窄，只到嘴裂為止，不會蓋到眼下；嘴基上方還有一小塊淡色斑。配上比例較小的頭與較細的嘴，是與中賊鷗分開的第一步（第2圈取自全身圖，實際可見）。",
+    "頸側與後頸帶著一層淡黃褐色；中賊鷗的黃褐色更濃更廣，兩者擺在一起看得出深淺差別（第3圈取自近景圖，實際可見）。",
+    "初級飛羽基部有一道白色，停棲時從翼上透出來，是深色翼上唯一的亮點；胸帶則只有淡淡的褐、脅部沒有濃密斑點，與中賊鷗相反（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CAN",
+      "USA",
+      "GRL",
+      "ISL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "GBR"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019100",
+      "use": "HKBWS substantive read: Category I, a scarce passage migrant through offshore waters in spring; 37-44 cm excluding tail streamers; fast falcon-like flight with a relatively small head and a finer bill than Pomarine Skua; compared to Pomarine the adult has a paler and less extensive dark cap that does not extend below the gape, a small pale spot above the bill base, a less well-marked breast band and lacks heavy spotting on the flanks; the two central tail feathers are long, thin and pointed and project up to several centimetres beyond the tail tip; no reports of vocalising in Hong Kong, the typical short call being a 'kyeeow' or 'kyeeor'; all records offshore, largely from boat-based surveys in southern waters; first recorded on 1 and 2 May 1999 during the close approach of a tropical storm (Turnbull 2004) and annually since 2005, with the earliest record on 21 March 2020 and the latest on 19 June 2009, most birds in April and the first half of May; highest count 16 at Cape D'Aguilar during a tropical storm on 2 May, then ten off Po Toi on 1 April 2012, most records being of up to six birds in a day and mostly adults; one seen harrying a Black-legged Kittiwake; monotypic, with a circumpolar breeding distribution in Arctic tundra and wintering near coasts in the southern hemisphere (Wiley and Lee 2020), a passage migrant through Chinese sea areas; IUCN Least Concern with a stable population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019000",
+      "use": "HKBWS Pomarine Jaeger page read as the primary contrast species: 42-50 cm excluding tail streamers, the largest skua in Hong Kong with a large body, rounded head, large bill and a steady powerful flight, a broader dark cap reaching below the eye line, a stronger yellow tone to the neck sides, a heavily spotted dark brown breast band, and broad rounded spoon-shaped central tail feathers."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019200",
+      "use": "HKBWS Long-tailed Jaeger page read as the second contrast species: 35-41 cm, a distinct black cap, long slender wings, an evenly greyish lower underbody with no pale underwing area, and streamers nearly twice the length of the tail."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 短尾賊鷗 Stercorarius parasiticus is number 195, Category I, with no IUCN code (i.e. Least Concern); 長尾賊鷗 is number 194 and 中賊鷗 number 196."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對細長而尖的中央尾羽、窄的深色頭頂與嘴基淡斑、頸側黃褐色、翼上白色閃光。",
+    "全身圖直接沿用上一張（0178）已核對的比較鳥 `0178/parasitic-jaeger.png`，升格為本卡主圖並重新核對尾羽、頭頂範圍、嘴形與白斑；近景圖本卡新繪。比較鳥中賊鷗（`pomarine-jaeger.png` = `0178/pixel.png`）與長尾賊鷗（`long-tailed-jaeger.png`）也沿用 0178 已核對的圖，非等比例——0178 與 0179 互相把對方當比較鳥。",
+    "身長採 HKBWS 的 37–44 公分（不含尾羽延長）；`cardDetails.zh.json` 寫 41–48 公分，是含尾羽延長的量法，兩者不衝突，卡面與 notes 採 HKBWS 的定義。體重 300–650 公克照 `cardDetails` 保留。",
+    "app 分數：i 2／a 2.8／v 4.1／r 4.8／c 1.2／o 3.0，六軸齊全，無 `vEst`。",
+    "IUCN 無危 LC、趨勢穩定；香港屬 Category I 的**春季海上稀少過境鳥**。全球無危與香港稀少要分開寫。",
+    "數量資料寫進 notes：1999-05-01／02 颱風逼近時首次紀錄（Turnbull 2004），2005 年起幾乎每年有紀錄，最早 2020-03-21、最晚 2009-06-19，多集中 4 月至 5 月上半；最高 16 隻（5 月 2 日颱風中的鶴咀），其次 2012-04-01 蒲台島外海 10 隻，多數紀錄單日不超過 6 隻、且多為成鳥。",
+    "notes 寫明：所有紀錄都在海上，主要來自南區的出海調查；卡面停棲站姿只是示意，香港沒有岸邊可看的紀錄。",
+    "叫聲照 HKBWS：香港沒有鳴叫紀錄，典型短叫是「kyeeow」（英文音譯保留，不硬譯成中文擬聲）。",
+    "地圖 9 個 ISO3：北極圈苔原的繁殖國家（RUS、CAN、USA、GRL、ISL、NOR、SWE、FIN、GBR，含蘇格蘭族群）；冬季在南半球近岸海域、沒有國家可標，故不列越冬地。",
+    "只交付 aviandex/0179.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

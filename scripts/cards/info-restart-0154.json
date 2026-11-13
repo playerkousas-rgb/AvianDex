@@ -1,0 +1,153 @@
+{
+  "id": "0154",
+  "name": "長嘴鷸",
+  "scientificName": "Limnodromus scolopaceus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Limnodromus scolopaceus in non-breeding plumage, the plumage in which most Hong Kong birds are seen: 29 cm, similar in size to a Common Snipe and thus noticeably smaller and more compact than an Asian Dowitcher, with greenish legs, a pale-based bill and a well-marked whitish supercilium. In non-breeding plumage it has grey-brown scapulars and coverts that are dark along the shaft, a greyish chest and a white belly. In flight it shows a narrow elongated white diamond up the back, barred underwing coverts and a white trailing edge to the secondaries and inner primaries. In full breeding plumage it has rusty underparts, a different, more cinnamon tone than Asian Dowitcher, with extensive blackish barring and spotting on the upper chest, flanks and undertail coverts. Juveniles have wholly dark centres to the tertials, greater coverts and scapulars with clear-cut buff fringes.",
+  "similarSpecies": [
+    {
+      "zh": "半蹼鷸",
+      "scientificName": "Limnodromus semipalmatus",
+      "asset": "asian-dowitcher.png",
+      "framing": "whole-bird",
+      "distinction": "半蹼鷸體型明顯較大較厚重、腳全黑、非繁殖羽下體較暗；本種小一號、腳黃綠色、嘴基較淡、眉紋更清楚。"
+    },
+    {
+      "zh": "黑尾鷸",
+      "scientificName": "Limosa limosa",
+      "asset": "black-tailed-godwit.png",
+      "framing": "whole-bird",
+      "distinction": "黑尾鷸明顯更高挑、頸與腳都更長、嘴粉橙配黑尖；本種體態較矮圓、腳較短、嘴全深色而基部較淡。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.06,
+      0.26,
+      0.66,
+      0.86
+    ],
+    [
+      0.34,
+      0.1,
+      0.9,
+      0.66
+    ],
+    [
+      0.37,
+      0.54,
+      0.59,
+      0.86
+    ],
+    [
+      0.44,
+      0.3,
+      0.7,
+      0.58
+    ]
+  ],
+  "featureLabels": [
+    "淡色嘴基",
+    "明顯白眉",
+    "黃綠色腳",
+    "羽軸深色"
+  ],
+  "featureNotes": [
+    "嘴長而筆直，深色但基部明顯較淡——與半蹼鷸的全黑嘴不同，是近距離最容易看到的差別（第1圈取自全身圖，實際可見）。",
+    "眼上有一道清楚鮮明的白色眉紋，把深色頭頂與深色眼線分隔開（第2圈取自近景圖，實際可見）。",
+    "腳黃綠至欖綠色，而非半蹼鷸的黑色——兩者並排時一望即分（第3圈取自全身圖，實際可見）。",
+    "非繁殖羽的肩羽與覆羽灰褐，但羽軸明顯較深，形成細密的深淺對比（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "USA",
+      "CAN",
+      "RUS",
+      "CHN",
+      "TWN",
+      "KOR",
+      "JPN",
+      "MNG",
+      "KAZ",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "PHL",
+      "BRN",
+      "KHM",
+      "LAO",
+      "MMR",
+      "BGD",
+      "IND",
+      "PAK",
+      "LKA",
+      "NPL",
+      "MEX",
+      "GTM",
+      "BLZ",
+      "HND",
+      "SLV",
+      "NIC",
+      "CRI",
+      "PAN",
+      "CUB",
+      "DOM",
+      "HTI",
+      "JAM",
+      "TTO",
+      "COL",
+      "VEN",
+      "GUY",
+      "SUR",
+      "BRA",
+      "ARG",
+      "CHL",
+      "PER",
+      "ECU",
+      "URY",
+      "PRY",
+      "BOL"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/013800",
+      "use": "HKBWS substantive read: Category I, a scarce passage migrant and winter visitor to the Deep Bay area, with all records from the intertidal mudflats or adjacent roost areas, mainly Mai Po Nature Reserve; 29 cm, similar in size to Common Snipe and thus noticeably smaller than Asian Dowitcher, with greenish legs, a pale bill and a well-marked whitish supercilium; in flight it shows a narrow elongated white diamond up the back, barred underwing coverts and a white trailing edge to the secondaries and inner primaries; in non-breeding plumage it has grey-brown scapulars and coverts that are dark along the shaft, a greyish chest and a white belly; in full breeding plumage it has rusty underparts, different from the more cinnamon tone of Asian Dowitcher, with extensive blackish barring and spotting on the upper chest, flanks and undertail coverts; juveniles have wholly dark centres to the tertials, greater coverts and scapulars with clear-cut buff fringes; the diagnostic flight call is a short sharp 'kyip' uttered in irregular series when alarmed or flushed; the first record was on 19 April 1982 and it has proved to be a passage migrant in both spring and autumn with a smaller wintering population, being more numerous on spring passage; the earliest autumn record is one on 22 July 2015 with few records until the first week of October, the peak period being the last week of October and first week of November; spring passage occurs from the first week of March, peaking from the last week of March to the third week of April, with the latest spring record on 16 May 2016 and the highest count four during 6-7 April 2011; its distinctive sewing-machine foraging action indicates it is a tactile feeder taking animal prey in soft muddy substrates; monotypic, breeding in coastal areas of west and north Alaska and adjacent northwest Canada with scattered populations in north and northeast Siberia from the Chukotka peninsula west to the Yana River, and in China records are scattered across lowland areas from Xinjiang to the eastern seaboard, with small numbers wintering in coastal areas of south China; IUCN Near Threatened with a population decreasing by 20% over three generations for reasons that are unclear."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對淡色嘴基、明顯白眉、黃綠色腳及深色羽軸；描繪非繁殖羽（香港紀錄以非繁殖羽為主），未畫繁殖羽的鏽紅下體與黑色橫斑。",
+    "兩隻比較鳥均為 AI 生成示意（半蹼鷸沿用 0153 全身圖、黑尾鷸新生成），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 近危 NT（三代下降 20%，原因未明）；香港屬 Category I，稀少過境鳥兼冬候鳥，春季較多，最高 4 隻（2011-04-06 至 07），首筆 1982-04-19。",
+    "只交付 aviandex/0154.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

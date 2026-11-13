@@ -1,0 +1,126 @@
+{
+ "id": "0190",
+ "name": "遺鷗",
+ "scientificName": "Ichthyaetus relictus",
+ "layout": "slim",
+ "size": [
+  1024,
+  1536
+ ],
+ "status": "review_before_upload",
+ "iucn": {
+  "code": "VU",
+  "zh": "易危"
+ },
+ "illustrationTaxon": "Ichthyaetus relictus: 39-45 cm, structurally distinct among small gulls due to a relatively small head, a rather flat crown that peaks behind the eye, small eyes, a thick neck and a large pot-bellied body, with a slightly awkward gait at times. First-winter birds are pale grey above with whitish-fringed tertials, pale brown lesser and median coverts and narrow brown streaks at the rear and sides of the neck, these brown areas fading quickly during winter; the bill is pale greenish-grey over its basal half to two-thirds with a dark tip. In flight first-winters are rather pale with contrasting dark brown outer four primaries, subterminal marks on the inner primaries and secondaries, greater coverts and a tail band, and white mirrors on the outer one or two primaries. Adults in breeding plumage have a blackish brown hood that is paler around the base of the bill and bright red bill and legs.",
+ "similarSpecies": [
+  {
+   "zh": "紅嘴鷗",
+   "scientificName": "Chroicocephalus ridibundus",
+   "asset": "black-headed-gull.png",
+   "framing": "whole-bird",
+   "distinction": "紅嘴鷗（37–43 公分）**嘴與腳都是鮮紅色**，本種第一年冬鳥**嘴基淡綠灰、嘴尖深色、腳深灰**。紅嘴鷗上體是較深的灰、頭形圓而比例正常；本種頭明顯偏小、**頭頂扁平而最高點在眼後**、頸粗、身體大而圓（pot-bellied）。"
+  },
+  {
+   "zh": "棕頭鷗",
+   "scientificName": "Chroicocephalus brunnicephalus",
+   "asset": "brown-headed-gull.png",
+   "framing": "whole-bird",
+   "distinction": "棕頭鷗（41–45 公分）與本種體長接近，但**虹膜淡色**、嘴與腳深紅、翼尖外側兩枚初級飛羽有**兩個大白斑**；本種第一年冬鳥虹膜深、嘴雙色、上體淡灰且三級飛羽有白羽緣、中覆羽淡褐。棕頭鷗頭部比例正常，本種是**小頭、平頂、厚頸**。"
+  }
+ ],
+ "featureCrops": [
+  [
+   0.13,
+   0.24,
+   0.73,
+   0.84
+  ],
+  [
+   0.13,
+   0.3,
+   0.46,
+   0.63
+  ],
+  [
+   0.6,
+   0.38,
+   0.92,
+   0.7
+  ],
+  [
+   0.32,
+   0.38,
+   0.52,
+   0.68
+  ]
+ ],
+ "featureLabels": [
+  "小頭平頂厚頸",
+  "嘴基淡綠灰",
+  "頸後褐色縱紋",
+  "淡褐肩部覆羽"
+ ],
+ "featureNotes": [
+  "第一年冬鳥的頭小、頭頂扁平，最高點在眼後，頸部顯得厚而短，接著是圓大的身體——HKBWS 明寫這是本種最好用的「結構」辨識點，比羽色更可靠（第1圈取自大頭圖，整個頭連嘴與後頸都在圈內）。",
+  "嘴的基部一半至三分之二是淡綠灰色，只有尖端深色，成兩段色；紅嘴鷗與棕頭鷗的嘴都是整支鮮紅（第2圈取自大頭圖，整支嘴由尖端到嘴基都在圈內）。",
+  "頸的後方與兩側有一列列窄的褐色縱紋，白頸上十分明顯；HKBWS 說這些褐色在冬季會很快褪淡，所以畫的是早期冬羽（第3圈取自大頭圖，五條縱紋完整入鏡）。",
+  "上體淡灰，肩部（小覆羽與中覆羽）有一整條淡褐色的帶，配上白色的羽緣；這是第一年鳥的特徵，成鳥繁殖羽沒有這塊褐色，而且這些褐色在冬季會很快褪淡（第4圈取自全身圖，褐色帶、白羽緣與上方淡灰的背部都在圈內）。"
+ ],
+ "featureSources": [
+  "features.png",
+  "features.png",
+  "features.png",
+  "pixel.png"
+ ],
+ "rangeMap": {
+  "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+  "caption": "世界底圖・部分分佈國家",
+  "disclaimer": "綠色非全境；非完整分佈",
+  "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+  "geometryLicense": "Natural Earth public domain",
+  "bounds": [
+   -180,
+   -90,
+   180,
+   90
+  ],
+  "viewport": "world",
+  "countryIso3": [
+   "KAZ",
+   "RUS",
+   "MNG",
+   "CHN",
+   "KOR"
+  ]
+ },
+ "sources": [
+  {
+   "url": "https://avifauna.hkbws.org.hk/species/0110/016700",
+   "use": "HKBWS substantive read: Category I, a rare winter visitor to the intertidal mudflats of Deep Bay; 39-45 cm, structurally distinct due to a relatively small head, a rather flat crown that peaks behind the eye, small eyes, a thick neck and a large pot-bellied body, with a slightly awkward gait at times; first-winter birds typically occur and are pale grey above with whitish-fringed tertials, pale brown in the lesser and median coverts and narrow brown streaks at the rear and sides of the neck, these brown areas fading quite quickly in the winter, with the bill pale greenish-grey over the basal half to two-thirds; upperpart, wing and tail feathers are prone to wear and fading; in flight first-winters are rather pale with contrasting dark brown outer four primaries, subterminal marks on the inner primaries and secondaries, greater coverts and a tail band, and white mirrors on the outer one or two primaries; adults in breeding plumage have a blackish brown hood that is paler around the base of the bill and bright red legs and bill; calls include a rather deep kyeeow and a donkey-like bray; all records refer to birds on the intertidal mudflats of Deep Bay seen from the Mai Po Boardwalk apart from one at Lau Fau Shan; all records have involved first-year birds between 3 November and 12 April, mainly early January to early March, with dated records in 1987/88, 1992 (two birds), 2006, 2008 (up to two), 2010, 2011, 2015, 2016 and 2017; walks around the mudflat foraging in the manner of an ungainly plover; monotypic, breeding from east Kazakhstan east through much of Mongolia and in Inner Mongolia where the largest colonies are thought to exist, in China also breeding in north Xinjiang and from Shaanxi to central and east Nei Mongol and wintering in the Yellow Sea, particularly the Bay of Bohai; IUCN Vulnerable, with a population estimated at 10,000 to 19,999 anticipated to undergo a rapid decline in the next three generations due to human disturbance at nesting colonies, climate change and the threat of reclamation of the coastal mudflats where the bulk of the population winters."
+  },
+  {
+   "url": "https://avifauna.hkbws.org.hk/species/0110/016300",
+   "use": "HKBWS Black-headed Gull page read as the first contrast species: 37-43 cm, dark brown breeding hood, bold complete white eye ring, deep red bill and legs, black-tipped outer primaries with a white leading edge."
+  },
+  {
+   "url": "https://avifauna.hkbws.org.hk/species/0110/016200",
+   "use": "HKBWS Brown-headed Gull page read as the second contrast species: 41-45 cm, slightly larger and heavier than Black-headed Gull with a deeper bill and relatively large head, pale iris, dark brown breeding hood, and two large white mirrors on the outer primaries."
+  },
+  {
+   "url": "https://avifauna.hkbws.org.hk/hk-list",
+   "use": "Hong Kong List 2024: 遺鷗 Ichthyaetus relictus is listed as 183 with IUCN code VU, matching the HKBWS species page."
+  }
+ ],
+ "notes": [
+  "AI 生成插圖，經人眼核對小頭平頂厚頸、嘴基淡綠灰、頸後褐色縱紋、淡褐中覆羽。",
+  "畫的是**第一年冬羽**（上體淡灰、三級飛羽白羽緣、淡褐中覆羽、頸後褐縱紋、嘴基淡綠灰、腳深灰）。HKBWS 明寫香港**所有紀錄都是第一年鳥**（3 November 至 12 April，主要在 1 月初至 3 月初），所以卡面用第一年冬羽而不是成鳥繁殖羽；成鳥繁殖羽是黑褐色頭罩＋鮮紅嘴腳，notes 在此寫明差別。",
+  "身長：HKBWS 量 **39–45 cm**；app 的 `explorerIndex.len` 為 0、`cardDetails` 無長度欄位，slim 版面亦不顯示身長，故卡面沒有身長數字，notes 只記 HKBWS 的區間，沒有自行補值（0014／0053／0188 前例）。體重無資料，不填。",
+  "**IUCN 正確，無需修改**：`cardDetails.zh.json` 的 0190 本來就是「易危 VU」，與 HKBWS 物種頁（VULNERABLE）和 HK List 2024（183 號，VU）一致，所以**沒有改動 app 資料、也沒有重跑評分腳本**。",
+  "app 分數照 `dexScores` 原值：**i 3.8／v 4.7／r 2.5／c 2.2／o 3.3**，但 **`a`（適應力）缺值**——`explorerIndex` 的食性 tag 與棲地 tag 都是空的，所以卡面適應力顯示「待查」並加「待查非零分」，沒有從 IUCN 推算或補零。`vEst: 1` 仍在（體長由 AVONET 翼長估算），卡面已標「觀賞值含體長估算」。",
+  "叫聲照 HKBWS：偏低沉的「kyeeow」與像驢叫的嘶鳴。覓食行為只有一句：像笨拙的鴴一樣在泥灘上走動覓食；沒有食性資料，卡面不補。",
+  "香港紀錄照 HKBWS 全部在后海灣潮間帶泥灘（米埔浮橋觀察），只有一筆在流浮山：1987-12-31 與 1988-01-02、1992 年兩隻（11-21 至 1993-03-08、11-28 至 12-05）、2006-03-22 與 03-30、2008-01-13 至 03-02 最多兩隻、2010-01-08 至 03-10、2011-04-08 至 04-12、2015-01-11 至 03-14、2016-12-24 與 12-26、2017-11-03。",
+  "地圖只有 5 個 ISO3：繁殖國 KAZ（東哈薩克）、RUS（單一繁殖地）、MNG（蒙古，最大族群）、CHN（內蒙古、陝西北部至內蒙古中東部、新疆北部）；再加上度冬國 KOR（韓國）與 CHN 的黃海／渤海灣。香港是**罕見冬候鳥（Category I）**，HKG 不上綠色；印度、日本等地無可靠原生紀錄，也不上色。綠色非全境、非完整分佈。",
+  "只交付 aviandex/0190.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+ ]
+}

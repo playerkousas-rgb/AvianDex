@@ -120,5 +120,5 @@ const html = `<!doctype html>
 ${cards}
 </body></html>`;
 
-writeFileSync(path.join(root, 'public/dex-card-preview.html'), html, 'utf8');
-console.log('已寫入 public/dex-card-preview.html（', targets.length, '張：', targets.join(', '), '）');
+writeFileSync(path.join(root, 'tools/card-pages/dex-card-preview.html'), html, 'utf8');
+console.log('已寫入 tools/card-pages/dex-card-preview.html（', targets.length, '張：', targets.join(', '), '）');

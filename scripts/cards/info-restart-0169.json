@@ -1,0 +1,140 @@
+{
+  "id": "0169",
+  "name": "小黃腳鷸",
+  "scientificName": "Tringa flavipes",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "illustrationTaxon": "Tringa flavipes, monotypic: 23-25 cm. Similar in size and structure to Marsh Sandpiper but with a slightly sturdier build, a more drawn-out rear end, a slightly shorter and thicker bill and a square white rump patch above a closely barred tail. The legs are always bright yellow. The primary projection is long and the legs protrude well beyond the tail in flight. Upperparts are brown with whitish notches along the feather edges, superficially similar to Wood Sandpiper but lacking that species' very dark cap and contrastingly pale supercilium behind the eye. The chest is diffusely streaked greyish, and juveniles have extensive clear-cut white spots against a plain brown background.",
+  "similarSpecies": [
+    {
+      "zh": "澤鷸",
+      "scientificName": "Tringa stagnatilis",
+      "asset": "marsh-sandpiper.png",
+      "framing": "whole-bird",
+      "distinction": "澤鷸身型更纖細單薄、嘴細直如針而更長，整體比例像一枝針插在長腿上；本種身型較結實、後半身拖得較長，嘴較短而明顯較厚。兩者腳都是黃色，差別在體型與嘴形。"
+    },
+    {
+      "zh": "林鷸",
+      "scientificName": "Tringa glareola",
+      "asset": "wood-sandpiper.png",
+      "framing": "whole-bird",
+      "distinction": "林鷸頭頂有很深的暗色帽、眼後眉紋對比強烈，背上的淡色斑點較大較散，腳偏黃綠；本種頭頂不深、眉紋較均勻不搶眼，背上是細密的白色缺口，腳是明亮的黃色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.72,
+      0.28,
+      1.0,
+      0.56
+    ],
+    [
+      0.56,
+      0.2,
+      0.86,
+      0.5
+    ],
+    [
+      0.01,
+      0.36,
+      0.28,
+      0.6
+    ],
+    [
+      0.34,
+      0.52,
+      0.64,
+      0.9
+    ]
+  ],
+  "featureLabels": [
+    "稍短而較厚的嘴",
+    "不深暗的頭頂",
+    "拖長的後半身",
+    "明亮的黃色腿"
+  ],
+  "featureNotes": [
+    "嘴比澤鷸短、也明顯較厚，基部略有厚度，不是一根細針——HKBWS 把「稍短而較厚」列為與澤鷸的第一個分別（第1圈取自近景圖，實際可見）。",
+    "頭頂只是帶縱紋的褐色，沒有一頂深色的「帽」；眉紋由眼先一路到眼後粗細相若，不會在眼後突然變亮——這正是與林鷸的分別（第2圈取自近景圖，實際可見）。",
+    "初級飛羽很長，翼尖伸出尾後一大截，加上拖長的後半身，側面輪廓像一枚拉長的楔子（第3圈取自全身圖，實際可見）。",
+    "腳永遠是明亮的黃色，細長而站在泥灘上非常醒目——「小黃腳鷸」的名字來自這裡，也對應美洲的 Greater/Lesser Yellowlegs 這對名字（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "USA",
+      "CAN",
+      "MEX",
+      "GTM",
+      "BLZ",
+      "SLV",
+      "HND",
+      "NIC",
+      "CRI",
+      "PAN",
+      "CUB",
+      "JAM",
+      "HTI",
+      "DOM",
+      "TTO",
+      "COL",
+      "VEN",
+      "GUY",
+      "SUR",
+      "ECU",
+      "PER",
+      "BRA",
+      "BOL",
+      "PRY",
+      "URY",
+      "ARG",
+      "CHL",
+      "CHN",
+      "TWN",
+      "JPN",
+      "RUS",
+      "BHS",
+      "PRI"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/014900",
+      "use": "HKBWS substantive read: Category I, Accidental; 23-25 cm, similar in size and structure to Marsh Sandpiper but differing in a slightly sturdier build, a more drawn-out rear end, a slightly shorter and thicker bill and a square white rump patch above a closely barred tail, with the legs always bright yellow, the primary projection long and the legs protruding well beyond the tail in flight; upperparts brown with whitish notches along the feather edges, superficially similar to Wood Sandpiper but differing from that species in lacking the very dark cap and the contrastingly pale supercilium behind the eye, with the chest diffusely streaked greyish and juveniles having extensive clear-cut white spots against a plain brown background; the call is typically a high-pitched tyoo, often in a short series, similar to Marsh Sandpiper; the Hong Kong records are one at Tsim Bei Tsui on 19 October 1986 and at Mai Po NR on 2 November (Kennerley 1987), and one at Mai Po NR on 1st and 14-16 April 1990; monotypic, breeding only in North America from western Alaska to north central Quebec and wintering in the southern USA and Central and South America, with China records only from Hong Kong and Taiwan and the species also recorded in Japan; IUCN VULNERABLE, the population decreasing at a rate of 23% to 49% per three generations, possibly largely due to unsustainable harvesting."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對稍短而較厚的嘴、不深暗的頭頂、拖長的後半身及明亮的黃色腿；單型種。",
+    "兩隻比較鳥均為 AI 生成示意（澤鷸沿用 0166 已核對的全身圖、林鷸沿用 0164 已核對的全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "資料修正：`cardDetails.zh.json` 原記「無危 LC」，HKBWS 明列 IUCN VULNERABLE（三個世代下降 23%–49%），已改為「易危 VU」並重算 dexScores／filterTraits；本卡分數因此由 2.7 升至 3.2。",
+    "本種繁殖於北美洲，香港至今只有 1986 與 1990 兩筆紀錄，屬真正的迷鳥；地圖只標有紀錄的國家，因此亞洲一側幾乎是空的。",
+    "方形白腰斑配密橫斑尾羽、飛行時腳伸出尾後很遠——這些要在飛行或起飛時才看得清，卡面只放靜態站姿。",
+    "IUCN 易危 VU（三個世代下降 23%–49%，部分原因可能是不可持續的捕獵）；香港屬 Category I，Accidental 迷鳥。",
+    "只交付 aviandex/0169.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

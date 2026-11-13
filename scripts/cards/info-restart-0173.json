@@ -1,0 +1,144 @@
+{
+  "id": "0173",
+  "name": "拉氏沙錐",
+  "scientificName": "Gallinago hardwickii",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Gallinago hardwickii: 29-33 cm, the largest of the East Asian snipes, with a very long straight bill, a compact body on short legs and cryptic black, brown, buff and white plumage. Head pattern: black-brown crown with a narrow buff median crown stripe, a broad cream supercilium that is widest in front of the eye, a bold narrow dark-brown cheek stripe and a thin pale eye ring. Upperparts black-brown with neat cream longitudinal streaks and a scaly mantle, underparts pale with fine dark barring on the flanks, and pale fringes to the wing coverts and tertials in juveniles. In flight it shows almost no toes projecting beyond the tail, which separates it from Pin-tailed and Swinhoe's Snipes, and it differs from Swinhoe's Snipe by lacking the pale panel across the median upperwing coverts. The taxonomic name honours John Latham; the species is monotypic.",
+  "similarSpecies": [
+    {
+      "zh": "大沙錐",
+      "scientificName": "Gallinago megala",
+      "asset": "swinhoes-snipe.png",
+      "framing": "whole-bird",
+      "distinction": "大沙錐的眉紋比眼睛還寬、嘴基兩側有深色冠紋，飛行時中覆羽有一道淡色橫帶而次級飛羽幾乎沒有白後緣，外側五至七對尾羽只是逐漸變窄而沒有針狀羽；本種體型更大（29–33 公分）、嘴更長，飛行時腳趾幾乎不伸出尾端，起飛的叫聲也低沉粗啞得多。"
+    },
+    {
+      "zh": "針尾沙錐",
+      "scientificName": "Gallinago stenura",
+      "asset": "pintail-snipe.png",
+      "framing": "whole-bird",
+      "distinction": "針尾沙錐體型明顯較小、外側尾羽呈針狀，飛行時腳趾清楚伸出尾端；本種整體大上一截、嘴更長更直，飛行時幾乎看不到腳趾伸出尾端，起飛時通常只叫一兩聲而且音調更低。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.46,
+      0.06,
+      0.98,
+      0.58
+    ],
+    [
+      0.48,
+      0.14,
+      0.68,
+      0.36
+    ],
+    [
+      0.15,
+      0.3,
+      0.42,
+      0.57
+    ],
+    [
+      0.2,
+      0.44,
+      0.52,
+      0.87
+    ]
+  ],
+  "featureLabels": [
+    "長而筆直的嘴",
+    "眉紋在眼前最粗",
+    "背上淡色縱紋",
+    "淡色腹部與短腿"
+  ],
+  "featureNotes": [
+    "嘴極長而筆直，長度約為頭長的兩倍，是亞洲幾種沙錐裡最長的一種，用來插入軟泥中探食（第1圈取自全身圖，實際可見）。",
+    "淺色眉紋在眼前最寬、往前額幾乎與額紋連接，眼後明顯變窄；大沙錐的眉紋則是全程都比眼睛寬，這是野外分辨兩者的重點（第2圈取自全身圖，實際可見）。",
+    "肩羽與背羽是深褐底配一列列整齊的淡色縱紋，形成沙錐典型的「條碼」背，站著不動時與枯草幾乎融為一體（第3圈取自全身圖，實際可見）。",
+    "下體淡色，脅部只有稀疏細橫斑，配一雙短短的青綠灰色腿；沙錐體型圓潤、腿短，幾乎不走路而是靠蹲伏避敵（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "JPN",
+      "RUS",
+      "KOR",
+      "PRK",
+      "CHN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "IDN",
+      "TLS",
+      "PNG",
+      "SLB",
+      "NCL",
+      "AUS",
+      "NZL"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024 substantive read: 拉氏沙錐 Gallinago hardwickii is number 128 on the list, Category I, with IUCN Near Threatened recorded against it; the surrounding snipe numbers (125 Eurasian Woodcock, 126 Swinhoe's Snipe, 127 Pintail Snipe, 129 Common Snipe) confirm its place in the Scolopacidae sequence."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/014100a",
+      "use": "HKBWS Swinhoe's Snipe page, read in full as the contrast species: the supercilium is broader than the eye and there are crown stripes at the base of the bill, a pale panel across the median upperwing coverts in flight, virtually no white trailing edge to the secondaries, 20-22 rectrices without pin-like outer feathers, a shorter foot projection beyond the tail and a lower-pitched, gruffer flight call."
+    },
+    {
+      "url": "http://www.hkbws.org.hk/BBS/viewthread.php?tid=31916",
+      "use": "HKBWS Record Committee Decision 2024: the sole Hong Kong record, Latham's Snipe at Long Valley on 23 April 2023, was voted onto Category I of the Hong Kong List (2 votes for Category I, 1 for Category III), with the checklist sub-committee noting that identification was straightforward."
+    },
+    {
+      "url": "https://epbcpublicportal.environment.gov.au/_entity/sharepointdocumentlocation/000a261d-8fab-ef11-b8e8-00224898256b/2ab10dab-d681-4911-b881-cc99413f07b6?file=Attachment+14+-+Lathams_Snipe_863-conservation-advice-05012024.pdf",
+      "use": "Australian Government conservation advice for Gallinago hardwickii: monotypic, formerly Capella hardwickii, also called Japanese snipe; breeds in Hokkaido with smaller numbers on Honshu, the eastern Russian mainland and historically Sakhalin and the Kurile Islands; the entire population winters mainly in eastern Australia; identification from the other two Australian snipes requires careful assessment of size, structure and toe projection, and separation is sometimes impossible."
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/ece3.9938",
+      "use": "Peer-reviewed note that the international status of Latham's Snipe was upgraded from Least Concern to Near Threatened (IUCN 2022) following drought-driven declines on the Australian wintering grounds; used to confirm the NT code used on the card."
+    },
+    {
+      "url": "https://ebird.org/species/latsni1",
+      "use": "Identification summary: long-billed skulking shorebird of muddy edges in freshwater wetlands, breeding in Japan and wintering mainly in eastern Australia, flushing with a loud chek call and almost no toes projecting behind the tail in flight."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對極長而筆直的嘴、眼前最寬的眉紋、背上淡色縱紋，以及淡色腹部配短腿。",
+    "兩隻比較鳥均為 AI 生成示意（大沙錐沿用 0159 已核對的全身圖、針尾沙錐沿用 0157 已核對的比較鳥），非等比例；卡上不作完整鑑別檢索表。",
+    "HKBWS《香港鳥類誌》暫未見本種的物種頁面：由 012800 至 014350 之間多個編號（含 012800、012900、013600、013700、013800、014050、014110、014150、014250、014350）逐一探測皆為 404，沙錐各頁的編號亦無算術規律（針尾 014000、大沙錐 014100a、扇尾 014200）。因此本卡以《香港鳥類名錄 2024》的類別與 IUCN 評級、紀錄委員會 2024 年決定、澳洲政府保育建議及同屬大沙錐頁面作對照來源，並在此明示。",
+    "app 資料庫（explorerIndex／cardDetails.zh／dexScores）目前沒有 0173 記錄，與 0014、0053、0054、0059、0084、0117、0124 的既有情況相同：六軸與綜合分一律顯示「待查」，不補零、不自行估算，卡面加註「待查非零分」。",
+    "IUCN 近危 NT：2022 年由無危上調，主因是澳洲越冬地乾旱導致族群下降；香港名錄 2024 亦標為 NT。香港至今只有 2023-04-23 塱原一筆紀錄，屬 Category I。",
+    "全球與香港狀態分開陳述：全球近危，但在香港只是極罕見的過境鳥，不能寫成「香港常見的受脅鳥種」。",
+    "本種在飛行時幾乎沒有腳趾伸出尾端，這是與針尾沙錐、大沙錐最快的野外區別，但卡面只放靜態站姿，故寫在比較欄。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地（日本、俄遠東）與越冬地（澳洲東部）不分工；遷徙途經的台灣、菲律賓、新畿內亞等地一併標示。",
+    "只交付 aviandex/0173.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

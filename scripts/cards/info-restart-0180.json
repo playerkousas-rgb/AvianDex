@@ -1,0 +1,128 @@
+{
+  "id": "0180",
+  "name": "長尾賊鷗",
+  "scientificName": "Stercorarius longicaudus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Stercorarius longicaudus: 35-41 cm excluding the tail streamers, the smallest and slimmest of the jaegers, with longer and more slender wings and a buoyant tern-like flight. Adult breeding plumage has a sharply defined jet-black cap that contrasts with the pale grey-white face and throat, a small bill with a pale base, pale grey head and upper breast, and the lower half of the underbody an even greyish rather than white, with no pale area on the underside of the wings. On the upperwing the flight feathers are only slightly darker than the wing coverts. The two central tail feathers are extremely long and thin, nearly twice the length of the tail.",
+  "similarSpecies": [
+    {
+      "zh": "中賊鷗",
+      "scientificName": "Stercorarius pomarinus",
+      "asset": "pomarine-jaeger.png",
+      "framing": "whole-bird",
+      "distinction": "中賊鷗大得多（42–50 公分），身體厚重、頭圓、嘴大，飛行沉穩有力；深色頭頂範圍廣而邊界模糊，頸側黃褐、胸帶濃密斑點、下腹純白，中央尾羽寬圓像湯匙而不是兩根長針。"
+    },
+    {
+      "zh": "短尾賊鷗",
+      "scientificName": "Stercorarius parasiticus",
+      "asset": "parasitic-jaeger.png",
+      "framing": "whole-bird",
+      "distinction": "短尾賊鷗較大（37–44 公分），頭較小但身體較結實，頭頂深褐而邊界漸層、不若本種那樣一塊分明的黑帽；下腹白、翼上有明顯白色閃光，中央尾羽細長而尖但只有幾公分長，不是本種那種近乎兩倍尾長的長針。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.12,
+      0.5,
+      0.4,
+      0.76
+    ],
+    [
+      0.63,
+      0.13,
+      0.93,
+      0.42
+    ],
+    [
+      0.52,
+      0.44,
+      0.78,
+      0.6
+    ],
+    [
+      0.44,
+      0.4,
+      0.68,
+      0.54
+    ]
+  ],
+  "featureLabels": [
+    "超長的中央尾羽",
+    "界線分明的黑色小帽",
+    "均勻灰色的下腹",
+    "覆羽與飛羽的深淺差"
+  ],
+  "featureNotes": [
+    "兩根中央尾羽極長、極細，長度幾乎是尾長的兩倍，像兩根針拖在身後；這是三種賊鷗裡最誇張的比例，也是「長尾」之名的由來（第1圈取自全身圖，實際可見）。",
+    "頭頂是一塊邊界銳利的黑色小帽，在眼後與後頸截然結束，配上淡灰白的臉與喉，界線乾淨得不像是漸層；中賊鷗與短尾賊鷗的深色頭頂都較淡、邊緣較模糊（第2圈取自近景圖，實際可見）。",
+    "下腹是均勻的灰，不是白色；翼下也沒有淡色區塊——這一整片「灰」正是與短尾賊鷗、中賊鷗最容易分開的地方（第3圈取自全身圖，實際可見）。",
+    "翼上覆羽比飛羽略淺，兩層之間的界線清楚但對比不大；短尾賊鷗與中賊鷗的翼上則有明顯的白色閃光，本種沒有（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "NOR",
+      "SWE",
+      "FIN",
+      "CAN",
+      "USA"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019200",
+      "use": "HKBWS substantive read: Category I, a scarce passage migrant through offshore and inshore sea areas in spring, with autumn records referring to storm-blown birds; 35-41 cm excluding tail streamers, smaller and slimmer than the other jaegers with longer more slender wings and a buoyant tern-like flight; the adult has very long central tail feathers nearly twice as long as the tail, lacks a pale area on the underside of the wings, has flight feathers only slightly darker than the wing coverts on the upperwing, and the lower half of the underbody an even greyish; the distinct black cap and the long tail feathers are the key head and tail features; juveniles show a pale base to the bill, greyish overall colour, a pale head, darkly barred undertail coverts, whitish bars on the underwing coverts and axillaries, and a central tail feather projection longer than the bill; not reported to call in Hong Kong, with flight calls on the breeding grounds being 'krek' or 'kloo'; the only skua recorded away from offshore waters in significant numbers, with records from Mai Po and a number from Mirs Bay, and boat-based surveys showing it passes offshore regularly; first Hong Kong record was an adult at Mai Po on 9 May 1976 (Viney 1978), followed by an adult at High Island Reservoir on 19 May 1991; earliest in spring 12 March 2006, main passage in April and the first week of May, and the two latest records on 19 May 1991 and 3 June 2012; autumn records are much rarer and all during or in the wake of a tropical storm, with adults at Cape D'Aguilar in 1993 (three on 21 August, one on 26 September and one on 5 November) and 1998 (37 on 26 October), plus three at Mai Po Nature Reserve on 23 September 2013; more likely than its congeners to be encountered in flocks, many first noticed resting on the sea; almost circumpolar breeding distribution in Arctic tundra excluding much of Greenland, wintering largely at sea in the southern oceans (Wiley and Lee 2020); the nominate subspecies breeds from north Scandinavia east to the Lena River while S. l. pallescens, presumed to occur in Hong Kong, breeds east through Siberia and Kamchatka to Alaska and high Arctic Canada; IUCN Least Concern with a stable population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019000",
+      "use": "HKBWS Pomarine Jaeger page read as a contrast species: 42-50 cm excluding tail streamers, large heavy body, rounded head, large bill, steady powerful flight, a broader dark cap, a stronger yellow tone to the neck sides, a heavily spotted breast band, a white lower underbody and broad rounded spoon-shaped central tail feathers."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019100",
+      "use": "HKBWS Parasitic Jaeger page read as the second contrast species: 37-44 cm excluding tail streamers, fast falcon-like flight, a relatively small head and finer bill, a paler and less extensive cap that does not extend below the gape, a less well-marked breast band, a white underbody, and two long thin pointed central tail feathers projecting only several centimetres beyond the tail tip."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 長尾賊鷗 Stercorarius longicaudus is number 194, Category I, with no IUCN code (i.e. Least Concern); 短尾賊鷗 is number 195 and 中賊鷗 number 196."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對近乎兩倍尾長的中央尾羽、界線分明的黑色小帽、均勻灰色的下腹、覆羽與飛羽的深淺差。",
+    "全身圖沿用 0178 已核對的比較鳥 `0178/long-tailed-jaeger.png` 升格為主圖（本卡重新核對黑帽邊界、灰色下腹與長尾針），近景圖本卡新繪。比較鳥中賊鷗（`pomarine-jaeger.png` = `0178/pixel.png`）與短尾賊鷗（`parasitic-jaeger.png` = 0179 主圖）沿用已核對的圖，非等比例——三張賊鷗卡彼此互為比較鳥。",
+    "身長採 HKBWS 的 35–41 公分（不含尾羽延長）；`cardDetails.zh.json` 寫 38–58 公分，是含尾羽延長的量法，兩者不衝突，卡面與 notes 採 HKBWS 的定義。體重 230–444 公克照 `cardDetails` 保留。",
+    "app 分數：i 2／a 2.3／v 4.2／r 1／c 1.2／o 2.1，六軸齊全，無 `vEst`；研究值只有 1，卡面照實顯示，沒有調整。",
+    "IUCN 無危 LC、趨勢穩定；香港屬 Category I 的**春季海上稀少過境鳥**，秋季紀錄全部出現在颱風期間或之後。全球無危與香港稀少要分開寫。",
+    "數量資料寫進 notes：首筆 1976-05-09 米埔（Viney 1978），其後 1991-05-19 萬宜水庫；春季最早 2006-03-12，主群 4 月至 5 月第一週，最晚 1991-05-19 與 2012-06-03；秋季全為颱風相關——1993 年鶴咀 8 月 21 日 3 隻、9 月 26 日 1 隻、11 月 5 日 1 隻，1998-10-26 鶴咀 37 隻，2013-09-23 米埔自然保護區 3 隻。",
+    "notes 寫明：本種是三種賊鷗裡唯一會在米埔與大鵬灣等**近岸**出現較多紀錄的一種，且常成群、先被看到停在海面；其餘兩種幾乎只在海上。",
+    "叫聲照 HKBWS：香港無鳴叫紀錄，繁殖地的飛行叫聲是「krek」或「kloo」（英文音譯保留）。",
+    "地圖 6 個 ISO3：北極圈苔原的繁殖國家（RUS、NOR、SWE、FIN、CAN、USA）；HKBWS 寫明繁殖分佈「幾乎環北極、但排除格陵蘭大部分地區」，故不標 GRL；冬季在南半球外海、沒有國家可標，不列越冬地。",
+    "只交付 aviandex/0180.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

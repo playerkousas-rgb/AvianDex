@@ -1,0 +1,183 @@
+{
+  "id": "0199",
+  "name": "小黑背鷗",
+  "scientificName": "Larus fuscus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Larus fuscus adult in non-breeding plumage, treated here in the broad IOC sense that includes birds breeding in northern Siberia and wintering in east Asia. Medium-dark grey upperparts, greyish head streaks before the spring moult, a small yellow bill with a red spot and predominantly yellow legs; extensive black in the outermost three primaries with one white mirror. A minority of Hong Kong birds are hybrids with Vega Gull and show intermediate structure, plumage or moult. First-year birds (smaller, slimmer, longer-winged, small-billed, broad dark tail band) are not shown.",
+  "similarSpecies": [
+    {
+      "zh": "織女銀鷗",
+      "scientificName": "Larus vegae",
+      "asset": "vega-gull.png",
+      "framing": "whole-bird",
+      "distinction": "翼上為中灰而非深石板灰，兩者並排時深淺差別最直接；本種體型較修長、翼較長、嘴較小，成鳥腳多為黃色而本種為粉紅。初級飛羽換羽本種最遲（二月底至三月初），織女銀鷗十二月或一月完成。"
+    },
+    {
+      "zh": "蒙古銀鷗",
+      "scientificName": "Larus mongolicus",
+      "asset": "mongolian-gull.png",
+      "framing": "whole-bird",
+      "distinction": "翼上為更淡的銀灰，體型更大、胸更深、嘴與翼更長，腳多為粉紅或桃色；成鳥換羽最早（十一月前完成），冬末白色翼尖已磨損，與本種三月初才完成形成明顯對比。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.14,
+      0.52,
+      0.36
+    ],
+    [
+      0.6,
+      0.62,
+      0.92,
+      0.94
+    ],
+    [
+      0.34,
+      0.34,
+      0.62,
+      0.62
+    ],
+    [
+      0.6,
+      0.46,
+      0.86,
+      0.72
+    ]
+  ],
+  "featureLabels": [
+    "較小較細的黃嘴",
+    "黃色的腳",
+    "深石板灰翼上",
+    "大片黑初級飛羽"
+  ],
+  "featureNotes": [
+    "嘴相對細小，黃色配下嘴紅斑；在幾種大型鷗之中，嘴的大小是判斷本種最快的結構指標（第1圈取自近景圖，整條嘴連紅斑入圈）。",
+    "成鳥腳黃色或大部分黃色，是最直接的野外特徵；香港部分個體被視為與織女銀鷗雜交，腳色可由黃至粉紅不等，這點已在卡上註明（第2圈取自近景圖，實際可見）。",
+    "翼上為中等偏深的石板灰，比織女銀鷗的中灰更深、比蒙古銀鷗的淡銀灰深得多（第3圈取自全身圖，實際可見）。",
+    "最外三枚初級飛羽（P8–P10）有大片黑色，最外一枚有一個白色「鏡斑」，P9 若有則通常很小（第4圈取自全身圖，實際可見；停棲折翼狀態，不代表飛行時圖案）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ISL",
+      "GBR",
+      "IRL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "EST",
+      "LVA",
+      "LTU",
+      "POL",
+      "DEU",
+      "DNK",
+      "NLD",
+      "BEL",
+      "FRA",
+      "ESP",
+      "PRT",
+      "ITA",
+      "RUS",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "CHN",
+      "MNG",
+      "KOR",
+      "JPN",
+      "TWN",
+      "HKG",
+      "VNM",
+      "PHL",
+      "IND",
+      "PAK",
+      "IRN",
+      "IRQ",
+      "SAU",
+      "OMN",
+      "ARE",
+      "EGY",
+      "LBY",
+      "DZA",
+      "MAR",
+      "MRT",
+      "MLI",
+      "NER",
+      "TCD",
+      "SDN",
+      "ETH",
+      "KEN",
+      "TZA",
+      "ZAF",
+      "NAM",
+      "BWA",
+      "NGA",
+      "GHA",
+      "SEN"
+    ],
+    "note": "Country overview only: breeds from Iceland and northwest Europe through Scandinavia east to north Siberia as far as the Taimyr Peninsula, with barabensis in Central Asia; winters from western Europe to equatorial and east Africa, the Middle East to India, and across to south China and east Asia (also a regular non-breeding visitor to North America). Not an occurrence polygon and not split by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017700",
+      "use": "HKBWS Lesser Black-backed Gull (017700) substantive read: 51-61 cm; medium-dark grey upperparts, greyish head streaks before the spring moult and yellow or predominantly yellow legs identify adults in HK; primary moult later than other large gulls and complete in late February or early March; a minority are hybrids with Vega Gull showing intermediate structure, plumage or moult with leg colour from yellow through pinkish-yellow to pink; adults usually have extensive black in P8-P10 with one white mirror on the outermost primary and any mirror on P9 usually small; first-years identified by smaller size, slimmer body, longer wings and smaller bill, no contrastingly paler inner primaries, broad blackish tail band, dark greater coverts; second-winters have dark grey mantle and coverts; most records from the Inner Deep Bay roost, with northward passage flocks off Po Toi 6 January to 12 April and a peak of 291 on 15 March 2007; highest count 865 on 28 January 2000, with winter numbers relatively low since 2015/16; breeds from Iceland and northwest Europe east to the Taimyr Peninsula, winters to Africa, the Middle East, India and south China; IUCN Least Concern, trend increasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017510",
+      "use": "HKBWS Mongolian Gull (017510) read as the pale contrast species: 56-68 cm, paler grey upperparts, more black in the primaries, pinkish or peachy legs, adult primary moult complete by November."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017600",
+      "use": "HKBWS Slaty-backed Gull (017600) read to confirm it is a separate species with equally dark (usually darker) upperparts and different structure, and is rare in Hong Kong."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 小黑背鷗 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Larus fuscus, Charadriiformes/Laridae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime has no score record for this bird; the renderer prints 待查 for missing axes and does not estimate or zero anything."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對深石板灰翼上、黃腳、小黃嘴紅斑與大片黑初級飛羽；不是照片，也不是分佈或族群證據。",
+    "分類處理各權威不同：IOC 把北西伯利亞繁殖、東亞越冬的鳥歸入 L. fuscus（跟隨 Collinson et al. 2008）；本卡沿用此廣義處理，卡面名稱用 app 的「小黑背鷗」。",
+    "香港部分個體被視為與織女銀鷗的雜交，結構、羽色或換羽居中，腳色由黃至粉紅不等；本卡不宣稱所有個體都能明確歸類。",
+    "比較鳥為 AI 生成示意，非等比例；三種灰階深淺只作對照參考。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危、趨勢上升；香港是常見冬候鳥與早春過境鳥，最高 865 隻（2000-01-28），但 2015/16 之後冬季數量偏低。",
+    "只交付 aviandex/0199.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

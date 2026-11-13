@@ -1,0 +1,125 @@
+{
+  "id": "0182",
+  "name": "冠海雀",
+  "scientificName": "Synthliboramphus wumizusume",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "illustrationTaxon": "Synthliboramphus wumizusume: 24-26 cm, a very small, compact, short-necked auklet similar to Ancient Murrelet but distinguished in breeding plumage by a spiky crest of feathers on the forehead, more prominent white on the sides of the crown above and behind the eye, no black on the lower throat, and a slightly larger bill. The head, chin and upper throat are black, the lower throat and cheeks are clean white, the upperparts are dark slate-black and blue-grey, the underparts white, and the stout slightly upturned bill is bluish-grey with a darker ridge along the culmen. Legs and feet yellow-grey. In non-breeding plumage the head is paler with a less extensive dark cap and some white on the sides of the crown.",
+  "similarSpecies": [
+    {
+      "zh": "扁嘴海雀",
+      "scientificName": "Synthliboramphus antiquus",
+      "asset": "ancient-murrelet.png",
+      "framing": "whole-bird",
+      "distinction": "扁嘴海雀沒有冠羽，繁殖羽的黑色沿下喉一整片延伸、喉部全黑，頭頂兩側只有一道白眉而不是本種那樣多道白斑，嘴也略小略短；本種額前有一撮明顯翹起的冠羽、下喉是白的。"
+    },
+    {
+      "zh": "三趾鷗",
+      "scientificName": "Rissa tridactyla",
+      "asset": "kittiwake.png",
+      "framing": "whole-bird",
+      "distinction": "三趾鷗是中型鷗（38–41 公分），背部中灰、翼尖全黑而界線分明、嘴黃腳黑，體態修長；本種只有二十多公分，身體短胖、頭黑喉黑、背深灰黑，翼短而圓，幾乎不張翼滑翔。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.505,
+      0.125,
+      0.665,
+      0.325
+    ],
+    [
+      0.72,
+      0.19,
+      0.98,
+      0.39
+    ],
+    [
+      0.64,
+      0.4,
+      0.84,
+      0.6
+    ],
+    [
+      0.45,
+      0.3,
+      0.66,
+      0.46
+    ]
+  ],
+  "featureLabels": [
+    "額前翹起的冠羽",
+    "頭頂兩側的白斑",
+    "下喉是白的",
+    "嘴脊的深色線"
+  ],
+  "featureNotes": [
+    "額前有一撮向上翹起的尖冠羽，是「冠海雀」之名的由來，也是繁殖羽與扁嘴海雀最直接的分別；扁嘴海雀的額頭是平的（第1圈取自近景圖，實際可見）。",
+    "頭頂兩側、眼後與後頸散著多道白色條斑，白得比扁嘴海雀多；扁嘴海雀只有一道不伸到眼前的白色眉線（第2圈取自近景圖，實際可見）。",
+    "黑色只佔下巴與上喉，下喉與頰是乾淨的白；扁嘴海雀的黑色一路蓋到整個喉部（第3圈取自近景圖，實際可見）。",
+    "嘴粗短、微微上翹，顏色是藍灰色角質，嘴脊上有一條較深的線；這個嘴形比扁嘴海雀更厚一點（第4圈取自近景圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "JPN",
+      "TWN",
+      "CHN"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019400",
+      "use": "HKBWS substantive read: Category I, accidental; 24-26 cm and similar to Ancient Murrelet, but in non-breeding plumage paler on the head with a less extensive dark cap and some white on the sides of the crown, juveniles browner on head and upperparts, and breeding plumage distinguished by a crest, more prominent white on the sides of the crown, lack of black on the lower throat and a slightly larger bill; the voice is a rather high-pitched 'cheeoo', 'chirroo' or similar and very passerine-like; records have all been at sea in southern waters, with two Hong Kong records, both of birds with damaged flight feathers, one in southern waters on 5 May 2007 and one on 21 April 2012; monotypic, breeding on coasts and islands of east and south Japan and wintering offshore from the breeding locations (Nettleship and Kirwan 2020), with vagrant records from Hong Kong, Taiwan (Liu and Chen 2020) and Hainan (Lewthwaite et al. 2021); IUCN Vulnerable, with a rapidly declining population due to disturbance at breeding sites, predation and mortality from drift-net fisheries."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019300",
+      "use": "HKBWS Ancient Murrelet page read as the primary contrast species: a very small auklet with a short, relatively deeply-based and pointed bill; in breeding plumage the black head and entire throat, a white supercilium that does not extend in front of the eye, and a pale bill are diagnostic, and birds fly low over the sea showing a white underbody, a largely white underwing and a narrow black half-collar; in non-breeding plumage the black of the head runs from the chin back to the nape with white extending up behind the eye."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016000",
+      "use": "HKBWS Black-legged Kittiwake page read as the second contrast species: 38-41 cm, a medium-sized rather elegant gull with relatively narrow wings and short legs; adults have medium grey upperparts and cleanly demarcated black wingtips with no mirrors, a dark ear spot and dusky hindneck in winter, a yellow bill and black legs; IUCN Vulnerable with a rapidly decreasing population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 冠海雀 Synthliboramphus wumizusume is number 198, Category I, and carries a VU code; 扁嘴海雀 is number 197 with no IUCN code (i.e. Least Concern); 三趾鷗 Rissa tridactyla is number 176 and is also listed VU."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對額前翹起的冠羽、頭頂兩側白斑、下喉的白色、嘴脊的深色線。",
+    "全身圖直接沿用上一張（0181）已核對的比較鳥 `0181/japanese-murrelet.png`，升格為本卡主圖並重新核對冠羽、頭頂白斑、下喉白與嘴形；近景圖本卡新繪。比較鳥扁嘴海雀（`ancient-murrelet.png` = `0181/pixel.png`）與三趾鷗（`0181/kittiwake.png`）沿用已核對的圖，非等比例——0181 與 0182 互相把對方當比較鳥。",
+    "身長 24–26 公分、體重 164–183 公克，與 `cardDetails.zh.json` 一致，沒有改動。",
+    "app 分數：i 3.8／a 2.3／v 3.4／r 4.8／c 4／o 3.7，六軸齊全，無 `vEst`；保育 4.0 是本批目前最高的一張，反映 VU 等級。",
+    "IUCN **易危 VU**、族群快速下降（HKBWS：disturbance at breeding sites, predation and mortality from drift-net fisheries）；`cardDetails.zh.json` 的「易危 VU」與 HKBWS 一致，不必改。香港屬 Category I 的**偶見鳥**，只有 2007-05-05 與 2012-04-21 兩筆，而且兩隻都是飛羽受損的個體。全球易危與香港偶見要分開寫。",
+    "notes 寫明：本種繁殖於日本東部與南部的海岸與島嶼，冬季只在繁殖地外海活動；中國境內僅有香港、台灣（Liu & Chen 2020）與海南（Lewthwaite et al. 2021）的迷鳥紀錄。",
+    "叫聲照 HKBWS：高音的「cheeoo」或「chirroo」，很像雀形目（英文音譯保留）。",
+    "`cardDetails` 提到 2017 年估計全球僅 2,500–10,000 隻、是最稀有的海雀之一，以及日本 1975 年指定為國家自然紀念物；這兩點寫進 notes 作背景，不作卡面主標。",
+    "地圖 3 個 ISO3：JPN 為繁殖地；TWN 與 CHN 只有迷鳥紀錄，屬「部分分佈國家」概述的一部分，綠色不代表全境。",
+    "只交付 aviandex/0182.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

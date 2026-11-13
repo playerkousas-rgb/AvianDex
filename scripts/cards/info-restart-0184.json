@@ -1,0 +1,127 @@
+{
+  "id": "0184",
+  "name": "黑嘴鷗",
+  "scientificName": "Saundersilarus saundersi",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "illustrationTaxon": "Saundersilarus saundersi: 29-32 cm, a very small, compact gull, slightly smaller than Black-headed Gull, with a relatively short and thick black bill. Adult breeding plumage has a sooty-black head and nape with broad white crescents around much of the eye, white neck, breast, belly and tail, pale grey mantle and upperwing, and broad white tips to the black primaries. Adult non-breeding plumage has a blackish spot behind the eye that extends diffusely onto the crown, with a diffuse blackish band above the eye over the crown; the legs are deep red. First-years have brown in the wing coverts, secondaries and inner primary tips, a brown tail band and dark outer primaries.",
+  "similarSpecies": [
+    {
+      "zh": "紅嘴鷗",
+      "scientificName": "Chroicocephalus ridibundus",
+      "asset": "black-headed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "紅嘴鷗體長 37–43 公分，比本種大上一截，嘴明顯較長較細、呈深紅色而不是短厚的黑；繁殖羽的頭罩是深巧克力褐、眼睛四周只有一圈細白環，本種則是墨黑的頭罩配兩道寬的白新月。飛行時紅嘴鷗靠翼前緣的白邊與黑色翼尖認出，本種的黑色初級飛羽每枚都有一大塊白尖。"
+    },
+    {
+      "zh": "小鷗",
+      "scientificName": "Hydrocoloeus minutus",
+      "asset": "little-gull.png",
+      "framing": "whole-bird",
+      "distinction": "小鷗是全球最小的鷗（25–30 公分），比本種再小一號，嘴細而黑、頭圓、體態圓滾；本種的嘴短而厚，是兩者最直接的分別。小鷗成鳥的翼下是深灰色（翼上反而淡），這是牠獨有的辨認點；本種翼下是白的，翼尖的黑白對比集中在初級飛羽末端。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.455,
+      0.355,
+      0.655,
+      0.655
+    ],
+    [
+      0.695,
+      0.195,
+      0.895,
+      0.495
+    ],
+    [
+      0.69,
+      0.4,
+      0.89,
+      0.7
+    ],
+    [
+      0.28,
+      0.6,
+      0.56,
+      0.92
+    ]
+  ],
+  "featureLabels": [
+    "短而厚的黑嘴",
+    "眼周的白色新月",
+    "白尖的黑色翼尖",
+    "深紅色的腳"
+  ],
+  "featureNotes": [
+    "嘴短、厚、整支墨黑，嘴尖略微下鉤；紅嘴鷗的嘴長而細、呈深紅，小鷗的嘴更細更小。這個「短厚黑」的嘴配上黑頭，是野外與照片鑑定最常用的第一個特徵（第1圈取自近景大頭圖，實際可見）。",
+    "眼的上方與下方各有一道寬闊的白色新月，把黑色的頭罩切出一圈白；這是繁殖羽最乾淨的標誌（第2圈取自近景大頭圖，實際可見）。",
+    "初級飛羽基部黑色、末端有大塊白斑，飛行時形成「黑底上一排白尖」；紅嘴鷗的黑色翼尖只有一塊白楔，小鷗的翼尖則是淡灰配一道白後緣（第3圈取自全身圖，實際可見）。",
+    "腳與蹼都是深紅色，站在泥灘上很顯眼；小鷗的腳也是深紅，但腿更細更短（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "VNM"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016400",
+      "use": "HKBWS substantive read: Category I, an uncommon winter visitor to Deep Bay whose numbers have declined substantially since the mid-1990s; 29-32 cm, slightly smaller than Black-headed Gull with a relatively short and thick bill; in breeding plumage has a black head and nape with broad white crescents around much of the eye and broad white tips to black primaries; in non-breeding plumage has a blackish spot behind the eye extending diffusely to the crown and a diffuse blackish band above the eye over the crown, with deep red legs; in flight the adult has a white outermost primary and white tips to the next three or four with black subterminally, and the black hood border is vertical seen side on; first-years have brown in the wing coverts, secondaries and inner primary tips, a brown tail band and dark outer primaries; almost exclusively on the intertidal mudflats of Deep Bay, with only three records elsewhere, and it forages singly, flying over the mudflats before swooping down in the manner of Gull-billed Tern, preying primarily on polychaete worms and small crabs and roosting scattered among Black-headed Gulls; an uncommon winter visitor and spring passage migrant, first arrivals in early November with first-winter birds remaining into late March and very rare after the third week of April, latest spring record 18 May 2011, the only summer record one on 11 June 2008; the first Hong Kong record was two adults at Mai Po on 14 March 1969; peak winter counts from 1989/90 to 1997/98 were usually over 100 with a maximum of 172 on 10 February 1994, whereas since 1999/2000 the peak has been below 75 apart from one winter of 114, and the average peak count fell from 115 in the 1990s to only 66 from winter 2010/11; monotypic, a largely Chinese breeding endemic in coastal salt marsh around the Bay of Bohai and the Yellow Sea, wintering from South Korea and the Bay of Bohai south to Vietnam and in southern Japan; IUCN Vulnerable, population thought to be decreasing and likely to become rapid through reclamation of tidal flats and disturbance at colonies, with a population size estimate of 14,400."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016300",
+      "use": "HKBWS Black-headed Gull page read as the first contrast species: 37-43 cm, the commonest small gull in Hong Kong, separated in flight from all but the rare Slender-billed Gull by the white leading edge to the wing and black-tipped outer primaries; the adult in breeding plumage has a dark brown hood with a red bill and red legs, and in non-breeding plumage a white tail and a blackish spot behind the eye with a tapered blackish streak reaching up from the eye; IUCN Least Concern with the population trend unknown."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/016500",
+      "use": "HKBWS Little Gull page read as the second contrast species: 25-30 cm, the smallest gull and approximately two-thirds the size of Black-headed Gull, with a rather fine and black bill; the adult has pale grey upperparts and upperwings with distinctive dark grey underwings (paler on the coverts), both surfaces with a broad white trailing edge; in breeding plumage a black hood with no eye crescents and a pinkish tinge to the underparts, in winter a fairly neat black spot behind the eye and a greyish hind crown, with deep red legs; Hong Kong records are two first-winters in Deep Bay on 23 February 1997 and 24 March 2005; IUCN Least Concern with the population trend increasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Hong Kong List 2024: 黑嘴鷗 Saundersilarus saundersi carries a VU code in Category I; 紅嘴鷗 Chroicocephalus ridibundus and 小鷗 Hydrocoloeus minutus are also Category I but carry no IUCN code (i.e. Least Concern)."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對短而厚的黑嘴、眼周的白色新月、白尖的黑色翼尖、深紅色的腳。",
+    "插圖畫的是**成鳥繁殖羽**（墨黑頭罩＋兩道白新月＋黑初級飛羽的白尖），這是本種最容易辨認、也最常出現在圖鑑與照片裡的一套羽色；但本種在香港主要是**冬候鳥**，冬季成鳥只有眼後一塊黑斑、頭頂一道淡淡的黑帶，notes 與卡面的四圈說明明確寫出這一點，避免把繁殖羽誤讀成香港冬天的樣子。",
+    "全身圖與近景圖皆為本卡新繪（`pixel.png`、`features.png`）；比較鳥紅嘴鷗沿用 0183 已核對的 `black-headed-gull.png`，小鷗 `little-gull.png` 為本卡新繪；兩者非等比例，只作外形對照。",
+    "身長：app 的 `cardDetails.zh.json` 寫「33 cm」，HKBWS 量得 29–32 cm。卡面照 app 資料顯示，notes 記下兩個數字，不自行改動任何一邊。體重 `cardDetails` 沒有資料，故不填（依 0014／0053 前例，不以估算補上）。",
+    "app 分數：i 3.8／a 4.7／v 3.7／r 4.8／c 4／o 4.2，六軸齊全，無 `vEst`。",
+    "**全球易危 VU、族群估計正在下降，且可能因潮間帶填海與繁殖地干擾而快速下降；HKBWS 給的族群量估計是 14,400 隻**；香港則是 Category I 的**不常見冬候鳥**，且自 1990 年代中期以來明顯減少。全球與香港分開寫。",
+    "數量細節寫進 notes：1989/90–1997/98 的冬季最高計數通常超過 100 隻、1994-02-10 最高 172 隻；1999/2000 之後除了有一年 114 隻，其餘都低於 75 隻；1990 年代平均高峰 115 隻，2010/11 之後只有 66 隻。HKBWS 明確表示下降與「中國沿岸 2005 年前缺乏調查」有關，無法確證是否真的下降，暖冬讓更多鳥留在北方也可能是原因——兩個可能都照寫。",
+    "香港首筆 1969-03-14 米埔兩隻成鳥；幾乎只出現於后海灣的潮間帶泥灘，其他地點只有三筆。覓食方式照 HKBWS：像鷗嘴燕鷗那樣在泥灘上空盤旋後俯衝，主食多毛類蠕蟲與小蟹；停棲時散落在紅嘴鷗群中，不會自己聚成一群。",
+    "地圖 5 個 ISO3：CHN（渤海灣與黃海的繁殖地，也是主要的度冬海岸）、KOR、PRK、JPN、VNM（度冬地從南韓與渤海向南到越南，另及日本南部）；本種是「大致以中國為中心的繁殖特有種」，故不標俄羅斯。",
+    "只交付 aviandex/0184.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

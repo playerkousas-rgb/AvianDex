@@ -1,0 +1,206 @@
+{
+  "id": "0166",
+  "name": "鶴鷸",
+  "scientificName": "Tringa erythropus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Tringa erythropus, monotypic: 29-32 cm. Adult in breeding plumage is unmistakable, being dark sooty spotted white above with dark legs. In winter it appears distinctly greyish above with white underparts, a whitish forepart of the head and red legs. Juveniles have pale spotted fringes to the brown upperpart feathers with darker bars, paler reddish legs and underparts extensively marked brown. It differs from Common Redshank in lacking the broad white area at the rear of the wing in flight, in its more elegant proportions, longer legs and bill (the latter finer, with the reddish base largely confined to the lower mandible) and in its more obvious supercilium above the lores when not in breeding plumage. When feeding it usually wades in deeper water.",
+  "similarSpecies": [
+    {
+      "zh": "紅腳鷸",
+      "scientificName": "Tringa totanus",
+      "asset": "common-redshank.png",
+      "framing": "whole-bird",
+      "distinction": "紅腳鷸身型較粗壯、腿與嘴都較短，嘴較粗且橙紅色基部連上嘴也包在內，非繁殖羽時眼先之上的眉紋沒有那麼顯眼，飛行時翼後方有一大片寬白；本種比例修長、嘴細長而紅色基部只在下嘴，且常走進較深的水裡。"
+    },
+    {
+      "zh": "澤鷸",
+      "scientificName": "Tringa stagnatilis",
+      "asset": "marsh-sandpiper.png",
+      "framing": "whole-bird",
+      "distinction": "澤鷸體型更小、身型更纖細，腿極長而呈暗綠灰色（不是紅色），嘴細直而全深色、沒有紅色基部，飛行時雙腳伸出尾後很長；本種腿與嘴基是紅色的，體型也大一號。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.66,
+      0.26,
+      1.0,
+      0.52
+    ],
+    [
+      0.55,
+      0.18,
+      0.92,
+      0.46
+    ],
+    [
+      0.03,
+      0.3,
+      0.43,
+      0.56
+    ],
+    [
+      0.24,
+      0.5,
+      0.6,
+      0.84
+    ]
+  ],
+  "featureLabels": [
+    "細長嘴、嘴基偏紅",
+    "眉紋延伸到眼後",
+    "素淨的灰色背部",
+    "長而紅的腿"
+  ],
+  "featureNotes": [
+    "嘴明顯比紅腳鷸更長更細，紅色基部只出現在下嘴、上嘴仍為深色——HKBWS 特別點出這個差別（第1圈取自近景圖，實際可見）。",
+    "非繁殖羽時，眼先之上就有一段清楚的白色眉紋，並延伸到眼後；紅腳鷸在同一季節只有眼前一小段（第2圈取自近景圖，實際可見）。",
+    "冬天背部是一片均勻的淺灰色，沒有任何縱紋或斑點，這與牠繁殖期「深灰黑底配白點」的樣貌完全相反（第3圈取自近景圖，實際可見）。",
+    "腿長而呈鮮紅色，覓食時常整條腿浸在水中，遠看像兩支紅色的高蹺——中文名「鶴鷸」正是形容這種踩深水的姿態（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "ISL",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "TWN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "VNM",
+      "THA",
+      "KHM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "BRN",
+      "IND",
+      "PAK",
+      "LKA",
+      "BGD",
+      "MMR",
+      "NPL",
+      "IRN",
+      "IRQ",
+      "SAU",
+      "YEM",
+      "OMN",
+      "ARE",
+      "QAT",
+      "KWT",
+      "JOR",
+      "ISR",
+      "EGY",
+      "SDN",
+      "ERI",
+      "ETH",
+      "DJI",
+      "SOM",
+      "KEN",
+      "UGA",
+      "TZA",
+      "RWA",
+      "BDI",
+      "COD",
+      "COG",
+      "GAB",
+      "CMR",
+      "NGA",
+      "BEN",
+      "TGO",
+      "GHA",
+      "CIV",
+      "LBR",
+      "SLE",
+      "GIN",
+      "GNB",
+      "SEN",
+      "GMB",
+      "MRT",
+      "MLI",
+      "BFA",
+      "NER",
+      "TCD",
+      "CAF",
+      "ZMB",
+      "ZWE",
+      "MWI",
+      "MOZ",
+      "ZAF",
+      "NAM",
+      "BWA",
+      "AGO",
+      "MDG",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "TUR",
+      "GRC",
+      "BGR",
+      "ROU",
+      "POL",
+      "DEU",
+      "NLD",
+      "BEL",
+      "FRA",
+      "GBR",
+      "IRL",
+      "ESP",
+      "PRT",
+      "ITA"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/015300",
+      "use": "HKBWS substantive read: Category I, a scarce passage migrant, slightly more numerous in spring, and a rare summer visitor that has much declined, occurring in vegetated freshwater wetlands; 29-32 cm, the adult in breeding plumage unmistakable as it is dark sooty spotted white above with dark legs, while in winter it appears distinctly greyish above with white underparts, a whitish forepart of the head and red legs, and juveniles have pale spotted fringes to the brown upperpart feathers with darker bars, paler reddish legs and underparts extensively marked brown; it differs from Common Redshank in lacking the broad white area at the rear of the wing in flight, in more elegant proportions, longer legs and bill with the latter finer and its reddish base largely confined to the lower mandible, and in a more obvious supercilium above the lores when not in breeding plumage, and when feeding it usually wades in deeper water; the characteristic flight call is an inflected disyllabic chew-it, occasionally reversed; most records are from the intertidal mudflats of Deep Bay and adjacent roosting areas primarily at Mai Po NR but also fish pond areas and the Kam Tin Main Drainage Channel, with up to ten at Long Valley mostly since autumn 2011, fewer than 15 records away from these sites, and this century the only records away from the northern New Territories being on Lantau on 8 October 2020 and 11 November 2016; first autumn migrants generally noted in the second week of August with desultory passage during September to mid-October and the highest count since 2006 being 72 compared with 191 previously, the winter flock arriving rather late with the highest count 2,500 on 20 January 2002 but a substantial decline such that since winter 2009/10 the highest count is only 186, the wintering flock remaining substantially intact until late March when numbers are augmented by northbound migrants, peak spring passage in April with the highest counts 2,500 on 17 April 1987 and 2,000 on 3 April 1997 though a sharp decrease in peak spring counts from 2006 to 2012 and all peak spring counts during 2019-2021 fewer than 50, and few summer records with most counts from the last week of May to the first week of August being of one or two birds; Vaughan and Jones (1913) called it a fairly common winter visitor often in flocks of several hundred though strictly confined to the intertidal mudflats, while Walker (1958) appears to be the first to have recorded it here with certainty from 4 April to 20 May 1956; it often forages in deep water where it has an appearance similar to a crane, hence its Chinese name, sometimes swims while feeding and may immerse both head and neck, and is gregarious, gathering in large flocks; monotypic, breeding north of the Arctic Circle from Scandinavia east to Chukotka and wintering in north and sub-Saharan Africa south to Tanzania, the Middle East, western and southern parts of the Indian subcontinent and mainland coastal areas of the South China Sea; in China breeding in central Xinjiang and wintering in southeast coastal provinces including Hainan and Taiwan; IUCN Least Concern with a stable population trend."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對細長而嘴基偏紅的嘴、延伸到眼後的眉紋、素淨的灰色背部及長而紅的腿；單型種。",
+    "兩隻比較鳥均為 AI 生成示意（紅腳鷸、澤鷸，本卡新繪製並已核對），非等比例；卡上不作完整鑑別檢索表。",
+    "插圖採用非繁殖羽：繁殖羽全身深灰黑配白點、腳轉為暗色，冬季才是「灰背白腹紅腿」——香港的紀錄也以非繁殖羽為主。",
+    "覓食時常整條腿浸在水中、甚至半身入水、偶爾游泳並把頭頸沒入水中，遠看像一隻小鶴，中文名由此而來；這些行為拍不進圓圈，只寫在說明。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危 LC（趨勢穩定）；香港屬 Category I，稀少過境鳥（春季略多）、罕見度夏鳥，數量已大幅下降；越冬群由 2002 年的 2,500 隻跌至 2009/10 年後最高 186 隻。",
+    "只交付 aviandex/0166.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

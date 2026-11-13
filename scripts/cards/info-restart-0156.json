@@ -1,0 +1,121 @@
+{
+  "id": "0156",
+  "name": "橙腹葉鵯",
+  "scientificName": "Chloropsis hardwickii",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Chloropsis hardwickii melliana (the mainland subspecies occurring in Hong Kong) in male plumage: 17-20.5 cm. Males are bright green above, fading to yellowish on the nape and greyish on the crown; the face, throat and upper chest are black apart from a broad blue malar; the rest of the underparts are orange-yellow, while the tail is dark below and blue above. The bill is somewhat decurved and the eye dark. Females are greenish overall, darker above than below, with the malar and the edges to the outer tail feathers being diffuse bluish, and are generally more inconspicuous and less vocal than males.",
+  "similarSpecies": [
+    {
+      "zh": "藍翅葉鵯",
+      "scientificName": "Chloropsis cochinchinensis",
+      "asset": "blue-winged-leafbird.png",
+      "framing": "whole-bird",
+      "distinction": "藍翅葉鵯雄鳥腹部同樣綠色、額頂金黃，全身沒有橙色；本種雄鳥腹部大片橙黃，是最直接的分別。"
+    },
+    {
+      "zh": "橙腹葉鵯（雌鳥）",
+      "scientificName": "Chloropsis hardwickii (female)",
+      "asset": "female-leafbird.png",
+      "framing": "whole-bird",
+      "distinction": "雌鳥全身大致綠色、上體較深、無黑臉罩也無橙色腹部，頰紋與外側尾羽邊緣呈淡藍色；雄鳥的黑臉、藍頰紋與橙腹對比強烈得多，兩者同群出現時極易被當成兩種鳥。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.62,
+      0.26,
+      0.88,
+      0.52
+    ],
+    [
+      0.52,
+      0.36,
+      0.76,
+      0.6
+    ],
+    [
+      0.34,
+      0.36,
+      0.56,
+      0.58
+    ],
+    [
+      0.66,
+      0.1,
+      0.92,
+      0.32
+    ]
+  ],
+  "featureLabels": [
+    "藍色頰紋",
+    "橙黃色腹部",
+    "藍色翼羽",
+    "灰頂與綠背"
+  ],
+  "featureNotes": [
+    "一道寬闊鮮明的藍色頰紋由嘴基沿喉側延伸，夾在黑臉與黑喉之間，是雄鳥最醒目的標記（第1圈取自近景圖，實際可見）。",
+    "下胸至腹部是大片橙黃色，與上半身的黑、綠形成強烈對比——這正是「橙腹」之名的由來（第2圈取自全身圖，實際可見）。",
+    "覆羽與飛羽呈鮮藍色，在綠色背部之間形成一條明顯的藍色翼帶（第3圈取自全身圖，實際可見）。",
+    "頭頂灰色、後頸漸變為黃綠、背再轉鮮綠，顏色由前到後分三段（第4圈取自近景圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "pixel.png",
+    "pixel.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "PAK",
+      "NPL",
+      "BTN",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "CHN",
+      "TWN",
+      "MYS",
+      "IDN",
+      "PHL"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/051900",
+      "use": "HKBWS substantive read (two chunks, both read): Category I, locally present at low densities in forested areas largely on the mainland, with a small summering population and possibly a regular breeding species in small numbers; 17-20.5 cm, males bright green above fading to yellowish on the nape and greyish on the crown, the face, throat and upper chest black apart from a broad blue malar, the rest of the underparts orange-yellow, the tail dark below and blue above, the bill somewhat decurved and the eye dark; females greenish overall, darker above than below, with the malar and edges to the outer tail feathers diffuse bluish, and generally more inconspicuous and less vocal than males; the species has extensive mimetic abilities, imitating species from Yellow-browed Warbler and Swinhoe's White-eye to Crested Goshawk and Crested Serpent Eagle, with most sounds uttered probably mimetic to some degree; the percentage of occupied 1 km squares in breeding bird surveys was unchanged at 0.4% between 1993-96 and 2016-19, but the winter distribution increased from 0.8% to 1.9% of squares between 2001-05 and 2016-19; HK Island was the second site at which the species was recorded after Tai Po Kau and it was regularly recorded there from 1 January 1986 to 9 July 1990, after which it became much rarer with only four records from 1992 to 2002 and none until 5 February 2016; records are now concentrated in the Tai Mo Shan massif, northeast New Territories and Sai Kung, and the spread of records is likely related to vegetative succession as shrubland matures into forest; following a record of a female at Lam Tsuen on 27 January 1934 there were no further reports until a male at Tai Po Kau from 2 October 1984 to 20 January 1985; it is most numerous from November to March with a non-breeding population arriving from elsewhere; the highest single-site count is five, all in the Tai Po Kau and Shing Mun area; although the species is part of the cagebird trade and has been deliberately released in Hong Kong, only a minority of records are considered to refer to ex-captive individuals; a male or pair can aggressively defend a fruiting tree from other birds and the species does not commonly join mixed-species flocks; it breeds the length of the Himalayas east through Myanmar, north Thailand and northern Indochina to south China and south into Vietnam, with four subspecies of which C. h. melliana occurs on the mainland including Hong Kong; IUCN Least Concern with a decreasing population trend."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖（雄鳥），經人眼核對藍色頰紋、橙黃腹部、藍色翼羽及灰頂綠背；雌鳥另在比較圈呈現（全綠、淡藍頰紋、無橙腹）。",
+    "兩隻比較鳥均為 AI 生成示意：藍翅葉鵯為另一物種，雌鳥為同種異性；非等比例，卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形；香港位於本種分佈的東南邊緣。",
+    "IUCN 無危 LC（趨勢下降）；香港屬 Category I，林區低密度局部存在，有小量度夏族群，可能以小數量定期繁殖；單一地點最高 5 隻，11 月至 3 月最常見。",
+    "只交付 aviandex/0156.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

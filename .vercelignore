@@ -45,6 +45,9 @@ SLIMMING_GUIDE.md
 BIRD_ID_MAPPING.csv
 scripts
 
+# --- 開發用單頁工具（2026-11 搬離 public/：每份 0.4–1 MB，不應進每次部署）---
+tools/card-pages
+
 # --- 系統檔 ---
 .DS_Store
 Thumbs.db

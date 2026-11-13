@@ -1,0 +1,136 @@
+{
+  "id": "0159",
+  "name": "大沙錐",
+  "scientificName": "Gallinago megala",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Gallinago megala, monotypic: 25-27 cm, a long-billed snipe with brown upperparts and pale longitudinal stripes, barred flanks and a whitish belly. It differs from Common Snipe in having the supercilium broader than the eye and crown stripes at the base of the bill, a pale panel across the median upperwing coverts in flight and virtually no white trailing edge to the secondaries. Compared with Pintail Snipe it has only 20-22 rectrices and lacks the pin-like outer tail feathers, the outer 5-7 pairs instead gradually getting narrower; it possibly has a shorter foot projection beyond the tail in flight and a longer bill. Juveniles have whitish-buff fringes to the wing coverts and tertials. It flushes less readily than both Common and Pintail Snipes and generally has a less erratic flight.",
+  "similarSpecies": [
+    {
+      "zh": "針尾沙錐",
+      "scientificName": "Gallinago stenura",
+      "asset": "pintail-snipe.png",
+      "framing": "whole-bird",
+      "distinction": "針尾沙錐外側尾羽呈針狀、尾羽最少 24 根；本種只有 20–22 根而外側 5–7 對逐漸變窄。野外更可靠的是：本種眉紋明顯比眼線與頭頂條紋寬，被扬起时只叫一兩聲、飛得較低較直。"
+    },
+    {
+      "zh": "扇尾沙錐",
+      "scientificName": "Gallinago gallinago",
+      "asset": "common-snipe.png",
+      "framing": "whole-bird",
+      "distinction": "扇尾沙錐次級飛羽有明顯白色後緣、眉紋不比頭頂條紋寬；本種幾乎沒有白色後緣，翼中覆羽在飛行時呈一塊淡色橫斑，且較不易被驚起。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.62,
+      0.26,
+      0.99,
+      0.56
+    ],
+    [
+      0.62,
+      0.14,
+      0.99,
+      0.48
+    ],
+    [
+      0.14,
+      0.36,
+      0.42,
+      0.62
+    ],
+    [
+      0.42,
+      0.44,
+      0.66,
+      0.66
+    ]
+  ],
+  "featureLabels": [
+    "長而筆直的嘴",
+    "眉紋比眼線寬",
+    "背部淺色縱紋",
+    "腹側橫斑"
+  ],
+  "featureNotes": [
+    "嘴很長且筆直、全深色，比例上比針尾沙錐更長——這是本種與針尾沙錐區分時相對可用的野外特徵之一（第1圈取自全身圖，實際可見）。",
+    "淡色眉紋的寬度明顯大於其下的深色眼線，也寬於頭頂的深色條紋——HKBWS 以此作為與扇尾沙錐分別的首要特徵（第2圈取自近景圖，實際可見）。",
+    "背部有多道淡色縱紋夾在深褐色羽毛之間，整體呈暖褐色（第3圈取自全身圖，實際可見）。",
+    "腹側排列整齊的橫斑延伸到腹部邊緣，腹部白色但不若扇尾沙錐那樣大片而乾淨（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "IND",
+      "PAK",
+      "NPL",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "VNM",
+      "MYS",
+      "LAO",
+      "KHM",
+      "IDN",
+      "PHL",
+      "BRN",
+      "AUS",
+      "PNG",
+      "UZB",
+      "TKM",
+      "KGZ",
+      "TJK",
+      "AFG",
+      "IRN"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/014100a",
+      "use": "HKBWS substantive read: Category I, an uncommon passage migrant and scarce winter visitor to freshwater marsh and wet agricultural fields; differs from Common Snipe in having the supercilium broader than the eye and crown stripes at the base of the bill, a pale panel across the median upperwing coverts in flight and virtually no white trailing edge to the secondaries; juveniles have whitish-buff fringes to the wing coverts and tertials; it flushes less readily than both Common and Pintail Snipes and generally has a less erratic flight; very similar to Pintail Snipe but differs in having only 20-22 rectrices and lacking the pin-like outer tail feathers, the outer 5-7 pairs instead gradually getting narrower, and possibly having a shorter foot projection beyond the tail in flight and a longer bill; the typical flight call when flushed is notably deeper and gruffer than both Common and Pintail Snipes, lacking an easily identifiable pitch on a sonagram and being grainier in texture and sound, and compared with Pintail Snipe it often keeps lower, calls only once or twice unless startled, and does not fly as far nor as erratically; birds confirmed in the hand have occurred on 20 January, 3 February, from 31 March to 8 April and from 28 August to 22 October, with the peak month September, which does not match Aymas (1930) who regarded it as visiting only in spring from the last week of March to the end of April; Vaughan and Jones (1913) noted it was the rarest of the three Gallinago snipes and had been obtained from 26 August to 17 May though chiefly in April, with none thought to winter in Hong Kong; it feeds by inserting its bill into soft mud feeling for prey and, as with all snipe in Hong Kong, is generally seen as it is flushed from diurnal roost sites; monotypic, breeding mainly in south central Siberia and north Mongolia with a disjunct population in Ussuriland, and wintering in south and northeast India, Myanmar, south China, the Philippines and Indonesia south to northern Australia; in China a migrant through the east and south wintering in southeast coastal provinces including Hainan; IUCN Least Concern with an unknown population trend."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對長而筆直的嘴、眉紋比眼線寬、背部淺色縱紋及腹側橫斑；單型種。",
+    "兩隻比較鳥均為 AI 生成示意（針尾沙錐、扇尾沙錐，均沿用 0155／0157 已核對素材），非等比例；卡上不作完整鑑別檢索表。",
+    "野外與針尾沙錐極難分辨，HKBWS 明言多數紀錄只能記為「針尾／大沙錐」二選一；卡上四圈只呈現相對可用的野外線索，尾羽數目與針狀尾羽屬實驗室特徵。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危 LC（趨勢未明）；香港屬 Category I，不常見過境鳥兼稀少冬候鳥；確認紀錄集中 1/20、2/3、3/31–4/8 及 8/28–10/22，高峰月 9 月。",
+    "只交付 aviandex/0159.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

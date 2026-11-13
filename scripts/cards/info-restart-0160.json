@@ -1,0 +1,152 @@
+{
+  "id": "0160",
+  "name": "翹嘴鷸",
+  "scientificName": "Xenus cinereus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Xenus cinereus, monotypic: 22-25 cm, a distinctive small to medium-sized shorebird with a fairly long upturned bill, yellow to orange legs and a broad white trailing edge to the wing; overall rather grey tone to the plumage makes it easy to pick out at distance. Upperparts including rump and tail greyish, breast greyish at the sides but whitish centrally, with a dark carpal area. In breeding plumage has dark marks on the scapulars and a darker bill. Juvenile is darker and browner above with narrow buff fringes to the feathers and, like the adult, dark marks on the scapulars. Distinctive in flight due to the white panel formed by largely white secondaries and pale tips to the inner primaries, the dark primary coverts and bend of wing, and the upturned bill.",
+  "similarSpecies": [
+    {
+      "zh": "磯鷸",
+      "scientificName": "Actitis hypoleucos",
+      "asset": "common-sandpiper.png",
+      "framing": "whole-bird",
+      "distinction": "磯鷸嘴短而直、末端不下彎也不上翹，翼角與白色翼斑之間有一塊明顯的白色楔形，尾部長長伸出翼尖，且不停上下擺尾；本種嘴長而明顯上翹，腿橙黃色，站姿較挺、不擺尾。"
+    },
+    {
+      "zh": "青腳鷸",
+      "scientificName": "Tringa nebularia",
+      "asset": "greenshank.png",
+      "framing": "whole-bird",
+      "distinction": "青腳鷸體型大得多、腿很長、頸長而挺，嘴粗且只微微上翹，腿為暗黃綠色；本種體型小、腿短呈橙黃色，嘴上翹幅度大得多，整體灰色調更均勻。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.66,
+      0.19,
+      1.0,
+      0.5
+    ],
+    [
+      0.53,
+      0.12,
+      0.93,
+      0.52
+    ],
+    [
+      0.22,
+      0.3,
+      0.58,
+      0.56
+    ],
+    [
+      0.31,
+      0.53,
+      0.67,
+      0.89
+    ]
+  ],
+  "featureLabels": [
+    "嘴上翹、基部較淡",
+    "深色眼先與白眉",
+    "肩羽黑褐縱紋",
+    "橙黃色短腿"
+  ],
+  "featureNotes": [
+    "嘴長而基部偏淡、端部深色，整根嘴向上翹——這是本種最容易辨認的特徵（第1圈取自近景圖，實際可見）。",
+    "眼上的細窄白色眉紋與眼下的深色眼先、頰部形成對比，頭部其餘部分為均勻灰褐色（第2圈取自近景圖，實際可見）。",
+    "肩羽中央有明顯的深褐至黑色縱紋，襯在灰褐底色上，是繁殖羽辨識暗色斑塊的位置（第3圈取自全身圖，實際可見）。",
+    "腿短、呈橙黃色至黃色，與多數灰白色鷸類的綠腳或黑腳不同，泥灘上很遠就能看出（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "FIN",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "RUS",
+      "KAZ",
+      "EGY",
+      "SDN",
+      "ERI",
+      "DJI",
+      "SOM",
+      "KEN",
+      "TZA",
+      "MOZ",
+      "ZAF",
+      "MDG",
+      "IRQ",
+      "IRN",
+      "SAU",
+      "ARE",
+      "OMN",
+      "KWT",
+      "YEM",
+      "IND",
+      "PAK",
+      "NPL",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "VNM",
+      "MYS",
+      "LAO",
+      "KHM",
+      "IDN",
+      "PHL",
+      "BRN",
+      "TLS",
+      "CHN",
+      "TWN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "AUS"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/014300",
+      "use": "HKBWS substantive read: Category I, a passage migrant through the Deep Bay area, abundant in spring and uncommon in autumn but scarce in summer and winter; 22-25 cm, a distinctive small to medium-sized shorebird with a fairly long upturned bill, yellow to orange legs and a broad white trailing edge to the wing, an overall rather grey tone that makes it easy to pick out at distance, greyish upperparts including rump and tail, breast greyish at the sides but whitish centrally and a dark carpal area, with dark marks on the scapulars and a darker bill in breeding plumage; juveniles are darker and browner above with narrow buff fringes and dark marks on the scapulars; distinctive in flight due to the white panel formed by largely white secondaries and pale tips to the inner primaries, the dark primary coverts and bend of wing and the upturned bill; a vocal species uttering a rapid series of 2-5 notes in flight or when taking off; most records are from the intertidal mudflats of Deep Bay and adjacent roosting areas of Mai Po NR, rare on commercial fish ponds and in freshwater habitats, with the highest count at other sites being 18 on migration over southern waters on 6 May 2019; primarily a spring passage migrant, main passage from the second week of April to the first week of June with the highest count 590 on 24 April 2007, autumn migrants obvious by the end of July or early August and erratic in number with the highest autumn count 253 on 23 August 2005 and numbers falling in early September, and since winter 2011/12 reported at least once in every winter period between December and February with a highest count of 15 on 25 February 2014; forages singly or in small groups on mudflats at a rapid pace, often chasing prey on the surface, also using a sideways sweep of its bill in the water, and crabs are caught and often washed in the water before consumption; monotypic, breeding from southern Finland and Ukraine east through Russia and northern Kazakhstan to northeast Siberia largely between about 55N and 70N, and wintering coastally in south and east Africa, the Middle East, the Indian subcontinent, southeast Asia, south China, Indonesia and Australia; in China a migrant through much of the country with small numbers in summer and winter in Taiwan; IUCN Least Concern with a decreasing population trend."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對上翹的嘴、深色眼先與白眉、肩羽黑褐縱紋及橙黃色短腿；單型種。",
+    "兩隻比較鳥均為 AI 生成示意（磯鷸、青腳鷸，本卡新繪製並已核對），非等比例；卡上不作完整鑑別檢索表。",
+    "春天數量可觀（單次最高 590 隻，2007-04-24），秋季數量起伏大；近十年幾乎每個冬季都有零星紀錄。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危 LC（趨勢下降）；香港屬 Category I，春季常見、秋季不常見的過境鳥，夏冬稀少。",
+    "只交付 aviandex/0160.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "id": "0151",
+  "name": "飾胸鷸",
+  "scientificName": "Calidris subruficollis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "illustrationTaxon": "Calidris subruficollis, monotypic, in the buff plumage in which the species is normally seen: 18-20 cm, approximately the same body size as a Dunlin but longer in the leg. It resembles a small female Ruff but is brighter, with a shorter and finer all-dark bill. The bird has a prominent dark eye highlighted by pale feathering around the eye, and a darkly streaked crown contrasting with a plain buff face. The underparts are largely buff with blackish spots at the sides of the breast, the upperparts are brown with broad buff fringes giving a scalloped pattern, and the legs are fairly deep yellow. It prefers open mud or grassy habitats.",
+  "similarSpecies": [
+    {
+      "zh": "流蘇鷸",
+      "scientificName": "Calidris pugnax",
+      "asset": "ruff.png",
+      "framing": "whole-bird",
+      "distinction": "流蘇鷸體型明顯較大、頸與腳更長、嘴較長較粗；本種整體較鮮明偏橙黃、嘴短而細、眼圈淡色，看起來像一隻小型雌流蘇鷸。"
+    },
+    {
+      "zh": "斑胸濱鷸",
+      "scientificName": "Calidris melanotos",
+      "asset": "pectoral-sandpiper.png",
+      "framing": "whole-bird",
+      "distinction": "斑胸濱鷸胸前深色縱紋在多條橫向分界上突然中斷，下方純白；本種整片下體都是皮黃色，只在胸側有黑色斑點，沒有那種銳利分界。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.228,
+      0.166,
+      0.436,
+      0.478
+    ],
+    [
+      0.3,
+      0.14,
+      0.78,
+      0.62
+    ],
+    [
+      0.32,
+      0.4,
+      0.54,
+      0.62
+    ],
+    [
+      0.36,
+      0.62,
+      0.58,
+      0.92
+    ]
+  ],
+  "featureLabels": [
+    "短而細的黑嘴",
+    "大眼淡色眼圈",
+    "胸側黑色斑點",
+    "較長的黃腳"
+  ],
+  "featureNotes": [
+    "嘴全黑、短而纖細，比流蘇鷸的長嘴短得多也細得多；這是與小型雌流蘇鷸最直接的分別（第1圈取自全身圖，實際可見）。",
+    "深色大眼被一圈淡色羽毛包圍，形成明顯的淡色眼圈——在整片皮黃色的臉上格外突出（第2圈取自近景圖，實際可見）。",
+    "下體大面積皮黃色，只在胸側有一列黑色斑點；斑點不像斑胸濱鷸那樣形成突然中斷的深色胸帶（第3圈取自全身圖，實際可見）。",
+    "腳長而呈鮮明的深黃色，比例上比濱鷸類長，站姿顯得較高（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "USA",
+      "CAN",
+      "MEX",
+      "GTM",
+      "BLZ",
+      "HND",
+      "SLV",
+      "NIC",
+      "CRI",
+      "PAN",
+      "CUB",
+      "DOM",
+      "HTI",
+      "JAM",
+      "TTO",
+      "COL",
+      "VEN",
+      "GUY",
+      "SUR",
+      "BRA",
+      "ARG",
+      "CHL",
+      "PER",
+      "ECU",
+      "URY",
+      "PRY",
+      "BOL",
+      "CHN",
+      "TWN",
+      "KOR",
+      "JPN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "AUS",
+      "NZL",
+      "IND",
+      "LKA",
+      "MMR",
+      "KHM",
+      "LAO",
+      "BRN",
+      "PNG",
+      "MNG",
+      "KAZ"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/013500",
+      "use": "HKBWS substantive read: Category I, Accidental, with only two Hong Kong records — one at Mai Po Nature Reserve on 19 April 2015 (the first Hong Kong record) and one on a drained fish pond at San Tin from 20 December 2016 to 2 January 2017; 18-20 cm, approximately the same body size as a Dunlin but longer in the leg, resembling a small female Ruff but brighter with a shorter and finer all-dark bill; a prominent dark eye is highlighted by pale feathering around it, and the darkly streaked crown contrasts with a plain face; the underparts are largely buff with blackish spots at the sides of the breast; the legs are fairly deep yellow; it prefers open mud or grassy habitats and appears to be largely silent away from the breeding grounds; monotypic, breeding in small numbers from western Chukotka in Russia east along the coast and on Wrangel Island to at least 170 degrees east with the bulk of the population breeding along the north coast of Alaska and Canada, and wintering in South America; in China it has occurred in Shandong and Taiwan; IUCN Vulnerable with a population decreasing at a moderately rapid pace at minimum."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對短而細的黑嘴、大眼淡色眼圈、胸側黑色斑點及較長黃腳；描繪本種常見的皮黃色羽色，未畫繁殖期的差異。",
+    "兩隻比較鳥均為 AI 生成示意（流蘇鷸、斑胸濱鷸），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 易危 VU（至少中度快速下降）；香港屬 Category I，屬偶見鳥，只有兩筆紀錄：2015-04-19 米埔、2016-12-20 至 2017-01-02 新田乾涸魚塘。",
+    "只交付 aviandex/0151.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

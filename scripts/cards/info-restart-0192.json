@@ -1,0 +1,129 @@
+{
+ "id": "0192",
+ "name": "黑尾鷗",
+ "scientificName": "Larus crassirostris",
+ "layout": "slim",
+ "size": [
+  1024,
+  1536
+ ],
+ "status": "review_before_upload",
+ "iucn": {
+  "code": "LC",
+  "zh": "無危"
+ },
+ "illustrationTaxon": "Larus crassirostris: 43-51 cm, a medium-sized, fairly long-winged and short-tailed gull whose tail is all or largely black at all ages. Most birds in Hong Kong are in first-winter plumage: pale dull greyish-brown mantle and scapulars contrasting with brown wing coverts, an extensive greyish-brown wash to the hind neck, chest and flanks, dark flight feathers, a black tail, and pale greyish-pink legs and bill, the latter with a broad black tip. First-year birds appear rather dark and uniform in flight, with plain dark brown flight feathers and wing coverts contrasting with a paler, more greyish mantle, a blackish barred rump and an all-black tail; the paler head contrasts with a broad darker diffuse collar. Second-year birds have dull brownish-grey upperwings, a broad black tail band with black extending up the inner webs to the uppertail coverts, a well-streaked rear half of the head often with an irregular greyish hind collar and a pale bill with a blackish tip. Adults have slate grey upperparts, a broad black tail band, narrow white tips to the outer primaries, a yellow bill with a black subterminal band and a red tip, and pale eyes with a red orbital ring.",
+ "similarSpecies": [
+  {
+   "zh": "紅嘴鷗",
+   "scientificName": "Chroicocephalus ridibundus",
+   "asset": "black-headed-gull.png",
+   "framing": "whole-bird",
+   "distinction": "紅嘴鷗（37–43 公分）比本種小，**成鳥嘴腳深紅**、翼上淡灰而翼尖只有黑色末端；本種成鳥是**黃嘴配黑色次端帶、紅色嘴尖**，而且**短尾整片黑色**。第一年冬鳥的紅嘴鷗上體較均勻的褐，本種是淡灰褐背配**深褐翼覆羽**、頸胸有大片灰褐、尾全黑。"
+  },
+  {
+   "zh": "漁鷗",
+   "scientificName": "Ichthyaetus ichthyaetus",
+   "asset": "pallas-gull.png",
+   "framing": "whole-bird",
+   "distinction": "漁鷗（60–72 公分）比本種大得多、嘴更粗更長；成鳥繁殖羽是**整頂黑頭罩＋黃嘴近尖端黑帶＋黃腳**，尾不是黑色。本種沒有黑頭罩，成鳥是白頭、**黃嘴配黑次端帶與紅尖端**、**尾整片黑**、腳黃。"
+  }
+ ],
+ "featureCrops": [
+  [
+   0.34,
+   0.42,
+   0.46,
+   0.6
+  ],
+  [
+   0.085,
+   0.31,
+   0.435,
+   0.66
+  ],
+  [
+   0.62,
+   0.42,
+   0.92,
+   0.72
+  ],
+  [
+   0.655,
+   0.4,
+   0.895,
+   0.76
+  ]
+ ],
+ "featureLabels": [
+  "深褐翼覆羽",
+  "淡粉灰嘴黑嘴尖",
+  "灰褐頸胸",
+  "全黑短尾"
+ ],
+ "featureNotes": [
+  "第一年冬鳥的翼覆羽是深褐、成片的暗色，與上方淡灰褐的背部（肩羽）形成清楚對比；HKBWS 明寫「pale dull greyish-brown mantle contrasting with brown wing coverts」（第1圈取全身圖，深褐覆羽與周圍淡灰褐背部同時入鏡）。",
+  "嘴是淡灰粉紅，**外側三分之一是整段黑色**，成兩段色；成鳥才是黃嘴配黑色次端帶與紅色尖端（第2圈取大頭圖，整支嘴由黑色嘴尖到淡粉嘴基都在圈內）。",
+  "後頸、胸與脇有大片灰褐色，把較淡的頭與身體隔開，形成一條寬而模糊的頸環；HKBWS 形容為「broad darker diffuse collar」（第3圈取大頭圖，頸環的深淺交界與白色頭部都在圈內）。",
+  "尾巴**全部黑色、而且很短**，這是本種各年齡都有的特徵，也是名字的由來；黑色由尾羽一直延伸到腰（第4圈取全身圖，整段黑尾與上方深色翼尖都在圈內）。"
+ ],
+ "featureSources": [
+  "pixel.png",
+  "features.png",
+  "features.png",
+  "pixel.png"
+ ],
+ "rangeMap": {
+  "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+  "caption": "世界底圖・部分分佈國家",
+  "disclaimer": "綠色非全境；非完整分佈",
+  "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+  "geometryLicense": "Natural Earth public domain",
+  "bounds": [
+   -180,
+   -90,
+   180,
+   90
+  ],
+  "viewport": "world",
+  "countryIso3": [
+   "RUS",
+   "CHN",
+   "PRK",
+   "KOR",
+   "JPN",
+   "TWN",
+   "HKG",
+   "VNM",
+   "PHL"
+  ]
+ },
+ "sources": [
+  {
+   "url": "https://avifauna.hkbws.org.hk/species/0110/016900",
+   "use": "HKBWS substantive read: Category I, uncommon passage migrant and scarce winter visitor to coastal waters; 43-51 cm, a medium-sized fairly long-winged and short-tailed gull, the tail all or largely black at all ages; most birds in Hong Kong are in first-winter plumage, with pale dull greyish-brown mantle and scapulars contrasting with brown wing coverts, an extensive greyish-brown wash to hind neck, chest and flanks, dark flight feathers, a black tail, pale greyish-pink legs and bill with a broad black tip; first-year birds appear rather dark and uniform in flight with plain dark brown flight feathers and wing coverts contrasting with a paler more greyish mantle, a blackish barred rump and an all-black tail, and the paler head contrasts with a broad darker diffuse collar; second-year birds have dull brownish-grey upperwings, a broad black tail band with black extending up the inner webs to the uppertail coverts, a well-streaked rear half of the head often with an irregular greyish hind collar and a pale bill with a blackish tip; adults have slate grey upperparts, a broad black tail band, narrow white tips to the outer primaries and a yellow bill with a black subterminal band and a red tip, with pale eyes and a red orbital ring; third-winters have slightly duller bill colouration, dark marks in the primary coverts and more extensive black in the tail; calls are a distinctive rather nasal kyow, kyee or kyooo; the species is more likely away from the main gull concentration in Deep Bay, with the largest numbers in Tolo Harbour and offshore waters, and the Deep Bay wintering population ranges between two and usually not more than 12 individuals; first recorded in 1970, largely a spring passage migrant from the second week of February to the third week of March, scarce in early and midwinter and rare in summer; influxes occurred in the mid-1970s, 1984/85, 2002/03 and 2011/12 to 2013/14, with the highest Hong Kong counts 293 at Sham Chung on 22 February 2003, 200 at Starling Inlet on 17 February 1985 and 200 off south Lantau on 8 March 2014; first-winters make up 85-90% of records, second-winters no more than 10%, and adults are recorded less than annually; small fish and organic waste are taken in coastal waters, presumably also crustaceans and polychaetes in Deep Bay, and birds usually occur singly or in small flocks; monotypic, breeding coastally from southern Ussuriland through Japan, Korea and east China to Fujian and dispersing in winter regularly as far south as Hong Kong; IUCN Least Concern with a stable population trend."
+  },
+  {
+   "url": "https://avifauna.hkbws.org.hk/species/0110/016300",
+   "use": "HKBWS Black-headed Gull page read as the first contrast species: 37-43 cm, dark brown breeding hood, bold complete white eye ring, deep red bill and legs, black-tipped outer primaries."
+  },
+  {
+   "url": "https://avifauna.hkbws.org.hk/species/0110/016800",
+   "use": "HKBWS Pallas's Gull page read as the second contrast species: 60-72 cm, black hood and black-tipped yellow bill with yellow legs in adult breeding plumage, no tail band."
+  },
+  {
+   "url": "https://avifauna.hkbws.org.hk/hk-list",
+   "use": "Hong Kong List 2024: 黑尾鷗 Larus crassirostris is listed as 184, Category I, with no IUCN code in the list, i.e. Least Concern, matching the HKBWS species page."
+  }
+ ],
+ "notes": [
+  "AI 生成插圖，經人眼核對深褐翼覆羽、淡粉灰嘴黑嘴尖、灰褐頸胸、全黑短尾。",
+  "畫的是**第一年冬羽**：HKBWS 明寫香港見到的 **85–90% 都是第一年鳥**、第二個冬季不超過 10%、成鳥「less than annually」——所以卡面用第一年冬羽，而**不是**成鳥的白頭黃嘴。成鳥樣子（石板灰上體、黃嘴配黑次端帶與紅尖端、淡色眼、紅色眼圈）寫在 notes 與第 2 圈說明，沒有畫成成鳥。",
+  "身長：HKBWS 量 **43–51 cm**；app 的 `explorerIndex.len` 為 0、`cardDetails` 無長度欄位，slim 版面不顯示身長，故卡面沒有身長數字，notes 只記 HKBWS 的區間（0014／0053／0188 前例）。",
+  "**IUCN 正確**：`cardDetails.zh.json` 0192 已是「無危 LC」，與 HKBWS（Least Concern、趨勢 stable）一致 → 沒有改資料、沒有重跑評分腳本。",
+  "app 分數照 `dexScores` 原值：**i 2.0／a 3.3／v 4.8／r 3.3／c 3.0／o 3.3**，六軸齊全；`vEst: 1` 是因為體長由 AVONET 翼長估算（`explorerIndex.len` 是 0），卡面已標「觀賞值含體長估算」。食性 tag `fish／carrion`、棲地 tag `water`。",
+  "香港紀錄照 HKBWS：1970 年首錄，主要為**2 月第二週至 3 月第三週的春季過境鳥**，冬季稀少、夏季罕見；1 月數量上升，3 月底大部分離開、4 月初偶有滯留。族群大增的年份是 1970 年代中、1984/85、2002/03、2011/12–2013/14；香港最高計數 2003-02-22 深涌 **293 隻**、1985-02-17 沙頭角海 200 隻、2014-03-08 南大嶼外海 200 隻。本種**不一定在后海灣**，最大數量出現在吐露港與外海，后海灣度冬族群只有 2 至通常不超過 12 隻。",
+  "叫聲照 HKBWS：明顯帶鼻音的「kyow」「kyee」「kyooo」；日本因叫聲像貓而稱「海貓 umineko」。食性：沿岸水域的小魚與有機廢棄物，后海灣大概也吃甲殼類與多毛類；本種通常單獨或少於十隻的小群，很少聚集。",
+  "地圖 9 個 ISO3：繁殖海岸線 RUS（南烏蘇里）、CHN（黃海島嶼至福建）、PRK／KOR／JPN（日本、韓國沿海），度冬南延至 TWN、HKG、VNM、PHL。香港是本種冬季分佈的**南限附近**，屬 Category I 不常見過境鳥，所以 HKG 上綠色但說明寫明是「度冬邊緣」。綠色非全境、非完整分佈。"
+ ]
+}

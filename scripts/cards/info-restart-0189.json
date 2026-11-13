@@ -1,0 +1,139 @@
+{
+ "id": "0189",
+ "name": "弗氏鷗",
+ "scientificName": "Leucophaeus pipixcan",
+ "layout": "slim",
+ "size": [
+  1024,
+  1536
+ ],
+ "status": "review_before_upload",
+ "iucn": {
+  "code": "LC",
+  "zh": "無危"
+ },
+ "illustrationTaxon": "Leucophaeus pipixcan: 32-36 cm, a small gull with a dark grey mantle and dark legs. Adult in breeding plumage has a black head and may show a pink wash on the chest; adult in non-breeding plumage has dark grey around the eye that reaches the hind crown, with white crescents above and below the eye, a white neck and underparts and a clean white tail. Adult upperwings are dark grey with white-tipped outer primaries that have black subterminal bands and white internally. First-year birds are darker brownish-grey on the upperwing (browner on the coverts) with broad white tips to the secondaries and inner primaries, a dark tail band, rather extensive dark grey on the rear of the head and broad white crescents around the eye.",
+ "similarSpecies": [
+  {
+   "zh": "紅嘴鷗",
+   "scientificName": "Chroicocephalus ridibundus",
+   "asset": "black-headed-gull.png",
+   "framing": "whole-bird",
+   "distinction": "紅嘴鷗（37–43 公分）比本種大，**嘴與腳都是鮮紅色**，本種嘴黑、腳深色；紅嘴鷗的繁殖頭罩是整頂深褐色，本種非繁殖羽只在眼周有一塊**深灰耳斑向後連到後冠**，眼上下各有一彎白新月。紅嘴鷗翼上淡灰、翼尖黑色，本種翼上深灰、外側初級飛羽黑底白端。"
+  },
+  {
+   "zh": "小鷗",
+   "scientificName": "Hydrocoloeus minutus",
+   "asset": "little-gull.png",
+   "framing": "whole-bird",
+   "distinction": "小鷗（25–30 公分）比本種小一截，是本地最小的鷗；繁殖羽整頂純黑頭罩**沒有眼圈**，本種非繁殖羽是深灰耳斑配**上下兩彎白新月**。小鷗腳深紅、翼下整片深灰，本種腳深黑、翼上深灰而翼下較淡。"
+  }
+ ],
+ "featureCrops": [
+  [
+   0.19,
+   0.19,
+   0.79,
+   0.79
+  ],
+  [
+   0.375,
+   0.295,
+   0.595,
+   0.515
+  ],
+  [
+   0.185,
+   0.365,
+   0.425,
+   0.605
+  ],
+  [
+   0.6,
+   0.42,
+   0.92,
+   0.8
+  ]
+ ],
+ "featureLabels": [
+  "深灰耳斑連後冠",
+  "眼上下白新月",
+  "短黑嘴",
+  "黑底白端初級飛羽"
+ ],
+ "featureNotes": [
+  "非繁殖羽的眼周是一整塊深灰，向後延伸並向上接到後冠，與白色的額、頰、頸側形成清楚邊界；繁殖羽才是整頂黑頭（第1圈取自大頭圖，實際可見頭罩後緣、白頰與嘴基都在圈內）。",
+  "眼下與眼上各有一彎乾淨的白新月，把深灰耳斑切成三塊；這是本種非繁殖羽最好用的辨識點（第2圈取自大頭圖，實際可見）。",
+  "嘴短而黑、整體一個顏色、尖端略鉤，嘴基與白色額部相接；紅嘴鷗的嘴更長而且是鮮紅色（第3圈取自大頭圖，整支嘴由嘴基到尖端都在圈內）。",
+  "收翼側面：次級飛羽與內側初級飛羽都是黑底配**白色端斑**，外側初級飛羽的黑色更實、白端更明顯，下方白尾與尾端深帶亦入鏡；HKBWS 形容成鳥初級飛羽是「黑底、內側白、白端」（第4圈取自全身圖，實際可見）。"
+ ],
+ "featureSources": [
+  "features.png",
+  "features.png",
+  "features.png",
+  "pixel.png"
+ ],
+ "rangeMap": {
+  "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+  "caption": "世界底圖・部分分佈國家",
+  "disclaimer": "綠色非全境；非完整分佈",
+  "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+  "geometryLicense": "Natural Earth public domain",
+  "bounds": [
+   -180,
+   -90,
+   180,
+   90
+  ],
+  "viewport": "world",
+  "countryIso3": [
+   "CAN",
+   "USA",
+   "MEX",
+   "BLZ",
+   "GTM",
+   "SLV",
+   "HND",
+   "NIC",
+   "CRI",
+   "PAN",
+   "COL",
+   "ECU",
+   "PER",
+   "CHL"
+  ]
+ },
+ "sources": [
+  {
+   "url": "https://avifauna.hkbws.org.hk/species/0110/016600",
+   "use": "HKBWS substantive read: Category I, Accidental; 32-36 cm, a small gull with a dark grey mantle and dark legs; breeding plumage has a black head and may have a pink wash on the chest; non-breeding plumage has dark grey around the eye that reaches the hind crown; adult has white-tipped outer primaries with black subterminal bands and white internally; first-year birds are rather dark brownish-grey on the upperwing (browner on the coverts) with broad white tips to the secondaries and inner primaries, a dark tail band, rather extensive dark grey on the rear of the head and broad white crescents around the eye; calls are rather high-pitched and often inflected, kyer or kyeeear; all Hong Kong sightings occurred on the intertidal mudflats of Deep Bay; 2015: a second-winter from 26 November to 2 May 2016 (Lewthwaite 2017) joined by a second bird from 19 April to 2 May; no observations on behaviour, foraging and diet; monotypic, breeding in the interior of central North America and wintering along the west seaboard of South America (Burger and Gochfeld 2020); in China there are records from Tianjin, Hebei, Zhejiang and Taiwan (Liu and Chen 2020); IUCN Least Concern with the population trend increasing."
+  },
+  {
+   "url": "https://avifauna.hkbws.org.hk/species/0110/016300",
+   "use": "HKBWS Black-headed Gull page read as the first contrast species: 37-43 cm, dark brown breeding hood, bold complete white eye ring, deep red bill and legs, black-tipped outer primaries with a white leading edge."
+  },
+  {
+   "url": "https://avifauna.hkbws.org.hk/species/0110/016500",
+   "use": "HKBWS Little Gull page read as the second contrast species: 25-30 cm, the smallest gull, black breeding hood with no eye crescents, fine black bill, deep red legs, dark grey underwings and a broad white trailing edge on both wing surfaces."
+  },
+  {
+   "url": "https://avifauna.hkbws.org.hk/hk-list",
+   "use": "Hong Kong List 2024: 弗氏鷗 Leucophaeus pipixcan is listed as 181, Category I, with no IUCN code in the list, i.e. Least Concern, matching the HKBWS species page."
+  },
+  {
+   "url": "https://www.allaboutbirds.org/guide/Franklins_Gull/lifehistory",
+   "use": "Cornell Lab (All About Birds) read for ecology beyond Hong Kong: nests in freshwater marshes with emergent vegetation in large colonies; omnivorous, eating mainly insects, earthworms and other invertebrates, and on wintering grounds also small fish, crabs and isopods along shorelines and around fishing operations; winters mostly along ocean coastlines of South America; highly social and sensitive to disturbance."
+  }
+ ],
+ "notes": [
+  "AI 生成插圖，經人眼核對深灰耳斑連後冠、眼上下白新月、短黑嘴、翼的白後緣白翼尖。",
+  "畫的是**非繁殖羽（冬季）**：眼周深灰向後延伸至後冠，眼上、眼下各一彎白新月，嘴黑、腳深黑；HKBWS 明寫繁殖羽是整頂黑頭、胸前可能帶粉紅——卡面所畫不是繁殖羽，notes 在此寫明差別（第 1、2 圈說明的也是非繁殖羽特徵）。",
+  "身長：HKBWS 量 **32–36 cm**；app 的 `explorerIndex.len` 為 0、`cardDetails` 無長度欄位，slim 版面亦不顯示身長，故卡面沒有身長數字，notes 只記 HKBWS 的區間，沒有自行補值（0014／0053 前例）。體重兩邊都無資料，不填。",
+  "**IUCN 來源錯誤已改正**：`cardDetails.zh.json` 原寫「未評估 NE」，但 HKBWS 物種頁明寫 **Least Concern、趨勢 increasing**，HK List 2024 的弗氏鷗一列亦無 IUCN 代碼（即 LC）。依 0185／0188 前例只改這一個 `iucn` 字串（brace scan + `str.replace`，沒有重新序列化整份檔案），再跑 `scripts/build-dex-scores.mjs` 與 `scripts/cards/build-filter-traits.mjs`；eBird／Cornell 的 BBS 長期下降數字屬區域趨勢，沒有寫進卡面 IUCN 章。",
+  "app 分數：改 IUCN 後由 `i 2.6／a 2.3／v 4.5／r 1.0／c 1.5／o 2.4` 變成 **`i 2.0／a 2.3／v 4.5／r 1.0／c 1.2／o 2.2`**，`vEst: 1` 仍在：體長由 AVONET 翼長估算（`explorerIndex.len` 是 0），卡面已標「觀賞值含體長估算」。食性 tag 只有 `insect`、棲地 tag 為空，適應力 2.3 照原值顯示，沒有替缺資料補值。",
+  "香港紀錄照 HKBWS 只有一筆（2015-11-26 至 2016-05-02 的一隻第二個冬季鳥，2016-04-19 至 05-02 有第二隻加入），兩隻都在后海灣潮間帶泥灘；分類為單型種。",
+  "叫聲照 HKBWS：偏高、尾音帶轉折的「kyer」或「kyeeear」。行為、覓食與食性 HKBWS 寫「No observations」，卡面不補；Cornell 的北美生態資料只在來源列註明，沒有寫成香港情況。",
+  "地圖 14 個 ISO3：北美洲內陸的**繁殖國家**（CAN、USA）＋南美洲西岸的**度冬國家**（COL、ECU、PER、CHL），再加上遷徙與度冬所經的中美洲與墨西哥（MEX、BLZ、GTM、SLV、HND、NIC、CRI、PAN；MEX 只是遷徙／零星度冬，不是繁殖國）。中國（天津、河北、浙江）與台灣的紀錄都是**迷鳥**，香港的一筆也是偶發紀錄，所以 CHN／TWN／HKG 都不上綠色；綠色非全境、非完整分佈。",
+  "只交付 aviandex/0189.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+ ]
+}

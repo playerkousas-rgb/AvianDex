@@ -1,0 +1,178 @@
+{
+  "id": "0155",
+  "name": "丘鷸",
+  "scientificName": "Scolopax rusticola",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Scolopax rusticola, monotypic: 33-35 cm, similar in shape to but larger and stockier than the snipes occurring in Hong Kong, and rarely found in open habitats. The plumage is cryptic and brown with darker markings, most notably broad black lines on the hind crown and black lines on the lores and below the cheeks. The bill is very long and straight, pale flesh-coloured with a dark tip, the legs are short, and the eye is set high and far back on the large head. In flight its distinctive long bill, stocky body and rounded wings are evident.",
+  "similarSpecies": [
+    {
+      "zh": "扇尾沙錐",
+      "scientificName": "Gallinago gallinago",
+      "asset": "common-snipe.png",
+      "framing": "whole-bird",
+      "distinction": "扇尾沙錐明顯較小較纖細、頸較長、背部有清楚的淺色縱紋；本種矮胖得多、幾乎看不見頸、背部是斑駁橫紋而非縱紋，眼位也明顯偏後偏高。"
+    },
+    {
+      "zh": "針尾沙錐",
+      "scientificName": "Gallinago stenura",
+      "asset": "pintail-snipe.png",
+      "framing": "whole-bird",
+      "distinction": "針尾沙錐體態修長、尾外側羽毛呈針狀、翼下覆羽密佈橫斑；本種身軀圓厚如球、尾短、頭大而眼位高後，兩者站姿一比即分。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.64,
+      0.29,
+      0.88,
+      0.53
+    ],
+    [
+      0.74,
+      0.02,
+      0.96,
+      0.24
+    ],
+    [
+      0.34,
+      0.62,
+      0.56,
+      0.76
+    ],
+    [
+      0.26,
+      0.34,
+      0.56,
+      0.64
+    ]
+  ],
+  "featureLabels": [
+    "長直而淡色的嘴",
+    "後枕寬黑帶",
+    "短而淡的腳",
+    "隱蔽的橫斑羽色"
+  ],
+  "featureNotes": [
+    "嘴很長、筆直，呈淡肉色而末端轉深——與沙錐類的全深色嘴不同（第1圈取自全身圖，實際可見）。",
+    "後枕橫過一道寬闊的黑帶，是頭部最醒目的標記；眼位於黑帶之前、位置偏高偏後（第2圈取自近景圖，實際可見）。",
+    "腳短而偏淡肉色，與矮胖的身軀比例相符，站姿比其他鷸類低得多（第3圈取自全身圖，實際可見）。",
+    "上體是褐、黑、皮黃交錯的斑駁橫紋而非縱紋，在落葉堆中極難察覺——這正是本種的隱蔽之道（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "DNK",
+      "GBR",
+      "IRL",
+      "NLD",
+      "BEL",
+      "DEU",
+      "POL",
+      "CZE",
+      "SVK",
+      "AUT",
+      "HUN",
+      "CHE",
+      "FRA",
+      "ESP",
+      "PRT",
+      "ITA",
+      "GRC",
+      "TUR",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "ROU",
+      "BGR",
+      "SRB",
+      "HRV",
+      "SVN",
+      "BIH",
+      "MNE",
+      "MKD",
+      "ALB",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "MMR",
+      "THA",
+      "VNM",
+      "MYS",
+      "LAO",
+      "KHM",
+      "IND",
+      "PAK",
+      "NPL",
+      "BGD",
+      "LKA",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "JOR",
+      "SYR",
+      "LBN",
+      "SAU",
+      "ARE",
+      "OMN",
+      "YEM",
+      "KWT",
+      "QAT",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "EGY"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/013900",
+      "use": "HKBWS substantive read: Category I, a widespread winter visitor and passage migrant occurring at low densities in damp wooded areas; 33-35 cm, similar in shape to but larger and stockier than the snipes occurring in Hong Kong and rarely found in open habitats; the plumage is cryptic and brown with darker markings, most notably broad black lines on the hind crown and black lines on the lores and below the cheeks; in flight its distinctive long bill, stocky body and rounded wings are evident; the only call heard in Hong Kong is a quiet though harsh 'charp' when flushed, similar to Common Snipe; most records have involved single birds in scattered wooded localities including shrubland or woodland in otherwise highly urbanized areas, and passage birds are recorded on Po Toi though it appears to support few in winter; it is a passage migrant and winter visitor, the earliest autumn record one at southwest Lantau on 22 September 2019, with peak passage in the second half of October and first week of November and the wintering population established by at least the end of the month; the highest single-site counts are seven at Cloudy Hill on 25 November 1998 and 17 December 1999; the wintering population remains fairly constant until the third week of January, with withdrawal of wintering birds and passage of migrants into April and the latest record on 19 April 1996; Swinhoe (1861) called it abundant during winter, Vaughan and Jones (1913) a regular but never abundant winter visitor from the beginning of November to mid-April, and Aymas (1930) expected it at the end of October and stated that a sportsman who could gather a brace in a day's shooting should consider himself very lucky; HKBWS records suggest numbers were possibly higher in the late 1950s; it forages in wooded areas along streams or where the ground is damp and is usually encountered when flushed from diurnal roosting sites, flying off steeply through the trees with a clatter and whirring of wings, and can also be seen flying over woodland to foraging areas at dusk; monotypic, breeding from northwest Europe east through Scandinavia and Russia to Japan largely between 40 and 65 degrees north and wintering in west, south and southeast Europe and north Africa to the Black and Caspian Sea areas, southwest India and the Himalayan foothills, and east through Indochina and south China to Honshu; in China it breeds in northern Xinjiang, the far northeast and Sichuan and winters from southern Tibet east through Yunnan and areas south of the Yangtze to Taiwan; IUCN Least Concern with a stable population trend."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對長直而淡色的嘴、後枕寬黑帶、短而淡的腳及隱蔽橫斑羽色；單型種，未畫亞種差異。",
+    "兩隻比較鳥均為 AI 生成示意（扇尾沙錐、針尾沙錐），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危 LC（趨勢穩定）；香港屬 Category I，廣泛分佈但密度低的冬候鳥兼過境鳥，單一地點最高 7 隻（1998-11-25、1999-12-17 大老山），最遲紀錄 1996-04-19。",
+    "只交付 aviandex/0155.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

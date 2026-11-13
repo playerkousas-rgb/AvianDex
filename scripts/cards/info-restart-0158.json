@@ -1,0 +1,135 @@
+{
+  "id": "0158",
+  "name": "針尾沙錐",
+  "scientificName": "Gallinago stenura",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Gallinago stenura, monotypic: 25-27 cm, a slim long-billed snipe. It differs structurally from Common Snipe in having a shorter tail beyond which there is a longer projection of the toes in flight; it is generally duller, sandier and more uniform, and lacks a clear-cut whitish trailing edge to the secondaries. Compared with Common Snipe it has a fully barred underwing and usually lacks notable contrast between the white cheek stripe and the buff supercilium. Its diagnostic pin-like outer tail feathers are not usually visible in the field. It often appears to have a relatively shorter bill and larger eyes than Swinhoe's Snipe, but as there is considerable overlap in plumage the two are usually treated as 'either/or' in the field.",
+  "similarSpecies": [
+    {
+      "zh": "扇尾沙錐",
+      "scientificName": "Gallinago gallinago",
+      "asset": "common-snipe.png",
+      "framing": "whole-bird",
+      "distinction": "扇尾沙錐較纖細、嘴與尾較長、褐色較濃、白腹對比鮮明；本種較暗淡偏沙色、腹側橫斑較密而腹部白色不突出，兩者在野外多數只能記為「沙錐一種」。"
+    },
+    {
+      "zh": "丘鷸",
+      "scientificName": "Scolopax rusticola",
+      "asset": "woodcock.png",
+      "framing": "whole-bird",
+      "distinction": "丘鷸大得多且矮胖如球、頸幾乎不可見、眼位高而偏後；本種明顯修長、頸較長、頭較小而眼較大，體態一比即分。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.56,
+      0.18,
+      0.94,
+      0.52
+    ],
+    [
+      0.72,
+      0.14,
+      0.99,
+      0.44
+    ],
+    [
+      0.2,
+      0.4,
+      0.46,
+      0.66
+    ],
+    [
+      0.44,
+      0.46,
+      0.68,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "長而筆直的嘴",
+    "大眼與頭部縱紋",
+    "暗淡的背部縱紋",
+    "腹側密集橫斑"
+  ],
+  "featureNotes": [
+    "嘴長而筆直、全深色；本種的嘴相對身體比扇尾沙錐略短（第1圈取自全身圖，實際可見）。",
+    "眼相對頭部顯得偏大，頭頂有深淺相間的縱紋，但白頰紋與皮黃眉紋之間對比不強——這正是與扇尾沙錐分別的難處（第2圈取自近景圖，實際可見）。",
+    "背部淺色縱紋較窄、較不明顯，整體呈偏沙的暗褐色，不如扇尾沙錐那樣有幾道鮮明的淡色條紋（第3圈取自全身圖，實際可見）。",
+    "腹側橫斑密集而一直延伸到腹部邊緣，腹部白色範圍小、對比弱——扇尾沙錐的腹部則是乾淨的白色（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "IND",
+      "PAK",
+      "NPL",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "VNM",
+      "MYS",
+      "LAO",
+      "KHM",
+      "IDN",
+      "PHL",
+      "BRN",
+      "UZB",
+      "TKM",
+      "KGZ",
+      "TJK",
+      "AFG",
+      "IRN",
+      "IRQ"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/014000",
+      "use": "HKBWS substantive read: Category I, a common passage migrant mainly in autumn and a scarce winter visitor to freshwater marsh and wet agricultural fields, with numbers possibly declined due to loss of rice paddy fields; 25-27 cm, differing structurally from Common Snipe in having a shorter tail beyond which there is a longer projection of the toes in flight, generally duller, sandier and more uniform, and lacking a clear-cut whitish trailing edge to the secondaries; juveniles have buff fringes to the wing coverts and narrower fringes on the upperparts; compared with Common Snipe it has a fully barred underwing and usually lacks notable contrast between the white cheek stripe and the buff supercilium; very similar to Swinhoe's Snipe, differing in the diagnostic pin-like outer tail feathers that are not usually visible in the field and in the number of tail feathers (minimum 24), and often appearing to have a relatively shorter bill and larger eyes, though as there is considerable overlap in plumage between the two most field records are treated as either/or; the typical flight call when flushed is flatter, slightly shorter and more even in pitch than Common Snipe's, generally higher in pitch and less husky than Swinhoe's and occasionally resembling the quack of a duck, and in Hong Kong it generally calls more frequently and flies faster, higher and more erratically than Swinhoe's; previously all Gallinago snipes in Hong Kong preferred paddy fields and marshes, and the loss of the former has likely caused a significant decline in all of them, with most records now from the wet agriculture and freshwater marsh at Long Valley and the freshwater or brackish ponds at Mai Po Nature Reserve; birds confirmed in the hand or rarely in the field by tail structure have occurred from 3 February to 4 May and from 29 August to 12 October, with the peak month September; Vaughan and Jones (1913) gave extreme dates of 9 August and 12 May and Aymas (1930) regarded it as the commonest snipe in Hong Kong, occurring from the second half of August and most numerous in September with numbers declining so that by December few remain; monotypic, breeding from the Urals east through Siberia to the Sea of Okhotsk and south to Ussuriland and northwest Mongolia, and wintering from the Indian subcontinent east to south China and south through Indochina and southeast Asia to Indonesia; in China a migrant through the east and south wintering in southeast coastal provinces including Hainan and Taiwan; IUCN Least Concern with an unknown population trend."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對長而筆直的嘴、大眼與頭部縱紋、暗淡的背部縱紋及腹側密集橫斑；單型種。",
+    "兩隻比較鳥均為 AI 生成示意（扇尾沙錐、丘鷸，均沿用 0155／0157 已核對素材），非等比例；卡上不作完整鑑別檢索表。",
+    "外側針狀尾羽是實驗室級別的特徵，野外通常看不到，卡上四圈因此改以體態、頭部、背部與腹側橫斑呈現——真正可靠的分辨仍要多聽飛行叫聲。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危 LC（趨勢未明）；香港屬 Category I，主要秋季常見的過境鳥、冬季稀少；確認紀錄集中 2 月 3 日至 5 月 4 日及 8 月 29 日至 10 月 12 日，高峰月為 9 月。",
+    "只交付 aviandex/0158.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
