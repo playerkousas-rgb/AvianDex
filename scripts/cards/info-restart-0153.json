@@ -1,0 +1,141 @@
+{
+  "id": "0153",
+  "name": "半蹼鷸",
+  "scientificName": "Limnodromus semipalmatus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Limnodromus semipalmatus in breeding plumage: 33-36 cm, a large dowitcher slightly smaller than a Bar-tailed Godwit, with a dark bill and dark legs and whitish underwings. In breeding plumage it has an orange-rust head and underparts extending to the belly, dark lores, a darkly streaked crown, and a grey-brown mantle, scapulars and wing coverts with a varying degree of orange-brown edges. In non-breeding plumage it is rather dull grey-brown overall with dark lores and crown and a heavily streaked face, neck and chest, while the juvenile has clear-cut pale fringes to the upperparts and a streaked warm buff-washed chest. In flight it shows pale underwings but densely barred axillaries and uppertail coverts.",
+  "similarSpecies": [
+    {
+      "zh": "長嘴鷸",
+      "scientificName": "Limnodromus scolopaceus",
+      "asset": "long-billed-dowitcher.png",
+      "framing": "whole-bird",
+      "distinction": "長嘴鷸腳為黃綠色、體型較小較緊湊；本種腳全黑、體型明顯較大較厚重，繁殖羽下體的橙鏽色更均勻地由頭延伸到腹部。"
+    },
+    {
+      "zh": "黑尾鷸",
+      "scientificName": "Limosa limosa",
+      "asset": "black-tailed-godwit.png",
+      "framing": "whole-bird",
+      "distinction": "黑尾鷸嘴明顯雙色（粉橙配黑尖）、腳更長；本種嘴全黑、腳較短，體型整體比黑尾鷸小一號，翼下淡色而腋羽與尾上覆羽密佈橫斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.62,
+      0.21,
+      0.92,
+      0.49
+    ],
+    [
+      0.66,
+      0.26,
+      0.92,
+      0.52
+    ],
+    [
+      0.52,
+      0.34,
+      0.74,
+      0.56
+    ],
+    [
+      0.28,
+      0.56,
+      0.52,
+      0.84
+    ]
+  ],
+  "featureLabels": [
+    "長而全黑的嘴",
+    "深色眼先",
+    "橙鏽色下體",
+    "黑色腳"
+  ],
+  "featureNotes": [
+    "嘴長而筆直、全黑，與黑尾鷸的雙色嘴截然不同；這是與大型鷸類分辨的第一個要點（第1圈取自全身圖，實際可見）。",
+    "嘴基與眼之間有一片明顯的深色眼先，配深色縱紋頭頂，令橙鏽色的臉顯得更濃（第2圈取自近景圖，實際可見）。",
+    "繁殖羽由頭、頸、胸一直橙鏽到腹部，不是只在胸前一段（第3圈取自全身圖，實際可見）。",
+    "腳全黑而相對短——長嘴鷸的腳是黃綠色，兩者並排時一望即分（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "NPL",
+      "MMR",
+      "THA",
+      "MYS",
+      "VNM",
+      "KHM",
+      "LAO",
+      "PHL",
+      "IDN",
+      "BRN",
+      "PNG",
+      "AUS",
+      "NZL",
+      "UZB",
+      "TKM",
+      "KGZ",
+      "TJK",
+      "AFG",
+      "IRN",
+      "IRQ"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0100/013700",
+      "use": "HKBWS substantive read: Category I, a passage migrant through the Deep Bay area, common in spring and scarce in autumn; 33-36 cm, a large dowitcher slightly smaller than Bar-tailed Godwit with dark bill and legs and whitish underwings; breeding plumage has an orange-rust head and underparts to the belly, dark lores, a darkly streaked crown and a grey-brown mantle, scapulars and wing coverts with varying orange-brown edges; non-breeding plumage is rather dull grey-brown overall with dark lores and crown and a heavily streaked face, neck and chest, and the juvenile has clear-cut pale fringes to the upperparts and a streaked warm buff-washed chest; in flight it shows pale underwings but densely barred axillaries and uppertail coverts; the vocalisation typically heard in Hong Kong is a characteristic rather nasal but rich 'kyow' that falls in pitch; apart from two Long Valley records all records are from the intertidal mudflats of Deep Bay or adjacent roosting areas, primarily Mai Po Nature Reserve, and it has been reported on a commercial fish pond only once; first recorded on 30 August 1967, it is primarily a spring passage migrant with only small numbers in autumn, the earliest occurrence 22 March and the main passage from the last week of April to the middle of May with peak numbers in the first week of May; in most years the peak spring count is 200 or fewer averaging around 150, with the highest count on record 540 on 2 May 2003; passage is largely complete by the end of May and most June and early July records probably refer to over-summering individuals; the earliest return-passage record concerns two on 19 July 2008 and the latest one on 13 November 2000, with the highest autumn count 28 on 21 August 2005 and most autumn records of juveniles; it is gregarious, with flocks keeping together at roost; it breeds in large disjunct areas from southern Siberia and northern Kazakhstan southeast through northern Mongolia and the Lake Baikal area to northeast China and southern Ussuriland, and winters coastally in southeast and northeast parts of the Indian subcontinent, southeast Asia, the Philippines, Indonesia and scattered locations in Australia; monotypic, though separation of westerly and easterly breeding populations may warrant subspecific status; IUCN Near Threatened with a decreasing population, probably due to habitat loss on the wintering grounds."
+    },
+    {
+      "url": "https://ebird.org/species/asidow1/HK",
+      "use": "eBird species account cross-check: blackish legs distinguish Asian Dowitcher from Long-billed Dowitcher's yellowish-green legs, and the all-dark bill of adult Asian Dowitcher differs from the bicoloured bill of godwits, while juveniles show a pale bill base."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對長而全黑的嘴、深色眼先、橙鏽色下體及黑色腳；描繪繁殖羽（香港春季過境所見多為此），未畫非繁殖羽的灰褐縱紋。",
+    "兩隻比較鳥均為 AI 生成示意（長嘴鷸、黑尾鷸），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 近危 NT（趨勢下降，相信與越冬地棲地喪失有關）；香港屬 Category I，春季常見、秋季稀少的過境鳥，最高 540 隻（2003-05-02），多數年份春季高峰約 150 隻。",
+    "只交付 aviandex/0153.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
