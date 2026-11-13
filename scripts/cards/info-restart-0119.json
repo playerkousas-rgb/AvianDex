@@ -1,0 +1,196 @@
+{
+  "id": "0119",
+  "name": "鳳頭麥雞",
+  "scientificName": "Vanellus vanellus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "illustrationTaxon": "Vanellus vanellus adult: dark crown with a long thin upcurved black crest, black and white face pattern, greenish-tinged dark upperparts with purple and bronze iridescence on the coverts, white underparts, orange-buff undertail coverts, pinkish-flesh legs, short dark bill. First-winters have pale buff tips to the upperpart feathers and a shorter crest, and are not shown. The species is monotypic.",
+  "similarSpecies": [
+    {
+      "zh": "灰頭麥雞",
+      "scientificName": "Vanellus cinereus",
+      "asset": "grey-headed-lapwing.png",
+      "framing": "whole-bird",
+      "distinction": "沒有冠羽；上體冷灰褐而非帶金屬光澤的深綠；嘴黃而先端黑、腳鮮黃而長；本種頭頂有長而向上彎的黑色冠羽、嘴腳皆暗色。"
+    },
+    {
+      "zh": "太平洋金斑鴴",
+      "scientificName": "Pluvialis fulva",
+      "asset": "pacific-golden-plover.png",
+      "framing": "whole-bird",
+      "distinction": "無冠羽、無黑白面紋及黑胸帶；上體金黃斑駁、嘴腳皆暗而腳長；本種上體深綠帶金屬光澤、有黑白面紋與寬黑胸帶。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6771,
+      0.0879,
+      0.9375,
+      0.4785
+    ],
+    [
+      0.4948,
+      0.3711,
+      0.8073,
+      0.8398
+    ],
+    [
+      0.4271,
+      0.4557,
+      0.6224,
+      0.651
+    ],
+    [
+      0.4271,
+      0.651,
+      0.6224,
+      0.8464
+    ]
+  ],
+  "featureLabels": [
+    "上彎長冠",
+    "黑白面紋",
+    "金屬綠背",
+    "粉紅短腳"
+  ],
+  "featureNotes": [
+    "頭頂長而纖細、末端向上彎的黑色冠羽，是鳳頭麥雞一眼可辨的標誌（第1圈取自頭部特寫，實際可見；第一年冬羽冠羽較短）。",
+    "面部黑白相間：深色頭頂、白色面頰與眼後白斑、貫穿眼部的深色橫紋，加黑色頦喉（第2圈取自頭部特寫，實際可見）。",
+    "上體深色帶綠色光澤，肩及覆羽在光線下有紫紅與青色金屬反光（第3圈取自全身圖，實際可見；飛行時翼形寬圓、翼端深色配白尾深色端帶，是另一項野外特徵，插圖為折翼狀態，本圈不代表飛行翼色）。",
+    "腳短而呈肉粉至暗紅色，脛跗相對體型短（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GBR",
+      "IRL",
+      "FRA",
+      "ESP",
+      "PRT",
+      "NLD",
+      "BEL",
+      "DEU",
+      "DNK",
+      "NOR",
+      "SWE",
+      "FIN",
+      "POL",
+      "CZE",
+      "SVK",
+      "AUT",
+      "HUN",
+      "ROU",
+      "BGR",
+      "GRC",
+      "ITA",
+      "CHE",
+      "SVN",
+      "HRV",
+      "SRB",
+      "BIH",
+      "MNE",
+      "ALB",
+      "MKD",
+      "UKR",
+      "BLR",
+      "LTU",
+      "LVA",
+      "EST",
+      "MDA",
+      "TUR",
+      "CYP",
+      "RUS",
+      "KAZ",
+      "UZB",
+      "TKM",
+      "MNG",
+      "CHN",
+      "TWN",
+      "JPN",
+      "KOR",
+      "PRK",
+      "IND",
+      "PAK",
+      "IRN",
+      "IRQ",
+      "SAU",
+      "ARE",
+      "OMN",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "EGY",
+      "ISR",
+      "LBN",
+      "JOR",
+      "KWT",
+      "QAT",
+      "AFG",
+      "NPL",
+      "BTN",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "MYS"
+    ],
+    "note": "Country overview only: monotypic. Breeds from western Europe east through Scandinavia and eastern Europe across Russia and Kazakhstan to Mongolia and northeast China; part of the population winters close to the breeding grounds in western Europe, while others move south to southern Europe, coastal north Africa, Iran, northwest India, south China, South Korea and southern Japan. In China it breeds in Xinjiang and the northeast and winters along the Yangtze floodplain south to the coast including Taiwan and Hainan. Not an occurrence polygon and not split by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080/010000",
+      "use": "HKBWS substantive identification/range/conservation read: Category I scarce winter visitor to open-country habitats, numbers possibly declining; 28-31cm medium-sized plover with dark crown, long thin crest, black and white face pattern, greenish-tinged dark upperparts, orange-buff undertail coverts and pink legs; first-winters with pale buff upperpart tips; in flight broad rounded white-tipped dark wings, dark-tipped white tail and white underparts, broad outer wing indicating a male; distinctive plaintive slightly nasal calls; most records from flat low-lying northwest New Territories especially Mai Po NR, also fish ponds, Long Valley and Kam Tin, up to five at Kai Tak and Chek Lap Kok, Castle Peak coast, Ho Chung, Tai Long Wan, Tai Po, Pui O; erratic occurrence with no records in some winters, highest numbers with cold fronts; earliest autumn record 6 Sep 1987, main period since 1999 first week of November to mid-February peaking first half of December; highest counts 126 on 21 Nov 1992 and 109 on 29 Dec 1991 both with northeast monsoon surges, next 40 on 6 Feb 1976; prey located aurally or visually with short runs and stops; monotypic, breeds western Europe through Scandinavia and eastern Europe across Russia and Kazakhstan to Mongolia and northeast China, winters western Europe, southern Europe, coastal north Africa, Iran, northwest India, south China, South Korea, southern Japan; China breeds Xinjiang and northeast and winters Yangtze floodplain south to the coast including Taiwan and Hainan; IUCN Near-threatened, decreasing, suspected moderately rapid."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0080",
+      "use": "HKBWS family list confirming 010000 鳳頭麥雞 and the neighbouring lapwing and plover articles."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 鳳頭麥雞 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Vanellus vanellus, Charriiformes/Charadriidae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six-axis scores i3 a2.3 v3.6 r4.8 c3.6 o3.5, no recomputation."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對冠羽形態、黑白面紋、上體金屬光澤及腳色；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例；灰頭麥雞與太平洋金斑鴴在香港都有紀錄，但卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 近危、全球趨勢下降；香港屬稀少而出現不穩定的越冬鳥，部分冬季完全無紀錄，最高計數為 1992-11-21 的 126 隻。",
+    "只交付 aviandex/0119.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
