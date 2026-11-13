@@ -1436,3 +1436,17 @@ HKBWS 0080/011200 內文（Category I 過境遷徙鳥，短草及其他開闊旱
 - 全身圖第一版嘴向下垂、匙端角度不自然，已重繪為向前平伸的側面輪廓。
 - **新增工具** `scripts/cards/preview-crops.py KKKK`：完全複製 renderer 的 `ImageOps.fit` 圓形裁切，事先看到四圈的真實效果。之前的正方形測試縮圖會誤導——寬框經 `ImageOps.fit` 後左右會被切走。
 - notes：IUCN CR（估計每年下降約 8%）；最高 13 隻（2005-04-03），一般一日不超過三隻，本世紀記錄減少。
+
+## 0147 紅頸濱鷸 _Calidris ruficollis_（NT 近危）
+
+- Drive：`1qM0uPiFAnOF9okOGJ6z0yvqxsVdsLlED`，164513 B，MD5 `68a96fb7c8c92fecfd6f6b0f0409d283`。
+- 四部位：短厚黑嘴／橙紅臉頸／橙紅肩羽／淡色短腳；比較鳥 勺嘴鷸 + 青腳濱鷸；74 ISO3。
+- 比較鳥特意配勺嘴鷸：HKBWS 明言嘴尖沾泥的紅頸濱鷸最易被誤認成勺嘴鷸，卡上已寫明。
+- notes：IUCN NT（黃海停歇地喪失）；春季最高 3,756 隻（2010-04-11）。
+
+## 0148 三趾濱鷸 _Calidris alba_（LC 無危）
+
+- Drive：`11lVn4bNjEApwnc9lDkivy1su7vgDnZI-`，159240 B，MD5 `18c723bf822ffee0fbde97d38906625d`。
+- 四部位：短而直的嘴／淡灰頭臉／翼角黑色斑／黑色無後趾；比較鳥 紅頸濱鷸 + 彎嘴濱鷸；92 ISO3。
+- 插圖為非繁殖羽（香港春季所見多為此），notes 已註明未畫繁殖羽橙褐色。
+- notes：IUCN LC；春季不常見至稀少，九成以上紀錄少於五隻，最高 67 隻（1993-05-04）。

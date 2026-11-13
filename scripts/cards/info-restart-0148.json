@@ -1,0 +1,201 @@
+{
+  "id": "0148",
+  "name": "三趾濱鷸",
+  "scientificName": "Calidris alba",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Calidris alba (C. a. rubida presumed in Hong Kong) in largely non-breeding plumage, as most birds seen in spring are: 18-20 cm, larger than the stints but slightly smaller than Curlew Sandpiper and much more compact. The bill and legs are black, and the feet lack a hind toe. Upperparts are rather pale grey, often with blackish at the bend of the closed wing, and the underparts from throat to undertail coverts are pure white with only faint greyish streaks at the side of the chest. Moult to breeding plumage results in darker and more distinct streaks and orange-brown on the chest, throat and face, with dark-centred upperpart feathers bearing large orange-brown blotches, though it is rare for birds in Hong Kong to be entirely in breeding plumage. Juveniles have blackish arrowhead centres to the mantle and scapulars that reach the edge of the feather and are outlined by broad buff or whitish fringes, rather different from the evenly scaled pattern of juvenile stints. It forages mainly by picking prey from the surface, though it also probes.",
+  "similarSpecies": [
+    {
+      "zh": "紅頸濱鷸",
+      "scientificName": "Calidris ruficollis",
+      "asset": "red-necked-stint.png",
+      "framing": "whole-bird",
+      "distinction": "紅頸濱鷸體型明顯較小、嘴短而厚、繁殖羽臉頸橙紅；本種較大較結實、嘴直而黑、非繁殖羽上體淡灰而全身白，兩者在春季最易互相混淆。"
+    },
+    {
+      "zh": "彎嘴濱鷸",
+      "scientificName": "Calidris ferruginea",
+      "asset": "curlew-sandpiper.png",
+      "framing": "whole-bird",
+      "distinction": "彎嘴濱鷸較大、嘴較長而下彎、腳較長，繁殖羽胸腹鏽紅；本種嘴短而直、體態緊湊、非繁殖羽上體淡灰而翼角有黑色斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1,
+      0.2,
+      0.4,
+      0.4
+    ],
+    [
+      0.16,
+      0.12,
+      0.48,
+      0.44
+    ],
+    [
+      0.82,
+      0.4,
+      0.98,
+      0.6
+    ],
+    [
+      0.28,
+      0.5,
+      0.8,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "短而直的嘴",
+    "淡灰頭臉",
+    "翼角黑色斑",
+    "黑色無後趾"
+  ],
+  "featureNotes": [
+    "嘴短、直而全黑，配合結實緊湊的體態；這是與紅頸濱鷸最容易比較的地方（第1圈取自全身圖，實際可見）。",
+    "頭、臉與上體都是相當淡的灰色，下體由喉到尾下覆羽幾乎純白，只有胸側有極淡的灰紋（第2圈取自全身圖，實際可見）。",
+    "摺合翅膀的翼角有一小塊黑色，在淡灰的上體上格外顯眼，是本種非繁殖羽最好認的細節（第3圈取自近景圖，實際可見）。",
+    "腳黑色，而且沒有後趾——「三趾」之名由此而來，是近距離觀察時最確實的特徵（第4圈取自全身圖，實際可見）。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "features.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "USA",
+      "CAN",
+      "GRL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "ISL",
+      "DNK",
+      "GBR",
+      "IRL",
+      "NLD",
+      "DEU",
+      "POL",
+      "EST",
+      "LVA",
+      "LTU",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "KOR",
+      "PRK",
+      "JPN",
+      "TWN",
+      "PHL",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN",
+      "PNG",
+      "AUS",
+      "NZL",
+      "IND",
+      "PAK",
+      "BGD",
+      "LKA",
+      "MMR",
+      "NPL",
+      "KHM",
+      "LAO",
+      "BRN",
+      "ARE",
+      "OMN",
+      "SAU",
+      "YEM",
+      "IRN",
+      "IRQ",
+      "EGY",
+      "SDN",
+      "ERI",
+      "ETH",
+      "KEN",
+      "TZA",
+      "ZAF",
+      "NAM",
+      "BWA",
+      "MOZ",
+      "MDG",
+      "NGA",
+      "GHA",
+      "SEN",
+      "MRT",
+      "MAR",
+      "DZA",
+      "TUN",
+      "LBY",
+      "ESP",
+      "PRT",
+      "FRA",
+      "ITA",
+      "GRC",
+      "TUR",
+      "BRA",
+      "ARG",
+      "CHL",
+      "PER",
+      "ECU",
+      "MEX",
+      "PAN",
+      "CRI",
+      "COL",
+      "VEN",
+      "SUR",
+      "GUY",
+      "CUB",
+      "DOM",
+      "HTI",
+      "JAM",
+      "TTO",
+      "URY",
+      "PRY",
+      "BOL"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/013200",
+      "use": "HKBWS substantive read: Category I, passage migrant scarce to uncommon in spring and rare in winter, occurring in intertidal areas of Deep Bay but rarely on sandy beaches; 18-20 cm, larger than stints but slightly smaller than Curlew Sandpiper and much more compact, with black bill and legs and feet lacking a hind toe; most birds seen in Hong Kong in spring are largely in winter plumage with rather pale grey upperparts often showing blackish at the bend of the closed wing and pure white underparts from throat to undertail coverts with only faint greyish streaks at the side of the chest; moult to breeding plumage gives darker and more distinct streaks and orange-brown on the chest, throat and face with dark-centred upperpart feathers bearing large orange-brown blotches, though it is rare for birds in Hong Kong to be entirely in breeding plumage; juveniles have blackish arrowhead centres to the mantle and scapulars reaching the feather edge and outlined by broad buff or whitish fringes, rather different from the evenly scaled pattern of juvenile stints; calls a somewhat explosive loud 'pwit' and a high-pitched 'chit'; although elsewhere associated with sandy beaches, disturbance and the inaccessibility of undisturbed sites mean few are recorded in that habitat in Hong Kong, with most records from the intertidal mudflats of Deep Bay and adjacent Mai Po roosts and very rare on the nearby commercial fish ponds, while away from Deep Bay records are mostly of up to eight birds at scattered coastal localities mainly in the New Territories but also on Lantau at Pui O and Shui Hau, Lamma, Po Toi, Tung Ping Chau with 15 on 27 April 2008 and at Kai Tak and Chek Lap Kok, with spring records of up to seven at the sandy beaches of Tai Long Wan and Long Ke Wan in Sai Kung and one autumn record of a single, and the highest count away from Deep Bay a flock of 19 over southern waters on 5 May 2018; primarily a spring passage migrant with low numbers and over 90% of records involving fewer than five birds, the earliest spring record one at Mai Po on 12 March 2017, passage peaking in the last week of April and first half of May, the highest spring count 67 on 4 May 1993 in an exceptional year with the highest in other years 19 on 5 May 2018 and the latest record one on 8 June 2004; rare on autumn passage with almost all records of one or two birds, the highest counts ten on 16 November 1958 and eight on 21 November 1976 and the highest this century four on 21 November 2001, earliest autumn records 8 August 2010 and 26 August 1962 and the latest 22 November 2009; appears to have declined, with peak counts usually five or more before 2009 but fewer than that subsequently; only four winter records; confusion with some Red-necked Stints in spring means many early records must be considered unreliable; birds bearing leg-flags from Victoria, Australia recorded from 23 April to 16 May; forages mainly by picking prey from the surface though it also probes, presumably feeding on small crustaceans and molluscs on sandy beaches; two subspecies with C. a. rubida, breeding in northeast Siberia, Alaska and northern Canada, presumed in Hong Kong; IUCN Least Concern with an unknown population trend."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0090/013100",
+      "use": "HKBWS Red-necked Stint comparison: a much smaller squat stint with a short thick bill and, in breeding plumage, orange-rufous face and chest, which is the species most often confused with Sanderling in spring in Hong Kong."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對短而直的嘴、淡灰頭臉、翼角黑色斑及黑色腳；描繪非繁殖羽（香港春季所見多為此羽色），未畫繁殖羽的橙褐色。",
+    "兩隻比較鳥均為 AI 生成示意（紅頸濱鷸沿用 0147 全身圖、彎嘴濱鷸沿用 0143 全身圖），非等比例；卡上不作完整鑑別檢索表。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危 LC（趨勢未明）；香港屬 Category I，春季不常見至稀少的過境鳥、冬季罕見，超過九成紀錄少於五隻，最高 67 隻（1993-05-04）。",
+    "只交付 aviandex/0148.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
