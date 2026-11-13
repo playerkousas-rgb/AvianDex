@@ -1,0 +1,131 @@
+{
+  "id": "0200",
+  "name": "灰背鷗",
+  "scientificName": "Larus schistisagus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Larus schistisagus adult in non-breeding plumage. Large and stocky with relatively short wings and a stout bill; slate-grey upperparts (the darkest of the large gulls that occur in Hong Kong), a broad white tertial crescent, a pale iris, greyish-brown streaks on the head and neck, yellow bill with a red subterminal spot and deep pink legs; in flight a rather small white mirror on the outermost primary and sometimes the penultimate. Adults are rare in Hong Kong — most birds recorded are first-years, which are brown overall and are not shown here.",
+  "similarSpecies": [
+    {
+      "zh": "小黑背鷗",
+      "scientificName": "Larus fuscus",
+      "asset": "lesser-black-backed-gull.png",
+      "framing": "whole-bird",
+      "distinction": "翼上為中等偏深的石板灰而非深石板灰，並排時本種更深；本種體型更粗壯、翼較短、嘴更粗厚、腳為深粉紅，小黑背鷗較修長而腳多為黃色。初級飛羽換羽本種亦較早完成。"
+    },
+    {
+      "zh": "灰翅鷗",
+      "scientificName": "Larus glaucescens",
+      "asset": "glaucous-winged-gull.png",
+      "framing": "whole-bird",
+      "distinction": "翼尖與翼上同為淡灰而非黑色，是本種最直接的對比：灰翅鷗全身淡灰白、無黑色翼尖，體型更粗大；本種翼上深石板灰、初級飛羽黑色而有小白鏡斑。香港並無灰翅鷗紀錄，此處只作灰階對照。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.3,
+      0.1,
+      0.66,
+      0.42
+    ],
+    [
+      0.04,
+      0.2,
+      0.44,
+      0.54
+    ],
+    [
+      0.44,
+      0.24,
+      0.8,
+      0.78
+    ],
+    [
+      0.38,
+      0.52,
+      0.88,
+      0.96
+    ]
+  ],
+  "featureLabels": [
+    "淡色虹膜",
+    "粗厚的黃嘴紅斑",
+    "深石板灰翼上",
+    "寬白三級飛羽新月"
+  ],
+  "featureNotes": [
+    "成鳥虹膜淡色（淺黃至灰白），配灰褐色的頭頸縱紋，是與其他大型鷗分辨的細節之一；非繁殖羽的頭頸縱紋在近景圖清楚可見（第1圈取自近景圖，實際可見）。",
+    "嘴粗厚，黃色，下嘴有紅色亞末端斑點；HKBWS 亦提到非繁殖成鳥有時嘴色偏淡、暗淡（第2圈取自近景圖，整條嘴連紅斑入圈）。",
+    "翼上為深石板灰，是香港出現的大型鷗之中最深的一種，與寬白的三級飛羽新月形成強烈對比（第3圈取自全身圖，實際可見）。",
+    "三級飛羽末端白色，在深灰翼上形成寬闊的白色新月狀帶，是成鳥最顯眼的辨識特徵（第4圈取自近景圖，實際可見）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "JPN",
+      "KOR",
+      "PRK",
+      "CHN",
+      "TWN",
+      "HKG"
+    ],
+    "note": "Country overview only: breeds around the coasts of the Sea of Okhotsk and the east Bering Sea in northeast Siberia, south to Hokkaido; winters in the breeding areas and south through Japan and the Yellow Sea coasts, regularly reaching south China (Burger et al. 2020, via HKBWS). Not an occurrence polygon and not split by season; Hong Kong is a scarce winter visitor and early spring passage migrant."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017600",
+      "use": "HKBWS Slaty-backed Gull (017600) substantive read: 55-67 cm, large and often stocky with relatively short wings, stout bill and deep pink legs; adults rare in HK and have slate-grey upperparts, broad white tertial crescent, pale iris, greyish-brown streaks on head and neck in non-breeding plumage and sometimes a very pale dull bill; in flight a broad white trailing edge to the secondaries and inner primaries, dark flight feathers on the underwing and a rather small mirror on the outermost primary and sometimes the penultimate; first-years brown overall with plain greater coverts and dark bill, prone to bleaching; Category I scarce winter visitor and early spring passage migrant, mainly second week of January to early April with numbers peaking in March, extremes 7 November 2016 and 19 April 2014; most records from the Inner Deep Bay gull roost with some over southern waters and off northern Lantau in February and March; first HK record two first-winters at Pak Nai on 17 March 1984; monotypic, breeds around the Sea of Okhotsk and east Bering Sea coasts south to Hokkaido, winters south through Japan and the Yellow Sea to south China; IUCN Least Concern, population trend unknown."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017700",
+      "use": "HKBWS Lesser Black-backed Gull (017700) read as the darker-looking but structurally different contrast species: medium-dark grey upperparts, slimmer build and longer wings, more extensive black in P8-P10."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 灰背鷗 unchanged. Note cardCopy.json carries a Wikipedia-sourced alias 大黑脊鷗 in its prose, which is a Wikipedia translation artefact and is not used on this card face."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Larus schistisagus, Charadriiformes/Laridae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores i2.0 a2.3 v4.5 r4.8 c1.2 o3.0, rendered as the app's own interest index; no axis is estimated."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對深石板灰翼上、寬白三級飛羽新月、淡色虹膜、粗厚黃嘴紅斑與深粉紅色腳；不是照片，也不是分佈或族群證據。",
+    "香港的灰背鷗以第一年鳥為主，成鳥罕見；本卡插圖畫的是成鳥非繁殖羽，與大多數香港紀錄的年齡不符，這點必須在閱讀時記住。",
+    "比較鳥為 AI 生成示意，非等比例；灰翅鷗（翼尖淡灰、無黑色翼尖）只作灰階對照，香港沒有其紀錄。",
+    "cardCopy.json 的 0200 條目含「來源請求」標記，且沿用了 Wikipedia 的別名「大黑脊鷗」與只提翅膀白邊的簡化描述；卡面採用 HKBWS 與 IOC 的灰背鷗、Larus schistisagus，並未改寫該資料檔。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。",
+    "IUCN 無危，族群趨勢不詳；香港屬第一類（Cat. I）稀少冬候鳥及初春過境鳥，主要在一月至四月初，三月最多。",
+    "只交付 aviandex/0200.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}

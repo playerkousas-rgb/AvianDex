@@ -1,0 +1,143 @@
+{
+  "id": "0198",
+  "name": "玄燕鷗",
+  "scientificName": "Anous minutus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "illustrationTaxon": "Anous minutus adult. A dark tern-like seabird with a greyish-white forecrown contrasting with the dark nape, black lores with a straight upper border, a white orbital ring, and a long thin bill noticeably longer than the head with only a slightly curved tip. Juveniles (paler, with narrow pale fringes above and an extensive pale forehead/crown) are not shown. Subspecies cannot be assigned from a photo, and four Pacific subspecies are candidates for Hong Kong.",
+  "similarSpecies": [
+    {
+      "zh": "白頂玄鷗",
+      "scientificName": "Anous stolidus",
+      "asset": "brown-noddy.png",
+      "framing": "whole-bird",
+      "distinction": "體型較大、較粗壯，羽色較淺而偏暖褐；嘴明顯較短較粗、末端鉤曲更強；白頂的淡色範圍更闊並柔和過渡至褐色後頸，黑眼先的上緣不像本種那樣呈一直線。"
+    },
+    {
+      "zh": "灰玄鷗",
+      "scientificName": "Anous albivitta",
+      "asset": "grey-noddy.png",
+      "framing": "whole-bird",
+      "distinction": "體色為淡藍灰而非黑褐，整體遠比本種淺色；頭頂與前額純白、與淡灰後頸分界清楚，黑色眼罩向前伸至嘴基。三者並排時深淺順序最易分辨。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.02,
+      0.2,
+      0.72,
+      0.9
+    ],
+    [
+      0.38,
+      0.12,
+      0.88,
+      0.62
+    ],
+    [
+      0.24,
+      0.1,
+      0.5,
+      0.36
+    ],
+    [
+      0.56,
+      0.4,
+      0.92,
+      0.76
+    ]
+  ],
+  "featureLabels": [
+    "長過頭的細黑嘴",
+    "灰白前額對比深色後頸",
+    "白色眼圈",
+    "楔形尾與長翼"
+  ],
+  "featureNotes": [
+    "嘴細長、長度大於頭長，末端只有輕微彎曲——這是與白頂玄鷗（嘴短粗而鉤曲）最直接的分別（第1圈取自近景圖，整條嘴連頭部與眼都入圈）。",
+    "前額與頭頂前部灰白，與深色後頸形成強烈對比；眼先黑色而**上緣呈一直線**，是與白頂玄鷗分別時要看的細節（第2圈取自近景圖，實際可見）。",
+    "眼周有清楚的白色眼圈，在整片黑褐羽色中格外突出；幼鳥縱紋較多、前額淡色範圍更大，本圖為成鳥（第3圈取自全身圖，實際可見）。",
+    "停棲時翼長於尾，尾呈長楔形、收合時顯得尖（第4圈取自全身圖，實際可見；插圖為停棲狀態，不代表飛行時的翼形）。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AUS",
+      "PNG",
+      "IDN",
+      "PHL",
+      "MYS",
+      "FSM",
+      "MHL",
+      "PLW",
+      "NRU",
+      "KIR",
+      "TUV",
+      "WSM",
+      "TON",
+      "FJI",
+      "VUT",
+      "SLB",
+      "NZL",
+      "USA",
+      "HKG",
+      "TWN"
+    ],
+    "note": "Country overview only: breeds on tropical and subtropical islands and islets in the Atlantic and Pacific between 30N and 30S; the four subspecies that could reach Hong Kong breed in the Pacific from northeast Australia north and east to Hawaii. HKG is marked because the sole Hong Kong record came from a rocky islet at Kung Chau; it is an accidental, not part of the normal range. Not an occurrence polygon and not split by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/015900",
+      "use": "HKBWS Black Noddy (015900) substantive read: 35-40 cm; tern-like seabird with wedge-shaped tail (pointed when closed), blackish-brown plumage apart from a greyish-white forecrown that contrasts strongly with the nape, black lores, white orbital ring, wings longer than tail at rest; juveniles paler with narrow pale fringes and an extensive pale forehead and crown; compared with Brown Noddy it is smaller, slimmer and darker with a noticeably thinner and relatively longer bill (greater than the length of the head) that has only a slightly curved tip, a whiter and more contrasting forehead, and black lores with a straight upper border; voice a nasal modulated rattle higher-pitched than Brown Noddy; the sole record was one bird among a tern colony on a rocky islet, Kung Chau 18-19 June 2017 (Lewthwaite et al. 2019); seven subspecies, four candidates for Hong Kong (worcesteri, minutus, marcusi, melanogenys) breeding in the Pacific from northeast Australia to Hawaii; breeds on tropical and subtropical islands between 30N and 30S; accidental in Taiwan; IUCN Least Concern, trend decreasing."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/015800",
+      "use": "HKBWS family list entry for Brown Noddy 白頂玄鷗, used as the contrast species."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name 玄燕鷗 unchanged."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy Anous minutus, Charadriiformes/Laridae."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime has no complete score record naming this bird's axes; the renderer prints 待查 for any missing axis and does not estimate or zero anything."
+    }
+  ],
+  "notes": [
+    "AI 生成插圖，經人眼核對灰白前額、深色後頸、白色眼圈與細長嘴；不是照片，也不是分佈或族群證據。",
+    "比較鳥為 AI 生成示意，非等比例；三種玄鷗的深淺與嘴形差異只作對照參考。",
+    "地圖為 Natural Earth 110m 世界底圖的國家層級概述，不是精確分佈多邊形，繁殖地與越冬地不分工。香港標綠是因為唯一一筆紀錄在弓洲，屬迷鳥，不代表正常分佈。",
+    "香港只有一筆紀錄：2017-06-18 至 19 於弓洲，混在燕鷗繁殖群中（Lewthwaite et al. 2019）。",
+    "IUCN 無危但全球趨勢下降；香港屬 Category I 迷鳥，稀有度只按 IUCN 計算。",
+    "只交付 aviandex/0198.avif 單一檔案到指定 Drive 資料夾，不壓縮成 ZIP。"
+  ]
+}
