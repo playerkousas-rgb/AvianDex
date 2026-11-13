@@ -1332,3 +1332,9 @@ HKBWS 0080/011200 內文（Category I 過境遷徙鳥，短草及其他開闊旱
 - Drive `1ndzbMzmz0jTurQcLUM_Onxltaysj4vlX`，174263 B，MD5 `c8feea36d76dc763d5b960db2e3ec1df`。
 
 兩張卡均已登記 `src/data/infoCards.json`（slim、revision `restart-01NN-v1`、面板色 `#173446`）；只交付單一 AVIF，無 ZIP。
+
+### 0131 中杓鷸 — 進行中（未交付）
+- 已完成並核對：`pixel.png`（全身，頭部縱紋、下彎且下喙有折角的嘴、藍灰腳）、`features.png`（左全身／右特寫）、`curlew.png`（白腰杓鶌比較鳥）。四部位裁切框已驗：頭部縱紋／嘴形／翼覆羽／藍灰腳。
+- 本輪 `generate_image` 額度已滿（10/10），**尚缺第二隻比較鳥 小杓鷸 `little-curlew.png`**，因此未寫 spec、未 render、未上載。
+- 下一輪第一步：生成 `cards/art/info-restart-0131/little-curlew.png`，然後寫 `scripts/cards/info-restart-0131.json`（比較鳥：白腰杓鷸 + 小杓鷸；ISO3 待定；IUCN LC 趨勢下降）並 `render-info-restart.py 0131`。
+- HKBWS 0090/011500 要點已抄入上文待用：全天可見、秋季最多（8 月第二週至 9 月第三週，8 月下半月高峰，2018-08-26 336 隻）；37–46 cm，比白腰杓鷸小、嘴較短而基部粗鈍、頭部縱紋對比強（淡中央冠紋 + 深側冠紋 + 貫穿眼先的深色眼紋）；翼覆羽花紋比白腰杓鶌更粗；飛行時下背多為乾淨白色或淡褐模糊橫斑；幼鳥胸部縱紋更明顯；叫聲為一串急速鈴音；主要在后海灣泥灘及米埔，其他海岸點如船灣（最高 33 隻）、蒲台海面遷徙 320 隻（2012-04-25）；2017-18 冬季高峰 151 隻（2018-02-18）；春季高峰 131 隻（2003-04-24）；過夏鳥通常 20–30 隻，最高 76 隻（2020-07-03）；香港推測亞種 _N. p. variegatus_（東北西伯利亞繁殖）；IUCN LC 趨勢下降。
