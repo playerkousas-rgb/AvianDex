@@ -1,0 +1,151 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危",
+    "assessmentNote": "IUCN 2025 NT；舊分數待核"
+  },
+  "id": "0290",
+  "name": "三趾翠鳥",
+  "scientificName": "Ceyx erithaca",
+  "illustrationTaxon": "Adult-like Black-backed Dwarf-Kingfisher Ceyx erithaca, sex/subspecies not verified, AI not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "赤背三趾翠鳥",
+      "scientificName": "Ceyx rufidorsa",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "背部更偏赤色，曾合併為東方侏儒翠鳥；圖中背羽不完全可見，不可單靠圖鑑別。"
+    },
+    {
+      "zh": "普通翠鳥",
+      "scientificName": "Alcedo atthis",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "橙色耳羽及藍綠上體，雄鳥黑喙；兩圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.1,
+      0.53,
+      0.6
+    ],
+    [
+      0.38,
+      0.12,
+      0.63,
+      0.44
+    ],
+    [
+      0.48,
+      0.3,
+      0.68,
+      0.6
+    ],
+    [
+      0.43,
+      0.38,
+      0.62,
+      0.67
+    ]
+  ],
+  "featureLabels": [
+    "珊瑚紅長喙",
+    "紫紅色頭頂",
+    "深藍黑翼羽",
+    "黃橙色下體"
+  ],
+  "featureNotes": [
+    "紅色尖長喙。",
+    "紫紅頭頂示意。",
+    "深藍黑折翼示意。",
+    "黃橙色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "BGD",
+      "NPL",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/028400",
+      "use": "12.5–14 cm, HK accidental and documented range; no explicit IUCN value on page."
+    },
+    {
+      "url": "https://ebird.org/species/bkbkin1",
+      "use": "IUCN 2025 NT, plumage, identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Black-backed_dwarf_kingfisher",
+      "use": "Split from rufous-backed species; morphology, diet and etymology."
+    },
+    {
+      "url": "https://ebird.org/species/rubkin1",
+      "use": "Rufous-backed comparison and differences."
+    },
+    {
+      "url": "https://www.tbn.org.tw/taxasearch/result?name=&page=1286&sort=asc&order=%E7%95%8C",
+      "use": "Traditional Chinese comparison name."
+    },
+    {
+      "url": "https://ebird.org/species/comkin1",
+      "use": "Common Kingfisher comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst; affected values withheld"
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "score inputs, includes outdated LC"
+    }
+  ],
+  "notes": [
+    "主圖成年型、性別亞種未知；羽毛色彩、腳趾數與比例非專家認證。赤背比較圖翅背局部遮掩，不能單靠 AI 圖鑑別；普通翠鳥重用 0289 主圖、兩者不等比例。",
+    "Cornell 同一學名 IUCN 2025 NT，runtime 舊文 LC，HKBWS 頁保育欄沒有實際值；HKBWS 12.5–14 cm、香港偶見，全球分類與舊東方侏儒翠鳥合併不同。",
+    "原 i/c 由舊 LC 算出、r 誤將分類當語源及要點截斷，與依賴它們的 o 遮蔽；保留 a=5、v=2.5，vEst 58.2 mm ×0.22 約12.804 cm 為估算、非實測平均。",
+    "完整世界底圖僅部分已記錄國家，不代表全境或完整季節。"
+  ],
+  "withheldScores": {
+    "i": "原分採舊 LC，Cornell 顯示 IUCN 2025 此學名 NT；舊分待核不重算。",
+    "c": "原分使用舊 LC 及受脅文字，狀態不符 2025 NT，待核不重算。",
+    "r": "原 etymology 欄只有分類合併而非語源，且 highlights 有截斷；原分待核。",
+    "o": "綜合值依賴舊 IUCN 與有缺陷的研究分，待核不重算。"
+  }
+}

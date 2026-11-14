@@ -1,0 +1,141 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0260",
+  "name": "蛇鵰",
+  "scientificName": "Spilornis cheela",
+  "illustrationTaxon": "Adult-like Crested Serpent-Eagle, AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "蛇鵰幼鳥",
+      "scientificName": "Spilornis cheela",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種幼鳥頭及下體多白，具褐色縱紋與深色眼罩。"
+    },
+    {
+      "zh": "短趾鵰",
+      "scientificName": "Circaetus gallicus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥腹部多白，頭胸較深；無蛇鵰短而有白點冠羽。不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.04,
+      0.55,
+      0.24
+    ],
+    [
+      0.42,
+      0.035,
+      0.7,
+      0.19
+    ],
+    [
+      0.31,
+      0.29,
+      0.58,
+      0.47
+    ],
+    [
+      0.55,
+      0.72,
+      0.79,
+      0.87
+    ]
+  ],
+  "featureLabels": [
+    "黃色面部",
+    "黑白冠羽",
+    "腹部白斑",
+    "尾部白帶"
+  ],
+  "featureNotes": [
+    "成鳥面部裸露皮膚及蠟膜黃色。",
+    "後冠短，黑色帶白色斑點。",
+    "褐色下體白色斑點。",
+    "尾部淡色寬帶；羽紋 AI 示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/crseag1",
+      "use": "Cornell IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/024400",
+      "use": "HKBWS plumage, HK status and range."
+    },
+    {
+      "url": "https://ebird.org/species/shteag1",
+      "use": "Short-toed Snake-Eagle comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC copy."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six scores and vEst."
+    }
+  ],
+  "notes": [
+    "成鳥樣貌，對照同種幼鳥和短趾鵰，不等比例。AI 圖經基本目視但非鳥類專家認證。",
+    "HKBWS 2024 香港全年見於林地與附近，也有過境跡象；Cornell IUCN 2025 LC。",
+    "vEst=1 保留體長估算提示；六項分數採 runtime，未重算。",
+    "地圖為部分分佈國家概覽，不是完整分佈或各國全境。"
+  ]
+}

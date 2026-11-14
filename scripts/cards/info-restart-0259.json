@@ -1,0 +1,144 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "id": "0259",
+  "name": "禿鷲",
+  "scientificName": "Aegypius monachus",
+  "illustrationTaxon": "Adult-like Cinereous Vulture, AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "禿鷲幼鳥",
+      "scientificName": "Aegypius monachus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種幼鳥頭部較暗，裸露皮膚帶粉紅，不具成鳥淡色頭斑。"
+    },
+    {
+      "zh": "兀鷲",
+      "scientificName": "Gyps fulvus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "兀鷲成鳥頭頸和頸環較白、身體淡褐色，飛羽較深色；不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.06,
+      0.06,
+      0.43,
+      0.29
+    ],
+    [
+      0.06,
+      0.1,
+      0.4,
+      0.3
+    ],
+    [
+      0.23,
+      0.17,
+      0.47,
+      0.33
+    ],
+    [
+      0.31,
+      0.33,
+      0.62,
+      0.58
+    ]
+  ],
+  "featureLabels": [
+    "藍灰面部",
+    "粗大鉤嘴",
+    "頸部羽領",
+    "深褐翼羽"
+  ],
+  "featureNotes": [
+    "成鳥裸露皮膚帶藍灰，頭部淡斑。",
+    "粗大而彎曲的嘴，AI 示意。",
+    "頸環深褐色尖羽，細節示意。",
+    "折翼深褐，非飛行姿態。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ESP",
+      "PRT",
+      "FRA",
+      "TUR",
+      "IRN",
+      "KAZ",
+      "MNG",
+      "RUS",
+      "CHN",
+      "IND",
+      "PAK"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/cinvul1",
+      "use": "Cornell IUCN 2025 NT and identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/024300",
+      "use": "HKBWS plumage, HK status and range."
+    },
+    {
+      "url": "https://ebird.org/species/eurgri1",
+      "use": "Eurasian Griffon comparison."
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=5D1987CEE4005AA2",
+      "use": "Chinese name for comparison species."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "NT copy."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six scores and vEst."
+    }
+  ],
+  "notes": [
+    "成鳥樣貌，對照同種幼鳥和兀鷲，不等比例。AI 圖經基本目視但非鳥類專家認證。",
+    "HKBWS 2024 香港極罕見冬候鳥，以深灣一帶為主，1990年代後下降；Cornell IUCN 2025 NT。",
+    "vEst=1 保留體長估算提示；六項分數採 runtime，未重算。",
+    "地圖為部分分佈國家概覽，不是完整分佈或各國全境。"
+  ]
+}

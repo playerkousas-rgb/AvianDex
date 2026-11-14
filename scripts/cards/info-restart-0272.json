@@ -1,0 +1,169 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "UNKNOWN",
+    "zh": "資料待查",
+    "assessmentNote": "拆分後全球保育狀態待核"
+  },
+  "id": "0272",
+  "name": "蒼鷹",
+  "scientificName": "Astur gentilis",
+  "illustrationTaxon": "Adult-like Eurasian Goshawk Astur gentilis; AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "蒼鷹幼鳥",
+      "scientificName": "Astur gentilis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種幼鳥褐色上體、下體深色縱斑；圖不等比例。"
+    },
+    {
+      "zh": "雀鷹雌鳥",
+      "scientificName": "Accipiter nisus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "雀鷹一般較小纖細，眉紋通常較不明顯；圖不等比例，須綜合特徵鑑別。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.19,
+      0.08,
+      0.48,
+      0.27
+    ],
+    [
+      0.19,
+      0.08,
+      0.48,
+      0.27
+    ],
+    [
+      0.25,
+      0.23,
+      0.51,
+      0.42
+    ],
+    [
+      0.59,
+      0.7,
+      0.82,
+      0.9
+    ]
+  ],
+  "featureLabels": [
+    "明顯淡眉",
+    "橙色眼睛",
+    "胸腹橫紋",
+    "尾部橫紋"
+  ],
+  "featureNotes": [
+    "成鳥明顯白色眉紋及深色冠頰。",
+    "成鳥虹膜橙色示意，顏色隨年齡變化。",
+    "下體細密深色橫斑。",
+    "尾羽深淺橫紋僅示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "ESP",
+      "DEU",
+      "SWE",
+      "FIN",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "JPN"
+    ],
+    "note": "Selected Eurasian resident or breeding countries only, no North American taxon; not full-country occupancy, complete distribution, or seasonal boundaries."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/norgos1",
+      "use": "Cornell current Eurasian taxon, adult and juvenile identification and hunting; no clearly confirmed post-split IUCN assessment."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025700",
+      "use": "HKBWS 50–65 cm, identification and Hong Kong vagrancy; 2024 Northern Goshawk broad taxonomy includes North America, not used for current range or IUCN."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/American_Goshawk/overview",
+      "use": "Cornell confirms 2023 split of American and Eurasian Goshawks."
+    },
+    {
+      "url": "https://migrationatlas.org/node/1772",
+      "use": "BirdLife European assessment LC 2021; regional and old broad taxonomy, not a post-split global assessment."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Eurasian_goshawk",
+      "use": "Eurasian range and measurement context: 300–342 mm is wing chord of a male subspecies, not body length."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025600",
+      "use": "Eurasian Sparrowhawk comparison."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Inputs to runtime scores: 300–342 mm treated as body length, migration refers to North America, conservation text uses 保護 for territorial defence."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Incorrect len=321 cm parsed from 300–342 mm, empty diet and habitat tags."
+    },
+    {
+      "path": "src/lib/dexScore.ts",
+      "use": "Score algorithm, including presence-only research and threat keyword matching."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores; only verified erroneous-input-derived fields withheld without recomputation."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime name and taxonomy."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    }
+  ],
+  "notes": [
+    "成鳥主圖對照同種幼鳥及雀鷹成雌，AI 圖不等比例、非專家認證，尾羽和腿部細節僅示意。",
+    "HKBWS 記香港迷鳥並有逃逸個體；原頁舊廣義分類包含北美，2023 已拆為歐亞蒼鷹與美洲蒼鷹。",
+    "未能確認拆分後全球 IUCN；2021 舊廣義 LC 不直接視作新分類全球評估。runtime i=2 仍為舊資料趣味分，非確認現行 IUCN。",
+    "runtime 將 300–342 mm 翼弦樣數字當成 321 cm 體長；HKBWS 身長 50–65 cm。v 和依賴它的 o 遮蔽不重算。",
+    "r 得分含北美遷徙欄位及混雜錯誤的要點；c 的保護是成鳥護衛領域而非保育，錯觸受脅字詞，r/c 暫遮蔽。a 原缺值待查；保留 i 時須注意分類口徑。",
+    "地圖只顯示部分歐亞國家，不表示各國全境或季節範圍。"
+  ],
+  "withheldScores": {
+    "v": "原 300–342 mm 被解析成 321 cm 體長；HKBWS 50–65 cm，疑將翼弦當體長。",
+    "r": "研究分輸入的遷徙欄位指北美已拆分的美洲物種，要點亦包括錯誤資料。",
+    "c": "保育欄位的保護指成鳥護衛區域，誤觸受脅字詞而加分。",
+    "o": "綜合分依賴受錯誤輸入影響的 v/r/c，暫遮蔽不重算。"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "新舊保育等級不同"
+  },
+  "id": "0252",
+  "name": "黑頭白䴉",
+  "scientificName": "Threskiornis melanocephalus",
+  "illustrationTaxon": "Adult-like Black-headed Ibis with grey ornamental feathers; AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "埃及聖䴉",
+      "scientificName": "Threskiornis aethiopicus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "非洲聖䴉同具黑頭白身，但黑色三級飛羽及翼緣較廣；折翼圖不能精確展示飛行特徵。"
+    },
+    {
+      "zh": "彩䴉",
+      "scientificName": "Plegadis falcinellus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "深色身體帶金屬綠和紅色光澤，不是白身；插圖眼色僅示意。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.02,
+      0.13,
+      0.38,
+      0.36
+    ],
+    [
+      0.2,
+      0.2,
+      0.41,
+      0.42
+    ],
+    [
+      0.36,
+      0.34,
+      0.7,
+      0.55
+    ],
+    [
+      0.28,
+      0.72,
+      0.7,
+      0.91
+    ]
+  ],
+  "featureLabels": [
+    "黑色彎嘴",
+    "黑色頸部",
+    "白色翼羽",
+    "黑色腿足"
+  ],
+  "featureNotes": [
+    "黑色下彎嘴局部，嘴尖在圈外。",
+    "裸露黑色頸部局部；頭部在圓框外。",
+    "白色折翼局部，不示飛行翼尖。",
+    "黑色腿足局部，趾爪為示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "BGD",
+      "KHM",
+      "VNM",
+      "IDN"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/blhibi1",
+      "use": "Cornell identification and IUCN 2025 LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0160/021600",
+      "use": "HKBWS identification, local status, range; IUCN NT on older page."
+    },
+    {
+      "url": "https://ebird.org/species/sacibi2",
+      "use": "African Sacred Ibis comparison."
+    },
+    {
+      "url": "https://singaporebirds.com/2022/12/10/singapores-first-wild-black-headed-ibis/",
+      "use": "Identification contrasts with African Sacred Ibis."
+    },
+    {
+      "url": "https://ebird.org/species/gloibi",
+      "use": "Glossy Ibis comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    }
+  ],
+  "notes": [
+    "成鳥裸黑頭頸白身，繁殖期灰色肩羽可能明顯；羽毛及嘴部為 AI 示意。",
+    "HKBWS 2024 指香港昔日稀少冬候鳥、1999 後無記錄；不代表全球滅絕。",
+    "Cornell IUCN 2025 LC 與 HKBWS 2024 和 runtime NT 不同，暫遮蔽受舊 NT 影響 i/c/o，不重算。",
+    "比較埃及聖䴉及彩䴉不等比例；AI 插圖非鳥類專家認證；世界地圖只示部分分佈國家。"
+  ],
+  "withheldScores": {
+    "i": "runtime i=3 源於 cardCopy NT，但 Cornell 2025 為 LC，暫待核。",
+    "c": "runtime c=3.6 含舊 NT 輸入，暫待核。",
+    "o": "runtime o=3.2 受舊 NT 相關 i/c 影響，暫待核，不重算。"
+  }
+}

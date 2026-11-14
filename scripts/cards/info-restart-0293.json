@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "id": "0293",
+  "name": "藍翡翠",
+  "scientificName": "Halcyon pileata",
+  "illustrationTaxon": "Adult-like Black-capped Kingfisher Halcyon pileata; sex unverified; AI not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白胸翡翠",
+      "scientificName": "Halcyon smyrnensis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "栗色頭及藍翼，缺黑頭；圖不等比例。"
+    },
+    {
+      "zh": "赤翡翠",
+      "scientificName": "Halcyon coromanda",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "鏽紅頭及下體、紫褐上體，沒有黑頭白領；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.19,
+      0.1,
+      0.62,
+      0.45
+    ],
+    [
+      0,
+      0.08,
+      0.52,
+      0.5
+    ],
+    [
+      0.26,
+      0.16,
+      0.68,
+      0.5
+    ],
+    [
+      0.43,
+      0.33,
+      0.8,
+      0.63
+    ]
+  ],
+  "featureLabels": [
+    "黑色頭頂",
+    "粗大紅色喙",
+    "白色頸領",
+    "深藍色翼羽"
+  ],
+  "featureNotes": [
+    "黑色頭頂示意。",
+    "紅色粗大喙。",
+    "白色頸領。",
+    "折翼的藍羽，不展示飛行翼斑。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "BGD",
+      "LKA",
+      "CHN",
+      "PRK",
+      "KOR",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/028100",
+      "use": "28–31 cm, HK scarce migrant and winter visitor, declining."
+    },
+    {
+      "url": "https://ebird.org/species/blckin1",
+      "use": "Cornell IUCN 2025 VU and identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Black-capped_kingfisher",
+      "use": "Range, etymology and plumage."
+    },
+    {
+      "url": "https://ebird.org/species/whtkin2",
+      "use": "White-throated Kingfisher comparison."
+    },
+    {
+      "url": "https://ebird.org/species/rudkin1",
+      "use": "Ruddy Kingfisher comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and selective withholding."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime scoring inputs."
+    }
+  ],
+  "notes": [
+    "AI 主圖成年型、性別未知，尾可能偏長，白胸與橙腹界線可能不準；白胸翡翠與赤翡翠重用 0292/0291 素材，皆非專家認證且不等比例。",
+    "Cornell IUCN 2025 全球 VU；HKBWS 28–31 cm、香港稀少過境及冬候鳥、繁殖季罕見，四季均顯著下降。",
+    "i=3.8、a=4.3、v=3.5、c=2.2 沿 runtime；28 cm 原體長為 HKBWS 下限，並非實測平均；c 缺保育文案、非完整評估。r 語源缺主詞、遷徙及要點截斷，r/o 暫遮蔽不補算。",
+    "世界圖僅部分已記錄原生國家，不代表全境或完整季節。"
+  ],
+  "withheldScores": {
+    "r": "原語源缺主詞、遷徙及部分要點截斷；研究分以欄位存在與否計算。",
+    "o": "綜合分依賴受影響的研究分，暫遮蔽不補算。"
+  }
+}

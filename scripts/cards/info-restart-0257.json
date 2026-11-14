@@ -1,0 +1,141 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0257",
+  "name": "鳳頭蜂鷹",
+  "scientificName": "Pernis ptilorhynchus",
+  "illustrationTaxon": "Adult male-like Oriental Honey-buzzard; AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "蜂鷹雌鳥",
+      "scientificName": "Pernis ptilorhynchus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種成雌頭較褐、眼偏黃橙；羽色變化很大，圖片僅示意。"
+    },
+    {
+      "zh": "普通鵟",
+      "scientificName": "Buteo japonicus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "普通鵟體型較結實，頭頸投影較短；羽色多變，圖片不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.15,
+      0.1,
+      0.45,
+      0.28
+    ],
+    [
+      0.24,
+      0.18,
+      0.42,
+      0.32
+    ],
+    [
+      0.25,
+      0.3,
+      0.48,
+      0.52
+    ],
+    [
+      0.6,
+      0.65,
+      0.84,
+      0.87
+    ]
+  ],
+  "featureLabels": [
+    "灰色頭部",
+    "淺色喉部",
+    "腹部橫斑",
+    "尾羽橫帶"
+  ],
+  "featureNotes": [
+    "成雄樣貌，灰頭及深色眼。",
+    "白喉及褐色胸側，非所有個體相同。",
+    "腹羽橫斑局部，羽色高度變異。",
+    "尾羽褐色橫帶局部；AI 羽紋非精確識別。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "IND",
+      "MMR",
+      "THA",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/orihob2",
+      "use": "Cornell IUCN 2025 LC, identification and plumage variability."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/024100",
+      "use": "HKBWS adult sex differences, HK occurrence and range."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/026500",
+      "use": "Eastern Buzzard comparison; compact structure."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC copy."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six scores and vEst."
+    }
+  ],
+  "notes": [
+    "主圖成雄樣貌，羽色與性別、年齡有差異；比較同種雌鳥及普通鵟，不等比例。AI 圖經基本目視但非鳥類專家認證。",
+    "HKBWS 2024 香港稀少秋季過境、冬春罕見；Cornell IUCN 2025 LC。",
+    "vEst=1 保留體長估算提示；六項分數採 runtime，未重算。",
+    "地圖為部分原生國家概覽，不是完整分佈或各國全境。"
+  ]
+}

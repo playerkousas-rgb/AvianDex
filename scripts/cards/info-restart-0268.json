@@ -1,0 +1,134 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0268",
+  "name": "赤腹鷹",
+  "scientificName": "Tachyspiza soloensis",
+  "illustrationTaxon": "Adult male Chinese Sparrowhawk, AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "赤腹鷹幼鳥",
+      "scientificName": "Tachyspiza soloensis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種幼鳥褐色上體、淡色下體有深色縱紋，圖示尾紋偏粗。"
+    },
+    {
+      "zh": "日本松雀鷹幼鳥",
+      "scientificName": "Tachyspiza gularis",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "幼鳥與赤腹鷹相似；飛行時翼底覆羽斑紋差異須綜合觀察，折翼示意圖不展示該特徵且不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.265,
+      0.09,
+      0.525,
+      0.35
+    ],
+    [
+      0.25,
+      0.12,
+      0.44,
+      0.31
+    ],
+    [
+      0.32,
+      0.24,
+      0.52,
+      0.43
+    ],
+    [
+      0.42,
+      0.26,
+      0.67,
+      0.47
+    ]
+  ],
+  "featureLabels": [
+    "紅色虹膜",
+    "黃色蠟膜",
+    "淡桃色胸",
+    "灰色翼羽"
+  ],
+  "featureNotes": [
+    "雄成鳥虹膜深紅至酒褐色。",
+    "黃橙色蠟膜，位於嘴基部。",
+    "雄成鳥胸部帶淡桃色。",
+    "成鳥上體藍灰色；折翼圖不展示飛行時黑翼尖。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "RUS",
+      "KOR",
+      "PHL",
+      "IDN"
+    ],
+    "note": "Selected breeding and wintering countries only, not full-country occupancy, complete distribution, or seasonal boundaries."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/grfhaw1",
+      "use": "Cornell 2025 LC and identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025300",
+      "use": "HKBWS adult and juvenile identification, Hong Kong occurrence, 25–35 cm, distribution and diet."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025400",
+      "use": "Japanese Sparrowhawk comparison."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores; v absent."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "diet and habitat tags, length absent."
+    }
+  ],
+  "notes": [
+    "成雄示意，與同種幼鳥及日本松雀鷹幼鳥不等比例比較；圖示尾橫紋偏粗，折翼不展示飛行翼底鑑別特徵，不能單靠示意圖鑑別。",
+    "HKBWS 香港春季常見過境、秋季稀少；Cornell IUCN 2025 LC。",
+    "runtime i=2、a=3.8、r=3.3、c=1.2、o=2.6，v 原缺值待查；o 基於已有項目，不自行補分。",
+    "AI 圖僅基本目視、非鳥類專家認證；地圖只顯示部分國家，不表示各國全境或季節範圍。"
+  ]
+}

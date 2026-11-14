@@ -1,0 +1,152 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0292",
+  "name": "白胸翡翠",
+  "scientificName": "Halcyon smyrnensis",
+  "illustrationTaxon": "Adult-like White-throated Kingfisher Halcyon smyrnensis; sex and subspecies unverified, AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "赤翡翠",
+      "scientificName": "Halcyon coromanda",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "通體偏鏽紅至紫色，無明顯白胸；圖不等比例。"
+    },
+    {
+      "zh": "普通翠鳥",
+      "scientificName": "Alcedo atthis",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小，藍綠上體、橙腹及雄型黑色長喙；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0,
+      0.12,
+      0.55,
+      0.56
+    ],
+    [
+      0.22,
+      0.25,
+      0.55,
+      0.6
+    ],
+    [
+      0.27,
+      0.16,
+      0.62,
+      0.44
+    ],
+    [
+      0.44,
+      0.32,
+      0.82,
+      0.63
+    ]
+  ],
+  "featureLabels": [
+    "粗大紅色喙",
+    "白色喉胸",
+    "栗色頭部",
+    "鮮藍色翼羽"
+  ],
+  "featureNotes": [
+    "紅色粗大喙。",
+    "白色喉胸示意。",
+    "栗色頭部。",
+    "折翼藍羽示意，不展示飛行翼斑。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "TUR",
+      "EGY",
+      "ISR",
+      "IRQ",
+      "IRN",
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "LKA",
+      "CHN",
+      "TWN",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/028000",
+      "use": "26–29 cm, identification, seasonal HK status and marked decline."
+    },
+    {
+      "url": "https://ebird.org/species/whtkin2",
+      "use": "Cornell IUCN 2025 LC, identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/White-throated_kingfisher",
+      "use": "Distribution, split from brown-breasted kingfisher, etymology."
+    },
+    {
+      "url": "https://ebird.org/species/rudkin1",
+      "use": "Ruddy Kingfisher comparison."
+    },
+    {
+      "url": "https://ebird.org/species/comkin1",
+      "use": "Common Kingfisher comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime score inputs."
+    }
+  ],
+  "notes": [
+    "主圖重用 0289 白胸翡翠比較圖，成年型、性別亞種未知；白胸面積和尾羽比例僅 AI 示意、未經專家認證；赤翡翠與普通翠鳥重用 0291/0289 圖，不等比例。",
+    "Cornell 2025 全球 LC；HKBWS 26–29 cm、香港全年出現但顯著下降，特別繁殖季；香港趨勢不等於全球趨勢。褐胸翡翠已分種，不套用舊合併分佈。",
+    "i=2、a=4.7、v=3.4、c=1.2 沿 runtime，a 漏甲殼類與齧齒類 tag，c 缺保育文案非完整評估；vEst 113.2 mm ×0.22 約24.904 cm 略低 HKBWS 26–29 cm、非實測平均。r 用缺主詞語源及截斷或重複 highlights，r/o 遮蔽不重算。",
+    "完整世界底圖只顯示部分原生國家，不代表全境或完整季節。"
+  ],
+  "withheldScores": {
+    "r": "語源欄缺主詞，且多個 highlights 截斷或自我重複，研究分以其存在與否計算。",
+    "o": "原綜合分依賴受影響研究分，暫遮蔽不補算。"
+  }
+}

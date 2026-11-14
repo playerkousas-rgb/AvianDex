@@ -1,0 +1,141 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0270",
+  "name": "松雀鷹",
+  "scientificName": "Tachyspiza virgata",
+  "illustrationTaxon": "Adult female Besra, reused AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "松雀鷹幼鳥",
+      "scientificName": "Tachyspiza virgata",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種幼鳥褐色上體、胸部帶深色淚滴狀縱斑；圖中喉紋和腹部細節簡化。"
+    },
+    {
+      "zh": "日本松雀鷹雌鳥",
+      "scientificName": "Tachyspiza gularis",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "須綜合羽色、喉紋、尾紋及體型鑑別；此圖不等比例且不保證細節準確。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.19,
+      0.105,
+      0.51,
+      0.32
+    ],
+    [
+      0.25,
+      0.235,
+      0.5,
+      0.42
+    ],
+    [
+      0.29,
+      0.36,
+      0.56,
+      0.54
+    ],
+    [
+      0.6,
+      0.72,
+      0.82,
+      0.91
+    ]
+  ],
+  "featureLabels": [
+    "褐色頭側",
+    "胸部縱紋",
+    "腹部橫紋",
+    "尾部橫紋"
+  ],
+  "featureNotes": [
+    "成雌上體偏褐色。",
+    "成雌胸部深色縱紋示意。",
+    "腹部褐色橫紋示意。",
+    "尾羽深淺相間橫紋，須結合其他特徵鑑別。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "CHN",
+      "MMR",
+      "VNM",
+      "LAO",
+      "KHM",
+      "THA",
+      "PHL",
+      "IDN"
+    ],
+    "note": "Selected partial native country overview only; no full-country occupancy or complete distribution."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/besra1",
+      "use": "Cornell 2025 LC and identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025500",
+      "use": "HKBWS 24–36 cm, identification, range, Hong Kong residence and passage."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025400",
+      "use": "Japanese Sparrowhawk comparison."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Only a and r recorded; i, v, c, o absent."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Diet and habitat tags; length absent."
+    }
+  ],
+  "notes": [
+    "成雌主圖重用0267比較素材，同種幼鳥與日本松雀鷹成雌示意不等比例；喉部中央深紋不夠清晰，AI圖不能作精確鑑別。",
+    "HKBWS 香港全年出現、秋季亦有過境，Cornell IUCN 2025 LC。HKBWS 舊引文曾用 Accipiter virgatus。",
+    "runtime 只有 a=3.3、r=1.0，i/v/c/o 原缺值，待查非零，不按外部 IUCN 或體長補分。食性 tags 僅昆蟲及爬蟲、棲地僅森林，a 不是完整生態評估；r 為原有程式趣味分。",
+    "AI 圖僅基本目視、非鳥類專家認證；地圖只顯示部分國家，不表示各國全境。"
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0278",
+  "name": "白頭鷂",
+  "scientificName": "Circus aeruginosus",
+  "illustrationTaxon": "Adult male-like Western Marsh Harrier Circus aeruginosus, AI illustration visually reviewed but not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白頭鷂雌鳥",
+      "scientificName": "Circus aeruginosus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "雌鳥多深褐色，乳白頭頂及喉、眼部暗紋與淡肩；色型及羽齡變化大。"
+    },
+    {
+      "zh": "白腹鷂雄鳥",
+      "scientificName": "Circus spilonotus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥頭胸多深色重縱紋、腹部較淡；實鳥羽色多變，折翼圖不示飛行特徵。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.15,
+      0.05,
+      0.47,
+      0.27
+    ],
+    [
+      0.15,
+      0.19,
+      0.44,
+      0.39
+    ],
+    [
+      0.19,
+      0.32,
+      0.45,
+      0.5
+    ],
+    [
+      0.44,
+      0.4,
+      0.72,
+      0.6
+    ]
+  ],
+  "featureLabels": [
+    "淡頭深紋",
+    "淡胸縱紋",
+    "棕褐腹羽",
+    "灰褐翼羽"
+  ],
+  "featureNotes": [
+    "成雄淡頭及褐色細紋、黃眼及黃色蠟膜示意。",
+    "淡色胸羽與深色縱紋示意，羽色可變。",
+    "成雄暖棕褐色腹羽示意。",
+    "灰色及褐色折翼羽示意，不展示飛行時翼上的三色格局。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "ESP",
+      "DEU",
+      "ITA",
+      "POL",
+      "UKR",
+      "TUR",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "PAK",
+      "IND",
+      "MAR",
+      "DZA",
+      "TUN",
+      "EGY"
+    ],
+    "note": "Selected western Eurasian breeding, resident and wintering countries plus northwest African and South Asian regions only; not full-country occupancy, complete distribution or seasonal boundaries."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/wemhar1",
+      "use": "Cornell global IUCN 2025 LC, adult plumages, wetland habitat and Eastern Marsh Harrier comparison."
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/western.marsh.harrier.html",
+      "use": "Adult male and female plumage variation; western Eurasian range and diet."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Western_marsh_harrier",
+      "use": "Range, migration, prey, breeding and separate classification of closely related marsh harriers."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "HKBWS Hong Kong list lists Western Marsh Harrier as category I, without occurrence details."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025800",
+      "use": "HKBWS historical eastern marsh harrier account treated earlier HK records as spilonotus; notes presumed hybrids; predates updated HK list."
+    },
+    {
+      "url": "https://ebird.org/species/easmah1",
+      "use": "Eastern Marsh Harrier adult male identification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "No 0278 score record; all six fields unavailable; no synthesized scores."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and runtime classification."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "No 0278 record; no inferred tags."
+    }
+  ],
+  "notes": [
+    "成雄樣貌對照同種雌鳥及白腹鷂雄鳥；圖片不等比例，AI 羽紋、足爪及尾翼比例僅示意，非鳥類專家認證；鷂類羽齡變化大、可能雜交，不能單靠圖片鑑別。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 名錄列香港 I 類，但未提供詳細頻率，舊白腹鷂物種頁把歷史香港紀錄視為白腹鷂並提及疑似雜交；其舊敘述與較新名錄不同時點，勿斷言白頭鷂沒有香港紀錄或套用白腹鷂本地狀態。",
+    "原 dexScores 沒有此 ID，六分均待查，非零，不能按外部 IUCN 或資料補算；未修改 runtime。",
+    "世界地圖僅部分原生、繁殖或越冬國家概覽，綠色不等於全境分佈，不指明季節或完整範圍。"
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0302",
+  "name": "蟻鴷",
+  "scientificName": "Jynx torquilla",
+  "illustrationTaxon": "Eurasian Wryneck Jynx torquilla; age, sex and subspecies unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "紅胸蟻鴷",
+      "scientificName": "Jynx ruficollis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "喉部栗紅，非洲鳥種；圖不等比例。"
+    },
+    {
+      "zh": "斑姬啄木鳥",
+      "scientificName": "Picumnus innominatus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "較小、綠背、下體黑斑；示意圖頭頂花紋不準。圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.14,
+      0.16,
+      0.38,
+      0.42
+    ],
+    [
+      0.31,
+      0.2,
+      0.61,
+      0.49
+    ],
+    [
+      0.15,
+      0.25,
+      0.42,
+      0.58
+    ],
+    [
+      0.6,
+      0.46,
+      0.92,
+      0.77
+    ]
+  ],
+  "featureLabels": [
+    "灰褐頭羽",
+    "背部深色紋",
+    "喉胸細紋",
+    "尾羽橫斑"
+  ],
+  "featureNotes": [
+    "灰褐頭羽示意。",
+    "背部深色縱紋。",
+    "淡色喉胸細紋。",
+    "尾羽橫斑；AI 圖尾可能過長。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ESP",
+      "PRT",
+      "FRA",
+      "ITA",
+      "POL",
+      "NOR",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "JPN",
+      "PAK",
+      "IND",
+      "MAR",
+      "DZA",
+      "SEN",
+      "THA",
+      "MYS"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0210/029100",
+      "use": "16–18 cm; identification, distribution, Hong Kong occurrence and population trend."
+    },
+    {
+      "url": "https://ebird.org/species/eurwry",
+      "use": "Cornell global IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://ebird.org/species/runwry1",
+      "use": "Red-throated Wryneck comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0210/029200",
+      "use": "Speckled Piculet comparison."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Eurasian_wryneck",
+      "use": "breeding and nonbreeding distribution."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime score input length typo and truncated highlights."
+    }
+  ],
+  "notes": [
+    "三張鳥圖已目視，主圖尾可能過長、趾序非可靠示範；紅胸蟻鴷比較圖尾較長，斑姬啄木鳥 AI 圖頭頂花紋與真鳥紅褐白條不符；AI 非專家認證，圖不等比例。",
+    "Cornell IUCN 2025 全球 LC；HKBWS 體長16–18 cm、香港秋季常見過境，冬季及春季不常見，全球趨勢下降。",
+    "i=2、a=2.8、c=3 沿 runtime；原體長「16.5–1 cm」導致 len=8.8 cm，v 暫遮蔽；r 因要點截斷遮蔽，o 連帶遮蔽不補算。c 基於瑞士下降及巢箱措施，不代表全球評估。",
+    "世界圖僅部分已記錄原生國家，不代表全境或完整季節。"
+  ],
+  "withheldScores": {
+    "v": "runtime 體長文案為錯誤「16.5–1 cm」，中點誤成8.8 cm，影響觀賞分。",
+    "r": "部分要點截斷，研究分以欄位存在與否計算。",
+    "o": "綜合分依賴受影響 v/r，暫不顯示、不補算。"
+  }
+}

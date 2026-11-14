@@ -1,0 +1,171 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0279",
+  "name": "紅角鴞",
+  "scientificName": "Otus sunia",
+  "illustrationTaxon": "Adult-like rufous morph Oriental Scops-Owl Otus sunia, AI illustration visually checked but not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "領角鴞",
+      "scientificName": "Otus lettia",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "一般較大、紅褐眼、面盤黑邊較明顯；圖中耳簇可能偏長。"
+    },
+    {
+      "zh": "黃嘴角鴞",
+      "scientificName": "Otus spilocephalus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "黃眼、鮮明白色肩羽線；插圖喙色不準，叫聲等資料亦重要。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.23,
+      0.13,
+      0.65,
+      0.41
+    ],
+    [
+      0.24,
+      0.34,
+      0.51,
+      0.52
+    ],
+    [
+      0.5,
+      0.29,
+      0.77,
+      0.47
+    ],
+    [
+      0.58,
+      0.5,
+      0.84,
+      0.67
+    ]
+  ],
+  "featureLabels": [
+    "黃色眼睛",
+    "淡腹細紋",
+    "翼上淡斑",
+    "棕色翼羽"
+  ],
+  "featureNotes": [
+    "黃色眼睛、灰黑喙及棕色面盤示意。",
+    "淡色腹羽稀疏深色縱紋示意，非精確羽式。",
+    "翅上淡色斑點示意，非完整肩羽線；色型和個體有變化。",
+    "暖棕色翼羽示意，無法靠單一色型分辨物種。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "TWN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "RUS",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Selected parts of documented breeding, migrant and wintering countries; not complete distribution, full-country occupancy or seasonal boundaries."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/orsowl",
+      "use": "Cornell global IUCN 2025 LC; plumage, yellow eyes and habitat."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0190/027000",
+      "use": "HKBWS 18–21 cm, scarce overlooked autumn migrant; rare spring migrant/summer visitor, subspecies and local identification."
+    },
+    {
+      "url": "https://www.owlpages.com/owls/species.php?s=560",
+      "use": "17–21 cm, color morphs, invertebrate prey and wider range; old vagrant HK label is superseded by HKBWS."
+    },
+    {
+      "url": "https://ebird.org/species/cosowl1",
+      "use": "Collared Scops Owl gray or brown, dark facial border and tufts."
+    },
+    {
+      "url": "https://ebird.org/species/mosowl2",
+      "use": "Mountain Scops Owl contrasting white scapular stripe."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores; v/o withheld without recalculation and vEst retained."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 142.5 mm used in existing estimated length."
+    },
+    {
+      "path": "src/lib/dexScore.ts",
+      "use": "Existing score formulas; 0.22 wing-to-length coefficient."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Empty diet and single forest habitat tags, no body length."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "English diet incorrectly contains voice; several data fields absent."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and runtime classification."
+    }
+  ],
+  "notes": [
+    "主圖為紅褐色型成鳥樣貌，對照領角鴞及黃嘴角鴞，重用 0277 已目視素材；不等比例。領角鴞圖耳簇可能偏長，黃嘴角鴞圖喙色不準，三圖羽式僅示意、非鳥類專家認證，不能單憑插圖鑑別。",
+    "HKBWS 香港秋季稀少但可能漏記的過境鳥，春季過境及夏候罕見，體長18–21 cm；The Owl Pages 全種17–21 cm 並稱香港迷鳥的舊說法與 HKBWS 不同，採較具本地實證的 HKBWS。Cornell 全球 IUCN 2025 LC。",
+    "翼長142.5 mm ×0.22 估體長31.35 cm 與 HKBWS 體長明顯不符，v=3.6 及依賴 v 的 o=2.0 暫遮蔽，不重算，保留原觀賞值體長估算提示。",
+    "i=2、a=2.3、r=1、c=1.2 沿 runtime；食性 tag 空、棲地僅森林、遷徙及要點和保育文字缺失，非完整生態／研究／保育評估。英文 diet 錯置叫聲未照抄。地圖僅部分國家。"
+  ],
+  "withheldScores": {
+    "v": "原 v=3.6 由 AVONET 翼長142.5 mm × 0.22 估體長31.35 cm，顯著偏離 HKBWS 體長18–21 cm，暫遮蔽。",
+    "o": "原 o=2.0 包含由翼長估體長偏差影響的 v，暫遮蔽、不重算。"
+  }
+}

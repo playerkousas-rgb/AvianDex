@@ -1,0 +1,143 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0291",
+  "name": "赤翡翠",
+  "scientificName": "Halcyon coromanda",
+  "illustrationTaxon": "Adult-like Ruddy Kingfisher Halcyon coromanda, sex and subspecies not verified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白胸翡翠",
+      "scientificName": "Halcyon smyrnensis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "白胸、栗頭及亮藍翼羽，圖不等比例。"
+    },
+    {
+      "zh": "三趾翠鳥",
+      "scientificName": "Ceyx erithaca",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小、頭紫紅、翼深藍及黃橙下體，圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0,
+      0.05,
+      0.59,
+      0.44
+    ],
+    [
+      0.32,
+      0.13,
+      0.72,
+      0.4
+    ],
+    [
+      0.44,
+      0.3,
+      0.86,
+      0.58
+    ],
+    [
+      0.39,
+      0.38,
+      0.71,
+      0.63
+    ]
+  ],
+  "featureLabels": [
+    "粗大紅色喙",
+    "鏽紅色頭部",
+    "紫褐色翼羽",
+    "橙褐色下體"
+  ],
+  "featureNotes": [
+    "紅色粗大喙示意。",
+    "鏽紅色頭部。",
+    "紫褐色折翼示意。",
+    "橙褐色下體。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "KOR",
+      "JPN",
+      "TWN",
+      "IND",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "MYS",
+      "PHL",
+      "IDN"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/027900",
+      "use": "25–27 cm, identification, HK accidental, global trend decreasing."
+    },
+    {
+      "url": "https://ebird.org/species/rudkin1",
+      "use": "Cornell IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Ruddy_kingfisher",
+      "use": "Diet, range and etymology."
+    },
+    {
+      "url": "https://ebird.org/species/whtkin2",
+      "use": "White-throated Kingfisher comparison."
+    },
+    {
+      "url": "https://ebird.org/species/bkbkin1",
+      "use": "Black-backed Dwarf-Kingfisher comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime score inputs."
+    }
+  ],
+  "notes": [
+    "AI 主圖成年型，性別亞種未知，尾羽可能過長，藍腰斑不明顯；非專家認證；白胸翡翠、三趾翠鳥重用 0289/0290 圖，不等比例。褐翅翡翠生成圖腳無站立支撐未採用。",
+    "Cornell 2025 LC；HKBWS 25–27 cm、香港偶見，其頁稱全球趨勢下降。首次誤取 028500 頁為冠魚狗，未套用；赤翡翠正確 027900。",
+    "六分沿 runtime：i=2、a=3.3、v=3.4、r=4.8、c=1.2、o=2.9，非學術評分；vEst 翼長113.7 mm×0.22為約25.014 cm，非實測平均；a 漏掉原文甲殼類，c 缺保育文案，均非完整評估。",
+    "完整世界底圖綠色僅部分原生國家，不代表全境或完整季節。"
+  ],
+  "withheldScores": {}
+}

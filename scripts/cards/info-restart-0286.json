@@ -1,0 +1,169 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0286",
+  "name": "短耳鴞",
+  "scientificName": "Asio flammeus",
+  "illustrationTaxon": "Adult-like northern Short-eared Owl Asio flammeus, AI illustration; sex and subspecies not verified, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "長耳鴞",
+      "scientificName": "Asio otus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "通常耳簇較長，歐亞族群眼橙紅；耳簇也可伏平，插圖不等比例。"
+    },
+    {
+      "zh": "沼澤耳鴞",
+      "scientificName": "Asio capensis",
+      "asset": "marsh-square.png",
+      "framing": "whole-bird",
+      "distinction": "非洲鳥種，色調較暗；AI 比較圖腿長、顏色偏深，比例及羽紋僅示意。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.11,
+      0.75,
+      0.443
+    ],
+    [
+      0.29,
+      0.16,
+      0.68,
+      0.42
+    ],
+    [
+      0.25,
+      0.14,
+      0.7,
+      0.44
+    ],
+    [
+      0.28,
+      0.31,
+      0.61,
+      0.53
+    ]
+  ],
+  "featureLabels": [
+    "短小耳簇",
+    "黃色眼睛",
+    "眼周深色",
+    "胸部縱斑"
+  ],
+  "featureNotes": [
+    "短耳簇甚小，常平伏；AI 耳簇略明顯。",
+    "黃眼示意。",
+    "眼周黑斑及淡色面盤示意。",
+    "胸部深縱斑示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CAN",
+      "USA",
+      "MEX",
+      "GBR",
+      "FRA",
+      "NOR",
+      "RUS",
+      "CHN",
+      "JPN",
+      "KOR",
+      "CHL",
+      "ARG",
+      "ECU",
+      "COL",
+      "BRA"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0190/027200",
+      "use": "HKBWS 37–38 cm, HK visitor status and behaviour, global trend and field marks."
+    },
+    {
+      "url": "https://ebird.org/species/sheowl",
+      "use": "Cornell IUCN 2025 LC and broad global identification, dawn/dusk activity."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Short-eared_owl",
+      "use": "Range countries, partial migration, Latin etymology and long-eared comparison."
+    },
+    {
+      "url": "https://ebird.org/species/loeowl",
+      "use": "Long-eared Owl long tufts and Eurasian eye colour."
+    },
+    {
+      "url": "https://ebird.org/species/marowl2",
+      "use": "Marsh Owl and habitat."
+    },
+    {
+      "url": "https://carolinabirds.org/HTML/Owl_Old_World.htm",
+      "use": "Marsh Owl yellow eyes and dark upperparts."
+    },
+    {
+      "url": "https://bible.fhl.net/Mar/dic_detail.php?sel=0&key=14",
+      "use": "Chinese name 沼澤耳鴞 for Asio capensis."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "runtime taxonomy"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime score"
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "tags and length 38.5 cm"
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "migration, etymology, highlights and conservation input"
+    },
+    {
+      "path": "src/lib/dexScore.ts",
+      "use": "Score formulas and limitations."
+    }
+  ],
+  "notes": [
+    "主圖北方成鳥型，性別亞種不詳；短耳簇略明顯；重用 0281 長耳鴞圖，耳簇可能誇張；沼澤耳鴞圖腿偏長、色偏深。所有圖不等比例、AI 羽紋腳爪僅示意，非專家認證。最初沼澤耳鴞生成錯眼色且耳簇過長，未採用。",
+    "Cornell IUCN 2025 全球 LC；HKBWS 37–38 cm，香港稀少冬候鳥、極稀少春季過境，可能漏記；全球趨勢下降不得推算香港趨勢。全球其他地區可晨昏獵食，香港 2024 HKBWS 無日間獵食紀錄。",
+    "全部分數依 runtime 不改算。v 由原有 38.5 cm 而非翼長估算；r 欄遷徙、語源和要點有內容但趣味分非研究評估；c 只按 runtime 威脅字和 LC 規則，不等於完整保育評估。",
+    "世界底圖是研究到的部分原生國家，綠色非全境、非完整分佈，未細分季節。"
+  ],
+  "withheldScores": {}
+}

@@ -1,0 +1,141 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危",
+    "assessmentNote": "2025 VU；舊資料 EN"
+  },
+  "id": "0254",
+  "name": "黑臉琵鷺",
+  "scientificName": "Platalea minor",
+  "illustrationTaxon": "Nonbreeding adult-like Black-faced Spoonbill reused from 0253 comparison; AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白琵鷺",
+      "scientificName": "Platalea leucorodia",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "白琵鷺沒有黑色臉部；插圖為繁殖成鳥，兩圖不等比例。"
+    },
+    {
+      "zh": "黑臉琵鷺幼鳥",
+      "scientificName": "Platalea minor",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "同種幼鳥嘴常較淡，初級飛羽尖深色較易在飛行中看到；插圖僅示意。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.23,
+      0.1,
+      0.45,
+      0.26
+    ],
+    [
+      0.025,
+      0.29,
+      0.22,
+      0.43
+    ],
+    [
+      0.39,
+      0.34,
+      0.72,
+      0.54
+    ],
+    [
+      0.37,
+      0.7,
+      0.73,
+      0.91
+    ]
+  ],
+  "featureLabels": [
+    "黑色臉部",
+    "匙形黑嘴",
+    "白色翼羽",
+    "黑色腿足"
+  ],
+  "featureNotes": [
+    "黑色裸露臉部及眼周。",
+    "匙形嘴前段局部；嘴基部在圓框外。",
+    "折翼白色羽毛局部。",
+    "黑色腿足局部；趾爪為示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PRK",
+      "KOR",
+      "RUS",
+      "CHN",
+      "JPN",
+      "VNM",
+      "PHL"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/blfspo1",
+      "use": "Cornell IUCN 2025 VU, identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0160/021900",
+      "use": "HKBWS 2024 EN older assessment, identification, local status, range."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0160/021800",
+      "use": "Comparison Eurasian Spoonbill."
+    },
+    {
+      "url": "https://ebird.org/species/eurspo1",
+      "use": "Eurasian Spoonbill identification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "VU copy."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores and vEst."
+    }
+  ],
+  "notes": [
+    "主圖為非繁殖成鳥示意，黑臉及黑匙形嘴；比較白琵鷺繁殖成鳥與同種幼鳥，非等比例。",
+    "Cornell IUCN 2025 VU、runtime VU；HKBWS 2024 舊頁 EN，非相同年份評估。香港是常見冬候鳥、夏季罕見；不以地方數量描述全球趨勢。",
+    "runtime vEst=1 保留體長估算提示。",
+    "AI 圖僅基本目視、非鳥類專家認證；地圖僅部分原生國家，不是完整分佈或各國全境。"
+  ]
+}

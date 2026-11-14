@@ -1,0 +1,155 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0263",
+  "name": "白腹隼鵰",
+  "scientificName": "Aquila fasciata",
+  "illustrationTaxon": "Adult-like Bonelli’s Eagle, AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白腹隼鵰幼鳥",
+      "scientificName": "Aquila fasciata",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種幼鳥腹部棕黃，尾缺成鳥寬闊深色次端帶；羽色因年齡而異。"
+    },
+    {
+      "zh": "白肩鵰幼鳥",
+      "scientificName": "Aquila heliaca",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "白肩鵰幼鳥較大、較不緊湊且身體多縱紋，鑑別複雜；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.16,
+      0.05,
+      0.51,
+      0.25
+    ],
+    [
+      0.24,
+      0.2,
+      0.49,
+      0.38
+    ],
+    [
+      0.3,
+      0.35,
+      0.56,
+      0.53
+    ],
+    [
+      0.6,
+      0.73,
+      0.83,
+      0.89
+    ]
+  ],
+  "featureLabels": [
+    "褐色頭部",
+    "白胸縱紋",
+    "腹部縱紋",
+    "尾部深帶"
+  ],
+  "featureNotes": [
+    "成鳥深褐色頭頂與黃色嘴基。",
+    "成鳥白胸具深色縱紋。",
+    "淡色腹部深色縱紋。",
+    "成鳥灰尾深色次端帶；AI 圖示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PRT",
+      "ESP",
+      "FRA",
+      "GRC",
+      "TUR",
+      "MAR",
+      "DZA",
+      "IRN",
+      "AFG",
+      "PAK",
+      "IND",
+      "CHN",
+      "VNM",
+      "IDN"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/boneag2",
+      "use": "Cornell IUCN 2025 LC, juvenile and adult identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025100",
+      "use": "HKBWS adult length, appearance, local status, range and recorded bird prey."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025000",
+      "use": "Eastern Imperial Eagle comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC copy."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Empty length; insect-only dietary tag incomplete against HKBWS."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 486.8 mm; existing estimated length 107.096 cm."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores; affected v/o withheld and vEst retained."
+    }
+  ],
+  "notes": [
+    "成鳥樣貌，對照同種幼鳥及白肩鵰幼鳥，不等比例；AI 圖僅基本目視、非專家認證。",
+    "HKBWS 2024 香港山地林地罕見留鳥，1990年代中後顯著減少；Cornell IUCN 2025 LC。",
+    "翼長×0.22 估算體長約107 cm，與 HKBWS 55–67 cm 明顯不符；v/o 暫遮蔽、不重算，保留 vEst 提示。",
+    "explorerIndex 食性標籤僅 insect，未反映 HKBWS 的水鳥獵物；a 沿 runtime，並非完整食性評估。地圖僅部分國家。"
+  ],
+  "withheldScores": {
+    "v": "原 v=5.0 以 AVONET 翼長486.8 mm × 0.22 估算約107 cm，顯著偏離 HKBWS 體長55–67 cm，暫遮蔽待核。",
+    "o": "原 o=2.7 包含受體長估算偏差影響的 v，暫遮蔽、不重新計算。"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0274",
+  "name": "白腹海鵰",
+  "scientificName": "Icthyophaga leucogaster",
+  "illustrationTaxon": "Adult-like White-bellied Sea-Eagle Icthyophaga leucogaster, AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白腹海鵰未成鳥",
+      "scientificName": "Icthyophaga leucogaster",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種未成鳥褐色漸轉白；圖示淡尾暗端的過渡外貌，羽齡個體變化大，不等比例。"
+    },
+    {
+      "zh": "灰頭魚鵰",
+      "scientificName": "Icthyophaga ichthyaetus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥灰頭、褐胸、白腹及白尾黑色端帶；AI 圖尾帶位置僅示意，不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.09,
+      0.1,
+      0.42,
+      0.31
+    ],
+    [
+      0.25,
+      0.46,
+      0.53,
+      0.65
+    ],
+    [
+      0.42,
+      0.3,
+      0.73,
+      0.53
+    ],
+    [
+      0.67,
+      0.59,
+      0.91,
+      0.78
+    ]
+  ],
+  "featureLabels": [
+    "白色頭頸",
+    "白色腹羽",
+    "灰色翼羽",
+    "白色尾羽"
+  ],
+  "featureNotes": [
+    "成鳥白色頭頸與鉛灰鉤嘴示意。",
+    "成鳥白色腹羽局部。",
+    "成鳥灰色折翼局部，非飛行翼底特徵。",
+    "成鳥白尾局部；短楔尾形狀與足部均為 AI 示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "LKA",
+      "BGD",
+      "MMR",
+      "THA",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "CHN",
+      "AUS",
+      "PNG"
+    ],
+    "note": "Selected native-range countries in South and Southeast Asia and Australasia only; not full-country occupancy, complete distribution, or seasonal boundaries."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/wbseag1",
+      "use": "Cornell current genus, identification and global IUCN 2025 LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/026300",
+      "use": "HKBWS 75–85 cm, identification, local uncommon coastal resident and nesting records."
+    },
+    {
+      "url": "https://ebird.org/species/gyhfie1",
+      "use": "Cornell Grey-headed Fish-Eagle adult white belly and black tail band comparison."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/White-bellied_sea_eagle",
+      "use": "Naming history, etymology and broadly distributed coastal range."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime score inputs: malformed 90–0 cm length; etymology contains only scientific name and family, not name origin."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Malformed length parsed as 45 cm, fish/reptile diet tags and empty habitat tags."
+    },
+    {
+      "path": "src/lib/dexScore.ts",
+      "use": "Visibility and presence-only research scoring calculations."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores, affected fields withheld without recalculation."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and taxonomy."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    }
+  ],
+  "notes": [
+    "成鳥主圖對照同種未成鳥與灰頭魚鵰，AI 圖不等比例、非專家認證；未成鳥羽齡變異很大，足部、尾形與灰頭魚鵰尾帶僅示意。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 香港沿岸不常見留鳥，不能把全球保育狀態視作本地常見度。",
+    "runtime 以 90–0 cm 錯誤資料解析為 45 cm，與 HKBWS 75–85 cm 顯著不符，v=4.1 遮蔽，不重算。",
+    "r=3.3 的語源欄只是學名及分類，沒有語源卻被 presence-only 計分；r 遮蔽，依賴 v/r 的 o=2.7 同遮蔽。",
+    "i/a/c 沿 runtime；a 根據魚類、爬蟲食性 tags 而無棲地 tags，並非完整生態評估；c 無保育文字輸入，非全球或本地威脅評估。",
+    "地圖僅部分國家，並不表示各國全境及季節範圍。"
+  ],
+  "withheldScores": {
+    "v": "90–0 cm 的格式錯誤資料被解析成 45 cm，與 HKBWS 75–85 cm 顯著不符。",
+    "r": "計分的語源欄只有學名和科別，並非語源資料，卻被計作語源存在。",
+    "o": "綜合分依賴錯誤體長與錯置語源輸入影響的 v/r，暫遮蔽不重算。"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0295",
+  "name": "斑魚狗",
+  "scientificName": "Ceryle rudis",
+  "illustrationTaxon": "Adult male-like Pied Kingfisher Ceryle rudis, subspecies unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "冠魚狗",
+      "scientificName": "Megaceryle lugubris",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "更大、羽色更深及羽冠更明顯，圖不等比例；本圖雌型。"
+    },
+    {
+      "zh": "普通翠鳥",
+      "scientificName": "Alcedo atthis",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小，藍上體橙下體、長黑喙；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.43,
+      0.04,
+      0.7,
+      0.445
+    ],
+    [
+      0.55,
+      0.1,
+      0.91,
+      0.64
+    ],
+    [
+      0.47,
+      0.3,
+      0.67,
+      0.6
+    ],
+    [
+      0.23,
+      0.34,
+      0.52,
+      0.78
+    ]
+  ],
+  "featureLabels": [
+    "黑白短羽冠",
+    "黑色長喙",
+    "雄鳥兩道胸帶",
+    "黑白斑翼羽"
+  ],
+  "featureNotes": [
+    "短冠示意，AI 可能較蓬。",
+    "黑色長喙。",
+    "雄型兩條胸帶，雌鳥多一條不完整胸帶。",
+    "折翼黑白斑紋示意，不作飛行翼斑。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "EGY",
+      "ISR",
+      "TUR",
+      "IRN",
+      "PAK",
+      "IND",
+      "BGD",
+      "NPL",
+      "CHN",
+      "MMR",
+      "THA",
+      "VNM",
+      "KHM",
+      "KEN",
+      "UGA",
+      "TZA",
+      "ETH",
+      "NGA",
+      "ZAF"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/028600",
+      "use": "25–30 cm, HK locally uncommon and declining, global trend unknown."
+    },
+    {
+      "url": "https://ebird.org/species/piekin1",
+      "use": "Cornell IUCN 2025 LC, identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Pied_kingfisher",
+      "use": "Male breast bands, range, only Ceryle species."
+    },
+    {
+      "url": "https://ebird.org/species/crekin1",
+      "use": "Crested Kingfisher comparison."
+    },
+    {
+      "url": "https://ebird.org/species/comkin1",
+      "use": "Common Kingfisher comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime score inputs."
+    }
+  ],
+  "notes": [
+    "AI 主圖雄型兩胸帶、羽冠可能較蓬；冠魚狗比較圖為雌型，普通翠鳥重用 0289，三圖不等比例；羽式喙腳非專家認證。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 25–30 cm、香港局部不常見留鳥並下降，該頁全球趨勢未知；香港食物記錄僅魚。",
+    "六分沿 runtime i=2、a=2.8、v=3.6、r=1、c=1.2、o=2.1；AVONET 翼長136.2 mm×0.22約29.964 cm 屬估算非實測平均；a 缺棲地 tag，r/c 欄位缺資料並非完整評估。",
+    "世界底圖綠色為部分已記錄原生國家，不代表全境或完整季節。"
+  ],
+  "withheldScores": {}
+}

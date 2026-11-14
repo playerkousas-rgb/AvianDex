@@ -1,0 +1,154 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0289",
+  "name": "普通翠鳥",
+  "scientificName": "Alcedo atthis",
+  "illustrationTaxon": "Adult male-like Common Kingfisher Alcedo atthis, subspecies unverified, AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "藍耳翠鳥",
+      "scientificName": "Alcedo meninting",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "成年鳥耳羽藍色而普通翠鳥橙色；幼鳥耳羽可為橙色，圖不能單獨鑑別。"
+    },
+    {
+      "zh": "白胸翡翠",
+      "scientificName": "Halcyon smyrnensis",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "大紅喙、栗色頭及顯眼白胸；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.29,
+      0.18,
+      0.71,
+      0.42
+    ],
+    [
+      0,
+      0.1,
+      0.6,
+      0.58
+    ],
+    [
+      0.34,
+      0.23,
+      0.68,
+      0.43
+    ],
+    [
+      0.4,
+      0.4,
+      0.75,
+      0.68
+    ]
+  ],
+  "featureLabels": [
+    "藍色斑點頭頂",
+    "雄鳥黑色長喙",
+    "橙色耳羽",
+    "橙色下體"
+  ],
+  "featureNotes": [
+    "頭頂點斑。",
+    "雄鳥型黑喙，雌鳥下喙多呈橙色。",
+    "橙色耳羽和白頸斑。",
+    "下體橙色示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PRT",
+      "ESP",
+      "FRA",
+      "DEU",
+      "ITA",
+      "GBR",
+      "GRC",
+      "TUR",
+      "MAR",
+      "DZA",
+      "EGY",
+      "CHN",
+      "MNG",
+      "RUS",
+      "IND",
+      "NPL",
+      "THA",
+      "VNM",
+      "KOR",
+      "JPN",
+      "IDN"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/028300",
+      "use": "16–18 cm, identification, HK seasonality and global trend unknown."
+    },
+    {
+      "url": "https://ebird.org/species/comkin1",
+      "use": "IUCN 2025 LC and habitat."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Common_kingfisher",
+      "use": "Taxonomy, etymology and range."
+    },
+    {
+      "url": "https://ebird.org/species/blekin1",
+      "use": "Adult vs juvenile Blue-eared Kingfisher comparison."
+    },
+    {
+      "url": "https://ebird.org/species/whtkin2",
+      "use": "White-throated Kingfisher comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and selective withholding"
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime scoring inputs"
+    }
+  ],
+  "notes": [
+    "AI 主圖近雄型，喙近基部有暖色、羽點規整，亞種性別及羽式均非專家認證；藍耳翠鳥幼鳥可有橙色耳羽；白胸翡翠及主圖不等比例，不應單靠 AI 圖鑑別。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 16–18 cm、香港秋冬常見春夏稀少，推測過境族群下降而后海灣冬季水鳥計數未見顯著下跌；其頁記全球趨勢未知。",
+    "i=2、a=4.7、v=2.8、c=3 沿 runtime；16 cm 是原資料值、非實測平均；c 由貓及掠食者等威脅文字觸發而非完整保育評估。r/o 因截斷及過度概括要點遮蔽，不重算。",
+    "完整世界底圖綠色僅部分記錄國家，不代表全境或完整季節。"
+  ],
+  "withheldScores": {
+    "r": "highlights 含數條截斷句且遷徙句將可能成小群概括成通常集體移動；研究分依該欄是否存在計算。",
+    "o": "原綜合分依賴受影響的研究分，遮蔽而不補算。"
+  }
+}

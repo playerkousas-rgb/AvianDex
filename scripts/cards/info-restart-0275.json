@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0275",
+  "name": "灰臉鵟鷹",
+  "scientificName": "Butastur indicus",
+  "illustrationTaxon": "Adult-like Gray-faced Buzzard Butastur indicus, AI illustration visually checked, not independently expert certified; central throat stripe is not clearly shown.",
+  "similarSpecies": [
+    {
+      "zh": "灰臉鵟鷹未成鳥",
+      "scientificName": "Butastur indicus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "未成鳥淡眉較明顯、褐色上體、淡色下體有縱紋；羽齡有變化，插圖不等比例。"
+    },
+    {
+      "zh": "鳳頭蜂鷹",
+      "scientificName": "Pernis ptilorhynchus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "蜂鷹頭部較小、體羽多變；飛行翼底條紋與翼型在折翼圖無法展示，圖片不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.44,
+      0.075,
+      0.73,
+      0.255
+    ],
+    [
+      0.45,
+      0.15,
+      0.72,
+      0.33
+    ],
+    [
+      0.43,
+      0.34,
+      0.7,
+      0.52
+    ],
+    [
+      0.27,
+      0.68,
+      0.53,
+      0.89
+    ]
+  ],
+  "featureLabels": [
+    "灰臉淡眉",
+    "白喉深色邊",
+    "腹部橫紋",
+    "尾羽橫紋"
+  ],
+  "featureNotes": [
+    "灰臉、淡眉與黃色眼睛示意。",
+    "白喉深色邊紋可見，但中央暗紋未清晰畫出，不能單靠插圖鑑別。",
+    "褐色腹部橫紋示意。",
+    "深色尾羽橫紋示意，AI 圖並非精確羽式。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "TWN",
+      "THA",
+      "VNM",
+      "MYS",
+      "PHL",
+      "IDN"
+    ],
+    "note": "Selected breeding, migration and nonbreeding countries/territories in East and Southeast Asia only; not full-country occupancy, complete distribution, or seasonal boundaries."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/gyfbuz1",
+      "use": "Cornell identification, Oriental Honey-buzzard comparison and global IUCN 2025 LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/026400",
+      "use": "HKBWS 41–48 cm, adult and juvenile identification, local spring/autumn passage and seasonal range."
+    },
+    {
+      "url": "https://ebird.org/species/orihob2",
+      "use": "Oriental Honey-buzzard smaller head, broad wings and plumage variation."
+    },
+    {
+      "url": "https://www.thainationalparks.com/species/grey-faced-buzzard",
+      "use": "Diet includes lizards, insects, amphibians and small mammals."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Grey-faced_buzzard",
+      "use": "Breeding and wintering distribution and adult throat pattern."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "No 0275 record; all six scores unavailable and must not be synthesized."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "No 0275 record; no inferred habitat/diet tags or body length."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy and scientific name."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    }
+  ],
+  "notes": [
+    "成鳥主圖對照同種未成鳥與鳳頭蜂鷹，AI 圖不等比例、非鳥類專家認證；主圖白喉中央深色縱紋沒有清晰畫出，喉邊、尾紋僅示意，不可單靠圖片鑑別。",
+    "HKBWS 總述春季廣泛而不常見過境、秋季稀少；正文另稱春季 common，採保守總述並保留原文差異。Cornell 全球 IUCN 2025 LC。",
+    "原 runtime 在 dexScores 無此 ID，六項 i/a/v/r/c/o 全缺值待查，不能用 IUCN、身長或食性自行補算。",
+    "森林、林緣、農地活動；食物包括兩棲類、爬蟲、小型哺乳類及昆蟲，季節變化；香港來源不支持舊文獻通常吃魚的說法。",
+    "世界底圖僅部分繁殖、遷徙及越冬國家／地區，綠色不表示全境或季節範圍。"
+  ]
+}

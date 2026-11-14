@@ -1,0 +1,174 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0283",
+  "name": "斑頭鵂鶹",
+  "scientificName": "Glaucidium cuculoides",
+  "illustrationTaxon": "Adult-like Asian Barred Owlet Glaucidium cuculoides, AI illustration visually checked but not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "領鵂鶹",
+      "scientificName": "Taenioptynx brodiei",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "較小，後頸有類眼斑；此正面圖不顯示後頸偽眼，羽式僅示意、不等比例。"
+    },
+    {
+      "zh": "林鵂鶹",
+      "scientificName": "Glaucidium radiatum",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "體羽密佈橫紋，與斑頭鵂鶹相似；插圖不等比例、不可只靠羽紋辨認。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.24,
+      0.075,
+      0.64,
+      0.475
+    ],
+    [
+      0.3,
+      0.12,
+      0.61,
+      0.43
+    ],
+    [
+      0.27,
+      0.3,
+      0.51,
+      0.54
+    ],
+    [
+      0.34,
+      0.41,
+      0.63,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "圓頭無耳簇",
+    "黃色眼睛",
+    "胸部橫紋",
+    "腹部縱斑"
+  ],
+  "featureNotes": [
+    "圓頭無耳簇示意；頭頂橫紋較規則且眉線不足。",
+    "黃色眼睛和偏黃的喙示意。",
+    "褐色胸羽與淡色橫紋示意，羽紋不必完全一致。",
+    "白色腹部褐色縱斑示意，非精確羽式。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "MMR",
+      "CHN",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/asbowl1",
+      "use": "Cornell 2025 IUCN LC, barred plumage and comparison with collared owlet."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0190/026900",
+      "use": "HKBWS 22–25 cm, adult barring and HK fairly common resident, mainly nocturnal locally, eight subspecies."
+    },
+    {
+      "url": "https://www.owlpages.com/owls/species.php?s=2130",
+      "use": "22–25 cm, white eyebrows, insect and small vertebrate diet, range; generally diurnal elsewhere."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Asian_barred_owlet",
+      "use": "Current eight subspecies and mainland Southeast Asia."
+    },
+    {
+      "url": "https://ebird.org/species/colowl1",
+      "use": "Collared Owlet smaller, pale underparts with long streaks."
+    },
+    {
+      "url": "https://ebird.org/species/junowl1",
+      "use": "Jungle Owlet dense barring and lack of false eyes."
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=1986F1ABAE2932D9",
+      "use": "Traditional Chinese comparison name 林鵂鶹 for Glaucidium radiatum."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores a/v/r/o withheld, vEst retained."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 147.8 mm estimated body length."
+    },
+    {
+      "path": "scripts/cards/build-explorer-data.mjs",
+      "use": "English diet grasshoppers matched by plant tag regex grass."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Truncated highlights and outdated historical subspecies list drive r."
+    },
+    {
+      "path": "src/lib/dexScore.ts",
+      "use": "WING_TO_LENGTH 0.22 and score formulas."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomic name."
+    }
+  ],
+  "notes": [
+    "主圖為成鳥示意；領鵂鶹及林鵂鶹比較圖不等比例，AI 羽紋、喙和腳爪僅示意、非鳥類專家認證。主圖頭頂橫紋過於規則，白眉不明顯；領鵂鶹後頸偽眼不可從正面圖見到，林鵂鶹羽紋也近似，不能單靠圖片鑑別。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 香港本地頗常見留鳥，多在新界、22–25 cm；香港主要夜間活動，與某些其他地區日間較活躍情況分開。",
+    "a 因英文 grasshoppers 被 plant 的 grass 誤配，v 因翼長147.8 mm×0.22 估32.516 cm 明顯偏離22–25 cm，r 因截斷及未核歷史分類要點暫遮蔽；o 依賴上述，也遮蔽；保留 vEst 原觀賞值估算提示，不重算。",
+    "i=2、c=1.2 沿 runtime；保育文案缺失，c 非完整受脅評估。HKBWS 現認八亞種，原文過去五亞種說法不當作目前分類；地圖僅部分國家。"
+  ],
+  "withheldScores": {
+    "a": "原 a=3.3 的 plant tag 由英文食性草蜢 grasshoppers 被植物正則 grass 誤配，故暫遮蔽。",
+    "v": "原 v=3.7 的 AVONET 翼長147.8 mm × 0.22 估體長32.516 cm，顯著偏離 HKBWS 22–25 cm，故暫遮蔽。",
+    "r": "原 r=1.8 以截斷及含未核實過往亞種分類的 highlights 作已核實要點；HKBWS 現採八亞種，故暫遮蔽。",
+    "o": "原 o=2.4 包含受草蜢誤配、翼長估算和受損要點影響的 a/v/r，暫遮蔽、不重算。"
+  }
+}

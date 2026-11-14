@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0267",
+  "name": "鳳頭鷹",
+  "scientificName": "Lophospiza trivirgata",
+  "illustrationTaxon": "Adult Crested Goshawk, sex unspecified, AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "鳳頭鷹幼鳥",
+      "scientificName": "Lophospiza trivirgata",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種幼鳥上體偏褐、下體淡而有較稀疏深褐斑紋；圖示喉紋及腿羽簡化。"
+    },
+    {
+      "zh": "松雀鷹雌鳥",
+      "scientificName": "Tachyspiza virgata",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "松雀鷹通常較小、足較纖；體型有性別差異，鷹類辨識須綜合多項特徵，圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.18,
+      0.055,
+      0.49,
+      0.255
+    ],
+    [
+      0.14,
+      0.055,
+      0.54,
+      0.355
+    ],
+    [
+      0.265,
+      0.27,
+      0.48,
+      0.45
+    ],
+    [
+      0.37,
+      0.38,
+      0.59,
+      0.56
+    ]
+  ],
+  "featureLabels": [
+    "灰色頭側",
+    "深色喉紋",
+    "胸部縱紋",
+    "腹部橫紋"
+  ],
+  "featureNotes": [
+    "成鳥頭側灰色，冠羽常平伏。",
+    "白色喉部深色紋路示意。",
+    "胸部赤褐色縱紋。",
+    "腹部淺色底有褐色橫紋。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "LKA",
+      "NPL",
+      "BTN",
+      "BGD",
+      "MMR",
+      "CHN",
+      "VNM",
+      "LAO",
+      "KHM",
+      "THA",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/cregos1",
+      "use": "Cornell 2025 LC, identification and classification Lophospiza trivirgata."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025200",
+      "use": "HKBWS identification, 30–46 cm, Hong Kong residency, native range and diet; old Accipiter citation."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025500",
+      "use": "Besra comparison and identification caveats."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and classification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC textual copy, not used to fill score gaps."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "forest only; incomplete dietary tags and missing length."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Only a and r are recorded; i/v/c/o missing."
+    }
+  ],
+  "notes": [
+    "成鳥示意，性別不作判定；同種幼鳥與松雀鷹雌鳥比較不等比例。幼鳥圖缺清楚中央喉紋及腿部橫紋，不能作精確鑑別。",
+    "HKBWS 香港林地常見留鳥，亦在開闊地獵食；Cornell IUCN 2025 LC。HKBWS 頁面舊引用 Accipiter trivirgatus，現標題及 runtime 皆為 Lophospiza trivirgata。",
+    "runtime 只有 a=2.3、r=2.5，i/v/c/o 原本缺值，待查非零，不根據 IUCN 或外部體長自行補分；食性 tag 空，a 並非完整食性評估。",
+    "AI 圖僅基本目視、非鳥類專家認證；地圖只顯示部分國家，不表示各國全境。"
+  ]
+}

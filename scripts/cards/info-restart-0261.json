@@ -1,0 +1,141 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "id": "0261",
+  "name": "烏鵰",
+  "scientificName": "Clanga clanga",
+  "illustrationTaxon": "Juvenile-like Greater Spotted Eagle; AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "烏鵰成鳥",
+      "scientificName": "Clanga clanga",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "一般成鳥羽色深褐較均勻，幼鳥上翼具顯眼淡色羽尖；罕見淡色型除外。"
+    },
+    {
+      "zh": "草原鵰",
+      "scientificName": "Aquila nipalensis",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "草原鵰較不緊湊，嘴大且嘴角伸至眼後附近；易混淆，AI 僅示意，不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.18,
+      0.11,
+      0.51,
+      0.32
+    ],
+    [
+      0.18,
+      0.13,
+      0.46,
+      0.3
+    ],
+    [
+      0.35,
+      0.3,
+      0.68,
+      0.51
+    ],
+    [
+      0.36,
+      0.58,
+      0.62,
+      0.76
+    ]
+  ],
+  "featureLabels": [
+    "深褐頭部",
+    "黃色嘴基",
+    "幼鳥翼斑",
+    "羽覆腿部"
+  ],
+  "featureNotes": [
+    "幼鳥深褐頭部；偶有羽色差異。",
+    "黃色蠟膜及嘴角；AI 圖僅示意。",
+    "幼鳥上翼覆羽淡色羽尖，多少具變化。",
+    "羽毛覆腿及黃色足部；非本種獨有。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "POL",
+      "BLR",
+      "UKR",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "IND",
+      "BGD",
+      "MMR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/grseag1",
+      "use": "Cornell IUCN 2025 VU, juvenile and adult identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/024700",
+      "use": "HKBWS plumage, HK status and range."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/024900",
+      "use": "Steppe Eagle comparison; identification complex."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "VU copy."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six scores."
+    }
+  ],
+  "notes": [
+    "幼鳥樣貌，對照同種深色型成鳥及草原鵰，不等比例；兩鵰辨識困難，AI 圖僅基本目視、非專家認證。",
+    "HKBWS 2024 香港新界北部稀少冬候鳥，主要在深灣，過境罕見；Cornell IUCN 2025 VU。",
+    "六項分數沿 runtime，未重算。",
+    "地圖為部分分佈國家概覽，不是完整分佈或各國全境。"
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0282",
+  "name": "褐漁鴞",
+  "scientificName": "Ketupa zeylonensis",
+  "illustrationTaxon": "Adult-like Brown Fish-Owl Ketupa zeylonensis, reused 0281 comparison illustration; visually checked but not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "鵰鴞",
+      "scientificName": "Bubo bubo",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "通常橙眼、有羽跗蹠、胸紋較粗；圖中羽式僅示意，不等比例。"
+    },
+    {
+      "zh": "馬來漁鴞",
+      "scientificName": "Ketupa ketupu",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "體色通常較鮮亮橙褐、黃眼；耳簇與羽色變化大，插圖僅示意。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.12,
+      0.09,
+      0.83,
+      0.565
+    ],
+    [
+      0.27,
+      0.14,
+      0.7,
+      0.425
+    ],
+    [
+      0.32,
+      0.25,
+      0.68,
+      0.49
+    ],
+    [
+      0.27,
+      0.62,
+      0.62,
+      0.855
+    ]
+  ],
+  "featureLabels": [
+    "外展耳簇",
+    "黃色眼睛",
+    "胸部縱紋",
+    "裸露腳部"
+  ],
+  "featureNotes": [
+    "外展鬆散耳簇示意，主圖耳簇可能偏長。",
+    "黃色眼睛與深色喙示意，虹膜視光線可有變化。",
+    "淡褐胸部縱紋示意，圖中缺細橫紋，非精確羽式。",
+    "裸露黃褐色跗蹠及腳爪示意，比例細節未經專家核對。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "TUR",
+      "IRN",
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "MYS"
+    ],
+    "note": "Selected documented native countries only; no full-country occupancy or full distribution implied; range patchy especially at western edge."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/brfowl1",
+      "use": "Cornell global IUCN 2025 LC, identification and waterside habitat."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0190/027400",
+      "use": "HKBWS 48–55 cm, yellow iris and bare legs, HK uncommon local species increased in recent years."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Brown_fish_owl",
+      "use": "Range, wider food items, taxonomic history; all-year resident in much of range."
+    },
+    {
+      "url": "https://ebird.org/species/eueowl1",
+      "use": "Eurasian Eagle-Owl orange eyes and large ear tufts."
+    },
+    {
+      "url": "https://ebird.org/species/bufowl2",
+      "use": "Buffy Fish-Owl bright orange-brown color, prominent tufts and yellow eyes."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores, a/r/c/o withheld without recalculation."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Diet fish tag and water habitat tag; 54.5 cm midpoint."
+    },
+    {
+      "path": "scripts/cards/build-explorer-data.mjs",
+      "use": "Chinese diet field takes priority and fish regex matches 魚 in species name even in misassigned fossil text."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Negated conservation text, trivial etymology and corrupted highlights."
+    },
+    {
+      "path": "src/lib/dexScore.ts",
+      "use": "Threat regex matches 否定句及「保護」; r values any etymology/highlights."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and taxonomy."
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=C1AAB74D595547CA",
+      "use": "Buffy Fish Owl Traditional Chinese name 馬來漁鴞; 黃漁鴞 can refer to a different species."
+    }
+  ],
+  "notes": [
+    "主圖重用 0281 已目視的褐漁鴞比較素材，為成鳥樣貌示意；對照鵰鴞及馬來漁鴞，不等比例。主圖耳簇可能偏長、下體細橫紋未畫清；馬來漁鴞插圖耳簇和腹部縱紋或誇張，三圖腳爪羽式僅示意、非鳥類專家認證，不能單靠圖片鑑別。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 香港不常見及局部分布，近年增加，48–55 cm。全球與香港狀態不混用，地圖僅部分原生國家。",
+    "a=2.8 的 fish tag 因錯置化石 diet 裏鳥名「褐魚鴞」的「魚」誤觸，不因外部確認魚食而補算，暫遮蔽。r=4.8 使用無語源解釋的 etymology 與錯置或損壞的 highlights，c=3.0 受保育文案中的「保護」「威脅」否定句誤判影響，r/c/o 均遮蔽，未改 runtime。",
+    "i=2、v=4.3 沿 runtime；54.5 cm 是原48–61 cm 範圍中點，HKBWS 香港範圍48–55 cm；不能當作實測個體或同等比例圖像。"
+  ],
+  "withheldScores": {
+    "a": "原 a=2.8 的 fish tag 是優先採用的錯置 diet 文案中「褐魚鴞」名字的「魚」觸發，非由食性句得出；雖外部來源證實魚類是食物，仍不以外部資料補算，暫遮蔽。",
+    "r": "原 r=4.8 把僅介紹名稱的 etymology 當作語源，且 highlights 有錯置化石句與文句損壞，暫遮蔽。",
+    "c": "原 c=3.0 將「國際自然保護聯盟並不認為褐魚鴞受到威脅」的「保護」「威脅」視作威脅訊號，忽略否定語境，暫遮蔽。",
+    "o": "原 o=3.4 包含受錯誤輸入影響的 a/r/c，暫遮蔽、不重算。"
+  }
+}

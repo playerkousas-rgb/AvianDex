@@ -1,0 +1,144 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0299",
+  "name": "三寶鳥",
+  "scientificName": "Eurystomus orientalis",
+  "illustrationTaxon": "Adult-like Oriental Dollarbird Eurystomus orientalis; sex unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "紫三寶鳥",
+      "scientificName": "Eurystomus azureus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "深紫羽色、橙喙腳，缺三寶鳥綠色光澤；圖不等比例。"
+    },
+    {
+      "zh": "藍胸佛法僧",
+      "scientificName": "Coracias garrulus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "藍頭胸棕背黑喙，圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.07,
+      0.15,
+      0.45,
+      0.35
+    ],
+    [
+      0.19,
+      0.13,
+      0.54,
+      0.33
+    ],
+    [
+      0.18,
+      0.18,
+      0.53,
+      0.38
+    ],
+    [
+      0.37,
+      0.32,
+      0.76,
+      0.64
+    ]
+  ],
+  "featureLabels": [
+    "橙紅寬喙",
+    "深色頭部",
+    "藍色喉羽",
+    "藍綠折翼"
+  ],
+  "featureNotes": [
+    "橙紅寬喙、黑色喙尖。",
+    "深色頭部。",
+    "藍色喉羽。",
+    "藍綠色折翼，不展示飛行翼斑。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "KOR",
+      "IND",
+      "NPL",
+      "BGD",
+      "MMR",
+      "THA",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "AUS",
+      "PNG",
+      "LKA"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/027800",
+      "use": "27–32 cm, identification, distribution, HK passage and global trend."
+    },
+    {
+      "url": "https://ebird.org/species/dollar1",
+      "use": "Cornell global IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://ebird.org/species/purrol1",
+      "use": "Azure Dollarbird dark purple plumage comparison."
+    },
+    {
+      "url": "https://ebird.org/species/eurrol1",
+      "use": "European Roller comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime score inputs."
+    }
+  ],
+  "notes": [
+    "主圖為 AI 成年型，尾形可能過長偏尖、翼紋與腳待核；紫三寶鳥首次圖明顯錯成亮藍未採用，改用深紫替代圖；藍胸佛法僧重用 0298 圖。均非專家認證且不等比例。",
+    "Cornell IUCN 2025 全球 LC；HKBWS 27–32 cm，香港春秋頗常見過境，全球趨勢下降。",
+    "i=2、a=3.3、v=4、c=1.2 沿 runtime；翼長186.2 mm×0.22 約40.964 cm 屬粗估且超出 HKBWS 範圍，非實測平均；c 無保育文案，非完整評估。r 因要點截斷及缺前文遮蔽，o 連帶遮蔽，不補算。",
+    "綠色僅部分已記錄原生國家，非全境或完整季節。"
+  ],
+  "withheldScores": {
+    "r": "部分已核實要點截斷，語音要點缺前文，研究分依欄位存在計算。",
+    "o": "綜合分依賴受影響研究分，暫不顯示、不補算。"
+  }
+}

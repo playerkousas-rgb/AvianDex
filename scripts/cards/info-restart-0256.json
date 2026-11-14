@@ -1,0 +1,140 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0256",
+  "name": "黑翅鳶",
+  "scientificName": "Elanus caeruleus",
+  "illustrationTaxon": "Adult-like Black-winged Kite; AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "黑翅鳶幼鳥",
+      "scientificName": "Elanus caeruleus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "幼鳥頭及胸帶褐、羽緣淡色，虹膜通常較橙；圖示為簡化概念。"
+    },
+    {
+      "zh": "紅隼雄鳥",
+      "scientificName": "Falco tinnunculus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "雄紅隼灰頭栗背、胸斑點，兩者均可懸停；插圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.12,
+      0.1,
+      0.36,
+      0.3
+    ],
+    [
+      0.25,
+      0.27,
+      0.56,
+      0.52
+    ],
+    [
+      0.18,
+      0.28,
+      0.4,
+      0.51
+    ],
+    [
+      0.3,
+      0.65,
+      0.52,
+      0.82
+    ]
+  ],
+  "featureLabels": [
+    "紅眼黑斑",
+    "黑色肩羽",
+    "白色胸羽",
+    "黃色腿足"
+  ],
+  "featureNotes": [
+    "紅色虹膜與深色眼部羽毛。",
+    "黑色肩羽及灰色折翼。",
+    "白色胸部局部。",
+    "黃色腿足握枝；AI 足趾僅示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ESP",
+      "PRT",
+      "MAR",
+      "EGY",
+      "KEN",
+      "ZAF",
+      "IND",
+      "PAK",
+      "CHN",
+      "THA",
+      "IDN"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/bkskit1",
+      "use": "Cornell LC 2025, identification and juvenile."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/024000",
+      "use": "HKBWS identification, HK local status and range."
+    },
+    {
+      "url": "https://ebird.org/species/eurkes",
+      "use": "Eurasian Kestrel identification, male comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC copy."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six scores and vEst."
+    }
+  ],
+  "notes": [
+    "主圖為成鳥示意；對照同種幼鳥及雄紅隼，兩者圖像不等比例，AI 圖非鳥類專家認證。",
+    "HKBWS 2024 指香港常見秋季過境、其他時期稀少，並無證實本地繁殖；Cornell IUCN 2025 LC。",
+    "runtime vEst=1 保留體長估算提示；所有分數原樣。",
+    "地圖僅部分原生國家，不是完整分佈或各國全境。"
+  ]
+}
