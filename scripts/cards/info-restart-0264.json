@@ -1,0 +1,157 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0264",
+  "name": "白腹鷂",
+  "scientificName": "Circus spilonotus",
+  "illustrationTaxon": "Adult female Eastern Marsh Harrier, AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白腹鷂雄鳥",
+      "scientificName": "Circus spilonotus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種成雄較灰白、喉胸具深色縱紋；雄羽色有變化。"
+    },
+    {
+      "zh": "鵲鷂雄鳥",
+      "scientificName": "Circus melanoleucos",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "鵲鷂成雄黑頭與黑胸對比淡色腹部；兩圖不等比例、亦非雌幼鳥鑑別。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.08,
+      0.055,
+      0.48,
+      0.285
+    ],
+    [
+      0.17,
+      0.21,
+      0.41,
+      0.37
+    ],
+    [
+      0.38,
+      0.25,
+      0.69,
+      0.47
+    ],
+    [
+      0.25,
+      0.51,
+      0.6,
+      0.84
+    ]
+  ],
+  "featureLabels": [
+    "淡色頭頂",
+    "深色胸帶",
+    "褐色翼羽",
+    "黃色長腳"
+  ],
+  "featureNotes": [
+    "雌鳥淡色頭頂及深色後臉。",
+    "淡色喉與深色上胸。",
+    "褐色折翼覆羽僅示意。",
+    "黃色細長腿足。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "JPN",
+      "KOR",
+      "VNM",
+      "LAO",
+      "KHM",
+      "THA",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/easmah1",
+      "use": "Cornell IUCN 2025 LC and plumages."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025800",
+      "use": "HKBWS length, identification, Hong Kong occurrence, range and reported prey."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/026000",
+      "use": "Pied Harrier comparison and identification caveats."
+    },
+    {
+      "url": "https://ebird.org/species/piehar1",
+      "use": "Cornell Pied Harrier male plumage."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC copy, range and diet."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Empty length; amphibian-only diet tag not exhaustive."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 407.2 mm; existing estimated length 89.584 cm."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores; affected v/o withheld and vEst retained."
+    }
+  ],
+  "notes": [
+    "主圖成雌；雄鳥及鵲鷂雄鳥比較不等比例。AI 插圖僅基本目視、非鳥類專家認證，羽紋不作精確鑑別。",
+    "HKBWS 2024 香港常見冬候兼過境，主要深灣、秋季較多；Cornell IUCN 2025 LC。",
+    "翼長×0.22 估算體長約89.6 cm，與 HKBWS 47–55 cm 明顯不符；v/o 暫遮蔽、不重算，保留 vEst 提示。",
+    "explorerIndex 食性標籤僅 amphibian，未反映 HKBWS 的鳥類食物紀錄；a 沿 runtime，並非完整食性評估。地圖僅部分國家。"
+  ],
+  "withheldScores": {
+    "v": "原 v=4.9 以 AVONET 翼長407.2 mm × 0.22 估算約89.6 cm，顯著偏離 HKBWS 體長47–55 cm，暫遮蔽待核。",
+    "o": "原 o=3.0 包含受體長估算偏差影響的 v，暫遮蔽、不重新計算。"
+  }
+}

@@ -144,8 +144,9 @@ def render():
     score_notes = []
     if withheld:
         score_notes.append('部分評分待核')
-    if scores.get('vEst') and f['score']['v']:
-        score_notes.append('觀賞值含體長估算')
+    if scores.get('vEst') and scores.get('v') is not None:
+        # Keep the provenance note even when a bad estimate is withheld.
+        score_notes.append('觀賞值含體長估算' if f['score']['v'] else '原觀賞值含體長估算')
     if score_notes:
         draw.text((64,1104), '；'.join(score_notes), font=font, fill='#d1c7a9')
     if SPEC['iucn'].get('assessmentNote'):

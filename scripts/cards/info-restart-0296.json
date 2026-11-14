@@ -1,0 +1,132 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0296",
+  "name": "藍喉蜂虎",
+  "scientificName": "Merops viridis",
+  "illustrationTaxon": "Adult-like Blue-throated Bee-eater Merops viridis; sex indistinguishable in field; AI illustration not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "栗喉蜂虎",
+      "scientificName": "Merops philippinus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "綠色頭、栗色喉，尾較藍；示意圖喉色偏橙。圖不等比例。"
+    },
+    {
+      "zh": "栗頭蜂虎",
+      "scientificName": "Merops leschenaulti",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "栗頭黃喉黑胸帶，無延長中央尾羽；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.27,
+      0.13,
+      0.57,
+      0.33
+    ],
+    [
+      0.29,
+      0.17,
+      0.54,
+      0.38
+    ],
+    [
+      0.08,
+      0.1,
+      0.52,
+      0.32
+    ],
+    [
+      0.53,
+      0.43,
+      0.86,
+      0.78
+    ]
+  ],
+  "featureLabels": [
+    "栗色頭頂",
+    "藍色喉部",
+    "細長黑喙",
+    "藍色尾羽"
+  ],
+  "featureNotes": [
+    "栗色頭頂和後頸。",
+    "藍色喉部。",
+    "黑色細長稍彎喙。",
+    "藍色尾羽；延長中央尾羽羽幹可能過細。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "THA",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/028800",
+      "use": "21–23.5 cm plus streamers; HK rare passage migrant, distribution, identification."
+    },
+    {
+      "url": "https://ebird.org/species/btbeat2",
+      "use": "Cornell IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/028700",
+      "use": "Blue-tailed Bee-eater comparison."
+    },
+    {
+      "url": "https://ebird.org/species/chbeat1",
+      "use": "Chestnut-headed Bee-eater comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime score inputs."
+    }
+  ],
+  "notes": [
+    "AI 主圖成年型中央尾羽羽幹可能過細；栗喉蜂虎喉色偏橙，栗頭蜂虎次圖腳爪細節不可靠；非專家認證，圖不等比例。",
+    "Cornell IUCN 2025 全球 LC；HKBWS 體長 21–23.5 cm 另加約 9 cm 尾羽延長，香港罕見過境。",
+    "i=2、a=3.8、v=3.3、r=1、c=1.2、o=2.3 沿 runtime；vEst 為 AVONET 翼長111.6 mm×0.22約24.552 cm 的估算，非實測平均；r 中文輸入僅有趣聞而無遷徙語源要點，c 無中文保育文案，均非完整評估。",
+    "綠色為部分已記錄原生國家概覽，非全境或完整季節。"
+  ],
+  "withheldScores": {}
+}

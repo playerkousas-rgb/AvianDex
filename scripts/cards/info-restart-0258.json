@@ -1,0 +1,148 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0258",
+  "name": "黑冠鵑隼",
+  "scientificName": "Aviceda leuphotes",
+  "illustrationTaxon": "Black Baza, AI illustration visually checked; crest proportions and fine detail are schematic, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "褐冠鵑隼",
+      "scientificName": "Aviceda jerdoni",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "褐冠鵑隼頭部褐色，冠羽白尖，白腹多淡紅色橫斑；插圖示意。"
+    },
+    {
+      "zh": "鳳頭蜂鷹",
+      "scientificName": "Pernis ptilorhynchus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "蜂鷹羽色多變，頭細小，停棲冠羽通常不明顯；插圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.14,
+      0.07,
+      0.6,
+      0.37
+    ],
+    [
+      0.25,
+      0.28,
+      0.54,
+      0.47
+    ],
+    [
+      0.3,
+      0.43,
+      0.59,
+      0.62
+    ],
+    [
+      0.47,
+      0.32,
+      0.74,
+      0.5
+    ]
+  ],
+  "featureLabels": [
+    "黑色冠羽",
+    "黑白胸帶",
+    "腹部橫斑",
+    "翼上斑塊"
+  ],
+  "featureNotes": [
+    "長黑冠羽，AI 圖比例示意。",
+    "白色上胸與寬黑胸帶。",
+    "腹部淡色、栗色或黑色橫斑具變化。",
+    "上體翼羽白色與栗色斑塊，細節示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "NPL",
+      "IND",
+      "CHN",
+      "MMR",
+      "THA",
+      "VNM",
+      "KHM",
+      "LAO",
+      "MYS",
+      "LKA",
+      "IDN"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/blabaz1",
+      "use": "Cornell IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/024200",
+      "use": "HKBWS plumage, HK status and range."
+    },
+    {
+      "url": "https://ebird.org/species/jerbaz1",
+      "use": "Jerdon’s Baza comparison."
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=0C89F1D6AF73DDEE",
+      "use": "Chinese name of comparison species."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/024100",
+      "use": "Crested Honey Buzzard comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC copy."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six scores and vEst."
+    }
+  ],
+  "notes": [
+    "主圖及比較圖為 AI 示意，冠羽及細節非實物；經基本目視但非鳥類專家認證。",
+    "HKBWS 2024 香港秋季不常見過境、春季稀少、夏季罕見；Cornell IUCN 2025 LC。",
+    "vEst=1 保留體長估算提示；六項分數採 runtime，未重算。",
+    "地圖為部分分佈國家概覽，不是完整分佈或各國全境。"
+  ]
+}

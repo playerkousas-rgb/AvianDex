@@ -1,0 +1,169 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0281",
+  "name": "鵰鴞",
+  "scientificName": "Bubo bubo",
+  "illustrationTaxon": "Adult-like Eurasian Eagle-Owl Bubo bubo, AI illustration visually checked but not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "褐漁鴞",
+      "scientificName": "Ketupa zeylonensis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "通常黃眼、面盤較素、跗蹠少羽且翼尾條紋較醒目；插圖比例羽紋僅示意。"
+    },
+    {
+      "zh": "長耳鴞",
+      "scientificName": "Asio otus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "體形較細長、耳簇較近且面盤輪廓明顯；兩圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.08,
+      0,
+      0.84,
+      0.51
+    ],
+    [
+      0.27,
+      0.12,
+      0.65,
+      0.375
+    ],
+    [
+      0.22,
+      0.25,
+      0.52,
+      0.45
+    ],
+    [
+      0.34,
+      0.4,
+      0.64,
+      0.6
+    ]
+  ],
+  "featureLabels": [
+    "明顯耳簇",
+    "橙色眼睛",
+    "胸部深紋",
+    "腹部細紋"
+  ],
+  "featureNotes": [
+    "豎起耳簇示意，耳簇可伏下。",
+    "橙色眼睛和面盤示意，細節有個體差異。",
+    "淡褐胸部粗深縱紋示意，非精確羽式。",
+    "腹部細橫紋和縱紋示意，圖中可能規整過度。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PRT",
+      "ESP",
+      "FRA",
+      "DEU",
+      "POL",
+      "NOR",
+      "SWE",
+      "FIN",
+      "ITA",
+      "GRC",
+      "TUR",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "PRK",
+      "KOR",
+      "PAK",
+      "NPL",
+      "IND"
+    ],
+    "note": "Partial documented native range countries only. Country fill is not full occupancy or full distribution; island and taxonomic differences are not represented."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/eueowl1",
+      "use": "Cornell global IUCN 2025 LC, field features and habitats."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0190/027300",
+      "use": "HKBWS 56–75 cm, local scarce resident, identification, local prey and probable local decline."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Eurasian_eagle-owl",
+      "use": "Wide Eurasian distribution, varied prey; 75 cm is upper end for females, not species average."
+    },
+    {
+      "url": "https://ebird.org/species/brfowl1",
+      "use": "Brown Fish-Owl comparison, yellow eyes and relatively plain face."
+    },
+    {
+      "url": "https://ebird.org/species/loeowl",
+      "use": "Long-eared Owl comparison, smaller slender owl with long ear tufts."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores; r/o withheld without recalculation."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Forest and rodent tags incomplete, length=75 cm."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Three truncated highlights used to calculate r, one claims entire Eurasian continent; other inputs to r absent."
+    },
+    {
+      "path": "src/lib/dexScore.ts",
+      "use": "Existing score formula weights any non-empty highlights in r and includes r in o."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and taxonomy."
+    }
+  ],
+  "notes": [
+    "主圖為成鳥樣貌示意，對照褐漁鴞和長耳鴞；三圖不等比例。主圖腹紋規整、耳簇及腳爪可能誇張；褐漁鴞耳簇偏長且條紋示意；長耳鴞面盤耳簇可能過度整齊。AI 羽式僅示意、非鳥類專家認證，不能單靠插圖鑑別。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 56–75 cm、香港稀少但廣佈留鳥，可能因草地演替為灌叢而下降，記錄少不足以準確量化；香港狀態與全球評估分開。",
+    "runtime 75 cm 是 HKBWS 範圍上限、Wikipedia 為較大雌鳥上限，非平均數；v=4.7 沿 runtime，解讀需注意。森林與鼠類兩 tag 並非棲地／食性完整列舉，a=2.8 沿 runtime；i=2、c=1.2 保留，c 並非對本地威脅完整評估。",
+    "r=1.8 由截斷 highlights 導出，分佈一項聲稱整個歐亞大陸都有記錄過度概括，r 及依賴它的 o 暫遮蔽不重算；未修改 runtime。地圖僅部分原生國家，不示全境或完整範圍。"
+  ],
+  "withheldScores": {
+    "r": "原 r=1.8 來自三項截斷 highlights，其中一項聲稱整個歐亞大陸均有分佈，範圍過度概括且非全域；故暫遮蔽。",
+    "o": "原 o=2.5 包含受錯誤／截斷 highlights 影響的 r，暫遮蔽、不重算。"
+  }
+}

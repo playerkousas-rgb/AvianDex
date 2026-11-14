@@ -1,0 +1,175 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0285",
+  "name": "褐林鴞",
+  "scientificName": "Strix leptogrammica",
+  "illustrationTaxon": "Adult-like Brown Wood-Owl Strix leptogrammica, sex and subspecies not verified, AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白領林鴞",
+      "scientificName": "Strix ocellata",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "橙灰密紋與較鮮明同心面紋；AI 比較圖不等比例，羽紋及腳爪僅示意。"
+    },
+    {
+      "zh": "灰林鴞",
+      "scientificName": "Strix aluco",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "體羽褐灰、腹部多縱紋；色型有變化，AI 比較圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.08,
+      0.7,
+      0.413
+    ],
+    [
+      0.25,
+      0.125,
+      0.66,
+      0.398
+    ],
+    [
+      0.2,
+      0.085,
+      0.7,
+      0.418
+    ],
+    [
+      0.24,
+      0.36,
+      0.58,
+      0.587
+    ]
+  ],
+  "featureLabels": [
+    "圓頭無耳簇",
+    "深色眼睛",
+    "面盤深色邊",
+    "腹部細橫紋"
+  ],
+  "featureNotes": [
+    "無耳簇圓頭示意。",
+    "深色眼睛示意。",
+    "淡面盤深色邊及白眉示意，AI 面部環紋可能較粗。",
+    "淺色下體細橫紋示意，並非真實羽序。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "LKA",
+      "BGD",
+      "NPL",
+      "BTN",
+      "MMR",
+      "CHN",
+      "TWN",
+      "THA",
+      "LAO",
+      "VNM",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0190/027500",
+      "use": "46–55 cm, adult morphology, HK scarce but increasing resident, global trend, range and taxonomic proposal."
+    },
+    {
+      "url": "https://ebird.org/species/brwowl1",
+      "use": "Cornell IUCN 2025 LC, dark eyes, face and plumage."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Brown_wood_owl",
+      "use": "Broad range and nocturnal food; variable subspecies taxonomy."
+    },
+    {
+      "url": "https://ebird.org/species/mowowl1",
+      "use": "Mottled Wood-Owl comparison."
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=52A8CE5C3058123E",
+      "use": "Traditional Chinese name 白領林鴞 for Strix ocellata."
+    },
+    {
+      "url": "https://ebird.org/species/tawowl1",
+      "use": "Tawny Owl comparison."
+    },
+    {
+      "url": "https://zh.wikipedia.org/zh-hant/灰林鸮",
+      "use": "Name 灰林鴞 for Strix aluco; disambiguation with eastern form."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "runtime taxonomy"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst"
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "diet/habitat tags, length unavailable"
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "etymology misfield and truncated highlights"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 313 mm"
+    },
+    {
+      "path": "src/lib/dexScore.ts",
+      "use": "Scoring formulas and wing-length approximation."
+    }
+  ],
+  "notes": [
+    "主圖為成鳥型，性別與亞種不詳；面盤邊界、腳爪、羽紋和褐色需專家核驗，AI 只作示意；兩比較圖不等比例，不可只憑插圖鑑別。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 46–55 cm，香港稀少但增加的留鳥，2006 首記，頁面稱全球趨勢下降，兩者不得混同。",
+    "vEst 313 mm×0.22 估68.86 cm 大於 HKBWS 46–55 cm，v 暫遮蔽；r 因語源欄實為名稱及分布且 highlights 截斷遮蔽，o 因依賴上述遮蔽。i/a/c 保留 runtime；c 缺乏保育文案非完整保育評估。",
+    "褐林鴞北部類群曾提議拆分，現跟 runtime 與 Cornell，地圖僅部分國家不代表整體分佈。"
+  ],
+  "withheldScores": {
+    "v": "原觀賞值 v=4.6 使用翼長313 mm×0.22 估68.86 cm，高於 HKBWS 46–55 cm；暫遮蔽並保留 vEst。",
+    "r": "原研究分 r=3.3 把命名及分布誤放的 etymology 視作語源，且要點有截斷；暫遮蔽。",
+    "o": "綜合分依賴受損的 v、r；暫遮蔽、不重算。"
+  }
+}

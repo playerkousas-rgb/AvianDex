@@ -1,0 +1,164 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0266",
+  "name": "鵲鷂",
+  "scientificName": "Circus melanoleucos",
+  "illustrationTaxon": "Juvenile Pied Harrier, AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "鵲鷂雄鳥",
+      "scientificName": "Circus melanoleucos",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種成雄黑頭胸和淺色腹翼，與褐色幼鳥不同。"
+    },
+    {
+      "zh": "白腹鷂雌鳥",
+      "scientificName": "Circus spilonotus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "白腹鷂雌鳥淡頭及深色胸帶；雌幼鷂辨識複雜，圖不能取代實際鑑別。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.065,
+      0.125,
+      0.39,
+      0.31
+    ],
+    [
+      0.14,
+      0.26,
+      0.37,
+      0.49
+    ],
+    [
+      0.27,
+      0.3,
+      0.6,
+      0.52
+    ],
+    [
+      0.57,
+      0.4,
+      0.83,
+      0.62
+    ]
+  ],
+  "featureLabels": [
+    "褐色頭部",
+    "暖褐下體",
+    "淺緣翼羽",
+    "尾上淡斑"
+  ],
+  "featureNotes": [
+    "幼鳥褐頭及深色眼後斑示意。",
+    "幼鳥暖褐色下體。",
+    "深褐翼覆羽有淡色羽緣。",
+    "尾上淡斑以白腰示意；實際形態須看全身與飛行。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "IND",
+      "LKA",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/piehar1",
+      "use": "Cornell IUCN 2025 LC, plumage and animal diet."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/026000",
+      "use": "HKBWS length, identification, HK occurrence, range and documented prey."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025800",
+      "use": "Eastern Marsh Harrier female identification and comparison."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC; English diet contains grasshoppers not plant food."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Empty length; erroneous plant tag."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 352.6 mm; existing estimated length 77.572 cm."
+    },
+    {
+      "path": "src/lib/dexScore.ts",
+      "use": "Existing score formulas and estimated length multiplier."
+    },
+    {
+      "path": "scripts/cards/build-explorer-data.mjs",
+      "use": "Plant regex matches grass within grasshoppers."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime values; affected a/v/o withheld, vEst retained."
+    }
+  ],
+  "notes": [
+    "幼鳥樣貌，對照同種成雄及白腹鷂成雌，不等比例。AI 圖僅基本目視、非鳥類專家認證，羽紋不作精確鑑別。",
+    "HKBWS 香港秋季常見過境，冬季與春季稀少，主要深灣；大多幼鳥，成雄罕見。Cornell IUCN 2025 LC。",
+    "翼長352.6 mm ×0.22 估算體長77.572 cm，與 HKBWS 43–50 cm 明顯不符；v 與 o 遮蔽、不重算，保留估算提示。",
+    "食性 plant 由英文 grasshoppers 觸發 grass 子串，屬標籤誤配；a=5.0 與依賴 a 的 o 遮蔽待核，不重算；其他潛在缺漏不自行補值。地圖只示部分國家。"
+  ],
+  "withheldScores": {
+    "a": "原 a=5.0 計入 plant 食性 tag；英語 diet 中 grasshoppers 被 plant 規則 grass 子串錯誤配對，暫遮蔽待核。",
+    "v": "原 v=4.7 以 AVONET 翼長352.6 mm × 0.22 估算77.572 cm，顯著偏離 HKBWS 體長43–50 cm，暫遮蔽待核。",
+    "o": "原 o=3.4 包含受 plant 誤配影響的 a 及受體長估算偏差影響的 v，暫遮蔽、不重新計算。"
+  }
+}

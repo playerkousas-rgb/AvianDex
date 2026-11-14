@@ -1,0 +1,161 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0284",
+  "name": "領鵂鶹",
+  "scientificName": "Taenioptynx brodiei",
+  "illustrationTaxon": "Adult-like Collared Owlet Taenioptynx brodiei; AI illustrative, sex and age unverified; not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "斑頭鵂鶹",
+      "scientificName": "Glaucidium cuculoides",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "較大、後頭無偽眼，鳴聲不同；正面比較圖不顯示後頭、不等比例。"
+    },
+    {
+      "zh": "林鵂鶹",
+      "scientificName": "Glaucidium radiatum",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "體羽密佈橫紋、後頭無偽眼；比較圖僅示意、不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.21,
+      0.105,
+      0.7,
+      0.432
+    ],
+    [
+      0.24,
+      0.15,
+      0.64,
+      0.417
+    ],
+    [
+      0.21,
+      0.135,
+      0.7,
+      0.462
+    ],
+    [
+      0.27,
+      0.39,
+      0.62,
+      0.64
+    ]
+  ],
+  "featureLabels": [
+    "圓頭無耳簇",
+    "黃色眼睛",
+    "白色喉部",
+    "腹部縱斑"
+  ],
+  "featureNotes": [
+    "圓頭無耳簇，羽紋僅示意。",
+    "黃眼及白眉示意，眼型顏色不精確。",
+    "白色喉部在正面可見。",
+    "淺色腹部有褐色縱斑，羽紋僅示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "CHN",
+      "TWN",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "MYS"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/colowl1",
+      "use": "Cornell IUCN 2025 LC, flank streaks, winter descent and morphology."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0190/026800",
+      "use": "HKBWS 15–17 cm, nape false eyes, HK rare resident first record 2019, global population trend and range."
+    },
+    {
+      "url": "https://www.owlpages.com/owls/species.php?s=1880",
+      "use": "White eyebrows, yellow eyes, diet including insects and lizards; distribution in older taxonomy should be interpreted with care."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Collared_owlet",
+      "use": "Two subspecies and former Sunda split; diet and threats discussion; old country list may include split taxon."
+    },
+    {
+      "url": "https://ebird.org/species/asbowl1",
+      "use": "Asian Barred Owlet comparison."
+    },
+    {
+      "url": "https://ebird.org/species/junowl1",
+      "use": "Jungle Owlet comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Authoritative runtime scores, no vEst."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Length, conservation and clipped highlights informing scores."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Forest, insect and reptile tags."
+    },
+    {
+      "path": "src/lib/dexScore.ts",
+      "use": "Score formulas and signal limitations."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy."
+    }
+  ],
+  "notes": [
+    "主圖沿用 0283 的領鵂鶹比較圖，成年型；性別及羽齡未核實。AI 鳥圖與比較圖不等比例，喙腳羽紋僅示意，非專家認證；主圖為正面，後頸偽眼不可見。另生成的背面素材偽眼過於圓黑，未用於卡片。",
+    "HKBWS 15–17 cm，香港稀少留鳥、2019 首記；全球 LC 和香港稀少分開；HKBWS 2024 頁稱全球趨勢下降，非香港趨勢推論。",
+    "i/a/v/r/c/o 沿 runtime；r 基於遷徙和要點是否存在，原文部分截斷且留鳥概括未涵蓋冬季下降低地，不代表完整研究評估；c 按棲地喪失威脅文字觸發，非完整保育評估；食性文字有推測成分，Owl Pages 另述昆蟲與蜥蜴。",
+    "昔日部分來源把巽他鵂鶹歸本種；現作 Taenioptynx sylvaticum 分種。世界底圖綠色僅部分國家而非全境。"
+  ],
+  "withheldScores": {}
+}

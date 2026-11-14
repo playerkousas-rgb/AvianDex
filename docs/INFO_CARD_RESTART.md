@@ -2511,3 +2511,364 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [Cornell](https://ebird.org/species/janher1) IUCN 2025 與 [HKBWS](https://avifauna.hkbws.org.hk/species/0170/022500) 均 VU，與 runtime cardCopy EN 不同；採 VU，受舊 EN 影響的 i/c/o 暫標待核、不自行重算，a=3.8、v=4.4、r=4.8 照 runtime。香港迷鳥；日南部及韓國濟州繁殖，菲律賓等越冬。
 - 成鳥圖 AI 嘴偏尖，非精確結構鑑別；比較黑冠鳽成鳥與夜鷺幼鳥，不等比例。AI 圖非專家認證，世界底圖僅部分國家。四圈、比較圖及全卡目視；修正渲染器在遮蔽分數時漏顯 vEst 的問題，重渲並核對「觀賞值含體長估算」。曾檢查 0201–0249 specs，未見同時遮蔽其他項且 vEst=1 的情況。AVIF／分類／分數及遮蔽項／bounds／ISO3／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2／UI／runtime。
 - 下一張 0251 黑冠鳽；比較鳥素材 `cards/art/comparisons/malayan-night-heron.png` 已生成並初步目視，可作候選但未製作該卡 spec、四圈、成卡或上載。所有素材與成品 gitignored，跨 sandbox 可能缺失；繼續前需查資料、核圖與 Drive 查重。
+
+## 0251 黑冠鳽交付
+
+- 外層 [`0251.avif`](https://drive.google.com/file/d/1xv1miVPv8XTn1Dxnjq3IRodqU3n2XIDS/view)，142655 bytes、MD5 `dc7bfb609c6cc819281df6637193b698`、SHA256 `f69391f81b17eb9ace2c3f646f229a9557cc6347bd06c4aed9b94dd3594b6e0c`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/manher1) IUCN 2025 LC、[HKBWS](https://avifauna.hkbws.org.hk/species/0170/022600) LC 並指香港為稀少但增加的夏候鳥，也有過境；成鳥藍眼先與黑冠，幼鳥多斑紋；比較栗鳽成鳥與夜鷺幼鳥，非等比例。AI 插圖僅基本目視、非鳥類專家認證，地圖僅部分國家。
+- 已目視主圖、對照圖、四圈及全卡；AVIF／分類／runtime 六分／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。
+
+## 0252 黑頭白䴉交付
+
+- 外層 [`0252.avif`](https://drive.google.com/file/d/1Zcq_ciPow-cLH-gzUtfVRO4oyUhPzca_/view)，135756 bytes、MD5 `75702163c2b6e3d6f0b381709739b3a6`、SHA256 `82dd2d4121ffe4fc6975a1430010902c330cfcf1114adadd7dd333e198c6af4d`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/blhibi1) IUCN 2025 LC，與 [HKBWS 2024](https://avifauna.hkbws.org.hk/species/0160/021600) 及 runtime NT 不同；舊 NT 污染的 i/c/o 遮蔽、不重算；vEst 有提示。HKBWS 指香港以前稀少冬候鳥、1999 後無記錄。比較非洲聖䴉及彩䴉（[Cornell](https://ebird.org/species/sacibi2)、[Singapore Birds](https://singaporebirds.com/2022/12/10/singapores-first-wild-black-headed-ibis/)、[Cornell](https://ebird.org/species/gloibi)），不等比例。AI 插圖僅基本目視、非鳥類專家認證，彩䴉眼色僅示意；地圖僅部分國家。
+- 已目視主圖、對照圖、四圈及全卡；AVIF／分類／可用分數／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。
+
+## 0253 白琵鷺交付
+
+- 外層 [`0253.avif`](https://drive.google.com/file/d/1ztBhfwP_CzXC5mkyPch3H48mGJHxGSz_/view)，134381 bytes、MD5 `7c1ef5256d2239af87fce6dc5c10a707`、SHA256 `6341b7b383b7584d15266afcee2ce7f880ff87ed077c4ad34c395ef53d7e0523`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/eurspo1) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0160/021800) 70–95 cm，深灣小量常規冬候鳥、1990年代中期以來可能下降（非全球趨勢）。cardCopy 長度 10–15 cm、explorerIndex.len 12.5 錯誤，受污染的 v/o 暫遮蔽、不重算、runtime 未更改。比較黑臉琵鷺非繁殖成鳥及白琵鷺幼鳥，不等比例（[Cornell](https://ebird.org/species/blfspo1)、[Plumarium](https://plumarium.es/en/eurasian-spoonbill/)）。
+- 已目視主圖、對照圖、四圈及全卡；AI 插圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／可用分數／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0254。
+
+## 0254 黑臉琵鷺交付
+
+- 外層 [`0254.avif`](https://drive.google.com/file/d/18pxvfV1divvf8ePGl_o4a9ZRKR6TMzp6/view)，133539 bytes、MD5 `132635ce8bad433386464d03943b55f7`、SHA256 `d546186454e4cfcb9e90a7ace29438f86c43049d6740e2157b2f0f5751292768`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/blfspo1) IUCN 2025 VU 與 runtime VU 一致；[HKBWS 2024](https://avifauna.hkbws.org.hk/species/0160/021900) 舊頁 EN，年份不同，卡面提示。香港常見冬候鳥、夏季罕見；保留 vEst 提示。主圖重用 0253 經目視黑臉琵鷺對照圖，對照白琵鷺繁殖成鳥及黑臉幼鳥，不等比例；幼鳥翼尖黑色以飛行較清楚。
+- 已目視主圖、對照圖、四圈及全卡；AI 插圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／六分／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。
+
+## 0255 鶚交付
+
+- 外層 [`0255.avif`](https://drive.google.com/file/d/1nW1lwIXLTDhmjfyTLcd_8Elaw488s0cd/view)，139882 bytes、MD5 `8bd16856ac8174aeaa3fd5e95360c7ec`、SHA256 `e7986980fbc3b3e769f2b682dab35bb313c2afc6a714fd1211e227f14f243623`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/osprey) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/023900) 香港深灣及東岸局部常見冬候及過境鳥，其他時期稀少；分類對澳洲種群的處理有不同，採 runtime 學名，地圖依 HKBWS 部分原生國家。適應力 a 缺值顯示待查非零，vEst=1 提示保留；其餘照 runtime 未重算。比較鶚幼鳥及白腹海鵰成鳥不等比例；後者腿色僅示意（[HKBWS](https://avifauna.hkbws.org.hk/species/0180/026300)）。
+- 已目視主圖、對照圖、四圈及全卡；AI 插圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／可用分數／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0256。
+
+## 0256 黑翅鳶交付
+
+- 外層 [`0256.avif`](https://drive.google.com/file/d/1b2_ERPxT6cG1OZ19dfedobzyuhmdkmwS/view)，129038 bytes、MD5 `b35b0454ae494f0b68f9afb4a7e8fe52`、SHA256 `bc3eeaa026c8f15f46f5072198744315a200a697fcda8d261cc83ef6e21fe686`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/bkskit1) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/024000) 香港常見秋季過境、其他時期稀少，無證實本地繁殖。六分沿 runtime，vEst=1 提示保留；比較同種幼鳥及雄紅隼（[Cornell](https://ebird.org/species/eurkes)），不等比例。
+- 已目視主圖、對照圖、四圈及全卡；AI 插圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／六分／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0257。
+
+## 0257 鳳頭蜂鷹交付
+
+- 外層 [`0257.avif`](https://drive.google.com/file/d/1zq8UaG7pvcfW7NXxb0fnNV3d_ywRDwBM/view)，132287 bytes、MD5 `4c539856df60f3be60139ec234b9bff8`、SHA256 `a40a957640cefbf1f0ce6a5897f237d86eb73476a657e4259af7ac2f67dc1506`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/orihob2) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/024100) 香港稀少秋季過境、冬春罕見。羽色多變；主圖成雄樣貌，對照同種雌鳥和[普通鵟](https://avifauna.hkbws.org.hk/species/0180/026500)，不等比例。六分沿 runtime，vEst=1 提示保留。
+- 已目視主圖、對照圖、四圈及全卡；AI 插圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／六分／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。
+
+## 0258 黑冠鵑隼交付
+
+- 外層 [`0258.avif`](https://drive.google.com/file/d/1DInbdD4Tyw9x-Lvr8Uj-7alnTEZL29Rs/view)，131244 bytes、MD5 `105240f31e6098e06196dc0c3702eafd`、SHA256 `4c16128dde5e66ec868773020f646e62e403d67a6e48ec06811056217520ef04`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/blabaz1) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/024200) 香港秋季不常見過境、春季稀少、夏季罕見。對照[褐冠鵑隼](https://ebird.org/species/jerbaz1)和鳳頭蜂鷹，不等比例。六分沿 runtime，vEst=1 提示保留。
+- 已目視主圖、對照圖、四圈及全卡；AI 插圖僅基本目視、非鳥類專家認證，冠羽細節僅示意；地圖僅部分國家。AVIF／分類／六分／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。
+
+## 0259 禿鷲交付
+
+- 外層 [`0259.avif`](https://drive.google.com/file/d/1lzw190xVyj6CzIS7ucEsBNr6xoDchQ9C/view)，133528 bytes、MD5 `2b14b78ed3323e71d63ab56cd9499408`、SHA256 `ac18d60f4144d0047415261eee2601ceeb266774b15127a0a8bc1b307661e7c3`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/cinvul1) IUCN 2025 NT；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/024300) 香港極罕見冬候鳥、1990年代後下降。成鳥對照同種幼鳥與[兀鷲](https://ebird.org/species/eurgri1)，不等比例。六分沿 runtime，vEst=1 提示保留。
+- 已目視主圖、對照圖、四圈及全卡，調整頭與嘴裁切；AI 插圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／六分／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0260。
+
+## 0260 蛇鵰交付
+
+- 外層 [`0260.avif`](https://drive.google.com/file/d/16U9q9Keb8M439HNwdi18t_sX-MdaVYhR/view)，130107 bytes、MD5 `f323ef374c99dd9ea595962fed89be31`、SHA256 `e3ae9ec005dd6e1db4dc5fcaf90a9ed806759866ad346ac92a38c1dfa3f91b4d`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/crseag1) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/024400) 香港全年見於林地與附近，也有過境跡象。成鳥對照同種幼鳥與[短趾鵰](https://ebird.org/species/shteag1)，不等比例。六分沿 runtime，vEst=1 提示保留。
+- 已目視主圖、對照圖、四圈及全卡；AI 插圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／六分／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0261。
+
+## 0261 烏鵰交付
+
+- 外層 [`0261.avif`](https://drive.google.com/file/d/1_HHFGwndxrRVqBkSmOpMojUoxDd4AedD/view)，129081 bytes、MD5 `ce976eb2778f89592d8160c7b89235b7`、SHA256 `1f3a1427b5e1af5642116d32ae2693f73422cab609f1736b22ea75220fa34d44`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/grseag1) IUCN 2025 VU；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/024700) 新界北部稀少冬候、主要深灣，過境罕見。幼鳥對照同種深色成鳥與[草原鵰](https://avifauna.hkbws.org.hk/species/0180/024900)，不等比例，辨識複雜不可單憑示意圖；六分沿 runtime，無 vEst。
+- 已目視主圖、對照圖、四圈及全卡；AI 插圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／六分／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0262。
+
+## 0262 白肩鵰交付
+
+- 外層 [`0262.avif`](https://drive.google.com/file/d/10ylKa6d70-x8TUr9mF-0KUkNq9Q3Ujzn/view)，125419 bytes、MD5 `64348d520cd4026785775dca83996d26`、SHA256 `7f44ebabc9f74f3ad8835b3c661ec7b074fdf9ffc13d6f2dc70be845a878778b`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/impeag1) IUCN 2025 VU；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/025000) 香港深灣稀少冬候鳥。成鳥對照同種幼鳥與[烏鵰](https://avifauna.hkbws.org.hk/species/0180/024700)，不等比例；六分沿 runtime，無 vEst。`c=2.2` 是非學術趣味分，包括既有保育文字輸入，非 IUCN 等級；原卡資料保育段缺失，不代表物種缺少威脅。
+- 已目視主圖、對照圖、四圈及全卡，調整頭部裁切；AI 插圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／六分／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0263。
+
+## 0263 白腹隼鵰交付
+
+- 外層 [`0263.avif`](https://drive.google.com/file/d/1N9eTamccX6VEPGoaB59B4VclhmECcs6_/view)，141698 bytes、MD5 `6f03ba07fc427ae3a6f8928b327b4b85`、SHA256 `d39f0432f4b68727f8d463ef58d0a1ef143c4ea7cb359c5dbc7be4e4665a216d`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/boneag2) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/025100) 香港山地林地罕見留鳥，自 1990 年代中期明顯下降。成鳥對照同種幼鳥與[白肩鵰幼鳥](https://avifauna.hkbws.org.hk/species/0180/025000)，不等比例，鑑別不能只靠示意圖。原 explorerIndex 食性 tag 僅 insect，未反映 HKBWS 記錄的水鳥獵物，但未證明昆蟲完全錯誤；a 沿 runtime，不是完整食性評估。c 是趣味分，原保育段缺失並不代表本地沒有保育問題。
+- runtime `vEst=1` 用 AVONET 翼長 486.8 mm × 0.22 推算體長 107.096 cm，與 HKBWS 55–67 cm 顯著不符；v=5.0 和依賴 v 的 o=2.7 遮蔽待核，不重算或修改 runtime。渲染器改為即使 v 遮蔽仍顯示原觀賞值含體長估算；其餘四分沿 runtime。
+- 已目視素材、四圈及全卡；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores 與遮蔽項／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0264。
+
+## 0264 白腹鷂交付
+
+- 外層 [`0264.avif`](https://drive.google.com/file/d/1KFDfyKjdUrA1YmZh3yDVPa-HZX94nxSa/view)，138711 bytes、MD5 `a2f7485150acfc086c1cddf1a9b69ec0`、SHA256 `267ff19f39139738dfb969a359c859249b98508affbfc85388e5cecd13135f56`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/easmah1) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/025800) 香港常見冬候與過境，深灣為主、秋季較多，觀察以雌鳥及未成熟鳥為主。成雌對照同種成雄及[鵲鷂成雄](https://ebird.org/species/piehar1)，不等比例；雌幼鳥鑑別複雜，不能以此示意圖替代鑑別。
+- 原 explorerIndex 食性 tag 僅 amphibian，未反映 HKBWS 記錄的鳥類食物；a 沿 runtime，不是完整食性評估。runtime `vEst=1` 以 AVONET 翼長 407.2 mm × 0.22 估算體長 89.584 cm，與 HKBWS 47–55 cm 明顯不符；v=4.9 和依賴 v 的 o=3.0 遮蔽待核，不重算或修改 runtime，其餘四分沿 runtime；保留估算提示。
+- 已目視素材、四圈及全卡，修正頭部及腳部圓框裁切；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores 與遮蔽項／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0265。
+
+## 0265 白尾鷂交付
+
+- 外層 [`0265.avif`](https://drive.google.com/file/d/1oocZSejELL0JCfZNUcVrAJFIn9paytqL/view)，138391 bytes、MD5 `8580c1442955dfea98e539e8cee9a5f6`、SHA256 `00387405699a0ac4eb49500c6acba6fab91ea8db72cc7cf98d2fab98a9f7ed22`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/norhar1) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/025900) 列香港迷鳥，其正文稱 2018–19 年米埔幼雌一例，但同頁後加入 2025 年照片，紀錄總數待核，不斷言只有一例。主圖幼雌外觀，對照同種成雄與[白腹鷂雌鳥](https://avifauna.hkbws.org.hk/species/0180/025800)，不等比例。AI 主圖尾下白色區並非可信的白腰展示；複雜辨識不能單靠圖。
+- 分數 i=2、a=2.3、v=4.1、r=4.8、c=3、o=3.2 均沿 runtime，無 vEst。食性 tags 為空、棲地僅 open，a 不是完整生態評估；cardCopy 的 diet 錯置鳴聲、habitat 錯置食性，原資料未改。c 為依已有文字的非學術趣味分，非 IUCN 保育狀態。
+- 已目視素材、四圈及全卡；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／六分／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0266。
+
+## 0266 鵲鷂交付
+
+- 外層 [`0266.avif`](https://drive.google.com/file/d/1oFulJeZTAvfIJqeSKzZdiXCmFB4uflW4/view)，138277 bytes、MD5 `58048c984253ff504cf803f8b74b1635`、SHA256 `bac27e0f00646befe8a43996c25e41c922dbfbd18b3b75c36ebb2316c37afc42`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/piehar1) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/026000) 香港秋季常見過境、冬春稀少，主要深灣，大多幼鳥而成雄罕見。幼鳥樣貌對照同種成雄及[白腹鷂雌鳥](https://avifauna.hkbws.org.hk/species/0180/025800)，不等比例；鷂類雌幼鳥複雜，不能單靠示意圖鑑別。
+- `vEst=1` 以 AVONET 翼長 352.6 mm × 0.22 估算體長 77.572 cm，與 HKBWS 43–50 cm 明顯不符；觀賞 v=4.7 暫遮蔽。食性 `plant` 標籤由英文 diet 中 grasshoppers 的 `grass` 子串誤觸 `build-explorer-data.mjs` 植物規則，適應力 a=5.0 暫遮蔽；受兩者影響的綜合 o=3.4 一併遮蔽待核、不重算，保留 vEst 來源提示。其餘三分沿 runtime。未更改標籤產生器或 runtime。
+- 已目視素材、四圈及全卡；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores 遮蔽項／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0267。
+
+## 0267 鳳頭鷹交付
+
+- 外層 [`0267.avif`](https://drive.google.com/file/d/1sA7zVXhmUG9atBQc5M5uXOJ0f7WEXfUa/view)，139670 bytes、MD5 `352aa05fa6b7e645647e56371178a98a`、SHA256 `ad2a8207014abca05a6c95359bdbd48418d5d3c93eb2e9749b76276c5c9deb82`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/cregos1) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/025200) 香港林地常見留鳥，亦在開闊地獵食。成鳥對照同種幼鳥與[松雀鷹雌鳥](https://avifauna.hkbws.org.hk/species/0180/025500)，不等比例；幼鳥圖缺清晰中央喉紋與腿部橫紋，不能單靠圖鑑別。
+- runtime 僅 a=2.3、r=2.5，i/v/c/o 原缺值顯示待查、非零；不根據外部資料補分。食性 tag 為空，a 非完整食性評估。
+- 已目視素材、四圈及全卡並調整喉部裁切；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0268。
+
+## 0268 赤腹鷹交付
+
+- 外層 [`0268.avif`](https://drive.google.com/file/d/1_l-JMiJQBYewLXhQE03wo8x0ZAI4h9OT/view)，135582 bytes、MD5 `545167e9fa701c77591a31ed26290415`、SHA256 `643de80cb3d3e5c03b664f675913b7dc4d1036df0fc974ed23194da155b4a190`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/grfhaw1) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/025300) 香港春季常見過境、秋季稀少。成雄對照同種幼鳥及[日本松雀鷹幼鳥](https://avifauna.hkbws.org.hk/species/0180/025400)，不等比例；AI 尾紋偏粗，折翼圖不展示飛行翼底鑑別特徵，不能單靠圖鑑別。
+- runtime i=2、a=3.8、r=3.3、c=1.2、o=2.6；觀賞 v 原缺值待查非零，綜合分沿已有資料，不補分。c 為趣味指標，非 IUCN 分級。
+- 已目視素材、四圈及全卡並調整頭部裁切；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0269。
+
+## 0269 日本松雀鷹交付
+
+- 外層 [`0269.avif`](https://drive.google.com/file/d/11eL-0JZPPZqRqJ8aC1qpvzmMmeHPbU9f/view)，139574 bytes、MD5 `df99e2738cae2215573c78837dbc999e`、SHA256 `2b44edd40714279384a450cc462063017dfa0563017eec8cc9618c46dd4e3556`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/japspa1) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/025400) 香港稀少過境及冬候。成雌對照同種幼鳥及[松雀鷹成雌](https://avifauna.hkbws.org.hk/species/0180/025500)，後兩圖重用已目視素材，圖不等比例；喉紋及尾紋僅示意，不能單靠圖鑑別。
+- runtime 僅 a=5.0、r=1.0，i/v/c/o 原缺值顯示待查、非零；不根據外部 IUCN 或體長補分。a 基於既有食性及棲地 tags，不是完整生態評估；r 為程式趣味分。
+- 已目視素材、四圈及全卡；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0270。
+
+## 0270 松雀鷹交付
+
+- 外層 [`0270.avif`](https://drive.google.com/file/d/14chlGpnECMzitDcYhrh7n_SV3bjrkUNm/view)，136903 bytes、MD5 `1b28e0a5a6b989b86196cbe60f8accdb`、SHA256 `e73ba46366f55c511de8575bcbb29a2b1ca01818a870a475d221ddab9f7be9e2`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/besra1) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/025500) 香港全年出現、秋季亦有過境。成雌主圖重用 0267 素材，對照新繪同種幼鳥及重用 [日本松雀鷹成雌](https://avifauna.hkbws.org.hk/species/0180/025400)，圖不等比例；喉部中央深紋不夠清晰，不能單靠 AI 圖鑑別。
+- runtime 僅 a=3.3、r=1.0，i/v/c/o 原缺值顯示待查、非零；不根據外部 IUCN 或體長補分。食性 tags 僅昆蟲與爬蟲、棲地僅森林，a 非完整生態評估；r 為程式趣味分。
+- 已目視素材、四圈及全卡；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0271。
+
+## 0271 雀鷹交付
+
+- 外層 [`0271.avif`](https://drive.google.com/file/d/1iD2WHftZc1rKvwVVHWZsFSSzjyYGciZq/view)，138205 bytes、MD5 `b19bf5a74c10cd5ea90a726f968889a8`、SHA256 `037342e3fac9dd5c762ec4bbc7b6a9093b0e1c106219e685bbcbb878ec28c475`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/eurspa1) IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/025600) 香港秋季稀少過境、冬春罕見。成雌對照同種成雄及重用 [日本松雀鷹成雌](https://avifauna.hkbws.org.hk/species/0180/025400)，圖不等比例，不能單靠 AI 圖鑑別。
+- runtime 以 cardCopy 體長 60 cm 計分，與 HKBWS 28–40 cm 及 [Naturalis](https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=130488) 28–38 cm 身長明顯不符，輸入來源待核；v=4.4 和依賴它的 o=3.5 遮蔽待核，不重算或修改 runtime。其他四分沿 runtime。
+- 原食性 tag 含 insect，但文案指出昆蟲極少取食，亦未反映鳥類獵物；a 非完整食性評估。c=3 為含特定島嶼亞種威脅文字的趣味分，非全球 IUCN 類別。
+- 已目視素材、四圈及全卡並調整頭部裁切；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores 遮蔽項／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0272。
+
+## 0272 蒼鷹交付
+
+- 外層 [`0272.avif`](https://drive.google.com/file/d/13XC5C1-vkrtZj54VOZObgvzaUZlAQtve/view)，135646 bytes、MD5 `d856c7db3687228ff860aa7657cb8671`、SHA256 `33b43883ef4a67ec050f70ce36e6d79af59bff1a6b28d0834b60414e75f479b8`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/norgos1) 及 [HKBWS](https://avifauna.hkbws.org.hk/species/0180/025700) 識別、香港迷鳥及體長 50–65 cm；HKBWS 2024 為舊廣義分類，北美已於 2023 [拆分為美洲蒼鷹](https://www.allaboutbirds.org/guide/American_Goshawk/overview)。未核實拆分後全球 IUCN，卡上註明待核，未用舊廣義 LC 冒稱新分類；保留 runtime i=2，但該舊資料趣味分非已確認現行 IUCN。成鳥對照同種幼鳥及雀鷹雌鳥，圖不等比例。
+- runtime `300–342 mm` 被解析成 `321 cm` 體長，而該數值似為翼弦，故 v=5 遮蔽；r=4.8 使用指北美已拆分物種的遷徙欄位及含錯誤的要點，c=3 因成鳥「保護」領域誤觸受脅字詞，r/c 遮蔽。依賴上述分數的 o=3.7 一併遮蔽，不重算；a 原缺值待查。未改 runtime。
+- 已目視素材、四圈、比較圓框及全卡，修正比較圖裁切；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分歐亞國家。AVIF／分類／scores 遮蔽項／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0273。
+
+## 0273 栗鳶交付
+
+- 外層 [`0273.avif`](https://drive.google.com/file/d/1yvPzC4ViN6zhWwQbbQXp_-rsAWSeuRrp/view)，137416 bytes、MD5 `9731721983406958b1599c31bdd0569b`、SHA256 `e133aaf4854ee58cb9178143ecf92ed3b21003fd11c49da486856c29f876c816`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/brakit1) 全球 IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/026200) 45–51 cm、香港迷鳥，紀錄於后海灣。成鳥對照同種幼鳥及[黑鳶](https://avifauna.hkbws.org.hk/species/0180/026100)，AI 圖不等比例；幼鳥折翼圖不展示飛行翼底淡斑，黑鳶尾叉偏深，不能單靠插圖鑑別。
+- runtime 以 AVONET 翼長 399.8 mm × 0.22 估身長 87.956 cm，與 HKBWS 45–51 cm 明顯不符，v=4.9 遮蔽，保留原觀賞值含體長估算提示。c=3 因無危文句中「瀕危物種紅色名錄」誤觸瀕危字詞，r=4.8 的遷徙欄為分佈而非遷徙、語源欄將法語名稱使用者 [Brisson 誤歸 Buffon](https://en.wikipedia.org/wiki/Brahminy_kite)，均遮蔽；依賴上述分數的 o=3.7 一併遮蔽，不重算。i=2、a=3.8 保留 runtime，a 為標籤趣味指標、非完整生態評估。
+- 已目視素材、四圈、比較圓框及全卡，調整頭部裁切；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores 遮蔽項／vEst 提示／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0274。
+
+## 0274 白腹海鵰交付
+
+- 外層 [`0274.avif`](https://drive.google.com/file/d/11qiF95hKfR_JBDOoTEAjiODGNV9Uy-jq/view)，134529 bytes、MD5 `b139860a9f4efddce7806dadb8c0805e`、SHA256 `849f523c71d28cbee174a39bdcf65c2593fdb3c530142ca7e978547eb04d8e56`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/wbseag1) 全球 IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/026300) 75–85 cm、香港沿岸不常見留鳥。成鳥對照同種未成鳥及[灰頭魚鵰](https://ebird.org/species/gyhfie1)，圖不等比例；未成鳥羽齡變化大，AI 足部、尾形及灰頭魚鵰尾帶僅示意，不能單靠插圖鑑別。
+- runtime `90–0 cm` 格式錯誤被解析為 45 cm，與 HKBWS 75–85 cm 明顯不符，v=4.1 遮蔽；r=3.3 的語源欄只寫學名及分類而非語源，被錯計為語源資料，r 暫遮蔽；依賴上述分數的 o=2.7 一併遮蔽，不重算。i=2、a=2.8、c=1.2 沿 runtime，a 棲地標籤缺失、c 無保育文字輸入，均非完整生態或威脅評估。
+- 已目視素材、四圈、比較圓框及全卡，調整腹部裁切及標籤；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores 遮蔽項／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0275。
+
+## 0275 灰臉鵟鷹交付
+
+- 外層 [`0275.avif`](https://drive.google.com/file/d/1g6kwCMCulwhWMWZoAFwVtKMq8KSM_drd/view)，142640 bytes、MD5 `d37445d50c7c0f32943b417553631860`、SHA256 `7aa6b76c748e3ed6cb1460fd113ddc8de7b3d5f5d152e5aa1c3bba357638e4ed`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/gyfbuz1) 全球 IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0180/026400) 41–48 cm、香港春季總述不常見過境、秋季稀少；正文另稱春季 common，保留此差異。成鳥對照同種未成鳥及[鳳頭蜂鷹](https://ebird.org/species/orihob2)，圖片不等比例；主圖白喉中央深色縱紋未清楚畫出，喉邊及尾紋僅示意，不可單靠插圖鑑別。
+- runtime 在 dexScores 無該 ID，六分均缺值待查、非零，沒有依據 IUCN 或外部資料補算；未修改 runtime。部分原生國家／地區底圖含繁殖、過境及越冬，不表示全境或季節邊界。
+- 已目視素材、四圈、比較圓框及全卡；AI 圖僅基本目視、非鳥類專家認證。AVIF／分類／缺分／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0276。
+
+## 0276 草鴞交付
+
+- 外層 [`0276.avif`](https://drive.google.com/file/d/1x14I8pJjll0WvtJB5dl_Pkcm7lna2pWI/view)，141937 bytes、MD5 `e4e6f63958c18165061359bd30bed0a2`、SHA256 `d978c21840105b56ff26c2ba27fbb12ad3a1b07149f378ac2e1c25194d843185`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/ausgro1) 全球 IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0190/026600) 香港稀有冬候及春季過境、32–38 cm；[The Owl Pages](https://www.owlpages.com/owls/species.php?s=220) 提供較廣全種體長 32–42 cm。主圖對照[東方倉鴞](https://ebird.org/species/eabowl1)及[栗鴞](https://ebird.org/species/orbowl1/TH-90)，圖片不等比例；草鴞腿及栗鴞耳簇、尾羽比例可能誇張，不能單靠圖鑑別。東方倉鴞依 eBird 2024 拆分分類。
+- runtime 食性 plant 由 diet 鳥名「草鴞」的「草」誤觸規則，a=3.3 遮蔽；中文鳴聲句截斷且矛盾，卻包含在評分所用要點中，r=1.8 暫遮蔽；o=2.8 依賴 a/r 一併遮蔽，不重算或修改 runtime。i=2、v=3.8、c=3 沿 runtime；v 使用 32–38 cm 中點，c 的新南威爾士州易危文字與全球 LC 不同，僅趣味分。英語食性錯欄、數段截斷，未照抄。
+- 已目視素材、四圈、比較圓框及全卡；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores 遮蔽項／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0277。
+- 本次環境重建 `/home/user/card-venv`、Noto TC 字體及 Natural Earth 世界底圖；舊 ignored 素材不在本機，Drive 已交付成品不重製。新素材與 AVIF 為 ignored 檔案，不保證跨環境保存。
+
+## 0277 領角鴞交付
+
+- 外層 [`0277.avif`](https://drive.google.com/file/d/196q9Y2BEf1IP2xicvacniseDfkbWT4Gy/view)，141363 bytes、MD5 `a5725f93a31d141e1fa96ade3cfd7732`、SHA256 `e92034156334e513a1f885aec9e31456126064f62c545a36b97094922ba81417`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0190/027100) 香港常見廣泛留鳥、23–25 cm、全球 IUCN LC；[Cornell](https://ebird.org/species/cosowl1) 識別、羽色與相似種。灰褐型成鳥樣貌對照[紅角鴞](https://ebird.org/species/orsowl)及[黃嘴角鴞](https://ebird.org/species/mosowl2)，圖片不等比例；AI 主圖及紅角鴞耳簇偏長、紅角鴞面盤黑邊偏明顯，黃嘴角鴞喙色不準，不能單憑示意圖鑑別。首圈原裁切欠缺完整耳簇，調整重渲目視。
+- 原 habitat「海拔」的「海」被 water 規則誤配為水邊，a=3.3 遮蔽；翼長 155.8 mm × 0.22 估體長 34.276 cm，明顯偏離 HKBWS 23–25 cm，v=3.7 遮蔽，保留原估算提示。原遷徙欄斯里蘭卡越冬說法在現行分類下未找到獨立核實，且部分要點截斷，r=3.3 暫遮蔽；依賴上述輸入的 o=2.7 一併遮蔽，不重算。i=2、c=1.2 沿 runtime；c 缺保育文字並非完整威脅評估。未修改 runtime。
+- 已目視素材、四圈、比較圓框及全卡；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores 遮蔽項／vEst／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0278。
+
+## 0278 白頭鷂交付
+
+- 外層 [`0278.avif`](https://drive.google.com/file/d/1R-Dn6vjhErVjrfvp6VcwmJcT8vgiqL2R/view)，144086 bytes、MD5 `70bde00fca8e49a86b9c3c4aab6af5df`、SHA256 `220fbf613ca2b52efcdfed9fbe406fe94d565ec1daccd30f13d9ea1bcfb55ddd`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/wemhar1) 全球 IUCN 2025 LC，成雄淡頭胸、棕褐腹；對照同種雌鳥和[白腹鷂雄鳥](https://ebird.org/species/easmah1)。AI 插圖不等比例、羽紋足爪及尾翼僅示意；折翼圖不展示飛行翼色，羽齡變化大且可能雜交，不可單憑圖片鑑別。
+- [HKBWS 較新香港名錄](https://avifauna.hkbws.org.hk/hk-list)將白頭鷂列 I 類但未在表格給出詳細頻率；[舊白腹鷂物種頁](https://avifauna.hkbws.org.hk/species/0180/025800)把歷史香港紀錄視為白腹鷂並提及疑似雜交，兩來源時點不同；不斷言白頭鷂沒有香港紀錄，亦不套用白腹鷂香港狀態。
+- runtime dexScores 沒有 0278，六分均待查、非零，沒有依 IUCN 或外部資料補算；未改 runtime。地圖僅部分原生／繁殖／越冬國家，不表示全境或季節邊界。
+- 已目視素材、四圈、比較圓框及全卡；AI 圖僅基本目視、非鳥類專家認證。AVIF／分類／缺分／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0279。
+
+## 0279 紅角鴞交付
+
+- 外層 [`0279.avif`](https://drive.google.com/file/d/1SEtutnUWe5ej5AAuIXpWEIiNnsDTnaIz/view)，144106 bytes、MD5 `f8db073008df0af93d7c7b9765744cd1`、SHA256 `a715d633f98f14842e8ca0aec5cb8dd59e7e619798c7b7bac5820d0e0e5c5521`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/orsowl) 全球 IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0190/027000) 香港秋季稀少但可能漏記的過境鳥，春季過境及夏候罕見、體長 18–21 cm；[The Owl Pages](https://www.owlpages.com/owls/species.php?s=560) 全種 17–21 cm，但舊稱香港迷鳥與 HKBWS 本地資料不同，採後者。紅褐型主圖對照領角鴞及黃嘴角鴞，後兩張重用 0277 已目視素材；不等比例，領角鴞耳簇偏長、黃嘴角鴞喙色不準，羽式僅示意，不可單憑插圖鑑別。
+- runtime 以 AVONET 翼長 142.5 mm × 0.22 估身長 31.35 cm，與 HKBWS 18–21 cm 顯著不符，v=3.6 和依賴 v 的 o=2.0 暫遮蔽，不重算，保留原觀賞值體長估算提示。i=2、a=2.3、r=1、c=1.2 沿 runtime，但食性 tag 空、棲地僅森林，遷徙／要點／保育文字缺失，非完整生態研究與威脅評估；英文 diet 錯置叫聲，未照抄。未修改 runtime。
+- 已目視素材、四圈、比較圓框及全卡；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。AVIF／分類／scores 遮蔽項／vEst／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0280。
+
+## 0280 黃嘴角鴞交付
+
+- 外層 [`0280.avif`](https://drive.google.com/file/d/1SBLzfGfllsDxlsKqesM_CQ9HxkUEKEkm/view)，147406 bytes、MD5 `73fc907dd6c654beb8281d2538fddf83`、SHA256 `3cc0b37ceb50f26169b3273b7f2f763eb471eb1572595ce74e1eee2a240020a4`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/mosowl2) 黃眼及鮮明白色肩羽列，當前頁沒有 IUCN 標籤；[The Owl Pages](https://www.owlpages.com/owls/species.php?s=380) 體長 18–20 cm，喙淡角質色、白色或蠟黃色。[Wikipedia](https://en.wikipedia.org/wiki/Mountain_scops_owl) 引用 BirdLife IUCN 2024 年無危，尚未直接核驗[原評估](https://www.iucnredlist.org/species/22688579/263677414)及其分類與目前分類是否完全一致，卡面標明參考 2024；[HKBWS 2024 香港名錄](https://avifauna.hkbws.org.hk/hk-list)列 I 類，不以名錄推斷本地頻率。
+- 原翼長 140.4 mm × 0.22 估體長 30.888 cm，明顯偏離 18–20 cm，v=3.6 及依賴 v 的 o=2.0 暫遮蔽、不重算；保留 vEst 原觀賞值體長估算提示。a 原缺分非零；i=2、r=1、c=1.2 沿 runtime，遷徙、語源、要點、保育文案缺失，c 非完整受脅評估。未修改 runtime。
+- 主圖 AI 耳簇偏長；比較圖重用 0277 領角鴞及 0279 紅角鴞，不等比例、耳簇偏長及紅角鴞面盤黑邊偏明顯；羽式、喙及腳爪僅示意，不可單靠插圖鑑別。素材、特徵圈及全卡已目視，AI 圖非鳥類專家認證；完整世界底圖僅部分國家。AVIF／分類／score 遮蔽／vEst／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0281。
+
+## 0281 鵰鴞交付
+
+- 外層 [`0281.avif`](https://drive.google.com/file/d/1NnGgbX0f3YCnUNZZfGMkq614fWPJRB4U/view)，150908 bytes、MD5 `a2bda3eede1bc73f644f4855a06d3268`、SHA256 `d30257cc4070badee1eff823812e00c270f22f620365db6432604deec43b8af5`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/eueowl1) 全球 IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0190/027300) 56–75 cm，香港稀少但廣佈留鳥，可能因草地演替為灌叢而下降，但記錄少不足以精確量化；香港狀態與全球評估分開。
+- runtime 的 75 cm 是 HKBWS 範圍上限，並非平均體長；v=4.7 沿 runtime。原 r=1.8 由截斷的 highlights 導出，其中範圍一項聲稱整個歐亞大陸均有分佈，過度概括，r 和依賴 r 的 o=2.5 暫遮蔽、不重算。i=2、a=2.8、c=1.2 沿 runtime；棲地與食性 tag 不完整，c 非完整本地受脅評估。未修改 runtime。
+- 主圖對照[褐漁鴞](https://ebird.org/species/brfowl1)和[長耳鴞](https://ebird.org/species/loeowl)，三圖不等比例；主圖腹紋規整、耳簇與腳爪可能誇張，褐漁鴞耳簇偏長，長耳鴞面盤耳簇可能過度整齊，AI 羽式僅示意、不應單靠圖片鑑別。已目視素材、四圈、比較圓框和全卡，但非鳥類專家認證；完整世界底圖僅部分國家。AVIF／分類／scores 遮蔽項／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0282。
+
+## 0282 褐漁鴞交付
+
+- 外層 [`0282.avif`](https://drive.google.com/file/d/1Z85GavvRb9ocGZRr0InOm-Sl4Mp-T7q9/view)，144426 bytes、MD5 `d4b207455af75efbf2145221112e8fcb`、SHA256 `5aa85547ea0429453a6e31a6d37da2b44174eae13b5f53794dcff5428816a4aa`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/brfowl1) 全球 IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0190/027400) 香港不常見及局部分布，近年增加，48–55 cm；全球與香港狀態分開。
+- a=2.8 的 fish tag 來自優先使用的錯置化石 diet 句中鳥名「褐魚鴞」的「魚」誤觸；雖外部來源證實魚是食物，依用戶要求不補算，暫遮蔽。r=4.8 使用沒有語源解釋的 etymology 和錯置／損壞 highlights；c=3.0 的規則把「國際自然保護聯盟並不認為……受到威脅」的「保護」「威脅」當受脅訊號、忽略否定語境；r/c 及依賴上述分數的 o=3.4 一併遮蔽、不重算。i=2、v=4.3 沿 runtime；54.5 cm 為原 48–61 cm 的中點，非個體實測，未修改 runtime。
+- 主圖重用 0281 已目視褐漁鴞素材，對照鵰鴞及[馬來漁鴞 *Ketupa ketupu*](https://ebird.org/species/bufowl2)，中文名依 [Avibase](https://avibase.bsc-eoc.org/species.jsp?avibaseid=C1AAB74D595547CA)，避免與黃腿漁鴞混淆。三圖不等比例；主圖耳簇偏長、下體細橫紋不清，馬來漁鴞耳簇及腹紋可能誇張，腳爪羽式僅示意，不能單靠圖片鑑別。已目視素材、四圈、比較圓框及全卡；非鳥類專家認證，地圖僅部分原生國家。AVIF／分類／scores 遮蔽項／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0283。
+
+## 0283 斑頭鵂鶹交付
+
+- 外層 [`0283.avif`](https://drive.google.com/file/d/1CJ2dfNpf_RLP8njSJmLCH-JaFyyW5BrD/view)，150231 bytes、MD5 `0252717067b5f2bdb5f5ce43abe0a83c`、SHA256 `d12a2a219feb62e6340b4f5ad568b94065d96561ffb360fad2e3701447dd0aee`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/asbowl1) 全球 IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0190/026900) 香港本地頗常見留鳥、主要在新界，22–25 cm，香港主要夜間活動，與其他地區較常日間活動分開。HKBWS 現認八亞種，不以舊文「過去五亞種」作現時分類。
+- 原 a=3.3 的 plant tag 是英文 diet「grasshoppers」被 plant 正則 `grass` 誤配；v=3.7 由 AVONET 翼長147.8 mm×0.22 估體長32.516 cm，明顯偏離 22–25 cm；r=1.8 使用截斷及未核歷史分類的要點；三者及依賴它們的 o=2.4 暫遮蔽，保留 vEst 原觀賞值體長估算提示、不重算。i=2、c=1.2 沿 runtime；c 非完整受脅評估，未改 runtime。
+- 主圖對照[領鵂鶹](https://ebird.org/species/colowl1)及[林鵂鶹](https://ebird.org/species/junowl1)，不等比例；主圖頭頂橫紋偏規則、白眉不明顯，領鵂鶹正面圖不顯示後頸偽眼，林鵂鶹羽紋相似，羽紋喙腳爪僅示意，不可單靠圖片鑑別。已目視素材、四圈、比較圓框及全卡，非鳥類專家認證；完整世界底圖僅部分國家。AVIF／分類／scores 遮蔽項／vEst／bounds／ISO3／bytes／hash 核驗，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套，未動 R2、UI、Service Worker 或 runtime。下一張 0284。
+
+## 0284 領鵂鶹交付
+
+- 外層 [`0284.avif`](https://drive.google.com/file/d/1Pmfxn06oN_15V9N9LgMOGWRHPAPV07cU/view)，142882 bytes、MD5 `6d97dc731f556855a544f3768ddc2a58`、SHA256 `8b6bb71bd2c684ea0b35236cae70d31f7362d5715d9c774d09415d1f4cd3433e`。上載前精確查重 0 且搜尋完整；上載後 get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/colowl1) 全球 IUCN 2025 LC，部分鳥冬季下降至低地；[HKBWS](https://avifauna.hkbws.org.hk/species/0190/026800) 15–17 cm、後頸偽眼、香港稀少留鳥 2019 首記；該頁稱全球趨勢下降，不推論香港趨勢。[Owl Pages](https://www.owlpages.com/owls/species.php?s=1880) 列食性包括昆蟲和蜥蜴，較舊的分佈分類需留意。[Wikipedia](https://en.wikipedia.org/wiki/Collared_owlet) 記巽他鵂鶹現已分種，舊分佈表不可盲目全套。
+- 六分沿 runtime：i=2、a=3.3、v=2.7、r=3.3、c=3、o=2.9，沒有重算；r 依遷徙及要點有無，原文部分截斷且留鳥描述概括，c 因棲地喪失威脅文字觸發，均非完整學術評估。未改 runtime。
+- 主圖沿用 0283 領鵂鶹比較素材；比較用既有斑頭鵂鶹及林鵂鶹素材，不等比例。主圖正面不顯示後頸偽眼；新背面素材偽眼過於圓黑而不採用；AI 羽紋、喙和腳爪僅示意，非專家認證，不能單靠圖鑑別。首次特徵圈未對準喉部，修正重渲並目視全卡、四圈及比較框；地圖部分國家、非全境。核驗 AVIF／分類／scores／bounds／ISO3／bytes／hash，標籤測試 5/5、diff check 通過；未跑 TS／Node 全套、未動 R2、UI 或 runtime。下一張 0285。
+
+## 0285 褐林鴞交付
+
+- 外層 [`0285.avif`](https://drive.google.com/file/d/1xRi4evPCL9nPmZWlRMiT1tUoSn09Chj3/view)，146488 bytes、MD5 `652ea8bfab59a1d5f04055e6dac344f4`、SHA256 `fb0dbebc49d400916980c7152ce1ee126d319bbbd28bfdc6457a7e83773a72ce`。上載前精確查重 0 且搜尋完整；get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/brwowl1) 全球 IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0190/027500) 46–55 cm、香港稀少但增加留鳥 2006 首記，其頁稱全球趨勢下降，與香港狀況分開。北部類群曾提議拆分，卡沿 runtime 及 Cornell。
+- v=4.6 的 AVONET 翼長313 mm×0.22 估68.86 cm，明顯高於 HKBWS 46–55 cm；r=3.3 把名稱與分布誤作語源且 highlights 截斷；v/r 與依賴它們的 o=3 暫遮蔽，不重算，保留 vEst；i=2、a=3.8、c=1.2 沿 runtime，c 缺保育文案並非完整評估。
+- 主圖、[白領林鴞](https://ebird.org/species/mowowl1)及[灰林鴞](https://ebird.org/species/tawowl1) AI 圖已目視、比例不一，羽紋、面盤與腳爪僅示意、非專家認證。比較名 [Avibase](https://avibase.bsc-eoc.org/species.jsp?avibaseid=52A8CE5C3058123E) 與 [灰林鴞消歧](https://zh.wikipedia.org/zh-hant/灰林鸮)。修正面盤圈裁切後目視全卡；世界圖僅部分國家。AVIF／分類／scores／vEst／bounds／ISO3／bytes／hash 核驗、標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0286。
+
+## 0286 短耳鴞交付
+
+- 外層 [`0286.avif`](https://drive.google.com/file/d/13L-I_Nzkn0YqCtOfj7eonn_cAsCGEeOE/view)，144347 bytes、MD5 `0f5be311dfb1cba911557b0d7b77f75f`、SHA256 `ed6e84e2dc38533f3ce4b135a194c95aa8dd3d2b5250c96d6c594a56909b984e`。查重 0 且完整、get_file 核驗 parent／名稱／MIME／大小／MD5／未刪。
+- [Cornell](https://ebird.org/species/sheowl) 全球 IUCN 2025 LC、全球其他地區可晨昏獵食；[HKBWS](https://avifauna.hkbws.org.hk/species/0190/027200) 37–38 cm，香港稀少冬候鳥、極稀少春季過境，可能漏記，該頁無香港日間獵食紀錄；其稱全球數量下降，不推論香港趨勢。[Wikipedia](https://en.wikipedia.org/wiki/Short-eared_owl) 部分遷徙、全球原生國家及語源。
+- 六分沿 runtime 不重算，v=3.9 用原有 38.5 cm 而非翼長估算，r=4.8、c=1.2 是 app 欄位趣味指標而非完整學術或保育評估。
+- AI 主圖、[長耳鴞](https://ebird.org/species/loeowl)及[沼澤耳鴞](https://ebird.org/species/marowl2)圖目視、不等比例：主圖耳簇略顯眼、長耳鴞耳簇可能誇張；首次沼澤耳鴞圖眼色錯和耳簇長未用，替代圖腿長且色偏深，AI 羽紋喙腳僅示意，非專家認證。[眼色參考](https://carolinabirds.org/HTML/Owl_Old_World.htm)。世界地圖僅部分原生國家，不分季節。驗 AVIF／分類／scores／bounds／ISO3／bytes／hash、標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0287。
+
+## 0287 北鷹鴞交付
+
+- 外層 [`0287.avif`](https://drive.google.com/file/d/1Vguc9srkL93BB2Ct47mhz5emJUPRiuQw/view)，142167 bytes、MD5 `daf07ccbbffb54ae4524f748b45d84aa`、SHA256 `ee92dc5d75e3d1f396d40790a0b5cd91ab7ff2fafcec2d42a199aff885e34e54`。查重 0 且完整；get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/norboo1) 全球 IUCN 2025 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0190/026700) 29–33 cm，香港稀少過境鳥主要春季、全球趨勢穩定。HKBWS 名「鷹鴞」、runtime 名「北鷹鴞」，均按 Ninox japonica 對照；HKBWS 列 3 亞種與 [Wikipedia](https://en.wikipedia.org/wiki/Northern_boobook) 列 2 不同，曾與褐鷹鴞合併，勿將舊合併物種分佈混用。
+- `dexScores` 無 0287，六項全待查，未按 LC 補算；世界圖僅部分記錄國家、不代表全境或完整季節。
+- 已目視主圖、[褐鷹鴞](https://ebird.org/species/brnhao1)及斑頭鵂鶹比較圖與整卡；主圖額上白斑小，初稿第三圈裁錯，改為「褐色翼羽」並重渲目視。褐鷹鴞與主圖相似，勿單靠插圖鑑別；腿爪、尾羽及比例僅 AI 示意，非專家認證。AVIF／分類／缺分／bounds／ISO3／bytes／hash、標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0288。
+
+## 0288 戴勝：未完成，續製備忘
+
+- 本輪生圖達上限，尚未有第二比較種綠林戴勝素材；**未建立 spec、未渲染、未查重或上載 0288**。下次先保留已生成素材，勿重生：`cards/art/info-restart-0288/pixel.png`（主圖）、`madagascar.png`（馬達加斯加戴勝比較圖）已目視；AI 圖非專家認證、兩圖相似不能單靠插圖鑑別。素材被 Git 忽略，跨 sandbox 不保證存在。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0200/027600) 體長 26–32 cm、香港稀少冬候鳥及過境鳥，夏季罕見、兩繁殖紀錄；其稱全球趨勢下降。[Cornell](https://ebird.org/species/hoopoe) Upupa epops 全球 IUCN 2025 LC；[Madagascar Hoopoe](https://ebird.org/species/madhoo1) 列 U. marginata 為獨立種，[Wikipedia](https://en.wikipedia.org/wiki/Eurasian_hoopoe) 說明戴勝分類拆合及亞種差異，勿混用分佈。綠林戴勝中文名可對 [GBIF](https://www.gbif.org/species/2498452)。
+- runtime i=2、a=3.3、v=3.6、r=4.8、c=3、o=3.3、vEst=1；AVONET 翼長 142.3 mm × 0.22 得 31.306 cm，落於 HKBWS 範圍，但仍是估算、非平均實測。`cardCopy` 的英文 fieldCopy 引用馬達加斯加戴勝，中文語源與部分 highlights 截斷，完成前須依實際算法核實 r/o 的影響；中文 weight「4.5 g」疑似錯誤勿使用。評估後才決定遮蔽、不能補算或修改 runtime。
+
+## 0288 戴勝交付（取代上述未完成狀態）
+
+- 外層 [`0288.avif`](https://drive.google.com/file/d/14kpQNQUQw6t2kze9FqCtqjumi5lyta35/view)，145538 bytes、MD5 `8ba5632cc7c895b9d8e405afe6d2fb42`、SHA256 `73648098f360a022496cc9efb4f31d402dcd3cf29f4d725f12c17530040aa3f5`。精確查重 0 且完整，get_file 核驗 parent、MIME、大小、hash、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0200/027600) 26–32 cm、香港稀少冬候鳥及過境鳥、全球趨勢下降；[Cornell](https://ebird.org/species/hoopoe) IUCN 2025 全球 LC。世界圖僅部分原生國家；[Madagascar Hoopoe](https://ebird.org/species/madhoo1) 獨立物種，曾有拆合。
+- i=2、a=3.3、v=3.6、c=3 沿 runtime；v 基於翼長估算、c 為歐洲局部威脅文字觸發而非完整評估。r 語源欄缺少語源、highlights 截斷，r/o 暫遮蔽不補算；原 vEst 提示保留。
+- 主圖、馬達加斯加戴勝及綠林戴勝比較 AI 圖已目視，兩戴勝圖相似不可單靠圖鑑別，羽式比例非專家認證。兩次調整長喙特徵圈並目視全卡；AVIF、分類、scores、bounds、ISO3、hash 及 5/5 標籤測試、diff check 通過；未動 R2 或 runtime。下一張 0289。
+
+## 0289 普通翠鳥交付
+
+- 外層 [`0289.avif`](https://drive.google.com/file/d/1bjZBcFquMuNt8FAnWnAzQGPireOdKKKV/view)，147159 bytes、MD5 `d49ff9faec4ee63cac2edf402c965800`、SHA256 `9907f7b236c315ae70600f77cc87d2851d18bc7c2a1beb8d836388eab91d6951`；查重 0 且完整，get_file 核驗 parent、MIME、大小、MD5、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0200/028300) 16–18 cm，香港秋冬常見春夏稀少、過境族群可能下降，后海灣冬季水鳥計數未見顯著下跌，全球趨勢未知；[Cornell](https://ebird.org/species/comkin1) 全球 IUCN 2025 LC。
+- i=2、a=4.7、v=2.8、c=3 沿 runtime；r=4.8 源 highlights 有截斷且遷徙描述將可能小群概括為通常集體移動，暫遮蔽 r/o，不重算。16 cm 是原 runtime 數值而非實測平均；c 由威脅文字觸發並非完整保育評估。
+- 雄型主圖及[藍耳翠鳥](https://ebird.org/species/blekin1)、[白胸翡翠](https://ebird.org/species/whtkin2)比較圖已目視；藍耳幼鳥可有橙耳、圖片不等比例，AI 羽式喙腳非專家認證，不單靠圖鑑別。修正喙圈後目視全卡；世界圖僅部分國家。AVIF、分類、scores、bounds、ISO3、hash、標籤測試 5/5 和 diff check 通過；未動 R2 或 runtime。下一張 0290。
+
+## 0290 三趾翠鳥交付
+
+- 外層 [`0290.avif`](https://drive.google.com/file/d/1chnDQ_Y0qT81P6K_3mAhO4jppKz8QnYe/view)，138900 bytes、MD5 `318ed9191950db594707aa63151b260d`、SHA256 `079c6887a6464b73618da34c4e8c7bf36e68c1ebf5dc513f86b07c6d0992852f`。完整精確查重 0，get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [Cornell](https://ebird.org/species/bkbkin1) 同學名的全球 IUCN 2025 **NT**，有別於 runtime 舊 LC；[HKBWS](https://avifauna.hkbws.org.hk/species/0200/028400) 12.5–14 cm、香港偶見，其網頁保育欄未提供有效值。曾與[赤背三趾翠鳥](https://ebird.org/species/rubkin1)合併，舊分佈不宜混用；地圖僅部分國家。
+- i/c 原用舊 LC、r 語源欄僅列分類拆合且要點截斷，連同依賴它們的 o 一併遮蔽，不補算；a=5、v=2.5 沿 runtime，vEst 基於翼長 58.2 mm × 0.22 約 12.804 cm，保留估算提示，並非實測平均。
+- 主圖、赤背三趾翠鳥及重用 0289 普通翠鳥圖已目視，AI 腳趾數及羽式非專家認證，不單憑圖鑑別；修正紅喙特徵圈後目視全卡。驗 AVIF／分類／scores／vEst／bounds／ISO3／hash，標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0291。
+
+## 0291 赤翡翠交付
+
+- 外層 [`0291.avif`](https://drive.google.com/file/d/1CfKt76dA31MjmWM6rBT5wdrc6ToFv9uL/view)，137120 bytes、MD5 `204c50e87afc382b754a0208be85974e`、SHA256 `14413844a6d9442a0d7ac2f92ce114b1bdec483774308f0d6d841e666982f9d7`；完整查重 0，get_file 核驗 parent、名稱、MIME、大小、MD5、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0200/027900) 25–27 cm、香港偶見、全球趨勢下降；[Cornell](https://ebird.org/species/rudkin1) 全球 IUCN 2025 LC。首次抓到 HKBWS 028500 是冠魚狗，**未用在本卡**。
+- 六分沿 runtime：i=2、a=3.3、v=3.4、r=4.8、c=1.2、o=2.9；vEst 翼長113.7 mm × 0.22 約 25.014 cm、不是實測平均。a 缺甲殼類 tag、c 無保育文案，均非完整評估。
+- AI 主圖尾可能過長、藍腰不明顯；重用白胸翡翠及三趾翠鳥圖比較，不等比例且非專家認證。褐翅翡翠比較草圖腳在空中沒支撐，未採用。已目視全卡及四圈，驗 AVIF／分類／scores／vEst／bounds／ISO3／hash、標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0292。
+
+## 0292 白胸翡翠交付
+
+- 外層 [`0292.avif`](https://drive.google.com/file/d/1yzmozo9oONzfQyh1nxdCfgUlVSSHDUXc/view)，136734 bytes、MD5 `31624bfa683fb962e1e1415acdf6e916`、SHA256 `9309d490dbadcbc273ad22541b63b573f37fc986934d04b23d8903ecebb63ecf`。完整精確查重 0，get_file 核驗 parent、MIME、大小、MD5、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0200/028000) 26–29 cm、香港全年出現但顯著下降特別在繁殖季；[Cornell](https://ebird.org/species/whtkin2) 全球 IUCN 2025 LC，全球和本地趨勢不可混同。[Wikipedia](https://en.wikipedia.org/wiki/White-throated_kingfisher) 記褐胸翡翠拆分，舊分佈不混用。
+- i=2、a=4.7、v=3.4、c=1.2 沿 runtime；a 原漏甲殼和齧齒 tag，c 欠保育文案並非完整評估；vEst 113.2 mm ×0.22 約24.904 cm 略低 HKBWS 26–29 cm，為估算不是平均實測。r 原語源缺主詞且要點截斷或重複，r/o 遮蔽不補算。
+- 重用 0289 白胸翡翠、0291 赤翡翠與 0289 普通翠鳥 AI 素材，圖不等比例、羽式及比例非專家認證；目視全卡和四圈、世界圖僅部分國家。核驗 AVIF／分類／scores／vEst／bounds／ISO3／hash，標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0293。
+
+## 0293 藍翡翠交付
+
+- 外層 [`0293.avif`](https://drive.google.com/file/d/1SoxWo523y1IHqZ21ZRX5SD-rdQYVjQXT/view)，141273 bytes、MD5 `182ecbf8dfedb7cf67848604b7e7249c`、SHA256 `3db97b397f2abed672f45e3126a35fcedba9a0e2ca25c87235e96e1ad0f19856`。完整精確查重 0，get_file 核驗 parent、MIME、大小、MD5、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0200/028100) 28–31 cm，香港稀少過境及冬候鳥、繁殖季罕見，四季顯著下降；[Cornell](https://ebird.org/species/blckin1) IUCN 2025 全球 VU。
+- i=3.8、a=4.3、v=3.5、c=2.2 沿 runtime；28 cm 為原值及 HKBWS 範圍下限，非實測平均；c 欠保育文案，非完整評估。語源缺主詞、遷徙及要點截斷，r/o 遮蔽不補算。
+- AI 主圖尾可能偏長、白胸與橙腹界線不保證準確；重用白胸翡翠、赤翡翠圖，不等比例、非專家認證。修正白領圈後目視全卡、四圈；世界圖僅部分國家。AVIF／分類／scores／bounds／ISO3／hash、標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0294。
+
+## 0294 白領翡翠交付
+
+- 外層 [`0294.avif`](https://drive.google.com/file/d/1rtsQJwg6CZaCEcOgilgpoM8vjRZ3pn4_/view)，144512 bytes、MD5 `6e668d70589237b60b2aceace6032382`、SHA256 `ee730354954105a4de319d5eb2e1b5c909b550f8c3765b1a71ff0fc19e95e5ff`。完整精確查重 0，get_file 核驗 parent、MIME、大小、MD5、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0200/028200) 23–25 cm、香港偶見，該頁稱全球 LC、趨勢穩定；[Cornell](https://ebird.org/species/colkin1) 同物種頁未顯示 IUCN 標籤，[Wikipedia](https://en.wikipedia.org/wiki/Collared_kingfisher) 列多類群拆分，評估範圍差異待核，卡標明 LC 依 HKBWS、不稱 2025 評估；舊 runtime 說東至玻里尼西亞含拆分類群，不用作完整分佈。
+- 六分沿 runtime i=2、a=4.7、v=3.3、r=1.8、c=1.2、o=2.6；24 cm 為原範圍中點非實測平均，r/c 為欄位趣味指標而非完整學術或保育評估。
+- AI 主圖及重用白胸翡翠、藍翡翠圖已目視，不等比例、羽式腳趾非專家認證；全卡四圈目視，世界圖僅部分國家。驗 AVIF／分類／scores／bounds／ISO3／hash，標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0295。
+
+## 0295 斑魚狗交付
+
+- 外層 [`0295.avif`](https://drive.google.com/file/d/10lWuqzGJ0hmwG7A8QkLrQIE0uHBeWZxr/view)，135232 bytes、MD5 `7dd309f6c40e86e923bb7a0673ab9307`、SHA256 `2c3a4515ccc561fa28f4b56dd16435d1dd0623af174cb5e5f613b33999434ff7`。完整精確查重 0；get_file 核驗 parent、MIME、大小、MD5、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0200/028600) 25–30 cm、香港局部不常見留鳥並下降，該頁稱全球趨勢未知，香港觀察食物僅魚；[Cornell](https://ebird.org/species/piekin1) 全球 IUCN 2025 LC。
+- 六分沿 runtime i=2、a=2.8、v=3.6、r=1、c=1.2、o=2.1；AVONET 翼長 136.2 mm×0.22 約29.964 cm 是估算、非平均實測；a 缺棲地 tag，r/c 缺輸入，非完整學術評估。
+- 已目視雄型兩胸帶主圖、冠魚狗雌型及重用普通翠鳥圖；圖不等比例、羽式喙腳僅 AI 示意、非專家認證。目視全卡四圈；世界圖僅部分國家。驗 AVIF／分類／scores／vEst／bounds／ISO3／hash、標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0296。
+
+## 0296 藍喉蜂虎交付
+
+- 外層 [`0296.avif`](https://drive.google.com/file/d/12raBk9U-LXWS_cG1k3ONwuvrfUwtXjvt/view)，135993 bytes、MD5 `c6c8c7956e790df56e24e8c4dd14aa66`、SHA256 `fa5c92211f57bb56f4e86aae51fc17c8dcff16e87a1aeb7ba755104d683cd985`。精確完整查重 0；get_file 核驗 parent、MIME、大小、MD5、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0200/028800) 體長 21–23.5 cm 另加約 9 cm 延長中央尾羽；香港罕見過境。[Cornell](https://ebird.org/species/btbeat2) 全球 IUCN 2025 LC。比較：[栗喉蜂虎](https://avifauna.hkbws.org.hk/species/0200/028700)、[栗頭蜂虎](https://ebird.org/species/chbeat1)。
+- 沿 runtime i=2、a=3.8、v=3.3、r=1、c=1.2、o=2.3；vEst 是 AVONET 翼長 111.6 mm×0.22 約24.552 cm 粗估、非實測平均。r 缺中文遷徙／語源／要點輸入；c 缺中文保育文案，均非完整評估。
+- 已目視三張 AI 圖及全卡四圈，修正尾羽裁切後重渲目視。主圖羽幹可能過細，栗喉喉色偏橙，栗頭腳爪細節不可靠；非專家認證且不等比例。世界圖僅部分國家；驗 AVIF／分類／scores／vEst／bounds／ISO3／hash，標籤測試 5/5、diff check 通過。未動 R2 或 runtime；下一張 0297。
+
+## 0297 栗喉蜂虎交付
+
+- 外層 [`0297.avif`](https://drive.google.com/file/d/1ZfBcClPoGogJcWxD-nkbHijaJp9nyekr/view)，132691 bytes、MD5 `e51032cbcd854acd803650cbe5a9ea6c`、SHA256 `79375ccf9aced9704656d81427db7e4fb9dacea4c366da4c3b2a6b8f5ff6d744`。精確完整查重 0，get_file 驗 parent、MIME、bytes、MD5、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0200/028700) 體長 28–30 cm，延長中央尾羽可再多達 7 cm；香港春秋過境、全球趨勢穩定。[Cornell](https://ebird.org/species/btbeat1) 全球 IUCN 2025 LC；比較 [藍喉蜂虎](https://ebird.org/species/btbeat2) 和 [栗頭蜂虎](https://ebird.org/species/chbeat1)。
+- i=2、v=3.5 沿 runtime；翼長129.5 mm ×0.22 約28.49 cm 為估算非實測平均。a 花蜜 tag 疑由蜜蜂誤配，r 語源缺詞且遷徙與要點截斷，c 無危名錄中的「保護／瀕危」誤觸受脅詞；a/r/c/o 遮蔽，不補算。
+- 三張 AI 圖重用 0296 已目視圖；栗喉主圖喉色偏橙，延長羽幹偏細，腳爪有局限，非專家認證，圖不等比例；喉圈標籤改為中性「喉部羽色」後重渲及目視。世界圖僅部分國家；驗 AVIF、分類、scores、vEst、bounds、ISO3、hash，標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0298。
+
+## 0298 藍胸佛法僧交付
+
+- 外層 [`0298.avif`](https://drive.google.com/file/d/1tGAMST-mDb5fU3buCIGuRTRpxRhyctEb/view)，139352 bytes、MD5 `27aefaf51f76d5ee4b8104750532f459`、SHA256 `73dde6bb2372bb96cfb8119dcc854e9fcb72ca0fbdb565345113b4db7ce5037b`。精確完整查重 0，get_file 驗 parent、MIME、bytes、MD5、未刪。
+- [Cornell](https://ebird.org/species/eurrol1) 全球 IUCN 2025 LC；[Wikipedia](https://en.wikipedia.org/wiki/European_roller) 體長 29–32 cm，非實測平均；[香港名錄](https://avifauna.hkbws.org.hk/hk-list) 有紀錄，不推斷常見程度。比較 [印度佛法僧](https://ebird.org/species/indrol2)、[紫胸佛法僧](https://ebird.org/species/librol2)，後者部分亞種胸藍。
+- a=3.3、v=4、r=2.5 沿 runtime；vEst 翼長190.8 mm×0.22 約41.976 cm，比來源體長範圍長，屬粗估非實測平均；r 遷徙欄混繁殖敘述。runtime 舊 NT 與目前 LC 不符，i/c 及連帶的 o 遮蔽，不補算。
+- 已目視三圖、全卡四圈；修喙圈重渲再目視。AI 主圖棕色折翼羽可能過多、尾腳待核；印度比較胸紋可能誇張、紫胸比較尾羽幹偏細。非專家認證、圖不等比例。世界圖僅部分國家；驗 AVIF、分類、scores、vEst、bounds、ISO3、hash，標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0299。
+
+## 0299 三寶鳥交付
+
+- 外層 [`0299.avif`](https://drive.google.com/file/d/1O2cXpimQmphQSXVYFZfCkeTJCue3Swls/view)，140165 bytes、MD5 `5bd21ca9d5ae2f82161be780dc739e99`、SHA256 `fee48865a8c94fe835bc19e47fb1bcf3bcb391eebeb10d65b1f83d836e3551c0`。精確完整查重 0；get_file 驗 parent、MIME、bytes、MD5、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0200/027800) 27–32 cm，香港頗常見春秋過境，全球趨勢下降；[Cornell](https://ebird.org/species/dollar1) 全球 IUCN 2025 LC。比較 [紫三寶鳥](https://ebird.org/species/purrol1)、[藍胸佛法僧](https://ebird.org/species/eurrol1)。
+- i=2、a=3.3、v=4、c=1.2 沿 runtime；翼長 186.2 mm×0.22 約40.964 cm 是粗估且超出 HKBWS 範圍，非實測平均；c 缺保育文案，非完整評估。r 要點截斷及缺前文，r/o 遮蔽不補算。
+- 三圖及全卡已目視；首次紫三寶鳥比較圖錯成亮藍未用，改深紫圖；藍胸重用 0298。主圖尾可能過長偏尖、翼紋與腳待核，均 AI 示意、非專家認證、不等比例；修頭部及喉圈後重渲再目視。世界圖僅部分國家；驗 AVIF、分類、scores、vEst、bounds、ISO3、hash，標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0300。
+
+## 0300 大擬啄木鳥交付
+
+- 外層 [`0300.avif`](https://drive.google.com/file/d/1mVTHzrc4K2uv6tZg1yFWP_wmngmPRboW/view)，143160 bytes、MD5 `30179b762f45cedbe02d0f9c1fdecc71`、SHA256 `03bb50f6aed7f74cd0b3c3018bd76116a05d859d19bbfb233c5585234aea3607`。精確完整查重 0；get_file 驗 parent、MIME、bytes、MD5、未刪。
+- [Cornell](https://ebird.org/species/grebar1) 全球 IUCN 2025 LC；[Wikipedia](https://en.wikipedia.org/wiki/Great_barbet) 描述體色、生態、分布與體長。比較 [黑眉擬啄木鳥](https://ebird.org/species/chibar1)、[斑頭擬啄木鳥](https://ebird.org/species/linbar1)，中文比較名參考 [Avibase](https://avibase.bsc-eoc.org/species.jsp?avibaseid=4EBAE9368BF0526B)。
+- i=2、a=3.3、v=3.7、r=1、c=1.2、o=2.2 沿 runtime；32–35 cm 的 33.5 cm 為範圍中點非實測平均；r 缺中文語源、遷徙與要點，c 缺中文保育文案，非完整評估。
+- 已目視三張 AI 圖及全卡；修喙圈後重渲及再目視。主圖腹條紋可能誇張、尾略長、喙足細節待核，兩比較鳥羽色與腳趾細節待核；非專家認證、圖不等比例。世界圖僅部分國家；驗 AVIF、分類、scores、bounds、ISO3、hash，標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0301。
+
+## 0301 黑眉擬啄木鳥交付
+
+- 外層 [`0301.avif`](https://drive.google.com/file/d/1QiFz4wskE7WatR1JB7L-6Yf-H_9zhSjN/view)，150472 bytes、MD5 `c0a29755d0e0750b75a830863635a8a2`、SHA256 `2c198ae73de6e12e5178a733a4b998552ca947efb0d45358fefa353674244655`。精確完整查重 0；get_file 核驗 parent、MIME、bytes、MD5、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0210/029000) 體長20–22 cm、香港稀少但增加的留鳥，香港無食性觀察、無確認繁殖紀錄；中國東南部特有。[Cornell](https://ebird.org/species/chibar1) 全球 IUCN 2025 LC；比較 [五色鳥](https://ebird.org/species/taibar2)、[大擬啄木鳥](https://ebird.org/species/grebar1)。
+- i=2、a=2.3、v=3.2 沿 runtime；a 棲地 tag 缺漏，食性文案主要食物缺詞；vEst 翼長103.2 mm×0.22約22.704 cm 為粗估非實測平均。r 因語源錯欄及遷徙、要點截斷，c 因「保育生物學家」誤觸受脅詞，連同 o 遮蔽不補算。
+- 三圖及全卡已目視；新主圖黑前冠紅後冠可見，黃眉與臉紋、尾腳細節待核，五色鳥比較為 AI、大擬啄木鳥重用 0300；均非專家認證、不等比例。修後冠裁圈後重渲再目視。世界圖僅中國部分國家概覽；驗 AVIF、分類、scores、vEst、bounds、ISO3、hash，標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0302。
+
+## 0302 蟻鴷交付
+
+- 外層 [`0302.avif`](https://drive.google.com/file/d/1ejsE2O7QwlCsmwMUkxsGU98gg8tsXUdP/view)，146482 bytes、MD5 `be4dd385662829eb9364b166684f88d7`、SHA256 `2a3287ffb5c773bac744a2ffb060226561ccb7d30920ef3b525bae6891df9124`。精確完整查重 0；get_file 核驗 parent、MIME、bytes、MD5、未刪。
+- [HKBWS](https://avifauna.hkbws.org.hk/species/0210/029100) 體長16–18 cm、香港秋季常見過境，冬季及春季不常見，全球趨勢下降；[Cornell](https://ebird.org/species/eurwry) 全球 IUCN 2025 LC。比較 [紅胸蟻鴷](https://ebird.org/species/runwry1)、[斑姬啄木鳥](https://avifauna.hkbws.org.hk/species/0210/029200)。
+- i=2、a=2.8、c=3 沿 runtime；原體長「16.5–1 cm」導致 len=8.8 cm，v 因此遮蔽；r 因要點截斷遮蔽，o 連帶遮蔽不補算。c 根據瑞士下降及巢箱措施，不代表全球保育評估。
+- 三圖及全卡已目視：主圖尾可能過長、趾序非可靠示範；紅胸比較尾較長，斑姬比較頭頂花紋與真鳥紅褐白條不符；AI 非專家認證、圖不等比例。世界圖僅部分國家；驗 AVIF、分類、scores、bounds、ISO3、hash，標籤測試 5/5、diff check 通過；未動 R2 或 runtime。下一張 0303。

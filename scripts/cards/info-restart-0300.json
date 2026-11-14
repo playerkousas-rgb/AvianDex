@@ -1,0 +1,140 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0300",
+  "name": "大擬啄木鳥",
+  "scientificName": "Psilopogon virens",
+  "illustrationTaxon": "Adult-like Great Barbet Psilopogon virens; sex unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "黑眉擬啄木鳥",
+      "scientificName": "Psilopogon faber",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "綠身、黑冠、藍耳及紅黃喉；圖不等比例。"
+    },
+    {
+      "zh": "斑頭擬啄木鳥",
+      "scientificName": "Psilopogon lineatus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "灰褐條紋頭及橙色眼周、綠身；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.03,
+      0.14,
+      0.41,
+      0.36
+    ],
+    [
+      0.25,
+      0.16,
+      0.55,
+      0.35
+    ],
+    [
+      0.31,
+      0.34,
+      0.63,
+      0.61
+    ],
+    [
+      0.58,
+      0.58,
+      0.83,
+      0.77
+    ]
+  ],
+  "featureLabels": [
+    "粗大淡黃喙",
+    "深藍色頭",
+    "腹部條紋",
+    "紅色尾下羽"
+  ],
+  "featureNotes": [
+    "粗大淡黃色喙及喙基鬚。",
+    "黑藍色頭部。",
+    "黃綠腹部帶條紋，AI 可能誇張。",
+    "紅色尾下覆羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "CHN",
+      "MMR",
+      "LAO",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/grebar1",
+      "use": "Global IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Great_barbet",
+      "use": "distribution, biology, length and body colors."
+    },
+    {
+      "url": "https://ebird.org/species/chibar1",
+      "use": "Chinese Barbet comparison."
+    },
+    {
+      "url": "https://ebird.org/species/linbar1",
+      "use": "Lineated Barbet comparison."
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=4EBAE9368BF0526B",
+      "use": "traditional Chinese comparison name."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime score inputs."
+    }
+  ],
+  "notes": [
+    "三張圖經目視為 AI 示意，非專家認證、圖不等比例；主圖腹條紋可能誇張、尾略長、喙足細節需核，兩比較物種羽色與爪細節亦待核。",
+    "Cornell 全球 IUCN 2025 LC；來源體長32–35 cm，runtime 33.5 cm 為範圍中點而非實測平均。",
+    "i=2、a=3.3、v=3.7、r=1、c=1.2、o=2.2 沿 runtime；r 缺中文語源、遷徙與要點，c 無中文保育文案，非完整學術評估。",
+    "綠色僅部分已記錄原生國家，非全境或完整季節。"
+  ],
+  "withheldScores": {}
+}

@@ -1,0 +1,131 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0301",
+  "name": "黑眉擬啄木鳥",
+  "scientificName": "Psilopogon faber",
+  "illustrationTaxon": "Adult-like Chinese Barbet Psilopogon faber, subspecies and sex unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "五色鳥",
+      "scientificName": "Psilopogon nuchalis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "藍臉喉、紅額及黃後頸，圖不等比例。"
+    },
+    {
+      "zh": "大擬啄木鳥",
+      "scientificName": "Psilopogon virens",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "體型較大、深色頭及淡黃大喙，圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.23,
+      0.12,
+      0.64,
+      0.31
+    ],
+    [
+      0.24,
+      0.17,
+      0.56,
+      0.38
+    ],
+    [
+      0.19,
+      0.2,
+      0.51,
+      0.41
+    ],
+    [
+      0.35,
+      0.31,
+      0.76,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "黑冠紅後冠",
+    "藍色耳羽",
+    "黃喉紅邊",
+    "綠色折翼"
+  ],
+  "featureNotes": [
+    "黑前冠、紅後冠；AI 黃眉位置可能不準。",
+    "藍色耳羽。",
+    "黃色喉及紅色邊緣。",
+    "綠色折翼。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0210/029000",
+      "use": "20–22 cm, identification, endemic range, HK resident and local uncertainty."
+    },
+    {
+      "url": "https://ebird.org/species/chibar1",
+      "use": "Cornell global IUCN 2025 LC, plumage and fruiting trees."
+    },
+    {
+      "url": "https://ebird.org/species/taibar2",
+      "use": "Taiwan Barbet comparison."
+    },
+    {
+      "url": "https://ebird.org/species/grebar1",
+      "use": "Great Barbet comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime score inputs."
+    }
+  ],
+  "notes": [
+    "主圖新 AI 成年型，紅後冠可見，但黃眉與臉紋、尾腳細節待核；比較五色鳥 AI 示意、大擬啄木鳥重用 0300 圖，非專家認證、不等比例。",
+    "Cornell IUCN 2025 LC；HKBWS 體長20–22 cm、香港稀少但增加的留鳥，食性無香港觀察，無確定繁殖紀錄；特有中國東南部。",
+    "i=2、a=2.3、v=3.2 沿 runtime；a 棲地 tag 缺漏，食性文案主要食物缺詞，非完整評估；vEst 翼長103.2 mm×0.22約22.704 cm 為粗估非實測平均。r 因語源錯欄及遷徙、要點截斷遮蔽；c 因保育生物學家詞組誤觸受脅詞遮蔽，o 連帶遮蔽不補算。",
+    "底圖綠色僅中國部分範圍概覽，非全境或完整季節。"
+  ],
+  "withheldScores": {
+    "r": "語源欄實為分類描述且截斷，遷徙及要點亦截斷，研究分依欄位存在計算。",
+    "c": "全球數量估計文中的「保育」被當作受脅訊號，非具體威脅描述。",
+    "o": "綜合分依賴受影響 r/c，暫不顯示、不補算。"
+  }
+}

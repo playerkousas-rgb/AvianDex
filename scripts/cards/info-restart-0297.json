@@ -1,0 +1,151 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0297",
+  "name": "栗喉蜂虎",
+  "scientificName": "Merops philippinus",
+  "illustrationTaxon": "Adult-like Blue-tailed Bee-eater Merops philippinus; sex not determined; reused 0296 comparison, AI not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "藍喉蜂虎",
+      "scientificName": "Merops viridis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "栗色冠、藍喉；圖不等比例。"
+    },
+    {
+      "zh": "栗頭蜂虎",
+      "scientificName": "Merops leschenaulti",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "栗頭黃喉，尾無細長延伸；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.27,
+      0.14,
+      0.62,
+      0.38
+    ],
+    [
+      0.29,
+      0.18,
+      0.57,
+      0.4
+    ],
+    [
+      0.1,
+      0.12,
+      0.56,
+      0.36
+    ],
+    [
+      0.54,
+      0.46,
+      0.89,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "橄欖綠頭頂",
+    "喉部羽色",
+    "細長黑喙",
+    "藍色尾羽"
+  ],
+  "featureNotes": [
+    "頭頂偏綠。",
+    "AI 喉色偏橙，真鳥喉栗紅、頷黃色。",
+    "黑色細長略下彎喙。",
+    "藍尾，AI 尾羽延長部分過細。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "LKA",
+      "CHN",
+      "MMR",
+      "THA",
+      "KHM",
+      "LAO",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "PNG"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/028700",
+      "use": "28–30 cm with streamers up to 7 cm more, identification, range, HK migrant, IUCN LC."
+    },
+    {
+      "url": "https://ebird.org/species/btbeat1",
+      "use": "Global IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://ebird.org/species/btbeat2",
+      "use": "Blue-throated Bee-eater comparison."
+    },
+    {
+      "url": "https://ebird.org/species/chbeat1",
+      "use": "Chestnut-headed Bee-eater comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime score inputs."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "diet and habitat tag inputs."
+    },
+    {
+      "path": "scripts/cards/build-explorer-data.mjs",
+      "use": "蜜 regex can match 蜜蜂 and cause nectar tag."
+    }
+  ],
+  "notes": [
+    "主圖及兩個比較圖重用 0296 圖；栗喉主圖喉部偏橙非栗紅，延長中央尾羽羽幹偏細，腳爪可能不準；均為 AI 示意非專家認證且不等比例。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 28–30 cm，延長尾羽可再加多達7 cm；香港春秋過境，全球趨勢穩定。",
+    "i=2、v=3.5 沿 runtime；翼長129.5 mm ×0.22 約28.49 cm 為估算非實測平均。a 因食性花蜜 tag 疑由蜜蜂誤配，r 因語源缺詞、遷徙及要點截斷，c 因無危名錄文中的保護／瀕危字眼被當受脅信號而遮蔽；o 連帶遮蔽，不補算。",
+    "綠色為部分已記錄原生國家，非全境或完整季節。"
+  ],
+  "withheldScores": {
+    "a": "食性 tag 花蜜疑因蜜蜂中的「蜜」誤配，影響適應力。",
+    "r": "中文語源缺詞、遷徙及要點截斷，研究分依欄位存在計算。",
+    "c": "無危名錄文字中的「保護」「瀕危」被當作受脅訊號。",
+    "o": "綜合分依賴受影響分項，暫不顯示、不補算。"
+  }
+}

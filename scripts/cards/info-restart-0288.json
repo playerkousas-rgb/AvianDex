@@ -1,0 +1,152 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0288",
+  "name": "戴勝",
+  "scientificName": "Upupa epops",
+  "illustrationTaxon": "Adult-like Eurasian Hoopoe Upupa epops; sex and subspecies not verified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "馬達加斯加戴勝",
+      "scientificName": "Upupa marginata",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "外貌相似，部分分類拆分；分佈及鳴聲不同，AI 圖不可獨立鑑別。"
+    },
+    {
+      "zh": "綠林戴勝",
+      "scientificName": "Phoeniculus purpureus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "金屬綠黑羽、紅色長喙與長尾，與戴勝冠羽及黑白翼羽不同；圖片不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.29,
+      0.08,
+      0.72,
+      0.3
+    ],
+    [
+      0,
+      0.18,
+      0.56,
+      0.51
+    ],
+    [
+      0.34,
+      0.41,
+      0.83,
+      0.68
+    ],
+    [
+      0.6,
+      0.62,
+      0.91,
+      0.91
+    ]
+  ],
+  "featureLabels": [
+    "黑尖扇形羽冠",
+    "細長下彎喙",
+    "黑白相間翼羽",
+    "黑尾寬白帶"
+  ],
+  "featureNotes": [
+    "展開的羽冠，通常平伏。",
+    "長而稍下彎的喙。",
+    "折翼的黑白紋示意。",
+    "黑尾寬白帶示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PRT",
+      "ESP",
+      "FRA",
+      "DEU",
+      "ITA",
+      "GRC",
+      "TUR",
+      "MAR",
+      "DZA",
+      "EGY",
+      "CHN",
+      "MNG",
+      "RUS",
+      "IND",
+      "NPL",
+      "THA",
+      "VNM",
+      "KOR",
+      "JPN"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/027600",
+      "use": "26–32 cm, plumage, HK seasonal status and global decreasing trend."
+    },
+    {
+      "url": "https://ebird.org/species/hoopoe",
+      "use": "Cornell IUCN 2025 LC, identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Eurasian_hoopoe",
+      "use": "Distribution and taxonomic splits."
+    },
+    {
+      "url": "https://ebird.org/species/madhoo1",
+      "use": "Madagascar hoopoe comparison."
+    },
+    {
+      "url": "https://www.gbif.org/species/2498452",
+      "use": "Green Wood Hoopoe traditional Chinese name."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores, vEst and selective withholding."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "inputs used by runtime scoring."
+    }
+  ],
+  "notes": [
+    "AI 圖僅示意，主圖冠羽展開但通常平伏，羽式腳趾及比例不保證正確；馬達加斯加戴勝與主圖相似、不可單靠 AI 圖鑑別；綠林戴勝和主圖不等比例，未經專家認證。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 26–32 cm，香港稀少冬候鳥及過境鳥；HKBWS 全球趨勢下降，和本地狀態分開。",
+    "r 的中文 etymology 殘缺未交代語源、highlights 部分截斷，r/o 暫遮蔽不重算。i/a/v/c 沿 runtime，c 由歐洲局部威脅語句觸發，非完整保育評估；v 的 142.3 mm 翼長×0.22 得31.306 cm 屬估算而非平均實測。",
+    "完整世界底圖綠色為已記錄部分國家非全境或完整季節；分類及亞種因來源不同而有拆合差異。"
+  ],
+  "withheldScores": {
+    "r": "研究分的 etymology 內容殘缺、並未交代名稱語源；highlights 多項截斷或缺詞，不能當成完整已核實要點。",
+    "o": "綜合分依賴受錯誤輸入影響的研究分，暫遮蔽，不補算。"
+  }
+}

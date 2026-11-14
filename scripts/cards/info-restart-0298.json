@@ -1,0 +1,151 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0298",
+  "name": "藍胸佛法僧",
+  "scientificName": "Coracias garrulus",
+  "illustrationTaxon": "Adult-like European Roller Coracias garrulus; sex not verified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "印度佛法僧",
+      "scientificName": "Coracias benghalensis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "胸喉較褐有白縱紋，圖片示意不等比例。"
+    },
+    {
+      "zh": "紫胸佛法僧",
+      "scientificName": "Coracias caudatus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "常見紫胸型有紫胸及延長外側尾羽，圖不等比例；部分亞種胸藍。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.19,
+      0.51,
+      0.39
+    ],
+    [
+      0.04,
+      0.19,
+      0.44,
+      0.39
+    ],
+    [
+      0.31,
+      0.29,
+      0.7,
+      0.56
+    ],
+    [
+      0.35,
+      0.33,
+      0.72,
+      0.61
+    ]
+  ],
+  "featureLabels": [
+    "藍色頭胸",
+    "粗黑色喙",
+    "棕色背羽",
+    "藍色折翼"
+  ],
+  "featureNotes": [
+    "藍色頭部及胸羽。",
+    "粗黑喙。",
+    "棕色背部及肩羽。",
+    "藍色折翼，並不展示飛行翼斑。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ESP",
+      "PRT",
+      "FRA",
+      "HUN",
+      "ROU",
+      "TUR",
+      "MAR",
+      "DZA",
+      "TUN",
+      "IRQ",
+      "IRN",
+      "KAZ",
+      "CHN",
+      "NAM",
+      "BWA",
+      "ZMB",
+      "ZAF"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/eurrol1",
+      "use": "Global IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/European_roller",
+      "use": "29–32 cm, range, wintering and migration; size not a measured mean."
+    },
+    {
+      "url": "https://ebird.org/species/indrol2",
+      "use": "Indian Roller comparison."
+    },
+    {
+      "url": "https://ebird.org/species/librol2",
+      "use": "Lilac-breasted Roller comparison, variable subspecies."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "HK bird list; no frequency claimed."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime score inputs."
+    }
+  ],
+  "notes": [
+    "三張 AI 示意圖非專家認證且不等比例；主圖折翼的棕色羽可能過多、尾長及爪需核；印度佛法僧胸紋誇張、紫胸佛法僧尾羽幹偏細。",
+    "Cornell 全球 IUCN 2025 為 LC；runtime 舊中文 NT 不一致。Wikipedia 體長29–32 cm；香港名錄有記錄，不由此推斷常見程度。",
+    "a=3.3、v=4、r=2.5 沿 runtime；vEst 取 AVONET 翼長190.8 mm×0.22 約41.976 cm，比引用體長範圍長，屬粗估非實測平均。r 遷徙文案混繁殖敘述；i/c 因舊 NT 遮蔽，o 連帶遮蔽，不補算。",
+    "綠色僅部分已記錄原生國家，非全境或完整季節。"
+  ],
+  "withheldScores": {
+    "i": "runtime 使用舊近危 NT，Cornell 全球 IUCN 2025 為 LC。",
+    "c": "保育分依賴舊 NT，與當前 LC 不一致。",
+    "o": "綜合分依賴受影響的 i/c，暫不顯示、不補算。"
+  }
+}

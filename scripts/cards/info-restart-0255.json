@@ -1,0 +1,146 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0255",
+  "name": "鶚",
+  "scientificName": "Pandion haliaetus",
+  "illustrationTaxon": "Adult-like Osprey with breast markings; sex unspecified. AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "鶚幼鳥",
+      "scientificName": "Pandion haliaetus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種幼鳥上體羽緣較淡呈鱗狀，虹膜較橙；兩圖不等比例。"
+    },
+    {
+      "zh": "白腹海鵰",
+      "scientificName": "Icthyophaga leucogaster",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "白腹海鵰成鳥灰背白頭無深色眼帶，通常較大；圖中腿色僅示意。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.15,
+      0.07,
+      0.44,
+      0.29
+    ],
+    [
+      0.25,
+      0.24,
+      0.49,
+      0.48
+    ],
+    [
+      0.42,
+      0.29,
+      0.73,
+      0.55
+    ],
+    [
+      0.32,
+      0.61,
+      0.55,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "深色眼帶",
+    "淡色胸部",
+    "褐色翼羽",
+    "灰足利爪"
+  ],
+  "featureNotes": [
+    "白頭、深色眼帶及彎嘴。",
+    "淡胸帶有斑紋；胸斑個體及性別差異大，不能單憑圖判性別。",
+    "褐色折翼局部；AI 羽緣僅示意，不用作年齡判斷。",
+    "灰色腳和彎爪握枝；AI 足趾數目不作鑑定依據。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CAN",
+      "USA",
+      "BRA",
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "IND",
+      "VNM",
+      "IDN"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/osprey",
+      "use": "Cornell LC 2025, identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/023900",
+      "use": "HKBWS 52–60 cm, adult and juvenile, HK status, range and LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/026300",
+      "use": "White-bellied Sea Eagle adult comparison; Icthyophaga taxonomy."
+    },
+    {
+      "url": "https://scottishwildlifetrust.org.uk/scotlands-wildlife/osprey-fact-file/",
+      "use": "Age comparison: juvenile pale fringes, orange eye."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC copy."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores; a absent, vEst=1."
+    }
+  ],
+  "notes": [
+    "主圖為成鳥樣貌示意，不指定性別；比較鶚幼鳥及白腹海鵰成鳥，不等比例，AI 插圖非專家認證。",
+    "HKBWS 指香港深灣及東部沿岸局部常見過境及冬候鳥，其他時期稀少；Cornell IUCN 2025 LC。",
+    "HKBWS 西方鶚分類與 Cornell Osprey 範圍有分類處理差異；卡沿 runtime Pandion haliaetus，地圖採來源覆蓋的部分原生國家。",
+    "runtime 適應力 a 缺值，待查非零；vEst=1 保留體長估算提示，未重算或修改 runtime。"
+  ]
+}

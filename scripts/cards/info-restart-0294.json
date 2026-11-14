@@ -1,0 +1,145 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "LC 依 HKBWS；分類差異待核"
+  },
+  "id": "0294",
+  "name": "白領翡翠",
+  "scientificName": "Todiramphus chloris",
+  "illustrationTaxon": "Adult-like Collared Kingfisher Todiramphus chloris, sex/subspecies unverified; AI not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白胸翡翠",
+      "scientificName": "Halcyon smyrnensis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "栗色頭、紅色大喙和白胸；兩圖不等比例。"
+    },
+    {
+      "zh": "藍翡翠",
+      "scientificName": "Halcyon pileata",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "黑色頭、紅色喙和藍翼，圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0,
+      0.1,
+      0.52,
+      0.52
+    ],
+    [
+      0.27,
+      0.14,
+      0.63,
+      0.43
+    ],
+    [
+      0.33,
+      0.22,
+      0.66,
+      0.49
+    ],
+    [
+      0.39,
+      0.35,
+      0.77,
+      0.65
+    ]
+  ],
+  "featureLabels": [
+    "黑上喙淡下喙",
+    "藍綠色頭頂",
+    "白色頸領",
+    "藍色翼羽"
+  ],
+  "featureNotes": [
+    "上喙深色、下喙淡色。",
+    "藍綠頭頂示意。",
+    "白色頸領。",
+    "折翼藍羽示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "SAU",
+      "OMN",
+      "ARE",
+      "IND",
+      "BGD",
+      "CHN",
+      "TWN",
+      "MMR",
+      "THA",
+      "VNM",
+      "KHM",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/028200",
+      "use": "23–25 cm, HK accidental, IUCN LC stable, range."
+    },
+    {
+      "url": "https://ebird.org/species/colkin1",
+      "use": "Collared Kingfisher plumage and classification, no IUCN label displayed."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Collared_kingfisher",
+      "use": "Species splits and historic range; assessment scope uncertain."
+    },
+    {
+      "url": "https://ebird.org/species/whtkin2",
+      "use": "White-throated Kingfisher comparison."
+    },
+    {
+      "url": "https://ebird.org/species/blckin1",
+      "use": "Black-capped Kingfisher comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime score inputs."
+    }
+  ],
+  "notes": [
+    "AI 主圖成年型、性別亞種未知，腳趾和羽式比例僅示意；兩比較圖重用 0292/0293，不等比例且非專家認證。",
+    "HKBWS 23–25 cm、香港偶見，該頁稱 LC、全球穩定；Cornell 物種頁未顯示 IUCN 標籤，多類群拆分及評估範圍仍待核，不稱 2025 評估。",
+    "六分沿 runtime i=2、a=4.7、v=3.3、r=1.8、c=1.2、o=2.6；體長 24 cm 是原範圍中點非實測平均；r 只反映來源欄位是否存在，c 缺保育文案，非完整評估。",
+    "runtime 舊 range 東至玻里尼西亞含已拆類群，不採用作已核範圍；世界地圖僅部分原生國家，非全境或完整季節。"
+  ],
+  "withheldScores": {}
+}

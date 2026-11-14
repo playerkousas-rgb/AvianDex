@@ -1,0 +1,146 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0265",
+  "name": "白尾鷂",
+  "scientificName": "Circus cyaneus",
+  "illustrationTaxon": "Juvenile female-like Hen Harrier, AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白尾鷂雄鳥",
+      "scientificName": "Circus cyaneus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種成雄灰色頭背、淡色腹部；與褐色雌幼鳥差異明顯。"
+    },
+    {
+      "zh": "白腹鷂雌鳥",
+      "scientificName": "Circus spilonotus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "雌白腹鷂淡頭及深色胸帶；實際雌幼鷂類辨識複雜，不能只依圖判斷。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.15,
+      0.05,
+      0.34,
+      0.3
+    ],
+    [
+      0.215,
+      0.23,
+      0.43,
+      0.52
+    ],
+    [
+      0.31,
+      0.25,
+      0.58,
+      0.53
+    ],
+    [
+      0.56,
+      0.59,
+      0.84,
+      0.94
+    ]
+  ],
+  "featureLabels": [
+    "頭部淡框",
+    "淡褐胸縱紋",
+    "褐色翼羽",
+    "尾部橫紋"
+  ],
+  "featureNotes": [
+    "頭部淡色面框；細節僅示意。",
+    "淡褐胸部縱紋。",
+    "褐色折翼覆羽。",
+    "尾部深淺橫帶。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "ESP",
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "IND",
+      "MAR",
+      "VNM"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/norhar1",
+      "use": "Cornell IUCN 2025 LC, white rump in all plumages, identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025900",
+      "use": "HKBWS length, identification, accidental local status, breeding/wintering range; occurrence narrative and 2025 image dates inconsistent."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025800",
+      "use": "Eastern Marsh Harrier female identification and regional comparison."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC, length, misplaced diet and habitat text."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Length 46.5 cm, incomplete diet/habitat tags."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six scores with no vEst."
+    }
+  ],
+  "notes": [
+    "主圖幼雌外觀；比較同種成雄與白腹鷂成雌，不等比例。圖中白色斑塊在尾下，不能用來展示實際白腰。",
+    "HKBWS 文字列香港迷鳥、2018–19米埔幼雌一例；頁面另附2025年照片，紀錄總數待核，不能確認僅一例。Cornell IUCN 2025 LC。",
+    "母本體長41–52 cm，explorerIndex 46.5 cm，無 vEst，六分沿 runtime。食性 tags 空、棲地只有 open，a 並非完整生態評估；cardCopy diet 錯置鳴聲、habitat 錯置食性，原資料未修改。",
+    "AI 圖僅基本目視、非鳥類專家認證；地圖只顯示部分國家，不表示全境或季節範圍。"
+  ]
+}

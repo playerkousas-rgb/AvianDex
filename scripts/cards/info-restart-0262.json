@@ -1,0 +1,145 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "id": "0262",
+  "name": "白肩鵰",
+  "scientificName": "Aquila heliaca",
+  "illustrationTaxon": "Adult-like Eastern Imperial Eagle; AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白肩鵰幼鳥",
+      "scientificName": "Aquila heliaca",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種幼鳥沙褐色，胸腹顯著深色縱紋；成鳥顏色較深。"
+    },
+    {
+      "zh": "烏鵰",
+      "scientificName": "Clanga clanga",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "烏鵰較緊湊，嘴角較明顯，深色成鳥頭後無淺色披肩；辨識複雜，不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.05,
+      0.05,
+      0.49,
+      0.32
+    ],
+    [
+      0.31,
+      0.08,
+      0.53,
+      0.25
+    ],
+    [
+      0.36,
+      0.25,
+      0.61,
+      0.42
+    ],
+    [
+      0.29,
+      0.56,
+      0.52,
+      0.73
+    ]
+  ],
+  "featureLabels": [
+    "淡色頭頸",
+    "淺色頸羽",
+    "白色肩斑",
+    "羽覆腿部"
+  ],
+  "featureNotes": [
+    "成鳥淡黃褐頭與後頸，與深色身體對比。",
+    "頭後淡色羽毛局部。",
+    "成鳥肩部數枚白羽，不同姿態可能隱藏。",
+    "腿被羽覆，並非本種獨有。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "HUN",
+      "BGR",
+      "TUR",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "IND",
+      "PAK",
+      "MMR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/impeag1",
+      "use": "Cornell IUCN 2025 VU, age identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025000",
+      "use": "HKBWS plumage, HK status and range."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/024700",
+      "use": "Greater Spotted Eagle comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "VU copy."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "IUCN and conservation text score inputs."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime six scores."
+    }
+  ],
+  "notes": [
+    "成鳥樣貌，對照同種幼鳥和烏鵰成鳥，不等比例；AI 圖僅基本目視、非專家認證。",
+    "HKBWS 2024 香港深灣稀少冬候鳥；Cornell IUCN 2025 VU。",
+    "六項分數沿 runtime，未重算；保育關注分也包含既有保育文字輸入，不能直接當 IUCN 評級。",
+    "地圖為部分分佈國家概覽，不是完整分佈或各國全境。"
+  ]
+}

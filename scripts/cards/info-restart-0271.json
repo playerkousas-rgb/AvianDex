@@ -1,0 +1,152 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0271",
+  "name": "雀鷹",
+  "scientificName": "Accipiter nisus",
+  "illustrationTaxon": "Adult female Eurasian Sparrowhawk, AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "雀鷹雄鳥",
+      "scientificName": "Accipiter nisus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種成雄藍灰上體、橙褐頰及橙褐橫紋，較雌鳥小；圖不等比例。"
+    },
+    {
+      "zh": "日本松雀鷹雌鳥",
+      "scientificName": "Tachyspiza gularis",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "日本松雀鷹較小，鑑別須綜合體型及羽色；AI 圖不等比例，並非精確鑑別圖。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.22,
+      0.08,
+      0.5,
+      0.27
+    ],
+    [
+      0.19,
+      0.085,
+      0.48,
+      0.275
+    ],
+    [
+      0.27,
+      0.24,
+      0.51,
+      0.42
+    ],
+    [
+      0.6,
+      0.7,
+      0.82,
+      0.89
+    ]
+  ],
+  "featureLabels": [
+    "白色眉紋",
+    "黃色虹膜",
+    "胸腹橫紋",
+    "尾部橫紋"
+  ],
+  "featureNotes": [
+    "成雌白色眉紋常較明顯。",
+    "圖示黃色眼睛。",
+    "成雌下體灰褐色橫紋。",
+    "尾羽深淺橫紋與方尾示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "ESP",
+      "DEU",
+      "SWE",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "CHN",
+      "JPN"
+    ],
+    "note": "Selected breeding/resident countries only; not full-country occupancy, complete distribution, or seasonal boundaries."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/eurspa1",
+      "use": "Cornell 2025 LC, identification and food."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025600",
+      "use": "HKBWS 28–40 cm, identification, range, Hong Kong occurrence."
+    },
+    {
+      "url": "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=130488",
+      "use": "Naturalis body length 28–38 cm; wingspan 60–75 cm."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025400",
+      "use": "Japanese Sparrowhawk comparison."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and classification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "runtime 60 cm length is discrepant, diet caveats and island conservation context."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores with affected v/o withheld."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "diet and habitat tags, 60 cm length."
+    }
+  ],
+  "notes": [
+    "成雌主圖對照同種成雄與日本松雀鷹成雌，不等比例；AI 圖非精確鑑別，眉紋和尾紋僅示意。",
+    "HKBWS 香港秋季稀少過境，冬春罕見；Cornell IUCN 2025 LC。",
+    "runtime 60 cm 體長與 HKBWS 28–40 cm 身長明顯不符，來源待核；v=4.4 及依賴它的 o=3.5 暫遮蔽，不重算。",
+    "食性標籤含 insect 但 cardCopy 表示極少取食昆蟲，又未反映鳥類獵物；a 沿 runtime 並非完整食性評估。c=3 是含特定島嶼亞種威脅文字的趣味分，非全球 IUCN 類別。",
+    "AI 圖僅基本目視、非鳥類專家認證；地圖只顯示部分國家，不表示各國全境或季節範圍。"
+  ],
+  "withheldScores": {
+    "v": "runtime 使用 cardCopy.length 60 cm，與 HKBWS 28–40 cm 及 Naturalis 28–38 cm 身長顯著不符；來源待核。",
+    "o": "runtime 綜合分依賴受體長輸入影響之 v，暫遮蔽待核，不重算。"
+  }
+}

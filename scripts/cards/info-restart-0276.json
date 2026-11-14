@@ -1,0 +1,172 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0276",
+  "name": "草鴞",
+  "scientificName": "Tyto longimembris",
+  "illustrationTaxon": "Adult-like Australasian Grass-Owl Tyto longimembris, AI illustration visually checked, not independently expert certified; legs are exaggerated.",
+  "similarSpecies": [
+    {
+      "zh": "東方倉鴞",
+      "scientificName": "Tyto javanica",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "面盤通常較白，腿較短；色澤各地有變化。採 eBird 2024 拆分分類。"
+    },
+    {
+      "zh": "栗鴞",
+      "scientificName": "Phodilus badius",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "頭形有角，短耳簇及栗色上體；AI 耳簇與尾偏長，非精確鑑別。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.21,
+      0.055,
+      0.59,
+      0.285
+    ],
+    [
+      0.47,
+      0.29,
+      0.8,
+      0.51
+    ],
+    [
+      0.28,
+      0.34,
+      0.5,
+      0.52
+    ],
+    [
+      0.37,
+      0.67,
+      0.64,
+      0.89
+    ]
+  ],
+  "featureLabels": [
+    "心形面盤",
+    "褐翼淡斑",
+    "淡色下體",
+    "長腿裸跗蹠"
+  ],
+  "featureNotes": [
+    "灰褐心形面盤與深色眼、暗色邊緣示意。",
+    "深褐翼羽帶黃褐與白色斑點示意。",
+    "淡色下體及少量斑點示意；畫中羽毛線條非精確紋理。",
+    "淡色跗蹠裸露示意；生成圖長腿比例可能誇張。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "TWN",
+      "PHL",
+      "IDN",
+      "PNG",
+      "AUS",
+      "NCL",
+      "FJI"
+    ],
+    "note": "Selected countries/territories across patchy native range; shading does not represent whole-country occupancy or a complete range."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/ausgro1",
+      "use": "Cornell identification, tall grass habitat and global IUCN 2025 LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0190/026600",
+      "use": "HKBWS 32–38 cm, dark eyes, long legs, HK rare winter visitor and spring migrant, range."
+    },
+    {
+      "url": "https://www.owlpages.com/owls/species.php?s=220",
+      "use": "Broader 32–42 cm species range, rodent prey and ground nesting in tall grass."
+    },
+    {
+      "url": "https://ebird.org/species/eabowl1",
+      "use": "Eastern Barn Owl has generally brighter white face."
+    },
+    {
+      "url": "https://science.ebird.org/it/use-ebird-data/the-/2024-ebird-taxonomy-update",
+      "use": "eBird 2024 splits Eastern Barn Owl as Tyto javanica."
+    },
+    {
+      "url": "https://ebird.org/species/orbowl1/TH-90",
+      "use": "Oriental Bay-Owl head and short rounded ear tufts."
+    },
+    {
+      "url": "https://www.environment.nsw.gov.au/threatenedspeciesapp/VegSpecies.aspx?vegName=Heathlands&habitat=F",
+      "use": "NSW regional vulnerable status distinct from global LC."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Six runtime scores; affected a/r/o withheld without recalculation."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "35 cm midpoint, rodent and erroneous plant diet tag, wetland habitat tag."
+    },
+    {
+      "path": "scripts/cards/build-explorer-data.mjs",
+      "use": "Plant regex matches 草 in species name 草鴞 in diet text."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Chinese voice truncated and in highlights; NSW regional conservation text."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and runtime classification."
+    }
+  ],
+  "notes": [
+    "成鳥樣貌主圖對照東方倉鴞與栗鴞；插圖不等比例、非鳥類專家認證。草鴞腿部、栗鴞耳簇及尾羽比例可能誇張，不能單憑示意圖鑑別。",
+    "HKBWS 香港稀有冬候及春季過境、32–38 cm；The Owl Pages 全種 32–42 cm；Cornell 全球 IUCN 2025 LC，新南威爾士州易危屬地方狀態。",
+    "原 plant 食性 tag 由中文 diet 鳥名「草鴞」誤觸；a=3.3 遮蔽。原中文鳴聲句截斷且矛盾，被收入要點並影響 r=1.8，r 遮蔽；o=2.8 一併遮蔽，不重算或修改 runtime。",
+    "i=2、v=3.8、c=3 沿 runtime；v 用 32–38 cm 中點，c 的州級易危屬程式文字趣味分，不是全球 IUCN。地圖只示部分國家。"
+  ],
+  "withheldScores": {
+    "a": "原 a=3.3 計入 plant 食性標籤；diet 句鳥名「草鴞」的「草」誤觸植物規則，非食草證據，暫遮蔽待核。",
+    "r": "原 r=1.8 計入要點；要點含截斷且互相矛盾的鳴聲句，不能視為已核實，暫遮蔽待核。",
+    "o": "原 o=2.8 包含受錯誤 plant 標籤及不可靠要點影響的 a/r，遮蔽、不重算。"
+  }
+}

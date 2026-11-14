@@ -1,0 +1,165 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0273",
+  "name": "栗鳶",
+  "scientificName": "Haliastur indus",
+  "illustrationTaxon": "Adult-like Brahminy Kite Haliastur indus, AI illustration visually checked, not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "栗鳶幼鳥",
+      "scientificName": "Haliastur indus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "同種幼鳥褐色、淡頭及胸部縱紋；折翼圖無法展示飛行時翼底淡斑，AI 圖不等比例。"
+    },
+    {
+      "zh": "黑鳶",
+      "scientificName": "Milvus migrans",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "黑鳶整體褐色、尾淺叉，栗鳶成鳥白頭胸栗身；AI 圖尾叉偏深，不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.13,
+      0.07,
+      0.51,
+      0.3
+    ],
+    [
+      0.23,
+      0.2,
+      0.49,
+      0.42
+    ],
+    [
+      0.43,
+      0.29,
+      0.74,
+      0.53
+    ],
+    [
+      0.59,
+      0.69,
+      0.85,
+      0.91
+    ]
+  ],
+  "featureLabels": [
+    "白色頭部",
+    "白色胸頸",
+    "栗色翼羽",
+    "栗色尾羽"
+  ],
+  "featureNotes": [
+    "成鳥頭部白色有細紋，嘴部淺色。",
+    "成鳥頸胸白色有細紋。",
+    "折翼栗色羽毛示意。",
+    "尾羽栗色、圓尾示意；AI 不能作解剖鑑別。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "PAK",
+      "LKA",
+      "BGD",
+      "MMR",
+      "THA",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "CHN",
+      "AUS",
+      "PNG"
+    ],
+    "note": "Selected Asian and Australasian native-range countries only; not full-country occupancy, complete distribution, or seasonal boundaries; Hong Kong accidental occurrence is not a proxy for native range."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/brakit1",
+      "use": "Cornell identification, range habitat and global IUCN 2025 LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/026200",
+      "use": "HKBWS 45–51 cm length, adult/juvenile identification, range and accidental Hong Kong occurrence, global conservation."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/026100",
+      "use": "HKBWS Black Kite comparison and shallow forked tail."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Brahminy_kite",
+      "use": "Naming history distinguishes Brisson, who used the French name, from Buffon; also seasonal movements and food."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime score inputs; IUCN 紅色名錄 name erroneously triggers 瀕危 threat keyword; migration field describes range, etymology misattributes French name."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 399.8 mm used for estimated visibility length."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Diet fish/crustacean and wetland/water habitat tags; no body length."
+    },
+    {
+      "path": "src/lib/dexScore.ts",
+      "use": "Visibility estimate, research presence and threat keyword calculations."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores and vEst; invalid-derived fields withheld without recalculation."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy and scientific name."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name."
+    }
+  ],
+  "notes": [
+    "成鳥主圖對照同種幼鳥與黑鳶，AI 圖不等比例、非專家認證。黑鳶圖尾叉偏深；幼鳥折翼圖無法顯示飛行翼底淡斑，不能單靠插圖鑑別。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 香港迷鳥，紀錄均在后海灣。",
+    "AVONET 翼長 399.8 mm × 0.22 估身長 87.956 cm，顯著高於 HKBWS 45–51 cm，v=4.9 及受影響綜合 o=3.7 暫遮蔽、不重算，仍標示原觀賞分含體長估算。",
+    "runtime c=3 因無危文句中的「瀕危物種紅色名錄」誤觸瀕危關鍵字，並非受脅描述；r=4.8 的遷徙欄位只有範圍、語源欄把法語名稱使用者 Brisson 誤歸 Buffon，均暫遮蔽。",
+    "i/a 沿 runtime；a 基於 fish/crustacean 和 wetland/water 標籤，並非完整生態評估。世界底圖綠色僅部分分佈國家，非國境全境或季節範圍。"
+  ],
+  "withheldScores": {
+    "v": "翼長 399.8 mm × 0.22 估身長 87.956 cm，顯著大於 HKBWS 45–51 cm。",
+    "r": "遷徙欄位只有分佈範圍，語源欄把法語名稱使用者誤歸 Buffon，presence-only 計分使用錯置內容。",
+    "c": "無危文句中的「瀕危物種紅色名錄」誤觸瀕危受脅關鍵字，並非該種受脅敘述。",
+    "o": "綜合分依賴受錯誤輸入影響的 v/r/c，暫遮蔽不重算。"
+  }
+}

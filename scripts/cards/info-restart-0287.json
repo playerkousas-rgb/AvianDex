@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0287",
+  "name": "北鷹鴞",
+  "scientificName": "Ninox japonica",
+  "illustrationTaxon": "Adult-like Northern Boobook Ninox japonica; sex and subspecies not verified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "褐鷹鴞",
+      "scientificName": "Ninox scutulata",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "曾與北鷹鴞合併分類，外形極相似，鳴聲及分佈有差異；AI 圖不可單獨鑑別。"
+    },
+    {
+      "zh": "斑頭鵂鶹",
+      "scientificName": "Glaucidium cuculoides",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "上體及胸部有淡色橫紋，北鷹鴞以深色縱斑為主；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.34,
+      0.06,
+      0.76,
+      0.34
+    ],
+    [
+      0.36,
+      0.11,
+      0.74,
+      0.363
+    ],
+    [
+      0.265,
+      0.32,
+      0.51,
+      0.483
+    ],
+    [
+      0.32,
+      0.29,
+      0.68,
+      0.53
+    ]
+  ],
+  "featureLabels": [
+    "圓頭無耳簇",
+    "金黃色眼睛",
+    "褐色翼羽",
+    "腹部褐縱斑"
+  ],
+  "featureNotes": [
+    "圓頭無耳簇示意。",
+    "金黃色眼睛。",
+    "褐色翼羽示意；主圖嘴上白斑小而不宜作特徵標示。",
+    "淺色腹部褐色縱斑，羽紋僅示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "TWN",
+      "PHL",
+      "IDN",
+      "THA"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0190/026700",
+      "use": "29–33 cm, HK scarce migrant, 3 subspecies and breeding/winter distribution."
+    },
+    {
+      "url": "https://ebird.org/species/norboo1",
+      "use": "Cornell IUCN 2025 LC and brown hawk-like plumage."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Northern_boobook",
+      "use": "Historical split from N. scutulata and different subspecies treatment."
+    },
+    {
+      "url": "https://ebird.org/species/brnhao1",
+      "use": "Brown Boobook comparison and difficulty of similar plumages."
+    },
+    {
+      "url": "https://zh.wikipedia.org/zh-tw/褐鷹鴞",
+      "use": "Traditional Chinese comparison name 褐鷹鴞, taxonomy varies."
+    },
+    {
+      "url": "https://ebird.org/species/asbowl1",
+      "use": "Asian Barred Owlet comparison."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "runtime taxonomy"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "no score record for 0287, all pending"
+    }
+  ],
+  "notes": [
+    "AI 主圖成年型、性別及亞種不明，嘴上白斑偏小，腿爪及尾羽形態不保證正確；褐鷹鴞圖極相似不可用作獨立鑑別，斑頭鵂鶹重用 0283 插圖，不等比例；AI 非專家認證。",
+    "Cornell 2025 全球 LC；HKBWS 29–33 cm、香港稀少過境主要春季，HKBWS 稱全球趨勢穩定，香港過境與全球趨勢分開。HKBWS 名鷹鴞，app 現稱北鷹鴞，以學名 Ninox japonica 配對。",
+    "dexScores 無本 ID，六項全待查，不從 LC 或其他來源補算；世界圖綠色僅部分記錄國家，不代表全境或完整季節。",
+    "HKBWS 認三個亞種，Wikipedia 文章列兩個，分類處理差異未解；曾與褐鷹鴞合併，避免套用舊合併分佈作完整現時分佈。"
+  ],
+  "withheldScores": {}
+}
