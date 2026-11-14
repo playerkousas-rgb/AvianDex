@@ -1,0 +1,146 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "id": "0234",
+  "name": "卷羽鵜鶘",
+  "scientificName": "Pelecanus crispus",
+  "illustrationTaxon": "Adult breeding plumage, orange throat pouch; AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白鵜鶘",
+      "scientificName": "Pelecanus onocrotalus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥粉紅眼周裸皮及粉紅腳，喉囊顏色隨季節變化。"
+    },
+    {
+      "zh": "斑嘴鵜鶘",
+      "scientificName": "Pelecanus philippensis",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "上嘴有深色斑點、後頸較深，插圖斑點僅示意。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.28,
+      0.07,
+      0.64,
+      0.31
+    ],
+    [
+      0.04,
+      0.15,
+      0.53,
+      0.48
+    ],
+    [
+      0.15,
+      0.18,
+      0.49,
+      0.5
+    ],
+    [
+      0.33,
+      0.68,
+      0.69,
+      0.93
+    ]
+  ],
+  "featureLabels": [
+    "捲曲冠羽",
+    "淡色嘴局部",
+    "橙色喉囊",
+    "灰色足部"
+  ],
+  "featureNotes": [
+    "卷曲冠羽及淡色眼睛，羽毛造型為 AI 示意。",
+    "淡色長嘴局部，嘴尖被圓框裁切；橙色喉囊在下方。",
+    "繁殖期橙色喉囊局部，非繁殖期偏黃。",
+    "灰色足部，足趾與蹼為 AI 簡化，不作解剖圖。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "MNG",
+      "KAZ",
+      "GRC"
+    ],
+    "note": "Selected partial country overview; no claim of full-country occurrence; seasons not shown."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/dalpel1",
+      "use": "Cornell identification and IUCN; HKBWS local status and breeding/winter range; comparison."
+    },
+    {
+      "url": "https://birdsoftheworld.org/bow/species/dalpel1/cur/introduction",
+      "use": "Cornell identification and IUCN; HKBWS local status and breeding/winter range; comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0170/023800",
+      "use": "Cornell identification and IUCN; HKBWS local status and breeding/winter range; comparison."
+    },
+    {
+      "url": "https://ebird.org/species/grwpel1",
+      "use": "Cornell identification and IUCN; HKBWS local status and breeding/winter range; comparison."
+    },
+    {
+      "url": "https://ebird.org/species/spbpel1",
+      "use": "Cornell identification and IUCN; HKBWS local status and breeding/winter range; comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and outdated VU"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores; affected values withheld"
+    }
+  ],
+  "withheldScores": {
+    "i": "runtime 以 cardCopy VU 得 i=3.8；Cornell eBird IUCN 2025 為 NT，舊分不採用。",
+    "c": "runtime c=4 含 VU 狀態輸入，與 Cornell NT 不一致，不自行重算。",
+    "o": "runtime o=3.6 含受 VU 影響的 i 和 c，不自行重算。"
+  },
+  "notes": [
+    "成鳥繁殖期橙色喉囊，其他季節顏色不同；比較鳥不等比例。",
+    "HKBWS 描述香港昔日冬候，常規越冬紀錄已消失，仍可能有偶發個體；與全球狀態分開。",
+    "AI 圖及足部僅供示意，非鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

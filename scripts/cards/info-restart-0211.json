@@ -1,0 +1,134 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0211",
+  "name": "粉紅燕鷗",
+  "scientificName": "Sterna dougallii",
+  "illustrationTaxon": "Adult early breeding plumage, sex unspecified; blackish bill and pale pink flush. AI illustration visually checked.",
+  "similarSpecies": [
+    {
+      "zh": "黑枕燕鷗",
+      "scientificName": "Sterna sumatrana",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "白頂黑眼罩與黑枕，非整個黑頂。"
+    },
+    {
+      "zh": "普通燕鷗",
+      "scientificName": "Sterna hirundo",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "深嘴深腳型普通燕鷗；本種繁殖初期通常橙紅腳。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.15,
+      0.1,
+      0.38,
+      0.445
+    ],
+    [
+      0.045,
+      0.09,
+      0.3,
+      0.465
+    ],
+    [
+      0.17,
+      0.3,
+      0.36,
+      0.585
+    ],
+    [
+      0.3,
+      0.57,
+      0.5,
+      0.87
+    ]
+  ],
+  "featureLabels": [
+    "黑冠與白頰",
+    "細長黑嘴",
+    "淡粉色胸部",
+    "橙紅色腳"
+  ],
+  "featureNotes": [
+    "繁殖成鳥黑冠延至後頸，白頰可見。",
+    "繁殖初期黑嘴，嘴尖可見。",
+    "近景淡粉胸色僅作初期繁殖羽示意。",
+    "橙紅腳部，趾尖可能受圓罩部分遮擋。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "AUS",
+      "IDN",
+      "GBR"
+    ],
+    "note": "Partial country overview from cited species range; selected countries are not necessarily occupied in full; not a marine range map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018500",
+      "use": "33–41 cm; early breeding blackish bill and pink flush, orange legs, black cap; later bill red; LC unknown."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Text and IUCN; discrepancies recorded in notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime interest scores; no inference."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018600",
+      "use": "Black-naped tern adult comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018700",
+      "use": "Common tern dark-billed comparison."
+    }
+  ],
+  "notes": [
+    "本圖為繁殖初期成鳥，黑嘴與母本稱嘴更多紅色的季節差異；繁殖後期嘴變紅。",
+    "母本體長 33–36 cm，HKBWS 33–41 cm；不印體長，未修改 runtime。",
+    "比較鳥不等比例，素材經目視核對，非鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

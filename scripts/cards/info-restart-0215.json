@@ -1,0 +1,138 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0215",
+  "name": "白尾鸏",
+  "scientificName": "Phaethon lepturus",
+  "illustrationTaxon": "Adult in flight, viewed from above; long white central tail streamers, yellow-orange bill. Sex unspecified. AI illustration, visually checked.",
+  "similarSpecies": [
+    {
+      "zh": "紅嘴鸏",
+      "scientificName": "Phaethon aethereus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "紅嘴、白色長尾羽，成鳥背部細黑橫斑。"
+    },
+    {
+      "zh": "紅尾鸏",
+      "scientificName": "Phaethon rubricauda",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥紅嘴、紅色中央長尾羽，白色翼。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.53,
+      0.29,
+      0.69,
+      0.52
+    ],
+    [
+      0.3,
+      0.07,
+      0.53,
+      0.49
+    ],
+    [
+      0.12,
+      0.56,
+      0.45,
+      0.91
+    ],
+    [
+      0.62,
+      0.54,
+      0.79,
+      0.9
+    ]
+  ],
+  "featureLabels": [
+    "黃橙色嘴",
+    "翼上黑色帶",
+    "白色中央尾羽",
+    "黑色外側初級飛羽"
+  ],
+  "featureNotes": [
+    "成鳥的黃橙色嘴與眼紋，嘴尖接近圓緣。",
+    "展翼的黑色翼帶，AI 圖黑帶與外初級羽相連，屬簡化圖案，勿當作精確羽列圖。",
+    "長中央尾羽局部，白色線條較抽象，尾尖不在此圓內。",
+    "展翼外側黑色初級飛羽局部，羽尖部分被圓罩截去。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "USA",
+      "AUS",
+      "IDN",
+      "JPN"
+    ],
+    "note": "Selected partial country overview; not a distribution polygon, marine range, or whole-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019500",
+      "use": "HKBWS identification, occurrence, geographic range and IUCN."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/White-tailed_Tropicbird/id",
+      "use": "Adult wing and face dark markings, geographic bill variation; juveniles lack streamers."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Red-tailed_Tropicbird/id",
+      "use": "Adult red tail streamers, red bill, white wings."
+    },
+    {
+      "url": "https://birdfinding.info/red-billed-tropicbird/",
+      "use": "Red-billed adult has red bill, fine barring on upperparts, white tail streamers."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "IUCN, mother copy, disagreements in notes"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores; no inference"
+    }
+  ],
+  "notes": [
+    "香港唯一紀錄是幼鳥；此圖成鳥長尾羽不代表該香港紀錄。",
+    "母本嘴 callout 文字「加入了紅嘴熱帶鳥羣體」不屬喙描述；卡面只列目視黃橙嘴，未修改 runtime。",
+    "vEst=1，觀賞值含體長估算；白尾長羽特徵與翼紋示意，非精確羽列。",
+    "比較鳥不等比例，AI 圖經基本目視，未經鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

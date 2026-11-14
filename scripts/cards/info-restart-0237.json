@@ -1,0 +1,139 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "id": "0237",
+  "name": "紫背葦鳽",
+  "scientificName": "Botaurus eurhythmus",
+  "illustrationTaxon": "Adult male-like Schrenck’s Bittern, AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "黃葦鳽",
+      "scientificName": "Botaurus sinensis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥身體較淡黃褐、喙相對細長。"
+    },
+    {
+      "zh": "栗葦鳽",
+      "scientificName": "Botaurus cinnamomeus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥冠及背鮮栗色，沒有紫背葦鳽的黑冠。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.17,
+      0.12,
+      0.53,
+      0.31
+    ],
+    [
+      0.25,
+      0.24,
+      0.52,
+      0.48
+    ],
+    [
+      0.52,
+      0.36,
+      0.83,
+      0.57
+    ],
+    [
+      0.37,
+      0.7,
+      0.77,
+      0.9
+    ]
+  ],
+  "featureLabels": [
+    "深色頭頂",
+    "淡色喉部",
+    "栗褐色翼",
+    "黃綠色足"
+  ],
+  "featureNotes": [
+    "深色冠與嘴基部；嘴尖被裁切。",
+    "淡色喉與深色中央線局部；AI 示意。",
+    "栗褐色折翼局部，飛行羽對比不由此圖顯示。",
+    "足和長趾局部，AI 簡化非解剖圖。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "RUS",
+      "KOR",
+      "JPN",
+      "PHL",
+      "IDN"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/schbit1",
+      "use": "Cornell identification and IUCN NT."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0170/022200",
+      "use": "HKBWS local status, identification and range; older LC differs from Cornell NT."
+    },
+    {
+      "url": "https://ebird.org/species/yelbit",
+      "use": "Cornell comparison."
+    },
+    {
+      "url": "https://ebird.org/species/cinbit1",
+      "use": "Cornell comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    }
+  ],
+  "notes": [
+    "雄鳥示意，雌鳥及幼鳥上體有淡斑；比較鳥不等比例。",
+    "Cornell NT；HKBWS 2024 仍列 LC，採 Cornell 狀態；香港春季稀少過境、秋季罕見。",
+    "AI 圖僅基本目視、非鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

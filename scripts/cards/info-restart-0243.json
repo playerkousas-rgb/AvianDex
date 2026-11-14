@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "UNKNOWN",
+    "zh": "資料待查",
+    "assessmentNote": "拆分後保育狀態待核"
+  },
+  "id": "0243",
+  "name": "中白鷺",
+  "scientificName": "Ardea intermedia",
+  "illustrationTaxon": "Nonbreeding adult-like Medium Egret; AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "大白鷺",
+      "scientificName": "Ardea alba",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "通常更高，嘴較長，嘴角延至眼後；圖中嘴角未清晰呈現。"
+    },
+    {
+      "zh": "小白鷺",
+      "scientificName": "Egretta garzetta",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "通常更小、黑嘴黑腿黃足；插圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.12,
+      0.09,
+      0.48,
+      0.27
+    ],
+    [
+      0.24,
+      0.25,
+      0.51,
+      0.46
+    ],
+    [
+      0.46,
+      0.36,
+      0.77,
+      0.57
+    ],
+    [
+      0.32,
+      0.73,
+      0.7,
+      0.94
+    ]
+  ],
+  "featureLabels": [
+    "黃色嘴部",
+    "白色彎頸",
+    "白色翼羽",
+    "深色腿足"
+  ],
+  "featureNotes": [
+    "非繁殖羽黃色嘴部與圓頭；嘴尖被裁切，圖例嘴角不可作精確鑑別。",
+    "白色彎頸局部。",
+    "白色翼羽局部，細節為 AI 示意。",
+    "深色腿足局部；趾尖被裁切且非解剖圖。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IND",
+      "JPN",
+      "THA",
+      "VNM",
+      "PHL"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/integr1",
+      "use": "Cornell Asian Medium Egret identification; page has no IUCN category shown."
+    },
+    {
+      "url": "https://ebird.org/news/2023-taxonomy-update",
+      "use": "Cornell taxonomic split into Medium, Plumed and Yellow-billed Egrets."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0170/023400",
+      "use": "HKBWS local status and identification; old broad-species LC and range."
+    },
+    {
+      "url": "https://ebird.org/species/greegr",
+      "use": "Cornell Great Egret comparison."
+    },
+    {
+      "url": "https://ebird.org/species/litegr",
+      "use": "Cornell Little Egret comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    }
+  ],
+  "notes": [
+    "Cornell 2023 拆分中白鷺複合種；eBird 亞洲種頁未顯示 IUCN 等級，HKBWS 舊頁的 LC 屬拆分前合併評估，因此暫標待核。",
+    "只選亞洲部分分佈國家；不沿用舊複合種的非洲／澳洲範圍。",
+    "黑腿白身非繁殖羽示意；嘴角未清楚，不能用作精確鑑別；比較鳥不等比例。",
+    "AI 圖僅基本目視，非鳥類專家認證。只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ],
+  "withheldScores": {
+    "i": "runtime 的 i=2 源自舊 cardCopy LC，該等級屬拆分前複合種，亞洲種狀態待核。",
+    "c": "runtime 的 c=1.2 包含舊 IUCN 輸入，亞洲種狀態待核。",
+    "o": "runtime o=2.5 受上述 i/c 輸入影響，不自行重算。"
+  }
+}

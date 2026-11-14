@@ -1,0 +1,131 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0207",
+  "name": "鷗嘴噪鷗",
+  "scientificName": "Gelochelidon nilotica",
+  "illustrationTaxon": "Adult breeding plumage; sex unspecified; AI-generated illustration, visually checked against cited sources.",
+  "similarSpecies": [
+    {
+      "zh": "紅嘴巨燕鷗",
+      "scientificName": "Hydroprogne caspia",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "紅嘴巨燕鷗具大型紅嘴。"
+    },
+    {
+      "zh": "普通燕鷗",
+      "scientificName": "Sterna hirundo",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "示意紅嘴、紅腳型普通燕鷗；香港多見黑嘴黑腳型。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.025,
+      0.09,
+      0.28,
+      0.47
+    ],
+    [
+      0.15,
+      0.13,
+      0.38,
+      0.38
+    ],
+    [
+      0.31,
+      0.32,
+      0.6,
+      0.62
+    ],
+    [
+      0.29,
+      0.39,
+      0.47,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "粗黑嘴",
+    "黑色頭冠",
+    "灰色翼上覆羽",
+    "白色胸部"
+  ],
+  "featureNotes": [
+    "完整粗黑嘴可見，修正版無錯誤白額。",
+    "黑冠延伸至喙基。",
+    "折翼灰色覆羽局部。",
+    "白胸局部。"
+  ],
+  "featureSources": [
+    "features-corrected.png",
+    "features-corrected.png",
+    "features-corrected.png",
+    "features-corrected.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IND",
+      "ESP",
+      "USA"
+    ],
+    "note": "Partial country overview from cited species range; not all selected countries are entirely occupied; does not map marine range."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/017800",
+      "use": "33–38 cm, breeding adult stout black bill, black crown, HK common spring migrant, LC declining."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018700",
+      "use": "Common tern comparison: HK most frequent longipennis has dark bill and legs; red-billed red-legged birds occasionally reported."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Text/IUCN source where available; discrepancies recorded in notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name, order and family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime score; missing values not inferred."
+    }
+  ],
+  "notes": [
+    "原生成主圖與近景錯誤出現白額，不採用；修正版已目視核對。",
+    "母本 33–42 cm，HKBWS 33–38 cm；不印體長、不改 runtime。",
+    "普通燕鷗紅嘴紅腳示意型並非香港最常見 longipennis。",
+    "比較鳥非等比例。",
+    "AI illustration inspected visually, not independently verified by ornithologist.",
+    "只交付 Drive 單張 AVIF；不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

@@ -60,6 +60,15 @@ def range_map():
         polygons = geom['coordinates'] if geom['type'] == 'MultiPolygon' else [geom['coordinates']]
         for polygon in polygons:
             draw.polygon([project(p) for p in polygon[0]], fill='#7da688' if iso in selected else '#e6e4d9', outline='#9baca7', width=2)
+    # Optional explicitly sourced point locations preserve small islands that
+    # are absent from the low-resolution country geometry. They are not a
+    # substitute for occurrence polygons or an indication of marine range.
+    for marker in SPEC['rangeMap'].get('pointMarkers', []):
+        lon, lat = marker['lon'], marker['lat']
+        assert west <= lon <= east and south <= lat <= north
+        assert marker.get('label') and marker.get('source')
+        x, y = project((lon, lat))
+        draw.ellipse((x-8, y-8, x+8, y+8), fill='#b6372d', outline='#fff8e8', width=2)
     draw.rectangle((0, plot_bottom, width, height), fill='#173446')
     ff = lambda size: ImageFont.truetype(str(Path(composer.FONT_DIR) / 'NotoSansTC_400Regular.ttf'), size)
     draw.text((22, plot_bottom+10), SPEC['rangeMap']['caption'], font=ff(34), fill='#f4eede')
@@ -75,13 +84,18 @@ def render():
     tax = json.loads((ROOT / 'src/data/birdTaxonomy.json').read_text())[SPEC['id']]
     # Some species have no score record at all: all axes/overall remain 待查.
     scores = json.loads((ROOT / 'src/data/dexScores.json').read_text())['scores'].get(SPEC['id'], {})
+    # An explicitly reviewed bad input may invalidate a derived runtime score.
+    # Never silently change its value: hide only the named affected fields and
+    # document the reason in the spec. Runtime data remains untouched.
+    withheld = SPEC.get('withheldScores', {})
+    assert isinstance(withheld, dict) and all(k in ('i', 'a', 'r', 'c', 'v', 'o') and isinstance(v, str) and v.strip() for k, v in withheld.items())
     assert bird['name'] == SPEC['name'] and tax['sciName'] == SPEC['scientificName']
     genus, epithet = tax['sciName'].split(' ', 1)
     f = {'id': SPEC['id'], 'z': bird['name'], 'e': tax['comName'], 's': tax['sciName'],
          'order': [tax['orderZh'], tax['order']], 'family': [tax['familyZh'], tax['family']],
          'genus': genus, 'epithet': epithet, 'iucn': SPEC['iucn'],
          'sim': [s['zh'] for s in SPEC['similarSpecies']],
-         'score': {k: f'{scores[k]:.1f}' if scores.get(k) is not None else ''
+         'score': {k: f'{scores[k]:.1f}' if scores.get(k) is not None and k not in withheld else ''
                    for k in ['i', 'a', 'r', 'c', 'v', 'o']}}
     # A deterministic working canvas holds separate assets at the exact existing slot coordinates.
     canvas = composer.compose_slim(f, None, 1)
@@ -127,8 +141,13 @@ def render():
     if not f['score']['o']:
         pending_font = ImageFont.truetype(str(Path(composer.FONT_DIR)/'NotoSansTC_400Regular.ttf'), 23)
         draw.text((84,1040), '綜合評分待查', font=pending_font, fill='#d1c7a9')
-    if scores.get('vEst'):
-        draw.text((64,1104), '觀賞值含體長估算', font=font, fill='#d1c7a9')
+    score_notes = []
+    if withheld:
+        score_notes.append('部分評分待核')
+    if scores.get('vEst') and f['score']['v']:
+        score_notes.append('觀賞值含體長估算')
+    if score_notes:
+        draw.text((64,1104), '；'.join(score_notes), font=font, fill='#d1c7a9')
     if SPEC['iucn'].get('assessmentNote'):
         draw.text((64,1076), SPEC['iucn']['assessmentNote'], font=font, fill='#d1c7a9')
     result.save(OUT/f'preview-{ID}.webp', quality=95, method=6)
@@ -143,7 +162,8 @@ def render():
               'objectKey':f'aviandex/{ID}.avif','layout':'slim','width':1024,'height':1536,
               'bytes':len(payload),'sha256':hashlib.sha256(payload).hexdigest(),
               'r2UploadPerformed':False,'status':'review_before_upload','score':f['score'],
-              'missingScores':missing_scores,'spec':SPEC}
+              'missingScores':[k for k in missing_scores if scores.get(k) is None],
+              'withheldScores':withheld,'spec':SPEC}
     (OUT/'manifest.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n')
     (OUT/'SHA256SUMS').write_text(f"{record['sha256']}  aviandex/{ID}.avif\n")
     (OUT/'README-先核對再上載.txt').write_text(f'''AvianDex 資訊卡重新製作 — {ID} {bird['name']}

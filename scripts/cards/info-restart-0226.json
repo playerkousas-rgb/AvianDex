@@ -1,0 +1,138 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0226",
+  "name": "白斑軍艦鳥",
+  "scientificName": "Fregata ariel",
+  "illustrationTaxon": "Adult male in flight, viewed from below; AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白腹軍艦鳥",
+      "scientificName": "Fregata andrewsi",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥雄鳥白色腹斑；白色腋斑並非每隻雄鳥都有。聖誕島在世界底圖尺度未顯示；海洋分佈亦未顯示，不將澳洲大陸誤標為該島繁殖範圍。"
+    },
+    {
+      "zh": "黑腹軍艦鳥",
+      "scientificName": "Fregata minor",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "主圖成鳥雄鳥腹部及腋下黑色；雌鳥白胸，幼鳥與雄鳥不同。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.48,
+      0.32,
+      0.63,
+      0.55
+    ],
+    [
+      0.38,
+      0.36,
+      0.53,
+      0.58
+    ],
+    [
+      0.25,
+      0.6,
+      0.47,
+      0.91
+    ],
+    [
+      0.59,
+      0.45,
+      0.8,
+      0.75
+    ]
+  ],
+  "featureLabels": [
+    "鉤形長嘴",
+    "翼下白色腋斑",
+    "長叉尾",
+    "黑色翼羽"
+  ],
+  "featureNotes": [
+    "雄鳥嘴及紅色喉囊，嘴尖靠圓緣。",
+    "白色腋斑近身體，形狀僅作示意。",
+    "叉尾局部，尖端可能靠圓邊。",
+    "深色翼下羽毛局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AUS"
+    ],
+    "note": "Selected partial overview only, not full-country occupancy or complete distribution; marine ranges and tiny islands not shown."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/lesfri",
+      "use": "Cornell identification, range, global status or comparison; HKBWS local occurrence and identification."
+    },
+    {
+      "url": "https://birdsoftheworld.org/bow/species/lesfri/cur/introduction",
+      "use": "Cornell identification, range, global status or comparison; HKBWS local occurrence and identification."
+    },
+    {
+      "url": "https://ebird.org/species/chifri1",
+      "use": "Cornell identification, range, global status or comparison; HKBWS local occurrence and identification."
+    },
+    {
+      "url": "https://ebird.org/species/grefri",
+      "use": "Cornell identification, range, global status or comparison; HKBWS local occurrence and identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0150/021000",
+      "use": "Cornell identification, range, global status or comparison; HKBWS local occurrence and identification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy / IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    }
+  ],
+  "notes": [
+    "成鳥雄性黑腹、白色腋斑；主圖紅喉囊為未膨脹的簡化圖。",
+    "軍艦鳥鑑別受性別、羽齡及個體變異影響；比較鳥不等比例，不可只憑單一特徵。",
+    "AI 圖經基本目視，未經鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

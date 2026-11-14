@@ -1,0 +1,136 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0217",
+  "name": "太平洋潛鳥",
+  "scientificName": "Gavia pacifica",
+  "illustrationTaxon": "Adult non-breeding plumage, swimming, sex unspecified. AI illustration, visually checked.",
+  "similarSpecies": [
+    {
+      "zh": "紅喉潛鳥",
+      "scientificName": "Gavia stellata",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "冬羽細嘴常上揚、上體有白點。"
+    },
+    {
+      "zh": "黃嘴潛鳥",
+      "scientificName": "Gavia adamsii",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "冬羽粗大淡色嘴和較淡頭頸。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.09,
+      0.2,
+      0.32,
+      0.48
+    ],
+    [
+      0.22,
+      0.18,
+      0.41,
+      0.48
+    ],
+    [
+      0.43,
+      0.4,
+      0.7,
+      0.77
+    ],
+    [
+      0.23,
+      0.4,
+      0.45,
+      0.73
+    ]
+  ],
+  "featureLabels": [
+    "深色直嘴",
+    "深色頭頂",
+    "素灰翼上羽",
+    "白色前頸羽"
+  ],
+  "featureNotes": [
+    "近水平深色嘴與臉部，靠圓緣。",
+    "深色頭頂及眼部，非繁殖羽。",
+    "折翼素灰上體羽毛局部，較抽象。",
+    "水面以上白色前頸，圓罩截去頭部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "USA",
+      "CAN",
+      "RUS",
+      "JPN",
+      "KOR",
+      "CHN",
+      "MEX"
+    ],
+    "note": "Selected partial country overview; not a distribution polygon, marine range, or whole-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019700",
+      "use": "HKBWS identification, occurrence, geographic range and IUCN."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019600",
+      "use": "Loon comparison in non-breeding plumage."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0130/019800",
+      "use": "Loon comparison in non-breeding plumage."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "IUCN, mother copy, disagreements in notes"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores; no inference"
+    }
+  ],
+  "notes": [
+    "本圖冬羽成鳥，母本 look 亦提幼鳥的淡色羽緣；香港唯一紀錄不以本插圖推斷羽齡。",
+    "原候選白色延至後脅易誤導；新圖後脅及尾下深色相連，水面遮擋局部，不聲稱精確展示尾下覆羽。",
+    "比較鳥不等比例，AI 圖經基本目視，未經鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

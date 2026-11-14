@@ -1,0 +1,136 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0233",
+  "name": "暗綠背鸕鷀",
+  "scientificName": "Phalacrocorax capillatus",
+  "illustrationTaxon": "Adult, nonbreeding for 0232 and breeding for 0233; AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "普通鸕鷀",
+      "scientificName": "Phalacrocorax carbo",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "黃喉袋通常較大；圖像不適合比較喉袋後緣角度。"
+    },
+    {
+      "zh": "小鸕鷀",
+      "scientificName": "Microcarbo niger",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小、頭扁嘴短，非等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.02,
+      0.52,
+      0.5
+    ],
+    [
+      0.41,
+      0.34,
+      0.72,
+      0.67
+    ],
+    [
+      0.46,
+      0.57,
+      0.63,
+      0.82
+    ],
+    [
+      0.64,
+      0.7,
+      0.82,
+      0.9
+    ]
+  ],
+  "featureLabels": [
+    "鉤嘴與白喉",
+    "綠色翼羽",
+    "白色股斑",
+    "深色尾羽"
+  ],
+  "featureNotes": [
+    "黃裸皮與白喉僅示意，不精確表達喉袋邊界。",
+    "綠色上翼光澤為示意，顏色隨光線變化。",
+    "繁殖期白色股斑，並非全年特徵。",
+    "深色尾羽局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "JPN",
+      "CHN",
+      "KOR"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/japcor1",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0160/021400",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://ebird.org/species/grecor",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://ebird.org/species/litcor1",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    }
+  ],
+  "notes": [
+    "繁殖期成鳥示意；喉袋及嘴角裸皮形狀精確鑑別十分重要，AI 圖無法作為精密鑑別依據。香港稀少冬候鳥，不等於全球稀少。",
+    "AI 圖只供示意，非鳥類專家認證；比較鳥不等比例。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。",
+    "舊稿黃色喉袋延伸較深，棄用 pixel-first.png，改用 pixel-corrected.png（複製為 pixel.png）；其白喉與嘴角仍非精密羽相圖。"
+  ]
+}

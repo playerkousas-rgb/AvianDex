@@ -1,0 +1,132 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危",
+    "assessmentNote": "英文母本及 HKBWS：VU"
+  },
+  "id": "0206",
+  "name": "白腰燕鷗",
+  "scientificName": "Onychoprion aleuticus",
+  "illustrationTaxon": "Adult breeding plumage; sex unspecified; AI-generated illustration, visually checked against cited sources.",
+  "similarSpecies": [
+    {
+      "zh": "褐翅燕鷗",
+      "scientificName": "Onychoprion anaethetus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "褐翅燕鷗褐灰背、白眉延伸至眼後。"
+    },
+    {
+      "zh": "烏燕鷗",
+      "scientificName": "Onychoprion fuscatus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "烏燕鷗上體黑褐、下體白。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.21,
+      0.2,
+      0.39,
+      0.47
+    ],
+    [
+      0.6,
+      0.48,
+      0.79,
+      0.69
+    ],
+    [
+      0.27,
+      0.37,
+      0.45,
+      0.66
+    ],
+    [
+      0.11,
+      0.11,
+      0.35,
+      0.47
+    ]
+  ],
+  "featureLabels": [
+    "白額與黑頂",
+    "白色腰部",
+    "灰色胸部",
+    "尖黑嘴"
+  ],
+  "featureNotes": [
+    "白額及黑頂可見。",
+    "白腰在灰背與尾之間，圖像示意且折翼遮擋部分。",
+    "灰胸局部。",
+    "完整嘴尖可見。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "USA",
+      "RUS",
+      "CHN",
+      "IDN"
+    ],
+    "note": "Partial country overview from cited species range; not all selected countries are entirely occupied; does not map marine range."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018200",
+      "use": "Breeding adult white forehead, grey breast and white rump; migrates via HK; 32–38 cm, VU, declining."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018700",
+      "use": "Common tern comparison: HK most frequent longipennis has dark bill and legs; red-billed red-legged birds occasionally reported."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Text/IUCN source where available; discrepancies recorded in notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name, order and family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime score; missing values not inferred."
+    }
+  ],
+  "notes": [
+    "cardCopy 無中文 IUCN，英文 iucnEn 為 VU；HKBWS 同為 VU，未改 runtime。",
+    "i、c 評分缺失，待查而非零；vEst=1 留估算提示。",
+    "飛行翼下次級飛羽黑端是識別特徵，但本圖折翼未展示，沒有標示。",
+    "比較鳥非等比例。",
+    "AI illustration inspected visually, not independently verified by ornithologist.",
+    "只交付 Drive 單張 AVIF；不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

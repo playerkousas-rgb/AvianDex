@@ -1,0 +1,65 @@
+{
+  "id": "0201",
+  "name": "灰翅鷗",
+  "scientificName": "Larus glaucescens",
+  "layout": "slim",
+  "size": [1024, 1536],
+  "status": "review_before_upload",
+  "iucn": {"code": "LC", "zh": "無危"},
+  "illustrationTaxon": "Larus glaucescens adult in breeding plumage, sex unspecified: white head and underparts, pale grey upperparts and similarly pale grey primaries, dark iris, stout yellow bill with red spot, pink legs. AI illustration, not a photograph; first-year birds rather than adults are the age class in the Hong Kong records described by HKBWS.",
+  "similarSpecies": [
+    {
+      "zh": "灰背鷗",
+      "scientificName": "Larus schistisagus",
+      "asset": "slaty-backed-gull-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥灰背鷗上體深石板灰，初級飛羽黑，三級飛羽有寬白新月；灰翅鷗成鳥上體淡灰，初級飛羽只稍深。第一年鳥的比較更複雜，褪色灰背鷗可造成混淆。"
+    },
+    {
+      "zh": "北極鷗",
+      "scientificName": "Larus hyperboreus",
+      "asset": "glaucous-gull-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥北極鷗初級飛羽淡至灰白；灰翅鷗初級飛羽淡灰並比背部稍深。兩者都是大型淺色鷗，需結合羽齡與其他特徵辨認。"
+    }
+  ],
+  "featureCrops": [[0.145, 0.02, 0.39, 0.29], [0.045, 0.01, 0.275, 0.355], [0.38, 0.32, 0.66, 0.66], [0.30, 0.64, 0.56, 0.94]],
+  "featureLabels": ["深色虹膜", "粗黃嘴與紅斑", "淡灰翼上覆羽", "粉紅色腳"],
+  "featureNotes": [
+    "近景的眼與深色虹膜可見；眼色依 cardCopy.json 的英文內容（通常很深），不以此單獨鑑定。",
+    "近景可見粗黃嘴及下嘴紅斑；此為成鳥示意，香港所列第一年鳥嘴全深色。",
+    "近景以淡灰翼上覆羽的重疊羽緣填滿圓形，畫面較抽象；只標示翼上覆羽，不宣稱展示翼尖或飛行圖案。",
+    "全身圖可見兩條粉紅色腳；圓內腳趾部分被遮罩裁切，標籤只指腳色，不宣稱展示完整腳趾。"
+  ],
+  "featureSources": ["features.png", "features.png", "features.png", "pixel.png"],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [-180, -90, 180, 90],
+    "viewport": "world",
+    "countryIso3": ["RUS", "USA", "CAN", "JPN"],
+    "note": "Partial country overview only, not an occurrence polygon: HKBWS describes breeding around the northern Pacific and regular wintering south to Hokkaido and California; Birds of the World describes breeding and wintering in coastal British Columbia. Hong Kong's accidental records are not marked as native range; country shading does not imply full-country distribution or season."
+  },
+  "sources": [
+    {"url": "https://avifauna.hkbws.org.hk/species/0110/017300", "use": "HKBWS Glaucous-winged Gull, substantive read: 58–62 cm; large, strongly built, stout bill, deep dull pink legs; adult pale grey upperparts and slightly darker primary tips, non-breeding head/neck brown mottling; first-year uniform pale brown with dark bill, pale-fringed primaries no darker than rest, sometimes confused with bleached first-year Slaty-backed Gull. Hong Kong Category I accidental in winter; all records in Deep Bay intertidal areas, first-years recorded in 1993, 1994, 2000 and 2009. Monotypic, northern Pacific breeding and wintering south to Hokkaido/California; IUCN LC, global trend increasing."},
+    {"url": "https://avifauna.hkbws.org.hk/species/0110/017600", "use": "HKBWS Slaty-backed Gull: adult slate-grey upperparts, broad white tertial crescent, pale iris; first-year plumage prone to bleaching, adults rare in Hong Kong."},
+    {"url": "https://avifauna.hkbws.org.hk/species/0110/017400", "use": "HKBWS Glaucous Gull: adult pale grey upperparts fading to whitish-grey primaries; first-years very pale with pink bill and black tip; rare winter visitor in Hong Kong."},
+    {"url": "https://birdsoftheworld.org/bow/species/glwgul/cur/distribution", "use": "Cornell Birds of the World distribution search excerpt describes breeding and wintering in coastal British Columbia; used to support CAN in the partial country map."},
+    {"path": "src/data/cardCopy.json", "use": "0201 source copy: length 50–68 cm, weight 730–1690 g, LC, Chinese range mentions Fujian; English copy says dark irises. HKBWS lists 58–62 cm; differing measurements remain attributed and runtime is unchanged. Renderer does not print these length, weight or range prose fields."},
+    {"path": "src/data/birds.json", "use": "Runtime Chinese name 灰翅鷗."},
+    {"path": "src/data/birdTaxonomy.json", "use": "Runtime scientific name Larus glaucescens and order/family."},
+    {"path": "src/data/dexScores.json", "use": "Runtime app interest index i2 a2.8 v4.4 r1 c1.2 o2.3; no scores invented."}
+  ],
+  "notes": [
+    "AI 生成鳥圖經基本目視，未經獨立鳥類專家驗證；圖示成鳥繁殖羽、性別未指定，而 HKBWS 所列香港紀錄為第一年鳥，不能用此圖代表其羽色。",
+    "比較圖為 AI 示意、非等比例。灰背鷗素材為直式圖補邊成正方形；北極鷗素材為橫式圖補邊成正方形，避免圓框切去全鳥。",
+    "cardCopy 的中國大陸分佈提福建；HKBWS 指中國紀錄少並曾見於南岸，不作完整分佈推論。HKBWS 體長 58–62 cm 與 cardCopy 50–68 cm 範圍不同，兩者分別記錄，未改 runtime。",
+    "更正歷史說明：0200 spec 中『香港並無灰翅鷗紀錄』與 HKBWS 017300 所列 1993、1994、2000、2009 紀錄矛盾；該舊 spec／已交付圖未重製。",
+    "地圖只標部分有來源支持的原生分佈國家，不含香港偶發紀錄，不代表整國或完整物種範圍。",
+    "IUCN LC 及全球族群趨勢上升依 HKBWS；香港為偶發冬候鳥，兩種尺度不能混淆。",
+    "僅擬交付 aviandex/0201.avif 至 Drive，不上載 R2、不打包 ZIP。"
+  ]
+}

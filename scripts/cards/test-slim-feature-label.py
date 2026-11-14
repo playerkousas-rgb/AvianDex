@@ -10,6 +10,12 @@ loader.loader.exec_module(composer)
 
 
 class SlimFeatureLabelTests(unittest.TestCase):
+    def test_missing_radar_scores_are_not_zero(self):
+        scores = {'i': '', 'a': '3.8', 'r': '1.0', 'c': None, 'v': '0.0'}
+        names = [(k, k) for k in ('i', 'a', 'r', 'c', 'v')]
+        points = composer.slim_radar_points(scores, names, [0] * 5, 10, 20, 50)
+        self.assertEqual(points, [None, (48.0, 20.0), (20.0, 20.0), None, (10.0, 20.0)])
+
     def test_short_label_keeps_original_style(self):
         self.assertEqual(composer.slim_feature_label('頭部'), ('頭部', 22, 100))
 

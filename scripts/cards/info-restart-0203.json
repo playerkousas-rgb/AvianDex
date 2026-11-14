@@ -1,0 +1,138 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0203",
+  "name": "白頂玄燕鷗",
+  "scientificName": "Anous stolidus",
+  "illustrationTaxon": "Adult brown noddy, sex unspecified; chocolate-brown body, pale grey-white forehead and crown fading into brown nape, white orbital ring. Corrected whole bird has a pointed closed tail.",
+  "similarSpecies": [
+    {
+      "zh": "玄燕鷗",
+      "scientificName": "Anous minutus",
+      "asset": "black-noddy-square.png",
+      "framing": "whole-bird",
+      "distinction": "玄燕鷗更深色、更細小，嘴較長而纖細；靜止時翼長過尾。素材有岩石底座，非比例對照。"
+    },
+    {
+      "zh": "烏燕鷗",
+      "scientificName": "Onychoprion fuscatus",
+      "asset": "sooty-tern-square.png",
+      "framing": "whole-bird",
+      "distinction": "烏燕鷗成鳥深色上體配白色下體、黑頂白額；本種褐色下體及灰白頭頂。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.115,
+      0.06,
+      0.39,
+      0.39
+    ],
+    [
+      0.04,
+      0.11,
+      0.37,
+      0.48
+    ],
+    [
+      0.14,
+      0.06,
+      0.38,
+      0.33
+    ],
+    [
+      0.34,
+      0.33,
+      0.64,
+      0.68
+    ]
+  ],
+  "featureLabels": [
+    "灰白前額與頭頂",
+    "較粗的黑嘴",
+    "白色眼圈",
+    "褐色翼上覆羽"
+  ],
+  "featureNotes": [
+    "近景頭頂淡色漸變至褐後頸。",
+    "修正全鳥素材中的黑嘴與嘴尖可見；不同於近景素材。",
+    "近景眼及白色眼圈可見。",
+    "近景翼上覆羽局部，畫面較抽象；不描述翼尾相對長度。"
+  ],
+  "featureSources": [
+    "features.png",
+    "pixel.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "USA",
+      "CHL",
+      "AUS"
+    ],
+    "note": "Partial native countries: HKBWS names Hawaii and Easter Island breeding, and ABC plus seahistory reports Australian breeding islands. Island breeding does not imply mainland distribution."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/015800",
+      "use": "Substantive read: 40–45 cm, dark chocolate plumage with grey-white forecrown, wedge tail; pale crown merges to brown nape, orbital ring white, relatively thicker bill and wings shorter than tail vs Black Noddy; HK accidental 2006/2020/2021; tropical island breeding, LC globally stable."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/015900",
+      "use": "Black Noddy is smaller, darker, slender longer bill, wings longer than tail at rest."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018400",
+      "use": "Sooty Tern adult dark upperparts, white forehead, pale underparts."
+    },
+    {
+      "url": "https://seahistory.org/sea-history-for-kids/noddy/",
+      "use": "Brown noddy nests on islands off Australia, among others."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC; dark chocolate and pale crown; field text contains erroneous ambiguous name 玄燕鷗 and length 52–35 mm, conflicting with HKBWS 40–45 cm. Neither incorrect prose nor length printed by renderer; runtime unchanged."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime interest index; no added scores."
+    }
+  ],
+  "notes": [
+    "主圖初稿尾羽分叉，已以修正圖替代；features.png 不用作尾形或翼尾長度依據。",
+    "黑玄鷗比較圖有岩石，不以背景作鑑別；比較圖非等比例。",
+    "cardCopy 0203 長度 52–35 mm 異常，與 HKBWS 40–45 cm 相衝突，未改 runtime。",
+    "世界底圖僅 USA／CHL／AUS 的離岸繁殖點國家概覽，不是全國分佈。",
+    "AI illustrations inspected visually only, not independently verified by an ornithologist.",
+    "只交付 Drive 單張 AVIF；不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}
