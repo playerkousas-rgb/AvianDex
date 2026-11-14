@@ -20,7 +20,7 @@
 5. 特徵標籤必須與圓內可見內容一致。看不到診斷特徵就縮窄成身體部位描述，不硬標；折翼圖不能宣稱示範飛行翼斑。`slim_feature_label()` 已可自適應膠囊寬度100–210px，字22→18，再省略；仍優先短句，避免靠省略掩蓋重要內容。
 6. 渲染：`python scripts/cards/render-info-restart.py NNNN`。產出 `deliver/cards/info-restart-NNNN/aviandex/NNNN.avif`、preview、manifest、SHA256SUMS及說明。每張全卡、四圈／標籤、比較圓框都要讀圖，修正後重渲染及再核對。
 7. 檢查 spec=manifest.spec、名稱／學名及六分=runtime、缺值／vEst、世界 bounds `[-180,-90,180,90]`、ISO3存在、AVIF解碼1024×1536、bytes/SHA256、無ZIP。跑 `python scripts/cards/test-slim-feature-label.py`（4測試）及 `git diff --check`。
-8. **上載前再次精確查重**；指定 Drive 資料夾 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`，檔名 `NNNN.avif`、MIME `image/avif`，單張直接上載，不ZIP、不R2。先用 connector list 取得 schema，再 search/upload。遇同名先核實，不任意覆寫、刪除或重傳。
+8. **上載前再次精確查重**；依用戶最新指示，新 AVIF 放在 `0201.avif` 所在的外層 Drive 資料夾 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`，**不要放入子資料夾「已上載R2」**。檔名 `NNNN.avif`、MIME `image/avif`，單張直接上載，不ZIP、不R2。先用 connector list 取得 schema，再 search/upload。遇同名先核實，不任意覆寫、刪除或重傳。
 9. 驗證 Drive 回傳 parent、bytes、MD5 與本機吻合，才把本地 manifest top-level 設 `uploaded_drive_verified`，記 `driveFileId/driveParentId/driveMd5/driveBytesVerified`；embedded spec 的製作階段 `review_before_upload` 不等於未交付。
 10. 把交付 ID／hash／來源／修正及下一步寫入 `INFO_CARD_RESTART.md`，向用戶如實報告。AI 圖只基本目視，非獨立專家驗證。
 

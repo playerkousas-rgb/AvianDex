@@ -1,0 +1,145 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "LC為拆分前合併評估",
+    "scope": "BirdLife assessment for combined Brown Booby and Cocos Booby, not separately assessed under Cornell split."
+  },
+  "id": "0230",
+  "name": "褐鰹鳥",
+  "scientificName": "Sula leucogaster",
+  "illustrationTaxon": "Adult standing; white morph for Sula sula. AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "藍臉鰹鳥",
+      "scientificName": "Sula dactylatra",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥以白色為主、黑色尾與飛羽；幼鳥不同。"
+    },
+    {
+      "zh": "紅腳鰹鳥",
+      "scientificName": "Sula sula",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "白型成鳥白身、紅足；亦有深色型。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.16,
+      0.0,
+      0.49,
+      0.5
+    ],
+    [
+      0.32,
+      0.34,
+      0.52,
+      0.55
+    ],
+    [
+      0.4,
+      0.37,
+      0.79,
+      0.69
+    ],
+    [
+      0.38,
+      0.68,
+      0.6,
+      0.91
+    ]
+  ],
+  "featureLabels": [
+    "淡黃色嘴",
+    "褐胸白腹",
+    "褐色折翼",
+    "黃色蹼足"
+  ],
+  "featureNotes": [
+    "成鳥淡黃嘴及眼部。",
+    "褐胸與白腹交界，形狀僅示意。",
+    "折翼褐色羽毛。",
+    "黃色足部，腳趾與蹼為 AI 簡化。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AUS",
+      "IDN"
+    ],
+    "note": "Selected partial country overview only, not full-country occupancy or complete distribution; small islands and marine range are not shown."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/brnboo",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://birdsoftheworld.org/bow/species/brnboo/cur/introduction",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0150/021300",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://ebird.org/species/masboo",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://ebird.org/species/refboo",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://birdsoftheworld.org/bow/species/brnboo/cur/conservation",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    }
+  ],
+  "notes": [
+    "成鳥褐頭胸、白腹及黃腳；個體與亞種裸露部位可有差異。Cornell 2024 拆出 Cocos Booby；現有 IUCN LC 是兩者合併評估，不是拆分後獨立評估。",
+    "比較圖不等比例；幼鳥、成鳥及色型不同，勿單靠單個特徵鑑別。",
+    "AI 圖經基本目視，非鳥類專家認證；足部結構簡化。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

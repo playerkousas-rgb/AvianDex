@@ -1,0 +1,135 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0232",
+  "name": "普通鸕鷀",
+  "scientificName": "Phalacrocorax carbo",
+  "illustrationTaxon": "Adult, nonbreeding for 0232 and breeding for 0233; AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "暗綠背鸕鷀",
+      "scientificName": "Phalacrocorax capillatus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥上體綠色光澤，喉袋較小；鑑別需看裸皮形狀。"
+    },
+    {
+      "zh": "小鸕鷀",
+      "scientificName": "Microcarbo niger",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "較小、扁頭短嘴，成鳥暗色；此圖與其他鳥不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.05,
+      0.05,
+      0.5,
+      0.35
+    ],
+    [
+      0.35,
+      0.33,
+      0.79,
+      0.64
+    ],
+    [
+      0.32,
+      0.63,
+      0.65,
+      0.83
+    ],
+    [
+      0.67,
+      0.61,
+      0.96,
+      0.84
+    ]
+  ],
+  "featureLabels": [
+    "鉤尖長嘴",
+    "褐色翼羽",
+    "黑色蹼足",
+    "深色尾羽"
+  ],
+  "featureNotes": [
+    "頭部鉤嘴、黃色裸皮及白頰；裸皮外緣為 AI 示意，非鑑別圖譜。",
+    "深褐翼覆羽與鱗紋；光澤與紋理簡化。",
+    "足部可見蹼，趾數與比例非解剖準確。",
+    "深色尾羽局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "GBR",
+      "AUS"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/grecor",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0160/021500",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://ebird.org/species/japcor1",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://ebird.org/species/litcor1",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    }
+  ],
+  "notes": [
+    "示意非繁殖成鳥；未成鳥常有淡色腹部，繁殖鳥具白色股斑。",
+    "AI 圖只供示意，非鳥類專家認證；比較鳥不等比例。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

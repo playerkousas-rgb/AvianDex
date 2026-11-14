@@ -1,0 +1,140 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0248",
+  "name": "池鷺",
+  "scientificName": "Ardeola bacchus",
+  "illustrationTaxon": "Breeding adult-like Chinese Pond-Heron; AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "牛背鷺",
+      "scientificName": "Ardea coromanda",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "圖示非繁殖羽白身黃嘴；繁殖羽橙棕頭頸胸，與繁殖池鷺不同。"
+    },
+    {
+      "zh": "夜鷺",
+      "scientificName": "Nycticorax nycticorax",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥黑頂黑背灰翼紅眼；幼鳥褐色有白斑，圖示成鳥。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.05,
+      0.08,
+      0.46,
+      0.28
+    ],
+    [
+      0.2,
+      0.22,
+      0.5,
+      0.43
+    ],
+    [
+      0.42,
+      0.32,
+      0.75,
+      0.55
+    ],
+    [
+      0.32,
+      0.72,
+      0.69,
+      0.93
+    ]
+  ],
+  "featureLabels": [
+    "黃色嘴部",
+    "栗色頸胸",
+    "深背白翼",
+    "黃綠腿足"
+  ],
+  "featureNotes": [
+    "黃嘴局部；黑色嘴尖被圓框裁去。",
+    "栗色頸胸局部。",
+    "深色背羽覆蓋白色折翼，非飛行圖。",
+    "黃綠色腿足局部，趾尖被裁。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "KOR",
+      "VNM",
+      "THA",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/chpher1",
+      "use": "Cornell identification and IUCN 2025 LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0170/022900",
+      "use": "HKBWS identification, local status, native range and LC."
+    },
+    {
+      "url": "https://ebird.org/species/categr2",
+      "use": "Eastern Cattle-Egret comparison."
+    },
+    {
+      "url": "https://ebird.org/species/bcnher",
+      "use": "Black-crowned Night Heron comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    }
+  ],
+  "notes": [
+    "繁殖成鳥示意；非繁殖羽與其他池鷺難區分。香港全年常見，遷徙與留鳥均有。",
+    "比較牛背鷺非繁殖羽與夜鷺成鳥，不等比例；嘴尖被裁，足趾為示意。",
+    "AI 圖僅基本目視、非專家認證；世界圖僅部分分佈國家。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

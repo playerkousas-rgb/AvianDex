@@ -1,0 +1,136 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0209",
+  "name": "白翅浮鷗",
+  "scientificName": "Chlidonias leucopterus",
+  "illustrationTaxon": "Adult breeding plumage, sex unspecified; AI-generated, visually checked against cited sources.",
+  "similarSpecies": [
+    {
+      "zh": "鬚浮鷗",
+      "scientificName": "Chlidonias hybrida",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽白頰、灰胸和紅嘴。"
+    },
+    {
+      "zh": "黑浮鷗",
+      "scientificName": "Chlidonias niger",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽亦有黑頭及黑腹，但翼色較深；比較圖不作完整腰尾判讀。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.05,
+      0.85,
+      0.43
+    ],
+    [
+      0.69,
+      0.08,
+      0.94,
+      0.455
+    ],
+    [
+      0.36,
+      0.3,
+      0.6,
+      0.66
+    ],
+    [
+      0.57,
+      0.29,
+      0.8,
+      0.64
+    ]
+  ],
+  "featureLabels": [
+    "黑色頭部",
+    "細黑嘴",
+    "淡灰翼上覆羽",
+    "黑色體側"
+  ],
+  "featureNotes": [
+    "近景黑頭。",
+    "細黑嘴尖可見。",
+    "折翼淡灰覆羽局部，非翼下。",
+    "黑色體側局部，非翼下。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "RUS",
+      "KAZ",
+      "MNG",
+      "IDN"
+    ],
+    "note": "Partial country overview from cited species range; selected countries are not necessarily occupied in full; not a marine range map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018900",
+      "use": "20–24 cm, black head and bill, pale grey upperwings, white rump/tail; HK common spring migrant; LC, global stable."
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Black_Tern/id",
+      "use": "Black tern breeding adult black head and underparts, dark grey wings; pale undertail coverts."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Text and IUCN; discrepancies recorded in notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime interest scores; no inference."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018800",
+      "use": "Whiskered tern breeding comparison."
+    }
+  ],
+  "notes": [
+    "圖示繁殖成鳥；白腰部分被折翼遮擋，未以裁切聲稱展示白腰；翼下亦未顯示。",
+    "近景圖有岩石底座，四圈不展示底座。",
+    "vEst=1，保留體長估算提示。",
+    "黑浮鷗比較圖灰尾深翼，白色尾下覆羽未清晰顯示，不作完整羽色依據。",
+    "比較鳥不等比例，素材經目視核對，非鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

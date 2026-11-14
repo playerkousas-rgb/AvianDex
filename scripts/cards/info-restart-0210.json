@@ -1,0 +1,135 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0210",
+  "name": "鬚浮鷗",
+  "scientificName": "Chlidonias hybrida",
+  "illustrationTaxon": "Adult breeding plumage, sex unspecified; AI-generated, visually checked against cited sources.",
+  "similarSpecies": [
+    {
+      "zh": "白翅浮鷗",
+      "scientificName": "Chlidonias leucopterus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽黑頭胸、淡灰翼。"
+    },
+    {
+      "zh": "普通燕鷗",
+      "scientificName": "Sterna hirundo",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "普通燕鷗翼尾較長，成鳥較白；圖為深嘴深腳型。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.16,
+      0.1,
+      0.39,
+      0.445
+    ],
+    [
+      0.09,
+      0.1,
+      0.31,
+      0.43
+    ],
+    [
+      0.2,
+      0.31,
+      0.4,
+      0.61
+    ],
+    [
+      0.35,
+      0.37,
+      0.59,
+      0.73
+    ]
+  ],
+  "featureLabels": [
+    "黑冠與白頰",
+    "深紅色嘴",
+    "灰色胸部",
+    "灰色翼上覆羽"
+  ],
+  "featureNotes": [
+    "白頰在黑冠下。",
+    "完整深紅嘴。",
+    "灰色胸部局部。",
+    "灰色折翼覆羽局部。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "RUS",
+      "KAZ",
+      "ESP",
+      "IND",
+      "AUS"
+    ],
+    "note": "Partial country overview from cited species range; selected countries are not necessarily occupied in full; not a marine range map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018800",
+      "use": "24–28 cm, breeding adult white cheek, grey underparts, deep red bill, short tail; LC stable."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Text and IUCN; discrepancies recorded in notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime interest scores; no inference."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018900",
+      "use": "White-winged tern breeding comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018700",
+      "use": "Common tern dark-billed longipennis comparison."
+    }
+  ],
+  "notes": [
+    "母本 look 為幼鳥褐肩羽，本圖為繁殖羽成鳥，兩者不可混同。",
+    "vEst=1，保留體長估算提示。",
+    "比較鳥不等比例，素材經目視核對，非鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

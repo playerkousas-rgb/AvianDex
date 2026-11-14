@@ -1,0 +1,141 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0223",
+  "name": "短尾鸌",
+  "scientificName": "Ardenna tenuirostris",
+  "illustrationTaxon": "Bird in flight, sex and age unspecified. AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "灰鸌",
+      "scientificName": "Ardenna grisea",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "翼下銀灰亮區較明顯；與短尾鸌極相似。"
+    },
+    {
+      "zh": "淡足鸌",
+      "scientificName": "Ardenna carneipes",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "嘴粉紅而有黑尖，較粗壯。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.54,
+      0.39,
+      0.64,
+      0.53
+    ],
+    [
+      0.47,
+      0.4,
+      0.62,
+      0.57
+    ],
+    [
+      0.3,
+      0.42,
+      0.43,
+      0.56
+    ],
+    [
+      0.38,
+      0.17,
+      0.55,
+      0.39
+    ]
+  ],
+  "featureLabels": [
+    "深色鉤嘴",
+    "深褐色頭部",
+    "暗色尾羽",
+    "深褐色翼羽"
+  ],
+  "featureNotes": [
+    "小深色鉤嘴及頭部。",
+    "深褐頭部，局部偏暗。",
+    "尾羽示意，圖中較圓；HKBWS 指淺楔形，勿憑尾獨立辨識。",
+    "翼羽局部，背視不展示翼下較淡區域。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AUS",
+      "USA"
+    ],
+    "note": "Selected partial countries only, not full-country occupancy or complete distribution; marine ranges not shown."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/shtshe",
+      "use": "Cornell identification and taxonomy."
+    },
+    {
+      "url": "https://birdsoftheworld.org/bow/species/shtshe/cur/introduction",
+      "use": "Cornell global IUCN status and account."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0140/020300",
+      "use": "Identification, range and/or local status."
+    },
+    {
+      "url": "https://ebird.org/species/sooshe",
+      "use": "Comparison species identification."
+    },
+    {
+      "url": "https://ebird.org/species/flfshe",
+      "use": "Comparison species identification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy / IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores, missing kept blank"
+    }
+  ],
+  "notes": [
+    "Cornell 和 HKBWS 皆指出尾並非特別短；圖的圓尾為簡化，不能當作精確輪廓。",
+    "灰鸌插圖翼下銀色區塊示意，實際會受光線影響；不可只憑單一特徵鑑別。",
+    "vEst=1，觀賞值含體長估算。",
+    "比較鳥不等比例；AI 圖經基本目視，未經鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。",
+    "適應力 a 無 runtime 值，卡面顯示待查。"
+  ]
+}

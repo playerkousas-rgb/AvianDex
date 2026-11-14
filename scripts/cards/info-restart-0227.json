@@ -1,0 +1,148 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "id": "0227",
+  "name": "白腹軍艦鳥",
+  "scientificName": "Fregata andrewsi",
+  "illustrationTaxon": "Adult male in flight, viewed from below; AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白斑軍艦鳥",
+      "scientificName": "Fregata ariel",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥雄性黑腹、白色腋斑；主圖紅喉囊為未膨脹的簡化圖。"
+    },
+    {
+      "zh": "黑腹軍艦鳥",
+      "scientificName": "Fregata minor",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "主圖成鳥雄鳥腹部及腋下黑色；雌鳥白胸，幼鳥與雄鳥不同。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.48,
+      0.23,
+      0.62,
+      0.4
+    ],
+    [
+      0.42,
+      0.4,
+      0.55,
+      0.56
+    ],
+    [
+      0.38,
+      0.3,
+      0.52,
+      0.5
+    ],
+    [
+      0.3,
+      0.6,
+      0.5,
+      0.9
+    ]
+  ],
+  "featureLabels": [
+    "鉤形長嘴",
+    "白色腹斑",
+    "翼下白色腋斑",
+    "長叉尾"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥嘴及紅色喉部，局部偏小。",
+    "白色腹斑，形狀為插圖示意。",
+    "近身體白色腋斑局部。",
+    "叉尾局部；兩尾尖接近圓緣。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "紅點：聖誕島概略位置",
+    "disclaimer": "海上分佈未顯示；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [],
+    "note": "Red dot is approximate Christmas Island location, not a surveyed colony point. Natural Earth 110m does not show the small island; marine distribution not shown.",
+    "pointMarkers": [
+      {
+        "lon": 105.63,
+        "lat": -10.49,
+        "label": "Christmas Island approximate island location; not a colony point",
+        "source": "https://en-academic.com/dic.nsf/enwiki/2994"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/chifri1",
+      "use": "Cornell identification, range, global status or comparison; HKBWS local occurrence and identification."
+    },
+    {
+      "url": "https://birdsoftheworld.org/bow/species/chifri1/cur/introduction",
+      "use": "Cornell identification, range, global status or comparison; HKBWS local occurrence and identification."
+    },
+    {
+      "url": "https://ebird.org/species/lesfri",
+      "use": "Cornell identification, range, global status or comparison; HKBWS local occurrence and identification."
+    },
+    {
+      "url": "https://ebird.org/species/grefri",
+      "use": "Cornell identification, range, global status or comparison; HKBWS local occurrence and identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0150/020800",
+      "use": "Cornell identification, range, global status or comparison; HKBWS local occurrence and identification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy / IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    },
+    {
+      "url": "https://en-academic.com/dic.nsf/enwiki/2994",
+      "use": "Approximate island centre coordinates, not breeding colony coordinates."
+    }
+  ],
+  "notes": [
+    "成鳥雄鳥白色腹斑；白色腋斑並非每隻雄鳥都有。紅點是聖誕島概略位置，不是精確巢址；海洋分佈未顯示。",
+    "軍艦鳥鑑別受性別、羽齡及個體變異影響；比較鳥不等比例，不可只憑單一特徵。",
+    "AI 圖經基本目視，未經鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

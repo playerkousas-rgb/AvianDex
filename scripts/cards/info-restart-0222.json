@@ -1,0 +1,138 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0222",
+  "name": "楔尾鸌",
+  "scientificName": "Ardenna pacifica",
+  "illustrationTaxon": "Bird in flight, sex and age unspecified. Dark morph. AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "淡足鸌",
+      "scientificName": "Ardenna carneipes",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "身形較壯，粉紅嘴有黑尖。"
+    },
+    {
+      "zh": "褐燕鸌",
+      "scientificName": "Bulweria bulwerii",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "較小而修長，翼上覆羽有淡帶。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.28,
+      0.39,
+      0.39,
+      0.51
+    ],
+    [
+      0.47,
+      0.36,
+      0.68,
+      0.58
+    ],
+    [
+      0.52,
+      0.32,
+      0.74,
+      0.65
+    ],
+    [
+      0.39,
+      0.18,
+      0.58,
+      0.42
+    ]
+  ],
+  "featureLabels": [
+    "深色細嘴",
+    "鱗狀羽緣",
+    "長楔形尾",
+    "褐色翼上羽"
+  ],
+  "featureNotes": [
+    "細長深灰嘴與頭部局部。",
+    "背上淺羽緣；局部為示意，非精確羽列。",
+    "未展開的楔形尾羽，尖端接近圓緣。",
+    "深褐色展翼覆羽局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "MDG",
+      "AUS",
+      "JPN",
+      "MEX"
+    ],
+    "note": "Selected partial countries only, not full-country occupancy or complete distribution; marine ranges not shown."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/wetshe",
+      "use": "Cornell identification and taxonomy."
+    },
+    {
+      "url": "https://birdsoftheworld.org/bow/species/wetshe/cur/introduction",
+      "use": "Cornell global IUCN status and account."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0140/020200",
+      "use": "Identification, range and/or local status."
+    },
+    {
+      "url": "https://ebird.org/species/flfshe",
+      "use": "Comparison species identification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy / IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores, missing kept blank"
+    }
+  ],
+  "notes": [
+    "主圖為深色型；羽色型不等於性別、年齡或繁殖狀態。",
+    "vEst=1，觀賞值含體長估算。",
+    "比較鳥不等比例；AI 圖經基本目視，未經鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。",
+    "適應力 a 無 runtime 值，卡面顯示待查。"
+  ]
+}

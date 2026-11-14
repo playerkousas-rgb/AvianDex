@@ -1,0 +1,134 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0219",
+  "name": "褐燕鸌",
+  "scientificName": "Bulweria bulwerii",
+  "illustrationTaxon": "Single adult-like dark brown bird in flight, sex unspecified; AI illustration visually checked.",
+  "similarSpecies": [
+    {
+      "zh": "楔尾鸌",
+      "scientificName": "Ardenna pacifica",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "深色型全褐，楔形尾，體型較大。"
+    },
+    {
+      "zh": "黑叉尾海燕",
+      "scientificName": "Hydrobates monorhis",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "全暗色，尾有明顯分叉。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.52,
+      0.34,
+      0.72,
+      0.54
+    ],
+    [
+      0.34,
+      0.18,
+      0.57,
+      0.41
+    ],
+    [
+      0.22,
+      0.38,
+      0.5,
+      0.58
+    ],
+    [
+      0.43,
+      0.52,
+      0.65,
+      0.75
+    ]
+  ],
+  "featureLabels": [
+    "深色鉤嘴",
+    "翼上淡色羽帶",
+    "尖楔形尾羽",
+    "褐色飛羽"
+  ],
+  "featureNotes": [
+    "深色細鉤嘴及淡褐臉部，圖像較暗。",
+    "展翼覆羽較淡羽帶局部，屬近距離特徵，畫面偏抽象。",
+    "未展開的尖楔狀尾羽局部，無分叉。",
+    "展翼深褐色羽片局部，較抽象。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "USA",
+      "PRT"
+    ],
+    "note": "HKBWS cites breeding on western and central Pacific and eastern Atlantic islands; selected countries are partial only, not full-country occupancy nor marine distribution."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0140/020500",
+      "use": "Dark brown petrel, pale upperwing band and face, pointed/wedge tail, sole HK record, range and LC."
+    },
+    {
+      "url": "https://www.hboc.org.au/wp-content/uploads/Wedge-tailed-Shearwater.pdf",
+      "use": "Dark morph wedge-tailed shearwater comparison."
+    },
+    {
+      "url": "https://kantorilode.weebly.com/dark-rumped-storm-petrels.html",
+      "use": "Forked tail and all-dark rump of Swinhoe’s storm petrel compared to Bulwer’s petrel."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores; no inference"
+    }
+  ],
+  "notes": [
+    "母本褐色、細長尖尾與插圖相符；本圖全鳥飛行姿勢、圖像偏深色。",
+    "香港唯一紀錄為風暴後獲救個體，不由插圖判斷其羽齡或性別。",
+    "比較鳥非等比例，深色型楔尾鸌亦有尖楔尾；黑叉尾海燕有叉尾；不可只憑一個特徵鑑別。",
+    "AI 圖經基本目視、未經鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

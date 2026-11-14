@@ -1,0 +1,133 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0212",
+  "name": "黑枕燕鷗",
+  "scientificName": "Sterna sumatrana",
+  "illustrationTaxon": "Adult breeding plumage, sex unspecified; AI-generated, visually checked against cited sources.",
+  "similarSpecies": [
+    {
+      "zh": "粉紅燕鷗",
+      "scientificName": "Sterna dougallii",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖初期黑頂、橙紅腳；不具白頂黑眼罩。"
+    },
+    {
+      "zh": "普通燕鷗",
+      "scientificName": "Sterna hirundo",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "深嘴深腳型普通燕鷗黑頂；黑枕燕鷗白頂黑枕。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.16,
+      0.12,
+      0.4,
+      0.48
+    ],
+    [
+      0.22,
+      0.15,
+      0.43,
+      0.465
+    ],
+    [
+      0.045,
+      0.15,
+      0.3,
+      0.525
+    ],
+    [
+      0.34,
+      0.37,
+      0.59,
+      0.745
+    ]
+  ],
+  "featureLabels": [
+    "白頂與黑眼罩",
+    "黑色後頸",
+    "尖黑嘴",
+    "淡灰翼上覆羽"
+  ],
+  "featureNotes": [
+    "白頂、眼部黑色面罩可見。",
+    "黑眼罩延至後頸。",
+    "黑嘴嘴尖可見。",
+    "折翼淡灰覆羽局部。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "IDN",
+      "PHL",
+      "THA"
+    ],
+    "note": "Partial country overview from cited species range; selected countries are not necessarily occupied in full; not a marine range map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018600",
+      "use": "33–35 cm, white crown, black mask broadening to nape, black bill and legs; HK breeds; LC unknown."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Text and IUCN; discrepancies recorded in notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and classification."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime interest scores; no inference."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018500",
+      "use": "Roseate tern comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018700",
+      "use": "Common tern dark-billed comparison."
+    }
+  ],
+  "notes": [
+    "vEst=1，保留體長估算提示。",
+    "比較鳥不等比例，素材經目視核對，非鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

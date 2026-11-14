@@ -1,0 +1,135 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0204",
+  "name": "烏燕鷗",
+  "scientificName": "Onychoprion fuscatus",
+  "illustrationTaxon": "Adult sooty tern, sex unspecified; blackish upperparts and crown, white forehead ending before eye, white underparts, black bill and dark legs. Main art reused from 0203 sooty tern comparison.",
+  "similarSpecies": [
+    {
+      "zh": "白頂玄燕鷗",
+      "scientificName": "Anous stolidus",
+      "asset": "brown-noddy-square.png",
+      "framing": "whole-bird",
+      "distinction": "白頂玄燕鷗褐色下體、淡頂並向後漸褐；本種白色下體、黑頂白額。"
+    },
+    {
+      "zh": "玄燕鷗",
+      "scientificName": "Anous minutus",
+      "asset": "black-noddy-square.png",
+      "framing": "whole-bird",
+      "distinction": "玄燕鷗整體黑褐、前頂灰白且具白眼圈；本種黑白對比鮮明。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.12,
+      0.16,
+      0.35,
+      0.44
+    ],
+    [
+      0.02,
+      0.14,
+      0.34,
+      0.5
+    ],
+    [
+      0.35,
+      0.38,
+      0.64,
+      0.66
+    ],
+    [
+      0.22,
+      0.27,
+      0.52,
+      0.63
+    ]
+  ],
+  "featureLabels": [
+    "白色前額與黑頂",
+    "尖黑嘴",
+    "深色翼上覆羽",
+    "白色胸部"
+  ],
+  "featureNotes": [
+    "近景白額和黑頂可見，白額止於眼前。",
+    "近景完整黑嘴及嘴尖可見。",
+    "翼上深色覆羽局部，畫面較抽象，不描述飛行翼下。",
+    "白色胸部與深色翼交界可見；未以此圈展示整個腹部。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "USA",
+      "JPN",
+      "AUS",
+      "IDN"
+    ],
+    "note": "Partial country overview only; HKBWS: tropical and subtropical oceans worldwide and west Pacific from Japan southeast to Easter Island; subspecies breeds to Greater Sundas and Australia; Hawaii from cardCopy. Does not map marine range or full countries."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018400",
+      "use": "Substantive read: 36–45 cm, HK mostly first-year; adult dark uniform upperparts, white forehead not extending beyond eye; HK accidental associated with tropical storms, records 5 April–20 October; pantropical ocean, LC, global trend unknown."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/015800",
+      "use": "Brown Noddy dark body and pale crown."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/015900",
+      "use": "Black Noddy blackish-brown body and pale forecrown."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC, 33–36 cm, breeding from Red Sea through Indian Ocean to central Pacific; HKBWS 36–45 cm differs; renderer does not print length."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime interest index; no added scores."
+    }
+  ],
+  "notes": [
+    "主圖沿用 0203 比較鳥素材，近景另生；兩種比較鳥沿用 0203 已審核素材，非等比例。",
+    "HKBWS 指香港多為第一年鳥，本圖為成鳥，年齡差異須注意。",
+    "cardCopy 長度 33–36 cm 與 HKBWS 36–45 cm 不同，未改 runtime；卡面不印長度。",
+    "未生成褐翅燕鷗比較圖：本輪生圖額度達上限；以玄燕鷗及白頂玄燕鷗作深淺羽色比較。",
+    "AI illustrations inspected visually only, not independently verified by an ornithologist.",
+    "只交付 Drive 單張 AVIF；不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

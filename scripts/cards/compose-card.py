@@ -618,6 +618,13 @@ def gpanel(cv, box, th, k=0.55, hi=False):
         diamond(cv, x, y, 7, fill=GOLD, outline=dark(GOLD, 0.45), width=1.5)
 
 
+def slim_radar_points(scores, names, angles, cx, cy, radius):
+    """Unknown axes are absent, not points at zero; explicit zero remains valid."""
+    return [(cx + radius * float(scores[k]) / 5 * math.cos(a),
+             cy + radius * float(scores[k]) / 5 * math.sin(a))
+            if scores[k] not in ('', None) else None for (_, k), a in zip(names, angles)]
+
+
 def compose_slim(f, art, out_scale=None):
     apply_theme(f)
     art_hi = art.convert('RGB') if art is not None else None
@@ -693,12 +700,21 @@ def compose_slim(f, art, out_scale=None):
                 outline=GOLD if lv == 5 else mix(dark(TH, 0.5), GOLD, 0.30), width=2.6 if lv == 5 else 1.2)
     for a in ang:
         cv.line([(cx, cy), (cx + R * math.cos(a), cy + R * math.sin(a))], mix(dark(TH, 0.5), GOLD, 0.30), 1.2)
-    pv = [float(sc[k]) if sc[k] else 0 for _, k in names]
-    pts = [(cx + R * v / 5 * math.cos(a), cy + R * v / 5 * math.sin(a)) for v, a in zip(pv, ang)]
-    cv.glass(pts, (255, 206, 90), 140)
-    cv.poly(pts, outline=(255, 226, 130), width=3.4)
+    # An unknown score is not zero: never draw a point at the origin or fill a
+    # polygon through it. Show known points and only edges between adjacent
+    # known axes; retain the original filled polygon when all axes are known.
+    pts = slim_radar_points(sc, names, ang, cx, cy, R)
+    if all(p is not None for p in pts):
+        cv.glass(pts, (255, 206, 90), 140)
+        cv.poly(pts, outline=(255, 226, 130), width=3.4)
+    else:
+        for i, p in enumerate(pts):
+            other = pts[(i + 1) % len(pts)]
+            if p is not None and other is not None:
+                cv.line([p, other], (255, 226, 130), 3.4)
     for q in pts:
-        diamond(cv, q[0], q[1], 7, fill=(255, 238, 170), outline=(150, 110, 30), width=1.5)
+        if q is not None:
+            diamond(cv, q[0], q[1], 7, fill=(255, 238, 170), outline=(150, 110, 30), width=1.5)
     for (nm, k), a in zip(names, ang):
         lx, ly = cx + (R + 46) * math.cos(a), cy + (R + 46) * math.sin(a)
         diamond(cv, lx, ly, 42, fill=dark(TH, 0.35), outline=GOLD, width=2.5)

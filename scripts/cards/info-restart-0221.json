@@ -1,0 +1,141 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危"
+  },
+  "id": "0221",
+  "name": "淡足鸌",
+  "scientificName": "Ardenna carneipes",
+  "illustrationTaxon": "Bird in flight, sex and age unspecified. AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "楔尾鸌",
+      "scientificName": "Ardenna pacifica",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "深色型嘴深灰、尾長呈楔形。"
+    },
+    {
+      "zh": "短尾鸌",
+      "scientificName": "Ardenna tenuirostris",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "深褐羽色及暗色較短嘴。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.04,
+      0.3,
+      0.38,
+      0.81
+    ],
+    [
+      0.34,
+      0.16,
+      0.62,
+      0.55
+    ],
+    [
+      0.43,
+      0.51,
+      0.71,
+      0.79
+    ],
+    [
+      0.25,
+      0.57,
+      0.38,
+      0.74
+    ]
+  ],
+  "featureLabels": [
+    "粉紅嘴黑尖",
+    "深褐色頭部",
+    "深褐色翼羽",
+    "淡粉色腳"
+  ],
+  "featureNotes": [
+    "粉紅嘴及黑色嘴尖，取自獨立近景。",
+    "深褐頭部，近景的羽色與全鳥一致。",
+    "展翼深褐色覆羽局部。",
+    "淡粉腳局部，足趾部分被尾羽遮擋。"
+  ],
+  "featureSources": [
+    "head-corrected.png",
+    "head-corrected.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AUS",
+      "NZL",
+      "USA"
+    ],
+    "note": "Selected partial countries only, not full-country occupancy or complete distribution; marine ranges not shown."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/flfshe",
+      "use": "Cornell identification and taxonomy."
+    },
+    {
+      "url": "https://birdsoftheworld.org/bow/species/flfshe/cur/introduction",
+      "use": "Cornell global IUCN status and account."
+    },
+    {
+      "url": "https://birdsoftheworld.org/bow/species/flfshe/cur/introduction",
+      "use": "Identification, range and/or local status."
+    },
+    {
+      "url": "https://ebird.org/species/wetshe",
+      "use": "Comparison species identification."
+    },
+    {
+      "url": "https://ebird.org/species/shtshe",
+      "use": "Comparison species identification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy / IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores, missing kept blank"
+    }
+  ],
+  "notes": [
+    "近景初稿胸部過淡，改用全深褐色近景。",
+    "a 無 runtime 值，顯示待查；vEst=1，觀賞值含體長估算。",
+    "淡粉腳在野外往往難見；插圖只作局部示意。",
+    "比較鳥不等比例；AI 圖經基本目視，未經鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

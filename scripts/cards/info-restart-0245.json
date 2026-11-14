@@ -1,0 +1,143 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0245",
+  "name": "小白鷺",
+  "scientificName": "Egretta garzetta",
+  "illustrationTaxon": "Nonbreeding adult-like Little Egret; AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "黃嘴白鷺",
+      "scientificName": "Egretta eulophotes",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽黃嘴、藍眼先及多根冠羽；非繁殖羽較暗。"
+    },
+    {
+      "zh": "中白鷺",
+      "scientificName": "Ardea intermedia",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "較大、通常黃色嘴與深色腳；插圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.18,
+      0.07,
+      0.43,
+      0.3
+    ],
+    [
+      0.33,
+      0.23,
+      0.52,
+      0.48
+    ],
+    [
+      0.48,
+      0.32,
+      0.72,
+      0.55
+    ],
+    [
+      0.4,
+      0.74,
+      0.65,
+      0.95
+    ]
+  ],
+  "featureLabels": [
+    "黑色細嘴",
+    "白色頸肩",
+    "白色翼羽",
+    "黑腿黃足"
+  ],
+  "featureNotes": [
+    "黑色嘴部與白頭，嘴尖被裁切。",
+    "白色頸部及肩部局部。",
+    "白色折翼局部，羽紋簡化。",
+    "黑腿黃足局部，趾端被裁切，並非解剖圖。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "IND",
+      "FRA",
+      "ZAF",
+      "AUS"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/litegr",
+      "use": "Cornell identification; page does not show IUCN category."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0170/023500",
+      "use": "HKBWS local status, range and LC."
+    },
+    {
+      "url": "http://www.environment.gov.au/cgi-bin/sprat/public/publicspecies.pl?taxon_id=982",
+      "use": "Australian government cites IUCN 2025.2 LC for Egretta garzetta."
+    },
+    {
+      "url": "https://ebird.org/species/chiegr",
+      "use": "Cornell comparison Chinese Egret."
+    },
+    {
+      "url": "https://ebird.org/species/integr1",
+      "use": "Cornell comparison Medium Egret."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    }
+  ],
+  "notes": [
+    "非繁殖成鳥示意，繁殖羽具兩根細長冠羽；香港全年可見。",
+    "Cornell eBird 頁未顯示等級；HKBWS 與澳洲政府引用 IUCN 2025.2 LC，和 runtime 一致。",
+    "比較鳥不等比例；AI 圖僅基本目視、非鳥類專家認證；地圖僅部分國家。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

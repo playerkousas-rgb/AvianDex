@@ -1,0 +1,139 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0214",
+  "name": "大鳳頭燕鷗",
+  "scientificName": "Thalasseus bergii",
+  "illustrationTaxon": "Adult breeding plumage, sex unspecified; white forehead, black cap and crest. AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "白額燕鷗",
+      "scientificName": "Sternula albifrons",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽黑尖黃嘴及橙黃腳，體形較小。"
+    },
+    {
+      "zh": "紅嘴巨燕鷗",
+      "scientificName": "Hydroprogne caspia",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽粗大紅嘴有近端暗色，黑頂。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.12,
+      0.12,
+      0.48,
+      0.48
+    ],
+    [
+      0.045,
+      0.16,
+      0.29,
+      0.41
+    ],
+    [
+      0.33,
+      0.33,
+      0.62,
+      0.72
+    ],
+    [
+      0.3,
+      0.64,
+      0.54,
+      0.95
+    ]
+  ],
+  "featureLabels": [
+    "白額及黑頭冠",
+    "黃色嘴",
+    "灰色翼上覆羽",
+    "黑色腿腳"
+  ],
+  "featureNotes": [
+    "白額與黑冠；後冠羽被圓罩部分遮擋。",
+    "黃嘴局部；嘴尖靠近圓罩邊緣。",
+    "折翼灰色覆羽近景，較抽象，並非展翼圖。",
+    "黑色腿腳；腳趾部分被圓罩遮擋。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "AUS",
+      "ZAF",
+      "MDG",
+      "MMR"
+    ],
+    "note": "Partial country overview from cited HKBWS species range; not complete or an ocean distribution polygon."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018000",
+      "use": "45–53 cm; adult breeding white forehead, black crest, grey upperparts, yellow bill, black legs; LC; range."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018100",
+      "use": "Little tern comparison; 22–28 cm, black-tipped yellow bill and orange-yellow legs in breeding plumage."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/017900",
+      "use": "Caspian tern comparison: large red bill dark near tip."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "IUCN and mother copy; conflicts in notes"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Six runtime interest scores; no inference"
+    }
+  ],
+  "notes": [
+    "母本體長 5.4–6.5 cm、體重 30 g 顯然可疑；HKBWS 體長 45–53 cm。卡面不印體長體重，未改 runtime。",
+    "母本冬羽文字不代表本圖繁殖成鳥；白額全年存在，非整個黑冠皆變白。",
+    "runtime explorerIndex.len 6 cm 明顯與 HKBWS 45–53 cm 矛盾；dexScore 觀賞分依體長計算，綜合包含觀賞分，故 v 1.6、o 2.7 暫不顯示，兩者待查；未改 runtime、未重算。",
+    "比較鳥不等比例；AI 圖經基本目視，未經鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ],
+  "withheldScores": {
+    "v": "explorerIndex.len = 6 cm 由錯誤體長 5.4–6.5 cm 而來，與 HKBWS 45–53 cm 矛盾；已存觀賞 1.6 不採用。",
+    "o": "綜合 2.7 依公式包含受錯誤體長污染的觀賞分；不自行重算。"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0224",
+  "name": "黑鸛",
+  "scientificName": "Ciconia nigra",
+  "illustrationTaxon": "Adult-like, sex unspecified, standing. AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "東方白鸛",
+      "scientificName": "Ciconia boyciana",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥白身、黑飛羽、黑嘴。"
+    },
+    {
+      "zh": "白鸛",
+      "scientificName": "Ciconia ciconia",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥白身、黑飛羽、紅嘴。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.06,
+      0.12,
+      0.33,
+      0.3
+    ],
+    [
+      0.21,
+      0.07,
+      0.43,
+      0.23
+    ],
+    [
+      0.36,
+      0.36,
+      0.66,
+      0.6
+    ],
+    [
+      0.39,
+      0.63,
+      0.66,
+      0.91
+    ]
+  ],
+  "featureLabels": [
+    "紅色長嘴",
+    "紅色眼周",
+    "白腹及黑翼",
+    "紅色長腿"
+  ],
+  "featureNotes": [
+    "成鳥紅色長嘴，嘴尖靠圓緣。",
+    "成鳥紅色眼周及黑色頭部。",
+    "白腹與帶光澤黑色折翼的邊界。",
+    "紅色長腿局部；腳趾未在此圓內。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PRT",
+      "FRA",
+      "POL",
+      "RUS",
+      "CHN"
+    ],
+    "note": "Selected partial countries only, not full-country occupancy or complete distribution; marine ranges not shown."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/blasto1",
+      "use": "Cornell identification and taxonomy."
+    },
+    {
+      "url": "https://birdsoftheworld.org/bow/species/blasto1/cur/introduction",
+      "use": "Cornell global IUCN status and account."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0150/020600",
+      "use": "Identification, range and/or local status."
+    },
+    {
+      "url": "https://ebird.org/species/oristo1",
+      "use": "Comparison species identification."
+    },
+    {
+      "url": "https://ebird.org/species/whisto1",
+      "use": "Comparison species identification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy / IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores, missing kept blank"
+    }
+  ],
+  "notes": [
+    "主圖為成鳥；母本 look 描述幼鳥，並非本圖羽齡，未改 runtime。",
+    "成鳥光澤色因光線而變；AI 上色僅示意。",
+    "比較鳥不等比例；AI 圖經基本目視，未經鳥類專家認證。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

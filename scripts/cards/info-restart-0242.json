@@ -1,0 +1,138 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0242",
+  "name": "大白鷺",
+  "scientificName": "Ardea alba",
+  "illustrationTaxon": "Nonbreeding adult-like Great Egret; AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "中白鷺",
+      "scientificName": "Ardea intermedia",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "一般較短嘴及圓頭，嘴角不超過眼後；圖例不適合判斷嘴角。"
+    },
+    {
+      "zh": "小白鷺",
+      "scientificName": "Egretta garzetta",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "通常黑嘴黑腿、黃足，體型較小；圖例不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.14,
+      0.03,
+      0.52,
+      0.22
+    ],
+    [
+      0.3,
+      0.19,
+      0.56,
+      0.42
+    ],
+    [
+      0.48,
+      0.38,
+      0.78,
+      0.6
+    ],
+    [
+      0.43,
+      0.75,
+      0.79,
+      0.95
+    ]
+  ],
+  "featureLabels": [
+    "黃色長嘴",
+    "白色長頸",
+    "白色翼羽",
+    "深色腿足"
+  ],
+  "featureNotes": [
+    "非繁殖羽黃嘴局部，嘴尖被裁切；圖例嘴角位置不足以用作精確鑑別。",
+    "白色彎曲長頸局部。",
+    "白色折翼局部，AI 羽紋簡化。",
+    "深色腿足局部；趾數和細節非解剖圖。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "USA",
+      "BRA",
+      "FRA",
+      "AUS"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/greegr",
+      "use": "Cornell identification, IUCN LC."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0170/023300",
+      "use": "HKBWS identification, local status and range."
+    },
+    {
+      "url": "https://ebird.org/species/integr1",
+      "use": "Cornell Medium Egret comparison."
+    },
+    {
+      "url": "https://ebird.org/species/litegr",
+      "use": "Cornell Little Egret comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    }
+  ],
+  "notes": [
+    "非繁殖成鳥示意，香港繁殖期常為黑嘴及綠色眼先；本圖綠色眼先僅 AI 示意。",
+    "大中白鷺嘴角鑑別重要，但本插圖嘴角不清楚，不宜用作鑑定；比較鳥不等比例。",
+    "AI 圖僅基本目視，非鳥類專家認證；地圖僅部分國家。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

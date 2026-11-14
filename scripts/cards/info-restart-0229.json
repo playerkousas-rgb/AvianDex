@@ -1,0 +1,139 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0229",
+  "name": "藍臉鰹鳥",
+  "scientificName": "Sula dactylatra",
+  "illustrationTaxon": "Adult standing; white morph for Sula sula. AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "納斯卡鰹鳥",
+      "scientificName": "Sula granti",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥粉橙色嘴，幼鳥與藍臉鰹鳥近似。"
+    },
+    {
+      "zh": "紅腳鰹鳥",
+      "scientificName": "Sula sula",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥紅腳和藍灰嘴，羽色多型。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.08,
+      0.06,
+      0.46,
+      0.44
+    ],
+    [
+      0.36,
+      0.4,
+      0.78,
+      0.65
+    ],
+    [
+      0.68,
+      0.57,
+      0.94,
+      0.78
+    ],
+    [
+      0.35,
+      0.67,
+      0.59,
+      0.84
+    ]
+  ],
+  "featureLabels": [
+    "黃色長嘴",
+    "黑白折翼",
+    "深色尾羽",
+    "灰色蹼足"
+  ],
+  "featureNotes": [
+    "成鳥黃嘴及深色面罩；眼部與喙尖均有顯示。",
+    "白色翼覆羽及深色折翼；不代表飛行翼下。",
+    "深色翼羽與尾羽局部。",
+    "灰色蹼足，足趾結構為 AI 簡化示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AUS",
+      "USA"
+    ],
+    "note": "Selected partial country overview only, not full-country occupancy or complete distribution; small islands and marine range are not shown."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/masboo",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://birdsoftheworld.org/bow/species/masboo/cur/introduction",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0150/021100",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://ebird.org/species/nazboo1",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "url": "https://ebird.org/species/refboo",
+      "use": "Cornell identification, distribution and conservation; HKBWS local status and identification."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    }
+  ],
+  "notes": [
+    "成鳥白身黑尾黃嘴；香港唯一紀錄為未成鳥，圖不代表該個體。",
+    "比較圖不等比例；幼鳥、成鳥及色型不同，勿單靠單個特徵鑑別。",
+    "AI 圖經基本目視，非鳥類專家認證；足部結構簡化。",
+    "只交付 Drive 單張 AVIF，不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

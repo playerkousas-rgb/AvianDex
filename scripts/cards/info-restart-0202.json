@@ -1,0 +1,136 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0202",
+  "name": "北極鷗",
+  "scientificName": "Larus hyperboreus",
+  "illustrationTaxon": "Adult breeding plumage, sex unspecified; pale grey upperparts fading to whitish primaries, stout yellow bill, pink legs; first-years usually recorded in Hong Kong.",
+  "similarSpecies": [
+    {
+      "zh": "灰翅鷗",
+      "scientificName": "Larus glaucescens",
+      "asset": "glaucous-winged-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥灰翅鷗初級飛羽灰色、比背稍深；北極鷗成鳥淡至灰白。"
+    },
+    {
+      "zh": "灰背鷗",
+      "scientificName": "Larus schistisagus",
+      "asset": "slaty-backed-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥灰背鷗背部深石板灰、初級飛羽黑；北極鷗淡灰背及淡色初級飛羽。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.045,
+      0.025,
+      0.29,
+      0.37
+    ],
+    [
+      0.37,
+      0.33,
+      0.64,
+      0.68
+    ],
+    [
+      0.68,
+      0.48,
+      0.98,
+      0.79
+    ],
+    [
+      0.25,
+      0.66,
+      0.53,
+      0.97
+    ]
+  ],
+  "featureLabels": [
+    "粗黃嘴與紅斑",
+    "淡灰翼上覆羽",
+    "灰白初級飛羽",
+    "粉紅色腳"
+  ],
+  "featureNotes": [
+    "近景嘴及紅斑可見，為成鳥示意。",
+    "淡灰色翼上覆羽重疊紋理，畫面抽象。",
+    "折翼時淺色初級飛羽可見，羽尖部分靠圓邊；不是展翅飛行圖。",
+    "粉紅腿腳可見，部分腳趾被圓形遮罩切去。"
+  ],
+  "featureSources": [
+    "features.png",
+    "features.png",
+    "features.png",
+    "features.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "USA",
+      "CAN",
+      "GRL",
+      "ISL",
+      "NOR"
+    ],
+    "note": "Partial circumpolar breeding country overview based on HKBWS 017400: northwest Siberia to Bering Sea, Alaska to Iceland, north Europe. No complete distribution or seasonal boundaries."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017400",
+      "use": "Substantive read: 64–77 cm, first/second year pale with pink bill black tip, adult pale grey back fading to whitish primaries, nonbreeding head streaks; 11 HK records, mostly first-year and mostly Deep Bay; circumpolar breeding, LC stable."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017300",
+      "use": "Glaucous-winged Gull adult pale grey upperparts and slightly darker primaries."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0110/017600",
+      "use": "Slaty-backed adult dark slate-grey and black primaries."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "LC, 55–77 cm, circumpolar breeding; HKBWS 64–77 cm, differing ranges attributed; renderer does not print length."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime Chinese name."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime scientific name and order/family."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime interest index; no added scores."
+    }
+  ],
+  "notes": [
+    "香港紀錄多為第一年鳥，本卡成鳥繁殖羽不代表該羽齡。",
+    "兩種比較鳥新生成及補邊，非等比例。",
+    "世界圖只畫部分原生國家、不代表整國。",
+    "AI illustrations inspected visually only, not independently verified by an ornithologist.",
+    "只交付 Drive 單張 AVIF；不改 R2、UI、Service Worker 或 runtime。"
+  ]
+}

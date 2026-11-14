@@ -1,0 +1,142 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危",
+    "assessmentNote": "評分源自舊狀態，待核"
+  },
+  "id": "0250",
+  "name": "栗鳽",
+  "scientificName": "Gorsachius goisagi",
+  "illustrationTaxon": "Adult-like Japanese Night Heron; AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "黑冠鳽",
+      "scientificName": "Gorsachius melanolophus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥黑冠、較強冠羽與黑胸縱紋，繁殖羽眼先藍；比較圖不等比例。"
+    },
+    {
+      "zh": "夜鷺幼鳥",
+      "scientificName": "Nycticorax nycticorax",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "幼鳥褐色上體有明顯白斑，非栗鳽；AI 圖示非等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.07,
+      0.11,
+      0.48,
+      0.3
+    ],
+    [
+      0.21,
+      0.26,
+      0.51,
+      0.48
+    ],
+    [
+      0.46,
+      0.34,
+      0.75,
+      0.56
+    ],
+    [
+      0.29,
+      0.72,
+      0.72,
+      0.94
+    ]
+  ],
+  "featureLabels": [
+    "深色嘴部",
+    "胸部暗紋",
+    "栗色翼羽",
+    "黃綠腿足"
+  ],
+  "featureNotes": [
+    "深色嘴部局部；嘴尖被裁，AI 畫嘴較尖，不作精確結構參照。",
+    "淡底胸部深色縱紋。",
+    "栗色折翼羽毛局部，細節為示意。",
+    "黃綠色腿足局部；腳趾簡化。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "JPN",
+      "KOR",
+      "PHL"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/janher1",
+      "use": "Cornell identification and IUCN 2025 VU."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0170/022500",
+      "use": "HKBWS identification, local status, breeding and winter range, VU."
+    },
+    {
+      "url": "https://ebird.org/species/manher1",
+      "use": "Malayan Night Heron comparison."
+    },
+    {
+      "url": "https://ebird.org/species/bcnher",
+      "use": "Juvenile Black-crowned Night Heron comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    }
+  ],
+  "notes": [
+    "成鳥栗色上體及淡色縱紋下體示意，香港為迷鳥；日本南部及韓國濟州繁殖，菲律賓等越冬。",
+    "Cornell 2025、HKBWS VU；runtime cardCopy EN 已過時，依受影響項目暫遮蔽 i/c/o、不重算。",
+    "比較黑冠鳽成鳥及夜鷺幼鳥，不等比例；主圖嘴偏尖，非精確鑑別。",
+    "AI 圖僅基本目視、非專家認證；地圖為部分國家，未顯示季節與完整範圍；不改 R2 或 runtime。"
+  ],
+  "withheldScores": {
+    "i": "runtime i=4.4 依 cardCopy 舊 EN，Cornell 2025 與 HKBWS 同列 VU，暫待核。",
+    "c": "runtime c=4.3 包含舊 EN 輸入，暫待核。",
+    "o": "runtime o=4.3 受 i/c 舊 EN 輸入影響，暫待核，不重算。"
+  }
+}

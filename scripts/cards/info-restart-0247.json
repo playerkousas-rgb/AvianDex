@@ -1,0 +1,152 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "UNKNOWN",
+    "zh": "資料待查",
+    "assessmentNote": "拆分後保育狀態待核"
+  },
+  "id": "0247",
+  "name": "牛背鷺",
+  "scientificName": "Ardea coromanda",
+  "illustrationTaxon": "Nonbreeding adult-like Eastern Cattle-Egret; AI illustration visually checked, not expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "小白鷺",
+      "scientificName": "Egretta garzetta",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "小白鷺黑嘴黑腿黃足；比較圖不等比例。"
+    },
+    {
+      "zh": "中白鷺",
+      "scientificName": "Ardea intermedia",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "非繁殖羽中白鷺黃嘴，頸嘴較長；圖示嘴角不足以鑑別。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.13,
+      0.12,
+      0.47,
+      0.3
+    ],
+    [
+      0.27,
+      0.24,
+      0.52,
+      0.43
+    ],
+    [
+      0.46,
+      0.34,
+      0.75,
+      0.56
+    ],
+    [
+      0.35,
+      0.72,
+      0.68,
+      0.93
+    ]
+  ],
+  "featureLabels": [
+    "短黃嘴部",
+    "白色頸部",
+    "白色翼羽",
+    "深色腿足"
+  ],
+  "featureNotes": [
+    "短黃嘴及頭部；嘴尖局部被裁。",
+    "非繁殖羽白色頸部局部。",
+    "折翼羽毛，細節為 AI 示意。",
+    "非繁殖鳥深色腿足局部，趾尖被裁。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IND",
+      "JPN",
+      "KOR",
+      "THA",
+      "AUS"
+    ],
+    "note": "Selected partial overview; not full-country occupancy or complete distribution; no indication of seasons."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/categr2",
+      "use": "Cornell identification, nonbreeding plumage and genus."
+    },
+    {
+      "url": "https://ebird.org/news/2023-taxonomy-update",
+      "use": "Cornell split of cattle egret complex."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0170/023000",
+      "use": "HKBWS identification, HK status, length 46–56 cm, range; cites pre-split species and reports LC."
+    },
+    {
+      "url": "https://ebird.org/species/litegr",
+      "use": "Little Egret comparison."
+    },
+    {
+      "url": "https://ebird.org/species/integr1",
+      "use": "Medium Egret comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Mother copy and IUCN"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Chinese name"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Scientific name and classification"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores"
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Length 92 cm input to dexScores; contradicted by HKBWS."
+    }
+  ],
+  "notes": [
+    "非繁殖羽示意；繁殖羽頭頸胸有橙棕羽。香港全年可見；比較鳥不等比例。",
+    "Cornell 已拆東西牛背鷺；HKBWS LC 及全球範圍引用合併種文獻，拆分後評估待核。",
+    "母本體長 88–96 cm 與 HKBWS 46–56 cm 明顯衝突，v 與綜合 o 暫遮蔽，不自行重算；i/c 原缺分。",
+    "AI 圖僅基本目視、非專家認證；地圖只選部分亞洲和澳洲國家。只交付 Drive，不改 R2 或 runtime。"
+  ],
+  "withheldScores": {
+    "v": "explorerIndex 長 92 cm 源自 cardCopy 88–96 cm，與 HKBWS 46–56 cm 不符；v 用該體長，暫待核。",
+    "o": "綜合分由受污染 v 得出，暫待核；不重算。"
+  }
+}
