@@ -1,0 +1,148 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0441",
+  "name": "藍翅希鶥",
+  "scientificName": "Actinodura cyanouroptera",
+  "illustrationTaxon": "Adult-type Actinodura cyanouroptera, morphologically matching A. c. wingatei; the Hong Kong race is officially unknown. AI interpretation, subspecies, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紅頭穗鶥",
+      "scientificName": "Cyanoderma ruficeps",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "頭頂栗紅、臉淡黃、上體橄欖褐而全無藍色；本種頭與後頸淡藍灰、有黑色側冠紋、上背栗褐而飛羽與尾為明顯藍色。"
+    },
+    {
+      "zh": "栗頸鳳鶥",
+      "scientificName": "Staphida torqueola",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "有豎起的冠羽、白色眼圈與栗色後頸，尾下覆羽淡黃而非白邊黑；本種無冠羽、臉部樸素無眼圈、尾下覆羽白色而邊緣黑色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.12,
+      0.2467,
+      0.2733,
+      0.4
+    ],
+    [
+      0.32,
+      0.4133,
+      0.4733,
+      0.5667
+    ],
+    [
+      0.2867,
+      0.3467,
+      0.44,
+      0.5
+    ],
+    [
+      0.48,
+      0.4933,
+      0.6333,
+      0.6467
+    ]
+  ],
+  "featureLabels": [
+    "黑色側冠紋",
+    "藍色飛羽",
+    "栗褐色上背",
+    "白色尾下覆羽"
+  ],
+  "featureNotes": [
+    "頭側有一道粗黑縱紋（側冠紋），把淡藍灰的頭頂與樸素的淡灰臉部分開，由上往下看時最明顯，為插圖局部。",
+    "飛羽為鮮明的藍色，羽端黑色而邊緣白色，是「藍翅」之名的由來，在光線充足時才看得出來，為插圖局部。",
+    "肩與上背為淺栗褐色，夾在藍灰的後頸與藍色的翼之間，形成三段色帶，為插圖局部。",
+    "尾下覆羽白色而邊緣黑色，形成一道白黑相間的橫帶，即使在樹冠陰影下由下往上看也是最可靠的辨識特徵，為插圖局部；尾長而呈藍色、外側羽黑色。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "KHM",
+      "LAO",
+      "MMR",
+      "MYS",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only: BirdLife's country table (Bhutan, Cambodia, China, India, Laos, Malaysia, Myanmar, Nepal, Thailand, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. BirdLife lists Hong Kong (China) separately as native and breeding, but it has no geometry on the 110m base map and is folded into China's shading; the Hong Kong population itself is of captive origin."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0370/043900",
+      "use": "香港第 IIB 類，新界中部森林常見而增加的留鳥，族群源自籠鳥；14–15.5 cm，身形修長的樹棲鶥；由下往上看多只見淡灰而平淡，此時診斷性的白色尾下覆羽配黑邊最有用；由上看則有黑色側冠紋、灰色頭頂、樸素無眉紋與過眼紋的臉、淺栗色上背及藍色飛羽與尾；叫聲略帶鼻音、中音，包括短促 pwit、choop、pweet 與拖長的 pwee，興奮時整群吱喳；1992-09-05 大埔滘首錄，1994 年在大埔滘證實繁殖，因非遷徙且最近自然分佈在廣西西部而被列為已建立的外來種（第 IIB 類）；此後持續增加，現為新界中部次生闊葉林常見鳥，西至大欖東至馬鞍山，東北與東新界數量較少；圖集記錄由 0.4%（1993–96 繁殖）、0.8%（2001–05 冬季）升至 5.5%（2016–19 夏季）與 6.9%（冬季），在 1990 年代由籠鳥建立的幾種小型林鳥之中，廣泛程度僅次於紅頭穗鶥；1995 年 1 月港島首錄但未建立族群，其他島嶼沒有；見於大帽山至少 650 米；比紅頭穗鶥與兩種相思鳥更嚴格依賴森林；3 月 23 日至 7 月 7 日見收集巢材（含蛛網），本港巢與蛋未有描述，5 月 16 日起見帶食物、6 月 11 日至 10 月 8 日見依賴期幼鳥，推測一年多窩；成對或成小群（一般 5–20 隻，最多 44 隻，最高計數 1999-09-18 大埔滘 50 隻但不確定是否同一群），冬季常混入鶥與鶯的混合群；食蟲兼食果，本港未研究，已知食物包括毛蟲及樹參、簕欓花椒與栽培柿的果實，於樹冠中層拾取；分佈自印度西北經尼泊爾至中南半島南部，中國原生範圍為藏南至川南、重慶及桂西；八個亞種，中國原生只有 wingatei，香港亞種未確認但形態與 wingatei 相同。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/blue-winged-minla-siva-cyanouroptera",
+      "use": "IUCN 2024 LC，理由為分佈極廣、族群未量化但未達門檻；趨勢下降（推測，因生境破壞與破碎化）；成熟個體 Unknown；繁殖 EOO 6,160,000 km²；海拔遷徙鳥、非繁殖 endemic；海拔 250–3,000 m；世代 2.7 年；森林依賴度 Medium；生境為亞熱帶／熱帶濕潤山地林（主要）、高山灌叢與農地（適用）；38 個 IBA／KBA；國家表十一列，**包括香港（中國，原生、繁殖）**；貿易欄記兩種用途（食用國內自給、寵物國際），七個貿易資料集出現兩個；分類註記說明由 Minla cyanouroptera 改為 Siva cyanouroptera（del Hoyo & Collar 2016），科名用 Leiotrichidae。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（藍翅希鶥；Blue-Winged Minla）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Actinodura cyanouroptera／噪鶥科 Leiothrichidae）；BirdLife 用 Siva cyanouroptera、科名 Leiotrichidae，屬與科的中文歸屬隨分類系統而異。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=2.8、v=2.7（含 vEst=1）、r=1、c=1.2、o=1.9，missingScores 為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range 中文寫「斑翅鶥屬的一種，是海拔遷徙的候鳥，分佈於香港、不丹、老撾、中國大陸、越南、印度」尚可、英文列了十二個國家／地區；habitat 中文全空、英文只有一句樣板；look 中文只有體重 17.4 克與體長 15 公分、英文其實是物種簡介而非外型；funFact 與 behavior 中文全空、英文分別是物種簡介與生境樣板句；etymology 中文全空、英文只有「曾置於 Minla 屬與單型 Siva 屬」；完全沒有 diet 與 voice 欄；length 與 weight 欄為空（但 look 文字有 15 公分）。iucn 欄為「無危 LC」，與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 65.3 mm、尾 69.7 mm、跗蹠 21.9 mm、嘴峯 14.7 mm、體重 17 g（runtime look 寫 17.4 克）。"
+    }
+  ],
+  "notes": [
+    "HKBWS 043900：香港第 IIB 類，新界中部森林常見而增加的留鳥，族群源自籠鳥；14–15.5 cm，身形修長的樹棲鶥；黑色側冠紋、灰色頭頂、樸素無眉紋與過眼紋的臉、淺栗色上背、藍色飛羽與尾，以及帶黑邊的白色尾下覆羽。",
+    "名錄史與族群：1992-09-05 大埔滘首錄、1994 年證實繁殖，因非遷徙且最近自然分佈遠在桂西而被列為已建立外來種；此後持續增加，現為新界中部次生闊葉林常見鳥（西至大欖、東至馬鞍山）；圖集由 0.4%（1993–96 繁殖）、0.8%（2001–05 冬季）升至 5.5%（2016–19 夏季）與 6.9%（冬季），在 1990 年代由籠鳥建立的小型林鳥中廣泛程度僅次於紅頭穗鶥；港島 1995 年 1 月首錄但未建立族群，其他島嶼沒有記錄；廣東同為已建立外來種，深圳梧桐山的族群可能源自本港擴散。",
+    "習性：成對或成小群（一般 5–20 隻、最多 44 隻，最高計數 1999-09-18 大埔滘 50 隻），冬季常混入鶯與鶥的混合群；於樹冠中層拾取食物，比其他小型鶥類活動得更高；3 月下旬至 7 月上旬收集巢材（含蛛網），本港巢與蛋未有描述，5–6 月起見帶食物及依賴期幼鳥至 10 月上旬，推測一年多窩；食蟲兼食果，已知食物包括毛蟲、樹參、簕欓花椒與栽培柿。",
+    "IUCN：本卡為 **LC（無危）**。BirdLife 2024 以 Siva cyanouroptera 評估，分佈極廣、族群未量化但未達門檻；趨勢下降（推測，生境破壞與破碎化）、EOO 6,160,000 km²、海拔 250–3,000 m、世代 2.7 年、森林依賴度中等、38 個 IBA；國家表把香港（中國）列為原生而繁殖，本港族群其實源自籠鳥，此為評估系統與本地名錄的差異。",
+    "runtime 分數：i=2、c=1.2、r=1 沿用；v=2.7 沿用——length 欄為空但 look 文字與 HKBWS 均為 14–15.5 cm，翼長 65.3 mm×0.22≈14.4 cm 落在範圍內，只加「原觀賞值含體長估算」提示；a=2.8 待查——habitat 與 behavior 中文全空、diet 欄完全缺失、behavior 英文與 habitat 英文是同一句生境樣板；o=1.9 依賴待查分項（a）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：habitat、behavior、funFact、etymology 中文全空；look 中文只有體重與體長、英文是物種簡介；完全沒有 diet 與 voice 欄；length 與 weight 欄為空但 look 文字寫了 15 公分。辨識與本地紀錄一律以 HKBWS 為準。",
+    "地圖按 BirdLife 國家表填十國；香港在 110m 底圖併入中國，BirdLife 另列香港為原生繁殖。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖為方形畫布（原橫幅補邊），單一長尾、純色深青底，畫出淡藍灰頭與黑色側冠紋、樸素臉、栗褐上背、藍色飛羽與長尾、白邊黑的尾下覆羽；亞種、性別與年齡差異仍待專家核。比較鳥沿用 0437 的紅頭穗鶥及 0433 的栗頸鳳鶥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 與 behavior 中文全空、diet 欄完全缺失、behavior 英文與 habitat 英文同為一句生境樣板，2.8 分缺乏棲地與食性支撐，待查。",
+    "o": "綜合分依賴待查分項（a），不補算。"
+  }
+}
