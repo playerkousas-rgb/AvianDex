@@ -1,0 +1,193 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "id": "0468",
+  "name": "戴菊",
+  "scientificName": "Regulus regulus",
+  "illustrationTaxon": "Goldcrest Regulus regulus (likely R. r. japonensis: pale olive-green upperparts, grey-tinged head, yellow crown stripe with orange at the rear). AI interpretation, sex, age, subspecies and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黃腰柳鶯",
+      "scientificName": "Phylloscopus proregulus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同為 10 cm 以下的綠身小鳥、常在同一林層活動，但屬柳鶯科而不同屬；黃腰柳鶯有清楚的淡色中央冠紋、長而黃的眉紋、兩條黃色翼帶與黃色腰，身形較修長；本種冠紋金黃而鑲黑邊、臉部淡色圍繞深眼、翼有黑色次級飛羽基斑及淡色端，身形短圓。"
+    },
+    {
+      "zh": "黃眉柳鶯",
+      "scientificName": "Phylloscopus inornatus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬柳鶯科的另一種小型綠身鳥，有長淡黃眉紋與兩條白翼帶，但沒有金黃冠紋、沒有翼上黑色次級飛羽基斑、腰不黃、身形較修長；本種的冠紋與翼上黑斑是最直接的分別。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.575,
+      0.275,
+      0.705,
+      0.405
+    ],
+    [
+      0.665,
+      0.348,
+      0.775,
+      0.458
+    ],
+    [
+      0.335,
+      0.395,
+      0.435,
+      0.495
+    ],
+    [
+      0.425,
+      0.492,
+      0.525,
+      0.592
+    ]
+  ],
+  "featureLabels": [
+    "金黃冠紋",
+    "深色細嘴",
+    "翼上黑斑",
+    "淡色腹部"
+  ],
+  "featureNotes": [
+    "雄鳥中央冠紋為檸檬黃、後段在豎起時可見橙色，兩側鑲黑邊；雌鳥冠紋較淡而無橙；頭與後頸的灰色是本港紀錄所屬 R. r. japonensis 的特徵，為插圖局部。",
+    "嘴非常細小、深色而尖，與同樣細小的柳鶯相比更短；本種 8.5–9.5 cm，體型比大部分柳鶯更短圓，為插圖局部。",
+    "翼上大覆羽與三級飛羽有淡色端，次級飛羽基部有黑色斑塊，形成本種最具辨識度的翼紋；幼鳥無冠紋時可憑此與柳鶯區分（柳鶯無此黑斑、但多有眉紋），為插圖局部。",
+    "下體淡皮黃至灰白、脇略帶黃綠，與淡橄欖綠的上體對比柔和；幼鳥無頂冠紋，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BLR",
+      "BEL",
+      "BTN",
+      "BIH",
+      "BGR",
+      "CHN",
+      "HRV",
+      "CYP",
+      "CZE",
+      "DNK",
+      "EST",
+      "FIN",
+      "FRA",
+      "GEO",
+      "DEU",
+      "GRC",
+      "HUN",
+      "IRN",
+      "IRL",
+      "ISR",
+      "ITA",
+      "JPN",
+      "KAZ",
+      "KGZ",
+      "LVA",
+      "LBN",
+      "LTU",
+      "LUX",
+      "MDA",
+      "MNG",
+      "MNE",
+      "MMR",
+      "NPL",
+      "NLD",
+      "PRK",
+      "MKD",
+      "NOR",
+      "POL",
+      "PRT",
+      "ROU",
+      "RUS",
+      "SRB",
+      "SVK",
+      "SVN",
+      "KOR",
+      "ESP",
+      "SWE",
+      "CHE",
+      "TJK",
+      "TUN",
+      "TUR",
+      "UKR",
+      "GBR",
+      "UZB"
+    ],
+    "note": "Partial NATIVE-country overview only, covering the 60 native countries that exist as geometry on the 110m base map. Andorra, Liechtenstein, Malta and the Faroe Islands are native but have no separate geometry at this resolution. Hong Kong is folded into China's outline. The huge Palaearctic range (breeding EOO 51,100,000 km²) is why almost every temperate Eurasian country is shaded; green does not imply full-country occupancy and the gaps (the Sahara, Arabia, South-East Asia) are real gaps in the mapped range."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0380/044800",
+      "use": "香港第 I 類，**偶然訪鳥（Accidental）**；8.5–9.5 cm，體型極小、短圓，臉部淡色圍繞深色眼睛並由深色口角與短頰紋鑲邊；上體淡橄欖綠，翼有大覆羽與三級飛羽的淡色端及次級飛羽基部的黑色斑塊；雄鳥中央冠紋檸檬黃、後段豎起時可見橙色羽毛，雌鳥冠紋較淡而無橙；頭與後頸明顯的灰色顯示為 **R. r. japonensis**；覓食群的典型叫聲為輕快的絮語夾雜極短而安靜的 chik 聲；出現於常綠闊葉次生林及遷徙熱點的樹木與灌叢；覓食方式如黃腰柳鶯（Pallas's Leaf Warbler）；本港紀錄只有兩筆：2020-03-31 蒲台島一隻（Diskin 2024，香港首筆）與 2020-04-20 大埔滘另一隻；分佈由西歐經古北界至西伯利亞南部，裏海與黑海之間、東北亞、中國中部與喜馬拉雅有大型間斷族群；中國東北、中部、西南及北疆繁殖，北方族群過境華東與新疆西部；共 14 個亞種，按分佈最可能出現的是最東的 R. r. japonensis；HKBWS 記 IUCN 為 Near-threatened、族群輕微下降（惟全球紅色名錄為 LC，見 notes）。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/goldcrest-regulus-regulus/details",
+      "use": "IUCN **2018** LC、成熟個體 **98,000,000–164,999,999**（2012 年估計、品質差，歐洲 2,000–3,700 萬對）、趨勢 **Decreasing**（Suspected，歐洲 1980–2013 中度下降）、繁殖 EOO **51,100,000 km²**、非繁殖 EOO **50,900,000 km²**、完全遷徙、繁殖 endemic **No**、IBA／KBA 一欄為「-」、生境描述為以挪威雲杉與冷杉為主的北方林；國家表列出約 67 個原生國家／地區（歐洲幾乎全部、北非阿爾及利亞與突尼西亞、西亞至中亞、中國、日本、南北韓、蒙古、緬甸、尼泊爾、不丹等），**沒有香港獨立一列**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（戴菊；Goldcrest）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Regulus regulus／戴菊科 Regulidae）——本批第一種非鶇科的雀形目；taxonOrder 26607。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 沒有本種任何分數，missingScores 為六軸全部（i/a/r/c/v/o），withheldScores 為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "runtime 沒有本種文案；卡面內容全部由 HKBWS 與 BirdLife 撰寫（slim 版式本身不顯示 runtime 文案，故無空欄問題）。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "runtime 沒有本種量度（AVONET 未收錄），故無法以翼長換算體長。"
+    }
+  ],
+  "notes": [
+    "HKBWS 044800（路徑 `0380/`，戴菊科）：香港第 I 類，**偶然訪鳥**——本港只有兩筆：2020-03-31 蒲台島（首筆，Diskin 2024）與 2020-04-20 大埔滘；8.5–9.5 cm，臉部淡色圍繞深眼、上體淡橄欖綠、翼有淡色端與次級飛羽基部黑斑、雄鳥冠紋檸檬黃後段帶橙、雌鳥較淡；頭與後頸灰調指向 R. r. japonensis。",
+    "生境與習性：常綠闊葉次生林及遷徙熱點的樹木灌叢，覓食方式如黃腰柳鶯；叫聲為絮語夾雜極短的 chik。",
+    "分類：分佈由西歐至西伯利亞南部，共 14 個亞種；中國東北、中部、西南及北疆繁殖，北方族群過境華東與新疆西部；香港出現的最可能是最東的 R. r. japonensis。",
+    "**IUCN 評級衝突（已核）**：HKBWS 頁面寫「IUCN: Near-threatened」，但 BirdLife／全球紅色名錄為 **LC（2018）**，而 **歐盟**紅色名錄才是 Near Threatened——HKBWS 該行應為歐洲評級。卡面因此用 **LC**，不用 NT，並在此記錄。",
+    "runtime：`dexScores.json`、`cardCopy.json`、`measurements.json` 三項資料庫皆**完全沒有 0468**（同 0456、0457、0461），故六軸全部待查、withheldScores 為空；卡面內容全部改由 HKBWS 與 BirdLife 撰寫，亦無法以翼長換算體長。",
+    "AI 主圖原為 1296×816 橫幅，直接取中央 816×816 方形（不補邊，避免平面色帶）後放大至 1127×1127，畫出金黃冠紋、淡臉深眼、淡橄欖綠上體與翼上黑斑，停在長滿苔蘚的樹枝上以呼應本港兩筆紀錄的次生林與遷徙熱點生境；雌鳥（冠紋較淡無橙）與幼鳥（無冠紋）仍待專家核。比較鳥為本輪新生成的黃腰柳鶯與黃眉柳鶯（皆屬柳鶯科，非同一科），非等比例、非專家認證。"
+  ],
+  "withheldScores": {}
+}
