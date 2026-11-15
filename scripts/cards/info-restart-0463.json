@@ -1,0 +1,146 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "id": "0463",
+  "name": "烏灰鶇",
+  "scientificName": "Turdus cardis",
+  "illustrationTaxon": "Adult male Turdus cardis (slate-grey head and chest, bluish-grey upperparts, white belly with large black spots, yellow bill). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "灰背鶇",
+      "scientificName": "Turdus hortulorum",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同樣在港越冬的鶇；雄鳥頭與上體亦為藍灰，但脇與下胸是大片橙黃褐色、腹部純白、嘴黃而腳淡粉；本種雄鳥頭胸石板灰與藍灰上體有明顯對比、白腹佈滿大型黑斑、脇沒有橙黃。雌鳥灰褐而胸脇密佈灰斑，與本種雌鳥相似，但本種雌鳥上脇有橙色渲染。"
+    },
+    {
+      "zh": "白腹鶇",
+      "scientificName": "Turdus pallidus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同樣是香港常見冬候鳥；雄鳥頭背橄欖褐、胸與脇淡灰、腹部白、嘴黃而腳淡粉，整體低對比；本種頭胸石板灰、上體藍灰、腹白有大黑斑，對比強烈。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.295,
+      0.725,
+      0.42
+    ],
+    [
+      0.675,
+      0.26,
+      0.8,
+      0.385
+    ],
+    [
+      0.47,
+      0.52,
+      0.595,
+      0.645
+    ],
+    [
+      0.47,
+      0.79,
+      0.595,
+      0.915
+    ]
+  ],
+  "featureLabels": [
+    "石板灰頭胸",
+    "黃嘴",
+    "白腹黑斑",
+    "淡粉腳"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥頭與胸為石板灰，與較淺的藍灰上體及尾成明顯對比；雌鳥上體灰褐、對比弱得多，第一齡雄鳥的對比則因地區而異，為插圖局部。",
+    "成鳥雄鳥的嘴大部分為黃色，僅嘴峯較暗；雌鳥與第一齡鳥的黃色較淡，幼鳥更暗，為插圖局部。",
+    "成鳥雄鳥下體白，腹部與脇佈滿與脇同色的大型斑點，部分個體腹部幾乎無斑；雌鳥白底而胸脇密佈灰斑、上脇有橙色渲染，為插圖局部。",
+    "腳與趾淡粉至肉色，與深色上體成對比；本種 21–22 cm，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "LAO",
+      "PRK",
+      "RUS",
+      "KOR",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists China (native, including the central-China breeding population), Japan (native, the other breeding population), Laos and Vietnam (native non-breeding), North Korea, South Korea, Russia and Taiwan as native, and Hong Kong is folded into China's outline. Thailand is a VAGRANT entry and is left unshaded. Russia is shaded as a country, not as a claim of breeding range west of the Urals. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0390/046600",
+      "use": "香港第 I 類：疏林與鬱閉林地常見的冬候鳥及過境鳥，1960–70 年代以後可能減少；21–22 cm，成鳥雄鳥頭與胸石板灰、與中藍灰上體及尾成明顯對比，脇灰而腹部有同色大型斑點，嘴大部分黃色，少數個體腹部無斑；成鳥雌鳥上體灰褐、下體白而胸脇密佈灰斑、上脇有橙色渲染，第一齡雌鳥大覆羽與三級飛羽有淡色端；第一齡雄鳥變異大（部分似成鳥但保留較褐的幼羽飛羽，部分頭與上體對比微弱而下體密佈斑點），日本繁殖鳥據說較暗較均勻；叫聲為高頻帶輕微嗡鳴的飛行聲，音高較灰背鶇略低，警報聲與其他鶇幾乎相同；見於森林、風水林與較疏的林地，包括有足夠地面覆蓋的市區公園，通常單獨或五隻以下小群、常與其他鶇混群；1999–2020 年一般由 11 月第二週至 4 月第一週出現，極端日期為 1970-10-25 與 1960-05-08，11 月下半月有過境高峰，12 月第三週至 2 月中數量穩定代表越冬族群，之後減至 3 月中，3 月下半月至 4 月第一週略升為較弱的春季過境；相對灰背鶇可能自 1960 年代減少（1966–67 年 MAPS 在山頂捕獲 34 隻本種對 30 隻灰背鶇，1999–2020 年遞交紀錄的遇見率只有灰背鶇一半）；近年最高 2019-11-21 南丫島一個為攝影而設的小水池 85 隻，正常觀鳥的最高為 2009-11-25 蒲台島 56 隻（其中 41 隻清晨飛過）；1960–70 年代曾見多達 20 隻的群，最高為 1969-02-01 及 02-08 港島 Bethanie 40 隻、1971-01-05 至 01-07 寶珊道 30 隻；Swinhoe (1861) 於 2、3 月紀錄，Kershaw (1904) 記為冬季常見，Vaughan & Jones (1913) 則認為不很多但春季因過境而較多，Herklots (1953) 同意；常在結果的樹木與灌木上進食（Ilex rotunda var. microcarpa、Machilus thunbergii、Schefflera heptaphylla、Osmanthus matsumuranus、Celtis sinensis），亦在落葉層找無脊椎動物，清晨與黃昏較多；單型種，兩個繁殖族群（日本全境；中國中部至東岸），冬季南至華南與中南半島東北部；IUCN LC、趨勢不明。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/japanese-thrush-turdus-cardis/details",
+      "use": "IUCN **2018** LC、成熟個體 Unknown、趨勢 Unknown（評語：因生境改造的影響不確定而難以判斷）、繁殖 EOO **3,250,000 km²**、非繁殖 EOO **1,050,000 km²**、完全遷徙、繁殖 endemic **No**、7 個 IBA／KBA、海拔 400–1,500 m、世代 **6.1 年**、森林依賴度 Medium；生境以溫帶林為繁殖期主要，非繁殖期見於亞熱帶低地濕林、鄉村花園、農地與溪流；用途為國際寵物貿易；無系統性監測計畫、已納入國際法規；國家表：中國原生、日本原生、寮國原生、北韓原生、俄羅斯（含亞洲部分）原生、南韓原生、台灣原生、越南原生，泰國為迷鳥，香港沒有獨立一列。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（烏灰鶇；Japanese Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Turdus cardis／鶇科 Turdidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=2.3、v=3.4（含 vEst=1）、r=3.3、c=1.2、o=2.4。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；diet 只有「它也會取食水果」一句，range 為國家名單，look 與 funFact 重複（只講首次越冬雄鳥上體與喉似灰背鶇的深藍灰），breeding（一季兩窩）、behavior（森林、落葉層、次生林、花園公園）、migration（10 月離開繁殖地，於華南沿海、海南、偶爾台灣過境及寮國越南北部越冬）有中文；habitat、voice、conservation、etymology 沒有；length 與 weight 為空；callouts 缺失。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 115.0 mm、尾 76.9 mm、跗蹠 29.4 mm、嘴峯 23.5 mm、體重 58.9 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 046600（路徑 `0390/`，鶇科）：香港第 I 類，疏林與林地常見冬候鳥及過境鳥；21–22 cm，成鳥雄鳥石板灰頭胸與藍灰上體成對比、白腹有大型黑斑、嘴大部分黃；雌鳥灰褐而胸脇密佈灰斑、上脇有橙；第一齡雄鳥變異大。",
+    "本港紀錄：1999–2020 年由 11 月第二週至 4 月第一週，極端 1970-10-25 與 1960-05-08；11 月下半月過境高峰、12 月第三週至 2 月中穩定越冬、3 月下半月至 4 月第一週弱春季過境；相對灰背鶇可能自 1960 年代減少，現時遇見率只有其一半；最高 2019-11-21 南丫島 85 隻（攝影水池），正常觀鳥最高 2009-11-25 蒲台島 56 隻。",
+    "習性：單獨或五隻以下小群，常與其他鶇混群；在結果樹木（鐵冬青、潤楠、鴨腳木、桂花、朴樹）與落葉層覓食，清晨黃昏較活躍；飛行叫聲高頻帶嗡鳴、音高較灰背鶇略低。",
+    "分類：單型種，兩個繁殖族群（日本；中國中部至東岸），冬季南至華南與中南半島東北部；香港沒有繁殖紀錄。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2018** 年評估，趨勢 **Unknown**（與 HKBWS「可能減少」並不矛盾，只是資料不足）；EOO 繁殖 3,250,000 km²、非繁殖 1,050,000 km²、完全遷徙、非繁殖 endemic、世代 6.1 年、森林依賴度 Medium、7 個 IBA。",
+    "runtime 分數：i=2、a=2.3、r=3.3、c=1.2 沿用（文案雖薄，但 diet、range、look、behavior、breeding、migration 皆有中文，a 的低分與實際相符）；v=3.4 待查——length 與 weight 皆為空、vEst=1 即原值由體長估算，翼長 115.0 mm×0.22≈25.3 cm 高於 HKBWS 的 21–22 cm；o=2.4 依賴待查分項（v）不補算。",
+    "runtime 文案缺陷：habitat、voice、conservation、etymology 四欄沒有中文，look 與 funFact 完全重複且只描述第一齡雄鳥，diet 只有一句「它也會取食水果」，length 與 weight 為空，callouts 缺失。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖原為 1296×816 橫幅，直接取中央 816×816 方形（不補邊，避免出現平面色帶）後放大至 1127×1127，畫出石板灰頭胸、藍灰上體、白底大黑斑與黃嘴，站在風水林的落葉層上以呼應 HKBWS 所述習性；雌鳥（灰褐、上脇橙色渲染）與第一齡雄鳥仍待專家核。比較鳥為本輪新生成的灰背鶇與白腹鶇，非等比例、非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 115.0 mm×0.22≈25.3 cm 高於 HKBWS 的 21–22 cm，3.4 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}
