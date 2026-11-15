@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 記下降"
+  },
+  "id": "0428",
+  "name": "強腳樹鶯",
+  "scientificName": "Horornis fortipes",
+  "illustrationTaxon": "Adult-type Horornis fortipes perched on a thin twig among grass stems; AI interpretation, sex, subspecies and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "遠東樹鶯",
+      "scientificName": "Horornis canturians",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型大得多、嘴短厚、眉紋寬而明顯、暖褐羽冠與翼緣對比強；本種小型、眉紋模糊、整體暗淡少標記。"
+    },
+    {
+      "zh": "鱗頭樹鶯",
+      "scientificName": "Urosphena squameiceps",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "僅 9–10 cm、尾極短、全身銹褐、眉紋奶油色而清晰；本種尾長而鬆軟、上體褐灰、眉紋淡而不明顯。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.625,
+      0.215,
+      0.775,
+      0.365
+    ],
+    [
+      0.355,
+      0.415,
+      0.555,
+      0.615
+    ],
+    [
+      0.36,
+      0.365,
+      0.52,
+      0.525
+    ],
+    [
+      0.13,
+      0.255,
+      0.35,
+      0.475
+    ]
+  ],
+  "featureLabels": [
+    "模糊淡眉",
+    "灰褐脇部",
+    "暖褐翼緣",
+    "鬆軟長尾"
+  ],
+  "featureNotes": [
+    "眉紋淡皮黃色而不明顯，眼先一段稍清楚；眼紋雖寬但不算深，耳羽比羽冠淡，為插圖局部。",
+    "胸部以下轉淡褐、脇部灰褐，正是英文名 brown-flanked 所指，為插圖局部。",
+    "飛羽外瓣暖褐色，與較灰褐的肩背形成對比，為插圖局部。",
+    "尾相對身體長而鬆軟，常微微擺動；尾下覆羽色調較暖，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "PAK",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and resident, breeding and wintering areas are not colour-separated. Hong Kong holds a common winter visitor and a recently established breeding population per HKBWS but is not listed in BirdLife's country table and has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0310/037300",
+      "use": "香港第 I 類常見冬候鳥，見於開闊冠層的灌叢、高草、林緣等地；11–12 cm；小型、腹部圓鼓、尾較長但鬆軟、缺乏醒目羽色；眉紋淡皮黃而不明顯、眼先一段較清楚，眼紋寬但不算深，耳羽較羽冠淡；上體由銹褐至灰褐、隨年齡與羽況有別；飛羽外瓣暖褐；下體暗淡偏白、胸部沾淡褐、脇部灰褐、尾下覆羽較暖；叫聲為硬而薄的「chak／tak」，鳴唱以一段 1–2 秒的平直純音起頭再轉入漸強；1983-12-01 加多利灣首筆，1993–96 繁殖調查未錄得，2016–19 已達 6.3% 方格；2003-07-05 首次證實繁殖；最高 51 隻（2018-04-03 屏風山脊）；冬季圖集佔用方格由 6.0% 升至 8.4%；香港族群屬 C. f. davidianus。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/brownish-flanked-bush-warbler-horornis-fortipes",
+      "use": "BirdLife 英文名作「Brownish-flanked Bush-warbler」；IUCN 2024 LC 但記下降（分佈區林木覆蓋 10 年減 2.7%、推測族群減 1–19%、森林依賴中等）；繁殖 EOO 5,820,000 km²、垂直遷徙、海拔 0–3,350 m、世代長度 2.2 年；國家：孟加拉、不丹、中國、印度、老撾、緬甸、尼泊爾、巴基斯坦、中國台灣、越南；未列香港。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（強腳樹鶯；英文作 Brownish-Flanked Bush Warbler）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Horornis fortipes／樹鶯科 Scotocercidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數齊備：i=2、a=2.8、v=2.4、r=1.8、c=1.2、o=2，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；中文 range、look、diet、voice、behavior、breeding、funFact 都有內容，但 fieldCopy 的 range 改寫成「分佈在南亞、模式產地在印度」與 zh range 不一致，habitat 中文為空，behavior 寫「海拔2400米一下」並以逗號收尾，funFact 自我重複「又名強腳樹鶯」，length 與 weight 為空，picks 列出七個欄位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 52.7 mm、尾 44.2 mm、跗蹠 21.1 mm、嘴峯 13.5 mm、體重 9.6 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 037300：11–12 cm，香港屬第 I 類常見冬候鳥，見於開闊冠層灌叢、高草、林緣等密生植被；1983 年 12 月 1 日加多利灣首筆，1993–96 繁殖調查完全未錄得，2003 年 7 月 5 日首次證實繁殖，此後繁殖範圍迅速擴展至 2016–19 調查的 6.3% 方格，兩大據點為大帽山—林村及屏風山—船灣；冬季圖集佔用方格由 6.0% 升至 8.4%。",
+    "辨識要點：小型、腹圓、尾較長而鬆軟、羽色低調；眉紋淡皮黃、眼先一段較明顯，眼紋寬而不深，耳羽較羽冠淡；上體銹褐至灰褐（隨年齡與羽況），飛羽外瓣暖褐；下體暗淡偏白、胸部沾淡褐、脇部灰褐、尾下覆羽較暖。卡面四個標籤取眉、脇、翼緣與尾。",
+    "鳴聲：非繁殖期多靠硬而薄的「chak／tak」發現，夏季鳴唱以一段 1–2 秒平直純音起頭，再接可變的漸強，是本種最具特色的部分；幼鳥離巢後另有一種金屬般的單調呼聲，近似斑文鳥。",
+    "英文名差異：runtime 用 Brownish-Flanked Bush Warbler，HKBWS 用 Brown-flanked Bush Warbler，BirdLife 用 Brownish-flanked Bush-warbler；同為 Horornis fortipes，中文同名「強腳樹鶯」。",
+    "IUCN：BirdLife 2024 評 LC 但記下降（林木覆蓋 10 年減 2.7%，推測族群減 1–19%）；HKBWS 頁面主要敘述本港族群的擴張與回升，兩者並不衝突——全球趨勢與本地殖民擴張可以並存，卡面註記只述全球評估。",
+    "runtime 六項分數齊備 i=2、a=2.8、v=2.4、r=1.8、c=1.2、o=2、vEst=1，全部沿用：look 自述體長 11–12.5 cm，與翼長 52.7 mm×0.22≈11.6 cm 相符，v 仍保留「原觀賞值含體長估算」提示；a 有棲地、食性、行為三方面內容；r=1.8 有 range、breeding、behavior 支撐。",
+    "runtime 文案缺陷：fieldCopy 的 range 被改寫成「分佈在南亞地區，其模式產地在印度」，與 zh range 的華南、華中、西南、北京、河北、陝西、甘肅不一致，亦與 BirdLife 的東喜馬拉雅至華南範圍有出入；habitat 中文為空；behavior 寫「海拔2400米一下」（應為「以下」）並以逗號收尾；diet 亦以逗號收尾；funFact 寫成「強腳樹鶯又名強腳樹鶯」自我重複；length、weight 為空；picks 列出七個欄位。辨識與分佈內容一律以 HKBWS／BirdLife 為準。",
+    "BirdLife 該頁的族群段落描述的是蘇門答臘、爪哇、峇里等巽他群島的狀況（locally common on Sumatra 等），與本種喜馬拉雅至華南的分佈不符，明顯是頁面資料錯置，故未採用。",
+    "世界底圖按 BirdLife 國家表填孟加拉、不丹、中國、印度、老撾、緬甸、尼泊爾、巴基斯坦、中國台灣、越南；香港雖是本地常見冬候鳥並已建立繁殖族群，但 BirdLife 國家表未列香港、110m 底圖亦無獨立多邊形，故隨中國顯示。留鳥、繁殖與越冬地未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成小型腹圓、尾長而鬆軟的暗淡樹鶯，停於草莖旁的細枝，並畫出模糊淡皮黃眉紋、寬而不深的眼紋、比羽冠淡的耳羽、暖褐翼緣、灰褐脇部與較暖的尾下覆羽；年齡與羽色差異（銹褐至灰褐）及亞種 davidianus 仍待專家核。比較鳥為 0427 遠東樹鶯及 0424 鱗頭樹鶯的比較圖（本回合環境重建後重新生成，非原始卡主圖），非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {}
+}
