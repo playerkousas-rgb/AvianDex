@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：趨勢記下降"
+  },
+  "id": "0436",
+  "name": "暗綠繡眼鳥",
+  "scientificName": "Zosterops simplex",
+  "illustrationTaxon": "Adult-type Zosterops simplex (nominate simplex group) on a twig; AI interpretation, subspecies, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紅脇繡眼鳥",
+      "scientificName": "Zosterops erythropleurus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "眼圈更寬、眼先黑色範圍大而散、喉黃而胸腹純白、脇部有栗色斑、嘴基淡粉、初級飛羽突出較長；本種眼圈較窄、眼先暗灰而窄、喉與腹同帶黃、無栗脇斑。"
+    },
+    {
+      "zh": "栗頸鳳鶥",
+      "scientificName": "Staphida torqueola",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "沒有白色眼圈、臉頰栗色帶白紋、頭頂有短冠羽、下體純白、尾長而外側有寬白端；本種有寬白眼圈、上體黃綠、尾短。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.695,
+      0.215,
+      0.785,
+      0.305
+    ],
+    [
+      0.725,
+      0.215,
+      0.805,
+      0.295
+    ],
+    [
+      0.4,
+      0.36,
+      0.52,
+      0.48
+    ],
+    [
+      0.27,
+      0.51,
+      0.39,
+      0.63
+    ]
+  ],
+  "featureLabels": [
+    "白色眼圈",
+    "暗灰眼先",
+    "黃綠色上體",
+    "檸檬黃泄殖腔"
+  ],
+  "featureNotes": [
+    "眼圈寬而白、由細小羽毛組成，是繡眼鳥科的名稱由來，也是本種最容易一眼認出的特徵，為插圖局部。",
+    "眼先是窄窄一條暗灰色，向下延伸至眼前下方，範圍比紅脇繡眼鳥小得多、邊界亦較清晰，為插圖局部。",
+    "頭部帶黃，上體、翼覆羽及初級飛羽邊緣為欖綠色，整體呈黃綠色調，為插圖局部。",
+    "腹部污白而泄殖腔周圍為檸檬黃色，是辨認本種時常用的一點，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BRN",
+      "CHN",
+      "IDN",
+      "KHM",
+      "LAO",
+      "MMR",
+      "MYS",
+      "THA",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only: BirdLife's country table (Brunei, Cambodia, China, Indonesia, Laos, Malaysia, Myanmar, Thailand, Taiwan, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. BirdLife also lists Hong Kong (China) as an extant resident, but Hong Kong has no separate geometry on the 110m base map and is covered by China's shading. Singapore is listed by BirdLife but has no geometry at 110m, so it is omitted from the shading; its population is introduced anyway."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0360/043400",
+      "use": "香港第 I 類，常見而廣泛的留鳥、遷徙鳥及冬候鳥，見於有樹木的生境；11–12 cm；小型黃綠色雀鳥，眼圈寬白、眼先暗灰而窄並延伸至眼前下方，頭帶黃，下體污白而泄殖腔檸檬黃，上體、翼覆羽及飛羽邊緣綠色，裸部灰色；晨昏鳴唱最盛，最常聽到的叫聲為急促下滑音，亦會發出似叉尾太陽鳥的顫音；繁殖期幾乎全港，中西部次生闊葉林與港島密度最高，亦見於風水林、市區公園及較高而鬱閉的灌叢，1993–96 年 1 公里方格佔 52.7%、2016–19 年 51.6%，西部及東部新界草地與大嶼山較少，大帽山 650 米以上稀疏；冬季分佈由 2001–05 年的 81.1% 降至 2016–19 年的 67.3%；最高計數 2015-11-26 粉嶺高爾夫球場 247 隻、2019-12-27 南丫 341 隻、2015-12-18 大嶼山西南 315 隻；食昆蟲、幼蟲、小肉質果實、種子、花蕾、花蜜與花粉，隆冬幾乎全吃果實、初夏改吃昆蟲，是本港三大種子傳播者之一；巢見於 3 月 21 日至 5 月 18 日；為本港最受歡迎籠鳥但未見對族群有影響，本地未偵測到族群或分佈變化；頁記 IUCN LC、趨勢下降。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/swinhoes-white-eye-zosterops-simplex",
+      "use": "IUCN 2019 LC、趨勢下降（推測，主因大量捕捉，成熟個體持續減少為 Yes）；繁殖 EOO 10,400,000 km²、非繁殖 9,590,000 km²；五個亞種（simplex、hainanus、erwini、williamsoni、salvadorii）；數量未量化，但為香港次生林最常見鳥類、亦是中國最受歡迎籠鳥；台灣常見，蘇門答臘因捕捉量高而受關注；國家表為汶萊、柬埔寨、中國、香港（中國）、印尼、寮國、馬來西亞、緬甸、新加坡（引入）、台灣、泰國、越南；海拔在華南可至 800 米。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（暗綠繡眼鳥；Swinhoe's White-Eye）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Zosterops simplex／繡眼鳥科 Zosteropidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=2.3、v=2.4（含 vEst=1）、r=4.8、c=1.2、o=2.5。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range 中文為真實分佈（中國東部、台灣、越南北部、馬來半島、蘇門答臘、婆羅洲），habitat 中文全空而英文重複同一句分佈，diet 中文為「留鳥、半開放高大樹木的森林、雜食性」的樣板句，look 中文只有體重翼長嘴峯等量度，breeding 中文寫的是 2018 年分子研究把本種自日菲繡眼提升為種的分類沿革、並非繁殖，migration 與 etymology 有可用內容，funFact 記台灣稱綠繡眼、香港稱相思；length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 53.5 mm、尾 36.5 mm、跗蹠 15.4 mm、嘴峯 13.3 mm、體重 11.3 g（runtime look 寫 11.29 g，略有出入）。"
+    }
+  ],
+  "notes": [
+    "HKBWS 043400：香港第 I 類，常見而廣泛的留鳥、遷徙鳥及冬候鳥；11–12 cm；眼圈寬白、眼先暗灰而窄、頭帶黃、上體與翼黃綠、下體污白而泄殖腔檸檬黃、裸部灰色。繁殖期分佈佔 1 公里方格 52.7%（1993–96）與 51.6%（2016–19），但冬季分佈由 81.1%（2001–05）跌至 67.3%（2016–19），文中歸因於城市化及市區邊緣生境減少、或北方移民減少。",
+    "辨識要點：與紅脇繡眼鳥之別——本種眼圈較窄、眼先暗灰而窄、喉與腹同樣帶黃、無栗色脇斑、嘴基不淡粉、初級飛羽突出較短。卡面四個標籤取眼圈、眼先、上體與泄殖腔。",
+    "分類：曾視為日菲繡眼 Zosterops japonicus 的亞種群，2018 年分子系統發育研究後提升為種；現分五個亞種，香港屬指名亞種 simplex。香港俗稱「相思」，台灣稱「綠繡眼」。",
+    "分佈：中國東部、台灣、越南北部、馬來半島、蘇門答臘及婆羅洲等；BirdLife 國家表另列汶萊、柬埔寨、印尼、寮國、緬甸、新加坡（引入）、泰國與香港（中國）。在 110m 底圖上香港併入中國填色，故地圖填十一國。",
+    "IUCN：HKBWS 與 BirdLife 都記 LC、趨勢下降；BirdLife 為 2019 年評定，主因大量捕捉，屬推測性下降，未達易危門檻。HKBWS 亦指出本種為香港最受歡迎籠鳥，但未見對本地族群有影響。",
+    "runtime 分數：i=2、r=4.8、c=1.2、v=2.4 沿用；vEst=1 而 length 為空，翼長 53.5 mm×0.22≈11.8 cm 落在 HKBWS 11–12 cm 之內，估算與實測相符，只加「觀賞值含體長估算」提示、不扣起；a=2.3 待查——habitat 中文全空、英文重複分佈句，diet 只有一句樣板中文，缺乏棲地支撐；o=2.5 依賴待查分項（a）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：habitat 中文全空而英文是分佈句、diet 中文為樣板句、look 中文僅列量度、breeding 中文寫的是分類沿革而非繁殖、length 與 weight 為空；體重 runtime 寫 11.29 g、AVONET 為 11.3 g，差異屬四捨五入。辨識與本地紀錄一律以 HKBWS 為準。",
+    "世界底圖按 BirdLife 國家表填汶萊、中國、印尼、柬埔寨、寮國、馬來西亞、緬甸、新加坡、泰國、台灣及越南共十一國，並非全部分佈區、也不是 occurrence polygon；香港雖為本地留鳥且被 BirdLife 列為 extant，但 110m 底圖無獨立多邊形，故以中國填色覆蓋；新加坡族群為引入。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成小型黃綠繡眼鳥，停於細枝上，並畫出寬白眼圈、窄窄的暗灰眼先、帶黃的頭、欖綠上體與翼、污白下體及檸檬黃泄殖腔；亞種、性別與年齡差異仍待專家核。比較鳥沿用 0435 的紅脇繡眼鳥及 0433 的栗頸鳳鶥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 中文全空而英文重複分佈句，diet 只有一句樣板中文，2.3 分缺乏棲地支撐，待查。",
+    "o": "綜合分依賴待查分項（a），不補算。"
+  }
+}
