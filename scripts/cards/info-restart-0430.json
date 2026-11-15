@@ -1,0 +1,167 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 記穩定"
+  },
+  "id": "0430",
+  "name": "白喉林鶯",
+  "scientificName": "Curruca curruca",
+  "illustrationTaxon": "Adult-type Curruca curruca perched in low scrub; AI interpretation, sex, subspecies and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "強腳樹鶯",
+      "scientificName": "Horornis fortipes",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "頭部與背部同為褐灰、沒有分明眼罩與白喉、尾長而鬆軟；本種頭較灰、有深色眼罩、喉純白、尾較短。"
+    },
+    {
+      "zh": "褐柳鶯",
+      "scientificName": "Phylloscopus fuscatus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "全身暗褐、只有眼前一小段淡眉、沒有眼罩與白色外側尾羽；本種頭灰、眼罩深、喉白、外側尾羽有白。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.625,
+      0.235,
+      0.775,
+      0.385
+    ],
+    [
+      0.645,
+      0.3,
+      0.785,
+      0.44
+    ],
+    [
+      0.545,
+      0.41,
+      0.7,
+      0.565
+    ],
+    [
+      0.08,
+      0.52,
+      0.29,
+      0.73
+    ]
+  ],
+  "featureLabels": [
+    "深色眼罩",
+    "純白喉部",
+    "淡褐脇部",
+    "白色外尾羽"
+  ],
+  "featureNotes": [
+    "深色眼罩橫過眼部，配上較灰的頭與白色的喉，是本種與其他林鶯最直接的分別，為插圖局部。",
+    "喉部純白而界線清楚，與下方的淡褐色胸口形成對比，為插圖局部。",
+    "脇部及胸部沾淡褐皮黃色，腹部較白，為插圖局部。",
+    "尾羽深灰，外側尾羽有明顯白邊，飛行或擺尾時最易看見，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ARE",
+      "CHN",
+      "DEU",
+      "DZA",
+      "EGY",
+      "ETH",
+      "FRA",
+      "GBR",
+      "IND",
+      "IRN",
+      "KAZ",
+      "LBY",
+      "MAR",
+      "MLI",
+      "MNG",
+      "NER",
+      "NGA",
+      "OMN",
+      "PAK",
+      "POL",
+      "RUS",
+      "SAU",
+      "SDN",
+      "SEN",
+      "TCD",
+      "TUR",
+      "UKR",
+      "UZB"
+    ],
+    "note": "Partial native-country overview only: a selection of breeding, passage and wintering countries from BirdLife's table, not the full list; green does not imply full-country occupancy and the seasons are not colour-separated. Hong Kong is a Cat I accidental with four records per HKBWS but is not listed by BirdLife and has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0360/042900",
+      "use": "香港第 I 類迷鳥；12–13.5 cm；小型緊湊的林鶯，上體褐、頭較灰，下體偏白而喉白、脇帶皮黃；尾羽外側有不同程度的白色；嘴與腳深色；在灌叢中低調覓食，叫聲近似褐柳鶯但稍柔；2006-10-15 米埔自然護理區網捕一隻經羽毛 DNA 確認為 C. c. blythi；其餘紀錄可能為指名亞種或沙漠林鶯 C. minula：2002-10-07 燕崗、2017-01-10/11 荔枝角、2017-01-22 至 2018-02-08 尖鼻咀；繁殖區由北極圈南至約北緯 40 度（伊朗可至 30 度），越冬於東非、中東及印度次大陸；在中國於西北及北方繁殖；頁記 IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/lesser-whitethroat-curruca-curruca",
+      "use": "IUCN 2024 LC、趨勢穩定；成熟個體 27,900,000–47,700,000（2018，資料品質差）；繁殖 EOO 32,700,000 km²、非繁殖 23,800,000 km²、完全遷徙；國家表涵蓋歐洲、西亞、中亞、北非、東非、中東至南亞，中國（繁殖）、蒙古、俄羅斯等；未列香港。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（白喉林鶯；Lesser Whitethroat）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Curruca curruca／鶯科 Sylviidae，即舊稱林鶯科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 只有 v=2.7、r=1，含 vEst=1；i、a、c、o 完全沒有分數。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；中文全部為空，range、habitat、diet 三段英文寫的是本種與 Common Whitethroat 在冰期分化的推測（放錯欄位），look、voice、breeding、migration、etymology 為可用的英文內容，picks 為空，length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 65.1 mm、尾 56.9 mm、嘴峯 12.4 mm、體重 11.4 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 042900：12–13.5 cm，香港屬第 I 類迷鳥，至今只有四筆：2002 年 10 月 7 日燕崗、2006 年 10 月 15 日米埔網捕（羽毛 DNA 確認為 C. c. blythi）、2017 年 1 月 10–11 日荔枝角、2017 年 1 月 22 日至 2018 年 2 月 8 日尖鼻咀；除首兩筆外，其餘可能屬指名亞種或沙漠林鶯 C. minula，無法確定。",
+    "辨識要點：上體褐、頭較灰、深色眼罩、喉純白、下體偏白而脇帶皮黃、尾羽外側有白、嘴與腳深色；叫聲近似褐柳鶯但稍柔，是本種在本港最可能被聽見的方式。卡面四個標籤取眼罩、喉、脇與外側尾羽。",
+    "分類：舊屬 Sylvia，現置 Curruca；runtime 科名用「鶯科」對應 Sylviidae（林鶯科）。HKBWS 亦提醒本種與沙漠林鶯 C. minula、白眶林鶯等近緣種在野外難以區分，香港部分紀錄因此只到屬級。",
+    "分佈：繁殖區由北極圈南至約北緯 40 度（伊朗可至 30 度），越冬於東非、中東及印度次大陸；在中國於西北及北方繁殖，與本港的迷鳥紀錄屬不同族群。BirdLife 國家表橫跨歐洲、西亞、中亞、北非至南亞，範圍極廣，地圖只取其中一部分作概覽。",
+    "IUCN：HKBWS 與 BirdLife 都記 LC、趨勢穩定；BirdLife 2024 的成熟個體估算 27.9–47.7 百萬，惟其自評資料品質為 Poor。",
+    "runtime 分數只有 v=2.7、r=1、vEst=1，i、a、c、o 完全缺失並列於 missingScores。v 待查——length 為空，翼長 65.1 mm×0.22≈14.3 cm，高於 HKBWS 12–13.5 cm，保留「原觀賞值含體長估算」提示；r=1 沿用——本港只有四筆迷鳥紀錄；o 依賴待查分項（v）不補算。",
+    "runtime 文案缺陷：fieldCopy 中文全部為空；range、habitat、diet 三段的英文其實是「本種與 Common Whitethroat 在上一個冰期分化」的推測，屬分類討論而非分佈、棲地或食性；look、voice、breeding、migration、etymology 有可用英文但未譯；picks 為空陣列；length、weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "世界底圖按 BirdLife 國家表選取部分繁殖、過境及越冬國家（英國、法國、德國、波蘭、烏克蘭、土耳其、俄羅斯、哈薩克、烏茲別克、蒙古、中國、伊朗、巴基斯坦、印度、沙地阿拉伯、阿聯酋、阿曼、埃及、蘇丹、埃塞俄比亞、乍得、尼日爾、尼日利亞、馬里、塞內加爾、摩洛哥、阿爾及利亞、利比亞），並非全部國家；香港雖有迷鳥紀錄，但 BirdLife 未列香港、110m 底圖亦無獨立多邊形，故不填色。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成小型緊湊林鶯，停於低矮帶刺灌叢，並畫出較灰的頭、深色眼罩、純白喉部、褐色上體與翼、淡褐脇部及帶白邊的外側尾羽；亞種（blythi、halimodendri 或指名）與性別差異仍待專家核。比較鳥為 0428 強腳樹鶯及褐柳鶯的重新生成比較圖，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 為空，翼長推估 14.3 cm 高於 HKBWS 12–13.5 cm，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}
