@@ -1,0 +1,151 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0458",
+  "name": "白眉地鶇",
+  "scientificName": "Geokichla sibirica",
+  "illustrationTaxon": "Adult male Geokichla sibirica sibirica (broad white supercilium, slaty blue-grey plumage). AI interpretation, subspecies and moult unverified; the fourth circle shows a female.",
+  "similarSpecies": [
+    {
+      "zh": "懷氏地鶇",
+      "scientificName": "Zoothera aurea",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是大型地棲鶇，但懷氏地鶇上體金褐並密佈黑色鱗斑、眼圈是一整圈白色、下體白底配寬黑新月斑，沒有長而粗的白眉；本種成鳥雄鳥全身石板藍灰、頭部較深、只有一條由眼前起向後收窄的粗白眉，下腹至尾下覆羽白。"
+    },
+    {
+      "zh": "白眉鶇",
+      "scientificName": "Turdus obscurus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "名字相近、都有白眉，但白眉鶇頭與胸偏藍灰、背與尾暖褐、脇橙黃、嘴黃而尖端深、白眉之外還有白色頰紋；本種全身石板藍灰而背部不暖褐、無橙黃脇、嘴深灰，且白眉更長更粗。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.63,
+      0.215,
+      0.755,
+      0.34
+    ],
+    [
+      0.42,
+      0.33,
+      0.545,
+      0.455
+    ],
+    [
+      0.29,
+      0.46,
+      0.415,
+      0.585
+    ],
+    [
+      0.42,
+      0.4,
+      0.545,
+      0.525
+    ]
+  ],
+  "featureLabels": [
+    "粗白眉",
+    "石板藍灰",
+    "白色下腹",
+    "雌鳥鱗斑"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥有一條寬而向後收窄的白色眉紋，起點正在眼前，與深色頭部成強烈對比，是野外辨識的第一眼特徵；雌鳥的眉紋較窄而斑駁，為插圖局部。",
+    "成鳥雄鳥全身石板藍灰，頭部更深，上體羽毛中央較深、邊緣較淡，形成低調的鱗狀層次；指名亞種 sibirica 較淺而偏藍，davisoni 更暗更冷，為插圖局部。",
+    "下腹、肛周與尾下覆羽白色，指名亞種的白會沿腹部向上延伸成窄帶，davisoni 通常只在尾下覆羽有窄白端、腹部無白，為插圖局部。",
+    "雌鳥欖褐色而飛羽較褐，頭與胸斑駁，下體在淡色底上密佈深色新月形或魚鱗狀斑；雌鳥辨識仍有不確定性，此格為另一張插圖的局部，非同一隻鳥。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "female-crop.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IND",
+      "IDN",
+      "JPN",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PRK",
+      "RUS",
+      "KOR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists these 14 (plus Singapore, which has no separate geometry on the 110m base map) as native; China covers both the breeding range and the coastal wintering range. Hong Kong is listed by BirdLife as a VAGRANT entry and Taiwan also as a vagrant, so neither is highlighted separately (Hong Kong falls inside China's outline). Not an occurrence polygon: green does not imply full-country occupancy and the seasons are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0390/046200",
+      "use": "香港第 I 類：秋季稀少過境鳥，冬季與春季罕見，一般在有林地區；兩個亞種 G. s. davisoni 與 G. s. sibirica 都會出現，至少雄鳥以 sibirica 較多；20–23 cm，整體是偏暗的鶇，成鳥雄鳥深灰、頭部較深、上體羽心較暗而邊緣較淡、下體羽緣略淡，並有一條由眼前開始、寬而收窄的醒目白色眉紋；飛行時兩性都可見翼下覆羽的寬白帶被深色帶分隔；指名亞種雄鳥較淺、偏藍，尾下覆羽與肛周的白色較多並以窄帶伸延至腹部，davisoni 雄鳥更暗更冷、尾下覆羽通常只有窄白端、腹部無白（判斷時要注意光線，尤其林蔭下）；雌鳥欖褐、飛羽較褐，頭與胸斑駁，下體有深色鱗斑，眉紋淡而斑駁、由嘴基起窄而向眼方向變寬；雌鳥 sibirica 較指名亞種淺，主要在胸部呈褐色橫斑對淡黃或白底，最長尾下覆羽大部分白，雌鳥 davisoni 較暗、胸前是褐色底上的淡色鱗斑、最長尾下覆羽有大片深色羽心，惟雌鳥辨識存疑；叫聲為短而高音的 tsip（停棲或飛行），另有較像 Turdus 的飛行聲 tzzzip／tzzee（起始音調上升）；出現於成熟森林，略少於一半紀錄來自大帽山山塊，長洲亦有一次，蒲台與何文田等過境點亦有；1958-10-31 首錄；1999–2020 的出現模式顯示秋季最常見（稀少過境鳥），10 月數量最高，隆冬至春季罕見；最高計數為 1995-01-14 至 02-07 與 2008-12-31 大帽山（梧桐寨）4 隻，另有 2019-10-08 至 11-03 大欖郊野公園 8 隻；秋季最早為 9 月 16 日甲龍（嘉道理農場一帶）兩隻，春季最遲為 2019-04-28 至 05-09 何文田一隻第二曆年雄鳥；雄鳥紀錄至少為雌鳥的兩倍，原因不明；一般隱蔽而不易見，見於落葉層翻找無脊椎動物及在結果樹（如榕屬）覓食；繁殖於中西伯利亞至鄂霍次克海、南至中國東北（東河北部）及庫頁島至日本，越冬於中國南部沿海（按香港紀錄）、中南半島南至馬來半島、蘇門答臘與爪哇；兩個亞種，指名亞種繁殖於大陸部分的南部西伯利亞至鄂霍次克海與中國東北，davisoni 繁殖於庫頁島、千島群島與日本；IUCN LC、種群趨勢下降。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/siberian-thrush-geokichla-sibirica/details",
+      "use": "IUCN **2024** LC、成熟個體 **Unknown**、趨勢 **Decreasing**（Suspected，因過去十年分佈範圍內樹冠覆蓋估計減少 11%，推算族群下降 1–19%、最佳估計 11–14%）；繁殖 EOO **11,500,000 km²**、非繁殖 EOO **4,640,000 km²**、完全遷徙、非繁殖 endemic；8 個 IBA／KBA；海拔 0–2,570 m；世代 3.5 年；森林依賴度 **High**（溫帶林繁殖為主要、熱帶山地濕林非繁殖為主要、北方林為適合）；貿易低普遍度（七個資料集中兩個有紀錄），用途為食用與寵物；國家表把**香港（中國）列為 Vagrant**、台灣亦為 Vagrant，原生國家為中國、印度、印尼、日本、寮國、馬來西亞、蒙古、緬甸、尼泊爾、北韓、俄羅斯（含亞洲與中亞）、新加坡、南韓、泰國、越南。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（白眉地鶇；Siberian Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Geokichla sibirica／鶇科 Turdidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=3.8、v=3.4（含 vEst=1）、r=4.8、c=1.2、o=3.0，missingScores 為空；r=4.8 為本批目前最高。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；diet（昆蟲、蚯蚓、漿果）、range（西伯利亞等國名列表）、look（飛行時白色翼下覆羽有黑色條紋，與虎鶇相同）、migration（強烈遷徙、冬季遷往東南亞）、behavior（極少出現西歐、隱密）、humanRelation、etymology（Geokichla 意為「地鶇」）有中文；breeding 只是分佈國名列表；**habitat、voice、conservation 三個欄位完全缺失**；length 與 weight 為空；callouts 只有「頭：白眉地鶇華南亞種」「身：下腹及體側為白色」。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 119.0 mm、尾 87.8 mm、跗蹠 28.5 mm、嘴峯 22.4 mm、體重 75.5 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 046200（路徑 `0390/`，鶇科）：香港第 I 類，秋季稀少過境鳥，冬季與春季罕見，一般在有林地區；20–23 cm，雄鳥石板藍灰、頭部更深、由眼前起一條寬而收窄的粗白眉，指名亞種 sibirica 較淺偏藍、尾下至腹部白，davisoni 更暗更冷、尾下覆羽只有窄白端；雌鳥欖褐而斑駁、下體深色鱗斑。",
+    "本港紀錄：1958-10-31 首錄；秋季 10 月最多，隆冬至春季罕見；最高為 1995-01-14 至 02-07 及 2008-12-31 梧桐寨 4 隻，另有 2019-10-08 至 11-03 大欖郊野公園 8 隻；秋季最早 9 月 16 日甲龍兩隻，春季最遲 2019-04-28 至 05-09 何文田一隻；雄鳥紀錄至少為雌鳥兩倍；略少於一半紀錄來自大帽山山塊。",
+    "習性：隱蔽難見，在落葉層翻找無脊椎動物、亦在結果榕樹覓食；叫聲為高音 tsip，另有像 Turdus 的 tzzzip。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2024** 年評估；成熟個體未知，趨勢 **下降**（推測，十年間分佈範圍樹冠減少 11%、推算下降 1–19%）；EOO 繁殖 11,500,000 km²、非繁殖 4,640,000 km²、完全遷徙、海拔 0–2,570 m、世代 3.5 年、森林依賴度 **High**、8 個 IBA。**注意 BirdLife 把香港列為 Vagrant**，與 HKBWS 視為第 I 類秋季過境鳥的看法不同；卡片以 HKBWS 的本地狀況敘述，地圖則依 BirdLife 的原生國家填色。",
+    "runtime 分數：i=2、a=3.8、r=4.8、c=1.2 沿用（a 有 diet 與 range 兩欄中文支撐）；v=3.4 待查——length 與 weight 皆為空、vEst=1 表示原本就是由體長估算，而翼長 119.0 mm×0.22≈26.2 cm 高於 HKBWS 的 20–23 cm；o=3.0 依賴待查分項（v）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：habitat、voice、conservation 三個欄位完全缺失；breeding 只是分佈國名列表；look 只描述飛行時的翼下條紋，沒有停棲時的外型；length 與 weight 為空；callouts 只有兩項且一項是亞種名稱。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖（雄鳥）與第四格雌鳥圖皆由 1408×768 橫幅補成方形後裁 `(0.08,0.13,0.88,0.93)`，雌鳥另存為 `female-crop.png`；這是本批首次用 `featureSources` 讓第四個圓圈取自另一張插圖，因為本種雌雄差異大、只畫雄鳥會漏掉雌鳥的鱗斑特徵。比較鳥為本輪新生成的懷氏地鶇與白眉鶇 AI 圖（舊插圖在沙盒重置後已遺失），非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 119.0 mm×0.22≈26.2 cm 高於 HKBWS 的 20–23 cm，3.4 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}
