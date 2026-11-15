@@ -1,0 +1,144 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0444",
+  "name": "白頰噪鶥",
+  "scientificName": "Pterorhinus sannio",
+  "illustrationTaxon": "Adult-type Pterorhinus sannio sannio (the likely Hong Kong race, not critically examined). AI interpretation, subspecies, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黑眉雀鶥",
+      "scientificName": "Alcippe hueti",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "小得多（12.5–14 cm）、尾短，頭淡灰而有黑色側冠紋、上體有縱紋；本種 22–24 cm、尾長、全身素淨的褐色，有純白眉紋與白臉頰。"
+    },
+    {
+      "zh": "栗頸鳳鶥",
+      "scientificName": "Staphida torqueola",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "小得多、有豎起的冠羽、白色眼圈與栗色後頸，下體偏灰白；本種無冠羽、無眼圈，眉紋與臉頰皆為純白，全身褐色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.68,
+      0.1,
+      0.805,
+      0.225
+    ],
+    [
+      0.735,
+      0.17,
+      0.86,
+      0.295
+    ],
+    [
+      0.315,
+      0.415,
+      0.44,
+      0.54
+    ],
+    [
+      0.145,
+      0.465,
+      0.27,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "純白眉紋",
+    "深褐色喉",
+    "栗紅尾下覆羽",
+    "長尾"
+  ],
+  "featureNotes": [
+    "眉紋純白而寬，由嘴基一直伸延至眼後，是「白頰噪鶥」這名字的來源之一，為插圖局部。",
+    "頦與喉為深褐色，與上方的白臉頰形成強烈對比，這塊深色亦把白頰與白眉連成一個完整的頭部圖案，為插圖局部。",
+    "尾下覆羽與泄殖腔附近為略帶栗紅的褐色，比身體其他部分暖，為插圖局部。",
+    "尾長而呈中等褐色，佔身長的比例大，是本種「小型而尾長的噪鶥」印象所在，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only: BirdLife's country table (China, India, Laos, Myanmar, Thailand, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. BirdLife lists Hong Kong (China) separately as native and breeding, but it has no geometry on the 110m base map and is folded into China's shading; the Hong Kong population is itself of disputed origin and is placed in Category IIA locally."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0370/044400",
+      "use": "香港第 IIA 類，開放與郁閉灌叢及灌叢邊緣不常見而局部的留鳥，1980 年代以來大減但本世紀數量大致穩定；22–24 cm，小型、整齊、緊湊而尾長的噪鶥，全身中等褐色、泄殖腔附近略帶栗紅；頭部圖案鮮明——頦深褐、純白眉紋在眼前與白臉頰相連；叫聲響亮而獨特，最明顯為急降的 pseeoo 與帶嗡嗡聲的 psrrroo，本港鳴唱未知（泰國為 1–4 個音）；1980 年代初起範圍與數量下降，Carey et al. (2001) 曾推測可能消失，但每年地點不多於七個、個體不多於 30 隻，長期維持極小；近年多在中新界（林村谷、大埔西南的市區邊緣與村落），2011–15 的輕微回升與這些地區的較大數量有關；長期有族群的地點包括長洲（1976 年、甚至 1941 年起）、大埔河谷泮涌／大達仁至少 2001 年、鉛礦坳 2003 年、林村谷 2005 年，另有 Chau Tau（1990 年代至 2008）與 Ho Sheung Heung（2009–2015）後來消失；港島 1999 年後再無紀錄，2011 年石澳 5 隻、2017 年鶴咀 1 隻、2019 年石澳三群共 15 隻（近期的最高計數）；1941 年長洲紀錄無法證實，1961 年兩筆市區紀錄，1971 年起港島經常有報告，1977–79 年高峰時有 15–18 個地點，1985 年起在多處消失；天氣與生境：現存地點多為灌叢—草地鑲嵌，常源自村落或市區邊緣的荒廢農地；香港族群孤立（廣東只在北部，最近觀察在廣州東北），故列第 IIA 類，亦有人認為應列第 IIB 類；繁殖無資料；食性與覓食行為在本港基本未有研究，Corlett (1998) 一份糞便有果實、Leven (2000) 一份有果實與螞蟻；分佈自印度東北經緬甸、寮國北部與越南至中國南部及中部（北至陝西、東至上海），並在台灣與日本有局部野化族群；四個亞種、中國有三個，香港最可能為指名亞種但未經仔細檢視。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/white-browed-laughingthrush-pterorhinus-sannio",
+      "use": "IUCN 2024 LC，理由為分佈極廣、族群未量化但未達門檻、趨勢穩定；成熟個體 Unknown；繁殖 EOO 3,020,000 km²；不遷徙、非繁殖 endemic；海拔未列；世代 3.5 年；森林依賴度為「通常不出現於森林」；生境為亞熱帶／熱帶濕潤灌叢（主要）、季節性濕草地、農園與市區（適用）；7 個 IBA；貿易欄記低普遍度、一種用途；國家表七列，**包括香港（中國，原生、繁殖）**；分類註記說明由 Garrulax sannio 改為 Pterorhinus（Cibois et al. 2018），亦曾被置於 Dryonastes 屬。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（白頰噪鶥；White-Browed Laughingthrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Pterorhinus sannio／噪鶥科 Leiothrichidae）；BirdLife 科名用 Leiotrichidae。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 只有五個軸有分數：i=2、v=3.2（含 vEst=1）、r=1、c=1.2、o=1.9；**a（適應力）完全沒有分數**，故 missingScores 為 a。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；只有 range 中文有內容（「畫眉科噪鶥屬的一種，分佈於香港、緬甸、老撾、中國大陸、越南、印度和泰國」），habitat、look、funFact、etymology 中文全空，亦沒有 diet、voice、breeding、behavior、conservation 欄；英文多為短短的分類沿革句（如 look 與 etymology 都是「曾置於 Garrulax 屬」），length 與 weight 欄為空。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 96.3 mm、尾 118.4 mm、跗蹠 34.5 mm、嘴峯 23.4 mm、體重 67.8 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 044400：香港第 IIA 類，開放與郁閉灌叢及灌叢邊緣不常見而局部的留鳥，1980 年代以來大減但本世紀大致穩定；22–24 cm，小型、緊湊而尾長的噪鶥，全身中等褐色、泄殖腔略帶栗紅，頦深褐、純白眉紋與白臉頰在眼前相連。",
+    "本港狀況：每年地點不多於七個、個體不多於 30 隻；長期有族群的地點包括長洲（1976 年起）、大埔河谷泮涌／大達仁（2001 年起）、鉛礦坳（2003 年起）與林村谷（2005 年起），另有後來消失的 Chau Tau 與 Ho Sheung Heung；港島 1999 年後幾乎絕跡，2019 年石澳三群共 15 隻為近期最高；1977–79 年高峰時曾達 15–18 個地點，1985 年起在多處消失；現存地點多為灌叢—草地鑲嵌，常源自荒廢農地；香港族群孤立（廣東只在北部），故列第 IIA 類，亦有人主張應列第 IIB 類。",
+    "研究空白：繁殖無資料，食性與覓食行為在本港基本未研究（只有各一份糞便紀錄有果實／螞蟻）；鳴唱在本港未知，泰國為 1–4 個音。",
+    "IUCN：本卡為 **LC（無危）**。BirdLife 2024：趨勢**穩定**、EOO 3,020,000 km²、不遷徙、世代 3.5 年、森林依賴度為「通常不出現於森林」、7 個 IBA；國家表七列並把香港（中國）列為原生繁殖，與本地「族群來源可疑」的判斷不同。",
+    "runtime 分數：i=2、r=1、c=1.2 沿用；**a（適應力）完全沒有分數**，卡面顯示「待查」、missingScores 為 a，不以他處數值補算；v=3.2 待查——look 中文全空、runtime 沒有任何外型描述，且翼長 96.3 mm×0.22≈21.2 cm 低於 HKBWS 的 22–24 cm，觀賞分缺乏支撐；o=1.9 依賴待查分項（v）不補算。",
+    "runtime 文案缺陷：只有 range 一句中文有內容，habitat／look／funFact／etymology 中文全空，完全沒有 diet、voice、breeding、behavior、conservation 欄，英文多為分類沿革句，length 與 weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "地圖按 BirdLife 國家表填六國；BirdLife 另列香港為原生繁殖，在 110m 底圖併入中國。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖為方形畫布（原橫幅補邊後裁緊），單一長尾、純色深青底，畫出純白眉紋、白臉頰、深褐喉、全身中等褐色、栗紅尾下覆羽與長尾；亞種（最可能指名亞種，未經檢視）、性別與年齡差異仍待專家核。比較鳥沿用 0440 的黑眉雀鶥及 0433 的栗頸鳳鶥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "runtime 沒有任何外型描述（look 中文全空），length 欄為空，翼長 96.3 mm×0.22≈21.2 cm 亦低於 HKBWS 的 22–24 cm，3.2 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}
