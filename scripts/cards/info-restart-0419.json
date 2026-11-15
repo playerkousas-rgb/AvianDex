@@ -1,0 +1,145 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 記下降"
+  },
+  "id": "0419",
+  "name": "黑眉柳鶯",
+  "scientificName": "Phylloscopus ricketti",
+  "illustrationTaxon": "Adult-type Phylloscopus ricketti among leaves; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "栗頭鶲鶯",
+      "scientificName": "Phylloscopus castaniceps",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "頭頂栗紅色、有白眼圈、臉灰色；本種頭頂是黑黃相間的縱紋、臉帶黃、下體硫黃色更濃。"
+    },
+    {
+      "zh": "極北柳鶯",
+      "scientificName": "Phylloscopus borealis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "下體灰白、無黑色冠側線、只有一道短翼斑；本種下體硫黃、黑冠側線明顯、翼斑白色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.655,
+      0.205,
+      0.8,
+      0.35
+    ],
+    [
+      0.64,
+      0.285,
+      0.79,
+      0.435
+    ],
+    [
+      0.44,
+      0.385,
+      0.58,
+      0.525
+    ],
+    [
+      0.1,
+      0.34,
+      0.26,
+      0.5
+    ]
+  ],
+  "featureLabels": [
+    "黑色冠側線",
+    "硫黃下體",
+    "白色翼斑",
+    "淡色尾緣"
+  ],
+  "featureNotes": [
+    "黑色冠側線與眼紋在頭後部最粗，中間夾著黃色冠中線及眉紋，為插圖局部。",
+    "喉、胸至腹部的硫黃色，為插圖局部。",
+    "大覆羽末端白色形成明顯翼斑，為插圖局部。",
+    "外側兩根尾羽的淡色羽緣，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "LAO",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/040300",
+      "use": "香港第 I 類稀少冬候鳥，見於密冠層森林；10–11 cm；黑色冠側線與眼紋在頭後最粗、夾著黃色冠中線及眉紋、大覆羽白端形成明顯翼斑、中覆羽翼斑窄或不明顯、外側兩根尾羽有淡色羽緣、上體欖綠明亮；首筆確證紀錄為 2005-11-25 大埔滘（此前紀錄被混淆為 Hartert's 冠紋柳鶯），極端日期 2020-09-13 及 2006-04-01，主要見於 11 月中至 2 月初，最高 4 隻（2008-12-24 大埔滘）；多在樹冠層覓食、亦下降到頭部高度；單型，主要為中國繁殖特有種，繁殖於黃河以南的低山，越冬向西南至中南半島；頁記 IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/sulphur-breasted-warbler-phylloscopus-ricketti",
+      "use": "IUCN 2024 LC 但趨勢下降（分佈區林木覆蓋 10 年減 8.7%，森林依賴中等，推測族群 10 年減 1–19%）；成熟個體未量化、繁殖 EOO 1,780,000 km²、非繁殖 614,000 km²、完全遷徙、海拔 0–1,890 m（另註可能局限於 800–1,100 m）、世代長度 2.5 年；國家：中國、老撾（過境）、泰國、越南；另記低度寵物貿易。"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Sulphur-breasted_warbler",
+      "use": "分布補充：繁殖中國、越冬老撾、泰國及柬埔寨；棲地為溫帶森林及亞熱帶或熱帶潮濕低地森林（BirdLife 未列柬埔寨，故地圖不填）。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（黑眉柳鶯）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus ricketti／柳鶯科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.3、v=2.5、r=1、c=1.2、o=1.8，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；只有 habitat 一句，range、look、diet、voice、breeding、etymology、funFact、highlights、callouts、migration 全空，length 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 55.7 mm、嘴峯 12.0 mm、體重 6.3 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 040300：10–11 cm，香港屬第 I 類稀少冬候鳥，見於密冠層森林；黑色冠側線與眼紋在頭後最粗、夾著黃色冠中線及眉紋，大覆羽白端形成明顯翼斑而中覆羽翼斑窄、外側兩根尾羽有淡色羽緣、上體欖綠明亮、下體硫黃；首筆確證紀錄為 2005 年 11 月 25 日大埔滘（早期紀錄被混淆為 Hartert's 冠紋柳鶯），極端日期 2020 年 9 月 13 日及 2006 年 4 月 1 日，主要見於 11 月中至翌年 2 月初，最高 4 隻（2008 年 12 月 24 日大埔滘），多在樹冠層覓食、也會下降到頭部高度；單型，主要為中國繁殖特有種，繁殖於黃河以南低山，越冬向西南至中南半島。",
+    "IUCN 表述不一致：HKBWS 頁記「LC、趨勢穩定」，BirdLife 2024 同為 LC 但記下降（分佈區林木覆蓋 10 年減 8.7%，森林依賴中等，推測 10 年減 1–19%）。卡面註記採用較新的 BirdLife 表述，HKBWS 的穩定說法留在 spec。",
+    "沿用 BirdLife 分佈：中國、老撾（過境）、泰國、越南；維基百科另列柬埔寨為越冬地，但 BirdLife 表未列，故地圖不填柬埔寨，只在 spec 記錄差異。",
+    "runtime 分數 i=2、a=2.3、v=2.5、r=1、c=1.2、o=1.8、vEst=1。a=2.3 沿用——habitat 雖只有一句「溫帶森林及亞熱帶或熱帶潮濕低地森林」，仍足以支撐低分，diet 缺漏已在卡面說明；v 待查——length 為空，翼長 55.7 mm×0.22≈12.3 cm，高於 HKBWS 10–11 cm，保留「原觀賞值含體長估算」提示；r=1 沿用——range、look、voice、breeding、etymology、funFact、highlights 全空；o 依賴待查分項（v）不補算；c=1.2 與 LC 一致、i=2 沿 runtime。",
+    "runtime 文案缺口：除 habitat 一句外，其餘欄位（含 look）全空，故卡面所有辨識內容均來自 HKBWS 040300；`range` 為空亦意味 runtime 未交代繁殖地與越冬地，卡面地圖純依 BirdLife／HKBWS。",
+    "世界底圖按 BirdLife 四國填色（中國、老撾、泰國、越南），繁殖與越冬未分色、不細分國家內部，綠色非全境、非完整分佈；柬埔寨為維基百科所述越冬地但未填色；香港的越冬紀錄不當原生國家分佈。",
+    "AI 主圖：欖綠明亮上體、黑冠側線與黑眼紋在頭後最粗、黃色冠中線與眉紋、硫黃色下體、明顯白色大覆羽翼斑、外側尾羽淡色羽緣、細而深色的嘴、淡粉腳，符合 HKBWS 描述；中覆羽翼斑是否夠窄、冠側線粗細及尾羽數目仍待專家核。比較鳥為 0418 栗頭鶲鶯及 0417 極北柳鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 為空，翼長推估 12.3 cm 高於 HKBWS 10–11 cm，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}
