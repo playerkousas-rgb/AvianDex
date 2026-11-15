@@ -3411,3 +3411,16 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0412 暗綠柳鶯](https://drive.google.com/file/d/14M63BxCIc_yoLQaADnm73vOYqqlPNzbd/view)：140825 bytes、MD5 `500805cf5d5f3d0f633596d269e4912f`、SHA256 `bad1f47ced8400c3997c6832cabb9064bccfd22958bc3b9a1d0e9c971cbbd61a`。HKBWS 10–11.5 cm，第 I 類偶然記錄，四筆（2015-12-18 至 2016-01-08 大澳、2016-05-02 梧桐寨、2020-11-01 至 04 鹿頸、2021-04-09 東龍洲）；上體及三級飛羽純色、大覆羽短翼斑兩端收窄、上體下體帶黃、白色長眉自嘴基伸延、眼前暗斑與嘴基分開、下嘴大部分淡色；四亞種，香港紀錄按叫聲歸 viridanus（繁殖東歐經西伯利亞至中國西北）。BirdLife 2024 LC 且**上升**，成熟個體 20,200,000–38,300,000（2018 推算），繁殖 EOO 18,700,000 km²、非繁殖 7,170,000 km²，完全遷徙，國家表把香港列為迷鳥。i=2 c=1.2 沿 runtime；length 空、翼 61.3 mm×0.22≈13.5 cm 遠超 HKBWS → v 待查並保留估算提示；habitat 欄實為 trochiloides／viridanus 基因流動說明 → a 待查；look 為「牠略小於該物種」等跨物種比較句、migration 欄講伯格曼法則、breeding 欄講非繁殖鳥上移 → r 待查；o 不補算。地圖按 BirdLife 原生國家表挑 30 國（歐洲至西伯利亞、中亞、南亞繁殖，印度、孟加拉、斯里蘭卡及中南半島非繁殖），繁殖與越冬不分色、不細分國家內部，香港及西歐迷鳥國家不填色。標籤「淡色長眉／單一短翼斑／淡色下嘴／欖綠上體」皆對應插圖像素；第 2 個局部曾重選以把翼斑置中。比較鳥重用 0411 淡尾鶲鶯及 0403 歐柳鶯主圖，非等比例、非專家認證。
 - 驗 spec／manifest／分數遮蔽／bounds／ISO3（30 個代碼逐一存在於 Natural Earth 110m）／AVIF 1024×1536／bytes／hash；`git diff --check` 通過。未改 runtime、UI、R2 或 slim 註冊。
 - **下一張 0413；0413–0450 尚未製作。** 本輪未重跑完整 `npm test`（此前曾逾時），亦未改動 `src/`。
+
+## 環境重建（0413 起）
+
+- 本輪開工時發現沙盒已重置：`cards/art/`、`deliver/cards/` 全空（Git 忽略、未入快照），`/home/user/card-venv` 及 `~/.fonts` 亦不存在；本地 git 亦回到 base commit，但遠端 `arena/b2d882cf-aviandex` 仍保有 `937fb51`、`a7a2ecf`、`5946388`，已 `git fetch` + `reset --hard` 對齊，未遺失任何已交付記錄。
+- 已重建：`/home/user/card-venv`（Pillow 13.0.0、numpy 2.4.6、fontTools 4.68.0）、`~/.fonts/NotoSansTC_400Regular.ttf` 及 `_700Bold.ttf`（由 google/fonts 的 `NotoSansTC[wght].ttf` 以 fontTools instancer 產生靜態實例）、每張卡的 `countries.geojson`（Natural Earth 110m，838,726 bytes，MD5 `21abb20e7c74fc0c66b8dd955f8f7f73`）。
+- 因舊素材不存在，0413 起的主圖及對照圖改為重新生成；`cards/art/_shared/` 存放可重用的對照鳥主圖（淡腳柳鶯、暗綠柳鶯）。0401–0412 的成品只是本地被清除，Drive 上 12 個 AVIF 及指紋不變。
+
+## 新批次 0401–0450：0413 已交付（取代「下一張 0413」）
+
+- `400-500` 內 `name = '0413.avif'` 精確查重 0 筆後單獨上載；獨立 `get_file` 核驗檔名、parent、MIME、大小、MD5，Drive 的 `sha256Checksum` 與本地 `SHA256SUMS` 一致。
+- [0413 峨眉柳鶯](https://drive.google.com/file/d/1Dnq68DRxgi0Q022RiXWf0Fw24eo1RATU/view)：140029 bytes、MD5 `d60ab3570b8268440a14d7849af55906`、SHA256 `ca9358269ed210cf50cbcbe16aef83be38e6c30c4bb32de9dbcb5dba0c148356`。BirdLife 2024 LC 記下降（推測 10 年減 1–19%，源於分佈區林木覆蓋 10 年減 1.2%），成熟個體未量化、被評為「相當不常見」；繁殖特有種，繁殖 EOO 482,000 km²，完全遷徙，海拔 1,000–2,000 m，世代長度 2.5 年；原生國家只有中國，緬甸列為迷鳥。**HKBWS 未找到條目**：039700 及 040000 均 404，039500／039600／039800／039900／040100 分別為雙斑柳鶯、暗綠柳鶯、庫頁島柳鶯、淡腳柳鶯、極北柳鶯，039000–039400 為白眶、灰冠、比氏、純色尾及峨嵋鶲鶯，故本卡沒有 HKBWS 的香港狀況、辨識或量度可引，辨識改以 runtime 英文 look（中覆羽淡黃羽端＋大覆羽寬淡黃羽端＝兩道翼斑）為據，並在 spec 明記此缺口。runtime i=2 a=2.8 v=2.4 r=1 c=1.2 o=1.9，無 vEst；length 11–12 cm 與其他柳鶯相若，**v 沿用 runtime 不補值**；中文 habitat／diet／voice／breeding／etymology 全缺 → a、r 待查，o 不補算。地圖只填中國，緬甸迷鳥不填色。標籤「淡色長眉／兩道翼斑／淡色下嘴／欖綠上體」皆對應插圖像素；第 2 個局部曾重選以同時框住兩道翼斑。比較鳥淡腳柳鶯及暗綠柳鶯為本輪新生成並已目視，非等比例、非專家認證。
+- 驗 spec／manifest／分數遮蔽（a、r、o）／bounds／ISO3／AVIF 1024×1536／bytes／hash；`git diff --check` 通過。未改 runtime、UI、R2 或 slim 註冊。
+- **下一張 0414；0414–0450 尚未製作。** 本輪未重跑完整 `npm test`（此前曾逾時），亦未改動 `src/`。
