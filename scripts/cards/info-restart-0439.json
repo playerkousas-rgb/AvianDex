@@ -1,0 +1,144 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危",
+    "assessmentNote": "全球 NT：BirdLife 2021 評定"
+  },
+  "id": "0439",
+  "name": "中華草鶥",
+  "scientificName": "Graminicola striatus",
+  "illustrationTaxon": "Adult-type Graminicola striatus sinicus (the taxon in Hong Kong) on a grass stem; AI interpretation, subspecies, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "棕扇尾鶯",
+      "scientificName": "Cisticola juncidis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型小得多、嘴細而短、尾短而扇形且末端有明顯白斑、常見於低地農田；本種嘴粗壯、尾長而散亂、只在高山草地，後頸有黑白縱紋。"
+    },
+    {
+      "zh": "褐柳鶯",
+      "scientificName": "Phylloscopus fuscatus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "嘴細、全身暗褐而沒有縱紋、有淡色眉紋、尾短；本種上體濃密黑褐縱紋、後頸黑白斑、嘴粗壯、尾長。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.42,
+      0.14,
+      0.54,
+      0.26
+    ],
+    [
+      0.59,
+      0.1,
+      0.7,
+      0.21
+    ],
+    [
+      0.33,
+      0.25,
+      0.45,
+      0.37
+    ],
+    [
+      0.5,
+      0.28,
+      0.61,
+      0.39
+    ]
+  ],
+  "featureLabels": [
+    "後頸黑白縱紋",
+    "粗壯嘴喙",
+    "黑褐縱紋上體",
+    "淡黃褐色下體"
+  ],
+  "featureNotes": [
+    "後頸有一片黑白相間的縱紋，是與其他似鷦鶯鳥類最直接的分別，也是本種最重要的辨識特徵，為插圖局部。",
+    "嘴比鷦鶯粗壯得多，是本種「像一隻壯碩鷦鶯」的由來，下嘴較淡，為插圖局部。",
+    "頭頂、肩與翼為暖褐色而密佈黑色縱紋，形成強烈對比，為插圖局部。",
+    "下體為無縱紋的淡黃褐色，與滿佈縱紋的上體形成強烈對比，脇與尾下覆羽略沾淡黃，為插圖局部；尾長而深色、常顯得散亂，是與短尾扇尾鶯類的另一分別。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "KHM",
+      "MMR"
+    ],
+    "note": "Partial native-country overview only: the extant range in BirdLife's table (Cambodia, China, Myanmar), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. BirdLife lists Thailand and Vietnam as Extinct, so they are deliberately left unshaded; Hong Kong, the species' stronghold, is part of China's shading but has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0360/043700",
+      "use": "香港第 I 類，高山草地稀有而局部的留鳥，因植被演替離開草地而可能正在減少；16–18 cm；小型而尾長的鶥，外觀像一隻壯碩的鷦鶯但嘴粗得多；頭頂與上體暖褐而密佈黑色縱紋，後頸有一片黑白相間的縱紋（診斷特徵）；下體為無縱紋的淡黃褐色；性隱蔽，飛行時可見長而深色、常顯得散亂的尾；常見叫聲為粗啞的 chwee 或 churr，鳴唱少而多在掩蔽處；分佈除大帽山山系外，亦見於紅花嶺、八仙嶺、大刀屻、草山、馬鞍山、飛鵝山及大嶼山的大東山與鳳凰山；圖集記錄由 1993–96 的 1.1%、2001–05 的 0.8%、2016–19 繁殖季 0.4% 與冬季 0.8%，顯示範圍縮減；只限 200–900 米（主要在 300–800 米）的草地，偏好芒草為主、木本覆蓋少於一成的生境；1982-06-20 大帽山首次網捕記錄，1957 年起被誤記為褐山鷦鶯的紀錄實為本種；密度估計 0.02–0.04 隻／公頃（Leader et al. 2010）或 0.13 隻／公頃（So et al. 2012），種群估計 50–100 對或約 490 隻；大部分生境在郊野公園內，但不受演替保護。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chinese-grass-babbler-graminicola-striatus",
+      "use": "IUCN 2021 NT（準則 C2a(i)），成熟個體 2,500–9,999（資料品質 Poor、推測），趨勢下降（十年約 5–10%）；繁殖 EOO 1,550,000 km²；不遷徙；理由為族群小、最大亞族群少於 1,000 隻，且農地化、灌叢再生、植林與放牧令合適草地減少；東南中國 175 個調查點只在 14 點記錄 33 隻；香港為據點、估計約 490 隻；泰國與越南已列滅絕，緬甸與柬埔寨族群極小且分割；國家表為柬埔寨、中國、香港（中國）、緬甸（現存）及泰國、越南（滅絕）。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（中華草鶥；Chinese Grassbird）；HKBWS 用「大草鶯」，兩者為同一種。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Graminicola striatus／雀鶥科 Pellorneidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=3、a=2.3、v=2.5（含 vEst=1）、r=1.8、c=1.8、o=2.3。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range 與 diet 是同一句樣板中文（留鳥、開放灌木叢、肉食性），habitat 中文寫的其實是「中華草鶥與南亞草鶥原為同一物種、鳥類學家利雅德花八年錄音」的分類故事、並非生境，voice 與 funFact 是同一句被截斷的分類故事，behavior 只有「種群數量現在非常低；」，look 中文只有量度，diet 英文其實是「受棲地喪失威脅」、conservation 英文同一句；length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 56.2 mm、尾 73.8 mm、跗蹠 23.6 mm、嘴峯 14.9 mm、體重 14.6 g（runtime look 寫 14.64 g）。"
+    }
+  ],
+  "notes": [
+    "HKBWS 043700：香港第 I 類，高山草地稀有而局部的留鳥，因植被由草地演替為灌叢而可能正在減少；16–18 cm；後頸黑白縱紋是診斷特徵，上體暖褐密佈黑縱紋，下體無縱紋而為淡黃褐，嘴粗壯，尾長而深色。",
+    "本地族群：1982-06-20 大帽山首次網捕記錄（1957 年起被誤記為褐山鷦鶯的紀錄其後證實為本種）；密度估計 0.02–0.04 隻／公頃或 0.13 隻／公頃，種群 50–100 對或約 490 隻；圖集記錄由 1.1%（1993–96）降至 0.4%（2016–19 繁殖季），惟首輪調查沒有時限、可能有觀察者特意尋找，數字須謹慎解讀；大部分生境在郊野公園內但不受演替保護。",
+    "分類：曾與南亞草鶥 Graminicola bengalensis 同屬一種（舊稱大草鶯），後分為兩種；香港族群屬 sinicus 亞種。runtime 名稱為「中華草鶥」而 HKBWS 用「大草鶯」，屬同一種。runtime 科名用「雀鶥科」對應 Pellorneidae。",
+    "分佈：東南中國（廣西、廣東）為核心，香港為最大據點，緬甸與柬埔寨族群極小且分割；泰國與越南已列滅絕。地圖只填三個現存國家（中國、柬埔寨、緬甸），泰越按 BirdLife 的 Extinct 刻意不填色。",
+    "IUCN：本卡為首批 **NT（近危）** 之一；BirdLife 2021 年以準則 C2a(i) 評定，理由為成熟個體僅 2,500–9,999、最大亞族群少於 1,000，且農地化、灌叢再生、植林與放牧令合適草地減少，趨勢下降約每十年 5–10%。HKBWS 頁面標題亦記 NT。",
+    "runtime 分數：i=3、c=1.8 沿用；a=2.3 待查——habitat 中文寫的是分類故事而非生境、diet 英文寫的是受威脅原因、中英不對應；v=2.5 待查——length 為空，翼長 56.2 mm×0.22≈12.4 cm 遠低於 HKBWS 16–18 cm，保留「原觀賞值含體長估算」提示；r=1.8 待查——voice 中文是分類故事且被截斷、breeding 與 etymology 全空、behavior 只有半句；o=2.3 依賴待查分項（a、v、r）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：range 與 diet 為同一句樣板中文、habitat 中文誤植分類故事、voice 與 funFact 為同一句被截斷的分類故事、behavior 只有「種群數量現在非常低；」半句、look 只有量度、diet 英文實為「受棲地喪失威脅」、length 與 weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "世界底圖只填 BirdLife 國家表中三個現存國家（中國、柬埔寨、緬甸），泰國與越南列為滅絕故不填色，並非 occurrence polygon；香港是本品種的全球最大據點，但在 110m 底圖上併入中國填色。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖第一版把尾畫成分叉散開，已重畫為單一長尾；現圖按本種特徵畫成壯碩鷦鶯狀的草鶯，直立於草莖上，並畫出後頸黑白縱紋、密佈黑褐縱紋的上體、無縱紋的淡黃褐下體、粗壯嘴喙與長而深色的尾；亞種、性別與年齡差異仍待專家核。比較鳥為新畫的棕扇尾鶯及沿用 0430 的褐柳鶯 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 中文寫的是分類故事而非生境、diet 英文寫的是受威脅原因，中英不對應，2.3 分缺乏棲地與食性支撐，待查。",
+    "v": "length 為空，翼長推估 12.4 cm 遠低於 HKBWS 16–18 cm，觀賞分待查並保留估算提示。",
+    "r": "voice 中文是分類故事且被截斷、breeding 與 etymology 全空、behavior 只有半句，1.8 分缺乏研究內容支撐，待查。",
+    "o": "綜合分依賴待查分項（a、v、r），不補算。"
+  }
+}
