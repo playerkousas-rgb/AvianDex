@@ -1,0 +1,142 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0442",
+  "name": "紅嘴相思鳥",
+  "scientificName": "Leiothrix lutea",
+  "illustrationTaxon": "Adult-type Leiothrix lutea, probably L. l. kwangtungensis (the likely Hong Kong race, unconfirmed). AI interpretation, subspecies, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "栗頸鳳鶥",
+      "scientificName": "Staphida torqueola",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "有豎起的冠羽、白色眼圈、栗色後頸與淡黃尾下覆羽，嘴暗色而非紅色；本種嘴鮮紅、頭亮橄欖綠、胸黃橙、翼有紅黃斑。"
+    },
+    {
+      "zh": "藍翅希鶥",
+      "scientificName": "Actinodura cyanouroptera",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "頭與後頸淡藍灰、上背栗褐、飛羽與尾藍色，嘴暗色；本種頭與上體橄欖綠、翼有紅色翼斑與黃色翼緣、嘴鮮紅、胸黃橙。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.78,
+      0.19,
+      0.9,
+      0.31
+    ],
+    [
+      0.735,
+      0.165,
+      0.855,
+      0.285
+    ],
+    [
+      0.44,
+      0.365,
+      0.56,
+      0.485
+    ],
+    [
+      0.745,
+      0.265,
+      0.865,
+      0.385
+    ]
+  ],
+  "featureLabels": [
+    "鮮紅色嘴",
+    "白色眼圈",
+    "紅黃翼斑",
+    "黃橙色胸"
+  ],
+  "featureNotes": [
+    "嘴短而略彎，成鳥為鮮紅色，「紅嘴」之名由此而來；亞成鳥的嘴較暗，為插圖局部。",
+    "眼圈白色而大，並在臉頰擴散成白色斑塊，與橄欖綠的頭頂形成對比，為插圖局部。",
+    "初級飛羽黑色而基部有一道寬闊的紅色翼斑、外緣鮮黃，次級飛羽基部黃色，在野外形成一個亮黃色斑點，為插圖局部。",
+    "喉與上胸為鮮明的黃橙色，往下漸淡，與臉頰下方那道寬黑頰紋相接，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "MMR",
+      "NPL",
+      "PAK",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only: BirdLife's native range (Bhutan, China, India, Myanmar, Nepal, Pakistan, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. BirdLife also lists introduced populations in France, Italy, Japan, Réunion and the USA (and Hong Kong as native/breeding); those introduced countries are deliberately left unshaded, and Hong Kong, where this card's birds live as an ex-captive population, has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0370/044000",
+      "use": "香港第 IIA 類，森林與灌叢不常見而局部的留鳥（多在中新界較高海拔），族群被視為源自籠鳥；14–15 cm，中型、圓胖、短尾而色彩鮮明；頭亮橄欖綠、眼周白斑延伸至臉頰、與黃或黃橙的胸之間隔著寬闊的黑頰紋；上體灰橄欖而帶綠，初級飛羽黑色而基部有寬紅斑、外緣鮮黃，次級飛羽基部黃色形成野外可見的黃斑；尾黑色，外側尾羽呈琴形向外扭；鳴唱為豐富的顫音，叫聲有短促 chip、鶥類式的吱喳及三、四音 pee-pee-pee，受擾時發出乾澀的沙啞聲；1990 年代初中期最盛，核心在中新界的城門、大埔滘、林村谷，尤以大帽山；此後分佈收縮，現主要限於大帽山山系較高處；圖集由 2.4%（1993–96 繁殖）、1.9%（2001–05 冬季）降至 1.4%（2016–19 繁殖）與 1.1%（冬季）；港島與九龍市區公園近乎消失，可能與減少放生有關；可能與同期增加、生態位相近的銀耳相思鳥競爭，大埔滘與城門這兩個舊據點正正是銀耳相思鳥現時眾多之處；生於次生闊葉林，尤其下層茂密處，特別喜歡林內或高山灌叢草地鑲嵌中的矮竹；1913 年首次報告的九龍（4 月）與港島（5 月）紀錄已被裁定為籠鳥，2001 年 Carey et al. 檢視後列入第 IIA 類；1980 年代初起相信已在港繁殖，但證實紀錄很少：1991 年鉛礦坳一對帶依賴期幼鳥（10 月 12 日）為首次，另有 1993 年九龍公園築巢、2005 年大帽山成鳥與幼鳥、2011 年 8 月大帽山幼鳥；成對或小群（一般少於十隻、可達 20 隻），可與銀耳相思鳥或鶯鶥混群，於下層至低樹冠覓食；Corlett (1998) 糞便樣本 96% 有果實、58% 有無脊椎動物，Leven (2000) 則為 72% 與 100%，後者認為 Corlett 取樣集中於 10 月底至 12 月中果實高峰期；無脊椎動物以鞘翅目（43%）與蜘蛛（25.5%）為主；原生範圍自印度西北經喜馬拉雅至中國南部及中部（北至四川、陝西、江蘇），並在台灣、日本、夏威夷與南歐建立野化族群；五個亞種，香港最可能為 kwangtungensis 但未經確認。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/red-billed-leiothrix-leiothrix-lutea",
+      "use": "IUCN 2024 LC，理由為分佈極廣、族群未量化但未達門檻；趨勢下降（推測），以樹冠在三個世代內減少 7% 及鳴鳥貿易推測族群下降 1–19%；成熟個體 Unknown；繁殖 EOO 5,780,000 km²；海拔遷徙鳥；海拔 0–4,100 m；世代 4.7 年；森林依賴度 Medium；14 個 IBA／KBA；威脅欄記自 1997 年列入 CITES 附錄二以來共 227,517 隻野捕個體進入國際貿易；貿易欄記高普遍度、三種用途；國家表十三列，原生為不丹、中國、印度、緬甸、尼泊爾、巴基斯坦、越南及香港（中國，繁殖），引進為法國、意大利、日本、留尼汪與美國。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（紅嘴相思鳥；Red-Billed Leiothrix）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Leiothrix lutea／噪鶥科 Leiothrichidae）；BirdLife 科名用 Leiotrichidae。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=3.8、v=2.7（含 vEst=1）、r=3.3、c=3、o=3，missingScores 為空；本卡沒有一個軸需要待查。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；本張 runtime 文案相對完整——habitat、diet、voice、breeding、behavior、etymology、callouts 與 highlights 都有中文；缺陷為 range 中文把引進國家（美國、日本、留尼汪）與原生國家並列、look 中文只描述翼與尾而沒有量度、length 與 weight 欄為空、funFact 中文其實是詞源句（屬名 leios「光滑」＋thrix「毛髮」）而英文 funFact 全空；iucn 欄「無危 LC」與 BirdLife 一致；notes 明示維基條目掛有「翻譯品質不佳」標記。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 68.2 mm、尾 59.2 mm、跗蹠 23.7 mm、嘴峯 13.7 mm、體重 21.4 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 044000：香港第 IIA 類，森林與灌叢不常見而局部的留鳥，多在中新界較高海拔，族群被視為源自籠鳥；14–15 cm，圓胖短尾而色彩鮮明；紅色嘴、白色眼圈與臉頰白斑、寬黑頰紋、亮橄欖綠頭、灰橄欖上體、黑色初級飛羽配寬紅翼斑與黃色邊、紅色翼斑外側的亮黃斑點、黃橙色胸、黑色琴形外側尾羽。",
+    "本港狀況：1913 年首次紀錄已被裁定為籠鳥；2001 年 Carey et al. 檢視後列入第 IIA 類。1990 年代初中期最盛（城門、大埔滘、林村谷、大帽山），此後收縮至大帽山山系較高處；圖集由 2.4%（1993–96 繁殖）、1.9%（2001–05 冬季）降至 1.4%（2016–19 繁殖）與 1.1%（冬季）。原因未確定，可能與減少放生有關，亦可能與同期增加、生態位相近的銀耳相思鳥競爭——大埔滘與城門正是銀耳相思鳥現時眾多之地；本種在高海拔仍較常見，2016–19 繁殖季數量最多的地方就在大帽山，可達山頂。",
+    "繁殖與食性：1980 年代初起相信已在港繁殖，但證實紀錄僅數宗（1991 年鉛礦坳一對帶幼鳥為首次、1993 年九龍公園築巢、2005 及 2011 年大帽山幼鳥），繁殖生態基本上未有研究；成對或小群於下層至低樹冠覓食；兩份糞便研究對果食比例結論不同（96%／58% 與 72%／100%），無脊椎動物以鞘翅目 43%、蜘蛛 25.5% 為主。",
+    "IUCN：本卡為 **LC（無危）**。BirdLife 2024：趨勢下降（推測，樹冠三個世代減 7% 及鳴鳥貿易）、EOO 5,780,000 km²、海拔 0–4,100 m、世代 4.7 年、森林依賴度中等、14 個 IBA；自 1997 年列入 CITES 附錄二以來共 227,517 隻野捕個體進入國際貿易；國家表把香港（中國）列為原生而繁殖，與本地名錄「籠鳥來源」的判斷不同。",
+    "runtime 分數：六個軸都有原始分數且均有 runtime 文案支撐（habitat、diet、voice、breeding、behavior、etymology 齊備），本卡 **withheldScores 為空**、missingScores 為空；v=2.7 沿用——length 欄為空、look 中文亦無量度，翼長 68.2 mm×0.22≈15.0 cm 落在 HKBWS 的 14–15 cm 內，只加「原觀賞值含體長估算」提示。",
+    "runtime 文案缺陷（不足以否定任何評分）：range 中文把引進國家與原生國家並列、look 中文只寫翼與尾、length 與 weight 欄為空、funFact 中文其實是詞源句而英文 funFact 全空、notes 自述條目有「翻譯品質不佳」標記。辨識與本地紀錄一律以 HKBWS 為準。",
+    "地圖只填 BirdLife 國家表中的原生國家（不丹、中國、印度、緬甸、尼泊爾、巴基斯坦、越南）；法國、意大利、日本、留尼汪、美國為引進族群，刻意不填色；香港在 110m 底圖併入中國。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖為方形畫布（原橫幅補邊後再裁緊），單一短尾、純色深青底，畫出鮮紅嘴、白眼圈與臉頰白斑、寬黑頰紋、橄欖綠頭與上體、紅色翼斑與黃色翼緣、黃橙色胸；亞種（最可能 kwangtungensis，未確認）、性別與年齡差異仍待專家核。比較鳥沿用 0433 的栗頸鳳鶥及 0441 的藍翅希鶥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {}
+}
