@@ -1,0 +1,140 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 記下降"
+  },
+  "id": "0420",
+  "name": "雙斑綠柳鶯",
+  "scientificName": "Phylloscopus plumbeitarsus",
+  "illustrationTaxon": "Adult-type Phylloscopus plumbeitarsus on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黑眉柳鶯",
+      "scientificName": "Phylloscopus ricketti",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "下體硫黃、黑冠側線粗、黃色冠中線明顯；本種下體白、冠較灰、只有兩道翼斑。"
+    },
+    {
+      "zh": "極北柳鶯",
+      "scientificName": "Phylloscopus borealis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "嘴較重、眉紋止於嘴基之前、胸前有淡縱紋、只有一道短翼斑；本種眉紋達額、下嘴黃、通常兩道翼斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.205,
+      0.195,
+      0.35,
+      0.34
+    ],
+    [
+      0.4,
+      0.225,
+      0.52,
+      0.345
+    ],
+    [
+      0.435,
+      0.4,
+      0.585,
+      0.55
+    ],
+    [
+      0.28,
+      0.62,
+      0.44,
+      0.78
+    ]
+  ],
+  "featureLabels": [
+    "灰冠長眉",
+    "黃色下嘴",
+    "兩道翼斑",
+    "石板灰腳"
+  ],
+  "featureNotes": [
+    "冠部較背部灰、眉紋長而達額，為插圖局部。",
+    "下嘴黃色、上嘴深色，近端幾乎沒有深色斑，為插圖局部。",
+    "中覆羽及大覆羽上的兩道淡色翼斑，為插圖局部。",
+    "石板灰至淡鉛色的腳與腳趾，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "PRK",
+      "KOR",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/039500",
+      "use": "香港第 I 類不常見過境及冬候鳥；11.5–12 cm；較極北柳鶯略小、頭較大、嘴較窄，通常有兩道翼斑、下嘴黃色而幾乎沒有深色斑、冠及腳較灰、眉紋通常達額、初級飛羽伸出較短、胸前沒有明顯灰縱紋；叫聲為滾動而飽滿的「tirririt／chirilee／chirrit」；1989-09-27 於嘉道理農業研究所環誌為首筆接受紀錄（最早野外紀錄為 1987-04-06 摩星嶺），1989 年起每年有紀錄且數量上升；秋季最早 2010-09-11，10 月第三週見高峰，1 月起下降至 3 月最低，4 月至 5 月上半月有弱春季過境，最遲 2020-05-17；於樹冠層覓食、偏好較高樹木，吃昆蟲、毛蟲及小蜘蛛；單型，繁殖西伯利亞東南部（貝加爾湖、北蒙古）至鄂霍次克海及中國東北，越冬中南半島及中國南部沿海省份；頁記 IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/two-barred-warbler-phylloscopus-plumbeitarsus",
+      "use": "IUCN 2024 LC 但趨勢下降（分佈區林木覆蓋 10 年減 8.9%、森林依賴中等、推測族群 10 年減 1–19%）；成熟個體未量化、繁殖 EOO 6,290,000 km²、非繁殖 2,640,000 km²、完全遷徙、海拔 0–4,500 m、世代長度 2.0 年；國家：中國、蒙古、俄羅斯（含亞洲及中亞部分）、北韓、南韓為繁殖，柬埔寨、老撾、緬甸、泰國、越南為非繁殖，澳門為過境；香港、馬來西亞、英國列作迷鳥。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（雙斑綠柳鶯；HKBWS 頁題為「雙斑柳鶯」，為同一種的不同中文名）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus plumbeitarsus／柳鶯科）。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "此卡在 runtime 沒有任何文案條目（cardCopy 無 0420），所有外觀、分佈及習性內容均來自 HKBWS 及 BirdLife。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "此卡在 runtime 沒有分數紀錄（scores 無 0420）、measurements 亦無 0420，故六項分數全部以「待查」呈現，不作任何估算。"
+    }
+  ],
+  "notes": [
+    "HKBWS 039500：11.5–12 cm，香港屬第 I 類不常見過境及冬候鳥；與極北柳鶯相比略小、頭較大、嘴較窄，通常有兩道翼斑、下嘴黃而幾乎無深色斑、冠與腳較灰、眉紋通常達額、初級飛羽伸出較短、胸前沒有明顯灰縱紋；叫聲為滾動飽滿的「tirririt／chirilee／chirrit」，通常兩至三個音節，是與極北柳鶯分辨的關鍵；首筆接受紀錄為 1989 年 9 月 27 日嘉道理農業研究所環誌（最早野外紀錄為 1987 年 4 月 6 日摩星嶺），1989 年起每年有紀錄且數量上升；秋季最早 2010 年 9 月 11 日，10 月第三週見高峰，1 月起下降至 3 月最低，4 月至 5 月上半月有弱春季過境，最遲 2020 年 5 月 17 日；於樹冠層覓食、偏好較高樹木，動作較極北柳鶯活潑，吃昆蟲、毛蟲及小蜘蛛；單型，繁殖西伯利亞東南部經北蒙古至鄂霍次克海及中國東北，越冬中南半島及中國南部沿海省份。",
+    "中文名差異：runtime 用「雙斑綠柳鶯」，HKBWS 及 BirdLife 中文頁題用「雙斑柳鶯」，英文同為 Two-barred Warbler、學名同為 P. plumbeitarsus，卡面依 runtime 用名。",
+    "香港地位不一致：HKBWS 記為第 I 類不常見過境及冬候鳥（1989 年起每年有紀錄），BirdLife 國家表則把香港列作迷鳥（Vagrant）；卡面地圖因此不為香港填色，兩者差異記於此。",
+    "IUCN 表述：HKBWS 頁記 LC、趨勢穩定；BirdLife 2024 同為 LC 但記下降（林木覆蓋 10 年減 8.9%，推測 10 年減 1–19%）。卡面註記用較新的 BirdLife 表述。",
+    "runtime 缺口：cardCopy、dexScores、measurements 均無 0420 條目，故六個分數軸全部顯示「待查」（並非遮蔽任何既有數值，withheldScores 為空），亦無翼長可核；卡面所有辨識內容改由 HKBWS 039500 直接提供。",
+    "世界底圖按 BirdLife 原生國家填色（俄羅斯、蒙古、中國、北韓、南韓、緬甸、泰國、老撾、柬埔寨、越南），繁殖與越冬未分色、不細分國家內部，綠色非全境、非完整分佈；澳門、馬來西亞、英國只列迷鳥或過境，故不填色。",
+    "AI 主圖：冠部較背部灰、眉紋長而達額、兩道淡色翼斑、下嘴黃配上嘴深色、胸前無灰縱紋、石板灰腳、下體白，符合 HKBWS 描述；初級飛羽伸出較短這一點在單一姿勢中難以呈現，翼斑寬度及頭型比例仍待專家核。比較鳥為 0419 黑眉柳鶯及 0417 極北柳鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {}
+}
