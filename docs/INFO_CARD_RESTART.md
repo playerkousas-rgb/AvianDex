@@ -3397,3 +3397,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - 驗證：spec=manifest.spec、runtime 名稱／學名、分數遮蔽（0407 為 r/o，0408–0410 為 a/v/r/o）、世界 bounds `[-180,-90,180,90]`、ISO3、AVIF 解碼 1024×1536、bytes、SHA256、無 ZIP；四張 manifest 已補 `uploaded_drive_verified`、`driveFileId`、`driveParentId`、`driveParentName`、`driveMd5`、`driveBytesVerified`、`driveMimeType`（0407 一併補回）。`git diff --check` 通過。
 - AI 圖只作基本目視，非鳥類專家認證，不宜單憑圖鑑定（尤其 0408／0409／0410 三者互相酷似，野外須靠叫聲及眼圈後緣等細節）。世界底圖只標部分原生國家，繁殖與越冬未分色，綠色非全境、非完整分佈。全部未改 runtime、UI、R2 或 slim 註冊；`cards/art/`、`deliver/cards/` 屬 Git 忽略，新環境不保證可重現或已重新核驗。
 - **下一張 0411；0411–0450 尚未製作。** 本輪未重跑完整 `npm test`（此前曾逾時），亦未改動 `src/`。
+
+## 新批次 0401–0450：0411 已交付（取代「下一張 0411」）
+
+- `400-500` 內 `name = '0411.avif'` 精確查重 0 筆後單獨上載；獨立 `get_file` 核驗檔名、parent、MIME、大小、MD5，Drive 的 `sha256Checksum` 與本地 `SHA256SUMS` 一致。
+- [0411 淡尾鶲鶯](https://drive.google.com/file/d/15E2AntHugapB4v8hgjPkb-0nF0XstL2y/view)：135725 bytes、MD5 `c99f38c211f91633a5c00216668518d4`、SHA256 `92a5f270b0f871ce029a62b6dc39444a315d446d273235cd1b5554f5fa64ac9c`。HKBWS 11–12 cm，第 I 類稀少至罕見秋季及初冬過境（首筆 2004-10-09、第二筆 2011-10-16，2018/19 冬季起幾乎每年；極端日期 9 月 30 日至 12 月 27 日）；嘴相對較大、黃色眼圈完整、前額偏綠使冠部黑灰紋只達眼上方、側冠下緣少灰、下體黃而脇帶綠、翼斑通常缺；單型，繁殖四川南部至陝西及北京並見福建河南湖南，越冬中國西南及中南半島；HKBWS 2023 全球 LC 趨勢穩定。HKBWS 中文名為「純色尾鶲鶯」，與 runtime「淡尾鶲鶯」不同，runtime 名稱不改。BirdLife factsheet 當日只回空模板（無 EOO、無國家表、無評估年份），未用作任何數字或分佈證據。i=2 c=1.2 沿 runtime；length 空、翼 55.6 mm×0.22≈12.2 cm 超 HKBWS → v 待查並保留估算提示；habitat 中文留空、diet 樣板 → a 待查；voice／breeding／etymology 中文留空、highlights 截句 → r 待查；o 不補算。地圖只列中國、緬甸、泰國、老撾、柬埔寨、越南六國（中國含繁殖及越冬，其餘越冬），不分季節、不細分省份，香港過境紀錄不當原生分佈。標籤「黑色側冠紋／黃色眼圈／寬基厚嘴／黃色下體」皆對應插圖像素；眼圈上半部色淡，故不寫「完整」。比較鳥重用 0408 灰冠鶲鶯及 0410 峨嵋鶲鶯主圖，非等比例、非專家認證。
+- 主圖與四圈逐張目視；首次生成帶米色紙邊且無側冠黑紋，已重繪為滿版深青底並補回側冠條紋；第 4 個局部再因圓內露出背景而重選。驗 spec／manifest／分數遮蔽／bounds／ISO3／AVIF 1024×1536／bytes／hash；`git diff --check` 通過。未改 runtime、UI、R2 或 slim 註冊。
+- **下一張 0412；0412–0450 尚未製作。** 本輪未重跑完整 `npm test`（此前曾逾時），亦未改動 `src/`。

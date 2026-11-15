@@ -1,0 +1,143 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：HKBWS 2023 記穩定"
+  },
+  "id": "0411",
+  "name": "淡尾鶲鶯",
+  "scientificName": "Phylloscopus soror",
+  "illustrationTaxon": "Adult-type Phylloscopus soror on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "灰冠鶲鶯",
+      "scientificName": "Phylloscopus tephrocephalus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "下體黃色更濃、眼圈後緣多斷開、亮灰中央冠紋伸至前額；本種前額偏綠、冠紋只達眼上方、嘴較大而厚。"
+    },
+    {
+      "zh": "峨嵋鶲鶯",
+      "scientificName": "Phylloscopus omeiensis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "中央冠紋純灰、嘴較短細、上體及耳羽偏黃綠；本種嘴較大較厚、黑色側冠帶較粗。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.56,
+      0.23,
+      0.75,
+      0.42
+    ],
+    [
+      0.625,
+      0.255,
+      0.745,
+      0.375
+    ],
+    [
+      0.72,
+      0.26,
+      0.86,
+      0.4
+    ],
+    [
+      0.65,
+      0.37,
+      0.765,
+      0.485
+    ]
+  ],
+  "featureLabels": [
+    "黑色側冠紋",
+    "黃色眼圈",
+    "寬基厚嘴",
+    "黃色下體"
+  ],
+  "featureNotes": [
+    "灰色中央冠紋兩側的黑色側冠條紋，止於眼上方而未伸至嘴基，前額偏綠，為插圖局部。",
+    "黃色眼圈；插圖中大致成一整圈，但上半部顏色較淡，故只標「黃色眼圈」。",
+    "嘴基寬而厚、下嘴淡橙，為插圖局部。",
+    "黃色喉至腹部，脇部帶欖綠，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/039300",
+      "use": "香港第 I 類稀少至罕見秋季及初冬過境（首筆 2004-10-09，2011 年第二筆，2018/19 冬季起幾乎每年）、極端日期 9 月 30 日至 12 月 27 日、11–12 cm、辨識（嘴較大、黃色眼圈完整、前額及前冠偏綠使冠部黑灰紋只達眼上方、側冠下緣少灰、下體黃而脇帶綠、大覆羽翼斑通常缺）、叫聲高音雙音「chi-dit／chi-tik」、單型、繁殖於四川南部至陝西及北京並見福建河南湖南、越冬中國西南及中南半島、IUCN LC 趨勢穩定。HKBWS 中文名作「純色尾鶲鶯」，與 runtime「淡尾鶲鶯」不同，runtime 名稱不改。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/alstr%C3%B6ms-warbler-phylloscopus-soror",
+      "use": "當日只回空模板（無 EOO、無國家表、無評估年份），故未用作保育或分佈證據；卡面 IUCN 註記改採 HKBWS 2023 的「LC 穩定」。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（淡尾鶲鶯）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus soror／柳鶯科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.3、v=2.5、r=3.3、c=1.2、o=2.3，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；habitat 中文留空、diet 為森林及「肉食性」樣板、voice／breeding／etymology 中文留空、highlights 截句、length 為空；中文 range／migration 只寫「在泰國、柬埔寨和越南北部越冬」。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 55.6 mm，×0.22≈12.2 cm，高於 HKBWS 11–12 cm。"
+    }
+  ],
+  "notes": [
+    "HKBWS：11–12 cm，香港屬第 I 類稀少至罕見秋季及初冬過境，首筆 2004-10-09，第二筆要到 2011-10-16，2018/19 冬季起幾乎每年有紀錄，極端日期 9 月 30 日至 12 月 27 日，故多數應為過境鳥；嘴相對較大、黃色眼圈完整、前額及前冠偏綠使冠部黑灰紋只達眼上方、側冠下緣少灰、下體黃色而脇帶綠、大覆羽翼斑通常不存在；叫聲為較高音的雙音「chi-dit／chi-tik」；單型，繁殖於四川南部至陝西及北京，並見於福建、河南、湖南，越冬中國西南及中南半島。全球 LC、趨勢穩定（HKBWS 2023）。",
+    "HKBWS 中文名為「純色尾鶲鶯」，runtime 用「淡尾鶲鶯」，屬中文名分歧，runtime 名稱不改，卡面沿用 runtime。BirdLife factsheet 當日只回空模板（無評估年份、EOO、國家表），因此未據此寫入任何數字；分佈國家改以 HKBWS 所述繁殖地（中國）及越冬地（中國西南、中南半島）配合 runtime 英文文案（緬甸南部、泰國、柬埔寨、越南南部、中國南部），只列可支持的中國、緬甸、泰國、老撾、柬埔寨、越南六國。",
+    "runtime 分數 i=2、a=2.3、v=2.5、r=3.3、c=1.2、o=2.3、vEst=1。length 為空，翼長 55.6 mm×0.22≈12.2 cm 高於 HKBWS 11–12 cm，故 v 待查並保留「原觀賞值含體長估算」提示；cardCopy habitat 中文留空、diet 只講森林及「肉食性」，故適應分待查；voice、breeding、etymology 中文留空、highlights 截句，故研究分待查；c=1.2 與 LC 一致、i=2 沿 runtime；o 依賴待查分項不補算。",
+    "世界底圖按上述六國填色：中國兼有繁殖及越冬、緬甸／泰國／老撾／柬埔寨／越南為越冬，繁殖與越冬未分色，亦不細分中國境內省份；綠色非全境、非完整分佈。香港的過境紀錄不當作原生分佈。",
+    "AI 主圖：灰色中央冠紋、黑色側冠條紋止於眼上方、前額偏綠、黃色眼圈、大而寬基的嘴、下體黃而脇帶綠、翼上無明顯翼斑，符合 HKBWS 描述；眼圈上半部顏色偏淡、翼斑是否真的完全缺失及嘴的實際比例仍待專家核。灰冠鶲鶯及峨嵋鶲鶯對照圖分別重用 0408、0410 主圖，非等比例，均為 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 中文留空、diet 為樣板描述，適應分待查、不補值。",
+    "v": "length 為空，翼長推估 12.2 cm 超出 HKBWS 11–12 cm，觀賞分待查並保留估算提示。",
+    "r": "鳴聲、繁殖、詞源中文留空及要點截句，研究分待查、不補值。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}
