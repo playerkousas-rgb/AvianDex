@@ -1,0 +1,143 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 記趨勢穩定"
+  },
+  "id": "0422",
+  "name": "白斑尾柳鶯",
+  "scientificName": "Phylloscopus ogilviegranti",
+  "illustrationTaxon": "Adult-type Phylloscopus ogilviegranti perched on a horizontal twig; AI interpretation, sex, subspecies and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "華南冠紋柳鶯",
+      "scientificName": "Phylloscopus goodsoni",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型較大、翅尾較長，會在樹幹上爬行覓食、腳較深、下嘴橙色；本種小型短尾、全淡下嘴、淡腳，只停在枝上。"
+    },
+    {
+      "zh": "雙斑綠柳鶯",
+      "scientificName": "Phylloscopus plumbeitarsus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "冠部較灰、沒有明顯中央冠紋，眉紋較白；本種冠側線淡、中央冠紋模糊、眉紋前段微黃，喉胸及尾下覆羽帶黃。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.735,
+      0.245,
+      0.885,
+      0.39
+    ],
+    [
+      0.665,
+      0.325,
+      0.795,
+      0.455
+    ],
+    [
+      0.235,
+      0.505,
+      0.375,
+      0.625
+    ],
+    [
+      0.408,
+      0.592,
+      0.605,
+      0.778
+    ]
+  ],
+  "featureLabels": [
+    "全淡下嘴",
+    "喉胸帶黃",
+    "尾下覆羽黃",
+    "淡粉腳"
+  ],
+  "featureNotes": [
+    "下嘴由嘴基至嘴尖全部淡肉色、上嘴深色，是本種與華南冠紋柳鶯（下嘴橙色、腳較深）的辨識點，為插圖局部。",
+    "喉部與上胸沾黃，腹部及脇較白，為插圖局部。",
+    "尾下覆羽明顯染黃，與白色的腹部形成對比，為插圖局部。",
+    "腳淡粉肉色、纖細，停棲於橫枝而非爬附樹幹，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "KHM",
+      "CHN",
+      "LAO",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding, resident and wintering areas are not colour-separated. Myanmar is excluded because BirdLife only records it as possible; Hong Kong records are not listed by BirdLife as a separate country entry and have no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/040500",
+      "use": "香港第 I 類大概稀少的冬候鳥，見於密冠層森林；10–11 cm；似 Hartert's 指名亞種但體型較小、翅尾較短、嘴較纖細、覓食動作較活躍如黃眉或黃腰柳鶯（不懸停），不會在樹幹或粗枝上爬行；冠側線較淡、中央冠紋較不明顯且前冠模糊，眉紋較不黃、眼前較窄；腳較淡、下嘴全淡；喉、上胸及尾下覆羽沾黃，腹部及脇較淡；叫聲高音多音節（一般二至四音節），首音短促；2017-03-16 大埔滘、2019-01-05 及 2020-02-01/02 白沙澳首幾筆紀錄，此後顯示可能屬規律而稀少的冬候鳥；三個亞種（指名於華南廣西至福建、disturbans 於四川甘肅陝西雲南、klossi 於老撾南部及越南中南部為留鳥）；頁記 IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/klosss-leaf-warbler-phylloscopus-ogilviegranti",
+      "use": "IUCN 2018 LC、趨勢穩定（推測，無下降證據）；成熟個體未量化、繁殖 EOO 3,150,000 km²、非繁殖 989,000 km²、海拔 900–2,550 m（冬季可降至 50 m）、世代長度 3.6 年、森林依賴中等、垂直遷徙；國家：柬埔寨（留鳥）、中國、老撾、泰國、越南，另記可能緬甸東北部；棲息闊葉常綠林及松林，2–5 月繁殖、於地面或附近築球狀巢。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（白斑尾柳鶯；Kloss's Leaf Warbler）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus ogilviegranti／柳鶯科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.8、v=2.4、r=1、c=1.2、o=1.9，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range 與 look 有內容，habitat、funFact、voice、behavior 只有英文（中文為空），behavior 與 habitat 句子重複，length、weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 52 mm、嘴峯 10.5 mm、體重 6.4 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 040500：10–11 cm，香港屬第 I 類「大概稀少」的冬候鳥，只見於密冠層森林；2017 年 3 月 16 日大埔滘、2019 年 1 月 5 日及 2020 年 2 月 1–2 日白沙澳的首幾筆紀錄（Carey and Martinez 2023）之後，連串紀錄顯示本種可能屬規律但稀少的冬候鳥；覓食動作活躍如黃眉柳鶯甚至黃腰柳鶯（但不懸停），不會在樹幹或粗枝上爬行。",
+    "外型要點：似 Hartert's 指名亞種但更小、翅尾更短、嘴更纖細；冠側線較淡、中央冠紋較不明顯且前冠模糊；眉紋較不黃、眼前較窄；腳較淡、下嘴全部淡色；喉、上胸及尾下覆羽沾黃，腹部及脇較淡。這些正好對應卡面四個標籤。",
+    "分佈與亞種：指名亞種繁殖於華南廣西至福建（可能越冬於越南），disturbans 繁殖於四川、甘肅、陝西、雲南（越冬於繁殖範圍南部、華南沿岸省份及中南半島），klossi 為老撾南部至越南中南部留鳥；BirdLife 國家表為柬埔寨、中國、老撾、泰國、越南，另記可能緬甸東北部。",
+    "runtime 文案缺陷：range 只寫「在中國大陸，分佈於四川、雲南、貴州、湖南等地」，只覆蓋 disturbans 的繁殖區、漏掉華南及中南半島；look 只有「為柳鶯科柳鶯屬的鳥類」一句 Taxonomy 式描述；habitat、funFact、voice、behavior 的中文全空且 behavior 與 habitat 英文句子重覆；length、weight 為空。卡面辨識內容因此以 HKBWS 為準。",
+    "runtime 分數 i=2、a=2.8、v=2.4、r=1、c=1.2、o=1.9、vEst=1。a 待查——只有一句英文 habitat、behavior 重覆該句、diet 全空，2.8 分高於內容更完整的 0421（a=2.3）卻缺乏對應支撐，不沿用；v 待查——length 為空，翼長 52 mm×0.22≈11.4 cm 高於 HKBWS 10–11 cm，保留「原觀賞值含體長估算」提示；r=1 沿用——遷徙資料雖空，但香港僅屬大概稀少的冬候鳥、BirdLife 記垂直遷徙，低分合理；c=1.2 與 LC、趨勢穩定一致；o 依賴待查分項（a、v）不補算；i=2 沿 runtime。",
+    "世界底圖按 BirdLife 國家表填柬埔寨、中國、老撾、泰國、越南；緬甸只記「可能」故不填色；香港不是 BirdLife 的獨立國家條目，110m 底圖亦無獨立多邊形。留鳥、繁殖與越冬地未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成小型短尾柳鶯，停在橫枝上而非爬附樹幹，並畫出全淡下嘴、喉胸沾黃、尾下覆羽黃、淡粉腳及兩道淡黃翼斑；冠側線淡、中央冠紋模糊等細部與亞種歸屬仍待專家核。比較鳥為 0421 華南冠紋柳鶯及 0420 雙斑綠柳鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "只有一句英文 habitat、behavior 重覆該句、diet 全空，2.8 分缺乏支撐，待查。",
+    "v": "length 為空，翼長推估 11.4 cm 高於 HKBWS 10–11 cm，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項（a、v），不補算。"
+  }
+}
