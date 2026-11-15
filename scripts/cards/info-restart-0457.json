@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "id": "0457",
+  "name": "灰背椋鳥",
+  "scientificName": "Sturnia sinensis",
+  "illustrationTaxon": "Adult male Sturnia sinensis (pale buff forehead, silver-grey back, creamy shoulder patch = male). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "絲光椋鳥",
+      "scientificName": "Spodiopsar sericeus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同是淡色椋鳥，但體型明顯較大（23–26 cm）、嘴幾乎全紅、初級飛羽基部有大片白斑、尾黑帶綠光而無寬白端、腰不白、頭部奶白而背部淡灰；本種只有 17–20 cm、嘴藍灰、肩部奶白成大塊肩斑、尾端寬白、腰白、眼銀白。"
+    },
+    {
+      "zh": "北椋鳥",
+      "scientificName": "Agropsar sturninus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者都是小型淡色椋鳥、都有淡色頭部與白腰，容易混淆；但北椋鳥頭淡灰而有大黑眼、上背與腰帶紫、肩羽只有窄白端、嘴全黑、尾端白較窄；本種眼圈內的虹膜銀白、嘴藍灰、肩部奶白成大片、背部銀灰而無紫色，尾白端特別寬。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.64,
+      0.145,
+      0.765,
+      0.27
+    ],
+    [
+      0.43,
+      0.29,
+      0.555,
+      0.415
+    ],
+    [
+      0.15,
+      0.54,
+      0.275,
+      0.665
+    ],
+    [
+      0.42,
+      0.52,
+      0.545,
+      0.645
+    ]
+  ],
+  "featureLabels": [
+    "銀白眼",
+    "奶白肩斑",
+    "白色尾端",
+    "淡粉腳"
+  ],
+  "featureNotes": [
+    "虹膜呈銀白或白色，配上藍灰色的嘴與淡黃褐色的額頭，是成鳥最搶眼的組合，也是與北椋鳥（大黑眼、黑嘴）最直接的區別；雌鳥較灰、對比較弱，為插圖局部。",
+    "肩羽奶白，在收合翼上形成一大塊奶白色肩斑，與深褐黑色的飛羽成強烈對比，是「White-shouldered」名字的由來；幼鳥沒有這片白，為插圖局部。",
+    "尾羽黑色，末端有寬闊的白色或淡黃色端斑，外側尾羽的白端最寬，停棲與飛行時都清楚可見；與絲光椋鳥的黑尾無寬白端不同，為插圖局部。",
+    "腳與趾淡粉至肉色，抓握在魚塘邊的鐵線與枝條上；本種相當樹棲與親近人工環境，常在電線、燈柱與舊屋簷間活動，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "JPN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "PHL",
+      "KOR",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists these 13 (plus Singapore, which has no separate geometry on the 110m base map) as native; China carries both the breeding range and Hong Kong, which BirdLife does not list as a separate row. Not an occurrence polygon: green does not imply full-country occupancy and the breeding/non-breeding seasons are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0380/045700",
+      "use": "香港第 I 類：局部常見的過境鳥與繁殖鳥，亦是不常見的冬候鳥，主要在新界西北的開闊鄉郊；17–20 cm，小型淡色椋鳥，腰淡色、虹膜淡色；成鳥雄鳥額頭淡黃褐，與銀灰色的後頸至背相連，腰與尾上覆羽偏白，肩羽奶白在收合翼上形成大片淡色斑並與深色飛羽成對比，尾黑而有寬白或淡黃端（外側較寬），頦至胸淡黃灰、腹與尾下覆羽偏白，虹膜銀白或白、嘴藍灰；雌鳥似雄鳥但整體較灰、明暗對比較弱；幼鳥較雌鳥褐、翼上無白而嘴大部分粉紅；叫聲多，尤其近巢或成群時，典型為略帶滾動的 chrrrt 及其變化，飛行時發出圓潤的 proo，停棲時會發出典型雙音；偏好有樹木、建築物與架空電線可停棲的開闊鄉郊，容忍人類存在、常與人工與建成區（村落、棚屋）相關，一般不進入林地與山區；最大族群在新界西北，尤其是后海灣一帶的商業魚塘區（米埔、落馬洲、新田、馬草壟、南生圍、蠔殼圍），塱原農地亦常見，新界西北以外較少但赤柱、貝澳、白泥、石崗與大尾篤近年增加，蒲台島過境規律、1999 年以來最多 55 隻；繁殖鳥調查 1993–96 與 2016–19 的佔有 1 公里方格比例無顯著差異（3.7% 與 3.8%），但分佈有顯著改變——沙田以南及以東（包括南丫、長洲與港島）由 20 格減至 6 格，大嶼山與索罟群島由 9 格減至 1 格，由后海灣腹地與錦田的增加所抵銷，前者現為繁殖重地；全年可見，春季 4 月首三週最多、之後以繁殖鳥為主，秋季主要過境為 8 月最後一週至 10 月中、可能以 9 月下半月為高峰，冬季數量低（全港每週少於 20 隻）；后海灣及西鐵的顏色環誌顯示繁殖族群與越冬族群基本分立，香港應無真正留鳥；多為百隻以下小群，罕有超過 200 隻，最高為 2014-09-02 米埔 950 隻，其次為 2016-03-22 荔枝窩 300 隻；Vaughan & Jones (1913) 認為是常見繁殖鳥，Herklots (1953) 說港島與新界都很多；巢址主要依賴人工構築物（舊建築的洞、村屋縫隙、街燈柱，2008 年起亦有巢箱），罕有在樹洞（都在花園、高爾夫球場或魚塘邊）；鬆散群殖，2 月起已見配對探查巢位，築巢一般 3 月下旬至 7 月下旬，幼鳥多見於 6 月中至 8 月下旬，產卵期 5 月 19 日至 7 月 11 日；Carey 等 (2001) 估計繁殖族群少於 50 對，但 40 mm 入口巢箱在落馬洲與西鐵的港鐵生態提升區非常有效，落馬洲現承載本港大部分繁殖族群；2011 年至少 137 窩、最少 544 隻雛鳥離巢，巢箱使用率落馬洲 100%、西鐵 81%，為最高紀錄，此後兩地多數年份分別有超過 80 對與 20 對；2011 年最大一窩 7 隻雛鳥（另有一蛋），一季最多三窩，第一窩平均 4.43 隻（S.D. ±0.86）、第二窩 3.47 隻（±1.14），第二窩見於落馬洲 86%、西鐵 60% 的巢箱；成群而相當樹棲，常與其他椋鳥一同棲息或覓食，950 隻的夜棲群為全港最高計數；雜食，紀錄有馬纓丹與細葉榕果實、開花的桉樹與毛蟲；單型種；繁殖於中國南部與越南北部，越冬南至泰國半島與中南半島，在馬來半島與新加坡稀少；在中國繁殖於南方沿海各省（雲南至福建），零星北至長江，在台灣、海南及廣西廣東沿海全年可見；IUCN LC、種群趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/white-shouldered-starling-sturnia-sinensis/details",
+      "use": "IUCN **2025** LC、成熟個體 **Unknown**（未量化但相信數量很大）、趨勢 **Stable**（Suspected，無已發表趨勢數據、不認為在下降）；繁殖 EOO **1,070,000 km²**、非繁殖 EOO **3,330,000 km²**、完全遷徙、非繁殖 endemic；6 個 IBA／KBA；海拔 0–1,480 m；世代 3.4 年；森林依賴度「通常不出現於森林」；生境為都市（繁殖與非繁殖）、乾燥稀樹草原、亞熱帶乾燥灌叢；貿易方面屬低普遍度（七個貿易資料集中只有一個有紀錄），用途為寵物（自給、國內）；國家表 14 個原生國家（汶萊、柬埔寨、中國大陸、印度、日本、寮國過境、馬來西亞、緬甸、菲律賓、新加坡、南韓、台灣、泰國、越南非繁殖），**香港沒有獨立一列**；分類上曾列為 Sturnus sinensis。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（灰背椋鳥；White-shouldered Starling）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Sturnia sinensis／椋鳥科 Sturnidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "**runtime 完全沒有 0457 的評分紀錄**，六個軸（i、a、r、c、v、o）全部沒有分數，故 missingScores 為六個軸，卡面一律顯示「待查」；不以他處數值補算。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "**runtime 完全沒有 0457 的卡面文案**（無任何中文或英文字段），故卡面文字全部由本次研究補寫；卡面版式本身不顯示 runtime 文案。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "**runtime 沒有 0457 的 AVONET 量度**，故無法以翼長換算體長。"
+    }
+  ],
+  "notes": [
+    "HKBWS 045700（路徑 `0380/`）：香港第 I 類，局部常見過境鳥與繁殖鳥、不常見冬候鳥，主要在新界西北開闊鄉郊；17–20 cm，小型淡色椋鳥，額淡黃褐連銀灰後頸與背、腰與尾上覆羽白、肩羽奶白成大塊肩斑、尾黑而末端寬白、虹膜銀白、嘴藍灰；雌鳥較灰、幼鳥較褐而翼上無白且嘴偏粉。",
+    "本港紀錄：全年可見，春季 4 月首三週最多，秋季過境 8 月最後一週至 10 月中（9 月下半月高峰），冬季每週少於 20 隻；最高 2014-09-02 米埔 950 隻，其次 2016-03-22 荔枝窩 300 隻；顏色環誌顯示繁殖與越冬族群基本分立，香港應無真正留鳥；繁殖鳥調查方格比例 3.7%→3.8% 但分佈大改：沙田以南以東 20→6 格、大嶼山與索罟群島 9→1 格，由后海灣腹地與錦田增加抵銷。",
+    "繁殖：巢址主要依賴人工構築物（舊建築洞、村屋縫隙、街燈柱、2008 年起巢箱），鬆散群殖；2011 年至少 137 窩、最少 544 隻雛鳥離巢，巢箱使用率落馬洲 100%／西鐵 81%，此後兩地多數年份超過 80 對與 20 對；最大一窩 7 隻雛鳥加一蛋，一季最多三窩，第一窩平均 4.43 隻；產卵期 5 月 19 日至 7 月 11 日。",
+    "食性：雜食，紀錄有馬纓丹與細葉榕果實、開花桉樹與毛蟲；成群而相當樹棲，常與其他椋鳥同棲同食。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2025** 年評估；成熟個體未知但相信數量很大，趨勢 **穩定**（無已發表趨勢數據、不認為在下降）；EOO 繁殖 1,070,000 km²、非繁殖 3,330,000 km²、完全遷徙、海拔 0–1,480 m、世代 3.4 年、森林依賴度「通常不出現於森林」、6 個 IBA。",
+    "runtime 資料缺口：0457 與 0456 一樣，在 `dexScores.json`、`cardCopy.json` 與 `measurements.json` **三者皆完全沒有紀錄**，因此六軸全部「待查」、卡面沒有 runtime 文案、亦無法以翼長換算體長；卡面內容全部改用 HKBWS 與 BirdLife 撰寫。",
+    "AI 主圖原為 1408×768 橫幅，補成方形後裁 `(0.10,0.18,0.86,0.94)`，畫出淡黃褐額頭、銀灰背、奶白肩斑、黑尾寬白端、銀白虹膜與藍灰嘴，站於魚塘邊的鐵線上以呼應其樹棲與親近人工環境的習性；雌鳥（較灰）與幼鳥（較褐、翼上無白）仍待專家核。比較鳥沿用 0453 的絲光椋鳥及 0450 的北椋鳥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {}
+}
