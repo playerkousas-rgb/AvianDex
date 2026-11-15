@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 記穩定"
+  },
+  "id": "0438",
+  "name": "棕頸鉤嘴鶥",
+  "scientificName": "Pomatorhinus ruficollis",
+  "illustrationTaxon": "Adult-type Pomatorhinus ruficollis (HK race presumed hunanensis) on a mossy branch; AI interpretation, subspecies, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紅頭穗鶥",
+      "scientificName": "Cyanoderma ruficeps",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型小得多（12 cm）、嘴短而直、頭頂栗紅而臉淡黃、無白色長眉與胸縱紋；本種嘴長而彎、有白色長眉、胸部濃縱紋，體型大一倍。"
+    },
+    {
+      "zh": "栗頸鳳鶥",
+      "scientificName": "Staphida torqueola",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "嘴短而暗色、頭頂有短冠羽、臉頰栗色帶白紋、下體純白無縱紋；本種嘴長而彎曲、白色長眉、胸部濃密縱紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.27,
+      0.165,
+      0.4,
+      0.295
+    ],
+    [
+      0.215,
+      0.255,
+      0.335,
+      0.375
+    ],
+    [
+      0.26,
+      0.33,
+      0.39,
+      0.46
+    ],
+    [
+      0.4,
+      0.18,
+      0.52,
+      0.3
+    ]
+  ],
+  "featureLabels": [
+    "白色長眉",
+    "栗色頸斑",
+    "胸縱紋",
+    "彎曲黃嘴"
+  ],
+  "featureNotes": [
+    "由嘴基一直伸延至後頸的粗白眉紋，上下夾著深褐色的頭頂與黑色的過眼紋，是本種最搶眼的頭部特徵，為插圖局部。",
+    "頸側有一塊雖不規則但明顯的栗紅色斑，是「棕頸」一名的由來，為插圖局部。",
+    "胸部為栗褐色而佈滿粗白縱紋，是「縱紋」一名的由來，與純白的喉部相接，為插圖局部。",
+    "嘴長而明顯向下彎曲如鐮刀，整體鮮黃色而只在上嘴基部一段黑色，是鉤嘴鶥屬的標誌，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only: the eight countries BirdLife lists (Bangladesh, Bhutan, China, India, Laos, Myanmar, Nepal, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. Hong Kong, where HKBWS treats it as a Cat IIA resident probably derived from ex-captive birds, is part of China's shading but has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0360/043600",
+      "use": "香港第 IIA 類，港島及內陸新界森林與灌叢廣泛而中等常見的留鳥，族群被視為源自籠鳥；16–19 cm；較大型、修長而尾長的鶥，頭部花紋鮮明：粗白眉由嘴基伸至後頸，配深褐頭頂與黑色過眼紋及臉頰，頦喉白色，胸部栗褐而密佈白色縱紋，其餘下體栗褐，上體暖褐而頸側有明顯栗紅色斑，嘴長而彎曲、整體鮮黃而只在上嘴基部黑色，腳長而灰、虹膜深色；性隱蔽，多憑鳴聲發現；全年鳴唱，本港有四種主要鳴唱型；分佈於華中至華東（陝西南部、河南、安徽、浙江），南至緬北、寮國與越南北部，海南普遍、台灣則為近緣種 P. musicus；共 12 個亞種、中國有九個，香港的亞種未經確認，但照片較符合 hunanensis 而非 stridulus；頁記 IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/streak-breasted-scimitar-babbler-pomatorhinus-ruficollis",
+      "use": "IUCN 2024 LC、趨勢穩定（推測）；成熟個體數量未量化，描述為常見；繁殖 EOO 5,280,000 km²；不遷徙、海拔 15–3,050 米、世代 3.0 年、森林依賴度低；國家表為孟加拉、不丹、中國、印度、寮國、緬甸、尼泊爾、越南，未列香港；貿易欄記寵物／展示動物、國際性且普遍度高；2004 年前未被 IUCN 承認（評估史記 Not Recognised）。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（棕頸鉤嘴鶥；Streak-Breasted Scimitar-Babbler）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Pomatorhinus ruficollis／畫眉科 Timaliidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=2.8、v=2.9（含 vEst=1）、r=1、c=1.2、o=2.0。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range 中文為「分佈於老撾及中國雲南、棲息灌木叢或竹林」，look 中文其實是分類與分佈句（並非外型）、habitat 中文全空而英文為濕潤山地林、behavior 英文與 habitat 英文完全同一句，diet 與 voice 全空，funFact 英文記台灣亞種 musicus 已獨立成種，callouts 只註明喙為滇南亞種、頭為峨眉亞種；length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 78.8 mm、尾 85.4 mm、跗蹠 28 mm、嘴峯 22.5 mm、體重 31.6 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 043600：香港第 IIA 類，港島及內陸新界森林與灌叢廣泛而中等常見的留鳥，族群被視為源自籠鳥；16–19 cm；頭部花紋鮮明，野外不易與其他香港鳥類混淆，但性隱蔽、多以鳴聲發現。",
+    "辨識要點：粗白眉自嘴基至後頸、深褐頭頂、黑色過眼紋與臉頰、白喉、栗褐胸而密佈白縱紋、其餘下體栗褐、上體暖褐而頸側有栗紅斑、嘴長而彎且鮮黃（上嘴基部黑色）、腳長而灰。卡面四個標籤取白眉、頸斑、胸紋與嘴。",
+    "分類：共 12 個亞種、中國有九個；香港亞種未經確認，照片較符合 hunanensis 而非舊文獻所記的 stridulus；台灣的 musicus 已獨立為台灣鉤嘴鶥，故台灣不在本種分佈之內。runtime 科名用「畫眉科」對應 Timaliidae。",
+    "分佈：華中至華東（陝西南部、河南、安徽、浙江），南至緬北、寮國、越南北部，海南普遍。BirdLife 國家表八國，未列香港；地圖按此填八國，香港部分由中國的填色覆蓋。",
+    "IUCN：HKBWS 與 BirdLife 都記 LC、趨勢穩定；BirdLife 2024 版，數量未量化但描述為常見；值得留意其評估史在 2004 年前為「Not Recognised」，即本種曾被視為其他鉤嘴鶥的亞種群。",
+    "runtime 分數：i=2、c=1.2、r=1（最低值）沿用；v=2.9 沿用——length 為空，翼長 78.8 mm×0.22≈17.3 cm 落在 HKBWS 16–19 cm 之內，估算與實測相符，只加「觀賞值含體長估算」提示、不扣起；a=2.8 待查——habitat 中文全空、英文與 behavior 英文完全重複、diet 全空，缺乏獨立支撐；o=2.0 依賴待查分項（a）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：look 中文寫的是分類與分佈而非外型、habitat 中文全空、behavior 英文與 habitat 英文重複、diet 與 voice 全空、length 與 weight 為空；callouts 只交代亞種（滇南、峨眉），與香港族群的亞種未定不符，卡面不採用。辨識與本地紀錄一律以 HKBWS 為準。",
+    "世界底圖按 BirdLife 國家表填孟加拉、不丹、中國、印度、寮國、緬甸、尼泊爾及越南共八國，並非全部分佈區、也不是 occurrence polygon；香港雖為本地留鳥且屬第 IIA 類，但 BirdLife 未列香港、110m 底圖亦無獨立多邊形，故只以中國填色覆蓋。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成修長而尾長的鉤嘴鶥，停於長滿苔蘚的枝條上，並畫出粗白長眉、深褐頭頂、黑色過眼紋與臉頰、白喉、栗褐而帶白縱紋的胸部、頸側栗紅斑、長而彎曲的鮮黃嘴（上嘴基部黑）及長灰腳；亞種、性別與年齡差異仍待專家核。比較鳥沿用 0437 的紅頭穗鶥及 0433 的栗頸鳳鶥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 中文全空、英文與 behavior 英文完全重複、diet 全空，2.8 分缺乏獨立支撐，待查。",
+    "o": "綜合分依賴待查分項（a），不補算。"
+  }
+}
