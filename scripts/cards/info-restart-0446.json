@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0446",
+  "name": "黑領噪鶥",
+  "scientificName": "Pterorhinus pectoralis",
+  "illustrationTaxon": "Adult male-type Pterorhinus pectoralis picticollis (black breast band = male); AI interpretation, subspecies, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黑喉噪鶥",
+      "scientificName": "Pterorhinus chinensis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "身體暗灰而翼尾深褐，黑面罩與黑喉連成一整塊，白頰只是面罩後方的一小塊，沒有栗紅色的上體與胸帶；本種上體栗紅、眉紋白、臉頰有黑白縱紋、上胸有黑色胸帶。"
+    },
+    {
+      "zh": "白頰噪鶥",
+      "scientificName": "Pterorhinus sannio",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "全身褐色而無栗紅色調，白眉與白頰連成一片，沒有黑色頰紋與胸帶，體型亦較小（22–24 cm）；本種 27–35 cm、上體栗紅、有黑白斑頰與黑色胸帶。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.745,
+      0.1,
+      0.87,
+      0.225
+    ],
+    [
+      0.74,
+      0.225,
+      0.865,
+      0.35
+    ],
+    [
+      0.545,
+      0.195,
+      0.67,
+      0.32
+    ],
+    [
+      0.08,
+      0.58,
+      0.205,
+      0.705
+    ]
+  ],
+  "featureLabels": [
+    "白色眉紋",
+    "黑色胸帶",
+    "栗紅上體",
+    "淡色尾端"
+  ],
+  "featureNotes": [
+    "眉紋白色而長，由嘴基伸延至眼後，與栗紅色的頭頂形成對比；本圖的虹膜呈深紅並有黃色眼圈，為插圖局部。",
+    "臉頰的黑色斑塊帶白色縱紋，向下延伸成上胸的黑色胸帶；雄鳥胸帶為黑色、雌鳥為灰色，而且通常不完整，為插圖局部。",
+    "頭頂、後頸與整個上體為濃栗紅色，是與本港其他大型噪鶥最直接的分別，為插圖局部。",
+    "尾羽外側的末端有寬闊的淡色（近白）端斑，本種受驚飛走時最顯眼，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only: BirdLife's native range (Bangladesh, Bhutan, China, India, Laos, Myanmar, Nepal, Thailand, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. BirdLife lists the USA as **Introduced**, so it is deliberately left unshaded, and BirdLife does not list Hong Kong at all — the Hong Kong population is of captive origin and has no separate geometry on the 110m base map anyway."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0370/044600",
+      "use": "香港第 IIA 類，森林及鄰近郁閉灌叢廣泛而局部常見的留鳥，族群相信源自籠鳥，1990 年代末尤其擴展；27–35 cm，本港最大的噪鶥，身形修長、尾長腳長；頭頂與上體大致栗紅，有白色眉紋與黑白縱紋的黑色頰斑，向下接上黑色（雄）或灰色（雌）的胸帶，胸帶通常不完整；下體可為淡栗紅或大致白色而僅脇部沾淡黃，劉陽與陳水華 (2021) 認為下體較栗紅者為雄鳥；虹膜深色（成鳥細看為深紅），部分個體有明顯黃色眼圈；性羞怯，見人常即飛走，此時可見淡色尾端；與較小的栗頦噪鶥（第 III 類）之別為後者較不栗紅、白頰無縱紋、胸帶完整、虹膜黃；最常聽到的叫聲為單音或雙音，似由一隻在高處的哨兵發出，鳴唱罕聞而為短促悅耳的一串音，受擾時發出多種沙啞與高音；圖集由 3.6%（1993–96 繁殖）升至 8.3%（2001–05 冬季）與 9.1%（2016–19 繁殖，冬季 8.1%），北新界近打鼓嶺一帶為本世紀唯一顯著擴展；1969-12-26 大埔滘一群十隻為首錄，1970 年代末起緩慢擴散、1990 年代初起加快，因模式不符自然遷入而由第 I 類改列第 IIA 類；港島 1976 年起的族群源自動植物公園逃逸的西方亞種，2018–21 年三張照片則屬 picticollis；大嶼山 1988 年首次、1999 年與 2020 年再有零星紀錄；1990 年首次證實繁殖（4 月 14 日見帶食物），至今仍無築巢觀察；至少六次見栗斑杜鵑幼鳥跟隨本種群，應為該杜鵑在本港的主要寄主；幾乎總成 5–20 隻的群，於森林各層活動（少在樹冠頂），行動可快可慢，常有一隻任哨兵；食蟲兼食果，Corlett (1998) 十份糞便全部有果實、70% 有無脊椎，Leven (2000) 八份中 63% 有果實、88% 有無脊椎（全為蟻科），亦見在木棉花上活動；分佈自尼泊爾與印度東北經緬甸至泰國西部、寮國與越南北部，在中國由藏東南至川北、陝西、河南、江蘇及南至海南與廣東，廣東最近見於梧桐山；五亞種，香港大部分屬 picticollis。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/greater-necklaced-laughingthrush-pterorhinus-pectoralis",
+      "use": "IUCN 2024 LC，理由為分佈極廣、族群未量化但未達門檻；趨勢下降（推測，樹冠在三個世代內減少 10.6%，1–19%）；成熟個體 Unknown；繁殖 EOO 5,950,000 km²；不遷徙、非繁殖 endemic；海拔未列（偶爾至 2,000 m）；世代 4.1 年；森林依賴度 Medium；18 個 IBA／KBA；生境為各種森林（低地林為主要）與灌叢、林地；貿易欄記低普遍度、兩種用途；國家表十列，**美國列為 Introduced、沒有香港一列**，原生為孟加拉、不丹、中國、印度、寮國、緬甸、尼泊爾、泰國、越南。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（黑領噪鶥；Greater Necklaced Laughingthrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Pterorhinus pectoralis／噪鶥科 Leiothrichidae）；BirdLife 科名用 Leiotrichidae。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=2.8、v=3.6（含 vEst=1）、r=1、c=1.2、o=2.1，missingScores 為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；只有 range 一句中文有內容（「畫眉科噪鶥屬的一種，分佈於美國（引進種）、不丹、孟加拉國、老撾、中國大陸、越南」），habitat、look、diet、behavior、etymology 中文全空，英文多為同句重複（habitat 與 behavior 英文完全相同、diet 英文其實是物種簡介、look 與 etymology 英文同為分類沿革），length 與 weight 為空。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 141.6 mm、尾 135.5 mm、跗蹠 46.2 mm、嘴峯 33.1 mm、體重 145.1 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 044600：香港第 IIA 類，森林及鄰近郁閉灌叢廣泛而局部常見，族群相信源自籠鳥；27–35 cm，本港最大的噪鶥；上體與頭頂栗紅、白色眉紋、黑白縱紋的黑頰、黑色（雄）或灰色（雌）而不完整的胸帶、淡色尾端、深紅虹膜配黃色眼圈。",
+    "本港狀況：1969-12-26 大埔滘一群十隻首錄，1970 年代末緩慢擴散、1990 年代初加快，因模式不符自然遷入而由第 I 類改列第 IIA 類；圖集由 3.6%（1993–96 繁殖）、8.3%（2001–05 冬季）升至 9.1%（2016–19 繁殖）與 8.1%（冬季），本世紀唯一顯著擴展在北新界近打鼓嶺；港島 1976 年起的族群源自動植物公園逃逸的西方亞種，近年照片則屬 picticollis；大嶼山與長洲只有零星紀錄。",
+    "繁殖與食性：1990 年 4 月 14 日首次證實繁殖（見帶食物），至今仍無築巢觀察；至少六次見栗斑杜鵑幼鳥跟隨本種群，應為該杜鵑在本港的主要寄主；成 5–20 隻群於森林各層活動、常有哨兵；Corlett (1998) 十份糞便全部有果實、70% 有無脊椎，Leven (2000) 八份中 63%／88%（全為蟻科）。",
+    "IUCN：本卡為 **LC（無危）**。BirdLife 2024：趨勢下降（樹冠三個世代減 10.6%，推測 1–19%）、EOO 5,950,000 km²、世代 4.1 年、18 個 IBA；國家表把美國列為 Introduced 且**沒有香港一列**，故地圖只填九個原生國家。",
+    "runtime 分數：i=2、r=1、c=1.2 沿用；v=3.6 沿用——length 欄為空，但翼長 141.6 mm×0.22≈31.2 cm 落在 HKBWS 的 27–35 cm 內，只加「原觀賞值含體長估算」提示；a=2.8 待查——habitat 與 diet 中文全空、behavior 英文與 habitat 英文完全相同；o=2.1 依賴待查分項（a）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：只有 range 一句中文有內容，其餘中文全空；英文多為重複或錯置（habitat 與 behavior 同句、diet 英文是物種簡介、look 與 etymology 同為分類沿革）；length 與 weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "地圖按 BirdLife 國家表填九個原生國家，美國（引進）不填色；BirdLife 未列香港，本港族群屬籠鳥來源，在 110m 底圖併入中國。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖為方形畫布（原橫幅補邊後裁緊），單一長尾、純色深青底，畫出白色眉紋、黑白縱紋頰斑、黑色不完整胸帶、栗紅上體、淡色尾端與深紅虹膜；胸帶畫成黑色（即雄鳥型），亞種、雌鳥（灰色胸帶）與雜交差異仍待專家核。比較鳥沿用 0445 的黑喉噪鶥及 0444 的白頰噪鶥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 與 diet 中文全空、behavior 英文與 habitat 英文完全相同，2.8 分缺乏棲地與食性支撐，待查。",
+    "o": "綜合分依賴待查分項（a），不補算。"
+  }
+}
