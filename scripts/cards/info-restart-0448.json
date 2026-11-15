@@ -1,0 +1,154 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0448",
+  "name": "絨額鳾",
+  "scientificName": "Sitta frontalis",
+  "illustrationTaxon": "Adult male-type Sitta frontalis frontalis (black forecrown extending behind the eye and orange eye-ring suggest a male). AI interpretation, sex, age and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "藍翅希鶥",
+      "scientificName": "Actinodura cyanouroptera",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "身形修長的樹棲鶥，頭淡灰、有黑色側冠紋、上背淺栗、嘴與腳都樸素，多在上層枝葉間活動而不沿樹幹上下走；本種短小緊湊、上體整個亮藍綠、嘴珊瑚紅、黃色虹膜，並以倒懸在樹幹上活動見稱。"
+    },
+    {
+      "zh": "紅嘴相思鳥",
+      "scientificName": "Leiothrix lutea",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "嘴亦為紅色，但體型圓胖短尾、頭部橄欖綠、有白色眼圈與黑色頰紋、胸橙黃、翼有紅黃翼斑，在灌叢中跳躍覓食；本種上體亮藍綠、無眼圈與頰紋、下體淡白帶淡紫、在樹幹上倒懸爬行。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.705,
+      0.455,
+      0.83,
+      0.58
+    ],
+    [
+      0.75,
+      0.495,
+      0.875,
+      0.62
+    ],
+    [
+      0.42,
+      0.34,
+      0.545,
+      0.465
+    ],
+    [
+      0.59,
+      0.56,
+      0.715,
+      0.685
+    ]
+  ],
+  "featureLabels": [
+    "黑色額斑",
+    "珊瑚紅嘴",
+    "藍綠色上體",
+    "淡紫下體"
+  ],
+  "featureNotes": [
+    "前額有一塊明顯的黑斑，雄鳥的黑斑更整齊明亮並在眼後延伸成一道短黑眉；這塊黑斑在所有亞種都有，是本種與其他鳾類及小型藍色林鳥之別，為插圖局部。",
+    "嘴短而尖、呈鮮珊瑚紅色，是本港唯一一種鳾，也是野外第一眼最易認的特徵；插圖中虹膜為淡黃色、眼圈偏橙，符合雄鳥型，為插圖局部。",
+    "上體、翼與短方尾皆為鮮亮藍綠色（turquoise blue），在常綠林的中上層十分醒目，為插圖局部。",
+    "下體淡白而臉頰、胸側與脇帶一層淡紫羅蘭色（lavender wash），並非純白，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PHL",
+      "LKA",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only: BirdLife's country table lists these 15 countries (the Philippines as native breeding), so only they are shaded; this is not an occurrence polygon, green does not imply full-country occupancy and the seasons are not colour-separated. Hong Kong is NOT listed by BirdLife: the local population is of ex-captive origin (Category IIB) and has no separate geometry on the 110m base map, so it is folded into China's shading — China in fact holds the species natively only in south Yunnan and southwest Guangxi."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0380/044900",
+      "use": "香港第 IIB 類，新界大陸森林（南至九龍山）局部頗常見的留鳥，港島有數筆紀錄；原生於東南亞，本港族群源自籠鳥；12–13 cm，本港唯一的鳾，看得清楚時不易誤認，常沿樹幹與樹枝上下走動、多倒懸；上體鮮藍綠色而前額有黑斑，下體淡白而臉頰與脇帶淡紫，嘴鮮珊瑚紅、虹膜黃色、腳粗壯而褐至暗粉紅；雄鳥羽色較乾淨明亮、前額黑斑更明顯並在眼後延伸成短黑眉、眼圈橙色，雌鳥眼圈黃色；叫聲嘈雜、常成對吱喳；分佈以大帽山山系為中心，西至大欖涌水塘、西北至大棠郊野公園，東面由南涌至西貢，偏好大樹但不限於林內，常見於林緣、村邊甚至新市鎮公園；港島狀況不明：1992 年 1–9 月在山頂與香港仔郊野公園首錄，之後要到 2013-04-21 摩星嶺才再見，此後港島西有數筆紀錄包括 2024 年初龍虎山，可能是 1992 年以來的族群或由新界擴散；單一地點最高計數為 2004-01-04 大埔滘 20 隻；1989-04-15 大埔滘首錄、同年 11 月已有最多四隻、1990 年可能繁殖；2000 年前已在城門一帶立足、核心仍在大埔滘，1997-03-29 鹿頸為新界東北唯一紀錄；圖集由 0.4%（1993–96 繁殖）升至 0.8%（2001–05 冬季），2011 年流水響、2012 年河背與鳳園、2014 年白沙澳先後錄得，第二輪圖集為 2.2%（2016–19 繁殖）與 3.7%（冬季）；1992 年鼎湖山的紀錄相信是佛寺附近的逃逸個體，本港族群確為籠鳥來源，但廣東東部（梧桐山 2007-08-19 首錄，現至沙頭角東北約 15 公里的園山風景區）反而是由本港擴散過去；多成對或家族群、常混入山雀／鶯／繡眼鳥群，叫聲遠播有助找群，不怕人，多在樹幹與粗枝（尤喜粗糙長滿苔蘚者）覓食，亦在竹與竹棚上覓食，相信主食昆蟲但本港無獵物紀錄；樹洞繁殖，有自行挖掘與縮窄洞口行為，3 月 1 日起察看樹洞、7 月在枯樹挖洞、3 月 16 日至 4 月 17 日帶巢材（苔蘚、兩次狗毛）入洞、5 月 10 日至 7 月 16 日餵雛，窩卵數多為二至三隻、4–8 月見幼鳥，資料顯示本港可能一年兩窩；原生範圍自西喜馬拉雅與印度大部分經東南亞至大巽他群島，在中國只有雲南南部與廣西西南（南寧以西），本港與深圳東部是唯一的非原生族群；五亞種，本港最可能為指名亞種。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/velvet-fronted-nuthatch-sitta-frontalis",
+      "use": "IUCN **2024** LC（理由為分佈極廣、族群未量化但未達門檻、下降速度未達門檻）；成熟個體 Unknown；趨勢**下降**（推測，生境破壞與破碎化）；繁殖 EOO 15,600,000 km²；不遷徙、非繁殖 endemic；海拔 0–2,610 m（偶爾上限 2,200 m）；世代 2.7 年；森林依賴度 **High**；生境以熱帶濕潤低地林為主要，山地林、沼澤林、紅樹林、乾燥林、人工林為適用；貿易欄記低普遍度，食用（自給、國內）與寵物（國際）兩種用途；保育行動只有「已劃定保育地點」一項；國家表 15 列（菲律賓為原生繁殖），**沒有香港一列**；評估史自 1988 年起一直為 LC。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（絨額鳾；Velvet-Fronted Nuthatch）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Sitta frontalis／鳾科 Sittidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=3.3、v=2.8（含 vEst=1）、r=1、c=1.2、o=2.1，missingScores 為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；只有 range 一句中文有內容（「分佈於印度半島、中南半島及其鄰近島嶼以及中國大陸的雲南、貴州、廣西、海南等地」——BirdLife 國家表沒有「貴州、海南」的獨立分佈說法，HKBWS 亦指中國僅雲南南部與廣西西南），habitat、diet、look、voice、breeding、behavior、etymology 中文全空，英文多為同句重複或截斷（voice 與 conservation 英文都在講分類沿革並被截斷），length 與 weight 為空。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 72.7 mm、尾 38.0 mm、跗蹠 16.0 mm、嘴峯 14.3 mm、體重 16.5 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 044900（注意頁面編號與 app 的 0448 不同）：香港第 IIB 類，新界大陸森林局部頗常見、南至九龍山，港島有數筆紀錄，族群源自籠鳥；12–13 cm，本港唯一鳾，常倒懸沿樹幹走動，上體鮮藍綠、前額黑斑、下體淡白帶淡紫、嘴珊瑚紅、虹膜黃色。",
+    "本港狀況：1989-04-15 大埔滘首錄、1990 年可能繁殖，2000 年前已在城門立足；圖集由 0.4%（1993–96 繁殖）、0.8%（2001–05 冬季）升至 2.2%（2016–19 繁殖）與 3.7%（冬季）；港島 1992 年山頂與香港仔首錄後長期無紀錄，2013 年摩星嶺再見，2024 年初龍虎山仍有紀錄，狀況未明。",
+    "分佈與來源：本港族群確為籠鳥來源，但 2007 年起廣東東部（梧桐山）反而是由本港擴散出去的族群；種群核心在大帽山山系，喜大樹亦用林緣、村邊與新市鎮公園。",
+    "繁殖與食性：樹洞繁殖，3 月 1 日起察看樹洞、7 月在枯樹挖洞、3 月 16 日至 4 月 17 日帶巢材（苔蘚、兩次狗毛）入洞、5 月 10 日至 7 月 16 日餵雛，窩卵數二至三隻、4–8 月見幼鳥，可能一年兩窩；相信主食昆蟲，但本港無獵物紀錄。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife 2024 年評估，趨勢**下降**（推測，生境破壞與破碎化）；EOO 15,600,000 km²、海拔 0–2,610 m、世代 2.7 年、森林依賴度 High；國家表 15 列、沒有香港，故地圖只填 15 個原生國家／地區，香港併入中國。",
+    "runtime 分數：i=2、r=1、c=1.2 沿用；a=3.3 待查（habitat 與 diet 中文全空、behavior 中文全空、英文多為同一句生境描述）；v=2.8 待查（length 與 look 中文皆空；翼長 72.7 mm×0.22≈16.0 cm 高於 HKBWS 的 12–13 cm）；o=2.1 依賴待查分項（a、v）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：只有 range 一句中文有內容，且分佈點（貴州、海南）與 HKBWS／BirdLife 說法有出入；其餘中文全空，英文多為重複或截斷（voice 與 conservation 英文同為被截斷的分類句，migration 與 habitat 英文同句）；length 與 weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖為方形畫布（原橫幅補邊、再把樹幹邊緣羽化融入純色深青底後裁緊），單一短方尾、倒懸於苔蘚樹幹，畫出黑色額斑、珊瑚紅嘴、黃色虹膜、藍綠色上體與淡紫下體；性別（雄鳥眼圈橙、雌鳥黃）與亞種差異仍待專家核。比較鳥沿用 0441 的藍翅希鶥及 0442 的紅嘴相思鳥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 與 diet 中文全空、behavior 中文全空，3.3 分缺乏棲地與食性支撐，待查。",
+    "v": "length 與 look 中文皆為空，翼長 72.7 mm×0.22≈16.0 cm 高於 HKBWS 的 12–13 cm，2.8 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（a、v），不補算。"
+  }
+}
