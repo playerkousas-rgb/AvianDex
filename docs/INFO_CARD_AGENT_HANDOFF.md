@@ -37,3 +37,12 @@
 - 用戶否決的舊0078–0081由本分支新版本取代；0082–0084保留有效。PR25 的0051–0077資料／歷史要保留，0078–0081舊交付只作被取代歷史。
 - 0038–0040本地JSON是候選，**未建立與既有Drive成品的來源對應**，不可冒稱已驗證的交付spec。0041–0043來源JSON缺口仍待真實來源／畫面核對，不能編造裁切來湊全。
 - 不在未獲用戶確認R2上載的情況下註冊slim。用戶掌握最終完成量與下一批工作量。
+
+## 環境重建（2026-11-15 實測可用）
+
+- 沙盒重置後 `/home/user/card-venv`、`~/.fonts`、`cards/art`、`deliver/cards` 都會消失（前三者與後兩者都在 repo 外或 Git 忽略），只有追蹤中的檔案會留下。重建：
+  1. `python3 -m venv /home/user/card-venv && /home/user/card-venv/bin/pip install -q pillow numpy fonttools`（Pillow 13 內建 AVIF 讀寫，`features.check('avif')` 為 True，不需 pillow-avif-plugin）。
+  2. 字體：`git clone --filter=blob:none --depth 1 --sparse https://github.com/google/fonts /tmp/gfonts && cd /tmp/gfonts && git sparse-checkout set ofl/notosanstc`，再用 fontTools `instantiateVariableFont(..., {"wght":400/700})` 產生 `~/.fonts/NotoSansTC_400Regular.ttf` 與 `_700Bold.ttf`。
+  3. 底圖：`git clone --filter=blob:none --depth 1 --sparse https://github.com/nvkelso/natural-earth-vector /tmp/nev && git -C /tmp/nev sparse-checkout set --no-cone /geojson/ne_110m_admin_0_countries.geojson`，複製成每張卡的 `cards/art/info-restart-NNNN/countries.geojson`（838,726 bytes、MD5 `21abb20e7c74fc0c66b8dd955f8f7f73`）。
+- 比較鳥素材若原卡主圖已不在本機，可依原規格重新生圖（須在 spec 與交付記錄註明是重新生成，不是原始主圖）。
+- 注意：分支 ref 有時會在環境還原後退回 base commit，本地工作區仍是較新的內容；`git push` 前先 `git fetch` 並確認 `git log` 的父鏈，必要時 `git reset --hard origin/<branch>` 後重做最後一次 commit，避免把整段歷史當成新 commit 重複推送。
