@@ -1,0 +1,151 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 記下降"
+  },
+  "id": "0426",
+  "name": "金頭擬縫葉鶯",
+  "scientificName": "Phyllergates cucullatus",
+  "illustrationTaxon": "Adult-type Phyllergates cucullatus perched on a slender twig; AI interpretation, sex, subspecies and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "棕臉鶲鶯",
+      "scientificName": "Abroscopus albogularis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "橙紅在臉部而非頭頂、下體白色帶黑喉紋、尾短；本種橙紅集中在前冠、臉胸灰色、腹部鮮黃、尾長。"
+    },
+    {
+      "zh": "鱗頭樹鶯",
+      "scientificName": "Urosphena squameiceps",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "全身銹褐、尾極短、沒有橙紅前冠、下體不黃；本種上體欖綠、腹鮮黃、前冠橙紅、尾長而常翹起。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.585,
+      0.245,
+      0.755,
+      0.415
+    ],
+    [
+      0.585,
+      0.375,
+      0.76,
+      0.55
+    ],
+    [
+      0.375,
+      0.495,
+      0.58,
+      0.7
+    ],
+    [
+      0.7,
+      0.29,
+      0.87,
+      0.46
+    ]
+  ],
+  "featureLabels": [
+    "橙紅前冠",
+    "灰色臉胸",
+    "鮮黃腹部",
+    "長嘴"
+  ],
+  "featureNotes": [
+    "前額至頭頂橙紅，下接白色眉紋與黑色眼紋；幼鳥的橙紅前冠較淡甚至缺失，為插圖局部。",
+    "臉部與上胸石板灰，並帶細密縱紋，與鮮黃的下體形成明顯分界，為插圖局部。",
+    "腹部、脇部及尾下覆羽鮮黃，是與長尾縫葉鶯最易分別之處，為插圖局部。",
+    "嘴長而纖細、微向下彎，角質色偏淡，是縫葉鶯型體態的另一半（另一半是長尾，見主圖），為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IDN",
+      "IND",
+      "KHM",
+      "LAO",
+      "MMR",
+      "MYS",
+      "PHL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and resident, breeding and wintering areas are not colour-separated. Hong Kong holds a fairly common resident and winter visitor population per HKBWS but is not listed in BirdLife's country table and has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0310/037100",
+      "use": "香港第 I 類在林地及密冠層灌叢屬相當常見的留鳥，同時是分佈更廣的冬候鳥，屬近年殖民者、1999 年首次紀錄；12–13 cm；極小、長尾長嘴，體態似長尾縫葉鶯但明亮得多——銹橙前冠、白色眉紋、黑色眼紋、臉與胸灰色、其餘下體鮮黃；幼鳥較暗、標記較弱且沒有橙紅前冠；鳴唱為全年可聞、3 至 5 月最盛、似飄逸的抑揚旋律；1999-10-08/09 大埔滘首筆，2005-05-18 大埔滘（原文作 Ng Tung Chai）證實繁殖，2007-04-29 大埔滘樹上兩米的球狀巢；2016–19 調查繁殖季見於 5.6% 方格、冬季 10.1%；在中國近年大幅擴張，Cheng (1987) 只記雲南、廣西，現已達廣東大部分、福建及海南。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/mountain-tailorbird-phyllergates-cucullatus",
+      "use": "IUCN 2024 LC 但記下降（林木覆蓋 10 年減 9.8%、推測族群減 1–19%、森林依賴中等）；成熟個體未量化、繁殖 EOO 12,100,000 km²、垂直遷徙、海拔 0–2,500 m、世代長度 2.6 年；國家：孟加拉、不丹、柬埔寨、中國、印度、印尼、老撾、馬來西亞、緬甸、菲律賓（繁殖）、泰國、越南；另記寵物用途但屬國內自用規模。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（金頭擬縫葉鶯；Mountain Tailorbird；HKBWS 頁題及名錄作「金頭縫葉鶯」）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phyllergates cucullatus／樹鶯科 Scotocercidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 只有 a=2.8、v=2.2、r=1、o=2，含 vEst=1；i 與 c 完全沒有分數。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；只有 range 有中文一句，look、voice、etymology 的英文是同一句分類沿革、habitat 與 behavior 也是同一句生境描述，picks 只選 range，length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 44.9 mm、尾 45.3 mm、嘴峯 16.2 mm、體重 5.9 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 037100：12–13 cm，香港屬第 I 類在林地及密冠層灌叢相當常見的留鳥，冬季則分佈更廣；1999 年 10 月 8–9 日大埔滘首次紀錄，是本港二十世紀後期最快速、最出乎意料的殖民擴張之一，2005 年 5 月 18 日證實繁殖，此後繁殖分佈持續擴展；2016–19 調查繁殖季見於 5.6% 方格、冬季 10.1%。",
+    "辨識要點：銹橙前冠、白色眉紋、黑色眼紋、臉與上胸灰色帶細縱紋、其餘下體鮮黃、上體欖綠、尾長而常翹；體態似長尾縫葉鶯但明亮得多，體型小且隱蔽，往往先靠飄逸的高音鳴唱發現。幼鳥較暗、標記較弱、沒有橙紅前冠。卡面四個標籤取前冠、灰臉胸、黃腹與長嘴，尾長則由主圖姿態呈現。",
+    "中文名差異：runtime 用「金頭擬縫葉鶯」，HKBWS 頁題及香港鳥類名錄用「金頭縫葉鶯」；英文同為 Mountain Tailorbird、學名同為 P. cucullatus，卡面依 runtime 用名。",
+    "分佈變遷：HKBWS 指出本種在中國大幅擴張——Cheng (1987) 只記雲南、廣西，Lewthwaite (2007) 已見於廣東大部分，現東達福建並見於海南；BirdLife 國家表則涵蓋南亞、東南亞至印尼與菲律賓（繁殖）。runtime 的 range 仍只寫「雲南、廣西等地」，已明顯過時。",
+    "IUCN 表述不一致：HKBWS 未在頁面註明趨勢（只寫分佈擴張），BirdLife 2024 記 LC 但下降（林木覆蓋 10 年減 9.8%，推測族群減 1–19%）。卡面註記採用 BirdLife 表述。",
+    "runtime 分數只有 a=2.8、v=2.2、r=1、o=2、vEst=1，i 與 c 完全缺失並列於 missingScores。a 待查——habitat 與 behavior 是同一個英文句子重複，沒有獨立內容支撐 2.8 分；v=2.2 沿用——翼長 44.9 mm×0.22≈9.9 cm，低於 HKBWS 12–13 cm，估算偏保守而非矛盾，保留「原觀賞值含體長估算」提示；r=1 沿用但備註 range 過時；o 依賴待查分項（a）不補算。",
+    "runtime 文案缺陷：look、voice、etymology 三個欄位的英文都是同一句「The mountain tailorbird … is a songbird species formerly placed in …」的分類沿革，沒有羽色、鳴聲或詞源內容；habitat 與 behavior 亦為同一句生境重複；中文只有 range 一句且已過時；picks 只選 range；length、weight 為空。辨識內容一律以 HKBWS 為準。",
+    "世界底圖按 BirdLife 國家表填孟加拉、不丹、中國、印尼、印度、柬埔寨、老撾、緬甸、馬來西亞、菲律賓、泰國、越南；香港雖是本地相當常見的留鳥及冬候鳥，但 BirdLife 國家表未列香港、110m 底圖亦無獨立多邊形，故不填色。留鳥、繁殖與越冬地未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成小型長尾長嘴的縫葉鶯型鳥，停於細枝並把尾微微翹起，畫出橙紅前冠、白眉黑眼紋、灰色臉胸、欖綠上體、鮮黃腹部與長嘴；幼鳥較暗、缺橙紅前冠的差異仍待專家核。比較鳥為 0425 棕臉鶲鶯及 0424 鱗頭樹鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 與 behavior 是同一個英文句子重複，沒有獨立內容支撐 2.8 分，待查。",
+    "o": "綜合分依賴待查分項（a），不補算。"
+  }
+}
