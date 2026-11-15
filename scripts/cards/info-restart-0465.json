@@ -1,0 +1,158 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "id": "0465",
+  "name": "白眉鶇",
+  "scientificName": "Turdus obscurus",
+  "illustrationTaxon": "Adult male Turdus obscurus (grey head, long white supercilium, brown upperparts, orange-buff chest and flanks, white belly, yellow bill). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "白腹鶇",
+      "scientificName": "Turdus pallidus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同樣越冬的鶇，但白腹鶇頭背橄欖褐而胸脇淡灰、無白色眉紋與眼下白斑、腹部白、嘴黃腳淡粉；本種頭灰而有大白眉、胸脇橙褐。"
+    },
+    {
+      "zh": "烏灰鶇",
+      "scientificName": "Turdus cardis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬，烏灰鶇雄鳥頭胸石板灰、白腹有大黑斑、無白眉、脇無橙；本種頭灰但有長白眉與眼下白斑、上體褐而非藍灰、胸脇橙褐。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.385,
+      0.25,
+      0.51,
+      0.375
+    ],
+    [
+      0.47,
+      0.43,
+      0.595,
+      0.555
+    ],
+    [
+      0.45,
+      0.545,
+      0.575,
+      0.67
+    ],
+    [
+      0.3,
+      0.275,
+      0.425,
+      0.4
+    ]
+  ],
+  "featureLabels": [
+    "白色長眉",
+    "橙褐胸脇",
+    "白色腹部",
+    "黃嘴"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥頭與喉為素淨的灰色，具長而窄的白色眉紋與眼下白色短帶，眼先黑褐；第一齡雄鳥頭帶灰而眉更白，第一齡雌鳥頭無灰調、喉有縱紋，為插圖局部。",
+    "成鳥雄鳥胸下與脇為橙褐色，大覆羽純褐；第一齡雄鳥大覆羽有淡黃白端而胸脇橙更明顯，第一齡雌鳥胸脇橙較暗啞，為插圖局部。",
+    "腹部純白，與橙褐色的胸脇成清楚界線；第一齡雌鳥喉部較淡而具縱紋，為插圖局部。",
+    "嘴為鮮黃至橙色，是四種常見鶇中最易見的黃嘴之一；雌鳥與第一齡鳥嘴色較暗啞，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "JPN",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "PRK",
+      "PHL",
+      "RUS",
+      "KOR",
+      "LKA",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 22 native countries/territories. Hong Kong (China) is native but has no separate geometry on the 110m base map and is folded into China's outline; Singapore is native but also has no geometry on this base map. Nepal is a VAGRANT entry and is left unshaded, as are the European, Middle Eastern and Palau vagrants. Russia is shaded as a country, not as a claim of breeding range west of the Urals. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0390/046800",
+      "use": "香港第 I 類：不常見過境鳥、稀少冬候鳥，見於森林或疏林；成鳥雄鳥頭與喉素淨灰色、具白色眉紋與眼下白斑、眼先黑褐、上體褐、胸下與脇橙、大覆羽純褐；第一齡雄鳥大覆羽有淡黃白端、頭帶灰、白眉與眼下白斑明顯、眼先黑褐、胸脇橙顯著；第一齡雌鳥暗啞、頭無灰調、喉有縱紋、大覆羽淡色端明顯、胸脇橙暗啞；叫聲較烏灰鶇與灰背鶇更細、更多嗡鳴、音高略低，細聽時音高會略降；分佈廣泛，越冬鳥主要在林地、過境鳥亦見於較疏林地；與大部分常見鶇不同，本種最常以過境鳥身分被記錄：秋季主要過境在 11 月與 12 月第一週，最高為 2000-11-26 嘉道理農場上空飛過 132 隻；越冬族群約由 12 月中至最遲 3 月最後一週、期間一般稀少；春季過境約由 3 月底或 4 月初開始，主要在 4 月第二週至 5 月第一週，數量波動大，1999 年以來最高為 2016-04-14 的 260 隻，另有 2019-05-03 大欖郊野公園 170 隻、翌日 165 隻（相信包含不同個體）；最高紀錄為 1983-04-16 大埔滘至少 1,000 隻；極端日期為 1993-10-13 與 2017-05-20；1941-04-19 首次紀錄，Herklots (1967) 視為不常見過境鳥、紀錄多在 4 月最後十天；遷徙期成群，多在結果樹上進食、較少在林地落葉層，紀錄吃白楸、蔓九節、鐵冬青與潤楠果實；單型種，繁殖於西伯利亞中部與東部、南至蒙古北部、東至庫頁島北部，冬季在華南、中南半島北部、東南亞、蘇門答臘與爪哇；IUCN LC、趨勢不明。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/eyebrowed-thrush-turdus-obscurus/details",
+      "use": "IUCN **2025** LC、成熟個體 Unknown、趨勢 **Decreasing**（inferred，A2 過去三代下降 10–19%；理由為高度依賴森林、分佈範圍內樹冠覆蓋三代間減少 13.5%）、繁殖 EOO **6,690,000 km²**、非繁殖 EOO **10,800,000 km²**、完全遷徙、繁殖 endemic **No**、5 個 IBA／KBA、海拔 0–1,500 m（偶然 2,400 m）、世代 **3.6 年**、森林依賴度 **High**；生境以北方林為繁殖期主要、溫帶林適宜，非繁殖期見於亞熱帶低地與山地濕林、紅樹林、人工林與灌叢；貿易普遍度低；國家表把**香港（中國）列為原生**，另有 21 個原生國家／地區（孟加拉、不丹、汶萊、柬埔寨、中國、印度、印尼、日本、寮國、馬來西亞、蒙古〔繁殖〕、緬甸、北韓、菲律賓、俄羅斯〔含亞洲與中亞部分，繁殖〕、新加坡、南韓、斯里蘭卡、台灣、泰國、越南），尼泊爾與歐洲、中東、帛琉、美國等為迷鳥。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（白眉鶇；Eyebrowed Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Turdus obscurus／鶇科 Turdidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=4.3、v=3.4（含 vEst=1）、r=4.8、c=1.2、o=3.1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；diet（昆蟲、蚯蚓、漿果）、range（冬季遷至中國與東南亞、偶見西歐）、look（約 22 cm，頭頸背灰褐、白色眉紋、虹膜褐、喙黃）、funFact（萊瑟姆記述分佈）、callouts 三項（頭 HEAD 白色眉紋／背 BACK 灰褐／身 BODY 腹部白）、breeding、voice（zip-zip 與 tseep）、etymology（Turdus 為鶇、obscurus 為暗色）、migration 有中文；habitat 與 conservation 沒有；length 與 weight 為空。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 119.8 mm、尾 81.5 mm、跗蹠 29.6 mm、嘴峯 22.0 mm、體重 62.6 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 046800（路徑 `0390/`，鶇科）：香港第 I 類，不常見過境鳥與稀少冬候鳥；成鳥雄鳥灰頭喉、長白眉兼眼下白斑、眼先黑褐、褐背、橙褐胸脇、白腹、黃嘴；第一齡雌鳥暗啞、喉有縱紋。",
+    "本港紀錄：本種最常以過境鳥身分出現——秋季 11 月至 12 月第一週（2000-11-26 嘉道理農場上空 132 隻），越冬 12 月中至 3 月最後一週且一般稀少，春季 3 月底至 5 月第一週（2016-04-14 260 隻、2019-05-03 大欖 170 隻及翌日 165 隻）；最高 1983-04-16 大埔滘至少 1,000 隻；極端 1993-10-13 與 2017-05-20；1941-04-19 首錄。",
+    "習性：遷徙期成群，多在結果樹上進食、較少下到落葉層，紀錄吃白楸、蔓九節、鐵冬青與潤楠；叫聲較烏灰鶇與灰背鶇更細、更多嗡鳴、音高略低而會略降。",
+    "分類：單型種，繁殖西伯利亞中部與東部、蒙古北部至庫頁島北部，冬季華南、中南半島北部、東南亞、蘇門答臘與爪哇。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2025** 年評估（本批最新的一次評估），趨勢 **Decreasing**（推論過去三代下降 10–19%，樹冠覆蓋減少 13.5%）；EOO 繁殖 6,690,000 km²、非繁殖 10,800,000 km²、完全遷徙、非繁殖 endemic、世代 3.6 年、森林依賴度 **High**、5 個 IBA。",
+    "runtime 分數：i=2、a=4.3、r=4.8、c=1.2 沿用（a 有 diet、look、voice、breeding、callouts 支撐，r=4.8 與本批最高並列）；v=3.4 待查——length 與 weight 皆為空、vEst=1 即原值由體長估算，翼長 119.8 mm×0.22≈26.4 cm 高於 runtime 與 HKBWS 的約 22 cm；o=3.1 依賴待查分項（v）不補算。",
+    "runtime 文案缺陷：habitat 與 conservation 沒有中文，length 與 weight 為空；look 的「背和頭頸部呈灰褐色」把灰頭與褐背混為一談（實為灰頭、褐背），funFact 是萊瑟姆的引文而非有趣事實；callouts 三項與 look 重複。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖原為 1296×816 橫幅，直接取中央 816×816 方形（不補邊，避免平面色帶）後放大至 1127×1127，畫出灰頭、長白眉與眼下白斑、黑眼先、褐背、橙褐胸脇、白腹與黃嘴，站在結果灌木的苔枝上以呼應 HKBWS 所述多在結果樹進食；雌鳥與第一齡鳥仍待專家核。比較鳥沿用 0463 的白腹鶇與本輪重生成的烏灰鶇，非等比例、非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 119.8 mm×0.22≈26.4 cm 高於 runtime 與 HKBWS 的約 22 cm，3.4 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}
