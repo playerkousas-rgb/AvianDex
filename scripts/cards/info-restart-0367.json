@@ -1,0 +1,176 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2025"
+  },
+  "id": "0367",
+  "name": "稻田葦鶯",
+  "scientificName": "Acrocephalus agricola",
+  "illustrationTaxon": "Adult-like Acrocephalus agricola; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "鈍翅葦鶯",
+      "scientificName": "Acrocephalus concinens",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "眉紋較短，通常有較短的翅膀。"
+    },
+    {
+      "zh": "遠東葦鶯",
+      "scientificName": "Acrocephalus tangorum",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "眉紋和喙色差異細微，須綜合鑑別。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.21,
+      0.18,
+      0.45,
+      0.255
+    ],
+    [
+      0.08,
+      0.16,
+      0.32,
+      0.29
+    ],
+    [
+      0.38,
+      0.32,
+      0.68,
+      0.52
+    ],
+    [
+      0.3,
+      0.33,
+      0.52,
+      0.51
+    ]
+  ],
+  "featureLabels": [
+    "淡色長眉",
+    "深色喙尖",
+    "棕色折翼",
+    "淡色腹部"
+  ],
+  "featureNotes": [
+    "淡色長眉。",
+    "深色喙尖。",
+    "棕色折翼。",
+    "淡色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ARM",
+      "BGD",
+      "BGR",
+      "CHN",
+      "GEO",
+      "IND",
+      "IRN",
+      "KAZ",
+      "KGZ",
+      "LAO",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PAK",
+      "ROU",
+      "RUS",
+      "TJK",
+      "THA",
+      "TKM",
+      "TUR",
+      "UKR",
+      "UZB"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/041000",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/paddyfield-warbler-acrocephalus-agricola",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/padwar1",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/040800",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/040900",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 12–14 cm，香港非常罕見冬候；BirdLife 2025 LC 全球疑穩定，較早 HKBWS 評為下降。",
+    "i=2 v=2.6 r=4.8 c=1.2 沿 runtime；c 缺中文保育正文非完整評估；棲地蘆葦及長草未被標記，a/o 待查。",
+    "AI 圖下喙尖色不清，眉線較長，翼尾比例及足趾待核；相似鳥不等比例不能憑插圖鑑定。"
+  ],
+  "withheldScores": {
+    "a": "低矮蘆葦與長草棲地未納入標籤，適應分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

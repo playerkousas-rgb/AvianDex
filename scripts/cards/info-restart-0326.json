@@ -1,0 +1,150 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "EN",
+    "zh": "瀕危",
+    "assessmentNote": "全球 EN 依香港鳥類報告"
+  },
+  "id": "0326",
+  "name": "鵲色鸝",
+  "scientificName": "Oriolus mellianus",
+  "illustrationTaxon": "Adult male-like O. mellianus, AI interpretation.",
+  "similarSpecies": [
+    {
+      "zh": "栗色黃鸝",
+      "scientificName": "Oriolus traillii",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥栗紅身軀、黑頭翼。"
+    },
+    {
+      "zh": "黑枕黃鸝",
+      "scientificName": "Oriolus chinensis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥金黃身、黑枕眼帶。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.12,
+      0.13,
+      0.29,
+      0.245
+    ],
+    [
+      0.27,
+      0.12,
+      0.43,
+      0.27
+    ],
+    [
+      0.29,
+      0.31,
+      0.47,
+      0.48
+    ],
+    [
+      0.73,
+      0.65,
+      0.9,
+      0.84
+    ]
+  ],
+  "featureLabels": [
+    "淡灰色喙",
+    "黑色頭部",
+    "銀白胸腹",
+    "栗色尾羽"
+  ],
+  "featureNotes": [
+    "淡灰色喙。",
+    "黑色頭及淡黃虹膜。",
+    "雄鳥銀白胸腹。",
+    "栗色尾羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "THA",
+      "KHM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032300",
+      "use": "Identification, HK status, range and global IUCN status."
+    },
+    {
+      "url": "https://ebird.org/species/silori1",
+      "use": "Identification and IUCN 2025."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime score inputs, taxonomy or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime score inputs, taxonomy or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime score inputs, taxonomy or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime score inputs, taxonomy or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime score inputs, taxonomy or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime score inputs, taxonomy or measurements."
+    },
+    {
+      "url": "https://ebird.org/species/marori2",
+      "use": "Maroon Oriole comparison."
+    },
+    {
+      "url": "https://ebird.org/species/blnori1",
+      "use": "Black-naped Oriole comparison."
+    }
+  ],
+  "notes": [
+    "HKBWS 體長28 cm、香港2018偶然迷鳥紀錄、全球 EN 趨勢下降；HKBWS 食性無觀察不等於無歷史紀錄。",
+    "i=4.4、r=1、c=2.5 沿 runtime；i 受原來源矛盾影響但獨立 Cornell 2025 及 HKBWS 均支持 EN；r/c 缺中文輸入非完整評估。食性欄錯置棲地故 a 遮蔽；翼長144.8 mm×0.22≈31.856 cm 超過28 cm 故 v 遮蔽但保留 vEst；o 連帶遮蔽。",
+    "主圖及栗色比較圖新製，黑枕比較重用0324主圖。鵲色主圖白色肩羽延伸至翼上緣，與來源黑色翼覆羽未完全一致；尾、足趾待核。黑枕比較圖黑枕側面未完整示範，AI 示意不等比例、非專家認證。",
+    "世界圖僅列 HKBWS 指明的部分繁殖／越冬國家，綠色非全境。"
+  ],
+  "withheldScores": {
+    "a": "英文食性欄錯置棲地而食性標籤為空，輸入不可靠。",
+    "v": "翼長估體長31.856 cm 高於 HKBWS 28 cm，觀賞分待查。",
+    "o": "綜合分依賴待查分項，暫不補算。"
+  }
+}

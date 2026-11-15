@@ -1,0 +1,158 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024"
+  },
+  "id": "0386",
+  "name": "洋燕",
+  "scientificName": "Hirundo javanica",
+  "illustrationTaxon": "Adult-like Hirundo javanica; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "家燕",
+      "scientificName": "Hirundo rustica",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "喉下通常有深色胸帶，成鳥尾流蘇較長。"
+    },
+    {
+      "zh": "金腰燕",
+      "scientificName": "Cecropis daurica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "腰橙褐、腹有縱紋，尾較長。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.24,
+      0.23,
+      0.36,
+      0.42
+    ],
+    [
+      0.39,
+      0.36,
+      0.6,
+      0.56
+    ],
+    [
+      0.33,
+      0.43,
+      0.51,
+      0.62
+    ],
+    [
+      0.59,
+      0.55,
+      0.76,
+      0.76
+    ]
+  ],
+  "featureLabels": [
+    "橙褐額喉",
+    "藍黑折翼",
+    "灰淡腹部",
+    "深色尾羽"
+  ],
+  "featureNotes": [
+    "橙褐額喉。",
+    "藍黑折翼。",
+    "灰淡腹部。",
+    "深色尾羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IDN",
+      "JPN",
+      "MYS",
+      "MMR",
+      "PHL",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/pacswa1",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/104006526",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036400",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036500",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036800",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "runtime 及 eBird 將洋燕定為 H. javanica；HKBWS 2024 舊文使用廣義 H. tahitica、香港迷鳥紀錄及 11–14 cm 可能屬今 javanica 的 namiyei；BirdLife 2024 H. javanica LC、數量未知、估上升，涵蓋的島嶼族群與 eBird 拆分範圍可能不同，勿直接等同。地圖只採共同東南亞和台灣日本部分。",
+    "runtime 無分數、測量及文案，六分待查不補。",
+    "AI 主圖尾形略長、色彩偏鮮及腳趾待核；尾下白斑未呈現，對照不等比例。"
+  ],
+  "withheldScores": {}
+}

@@ -1,0 +1,158 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依較早 HKBWS"
+  },
+  "id": "0400",
+  "name": "黃腰柳鶯",
+  "scientificName": "Phylloscopus proregulus",
+  "illustrationTaxon": "Adult-like Phylloscopus proregulus; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "雲南柳鶯",
+      "scientificName": "Phylloscopus yunnanensis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "整體較暗淡，眉紋偏白、腰斑較淡小，喙較細。"
+    },
+    {
+      "zh": "黃眉柳鶯",
+      "scientificName": "Phylloscopus inornatus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "無明顯淡中央冠紋和黃腰斑；叫聲有別。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.13,
+      0.43,
+      0.24
+    ],
+    [
+      0.28,
+      0.2,
+      0.46,
+      0.32
+    ],
+    [
+      0.38,
+      0.35,
+      0.57,
+      0.48
+    ],
+    [
+      0.61,
+      0.37,
+      0.75,
+      0.52
+    ]
+  ],
+  "featureLabels": [
+    "淡黃冠紋",
+    "淡黃眉紋",
+    "淡色翼斑",
+    "黃色腰斑"
+  ],
+  "featureNotes": [
+    "淡黃冠紋，為插圖局部。",
+    "淡黃眉紋，為插圖局部。",
+    "淡色翼斑，為插圖局部。",
+    "黃色腰斑，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "MNG",
+      "RUS"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038100",
+      "use": "Identification, conservation, distribution, length or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/palwar5",
+      "use": "Identification, conservation, distribution, length or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038000",
+      "use": "Identification, conservation, distribution, length or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/chilew1",
+      "use": "Identification, conservation, distribution, length or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/037900",
+      "use": "Identification, conservation, distribution, length or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 9–9.5 cm、香港不常見至常見冬候及過境；較早 HKBWS 全球 LC 趨勢穩定；BirdLife 數字及名稱 URL 返回空模板，未能獨立核最新趨勢；eBird 頁先前顯示 IUCN 2025 LC。世界地圖僅採 HKBWS 明確的中國、蒙古、俄羅斯，非完整範圍。",
+    "i=2 v=2.2 沿 runtime，體長 9–10 cm 取中點 9.5；棲地索引空且中文 habitat 錯成其他物種繁殖，a 待查；多個要點及人鳥關係截句、英文 voice 是遷徙，r 待查；中文 conservation 為越冬與歐洲觀察量而非全球評估，c/o 待查。",
+    "AI 主圖腰斑位近尾基部且色過鮮，冠紋及喙足比例待核；雲南對照圖偏灰並有淡腰、中央冠紋不明顯；均為示意，不能憑圖確定鑑別。"
+  ],
+  "withheldScores": {
+    "a": "棲地索引缺失且中文 habitat 錯置其他物種，適應分待查。",
+    "r": "要點與人鳥關係截句，英文鳴聲錯置遷徙，研究分待查。",
+    "c": "中文保育欄為遷徙及歐洲觀察量，非全球評估，保育分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

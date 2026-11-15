@@ -1,0 +1,179 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2019"
+  },
+  "id": "0397",
+  "name": "黃眉柳鶯",
+  "scientificName": "Phylloscopus inornatus",
+  "illustrationTaxon": "Adult-like Phylloscopus inornatus; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "淡眉柳鶯",
+      "scientificName": "Phylloscopus humei",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "通常偏灰、喙足更暗、翼斑較弱；鳴聲重要。"
+    },
+    {
+      "zh": "黃腰柳鶯",
+      "scientificName": "Phylloscopus proregulus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "頭頂中央淡黃冠紋與黃色腰斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.23,
+      0.23,
+      0.42,
+      0.33
+    ],
+    [
+      0.41,
+      0.24,
+      0.61,
+      0.38
+    ],
+    [
+      0.37,
+      0.38,
+      0.59,
+      0.52
+    ],
+    [
+      0.31,
+      0.49,
+      0.56,
+      0.66
+    ]
+  ],
+  "featureLabels": [
+    "淡黃眉紋",
+    "橄欖色背",
+    "淡色翼斑",
+    "白色腹部"
+  ],
+  "featureNotes": [
+    "淡黃眉紋。",
+    "橄欖色背。",
+    "淡色翼斑；全鳥有兩道，本局部不完整。",
+    "白色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "JPN",
+      "KAZ",
+      "KGZ",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PAK",
+      "PRK",
+      "RUS",
+      "KOR",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/037900",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22715310",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/yebwar3",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/037800",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/humwar1",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/palwar5",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 10–11 cm，香港常見冬候及過境；BirdLife 可讀事實表 2019 LC 全球疑穩定、數量未知；eBird 標 IUCN 2025 LC，未把讀不到的2025趨勢當已核。",
+    "i=2 沿 runtime；HKBWS 食性亦有蜘蛛但索引只昆蟲，a 待查；翼58.4 mm 推估12.848 cm 高於參考，v 待查留 vEst；多項要點截句、英文食性錯置遷徙，r 待查；保育欄為英國數量非全球評估，c/o 待查。",
+    "AI 主圖翼斑和眉色較強，足趾及尾形待核；淡眉圖缺棲枝且雙翼斑過分相似黃眉，黃腰圖色及斑位置示意；相似鳥須憑叫聲等專業鑑別。"
+  ],
+  "withheldScores": {
+    "a": "食性索引漏蜘蛛且英文食性錯置遷徙，適應分待查。",
+    "v": "翼長估體長大於參考，觀賞分待查並留 vEst。",
+    "r": "多項要點截句、英文食性錯置遷徙，研究分待查。",
+    "c": "保育欄為英國個體數而非全球評估，保育分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

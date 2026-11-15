@@ -1,0 +1,156 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0394",
+  "name": "栗背短腳鵯",
+  "scientificName": "Hemixos castanonotus",
+  "illustrationTaxon": "Adult-like Hemixos castanonotus; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "綠翅短腳鵯",
+      "scientificName": "Ixos mcclellandii",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "臉較淡、背灰褐、翼尾橄欖綠。"
+    },
+    {
+      "zh": "黑短腳鵯",
+      "scientificName": "Hypsipetes leucocephalus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "香港成鳥白頭與橙紅喙足，身深灰黑；幼鳥黑頭。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1,
+      0.12,
+      0.32,
+      0.26
+    ],
+    [
+      0.33,
+      0.2,
+      0.56,
+      0.38
+    ],
+    [
+      0.15,
+      0.21,
+      0.33,
+      0.35
+    ],
+    [
+      0.36,
+      0.34,
+      0.65,
+      0.52
+    ]
+  ],
+  "featureLabels": [
+    "黑色頭部",
+    "栗色背部",
+    "白色喉部",
+    "黑色折翼"
+  ],
+  "featureNotes": [
+    "黑色頭部。",
+    "栗色背部。",
+    "白色喉部。",
+    "黑色折翼。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/035500",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22713204",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/chebul1",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/035600",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/035800",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 21–22 cm，香港常見森林留鳥且增加，冬較廣；BirdLife 2024 LC、估全球上升、數量未知，原生中國及越南。runtime 中文「中國特有」並不適用整物種。",
+    "i/c 缺值不補；翼97.4 mm 推估21.428 cm 落參考區間，v=3.2 沿 runtime 留 vEst；食性索引空，a 待查；原文混海南亞種與整物種且英文鳴聲錯置分類，r/o 待查。",
+    "AI 圖尾較細長，冠及灰胸範圍、足趾比例待專家核；比較不等比例。"
+  ],
+  "withheldScores": {
+    "a": "食性索引缺失，適應分待查。",
+    "r": "原文將海南亞種與整物種混淆，英文鳴聲錯置分類，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

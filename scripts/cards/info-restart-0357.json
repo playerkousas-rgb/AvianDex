@@ -1,0 +1,168 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2018"
+  },
+  "id": "0357",
+  "name": "雲雀",
+  "scientificName": "Alauda arvensis",
+  "illustrationTaxon": "Adult-like Alauda arvensis; AI interpretation, sex and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "小雲雀",
+      "scientificName": "Alauda gulgula",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "通常較小、冠短，外尾及翼後緣偏淡褐。"
+    },
+    {
+      "zh": "蒙古短趾百靈",
+      "scientificName": "Calandrella dukhunensis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "較小、胸部通常較少縱紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.17,
+      0.15,
+      0.39,
+      0.32
+    ],
+    [
+      0.18,
+      0.23,
+      0.39,
+      0.37
+    ],
+    [
+      0.19,
+      0.36,
+      0.4,
+      0.56
+    ],
+    [
+      0.37,
+      0.4,
+      0.67,
+      0.65
+    ]
+  ],
+  "featureLabels": [
+    "褐色冠羽",
+    "淡色眼周",
+    "褐色胸紋",
+    "褐色折翼"
+  ],
+  "featureNotes": [
+    "褐色冠羽。",
+    "淡色眼周。",
+    "褐色胸紋。",
+    "褐色折翼。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "ESP",
+      "DEU",
+      "CHN",
+      "MNG",
+      "RUS",
+      "KAZ",
+      "JPN",
+      "IND",
+      "MAR",
+      "DZA",
+      "TUN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0280/035200",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/102998555",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/skylar",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0280/035100",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0280/035300",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 17–19 cm、香港秋季局部常見過境；BirdLife 2018 LC、下降。香港 BirdLife 註為迷鳥與 HKBWS 局部常見過境記載不同，不將香港當作原生填色；澳紐屬引入不填。",
+    "i=2 c=1.2 沿 runtime；c 無中文正文非完整評估。英文棲地錯置為澳洲引入分布，h 空，a 待查；翼長106.7 mm 估23.474 cm 高於參考，v 待查保留 vEst；英文要點截斷且遷徙未納研究輸入，r/o 待查。",
+    "AI 圖冠過於豎起及喙尾比例待核，與小雲雀相似，勿憑圖鑑定；比較不等比例，飛行翼緣不可從折翼判斷。"
+  ],
+  "withheldScores": {
+    "a": "棲地錯置為引入分布，棲地標籤空，適應力待查。",
+    "v": "翼長估長超出香港參考，觀賞分待查並保留估算提示。",
+    "r": "英文要點截斷、遷徙未納研究輸入，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

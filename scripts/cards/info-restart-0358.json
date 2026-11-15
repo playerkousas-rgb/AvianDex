@@ -1,0 +1,172 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2025"
+  },
+  "id": "0358",
+  "name": "小雲雀",
+  "scientificName": "Alauda gulgula",
+  "illustrationTaxon": "Adult-like Alauda gulgula; AI interpretation, sex and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "雲雀",
+      "scientificName": "Alauda arvensis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "通常體形較大，尾側及飛行翼後緣較白。"
+    },
+    {
+      "zh": "蒙古短趾百靈",
+      "scientificName": "Calandrella dukhunensis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "較小、胸多淡而縱紋稀疏。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.23,
+      0.08,
+      0.4,
+      0.26
+    ],
+    [
+      0.23,
+      0.16,
+      0.39,
+      0.3
+    ],
+    [
+      0.27,
+      0.3,
+      0.41,
+      0.51
+    ],
+    [
+      0.39,
+      0.31,
+      0.64,
+      0.55
+    ]
+  ],
+  "featureLabels": [
+    "褐色冠羽",
+    "淡色眉紋",
+    "褐色胸紋",
+    "褐色折翼"
+  ],
+  "featureNotes": [
+    "褐色冠羽。",
+    "淡色眉紋。",
+    "褐色胸紋。",
+    "褐色折翼。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IRN",
+      "KAZ",
+      "KGZ",
+      "LAO",
+      "MMR",
+      "NPL",
+      "PAK",
+      "PHL",
+      "LKA",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0280/035100",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/oriental-skylark-alauda-gulgula",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/orisky1",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0280/035200",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0280/035300",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 香港罕見冬候，較上世紀明顯下降；BirdLife 2025 LC、全球疑下降，HKBWS 較早趨勢未知。台灣及多個亞種，外尾羽色隨資料與亞種而異。",
+    "i=2 v=2.9 c=1.2 沿 runtime，v 輸入為範圍中點16.8 cm，中文外觀寫約15 cm；c 無中文正文非完整評估。中文食性錯置棲地、缺昆蟲種子，a 待查；要點截斷及遷徙未納研究輸入，r/o 待查。",
+    "AI 圖冠過於豎起，比例及羽色待專家核；與雲雀難分，勿憑圖鑑定，不等比例，折翼不可作飛行翼緣證據。"
+  ],
+  "withheldScores": {
+    "a": "中文食性欄錯置棲地，食性標籤缺昆蟲及種子，適應力待查。",
+    "r": "要點截斷且英文遷徙未納研究輸入，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

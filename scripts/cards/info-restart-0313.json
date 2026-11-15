@@ -1,0 +1,152 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "無危依香港鳥類資料庫"
+  },
+  "id": "0313",
+  "name": "紅領綠鸚鵡",
+  "scientificName": "Psittacula krameri",
+  "illustrationTaxon": "Male-like Rose-ringed Parakeet Psittacula krameri; subspecies not verified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "亞歷山大鸚鵡",
+      "scientificName": "Psittacula eupatria",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "較大，肩有深紅色斑；圖不等比例。"
+    },
+    {
+      "zh": "花頭鸚鵡",
+      "scientificName": "Psittacula cyanocephala",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥梅紅頭、上喙黃色；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.22,
+      0.08,
+      0.38,
+      0.2
+    ],
+    [
+      0.27,
+      0.11,
+      0.47,
+      0.24
+    ],
+    [
+      0.41,
+      0.21,
+      0.65,
+      0.39
+    ],
+    [
+      0.61,
+      0.51,
+      0.82,
+      0.73
+    ]
+  ],
+  "featureLabels": [
+    "紅色上喙",
+    "黑粉頸環",
+    "綠色翅羽",
+    "細長尾羽"
+  ],
+  "featureNotes": [
+    "紅色上喙；下喙深色。",
+    "雄鳥黑粉色頸環。",
+    "綠色翅羽、無紅肩斑。",
+    "藍綠色長尾；比例待核。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "SEN",
+      "GIN",
+      "MRT",
+      "UGA",
+      "SDN",
+      "ETH",
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "LKA",
+      "MMR",
+      "CHN"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0220/030300",
+      "use": "IUCN LC, identification, Hong Kong introduced population and range."
+    },
+    {
+      "url": "https://ebird.org/species/rorpar",
+      "use": "Identification and native/introduced distinction; no IUCN category displayed on this page."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rose-ringed_parakeet",
+      "use": "37–43 cm, native ranges, taxonomy disagreement and etymology."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0220/030200",
+      "use": "Alexandrine Parakeet comparison."
+    },
+    {
+      "url": "https://ebird.org/species/plhpar1",
+      "use": "Plum-headed Parakeet comparison."
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=109000B451137457",
+      "use": "traditional Chinese comparison name."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "misplaced conservation, corrupted etymology and truncated highlights."
+    }
+  ],
+  "notes": [
+    "三圖新製並目視；主圖雄型喙形、尾長與足趾待核；兩比較鳥尾長及足趾待核，花頭尾端缺白色。AI 圖非專家認證、圖不等比例。",
+    "HKBWS 全球無危、趨勢增加，香港引入族群少見且自1980年代顯著下降；Cornell 頁未列 IUCN。Wikipedia 記部分機構改屬 Alexandrinus，runtime 仍用 Psittacula 不改分類。",
+    "i=2、a=4.3、v=3.9 沿 runtime；40 cm 是37–43 cm中點非實測，a 標籤不等於完整評估。r 語源欄錯置及要點截斷，c 的受脅信號「下降」描述的是另一物種而非本種，r/c/o 遮蔽、不補算。",
+    "世界圖只列部分原生國家；中國綠色僅依 HKBWS 極西雲南原生紀錄，香港族群源自引入，並非香港全境原生；綠色非全境或完整分布。"
+  ],
+  "withheldScores": {
+    "r": "原語源欄錯置且要點截斷，研究分暫遮蔽。",
+    "c": "原保育欄的下降指另一受競爭物種，誤觸本鳥受脅信號。",
+    "o": "綜合分依賴受影響 r/c，暫不顯示、不補算。"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0324",
+  "name": "黑枕黃鸝",
+  "scientificName": "Oriolus chinensis",
+  "illustrationTaxon": "Adult male-like O. chinensis, East Asian type; age and subspecies artistic interpretation.",
+  "similarSpecies": [
+    {
+      "zh": "黃鸝",
+      "scientificName": "Oriolus oriolus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥黑眼紋較短。"
+    },
+    {
+      "zh": "黑頭黃鸝",
+      "scientificName": "Oriolus xanthornus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "黑色頭罩及喉部。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1,
+      0.115,
+      0.34,
+      0.245
+    ],
+    [
+      0.24,
+      0.105,
+      0.46,
+      0.25
+    ],
+    [
+      0.38,
+      0.3,
+      0.61,
+      0.48
+    ],
+    [
+      0.29,
+      0.33,
+      0.48,
+      0.52
+    ]
+  ],
+  "featureLabels": [
+    "粉紅色喙",
+    "黑色眼罩",
+    "黑色折翼",
+    "金黃色胸"
+  ],
+  "featureNotes": [
+    "粉紅色喙。",
+    "黑色眼罩向枕部延伸。",
+    "深色折翼。",
+    "金黃色胸腹。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "TWN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "IND",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032400",
+      "use": "23–28 cm; identification, HK status, global LC and range."
+    },
+    {
+      "url": "https://ebird.org/species/blnori1",
+      "use": "Identification and sex variation."
+    },
+    {
+      "url": "https://www.birdforum.net/opus/Black-naped_Oriole",
+      "use": "Subspecies distribution and diagnostic comparison."
+    },
+    {
+      "url": "https://ebird.org/species/eugori2",
+      "use": "Eurasian Golden Oriole comparison."
+    },
+    {
+      "url": "https://ebird.org/species/blhori1",
+      "use": "Black-hooded Oriole comparison."
+    },
+    {
+      "url": "https://www.researchgate.net/publication/348559449_The_State_of_Taiwan%27s_Birds_2020",
+      "use": "Taiwan population assessed regionally VU in 2020, globally LC; not current population estimate."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores and vEst or missing score record."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Review of score inputs where present."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing input if present."
+    }
+  ],
+  "notes": [
+    "HKBWS 23–28 cm，香港稀少過境、罕見冬訪，最後確證繁殖2003；全球 LC 趨勢下降，與台灣地方保育狀況不可混同。",
+    "i=2、c=3 沿 runtime；c 輸入為台灣地方歷史狀況，不代表全球評估或當前數量；中文食性錯置導致食物標籤缺漏，a 遮蔽；vEst 翼長150.9 mm×0.22≈33.198 cm 高於23–28 cm，v 遮蔽但保留估算提示；語源錯置、要點截斷，r/o 遮蔽不補算。",
+    "三圖新製，主鳥黑枕連接處側面未完整示範，翼尾斑和足趾待核；比較圖雄鳥及足趾待核；AI 示意不等比例、非專家認證。",
+    "世界圖僅部分原生繁殖／越冬國家，不區分季節或亞種；分類拆合見 HKBWS，綠色非全境。"
+  ],
+  "withheldScores": {
+    "a": "中文食性欄錯置行為，食性標籤為空但英文資料包含昆蟲及果實，適應力待查。",
+    "v": "翼長估體長33.198 cm 高於 HKBWS 23–28 cm，觀賞分待查。",
+    "r": "語源欄錯置遷徙資料且要點截斷，研究分待查。",
+    "o": "綜合分依賴待查分項，暫不補算。"
+  }
+}

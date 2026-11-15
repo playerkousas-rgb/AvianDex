@@ -1,0 +1,167 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0360",
+  "name": "純色山鷦鶯",
+  "scientificName": "Prinia inornata",
+  "illustrationTaxon": "Adult-like Prinia inornata; AI interpretation, sex and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黃腹山鷦鶯",
+      "scientificName": "Prinia flaviventris",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖羽灰頭白喉，腹部通常更黃。"
+    },
+    {
+      "zh": "棕扇尾鶯",
+      "scientificName": "Cisticola juncidis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "短尾、上體有明顯深色縱紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.19,
+      0.39,
+      0.29
+    ],
+    [
+      0.23,
+      0.18,
+      0.43,
+      0.3
+    ],
+    [
+      0.39,
+      0.34,
+      0.63,
+      0.51
+    ],
+    [
+      0.3,
+      0.37,
+      0.51,
+      0.54
+    ]
+  ],
+  "featureLabels": [
+    "淡色眉紋",
+    "褐色頭部",
+    "褐色折翼",
+    "淡色腹部"
+  ],
+  "featureNotes": [
+    "淡色眉紋。",
+    "褐色頭部。",
+    "褐色折翼。",
+    "淡色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MMR",
+      "NPL",
+      "PAK",
+      "LKA",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0350/042700",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/plain-prinia-prinia-inornata",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/plapri1",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0350/042600",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0350/042400",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 香港局部常見留鳥、11 cm；BirdLife 2024 LC 全球疑穩定，局部分布改變不等於全球趨勢。",
+    "i=2 a=3.8 v=2.4 c=1.2 沿 runtime，vEst 翼長50.4 mm 估11.088 cm；c 無中文保育正文非完整評估。叫聲和要點截斷、行為實為分類，r/o 待查；資料森林標籤指開闊林地，不代表封閉樹冠林。",
+    "主圖似非繁殖羽，性別與亞種未核；AI 腳趾、喙與眉紋細節待核，僅作示意。"
+  ],
+  "withheldScores": {
+    "r": "叫聲與要點截斷且行為錯置為分類，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0381",
+  "name": "高山短翅蝗鶯",
+  "scientificName": "Locustella mandelli",
+  "illustrationTaxon": "Adult-like Locustella mandelli; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "棕褐短翅蝗鶯",
+      "scientificName": "Locustella luteoventris",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體通常較暖、喉較白、尾下覆羽素。"
+    },
+    {
+      "zh": "北短翅蝗鶯",
+      "scientificName": "Locustella davidi",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "尾相對短，喉斑季節性較明顯。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.29,
+      0.23,
+      0.4,
+      0.32
+    ],
+    [
+      0.41,
+      0.37,
+      0.63,
+      0.54
+    ],
+    [
+      0.28,
+      0.3,
+      0.39,
+      0.46
+    ],
+    [
+      0.57,
+      0.48,
+      0.8,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "淡色眉紋",
+    "棕褐折翼",
+    "灰淡喉部",
+    "褐色尾羽"
+  ],
+  "featureNotes": [
+    "淡色眉紋。",
+    "棕褐折翼。",
+    "灰淡喉部。",
+    "褐色尾羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/042300",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22734189",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/rubwar1",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/042000",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/042200",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 13–14 cm，香港常見冬候與秋季過境，山頂有小量繁殖；BirdLife 2024 LC 全球疑穩定。eBird 與 HKBWS 對棕褐短翅相對顏色表述不一致，依 HKBWS 本地描述。",
+    "i=2 c=1.2 沿 runtime，c 缺中文保育正文非完整評估；a 缺不補；翼50 mm 估11 cm 低於參考，v 待查留 vEst；要點截斷且英語混入非鳴聲，r/o 待查。",
+    "AI 圖尾下未畫淡羽尖，喉部和腳趾、年齡季節待核；近似鳥勿憑圖鑑別。"
+  ],
+  "withheldScores": {
+    "v": "翼長估體長低於參考，觀賞分待查並留 vEst。",
+    "r": "要點截斷且英語鳴聲欄錯置，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

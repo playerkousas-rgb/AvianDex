@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0303",
+  "name": "斑姬啄木鳥",
+  "scientificName": "Picumnus innominatus",
+  "illustrationTaxon": "Speckled Piculet Picumnus innominatus; age, sex and subspecies unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "蟻鴷",
+      "scientificName": "Jynx torquilla",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "灰褐隱蔽色及細紋；圖不等比例。"
+    },
+    {
+      "zh": "小啄木",
+      "scientificName": "Yungipicus canicapillus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "深色上體、淡色黑縱紋下體；外觀隨地區變化，圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.35,
+      0.12,
+      0.59,
+      0.27
+    ],
+    [
+      0.35,
+      0.19,
+      0.62,
+      0.34
+    ],
+    [
+      0.28,
+      0.34,
+      0.52,
+      0.6
+    ],
+    [
+      0.44,
+      0.38,
+      0.66,
+      0.66
+    ]
+  ],
+  "featureLabels": [
+    "褐白頭紋",
+    "面部黑白紋",
+    "橄欖綠翼",
+    "白腹黑斑"
+  ],
+  "featureNotes": [
+    "褐白頭紋示意。",
+    "深色眼紋與白色臉紋。",
+    "橄欖綠翅羽。",
+    "淺色胸腹黑斑；AI 圖花紋大小可能失真。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "CHN",
+      "MMR",
+      "LAO",
+      "THA",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0210/029200",
+      "use": "Hong Kong identification, habitat, occurrence, trend and distribution."
+    },
+    {
+      "url": "https://ebird.org/species/spepic1",
+      "use": "Cornell global IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Speckled_piculet",
+      "use": "distribution, taxonomic information and ecology."
+    },
+    {
+      "url": "https://ebird.org/species/eurwry",
+      "use": "Eurasian Wryneck comparison."
+    },
+    {
+      "url": "https://ebird.org/species/gycwoo1",
+      "use": "Gray-capped Pygmy Woodpecker comparison; geographically variable plumage."
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=5A4F2DF69ADE33D1",
+      "use": "traditional Chinese comparison name 小啄木."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing length used by existing vEst."
+    }
+  ],
+  "notes": [
+    "三張鳥圖經目視，主圖頭紋與胸腹黑斑可見，尾可能過長、腳趾不宜作鑑別；蟻鴷與小啄木比較圖羽紋、比例及腳爪僅為 AI 示意，非專家認證，不等比例。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 香港不常見但增加留鳥，全球趨勢下降，香港食性未作研究。",
+    "i=2、a=3.3、v=2.4、r=1、c=1.2、o=2 沿 runtime；vEst 基於 AVONET 翼長53.4 mm ×0.22 約11.748 cm，為估算非實測；r/c 缺中文輸入，非完整學術或保育評估。",
+    "世界地圖僅部分已記錄原生國家，不表示全境或完整分佈。"
+  ],
+  "withheldScores": {}
+}

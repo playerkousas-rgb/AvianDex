@@ -1,0 +1,136 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0319",
+  "name": "灰山椒鳥",
+  "scientificName": "Pericrocotus divaricatus",
+  "illustrationTaxon": "Adult male-like Pericrocotus divaricatus; age and sex artistic interpretation.",
+  "similarSpecies": [
+    {
+      "zh": "琉球山椒鳥",
+      "scientificName": "Pericrocotus tegimae",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "較深灰，胸側暗如馬甲。"
+    },
+    {
+      "zh": "小灰山椒鳥",
+      "scientificName": "Pericrocotus cantonensis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥後頂較灰、腰部帶褐。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.18,
+      0.09,
+      0.39,
+      0.2
+    ],
+    [
+      0.25,
+      0.1,
+      0.46,
+      0.22
+    ],
+    [
+      0.2,
+      0.16,
+      0.41,
+      0.28
+    ],
+    [
+      0.38,
+      0.23,
+      0.61,
+      0.39
+    ]
+  ],
+  "featureLabels": [
+    "白色額斑",
+    "深色臉側",
+    "淡色喉側",
+    "灰色上體"
+  ],
+  "featureNotes": [
+    "雄型額部白色。",
+    "雄型臉側與後頂黑色。",
+    "白色下臉、喉側。",
+    "肩背及翼覆羽灰色。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "IND",
+      "THA",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Partial native-country overview only; green not full-country occupancy and no separation of seasons. Records outside core range may be accidental."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0230/030900",
+      "use": "18–21 cm; identification, HK occurrence, global LC and range."
+    },
+    {
+      "url": "https://ebird.org/species/ashmin1",
+      "use": "Plumage and comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0230/031000",
+      "use": "Ryukyu Minivet comparison."
+    },
+    {
+      "url": "https://www.shanghaibirding.com/birds-of-china/swinhoes-minivet/",
+      "use": "Swinhoe's Minivet comparison."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "95.7 mm AVONET wing measurement for vEst."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores, missing dimensions and vEst."
+    }
+  ],
+  "notes": [
+    "HKBWS 18–21 cm；香港春不常見、秋稀少過境，冬季罕見；全球 LC、趨勢下降。此前琉球山椒鳥曾被視為亞種，本卡沿 runtime 分種。",
+    "runtime 無 i、c，待查不從 LC 補算；a=3.3、v=3.2、r=1、o=2.5 沿 runtime，r 因中文資料缺乏非完整研究評估；vEst 翼長95.7 mm×0.22約21.054 cm，略超來源上界21 cm，係數為粗估而非精密體長實測。",
+    "主鳥額白、後頂黑及灰背已目視；額白範圍、尾與足趾待核。琉球及小灰比較圖重用 0318，琉球白眉可能過長，小灰腰色及比例待核。AI 示意非專家認證、不等比例。",
+    "完整世界底圖僅部分繁殖／越冬原生國家，不表明全國有分布、不區分季節。"
+  ]
+}

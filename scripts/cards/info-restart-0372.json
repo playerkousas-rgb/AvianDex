@@ -1,0 +1,151 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：eBird 2025"
+  },
+  "id": "0372",
+  "name": "亞洲短趾百靈",
+  "scientificName": "Alaudala cheleensis",
+  "illustrationTaxon": "Adult-like Alaudala cheleensis; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "蒙古短趾百靈",
+      "scientificName": "Calandrella dukhunensis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "胸紋通常較疏、眉較明顯，兩者細節須核。"
+    },
+    {
+      "zh": "小雲雀",
+      "scientificName": "Alauda gulgula",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "通常較大、喙較細，常有可豎起的冠羽。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1,
+      0.2,
+      0.26,
+      0.32
+    ],
+    [
+      0.19,
+      0.15,
+      0.43,
+      0.25
+    ],
+    [
+      0.2,
+      0.3,
+      0.38,
+      0.51
+    ],
+    [
+      0.28,
+      0.51,
+      0.51,
+      0.65
+    ]
+  ],
+  "featureLabels": [
+    "短粗鳥喙",
+    "頭頂縱紋",
+    "胸部縱紋",
+    "淡色腹部"
+  ],
+  "featureNotes": [
+    "短粗鳥喙。",
+    "頭頂縱紋。",
+    "胸部縱紋。",
+    "淡色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "KAZ",
+      "MNG",
+      "RUS",
+      "TKM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0280/035400",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/lstlar2",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0280/035300",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0280/035100",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 14–15 cm，香港偶然迷鳥，已記錄2014年一隻；HKBWS LC 全球下降，eBird 標 IUCN 2025 LC；BirdLife 數字連結返回空資料，故不引用其為已核 factsheet。",
+    "runtime 0372 無任何評分資料，六分皆待查，不自行補值；科屬名稱取 runtime。",
+    "主圖條紋和腿趾比例待專家核，蒙古短趾百靈比較圖胸側黑斑略誇張、小雲雀冠羽誇張；非精確等比例鑑別圖。"
+  ],
+  "withheldScores": {}
+}

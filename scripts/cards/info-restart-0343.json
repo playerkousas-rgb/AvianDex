@@ -1,0 +1,155 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2025"
+  },
+  "id": "0343",
+  "name": "印支綠鵲",
+  "scientificName": "Cissa hypoleuca",
+  "illustrationTaxon": "Adult-like Cissa hypoleuca; AI interpretation, sex and subspecies unverified. Southern yellow-breasted population.",
+  "similarSpecies": [
+    {
+      "zh": "綠鵲",
+      "scientificName": "Cissa chinensis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "多為綠色下體，翼後有黑白紋。"
+    },
+    {
+      "zh": "紅嘴藍鵲",
+      "scientificName": "Urocissa erythroryncha",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "黑頭、藍翼長尾及紅喙。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.09,
+      0.125,
+      0.265,
+      0.265
+    ],
+    [
+      0.18,
+      0.11,
+      0.38,
+      0.27
+    ],
+    [
+      0.22,
+      0.215,
+      0.43,
+      0.383
+    ],
+    [
+      0.4,
+      0.33,
+      0.68,
+      0.55
+    ]
+  ],
+  "featureLabels": [
+    "鮮紅喙",
+    "黑色面罩",
+    "黃色胸羽",
+    "栗色翼羽"
+  ],
+  "featureNotes": [
+    "鮮紅喙。",
+    "黑色面罩。",
+    "黃色胸羽。",
+    "栗色翼羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "LAO",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/yebmag1",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/gremag1",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/indochinese-green-magpie-cissa-hypoleuca",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033400",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "Cornell 指南：印支綠鵲南方族群胸腹黃、中國族群下體綠；圖示南方黃胸型，非指定亞種；香港 HKBWS 名錄 IIB。BirdLife 2025 全球 LC，趨勢疑下降。",
+    "i=2 a=4.3 v=3.8 r=1 c=1.2 o=2.5 沿 runtime；英文食性蛇蜥蛋與雛鳥被概括為爬蟲及鳥標籤，並不等同食成體；r/c 缺中文遷徙、語源、要點及保育正文，不代表完整評估。",
+    "主圖、綠鵲比較新製；綠鵲圖未見來源所述翼後黑白網紋，不應用圖鑑定；印支圖虹膜、尾形、趾須專家核查。紅嘴藍鵲沿用0342。AI 示意不等比例，非專家認證。",
+    "地圖為 BirdLife 部分原生國家，柬埔寨 origin uncertain 未列；國家填色不代表全境，未區分南北羽型。"
+  ],
+  "withheldScores": {}
+}

@@ -1,0 +1,143 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0306",
+  "name": "栗啄木鳥",
+  "scientificName": "Micropternus brachyurus",
+  "illustrationTaxon": "Male-like Rufous Woodpecker Micropternus brachyurus; age and subspecies unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "黃嘴栗啄木鳥",
+      "scientificName": "Blythipicus pyrrhotis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "長黃喙，雄型後頸紅斑；圖不等比例。"
+    },
+    {
+      "zh": "棕腹啄木鳥",
+      "scientificName": "Dendrocopos hyperythrus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "雄型紅冠、棕腹及黑白翼紋；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.43,
+      0.14,
+      0.6,
+      0.27
+    ],
+    [
+      0.52,
+      0.16,
+      0.66,
+      0.28
+    ],
+    [
+      0.49,
+      0.29,
+      0.7,
+      0.53
+    ],
+    [
+      0.49,
+      0.6,
+      0.63,
+      0.84
+    ]
+  ],
+  "featureLabels": [
+    "深色喙",
+    "眼下紅斑",
+    "翼羽深色橫斑",
+    "尾羽橫斑"
+  ],
+  "featureNotes": [
+    "深色短喙；AI 喙長可能偏長。",
+    "雄型眼下紅斑。",
+    "栗褐翼羽深色橫斑。",
+    "尾羽橫斑；AI 尾可能過長。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN",
+      "LKA"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0210/029600",
+      "use": "21–24 cm, identification, Hong Kong accidental status, range and population trend."
+    },
+    {
+      "url": "https://ebird.org/species/rufwoo2",
+      "use": "Cornell global IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rufous_woodpecker",
+      "use": "distribution, ecology and taxonomy."
+    },
+    {
+      "url": "https://ebird.org/species/baywoo1",
+      "use": "Bay Woodpecker comparison."
+    },
+    {
+      "url": "https://ebird.org/species/rubwoo1",
+      "use": "Rufous-bellied Woodpecker comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing length for existing estimate."
+    }
+  ],
+  "notes": [
+    "三張鳥圖目視，主圖嘴可能仍偏長、尾及爪趾待核；比較圖重用 0304、0305，尾可能過長；AI 示意非專家認證、圖不等比例。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 21–24 cm，香港偶見、全球趨勢下降。",
+    "i=2、a=3.3、v=3.4、r=1、c=1.2、o=2.2 沿 runtime；vEst 翼長118.2 mm×0.22 約26.004 cm 略高於 HKBWS 範圍，粗估非實測；r/c 缺中文輸入，非完整評估。",
+    "地圖僅部分已記錄原生國家，不表示全境或完整分佈。"
+  ],
+  "withheldScores": {}
+}

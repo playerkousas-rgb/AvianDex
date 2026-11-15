@@ -1,0 +1,164 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0389",
+  "name": "白腹毛腳燕",
+  "scientificName": "Delichon lagopodum",
+  "illustrationTaxon": "Adult-like Delichon lagopodum; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "煙腹毛腳燕",
+      "scientificName": "Delichon dasypus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "白腰通常較小，脅胸可有灰色；亞種有變化。"
+    },
+    {
+      "zh": "家燕",
+      "scientificName": "Hirundo rustica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "赤褐額喉、暗胸帶、長尾流蘇。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.21,
+      0.17,
+      0.34,
+      0.28
+    ],
+    [
+      0.22,
+      0.28,
+      0.35,
+      0.4
+    ],
+    [
+      0.35,
+      0.34,
+      0.59,
+      0.52
+    ],
+    [
+      0.56,
+      0.45,
+      0.69,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "藍黑頭部",
+    "白色喉胸",
+    "藍黑折翼",
+    "白色腰部"
+  ],
+  "featureNotes": [
+    "藍黑頭部。",
+    "白色喉胸。",
+    "藍黑折翼。",
+    "白色腰部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "KHM",
+      "CHN",
+      "LAO",
+      "MNG",
+      "MMR",
+      "PRK",
+      "RUS",
+      "KOR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036600",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/103811905",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/comhom2",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036700",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036500",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 13–14 cm、香港罕見晚秋過境；BirdLife 2024 LC 全球疑下降、未估全球數。BirdLife 監測條目含歐洲，可能混用拆分前資訊，未採為本種證據。",
+    "i=2 c=1.2 沿 runtime；c 缺保育正文非完整評估；a 缺值不補；翼108.1 mm 估23.782 cm 遠超 HKBWS，v 待查並留 vEst；look 為分類，breeding 與 migration 重複且 voice 錯置，r/o 待查。",
+    "AI 圖白腰與翼位置重疊、腳羽及尾形待核；煙腹比較圖白腰偏狹，個體及亞種差異大，不可憑圖鑑別。"
+  ],
+  "withheldScores": {
+    "v": "翼長估體長遠超參考，觀賞分待查並留 vEst。",
+    "r": "外觀和鳴聲欄錯置分類，繁殖遷徙重複，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

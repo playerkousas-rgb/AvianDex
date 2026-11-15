@@ -1,0 +1,163 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0363",
+  "name": "厚嘴葦鶯",
+  "scientificName": "Arundinax aedon",
+  "illustrationTaxon": "Adult-like Arundinax aedon; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "靴籬鶯",
+      "scientificName": "Iduna caligata",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "通常較小，淡眉較明顯，喙較細。"
+    },
+    {
+      "zh": "黑眉葦鶯",
+      "scientificName": "Acrocephalus bistrigiceps",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "較小且淡眉上方有深色邊紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.15,
+      0.14,
+      0.34,
+      0.34
+    ],
+    [
+      0.27,
+      0.17,
+      0.4,
+      0.31
+    ],
+    [
+      0.4,
+      0.3,
+      0.64,
+      0.54
+    ],
+    [
+      0.65,
+      0.48,
+      0.87,
+      0.76
+    ]
+  ],
+  "featureLabels": [
+    "深基部喙",
+    "淡色眼周",
+    "棕色折翼",
+    "赤褐尾羽"
+  ],
+  "featureNotes": [
+    "深基部喙。",
+    "淡色眼周。",
+    "棕色折翼。",
+    "赤褐尾羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "KHM",
+      "CHN",
+      "IND",
+      "LAO",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PRK",
+      "KOR",
+      "RUS",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/041200",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/thick-billed-warbler-arundinax-aedon",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/thbwar1",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/041300",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/040700",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 16–17.5 cm，香港秋季不常見過境，冬春罕見；BirdLife 2024 LC、全球疑下降；香港 BirdLife 記為迷鳥與 HKBWS 時序記錄不同。",
+    "六分沿 runtime（i=2 a=2.8 v=2.9 r=4.8 c=1.2 o=2.7）；v 為原資料16–17.5 cm 中點16.8；c 缺中文保育正文非完整評估。",
+    "AI 圖嘴尖近似黑色、足趾及羽色待核；兩個對照大小不等比例，不能憑插圖鑑定。"
+  ],
+  "withheldScores": {}
+}

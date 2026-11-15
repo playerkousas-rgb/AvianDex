@@ -1,0 +1,172 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2019"
+  },
+  "id": "0387",
+  "name": "家燕",
+  "scientificName": "Hirundo rustica",
+  "illustrationTaxon": "Adult-like Hirundo rustica; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "洋燕",
+      "scientificName": "Hirundo javanica",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "無深胸帶，尾流蘇較短。"
+    },
+    {
+      "zh": "金腰燕",
+      "scientificName": "Cecropis daurica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "腰橙褐、腹具縱紋，尾較短鈍。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.12,
+      0.2,
+      0.3,
+      0.3
+    ],
+    [
+      0.16,
+      0.28,
+      0.27,
+      0.36
+    ],
+    [
+      0.28,
+      0.32,
+      0.49,
+      0.46
+    ],
+    [
+      0.58,
+      0.57,
+      0.72,
+      0.69
+    ]
+  ],
+  "featureLabels": [
+    "紅褐額喉",
+    "藍黑胸帶",
+    "藍黑折翼",
+    "深色尾羽"
+  ],
+  "featureNotes": [
+    "紅褐額喉。",
+    "藍黑胸帶。",
+    "藍黑折翼。",
+    "深色尾羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CAN",
+      "USA",
+      "MEX",
+      "BRA",
+      "ARG",
+      "GBR",
+      "FRA",
+      "DEU",
+      "RUS",
+      "CHN",
+      "JPN",
+      "IND",
+      "ZAF",
+      "KEN",
+      "EGY",
+      "KAZ",
+      "MNG"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036500",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22712252",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/barswa",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/pacswa1",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036800",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 17–19 cm、香港全年有記錄，春秋常見過境及本地繁殖；BirdLife 2019 LC 全球下降，成熟數粗估2.9–4.87億。",
+    "i=2 v=3 沿 runtime，原有體長17–19 cm 中點18；食性昆蟲在英文及人鳥關係有載但索引空，a 待查；要點和食性截斷、地理欄錯置且保育欄為電線棲息行為，r/c/o 待查。",
+    "重用 0385 已目視家燕對照圖，尾流蘇較長、足趾和羽齡待核，對照不等比例。 圖中的白色尾羽線條非準確尾斑，勿作尾斑位置參考。"
+  ],
+  "withheldScores": {
+    "a": "食性昆蟲未納索引，適應分待查。",
+    "r": "要點及食性截斷，地理及保育欄錯置，研究分待查。",
+    "c": "保育欄錯置行為且未反映全球下降，保育分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

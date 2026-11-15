@@ -1,0 +1,158 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0330",
+  "name": "髮冠卷尾",
+  "scientificName": "Dicrurus hottentottus",
+  "illustrationTaxon": "Adult-like Dicrurus hottentottus; sex and subspecies not independently verified.",
+  "similarSpecies": [
+    {
+      "zh": "黑卷尾",
+      "scientificName": "Dicrurus macrocercus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "深叉尾，成鳥深褐眼。"
+    },
+    {
+      "zh": "鴉嘴卷尾",
+      "scientificName": "Dicrurus annectens",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "粗喙，尾叉較淺。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.04,
+      0.46,
+      0.18
+    ],
+    [
+      0.18,
+      0.12,
+      0.36,
+      0.3
+    ],
+    [
+      0.37,
+      0.3,
+      0.57,
+      0.46
+    ],
+    [
+      0.71,
+      0.71,
+      0.99,
+      0.97
+    ]
+  ],
+  "featureLabels": [
+    "髮絲狀冠",
+    "深色彎喙",
+    "藍黑折翼",
+    "外尾羽上翹"
+  ],
+  "featureNotes": [
+    "髮絲狀冠。",
+    "深色彎喙。",
+    "藍黑折翼。",
+    "外尾羽上翹。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032600",
+      "use": "Identification, HK status, range and global LC."
+    },
+    {
+      "url": "https://ebird.org/species/hacdro1",
+      "use": "Identification, global LC where specified and comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032700",
+      "use": "Similar drongo identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032500",
+      "use": "Similar drongo identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032800",
+      "use": "Black Drongo comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy or score inputs."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy or score inputs."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy or score inputs."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy or score inputs."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy or score inputs."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy or score inputs."
+    }
+  ],
+  "notes": [
+    "HKBWS 28–32 cm，香港全年有紀錄、秋季過境較多；全球 LC 趨勢未知。HKBWS 分類文字使用 D. t. brevirostris，runtime 沿 D. hottentottus，分佈只依香港亞種的部分國家。",
+    "i=2、c=1.2 沿 runtime；c 缺中文保育正文非完整評估。棲地錯置、食性缺昆蟲標籤故 a 遮蔽；翼長152.8 mm×0.22≈33.616 cm 超過28–32 cm，v 遮蔽仍保留 vEst；遷徙截斷及語源資料錯置，r/o 遮蔽不補算。",
+    "主圖重用0327髮冠比較圖，黑比較重用0327主圖，鴉嘴比較為0329新圖。髮冠圖外尾羽上翹但形狀可能誇張，冠羽、足趾待核；黑尾叉偏長，鴉嘴尾端未顯示清晰淺叉。AI 示意非專家認證、不等比例。",
+    "世界圖僅 HKBWS 所列香港亞種部分繁殖／越冬國家，不等於物種完整分布，綠色非全境。"
+  ],
+  "withheldScores": {
+    "a": "棲地欄錯置繁殖行為、缺棲地標籤；食性欄只提花蜜，缺昆蟲標籤，適應力待查。",
+    "v": "翼長估體長33.616 cm 高於 HKBWS 28–32 cm，觀賞分待查。",
+    "r": "遷徙欄截斷、語源欄只記命名歷史，研究分待查。",
+    "o": "綜合分依賴待查分項，暫不補算。"
+  }
+}

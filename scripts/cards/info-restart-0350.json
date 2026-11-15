@@ -1,0 +1,158 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危",
+    "assessmentNote": "全球 VU 依 BirdLife 2018"
+  },
+  "id": "0350",
+  "name": "白頸鴉",
+  "scientificName": "Corvus torquatus",
+  "illustrationTaxon": "Adult-like Corvus torquatus; AI interpretation, sex unverified.",
+  "similarSpecies": [
+    {
+      "zh": "達烏里寒鴉",
+      "scientificName": "Coloeus dauuricus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥白色擴及腹部，體形較小。"
+    },
+    {
+      "zh": "大嘴烏鴉",
+      "scientificName": "Corvus macrorhynchos",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "全黑且喙粗厚。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.15,
+      0.14,
+      0.35,
+      0.34
+    ],
+    [
+      0.34,
+      0.21,
+      0.46,
+      0.38
+    ],
+    [
+      0.29,
+      0.34,
+      0.4,
+      0.57
+    ],
+    [
+      0.29,
+      0.68,
+      0.58,
+      0.94
+    ]
+  ],
+  "featureLabels": [
+    "黑色細喙",
+    "白色後頸",
+    "白色胸帶",
+    "黑色腳趾"
+  ],
+  "featureNotes": [
+    "黑色細喙。",
+    "白色後頸。",
+    "白色胸帶。",
+    "黑色腳趾。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/034100",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22706049",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/colcro1",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033700",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/034200",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 50–55 cm 香港局部分布留鳥，BirdLife 2018 VU、下降，全球成熟個體估2500–9999（2016）；來源採 Corvus pectoralis，runtime/HKBWS 採 C. torquatus，為分類命名差異。",
+    "i=3.8 沿 runtime；中文食性錯置威脅，標籤遺漏腐肉、魚及貝類，a 待查；v 缺值；要點截斷 r 待查；保育正文含過時 NT 評級與數量，c 待查，o 不補算。",
+    "AI 成鳥圖白後頸連胸帶、黑腹；形態與足趾待專家核，對照圖不等比例。",
+    "地圖只填中國與越南，香港位於中國內；台灣原生來源未確定，未填全島。"
+  ],
+  "withheldScores": {
+    "a": "食性欄錯置威脅且標籤不完整，適應力待查。",
+    "r": "要點截斷，研究分待查。",
+    "c": "保育正文含過時評級與數量，保育分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

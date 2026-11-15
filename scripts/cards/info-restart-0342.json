@@ -1,0 +1,162 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0342",
+  "name": "灰喜鵲",
+  "scientificName": "Cyanopica cyanus",
+  "illustrationTaxon": "Adult-like Cyanopica cyanus; AI interpretation, sex and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "伊比利亞灰喜鵲",
+      "scientificName": "Cyanopica cooki",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "西歐分種，藍尾一般無白端。"
+    },
+    {
+      "zh": "紅嘴藍鵲",
+      "scientificName": "Urocissa erythroryncha",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "紅喙、黑胸及長藍尾。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.22,
+      0.105,
+      0.4,
+      0.22
+    ],
+    [
+      0.2,
+      0.16,
+      0.38,
+      0.34
+    ],
+    [
+      0.35,
+      0.3,
+      0.55,
+      0.45
+    ],
+    [
+      0.75,
+      0.8,
+      0.93,
+      0.96
+    ]
+  ],
+  "featureLabels": [
+    "黑色頭頂",
+    "白色喉羽",
+    "藍色折翼",
+    "藍尾白端"
+  ],
+  "featureNotes": [
+    "黑色頭頂。",
+    "白色喉羽。",
+    "藍色折翼。",
+    "藍尾白端。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033300",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/azwmag2",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/azwmag3",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://www.birdforum.net/opus/Azure-winged_Magpie",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033400",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 33–38 cm，香港第 IIB 類、后海灣本地常見繁殖留鳥，族群源自逸放籠鳥；香港現有群體不能當作全球原生依據。HKBWS 全球 LC、趨勢未知，Cornell IUCN 2025 LC。",
+    "i=2、c=1.2 沿 runtime；c 缺中文保育正文非完整評估。食性僅圈養紀錄，「水果」未觸發果實標籤，a 遮蔽；vEst 141.3 mm×0.22≈31.086 cm 低於33–38 cm，v 遮蔽並保留估算提示；要點截斷，r/o 遮蔽不補算。",
+    "灰喜鵲、伊比利亞灰喜鵲及紅嘴藍鵲圖均本批新製；灰喜鵲尾階與白端、足趾待核；紅嘴藍鵲冠羽及尾、伊比利亞鳥尾色待核。AI 示意非專家認證、不等比例。",
+    "C. cooki 為西歐另種，未把伊比利亞半島或香港逸放個體列作本種原生分布；只標 HKBWS 明示的部分東亞原生國家，綠色非全境。"
+  ],
+  "withheldScores": {
+    "a": "食性用圈養紀錄且「水果」未觸發果實標籤，適應力待查。",
+    "v": "翼長估體長低於香港資料範圍，觀賞分待查並保留估算提示。",
+    "r": "外貌要點為截斷句，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

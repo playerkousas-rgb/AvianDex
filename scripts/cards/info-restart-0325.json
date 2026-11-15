@@ -1,0 +1,154 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0325",
+  "name": "灰燕鵙",
+  "scientificName": "Artamus fuscus",
+  "illustrationTaxon": "Adult-like Artamus fuscus, sexes similar; age not independently verified.",
+  "similarSpecies": [
+    {
+      "zh": "白胸燕鵙",
+      "scientificName": "Artamus leucorynchus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體更黑、下體白。"
+    },
+    {
+      "zh": "家燕",
+      "scientificName": "Hirundo rustica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "栗色喉、尾深叉。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.09,
+      0.17,
+      0.25,
+      0.25
+    ],
+    [
+      0.15,
+      0.16,
+      0.36,
+      0.3
+    ],
+    [
+      0.41,
+      0.4,
+      0.61,
+      0.56
+    ],
+    [
+      0.23,
+      0.43,
+      0.41,
+      0.6
+    ]
+  ],
+  "featureLabels": [
+    "淡藍色喙",
+    "深色眼先",
+    "灰色折翼",
+    "淡灰腹部"
+  ],
+  "featureNotes": [
+    "淡藍喙及深色喙尖。",
+    "眼先深色。",
+    "灰色折翼。",
+    "淡灰褐色下體。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "LKA",
+      "NPL",
+      "BTN",
+      "BGD",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0230/030600",
+      "use": "Identification, HK accidental record, range and global LC stable."
+    },
+    {
+      "url": "https://ebird.org/species/ashwoo2",
+      "use": "Identification, behaviour and taxonomy."
+    },
+    {
+      "url": "https://www.birdforum.net/opus/Ashy_Woodswallow",
+      "use": "19 cm, range, white tail tips."
+    },
+    {
+      "url": "https://indianbirds.thedynamicnature.com/2017/08/ashy-woodswallow-artamus-fuscus.html",
+      "use": "20 cm and Asian native range."
+    },
+    {
+      "url": "https://ebird.org/species/whbwoo4",
+      "use": "White-breasted Woodswallow comparison."
+    },
+    {
+      "url": "https://ebird.org/species/barswa",
+      "use": "Barn Swallow comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores and vEst or missing score record."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Review of score inputs where present."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing input if present."
+    }
+  ],
+  "notes": [
+    "HKBWS 香港偶然迷鳥，2011年唯一紀錄；全球 LC、趨勢穩定；其他來源記載體長19–20 cm。",
+    "runtime 無 dexScores 記錄，六分全部待查，不從 LC 等自行補算。",
+    "三圖新製；首張主圖折翼未伸過尾端，改用已目視修正版，修正版尾端白色缺失、喙可能過長彎，翼尾與足趾待核；白胸比較圖頭胸交界及家燕尾比例待核。AI 示意不等比例、非專家認證。",
+    "世界圖僅部分原生國家，綠色非全境；香港單一偶然紀錄不作原生分布依據。"
+  ]
+}

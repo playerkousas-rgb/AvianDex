@@ -1,0 +1,173 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2025"
+  },
+  "id": "0377",
+  "name": "矛斑蝗鶯",
+  "scientificName": "Locustella lanceolata",
+  "illustrationTaxon": "Adult-like Locustella lanceolata; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "小蝗鶯",
+      "scientificName": "Helopsaltes certhiola",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "通常較大、眉較顯，腰暖棕且下體較素。"
+    },
+    {
+      "zh": "斑背大尾鶯",
+      "scientificName": "Helopsaltes pryeri",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "喙較粗短、三級飛羽具大黑斑及較長尾。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.19,
+      0.18,
+      0.47,
+      0.25
+    ],
+    [
+      0.36,
+      0.29,
+      0.6,
+      0.41
+    ],
+    [
+      0.23,
+      0.31,
+      0.44,
+      0.47
+    ],
+    [
+      0.62,
+      0.49,
+      0.82,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "頭頂縱紋",
+    "背部縱紋",
+    "胸部縱紋",
+    "尾下縱紋"
+  ],
+  "featureNotes": [
+    "頭頂縱紋。",
+    "背部縱紋。",
+    "胸部縱紋。",
+    "尾下縱紋。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "JPN",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PRK",
+      "PHL",
+      "RUS",
+      "KOR",
+      "LKA",
+      "THA",
+      "VNM",
+      "TWN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/041900",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22714654",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/lanwar",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/041600",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/041500",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 約12 cm，香港秋季常見過境，冬春罕見；BirdLife 2025 LC 全球趨勢未知，粗估40–60萬成熟個體、資料品質差。較早 HKBWS 全球穩定。",
+    "i=2 v=2.5 c=1.2 沿 runtime，c 缺中文保育正文非完整評估；翼54.6 mm 估12.012 cm 約等 HKBWS，留 vEst。食性標籤僅昆蟲而 BirdLife 亦載蜘蛛和種子，a 待查；鳴聲誤置語源及要點截斷，r/o 待查。",
+    "沿用前次已目視的 0374 矛斑對照圖作主圖；縱紋偏強且淡眉較明顯，羽齡、亞種和隱藏腳趾待核。"
+  ],
+  "withheldScores": {
+    "a": "食性索引未納蜘蛛及種子，適應分待查。",
+    "r": "鳴聲為語源且要點截斷，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

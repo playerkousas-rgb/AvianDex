@@ -1,0 +1,173 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0390",
+  "name": "煙腹毛腳燕",
+  "scientificName": "Delichon dasypus",
+  "illustrationTaxon": "Adult-like Delichon dasypus; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "白腹毛腳燕",
+      "scientificName": "Delichon lagopodum",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥腰白範圍通常較大、腹部較白；亞種有差異。"
+    },
+    {
+      "zh": "家燕",
+      "scientificName": "Hirundo rustica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "赤褐額喉、深胸帶、長尾流蘇。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.16,
+      0.42,
+      0.3
+    ],
+    [
+      0.27,
+      0.28,
+      0.41,
+      0.4
+    ],
+    [
+      0.3,
+      0.39,
+      0.51,
+      0.58
+    ],
+    [
+      0.59,
+      0.45,
+      0.69,
+      0.57
+    ]
+  ],
+  "featureLabels": [
+    "藍黑頭部",
+    "白色喉部",
+    "煙灰胸腹",
+    "白色腰斑"
+  ],
+  "featureNotes": [
+    "藍黑頭部。",
+    "白色喉部。",
+    "煙灰胸腹。",
+    "白色腰斑。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "JPN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PAK",
+      "PHL",
+      "RUS",
+      "PRK",
+      "KOR",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036700",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22712491",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/ashmar1",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036600",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036500",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 12–13 cm，香港秋季不常見過境、冬少見；BirdLife 2024 LC、估全球上升，數量未知；蒙古原生地位不確定，地圖不納入。",
+    "i=2 a=3.3 c=1.2 沿 runtime；中文保育正文缺失並非完整評估。原長度「12–1 cm」被解析作6.5 cm，v 待查；研究資料只有分布及分類，英文鳴聲錯置保育資料，r/o 待查。",
+    "AI 圖仿煙腹型，白腰偏小且下體偏灰，尾叉和足趾需核；不同亞種腹色差異大，比較圖不能當精確鑑定圖。"
+  ],
+  "withheldScores": {
+    "v": "來源體長截斷被解析成 6.5 cm，觀賞分待查。",
+    "r": "中文研究資料只有分類和分布，鳴聲錯置保育資料，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

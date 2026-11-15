@@ -1,0 +1,160 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2025"
+  },
+  "id": "0373",
+  "name": "斑背大尾鶯",
+  "scientificName": "Helopsaltes pryeri",
+  "illustrationTaxon": "Adult-like Helopsaltes pryeri; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "小蝗鶯",
+      "scientificName": "Helopsaltes certhiola",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "眉較明顯、暖棕腰和淡尾尖常見。"
+    },
+    {
+      "zh": "矛斑蝗鶯",
+      "scientificName": "Locustella lanceolata",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "較小，胸脅及尾下有明顯縱紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.13,
+      0.46,
+      0.22
+    ],
+    [
+      0.08,
+      0.17,
+      0.26,
+      0.25
+    ],
+    [
+      0.35,
+      0.27,
+      0.65,
+      0.46
+    ],
+    [
+      0.63,
+      0.48,
+      0.88,
+      0.72
+    ]
+  ],
+  "featureLabels": [
+    "頭頂縱紋",
+    "淡色短喙",
+    "黑斑折翼",
+    "褐色長尾"
+  ],
+  "featureNotes": [
+    "頭頂縱紋。",
+    "淡色短喙。",
+    "黑斑折翼。",
+    "褐色長尾。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "MNG",
+      "RUS"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/041500",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22715480",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/margra1",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/041600",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/041900",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 12–14 cm，香港偶然迷鳥；BirdLife 2025 LC 並估全球增加，與較早 HKBWS 及 runtime NT 不同。BirdLife 摘要和正文估數互不一致，故不選取單一個體數。",
+    "runtime i=3、c=1.8 依舊 NT 與 2025 LC 不一致，i/c/o 遮蔽不重算；a 缺值；翼52.2 mm 估11.484 cm 小於 HKBWS，v 待查保留 vEst；r=1 未納 BirdLife 遷徙資料，待查。",
+    "圖像臉灰及羽紋偏誇張，亞種和細節待專家核，對照圖僅示意。"
+  ],
+  "withheldScores": {
+    "i": "runtime 使用較早 NT，與 BirdLife 2025 LC 不一致，重要性待查。",
+    "v": "翼長估體長低於 HKBWS 參考，觀賞分待查保留 vEst。",
+    "r": "研究輸入缺遷徙資料，研究分待查。",
+    "c": "runtime 沿舊 NT 且未納最新保育資料，保育分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

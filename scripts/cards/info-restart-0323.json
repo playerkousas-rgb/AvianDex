@@ -1,0 +1,152 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0323",
+  "name": "白腹鳳鶥",
+  "scientificName": "Erpornis zantholeuca",
+  "illustrationTaxon": "Adult-like E. zantholeuca; sexes alike, subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "暗綠繡眼鳥",
+      "scientificName": "Zosterops japonicus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "白眼圈明顯，無冠。"
+    },
+    {
+      "zh": "冠羽畫眉",
+      "scientificName": "Yuhina brunneiceps",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "棕色冠羽、黑色頰紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.27,
+      0.16,
+      0.43,
+      0.29
+    ],
+    [
+      0.29,
+      0.27,
+      0.44,
+      0.38
+    ],
+    [
+      0.44,
+      0.37,
+      0.63,
+      0.52
+    ],
+    [
+      0.62,
+      0.51,
+      0.79,
+      0.64
+    ]
+  ],
+  "featureLabels": [
+    "黃綠冠羽",
+    "淡灰面部",
+    "黃綠折翼",
+    "黃色尾下"
+  ],
+  "featureNotes": [
+    "頭頂冠羽。",
+    "淡灰面部與深色眼。",
+    "折翼黃綠色。",
+    "尾下覆羽黃色。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "NPL",
+      "BTN",
+      "IND",
+      "BGD",
+      "CHN",
+      "TWN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN",
+      "BRN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032200",
+      "use": "11–13 cm, identification, local status, range and LC."
+    },
+    {
+      "url": "https://ebird.org/species/whbyuh1",
+      "use": "Identification and IUCN 2025 LC."
+    },
+    {
+      "url": "https://www.birdforum.net/opus/White-bellied_Erpornis",
+      "use": "Range, including Sumatra and Borneo."
+    },
+    {
+      "url": "https://ebird.org/species/jaweye",
+      "use": "White-eye comparison."
+    },
+    {
+      "url": "https://ebird.org/species/taiyuh1?siteLanguage=zh",
+      "use": "Taiwan Yuhina comparison; endemic to Taiwan."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Review of source-derived score inputs."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing length."
+    }
+  ],
+  "notes": [
+    "HKBWS 11–13 cm、香港稀少且分布局限的森林留鳥、全球 LC 趨勢未知。",
+    "i=2、a=3.3、r=1.8 沿 runtime；vEst 翼長66.4 mm×0.22≈14.608 cm 高於11–13 cm，v 遮蔽但保留估算提示；原保育文字的「國際自然保護聯盟」誤觸受脅詞，c 遮蔽；o 連帶遮蔽。a 僅現有標籤，非完整生態評估。",
+    "三圖新製；主圖冠羽可能太高且偏黃、足趾待核；冠羽畫眉比較圖未顯示資料提及的白色冠緣，且為台灣特有而非香港鳥，AI 示意不等比例、非專家認證。",
+    "世界圖僅部分原生國家，綠色非全境。"
+  ],
+  "withheldScores": {
+    "v": "翼長估體長14.608 cm 高於 HKBWS 11–13 cm，觀賞分待查。",
+    "c": "保育文字中的「國際自然保護聯盟」誤觸受脅詞，保育關注分待查。",
+    "o": "綜合分依賴待查分項，暫不補算。"
+  }
+}

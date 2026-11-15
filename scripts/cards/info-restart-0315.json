@@ -1,0 +1,145 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危"
+  },
+  "id": "0315",
+  "name": "仙八色鶇",
+  "scientificName": "Pitta nympha",
+  "illustrationTaxon": "Adult-like Fairy Pitta Pitta nympha; sex and age unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "藍翅八色鶇",
+      "scientificName": "Pitta moluccensis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "藍翼較廣、下體較暖；圖不等比例。"
+    },
+    {
+      "zh": "印度藍翅八色鳥",
+      "scientificName": "Pitta brachyura",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "淡頂中央黑條；AI 頭頂配色不準。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.29,
+      0.14,
+      0.58,
+      0.32
+    ],
+    [
+      0.46,
+      0.33,
+      0.68,
+      0.5
+    ],
+    [
+      0.36,
+      0.38,
+      0.57,
+      0.57
+    ],
+    [
+      0.58,
+      0.59,
+      0.82,
+      0.75
+    ]
+  ],
+  "featureLabels": [
+    "栗頂淡眉",
+    "藍色肩羽",
+    "淡褐下體",
+    "紅色尾下"
+  ],
+  "featureNotes": [
+    "栗褐頭頂、淡色眉紋。",
+    "折翼少量藍色肩羽。",
+    "下體淺褐。",
+    "紅色尾下區域。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "TWN",
+      "KOR",
+      "JPN",
+      "MYS",
+      "IDN",
+      "BRN"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0220/030500",
+      "use": "16–20 cm, identification, HK passage, native range and conservation."
+    },
+    {
+      "url": "https://ebird.org/species/faipit1",
+      "use": "Global IUCN 2025 VU, appearance."
+    },
+    {
+      "url": "https://ebird.org/species/blwpit1",
+      "use": "Blue-winged Pitta comparison."
+    },
+    {
+      "url": "https://ebird.org/species/indpit1",
+      "use": "Indian Pitta comparison."
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=DE63114F",
+      "use": "traditional Chinese comparison name."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "incomplete highlights."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "wing length estimate."
+    }
+  ],
+  "notes": [
+    "主圖及比較圖均重用本輪 0314/0315 生成素材並目視；主鳥頭部比例與足趾待核，印度比較圖頭頂大面積黑色與 Cornell 淡頂中央黑條不符；AI 圖非專家認證，不等比例。",
+    "HKBWS 16–20 cm、香港稀少過境且秋季較多，全球疑因森林砍伐及籠鳥捕捉迅速下降；Cornell 全球 IUCN 2025 VU。",
+    "i=3.8、a=5、c=4 沿 runtime；a 僅反映原文及標籤，非完整評估。vEst 翼長121.4 mm ×0.22 =26.708 cm，高於16–20 cm，v 遮蔽但保留估算提示；原要點及 habitat/diet 多處截斷，r 及 o 遮蔽、不補算。",
+    "完整世界底圖只列部分原生繁殖/越冬國家，綠色非全境亦非完整分布。"
+  ],
+  "withheldScores": {
+    "v": "翼長推估26.708 cm 大於來源16–20 cm，原觀賞分暫遮蔽。",
+    "r": "原要點及棲地、食性資料截斷，研究分暫遮蔽。",
+    "o": "綜合分依賴受影響 v/r，暫不顯示、不補算。"
+  }
+}

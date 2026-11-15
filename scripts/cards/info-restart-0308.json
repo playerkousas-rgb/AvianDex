@@ -1,0 +1,153 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "無危依香港鳥類資料庫"
+  },
+  "id": "0308",
+  "name": "紅隼",
+  "scientificName": "Falco tinnunculus",
+  "illustrationTaxon": "Male-like Eurasian Kestrel Falco tinnunculus; age and subspecies unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "阿穆爾隼",
+      "scientificName": "Falco amurensis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥灰色身軀、橙紅眼圈及腳；圖不等比例。"
+    },
+    {
+      "zh": "燕隼",
+      "scientificName": "Falco subbuteo",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥灰背、深色胸紋與栗紅腿羽；示意圖尾紋不準。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.12,
+      0.44,
+      0.27
+    ],
+    [
+      0.37,
+      0.25,
+      0.66,
+      0.48
+    ],
+    [
+      0.27,
+      0.29,
+      0.5,
+      0.52
+    ],
+    [
+      0.61,
+      0.68,
+      0.83,
+      0.9
+    ]
+  ],
+  "featureLabels": [
+    "灰色頭羽",
+    "栗背黑斑",
+    "胸部縱紋",
+    "灰尾黑端"
+  ],
+  "featureNotes": [
+    "雄型灰色頭羽。",
+    "栗色背部黑斑。",
+    "胸部深色縱紋。",
+    "灰尾黑色端帶；AI 圖尾可能過長。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "ESP",
+      "DEU",
+      "NOR",
+      "RUS",
+      "MNG",
+      "CHN",
+      "IND",
+      "JPN",
+      "MAR",
+      "DZA",
+      "KEN",
+      "ZAF"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0220/029700",
+      "use": "Global LC as shown by HKBWS, length, identification and Hong Kong seasonal occurrence."
+    },
+    {
+      "url": "https://ebird.org/species/eurkes",
+      "use": "Identification; Cornell page did not show IUCN label."
+    },
+    {
+      "url": "https://ebird.org/species/amufal1",
+      "use": "Amur Falcon comparison."
+    },
+    {
+      "url": "https://ebird.org/species/eurhob",
+      "use": "Eurasian Hobby comparison."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Common_kestrel",
+      "use": "distribution and ecology."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "truncated research inputs and negated conservation text."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "runtime length and habitat/diet tags."
+    }
+  ],
+  "notes": [
+    "三張 AI 圖已目視；先前未交付主圖跨環境缺失，重新生成；新主圖尾可能過長、腳爪待核。燕隼比較圖尾羽有橫斑，與 Cornell 成人素色尾描述不符；阿穆爾隼比例及腳爪待核；不等比例、非專家認證。",
+    "HKBWS 體長27–35 cm、香港秋季常見過境，全球 LC 趨勢下降；Cornell 當頁未顯示 IUCN，故無危依 HKBWS。",
+    "i=2、a=4.3、v=3.8 沿 runtime；體長35.5 cm 是原32–39 cm範圍中點非實測，a 原食性標籤僅蛙和爬蟲、缺其他食性且非完整評估。r 原遷徙和要點截斷且語源為火箭命名，c 原無危否定句誤觸受脅詞，r/c/o 遮蔽不補算。",
+    "世界圖只部分原生國家，不表示全境或完整分佈。"
+  ],
+  "withheldScores": {
+    "r": "中文遷徙和要點截斷，語源欄為火箭命名，不是鳥名語源。",
+    "c": "無危保育句的「保護」「瀕危」在否定語境中誤觸受脅規則。",
+    "o": "綜合分依賴受影響研究及保育分，暫不顯示、不補算。"
+  }
+}

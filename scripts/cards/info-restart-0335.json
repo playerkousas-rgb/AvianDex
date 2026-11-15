@@ -1,0 +1,158 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0335",
+  "name": "牛頭伯勞",
+  "scientificName": "Lanius bucephalus",
+  "illustrationTaxon": "Adult male-like Lanius bucephalus, AI interpretation.",
+  "similarSpecies": [
+    {
+      "zh": "虎紋伯勞",
+      "scientificName": "Lanius tigrinus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥灰頭、栗背帶黑色橫斑。"
+    },
+    {
+      "zh": "紅背伯勞",
+      "scientificName": "Lanius collurio",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥灰頭栗背、不具虎紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.045,
+      0.47,
+      0.19
+    ],
+    [
+      0.25,
+      0.1,
+      0.47,
+      0.23
+    ],
+    [
+      0.15,
+      0.105,
+      0.34,
+      0.28
+    ],
+    [
+      0.47,
+      0.37,
+      0.62,
+      0.51
+    ]
+  ],
+  "featureLabels": [
+    "栗色頭頂",
+    "黑色面罩",
+    "粗鉤狀喙",
+    "翼上白斑"
+  ],
+  "featureNotes": [
+    "栗色頭頂。",
+    "黑色面罩。",
+    "粗鉤狀喙。",
+    "翼上白斑。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031600",
+      "use": "Identification, range, Hong Kong occurrence and global conservation."
+    },
+    {
+      "url": "https://ebird.org/species/buhshr1",
+      "use": "Identification and IUCN where displayed."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031500",
+      "use": "Comparison species identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031800",
+      "use": "Comparison species identification."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 19–20 cm；頁首稱香港罕見過境及冬訪，occurrence 稱 scarce，頻率用語有別。全球 LC 趨勢下降，Cornell IUCN 2025 LC。",
+    "僅 i=2 沿 runtime；中文食性爬蟲類未被標籤規則匹配，a 遮蔽；vEst 翼長84.1 mm×0.22≈18.502 cm，低於19–20 cm，v 遮蔽並保留估算提示；遷徙與要點截斷、保育欄錯置遷徙致「減少」誤觸，r/c/o 遮蔽不補算。",
+    "主圖及比較圖本批新製，雄鳥白斑位置、黑面罩與足趾待核，虎紋圖尾比例、紅背白尾緣比例亦待核；AI 示意不等比例、非專家認證。",
+    "僅標 HKBWS 部分繁殖及非繁殖國家，不分季節，綠色非全境。"
+  ],
+  "withheldScores": {
+    "a": "食性有爬蟲類但中文匹配詞表漏掉該類，標籤不完整，適應力待查。",
+    "v": "翼長估體長低於 HKBWS 範圍，觀賞分待查並保留估算提示。",
+    "r": "遷徙與要點文字截斷，研究分待查。",
+    "c": "保育欄錯置遷徙並以「減少」誤觸受脅詞，保育分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

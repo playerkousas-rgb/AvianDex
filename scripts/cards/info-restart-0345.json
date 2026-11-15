@@ -1,0 +1,157 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0345",
+  "name": "達烏里寒鴉",
+  "scientificName": "Coloeus dauuricus",
+  "illustrationTaxon": "Adult-like Coloeus dauuricus; AI interpretation, sex and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "寒鴉",
+      "scientificName": "Coloeus monedula",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥淡眼、灰頸及暗色下體。"
+    },
+    {
+      "zh": "喜鵲",
+      "scientificName": "Pica serica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "黑白色、長尾及白肩。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.1,
+      0.14,
+      0.29,
+      0.29
+    ],
+    [
+      0.3,
+      0.14,
+      0.5,
+      0.3
+    ],
+    [
+      0.19,
+      0.25,
+      0.37,
+      0.41
+    ],
+    [
+      0.31,
+      0.4,
+      0.56,
+      0.6
+    ]
+  ],
+  "featureLabels": [
+    "粗短黑喙",
+    "白色後頸",
+    "黑色喉胸",
+    "白色腹羽"
+  ],
+  "featureNotes": [
+    "粗短黑喙。",
+    "白色後頸。",
+    "黑色喉胸。",
+    "白色腹羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033700",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/daujac1",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/eurjac",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033600",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 34–36 cm、香港罕見冬候鳥，多數為暗色首冬鳥；此圖示黑白成鳥，不代表所有年齡。HKBWS 全球 LC 趨勢穩定。",
+    "runtime i=2 c=1.2 保留；c 缺中文保育正文非完整評估；v 缺值非零。中文食性缺昆蟲與果實標籤，a 待查；要點及語源截斷，r 待查；o 待查不補算。",
+    "主圖及寒鴉比較圖本批新製；喜鵲沿用0344。達烏里圖喙比例及白色後頸範圍、腳趾需專家核實；AI 示意非專家認證、不等比例。",
+    "HKBWS 屬名 Coloeus，引用 BoW 使用 Corvus 屬為命名差異，不更改 runtime；地圖示部分繁殖和越冬國家，綠色非全境。"
+  ],
+  "withheldScores": {
+    "a": "中文食性未載昆蟲與果實，標籤遺漏，適應力待查。",
+    "r": "要點與語源條目截斷，研究分待查。",
+    "o": "綜合分依賴待查分項，不能補算。"
+  }
+}

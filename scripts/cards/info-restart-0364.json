@@ -1,0 +1,170 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0364",
+  "name": "靴籬鶯",
+  "scientificName": "Iduna caligata",
+  "illustrationTaxon": "Adult-like Iduna caligata; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "賽氏籬鶯",
+      "scientificName": "Iduna rama",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "通常嘴尾較長，眉紋更弱，兩者非常相近。"
+    },
+    {
+      "zh": "黑眉葦鶯",
+      "scientificName": "Acrocephalus bistrigiceps",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "眉紋上方有較寬的深色邊。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.17,
+      0.215,
+      0.39,
+      0.32
+    ],
+    [
+      0.1,
+      0.22,
+      0.24,
+      0.34
+    ],
+    [
+      0.39,
+      0.34,
+      0.65,
+      0.51
+    ],
+    [
+      0.26,
+      0.36,
+      0.48,
+      0.55
+    ]
+  ],
+  "featureLabels": [
+    "淡色眉紋",
+    "深色喙尖",
+    "棕色折翼",
+    "淡色腹部"
+  ],
+  "featureNotes": [
+    "淡色眉紋。",
+    "深色喙尖。",
+    "棕色折翼。",
+    "淡色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "AZE",
+      "BGD",
+      "CHN",
+      "FIN",
+      "IND",
+      "IRN",
+      "KAZ",
+      "KGZ",
+      "MNG",
+      "NPL",
+      "PAK",
+      "RUS",
+      "LKA",
+      "TJK",
+      "TKM",
+      "UZB"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/041300",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/booted-warbler-iduna-caligata",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/boowar1",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/041400",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/040700",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 11.5 cm，香港偶然迷鳥；BirdLife 2024 LC 全球疑上升，全球趨勢與本地迷鳥不同。",
+    "i=2 a=2.8 r=4.8 c=1.2 沿 runtime；c 缺中文保育正文非完整評估；翼59.4 mm 粗估13.068 cm 超過 HKBWS 11.5，v/o 待查並保留 vEst。行為欄為分類文字，不冒稱實際行為。",
+    "AI 圖眉紋延伸較長、羽形和足趾未認證，與賽氏籬鶯的細微診斷差異不能依賴插圖，大小不等比例。"
+  ],
+  "withheldScores": {
+    "v": "翼長推算體長超過 HKBWS 參考，觀賞分待查並保留 vEst。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

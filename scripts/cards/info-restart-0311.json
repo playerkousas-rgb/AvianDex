@@ -1,0 +1,158 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0311",
+  "name": "遊隼",
+  "scientificName": "Falco peregrinus",
+  "illustrationTaxon": "Adult-like Peregrine Falcon Falco peregrinus; sex and subspecies unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "燕隼",
+      "scientificName": "Falco subbuteo",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "纖細成鳥有栗紅腿羽及胸部縱紋；圖不等比例。"
+    },
+    {
+      "zh": "紅隼",
+      "scientificName": "Falco tinnunculus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥栗背黑斑、灰尾黑端；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.19,
+      0.1,
+      0.46,
+      0.25
+    ],
+    [
+      0.43,
+      0.25,
+      0.72,
+      0.48
+    ],
+    [
+      0.25,
+      0.34,
+      0.5,
+      0.58
+    ],
+    [
+      0.31,
+      0.57,
+      0.56,
+      0.72
+    ]
+  ],
+  "featureLabels": [
+    "黑色鬚紋",
+    "灰色上體",
+    "腹部橫紋",
+    "黃色腳爪"
+  ],
+  "featureNotes": [
+    "寬黑鬚紋與白頰。",
+    "灰色上體及折翼。",
+    "淺色下體有深色橫紋。",
+    "黃色腳爪；AI 趾序待核。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CAN",
+      "USA",
+      "MEX",
+      "BRA",
+      "ARG",
+      "GBR",
+      "FRA",
+      "ESP",
+      "NOR",
+      "RUS",
+      "CHN",
+      "JPN",
+      "IND",
+      "ZAF",
+      "KEN",
+      "AUS"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0220/030000",
+      "use": "36–58 cm, identification, Hong Kong occurrence, distribution and population trend."
+    },
+    {
+      "url": "https://ebird.org/species/perfal",
+      "use": "Global IUCN 2025 LC, identification and habitat."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Peregrine_falcon",
+      "use": "global distribution and migration."
+    },
+    {
+      "url": "https://ebird.org/species/eurhob",
+      "use": "Eurasian Hobby comparison."
+    },
+    {
+      "url": "https://ebird.org/species/eurkes",
+      "use": "Common Kestrel comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "truncated and misplaced information."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "wing length for vEst."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "runtime habitat and diet tags."
+    }
+  ],
+  "notes": [
+    "主圖新製、比較圖重用 0310/0308；全卡及三鳥目視，主鳥比例、足趾及翼尾待核；AI 非獨立專家認證，圖不等比例。",
+    "Cornell 全球 IUCN 2025 LC，HKBWS 36–58 cm、香港全年出現，全球趨勢上升；香港與全球趨勢勿混淆。",
+    "i=2、a=4.7、c=1.2 沿 runtime；a 食性標籤只含昆蟲魚爬蟲，漏主要獵物鳥類，非完整評估；c 原中文保育欄是食性資訊，非完整評估。vEst 翼長314.7 mm ×0.22 約69.234 cm，高於 HKBWS 36–58 cm，v 遮蔽保留估算提示；r 原要點中遷徙錯稱僅北極族群長距離遷徙，r 及 o 遮蔽、不補算。",
+    "世界底圖僅部分原生國家，不區分繁殖及越冬，非全境或完整分布。"
+  ],
+  "withheldScores": {
+    "v": "原翼長估算體長約69.234 cm，高於來源36–58 cm，觀賞分暫遮蔽。",
+    "r": "原要點錯稱僅北極族群會長距離遷徙；研究分暫遮蔽。",
+    "o": "綜合分依賴受影響 v/r，暫不顯示、不補算。"
+  }
+}

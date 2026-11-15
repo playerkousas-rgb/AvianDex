@@ -1,0 +1,158 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0354",
+  "name": "雜色山雀",
+  "scientificName": "Sittiparus varius",
+  "illustrationTaxon": "Adult-like Sittiparus varius; nominal-like plumage, sex and subspecies not confirmed; AI interpretation.",
+  "similarSpecies": [
+    {
+      "zh": "黃腹山雀",
+      "scientificName": "Periparus venustulus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥黑頭白頰黃腹。"
+    },
+    {
+      "zh": "中華攀雀",
+      "scientificName": "Remiz consobrinus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥灰冠黑面罩、淡腹。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.26,
+      0.1,
+      0.46,
+      0.34
+    ],
+    [
+      0.27,
+      0.24,
+      0.41,
+      0.45
+    ],
+    [
+      0.43,
+      0.34,
+      0.68,
+      0.61
+    ],
+    [
+      0.36,
+      0.48,
+      0.62,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "黑白面部",
+    "黑色喉羽",
+    "藍灰折翼",
+    "橙栗腹部"
+  ],
+  "featureNotes": [
+    "黑白面部。",
+    "黑色喉羽。",
+    "藍灰折翼。",
+    "橙栗腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "PRK",
+      "KOR",
+      "RUS"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0270/034700",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/varied-tit-sittiparus-varius",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/vartit1",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0270/034600",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0270/035000",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 12–15 cm，香港罕見迷鳥及侵入性來訪；BirdLife 2024 LC、疑下降，早期 HKBWS 稱趨勢未知。台灣栗腹山雀等在外部資料已拆種，不將其範圍套用本種。",
+    "i=2 a=4.7 v=2.6 c=1.2 沿 runtime；c 無中文保育正文非完整評估；語源欄錯置命名歷史且要點截斷，r/o 遮蔽。",
+    "AI 圖近似指名亞種，胸腹、喙及足趾比例待專家核；比較圖不等比例。"
+  ],
+  "withheldScores": {
+    "r": "語源欄錯置命名歷史及要點截斷，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}
