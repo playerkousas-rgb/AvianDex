@@ -1,0 +1,143 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "id": "0469",
+  "name": "赤頸鶇",
+  "scientificName": "Turdus ruficollis",
+  "illustrationTaxon": "Adult male Turdus ruficollis (dull grey upperparts, rufous throat, chest and face, off-white belly, orange-brown tail base). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黑頸鶇",
+      "scientificName": "Turdus atrogularis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬，過去與本種被合稱「黑喉鶇」（dark-throated thrush）而現已分為兩種；黑頸鶇雄鳥的喉與上胸是**黑色**而非赤紅、沒有赤紅色的臉側與眉紋，上體偏灰褐、腹白；本種的喉、胸、臉側與頸側都是赤紅褐色。"
+    },
+    {
+      "zh": "斑鶇",
+      "scientificName": "Turdus eunomus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同樣在東亞越冬的鶇，但斑鶇上體褐而羽心深、眉紋淡、胸前有黑色橫帶、脇與外側尾羽赤褐，花紋對比強；本種上體均勻暗灰、喉胸整片赤紅、腹面樸素而少斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.415,
+      0.44,
+      0.515,
+      0.54
+    ],
+    [
+      0.325,
+      0.355,
+      0.425,
+      0.455
+    ],
+    [
+      0.515,
+      0.425,
+      0.615,
+      0.525
+    ],
+    [
+      0.665,
+      0.585,
+      0.765,
+      0.685
+    ]
+  ],
+  "featureLabels": [
+    "赤紅喉胸",
+    "黃色嘴基",
+    "灰褐上體",
+    "橙褐尾基"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥的喉、胸、臉前部、頸側與眉紋都是赤紅褐色；成鳥雌鳥的赤紅較暗啞而淡、喉有深色縱紋、胸有灰色羽毛，第一齡雌鳥幾乎沒有赤紅（本港唯一紀錄正是這種個體），為插圖局部。",
+    "嘴為深色而基部帶黃；雌鳥與第一齡鳥的嘴色較淡，為插圖局部。",
+    "上體為暗啞的灰色，與赤紅色的頸胸成強烈對比；雌鳥上體較褐，為插圖局部。",
+    "尾基部橙褐而末端轉灰，是飛行時最容易看到的特徵；雌鳥與第一齡鳥同樣有此尾型但較暗，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "BTN",
+      "CHN",
+      "MNG",
+      "MMR",
+      "NPL",
+      "RUS"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife (under its English name Rufous-throated Thrush) lists Afghanistan, Bhutan, China, Mongolia (breeding), Myanmar, Nepal and Russia (including Asian and Central Asian Russia) as native. Hong Kong has no separate 110m geometry and is folded into China's outline. Japan, Taiwan, Thailand and the European/west-Asian records are VAGRANT entries and are left unshaded. Russia is shaded as a country, not as a claim of breeding range west of the Urals. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0390/047100",
+      "use": "香港第 I 類，**偶然訪鳥（Accidental）**：唯一紀錄是 2009-11-19 蒲台島一隻第一齡雌鳥（Lee 2012，香港首筆）；24–27 cm，成鳥雄鳥上體暗灰、喉、胸、臉前部、頸側與眉紋赤紅褐，其餘下體近白、脇略灰，尾基橙褐而末端轉灰；成鳥雌鳥赤紅部分較暗較淡、喉有深色縱紋、胸有灰色羽毛、脇灰白而疏落暗紋；第一齡雄鳥似成鳥雌鳥但大覆羽有換羽對比；第一齡雌鳥胸部幾乎無紅、有淡皮黃眉紋、頦與喉側有黑色縱紋、胸灰而帶黑至暖褐斑（下胸較暖），同為第一齡可由大覆羽與三級飛羽的淡色端判齡；常見叫聲為雙音 hyiv-hyiv，chuk 聲與同屬相似但音高略高；單型種，繁殖於西伯利亞南部與蒙古北部、西至中國西北、東至肯特山脈，冬季在印度次大陸北部向東經西藏南部至中國長江以北的大片地區（南至黑龍江南部、東至沿海）；IUCN LC、趨勢不明。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/rufous-throated-thrush-turdus-ruficollis/details",
+      "use": "BirdLife 用 **Rufous-throated Thrush** 這個英文名（香港與 eBird 用 Red-throated Thrush，同一學名 Turdus ruficollis）；IUCN **2018** LC（2012 及以前評為 Not Recognised，2016 年才因與黑頸鶇分家而被承認）、成熟個體 Unknown、趨勢 Unknown（生境改造影響不確定）、繁殖 EOO **2,510,000 km²**、非繁殖 EOO **1,650,000 km²**、完全遷徙、繁殖 endemic **No**、IBA／KBA 一欄為「-」、海拔 0–3,900 m、世代 **6.1 年**、森林依賴度 Medium；生境以溫帶林為主要（留鳥）、溫帶草原與灌叢繁殖、亞熱帶高海拔灌叢與人工林非繁殖期；用途為食用（自給、國內）與國際寵物貿易；無系統性監測、已納入國際法規；國家表：阿富汗、不丹、中國、蒙古（繁殖）、緬甸、尼泊爾、俄羅斯（含亞洲與中亞部分，繁殖）原生，奧地利、亞塞拜疆、比利時、保加利亞、捷克、丹麥、芬蘭、法國、德國、希臘、義大利、日本、拉脫維亞、荷蘭、挪威、波蘭、葡萄牙、西班牙、瑞典、台灣、泰國、英國為迷鳥，**沒有香港獨立一列**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（赤頸鶇；Red-Throated Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Turdus ruficollis／鶇科 Turdidae）；taxonOrder 28511。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 只有兩軸有分數：v=3.6（含 vEst=1）與 r=1，i、a、c、o 完全沒有分數。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案極薄，只有 range（前蘇聯、蒙古、伊朗、阿富汗、尼泊爾、印度、孟加拉、阿拉伯、也門及中國新疆）與 breeding（一長串國家名單，句式不完整、在「四川」後缺括號收尾）；diet、look、habitat、voice、conservation、etymology、migration、callouts 全部沒有；length 與 weight 為空。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 134.2 mm、尾 97.1 mm、跗蹠 31.7 mm、嘴峯 24.4 mm、體重 80.6 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 047100（路徑 `0390/`，鶇科）：香港第 I 類，**偶然訪鳥**——**全港只有一筆**：2009-11-19 蒲台島一隻第一齡雌鳥（Lee 2012，首筆）。24–27 cm，成鳥雄鳥暗灰上體、赤紅喉胸臉側與眉紋、尾基橙褐末端灰；雌鳥赤紅較淡而有縱紋；第一齡雌鳥幾乎無紅（即本港那一筆的樣貌）。",
+    "叫聲為雙音 hyiv-hyiv，chuk 聲音高較同屬略高；單型種，繁殖西伯利亞南部與蒙古北部至中國西北，冬季印度次大陸北部經西藏南部至長江以北的中國。",
+    "**命名差異**：BirdLife 稱本種為 Rufous-throated Thrush，香港鳥類名錄與 eBird 稱 Red-throated Thrush，學名同為 Turdus ruficollis；BirdLife 的評估歷史顯示 2012 年及以前為 Not Recognised，2016 年與黑頸鶇分家後才被承認。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2018** 年評估，趨勢 **Unknown**；EOO 繁殖 2,510,000 km²、非繁殖 1,650,000 km²、完全遷徙、非繁殖 endemic、世代 6.1 年、海拔 0–3,900 m、森林依賴度 Medium、無 IBA。",
+    "runtime 分數：**只有 r=1 沿用**（與「全港僅一筆」相符）；i、a、c 沒有分數；**v=3.6 待查**——length 與 weight 皆為空、vEst=1 即原值由體長估算，翼長 134.2 mm×0.22≈29.5 cm 高於 HKBWS 的 24–27 cm；o 亦無分數。",
+    "runtime 文案缺陷：只有 range 與 breeding 兩段，breeding 是殘缺的國家名單（「四川」後缺括號、句中斷裂），look、diet、habitat、voice 等全部缺失，length 與 weight 為空，callouts 缺失。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖原為 1296×816 橫幅，直接取中央 816×816 方形（不補邊，避免平面色帶）後放大至 1127×1127，畫出暗灰上體、赤紅喉胸與臉側、黃色嘴基與橙褐尾基，站在冬季林緣的枯草落葉上；雌鳥（赤紅較淡、喉有縱紋）與第一齡雌鳥（幾乎無紅，即本港紀錄的樣貌）仍待專家核。比較鳥為本輪新生成的黑頸鶇（舊稱同種、現已分家，最易混淆）與斑鶇，非等比例、非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 134.2 mm×0.22≈29.5 cm 高於 HKBWS 的 24–27 cm，3.6 分缺乏支撐，待查。"
+  }
+}
