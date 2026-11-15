@@ -3755,3 +3755,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - **本輪工作區再次被重置**：HEAD 回到 base commit `0254314`、`cards/art` 與 `deliver/cards`（gitignore）全部消失；已 `git fetch` 後 `git reset --hard origin/arena/b2d882cf-aviandex` 回到 `aef938d`，spec 與 docs 無損，0460 的插圖全部重新生成。
 - 驗 spec／manifest／withheldScores（a、o）／missingScores（v）／bounds／ISO3／AVIF 1024×1536／bytes／hash；`git diff --check` 通過。未改 runtime、UI、R2 或 slim 註冊。
 - **下一張 0461；0461–0583 尚未製作。** 本輪未重跑完整 `npm test`（此前曾逾時），亦未改動 `src/`。
+
+## 新批次 0451–0500：0461 已交付
+
+- `400-500` 內 `name = '0461.avif'` 精確查重 0 筆後單獨上載；獨立 `get_file` 核驗檔名、parent、MIME、大小、MD5 與 SHA256，與本地 `SHA256SUMS` 一致。
+- [0461 粉紅椋鳥](https://drive.google.com/file/d/1Jo7pRnONqe6vOsxZ-M4q94vHq2HqzdAr/view)：139773 bytes、MD5 `dd85b991a5619d1a25406221f7847f6e`、SHA256 `4f2d9aba438abaa55237ced3eacdcf1807a04d6279c383c7b946a79ae303e817`。HKBWS 045900（路徑 `0380/`）：香港第 I 類，開闊鄉郊的罕見冬候鳥；成鳥雄鳥黑頭黑上胸配鬆散冠羽、粉紅身體、黑翼尾、淡粉嘴腳；幼鳥全身褐而腹面較淡、嘴大部分黃；第一齡冬羽最暗啞；1996 年前三筆四隻（首筆 1982-11-07／12 米埔幼鳥；1984-12-30 至 1985-04-13 廈村與尖鼻咀可能兩隻）；至 2020 年共 20 筆，9 月 24 日至 4 月 28 日、多在 10 月至 3 月，絕大多數為幼鳥或換羽中的第一齡冬羽，成鳥型紀錄包括 2014-02-27 一隻鳴唱雄鳥；地點集中新界西北低地開闊鄉郊（塱原至尖鼻咀），另有數碼港、蒲台島、青衣公園各一筆；覓食方式似紫翅椋鳥，地面與樹上都會；叫聲為帶轉音嗡鳴 zeerp 與絮語；單型種，繁殖由歐洲東南部至中國西北、南至伊朗西北與阿富汗，主要於印度次大陸越冬。BirdLife **2025** LC、成熟個體 400,000–1,600,000（2021 年估計、品質差）、趨勢 **Stable**、繁殖 EOO 8,190,000 km²、非繁殖 2,310,000 km²、完全遷徙、2 個 IBA、海拔 0–3,120 m、世代 3.3 年、森林依賴度「通常不出現於森林」、貿易高普遍度（食用、國際寵物、運動狩獵）、伯恩公約附錄 II；國家表把**香港（中國）列為 Vagrant**，原生國家多達 46 個。runtime 三項資料庫皆完全沒有 0461（同 0456、0457）：`dexScores.json` 無評分（六軸全部待查，missingScores 為 i/a/r/c/v/o）、`cardCopy.json` 無文案、`measurements.json` 無量度，卡面內容全部由 HKBWS 與 BirdLife 撰寫。地圖把 46 個原生國家全部填色（溫帶歐亞大片綠色是如實反映繁殖 EOO 8,190,000 km²；香港為 Vagrant 不另標示、併入中國；歐洲與北非各地迷鳥不填）。標籤「黑頭冠羽／粉紅身體／黑色翼尾／淡粉腳」皆對應插圖像素；主圖原為 1408×768 橫幅，補方形後裁 `(0.10,0.14,0.90,0.94)`，站於魚塘邊草地；比較鳥為本輪新生成的紫翅椋鳥與灰椋鳥，非等比例、非專家認證。
+- 驗 spec／manifest／withheldScores（空）／missingScores（六軸）／bounds／ISO3／AVIF 1024×1536／bytes／hash；`git diff --check` 通過。未改 runtime、UI、R2 或 slim 註冊。
+- **下一張 0462；0462–0583 尚未製作。** 本輪未重跑完整 `npm test`（此前曾逾時），亦未改動 `src/`。
