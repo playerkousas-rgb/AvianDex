@@ -1,0 +1,140 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 趨勢穩定"
+  },
+  "id": "0402",
+  "name": "棕眉柳鶯",
+  "scientificName": "Phylloscopus armandii",
+  "illustrationTaxon": "Adult-type Phylloscopus armandii on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "巨嘴柳鶯",
+      "scientificName": "Phylloscopus schwarzi",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型較大、嘴較鈍厚、上體較欖綠、下體偏淡白；野外主要靠較柔和鼻音叫聲分辨。"
+    },
+    {
+      "zh": "褐柳鶯",
+      "scientificName": "Phylloscopus fuscatus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小、嘴較細、腳較深色，眉紋在眼前較白、眼後偏褐。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.245,
+      0.24,
+      0.45,
+      0.445
+    ],
+    [
+      0.21,
+      0.275,
+      0.32,
+      0.385
+    ],
+    [
+      0.49,
+      0.35,
+      0.72,
+      0.58
+    ],
+    [
+      0.44,
+      0.65,
+      0.63,
+      0.845
+    ]
+  ],
+  "featureLabels": [
+    "淺色眉紋",
+    "雙色嘴",
+    "翼部淡色邊",
+    "褐色腳"
+  ],
+  "featureNotes": [
+    "眼後較白的眉紋與眼線，為插圖局部。",
+    "上嘴較深、下嘴偏淡的雙色嘴，為插圖局部。",
+    "橄欖褐色翼羽及淡色翼斑，為插圖局部。",
+    "中等褐色的腳與腳趾握枝，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "LAO",
+      "MMR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038200",
+      "use": "香港狀況（1994 年首記錄、秋季過境及冬候、蘆葦及灌叢生境）、12.5–13.5 cm、與巨嘴柳鶯的辨識分野、叫聲為最可靠特徵、繁殖近乎中國特有、IUCN 全球 LC 趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/yellow-streaked-warbler-phylloscopus-armandii",
+      "use": "IUCN 2024 全球 LC、趨勢穩定、完全遷徙、原生國家（中國繁殖、老撾、緬甸、泰國、越南）及香港為迷鳥。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.3、v=2.6、r=1、c=1.2、o=1.8，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；本種僅有分布及 IUCN 文字，其餘欄位為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 61.2 mm，×0.22≈13.5 cm，與 HKBWS 12.5–13.5 cm 相符。"
+    }
+  ],
+  "notes": [
+    "HKBWS：12.5–13.5 cm，香港屬第 I 類，秋季稀有過境及稀少冬候，主要在蘆葦床及灌叢；1994 年 10 月首次記錄，2010 年起近乎每年有記錄；與巨嘴柳鶯羽色分野極細，野外幾乎只能靠金屬聲「tzik」分辨。繁殖近乎中國特有，華北至雲南西北部；全球 LC、趨勢穩定（HKBWS 及 BirdLife 2024 一致）。",
+    "runtime 六分俱全（i=2、a=2.3、v=2.6、r=1、c=1.2、o=1.8，vEst=1）。cardCopy 只有 range 及 iucn 有內容，length、look、habitat、diet、migration、voice、breeding、etymology、funFact、callouts、highlights 全部為空，故適應分（棲地／食性輸入缺失）及研究分（研究欄位空白）待查；v 沿用 runtime 並保留「觀賞值含體長估算」提示；o 依賴待查分項，一併待查。",
+    "世界底圖只標 BirdLife 原生國家（中國、老撾、緬甸、泰國、越南），不標香港迷鳥地區，亦不分繁殖與越冬季節；綠色非全境、非完整分佈。",
+    "AI 主圖：眉紋眼前偏淡、眼後較白，嘴呈上深下淡雙色，褐色腳，大致符合描述；但實鳥胸帶常呈較深暗褐色，本圖只有很淡的褐色胸側，胸帶對比偏弱，足趾握枝略生硬，性別及年齡未核。對照鳥重用 0401 已目視的巨嘴柳鶯及褐柳鶯圖，非等比例，均不能單憑圖鑑定。"
+  ],
+  "withheldScores": {
+    "a": "棲地及食性欄位全空，適應分待查、不補值。",
+    "r": "外觀、鳴聲、繁殖、遷移、詞源及要點全空，研究分待查、不補值。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

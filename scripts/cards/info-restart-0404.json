@@ -1,0 +1,136 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 趨勢穩定"
+  },
+  "id": "0404",
+  "name": "棕腹柳鶯",
+  "scientificName": "Phylloscopus subaffinis",
+  "illustrationTaxon": "Adult-type Phylloscopus subaffinis on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "棕眉柳鶯",
+      "scientificName": "Phylloscopus armandii",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型略大、下體較白而胸帶較暗，眉紋較窄；野外常靠金屬聲叫聲分辨。"
+    },
+    {
+      "zh": "褐柳鶯",
+      "scientificName": "Phylloscopus fuscatus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體較灰褐、喉及胸偏白，橙黃色調較弱，嘴較細。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.265,
+      0.415,
+      0.48
+    ],
+    [
+      0.235,
+      0.33,
+      0.42,
+      0.52
+    ],
+    [
+      0.33,
+      0.35,
+      0.545,
+      0.565
+    ],
+    [
+      0.39,
+      0.6,
+      0.605,
+      0.815
+    ]
+  ],
+  "featureLabels": [
+    "淡黃眉紋",
+    "橙黃喉胸",
+    "翼羽淡邊",
+    "深色腳"
+  ],
+  "featureNotes": [
+    "明顯的淡黃褐色眉紋與淡色眼圈，為插圖局部。",
+    "喉部至上胸的橙黃褐色，向腹部轉淡，為插圖局部。",
+    "橄欖褐翼羽的淡色羽緣，無明顯翼斑，為插圖局部。",
+    "細而深色的腳與腳趾握枝，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "LAO",
+      "MMR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038500",
+      "use": "香港第 I 類偶然記錄（2018 年 10 月 9 日香港濕地公園單一紀錄）、10.5–11 cm、辨識（素色橄欖褐、無翼斑、橙黃眉紋及下體、深色腳）、崑蟲聲「chrrrip」叫聲、單型、中國山地繁殖往南至中南半島低地越冬、IUCN 全球 LC 趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/buff-throated-warbler-phylloscopus-subaffinis",
+      "use": "IUCN 2025 全球 LC、趨勢穩定、海拔遷徙、原生國家（中國、老撾、緬甸、泰國、越南），印度為非繁殖及過境迷鳥。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 無本種分數紀錄，六項全部待查。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "runtime 無本種卡面文案；本卡資料取自 HKBWS 及 BirdLife。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "runtime 無本種測量；未自行補值。"
+    }
+  ],
+  "notes": [
+    "HKBWS：10.5–11 cm，香港屬第 I 類偶然記錄，唯一一筆為 2018 年 10 月 9 日在香港濕地公園蘆葦床網捕；單型，主要在中國黃河以南山地繁殖，冬季降至南至中南半島北部低地；叫聲為崑蟲聲「chrrrip」。全球 LC、趨勢穩定（HKBWS 2023、BirdLife 2025 一致）。",
+    "runtime 完全沒有本種的六項分數、測量及卡面文案，故 i、a、v、r、c、o 全部顯示待查，不作估算、不從 IUCN 反推；卡面註明「待查非零分」及「應用程式趣味指標・非學術評分」。",
+    "世界底圖只標 BirdLife 原生國家（中國、老撾、緬甸、泰國、越南），不標印度的迷鳥紀錄，繁殖山地與越冬低地未分色；綠色非全境、非完整分佈。",
+    "AI 主圖：橄欖褐上體、無翼斑、橙黃眉紋及喉胸、深色細腳，與 HKBWS 描述大致相符；但嘴形比例、初級飛羽長度及實際體型（10.5–11 cm，屬小型柳鶯）未核，插圖頭身比例可能偏大。棕眉柳鶯對照圖重用 0402、褐柳鶯重用 0401 已目視版本，非等比例，均為 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {}
+}

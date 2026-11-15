@@ -1,0 +1,157 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：HKBWS 2023 記趨勢下降"
+  },
+  "id": "0403",
+  "name": "歐柳鶯",
+  "scientificName": "Phylloscopus trochilus",
+  "illustrationTaxon": "Immature-type Phylloscopus trochilus on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "嘰喳柳鶯",
+      "scientificName": "Phylloscopus collybita",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體較褐，初級飛羽短、三級飛羽幾乎達尾端，腳深褐至黑；叫聲「chiff-chaff」有別。"
+    },
+    {
+      "zh": "褐柳鶯",
+      "scientificName": "Phylloscopus fuscatus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體較深褐、嘴較細、眉紋較短，腳深色，初級飛羽較短。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.235,
+      0.815,
+      0.45
+    ],
+    [
+      0.4,
+      0.33,
+      0.615,
+      0.545
+    ],
+    [
+      0.24,
+      0.42,
+      0.455,
+      0.635
+    ],
+    [
+      0.47,
+      0.6,
+      0.685,
+      0.815
+    ]
+  ],
+  "featureLabels": [
+    "長白眉紋",
+    "素色翼上",
+    "長初級飛羽",
+    "粉褐色腳"
+  ],
+  "featureNotes": [
+    "長而白的眉紋、淡黃喉部，為插圖局部。",
+    "灰綠翼上無淡色翼斑，為插圖局部。",
+    "初級飛羽延伸約與三級飛羽等長的長翼尖，為插圖局部。",
+    "粉褐至肉色的腳與腳趾，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IRL",
+      "GBR",
+      "FRA",
+      "DEU",
+      "POL",
+      "SWE",
+      "NOR",
+      "FIN",
+      "EST",
+      "RUS",
+      "NGA",
+      "GHA",
+      "KEN",
+      "TZA",
+      "ZMB",
+      "ZAF"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering countries are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038600",
+      "use": "香港屬第 I 類偶然記錄（2008 長洲／2020 米埔各一）、11–12.5 cm、粉褐腳、長初級飛羽、無翼斑、叫聲上揚「hooeet」、IUCN 全球 LC 趨勢下降。"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Willow_warbler",
+      "use": "繁殖範圍由愛爾蘭東至西伯利亞阿納德爾河流域、幾乎全族在撒哈拉以南非洲越冬、開闊林地（樺、榿、柳）生境、食蟲，以及三個亞種由西向東漸變灰。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/willow-warbler-phylloscopus-trochilus",
+      "use": "嘗試核對 BirdLife 條目；該頁只回傳空的載入模板（無評估年份、趨勢及國家表），故未用作證據。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=3.8、v=2.7、r=4.8、c=1.2、o=2.9，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；外觀及聲音兩欄內容實為林柳鶯描述（粉黃腳對比柳鶯深色腳、「hoo-eet」對比柳鶯「hweet」），屬跨物種錯置。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 65.9 mm，×0.22≈14.5 cm，高於 HKBWS 11–12.5 cm。"
+    }
+  ],
+  "notes": [
+    "HKBWS：香港屬第 I 類偶然記錄，先後只有 2008 年 10 月長洲／長 Valley 及 2020 年 10 月米埔兩筆；11–12.5 cm，素色柳鶯，初級飛羽長度約等於外露三級飛羽，腳粉褐，上體灰綠，長白眉紋，無翼斑，秋季幼鳥下體偏黃、春季成鳥較白；叫聲為急促上揚「hooeet」。全球 LC、趨勢下降。",
+    "cardCopy 有明顯跨物種錯置：look 寫「牠與柳鶯非常相似……較淡的粉黃腿（柳鶯為深棕至黑色）」及 voice 的「hoo-eet／hweet」對比，均為林柳鶯（Wood Warbler）對比柳鶯的描述，但本卡正是歐柳鶯；HKBWS 明言歐柳鶯本身腳為粉褐色。因此以該文案為基礎的適應分及研究分不採用，顯示待查。",
+    "runtime 分數 i=2、a=3.8、v=2.7、r=4.8、c=1.2、o=2.9、vEst=1。length 欄為空，v 由翼長推估：65.9 mm ×0.22≈14.5 cm，明顯大於 HKBWS 11–12.5 cm，故 v 待查；卡片保留「原觀賞值含體長估算」提示。c=1.2 依 IUCN 全球 LC 沿用 runtime，o 依賴待查分項而不補算。",
+    "世界底圖按維基所述繁殖區（愛爾蘭、英國、法國、德國、波蘭、瑞典、挪威、芬蘭、愛沙尼亞、俄羅斯）及越冬區（尼日利亞、加納、肯尼亞、坦桑尼亞、贊比亞、南非）選取部分國家，繁殖與越冬沒有分色，綠色非全境、非完整分佈；BirdLife 條目當日只回傳空模板，未用作分佈依據。",
+    "AI 主圖示秋季幼鳥型：灰綠上體、長白眉紋、無翼斑、淡黃喉胸、粉褐腳，與 HKBWS 描述大致相符；但初級飛羽長度、嘴形比例及亞種（P. t. trochilus／acredula／yakutensis 由西向東漸灰）均未核。嘰喳柳鶯對照圖的初級飛羽仍略長、腳色偏深褐；褐柳鶯對照圖重用 0401 已目視版本。三圖為 AI 示意，非專家認證，對照不等比例。"
+  ],
+  "withheldScores": {
+    "a": "棲地及食性文案疑為林柳鶯內容，適應分待查、不補值。",
+    "v": "length 欄為空，翼長推估 14.5 cm 超出 HKBWS 11–12.5 cm，觀賞分待查並保留估算提示。",
+    "r": "外觀及聲音文案屬另一物種，研究分待查、不補值。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}
