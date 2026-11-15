@@ -1,0 +1,154 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "id": "0455",
+  "name": "家八哥",
+  "scientificName": "Acridotheres tristis",
+  "illustrationTaxon": "Adult Acridotheres tristis (sexes alike). AI interpretation, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "灰椋鳥",
+      "scientificName": "Spodiopsar cineraceus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是褐灰而帶深色頭部的椋鳥，但頭部只是深灰而非光澤黑、嘴與腳橙黃而非鮮黃、臉頰大片白、腰與尾端白，且沒有眼後的黃色裸皮；本種頭部全黑、眼後及眼下有鮮黃色裸皮、嘴腳鮮黃、身體朱古力褐、尾下覆羽白。"
+    },
+    {
+      "zh": "紫翅椋鳥",
+      "scientificName": "Sturnus vulgaris",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "全身密佈淡白端斑並帶紫綠金屬光澤、嘴細長而暗色、沒有裸皮；本種無斑點與金屬光澤，身體均勻朱古力褐、頭部光澤黑、有鮮黃色眼周裸皮及鮮黃嘴腳，兩者氣質完全不同。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.64,
+      0.19,
+      0.765,
+      0.315
+    ],
+    [
+      0.715,
+      0.17,
+      0.84,
+      0.295
+    ],
+    [
+      0.43,
+      0.38,
+      0.555,
+      0.505
+    ],
+    [
+      0.185,
+      0.45,
+      0.31,
+      0.575
+    ]
+  ],
+  "featureLabels": [
+    "黃色眼周",
+    "黃色嘴",
+    "白色翼斑",
+    "白色尾下"
+  ],
+  "featureNotes": [
+    "眼後及眼下的皮膚裸露，呈鮮黃色，是與本港其他椋鳥（尤其八哥屬以外的種類）最直接的辨識點；八哥（Crested Myna）沒有這片裸皮，改以額前羽冠為特徵，為插圖局部。",
+    "嘴粗壯而呈鮮黃色，與同樣鮮黃的腳互相配合；幼鳥較暗啞、頭部較褐，嘴色亦較淡，為插圖局部。",
+    "翼上有一片明顯的白色翼斑，飛行時初級飛羽基部的白斑與白色翼下覆羽更為張揚，成群飛行時相當顯眼，為插圖局部。",
+    "腹部後段漸淡，尾下覆羽純白，與深褐色的下腹成強烈對比；本港另一種常見的八哥屬鳥類（八哥）尾下覆羽亦白，但身體灰黑而非朱古力褐，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IRN",
+      "KAZ",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PAK",
+      "LKA",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists these 16 as native residents (Singapore is also native but has no separate geometry on the 110m base map, so it is not shaded). Hong Kong is listed by BirdLife as INTRODUCED and is left unshaded even though it falls inside China's outline; the many deliberate and accidental introductions elsewhere (Australia, New Zealand, South Africa, USA, the Gulf states and many islands) are also unshaded. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0380/045100",
+      "use": "香港第 IIB 類：局部常見的留鳥族群，相信源自逃逸或被放生的籠鳥；23–26 cm，成鳥身體深褐、頭部黑、嘴腳及眼後眼下的裸皮鮮黃，脇與下胸深褐、下腹漸淡至尾下覆羽白，飛行時可見明顯的白色翼斑與翼下覆羽；雌雄同色而雄鳥略大，幼鳥較暗啞帶褐、頭羽較褐而無光澤、頦至上胸褐黑、尾羽淡色端較窄而暗；叫聲多樣；局部常見於農地、魚塘及其他開闊鄉郊或村邊、樹木與植被密度低的地方，主要在新界，與八哥一樣一般避開森林、鬱閉灌叢與山區；1952-01-26 盟山首錄（Herklots 1967），1950 年代在屏山與盟山一帶變得規律、有時達 30 隻，1960 年代似有下降，1979–1981 在石崗村及附近機場的軍事建築繁殖、機場周邊最多 23 隻覓食，1980 年代機場改作難民營後錦田一帶數量不錯，1990 年代範圍擴張並於 1994 年在米埔、上屋村與上水繁殖，2000 年代初向北平擴至塱原及大生圍至新田一帶魚塘（數量最多），亦東擴至大尾篤但數量少得多，2015 年 7 月起在貝澳有落戶大嶼山的跡象，九龍仔、美孚與旺角等市區公園亦有少數紀錄；繁殖鳥調查 1993–96 至 2016–19 範圍增加 68%（2.4%→4.0% 方格），冬季圖集 2001–05 至 2016–19 增加 74%（2.0%→3.5%），即使新界開闊生境面積近二十年減少仍在擴張；留鳥、無已知遷徙；1999 年以來最高計數為 2018-01-25 新田 63 隻，另有 2019-11-15 石崗 60 隻與 2017-02-22 大崗埔 53 隻，塱原最多 30 隻、大尾篤 10 隻、長洲 16 隻；群棲，常與八哥一同夜棲；覓食機會主義、常與八哥一起在地面覓食，雜食但本地食性資料少；繁殖多在人造構築物（屋頂、電塔、冷氣機後），最早 1 月 20 日築巢、最遲 4 月 29 日，幼鳥見於 4 月至 9 月；IUCN LC、種群趨勢上升；兩個亞種，香港族群相信源自籠鳥、大概屬指名亞種，其自然分佈由土庫曼、烏茲別克、哈薩克、新疆、吉爾吉斯與塔吉克至伊朗、阿富汗及幾乎整個印度次大陸（斯里蘭卡除外），再向東至緬甸、中國南部（雲南與海南）、泰國、中南半島、馬來半島與新加坡，並被刻意或意外引入世界各地。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/common-myna-acridotheres-tristis/details",
+      "use": "IUCN **2025** LC；成熟個體 **200,000,000**（2017 年估計、品質差）、趨勢 **Decreasing**（以 eBird 2015–2022 資料推斷，整體緩慢下降）、延續下降為 Yes；繁殖／留鳥 EOO **18,000,000 km²**、AOO Unknown；非遷徙、非繁殖 endemic；海拔 0–3,740 m；世代 3.2 年；森林依賴度 Low；生境為人工林、都市、農地（另有其他類別）；國家表把**香港（中國）列為 Introduced、留鳥**，原生國家為阿富汗、孟加拉、不丹、柬埔寨、中國大陸、印度、伊朗、哈薩克、寮國、馬來西亞、緬甸、尼泊爾、巴基斯坦、新加坡、斯里蘭卡、泰國與越南，另有吉爾吉斯、塔吉克、土庫曼、烏茲別克被列為引入（與 BoW 看法不同），黎巴嫩來源不確定，俄羅斯三項為迷鳥。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（家八哥；Common Myna）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Acridotheres tristis／椋鳥科 Sturnidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=4.7、v=3.3、r=3.3、c=3、o=3.3，沒有 vEst，missingScores 為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range、diet、look、voice、behavior、conservation、humanRelation、etymology 中文都有內容，habitat 中文卻是「全年集體棲息…」的群棲句子而非生境；breeding 中文是 1978 年普納日間活動分配而非繁殖週期；length 為 23 cm、weight 為空；callouts 為喙（喙和腿呈鮮黃色）、頭（黑色的頭部）、身（棕色的身體）。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 139.8 mm、尾 84.8 mm、跗蹠 38.6 mm、嘴峯 26.8 mm、體重 116.4 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 045100（頁面編號與 app 的 0455 不同，路徑為 `0380/`）：香港第 **IIB** 類，局部常見留鳥，族群相信源自逃逸籠鳥；23–26 cm，朱古力褐身體、光澤黑頭、鮮黃嘴腳與眼後眼下裸皮、白色翼斑、白色尾下覆羽；幼鳥較褐而暗啞。",
+    "本港紀錄：1952-01-26 盟山首錄，1979–1981 石崗軍事建築繁殖，1994 米埔、上屋村與上水繁殖，2000 年代擴至塱原與新界西北魚塘，2015 年起在貝澳落戶大嶼山，市區公園亦有少數；繁殖鳥調查 1993–96→2016–19 範圍 +68%（2.4%→4.0%），冬季圖集 2001–05→2016–19 +74%（2.0%→3.5%）；最高 2018-01-25 新田 63 隻，另有 2019-11-15 石崗 60 隻、2017-02-22 大崗埔 53 隻。",
+    "習性與繁殖：留鳥、無遷徙；群棲並常與八哥同棲，機會主義、常在地面與八哥一起覓食；多在屋頂、電塔、冷氣機後等人造構築物築巢，最早 1 月 20 日、最遲 4 月 29 日，幼鳥 4–9 月。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2025** 年評估；全球成熟個體約 2 億（2017 年估計，品質差），趨勢 **下降**（以 eBird 2015–2022 推斷、整體緩慢），EOO 18,000,000 km²、世代 3.2 年、森林依賴度 Low、非遷徙。**注意本地與全球方向相反**：HKBWS 指香港族群無下降跡象、範圍仍在擴張，BirdLife 則把香港列為 Introduced。",
+    "本種是 IUCN「全球 100 種最嚴重入侵外來種」之一（亦是名單上僅有的三種鳥類之一），在澳洲等地造成嚴重生態影響；卡面只以本地與全球種群資料呈現，未渲染入侵議題。",
+    "runtime 分數：i=2、a=4.7、r=3.3、c=3 沿用；v=3.3 待查——翼長 139.8 mm×0.22≈30.8 cm 高於 HKBWS 的 23–26 cm（length 欄 23 cm 雖相符亦不足以單獨支撐）；o=3.3 依賴待查分項（v）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：habitat 中文是群棲句子而非生境，breeding 中文是 1978 年普納的日間活動時間分配、與繁殖週期無關，conservation 中文講的是排擠本地鳥類而非保育評級，weight 為空、length 只有 23 cm。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖原為 1408×768 橫幅，補成方形後裁 `(0.08,0.14,0.88,0.94)`，畫出朱古力褐身體、光澤黑頭、鮮黃眼周裸皮與嘴腳、白色翼斑及白色尾下覆羽，站於村邊草地上、背景有魚塘與低矮植被以呼應 HKBWS 所述生境；幼鳥（較褐、暗啞）仍待專家核。比較鳥沿用 0454 的灰椋鳥及 0449 的紫翅椋鳥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "翼長 139.8 mm×0.22≈30.8 cm 高於 HKBWS 的 23–26 cm，length 欄 23 cm 雖相符亦不足以單獨支撐，3.3 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}
