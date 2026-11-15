@@ -1,0 +1,164 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0331",
+  "name": "黑枕王鶲",
+  "scientificName": "Hypothymis azurea",
+  "illustrationTaxon": "Adult male-like H. azurea, subspecies not independently verified.",
+  "similarSpecies": [
+    {
+      "zh": "紫綬帶",
+      "scientificName": "Terpsiphone atrocaudata",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖雄鳥紫黑身、黑尾飾。"
+    },
+    {
+      "zh": "綬帶",
+      "scientificName": "Terpsiphone incei",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "栗色型雄鳥背翼及長尾栗色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.36,
+      0.075,
+      0.51,
+      0.22
+    ],
+    [
+      0.19,
+      0.105,
+      0.36,
+      0.24
+    ],
+    [
+      0.24,
+      0.24,
+      0.4,
+      0.37
+    ],
+    [
+      0.37,
+      0.34,
+      0.58,
+      0.5
+    ]
+  ],
+  "featureLabels": [
+    "黑色枕羽",
+    "藍色頭部",
+    "黑色胸帶",
+    "淺色腹羽"
+  ],
+  "featureNotes": [
+    "黑色枕羽。",
+    "藍色頭部。",
+    "黑色胸帶。",
+    "淺色腹羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "LKA",
+      "CHN",
+      "TWN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032900",
+      "use": "Identification, range, local and global status."
+    },
+    {
+      "url": "https://ebird.org/species/blnmon1",
+      "use": "Identification and global IUCN 2025 where shown."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/033100",
+      "use": "Similar species comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/033000",
+      "use": "Similar species comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs and measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs and measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs and measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs and measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs and measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs and measurements."
+    },
+    {
+      "url": "https://indianbirds.thedynamicnature.com/2018/04/black-naped-monarch-hypothymis-azurea.html",
+      "use": "Partial range including Sri Lanka and Taiwan."
+    }
+  ],
+  "notes": [
+    "HKBWS 15–17 cm、香港不常見冬候及過境，全球 LC 趨勢穩定；雄鳥黑枕及胸帶、雌鳥灰棕翼背。",
+    "i=2、a=2.8、v=2.8 沿 runtime，vEst 翼長69.8 mm×0.22≈15.356 cm，在參考範圍內是粗估非實測；要點截斷，r 待查；保育欄錯置巢抗菌資料且「保護」誤觸受脅詞，c/o 待查不補算。",
+    "主圖新製；黑枕羽束似乎偏大、尾羽偏長、腳趾待核。比較圖為另兩卡新製雄鳥，長尾比例和冠形待核，AI 示意不等比例、非專家認證。",
+    "世界圖僅部分原生國家，綠色非全境；不因單一記錄把伊朗列為常規原生分布。"
+  ],
+  "withheldScores": {
+    "r": "中文要點截斷，研究分待查。",
+    "c": "保育欄錯置築巢抗菌資料，保護一詞誤觸受脅標籤。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

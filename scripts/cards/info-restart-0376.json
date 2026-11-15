@@ -1,0 +1,157 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2025"
+  },
+  "id": "0376",
+  "name": "史氏蝗鶯",
+  "scientificName": "Helopsaltes pleskei",
+  "illustrationTaxon": "Adult-like Helopsaltes pleskei; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "北蝗鶯",
+      "scientificName": "Helopsaltes ochotensis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "通常較小、喙較短，腰與背色稍有對比。"
+    },
+    {
+      "zh": "小蝗鶯",
+      "scientificName": "Helopsaltes certhiola",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "背有明顯深色縱紋，腰暖棕、眉較明顯。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.225,
+      0.14,
+      0.37,
+      0.245
+    ],
+    [
+      0.4,
+      0.31,
+      0.6,
+      0.48
+    ],
+    [
+      0.32,
+      0.37,
+      0.5,
+      0.55
+    ],
+    [
+      0.66,
+      0.53,
+      0.84,
+      0.75
+    ]
+  ],
+  "featureLabels": [
+    "狹淡眉紋",
+    "灰褐折翼",
+    "淡色腹部",
+    "褐色長尾"
+  ],
+  "featureNotes": [
+    "狹淡眉紋。",
+    "灰褐折翼。",
+    "淡色腹部。",
+    "褐色長尾。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "KOR",
+      "RUS",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/041800",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/pleskes-grasshopper-warbler-helopsaltes-pleskei",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/041700",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/041600",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 15–16 cm，香港不常見冬候及稀少過境；BirdLife 2025 LC、全球疑穩定、數量未知，與較早 HKBWS 及 runtime VU 不同；不將各地小島繁殖概括成全國分布。",
+    "翼70 mm 估15.4 cm 在 HKBWS 範圍，v=2.8 沿 runtime 並留 vEst；i/c 基於舊 VU 不吻合最新 LC，待查。食性資料混入棲地且漏英文灌叢、分類文字落分布欄，a/r/o 待查，不重算。",
+    "圖中長喙與長尾僅示意，隱藏一腳及比例待專家核；近似鳥不能憑 AI 圖鑑別。"
+  ],
+  "withheldScores": {
+    "i": "舊 VU 與 BirdLife 2025 LC 不一致，重要性待查。",
+    "a": "食性混棲地並漏英文灌叢，適應分待查。",
+    "r": "分類錯置分布，遷徙及威脅未納中文研究輸入，研究分待查。",
+    "c": "舊 VU 與 BirdLife 2025 LC 不一致，保育分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

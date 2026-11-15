@@ -1,0 +1,174 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0361",
+  "name": "棕扇尾鶯",
+  "scientificName": "Cisticola juncidis",
+  "illustrationTaxon": "Adult-like Cisticola juncidis; AI interpretation, sex and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "金頭扇尾鶯",
+      "scientificName": "Cisticola exilis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖雄鳥頭部金棕；非繁殖羽及雌鳥須細辨。"
+    },
+    {
+      "zh": "純色山鷦鶯",
+      "scientificName": "Prinia inornata",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "尾較長，上體較少深色縱紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.45,
+      0.21,
+      0.66,
+      0.31
+    ],
+    [
+      0.48,
+      0.25,
+      0.66,
+      0.34
+    ],
+    [
+      0.32,
+      0.31,
+      0.52,
+      0.44
+    ],
+    [
+      0.48,
+      0.37,
+      0.66,
+      0.54
+    ]
+  ],
+  "featureLabels": [
+    "頭頂縱紋",
+    "淡色眉紋",
+    "背部縱紋",
+    "淡色胸腹"
+  ],
+  "featureNotes": [
+    "頭頂縱紋。",
+    "淡色眉紋。",
+    "背部縱紋。",
+    "淡色胸腹。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "KOR",
+      "TWN",
+      "IND",
+      "BGD",
+      "MMR",
+      "THA",
+      "VNM",
+      "KHM",
+      "IDN",
+      "PHL",
+      "AUS",
+      "FRA",
+      "ESP",
+      "PRT",
+      "ITA",
+      "DZA",
+      "MAR",
+      "KEN",
+      "ZAF"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0350/042400",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/zitting-cisticola-cisticola-juncidis",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/zitcis1",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0350/042500",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0350/042700",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 10–13 cm，香港常見過境和冬候、中冬數量自1990年代下降；BirdLife 2024 LC、全球趨勢未知，與較早 HKBWS 全球增加不同。",
+    "i=2 a=2.8 v=2.3 c=1.2 沿 runtime，vEst 翼長48.9 mm估10.758 cm；c 無中文保育正文非完整評估。語源有空字、繁殖錯置鳴唱及要點截斷，r/o 待查。",
+    "AI 圖尾部未呈現典型寬白尖與暗亞端斑，不能用於鑑別；腳趾羽形待專家核對。"
+  ],
+  "withheldScores": {
+    "r": "語源缺字、繁殖錯置及要點截斷，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

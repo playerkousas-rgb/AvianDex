@@ -1,0 +1,166 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危",
+    "assessmentNote": "全球 VU 依 BirdLife 2025"
+  },
+  "id": "0369",
+  "name": "遠東葦鶯",
+  "scientificName": "Acrocephalus tangorum",
+  "illustrationTaxon": "Adult-like Acrocephalus tangorum; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "稻田葦鶯",
+      "scientificName": "Acrocephalus agricola",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "下喙近尖端通常有深色，眉紋形態不同。"
+    },
+    {
+      "zh": "黑眉葦鶯",
+      "scientificName": "Acrocephalus bistrigiceps",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "眉上深邊通常較闊、較黑、較顯眼。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.21,
+      0.15,
+      0.46,
+      0.225
+    ],
+    [
+      0.035,
+      0.12,
+      0.34,
+      0.27
+    ],
+    [
+      0.43,
+      0.31,
+      0.71,
+      0.51
+    ],
+    [
+      0.23,
+      0.22,
+      0.41,
+      0.34
+    ]
+  ],
+  "featureLabels": [
+    "淡色眉紋",
+    "深基部喙",
+    "棕色折翼",
+    "淡色喉部"
+  ],
+  "featureNotes": [
+    "淡色眉紋。",
+    "深基部喙。",
+    "棕色折翼。",
+    "淡色喉部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "KHM",
+      "CHN",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "PRK",
+      "KOR",
+      "RUS",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/040900",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22728387",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/manrew1",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/041000",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/040700",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 13.5–14 cm，香港不常見過境及罕見冬候；BirdLife 2025 VU、下降，估2000–20000成熟個體（數據品質差），不同於較早 HKBWS 估計。BirdLife 英文名 White-browed Reed-warbler。",
+    "i=3.8 c=4 沿 runtime，a 缺值不補；翼53.5 mm 推估11.77 cm 低於 HKBWS，v 待查保留 vEst；要點截斷 r/o 待查。",
+    "AI 圖眉紋及喙色僅近似，翼形比例與足趾待核，近似種類需專家鑑別。"
+  ],
+  "withheldScores": {
+    "v": "翼長估體長低於 HKBWS 參考，觀賞分待查，保留 vEst。",
+    "r": "研究輸入的多條要點截斷，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0340",
+  "name": "楔尾伯勞",
+  "scientificName": "Lanius sphenocercus",
+  "illustrationTaxon": "Adult-like Lanius sphenocercus; AI interpretation, sex and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "灰伯勞",
+      "scientificName": "Lanius excubitor",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "較小，眼罩相對較窄。"
+    },
+    {
+      "zh": "灰背伯勞",
+      "scientificName": "Lanius tephronotus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "灰背而脅羽棕色，無白翼斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.17,
+      0.12,
+      0.37,
+      0.25
+    ],
+    [
+      0.085,
+      0.105,
+      0.285,
+      0.305
+    ],
+    [
+      0.37,
+      0.39,
+      0.57,
+      0.52
+    ],
+    [
+      0.67,
+      0.67,
+      0.85,
+      0.83
+    ]
+  ],
+  "featureLabels": [
+    "黑色面罩",
+    "黑色鉤喙",
+    "翼上白斑",
+    "黑白尾羽"
+  ],
+  "featureNotes": [
+    "黑色面罩。",
+    "黑色鉤喙。",
+    "翼上白斑。",
+    "黑白尾羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "PRK",
+      "KOR"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chinese-grey-shrike-lanius-sphenocercus",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/chgshr1",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://www.birdforum.net/opus/Chinese_Grey_Shrike",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "http://www.hkbws.org.hk/BBS/viewthread.php?tid=28890",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=130973",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/032000",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "BirdForum 體長29–31 cm；HKBWS 紀錄委員會接納2019年譚江洲紀錄為香港第I類，既往另有疑似籠鳥。BirdLife 2024 全球 LC、趨勢穩定。",
+    "BirdLife 與 Cornell 將高原巨灰伯勞 Lanius giganteus 分種；runtime 保留 L. sphenocercus，地圖及 LC 按分種後範圍。",
+    "i=2、r=1、c=1.2 沿 runtime，r/c 缺中文相應資料，非完整評估；食性缺失且棲地標籤單一，a 待查；翼長120 mm×0.22≈26.4 cm 低於29–31 cm，v 待查並保留 vEst；o 遮蔽不補算。",
+    "主圖與灰伯勞比較圖新製，灰背比較沿用0339主圖。楔尾喙、翼斑與尾型足趾待核；灰伯勞圖白翼斑位置與灰背面罩待核；AI 示意非專家認證、不等比例。",
+    "底圖僅 BirdLife 分種後部分原生繁殖及非繁殖國家，綠色非全境。"
+  ],
+  "withheldScores": {
+    "a": "棲地只有英文 forest 標籤，中文食性缺失，適應力待查。",
+    "v": "翼長估算體長低於參考範圍，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

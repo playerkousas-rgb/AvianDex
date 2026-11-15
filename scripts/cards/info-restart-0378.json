@@ -1,0 +1,157 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0378",
+  "name": "棕褐短翅蝗鶯",
+  "scientificName": "Locustella luteoventris",
+  "illustrationTaxon": "Adult-like Locustella luteoventris; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "中華短翅蝗鶯",
+      "scientificName": "Locustella tacsanowskia",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體通常較淡較暗，尾下覆羽淡尖細窄。"
+    },
+    {
+      "zh": "北短翅蝗鶯",
+      "scientificName": "Locustella davidi",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "尾下覆羽淡尖較寬，常有帶狀觀感。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.29,
+      0.17,
+      0.4,
+      0.3
+    ],
+    [
+      0.41,
+      0.34,
+      0.62,
+      0.51
+    ],
+    [
+      0.28,
+      0.25,
+      0.41,
+      0.4
+    ],
+    [
+      0.57,
+      0.58,
+      0.81,
+      0.82
+    ]
+  ],
+  "featureLabels": [
+    "淡色眼圈",
+    "棕色折翼",
+    "淡色喉部",
+    "褐色尾羽"
+  ],
+  "featureNotes": [
+    "淡色眼圈。",
+    "棕色折翼。",
+    "淡色喉部。",
+    "褐色尾羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "MMR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/042000",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/brown-grasshopper-warbler-locustella-luteoventris",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/042100",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/brbwar2",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 約13 cm，香港罕見冬候；BirdLife 2024 LC、全球疑穩定。BirdLife 列香港和孟加拉迷鳥、尼泊爾滅絕，不納入綠色地圖；HKBWS 本地與 BirdLife 季節地位不同。",
+    "i=2 c=1.2 沿 runtime，c 缺中文保育正文非完整評估；forest 標籤與 BirdLife 主要灌叢不一致，a 待查；翼51.6 mm 估11.352 cm 小於參考，v 待查留 vEst；中文資料僅分布，r/o 待查。",
+    "AI 主圖眉較明顯、尾端比例未核；北短翅對照淡眉偏強且未展示尾下圖紋，與中華比較皆非等比例。"
+  ],
+  "withheldScores": {
+    "a": "forest 標籤與主要灌叢棲地不同，適應分待查。",
+    "v": "翼長估體長低於參考，觀賞分待查並留 vEst。",
+    "r": "中文研究輸入僅分布且未納英文棲地，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

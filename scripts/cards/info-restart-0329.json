@@ -1,0 +1,159 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0329",
+  "name": "鴉嘴卷尾",
+  "scientificName": "Dicrurus annectens",
+  "illustrationTaxon": "Adult-like Dicrurus annectens; sex and subspecies not independently verified.",
+  "similarSpecies": [
+    {
+      "zh": "黑卷尾",
+      "scientificName": "Dicrurus macrocercus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "黑卷尾尾叉較深。"
+    },
+    {
+      "zh": "灰卷尾",
+      "scientificName": "Dicrurus leucophaeus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "灰色羽、一般較纖細。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.69,
+      0.1,
+      0.95,
+      0.273
+    ],
+    [
+      0.6,
+      0.13,
+      0.77,
+      0.23
+    ],
+    [
+      0.43,
+      0.3,
+      0.66,
+      0.43
+    ],
+    [
+      0.08,
+      0.67,
+      0.4,
+      0.83
+    ]
+  ],
+  "featureLabels": [
+    "粗壯黑喙",
+    "深紅虹膜",
+    "藍黑折翼",
+    "深色尾羽"
+  ],
+  "featureNotes": [
+    "粗壯黑喙。",
+    "深紅虹膜。",
+    "藍黑折翼。",
+    "深色尾羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032500",
+      "use": "Identification, HK status, range and global LC."
+    },
+    {
+      "url": "https://singaporebirds.com/species/crow-billed-drongo/",
+      "use": "Identification, global LC where specified and comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032700",
+      "use": "Similar drongo identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032600",
+      "use": "Similar drongo identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032800",
+      "use": "Black Drongo comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy or score inputs."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy or score inputs."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy or score inputs."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy or score inputs."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy or score inputs."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy or score inputs."
+    }
+  ],
+  "notes": [
+    "HKBWS 27–32 cm、香港2014年偶然紀錄、全球 LC 趨勢未知；行為食性無本地觀察不代表沒有鳥類紀錄。",
+    "i/c 原 runtime 缺分，待查不從 LC 補算；a=3.3、v=3.6、r=1、o=2.6 沿 runtime；翼長143.2 mm×0.22≈31.504 cm 在 HKBWS 範圍內、為估算非實測；r 缺中文輸入，a 只基於現有標籤。",
+    "主圖新製、黑與灰比較分別重用0327主圖與0322比較圖；主圖尾端看似圓平、未清楚示範淺叉，足趾待核；黑及灰圖尾叉看似偏長。AI 示意非專家認證、不等比例。",
+    "僅部分原生繁殖／越冬國家，不以香港迷鳥證明原生，綠色非全境。"
+  ],
+  "withheldScores": {}
+}

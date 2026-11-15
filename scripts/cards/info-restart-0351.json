@@ -1,0 +1,168 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0351",
+  "name": "方尾鶲",
+  "scientificName": "Culicicapa ceylonensis",
+  "illustrationTaxon": "Adult-like Culicicapa ceylonensis; sex and subspecies unverified; AI interpretation.",
+  "similarSpecies": [
+    {
+      "zh": "火冠雀",
+      "scientificName": "Cephalopyrus flammiceps",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖雄鳥橙紅額喉，較短小。"
+    },
+    {
+      "zh": "黃腹山雀",
+      "scientificName": "Periparus venustulus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥黑頭黑喉、白頰。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.12,
+      0.5,
+      0.39
+    ],
+    [
+      0.27,
+      0.15,
+      0.45,
+      0.34
+    ],
+    [
+      0.46,
+      0.28,
+      0.68,
+      0.51
+    ],
+    [
+      0.38,
+      0.4,
+      0.63,
+      0.64
+    ]
+  ],
+  "featureLabels": [
+    "灰色頭部",
+    "白色眼圈",
+    "橄欖綠翼",
+    "黃色腹部"
+  ],
+  "featureNotes": [
+    "灰色頭部。",
+    "白色眼圈。",
+    "橄欖綠翼。",
+    "黃色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PAK",
+      "LKA",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0270/034400",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/grey-headed-canary-flycatcher-culicicapa-ceylonensis",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/gyhcaf1",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0270/034500",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0270/034600",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 12–13 cm，香港常見冬候及過境鳥；BirdLife 2024 全球 LC、趨勢疑下降。",
+    "i=2 a=3.3 v=2.5 c=1.2 沿 runtime；翼長58.4 mm 粗估12.848 cm，在參考範圍，vEst 仍顯示；c 無中文保育正文非完整評估。英文要點截斷且研究輸入未納入英文遷徙，r/o 遮蔽。",
+    "AI 圖頭形、眼圈、尾形和足趾比例待專家核實；比較鳥示繁殖雄火冠雀及雄黃腹山雀，並非等比例。"
+  ],
+  "withheldScores": {
+    "r": "英文要點截斷，研究輸入未納入英文遷徙，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

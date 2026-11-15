@@ -1,0 +1,159 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依較早 HKBWS"
+  },
+  "id": "0398",
+  "name": "淡眉柳鶯",
+  "scientificName": "Phylloscopus humei",
+  "illustrationTaxon": "Adult-like Phylloscopus humei; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黃眉柳鶯",
+      "scientificName": "Phylloscopus inornatus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "通常較鮮綠，喙足較淡，翼帶較顯；叫聲不同。"
+    },
+    {
+      "zh": "黃腰柳鶯",
+      "scientificName": "Phylloscopus proregulus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "較鮮黃，中央冠紋明顯，具有黃色腰斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.18,
+      0.43,
+      0.32
+    ],
+    [
+      0.42,
+      0.23,
+      0.6,
+      0.37
+    ],
+    [
+      0.36,
+      0.37,
+      0.62,
+      0.51
+    ],
+    [
+      0.28,
+      0.43,
+      0.55,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "淡色眉紋",
+    "灰褐色背",
+    "淡色翼斑",
+    "白色腹部"
+  ],
+  "featureNotes": [
+    "淡色眉紋，為插圖局部。",
+    "灰褐色背，為插圖局部。",
+    "淡色翼斑，為插圖局部。",
+    "白色腹部，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "BGD",
+      "CHN",
+      "IND",
+      "KAZ",
+      "NPL",
+      "PAK",
+      "RUS"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/037800",
+      "use": "Identification, conservation, distribution, length or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/humwar1",
+      "use": "Identification, conservation, distribution, length or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/037900",
+      "use": "Identification, conservation, distribution, length or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038100",
+      "use": "Identification, conservation, distribution, length or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 10–11 cm，香港罕見冬候及過境，多數記錄為 mandellii；較早 HKBWS 全球 LC、趨勢穩定。BirdLife 數字及名稱 URL 均返回空模板，未能核實最新趨勢。eBird 頁先前顯示 IUCN 2025 LC。地圖只選 HKBWS 列明部分國家，不代表全境或季節。",
+    "i=2 c=1.2 沿 runtime，c 原中文無保育正文，非完整評估；英文食性欄錯置英國迷鳥，食性索引無可核依據，a 待查；翼54.6 mm 估12.012 cm 高於參考，v 待查留 vEst；funFact 截句，voice 分類錯置，conservation 遷徙錯置，r/o 待查。",
+    "AI 圖喙相對較長、棲枝與趾接觸仍不自然，頭頂淡冠及尾羽細節需核；不是精確鑑別圖，與黃眉靠鳴聲及多項形態判別。"
+  ],
+  "withheldScores": {
+    "a": "英文食性欄為英國迷鳥，索引食性未見來源支持；適應分待查。",
+    "v": "翼長推估體長高於參考，觀賞分待查且保留 vEst。",
+    "r": "中文 funFact 截句，英文鳴聲及保育欄錯置分類及遷徙，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

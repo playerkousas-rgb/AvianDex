@@ -1,0 +1,160 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0391",
+  "name": "白喉紅臀鵯",
+  "scientificName": "Pycnonotus aurigaster",
+  "illustrationTaxon": "Adult-like Pycnonotus aurigaster; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紅耳鵯",
+      "scientificName": "Pycnonotus jocosus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥高黑冠、白頰及眼後紅斑；同具紅色尾下覆羽。"
+    },
+    {
+      "zh": "黑短腳鵯",
+      "scientificName": "Hypsipetes leucocephalus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "香港成鳥白頭、暗身與橙紅喙足，無紅臀。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.14,
+      0.14,
+      0.4,
+      0.32
+    ],
+    [
+      0.38,
+      0.29,
+      0.69,
+      0.48
+    ],
+    [
+      0.25,
+      0.35,
+      0.48,
+      0.56
+    ],
+    [
+      0.58,
+      0.52,
+      0.7,
+      0.64
+    ]
+  ],
+  "featureLabels": [
+    "黑色頭喉",
+    "褐色折翼",
+    "灰褐胸腹",
+    "紅色臀部"
+  ],
+  "featureNotes": [
+    "黑色頭喉。",
+    "褐色折翼。",
+    "灰褐胸腹。",
+    "紅色臀部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "KHM",
+      "CHN",
+      "IDN",
+      "LAO",
+      "MMR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/036100",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22712699",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/sohbul1",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/036000",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/035800",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 19–21 cm，香港局部留鳥、分布下降；BirdLife 2024 LC、疑全球下降、數量未知，將新加坡列引入並未列馬來西亞，地圖不納入。",
+    "i=2 v=3.1 c=1.2 沿 runtime，c 缺中文保育正文非完整評估；AVONET 翼91.8 mm 估20.196 cm 屬參考範圍，保留 vEst；a 缺值不補；研究中文僅分布，r/o 待查。",
+    "AI 主圖頭冠比實鳥豎立，臀斑及尾羽腳趾比例待核；紅耳鵯對照冠較誇張，無法憑圖鑑別。"
+  ],
+  "withheldScores": {
+    "r": "中文研究資料只有分布，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

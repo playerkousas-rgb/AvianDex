@@ -1,0 +1,161 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0334",
+  "name": "虎紋伯勞",
+  "scientificName": "Lanius tigrinus",
+  "illustrationTaxon": "Adult male-like Lanius tigrinus, AI interpretation.",
+  "similarSpecies": [
+    {
+      "zh": "牛頭伯勞",
+      "scientificName": "Lanius bucephalus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥栗頭灰背、折翼有白斑。"
+    },
+    {
+      "zh": "紅背伯勞",
+      "scientificName": "Lanius collurio",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥灰頭栗背、不具虎紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.55,
+      0.12,
+      0.73,
+      0.27
+    ],
+    [
+      0.63,
+      0.15,
+      0.84,
+      0.32
+    ],
+    [
+      0.78,
+      0.16,
+      0.91,
+      0.28
+    ],
+    [
+      0.41,
+      0.29,
+      0.61,
+      0.46
+    ]
+  ],
+  "featureLabels": [
+    "灰色頭頂",
+    "黑色面罩",
+    "鉤狀喙",
+    "栗背黑斑"
+  ],
+  "featureNotes": [
+    "灰色頭頂。",
+    "黑色面罩。",
+    "鉤狀喙。",
+    "栗背黑斑。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "MMR",
+      "LAO",
+      "VNM",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031500",
+      "use": "Identification, range, Hong Kong occurrence and global conservation."
+    },
+    {
+      "url": "https://ebird.org/species/tigshr1",
+      "use": "Identification and IUCN where displayed."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031600",
+      "use": "Comparison species identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031800",
+      "use": "Comparison species identification."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 體長17–19 cm、香港罕見早秋過境及單一春季紀錄，全球 LC 趨勢下降；幾乎所有香港紀錄為第一年鳥，本圖示雄成鳥。Cornell 全球 IUCN 2025 LC。",
+    "顯示 i=2、a=3.3、v=3；a 基於現有林地農田與昆蟲標籤，非完整生態評估。vEst 由翼長82.4 mm×0.22≈18.128 cm，屬粗估非實測；原要點有截斷、保育「不被認為面臨威脅」誤觸關鍵詞，r/c/o 遮蔽不補算。",
+    "主圖與兩比較圖均本批新製；虎紋圖頭罩、斑紋、尾比例及足趾須專家核實；比較牛頭圖白翼斑位置和紅背圖白尾緣比例待核。AI 示意不等比例。",
+    "世界底圖僅選 HKBWS 所述部分原生繁殖及非繁殖國家；不分季節，綠色非全境。"
+  ],
+  "withheldScores": {
+    "r": "研究要點有截斷片語，研究分待查。",
+    "c": "保育原文「不被認為面臨威脅」否定語句誤觸威脅詞，保育分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

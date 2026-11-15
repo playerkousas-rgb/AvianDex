@@ -1,0 +1,131 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0320",
+  "name": "小灰山椒鳥",
+  "scientificName": "Pericrocotus cantonensis",
+  "illustrationTaxon": "Adult male-like P. cantonensis, age and sex artistic interpretation.",
+  "similarSpecies": [
+    {
+      "zh": "灰山椒鳥",
+      "scientificName": "Pericrocotus divaricatus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥後頂黑、下體較白。"
+    },
+    {
+      "zh": "粉紅山椒鳥",
+      "scientificName": "Pericrocotus roseus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥胸及翼帶粉紅色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.14,
+      0.44,
+      0.24
+    ],
+    [
+      0.3,
+      0.15,
+      0.49,
+      0.26
+    ],
+    [
+      0.29,
+      0.2,
+      0.46,
+      0.31
+    ],
+    [
+      0.42,
+      0.22,
+      0.65,
+      0.37
+    ]
+  ],
+  "featureLabels": [
+    "白額眉",
+    "深色眼線",
+    "淡色喉部",
+    "灰褐上體"
+  ],
+  "featureNotes": [
+    "雄型白額和眉向後延伸。",
+    "深色眼先及眼線。",
+    "白色喉部。",
+    "灰褐色背部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0230/031100",
+      "use": "18–19 cm, identification, Hong Kong passage, range and IUCN."
+    },
+    {
+      "url": "https://ebird.org/species/brrmin1",
+      "use": "2025 global IUCN LC, plumage."
+    },
+    {
+      "url": "https://ebird.org/species/ashmin1",
+      "use": "Ashy Minivet comparison."
+    },
+    {
+      "url": "https://ebird.org/species/rosmin1",
+      "use": "Rosy Minivet comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores and vEst."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "88.4 mm AVONET wing input."
+    }
+  ],
+  "notes": [
+    "HKBWS 18–19 cm、香港稀少過境、全球 LC 趨勢下降；Cornell 2025 全球 LC。",
+    "六分沿 runtime：i=2、a=2.8、v=3.1、r=2.5、c=1.2、o=2.3；vEst 翼長88.4 mm×0.22約19.448 cm，略超18–19 cm，為粗估非實測。食性資料缺漏，a 和 c 非完整評估。",
+    "重用 0318 小灰比較圖作主圖，灰山椒比較圖重用 0319、粉紅比較圖新製；主鳥背部較棕，可能比資料所述雄鳥灰背暖，眼紋、腰色、足趾待核；粉紅比較圖眼後深色範圍及翼斑待核。AI 示意非專家認證、不等比例。",
+    "世界底圖僅部分繁殖／越冬原生國家，綠色非全境。"
+  ]
+}

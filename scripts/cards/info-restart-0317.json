@@ -1,0 +1,146 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0317",
+  "name": "赤紅山椒鳥",
+  "scientificName": "Pericrocotus speciosus",
+  "illustrationTaxon": "Adult male-like P. speciosus mainland form; subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "灰喉山椒鳥",
+      "scientificName": "Pericrocotus solaris",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥灰頭淡灰喉。"
+    },
+    {
+      "zh": "長尾山椒鳥",
+      "scientificName": "Pericrocotus ethologus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥翼斑形狀較簡單。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.3,
+      0.13,
+      0.48,
+      0.27
+    ],
+    [
+      0.3,
+      0.19,
+      0.48,
+      0.3
+    ],
+    [
+      0.48,
+      0.32,
+      0.66,
+      0.47
+    ],
+    [
+      0.37,
+      0.35,
+      0.55,
+      0.53
+    ]
+  ],
+  "featureLabels": [
+    "黑色頭部",
+    "喉胸交界",
+    "紅色翼斑",
+    "赤紅下體"
+  ],
+  "featureNotes": [
+    "雄型黑色頭頂。",
+    "黑色喉部與紅色胸部交界。",
+    "折翼可見紅斑。",
+    "胸腹赤紅。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "NPL",
+      "BTN",
+      "IND",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL"
+    ],
+    "note": "Partial native-country overview; no distinction between seasons or subspecies, no full-country occupancy. Taxonomic limits vary among authorities."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0230/030800",
+      "use": "17–22 cm, plumage, HK status, caterpillar diet, range and LC."
+    },
+    {
+      "url": "https://ebird.org/species/scamin1",
+      "use": "Identification, regional plumage and taxonomy."
+    },
+    {
+      "url": "https://ebird.org/species/gycmin1",
+      "use": "Grey-chinned Minivet comparison."
+    },
+    {
+      "url": "https://ebird.org/species/lotmin1",
+      "use": "Long-tailed Minivet comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Truncated highlights and food, English diet insect."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Missing insect tag."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores."
+    }
+  ],
+  "notes": [
+    "HKBWS 17–22 cm，香港常見留鳥、全球 LC；羽色按大陸雄型示意，不代表所有亞種。",
+    "i=2、v=3.1、c=1.2 沿 runtime；v 為20–22 cm中點，c 缺中文輸入非完整評估。原英文食性提昆蟲卻未入標籤，a 遮蔽；原要點截斷，r 及綜合 o 遮蔽、不補算。",
+    "已目視三圖；主鳥喉紅色可能延至過高、翼斑及足趾待核；長尾比較圖尾極長且分叉、翼斑形狀未準確示範，非專家認證、不等比例。",
+    "世界圖僅部分原生國家概覽，綠色非全境；分類及各地羽色有差異。"
+  ],
+  "withheldScores": {
+    "a": "食性原英文提昆蟲但 explorer 食性標籤為空，適應力分遮蔽。",
+    "r": "原中文要點多項截斷，研究分遮蔽。",
+    "o": "綜合分依賴受影響的 a/r，暫遮蔽、不補算。"
+  }
+}

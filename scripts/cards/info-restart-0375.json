@@ -1,0 +1,159 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2025"
+  },
+  "id": "0375",
+  "name": "北蝗鶯",
+  "scientificName": "Helopsaltes ochotensis",
+  "illustrationTaxon": "Adult-like Helopsaltes ochotensis; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "史氏蝗鶯",
+      "scientificName": "Helopsaltes pleskei",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "通常較大、喙及尾較長，上體較灰而均勻。"
+    },
+    {
+      "zh": "小蝗鶯",
+      "scientificName": "Helopsaltes certhiola",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "背有明顯深色縱紋，眉紋通常更顯。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.265,
+      0.16,
+      0.37,
+      0.25
+    ],
+    [
+      0.41,
+      0.31,
+      0.62,
+      0.5
+    ],
+    [
+      0.34,
+      0.38,
+      0.52,
+      0.57
+    ],
+    [
+      0.64,
+      0.5,
+      0.82,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "淡色眉紋",
+    "褐色折翼",
+    "淡色腹部",
+    "褐色尾羽"
+  ],
+  "featureNotes": [
+    "淡色眉紋。",
+    "褐色折翼。",
+    "淡色腹部。",
+    "褐色尾羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IDN",
+      "JPN",
+      "MYS",
+      "PHL",
+      "RUS",
+      "KOR",
+      "TWN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/041700",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/middendorffs-grasshopper-warbler-helopsaltes-ochotensis",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/041800",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0340/041600",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 14–15 cm，香港罕見秋季過境；BirdLife 2025 LC、全球趨勢未知，與較早 HKBWS 下降不同；BirdLife 範圍文字誤含非本種歐非資料，不採用。",
+    "i=2 c=1.2 沿 runtime；c 缺中文保育正文非完整評估。食性昆蟲未納及草地濕地與 forest 標籤不同，a 待查；翼69.5 mm 估15.29 cm 略高 HKBWS，v 待查並留 vEst；鳴聲及要點截斷 r/o 待查。",
+    "AI 圖喙略長、尾羽比例及足趾待專家核，對照圖不等比例。"
+  ],
+  "withheldScores": {
+    "a": "棲地及食性標籤與參考來源不一致，適應分待查。",
+    "v": "翼長估體長略高於參考範圍，觀賞分待查並留 vEst。",
+    "r": "鳴聲及要點截斷，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

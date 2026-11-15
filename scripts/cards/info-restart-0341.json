@@ -1,0 +1,171 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2025"
+  },
+  "id": "0341",
+  "name": "松鴉",
+  "scientificName": "Garrulus glandarius",
+  "illustrationTaxon": "Adult-like Garrulus glandarius; AI interpretation, sex and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "灰喜鵲",
+      "scientificName": "Cyanopica cyanus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "黑頭、藍翼及長藍尾。"
+    },
+    {
+      "zh": "紅嘴藍鵲",
+      "scientificName": "Urocissa erythroryncha",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "紅喙、黑頭及長藍尾。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.65,
+      0.09,
+      0.81,
+      0.25
+    ],
+    [
+      0.66,
+      0.2,
+      0.8,
+      0.32
+    ],
+    [
+      0.48,
+      0.38,
+      0.67,
+      0.53
+    ],
+    [
+      0.4,
+      0.45,
+      0.56,
+      0.58
+    ]
+  ],
+  "featureLabels": [
+    "淡色虹膜",
+    "黑色鬚紋",
+    "藍黑翼紋",
+    "白色翼羽"
+  ],
+  "featureNotes": [
+    "淡色虹膜。",
+    "黑色鬚紋。",
+    "藍黑翼紋。",
+    "白色翼羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "ESP",
+      "DEU",
+      "POL",
+      "ITA",
+      "MAR",
+      "DZA",
+      "TUR",
+      "RUS",
+      "MNG",
+      "CHN",
+      "KOR",
+      "JPN",
+      "TWN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033200",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/eurasian-jay-garrulus-glandarius",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/animals/birds/jay/",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033300",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033400",
+      "use": "Identification, range, status or comparative reference; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 32–35 cm，香港曾為留鳥、1980年代以來大減、現為罕見訪客；HKBWS 推測曾繁殖但缺實證。BirdLife 2025 全球 LC、趨勢穩定，不同於香港本地歷史趨勢。",
+    "i=2、c=1.2 沿 runtime，c 無中文保育正文非完整評估；中文食性僅列部分動物，缺橡實和昆蟲標籤，a 遮蔽；vEst 181.4 mm×0.22≈39.908 cm 超過32–35 cm，v 遮蔽保留估算提示；語源欄僅舊分類名，r/o 待查不補算。",
+    "主圖新製，比較使用本批灰喜鵲及紅嘴藍鵲圖；松鴉翅羽黑白配色、頭頂紋及足趾須核；紅嘴藍鵲冠紋、尾和趾待核。AI 示意不等比例、非專家認證。",
+    "地圖只列 BirdLife 部分原生國家，未分亞種；不同亞種頭羽差異顯著，圖未定亞種。綠色非全境。"
+  ],
+  "withheldScores": {
+    "a": "中文食性只提部分動物，漏橡實、昆蟲等主要食物標籤，適應力待查。",
+    "v": "翼長估體長高於參考範圍，觀賞分待查並保留估算提示。",
+    "r": "語源欄僅述過往學名而非詞源，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

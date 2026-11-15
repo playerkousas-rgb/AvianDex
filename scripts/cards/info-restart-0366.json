@@ -1,0 +1,171 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0366",
+  "name": "黑眉葦鶯",
+  "scientificName": "Acrocephalus bistrigiceps",
+  "illustrationTaxon": "Adult-like Acrocephalus bistrigiceps; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "靴籬鶯",
+      "scientificName": "Iduna caligata",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "眉紋上方深邊較窄。"
+    },
+    {
+      "zh": "厚嘴葦鶯",
+      "scientificName": "Arundinax aedon",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "體形較大、頭部較素、嘴基較厚。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.21,
+      0.23,
+      0.43,
+      0.33
+    ],
+    [
+      0.19,
+      0.25,
+      0.4,
+      0.35
+    ],
+    [
+      0.37,
+      0.35,
+      0.63,
+      0.53
+    ],
+    [
+      0.29,
+      0.38,
+      0.5,
+      0.57
+    ]
+  ],
+  "featureLabels": [
+    "深色眉邊",
+    "淡色眉紋",
+    "棕色折翼",
+    "淡色腹部"
+  ],
+  "featureNotes": [
+    "深色眉邊。",
+    "淡色眉紋。",
+    "棕色折翼。",
+    "淡色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "JPN",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PRK",
+      "KOR",
+      "RUS",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/040700",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/black-browed-reed-warbler-acrocephalus-bistrigiceps",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/bbrwar1",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/041300",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/041200",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 13.5–14 cm，香港秋季常見過境、春不常見；BirdLife 2024 LC 全球疑穩定。",
+    "i=2 沿 runtime；a 缺值保留；翼52.7 mm估11.594 cm 低於參考，v 待查保留 vEst；遷徙資料置繁殖欄未納研究輸入，r 待查；中文保育狀況稱令人擔憂，BirdLife 2024 未指出重大威脅，c/o 待查。",
+    "插圖眼部與眉邊近似概念圖，腳趾與羽形待核，勿用作鑑定；對照鳥不等比例。"
+  ],
+  "withheldScores": {
+    "v": "翼長估體長低於 HKBWS 參考，觀賞分待查保留 vEst。",
+    "r": "遷徙資料錯置繁殖欄而未納入研究輸入，研究分待查。",
+    "c": "保育正文與最新 BirdLife 趨勢及威脅敘述存在差異，保育分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

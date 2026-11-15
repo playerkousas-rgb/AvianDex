@@ -1,0 +1,130 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0318",
+  "name": "琉球山椒鳥",
+  "scientificName": "Pericrocotus tegimae",
+  "illustrationTaxon": "Adult male-like Pericrocotus tegimae; age and sex are artistic interpretation.",
+  "similarSpecies": [
+    {
+      "zh": "灰山椒鳥",
+      "scientificName": "Pericrocotus divaricatus",
+      "asset": "sim0-better-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥後頂與後頸較黑，上體較淡。"
+    },
+    {
+      "zh": "小灰山椒鳥",
+      "scientificName": "Pericrocotus cantonensis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥較淺，腰褐、白眉較長。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.24,
+      0.11,
+      0.42,
+      0.22
+    ],
+    [
+      0.29,
+      0.15,
+      0.47,
+      0.26
+    ],
+    [
+      0.3,
+      0.21,
+      0.47,
+      0.38
+    ],
+    [
+      0.29,
+      0.25,
+      0.46,
+      0.42
+    ]
+  ],
+  "featureLabels": [
+    "白色額眉",
+    "深色臉側",
+    "淡色喉胸",
+    "胸側羽色"
+  ],
+  "featureNotes": [
+    "雄型有白色額與眉。",
+    "深色耳羽。",
+    "喉與胸部偏淡。",
+    "胸側灰色與淡色下體相接。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "JPN"
+    ],
+    "note": "Partial native-country overview only; green not full-country occupancy and no separation of seasons. Records outside core range may be accidental."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0230/031000",
+      "use": "18–21 cm, identification, Hong Kong accidental, Japan range, conservation."
+    },
+    {
+      "url": "https://ebird.org/species/ryumin1",
+      "use": "Global IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Ryukyu_minivet",
+      "use": "Japanese range, taxonomy and Jeju record; outlying records not mapped as native."
+    },
+    {
+      "url": "https://ebird.org/species/ashmin1",
+      "use": "Ashy Minivet comparison."
+    },
+    {
+      "url": "https://www.shanghaibirding.com/birds-of-china/swinhoes-minivet/",
+      "use": "Swinhoe's Minivet comparison."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "86 mm AVONET wing measurement for vEst."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores and vEst."
+    }
+  ],
+  "notes": [
+    "HKBWS 18–21 cm，香港偶然迷鳥；日本琉球群島及九州、四國、本州西部出現，HKBWS 全球 LC 趨勢上升；Cornell 全球 IUCN 2025 LC。韓國濟州等零星紀錄不據此當作原生地。",
+    "六分沿 runtime：i=2、a=2.3、v=3、r=1、c=1.2、o=1.9；vEst 翼長86 mm×0.22約18.92 cm，屬粗估非實測，落於18–21 cm；a 食性資料缺失，r/c 缺中文材料，並非完整評估。",
+    "主鳥灰色頭背、白額眉及深色胸側已目視；白眉可能過長、胸側及尾羽形狀待核。比較圖灰山椒鳥為新繪且重用作 0319 主圖；小灰圖腰色及比例待核。AI 示意非專家認證、不等比例。",
+    "世界圖僅日本原生國家概覽，綠色非全境，並未表明全國有分布。"
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0371",
+  "name": "東方大葦鶯",
+  "scientificName": "Acrocephalus orientalis",
+  "illustrationTaxon": "Adult-like Acrocephalus orientalis; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "厚嘴葦鶯",
+      "scientificName": "Arundinax aedon",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "通常較小，臉部較素，嘴基厚。"
+    },
+    {
+      "zh": "鈍翅葦鶯",
+      "scientificName": "Acrocephalus concinens",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "通常較小，翅短而眉紋較弱。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.075,
+      0.095,
+      0.38,
+      0.345
+    ],
+    [
+      0.28,
+      0.16,
+      0.48,
+      0.27
+    ],
+    [
+      0.48,
+      0.36,
+      0.74,
+      0.56
+    ],
+    [
+      0.31,
+      0.35,
+      0.52,
+      0.53
+    ]
+  ],
+  "featureLabels": [
+    "粗長尖喙",
+    "淡色眉紋",
+    "棕色折翼",
+    "淡色腹部"
+  ],
+  "featureNotes": [
+    "粗長尖喙。",
+    "淡色眉紋。",
+    "棕色折翼。",
+    "淡色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "JPN",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "PRK",
+      "KOR",
+      "PHL",
+      "RUS",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/040600",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/oriental-reed-warbler-acrocephalus-orientalis",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/orrwar1",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/041200",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0330/040800",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 17–19 cm，香港秋季常見過境；BirdLife 2024 LC、全球疑下降。",
+    "i=2 v=2.9 沿 runtime；翼79 mm 推估17.38 cm 屬 HKBWS 範圍內，保留 vEst；食性欄混入棲地致誤標種子及植物，a 待查；要點截斷及英文遷徙未納，r 待查；保育正文僅描述繁殖密度、未反映 BirdLife 受脅，c/o 待查。",
+    "AI 圖胸縱紋較明顯，尾羽及隱藏一腳待核；相似圖不等比例，勿憑插圖鑑定。"
+  ],
+  "withheldScores": {
+    "a": "食性欄混棲地，誤標種子及植物，適應分待查。",
+    "r": "要點截斷且英文遷徙未納研究輸入，研究分待查。",
+    "c": "保育正文只描述密度，未反映 BirdLife 棲地破壞，保育分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

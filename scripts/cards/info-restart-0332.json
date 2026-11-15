@@ -1,0 +1,157 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0332",
+  "name": "紫綬帶",
+  "scientificName": "Terpsiphone atrocaudata",
+  "illustrationTaxon": "Adult breeding male-like T. atrocaudata, subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黑枕王鶲",
+      "scientificName": "Hypothymis azurea",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥藍身、黑枕及胸帶。"
+    },
+    {
+      "zh": "綬帶",
+      "scientificName": "Terpsiphone incei",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "栗色型雄鳥背翼及長尾栗色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.07,
+      0.38,
+      0.2
+    ],
+    [
+      0.21,
+      0.1,
+      0.33,
+      0.21
+    ],
+    [
+      0.26,
+      0.17,
+      0.38,
+      0.29
+    ],
+    [
+      0.34,
+      0.25,
+      0.48,
+      0.39
+    ]
+  ],
+  "featureLabels": [
+    "藍色眼圈",
+    "藍色短喙",
+    "黑色胸羽",
+    "白色腹部"
+  ],
+  "featureNotes": [
+    "藍色眼圈。",
+    "藍色短喙。",
+    "黑色胸羽。",
+    "白色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "JPN",
+      "KOR",
+      "CHN",
+      "TWN",
+      "PHL",
+      "LAO",
+      "THA",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/033100",
+      "use": "Identification, range, local and global status."
+    },
+    {
+      "url": "https://ebird.org/species/japfly1",
+      "use": "Identification and global IUCN 2025 where shown."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032900",
+      "use": "Similar species comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/033000",
+      "use": "Similar species comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs and measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs and measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs and measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs and measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs and measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs and measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 雄18.5–20 cm、雌17–18 cm（繁殖雄長尾另延伸）；香港不常見春秋過境；HKBWS 全球 LC 趨勢穩定，Cornell IUCN 2025 LC。",
+    "runtime a/v 缺分，待查不補算；原 i/c 採舊 NT，與 HKBWS 和 Cornell 2025 LC 不同，兩分遮蔽不重算；原研究重點截斷故 r 待查，o 連帶待查。全球評估與局部繁殖族群歷史下降不能混同。",
+    "三種圖均為本批新製，紫綬帶冠看似過高、尾飾較細；綬帶的長尾與冠比例、王鶲枕羽和尾比例待核。AI 示意不等比例、非專家認證。",
+    "只標部分繁殖、遷徙及越冬國家，不分季節／亞種；綠色非全境。"
+  ],
+  "withheldScores": {
+    "i": "runtime 評分輸入為較舊 NT；HKBWS 與 Cornell 2025 均列 LC，重要性待查，不重新計分。",
+    "r": "中文重點含截斷句，研究分待查。",
+    "c": "保育文字含錯置人名及舊 NT；關注度待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

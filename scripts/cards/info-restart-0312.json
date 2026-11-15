@@ -1,0 +1,134 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0312",
+  "name": "冠魚狗",
+  "scientificName": "Megaceryle lugubris",
+  "illustrationTaxon": "Female-like Crested Kingfisher Megaceryle lugubris; age and subspecies unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "斑魚狗",
+      "scientificName": "Ceryle rudis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "黑白對比明顯、白色較多，雌型單胸帶；圖不等比例。"
+    },
+    {
+      "zh": "普通翠鳥",
+      "scientificName": "Alcedo atthis",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "藍色上體及橙色腹部；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.34,
+      0.07,
+      0.7,
+      0.26
+    ],
+    [
+      0.08,
+      0.17,
+      0.43,
+      0.405
+    ],
+    [
+      0.34,
+      0.33,
+      0.58,
+      0.48
+    ],
+    [
+      0.55,
+      0.35,
+      0.82,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "斑駁冠羽",
+    "黑色長喙",
+    "深色胸帶",
+    "斑點上體"
+  ],
+  "featureNotes": [
+    "黑白斑駁冠羽；形態可能誇張。",
+    "長直黑喙。",
+    "雌型深色胸帶，未呈栗色。",
+    "黑白斑點上體。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "IND",
+      "NPL",
+      "BTN",
+      "CHN",
+      "PRK",
+      "JPN",
+      "VNM"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0200/028500",
+      "use": "38–43 cm, identification, HK occurrence and global trend."
+    },
+    {
+      "url": "https://ebird.org/species/crekin1",
+      "use": "Global IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Crested_kingfisher",
+      "use": "subspecies ranges, biology and distribution."
+    },
+    {
+      "url": "https://ebird.org/species/piekin1",
+      "use": "Pied Kingfisher comparison."
+    },
+    {
+      "url": "https://ebird.org/species/comkin1",
+      "use": "Common Kingfisher comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "no runtime entry: all scores missing, not calculated."
+    }
+  ],
+  "notes": [
+    "三張圖新製並目視，主鳥冠羽可能過度誇張、尾可能過長、胸帶形狀和趾序待核，斑魚狗尾及普通翠鳥色彩比例待核。AI 示意非專家認證，不等比例。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 38–43 cm、香港偶見稀少訪鳥且曾嘗試繁殖，全球趨勢下降。",
+    "runtime 無此鳥 dexScores entry，六分全部待查，不從 IUCN 或外部研究補算；無 vEst 旗標。",
+    "世界底圖只顯示部分原生國家，綠色非全境；不代表完整分布。"
+  ],
+  "withheldScores": {}
+}

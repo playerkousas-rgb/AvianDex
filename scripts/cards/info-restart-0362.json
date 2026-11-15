@@ -1,0 +1,168 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0362",
+  "name": "金頭扇尾鶯",
+  "scientificName": "Cisticola exilis",
+  "illustrationTaxon": "Breeding male-like Cisticola exilis; AI interpretation, subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "棕扇尾鶯",
+      "scientificName": "Cisticola juncidis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "頭頂有深色縱紋，尾端常有白尖及暗斑。"
+    },
+    {
+      "zh": "純色山鷦鶯",
+      "scientificName": "Prinia inornata",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "體形細長、尾更長，上體較少深色縱紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.24,
+      0.46,
+      0.35
+    ],
+    [
+      0.26,
+      0.32,
+      0.41,
+      0.45
+    ],
+    [
+      0.39,
+      0.35,
+      0.59,
+      0.49
+    ],
+    [
+      0.48,
+      0.43,
+      0.68,
+      0.56
+    ]
+  ],
+  "featureLabels": [
+    "金棕頭部",
+    "淡色喉部",
+    "深色背紋",
+    "棕色折翼"
+  ],
+  "featureNotes": [
+    "金棕頭部。",
+    "淡色喉部。",
+    "深色背紋。",
+    "棕色折翼。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AUS",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MMR",
+      "NPL",
+      "PNG",
+      "PHL",
+      "TWN",
+      "THA",
+      "TLS",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0350/042500",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/golden-headed-cisticola-cisticola-exilis",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/gohcis1",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0350/042400",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0350/042700",
+      "use": "Identification, range, conservation, comparison, or length; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 9–11.5 cm，香港不常見冬候，當地繁殖未確定；BirdLife 2024 LC、全球估計上升，香港記為迷鳥。",
+    "i=2 v=2.3 c=1.2 沿 runtime，v 輸入範圍中點10.3 cm。中文棲地海拔缺字且 habitat 標籤只得 water，a 待查；要點與分布截斷、遷徙為可能性，r/o 待查。",
+    "圖示繁殖雄鳥，亞種未核；與雌鳥及非繁殖羽不同，腳趾與羽色待專家核對，比較圖僅示意。"
+  ],
+  "withheldScores": {
+    "a": "中文棲地缺字且標籤遺漏主要草地，適應分待查。",
+    "r": "要點截斷且遷徙不確定，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

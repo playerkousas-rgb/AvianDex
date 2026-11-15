@@ -1,0 +1,156 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "無危依香港鳥類資料庫"
+  },
+  "id": "0307",
+  "name": "灰頭綠啄木鳥",
+  "scientificName": "Picus canus",
+  "illustrationTaxon": "Male-like Gray-headed Woodpecker Picus canus black-naped group; age and subspecies unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "黃嘴栗啄木鳥",
+      "scientificName": "Blythipicus pyrrhotis",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "栗褐羽、黃喙；圖不等比例。"
+    },
+    {
+      "zh": "歐洲綠啄木鳥",
+      "scientificName": "Picus viridis",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "紅冠黑面罩，歐洲分佈；圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.43,
+      0.07,
+      0.65,
+      0.19
+    ],
+    [
+      0.4,
+      0.15,
+      0.54,
+      0.29
+    ],
+    [
+      0.29,
+      0.26,
+      0.56,
+      0.5
+    ],
+    [
+      0.43,
+      0.25,
+      0.64,
+      0.53
+    ]
+  ],
+  "featureLabels": [
+    "紅冠及灰頭",
+    "黑色頸羽",
+    "橄欖綠翼",
+    "灰綠下體"
+  ],
+  "featureNotes": [
+    "雄型紅冠及灰頭。",
+    "黑頸及灰頰示意，並非精確亞種鑑定。",
+    "橄欖綠翼羽。",
+    "灰綠下體。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "NOR",
+      "SWE",
+      "FIN",
+      "DEU",
+      "POL",
+      "FRA",
+      "RUS",
+      "CHN",
+      "JPN",
+      "PRK",
+      "KOR",
+      "IND",
+      "NPL",
+      "BTN",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0210/029400",
+      "use": "IUCN LC as shown on HKBWS; HK rare visitor, subspecies and range."
+    },
+    {
+      "url": "https://ebird.org/species/gyfwoo1",
+      "use": "Gray-headed Woodpecker identification and geographical plumage variation; IUCN label absent."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Grey-headed_woodpecker",
+      "use": "25–26 cm European nominate length, range, taxonomy."
+    },
+    {
+      "url": "https://ebird.org/species/eugwoo2",
+      "use": "European Green Woodpecker comparison."
+    },
+    {
+      "url": "https://ebird.org/species/baywoo1",
+      "use": "Bay Woodpecker comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "truncated highlights affect research score."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing length for existing estimate."
+    }
+  ],
+  "notes": [
+    "三張鳥圖目視，主圖黑頸紅冠顯示、喙尾可能過長、足趾待核；歐洲綠啄木鳥比較圖羽色及喙比例待核，黃嘴栗啄木鳥重用 0305；非專家認證、不等比例。",
+    "HKBWS 稱全球 LC、趨勢增加，香港稀少訪鳥；Cornell 本頁無 IUCN 值，故卡標 LC 依 HKBWS，不假稱 Cornell 2025 評估。分佈跨多個不同亞種，維基列歐洲指名亞種 25–26 cm，不能當所有亞種統一體長。",
+    "i=2、a=3.8、v=3.6、c=1.2 沿 runtime；vEst 翼長143.1 mm ×0.22 約31.482 cm，粗估長於維基歐洲指名型 25–26 cm 但亞種可能不同，非實測。r 因要點多項截斷，連帶 o 遮蔽、不補算。",
+    "世界圖僅部分原生國家，不代表全境或完整分佈。"
+  ],
+  "withheldScores": {
+    "r": "原中文要點含多項截斷，研究分受欄位存在影響。",
+    "o": "綜合分依賴受影響研究分，暫不顯示、不補算。"
+  }
+}

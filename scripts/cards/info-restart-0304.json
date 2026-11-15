@@ -1,0 +1,145 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0304",
+  "name": "棕腹啄木鳥",
+  "scientificName": "Dendrocopos hyperythrus",
+  "illustrationTaxon": "Male-like Rufous-bellied Woodpecker Dendrocopos hyperythrus; age and subspecies unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "斑姬啄木鳥",
+      "scientificName": "Picumnus innominatus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "橄欖綠上體、白腹黑斑；圖不等比例。"
+    },
+    {
+      "zh": "小啄木",
+      "scientificName": "Yungipicus canicapillus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "深色上體、淡色黑縱紋下體；外觀地區變化，圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.18,
+      0.06,
+      0.35,
+      0.23
+    ],
+    [
+      0.22,
+      0.25,
+      0.36,
+      0.55
+    ],
+    [
+      0.32,
+      0.27,
+      0.49,
+      0.56
+    ],
+    [
+      0.34,
+      0.57,
+      0.47,
+      0.89
+    ]
+  ],
+  "featureLabels": [
+    "紅色頭冠",
+    "黑白橫斑翼",
+    "棕色胸腹",
+    "尾羽橫斑"
+  ],
+  "featureNotes": [
+    "雄型紅冠；性別及亞種未核實。",
+    "黑白橫斑翼。",
+    "棕橙色胸腹。",
+    "尾羽橫斑；AI 圖尾可能過長。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "BTN",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "RUS",
+      "PRK",
+      "KOR"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0210/029300",
+      "use": "20–25 cm; identification, accidental Hong Kong status and population trend."
+    },
+    {
+      "url": "https://ebird.org/species/rubwoo1",
+      "use": "Cornell global IUCN 2025 LC, identification and distribution."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Rufous-bellied_woodpecker",
+      "use": "19–23 cm length, plumage and ecology."
+    },
+    {
+      "url": "https://ebird.org/species/spepic1",
+      "use": "Speckled Piculet comparison."
+    },
+    {
+      "url": "https://ebird.org/species/gycwoo1",
+      "use": "Gray-capped Pygmy Woodpecker comparison."
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=5A4F2DF69ADE33D1",
+      "use": "traditional Chinese name 小啄木."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and missing values."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime input length 19–23 cm."
+    }
+  ],
+  "notes": [
+    "三張鳥圖目視，主圖尾可能過長、趾序與黑白斑僅 AI 示意；比較圖重用 0303 素材，不等比例且非專家認證。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 20–25 cm、香港偶見、全球趨勢下降，遷徙亞種冬季至西南中國及北印支；runtime 長度 19–23 cm 中點 21 cm 非實測平均。",
+    "runtime i/c 缺分，依規則待查；a=3.3、v=3.1、r=1、o=2.5 沿 runtime，無重算；r 無中文語源、遷徙及要點，非完整學術評估。",
+    "世界圖僅部分記錄原生國家，不以香港偶見當原生範圍，不顯示季節界線。"
+  ],
+  "withheldScores": {}
+}

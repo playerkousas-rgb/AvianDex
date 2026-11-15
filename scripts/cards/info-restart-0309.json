@@ -1,0 +1,150 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0309",
+  "name": "阿穆爾隼",
+  "scientificName": "Falco amurensis",
+  "illustrationTaxon": "Male-like Amur Falcon Falco amurensis; age unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "紅隼",
+      "scientificName": "Falco tinnunculus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥灰頭栗背斑、灰尾黑端；圖不等比例。"
+    },
+    {
+      "zh": "燕隼",
+      "scientificName": "Falco subbuteo",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥灰背、胸部深色縱紋；圖示尾紋不準。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.46,
+      0.12,
+      0.6,
+      0.23
+    ],
+    [
+      0.38,
+      0.25,
+      0.61,
+      0.44
+    ],
+    [
+      0.39,
+      0.43,
+      0.61,
+      0.6
+    ],
+    [
+      0.39,
+      0.55,
+      0.6,
+      0.68
+    ]
+  ],
+  "featureLabels": [
+    "橙紅眼圈",
+    "灰色身羽",
+    "栗紅腿羽",
+    "橙紅色腳"
+  ],
+  "featureNotes": [
+    "橙紅色眼圈。",
+    "深灰身羽。",
+    "雄型栗紅腿羽。",
+    "橙紅色腳；AI 趾爪僅示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "PRK",
+      "IND",
+      "LKA",
+      "THA",
+      "KHM",
+      "ZAF",
+      "BWA",
+      "ZWE",
+      "MOZ"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0220/029800",
+      "use": "28–30 cm, Hong Kong occurrence, identification and distribution."
+    },
+    {
+      "url": "https://ebird.org/species/amufal1",
+      "use": "Global IUCN 2025 LC, identification and migration."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Amur_falcon",
+      "use": "length, migration and taxonomy."
+    },
+    {
+      "url": "https://ebird.org/species/eurkes",
+      "use": "Eurasian Kestrel comparison."
+    },
+    {
+      "url": "https://ebird.org/species/eurhob",
+      "use": "Eurasian Hobby comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores and vEst."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing length used in estimate."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "truncated research inputs."
+    }
+  ],
+  "notes": [
+    "主圖及比較圖重用 0308 圖，三圖、全卡目視；雄型阿穆爾隼示意翼尖不及尾尖，可能不準；燕隼尾有橫斑，與 Cornell 成人素色尾不符。尾與趾爪皆 AI 示意，非專家認證、不等比例。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 28–30 cm、香港秋季常見過境、全球趨勢穩定。",
+    "i=2、a=3.8、c=1.2 沿 runtime；vEst 翼長234.2 mm ×0.22 約51.524 cm，明顯高於 28–30 cm，v 遮蔽但保留估算提示。r 遷徙和要點截斷；v/r/o 一併遮蔽、不補算。",
+    "完整世界圖只列部分原生國家，未劃分繁殖、越冬及過境區，綠色非全境。"
+  ],
+  "withheldScores": {
+    "v": "翼長換算體長約51.524 cm，明顯超過來源28–30 cm，原觀賞分暫遮蔽。",
+    "r": "原遷徙和多項要點截斷，影響研究分欄位判斷。",
+    "o": "綜合分依賴受影響 v/r，暫不顯示、不補算。"
+  }
+}

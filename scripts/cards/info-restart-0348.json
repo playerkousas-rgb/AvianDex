@@ -1,0 +1,161 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0348",
+  "name": "小嘴烏鴉",
+  "scientificName": "Corvus corone",
+  "illustrationTaxon": "Adult-like Corvus corone; AI interpretation, sex and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "禿鼻烏鴉",
+      "scientificName": "Corvus frugilegus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥喙基淡色裸皮。"
+    },
+    {
+      "zh": "大嘴烏鴉",
+      "scientificName": "Corvus macrorhynchos",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "額更隆起，上喙更厚更彎。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.12,
+      0.14,
+      0.29,
+      0.37
+    ],
+    [
+      0.21,
+      0.11,
+      0.36,
+      0.33
+    ],
+    [
+      0.34,
+      0.34,
+      0.57,
+      0.62
+    ],
+    [
+      0.32,
+      0.75,
+      0.52,
+      0.99
+    ]
+  ],
+  "featureLabels": [
+    "黑色喙",
+    "黑色面部",
+    "黑色折翼",
+    "黑色腳趾"
+  ],
+  "featureNotes": [
+    "黑色喙。",
+    "黑色面部。",
+    "黑色折翼。",
+    "黑色腳趾。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "ESP",
+      "DEU",
+      "RUS",
+      "MNG",
+      "CHN",
+      "KAZ",
+      "JPN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/034000",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/carrion-crow-corvus-corone",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033900",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/034200",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 48–53 cm、香港冬季偶然迷鳥；BoW/HKBWS 區分西方與東方亞種，BirdLife 2024 LC 趨勢穩定，與 HKBWS 較早全球趨勢上升不同；BirdLife 全球評估可能含其他分類處理，地圖以 HKBWS 兩型部分原生地示意。",
+    "i=2 c=1.2 沿 runtime，c 無中文保育正文非完整評估；棲地錯置、標籤空 a 待查；500 mm 被索引錯誤當500 cm，v=5 遮蔽；遷徙及要點截斷 r/o 遮蔽，不補算。",
+    "三種圖均本批新製，示意喙基是否具羽、額喙及足趾比例仍待專家核；AI 圖非專家認證、不等比例。",
+    "世界底圖為部分原生國家，不分亞種與季節；香港偶然迷鳥不當原生填色。"
+  ],
+  "withheldScores": {
+    "a": "棲地欄錯置分布，棲地標籤為空，適應力待查。",
+    "v": "500 mm 被索引誤作 500 cm，觀賞分待查。",
+    "r": "遷徙及要點截斷，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

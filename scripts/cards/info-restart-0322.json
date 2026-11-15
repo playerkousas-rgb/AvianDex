@@ -1,0 +1,151 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0322",
+  "name": "暗灰鵑鵙",
+  "scientificName": "Lalage melaschistos",
+  "illustrationTaxon": "Male-like L. melaschistos; age and subspecies not independently verified.",
+  "similarSpecies": [
+    {
+      "zh": "大鵑鵙",
+      "scientificName": "Coracina javensis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "較粗壯，深面喉。"
+    },
+    {
+      "zh": "灰卷尾",
+      "scientificName": "Dicrurus leucophaeus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "尾深叉，無白尾端。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.18,
+      0.12,
+      0.36,
+      0.24
+    ],
+    [
+      0.36,
+      0.27,
+      0.59,
+      0.44
+    ],
+    [
+      0.29,
+      0.3,
+      0.46,
+      0.49
+    ],
+    [
+      0.7,
+      0.76,
+      0.87,
+      0.9
+    ]
+  ],
+  "featureLabels": [
+    "暗色眼罩",
+    "深色折翼",
+    "灰色下體",
+    "尾羽白端"
+  ],
+  "featureNotes": [
+    "眼周暗色。",
+    "折翼深色。",
+    "胸腹灰色。",
+    "尾羽末端白色。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PAK",
+      "NPL",
+      "BTN",
+      "IND",
+      "BGD",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "TWN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0230/031400",
+      "use": "20–24 cm, plumage, habitat, range and conservation; category summary and occurrence body disagree on frequency."
+    },
+    {
+      "url": "https://ebird.org/species/bkwcus1",
+      "use": "Identification and IUCN 2025 LC."
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=FAE71B8FB79BE417",
+      "use": "Subspecies and range."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/031300",
+      "use": "Oriental Cuckooshrike comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032700",
+      "use": "Ashy Drongo comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores and vEst."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Review of source-derived score inputs."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing length."
+    }
+  ],
+  "notes": [
+    "HKBWS 20–24 cm、全球 LC 趨勢下降；其頁首稱稀少而 occurrence 內文稱常見，香港頻率有矛盾，未採單一定論。",
+    "i=2、a=3.3 沿 runtime；vEst 翼長117.9 mm×0.22≈25.938 cm 超出20–24 cm，v 遮蔽但保留估算提示；原要點錯置及截斷 r 遮蔽；原保育文字中的「保護區」誤觸受脅詞，c 遮蔽；o 連帶遮蔽。",
+    "三圖新製；主圖白尾端是否僅尾下可見、臉罩與足趾待核；比較圖灰卷尾分叉過長之可能待核。AI 示意不等比例、非專家認證。",
+    "世界圖僅部分繁殖或越冬國家，綠色非全境；不分季節。"
+  ],
+  "withheldScores": {
+    "v": "翼長估體長25.938 cm 超出 HKBWS 20–24 cm，觀賞分待查。",
+    "r": "要點含錯置圖片說明及截斷，研究分待查。",
+    "c": "保育文字錯置地名「保護區」，誤觸受脅詞，保育關注分待查。",
+    "o": "綜合分依賴待查分項，暫不補算。"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2025"
+  },
+  "id": "0385",
+  "name": "崖沙燕",
+  "scientificName": "Riparia riparia",
+  "illustrationTaxon": "Adult-like Riparia riparia; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "灰喉沙燕",
+      "scientificName": "Riparia chinensis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "灰褐喉與上胸逐漸過渡至白腹，無深胸帶。"
+    },
+    {
+      "zh": "家燕",
+      "scientificName": "Hirundo rustica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體藍黑、額喉赤褐，長叉尾。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.28,
+      0.25,
+      0.39,
+      0.34
+    ],
+    [
+      0.3,
+      0.33,
+      0.41,
+      0.41
+    ],
+    [
+      0.42,
+      0.32,
+      0.65,
+      0.5
+    ],
+    [
+      0.35,
+      0.4,
+      0.55,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "白色喉部",
+    "褐色胸帶",
+    "褐色折翼",
+    "白色腹部"
+  ],
+  "featureNotes": [
+    "白色喉部。",
+    "褐色胸帶。",
+    "褐色折翼。",
+    "白色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CAN",
+      "USA",
+      "MEX",
+      "BRA",
+      "ARG",
+      "GBR",
+      "FRA",
+      "DEU",
+      "RUS",
+      "CHN",
+      "JPN",
+      "IND",
+      "ZAF",
+      "KEN",
+      "EGY",
+      "KAZ",
+      "MNG"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036200",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/collared-sand-martin-riparia-riparia",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036300",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036500",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 約12 cm，香港不常見過境、稀少冬候；BirdLife 2025 LC 全球下降，估3870萬–5040萬成熟個體；BirdLife 香港列繁殖，與 HKBWS 本地季節紀錄不同。",
+    "i=2 v=2.6 沿 runtime，原中文長度12–14 cm 中點13；棲地索引空不反映濕地，a 待查；語音截斷且保育欄錯置夜棲數量，r/c/o 待查。",
+    "AI 主圖褐色胸帶比通常窄帶略寬，尾羽和足趾比例待專家核；比較鳥不等比例。"
+  ],
+  "withheldScores": {
+    "a": "棲地索引空未反映濕地，適應分待查。",
+    "r": "語音截斷及保育欄錯置夜棲內容，研究分待查。",
+    "c": "保育欄錯置夜棲內容且未反映下降，保育分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

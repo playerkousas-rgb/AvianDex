@@ -1,0 +1,168 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0338",
+  "name": "棕背伯勞",
+  "scientificName": "Lanius schach",
+  "illustrationTaxon": "Adult-like Lanius schach; AI interpretation, subspecies and sex unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紅尾伯勞",
+      "scientificName": "Lanius cristatus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "棕色型背褐、尾栗紅。"
+    },
+    {
+      "zh": "灰背伯勞",
+      "scientificName": "Lanius tephronotus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥灰背、翼無白斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.11,
+      0.43,
+      0.24
+    ],
+    [
+      0.4,
+      0.32,
+      0.58,
+      0.47
+    ],
+    [
+      0.52,
+      0.33,
+      0.72,
+      0.54
+    ],
+    [
+      0.7,
+      0.67,
+      0.84,
+      0.82
+    ]
+  ],
+  "featureLabels": [
+    "黑色面罩",
+    "翼上白斑",
+    "栗色腰羽",
+    "深色尾羽"
+  ],
+  "featureNotes": [
+    "黑色面罩。",
+    "翼上白斑。",
+    "栗色腰羽。",
+    "深色尾羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "TWN",
+      "VNM",
+      "IND",
+      "NPL",
+      "MMR",
+      "THA",
+      "LAO",
+      "MYS",
+      "IDN",
+      "PHL",
+      "LKA",
+      "PAK"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031900",
+      "use": "Identification, range, Hong Kong occurrence and global status."
+    },
+    {
+      "url": "https://ebird.org/species/lotshr1",
+      "use": "Identification and IUCN 2025."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031700",
+      "use": "Comparison species identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/032000",
+      "use": "Comparison species identification."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "url": "https://birdsoftheworld.org/bow/species/lotshr1/cur/introduction",
+      "use": "Partial range across subspecies for map."
+    }
+  ],
+  "notes": [
+    "HKBWS 20–25 cm，香港常見繁殖留鳥；本地繁殖分布縮減與全球趨勢未知分開。HKBWS 全球 LC，Cornell IUCN 2025 LC；圖示典型型、非黑色型。",
+    "顯示 i=2、v=3.1、c=1.2 沿 runtime，c 無中文保育正文，不代表完整評估；vEst 翼長92.4 mm×0.22≈20.328 cm 為粗估；食性欄只列偶捕魚漏常見昆蟲、小鳥，a 待查；要點含比較種誤置及截斷，r/o 遮蔽不補算。",
+    "主圖及本批比較圖新製；棕背圖白翼斑位置、栗背範圍和足趾待核；紅尾胸紋與灰背面罩待核。AI 示意非專家認證、不等比例。",
+    "世界底圖按 Cornell Birds of the World 部分原生亞種分布，未細分季節或亞種，綠色非全境。"
+  ],
+  "withheldScores": {
+    "a": "食性欄只列偶捕魚而未標昆蟲、小鳥等，適應力待查。",
+    "r": "要點含比較種誤置與截斷，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

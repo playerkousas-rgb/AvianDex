@@ -1,0 +1,174 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0384",
+  "name": "灰喉沙燕",
+  "scientificName": "Riparia chinensis",
+  "illustrationTaxon": "Adult-like Riparia chinensis; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "崖沙燕",
+      "scientificName": "Riparia riparia",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "白喉與白腹間有深褐胸帶。"
+    },
+    {
+      "zh": "家燕",
+      "scientificName": "Hirundo rustica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "暗藍背、赤褐喉和長叉尾。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.27,
+      0.2,
+      0.39,
+      0.31
+    ],
+    [
+      0.29,
+      0.29,
+      0.4,
+      0.41
+    ],
+    [
+      0.4,
+      0.33,
+      0.61,
+      0.53
+    ],
+    [
+      0.36,
+      0.46,
+      0.54,
+      0.61
+    ]
+  ],
+  "featureLabels": [
+    "灰褐頭部",
+    "灰褐喉胸",
+    "褐色折翼",
+    "白色腹部"
+  ],
+  "featureNotes": [
+    "灰褐頭部。",
+    "灰褐喉胸。",
+    "褐色折翼。",
+    "白色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "PAK",
+      "PHL",
+      "TWN",
+      "TJK",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036300",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/103815539",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/gytmar1",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036200",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0300/036500",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://www.birdforum.net/opus/Grey-throated_Martin",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 10–11 cm、香港迷鳥；BirdLife 2024 LC 全球疑下降、數量未知；列香港、烏茲別克為迷鳥，後者與 HKBWS 分布文字不同，地圖不納入。",
+    "i=2 c=1.2 沿 runtime，中文保育正文缺失非完整評估；食性欄錯置棲地致索引 plant，昆蟲缺漏，a 待查；翼89.9 mm 估19.778 cm 高於參考，v 待查留 vEst；中文研究僅分布且遷徙未納，r/o 待查。",
+    "AI 圖喉部偏白、尾部叉形及翼羽比例待核；崖沙燕對照胸帶較寬，家燕對照尾流蘇偏長；非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "食性欄錯置棲地，昆蟲標籤缺漏，適應分待查。",
+    "v": "翼長估體長大於參考，觀賞分待查並留 vEst。",
+    "r": "中文研究僅分布且遷徙未納，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

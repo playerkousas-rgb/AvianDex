@@ -1,0 +1,167 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0327",
+  "name": "黑卷尾",
+  "scientificName": "Dicrurus macrocercus",
+  "illustrationTaxon": "Adult-like D. macrocercus, sexes similar; subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "灰卷尾",
+      "scientificName": "Dicrurus leucophaeus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "灰色羽毛，常見紅眼。"
+    },
+    {
+      "zh": "髮冠卷尾",
+      "scientificName": "Dicrurus hottentottus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "髮絲狀冠，尾端強烈上翹。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.31,
+      0.045,
+      0.48,
+      0.18
+    ],
+    [
+      0.33,
+      0.16,
+      0.46,
+      0.29
+    ],
+    [
+      0.43,
+      0.27,
+      0.62,
+      0.42
+    ],
+    [
+      0.46,
+      0.52,
+      0.76,
+      0.89
+    ]
+  ],
+  "featureLabels": [
+    "深褐色眼",
+    "藍黑肩羽",
+    "深色折翼",
+    "深叉尾羽"
+  ],
+  "featureNotes": [
+    "成鳥深褐眼。",
+    "深色肩部帶藍色光澤。",
+    "黑色折翼。",
+    "深叉尾。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IRN",
+      "PAK",
+      "IND",
+      "NPL",
+      "BGD",
+      "LKA",
+      "CHN",
+      "TWN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032800",
+      "use": "Identification, HK status, range and global IUCN status."
+    },
+    {
+      "url": "https://ebird.org/species/bladro1",
+      "use": "Identification and IUCN 2025."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime score inputs, taxonomy or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime score inputs, taxonomy or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime score inputs, taxonomy or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime score inputs, taxonomy or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime score inputs, taxonomy or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime score inputs, taxonomy or measurements."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032700",
+      "use": "Ashy Drongo comparison."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/032600",
+      "use": "Hair-crested Drongo comparison."
+    },
+    {
+      "url": "https://www.thainationalparks.com/species/black-drongo",
+      "use": "28 cm and distribution; secondary account."
+    }
+  ],
+  "notes": [
+    "HKBWS 30–31 cm；香港常見夏候鳥及過境、少量冬候；全球 LC 趨勢未知。另有來源記28 cm，runtime 28 cm 依原輸入保留，數據範圍有差異。",
+    "i=2、v=3.5 沿 runtime；食性蜜蜂誤觸花蜜標籤，a 待查；語源錯置亞種、要點截斷及誤名，r 待查；保育受脅詞指其他物種且缺名，c 待查，o 連帶遮蔽、不補算。",
+    "主圖及髮冠比較圖新製，灰卷尾重用0322比較圖；主圖尾叉看來偏長、足趾待核；灰卷尾尾叉長度待核，髮冠尾形及腳趾待核。AI 示意不等比例、非專家認證。",
+    "世界圖只部分原生國家，不區分季節及亞種；關島、北馬里亞納為引入，不視為原生範圍；綠色非全境。"
+  ],
+  "withheldScores": {
+    "a": "中文食性「蜜蜂」中的蜜誤觸花蜜標籤，適應力待查。",
+    "r": "語源欄錯置亞種、要點截斷及多欄誤名，研究分待查。",
+    "c": "原保育文字中下降指被捕食的其他鳥且缺物種名，非黑卷尾受脅資料。",
+    "o": "綜合分依賴待查分項，暫不補算。"
+  }
+}

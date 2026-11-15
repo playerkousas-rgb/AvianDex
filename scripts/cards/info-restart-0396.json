@@ -1,0 +1,170 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0396",
+  "name": "林柳鶯",
+  "scientificName": "Phylloscopus sibilatrix",
+  "illustrationTaxon": "Adult-like Phylloscopus sibilatrix; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "柳鶯",
+      "scientificName": "Phylloscopus trochilus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "較短翼，胸腹色調較柔和漸淡，辨別需綜合鳴聲。"
+    },
+    {
+      "zh": "黃眉柳鶯",
+      "scientificName": "Phylloscopus inornatus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "較小，兩道淡翼斑、白色腹部；沒有黃色喉胸。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.19,
+      0.16,
+      0.41,
+      0.31
+    ],
+    [
+      0.21,
+      0.27,
+      0.39,
+      0.45
+    ],
+    [
+      0.4,
+      0.35,
+      0.66,
+      0.52
+    ],
+    [
+      0.31,
+      0.48,
+      0.56,
+      0.65
+    ]
+  ],
+  "featureLabels": [
+    "黃色眉紋",
+    "黃色喉胸",
+    "橄欖綠翼",
+    "白色腹部"
+  ],
+  "featureNotes": [
+    "黃色眉紋。",
+    "黃色喉胸。",
+    "橄欖綠翼。",
+    "白色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "DEU",
+      "ESP",
+      "POL",
+      "SWE",
+      "FIN",
+      "RUS",
+      "KAZ",
+      "CIV",
+      "GHA",
+      "NGA",
+      "CMR",
+      "COD",
+      "GAB"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/037700",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22715260",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/woowar",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/wlwwar",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/037900",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 11–13 cm，香港偶然迷鳥；BirdLife 2024 LC、全球下降，估1710萬–3000萬成熟個體、資料品質差；BirdLife 中國列迷鳥與 HKBWS 新疆繁殖資料不同，地圖不標中國。",
+    "i=2 c=3 沿 runtime，c 描述加納局部生境減少非完整全球評估；原分類地點山毛櫸觸發 mountain，a 待查；翼75.8 mm 推估16.676 cm 超過參考，v 待查保留 vEst；多處要點及繁殖截句、英文繁殖錯置保育與遷徙未納，r/o 待查。",
+    "AI 圖喉黃色偏鮮、腳部白點及尾羽比例待核，與柳鶯僅示意，不能以圖單獨鑑別。"
+  ],
+  "withheldScores": {
+    "a": "山毛櫸文字可能誤觸發 mountain，適應分待查。",
+    "v": "翼長估體長大於參考，觀賞分待查並留 vEst。",
+    "r": "要點繁殖截斷，遷徙未納及英文繁殖錯置，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0337",
+  "name": "紅尾伯勞",
+  "scientificName": "Lanius cristatus",
+  "illustrationTaxon": "Adult-like Lanius cristatus; AI interpretation, subspecies and sex unverified.",
+  "similarSpecies": [
+    {
+      "zh": "棕背伯勞",
+      "scientificName": "Lanius schach",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "典型型下背栗紅、翼有白斑。"
+    },
+    {
+      "zh": "灰背伯勞",
+      "scientificName": "Lanius tephronotus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥灰背、翼無白斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.17,
+      0.37,
+      0.29
+    ],
+    [
+      0.105,
+      0.165,
+      0.29,
+      0.32
+    ],
+    [
+      0.3,
+      0.29,
+      0.48,
+      0.45
+    ],
+    [
+      0.62,
+      0.6,
+      0.79,
+      0.77
+    ]
+  ],
+  "featureLabels": [
+    "黑色面罩",
+    "鉤狀嘴",
+    "棕色折翼",
+    "棕紅尾羽"
+  ],
+  "featureNotes": [
+    "黑色面罩。",
+    "鉤狀嘴。",
+    "棕色折翼。",
+    "棕紅尾羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "MNG",
+      "CHN",
+      "PRK",
+      "KOR",
+      "JPN",
+      "IND",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "MYS",
+      "IDN",
+      "PHL",
+      "TWN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031700",
+      "use": "Identification, range, Hong Kong occurrence and global status."
+    },
+    {
+      "url": "https://ebird.org/species/brnshr",
+      "use": "Identification and IUCN 2025."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031900",
+      "use": "Comparison species identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/032000",
+      "use": "Comparison species identification."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/brown-shrike-lanius-cristatus",
+      "use": "2024 assessment, population trend and country distribution."
+    }
+  ],
+  "notes": [
+    "HKBWS 17–20 cm，香港春季常見過境、秋季較少、冬季罕見至稀少（頁首 rare、occurrence scarce）；全球 LC，BirdLife 2024 趨勢下降。亞種羽色有變，圖不指定亞種或性別。",
+    "顯示 i=2、v=3、c=1.2 沿 runtime，c 無中文保育正文、不是完整評估；vEst 翼長85 mm×0.22≈18.7 cm，為粗估非實測；棲地欄錯置外貌而缺棲地標籤，a 待查；要點含截斷，r/o 遮蔽不補算。",
+    "主圖及本批比較圖新製；紅尾示棕色型，胸部橫紋、尾長及腳趾待核；棕背白翼斑位置、灰背面罩及足趾待核。AI 示意非專家認證、不等比例。",
+    "地圖僅 BirdLife 部分原生繁殖及非繁殖國家，不分季節／亞種；綠色非全境。"
+  ],
+  "withheldScores": {
+    "a": "棲地欄錯置面貌，棲地標籤缺失，適應力待查。",
+    "r": "要點含多處截斷片語，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

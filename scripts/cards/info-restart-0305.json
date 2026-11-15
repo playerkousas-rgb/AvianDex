@@ -1,0 +1,141 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危"
+  },
+  "id": "0305",
+  "name": "黃嘴栗啄木鳥",
+  "scientificName": "Blythipicus pyrrhotis",
+  "illustrationTaxon": "Male-like Bay Woodpecker Blythipicus pyrrhotis; age and subspecies unverified; AI illustration not independently expert certified.",
+  "similarSpecies": [
+    {
+      "zh": "棕腹啄木鳥",
+      "scientificName": "Dendrocopos hyperythrus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "雄型紅冠、棕腹及黑白翼紋；圖不等比例。"
+    },
+    {
+      "zh": "栗啄木鳥",
+      "scientificName": "Micropternus brachyurus",
+      "asset": "sim1.png",
+      "framing": "whole-bird",
+      "distinction": "短深色喙，雄型眼下紅斑；外觀地區有變化，圖不等比例。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.41,
+      0.08,
+      0.58,
+      0.22
+    ],
+    [
+      0.26,
+      0.16,
+      0.43,
+      0.3
+    ],
+    [
+      0.35,
+      0.27,
+      0.55,
+      0.49
+    ],
+    [
+      0.36,
+      0.38,
+      0.55,
+      0.64
+    ]
+  ],
+  "featureLabels": [
+    "鮮黃長喙",
+    "後頸紅斑",
+    "栗色身羽",
+    "翼羽橫斑"
+  ],
+  "featureNotes": [
+    "鮮黃長喙。",
+    "雄型後頸紅斑。",
+    "栗色體羽。",
+    "栗黑橫斑，AI 羽紋僅示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS"
+    ],
+    "note": "Partial documented native countries only; green does not represent full-country occupancy, complete distribution or seasonal limits."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0210/029500",
+      "use": "26–30 cm; Hong Kong occurrence, identification, distribution, population trend."
+    },
+    {
+      "url": "https://ebird.org/species/baywoo1",
+      "use": "Cornell global IUCN 2025 LC and identification."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Bay_woodpecker",
+      "use": "26.5–30 cm, distribution and ecology; food is not claimed observed in Hong Kong."
+    },
+    {
+      "url": "https://ebird.org/species/rubwoo1",
+      "use": "Rufous-bellied Woodpecker comparison."
+    },
+    {
+      "url": "https://ebird.org/species/rufwoo2",
+      "use": "Rufous Woodpecker comparison."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime scores."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "runtime score inputs."
+    }
+  ],
+  "notes": [
+    "三張鳥圖目視，主圖尾可能過長、喙形及趾序待核；栗啄木鳥比較圖短喙不夠明顯、尾可能過長，棕腹重用 0304 圖；AI 羽紋腳爪不等比例、非專家認證。",
+    "Cornell 全球 IUCN 2025 LC；HKBWS 26–30 cm，香港不常見但增加留鳥，全球趨勢下降；香港食性未有觀察。",
+    "六分沿 runtime i=2、a=3.3、v=3.5、r=1、c=1.2、o=2.2；原長度26.5–30 cm中點約28.3 cm，非個體實測；r/c 缺中文輸入，非完整評估。",
+    "完整世界圖僅部分已記錄原生國家，不代表全境或完整分佈。"
+  ],
+  "withheldScores": {}
+}

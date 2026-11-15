@@ -1,0 +1,150 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0316",
+  "name": "灰喉山椒鳥",
+  "scientificName": "Pericrocotus solaris",
+  "illustrationTaxon": "Adult male-like P. solaris; individual subspecies not independently verified.",
+  "similarSpecies": [
+    {
+      "zh": "赤紅山椒鳥",
+      "scientificName": "Pericrocotus speciosus",
+      "asset": "sim0.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥頭喉黑，翼另有紅斑。"
+    },
+    {
+      "zh": "長尾山椒鳥",
+      "scientificName": "Pericrocotus ethologus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥黑喉，翼斑形狀不同。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.31,
+      0.16,
+      0.5,
+      0.3
+    ],
+    [
+      0.32,
+      0.23,
+      0.49,
+      0.33
+    ],
+    [
+      0.49,
+      0.32,
+      0.66,
+      0.46
+    ],
+    [
+      0.47,
+      0.42,
+      0.65,
+      0.57
+    ]
+  ],
+  "featureLabels": [
+    "灰色頭頂",
+    "淡灰色喉",
+    "橙色翼斑",
+    "橙紅下體"
+  ],
+  "featureNotes": [
+    "雄型頭部中灰色。",
+    "喉部淡灰。",
+    "折翼可見橙色斑。",
+    "胸腹呈橙紅色。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "NPL",
+      "BTN",
+      "IND",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "MYS",
+      "IDN",
+      "TWN",
+      "KHM"
+    ],
+    "note": "Partial native-country overview; no distinction between seasons or subspecies, no full-country occupancy. Taxonomic limits vary among authorities."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0230/030700",
+      "use": "18 cm, HK occurrence, appearance, range, LC and trends."
+    },
+    {
+      "url": "https://ebird.org/species/gycmin1",
+      "use": "Appearance, variation."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Grey-chinned_minivet",
+      "use": "17–19 cm; subspecies range and taxonomic differences."
+    },
+    {
+      "url": "https://indianbirds.thedynamicnature.com/2018/05/grey-chinned-minivet-pericrocotus-solaris.html",
+      "use": "Insect food, corroborates incomplete input."
+    },
+    {
+      "url": "https://ebird.org/species/scamin1",
+      "use": "Scarlet Minivet comparison."
+    },
+    {
+      "url": "https://ebird.org/species/lotmin1",
+      "use": "Long-tailed Minivet comparison."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Wrong diet field and truncated English text."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime scores."
+    }
+  ],
+  "notes": [
+    "HKBWS 雄鳥灰頂灰背淡灰喉，18 cm；香港冬常見夏稀少至不常見、全球穩定 LC。另依 Wikipedia 列 17–19 cm。",
+    "i=2、v=3、r=1、c=1.2 沿 runtime；v 為 17–19 cm 中點，r 和 c 缺中文輸入並非完整評估；食性欄錯置羽色且昆蟲漏標，a/o 遮蔽、不補算。",
+    "主圖灰喉、橙腹及翼斑已目視；灰喉翼斑形狀、各圖趾及比例未經專家核實。長尾比較圖喉色正確但尾極長且分叉、翼斑形狀未準確示範，非專家認證、不等比例。",
+    "世界圖僅部分原生國家概覽，綠色非全境；南部亞種分類有分歧。"
+  ],
+  "withheldScores": {
+    "a": "食性英文欄錯置為羽色而非食物，已知昆蟲食性被漏標；適應力分遮蔽。",
+    "o": "綜合分依賴受影響的適應力分，暫遮蔽、不補算。"
+  }
+}

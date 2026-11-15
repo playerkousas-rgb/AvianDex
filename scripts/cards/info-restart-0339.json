@@ -1,0 +1,163 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依香港鳥類報告"
+  },
+  "id": "0339",
+  "name": "灰背伯勞",
+  "scientificName": "Lanius tephronotus",
+  "illustrationTaxon": "Adult-like Lanius tephronotus; AI interpretation, subspecies and sex unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紅尾伯勞",
+      "scientificName": "Lanius cristatus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "棕色型背褐、尾栗紅。"
+    },
+    {
+      "zh": "棕背伯勞",
+      "scientificName": "Lanius schach",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "典型型下背栗紅、翼有白斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.22,
+      0.065,
+      0.48,
+      0.21
+    ],
+    [
+      0.2,
+      0.13,
+      0.43,
+      0.26
+    ],
+    [
+      0.38,
+      0.27,
+      0.59,
+      0.43
+    ],
+    [
+      0.35,
+      0.41,
+      0.53,
+      0.58
+    ]
+  ],
+  "featureLabels": [
+    "灰色頭頂",
+    "黑色面罩",
+    "灰色背羽",
+    "棕色脅羽"
+  ],
+  "featureNotes": [
+    "灰色頭頂。",
+    "黑色面罩。",
+    "灰色背羽。",
+    "棕色脅羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/032000",
+      "use": "Identification, range, Hong Kong occurrence and global status."
+    },
+    {
+      "url": "https://ebird.org/species/gybshr1",
+      "use": "Identification and IUCN 2025."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031700",
+      "use": "Comparison species identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031900",
+      "use": "Comparison species identification."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/grey-backed-shrike-lanius-tephronotus",
+      "use": "2024 assessment, population trend and country distribution."
+    }
+  ],
+  "notes": [
+    "HKBWS 21–23 cm，香港偶然迷鳥；BirdLife 2024 全球 LC、趨勢穩定。BirdLife 將其稱 fully migratory，而 HKBWS 指部分為留鳥及高地夏候，遷移模式來源有差異。",
+    "i=2、v=3.2、r=1、c=1.2 沿 runtime；vEst 翼長98.6 mm×0.22≈21.692 cm，為粗估非實測；r 缺中文遷徙、語源及要點，c 缺中文保育正文，均非完整評估。英文食性 grasshoppers 的 grass 誤觸植物食性標籤，a/o 遮蔽不補算。",
+    "三種圖均本批新製；灰背圖頭和背均灰、無白翼斑，面罩是否過寬、喙和足趾待核；棕背圖翼斑與栗背範圍、紅尾胸紋待核。AI 示意非專家認證、不等比例。",
+    "地圖僅部分 BirdLife 原生國家，未標來源歸類 uncertain 的巴基斯坦，綠色非全境、不分季節。"
+  ],
+  "withheldScores": {
+    "a": "英文 grasshoppers 含 grass，誤觸植物食性標籤，適應力待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

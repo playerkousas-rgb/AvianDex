@@ -1,0 +1,164 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2025"
+  },
+  "id": "0382",
+  "name": "褐柳鶯",
+  "scientificName": "Phylloscopus fuscatus",
+  "illustrationTaxon": "Adult-like Phylloscopus fuscatus; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "巨嘴柳鶯",
+      "scientificName": "Phylloscopus schwarzi",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "較大壯、喙較鈍粗，眉紋延伸較長。"
+    },
+    {
+      "zh": "棕腹柳鶯",
+      "scientificName": "Phylloscopus subaffinis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "喉和腹更棕黃，下喙多偏暗。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.29,
+      0.2,
+      0.45,
+      0.29
+    ],
+    [
+      0.27,
+      0.22,
+      0.42,
+      0.3
+    ],
+    [
+      0.42,
+      0.34,
+      0.65,
+      0.52
+    ],
+    [
+      0.34,
+      0.4,
+      0.55,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "淡色眉紋",
+    "深色眼紋",
+    "灰褐折翼",
+    "淡色腹部"
+  ],
+  "featureNotes": [
+    "淡色眉紋。",
+    "深色眼紋。",
+    "灰褐折翼。",
+    "淡色腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "JPN",
+      "KAZ",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PRK",
+      "RUS",
+      "KOR",
+      "THA",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038400",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/dusky-warbler-phylloscopus-fuscatus",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038300",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038500",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 11–12 cm，香港常見過境及冬候；BirdLife 2025 LC 全球疑穩定、成熟數未知。",
+    "runtime 0382 無任何分數、詳細資料和測量值，六分皆待查，不自行補值。",
+    "AI 主圖眉與眼紋偏鮮明；兩對照圖羽色及足趾待專家核，圖片並非等比例鑑別依據。"
+  ],
+  "withheldScores": {}
+}

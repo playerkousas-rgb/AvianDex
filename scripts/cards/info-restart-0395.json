@@ -1,0 +1,164 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0395",
+  "name": "綠翅短腳鵯",
+  "scientificName": "Ixos mcclellandii",
+  "illustrationTaxon": "Adult-like Ixos mcclellandii; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "栗背短腳鵯",
+      "scientificName": "Hemixos castanonotus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "栗色背、黑冠黑翼與白喉。"
+    },
+    {
+      "zh": "黑短腳鵯",
+      "scientificName": "Hypsipetes leucocephalus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "香港成鳥白頭黑身、紅橙色喙足。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.21,
+      0.11,
+      0.43,
+      0.27
+    ],
+    [
+      0.24,
+      0.27,
+      0.42,
+      0.43
+    ],
+    [
+      0.38,
+      0.39,
+      0.66,
+      0.61
+    ],
+    [
+      0.32,
+      0.43,
+      0.56,
+      0.6
+    ]
+  ],
+  "featureLabels": [
+    "深褐頭冠",
+    "灰白喉紋",
+    "橄欖綠翼",
+    "淺褐腹部"
+  ],
+  "featureNotes": [
+    "深褐頭冠。",
+    "灰白喉紋。",
+    "橄欖綠翼。",
+    "淺褐腹部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/035600",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22713207",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/moubul2",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/035500",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0290/035800",
+      "use": "Identification, conservation, distribution, length, comparison or taxonomy; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 21–24 cm，香港不常見局部留鳥、本地擴展；BirdLife 2024 LC、全球疑下降、數量未知，較早 HKBWS 列穩定；孟加拉表雖列原生，正文稱稀少或或已滅絕，地圖不採。",
+    "i=2 v=3.3 c=1.2 沿 runtime，c 缺中文保育正文並非完整評估；翼106 mm 估23.32 cm 落參考範圍，保留 vEst。食性欄錯置分布及保育且索引空，a 待查；英文鳴聲錯置分類且僅中文分布，r/o 待查。",
+    "AI 圖冠與喉紋較誇張，黃尾下覆羽不明顯；翼尾和足趾需核，對照不等比例。"
+  ],
+  "withheldScores": {
+    "a": "食性欄錯置分布和保育、索引空，適應分待查。",
+    "r": "英文鳴聲錯置分類且中文資料有限，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

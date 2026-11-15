@@ -1,0 +1,171 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0336",
+  "name": "紅背伯勞",
+  "scientificName": "Lanius collurio",
+  "illustrationTaxon": "Adult male-like Lanius collurio, AI interpretation.",
+  "similarSpecies": [
+    {
+      "zh": "虎紋伯勞",
+      "scientificName": "Lanius tigrinus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥灰頭、栗背帶黑色橫斑。"
+    },
+    {
+      "zh": "牛頭伯勞",
+      "scientificName": "Lanius bucephalus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥栗頭灰背、折翼有白斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.51,
+      0.13,
+      0.69,
+      0.27
+    ],
+    [
+      0.57,
+      0.18,
+      0.74,
+      0.3
+    ],
+    [
+      0.39,
+      0.28,
+      0.59,
+      0.44
+    ],
+    [
+      0.58,
+      0.29,
+      0.72,
+      0.45
+    ]
+  ],
+  "featureLabels": [
+    "灰色頭頂",
+    "黑色面罩",
+    "栗色背翼",
+    "淡粉胸羽"
+  ],
+  "featureNotes": [
+    "灰色頭頂。",
+    "黑色面罩。",
+    "栗色背翼。",
+    "淡粉胸羽。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "FRA",
+      "DEU",
+      "POL",
+      "UKR",
+      "RUS",
+      "KAZ",
+      "TUR",
+      "KEN",
+      "TZA",
+      "ZMB",
+      "ZWE",
+      "ZAF"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031800",
+      "use": "Identification, range, Hong Kong occurrence and global conservation."
+    },
+    {
+      "url": "https://ebird.org/species/rebshr1",
+      "use": "Identification and IUCN where displayed."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031500",
+      "use": "Comparison species identification."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0240/031600",
+      "use": "Comparison species identification."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, copy, score inputs or measurements."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/red-backed-shrike-lanius-collurio",
+      "use": "2024 global IUCN, trend and native-country selection; China assessed vagrant, contrary to HKBWS breeding range."
+    },
+    {
+      "url": "https://www.oiseaux.net/birds/red-backed.shrike.html",
+      "use": "Winter range and migration through Middle East."
+    }
+  ],
+  "notes": [
+    "HKBWS 體長17–19 cm，香港屬偶然迷鳥；當地紀錄均為第一年鳥，本圖為雄成鳥。BirdLife 2024 全球 LC、趨勢穩定。",
+    "顯示 i=2、v=2.9、c=1.2 沿 runtime；v 由原有16–18 cm 中值17 cm，非實測；c 缺中文保育正文。a 因中文食性棲地缺失、英文標籤漏小鳥且棲地標籤空而待查；r 因遷徙文案把中東列越冬區，與來源主要越冬區及過境描述有差異，連同 o 遮蔽不補算。",
+    "HKBWS 提及繁殖範圍達中國西北，BirdLife 國別表將中國列迷鳥，為避免無法解決的分類／分布差異，圖不標中國；地圖為部分原生國家不分季節。",
+    "主圖及比較圖本批新製；紅背圖白色沿尾羽全長但參考僅載尾側基部有白色，尾與足趾待核；虎紋尾比例、牛頭白翼斑位置待核。AI 圖示非專家認證、不等比例。"
+  ],
+  "withheldScores": {
+    "a": "中文食性及棲地缺失，英文食性標籤漏掉小鳥且棲地標籤缺失，適應力待查。",
+    "r": "遷徙文案把中東列為越冬區，與來源描述的主要越冬區及過境區有差異，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

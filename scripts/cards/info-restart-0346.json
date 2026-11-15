@@ -1,0 +1,159 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2018"
+  },
+  "id": "0346",
+  "name": "家鴉",
+  "scientificName": "Corvus splendens",
+  "illustrationTaxon": "Adult-like Corvus splendens; AI interpretation, sex and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "寒鴉",
+      "scientificName": "Coloeus monedula",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "灰頸但成鳥眼白且喙較短。"
+    },
+    {
+      "zh": "大嘴烏鴉",
+      "scientificName": "Corvus macrorhynchos",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "全黑，喙粗大且前額高。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.09,
+      0.13,
+      0.32,
+      0.315
+    ],
+    [
+      0.31,
+      0.13,
+      0.52,
+      0.29
+    ],
+    [
+      0.24,
+      0.2,
+      0.43,
+      0.36
+    ],
+    [
+      0.36,
+      0.29,
+      0.63,
+      0.505
+    ]
+  ],
+  "featureLabels": [
+    "黑色長喙",
+    "灰褐後頸",
+    "黑色喉羽",
+    "深色折翼"
+  ],
+  "featureNotes": [
+    "黑色長喙。",
+    "灰褐後頸。",
+    "黑色喉羽。",
+    "深色折翼。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "PAK",
+      "IND",
+      "LKA",
+      "NPL",
+      "BGD",
+      "BTN",
+      "MMR",
+      "CHN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033800",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/house-crow-corvus-splendens",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/eurjac",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/034200",
+      "use": "Identification, range, conservation, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 體長40–43 cm，香港 IIB 外來入侵留鳥；BirdLife 2018 全球 LC、疑穩定，該頁把香港列 native 與 HKBWS 外來狀態衝突，地圖選南亞部分原生國家，不將香港視原生。",
+    "i=2 v=3.9 沿 runtime（體長40 cm）；a 中文食性爬蟲及農作物漏標、r 要點截斷、c 保育欄錯置香港數量，a/r/c/o 遮蔽不補算。",
+    "家鴉及大嘴圖新製，寒鴉比較用0345素材；家鴉灰頸範圍、喙與趾、大嘴額喙比例待核。AI 圖非專家認證、不等比例。"
+  ],
+  "withheldScores": {
+    "a": "中文食性含爬蟲及農作物，標籤只識昆蟲；適應力待查。",
+    "r": "要點截斷，研究分待查。",
+    "c": "保育欄錯置香港外來群體數量，保育分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

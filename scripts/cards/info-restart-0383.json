@@ -1,0 +1,163 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC 依 BirdLife 2024"
+  },
+  "id": "0383",
+  "name": "小鱗胸鷦鶥",
+  "scientificName": "Pnoepyga pusilla",
+  "illustrationTaxon": "Adult-like Pnoepyga pusilla; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "鱗胸鷦鶥",
+      "scientificName": "Pnoepyga albiventer",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "較大；頭頂及頸有淡色斑點，鳴聲較複雜。"
+    },
+    {
+      "zh": "鱗頭樹鶯",
+      "scientificName": "Urosphena squameiceps",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "有長淡眉、下體無明顯鱗紋。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.4,
+      0.17,
+      0.53,
+      0.27
+    ],
+    [
+      0.54,
+      0.31,
+      0.67,
+      0.43
+    ],
+    [
+      0.4,
+      0.32,
+      0.54,
+      0.48
+    ],
+    [
+      0.55,
+      0.52,
+      0.66,
+      0.76
+    ]
+  ],
+  "featureLabels": [
+    "深褐頭部",
+    "翼上淡斑",
+    "胸腹鱗紋",
+    "淡褐長腳"
+  ],
+  "featureNotes": [
+    "深褐頭部。",
+    "翼上淡斑。",
+    "胸腹鱗紋。",
+    "淡褐長腳。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0310/036900",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22716108",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/scbcup3",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "url": "https://ebird.org/species/asistu1",
+      "use": "Identification, conservation, distribution, length, or comparison; see notes."
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/cardDetails.zh.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/explorerIndex.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "Runtime taxonomy, score inputs or measurements."
+    }
+  ],
+  "notes": [
+    "HKBWS 7.5–9 cm；香港局部常見留鳥，本地分布擴張；BirdLife 2024 LC、全球疑下降，成熟數未知。",
+    "i/c 缺值不補；食性索引空，HKBWS 僅推測食蟲，a 待查；翼50 mm 推估11 cm 大於參考，v 待查保留 vEst；中文研究資料僅分布，r/o 待查。",
+    "AI 主圖胸腹鱗片偏大及嘴腳比例待核；鱗胸比較鳥頭頂淡斑未呈現，兩鳥皆非專家認證，對照不等比例。"
+  ],
+  "withheldScores": {
+    "a": "食性索引空，實際食性待核，適應分待查。",
+    "v": "翼長估體長大於參考，觀賞分待查並留 vEst。",
+    "r": "中文研究資料僅分布，研究分待查。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}
