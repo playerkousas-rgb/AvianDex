@@ -1,0 +1,140 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "id": "0464",
+  "name": "灰背鶇",
+  "scientificName": "Turdus hortulorum",
+  "illustrationTaxon": "Adult male Turdus hortulorum (medium grey head and upperparts, narrow orange band below the chest widening on the flanks, white belly). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "烏灰鶇",
+      "scientificName": "Turdus cardis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同在林地越冬的鶇；雄鳥頭與胸石板灰而與藍灰上體成明顯對比、腹部佈滿大型黑斑、脇沒有橙黃。本種頭、喉、胸同為中灰、橙只在下胸成窄帶並在脇變闊、腹部純白無斑。"
+    },
+    {
+      "zh": "白腹鶇",
+      "scientificName": "Turdus pallidus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同樣常見的冬候鳥，但白腹鶇頭背橄欖褐、胸與脇淡灰、腹白、嘴黃腳淡粉，整體低對比且完全沒有橙黃；本種上體中灰、下胸與脇為鮮明的橙黃。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.355,
+      0.27,
+      0.48,
+      0.395
+    ],
+    [
+      0.46,
+      0.48,
+      0.585,
+      0.605
+    ],
+    [
+      0.515,
+      0.615,
+      0.64,
+      0.74
+    ],
+    [
+      0.265,
+      0.3,
+      0.39,
+      0.425
+    ]
+  ],
+  "featureLabels": [
+    "石板灰上體",
+    "橙黃脇",
+    "白色腹部",
+    "淡黃嘴"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥頭、頸、喉、胸與上體為均勻的中灰；第一齡雄鳥的灰會混入褐色，成鳥雌鳥上體則偏褐、腰與尾上覆羽較灰，為插圖局部。",
+    "橙色在下胸只是窄帶，沿脇向下變闊，與白色腹部成對比；成鳥雌鳥的橙集中在中至下脇、上體褐而胸有粗斑，為插圖局部。",
+    "腹部、肛周與尾下覆羽純白，是與多數鶇區分的重點；雄鳥腹部無斑，雌鳥與第一齡鳥的頦、喉與上胸則有粗褐色斑點，為插圖局部。",
+    "嘴大部分為淡黃至黃色而嘴峯較暗；第一齡鳥的嘴較暗啞，幼鳥更暗，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "PRK",
+      "RUS",
+      "KOR",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists China, Hong Kong (China), Macao (China), North Korea (breeding), Russia (including Asian Russia), South Korea and Vietnam as native. Hong Kong and Macao have no separate geometry on the 110m base map and are folded into China's outline. Japan and Taiwan are VAGRANT entries and are left unshaded. Russia is shaded as a country, not as a claim of breeding range west of the Urals. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0390/046700",
+      "use": "香港第 I 類：多樣林地常見的冬候鳥、不常見過境鳥，是香港兩種最常見鶇之一；20–23 cm，成鳥雄鳥上體、頭、喉與胸為中灰，胸下有一窄帶橙、沿脇變闊，腹部、肛周與尾下覆羽白，嘴大部分淡黃；第一齡雄鳥相似但灰中混褐、胸與上腹有深色斑、部分大覆羽有淡色端、嘴較暗啞；成鳥雌鳥上體褐、腰與尾上覆羽較灰，乳白胸喉有粗褐斑、中至下脇橙，大覆羽純褐；第一齡雌鳥上體暗褐、大覆羽淡色端可見整個冬季、下體斑點更多；飛行叫聲為高頻帶輕微嗡鳴，音高較烏灰鶇略高，警報聲與其他鶇幾乎相同；見於全港多樣林地，包括森林、風水林與較開闊疏林（花園、市區公園），以鬱閉次生林最為偏好；冬季鳥類圖集佔有 1 公里方格比例由 20.9%（2001–05）降至 14.1%（2016–19），顯示分佈較以前收縮，跌幅見於大嶼山南部、港島、西貢與新界東北；香港位於其越冬範圍南緣，冬季變暖可能令部分鳥留在更北；核心越冬期為 11 月第三週至 2 月第三週，最早秋季紀錄 2019-10-31，11 月上半月數量仍低、秋季過境證據不多，2 月大量離開後數量低而平穩至 4 月第一週，之後紀錄很少，部分 3–4 月紀錄相信是過境鳥，最遲春季紀錄 1978-04-25；常成小群、通常不超過 20 隻，在森林中常與烏灰鶇一起，性情害羞隱蔽、只靠高頻嘶聲叫聲得知存在；東北季風南下後數量最多（部分因低溫時不願停止覓食而較顯眼），亦確有真實湧入，如 1992-01-18 大埔滘 50 隻、1992-01-21 嘉道理農場 42 隻，1995-02-02 香港仔郊野公園約 100 隻鶇大多為本種；嘉道理農場與米埔的繫放資料顯示個體會回到同一地點越冬；Swinhoe (1861) 在澳門紀錄的相信是本種且數量豐富，Kershaw (1904)、Vaughan & Jones (1913) 與 Herklots (1953) 皆記為常見冬候鳥、由 11 月中至 5 月初；常在結果樹木與灌木進食（Melia azedarach、Mallotus paniculatus、Ilex rotunda var. microcarpa、Machilus thunbergii、Photinia benthaminiana、Schefflera heptaphylla、Ficus superba、Pavetta hongkongensis、Osmanthus matsumuranus、Syzygium hancei、Psychotria asiatica、Celtis sinensis），亦在落葉層找無脊椎動物、清晨黃昏較多；單型種，繁殖於西伯利亞東南部、中國東北與北韓，冬季在華南與越南北部；IUCN LC、趨勢不明。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/grey-backed-thrush-turdus-hortulorum/details",
+      "use": "IUCN **2018** LC、成熟個體 Unknown、趨勢 Unknown（評語：生境改造影響不確定而難以判斷）、繁殖 EOO **2,170,000 km²**、非繁殖 EOO **1,560,000 km²**、完全遷徙、繁殖 endemic **No**、6 個 IBA／KBA、海拔 0–1,100 m、世代 **6.1 年**、森林依賴度 Medium；生境以溫帶林為繁殖期主要、亞熱帶低地濕林為非繁殖期主要，溫帶與亞熱帶灌叢為適宜；用途為食用（自給、國內）與國際寵物貿易；無系統性監測計畫、已納入國際法規；族群描述在俄羅斯與中國繁殖期常見、北韓罕見、南韓不常見而局部、香港非繁殖期常見至豐富、越南非繁殖期不常見至相當常見；國家表把**香港（中國）與澳門（中國）都列為原生**（本批目前唯一把香港獨立列出者），中國、北韓（繁殖）、俄羅斯（含亞洲部分）、南韓、越南原生，日本與台灣為迷鳥。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（灰背鶇；Gray-Backed Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Turdus hortulorum／鶇科 Turdidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=3.3、v=3.2（無 vEst）、r=3.3、c=1.2、o=2.6。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；diet（水果與昆蟲）、range（西伯利亞、朝鮮、越南、日本、台灣及中國東北至江蘇）、look（兩性異形，雄鳥背與胸石板灰、下巴及腹部白、兩側紅棕）、callouts（背 BACK：雄鳥背部和胸部為石板灰色／身 BODY：下巴及腹部為白色）、breeding（人工飼養下一對產五卵、首卵後 14 天孵化、雛鳥 12 天離巢）、behavior（起伏地形的落葉或常綠林築巢覓食，少有超過 1100 公尺）、highlights（含遷徙：繁殖中國東北與俄羅斯遠東，冬季至中國南部與越南北部）有中文；habitat、voice、conservation、etymology 沒有；**length 20–23 cm 與 weight 66.7 g 皆有值**。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 115.8 mm、尾 83.0 mm、跗蹠 31.3 mm、嘴峯 23.3 mm、體重 66.7 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 046700（路徑 `0390/`，鶇科）：香港第 I 類，多樣林地常見冬候鳥、不常見過境鳥，本港兩種最常見鶇之一；20–23 cm，成鳥雄鳥中灰頭頸喉胸、胸下窄橙帶沿脇變闊、腹部至尾下覆羽純白、嘴大部分淡黃；雌鳥上體褐而胸有粗斑、中下脇橙；第一齡鳥灰中混褐或暗褐、有淡色大覆羽端與更多斑點。",
+    "本港紀錄：冬季圖集佔有方格由 20.9%（2001–05）降至 14.1%（2016–19），跌幅見於大嶼山南部、港島、西貢、新界東北；核心越冬期 11 月第三週至 2 月第三週，最早 2019-10-31、最遲 1978-04-25；常成 20 隻以下小群、常與烏灰鶇混群，害羞隱蔽；東北季風後數量最多（1992-01-18 大埔滘 50 隻、1992-01-21 嘉道理 42 隻、1995-02-02 香港仔郊野公園約 100 隻鶇大多為本種）；繫放顯示會回到同一越冬地。",
+    "習性：在十多種結果樹木（苦楝、白楸、鐵冬青、潤楠、石楠、鴨腳木、雀榕、龍船花、桂花、紅鱗蒲桃、九節、朴樹）與落葉層覓食，清晨黃昏較多；飛行叫聲高頻帶嗡鳴、音高較烏灰鶇略高。",
+    "分類：單型種，繁殖於西伯利亞東南部、中國東北與北韓，冬季在華南與越南北部；香港無繁殖紀錄。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2018** 年評估，趨勢 **Unknown**；EOO 繁殖 2,170,000 km²、非繁殖 1,560,000 km²、完全遷徙、非繁殖 endemic、世代 6.1 年、森林依賴度 Medium、6 個 IBA；BirdLife 是**本批目前唯一把香港獨立列為原生**的一筆，惟 110m 底圖無香港幾何，地圖仍併入中國。",
+    "runtime 分數：六軸全部沿用（i=2、a=3.3、v=3.2、r=3.3、c=1.2、o=2.6），missingScores 為空、withheldScores 為空；v 有實據——length 20–23 cm 與 weight 66.7 g 皆有值且無 vEst，AVONET 翼長 115.8 mm×0.22≈25.5 cm 雖略大於 HKBWS 上限，但原值並非由翼長推算，故保留；a 有 diet、look、behavior、breeding 與 callouts 支撐。",
+    "runtime 文案缺陷：habitat、voice、conservation、etymology 四欄沒有中文（habitat 僅由 behavior 一句概括），diet 只有「牠們的食物包括水果和昆蟲」一句，breeding 講的是人工飼養數據；callouts 兩項（背、身）內容與 look 重複。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖原為 1296×816 橫幅，直接取中央 816×816 方形（不補邊，避免平面色帶）後放大至 1127×1127，畫出中灰頭頸喉胸、下胸窄橙帶與寬橙脇、白色腹部與淡黃嘴，站在鬱閉次生林的落葉層上以呼應 HKBWS 所述偏好生境；雌鳥（上體褐、胸有粗斑）與第一齡鳥仍待專家核。比較鳥為本輪新生成的烏灰鶇（重生成，避免把胸喉畫成有斑）與沿用 0463 的白腹鶇，非等比例、非專家認證。"
+  ],
+  "withheldScores": {}
+}
