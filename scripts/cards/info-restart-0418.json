@@ -1,0 +1,148 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 記下降"
+  },
+  "id": "0418",
+  "name": "栗頭鶲鶯",
+  "scientificName": "Phylloscopus castaniceps",
+  "illustrationTaxon": "Adult-type Phylloscopus castaniceps on a mossy twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "極北柳鶯",
+      "scientificName": "Phylloscopus borealis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體欖綠、下體灰白而無黃色、頭頂無栗色；本種頭頂栗色、眼圈白、下體檸檬黃。"
+    },
+    {
+      "zh": "日本柳鶯",
+      "scientificName": "Phylloscopus xanthodryas",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "只有淡黃色澤、頭頂與臉部同為欖綠、無栗色頭頂與白眼圈；本種對比強烈得多。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.31,
+      0.175,
+      0.44,
+      0.305
+    ],
+    [
+      0.3,
+      0.24,
+      0.43,
+      0.37
+    ],
+    [
+      0.45,
+      0.4,
+      0.585,
+      0.535
+    ],
+    [
+      0.28,
+      0.4,
+      0.42,
+      0.54
+    ]
+  ],
+  "featureLabels": [
+    "栗色頭頂",
+    "白色眼圈",
+    "黃綠翼斑",
+    "檸檬黃下身"
+  ],
+  "featureNotes": [
+    "栗紅色頭頂與兩側暗色冠側線，為插圖局部。",
+    "白色眼圈在上方有缺口，臉頰灰色，為插圖局部。",
+    "中、大覆羽上的兩道淡黃翼斑，為插圖局部。",
+    "灰白胸口轉為檸檬黃腹部的過渡，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "NPL",
+      "BTN",
+      "BGD",
+      "IND",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/040200",
+      "use": "香港第 I 類稀少冬候鳥（11 月第二週至 3 月第二週，主要 12 月至 2 月；極端日期 1988-11-05 及 2017-03-15）；9–10.5 cm、栗色頭頂配暗色冠側線、白色眼圈在上方斷開、臉及胸灰色、胸至尾下覆羽及飛羽邊緣檸檬黃、上體欖綠帶黃綠、腰淡黃、兩道淡黃翼斑；叫聲為短乾的嘎響及高音「tit」；偏好密冠層森林，七成半紀錄來自大埔滘；繁殖喜馬拉雅至華中及華南、中南半島、馬來半島及蘇門答臘，多為留鳥；中國包括香港為 sinensis 亞種；IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chestnut-crowned-warbler-phylloscopus-castaniceps",
+      "use": "IUCN 2024 LC 但趨勢下降（推測 10 年減 1–19%，最佳估計 11–14%，源於分佈區 10 年林木覆蓋減 11.5%、森林依賴高）；成熟個體未量化、繁殖 EOO 8,520,000 km²、非繁殖 8,360,000 km²、海拔 85–2,850 m、世代長度 1.9 年、垂直遷徙；棲地為亞熱帶山地濕林（留鳥，主要）及低地濕林（非繁殖）；國家：孟加拉、不丹、柬埔寨、中國、印度、印尼、老撾、馬來西亞、緬甸、尼泊爾、泰國、越南；另記低度寵物貿易紀錄。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（栗頭鶲鶯）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus castaniceps／柳鶯科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.3、v=2.3、r=4.8、c=1.2、o=2.5，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range、diet、habitat、etymology、funFact、migration、highlights 有內容，look 寫成分類沿革，diet 與 habitat 為同一句，voice、breeding、callouts 為空，length 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 48.8 mm、嘴峯 9.6 mm、體重 5.3 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS：9–10.5 cm，香港屬第 I 類稀少冬候鳥，見於 11 月第二週至翌年 3 月第二週、以 12 月至 2 月為主，極端日期為 1988 年 11 月 5 日及 2017 年 3 月 15 日；栗色頭頂配暗色冠側線、白色眼圈在上方斷開、臉及胸灰色、胸至尾下覆羽與飛羽邊緣檸檬黃、上體欖綠、腰淡黃、兩道淡黃翼斑；叫聲為短乾嘎響及高音「tit」；偏好密冠層森林，約七成半紀錄來自大埔滘；繁殖由喜馬拉雅東至華中及華南、中南半島、馬來半島及蘇門答臘，多為留鳥；中國（含香港）為 sinensis 亞種，另有八個亞種；HKBWS 頁記 IUCN LC、趨勢穩定。",
+    "BirdLife 2024 同為 LC 但記下降：分佈區林木覆蓋 10 年減 11.5%，推測族群 10 年減 1–19%（最佳估計 11–14%），森林依賴高；繁殖 EOO 8,520,000 km²、非繁殖 8,360,000 km²，海拔 85–2,850 m，世代長度 1.9 年，列為垂直遷徙而非完全遷徙；與 HKBWS 的「穩定」不一致，卡面註記採用 BirdLife 2024 的下降表述，HKBWS 的穩定說法只留在 spec。",
+    "runtime 分數 i=2、a=2.3、v=2.3、r=4.8、c=1.2、o=2.5、vEst=1。a=2.3 沿用——diet 與 habitat 雖是同一句「棲息於樹上、以昆蟲為食」，仍足以支撐低分；v 待查——length 為空，翼長 48.8 mm×0.22≈10.7 cm，略高於 HKBWS 的 9–10.5 cm，保留「原觀賞值含體長估算」提示；r=4.8 沿用——etymology、funFact、migration、look、highlights 均有內容；o 依賴待查分項（v）不補算；c=1.2 與 LC 一致、i=2 沿 runtime。",
+    "runtime 文案缺陷：look 只寫「以前被歸入鶲鶯屬（Seicercus）」而完全沒有外觀描述；diet 與 habitat 是同一句；voice、breeding、callouts 全空；funFact 是 2018 年分子系統發生學研究結論而非趣聞；highlights 第二條以逗號收尾屬殘句。這些未影響 a、r 的沿用。",
+    "世界底圖按 BirdLife 十二國填色（尼泊爾、不丹、孟加拉、印度、中國、緬甸、泰國、老撾、柬埔寨、越南、馬來西亞、印尼），留鳥與垂直遷移的下限未分色、不細分國家內部，綠色非全境、非完整分佈；香港為 sinensis 亞種的越冬地，但其紀錄不當原生國家分佈另行標示。",
+    "AI 主圖：栗色頭頂、灰臉、上方斷開的白色眼圈、欖綠帶黃綠的上體、淡黃腰、兩道淡黃翼斑、檸檬黃下體、暗色細嘴、淡粉腳，符合 HKBWS 描述；冠側線的深淺、眼圈缺口位置及尾羽邊緣仍待專家核。比較鳥為 0417 極北柳鶯及 0416 日本柳鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 為空，翼長推估 10.7 cm 略高於 HKBWS 9–10.5 cm，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}
