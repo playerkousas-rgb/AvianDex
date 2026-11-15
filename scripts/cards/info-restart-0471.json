@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "id": "0471",
+  "name": "紅尾鶇",
+  "scientificName": "Turdus naumanni",
+  "illustrationTaxon": "Adult male Turdus naumanni (greyish upperparts with brighter rufous rump and tail, pale orange supercilium, orange-rufous neck sides and upper chest, rufous-streaked throat and chest, whitish belly with dark rufous feather centres, pale fringes to coverts and remiges). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "斑鶇",
+      "scientificName": "Turdus eunomus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬，曾與本種視為同一種，兩者在本港常有中間型；斑鶇上體暗灰、翼上有大覆羽與三級飛羽形成的整片赤褐翼斑、胸有黑色橫帶、下體白，對比冷而硬；本種整體較淡、翼與頭較單純（只有淡色羽緣）、下體常有橙褐色鱗狀斑，腰與尾的赤褐較亮。"
+    },
+    {
+      "zh": "赤頸鶇",
+      "scientificName": "Turdus ruficollis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬，飛行叫聲相近（本種的「chee」較飽滿）；赤頸鶇的喉、胸、臉側與頸側是整片赤紅褐、上體均勻暗灰、翼上沒有赤褐翼斑；本種喉與胸是赤褐縱紋而非整片，脇與尾下覆羽帶赤褐，第一齡亦可憑脇赤褐與尾下覆羽赤褐與同齡赤頸鶇區分（Shirihai & Svensson 2018）。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.335,
+      0.155,
+      0.435,
+      0.255
+    ],
+    [
+      0.32,
+      0.29,
+      0.42,
+      0.39
+    ],
+    [
+      0.8,
+      0.6,
+      0.9,
+      0.7
+    ],
+    [
+      0.5,
+      0.41,
+      0.6,
+      0.51
+    ]
+  ],
+  "featureLabels": [
+    "橙褐眉紋",
+    "喉胸赤褐縱紋",
+    "赤褐腰與尾",
+    "翼羽淡橙羽緣"
+  ],
+  "featureNotes": [
+    "淡橙色的眉紋由嘴基延伸，繞過暗褐的臉頰，接到橙赤褐的頸側與上胸，是成鳥最醒目的標記；成鳥雌鳥較暗啞、赤褐較少，第一齡鳥上體幾乎沒有赤褐，為插圖局部。",
+    "喉與上胸在淡色底上密佈較深的赤褐縱紋；成鳥雌鳥與第一齡鳥的斑紋更重，喉側與頰下線（malar）的深色縱紋更明顯，為插圖局部。",
+    "腰與尾的赤褐比上體更亮，尾羽中央帶淡色羽軸；第一齡鳥上體赤褐很少、尾的赤褐亦較暗啞，為插圖局部。",
+    "翼上大覆羽與飛羽的羽緣為淡白至淡橙，令翼面呈一層淺色鑲邊；新羽時最明顯，磨損後變淡，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "MNG",
+      "PRK",
+      "RUS",
+      "KOR",
+      "TWN",
+      "MMR"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists eight native countries/territories — China (non-breeding), Japan (non-breeding), Mongolia (passage), North Korea (non-breeding), Russia and Asian Russia (breeding / non-breeding), South Korea (non-breeding), Taiwan (non-breeding) and Myanmar (presence uncertain, non-breeding). Hong Kong has no separate 110m geometry and is folded into China's outline. The long list of European, Middle Eastern and Central Asian records (Austria to the United Kingdom, Kazakhstan, Kuwait, Oman, Saudi Arabia, Israel, Cyprus) are VAGRANT entries and are left unshaded. Russia is shaded as a country, not as a claim that the whole country is occupied. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0390/047300",
+      "use": "香港第 I 類：**意外冬候鳥**，全部紀錄都在遠離開冠林或密灌叢的開闊鄉郊；23–25 cm，中型鶇而嘴較粗厚；成鳥雄鳥上體灰褐而**腰與尾的赤褐更亮**、眉紋淡橙並繞過暗褐臉頰接到橙赤褐的頸側與上胸、喉與胸有較深的赤褐縱紋、下胸至肛周白而羽毛中央帶深赤褐、**尾下覆羽赤褐範圍更大**、翼灰褐而覆羽與飛羽有淡白至淡橙羽緣；成鳥雌鳥較暗啞、赤褐較少、喉與頦的斑紋更重、頰下線更明顯、肩羽與翼覆羽赤褐較少；第一齡比成鳥雌鳥更暗更啞、上體幾乎沒有赤褐、下體赤褐羽心不明顯、喉側與頰下線黑褐縱紋更多、新羽時翼覆羽與三級飛羽的羽端明顯偏白；與斑鶇相比本種較淡、翼與頭較單純、下體常有橙褐鱗狀斑，站姿與叫聲相似；與同齡赤頸鶇的分別在於本種有赤褐脇、赤紅褐與灰的下體斑塊與赤褐尾下覆羽（Shirihai & Svensson 2018）；飛行叫為「chee」一聲或連聲，與赤頸鶇相似但更飽滿；單型種，繁殖於西伯利亞東南部與中南部（有些年份鳥會在核心區以北或以南繁殖），冬季南至烏蘇里南部、朝鮮半島與中國東北與東部；Liu & Chen (2021) 指冬季見於整個華南，但由本港狀況推斷長江以南的紀錄應屬不規則；IUCN Least Concern、趨勢不明。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/naumanns-thrush-turdus-naumanni/details",
+      "use": "IUCN **2025** LC、成熟個體 Unknown、趨勢 **Unknown**（無已發表趨勢數據；描述為 fairly common to common）、繁殖 EOO **2,370,000 km²**、非繁殖 EOO **4,370,000 km²**、完全遷徙、**繁殖 endemic Yes**、IBA／KBA 一欄為「-」、海拔 0–2,900 m、世代 **3.0 年**、森林依賴度 **Low**、生態系為陸域；生境為溫帶林、溫帶與凍原草原、北方與溫帶灌叢、鄉村花園（重要性均為 Suitable）；貿易普遍度高（七個貿易資料集中出現於三個），用途為食用（自給、國內）與國際寵物貿易；已列入國際法規但無國際貿易管制；國家表把**中國大陸（非繁殖）、日本（非繁殖）、蒙古（過境）、北韓（非繁殖）、俄羅斯與亞洲俄羅斯（繁殖／非繁殖）、中亞俄羅斯（繁殖與過境）、南韓（非繁殖）、台灣（非繁殖）、緬甸（presence uncertain、非繁殖）**列為原生，另有奧地利、白俄羅斯、比利時等多個歐洲與中東國家（哈薩克、科威特、阿曼、沙特、以色列、塞浦路斯）為迷鳥；與斑鶇不同，**BirdLife 沒有把香港獨立列為國家／地區**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（紅尾鶇；Naumann's Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Turdus naumanni／鶇科 Turdidae）；speciesCode dusthr1；taxonOrder 28515。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六軸齊全：i=2、a=5、v=3.5（含 vEst=1）、r=1、c=1.2、o=2.5。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案極少：只有 look 與 breeding 兩段，且同為「紅尾鶇，也稱紅尾斑鶇，是鶇科鶇屬鳥類，繁殖區位於西伯利亞中部到俄羅斯遠東地區和中國東北地區」的循環句（breeding 多一句「與斑鶇關係密切，曾被視為同一物種」）；iucn「無危 LC」與 BirdLife 一致；picks 只有 look 與 breeding；**沒有 diet、habitat、voice、behavior、humanRelation、etymology、callouts、migration、conservation**，**length 與 weight 皆為空**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 128.7 mm、尾 90.4 mm、跗蹠 31.6 mm、嘴峯 22.9 mm、體重 73.2 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 047300（路徑 `0390/`，鶇科）：香港第 I 類，**意外冬候鳥**（本年鑑的 Category I 在此頁標為 Accidental，而 OCCURRENCE 段同時寫 rare winter visitor）；23–25 cm，單型種。",
+    "本港紀錄：紀錄期 11 月 12 日至 4 月 19 日；1974–1982 年有九筆（Chalmers 1986），除一筆兩隻（1 月 5 日至 4 月 19 日）外全為單隻，且多數缺乏現時要求的證據；此後只有四筆——**1990** 年 1 月 29 日東涌一隻、11 月 14 日米埔自然保護區一隻；**2010** 年 11 月 12 日落馬洲一隻第一齡；**2012** 年 12 月 27–29 日赤鱲角一隻成鳥雄鳥；**2016** 年 3 月 25 日摩星嶺一隻第一齡。",
+    "生境：HKBWS 只寫「全部紀錄都在遠離開冠林或密灌叢的開闊鄉郊」，沒有更細的生境分項——本卡不作推測。",
+    "分類：單型種，繁殖西伯利亞東南部與中南部，冬季至烏蘇里南部、朝鮮半島與中國東北與東部；長江以南應屬不規則（HKBWS 依本港狀況判斷）。與斑鶇關係密切、曾被視為同一種，兩者在本港常有中間型。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2025** 年評估（比 0470 斑鶇的 2024 年更新），趨勢 **Unknown**；EOO 繁殖 2,370,000 km²、非繁殖 4,370,000 km²、完全遷徙、**繁殖 endemic Yes**、世代 3.0 年、海拔 0–2,900 m、森林依賴度 **Low**、無 IBA；BirdLife **沒有**把香港獨立列出（與 0470 相反）。",
+    "runtime 分數：i=2、r=1、c=1.2 沿用；**a=5 待查**——此軸由棲地×食性 tag 推出，但本案 cardCopy 完全沒有 habitat 與 diet 文字，5 分（批次最高）缺乏支撐；v=3.5 **待查**（length 與 weight 皆空、vEst=1，翼 128.7 mm×0.22≈28.3 cm 高於 HKBWS 的 23–25 cm）；o=2.5 依賴待查分項不補算。",
+    "runtime 文案缺陷：look 與 breeding 是同一句自我循環的描述，breeding 只多一句「與紅尾鶇關係密切的斑鶇曾被視為同一物種」，voice、callouts、etymology、habitat、conservation 全無，length 與 weight 為空。辨識、本地紀錄與叫聲一律以 HKBWS 為準。",
+    "AI 主圖原為 1312×816 橫幅，直接取 816×816 方形（起點 x=470，不補邊，避免平面色帶）後放大至 1127×1127，畫出灰褐上體、赤褐腰尾、淡橙眉紋、橙赤褐頸側與上胸、喉胸赤褐縱紋和白腹，站在新界濕農田的短草地上；雌雄與年齡差異仍待專家核。比較鳥為 0470 卡的斑鶇（最易混淆、曾有中間型）與本輪沿用的赤頸鶇，非等比例、非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "此軸由棲地與食性 tag 推出，但本案 cardCopy 的 habitat 與 diet 皆缺，runtime 的 5 分（批次最高）在本卡無可供核對的內容，待查。",
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 128.7 mm×0.22≈28.3 cm 高於 HKBWS 的 23–25 cm，3.5 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（a、v），不補算。"
+  }
+}
