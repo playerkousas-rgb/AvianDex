@@ -1,0 +1,143 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 年評定"
+  },
+  "id": "0431",
+  "name": "白眶鶲鶯",
+  "scientificName": "Phylloscopus intermedius",
+  "illustrationTaxon": "Adult-type Phylloscopus intermedius (nominate, yellow orbital ring) perched on a twig; AI interpretation, sex, subspecies and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "褐柳鶯",
+      "scientificName": "Phylloscopus fuscatus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "全身暗褐、沒有眼圈、眉紋短淡、下體沾皮黃；本種眼圈粗而鮮黃、冠側有黑紋、下體鮮黃、翼有黃斑。"
+    },
+    {
+      "zh": "灰冠鶲鶯",
+      "scientificName": "Phylloscopus tephrocephalus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "眼圈窄而灰白、翼上沒有黃斑、下體灰白；本種眼圈寬而鮮黃（前上方有缺口）、有一道明顯黃色翼斑、下體濃黃。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.7,
+      0.265,
+      0.8,
+      0.365
+    ],
+    [
+      0.645,
+      0.215,
+      0.815,
+      0.385
+    ],
+    [
+      0.485,
+      0.38,
+      0.615,
+      0.5
+    ],
+    [
+      0.64,
+      0.33,
+      0.76,
+      0.45
+    ]
+  ],
+  "featureLabels": [
+    "黃色眼圈",
+    "冠側黑紋",
+    "黃色翼斑",
+    "鮮黃下體"
+  ],
+  "featureNotes": [
+    "眼圈寬而鮮黃，並在眼的前上方有一處明顯缺口，是「白眶」一名的由來，也是本種在鶲鶯群中最易辨的一點，為插圖局部。",
+    "冠中央灰、兩側各有一條黑色冠側紋，把灰色的頭頂夾在中間，為插圖局部。",
+    "翼上有一道粗而鮮黃的翼斑，在暗色飛羽之間十分搶眼，為插圖局部。",
+    "喉、胸至腹部為濃黃色，與橄欖綠色的上體形成對比，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only: the eight countries BirdLife lists for this species (Bangladesh, Bhutan, China, India, Laos, Myanmar, Nepal, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. Hong Kong is a Cat I scarce winter visitor per HKBWS but is not listed by BirdLife and has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/039000",
+      "use": "香港第 I 類稀有冬候鳥，見於鬱閉樹冠的森林；2002-11-17 首次記錄，極端日期 11 月 8 日至 3 月 5 日，主要見於 11 月第三週至 2 月第三週；多在大帽山山系，亦見於蒲台、長洲及港島；多單隻，偶兩隻一起；在鶲鶯群中最易憑羽色辨認——眼圈寬、在眼前上方有明顯缺口、有一道鮮黃翼斑、下體濃黃，冠側黑紋分明、嘴略短而薄；叫聲富於哨音、明顯多音節，具辨識價值；綠頭的 cognitus 型較少見（約 12 宗）；在樹冠下層低調覓食，偶短飛捕食，常保持水平姿勢；繁殖由東喜馬拉雅至東南中國及南越南，指名亞種眼圈黃、在華中及東南中國繁殖並見於香港；頁記 IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/white-spectacled-warbler-phylloscopus-intermedius",
+      "use": "IUCN 2018 LC、趨勢穩定（推測）；成熟個體數量未量化，頁稱局部常見，中國約 100–10,000 對（Brazil 2009）；繁殖 EOO 3,880,000 km²、非繁殖 2,690,000 km²；遷徙狀況為海拔遷徙而非長途遷徙；世代長度 3.1 年、森林依賴度高；國家表只有孟加拉、不丹、中國、印度、寮國、緬甸、尼泊爾、越南，未列香港。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（白眶鶲鶯；White-spectacled Warbler）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus intermedius／柳鶯科 Phylloscopidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 完全沒有 0431 的分數條目，六個軸皆缺失。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；runtime 亦無本種條目，中英文皆無可用的 look、voice、breeding、migration、range、habitat、diet 內容。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "runtime 無本種量度，翼長、嘴峯、體重皆缺。"
+    }
+  ],
+  "notes": [
+    "HKBWS 039000：香港第 I 類稀有冬候鳥，2002 年 11 月 17 日首次記錄，極端日期 11 月 8 日至 3 月 5 日，主要出現於 11 月第三週至 2 月第三週；絕大多數紀錄在大帽山山系，蒲台、長洲及港島亦有；多為單隻，偶見兩隻。",
+    "辨識要點：本種是香港「金眶鶲鶯」群中最容易憑羽色認出的一員——眼圈寬而鮮黃、在眼的前上方有明顯缺口，有一道鮮黃翼斑，下體濃黃，冠側黑紋分明，嘴較其他近緣種略短而薄；綠頭的 cognitus 型較少見（約 12 宗）。叫聲富於哨音、明顯多音節，比淡尾鶲鶯（雙音節）低沉，具辨識價值。卡面四個標籤取眼圈、冠側黑紋、翼斑與下體。",
+    "分類：舊屬 Seicercus affinis，現置 Phylloscopus intermedius；runtime 科名用「柳鶯科」對應 Phylloscopidae。香港紀錄屬指名亞種（眼圈黃、在華中及東南中國繁殖），與西部的 zosterops 及南越南的 ocularis 有別。",
+    "分佈：繁殖區由東喜馬拉雅東至東南中國、南至南越南，在中國見於長江以南；BirdLife 標為海拔遷徙（altitudinal migrant）而非長途遷徙，與本港的冬候鳥身分吻合——本港個體應為南遷或下移度冬。地圖按 BirdLife 國家表填八個國家（孟加拉、不丹、中國、印度、寮國、緬甸、尼泊爾、越南）。",
+    "IUCN：HKBWS 與 BirdLife 都記 LC、趨勢穩定；BirdLife 為 2018 年評定，成熟個體數量未量化，僅稱局部常見，中國約 100–10,000 對，屬粗略估計。",
+    "runtime 缺口：cardCopy、dexScores、measurements 均無 0431 條目，故六個分數軸（i、a、r、c、v、o）全部顯示「待查」，並非遮蔽任何既有數值，withheldScores 為空；亦無翼長或體長可核，卡面所有辨識與本地紀錄內容改由 HKBWS 039000 提供。",
+    "世界底圖按 BirdLife 國家表填孟加拉、不丹、中國、印度、寮國、緬甸、尼泊爾及越南共八國，並非全部分佈區，也不是 occurrence polygon；香港雖屬第 I 類稀有冬候鳥，但 BirdLife 未列香港、110m 底圖亦無獨立多邊形，故不填色。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成小型鶲鶯，停於細枝上，並畫出寬而鮮黃、前上方有缺口的眼圈，灰冠配黑色冠側紋，橄欖綠上體、一道黃色翼斑、濃黃下體及略短而薄的嘴；亞種與性別差異仍待專家核。比較鳥為褐柳鶯（沿用 0430 比較圖）及新畫的灰冠鶲鶯，兩者皆非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {}
+}
