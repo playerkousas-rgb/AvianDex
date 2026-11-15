@@ -1,0 +1,140 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "id": "0447",
+  "name": "矛紋草鶥",
+  "scientificName": "Pterorhinus lanceolatus",
+  "illustrationTaxon": "Adult-type Pterorhinus lanceolatus latouchei (the Hong Kong form). AI interpretation, subspecies, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黑領噪鶥",
+      "scientificName": "Pterorhinus pectoralis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體栗紅而無縱紋、眉紋白、白頰帶縱紋、上胸有黑色胸帶、虹膜深紅配黃眼圈；本種全身佈滿深色縱紋、有黑色髭紋與白色虹膜，沒有任何栗紅色塊。"
+    },
+    {
+      "zh": "白頰噪鶥",
+      "scientificName": "Pterorhinus sannio",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "全身素淨的中等褐色而無縱紋，眉紋與臉頰純白、無髭紋；本種上下體皆有濃密縱紋、有黑色髭紋與白色虹膜。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.65,
+      0.1,
+      0.775,
+      0.225
+    ],
+    [
+      0.655,
+      0.145,
+      0.78,
+      0.27
+    ],
+    [
+      0.465,
+      0.165,
+      0.59,
+      0.29
+    ],
+    [
+      0.625,
+      0.265,
+      0.75,
+      0.39
+    ]
+  ],
+  "featureLabels": [
+    "白色虹膜",
+    "黑色髭紋",
+    "上體縱紋",
+    "下體縱紋"
+  ],
+  "featureNotes": [
+    "虹膜近乎純白，在褐色頭部上十分醒目，給人一種「瞪眼」的感覺，是現場辨識本種最快的一項，為插圖局部。",
+    "一道濃黑的髭紋由嘴基沿喉側向下伸延，把白色的喉與臉頰分開，為插圖局部。",
+    "頭頂、後頸、肩與翼上覆羽為中等褐色而密佈深褐色縱紋，形成本種「矛紋」的印象，為插圖局部。",
+    "下體淡黃白而胸與脇密佈深色縱紋，與上體同樣佈滿條紋，是本種與本港其他大型噪鶥最明顯的分別，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "MMR"
+    ],
+    "note": "Partial native-country overview only: BirdLife's country table is just China, Myanmar and Hong Kong, so only the two large countries are shaded; this is not an occurrence polygon, green does not imply full-country occupancy and the seasons are not colour-separated. Hong Kong (where the card's birds live, on Tai Mo Shan, and of captive origin) has no separate geometry on the 110m base map and is folded into China's shading."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0370/044700",
+      "use": "香港第 IIA 類，只限大帽山高海拔的稀有留鳥；2009–10 年因相信原有野化族群已消失而被列入第 IIC 類，2020 年重新發現後回復第 IIA 類；25–29 cm，大型而修長的噪鶥，上下體皆有濃密縱紋、有粗黑的髭紋與白色虹膜；看得清楚時不會誤認，但可以非常隱蔽，在濃密植被中看得不好時可能與畫眉混淆；叫聲多樣，包括吱喳聲、帶轉調的嗡嗡聲與較純的短哨音，廣告聲為一段短或稍拖長的下降哨音，受擾時發出連串粗啞聲；分佈極限於大帽山較高處，多在矮竹或長草間活動，亦用灌叢及被火維持的草地環繞的樹叢；2000 年前 600 米以上生境曾相當廣闊，但其後二十年森林大幅向上擴展至山頂，西坡介乎青年旅舍與山頂之間的山道旁那種過渡鑲嵌生境已大減；東北坡仍保有較大片此類生境，2020 年就在此重新發現；1959-07-19 在大帽山 900 米首次錄得鳴唱個體，翌年證實繁殖；此後幾乎每年有紀錄，最高計數 1984-08-25 山頂附近 14 隻；1996 年後數量明顯減少（每年最多四隻），2006–10 五年間無紀錄，Welch (2013) 於 2011 年稱大帽山族群似乎已消失；2011–2022 年多數年份仍有一至四隻紀錄；曾被列第 I 類，因這種定居的高山鳥自然遷入可能性低而改列第 IIA 類；1994 年草山（647 米）有繁殖紀錄並在 1994–95 有最多六隻的觀察，此後未再錄得；港島畢拿山等地的紀錄相信是剛逃逸或放生的個體，1999–2020 年間只有 2009-02-05 大埔滘一隻；繁殖：1960-07-24 大帽山一對帶三隻剛離巢幼鳥為首次，1994 年一對帶四隻幼鳥，1994 年 5 月 21 日草山 450 米見成鳥帶食物到巢；多在灌叢或灌叢草地鑲嵌間小群活動，以跳躍前進、少作長距離飛行，常隱蔽但在岩石與枯枝上鳴唱時會曝光；食性相信與其他噪鶥一樣為食蟲兼食果，但本港並無觀察紀錄；分佈自緬甸中部經藏東南、雲南至四川、陝西、湖北及華南各省；三亞種，香港鳥符合 latouchei。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chinese-babax-pterorhinus-lanceolatus",
+      "use": "IUCN **2018** LC、趨勢**穩定**（推測，無已知下降證據）；成熟個體未知；繁殖 EOO 2,630,000 km²；不遷徙、非繁殖 endemic；世代 5.5 年；森林依賴度 Medium；海拔 350–4,265 m；生境為高山灌叢（主要）及亞熱帶／熱帶濕潤低地林與山地林、高山草地（適用）；國家表只有中國、緬甸與香港（中國），三者皆列為原生、留鳥；分類註記說明 Garrulax lanceolatus 與 G. woodi 曾與 Babax lanceolatus 併為一種（del Hoyo & Collar 2016）。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（矛紋草鶥；Chinese Babax）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Pterorhinus lanceolatus／噪鶥科 Leiothrichidae）；BirdLife 科名用 Leiotrichidae。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=2.8、v=3.1（含 vEst=1）、r=1、c=1.2、o=2.0，missingScores 為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；只有 range 一句中文有內容（「畫眉科草鶥屬的一種，分佈於印度、緬甸、香港和中國大陸」——印度一項與 BirdLife 國家表不符，BirdLife 只列中國、緬甸與香港），habitat、look、diet、behavior、etymology 中文全空，英文多為同句重複（habitat 與 behavior 英文完全相同、look 與 etymology 英文同為分類沿革），length 與 weight 為空。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 95.4 mm、尾 122.0 mm、跗蹠 35.2 mm、嘴峯 27.8 mm、體重 80.5 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 044700：香港第 IIA 類，只限大帽山高海拔的稀有留鳥（2009–10 曾列第 IIC 類，2020 年重新發現後回復 IIA）；25–29 cm，大型修長而上下體皆密佈縱紋、有粗黑髭紋與白色虹膜；看得不好時可能與畫眉混淆。",
+    "本港狀況：1959-07-19 大帽山 900 米首錄鳴唱個體、翌年證實繁殖，最高計數 1984-08-25 山頂附近 14 隻；1996 年後每年最多四隻，2006–10 五年無紀錄（Welch 2013 稱族群似乎已消失），2011–2022 年多數年份仍有一至四隻；2020 年在大帽山東北坡重新發現，相信是生境改變令分佈轉移或收縮至該處，但「原族群已消失、2005 年後所見為再放生個體」亦不能排除；1994 年草山（647 米）有繁殖紀錄（5 月 21 日 450 米見成鳥帶食物到巢）及最多六隻的觀察，此後未再錄得；港島等地的零星紀錄相信是逃逸或放生個體。",
+    "生境：多在矮竹或長草間活動，亦用灌叢與被火維持的草地所環繞的樹叢；2000 年後森林向上擴展至山頂，西坡山道旁的過渡鑲嵌生境大減，東北坡仍保有較大片此類生境且較少觀察者到訪。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2018** 年評估（頁面其後未更新）；趨勢**穩定**、EOO 2,630,000 km²、海拔 350–4,265 m、世代 5.5 年、森林依賴度中等；國家表只有中國、緬甸與香港，故地圖只填兩個大國，香港在 110m 底圖併入中國。",
+    "runtime 分數：i=2、r=1、c=1.2 沿用；a=2.8 待查——habitat 與 diet 中文全空、behavior 英文與 habitat 英文完全相同；v=3.1 待查——length 欄與 look 中文皆為空，翼長 95.4 mm×0.22≈21.0 cm 遠低於 HKBWS 的 25–29 cm；o=2.0 依賴待查分項（a、v）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：只有 range 一句中文有內容，且把印度列為分佈地（BirdLife 國家表沒有印度）；其餘中文全空，英文多為重複或錯置；length 與 weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖為方形畫布（原橫幅補邊後裁緊），單一長尾、純色深青底，畫出白色虹膜、黑色髭紋、上下體密佈縱紋的中等褐色身體與長尾，背景加矮竹與岩石以呼應大帽山生境；亞種（符合 latouchei）、性別與年齡差異仍待專家核。比較鳥沿用 0446 的黑領噪鶥及 0444 的白頰噪鶥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 與 diet 中文全空、behavior 英文與 habitat 英文完全相同，2.8 分缺乏棲地與食性支撐，待查。",
+    "v": "length 欄與 look 中文皆為空，翼長 95.4 mm×0.22≈21.0 cm 遠低於 HKBWS 的 25–29 cm，3.1 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（a、v），不補算。"
+  }
+}
