@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危",
+    "assessmentNote": "全球 NT：BirdLife 2025 評定"
+  },
+  "id": "0485",
+  "name": "琉璃藍鶲",
+  "scientificName": "Cyanoptila cumatilis",
+  "illustrationTaxon": "Adult male Cyanoptila cumatilis (flycatcher 16–17 cm: upperparts, chin, throat, breast and cheeks uniform turquoise blue-green with a slightly paler crown and contrastingly dark lores; belly and undertail coverts white, faintly greyish on the flanks; a faint blackish line along the lower border of the breast; white bases to the sides of the tail; black bill and black legs). Females and first-winter males are greyish-brown with rufous-brown wings, rump and tail and are, on current knowledge, inseparable from Blue-and-white Flycatcher in the field; neither is shown. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "白腹藍鶲",
+      "scientificName": "Cyanoptila cyanomelana",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "本種原本被視為白腹藍鶲的亞種，2012 年才確立為獨立種（Leader & Carey 2012），亦是最難分辨的一種；白腹藍鶲雄鳥的**臉、喉、胸與脇為光亮黑色**，藍色只在上體；本種雄鳥的**上體、頰、頦、喉與胸都是均勻的藍綠色**、**眼先明顯較深**、頭頂比背部淺，胸下緣或有一道暗色細線。HKBWS 提醒兩者的藍色在不同光線下會變，故要看**胸前是黑色還是藍綠色**。**雌鳥與第一齡雄鳥目前一般認為兩者在野外無法分別。**"
+    },
+    {
+      "zh": "小仙鶲",
+      "scientificName": "Niltava macgrigoriae",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是藍色上體、白色下腹的小型鶲；小仙鶲體型明顯較小（**11–14 cm**）、**黑色只限於眼先、頰與頦**、上胸已是深藍而非藍綠，而且前額、腰與頸側各有一片**淡天藍斑**；本種較大（16–17 cm）、藍綠色由頭頂一直覆蓋到胸前，頸側沒有淡藍斑，眼先反而是唯一明顯較深的部位。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.36,
+      0.22,
+      0.6,
+      0.46
+    ],
+    [
+      0.28,
+      0.17,
+      0.46,
+      0.35
+    ],
+    [
+      0.72,
+      0.6,
+      0.9,
+      0.78
+    ],
+    [
+      0.34,
+      0.36,
+      0.52,
+      0.54
+    ]
+  ],
+  "featureLabels": [
+    "藍綠上體",
+    "深色眼先",
+    "白色尾基",
+    "藍綠喉胸"
+  ],
+  "featureNotes": [
+    "上體為均勻的藍綠色（帶一點綠的綠松藍），而不是白腹藍鶲那種深藍；頭頂比背部略淺。這種「一身藍綠」是本種雄鳥與白腹藍鶲最快速的整體印象，為插圖局部。",
+    "**眼先（嘴與眼之間）明顯較深**，在一片藍綠色的臉上形成對比——HKBWS 以此為雄鳥與白腹藍鶲的兩項主要分別之一（另一項是整體藍綠色），為插圖局部。",
+    "尾羽兩側基部有**白色面板**，白腹藍鶲亦有，故此點只能輔助而不能單獨用作分辨；飛行或展開尾羽時較明顯，為插圖局部。",
+    "**頦、喉與胸同為藍綠色**（白腹藍鶲此處為光亮黑色），胸下緣或有一道暗色細線；胸以下轉為白色腹部，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "KHM",
+      "CHN",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 9 native countries/territories — Cambodia (passage), China (breeding and passage), Indonesia (non-breeding), Laos (passage), Malaysia (non-breeding), Myanmar (passage), Singapore (non-breeding and passage), Thailand (passage) and Vietnam (passage). Singapore has no separate 110m geometry, so 8 shapes are shaded. Hong Kong is NOT in BirdLife's country table even though HKBWS has one accepted record (a male on Po Toi, 19 October 2008), so it is deliberately not claimed here; Hong Kong also has no separate 110m geometry. Not an occurrence polygon: this is a Full Migrant and a Chinese breeding endemic with a breeding EOO of 787,000 km² — the smallest breeding range of the flycatchers in this batch."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/048700",
+      "use": "香港第 I 類，**偶發（Accidental）**；**全港只有一筆紀錄：2008 年 10 月 19 日蒲台一隻雄鳥被拍下**（Holmes 2011，亦是此分類單元在香港的首筆紀錄）。**16–17 cm**。成鳥雄鳥：**上體、胸、頦、喉與頰為藍綠色（turquoise）**，對比**略深的眼先**與**較淺的頭頂**，**尾羽兩側基部為白色**。雌鳥：上體灰褐而**翼、腰與尾帶赤褐**，有**狹窄的淡色眼圈**，**胸部橄欖灰**，腹與尾下近白；第一齡雄鳥似雌鳥但翼、腰與尾帶藍；**胸下緣或有一道暗色細線**。與白腹藍鶲的分別：本種**整體為均勻的藍綠色、眼先明顯較深**，但兩者的顏色會隨光線變化；**雌鳥與未成齡雄鳥目前一般認為在野外無法與白腹藍鶲分別**。叫聲不詳，推測與白腹藍鶲相似。分佈與生境：唯一紀錄在過境熱點蒲台。分類：**單型種**，**曾為白腹藍鶲的亞種**（Leader & Carey 2012）。繁殖於中國中部與中東部（北京南至陝西南部與湖北西部，可能更西至四川北部），越冬於泰國南部、馬來半島、蘇門答臘與爪哇，北婆羅洲稀少（del Hoyo et al. 2020）。IUCN：**NEAR-THREATENED（近危）**，是一個認識不多的物種，種群相信不大且可能因繁殖地生境流失而下降。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/zappeys-flycatcher-cyanoptila-cumatilis/details",
+      "use": "IUCN **2025 NT（近危），準則 A2cd+3cd+4cd**——理由為由中國繁殖地遷往東南亞、當地森林流失懷疑造成三代內 5–25% 下降，另可能受貿易影響，故以防禦性評估列為近危；繁殖 EOO **787,000 km²**（本批暫時最小的繁殖範圍）、非繁殖 EOO **3,300,000 km²**、**Full Migrant**、**繁殖 endemic Yes**、**AOO 持續下降 Yes**、**IBA／KBA 為「-」**、海拔 **0–1,700 m**（繁殖 1,000–1,700 m）、世代 **3.1 年**、森林依賴度 **Medium**、**亞種群 1 個且全部個體在同一亞種群 Yes**；趨勢 Decreasing（Suspected），**A2／A3／A4 皆 10–25%**，以非繁殖區森林覆蓋減少 **10–22%** 推算，並加上貿易的潛在影響；生境只有兩項且皆 **Major**（亞熱帶／熱帶乾燥林、濕潤低地林）；國家表列 **9 個原生國家／地區**（柬埔寨過境、中國繁殖與過境、印尼非繁殖、寮國過境、馬來西亞非繁殖、緬甸過境、新加坡非繁殖與過境、泰國過境、越南過境），**香港不在表中**；非繁殖區紀錄稀疏且可能被低估（與白腹藍鶲雌鳥／未成齡雄鳥無法分辨）。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **492 項 琉璃藍鶲（Cyanoptila cumatilis），第 I 類，IUCN NT**；同科鄰項為 490 小仙鶲、491 白腹藍鶲（皆 I 類）、493 銅藍鶲（I 類）。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（琉璃藍鶲；Zappey's Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Cyanoptila cumatilis／鶲科 Muscicapidae）；speciesCode zapfly1；taxonOrder 28805。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **只有五軸**：i=3、v=3.1（**含 vEst=1**）、r=3.3、c=1.8、o=2.8——**a（外觀）完全沒有分數**，故 missingScores 為 a；v 與 o 列為待查（withheldScores）。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案可讀但 `look` 只是「琉璃藍鶲又稱白腹暗藍鶲，是雀形目鶲科的一種鳥類」一句分類式空話，`diet` 寫「候鳥…棲息在密集的高大樹木組成的森林中，食性為肉食性」、`range` 與 `migration` 完全相同（都寫越冬範圍）、`breeding` 只有繁殖地一句、`highlights` 為上述句子重複；**沒有 habitat、voice、behavior、conservation、etymology、callouts、funFact（中文）**；**length 與 weight 皆為空**；iucn 為「近危 NT」，與 BirdLife 2025 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 90.5 mm、尾 59.2 mm、跗蹠 14.7 mm、嘴峯 14.6 mm、體重 22.5 g（與 0484 白腹藍鶲的數值相同）。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **492** 項、**第 I 類、IUCN NT**；HKBWS 列為 **Accidental（偶發）**，**全港只有一筆紀錄——2008 年 10 月 19 日蒲台一隻雄鳥被拍下**（Holmes 2011），亦是此分類單元在香港的首筆紀錄；本卡是本批暫時「香港紀錄最少」的一張（一筆）。",
+    "辨識要點（成鳥雄鳥）：**上體、頰、頦、喉與胸為均勻的藍綠色**、**頭頂較淺**、**眼先明顯較深**、**尾羽兩側基部白色**、腹與尾下白色而脇略帶灰、**胸下緣或有一道暗色細線**。與白腹藍鶲的分別在於「胸前是藍綠還是光亮黑色」，但顏色隨光線變化，要看整體印象；**雌鳥與未成齡雄鳥目前一般認為在野外無法與白腹藍鶲分別**，卡片照錄這項限制，插圖只畫成鳥雄鳥。",
+    "**分類史**：本種原是白腹藍鶲的亞種（*C. cyanomelana cumatilis*），2012 年由 Leader & Carey 確立為獨立種，其論文標題正是「a forgotten Chinese breeding endemic」——**牠是中國繁殖特有種**，BirdLife 亦標示 breeding endemic = Yes、繁殖 EOO 只有 **787,000 km²**，是本批暫時最小的繁殖範圍。這也解釋了為何 IUCN 在 2025 年把牠評為 **NT**：繁殖範圍小、非繁殖區森林流失 10–22%，加上潛在貿易壓力。",
+    "IUCN：**NT（近危）**，BirdLife **2025** 以 **A2cd+3cd+4cd** 評估，A2／A3／A4 下降率皆 **10–25%**（以非繁殖區森林覆蓋減少 **10–22%** 推算，另加貿易影響）；**AOO 持續下降為 Yes**、**只有一個亞種群**、**IBA／KBA 為「-」**、世代 3.1 年、森林依賴度 Medium、生境只有乾燥林與濕潤低地林兩項且皆 Major。runtime 的 c=1.8 與 NT 相符。",
+    "**地圖**：BirdLife **9 個原生國家／地區**（新加坡無 110m 幾何）故填 **8 個形狀**（柬埔寨、中國、印尼、寮國、馬來西亞、緬甸、泰國、越南）；**香港不在 BirdLife 國家表中**（雖然 HKBWS 有一筆紀錄），note 內明寫這點，避免綠色被誤讀成「香港有分佈」。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：**`dexScores` 缺 a 軸**（missingScores 為 a）；`cardCopy` 的 `look` 只是「又稱白腹暗藍鶲，是雀形目鶲科的一種鳥類」一句分類式空話、`range` 與 `migration` 完全相同、`highlights` 重複、`diet` 把「候鳥、棲息在…森林」與「食性為肉食性」混在一句；沒有 habitat、voice、behavior（中文）、conservation、callouts；**length 與 weight 皆為空**；`measurements` 與 0484 白腹藍鶲的數值完全相同（兩個物種共用同一組 AVONET 數值，屬資料層面的可疑重複，只記錄不改動）。v（3.1）的 vEst=1 估算同樣失準（翼 90.5 mm×0.22≈19.9 cm 高於 16–17 cm），故 v、o 列為待查；i=3、r=3.3、c=1.8 沿用。",
+    "AI 主圖以 0483 棕腹大仙鶲的方形主圖作風格參照，生成 1024×1024、直接放大至 1127×1127（不裁切、不補邊），刻意畫成**均勻藍綠色（綠松藍）**而非深藍，並加深眼先、加上胸下暗線與白色尾基，以與 0484 白腹藍鶲主圖形成可比較的一對。比較鳥為**白腹藍鶲**（用同一輪 0484 主圖的方形版本）與**小仙鶲**（沿用 0482 主圖），非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "withheldScores": {
+    "v": "length 與 weight 皆為空且 vEst=1，原值由體長估算；翼 90.5 mm×0.22≈19.9 cm，高於 HKBWS 的 16–17 cm，3.1 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查的 v，且 a 軸本身缺分，不補算；i=3、r=3.3（全港僅一筆紀錄）、c=1.8（與 NT 相符）三軸沿用。"
+  }
+}
