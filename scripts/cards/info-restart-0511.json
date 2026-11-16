@@ -1,0 +1,152 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0511",
+  "name": "北紅尾鴝",
+  "scientificName": "Phoenicurus auroreus",
+  "illustrationTaxon": "Adult male Daurian Redstart Phoenicurus auroreus perched lengthwise on a thin mossy twig, tail slightly cocked. Crown and nape silvery blue-grey, clearly paler than the back; face, cheeks, throat, mantle and upper back black, with the black stopping at the throat and NOT running onto the breast; a large bright white rectangular patch across the greater coverts; breast, belly, lower back and rump warm orange; tail dark brown with orange edges; thin dark bill, dark legs. The female is not shown: she is greyish-brown above with warm brownish-buff underparts, a white wing patch, and orange rump and outer tail feathers. AI interpretation; sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黑喉紅尾鴝",
+      "scientificName": "Phoenicurus hodgsoni",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "**雄鳥對雄鳥**，兩者都有銀灰冠、黑臉、白翼斑與橙紅下體，是本批最相似的一對。分別在**黑色範圍**：本種的黑**只到喉部**，上胸已經是橙色；黑喉紅尾鴝的黑**由喉部延伸成一塊覆蓋整個上胸的黑胸兜**，在胸前以一條近乎水平的界線停住，橙色只由中胸才開始。另一點是**白翼斑**：本種是**一大片醒目的長方形白斑**，黑喉紅尾鴝的**明顯較小**。HKBWS 對黑喉紅尾鴝的描述正是「與雄性北紅尾鴝相似，但黑臉更廣、覆蓋上胸，白翼斑較小」。"
+    },
+    {
+      "zh": "赭紅尾鴝",
+      "scientificName": "Phoenicurus ochruros",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "**雌鳥對雌鳥**才是冬季最常要比的一對。本種雌鳥**上體灰褐**、**下體暖褐皮黃**、**翼上通常有一塊明顯白斑**、**腰與外側尾羽橙紅**；赭紅尾鴝雌鳥**上下體都是同一片灰褐、缺少暖橙調**、**翼上沒有白斑**、尾只是深褐帶銹邊。HKBWS 正是用「雌性北紅尾鴝缺少灰色調，且通常在翼上有一白斑」把赭紅尾鴝雌鳥分開；少數雌性北紅尾鴝的白斑會被遮住或缺失，故要再看下體暖調與橙紅腰尾。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.58,
+      0.18,
+      0.88,
+      0.42
+    ],
+    [
+      0.36,
+      0.36,
+      0.62,
+      0.56
+    ],
+    [
+      0.52,
+      0.36,
+      0.78,
+      0.62
+    ],
+    [
+      0.14,
+      0.22,
+      0.44,
+      0.5
+    ]
+  ],
+  "featureLabels": [
+    "銀灰冠與黑臉",
+    "大白翼斑",
+    "橙紅胸腹",
+    "橙紅腰與尾"
+  ],
+  "featureNotes": [
+    "**頭頂與後頸是銀灰藍色**，與**黑色的臉、頰與喉**形成本種雄鳥最搶眼的對比；前額與頭側顏色更淺。冬天遇到的雄鳥多數已換上這副羽色。為插圖局部。",
+    "**大覆羽上的一大片長方形白斑**是辨識關鍵之一：黑喉紅尾鴝的白斑明顯較小，赭紅尾鴝與多數雌鳥則完全沒有。為插圖局部。",
+    "**胸部、腹部與下背都是橙紅色**，黑色只到喉部為止——這正是與黑喉紅尾鴝雄鳥（黑胸兜覆蓋上胸）的分界線。為插圖局部。",
+    "**腰、脇與外側尾羽橙紅**，中央尾羽較深；本種常翹起並抖動尾巴，橙紅色的腰與尾在野外十分顯眼，也是「紅尾鴝」之名所本。為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "JPN",
+      "LAO",
+      "MNG",
+      "MMR",
+      "PRK",
+      "RUS",
+      "KOR",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 15 rows, which collapse to 13 native territories because Russia appears three times (Russia, Russia (Asian) and Russia (Central Asian)); of those, the Russia (Central Asian) row is itself a VAGRANT record, so it does not make Russia a vagrant country. All 13 native territories — Bhutan, China (mainland), India, Japan, Laos, Mongolia, Myanmar, North Korea, Russia, South Korea, Taiwan, Thailand and Vietnam — have 110m geometry, so 13 shapes are shaded and there is no 'no geometry' caveat this time. Not an occurrence polygon: green does not imply full-country occupancy; most of the shaded area is breeding range (breeding EOO 8,510,000 km² against a non-breeding EOO of 5,370,000 km²). Hong Kong is not in BirdLife's country table, so no Hong Kong claim is drawn from this map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/051100",
+      "use": "香港第 I 類、**常見的冬候鳥**，見於**疏林**。**14–15 cm**；**雄鳥**以**銀灰色頭頂與後頸、黑臉、黑喉與黑背黑翼**、**橙色下體與腰**見稱，**翼上有一大片白斑**，**深色尾的邊緣為橙色**；**雌鳥**上體**灰褐**、下體**褐皮黃**、**腰與外側尾羽橙色**、**翼上有白斑**（極少數個體此斑會被遮住或缺失）。聲音：常發出**高音『see』**（可聽出尾音下降）或**『tuk』**（單聲或連續），兩者可連在一起；與紅脇藍尾鴝同區出現時的叫聲相比，本種的**音調略高、音高較平**，**『tuk』較高**，兩聲連用時**間隔較短**。生境：**開揚樹冠的林地與灌叢、疏樹公園、以及有足夠樹木的村落與農地**，一般只佔**封閉樹冠生境的邊緣**；**全港廣泛分佈（包括離島）**，**2016–19 冬季地圖集與 2001–05 相比，佔用的 1 km 方格比例沒有顯著變化**。出現情況：**極端日期 9 月 29 日與 5 月 2 日**；**10 月最後一週前罕見**，之後一般常見至 **2 月第三週**；**數量高峰在 11 月第二週至 12 月第一週**（相信包括過境鳥），**1 月最後一週至 2 月第一週有較小的第二個高峰**（可能是北方寒潮帶來的移動）；2 月最後一週起逐漸減少，**3 月底至 4 月減幅更明顯**，**4 月中之後罕見**。通常**一或兩隻**，但多隻可散落於合適地點；**最高紀錄 2013-11-17 大嶼山西南部 48 隻**；典型地點的最高數為 **1995-02-05 白沙澳至少 30 隻**，屬寒潮後鶇科湧入香港的一部分。**2012/13 起紀錄數目明顯增加**——每冬季週計數總和由 1999/2000 的 **27** 升至 2019/20 的 **1507**，幾乎肯定是觀察力度與回報改善所致（eBird 令常見而廣泛的鳥種更易被記錄）；但**逐季高峰數**（Figure 2）顯示增幅沒有那麼大。Vaughan & Jones（1913）、Hutson（1930）與 Herklots（1953）都記載本種為冬候鳥、某些年份較多。行為：**通常單獨**，愛停在**灌木與圍欄、柱子等人造物**的顯眼處並**頻頻抖尾**；**不太怕人**，有時接近民居——**1959 年 11 月大埔滘**一隻雄鳥連續約 **16 天**反覆撞向一間屋的窗（明顯被自己的倒影吸引），並被見到**啣漿果去「餵」自己的倒影**（Barretto 1960）；**2013 至 2020 年**亦有單隻越冬鳥定期到**船灣一個露台鳥浴**；寒冷天氣時尤其容易接近。食性以**昆蟲**為主，由棲枝**撲下地面**捕食、較少在空中捕食（Hutson 1930）；亦吃果實，紀錄有 **Schleffera heptaphylla、Psychotria asiatica 與 Lantana camara**。分類：**兩個亞種**；***P. a. auroreus*** 繁殖於**西伯利亞中南部、蒙古北部與東北部**向東至**黑龍江與烏蘇里**，南至**北韓與中國東北**，另在**日本中部**有小族群；冬季在**南韓、日本、台灣、中國東南沿岸與越南北部**；在中國繁殖於**黑龍江與吉林**東南至**山西、河南、湖北與江西**，冬季在**長江平原以南**。***P. a. leucopterus*** 繁殖於**中國中部**（青海東部、甘肅西北、陝西南部至藏東南與雲南北部），冬季由**喜馬拉雅東部**向東至**泰國北部與中南半島北部**。保育：**IUCN Least Concern，趨勢 stable**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/daurian-redstart-phoenicurus-auroreus/details",
+      "use": "IUCN **LC**、**2024 年評估**（準則 N/A；2024、2016、2012、2009、2008、2004 皆 LC，2000、1994、1988 為 Lower Risk/Least Concern）；**成熟個體 Unknown**、**趨勢 Stable（Suspected）——與 HKBWS 的 stable 一致**；種群未量化，但 **del Hoyo et al.（2005）** 稱在**大部分繁殖區常見**、**分佈北緣稀有**、**外貝加爾西南部豐富**；國家估算（Brazil 2009）：**中國 100–100,000 繁殖對、50–10,000 過境、1,000–10,000 越冬**，**台灣 1,000–10,000 過境與越冬**，**韓國 10,000–100,000 繁殖對**，**俄羅斯 10,000–100,000 繁殖對與 1,000–10,000 過境**；**繁殖 EOO 8,510,000 km²、非繁殖 EOO 5,370,000 km²**、AOO Unknown、**Breeding endemic No**、**Full Migrant**、**IBA／KBA 為「-」**、**生態系統只有陸域**、海拔 **0–3,760 m**、世代 **2.3 年**、**森林依賴度 Low**；**生境 10 項，全部只是 Suitable、沒有一項 Major（本批第一次）**——鄉村花園、温帶林與三類灌叢（温帶、亞熱帶／熱帶潮濕、亞熱帶／熱帶高山）各分繁殖期與非繁殖期；**用途與貿易：high prevalence，七個貿易數據集中有三個**（本批目前最高），終端用途為**人類食用（Subsistence、National）**與**寵物／展示（Subsistence、International）**——**「International」的寵物貿易在本批中首次出現**；**保育行動**只有「已劃定保育地點（覆蓋全部範圍）」與「已納入國際法規」，其餘皆 No，**系統性監測計劃為 No**；**政策工具：CMS 附錄 II**；**沒有次全球評估表**；命名人 **(Pallas, 1776)**；Alliance for Zero Extinction 與 Search for Lost Birds 皆 No。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024（頁面最後更新 2025-05-11）：第 **520** 項 北紅尾鴝 Daurian Redstart（*Phoenicurus auroreus*），**第 I 類**；鄰項為 519 赭紅尾鴝與 521 黑喉紅尾鴝——名錄次序為赭紅（519）→ 北紅（520）→ 黑喉（521），與 runtime 次序 0509 黑喉 → 0510 赭紅 → 0511 北紅不同。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（北紅尾鴝；Daurian Redstart）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phoenicurus auroreus／鶲科 Muscicapidae）；speciesCode daured1；taxonOrder 29360。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 2、a 3.3、v 2.8（vEst 1）、r 3.3、c 3、o 2.9），`missingScores` 與 `withheldScores` 皆為空；o 2.9 與六軸平均 2.88 相符。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "`look` 中文是繁殖羽雄鳥的形態描述（灰冠、黑臉、褐翼），故 a 保留；`behavior` 與 `habitat` 中文是同一句（黃尾鴝偏好開闊森林…），`behavior` 英文才是「不怕人」；`migration` 中文在「而P. a.」**中途截斷**；`aliases` 只有「1776」；length 與 weight 為空；`funFact` 的命名人 Pallas 正確。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 72.5、tail 65.9、tarsus 22.2、bill 14、mass 16.2。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **520** 項、**第 I 類**；HKBWS 描述為**常見的冬候鳥**。**極端日期 9 月 29 日與 5 月 2 日**；10 月最後一週前罕見，之後常見至 2 月第三週；**高峰 11 月第二週至 12 月第一週**，1 月最後一週至 2 月第一週有第二個小高峰；**最高紀錄 2013-11-17 大嶼山西南部 48 隻**。**2012/13 起紀錄大增**（每冬季週計數總和由 1999/2000 的 27 升至 2019/20 的 1507），但 HKBWS 明言幾乎肯定是**觀察力度與回報改善**所致，逐季高峰數顯示實際增幅沒有那麼大——這一點照實記錄，不當作族群真的暴增。",
+    "辨識要點：雄鳥——**銀灰冠 + 黑臉黑喉 + 橙紅胸腹 + 一大片長方形白翼斑 + 橙紅腰尾**；黑喉紅尾鴝雄鳥的黑**延伸成覆蓋上胸的黑胸兜**、白翼斑**明顯較小**。雌鳥——**上體灰褐、下體暖褐皮黃、翼上通常有白斑、腰與外側尾橙紅**；赭紅尾鴝雌鳥上下體同一片灰褐、**無白翼斑**、尾只深褐帶銹邊。",
+    "IUCN：**LC（無危）**、BirdLife **2024** 年評估、**趨勢 Stable（Suspected）**，與 HKBWS 一致。成熟個體 Unknown；繁殖 EOO 8,510,000 km²、非繁殖 EOO 5,370,000 km²；**IBA／KBA 為「-」**；海拔 0–3,760 m；世代 2.3 年；森林依賴度 Low；**生境 10 項全部只是 Suitable、沒有一項 Major（本批第一次）**；**貿易為 high prevalence（七個數據集中三個，本批最高）**，且**寵物／展示一項的規模為 International（本批首次）**；保育行動只有「已劃定保育地點」與「已納入國際法規」，**沒有系統性監測**；政策工具 **CMS 附錄 II**；**本頁沒有次全球評估表**；命名人 (Pallas, 1776)。",
+    "地圖填 **13 個形狀**（不丹、中國、印度、日本、寮國、蒙古、緬甸、北韓、俄羅斯、南韓、台灣、泰國、越南）：BirdLife 列 15 列，俄羅斯分三列（Russia、Russia (Asian)、Russia (Central Asian)）併為一個 `RUS`，而其中 **Russia (Central Asian) 一列本身是迷鳥紀錄**，故不影響俄羅斯整體為原生；**13 個原生地區全部有 110m 幾何**，沒有迷鳥國家、沒有 Origin Uncertain、沒有缺幾何的地區。**香港不在 BirdLife 國家表**，故不作香港聲明。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`look` 只描述繁殖羽雄鳥（故 a 保留）；`behavior` 與 `habitat` 中文是同一句、且用的是台灣名「黃尾鴝」；`migration` 中文在「而P. a.」**中途截斷**（英文也斷在「and P.」）；`aliases` 只有一個年份「1776」；**length 與 weight 皆為空**；`funFact` 的敘述正確。六軸分數齊全。",
+    "HKBWS 頁面 id 是 **051100**（路徑 `0410/`；名錄第 **520** 項），比 runtime **0511** 大 0——與 0503 同為本批僅有的「零偏移」。至此 0501–0511 的偏移為 +1、+2、0、+1、+1、+1、+1、+4、+1、−1、0，**毫無規律，必須逐張開頁確認標題**。",
+    "素材：主圖（雄鳥）與比較鳥一（黑喉紅尾鴝雄鳥）為本輪新生成，正方形滿版構圖、不帶風格參照、硬性羽色規格＋明寫負面條件（黑喉紅尾鴝特意要求「黑胸兜覆蓋整個上胸、橙色只由中胸開始」，第一版黑只到喉部、已重新生成）。**比較鳥二直接沿用 0510 的主圖（赭紅尾鴝雌鳥）**，屬「上一張的主圖降為下一張的比較鳥」，免再生成。全部為 AI 解讀、非等比例，未經鳥類專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
