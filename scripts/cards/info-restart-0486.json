@@ -1,0 +1,153 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0486",
+  "name": "銅藍鶲",
+  "scientificName": "Eumyias thalassinus",
+  "illustrationTaxon": "Adult male Eumyias thalassinus (flycatcher 15–17 cm: whole body a powdery copper-sulphate blue, greener and slightly darker on the head and underparts; the upperwing and tail a brighter, purer blue than the body; lores black; undertail coverts with small pale whitish tips; black bill and black legs). Females are slightly duller with greyish lores and a finely grey-barred chin and upper throat and are not shown. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "琉璃藍鶲",
+      "scientificName": "Cyanoptila cumatilis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是「一身藍綠色」的鶲，但琉璃藍鶲的**腹部與尾下覆羽純白**，只有上體、頰、頦、喉與胸是藍綠色，形成明顯的藍白二分；本種**整個身體（包括腹部與尾下覆羽）都是銅藍色**，只在尾下覆羽末端有淡色小端斑。本種體型也略小（15–17 cm），站姿與取食高度通常更高、更常停在開揚的高枝上。"
+    },
+    {
+      "zh": "白腹藍鶲",
+      "scientificName": "Cyanoptila cyanomelana",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同科、同樣在本港秋冬季可見；白腹藍鶲雄鳥是**深藍上體＋光亮黑色的臉喉胸＋純白腹部**的三段式，腹部有明確的白色大塊；本種則是**通體銅藍、沒有黑色圍兜、腹部也是藍色**，只有眼先是黑色。兩者體型接近（16–17 cm 與 15–17 cm），故看腹部是白還是藍即可分開。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.28,
+      0.18,
+      0.46,
+      0.36
+    ],
+    [
+      0.5,
+      0.36,
+      0.68,
+      0.54
+    ],
+    [
+      0.68,
+      0.6,
+      0.84,
+      0.76
+    ],
+    [
+      0.4,
+      0.44,
+      0.58,
+      0.62
+    ]
+  ],
+  "featureLabels": [
+    "黑色眼先",
+    "亮藍翼面",
+    "淡端尾下",
+    "銅藍通體"
+  ],
+  "featureNotes": [
+    "眼先（嘴與眼之間）為黑色，在一片銅藍色的臉上格外明顯；英文種名的由來亦與這片深色斑有關，雌鳥的眼先則偏灰而非黑，為插圖局部。",
+    "上翼表面（覆羽與飛羽外瓣）比身體其他部分**更亮更純的藍**，HKBWS 以「a brighter blue tail and upperwing」形容；飛行或展翅時最明顯，為插圖局部。",
+    "尾下覆羽末端有**淡白色小端斑**，從下方看尾基時可見——這是本種與其他銅藍色鶲分辨的細節之一，雌鳥亦有，為插圖局部。",
+    "全身（頭、背、翼、尾、胸、腹）都是「銅硫酸鹽」般的粉藍綠色，腹部不是白色；這種通體一致的藍正是與琉璃藍鶲（藍上體＋白腹）、白腹藍鶲（黑臉胸＋白腹）最直接的整體分別，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PAK",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 14 native countries/territories — Bangladesh, Bhutan, Brunei, Cambodia, China (mainland), India, Indonesia, Laos, Malaysia, Myanmar, Nepal, Pakistan (breeding), Thailand (non-breeding) and Vietnam — plus Iran as a VAGRANT, which is deliberately left unshaded. Hong Kong is NOT in BirdLife's country table even though it is a regular winter visitor here; it also has no separate 110m geometry. Not an occurrence polygon: this is a Full Migrant with a very large breeding EOO of 13,300,000 km² and a non-breeding EOO of 17,400,000 km², breeding from Pakistan through south China to Indochina and wintering south to India and the Greater Sundas."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/048800",
+      "use": "香港第 I 類，**不常見的冬候鳥，見於封閉樹冠的森林**；**15–17 cm**。雄鳥**通體銅藍綠色，翼面與尾更亮更藍，眼先黑色，尾下覆羽有淡色端斑**。雌鳥似雄鳥但**較暗淡、眼先偏灰，頦與上喉有細密的灰色橫斑**。鳴聲：在本港少鳴，可發出類似褐柳鶯的短「tak」；春季偶然可聽到中等音高、平穩而鬆散的鳴唱。分佈與生境：主要在**封閉樹冠森林或林緣**，不少紀錄來自**大帽山山塊**，其餘見於新界各處、港島與離島，過境時偶見於蒲台與何文田等熱點，但**以冬候鳥為主**。出現情況：**不常見冬候鳥兼稀少過境鳥，極端日期 8 月 11 日至 4 月 15 日**；8 月紀錄最早為 2018 年大埔滘一隻已完成大量後幼鳥換羽的當年鳥，**可能暗示本港附近有繁殖**——本種在粵北繁殖，最近已知地點為本港東北約 85 km 的梁化（2018-07-14 見幼鳥，R.W. Lewthwaite in litt.），其後另有 2020-08-25 大欖郊野公園與 2020-08-29 何文田兩筆 8 月紀錄；9 月至 10 月上半月稀少，**10 月中後增加，主要出現期為 11 月第二週至 2 月第二週、高峰在 1 月第一週**（與 1998 年前高峰在 12 月至 1 月不同）；2 月中至 4 月初減少，4 月第二週似有微弱過境，亦是錄得最多鳴唱的時候。數量：**2008/09 之前每冬總數多為個位或極低雙位數；2009/10 起全部為雙位數，由 2013/14 的 20 隻至 2018/19 的 49 隻**，是 1970 年代初（1971 年至少 24 隻）以來最高，很大程度上與觀鳥活動增加有關；通常一兩隻，最高計數為 **2012-02-26 鉛礦坳六隻**，較近為 **2021-11-07 白沙澳七隻**；1970 年代初三四隻並不罕見，但 1985 至 2005 年春之間同時不超過兩隻；可在偏好地點整個冬季停留（如 2016-10-14 至 2017-03-20 石崗引水道兩隻）。歷史：Vaughan & Jones (1913) 在澳門春季記錄，**香港首兩筆為 1937-02-06 與 1940-02-17 林村各一隻**（Herklots 1937、1940）。行為：**從較高而常開揚的枝頭（如枯樹）取食，亦會用柱與電線等人造物**，尤其傍晚利用餘暉；正午多在陰暗處，亦會加入樹冠下的混合鳥群；**寒冷天氣時會在排水溝的地面覓食**；雄鳥 3 月 14 日至 4 月 15 日偶有鳴唱。分佈與分類：*E. t. thalassinus* 由北巴基斯坦向東至印度東北、中國中部與南部、緬甸、泰國與中南半島繁殖，南至印度中南部、孟加拉、緬甸中部、泰國中部與中國東南越冬；*E. t. thalassoides* 為南緬甸、南泰國、馬來半島、蘇門答臘與婆羅洲的留鳥。IUCN：**Least Concern，種群趨勢穩定**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/verditer-flycatcher-eumyias-thalassinus/details",
+      "use": "IUCN **2024 LC**（準則 N/A）；成熟個體 Unknown、趨勢 **Decreasing（Suspected）**——範圍內十年樹冠減少 **12.4%**、暫定懷疑下降 **1–19%**；繁殖 EOO **13,300,000 km²**、非繁殖 EOO **17,400,000 km²**（本批暫時最大）、**Full Migrant**、繁殖 endemic No、**IBA／KBA 為「-」**、海拔 **0–3,050 m**、世代 **2.7 年**、森林依賴度 **Medium**、亞種群「-」；種群量未量化，但整體被描述為 common，**中國的越冬個體估計少於 1,000 隻**（Brazil 2009）；生境 **13 項全為 Suitable**（市區、鄉村花園、耕地、沼澤林、山地林、低地林、紅樹林，繁殖與非繁殖季皆列）；國家表列 **14 個原生國家／地區加伊朗一個迷鳥紀錄**；**香港不在表中**；**貿易普遍度低（七個資料集中只有一個）**，用途為食用與寵物（皆為自給、全國）；保育行動：全範圍已劃定保育地點，但無系統監測、無復育計劃、無國際貿易管制。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **493 項 銅藍鶲（Eumyias thalassinus），第 I 類**；同科鄰項為 491 白腹藍鶲、492 琉璃藍鶲（I 類，NT）、494 中華仙鶲（I 類）。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（銅藍鶲；Verditer Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Eumyias thalassinus／鶲科 Muscicapidae）；speciesCode verfly4；taxonOrder 28821。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **六軸齊全**：i=2、a=3.8、v=2.9（**含 vEst=1**）、r=1.8、c=1.2、o=2.3——**本批自 0483 之後第一張六軸全部可用的卡**（WITHHELD 為空）。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案在本批中相對完整：`look` 有真正的外觀描述（額基、頦與眼先形成一體的黑色區域、翼與尾為鮮亮銅藍、羽片內側暗褐、**尾下覆羽具白色端斑**）、`diet` 列出鱗翅目／鞘翅目／直翅目昆蟲與幼蟲並提及果實與種子、`callouts` 兩條（喙與腳黑色；多在高大喬木冠層）、`breeding`（夏季在喜馬拉雅、泰北與中國繁殖，冬季遷徙至東南亞及南亞）、`behavior`（常單獨或成對活動）、`range`、`highlights`；**沒有 habitat、voice（中文）、migration、conservation、funFact（中文）；length 與 weight 皆為空**；picks 為 range、diet、highlights、look、breeding、behavior。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 76.2 mm、尾 61.0 mm、跗蹠 13.8 mm、嘴峯 12.0 mm、體重 18.1 g。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **493** 項、**第 I 類**；HKBWS 描述為**不常見的冬候鳥兼稀少過境鳥**，**極端日期 8 月 11 日至 4 月 15 日**；主要出現期為 **11 月第二週至 2 月第二週、高峰在 1 月第一週**；**2008/09 前每冬多為個位或極低雙位數，2009/10 起全部雙位數，由 2013/14 的 20 隻至 2018/19 的 49 隻**；最高計數 **2012-02-26 鉛礦坳六隻**、較近 **2021-11-07 白沙澳七隻**。",
+    "**繁殖的可能性**：2018 年 8 月大埔滘一隻當年鳥已完成大量後幼鳥換羽，HKBWS 認為**可能暗示本港附近有繁殖**——本種在粵北繁殖，最近已知地點是距港約 85 km 的梁化（2018-07-14 幼鳥）；2020 年 8 月另有兩筆。卡片把「8 月紀錄」與「繁殖疑問」寫進 notes，但不宣稱本港有繁殖。",
+    "辨識要點（雄鳥）：**通體銅藍綠色**、**翼面與尾更亮更藍**、**眼先黑色**、**尾下覆羽有淡色端斑**；雌鳥較暗淡、**眼先偏灰**、**頦與上喉有細密灰色橫斑**。與琉璃藍鶲（藍上體＋白腹）及白腹藍鶲（黑臉胸＋白腹）的分別都在「腹部是藍色還是白色」——本種**腹部也是銅藍色**。",
+    "行為值得記錄：**從較高而常開揚的枝頭取食，也會用柱與電線等人造物**（尤其傍晚利用餘暉）；正午多在陰暗處並加入樹冠下的混合鳥群；**寒冷天氣會到排水溝地面覓食**；雄鳥 3 月 14 日至 4 月 15 日偶有鳴唱，4 月第二週亦是錄得最多鳴唱的時候。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 評估；**趨勢 Decreasing（Suspected）**（樹冠減 **12.4%**、懷疑下降 1–19%），而 HKBWS 寫「stable」，兩者不一致，已在 notes 並列。繁殖 EOO **13,300,000 km²**、非繁殖 EOO **17,400,000 km² 為本批暫時最大**、**Full Migrant**、**IBA／KBA 為「-」**、海拔 **0–3,050 m**、世代 2.7 年、森林依賴度 Medium、生境 **13 項全 Suitable**（含市區、耕地、紅樹林）；**中國越冬個體估計少於 1,000 隻**。",
+    "**本卡是本批近期第一張六軸全部照用的卡**：`cardCopy` 的 `look` 有真正的外觀描述（黑色額基／頦／眼先、亮銅藍翼尾、尾下覆羽白端斑）足以支撐 **a=3.8**；**v=2.9 的估算（翼 76.2 mm×0.22≈16.8 cm）落在 HKBWS 的 15–17 cm 之內**，故沿用；i=2、r=1.8、c=1.2、o=2.3 亦全部保留，`withheldScores` 為空、`missingScores` 為空。這是與 0484、0485 兩張（同樣是藍色鶲、但分別缺 a／缺文字支撐）刻意對照的一點。",
+    "**地圖**：BirdLife **14 個原生國家／地區**全部有 110m 幾何，故填 **14 個形狀**（孟加拉、不丹、汶萊、柬埔寨、中國、印度、印尼、寮國、馬來西亞、緬甸、尼泊爾、巴基斯坦、泰國、越南）；**伊朗為迷鳥不填**；**香港不在 BirdLife 國家表中**（雖然是本港常見冬候鳥），note 內明寫。",
+    "AI 主圖以 0483 棕腹大仙鶲的方形主圖作風格參照，生成 1024×1024、直接放大至 1127×1127（不裁切、不補邊），畫出通體銅藍綠色、更亮的翼與尾、黑色眼先與尾下覆羽的淡色端斑。比較鳥為**琉璃藍鶲**（0485 主圖方形版）與**白腹藍鶲**（0484 主圖方形版），形成「藍綠＋白腹／深藍＋黑胸白腹／通體藍」三張一組的比較系列，非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "withheldScores": {}
+}
