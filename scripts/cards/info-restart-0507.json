@@ -160,7 +160,7 @@
     },
     {
       "url": "https://avifauna.hkbws.org.hk/hk-list",
-      "use": "香港鳥類名錄 2024：第 **516** 項 紅胸姬鶲 Red-breasted Flycatcher（*Ficedula parva*），**第 I 類**；鄰項為 515 紅喉姬鶲與 517 紅脇藍尾鴝——**名錄把紅胸姬鶲排在紅喉姬鶲之後，與交接文件 §12 的次序相反**。"
+      "use": "香港鳥類名錄 2024（頁面最後更新 2025-05-11）：第 **515** 項 紅胸姬鶲 Red-breasted Flycatcher（*Ficedula parva*），**第 I 類**；鄰項為 514 白眉藍姬鶲與 516 紅喉姬鶲——**名錄把紅胸姬鶲排在紅喉姬鶲之前**（IOC 次序 *parva* 先於 *albicilla*），與 runtime id 的次序（0506 紅喉姬鶲在前）相反。"
     },
     {
       "path": "src/data/birds.json",
@@ -189,7 +189,7 @@
     "IUCN：**LC（無危）**，BirdLife **2018** 年評估、**趨勢 Increasing**（Suspected，歐洲族群上升）——**與 HKBWS 的 increasing 一致**，是本批第一張趨勢上升的卡；**成熟個體 6,500,000–10,499,999** 是本批至今唯一有具體數量估計的物種（歐洲 3,290,000–5,090,000 繁殖對、佔全球分佈 >95%）；繁殖 EOO 9,310,000 km²、非繁殖 EOO 2,630,000 km²、IBA／KBA 6 個、海拔 0–2,350 m、世代 3.9 年、森林依賴度 Medium；**威脅**為現代林業導致老樹與巢位減少；**保育行動**為 CMS 附錄 II、伯恩公約附錄 II、歐盟鳥類指令附件 I，但歐洲沒有已知措施；**本頁沒有貿易一節**。",
     "**地圖是本批最寬的一張：58 個形狀**。BirdLife 列 61 個原生列（俄羅斯分 Russia 與 Russia (European) 兩列），去重後 60 個地區，其中 **Bahrain 與 Malta 無 110m 幾何**，只在 note 以文字說明，故填 **58 個形狀**。**法羅群島、冰島、愛爾蘭、蘇丹為迷鳥**、**巴勒斯坦、塞內加爾、敘利亞、梵蒂岡為 Origin Uncertain**，一律不填；**香港不在 BirdLife 國家表**，故不作香港聲明。",
     "runtime 資料缺陷（只記錄、不改 runtime）：`look` 中文只有量度、英文才有形態描述（故 `a` 保留）；`funFact` 中文自指；`behavior` 只有一句彈翅展尾、沒有進食或遷徙；`voice` 與 `humanRelation` 一字不差；`breeding` 只講前蘇聯的築巢時間；`habitat` 中文全缺；length 與 weight 為空。六軸分數齊全。",
-    "HKBWS 頁面 id 是 **050800**（路徑 `0410/`），比 runtime **0507** 大 1；名錄序號 516（在紅喉姬鶲 515 之後）。",
+    "HKBWS 頁面 id 是 **050800**（路徑 `0410/`），比 runtime **0507** 大 1；名錄序號 **515**（在 516 紅喉姬鶲之前，與 runtime id 次序相反）。",
     "**本輪開始前沙盒被重置**：`/home/user/card-venv`、字型、`/tmp/dump.py` 與 **`cards/art`、`deliver/cards` 全部消失**（只有 repo 內的檔案存活），本機 git 分支亦退回 base commit，需 `git fetch` 後 `git reset --hard origin/arena/3fc0e99d-aviandex` 才對回 `4d226c5`。0501–0506 的 AVIF 已在 Drive，不受影響，但**本機已無法重跑它們的 `verify-info-card.py`**（缺 art 與 manifest）。因此 0507 的三張圖全部重新生成：主圖紅胸姬鶲雄鳥、比較鳥紅喉姬鶲雄鳥與橙胸姬鶲雄鳥，均為**不帶風格參照、以硬性羽色規格描述**（分別明寫「不得有黑臉罩／白額」、「不得有橙胸板」、「不得有灰臉」等），**非等比例、非專家認證**；插圖與全部辨識要點均為 AI 解讀，未經鳥類專家審核。"
   ],
   "missingScores": [],

@@ -119,7 +119,7 @@
     },
     {
       "url": "https://avifauna.hkbws.org.hk/hk-list",
-      "use": "香港鳥類名錄 2024：第 **515** 項 紅喉姬鶲 Red-throated Flycatcher（*Ficedula albicilla*），**第 I 類**；鄰項為 514 白眉藍姬鶲與 516 紅胸姬鶲——**名錄把紅胸姬鶲排在紅喉姬鶲之後**，與交接文件 §12 待辦清單的次序相反。"
+      "use": "香港鳥類名錄 2024（頁面最後更新 2025-05-11）：第 **516** 項 紅喉姬鶲 Red-throated Flycatcher（*Ficedula albicilla*），**第 I 類**；鄰項為 515 紅胸姬鶲與 517 紅脇藍尾鴝——**名錄把紅喉姬鶲排在紅胸姬鶲之後**，與 runtime id 的次序（0506 紅喉姬鶲在前）相反。"
     },
     {
       "path": "src/data/birds.json",
