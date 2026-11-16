@@ -1,0 +1,138 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0460",
+  "name": "寶興歌鶇",
+  "scientificName": "Turdus mupinensis",
+  "illustrationTaxon": "Chinese Thrush, probably first-winter (broad pale wing-covert tips). AI interpretation, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "懷氏地鶇",
+      "scientificName": "Zoothera aurea",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是褐色而佈滿斑點的地棲鶇，但懷氏地鶇下體的斑是寬闊的深灰黑色新月斑、眼圈是一整圈白、上體金褐帶黑鱗；本種下體是淡黃褐底上的大型深褐圓斑（伸延至肛周）、臉部灰白形成頭罩感、眼後有粗黑月牙而無白眼圈。"
+    },
+    {
+      "zh": "白眉鶇",
+      "scientificName": "Turdus obscurus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬且都有白喉與深色頰紋，但白眉鶇頭與胸藍灰、有粗白眉與白色頰紋、脇橙黃、嘴黃；本種沒有白眉，臉部灰白而眼後有一道粗黑月牙，胸腹淡黃褐並佈滿大褐斑，嘴灰。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.545,
+      0.395,
+      0.67,
+      0.52
+    ],
+    [
+      0.635,
+      0.265,
+      0.76,
+      0.39
+    ],
+    [
+      0.4,
+      0.32,
+      0.525,
+      0.445
+    ],
+    [
+      0.47,
+      0.6,
+      0.595,
+      0.725
+    ]
+  ],
+  "featureLabels": [
+    "褐色大斑",
+    "耳後月牙",
+    "褐背深心",
+    "淡粉腳"
+  ],
+  "featureNotes": [
+    "胸與脇以淡黃褐為底，佈滿大型深褐色圓斑，斑點一直伸延至肛周與尾下，是與其他鶇區分的主要特徵；幼鳥第一齡冬羽的斑較模糊而密集，為插圖局部。",
+    "耳羽後方有一道寬闊的深色月牙，向下延伸成界定白色喉部的模糊深色頰紋，另有一條較不明顯的深色線由眼向下，為插圖局部。",
+    "上體中褐而羽毛中央較深，形成低調的縱紋感；飛羽邊緣較暖褐，第一齡冬羽的翼覆羽有寬白端（插圖即畫有此特徵），為插圖局部。",
+    "腳呈淡粉肉色、嘴灰，配合頭部灰白與身體褐色，是本種低調配色的基調，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists China as the sole native country and flags the species as a breeding endemic; Vietnam is a VAGRANT entry and is left unshaded. Hong Kong falls inside China's outline and BirdLife gives it no separate row; HKBWS classes it as a Cat. I accidental winter visitor. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0390/046400",
+      "use": "香港第 I 類：冬季偶見鳥；23 cm，中小型鶇，下體由胸至肛周佈滿大型深褐斑，耳羽後有寬闊的深色月牙、另有較不明顯的深色線由眼向下，上體中褐而羽心較深、臉部灰白形成頭罩效果，白色喉部由模糊而寬的深色頰紋界定，胸與脇底色淡黃褐，飛羽邊緣較暖褐，腳淡粉、嘴灰，第一齡冬羽的翼覆羽有寬白端；本港可聽到的非鳴唱叫聲未知，鳴唱為一連串短句、多為純音而不刺耳、句與句之間不重複，速度偏慢偶有急促花腔；所有紀錄都在鬱閉灌叢、森林或林緣；紀錄期為 11 月 18 日至 3 月 24 日：2004 年 11 月 18 日嘉道理農場一隻被捕獲、2006 年 2 月 16 日至 3 月 24 日蒲台一隻、2012 年 12 月 5 日蒲台一隻、2014 年 1 月 17 日至 2 月 1 日山頂一隻、2017 年 12 月 12–18 日城門水塘一隻；一般相當隱蔽害羞，但寒冷天候下有時很易觀察；單型種，是中國特有種，國外紀錄極少；繁殖於中國中部，由青藏高原東部與東南緣東至秦嶺、東北至北京一帶，在山區是稀少而局部的繁殖鳥、低地為過境鳥、冬季罕見，非繁殖期紀錄東至南韓西岸島嶼、南至台灣；香港紀錄是其已知分佈的南限；IUCN LC、種群趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chinese-thrush-otocichla-mupinensis/details",
+      "use": "IUCN **2024** LC、成熟個體 **Unknown**（中國估計少於 100 對繁殖鳥、50–1,000 隻過境與 50–1,000 隻越冬個體）、趨勢 **Decreasing**（Suspected，因範圍內樹冠覆蓋十年間減少 1.4%，推算族群下降 1–19%）；EOO **2,130,000 km²**、**非遷徙**、**繁殖 endemic Yes**；海拔 1,300–3,200 m；世代 3.5 年；森林依賴度 **Medium**（溫帶林為主要，另有鄉村花園與農地）；貿易低普遍度、用途為國際寵物貿易；國家表只有中國（原生繁殖）與越南（迷鳥）。分類上 BirdLife 用 Otocichla mupinensis，runtime 仍用 Turdus mupinensis。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（寶興歌鶇；Chinese Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Turdus mupinensis／鶇科 Turdidae）；BirdLife 現用 Otocichla mupinensis，卡面沿用 runtime 學名。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 只有五個軸有分數：i=2、a=2.8、r=1、c=1.2、o=1.8；**v（觀賞值）完全沒有分數**，故 missingScores 為 v。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案極少：只有 range（中國及越南北部）、look（講的是分子研究顯示最近親為歐洲物種，不是外型描述）、funFact（分類與俗名）三段中文，**habitat、diet、voice、behavior、breeding、conservation、migration、etymology 全部沒有**；length 與 weight 為空；callouts 缺失。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "**runtime 沒有 0460 的 AVONET 量度**，故無法以翼長換算體長。"
+    }
+  ],
+  "notes": [
+    "HKBWS 046400（路徑 `0390/`，鶇科）：香港第 I 類，冬季偶見鳥；23 cm，下體由胸至肛周佈滿大型深褐斑、耳後有寬闊深色月牙、臉部灰白形成頭罩效果、上體中褐而羽心較深、淡黃褐底、腳淡粉、嘴灰，第一齡冬羽翼覆羽有寬白端。",
+    "本港紀錄只有五筆，全部在 11 月 18 日至 3 月 24 日之間：2004-11-18 嘉道理農場（捕獲）、2006-02-16 至 03-24 蒲台、2012-12-05 蒲台、2014-01-17 至 02-01 山頂、2017-12-12 至 12-18 城門水塘；全部在鬱閉灌叢、森林或林緣；香港是已知分佈的南限。",
+    "分類與分佈：單型種、中國特有種；繁殖於中國中部（青藏高原東南緣至秦嶺、東北至北京），山區稀少而局部，低地過境、冬季罕見；非繁殖期紀錄東至南韓西岸島嶼、南至台灣。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2024** 年評估；成熟個體未知，趨勢 **下降**（推測，範圍內樹冠十年減少 1.4%、推算下降 1–19%）；EOO 2,130,000 km²、**非遷徙**、**繁殖 endemic**、海拔 1,300–3,200 m、世代 3.5 年、森林依賴度 Medium。HKBWS 則記趨勢穩定，兩者取向不同，卡面以 BirdLife 的全球評定為準。",
+    "runtime 分數：i=2、r=1、c=1.2 沿用；**v 完全沒有原始分數**（missingScores 為 v，不是 withheld）；a=2.8 待查——runtime 只有 range／look／funFact 三段中文，其中 look 講的是分子研究而非外型，habitat 與 diet 完全缺失，無法支撐適應力分數；o=1.8 依賴待查分項（a、v）不補算。",
+    "runtime 文案與量度缺口：cardCopy 只有三段中文（range、look、funFact）且 look 與 funFact 都不是野外資訊，habitat、diet、voice、behavior、breeding、conservation、migration、etymology 全無；measurements.json 沒有本種、length 與 weight 為空、callouts 缺失。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖原為 1408×768 橫幅，補成方形後裁 `(0.06,0.13,0.86,0.93)`，畫出淡黃褐底的大型深褐斑、耳後深色月牙、灰白臉部、褐色上體與淡粉腳，背景為竹林與苔蘚以呼應其中國中部山地森林的生境；插圖帶有第一齡冬羽的寬白翼覆羽端，年齡仍待專家核。比較鳥為本輪新生成的懷氏地鶇與白眉鶇 AI 圖（前幾張的插圖在沙盒重置後已遺失），非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "runtime 只有 range、look、funFact 三段中文，look 講的是分子研究而非外型，habitat 與 diet 完全缺失，a=2.8 缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（a）與完全缺失的 v，不補算。"
+  }
+}

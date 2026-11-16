@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：HKBWS 2025 記下降"
+  },
+  "id": "0415",
+  "name": "庫頁島柳鶯",
+  "scientificName": "Phylloscopus borealoides",
+  "illustrationTaxon": "Adult-type Phylloscopus borealoides on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "淡腳柳鶯",
+      "scientificName": "Phylloscopus tenellipes",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "羽色幾乎相同，野外主要靠叫聲：本種音調較低（4.5–5.3 kHz），初級飛羽伸出較長。"
+    },
+    {
+      "zh": "峨眉柳鶯",
+      "scientificName": "Phylloscopus emeiensis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體欖綠、兩道淡黃翼斑清楚、嘴較細長；本種上體褐灰帶欖、冠及眼紋較深、翼斑較窄。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.66,
+      0.2,
+      0.85,
+      0.39
+    ],
+    [
+      0.45,
+      0.37,
+      0.62,
+      0.54
+    ],
+    [
+      0.77,
+      0.235,
+      0.92,
+      0.385
+    ],
+    [
+      0.48,
+      0.575,
+      0.7,
+      0.795
+    ]
+  ],
+  "featureLabels": [
+    "白色長眉",
+    "兩道翼斑",
+    "淡色嘴尖",
+    "淡粉腳"
+  ],
+  "featureNotes": [
+    "白色眉紋在眼後較寬並略向上折，配深色眼紋，為插圖局部。",
+    "大覆羽及中覆羽上的兩道淡色翼斑，為插圖局部。",
+    "上嘴深色、下嘴及嘴尖淡肉色，為插圖局部。",
+    "淡粉肉色的腳、腳趾及爪，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "JPN",
+      "CHN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "SGP"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/039800",
+      "use": "香港第 I 類秋季稀少過境；繁殖庫頁島、千島群島、北海道及本州，越冬華南沿岸（罕見）、海南經東南亞至新加坡，蘇門答臘北部可能；與淡腳柳鶯羽色幾乎相同，靠叫聲音調（4.5–5.3 kHz，較淡腳低）及初級飛羽伸出較長分辨；IUCN LC 趨勢下降。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/sakhalin-leaf-warbler-phylloscopus-borealoides",
+      "use": "BirdLife 物種頁本輪只回傳空白骨架（無評估年份、趨勢、EOO、國家表），故 IUCN、分佈及國家一律以 HKBWS 為據。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（庫頁島柳鶯）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus borealoides／柳鶯科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.3、v=2.6、r=3.3、c=1.2、o=2.3，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range、look、voice、breeding、migration 及 highlights 有內容但偏簡略，diet、habitat、etymology、funFact 為空，length 為空；range 稱越冬奄美及沖繩群島，與 HKBWS 不符。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 62.2 mm，×0.22≈13.7 cm。"
+    }
+  ],
+  "notes": [
+    "HKBWS：香港屬第 I 類秋季稀少過境；繁殖庫頁島、千島群島、北海道及本州，越冬華南沿岸（罕見）、海南經中南半島及馬來半島至新加坡，蘇門答臘北部可能有；與淡腳柳鶯在外形上幾乎無法分辨，野外靠叫聲單音音調分辨——本種 4.5–5.3 kHz，淡腳 5.5–5.9 kHz，兩者音域略有重疊；本種初級飛羽伸出較長、體型略大。HKBWS 2025 記全球 LC 但趨勢下降。",
+    "runtime 的 range／migration 稱「分佈於庫頁島、千島群島和日本，並在冬季遷徙至奄美群島和沖繩群島」，與 HKBWS 描述的越冬地（華南沿岸、海南、中南半島至新加坡）不符，疑為舊資料；卡面地圖依 HKBWS 填色，奄美、沖繩所屬的日本仍因繁殖地而列入，此差異只記在 spec。",
+    "runtime 分數 i=2、a=2.3、v=2.6、r=3.3、c=1.2、o=2.3、vEst=1。v 待查：length 為空，翼長 62.2 mm×0.22≈13.7 cm，高於 HKBWS 體型描述，保留「原觀賞值含體長估算」提示；a 待查：habitat 及 diet 全空；o 依賴待查分項不補算；r=3.3 沿用——voice（叫聲音調比較）、breeding（灌木叢築巢）及 look 均有內容，etymology 缺漏只屬旁註；c=1.2 與 LC 一致、i=2 沿 runtime。",
+    "runtime 文案亦有缺陷：look 只寫臉頰綠棕、耳羽斑駁，未提眉紋、翼斑與腳色；voice 句子「較低音調的鳴聲聲」有疊字，且音調範圍只說「有些重疊」而未給數字；funFact 為空。這些未影響 r 的沿用。",
+    "世界底圖按 HKBWS 分佈填色（俄羅斯、日本、中國、緬甸、泰國、老撾、柬埔寨、越南、馬來西亞、新加坡），繁殖與越冬未分色、不細分國家內部，綠色非全境、非完整分佈；蘇門答臘北部「可能」有紀錄，未將印尼填色；香港的過境紀錄不當原生分佈。",
+    "AI 主圖：上體褐灰帶欖、冠及眼紋較深、白色長眉在眼後向上折、耳羽淡而斑駁、兩道淡色翼斑、下體白、初級飛羽伸出較長、下嘴及嘴尖淡色、腳淡粉，符合 HKBWS 描述；冠部灰調深淺、翼斑寬度及尾羽磨損仍待專家核。比較鳥為 0414 淡腳柳鶯及 0413 峨眉柳鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 及 diet 全空，適應分待查、不補值。",
+    "v": "length 為空，翼長推估 13.7 cm 缺乏體長可核，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

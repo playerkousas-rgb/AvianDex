@@ -1,0 +1,146 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0466",
+  "name": "赤胸鶇",
+  "scientificName": "Turdus chrysolaus",
+  "illustrationTaxon": "Adult male Turdus chrysolaus (dark greyish face and throat, brownish-olive upperparts, extensive orange flanks, white belly, yellow bill). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "白腹鶇",
+      "scientificName": "Turdus pallidus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同樣在港越冬的鶇，但白腹鶇頭背橄欖褐而胸脇淡灰、橙只隱約出現、嘴黃而腳淡粉，整體灰調重；本種臉與喉深灰、上體褐橄欖、脇有鮮明大片橙紅。"
+    },
+    {
+      "zh": "白眉鶇",
+      "scientificName": "Turdus obscurus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同樣有橙褐胸脇，但白眉鶇頭灰而具長白眉與眼下白斑、眼先黑褐、背較暖褐；本種完全沒有白眉、臉與喉深灰、上體較褐橄欖，橙集中在脇而非胸口。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.655,
+      0.28,
+      0.78,
+      0.405
+    ],
+    [
+      0.6,
+      0.44,
+      0.725,
+      0.565
+    ],
+    [
+      0.525,
+      0.555,
+      0.65,
+      0.68
+    ],
+    [
+      0.715,
+      0.285,
+      0.84,
+      0.41
+    ]
+  ],
+  "featureLabels": [
+    "深灰臉喉",
+    "橙紅脇",
+    "白色腹部",
+    "黃嘴"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥（在港罕見）臉與喉為深灰，與褐橄欖色的頭頂及上體成對比；成鳥雌鳥頭與上體均勻橄欖褐、喉較淡而有深色縱紋、可能有一道模糊眉紋，為插圖局部。",
+    "脇部通常有大片橙紅，成鳥雌鳥的橙較暗啞且範圍較窄；第一齡鳥上體較暗啞、臉有淡色細斑，為插圖局部。",
+    "腹部與尾下覆羽白色，與橙紅色的脇成清楚界線；第一齡鳥大覆羽在羽色新鮮時有淡色端，為插圖局部。",
+    "嘴的黃色範圍大、連嘴基部亦是黃色；雌鳥與第一齡鳥的嘴較暗啞，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "PRK",
+      "PHL",
+      "RUS",
+      "KOR",
+      "TWN"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists China, Japan, North Korea (breeding), the Philippines, Russia (including Asian Russia), South Korea and Taiwan as native. Hong Kong has no separate geometry on the 110m base map and is folded into China's outline. Russia is shaded as a country, not as a claim of breeding range west of the Urals. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0390/047000",
+      "use": "香港第 I 類：林地稀少的冬候鳥，是本港較少被記錄的常見鶇之一；23–24 cm，整體均勻而脇通常大片橙；成鳥雄鳥（在港罕見）臉與喉深灰、上體褐橄欖、嘴基部大範圍黃色；成鳥雌鳥頭與上體均勻橄欖褐、喉較淡而有深色縱紋、脇橙較暗啞而範圍較窄、可能有模糊眉紋；第一齡鳥臉有淡色細斑、喉側有深色縱紋、羽色新鮮時大覆羽有淡色端、上體較暗啞；叫聲在飛行或棲息時皆急速下降、時長較短、結束較突然，與灰背鶇及烏灰鶇有別，最接近白腹鶇；全港林地廣泛分佈但密度極低；冬季由 11 月第三週至 4 月第一週，期間以外紀錄極少，極端日期 2009-11-16 與 2020-04-22，最高為 2015-12-15 何文田及 2018-12-18 蒲台島各 4 隻；多數紀錄在 11 月下半月與 12 月，顯示有過境；1 月初至 3 月中越冬數量穩定，之後回升反映春季過境；Swinhoe (1861) 於 2、3 月紀錄，Vaughan & Jones (1913) 稱其為偶然冬候鳥、最遲至 4 月 6 日，之後直至 1958 年 HKBWS 成立才有紀錄；在林地落葉層與結果樹（鵝掌柴、紅鱗蒲桃）覓食；繁殖於庫頁島、千島群島南至日本本州，冬季由日本南部經琉球至台灣、中國沿海、海南與菲律賓北部，在中國東部為過境鳥、東南部為冬候鳥；兩個亞種，指名亞種繁殖日本北至中部、越冬日本南部、華東南（含香港與台灣）與菲律賓北部，T. c. orii 繁殖庫頁島與千島群島、越冬日本；IUCN LC、趨勢不明。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/brown-headed-thrush-turdus-chrysolaus/details",
+      "use": "IUCN **2024** LC、成熟個體 Unknown、趨勢 **Decreasing**（樹冠在分佈範圍內十年間減少 2.5%，推測族群下降 1–19%）、繁殖 EOO **1,620,000 km²**、非繁殖 EOO **3,190,000 km²**、完全遷徙、繁殖 endemic **No**、6 個 IBA／KBA、海拔 0–2,750 m、世代 **3.1 年**、森林依賴度 Medium；生境以溫帶林為繁殖期主要，非繁殖期見於亞熱帶乾林與乾灌叢、鄉村花園與人工林；貿易普遍度低（七個貿易資料集中出現於兩個）；無系統性監測、已納入國際法規；國家表為中國、日本、北韓（繁殖）、菲律賓、俄羅斯（含亞洲部分）、南韓、台灣，**香港沒有獨立一列**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（赤胸鶇；Brown-Headed Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Turdus chrysolaus／鶇科 Turdidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=2.3、v=3.4（含 vEst=1）、r=1、c=1.2、o=2.0。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案極薄，只有 range（日本、菲律賓、朝鮮半島南部、台灣、海南及中國河北至福建）、funFact（「赤胸鶇為鶲科鶇屬的鳥類」——科名有誤）與 behavior（把 range 重述一次，再加廣東）；diet、look、habitat、voice、breeding、conservation、etymology、migration 全部沒有；length 與 weight 為空；callouts 缺失。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 119.4 mm、尾 86.9 mm、跗蹠 30.9 mm、嘴峯 24.3 mm、體重 65.4 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 047000（路徑 `0390/`，鶇科）：香港第 I 類，林地稀少冬候鳥、密度極低；23–24 cm，成鳥雄鳥臉喉深灰、上體褐橄欖、脇大片橙、嘴基部大範圍黃；雌鳥頭與上體橄欖褐、喉有縱紋、橙較暗；第一齡鳥有淡色大覆羽端。",
+    "本港紀錄：冬季由 11 月第三週至 4 月第一週，期間外紀錄極少；極端 2009-11-16 與 2020-04-22；最高 2015-12-15 何文田及 2018-12-18 蒲台島各 4 隻；11 月下半月至 12 月多紀錄（有過境），1 月初至 3 月中穩定，之後回升為春季過境；Swinhoe (1861) 2、3 月紀錄，Vaughan & Jones (1913) 稱偶然冬候鳥，之後至 1958 年才有紀錄。",
+    "習性：在林地落葉層與結果樹（鵝掌柴、紅鱗蒲桃）覓食；叫聲急速下降、較短、結束突然，最接近白腹鶇。",
+    "分類：兩個亞種，指名亞種繁殖日本北至中部、越冬日本南部與華東南（含香港、台灣）及菲律賓北部；T. c. orii 繁殖庫頁島與千島群島、越冬日本。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2024** 年評估，趨勢 **Decreasing**（樹冠減少 2.5%、推測下降 1–19%）；EOO 繁殖 1,620,000 km²、非繁殖 3,190,000 km²、完全遷徙、非繁殖 endemic、世代 3.1 年、森林依賴度 Medium、6 個 IBA。",
+    "runtime 分數：i=2、r=1、c=1.2 沿用；**a=2.3 待查**——cardCopy 只有 range、funFact 與重述 range 的 behavior，look、diet、habitat 全部缺失，a 缺乏支撐；**v=3.4 待查**——length 與 weight 皆為空、vEst=1 即原值由體長估算，翼長 119.4 mm×0.22≈26.3 cm 高於 HKBWS 的 23–24 cm；**o=2.0 依賴待查分項（a、v）不補算**。",
+    "runtime 文案缺陷：只有三段中文且 funFact 把科名寫成「鶲科」（應為鶇科 Turdidae），behavior 只是 range 的重述；length 與 weight 為空、callouts 缺失。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖原為 1296×816 橫幅，直接取中央 816×816 方形（不補邊，避免平面色帶）後放大至 1127×1127，畫出深灰臉喉、褐橄欖上體、大片橙紅脇、白腹與大範圍黃嘴，站在林地落葉層以呼應 HKBWS 所述覓食方式；雌鳥（橄欖褐、喉有縱紋）與第一齡鳥仍待專家核。比較鳥沿用 0463 的白腹鶇與本輪新生成的白眉鶇，非等比例、非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "cardCopy 只有 range、funFact（且科名有誤）與把 range 重述一次的 behavior，look、diet、habitat 全部缺失，a=2.3 缺乏支撐，待查。",
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 119.4 mm×0.22≈26.3 cm 高於 HKBWS 的 23–24 cm，3.4 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（a、v），不補算。"
+  }
+}

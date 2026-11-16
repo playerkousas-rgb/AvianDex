@@ -1,0 +1,151 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0482",
+  "name": "小仙鶲",
+  "scientificName": "Niltava macgrigoriae",
+  "illustrationTaxon": "Adult male Niltava macgrigoriae (wet-plate blue flycatcher 11–14 cm: lores, cheek and chin black; rest of face and upper breast dark blue; lower breast and belly greyish to greyish-blue, whiter on the lower belly and vent; purplish-blue upperparts from crown to tail with a contrastingly pale sky-blue forecrown and rump and a pale sky-blue patch on the side of the neck; black bill and black legs). Females are brown above with rufous wings and tail and a browner throat and are not shown. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "棕腹大仙鶲",
+      "scientificName": "Niltava davidi",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、本港名錄上相鄰的一種，也是最容易混淆的近親；棕腹大仙鶲體型明顯較大（約 15–17 cm）、嘴更粗壯，雄鳥**下腹、脇與尾下覆羽為鮮栗橙**，與深藍的上體強烈對比，而且**沒有本種那樣淡藍的前額、腰與頸側斑**；本種體型小（11–14 cm）、整個下腹只是灰白而非栗橙。雌鳥方面，棕腹大仙鶲亦為褐色而尾栗，但體型較大、下體較暖褐、頸側沒有明顯淡藍斑。"
+    },
+    {
+      "zh": "白腹藍鶲",
+      "scientificName": "Cyanoptila cyanomelana",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是藍色上體、深色臉部的鶲；白腹藍鶲雄鳥體型大得多（約 17–18 cm）、**整個臉、喉、胸與脇都是黑色而形成一大片黑圍兜**、下腹純白、**額頭與腰沒有淡藍斑、頸側亦無淡藍小斑**；本種體型小、黑色只限於眼先、頰與頦，上胸已轉深藍，而且三處淡藍斑（前額、腰、頸側）是辨識關鍵。雌鳥白腹藍鶲為橄欖褐而喉腹近白、尾亦帶栗，但沒有本種的頸側淡藍斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.26,
+      0.17,
+      0.49,
+      0.4
+    ],
+    [
+      0.3,
+      0.1,
+      0.5,
+      0.3
+    ],
+    [
+      0.63,
+      0.525,
+      0.86,
+      0.755
+    ],
+    [
+      0.39,
+      0.21,
+      0.62,
+      0.44
+    ]
+  ],
+  "featureLabels": [
+    "黑頰與黑頦",
+    "淡藍額斑",
+    "淡藍腰斑",
+    "頸側藍斑"
+  ],
+  "featureNotes": [
+    "雄鳥的眼先、頰與頦為黑色，其餘臉部與上胸則是深藍——黑色只佔臉部下側一小塊，與白腹藍鶲那種連喉連胸的大片黑圍兜完全不同，為插圖局部。",
+    "前額（嘴上方）有一小片明顯較淺的天藍色，與深紫藍的頭頂形成對比；這是雄鳥最易與棕腹大仙鶲分開的細節之一，後者沒有這片淡藍前額，為插圖局部。",
+    "腰與尾上覆羽的淡天藍斑在深藍背部與尾羽之間形成一塊淺色區域，HKBWS 以「contrastingly pale blue … rump」形容；飛行或俯身時最顯眼，為插圖局部。",
+    "頸側另有一小片淡天藍斑，形狀與大小個體間有變化（雌鳥亦有，只是深淺不一）；本種的三處淡藍斑（前額、腰、頸側）合起來就是野外最快的辨識組合，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 9 native countries/territories — Bangladesh, Bhutan, China (mainland), India, Laos, Myanmar, Nepal, Thailand and Vietnam, all recorded as Resident/Native — and all 9 have 110m geometry, so 9 shapes are shaded. Hong Kong is NOT in BirdLife's country table (it is folded into China's outline) even though HKBWS documents 12 winters with records since 1999/2000. Not an occurrence polygon: this is an Indomalayan hill-forest bird (280–2,560 m) inside a resident/breeding EOO of 3,280,000 km²; the nominate race lives in the west and central Himalayas and the presumed Hong Kong form, N. m. signata, breeds from the east Himalayas to southeast China."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/048500",
+      "use": "香港第 I 類，**稀少的秋季過境遷徙鳥與稀少的冬候鳥**，見於有林地區；**11–14 cm**。雄鳥：**眼先、頰與頦黑色**，其餘臉部與上胸深藍；**下胸與腹灰或灰藍，下腹與尾下覆羽轉白**；**嘴與腳黑色**；**上體由頭頂至尾為紫藍色，只有前額與腰呈對比的淡藍，頸側另有一片淡藍斑**。雌鳥：頭與上體褐色而**翼與尾栗色**，頸側淡藍斑大小有變化；**喉褐色**，其餘下體灰褐。鳴聲：**高音的二至五音鳴唱，音調逐漸下降**，有時可音譯為「three-blind-mice」；另有 rattling 的警戒聲。分佈與生境：紀錄多來自新界林地（**城門、大埔滘、大欖郊野公園、新娘潭**），亦偶見他處，包括香港島**龍虎山**在兩個冬季出現。出現情況：**10 月 21–29 日的稀少過境鳥**（蒲台三筆）與 **11 月 23 日至 3 月 4 日的稀少冬候鳥**，大多見於 11 月最後一週至 2 月第一週。**首兩筆紀錄（均為雄鳥）分別是 1985 年 12 月 27–28 日薄扶林與 1999 年 1 月 23 日蠔涌，當年視為籠中逸出個體；2004 年 1 月下旬寒潮期間三個不同地點同時有鳥湧入，促使重新評估並改列第 I 類**。**1999/2000 至 2019/20 的 21 個冬季中有 12 個冬季有紀錄**，每冬數量少，**最高為 2019/20 的七隻**；通常每個地點只有一隻，但 2019 年 11 月 24 日至 2020 年 3 月 2 日大欖郊野公園有四隻（兩雄兩雌）。行為：**單獨而不顯眼**，在**林下植被與灌木叢**中從低棲枝衝出捕食昆蟲，偶爾跟隨混合鳥群。分佈與分類：指名亞種為西喜馬拉雅與中喜馬拉雅的留鳥兼短距離垂直遷徙鳥；**香港假定為 *N. m. signata***，分佈較廣，由東喜馬拉雅向東至中國東南部、泰國北部與西部、中南半島北部與中部南至中安南；在中國由藏東南向東至福建繁殖（Liu & Chen 2020）；雖然在繁殖區大致為留鳥，冬季仍會下降到較低海拔（Clement 2020）。IUCN：**Least Concern，種群趨勢穩定**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/small-niltava-niltava-macgrigoriae/details",
+      "use": "IUCN **2024 LC**（準則 N/A，理由為分佈範圍極大、種群量未量化但不接近門檻、下降未達 30%/10 年）；成熟個體 Unknown、趨勢 **Decreasing（Suspected）**、繁殖 EOO **3,280,000 km²**、非繁殖 EOO **3,550,000 km²**、遷徙狀況 **Not a Migrant**、繁殖 endemic **No**、**IBA／KBA 34 個**、海拔 **280–2,560 m**、世代 **2.1 年**、森林依賴度 **Medium**、亞種群數「-」；種群描述 fairly common to common or uncommon（del Hoyo et al. 2006），**分佈範圍內十年樹冠減少 10.5%，故暫定懷疑下降 1–19%**；生境六項全為 Suitable（亞熱帶／熱帶濕潤山地林、濕潤低地林、熱帶乾燥草原、濕潤灌叢、高海拔灌叢、內陸沼澤濕地）；國家表列 **9 個原生國家／地區**（孟加拉、不丹、中國、印度、寮國、緬甸、尼泊爾、泰國、越南，全部 Resident／Native），**香港不在表中**；貿易普遍度低（七個資料集中兩個），用途為食用（自給、全國）與寵物（**國際**）；保育行動：**全分佈範圍均已劃定保育地點**，但**沒有系統監測、沒有行動復育計劃、沒有國際貿易管制**（列入國際法規為 Yes）；評估歷史 **2000 年（LR/LC）起一直為 LC**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **490 項 小仙鶲（Niltava macgrigoriae），第 I 類**（更新至 2025-05-11）；同科鄰項為 487 褐胸鶲、488 北灰鶲、489 棕腹大仙鶲、491 白腹藍鶲（皆 I 類）。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（小仙鶲；Small Niltava）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Niltava macgrigoriae／鶲科 Muscicapidae）；speciesCode smanil1；taxonOrder 28790。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **六軸齊全**：i=2、a=2.8、v=2.6（**含 vEst=1**）、r=1、c=1.2、o=1.9；missingScores 為空。v 的估算（翼 63.2 mm×0.22≈13.9 cm）落在 HKBWS 的 11–14 cm 之內，故沿用；a 缺文字支撐、o 依賴 a，故 withheldScores 為 a、o。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案**近乎空白**：只有 `range`（「在中國大陸，分佈於西藏、雲南、貴州、廣西、廣東等地。」）有中文內容；`habitat`、`breeding`、`behavior` 只有英文而中文為空；**沒有 look、diet、voice、migration、highlights、conservation、callouts、funFact**；**length 與 weight 皆為空**；picks 只有 range。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 63.2 mm、尾 52.8 mm、跗蹠 16.8 mm、嘴峯 11.7 mm、體重 12 g。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **490** 項、**第 I 類**；HKBWS 描述為**稀少的秋季過境鳥（10 月 21–29 日，蒲台三筆）與稀少的冬候鳥（11 月 23 日至 3 月 4 日）**，高峰在 11 月最後一週至 2 月第一週；**1999/2000 至 2019/20 的 21 個冬季中有 12 個有紀錄**，每冬數量少、**最高 2019/20 的七隻**；2019-11-24 至 2020-03-02 大欖郊野公園有四隻（兩雄兩雌）。紀錄集中在城門、大埔滘、大欖郊野公園與新娘潭，香港島龍虎山亦有兩個冬季的紀錄。",
+    "**名錄地位的一波三折**：首兩筆紀錄（1985-12-27～28 薄扶林、1999-01-23 蠔涌，均為雄鳥）原本被視為籠中逸出個體；2004 年 1 月下旬寒潮期間三個不同地點同時有鳥湧入，才促使重新評估並**改列第 I 類**。本種亦是本批少見的「**曾是逸鳥嫌疑、後被接受為野生**」案例，與 0481 白喉林鶲「冬季紀錄被視為逸鳥」的方向相反，卡面在 notes 並列。",
+    "辨識要點（雄鳥）：**眼先、頰與頦黑色**，其餘臉部與上胸深藍；**上體由頭頂至尾紫藍，但前額與腰呈對比的淡藍，頸側另有一片淡藍斑**；**下胸與腹灰至灰藍，下腹與尾下覆羽轉白**；嘴與腳黑色。雌鳥為褐色上體、**栗色翼與尾**、褐色喉、灰褐下體，**頸側淡藍斑大小不一**——與棕腹大仙鶲、白腹藍鶲雌鳥的分別主要在體型與頸側斑。卡片四個標籤「黑頰與黑頦／淡藍額斑／淡藍腰斑／頸側藍斑」全部可在插圖上辨認。",
+    "行為：**單獨而不顯眼**，在林下植被與灌木叢中從低棲枝衝出捕食昆蟲，偶爾跟隨混合鳥群；鳴唱為**高音二至五音、音調逐漸下降**，可音譯為「three-blind-mice」，另有 rattling 警戒聲。runtime 的 `behavior` 完全沒有中文內容，卡面內容全部來自 HKBWS。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 評估、**2000 年起一直為 LC**；但**趨勢欄為 Decreasing（Suspected）**——分佈範圍內十年樹冠減少 10.5%，暫定懷疑下降 1–19%；而 HKBWS 寫「population trend stable」，**兩者不一致**，卡面以 LC 為主並在 notes 並列兩種趨勢說法。其他：繁殖 EOO 3,280,000 km²、非繁殖 EOO 3,550,000 km²、**Not a Migrant**、**IBA／KBA 34 個**、海拔 280–2,560 m、世代 2.1 年、森林依賴度 **Medium**、生境六項全為 Suitable。",
+    "**地圖**：BirdLife 9 個原生國家／地區全部有 110m 幾何，故填 **9 個形狀**（孟加拉、不丹、中國、印度、寮國、緬甸、尼泊爾、泰國、越南）；**香港不在 BirdLife 國家表中**（已摺入中國），但 HKBWS 記錄了 12 個冬季的出現，已在 note 內明寫。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`cardCopy` 近乎空白——只有 `range` 有中文，`habitat`／`breeding`／`behavior` 只有英文而中文為空，**沒有 look、diet、voice、migration、highlights、conservation、callouts**，**length 與 weight 皆為空**，picks 只有 range；因此 **a 軸（2.8）沒有任何文字可以核對**，與 0478 的情況相同，a 列為待查，o 依賴 a 亦列為待查。`dexScores` 六軸雖齊全，但 **v=2.6 帶 `vEst=1`**（由體長估算而 length 為空）；翼 63.2 mm×0.22≈13.9 cm 落在 HKBWS 的 11–14 cm 內，估算與描述一致，故 v 沿用而非待查。",
+    "AI 主圖：**本輪沙盒被重置，`cards/art` 與 `deliver` 目錄（皆為 gitignored）全部清空，前幾張卡的主圖已不在工作區**，因此主圖無法再用前一張作風格參照，改以文字描述水彩圖鑑風格生成。首版出現兩個問題——**淡藍腰斑被畫成一條沿翼緣的亮藍條紋**、黑色延伸至眼周而非只限眼先／頰／頦——已重生一次修正。生成尺寸為 1376×768（非以往的 1312×816），方形主圖改以 `min(寬,高)` 置中裁切（起點 x=304）再放大至 1127×1127，不補邊。比較鳥為棕腹大仙鶲與白腹藍鶲，**本輪新生成**（各 1408×768，邊緣帶水彩紙白邊，已按亮度自動裁去紙邊再置中裁成 816×816），非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "withheldScores": {
+    "a": "cardCopy 幾乎空白——只有 range 有中文、habitat／breeding／behavior 只有英文而中文為空，沒有 look、diet、voice、migration，length 與 weight 皆為空，2.8 分無任何文字可核對，待查。",
+    "o": "綜合分依賴待查的 a 軸，不補算；i、v、r、c 四軸沿用（v 的翼長估算 13.9 cm 與 HKBWS 11–14 cm 相符）。"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "id": "0461",
+  "name": "粉紅椋鳥",
+  "scientificName": "Pastor roseus",
+  "illustrationTaxon": "Adult male Pastor roseus (black head, shaggy crest and pink body = adult male). AI interpretation, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紫翅椋鳥",
+      "scientificName": "Sturnus vulgaris",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型與姿態最接近，但紫翅椋鳥全身深色、密佈淡白端斑並帶紫綠金屬光澤，嘴黃、腳橙紅；本種身體大面積粉紅、頭與胸及翼尾純黑、嘴淡粉而腳淡粉，配色完全不同，野外不易混淆。"
+    },
+    {
+      "zh": "灰椋鳥",
+      "scientificName": "Spodiopsar cineraceus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同是椋鳥科、體型相近，但灰椋鳥全身灰褐、臉頰白、腰及尾端白、嘴橙黃帶黑尖；本種沒有白色腰與尾端，改以粉紅身體配黑色頭胸翼尾，成鳥雄鳥的黑色頭部更帶鬆散冠羽。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.465,
+      0.215,
+      0.59,
+      0.34
+    ],
+    [
+      0.38,
+      0.31,
+      0.505,
+      0.435
+    ],
+    [
+      0.2,
+      0.4,
+      0.325,
+      0.525
+    ],
+    [
+      0.395,
+      0.54,
+      0.52,
+      0.665
+    ]
+  ],
+  "featureLabels": [
+    "黑頭冠羽",
+    "粉紅身體",
+    "黑色翼尾",
+    "淡粉腳"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥的頭、頸、喉與上胸為帶光澤的黑色，頭頂羽毛略延長成鬆散的冠羽，配深色眼睛與淡粉色的嘴；雌鳥黑度較少、冠羽較短，第一齡冬羽更暗啞，為插圖局部。",
+    "身體大部分為淡粉紅色，在繁殖季最鮮豔，非繁殖季與雌鳥偏灰粉或淡皮黃；幼鳥則全身褐色而腹面較淡，看不出粉紅，為插圖局部。",
+    "翼與尾為黑色，收合翼上可見帶淡色邊的覆羽；幼鳥的翼與尾較褐，尾下覆羽中央深色，為插圖局部。",
+    "腳與趾淡粉肉色，配合淡粉色的嘴，與黑色頭胸形成對比；幼鳥的嘴大部分黃色，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BGD",
+      "BGR",
+      "CHN",
+      "HRV",
+      "CYP",
+      "DNK",
+      "GEO",
+      "GRC",
+      "IND",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "ITA",
+      "JOR",
+      "KAZ",
+      "KWT",
+      "KGZ",
+      "MYS",
+      "MDA",
+      "MNG",
+      "MNE",
+      "NPL",
+      "MKD",
+      "OMN",
+      "PAK",
+      "QAT",
+      "ROU",
+      "RUS",
+      "SAU",
+      "SRB",
+      "SVK",
+      "SVN",
+      "LKA",
+      "SYR",
+      "TJK",
+      "THA",
+      "TKM",
+      "TUR",
+      "UKR",
+      "ARE",
+      "UZB"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 46 native countries/territories (this card shades all of them, so a large part of temperate Eurasia is green); Hong Kong is listed only as a VAGRANT and is not highlighted, and all vagrant records in western Europe, North Africa and South-East Asia are unshaded. Not an occurrence polygon: green does not imply full-country occupancy and the breeding/non-breeding seasons are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0380/045900",
+      "use": "香港第 I 類：開闊鄉郊的罕見冬候鳥；幼鳥全身褐色而腹面較淡（尾下覆羽中央深色）、嘴大部分黃色；非幼鳥羽色有黑色頭、翼與尾下覆羽對比粉紅色調的腹面與背，亮度隨年齡變化而以成鳥雄鳥最搶眼，第一齡冬羽（仍帶幼鳥初級與次級飛羽）最暗啞；叫聲包括帶轉音的嗡鳴 zeerp 與連串絮語；大部分紀錄在新界西北的低地開闊鄉郊（由塱原至尖鼻咀），另有港島數碼港、蒲台島與青衣公園各一筆；1996 年前共有三筆、四隻，由 11 月 7 日至 4 月 13 日，首筆為 1982 年 11 月 7 日與 12 日米埔一隻幼鳥；1984-12-30 至 1985-04-13 廈村與尖鼻咀一帶可能為兩隻；至 2020 年共 20 筆，日期由 9 月 24 日至 4 月 28 日，多在 10 月至 3 月；大部分紀錄為幼鳥或正在換羽成第一齡冬羽的個體，成鳥型羽色的少數紀錄包括 2014-02-27 一隻鳴唱中的雄鳥；覓食生境與方式與紫翅椋鳥相似，在地面與樹上都會；單型種，繁殖由歐洲東南部東至中國西北、南至伊朗西北與阿富汗，主要在印度次大陸越冬，但迷鳥在由歐洲至中國的許多地方都屬規律；IUCN LC。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/rosy-starling-pastor-roseus/details",
+      "use": "IUCN **2025** LC、成熟個體 **400,000–1,600,000**（2021 年估計、品質差；歐洲 101,000–403,000）、趨勢 **Stable**（推斷，歐洲十年大致穩定，歐洲以外無趨勢數據）；繁殖 EOO **8,190,000 km²**（無持續下降）、非繁殖 EOO **2,310,000 km²**、完全遷徙、非繁殖 endemic；2 個 IBA／KBA；海拔 0–3,120 m；世代 3.3 年；森林依賴度「通常不出現於森林」（溫帶草原繁殖為主要）；生境另有岩壁、乾燥稀樹草原、農地、牧地與人工林；貿易屬高普遍度（七個資料集中三個有紀錄），用途為食用、國際寵物貿易與運動狩獵；保育行動：伯恩公約附錄 II，無其他針對性措施；國家表把**香港（中國）列為 Vagrant**，原生國家多達 46 個（由歐洲東南部經中東、中亞至中國西北與南亞）。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（粉紅椋鳥；Rosy Starling）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Pastor roseus／椋鳥科 Sturnidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "**runtime 完全沒有 0461 的評分紀錄**，六個軸（i、a、r、c、v、o）全部沒有分數，故 missingScores 為六個軸，卡面一律顯示「待查」；不以他處數值補算。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "**runtime 完全沒有 0461 的卡面文案**（無任何中文或英文字段），卡面文字全部由本次研究補寫；卡面版式本身不顯示 runtime 文案。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "**runtime 沒有 0461 的 AVONET 量度**，故無法以翼長換算體長。"
+    }
+  ],
+  "notes": [
+    "HKBWS 045900（路徑 `0380/`）：香港第 I 類，開闊鄉郊的罕見冬候鳥；成鳥雄鳥黑頭黑胸、鬆散冠羽、粉紅身體、黑翼尾、淡粉嘴腳；幼鳥全身褐、腹面較淡、嘴大部分黃；第一齡冬羽最暗啞。",
+    "本港紀錄：1996 年前三筆四隻（首筆 1982-11-07／12 米埔幼鳥；1984-12-30 至 1985-04-13 廈村與尖鼻咀可能兩隻）；至 2020 年共 20 筆，9 月 24 日至 4 月 28 日，多在 10 月至 3 月；絕大多數是幼鳥或換羽中的第一齡冬羽，成鳥型紀錄包括 2014-02-27 一隻鳴唱雄鳥；地點集中新界西北低地開闊鄉郊（塱原至尖鼻咀），另有數碼港、蒲台島、青衣公園各一筆。",
+    "習性：覓食方式與紫翅椋鳥相似，地面與樹上都會；叫聲為帶轉音的嗡鳴 zeerp 與絮語。分佈：單型種，繁殖由歐洲東南部至中國西北、南至伊朗西北與阿富汗，主要在印度次大陸越冬，迷鳥在歐洲至中國多地規律出現。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2025** 年評估；成熟個體 400,000–1,600,000、趨勢 **穩定**；EOO 繁殖 8,190,000 km²、非繁殖 2,310,000 km²、完全遷徙、海拔 0–3,120 m、世代 3.3 年、森林依賴度「通常不出現於森林」。**BirdLife 把香港列為 Vagrant**，與 HKBWS 視為第 I 類罕見冬候鳥不同；卡面以 HKBWS 敘述本地狀況，地圖依 BirdLife 原生國家填色。",
+    "runtime 資料缺口：0461 與 0456、0457 一樣，`dexScores.json`、`cardCopy.json` 與 `measurements.json` **三者皆完全沒有紀錄**，因此六軸全部「待查」、卡面沒有 runtime 文案、亦無法以翼長換算體長。",
+    "地圖：本種原生國家多達 46 個，全部填色，因此溫帶歐亞大片地區呈綠色；這是如實反映其繁殖與越冬分佈廣闊（繁殖 EOO 8,190,000 km²），並非錯誤。香港為 Vagrant 故不另行標示（亦併入中國）。",
+    "AI 主圖原為 1408×768 橫幅，補成方形後裁 `(0.10,0.14,0.90,0.94)`，畫出黑色頭頸與鬆散冠羽、粉紅身體、黑翼尾、淡粉嘴腳，站於魚塘邊草地以呼應新界西北低地開闊鄉郊；雌鳥（黑度較少）與幼鳥（全身褐、嘴黃）仍待專家核。比較鳥為本輪新生成的紫翅椋鳥與灰椋鳥 AI 圖（前幾張插圖在沙盒重置後已遺失），非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {}
+}

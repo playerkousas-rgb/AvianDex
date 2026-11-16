@@ -1,0 +1,206 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2019 評定"
+  },
+  "id": "0449",
+  "name": "紫翅椋鳥",
+  "scientificName": "Sturnus vulgaris",
+  "illustrationTaxon": "Adult in fresh autumn/winter plumage (heavily spotted); subspecies not identifiable in this plumage. AI interpretation, sex, age and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黑喉噪鶥",
+      "scientificName": "Pterorhinus chinensis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型大得多（23–30 cm）、尾長而身形修長，暗灰身體配黑色面罩與黑喉、白頰，羽毛完全沒有斑點也沒有金屬光澤；本種只有 21–22 cm、尾短而方、全身密佈白斑並帶紫綠光澤。"
+    },
+    {
+      "zh": "紅嘴相思鳥",
+      "scientificName": "Leiothrix lutea",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "嘴鮮紅、眼圈白、胸橙黃、翼有紅黃翼斑，多於灌叢間活躍跳動；本種嘴暗褐近黑、全身深色帶白斑、腳粉紅，多在開闊農地地面步行覓食。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.4,
+      0.33,
+      0.525,
+      0.455
+    ],
+    [
+      0.575,
+      0.165,
+      0.7,
+      0.29
+    ],
+    [
+      0.525,
+      0.575,
+      0.65,
+      0.7
+    ],
+    [
+      0.745,
+      0.12,
+      0.87,
+      0.245
+    ]
+  ],
+  "featureLabels": [
+    "白色斑點",
+    "紫綠光澤",
+    "粉紅色腳",
+    "尖長嘴"
+  ],
+  "featureNotes": [
+    "秋冬換上的新羽，頭與身體每片羽毛末端都有淡白或淡黃的端斑，遠看像滿身斑點；到春季斑點磨損後才變成大部分時間見到的油亮黑色，為插圖局部。",
+    "頭、背與胸在上體黑色羽毛上有明顯的紫與綠色金屬光澤，是椋鳥科最易認的特徵之一；雌鳥斑點較多、整體較不光亮，為插圖局部。",
+    "腳與趾粗壯而呈粉紅至紅色，與暗色身體成對比，常用來在草地步行覓食，為插圖局部。",
+    "嘴相對身體較長而尖、呈暗褐近黑色（冬季色），夏季則轉為黃色（雄鳥）或基部粉紅的檸檬黃（雌鳥）；插圖為秋冬季羽色，故嘴為深色，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BLR",
+      "BEL",
+      "BIH",
+      "BGR",
+      "CHN",
+      "HRV",
+      "CYP",
+      "CZE",
+      "DNK",
+      "EGY",
+      "EST",
+      "FIN",
+      "FRA",
+      "GEO",
+      "DEU",
+      "GRC",
+      "HUN",
+      "ISL",
+      "IRN",
+      "IRQ",
+      "IRL",
+      "ISR",
+      "ITA",
+      "JPN",
+      "JOR",
+      "KAZ",
+      "KWT",
+      "KGZ",
+      "LVA",
+      "LBN",
+      "LBY",
+      "LTU",
+      "LUX",
+      "MDA",
+      "MNG",
+      "MNE",
+      "MAR",
+      "NPL",
+      "NLD",
+      "MKD",
+      "NOR",
+      "OMN",
+      "POL",
+      "PRT",
+      "QAT",
+      "ROU",
+      "RUS",
+      "SAU",
+      "SRB",
+      "SVK",
+      "SVN",
+      "ESP",
+      "SWE",
+      "CHE",
+      "SYR",
+      "TJK",
+      "TUN",
+      "TKM",
+      "TUR",
+      "ARE",
+      "UKR",
+      "GBR",
+      "UZB"
+    ],
+    "note": "Partial NATIVE-country overview only: BirdLife's native list is much longer than this — Bahrain, the Faroe Islands, Gibraltar, Liechtenstein, Malta, Palestine and Svalbard have no geometry on the 110m base map and are therefore not shaded, nor are the many introduced (e.g. USA, Canada, Australia, New Zealand, South Africa) and vagrant entries. Green does not imply full-country occupancy and the seasons are not colour-separated. BirdLife lists Hong Kong (China) as native (the local birds are scarce passage migrants and winter visitors) but Hong Kong has no separate geometry, so it is folded into China's shading."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0380/046000",
+      "use": "香港第 I 類；秋季過境鳥與冬候鳥，數量少而見於開闊鄉郊，主要在新界北與西北；21–22 cm，矮壯、尾短而方、嘴較長；頭背胸有明顯紫與綠色光澤，秋季新羽每片頭與身體羽毛有淡白或淡黃端斑，翼與尾褐而羽緣淡黃，雌鳥斑點較多、較不光亮，隨冬季推進斑點磨損至春季呈油亮黑，第一曆年鳥保留灰褐帶淡黃邊的幼羽；叫聲多變包括短促 tit 聲；見於大生圍、甩洲、新田、米埔、塱原，2010 年前錦田常有紀錄、此後絕跡（可能與該處野水牛群消失有關）；新界北與西北以外罕見，離島有蒲台、大嶼山（貝澳、二澳、散頭、赤鱲角）與南丫島紀錄，2019-11-26 何文田市區一隻；過境與越冬主要 11 月至 1 月底，極端日期 10 月 16 日與 4 月 14 日，11 月有遷徙高峰、1 月下半月有嚴寒驅動的第二高峰；最高計數 2014-11-23 大生圍 25 隻、其次 2013-11-24 甩洲 11 隻，年度高峰多為個位數、最多六隻的小群常見；1971-11-07 落馬洲兩隻為首錄（Webster 1972），至 1978/79 冬季該處常有最多 11 隻；1980–2000 只有零散紀錄、部分冬季完全沒有；1999 年起每年冬季都有紀錄；相信本港出現與其在俄羅斯東向擴張有關（Feare 1996），河北北戴河（Williams 1986）與日本（Brazil 1991）有類似增加；單獨或小群、常與紅嘴椋鳥及白頰椋鳥混群；繁殖自歐洲向東至外貝加爾、南至中國西北，部分留鳥、部分南遷北非、中東與印度次大陸北部；引入北美、南非、澳洲與紐西蘭；中國有 poltaratskyi 與 porphyronotus 兩亞種。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/common-starling-sturnus-vulgaris/details",
+      "use": "IUCN **2019** LC（最後評估 2018-10-31）；成熟個體 **150,000,000**（2008 年、Poor、估計）；趨勢**下降**（推測：歐洲 1980–2015 中度下降、北美引入族群 1966–2015 減 51%）；繁殖 EOO 38,400,000 km²、非繁殖 EOO 33,200,000 km²；完全遷徙；海拔 0–2,000 m；世代 4.6 年；森林依賴度 **Low**；生境以人工地、溫帶草地、灌叢、鹽沼、都市等為主；威脅為農業集約化與過去的獵捕；用途為食用、寵物與運動狩獵（皆為國內自給規模）；保護行動包括歐盟鳥類指令附錄 II 與巢箱；國家表把**香港（中國）列為原生**，另列大量引入地（美國、加拿大、澳洲、紐西蘭等）與迷鳥地；IBAs 沒有為本種劃定。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（紫翅椋鳥；European Starling）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Sturnus vulgaris／椋鳥科 Sturnidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=3.8、v=2.2、r=4.8、c=3、o=3.2（沒有 vEst 標記），missingScores 為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；本種中文內容相對齊全（range、habitat、diet、look、voice、breeding、behavior、migration、conservation、funFact、etymology、humanRelation 皆有中文），但多處句子被截斷；length 欄為「20–0 cm」（明顯損壞），weight 為 58–101 g；callouts 為喙（棕黑色）、頭（頭骨狹窄）、背（翅膀和背部有淡黃色端部）。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 128.3 mm、尾 65.8 mm、跗蹠 29.0 mm、嘴峯 30.2 mm、體重 77.1 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 046000（頁面編號與 app 的 0449 不同）：香港第 I 類，秋季過境鳥與冬候鳥，數量少，主要在 11 月至 1 月底出現於新界北與西北的開闊鄉郊；21–22 cm，矮壯短方尾、嘴較長，全身密佈淡白端斑並帶紫綠光澤，春季磨損後成油亮黑。",
+    "本港紀錄：1971-11-07 落馬洲兩隻首錄，至 1978/79 冬季該處常有最多 11 隻；1980–2000 只有零散紀錄、部分冬季全無，1999 年起每年冬季都有；最高計數 2014-11-23 大生圍 25 隻；極端日期 10 月 16 日與 4 月 14 日；2010 年後錦田絕跡（可能與野水牛群消失有關），離島與何文田有零星紀錄。",
+    "分類與來源：本港出現相信與其在俄羅斯的東向擴張有關，河北北戴河與日本有類似增加；中國有 poltaratskyi 與 porphyronotus 兩亞種，HKBWS 未指定本港個體所屬亞種。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife 2019 年評估，成熟個體約 1.5 億、趨勢**下降**（歐洲中度下降、北美引入族群減 51%）；世代 4.6 年、森林依賴度 Low；國家表把香港列為原生，另有大量引入地與迷鳥地，地圖只填可在 110m 底圖上畫出的原生國家。",
+    "runtime 分數：i=2、a=3.8、r=4.8、c=3 沿用；a 沿用——habitat 與 diet 中文雖被截斷但內容與 HKBWS／BirdLife 相符（開闊地、雜食）；v=2.2 待查——length 欄為「20–0 cm」明顯損壞，翼長 128.3 mm×0.22≈28.2 cm 又遠高於 HKBWS 的 21–22 cm；o=3.2 依賴待查分項（v）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：中文內容相對齊全但多句被截斷（range 斷在「印度（主要在北部」、voice 與 conservation 斷句），callouts 的「頭骨狹窄」並不是野外可用的辨識要點；length 欄損壞為「20–0 cm」。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖為方形畫布（原橫幅補邊後裁緊），畫出秋冬新羽的滿身白斑、紫綠光澤、粉紅腳與暗色尖長嘴，站立於短草農地上；亞種、雌雄與第一曆年羽色差異仍待專家核。比較鳥沿用 0445 的黑喉噪鶥及 0442 的紅嘴相思鳥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 欄為「20–0 cm」明顯損壞，翼長 128.3 mm×0.22≈28.2 cm 遠高於 HKBWS 的 21–22 cm，2.2 分缺乏可信量度支撐，待查。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 記下降"
+  },
+  "id": "0425",
+  "name": "棕臉鶲鶯",
+  "scientificName": "Abroscopus albogularis",
+  "illustrationTaxon": "Adult-type Abroscopus albogularis perched on a mossy branch; AI interpretation, sex and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "鱗頭樹鶯",
+      "scientificName": "Urosphena squameiceps",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "全身銹褐、沒有橙色臉、喉部淡而不帶黑紋；本種有橙紅臉、白色下髭線與濃密黑色喉紋、背欖綠。"
+    },
+    {
+      "zh": "淡腳樹鶯",
+      "scientificName": "Hemitesia pallidipes",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體深褐、喉純白無縱紋、尾較長、嘴較粗厚；本種小型、橙臉、白色喉部佈滿黑色縱紋、上體欖綠。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.19,
+      0.8,
+      0.39
+    ],
+    [
+      0.64,
+      0.32,
+      0.78,
+      0.46
+    ],
+    [
+      0.425,
+      0.245,
+      0.605,
+      0.425
+    ],
+    [
+      0.375,
+      0.625,
+      0.585,
+      0.835
+    ]
+  ],
+  "featureLabels": [
+    "橙紅臉部",
+    "黑色喉紋",
+    "欖綠背羽",
+    "灰粉腳趾"
+  ],
+  "featureNotes": [
+    "臉部與眼先橙紅，上方有一道黑色細線、下方接白色下髭線，是本種最易辨的頭部組合，為插圖局部。",
+    "下喉至上胸佈滿細密黑灰色縱紋，與白色的喉部底色成強烈對比，為插圖局部。",
+    "背部與後頸鮮欖綠色，飛羽與三級飛羽的羽緣帶黃綠，為插圖局部。",
+    "腳與趾灰粉紅色，抓握長滿苔蘚的樹枝，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "THA",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and resident and breeding areas are not colour-separated. Hong Kong is a rare winter visitor per HKBWS but is not listed in BirdLife's country table and has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0310/037000",
+      "use": "香港第 I 類稀少冬候鳥；8–9 cm；極小、頭大，臉部及眼先橙紅，上方有黑色細線、下方有白色下髭線及濃密黑色喉紋；背部鮮欖綠、飛羽羽緣黃綠、其餘下體白色；嘴橙色角質、腳灰粉紅；鳴唱為中等偏高頻的顫音、聯絡聲為短促高音「chip」、警戒聲為急促碎音；見於新界大部分林地及港島、蒲台、長洲；1964-02-01 首筆後要到 1993 年（蠔涌 1 月 10 日至 2 月 5 日）才有第二筆，2003–04 大埔滘、2009 梅子林、2012 城門、2017–18 新娘潭，2019-11-10 蒲台為最早，2019/20 冬季分佈大幅擴展至大埔滘、新界東北、西貢、甲龍、大欖郊野公園、何文田及港島，最高七隻（2019-12-12 西貢仁義路引水道）；於密冠層森林中下層安靜覓食的食蟲鳥；頁記 IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/rufous-faced-warbler-abroscopus-albogularis",
+      "use": "IUCN 2024 LC 但記下降（林木覆蓋 10 年減 9.3%、推測族群減 1–19%、森林依賴中等）；成熟個體未量化、繁殖 EOO 4,300,000 km²、非遷徙、海拔 0–2,790 m（常見 300–1,800 m）、世代長度 2.2 年、15 個 IBA/KBA；國家：孟加拉、不丹、中國、印度、老撾（繁殖）、緬甸、尼泊爾、中國台灣、泰國、越南；另記在七個貿易資料集其中兩個以低普及度出現，用途為國際寵物交易。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（棕臉鶲鶯；Rufous-Faced Warbler）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Abroscopus albogularis／樹鶯科 Scotocercidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數齊備：i=2、a=2.3、v=2.2、r=1、c=1.2、o=1.7，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range、funFact、behavior 有中文，habitat 只有英文，look 完全沒有，funFact 自我重複列出三個中文名，length 與 weight 為空，picks 只選三個欄位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 43.4 mm、尾 38.7 mm、嘴峯 9 mm、體重 4.8 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 037000：8–9 cm，香港屬第 I 類稀少冬候鳥，見於新界大部分林地及港島、蒲台、長洲；1964 年 2 月 1 日首筆之後要到 1993 年才有第二筆，2019/20 冬季紀錄大幅擴展，最高七隻於 2019 年 12 月 12 日西貢仁義路引水道；於密冠層森林中下層安靜覓食。",
+    "辨識要點：臉部及眼先橙紅，上有一道黑色細線、下有白色下髭線，喉部佈滿濃密黑色縱紋；背部鮮欖綠、飛羽羽緣黃綠、下體白色；嘴橙色角質、腳灰粉紅。卡面四個標籤即取臉、喉紋、背與腳。",
+    "分佈與亞種：由東喜馬拉雅及緬甸北部向東至華南，南至中南半島北部及東部；在中國見於長江流域以南至沿岸省份（一般遠離海岸）及台灣、海南；三個亞種中 A. a. fulvifacies 繁殖於華南、台灣及中南半島，香港的紀錄推斷屬此亞種。",
+    "IUCN 表述不一致：HKBWS 記 LC、趨勢穩定；BirdLife 2024 同為 LC 但記下降（林木覆蓋 10 年減 9.3%，推測族群減 1–19%）。卡面註記採用較新的 BirdLife 表述；BirdLife 亦記本種在國際寵物交易中以低普及度出現，但未列為受威脅。",
+    "runtime 六項分數齊備 i=2、a=2.3、v=2.2、r=1、c=1.2、o=1.7、vEst=1。a=2.3 沿用——habitat 與 behavior 各有獨立內容（雖 habitat 只有英文一句）；v 待查——length 為空，翼長 43.4 mm×0.22≈9.55 cm，高於 HKBWS 8–9 cm，保留「原觀賞值含體長估算」提示；r=1、c=1.2、i=2 沿用；o 依賴待查分項（v）不補算。",
+    "runtime 文案缺陷：完全沒有 look 欄位，卡面羽色描述只能由 HKBWS 提供；habitat 只有英文一句、中文為空；funFact 寫成「棕臉鶲鶯，又名棕臉鶲鶯、棕面鶲鶯」自我重複三個中文名；range 用「寮國」而 HKBWS 及一般用法多作「老撾」；length、weight 為空；picks 只選 range、funFact、behavior 三項。",
+    "世界底圖按 BirdLife 國家表填孟加拉、不丹、中國、印度、老撾、緬甸、尼泊爾、中國台灣、泰國、越南；香港雖是本地稀少冬候鳥，但 BirdLife 國家表未列香港、110m 底圖亦無獨立多邊形，故不填色。留鳥與繁殖地未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成小型大頭鶲鶯，停於長滿苔蘚的樹枝，並畫出橙紅臉與眼先、上黑線下白下髭線、濃密黑色喉紋、欖綠背與黃綠羽緣、白色下體、橙色嘴及灰粉腳；亞種歸屬（推斷為 fulvifacies）與性別差異仍待專家核。比較鳥為 0424 鱗頭樹鶯及 0423 淡腳樹鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 為空，翼長推估 9.55 cm 高於 HKBWS 8–9 cm，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}

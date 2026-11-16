@@ -1,0 +1,137 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 記下降"
+  },
+  "id": "0413",
+  "name": "峨眉柳鶯",
+  "scientificName": "Phylloscopus emeiensis",
+  "illustrationTaxon": "Adult-type Phylloscopus emeiensis on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "淡腳柳鶯",
+      "scientificName": "Phylloscopus tenellipes",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體偏褐灰、翼斑模糊、嘴較短而先端淡色、腳淡粉；本種上體偏欖綠、兩道翼斑明顯。"
+    },
+    {
+      "zh": "暗綠柳鶯",
+      "scientificName": "Phylloscopus trochiloides",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "只有一道兩端收窄的短翼斑、下體帶黃、上體偏黃綠；本種有兩道明顯翼斑、下體較白。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.24,
+      0.8,
+      0.44
+    ],
+    [
+      0.47,
+      0.405,
+      0.63,
+      0.525
+    ],
+    [
+      0.72,
+      0.245,
+      0.88,
+      0.405
+    ],
+    [
+      0.45,
+      0.3,
+      0.62,
+      0.47
+    ]
+  ],
+  "featureLabels": [
+    "淡色長眉",
+    "兩道翼斑",
+    "淡色下嘴",
+    "欖綠上體"
+  ],
+  "featureNotes": [
+    "淡黃白色長眉線，下緣有深色眼紋，為插圖局部。",
+    "中覆羽及大覆羽各有一道淡黃色翼斑，插圖中兩道均可見，為插圖局部。",
+    "下嘴淡粉肉色、上嘴較深，為插圖局部。",
+    "欖綠色上體，頭部無冠紋亦無眼圈，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/emei-leaf-warbler-phylloscopus-emeiensis",
+      "use": "IUCN 2024 LC、記下降（推測 10 年減 1–19%，源於分佈區林木覆蓋減少 1.2%）、成熟個體未量化、繁殖特有種 Breeding endemic Yes、繁殖 EOO 482,000 km²、完全遷徙、海拔 1,000–2,000 m、世代長度 2.5 年、森林依賴度中等；原生國家中國，緬甸列為迷鳥。"
+    },
+    {
+      "path": "docs/INFO_CARD_RESTART.md",
+      "use": "紀錄 HKBWS 條目未找到：039700 及 040000 均回 404；039500、039600、039800、039900、040100 分別為雙斑柳鶯、暗綠柳鶯、庫頁島柳鶯、淡腳柳鶯及極北柳鶯，039000–039400 為白眶、灰冠、比氏、純色尾及峨嵋鶲鶯，皆非峨眉柳鶯，故本卡未引用 HKBWS 資料，只以 BirdLife 及 runtime 文案為據。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（峨眉柳鶯）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus emeiensis／柳鶯科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.8、v=2.4、r=1、c=1.2、o=1.9；無 vEst 旗標。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案只有中文 range「分佈於緬甸和中國大陸四川、貴州等地」及 iucn；look、diet、habitat、voice、breeding、etymology 中文全缺（僅英文 fieldCopy 有內容），length 為 11–12 cm。英文 look 描述中覆羽淡黃色羽端及大覆羽寬淡黃色羽端形成兩道明顯翼斑，本卡翼斑標籤即據此。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 56.5 mm、尾 40.6 mm、跗蹠 16.5 mm、嘴 9.9 mm、體重 10.5 g；未作體長換算。"
+    }
+  ],
+  "notes": [
+    "BirdLife 2024：全球 LC 但趨勢記下降（推測 10 年減 1–19%，因為分佈區林木覆蓋 10 年減 1.2%），成熟個體未量化、被評為「相當不常見」；繁殖特有種（Breeding endemic: Yes），繁殖 EOO 482,000 km²，完全遷徙，海拔 1,000–2,000 m，世代長度 2.5 年，森林依賴度中等；國家表只有中國（原生）及緬甸（迷鳥）。",
+    "HKBWS 未有可用條目：039700 及 040000 均回 404，039500、039600、039800、039900、040100 分別是雙斑柳鶯、暗綠柳鶯、庫頁島柳鶯、淡腳柳鶯、極北柳鶯，039000–039400 為白眶、灰冠、比氏、純色尾及峨嵋鶲鶯，皆非峨眉柳鶯；故本卡沒有 HKBWS 的香港狀況、辨識要點或量度可引，這是與 0401–0412 不同的資料缺口，已在 spec 明記。卡面辨識資料改以 runtime 英文 look（中覆羽淡黃色羽端、大覆羽寬淡黃色羽端形成兩道明顯翼斑）配合 BirdLife 生境為據。",
+    "runtime 分數 i=2、a=2.8、v=2.4、r=1、c=1.2、o=1.9，無 vEst 旗標。length 為 11–12 cm 且與其他柳鶯相若，v 沿用 runtime 不補值；cardCopy 中文 habitat、diet 全缺（僅英文有內容），故適應分待查；voice、breeding、etymology 中文全缺，研究分待查（runtime r=1 為原值，未改寫）；c=1.2 與 LC 一致、i=2 沿 runtime；o 依賴待查分項不補算。",
+    "世界底圖只填中國（BirdLife 唯一原生國家）；緬甸在 BirdLife 列為迷鳥，故不填色，也不把 runtime 文案「分佈於緬甸」當作原生生分佈；中國以整體國家填色、不細分四川貴州等省份，繁殖與越冬未分色，綠色非全境、非完整分佈。",
+    "AI 主圖：欖綠上體、頭部無冠紋無眼圈、淡色長眉配深色眼紋、中覆羽與大覆羽各一道淡黃色翼斑、下體偏白、下嘴淡色、腳淡粉，符合 runtime 英文 look 及 BirdLife 生境描述；兩道翼斑的寬度、嘴長及尾羽比例仍待專家核。淡腳柳鶯及暗綠柳鶯對照圖為本輪新生成並已目視，非等比例，均為 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 及 diet 中文全缺（僅英文有內容），適應分待查、不補值。",
+    "r": "voice、breeding、etymology 中文全缺，研究分待查、不補值。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "id": "0453",
+  "name": "絲光椋鳥",
+  "scientificName": "Spodiopsar sericeus",
+  "illustrationTaxon": "Adult male-type Spodiopsar sericeus (creamy white head and red bill = male). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "灰頭椋鳥",
+      "scientificName": "Sturnia malabarica",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是淡色椋鳥，但嘴藍底配大片黃尖、尾部與尾下覆羽栗色、下體淡黃；本種嘴幾乎全紅、尾部黑帶綠光、翼有白色初級飛羽基斑、腳橙色，配色完全不同。"
+    },
+    {
+      "zh": "北椋鳥",
+      "scientificName": "Agropsar sturninus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "頭淡灰而有大黑眼、背部紫、腰淡白、嘴全黑，體型明顯較小（16–19 cm）；本種 23–26 cm、頭奶白、背部淡灰而無紫色、腰不淡、嘴紅色、腳橙色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.63,
+      0.07,
+      0.755,
+      0.195
+    ],
+    [
+      0.775,
+      0.115,
+      0.9,
+      0.24
+    ],
+    [
+      0.415,
+      0.475,
+      0.54,
+      0.6
+    ],
+    [
+      0.495,
+      0.675,
+      0.62,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "奶白頭部",
+    "紅色嘴",
+    "白色翼斑",
+    "橙色腳"
+  ],
+  "featureNotes": [
+    "雄鳥的頭部奶白至淡皮黃，羽毛略帶絲狀鬆散質感，與淡灰的身體成對比，是野外最易認的一點；雌鳥頭部較暗並沾褐色，對比亦較弱，為插圖局部。",
+    "嘴大部分為鮮紅色（尖端略深），配合奶白頭部與淡灰身體，是與本港其他椋鳥最直接的分別（灰椋鳥嘴橙黃而尖端黑、灰頭椋鳥嘴藍底配黃尖），為插圖局部。",
+    "初級飛羽基部白色，在翼上形成明顯白斑，飛行時最清楚；雄鳥的斑較雌鳥大而明顯，也是與灰椋鳥（腰淡白）之別，為插圖局部。",
+    "腳與趾為橙色，與紅色嘴同屬暖色系，在淡灰身體下方十分醒目，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only: BirdLife lists China (breeding), Japan and Taiwan as native and Vietnam as native non-breeding; the Philippines and South Korea are VAGRANT entries and are left unshaded. Hong Kong is listed as native non-breeding but has no separate geometry on the 110m base map and is folded into China's shading. Not an occurrence polygon: green does not imply full-country occupancy and the seasons are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0380/045200",
+      "use": "香港第 I 類；開闊鄉郊的常見至局部大量的冬候鳥（分佈範圍似乎在縮小），另有少數在村屋與市區公園的繁殖紀錄；23–26 cm，中型椋鳥；雄鳥頭奶白、後頸至上背與胸脇淡灰、腹中央與尾下覆羽淡白，翼黑帶藍光澤、初級飛羽基部白色，尾黑帶綠光澤，腳橙色、嘴大部分紅色；雌鳥較暗、頭與下體沾褐、頭與身體對比弱；飛行時初級飛羽白斑在較淡的雄鳥較大，並以「上體均勻、腰不淡白」、淡色頭部與深色翼的強對比與灰椋鳥區分；叫聲中等粗啞、成群時常叫，警報聲為拖長的 skaaar；偏好低地開闊生境與有樹可供躲避及棲息的海岸，常與魚塘（漏落的魚糧）相關，亦在蘆葦床邊緣、淡水沼澤與天然及人工水道覓食；大量越冬族群集中於新界西北（米埔、落馬洲、新田、甩洲、大生圍），塱原、南生圍、船灣等地有較少數量，大埔海岸、沙田、石崗、南涌等地會不規則出現超過 300 隻，新界以外少量（港島摩星嶺、大嶼山水口與貝澳、蒲台、長洲），船灣一帶在 2000 年前曾大量、此後極少；九龍公園、大尾篤與洪水橋有繁殖或疑似繁殖紀錄，后海灣仲夏有雙位數的幼鳥估計，顯示深圳一帶有更大的繁殖族群；2001–05 與 2016–19 冬季圖集顯示分佈範圍減少 59%，錦田一帶因生境喪失而明顯減少，2010 年前逾千隻的紀錄並不罕見、2020 年已極少；越冬期主要 11 月至 3 月，1999 年起 11 月初數量仍低、11 月中急升、12 月初達高峰，3 月第三週後在新界少見；2006-12-25 單次 11,260 隻飛往夜棲為本種最高計數，2006/07 冬季另有 6,509 隻（2007-01-15）與 3,637 隻（3 月 13 日）；新界西北魚塘區以外最高為 2007-02-03 錦田 1,868 隻與 2003/04 冬季大埔海濱 1,000 隻；樹洞、村屋屋頂或牆洞、冷氣機底都曾見巢，4 月下旬至 6 月下旬築巢，6 月見本地養育的幼鳥（2015-06-07 一家四隻離巢幼鳥）；常與灰椋鳥、八哥混群，鳴聲吵鬧，是本港最大的非夜棲雀形目同種群之一，並會群棲（后海灣紅樹林最大群位置不明，大埔海濱公園與大埔工業邨的大榕樹、港島寶馬山的植林亦有夜棲）；雜食、覓食機會主義，紀錄包括洋紫荊花瓣、細葉榕與大葉榕果實、鴨腳木、烏桕、白千層、樟樹果實、木棉蜜、昆蟲與魚糧，甚至入屋找濺出的食物，比同屬更愛在地面覓食；單型種，主要分佈中國東南（四川、長江以南至上海、南至海南與廣東），非繁殖期見於越南北部與台灣。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/red-billed-starling-spodiopsar-sericeus/details",
+      "use": "IUCN **2018** LC、趨勢**穩定**（推測，無下降證據亦無重大威脅）；成熟個體 Unknown；繁殖 EOO 2,090,000 km²、非繁殖 EOO 2,440,000 km²；完全遷徙、非繁殖 endemic；海拔未列；世代 4.4 年；森林依賴度「通常不出現於森林」；生境為農地、鄉村花園與濕潤亞熱帶灌叢；用途為食用與寵物（皆國內自給）；國家表把**香港（中國）列為原生非繁殖**，另把菲律賓與南韓列為迷鳥。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（絲光椋鳥；Red-Billed Starling）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Spodiopsar sericeus／椋鳥科 Sturnidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 只有五個軸有分數：i=2、v=3.4（含 vEst=1）、r=2.5、c=1.2、o=2.3；**a（適應力）完全沒有分數**，故 missingScores 為 a。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；只有 range、breeding、funFact、etymology 四段中文有內容（breeding 是分佈與營巢合句、funFact 講 2008 年分子研究、etymology 講 sericeus 意為「如絲綢般的」），look、habitat、voice、behavior、migration、conservation 中文全空；length 與 weight 為空；callouts 缺失。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 120.6 mm、尾 71.8 mm、跗蹠 29.9 mm、嘴峯 26.8 mm、體重 65.0 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 045200（頁面編號與 app 的 0453 不同，路徑為 `0380/`）：香港第 I 類，開闊鄉郊常見至局部大量的冬候鳥，分佈範圍似乎在縮小，另有少數村屋與市區公園的繁殖紀錄；23–26 cm，雄鳥頭奶白、身體淡灰、翼黑帶藍光而初級飛羽基部白、尾黑帶綠光、嘴紅色、腳橙色；雌鳥較暗沾褐。",
+    "本港紀錄：越冬主要 11 月至 3 月，12 月初高峰，3 月第三週後少見；最高計數 2006-12-25 單次 11,260 隻飛往夜棲，2006/07 冬季另有 6,509 與 3,637 隻；新界西北魚塘區以外最高 2007-02-03 錦田 1,868 隻；2001–05 至 2016–19 冬季圖集分佈減少 59%，錦田一帶明顯減少；船灣一帶 2000 年後極少。",
+    "繁殖與群棲：九龍公園、大尾篤、洪水橋有繁殖或疑似繁殖；巢在樹洞、村屋屋頂或牆洞、冷氣機底；4 月下旬至 6 月下旬築巢，2015-06-07 見一家四隻離巢幼鳥；后海灣仲夏有雙位數幼鳥估計，顯示深圳一帶有更大繁殖族群；常與灰椋鳥、八哥混群，夜棲於大埔海濱公園與大埔工業邨大榕樹、港島寶馬山植林。",
+    "食性：雜食而機會主義，紀錄包括洋紫荊花瓣、細葉榕與大葉榕果實、鴨腳木、烏桕、白千層、樟樹、木棉蜜、昆蟲與魚糧；比同屬更愛地面覓食。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife 2018 年評估，趨勢**穩定**（推測，無下降證據）；EOO 繁殖 2,090,000 km²、非繁殖 2,440,000 km²、世代 4.4 年、森林依賴度「通常不出現於森林」；國家表把香港列為原生非繁殖，菲律賓與南韓為迷鳥故地圖不填。",
+    "runtime 分數：i=2、r=2.5、c=1.2 沿用；**a 完全缺席**（missingScores 為 a），卡面該軸顯示「待查」，不以他處數值補算；v=3.4 待查（length 與 look 中文皆為空，翼長 120.6 mm×0.22≈26.5 cm 略高於 HKBWS 的 23–26 cm）；o=2.3 依賴待查分項（a、v）不補算。",
+    "runtime 文案缺陷：look、habitat、voice、behavior、migration、conservation 中文全空，breeding 是分佈與營巢合句、funFact 與 etymology 都不是野外資訊，length 與 weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖原已是方形畫布（1024×1024），只作輕微裁切，畫出奶白頭部、紅色嘴、淡灰身體、黑翼配白色初級飛羽基斑、綠光尾羽與橙色腳，站於魚塘邊枝條上；雌鳥（較暗沾褐）與幼鳥差異仍待專家核。比較鳥沿用 0452 的灰頭椋鳥及 0450 的北椋鳥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 與 look 中文皆為空，翼長 120.6 mm×0.22≈26.5 cm 略高於 HKBWS 的 23–26 cm，3.4 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（a、v），不補算。"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "id": "0451",
+  "name": "栗頰椋鳥",
+  "scientificName": "Agropsar philippensis",
+  "illustrationTaxon": "Adult male-type Agropsar philippensis (chestnut ear-patch and purple back = male). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "北椋鳥",
+      "scientificName": "Agropsar sturninus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、體型與淡色頭部都相似，但雄鳥沒有栗色臉頰斑，而是後冠小片紫色與整片紫色下背，肩羽末端寬白成明顯白帶，腰淡白；本種眼後的栗色斑是最直接的分別，且翼上白帶較窄、腰亦淡。"
+    },
+    {
+      "zh": "紫翅椋鳥",
+      "scientificName": "Sturnus vulgaris",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型較大而矮壯、嘴更長，全身深色並密佈淡白端斑、帶紫綠光澤，頭部同樣深色；本種 16–19 cm、頭淡白、眼後有栗斑、背部紫、翼帶白，兩者不易混淆。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.68,
+      0.145,
+      0.805,
+      0.27
+    ],
+    [
+      0.5,
+      0.205,
+      0.625,
+      0.33
+    ],
+    [
+      0.405,
+      0.34,
+      0.53,
+      0.465
+    ],
+    [
+      0.32,
+      0.315,
+      0.445,
+      0.44
+    ]
+  ],
+  "featureLabels": [
+    "栗色臉頰",
+    "紫色背部",
+    "白色翼帶",
+    "綠色翼羽"
+  ],
+  "featureNotes": [
+    "眼後與耳羽有一塊深淺不一的栗色斑，形狀不規則，是雄鳥最直接的特徵，也是本種中文名的由來；雌鳥與幼鳥沒有這塊栗斑，為插圖局部。",
+    "後冠至上背帶紫色，雄鳥可呈整片帶光澤的紫色；這片紫色是與同屬北椋鳥（紫色集中在後冠與下背、肩部白帶較寬）之別，為插圖局部。",
+    "中覆羽白色，在翼上形成一道明顯的白帶，停棲與飛行時都看得到，為插圖局部。",
+    "飛羽、三級飛羽與大覆羽帶光澤的綠色，與紫色的背部成對比，是椋鳥科典型的金屬光澤結構色，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BRN",
+      "CHN",
+      "IDN",
+      "JPN",
+      "MYS",
+      "PHL",
+      "RUS",
+      "TWN"
+    ],
+    "note": "Partial NATIVE-country overview only: BirdLife's native entries are Brunei, China (non-breeding), Indonesia, Japan, Malaysia, the Philippines, Russia and Taiwan; Singapore is also listed as native but has no separate geometry on the 110m base map and is therefore not shaded. Hong Kong itself is listed by BirdLife as a VAGRANT, and the North Korea, South Korea and Palau entries are also vagrant, so all four are deliberately left unshaded. Not an occurrence polygon: green does not imply full-country occupancy and the breeding/non-breeding seasons are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0380/045600",
+      "use": "香港第 I 類，開闊鄉郊的稀少過境鳥（HKBWS 英文標題用 Chestnut-Cheeked Starling、中文用「紫背椋鳥」）；16–19 cm，小型短尾、頭淡色而腰淡的椋鳥；成鳥雄鳥眼後有不規則的深栗色斑、深淺不一，後冠至背帶紫或整片帶光澤的紫，飛羽、三級飛羽、尾與大覆羽帶光澤綠，中覆羽白色成翼帶，外側尾羽外瓣白，頦至胸與脇淡灰、腹與尾下覆羽乳白；眼深褐、繁殖季嘴黑、其他時候嘴基淡；雌鳥與幼鳥冠至背褐、腰淡、頦至胸與脇淡褐、翼褐、中覆羽淡白、尾褐帶淡紫光澤；叫聲較北椋鳥扁平；偏好開闊地，紀錄多在后海灣一帶與新界北（塱原、錦田、屯門、粉嶺等），蒲台島有規律紀錄；春季 4 月 3 日至 5 月 4 日、秋季 9 月 28 日至 11 月 20 日（後者兩筆比之前的 10 月 29 日最晚紀錄遲三週），春季主要過境在 4 月最後三週、秋季主要過境在 10 月首三週；1976-03-28 米埔一隻成鳥雄鳥為首錄，1999 年前只有九筆獲接受紀錄，此後因對非成鳥雄鳥羽色的認識增加及觀察活動上升而較為規律；多數紀錄為一至兩隻，最高計數 2020-10-10 屯門龍鼓灘五隻；是本港規律過境椋鳥中最稀有的一種，紀錄量顯示香港不在其正常遷徙路線上；樹棲，常與其他椋鳥一起棲息或覓食；雜食，但本港食性無紀錄；單型種，繁殖於庫頁島、日本、南千島群島與海參崴外海一個島，越冬於台灣、菲律賓與北婆羅洲。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chestnut-cheeked-starling-agropsar-philippensis/details",
+      "use": "IUCN **2018** LC（分佈「very large」、族群未量化、趨勢未知但未達門檻）；成熟個體 Unknown；趨勢 **Unknown**；繁殖 EOO 902,000 km²、非繁殖 EOO 1,910,000 km²；完全遷徙、非繁殖 endemic；海拔 0–1,500 m；世代 4.4 年；森林依賴度 Low；生境為溫帶林（繁殖）與都市、人工林、農地（繁殖與非繁殖）；用途只有寵物（國內自給）；保育行動只有「已劃定保育地點」；為本種劃定 1 個 IBA；國家表把**香港（中國）列為迷鳥**，另有北韓、南韓、帛琉三筆迷鳥。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（栗頰椋鳥；Chestnut-Cheeked Starling）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Agropsar philippensis／椋鳥科 Sturnidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 只有五個軸有分數：i=2、v=3.3（含 vEst=1）、r=2.5、c=1.2、o=2.3；**a（適應力）完全沒有分數**，故 missingScores 為 a。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；只有 range、breeding、migration 三段中文有內容（breeding 與 migration 各只有半句），habitat、look、diet、voice、behavior、funFact、etymology 中文全空，英文多為同一句分佈／繁殖描述重複，length 與 weight 為空。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 105.2 mm、尾 49.0 mm、跗蹠 24.0 mm、嘴峯 17.5 mm、體重 28.8 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 045600（頁面編號與 app 的 0451 不同）：香港第 I 類，開闊鄉郊的稀少過境鳥；16–19 cm，小型短尾、頭淡色而腰淡；雄鳥眼後有深栗色斑、後冠至背紫、飛羽帶綠光、中覆羽白成翼帶；雌鳥與幼鳥較褐、無栗斑。",
+    "本港紀錄：1976-03-28 米埔一隻成鳥雄鳥首錄，1999 年前只有九筆獲接受紀錄；春季 4 月 3 日至 5 月 4 日、秋季 9 月 28 日至 11 月 20 日，主要過境在 4 月最後三週與 10 月首三週；多數為一至兩隻，最高 2020-10-10 龍鼓灘五隻；是規律過境椋鳥中最稀有者，紀錄量顯示香港不在其正常遷徙路線上。",
+    "分類：單型種，繁殖於庫頁島、日本、南千島群島與海參崴外海島嶼，越冬於台灣、菲律賓與北婆羅洲；HKBWS 頁面中文名用「紫背椋鳥」，app 用「栗頰椋鳥」，兩者指同一種。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife 2018 年評估，趨勢**未知**；EOO 繁殖 902,000 km²、非繁殖 1,910,000 km²、世代 4.4 年、森林依賴度 Low；國家表把香港列為**迷鳥**，故地圖只填原生國家，北韓、南韓、帛琉與香港一律不填色。",
+    "runtime 分數：i=2、r=2.5、c=1.2 沿用；**a 完全缺席**（missingScores 為 a），卡面該軸顯示「待查」，不以他處數值補算；v=3.3 待查（length 與 look 中文皆為空，翼長 105.2 mm×0.22≈23.1 cm 高於 HKBWS 的 16–19 cm）；o=2.3 依賴待查分項（a、v）不補算。",
+    "runtime 文案缺陷：只有 range、breeding、migration 三段中文有內容且後兩段只有半句，其餘中文全空；look 與 habitat 皆空，length 與 weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖為方形畫布（原橫幅補邊後裁緊），畫出淡色頭部、眼後栗斑、紫色背部、綠色翼羽、白色中覆羽帶與乳白腹部，站於有葉枝條上；雌鳥與幼鳥（褐頭、無栗斑、白帶較淡）及換羽差異仍待專家核。比較鳥沿用 0450 的北椋鳥及 0449 的紫翅椋鳥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 與 look 中文皆為空，翼長 105.2 mm×0.22≈23.1 cm 高於 HKBWS 的 16–19 cm，3.3 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（a、v），不補算。"
+  }
+}

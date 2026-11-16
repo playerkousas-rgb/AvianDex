@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "id": "0443",
+  "name": "銀耳相思鳥",
+  "scientificName": "Leiothrix argentauris",
+  "illustrationTaxon": "Adult-type Leiothrix argentauris, appearing to match the description of L. a. ricketti; Hong Kong birds have not been assigned to a race. AI interpretation, subspecies, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紅嘴相思鳥",
+      "scientificName": "Leiothrix lutea",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "嘴鮮紅而非鮮黃、臉有白色眼圈而非大片銀白臉頰、胸黃橙而無完整的橙紅頸環、上體橄欖綠而非銀灰；本種嘴與腳皆鮮黃、有銀白臉頰與橙紅頸環。"
+    },
+    {
+      "zh": "藍翅希鶥",
+      "scientificName": "Actinodura cyanouroptera",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "嘴與腳暗色、頭淡藍灰、上背栗褐、飛羽與尾藍色，全身沒有橙紅色；本種嘴腳鮮黃、臉有大片銀白、頸有橙紅環、翼有紅黃斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.585,
+      0.135,
+      0.71,
+      0.26
+    ],
+    [
+      0.62,
+      0.23,
+      0.745,
+      0.355
+    ],
+    [
+      0.32,
+      0.34,
+      0.445,
+      0.465
+    ],
+    [
+      0.745,
+      0.155,
+      0.87,
+      0.28
+    ]
+  ],
+  "featureLabels": [
+    "銀白色臉頰",
+    "橙紅色頸環",
+    "紅黃翼斑",
+    "鮮黃色嘴"
+  ],
+  "featureNotes": [
+    "臉頰有一大片銀白色的斑塊，嵌在幾乎全黑的頭部之中，「銀耳」之名由此而來，為插圖局部。",
+    "頦、喉、上胸與一整圈頸環為鮮明的橙紅色，與銀白臉頰及銀灰上體形成強烈對比，為插圖局部。",
+    "初級與次級飛羽基部有一道寬闊的鮮紅色翼斑，其餘部分黑色而邊緣鮮黃，在林中一閃即見，為插圖局部。",
+    "嘴短而厚、呈鮮黃色，腳亦為鮮黃色，是與紅嘴相思鳥最直接的分別，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "KHM",
+      "LAO",
+      "MMR",
+      "MYS",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only: BirdLife's country table minus Bangladesh, which BirdLife marks Extinct and which is therefore deliberately left unshaded (Bhutan, Cambodia, China, India, Laos, Malaysia, Myanmar, Nepal, Thailand, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. BirdLife does not list Hong Kong at all; the Hong Kong population is of captive origin and, on the 110m base map, falls inside China's shading."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0370/044100",
+      "use": "香港第 IIB 類，森林局部常見而增加的留鳥，多在中新界，族群源自籠鳥；16–17 cm，中型、圓胖、短尾而色彩鮮明；頭大致黑色、有大片銀白臉頰與額上一小片黃斑；喉、上胸與一整圈頸環為鮮橙或紅色；上體大致銀灰，初級與次級飛羽基部有寬闊的鮮紅翼斑、其餘部分邊緣鮮黃；嘴短而厚、腳皆鮮黃，虹膜深褐而野外看似黑色；鳴唱全年常聞，為 4–7 個音的響亮樂句，末兩三音有轉調，間有雌鳥以 jit jit jit 回應的二重唱，叫聲為偏低沉的 chuk 或 chik，覓食群會高聲吱喳；分佈核心由城門至馬鞍山，最大數量在大帽山山系；圖集由 2.5%（1993–96 繁殖）、1.9%（2001–05 冬季）升至 3.4%（2016–19 繁殖）與 2.4%（冬季），冬季看似較少可能是繁殖季鳴唱易於偵測所致；兩個調查期之間的主要變化是核心向東擴展至馬鞍山，而港島西部的舊據點消失（可能部分是調查偏差）；與同屬的紅嘴相思鳥同時存在並常混群，Leven & Corlett (2004) 推測兩者可能直接競爭，但結果似對本種有利——同期紅嘴相思鳥的範圍由 2.4%／1.9% 降至 1.4%／1.1%；在喜馬拉雅兩者同域時紅嘴相思鳥繁殖於較高海拔，本港亦有跡象顯示本種少見於大帽山較高處；主要生境為次生闊葉林（下層茂密）與郁閉灌叢，市區公園紀錄視為籠鳥；1970 年 12 月港島 Hatton Road 首錄後長期無紀錄，1987-12-07 大埔滘再見兩隻，1990–91 冬季大埔滘經常出現（1990-12-08 兩群各至少 20 隻），1992 年底城門最多 30 隻，因非遷徙且自然分佈最近在廣西而列入第 IIB 類；現常見 20–30 隻的群，最高計數 2018-09-28 石崗引水道 60 隻，單群最多 50 隻於 2014 年 12 月 26 日大埔滘公園的榕樹上；4 月 18 日見「築巢行為」、5 月 31 日見攜巢材，4 月 29 日至 9 月 20 日見離巢幼鳥，推測一年多窩，但本港巢與蛋未有描述；結群 5–20 隻，可與紅嘴相思鳥或其他小型鶥及鶯混群，於下層至低樹冠覓食；Corlett (1998) 糞便樣本 97% 有果實、87% 有無脊椎動物，已知取食樹參與榕屬果實，亦有在互葉白千層花上活動的紀錄；分佈自印度西北經尼泊爾至中南半島大部分與蘇門答臘；五亞種，香港鳥未歸亞種但形態符合 ricketti。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/silver-eared-mesia-leiothrix-argentauris",
+      "use": "IUCN 2025 LC，理由為分佈極廣、族群未量化但未達門檻；趨勢下降（推測，樹冠在三個世代內減少 9.7% 及籠鳥貿易，推測族群下降 1–19%）；成熟個體 Unknown；繁殖 EOO 5,770,000 km²；不遷徙、非繁殖 endemic；海拔 25–3,050 m（偶爾至 2,600 m）；世代 3.5 年；森林依賴度 Medium；生境為亞熱帶／熱帶濕潤山地林（主要）及低地林、灌叢與農地（適用）；評估史顯示 2012 年及之前為 Not Recognised，2016 年起 LC，本頁為 2025 年評估；貿易欄記高普遍度、三種用途；**國家表沒有香港**，孟加拉列為滅絕。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（銀耳相思鳥；Silver-Eared Mesia）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Leiothrix argentauris／噪鶥科 Leiothrichidae）；BirdLife 科名用 Leiotrichidae。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=3.8、v=2.8（含 vEst=1）、r=1、c=3、o=2.5，missingScores 為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range 中文列出中國（藏東南、雲南、桂西南）、印度、錫金、尼泊爾尚可；look 中文其實是分類與生境句（「又稱相思鳥、黃嘴玉……棲息於平原及海拔 1000 米的小丘」）而非外型；behavior 中文是同一句分類句且被截斷；conservation 中文為 CITES 附錄二一句；habitat、diet、voice、breeding、funFact 中文全空而只有英文；etymology 中文全空；length 與 weight 欄為空。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 73.5 mm、尾 75.4 mm、跗蹠 25.0 mm、嘴峯 17.1 mm、體重 28.4 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 044100：香港第 IIB 類，森林局部常見而增加的留鳥，多在中新界，族群源自籠鳥；16–17 cm，圓胖短尾；頭黑、大片銀白臉頰、額有小黃斑、喉與上胸及整圈頸環橙紅、上體銀灰、飛羽寬紅翼斑配黃邊、嘴短厚而腳皆鮮黃。",
+    "本港狀況：1970 年 12 月港島 Hatton Road 首錄後長期無紀錄，1987-12-07 大埔滘再見，1990–91 冬季大埔滘常有（12 月 8 日兩群各至少 20 隻），1992 年底城門最多 30 隻，因非遷徙且最近自然分佈在廣西而列入第 IIB 類；核心由城門至馬鞍山、最大數量在大帽山山系，圖集由 2.5%／1.9% 升至 3.4%（繁殖）與 2.4%（冬季）；最高計數 2018-09-28 石崗引水道 60 隻、單群最多 50 隻（2014-12-26 大埔滘公園榕樹）。",
+    "與紅嘴相思鳥的關係：兩者同屬、外形相近而常混群，Leven & Corlett (2004) 推測可能直接競爭，但趨勢顯示本種較有利——同期紅嘴相思鳥由 2.4%／1.9% 降至 1.4%／1.1%；本種亦少見於大帽山較高處，而紅嘴相思鳥在該處相對常見，可能與喜馬拉雅同域時的海拔分隔一致。",
+    "繁殖與食性：4 月 18 日見築巢行為、5 月 31 日見攜巢材、4 月 29 日至 9 月 20 日見離巢幼鳥，推測一年多窩，本港巢與蛋未有描述；結群 5–20 隻於下層至低樹冠覓食；Corlett (1998) 糞便 97% 有果實、87% 有無脊椎，已知取食樹參與榕果。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2025** 年評估（評估史顯示 2012 年及以前為 Not Recognised）。趨勢下降（樹冠三個世代減 9.7% 及籠鳥貿易，推測 1–19%）、EOO 5,770,000 km²、海拔 25–3,050 m、世代 3.5 年、森林依賴度中等；國家表把孟加拉列為滅絕故地圖不填色，亦沒有香港一列。",
+    "runtime 分數：i=2、c=3、r=1 沿用；v=2.8 沿用——length 欄為空、look 中文沒有量度，翼長 73.5 mm×0.22≈16.2 cm 落在 HKBWS 的 16–17 cm 內，只加「原觀賞值含體長估算」提示；a=3.8 待查——habitat 與 diet 中文全空、behavior 中文其實是分類與生境句且被截斷；o=2.5 依賴待查分項（a）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：habitat、diet、voice、breeding、funFact、etymology 中文全空（只有英文）、look 與 behavior 中文皆為分類句、length 與 weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "地圖按 BirdLife 國家表填十國並剔除已滅絕的孟加拉；BirdLife 未列香港，本港族群屬籠鳥來源，在 110m 底圖併入中國。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖為方形畫布（原橫幅補邊後裁緊），單一短尾、純色深青底，畫出黑頭配銀白臉頰、額上小黃斑、橙紅喉與頸環、銀灰上體、寬紅翼斑配黃邊、鮮黃嘴與黃腳；亞種（形態符合 ricketti，未正式歸類）、性別與年齡差異仍待專家核。比較鳥沿用 0442 的紅嘴相思鳥及 0441 的藍翅希鶥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 與 diet 中文全空、behavior 中文其實是分類與生境句且被截斷，3.8 分缺乏棲地與食性支撐，待查。",
+    "o": "綜合分依賴待查分項（a），不補算。"
+  }
+}

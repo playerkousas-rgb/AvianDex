@@ -1,0 +1,142 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 記下降"
+  },
+  "id": "0409",
+  "name": "比氏鶲鶯",
+  "scientificName": "Phylloscopus valentini",
+  "illustrationTaxon": "Adult-type Phylloscopus valentini on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "灰冠鶲鶯",
+      "scientificName": "Phylloscopus tephrocephalus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "眼圈黃色後緣多斷開、下體黃色更濃、大覆羽翼斑模糊或無、嘴較短細；本種眼圈多為完整一圈、翼斑明顯、嘴較長厚。"
+    },
+    {
+      "zh": "峨嵋鶲鶯",
+      "scientificName": "Phylloscopus omeiensis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "中央冠紋純灰、上體及耳羽偏黃綠、下體淡黃、翼斑通常缺、嘴較短細；本種大覆羽有明顯翼斑、嘴較長厚。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.225,
+      0.79,
+      0.415
+    ],
+    [
+      0.655,
+      0.26,
+      0.765,
+      0.37
+    ],
+    [
+      0.42,
+      0.4,
+      0.56,
+      0.54
+    ],
+    [
+      0.72,
+      0.27,
+      0.85,
+      0.4
+    ]
+  ],
+  "featureLabels": [
+    "黑側冠紋",
+    "黃色眼圈",
+    "明顯翼斑",
+    "長厚嘴"
+  ],
+  "featureNotes": [
+    "黑色側冠條紋，在額部漸淡，為插圖局部。",
+    "黃色眼圈；插圖中大致成一圈，後緣是否完全閉合仍待專家核。",
+    "大覆羽上的明顯淡色翼斑，為插圖局部。",
+    "較長而厚的嘴，下嘴淡橙色、上嘴較深，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "MMR",
+      "LAO",
+      "VNM",
+      "THA"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/039200",
+      "use": "香港第 I 類罕見過境及冬候、11–12 cm、辨識（眼圈黃色通常完整、黑色側冠條紋於額部漸淡、灰色中央冠紋在額部偏綠、上體灰綠、下體黃而脇帶綠、大覆羽有明顯翼斑、嘴長而厚）、叫聲下降「tyoo」、指名亞種及 latouchei、繁殖中國中部、IUCN 全球 LC 穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/bianchis-warbler-phylloscopus-valentini",
+      "use": "IUCN 2024 LC、下降；原生國家中國、緬甸、老撾、越南及泰國（非繁殖）；繁殖 EOO 477,000 km²、非繁殖 392,000 km²；完全遷徙；世代長度 2.0 年；海拔 450–3,100 m；繁殖 1,750 m 以上闊葉常綠林。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus valentini／柳鶯科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.8、v=2.5、r=3.3、c=1.2、o=2.4，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；habitat 中文留空、diet 為森林及「肉食性」樣板、voice／breeding／etymology／funFact 為空、highlights 截句、length 為空；range 稱「越冬於雲南南部、泰國西北部和老撾北部」。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 54.8 mm，×0.22≈12.1 cm，略高於 HKBWS 11–12 cm 上限。"
+    }
+  ],
+  "notes": [
+    "HKBWS：11–12 cm，香港屬第 I 類罕見過境及冬候；眼圈黃色通常完整一圈、黑色側冠條紋在額部漸淡、中央冠紋灰色而在額部轉綠、上體灰綠、下體黃色而脇部帶綠、大覆羽有明顯翼斑、嘴長而厚；叫聲為下降的「tyoo」；分指名亞種及 latouchei，繁殖於中國中部。全球 LC、趨勢穩定（HKBWS）。",
+    "BirdLife 2024 評估為 LC 但趨勢下降（推測 10 年減 5–9%），原生國家為中國、緬甸、老撾、越南，泰國列為非繁殖；繁殖 EOO 477,000 km²、非繁殖 EOO 392,000 km²，完全遷徙，世代長度 2.0 年；冬季可降至 450 m。",
+    "runtime 分數 i=2、a=2.8、v=2.5、r=3.3、c=1.2、o=2.4、vEst=1。length 為空，翼長 54.8 mm×0.22≈12.1 cm 略高於 HKBWS 11–12 cm 上限，故 v 待查並保留「原觀賞值含體長估算」提示；cardCopy habitat 中文留空、diet 只講森林及「肉食性」，故適應分待查；voice、breeding、etymology、funFact 全空、highlights 截句，故研究分待查；c=1.2 與 LC 一致、i=2 沿 runtime；o 依賴待查分項不補算。",
+    "世界底圖按 BirdLife 原生國家列出中國、緬甸、老撾、越南及泰國（泰國為非繁殖）；runtime 文案只寫「越冬於雲南南部、泰國西北部和老撾北部」，未涵蓋繁殖地，故不以文案取代原生化分佈；繁殖與越冬未分色，綠色非全境、非完整分佈。",
+    "AI 主圖：黑色側冠條紋、黃色眼圈、大覆羽明顯翼斑、嘴長而厚、上體灰綠而下體黃帶綠，整體符合 HKBWS 描述；眼圈後緣是否完全閉合、額部中央冠紋轉綠程度及脇部綠色仍待專家核。灰冠鶲鶯及峨嵋鶲鶯對照圖分別重用 0408、0410 主圖，非等比例，均為 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 中文留空、diet 為樣板描述，適應分待查、不補值。",
+    "v": "length 為空，翼長推估 12.1 cm 略高於 HKBWS 11–12 cm，觀賞分待查並保留估算提示。",
+    "r": "鳴聲、繁殖、詞源及要點全空或截句，研究分待查、不補值。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

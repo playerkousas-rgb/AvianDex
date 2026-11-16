@@ -1,0 +1,148 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 記疑下降"
+  },
+  "id": "0401",
+  "name": "巨嘴柳鶯",
+  "scientificName": "Phylloscopus schwarzi",
+  "illustrationTaxon": "Adult-type Phylloscopus schwarzi on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "褐柳鶯",
+      "scientificName": "Phylloscopus fuscatus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小、上體較灰褐、嘴較細尖、腳較深色，眉紋在眼後較窄。"
+    },
+    {
+      "zh": "棕眉柳鶯",
+      "scientificName": "Phylloscopus armandii",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "羽色分野極細，野外主要靠金屬聲「tzik」叫聲；胸帶較深、喉部較白。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.2,
+      0.845,
+      0.445
+    ],
+    [
+      0.39,
+      0.27,
+      0.635,
+      0.515
+    ],
+    [
+      0.3,
+      0.41,
+      0.545,
+      0.655
+    ],
+    [
+      0.505,
+      0.6,
+      0.705,
+      0.8
+    ]
+  ],
+  "featureLabels": [
+    "淡色長眉紋",
+    "橄欖褐背",
+    "摺翼淡色邊",
+    "淡橙色腳"
+  ],
+  "featureNotes": [
+    "眼後較白、眼前偏淡褐的長眉紋，為插圖局部。",
+    "橄欖褐色上背與肩羽，邊緣淡色，為插圖局部。",
+    "摺合翼羽的淡色邊及翼上淡色板塊，為插圖局部。",
+    "淡橙黃色腳與腳趾握枝，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "KHM",
+      "LAO",
+      "MNG",
+      "MMR",
+      "PRK",
+      "RUS",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and no separation by season."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038300",
+      "use": "香港狀況、辨識（嘴較鈍厚、眉紋、腳色）、12.5–14 cm、遷移及分布；IUCN 全球 LC 趨勢穩定。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038200",
+      "use": "與棕眉柳鶯的辨識分野、叫聲為主要可靠特徵，以及棕眉柳鶯的香港狀況。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/raddes-warbler-phylloscopus-schwarzi",
+      "use": "IUCN 2025 全球 LC、趨勢疑下降、完全遷徙、原生國家名單及繁殖／越冬國別。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=3.3、v=2.7、r=4.8、c=1.2、o=2.8。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；其中 length 欄為「17–13 mm」，與任何柳鶯體長不符，屬有問題輸入。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 63.2 mm，×0.22≈13.9 cm，與 HKBWS 12.5–14 cm 相符。"
+    }
+  ],
+  "notes": [
+    "HKBWS：12.5–14 cm，香港不常見秋季過境及稀少冬候，見於開闊灌木林及林緣；全球 LC、趨勢穩定。BirdLife 2025 亦為 LC 但記疑下降，兩者趨勢評估有差異，圖只寫「疑下降」並保留差異。",
+    "runtime 六分俱全（i=2、a=3.3、v=2.7、r=4.8、c=1.2、o=2.8）。cardCopy.length 為「17–13 mm」，方向與數值俱不合理，屬有問題輸入，故 v 待查、不補值；該筆亦無 vEst 旗標，無翼長估算可保留。o 依賴待查分項，同樣待查。callouts 兩條為截句（「但幼鳥腹部顏色較黃」、「腳看起來較大」），未影響其餘分項沿用 runtime。",
+    "世界底圖只標 BirdLife 列為原生的國家（中國、日本、柬埔寨、老撾、蒙古、緬甸、北韓、俄羅斯、泰國、越南），不標香港、哈薩克、馬來西亞等迷鳥地區；繁殖與越冬國未分色，綠色非全境、非完整分布。",
+    "AI 主圖嘴形偏長尖（實鳥為較鈍厚短嘴），眉紋眼前偏淡褐、眼後較白符合描述但界線較銳；足趾握枝位置略生硬，換羽及亞種（單型）差異未核。褐柳鶯對照圖上體偏褐灰、嘴較細，大致符合但腳色偏淺；棕眉柳鶯對照圖未清楚顯示暗褐胸帶。三圖均為 AI 示意，非專家認證，對照鳥不等比例，不能單憑圖鑑定。"
+  ],
+  "withheldScores": {
+    "v": "cardCopy.length 為「17–13 mm」，方向及數值均不合理，觀賞分待查、不補值。",
+    "o": "綜合分依賴待查的觀賞分，不補算。"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危",
+    "assessmentNote": "全球 VU：BirdLife 2025 記下降"
+  },
+  "id": "0407",
+  "name": "飯島柳鶯",
+  "scientificName": "Phylloscopus ijimae",
+  "illustrationTaxon": "Adult-type Phylloscopus ijimae on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "冕柳鶯",
+      "scientificName": "Phylloscopus coronatus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "有淡色中央冠紋及深色側冠條紋，背部較綠，下嘴橙黃而上嘴較深。"
+    },
+    {
+      "zh": "歐柳鶯",
+      "scientificName": "Phylloscopus trochilus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "無冠紋亦無側冠，翼上無淡色翼斑，嘴全深色，腳粉褐。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.245,
+      0.255,
+      0.46,
+      0.47
+    ],
+    [
+      0.16,
+      0.3,
+      0.3,
+      0.44
+    ],
+    [
+      0.42,
+      0.4,
+      0.575,
+      0.555
+    ],
+    [
+      0.35,
+      0.62,
+      0.525,
+      0.795
+    ]
+  ],
+  "featureLabels": [
+    "乳白長眉線",
+    "寬基淡色嘴",
+    "單一淡翼斑",
+    "淡粉腳"
+  ],
+  "featureNotes": [
+    "延伸至後頭的乳白色長眉線，眼後較白、眼前偏黃，為插圖局部。",
+    "嘴基較寬、上下嘴均為淡橙色，為插圖局部。",
+    "大覆羽上單一而模糊的淡色翼斑，為插圖局部。",
+    "淡粉肉色的腳與腳趾，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "JPN",
+      "TWN",
+      "PHL"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038900",
+      "use": "香港第 I 類偶然記錄（2015 年 3 月 29 日至 4 月 4 日蒲台島單一紀錄）、11–12 cm、辨識（無冠紋、背較灰、尾下覆羽偏綠、眼前縱紋窄、單一模糊翼斑、嘴基寬且上下嘴全淡色）、單型、繁殖於日本伊豆群島及吐噶喇群島中之島、台灣偶見、全球 VU 2,500–9,999 隻且下降。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/ijimas-leaf-warbler-phylloscopus-ijimae",
+      "use": "IUCN 2025 VU C2a(ii)、成熟個體 3,270–10,750、下降、完全遷徙、原生國家日本（繁殖及非繁殖）、菲律賓及台灣（非繁殖）；生境及威脅說明。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=3.8、a=2.8、v=2.4、r=4.8、c=4、o=3.6；無 vEst 旗標。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；habitat、voice、etymology、highlights 多處留空截句，length 為 11.5 cm。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 63 mm；未作體長換算。"
+    }
+  ],
+  "notes": [
+    "HKBWS：11–12 cm，香港屬第 I 類，唯一紀錄為 2015 年 3 月 29 日至 4 月 4 日蒲台島一隻；外貌似冕柳鶯但無冠紋、背部較灰、尾下覆羽偏綠，眼前縱紋窄、單一模糊翼斑、嘴基寬且上下嘴全淡色；單型，繁殖於日本伊豆群島及吐噶喇群島中之島，台灣偶見。全球 VU（2,500–9,999 隻、下降，因繁殖地及越冬地生境喪失、可能農藥及遷徙期捕捉）。",
+    "BirdLife 2025 更新為 VU C2a(ii)，成熟個體估 3,270–10,750（2024 年、資料品質欠佳），原生國家為日本、菲律賓、台灣（後兩者為非繁殖）。HKBWS 較早的 2,500–9,999 與此並不完全相同，卡面採用 BirdLife 最新數字並註明來源年份。",
+    "runtime 分數 i=3.8、a=2.8、v=2.4、r=4.8、c=4、o=3.6。length 11.5 cm 在 HKBWS 11–12 cm 範圍內，v 沿用；c=4 與 VU 一致，i=3.8 亦沿 runtime。cardCopy 的 voice（「1953年， 和 基於鳥鳴……）、etymology（「……， 並在1923年」）、habitat（「包括、赤楊……」）及 highlights（「巢築於距地面約 的……」）均留空截句，故研究分待查、o 不補算；適應分沿用 habitat／diet 可讀部分（低地落葉及亞熱帶常綠林、榿木林、竹林；主食昆蟲）。",
+    "世界底圖只標 BirdLife 原生三國（日本、台灣、菲律賓），不標中國大陸沿岸（HKBWS 只稱「可能」為東南沿海過境，未列為原生證據），繁殖與越冬未分色；綠色非全境、非完整分佈。",
+    "AI 主圖：經重繪後頭頂已無淡色中央冠紋、背較灰、翼欖綠、單一淡翼斑、上下嘴全淡橙、腳淡粉，符合 HKBWS 描述；但嘴基寬度、眼前縱紋的粗細以及尾下覆羽綠色調仍待專家核。冕柳鶯（重用 0406）及歐柳鶯（重用 0403）對照圖非等比例，均為 AI 示意。",
+    "卡面 IUCN 註記已縮短為「全球 VU：BirdLife 2025 記下降」，完整數字（3,270–10,750 成鳥）只寫在 spec，避免壓住雷達的保育分標籤。"
+  ],
+  "withheldScores": {
+    "r": "鳴聲、詞源、棲地及要點多處留空截句，研究分待查、不補值。",
+    "o": "綜合分依賴待查的研究分，不補算。"
+  }
+}

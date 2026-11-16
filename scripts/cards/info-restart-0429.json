@@ -1,0 +1,143 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 記下降"
+  },
+  "id": "0429",
+  "name": "紅頭長尾山雀",
+  "scientificName": "Aegithalos concinnus",
+  "illustrationTaxon": "Adult-type Aegithalos concinnus perched on a slender branch; AI interpretation, sex, subspecies and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "強腳樹鶯",
+      "scientificName": "Horornis fortipes",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "整體暗淡褐灰、沒有眼罩與橙色胸帶、羽色缺乏對比；本種橙紅羽冠、黑色眼罩、白頰與橙紅胸帶分明。"
+    },
+    {
+      "zh": "鱗頭樹鶯",
+      "scientificName": "Urosphena squameiceps",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "尾極短、全身銹褐、沒有橙紅羽冠與黑色喉斑；本種尾長、上體濃灰黑、喉部有獨立黑斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.635,
+      0.208,
+      0.825,
+      0.398
+    ],
+    [
+      0.685,
+      0.295,
+      0.845,
+      0.455
+    ],
+    [
+      0.625,
+      0.35,
+      0.79,
+      0.52
+    ],
+    [
+      0.1,
+      0.115,
+      0.32,
+      0.335
+    ]
+  ],
+  "featureLabels": [
+    "赤褐頭頂",
+    "黑色眼罩",
+    "橙紅胸帶",
+    "濃灰長尾"
+  ],
+  "featureNotes": [
+    "頭頂至後頸橙紅赤褐色，是香港鳥類中少見的暖色羽冠，為插圖局部。",
+    "黑色眼罩穿過眼眶，下接白頰，再往下是獨立的一大塊黑色喉斑，三者組合是本種的招牌，為插圖局部。",
+    "上胸橫過一道橙紅胸帶，脇部亦為橙紅，與白色的腹部成對比；幼鳥的胸口另有斑點或縱紋，為插圖局部。",
+    "尾長而呈濃灰色，幾乎與身體等長，是「長尾山雀」之名的由來，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "THA",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and resident and breeding areas are not colour-separated. Bangladesh, Nepal, Bhutan and Pakistan are named in the runtime range but are not listed for this species by BirdLife and are therefore not filled; Hong Kong is a scarce local resident per HKBWS but is not listed by BirdLife and has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0310/037600",
+      "use": "香港第 I 類稀少而局部的留鳥及／或冬候鳥，主要見於大帽山一帶的成熟次生林；8.8–11.5 cm；橙紅羽冠、黑色眼罩與獨立黑色喉斑、白色虹膜、橙紅胸帶與脇部、濃灰黑上體，組合極為鮮明；幼鳥羽冠較淡、上體較褐、喉淡白、腹淡皮黃並在胸前有斑點或縱紋；1976-12-19 南丫島兩隻為首筆，1992 年大埔滘築巢為首個繁殖證據，1997-06-18 大欖涌 20 隻為最高紀錄，2025 年頁面仍列為第 I 類；主要在大帽山一帶，九龍山及獅子山郊野公園有零星紀錄，蒲台島 2012-12-25 至 2013-02-26 最多三隻；常成小群在樹冠快速移動，最高 15 隻，並加入混合鳥群。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/black-throated-tit-aegithalos-concinnus",
+      "use": "IUCN 2024 LC 但記下降（分佈區林木覆蓋 10 年減 7%、推測族群減 1–19%、森林依賴中等）；繁殖 EOO 4,080,000 km²、非遷徙、海拔 100–3,600 m、世代長度 2.1 年；國家：中國、印度、老撾、緬甸、中國台灣、泰國、越南；另記在七個貿易資料集其中一個以低普及度出現，用途為國內食物及寵物。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（紅頭長尾山雀；英文作 Black-Throated Tit）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Aegithalos concinnus／長尾山雀科 Aegithalidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數齊備：i=2、a=4.3、v=2.3、r=1.8、c=1.2、o=2.3，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；look 詳述羽色並附三個 callout，diet 與 range 有內容，habitat、breeding、funFact、conservation 只有英文，behavior 中文寫成「經常與山雀科和畫眉科的鳥類混淆」，length 與 weight 為空，picks 列出五個欄位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 48.6 mm、尾 46.8 mm、嘴峯 7.4 mm、體重 6.1 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 037600：8.8–11.5 cm，香港屬第 I 類稀少而局部的留鳥及／或冬候鳥，主要見於大帽山一帶的成熟次生林，九龍山及獅子山郊野公園只有零星紀錄，沒有在沙田以東（西貢、馬鞍山）建立族群的跡象；蒲台島 2012 年 12 月至 2013 年 2 月最多三隻，被視為可能是自然到達。",
+    "辨識要點：橙紅羽冠、黑色眼罩、獨立黑色喉斑、白頰、白色虹膜、橙紅胸帶與脇部、濃灰黑上體與長尾、白色腹部；幼鳥羽冠較淡、上體較褐、喉淡白、腹淡皮黃，胸前有可變的斑點或縱紋。卡面四個標籤取羽冠、眼罩、胸帶與尾。",
+    "紀錄史：1976 年 12 月 19 日南丫島兩隻為首筆；1986、1987 年有懷疑為逃逸鳥的紀錄；1992 年大埔滘築巢首次證實繁殖，其後在鴨脷洲及大欖涌亦有繁殖；1997 年 6 月 18 日大欖涌 20 隻為最高單次紀錄；近年數量下降，但 1999 年後幾乎所有雙位數字紀錄都集中在 7 月 15 日至 9 月 24 日，顯示本地可能仍有繁殖族群。",
+    "分類：共有七個亞種，最近者為指名亞種（華南大陸東南部、台灣及越南北部），但香港出現的屬哪一個亞種仍不確定；HKBWS 亦指出本種與紅頭山雀（A. iredalei）等近緣種的分類仍在變動。",
+    "IUCN：BirdLife 2024 評 LC 但記下降（林木覆蓋 10 年減 7%，推測族群減 1–19%）；HKBWS 亦記本港數量自 1990 年代高峰下滑。卡面註記只述全球評估。",
+    "runtime 六項分數齊備 i=2、a=4.3、v=2.3、r=1.8、c=1.2、o=2.3、vEst=1，全部沿用：a=4.3 為本批最高，棲地、食性、群聚行為都有獨立內容；v 的翼長 48.6 mm×0.22≈10.7 cm 落在 HKBWS 8.8–11.5 cm 之內，僅保留「原觀賞值含體長估算」提示。",
+    "runtime 文案缺陷：range 只列巴基斯坦、尼泊爾、錫金、不丹、印度、孟加拉及西藏，漏掉 BirdLife 亦列的中國、老撾、緬甸、台灣、泰國、越南，反之 BirdLife 並未列孟加拉、尼泊爾、不丹、巴基斯坦——兩者不一致，地圖以 BirdLife 為準；behavior 中文寫成「經常與山雀科和畫眉科的鳥類混淆」，語意不清且非行為描述（英文為加入混合鳥群）；habitat、breeding、funFact、conservation 只有英文；length、weight 為空；picks 列五欄。",
+    "世界底圖按 BirdLife 國家表填中國、印度、老撾、緬甸、中國台灣、泰國、越南；runtime 提到的孟加拉、尼泊爾、不丹、巴基斯坦 BirdLife 未列，故不填色；香港雖是本地留鳥，但 BirdLife 未列香港、110m 底圖亦無獨立多邊形，故隨中國顯示。留鳥與繁殖地未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成小型長尾山雀，停於細枝，並畫出橙紅羽冠、黑色眼罩與獨立黑喉斑、白頰、白虹膜、橙紅胸帶與脇部、濃灰黑上體與長尾、白腹；幼鳥的暗淡羽色與亞種歸屬仍待專家核。比較鳥為 0428 強腳樹鶯主圖及 0424 鱗頭樹鶯的重新生成比較圖，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {}
+}

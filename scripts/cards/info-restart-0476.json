@@ -1,0 +1,146 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0476",
+  "name": "褐胸鶲",
+  "scientificName": "Muscicapa muttui",
+  "illustrationTaxon": "Adult Muscicapa muttui (dull grey-brown upperparts, warm brown uppertail coverts and tail, buff wing bar on the greater coverts, brownish flight-feather centres, dark orbital ring, pale bill with a small dark tip to the underside of the lower mandible, buff-tinged breast and flanks, pale pink legs). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "北灰鶲",
+      "scientificName": "Muscicapa dauurica",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、外觀最接近的一對；北灰鶲嘴較深而嘴基寬、下嘴黃色明顯，上體較冷的灰褐、腰與尾不帶暖褐，下體較白而少褐，腳色較深；本種嘴較淡而嘴尖的深色較少（有時幾乎沒有）、大覆羽有一道明顯皮黃翼斑、腰與尾暖褐而與較灰的背部成對比、腳淡粉紅。"
+    },
+    {
+      "zh": "烏鶲",
+      "scientificName": "Muscicapa sibirica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬；烏鶲上體煙灰而更暗、眼圈較寬、下體白而有瀰散深灰斑駁並在胸脇糊成一片、翼較長；本種上體較淡較褐、眼圈只是一圈細暗、下體只帶淡褐而幾乎沒有斑駁、翼較短，整體色調偏暖而不偏冷。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.165,
+      0.25,
+      0.265,
+      0.35
+    ],
+    [
+      0.42,
+      0.43,
+      0.52,
+      0.53
+    ],
+    [
+      0.68,
+      0.6,
+      0.78,
+      0.7
+    ],
+    [
+      0.4,
+      0.71,
+      0.5,
+      0.81
+    ]
+  ],
+  "featureLabels": [
+    "淡色嘴小嘴尖",
+    "皮黃翼斑",
+    "赤褐尾羽",
+    "粉紅腳"
+  ],
+  "featureNotes": [
+    "嘴較淡，下嘴的深色嘴尖不明顯、有時幾乎沒有，是本種與北灰鶲最容易混淆的一點；側光下嘴色會偏肉色，為插圖局部。",
+    "大覆羽上有一道明顯的皮黃（buff）翼斑，第一齡鳥的翼斑端更亮更清楚；成鳥較淡較窄，為插圖局部。",
+    "腰與尾上覆羽及尾羽為暖赤褐，與較冷較灰的背部成對比；飛羽中央不像烏鶲、北灰鶲那樣黑，為插圖局部。",
+    "腳為淡粉紅色，較北灰鶲與灰紋鶲的深色腳淺；本種多在下層枝條或溪邊活動，腳的顏色在近距離觀察時有用，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IND",
+      "LKA",
+      "MMR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists seven native countries/territories — China (breeding), Hong Kong (China), India (resident), Myanmar (non-breeding), Sri Lanka (non-breeding), Thailand (non-breeding) and Vietnam (breeding). Hong Kong has no separate 110m geometry and is folded into China's outline. BirdLife lists NO vagrant territories. Not an occurrence polygon: green does not imply full-country occupancy; the green area is large relative to a breeding EOO of 2,020,000 km² and a non-breeding EOO of only 429,000 km² (the smallest in this batch)."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/047800",
+      "use": "香港第 I 類：**局部不常見但在增加的夏候鳥**、稀少至罕見的過境鳥、極罕見的冬候鳥，見於密冠層森林——**本批第一種在本港繁殖的雀形目**；**13–14 cm**；與北灰鶲相似但分別在：嘴較淡而**下嘴的深色嘴尖較不明顯、有時完全沒有**、大覆羽有**一道明顯皮黃翼斑**、上體較暗啞較灰而**腰與尾上覆羽及尾呈對比的暖褐色**、飛羽中央較不黑、**初級飛羽伸出較短**、通常有**深色眼圈**與**淡粉紅的腳**；第一齡鳥的大覆羽端更明顯更亮；非繁殖季通常安靜，偶爾發出類似北灰鶲但較慢、較多變調而更金屬感的短串音；鳴唱為不足一秒、高音而略為下降的哨音；生境主要在大帽山山體的密冠層森林、尤其大埔滘並常在溪流附近，近年擴散至新界東北、馬鞍山與大欖郊野公園，被視為過境的個體見於香港濕地公園、何文田、京士柏、蒲台與東平洲；2012 年前只有五筆紀錄（2001-11-28 至 2002-01-21 大埔滘、2003-02-03 元崗、2009-04-13 大埔滘、2010-09-13 鳳園、2011-09-02 大埔滘附近），2012 年起在大埔滘變得規律並可能已在該處繁殖，現為新界中部與東部密冠層林地的稀少夏候鳥；**4 月初到達繁殖地，可留至 7 月底或 8 月**；9 月全月有過境或擴散個體的紀錄；**10 月與 11 月上半月沒有紀錄**，越冬鳥似在 11 月中至 2 月初出現，2020-03-14 與 04-02 京士柏一隻因此可能是過境鳥；繁殖：2014 年在大埔滘首次確認（一對由 4 月 10 日至少留至 7 月 1 日，三次築巢，首兩次分別被獼猴與不明捕食者破壞，第三次 7 月 1 日成功離巢四隻），2015 年 5 月 9 日已孵出但一週後棄巢、第二次嘗試結果不明，2018 年 5 月找到兩鳥與巢、6 月 3 日前被毀但第二次成功並於 7 月 12 日見兩隻幼鳥，2020 年在馬鞍山郊野公園昂平與大埔滘北面的元墩下見築巢、7 月 20 日在流水響見成鳥與兩隻剛離巢幼鳥、8 月 28 日在城門見一隻幼鳥；食蟲，在冠層下的顯露枝條衝出捕食，似乎偏好溪流；單型種；IUCN Least Concern、**趨勢下降**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/brown-breasted-flycatcher-muscicapa-muttui/details",
+      "use": "IUCN **2024** LC（1988 為 LR/LC、1994 曾列 LR/Near Threatened、2000 起回到 LC）、成熟個體 Unknown、趨勢 **Decreasing**（Suspected，分佈範圍十年樹冠減少 2.1%，暫定下降 1–19%、**最佳估計少於 5%**）、繁殖 EOO **2,020,000 km²**、非繁殖 EOO **429,000 km²**（**本批最小**）、完全遷徙、繁殖 endemic **No**、**IBA／KBA 2 個**、海拔 0–2,230 m、世代 **2.2 年**、森林依賴度 **High**（**本批第一個 High**）；生境只有亞熱帶／熱帶濕潤山地林（繁殖與非繁殖皆 **Major**）；**七個貿易資料集皆無紀錄、無任何利用**；國家表列 **7 個原生國家／地區**——中國（繁殖）、**香港（中國）**、印度（resident）、緬甸（非繁殖）、斯里蘭卡（非繁殖）、泰國（非繁殖）、越南（繁殖）；**沒有迷鳥國家**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（褐胸鶲；Brown-Breasted Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Muscicapa muttui／鶲科 Muscicapidae）；speciesCode brbfly2；taxonOrder 28538。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **只有四軸**：a=2.8、v=2.8（含 vEst=1）、r=1、o=2.2——**i（重要性）與 c（保育關注度）完全沒有分數**，故 manifest 的 missingScores 為 i、c。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案幾乎空白：只有 range（「在中國大陸，分佈於甘肅、四川、貴州、廣西、雲南等地」）與 iucnEn（Least Concern (LC)），**沒有中文 iucn 欄**；picks 只選了 range；**沒有 look、diet、habitat、voice、behavior、breeding、humanRelation、etymology、callouts、migration、highlights、conservation**，**length 與 weight 皆為空**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 71.4 mm、尾 55.0 mm、跗蹠 13.1 mm、嘴峯 14.9 mm、體重 12.0 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 047800（路徑 `0400/`，鶲科）：香港第 I 類，**局部不常見但在增加的夏候鳥**、稀少至罕見過境鳥、極罕見冬候鳥，見於密冠層森林——**本批第一種在本港有繁殖紀錄的雀形目**；13–14 cm。",
+    "辨識要點：嘴較淡而下嘴深色嘴尖不明顯（有時沒有）、大覆羽一道明顯皮黃翼斑、腰與尾暖褐而與較灰的背部成對比、飛羽中央較不黑、初級飛羽伸出較短、深色眼圈、淡粉紅腳（HKBWS 逐項與北灰鶲對比）。",
+    "本港紀錄與繁殖：首錄為 2001-11-28 至 2002-01-21 大埔滘（Tai & Wong 2007）；2012 年起在大埔滘變得規律，**2014 年首次確認繁殖**（三次築巢，前兩次分別被獼猴與不明捕食者破壞，第三次 7 月 1 日成功離巢四隻）；2018 年第二次嘗試成功、7 月 12 日見兩隻幼鳥；2020 年在馬鞍山郊野公園昂平與元墩下築巢、流水響見成鳥與兩隻剛離巢幼鳥、城門見幼鳥。",
+    "季節：4 月初到達繁殖地、可留至 7 月底或 8 月；9 月有過境或擴散個體；**10 月至 11 月上半月無紀錄**；越冬鳥約 11 月中至 2 月初。生境主要為大埔滘的溪流附近密林，近年擴散至新界東北、馬鞍山與大欖。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2024** 年評估、趨勢 **Decreasing**（Suspected，**最佳估計下降少於 5%**）——HKBWS 亦寫 decreasing；非繁殖 EOO 只有 **429,000 km²（本批最小）**、森林依賴度 **High（本批第一個 High）**、世代 2.2 年、海拔 0–2,230 m、IBA 2 個、無貿易紀錄；BirdLife 把**香港（中國）列為原生**（與 0470 斑鶇、0475 北灰鶲同類情況）。",
+    "**兩處資料差異**：BirdLife 把緬甸列為非繁殖、越南列為繁殖，而 HKBWS 寫繁殖於印度東北部、緬甸北部向東至中國西南與南部遠至廣東、冬季在印度西南與斯里蘭卡；本卡以 HKBWS 的分佈敘述為主，BirdLife 的國家表只用於地圖。另 HKBWS 頁面沒有列出量度以外的體重，runtime 的 weight 亦為空。",
+    "runtime 分數與缺項：**i 與 c 完全沒有分數**（missingScores 為 i、c，卡面這兩軸顯示「待查」）；a=2.8 **待查**（此軸由棲地×食性 tag 推出，但 cardCopy 沒有 habitat 與 diet 文字）；v=2.8 **待查**（length 與 weight 皆空、vEst=1 即原值由體長估算，翼 71.4 mm×0.22≈15.7 cm 高於 HKBWS 的 13–14 cm）；o=2.2 依賴待查分項不補算；**r=1 沿用**（最低基準值）。withheldScores 因此為 a、v、o。",
+    "runtime 文案缺陷：卡面只有一句中國大陸省份分佈與英文 IUCN，**連中文 IUCN 標籤都沒有**（本卡 iucn 由 BirdLife 2024 補上）、沒有 look／habitat／voice／breeding 等任何描述，length 與 weight 為空；本卡的全部辨識、季節與繁殖內容均由 HKBWS 撰寫。",
+    "AI 主圖原為 1312×816 橫幅，直接取 816×816 方形（起點 x=496，不補邊，避免平面色帶）後放大至 1127×1127，畫出灰褐上體、暖褐腰尾、皮黃翼斑、淡嘴、深色眼圈與粉紅腳，停在林下細枝、背景帶溪流以呼應 HKBWS 所述生境；比較鳥為北灰鶲（外觀最接近）與烏鶲，**本輪工作區再次被重置**（HEAD 回到 base `0254314`、`cards/art/` 與 `deliver/cards/` 全被清空），已 `git fetch` 後 `git reset --hard origin/arena/b2d882cf-aviandex` 回到 `ba78818`，0472–0475 的比較鳥圖已不存在，故這兩張比較圖在本輪重新生成，非等比例、非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "此軸由棲地與食性 tag 推出，但本案 cardCopy 完全沒有 habitat 與 diet 文字（亦無 look、voice、breeding），2.8 分無可供核對的內容，待查。",
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 71.4 mm×0.22≈15.7 cm 高於 HKBWS 的 13–14 cm，2.8 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（a、v）與本來就缺分的 i、c，不補算。"
+  }
+}

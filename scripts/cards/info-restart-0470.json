@@ -1,0 +1,151 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0470",
+  "name": "斑鶇",
+  "scientificName": "Turdus eunomus",
+  "illustrationTaxon": "Adult male Turdus eunomus (dark greyish above and below, rufous wing panel, whitish supercilium and half-collar, blackish breast band). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紅尾鶇",
+      "scientificName": "Turdus naumanni",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同為東亞越冬的鶇，兩者在本港常有中間型（intergrades）；紅尾鶇上體為深銅褐色、翼覆羽金褐，胸與脇帶赤褐而腹白；本種上體暗灰、翼為赤褐色的整片翼斑、胸有黑色橫帶，整體對比更冷更暗。"
+    },
+    {
+      "zh": "赤頸鶇",
+      "scientificName": "Turdus ruficollis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬，但赤頸鶇的喉、胸、臉側與頸側是整片赤紅褐、上體均勻暗灰、翼上沒有赤褐翼斑；本種只有喉與半頸環白、翼有明顯赤褐翼斑、胸有黑色橫帶。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.555,
+      0.525,
+      0.655,
+      0.625
+    ],
+    [
+      0.395,
+      0.345,
+      0.495,
+      0.445
+    ],
+    [
+      0.415,
+      0.575,
+      0.515,
+      0.675
+    ],
+    [
+      0.305,
+      0.345,
+      0.405,
+      0.445
+    ]
+  ],
+  "featureLabels": [
+    "赤褐翼斑",
+    "白色眉喉",
+    "白色腹部",
+    "黃色嘴基"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥的大覆羽、三級飛羽與飛羽邊緣形成一大片赤褐翼斑，與暗灰的上體成強烈對比；成鳥雌鳥翼上赤褐範圍較小，第一齡鳥的內側大覆羽赤褐、外側仍是較暗啞的幼羽，為插圖局部。",
+    "眉紋、喉與半頸環近白，把深色的臉與胸隔開；成鳥雌鳥與第一齡鳥的白較淡、斑紋較模糊，為插圖局部。",
+    "腹部與尾下覆羽白色，脇帶深色縱紋；第一齡雌鳥下體黑褐較少、整隻較暗啞，為插圖局部。",
+    "嘴為深色而基部帶黃；雌鳥與第一齡鳥的嘴色較淡，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "JPN",
+      "MMR",
+      "NPL",
+      "PAK",
+      "RUS",
+      "KOR",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 14 native countries/territories — Bangladesh, Bhutan, China, Hong Kong (China), India, Japan, Myanmar, Nepal, Pakistan, Russia (including Asian and Central Asian Russia), South Korea, Taiwan, Thailand and Vietnam. Hong Kong has no separate 110m geometry and is folded into China's outline. The long list of European, Middle Eastern and North American records are VAGRANT entries and are left unshaded. Russia is shaded as a country, not as a claim of breeding range west of the Urals. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0390/047200",
+      "use": "香港第 I 類：**稀少冬候鳥**，遇寒冷天氣湧入時可不常見，見於開闊鄉郊或疏落林地；21–24 cm，成鳥雄鳥上體與下體均為中等深度的灰、翼有大覆羽與三級飛羽及飛羽邊緣形成的赤褐翼斑、眉紋喉部與半頸環近白；**成鳥雄鳥在本港似乎罕見**；成鳥雌鳥大覆羽圖案均勻（可判齡）而翼上赤褐有限（可判性別）；第一齡雄鳥內側大覆羽赤褐而與較暗啞的幼羽外側大覆羽成對比；第一齡雌鳥上體暗啞、大覆羽赤褐亦暗啞、下體黑褐較少；與紅尾鶇常有中間型，多數像本種但上體為深銅褐、翼覆羽金褐，並可能下體帶赤褐；叫聲為相當響亮、常為雙或三音的叫聲，在飛行中發出，除紅尾鶇外與本港其他鶇明顯不同；生境為開闊鄉郊：乾濕農地（如塱原）、高爾夫球場、農業與低密度住宅混合區（如林村）、魚塘、受管理濕地、淡水沼澤與大型整治河道，新界西北紀錄最多、塱原是較受偏好的地點；極端日期 2001-10-28 與 1989-05-05，64% 紀錄集中於年初至 3 月第一週，不規則的暴發式出現反映許多鳥是因北方寒冷天氣而南下；大多數紀錄只出現在 1983/84 與 1994/95 兩個冬季，1984-02-18 新界西北廈村一處舊沼澤有至少 100 隻，是全港最高單一計數；距離上一次暴發已久，而本種在 1970 年代與 1980 年代初（觀鳥活動遠少於現在時）反而更常見，相信與氣候變暖令冬季變暖、影響這種北方鳥種有關；1956-02-04 首次紀錄（Walker 1958），1960 年代只在兩個冬季有紀錄，但 1971/72 冬季以來幾乎每年可見；活躍而愛鳴叫，在地面與結果樹木或灌木上覓食（食物細節不詳），常停在空曠的枯樹上；單型種，繁殖於西伯利亞北部與東北部東至鄂霍次克海（含堪察加半島），冬季在日本大部分地區、朝鮮半島、華南與中南半島北部；中國為長江以南的冬候鳥；IUCN LC、趨勢不明。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/dusky-thrush-turdus-eunomus/details",
+      "use": "IUCN **2024** LC、成熟個體 Unknown、趨勢 **Unknown**（生境改造影響不確定；描述為 common）、繁殖 EOO **8,730,000 km²**、非繁殖 EOO **6,640,000 km²**、完全遷徙、**繁殖 endemic Yes**、IBA／KBA 一欄為「-」、海拔 980–3,000 m、世代 **3.4 年**、森林依賴度 **Low**；生境以北方林（繁殖）與凍原（邊緣）為主，非繁殖期見於溫帶林與草原、農地、鄉村花園、人工林、灌叢與岩石區；貿易普遍度低（七個貿易資料集中出現於兩個），用途為食用（自給、國內）與國際寵物貿易；國家表把**香港（中國）列為原生、非繁殖**，另有孟加拉、不丹、中國（非繁殖）、印度、日本（非繁殖）、緬甸、尼泊爾、巴基斯坦、俄羅斯（含亞洲與中亞部分，繁殖與過境）、南韓（過境）、台灣（非繁殖）、泰國、越南共 14 個原生國家／地區；歐洲、中東、加拿大、美國、菲律賓等為迷鳥。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（斑鶇；Dusky Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Turdus eunomus／鶇科 Turdidae）；taxonOrder 28514。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六軸齊全：i=2、a=5、v=3.5（含 vEst=1）、r=4.8、c=1.2、o=3.3。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案相對豐富：diet（昆蟲、蚯蚓、漿果）、range（只有一句「是鶇科鶇屬鳥類」，循環而無資訊）、look（只描述紅尾鶇，未描述本種）、funFact（含繁殖地從西伯利亞中部至堪察加）、breeding、voice（只說研究建議與紅尾鶇歌聲不同）、behavior（遷徙與越冬成小群）、humanRelation（2016 年 12 月英國德比郡的紀錄吸引數百名賞鳥者）、etymology（Turdus 為鶇、eunomos 為有序）、callouts 三項（頭 HEAD 與白眉歌鶇相似／背 BACK 翼下紅棕／身 BODY 腹部及尾下覆羽白）、migration 有中文；habitat 與 conservation 沒有；length 與 weight 為空。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 127.1 mm、尾 87.3 mm、跗蹠 30.7 mm、嘴峯 23.7 mm、體重 73.2 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 047200（路徑 `0390/`，鶇科）：香港第 I 類，**稀少冬候鳥**，遇寒冷天氣湧入時可不常見；21–24 cm，成鳥雄鳥上下體均為中等深灰、翼有赤褐翼斑、眉紋喉部與半頸環白、胸有黑色橫帶；成鳥雄鳥在港似乎罕見，所見多為雌鳥與第一齡鳥；與紅尾鶇常有中間型。",
+    "本港紀錄：極端日期 2001-10-28 與 1989-05-05；64% 紀錄在年初至 3 月第一週；不規則暴發式出現，多數紀錄只在 1983/84 與 1994/95 兩個冬季；1984-02-18 廈村舊沼澤至少 100 隻（全港最高）；1956-02-04 首錄（Walker 1958），1971/72 冬季以來幾乎每年可見；長期而言 1970–80 年代初更常見而近數十年暴發不再，相信與氣候變暖有關。",
+    "生境與習性：開闊鄉郊——乾濕農地（塱原最受偏好）、高爾夫球場、農業與低密度住宅混合區（林村）、魚塘、受管理濕地、淡水沼澤與大型整治河道，新界西北最多；地面與結果樹上覓食，常停在空曠枯樹，叫聲為響亮的雙或三音。",
+    "分類：單型種，繁殖西伯利亞北部與東北部至鄂霍次克海（含堪察加），冬季日本、朝鮮半島、華南與中南半島北部；中國為長江以南冬候鳥。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2024** 年評估，趨勢 **Unknown**；EOO 繁殖 8,730,000 km²、非繁殖 6,640,000 km²、完全遷徙、**繁殖 endemic Yes**、世代 3.4 年、海拔 980–3,000 m、森林依賴度 **Low**、無 IBA；BirdLife 把香港列為原生非繁殖，是本批少數把香港獨立列出者。",
+    "runtime 分數：i=2、a=5、r=4.8、c=1.2 沿用（a=5 為批次內最高——文案確有 diet、look、voice、behavior、breeding、humanRelation、etymology 與 callouts，惟 look 只寫紅尾鶇、range 循環無資訊，已在此記錄）；v=3.5 **待查**（length 與 weight 皆空、vEst=1 即原值由體長估算，翼 127.1 mm×0.22≈28.0 cm 高於 HKBWS 的 21–24 cm）；o=3.3 依賴待查分項不補算。",
+    "runtime 文案缺陷：range 只是「斑鶇又名斑鶇，是鶇科鶇屬鳥類」的循環句，look 描述的是紅尾鶇而非本種，voice 只說「有研究建議與紅尾鶇歌聲不同」，habitat 與 conservation 完全沒有，length 與 weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖原為 1296×816 橫幅，直接取中央 816×816 方形（不補邊，避免平面色帶）後放大至 1127×1127，畫出暗灰上體、赤褐翼斑、白色眉喉與黑色胸帶，站在新界濕農田的短草地上以呼應 HKBWS 所述生境；雌鳥與第一齡鳥仍待專家核。比較鳥為本輪新生成的紅尾鶇（最易混淆，兩者常有中間型）與赤頸鶇，非等比例、非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 127.1 mm×0.22≈28.0 cm 高於 HKBWS 的 21–24 cm，3.5 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}

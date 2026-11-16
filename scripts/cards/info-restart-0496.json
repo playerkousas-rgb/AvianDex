@@ -1,0 +1,157 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0496",
+  "name": "白尾藍地鴝",
+  "scientificName": "Myiomela leucura",
+  "illustrationTaxon": "Adult male Myiomela leucura (17–19 cm, secretive forest-floor chat: overall plumage dark slate-blue, appearing all black in poor light; contrasting pale silvery-blue forehead and pale blue shoulder patch; black bill and dark legs; the long, broad white patches at the base of the full tail are diagnostic and are shown here with the tail half spread). Females are plain brown with the same white tail-base patches and are not shown. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紫嘯鶇",
+      "scientificName": "Myophonus caeruleus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "本港另一種**通體深藍的近黑林下鳥**，同樣在濃密下層植被中貼地活動；但紫嘯鶇**大得多（30–35 cm）**、全身深紫藍灑滿**淡藍色亮斑**、**有黃色的嘴與腳**，且**沒有白色尾基**——本種**只有 17–19 cm**、前額與肩是**整片淡藍**、嘴腳皆黑、**尾基有大片長白斑**。"
+    },
+    {
+      "zh": "藍歌鴝",
+      "scientificName": "Larvivora cyane",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同為**小型、深藍上體、貼地而隱蔽**的鶲科鳥，在陰暗林下最容易與本種混淆；藍歌鴝**上體是明亮的寶石藍配上黑色的臉與脇**、**腹部純白**，**尾上覆羽與尾基的藍色一直延伸到尾部而沒有白斑**；本種的藍**沉得多、幾乎發黑**，腹部不是純白，且**尾巴一展開就露出兩側大片白斑**。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.24,
+      0.19,
+      0.4,
+      0.31
+    ],
+    [
+      0.4,
+      0.31,
+      0.54,
+      0.43
+    ],
+    [
+      0.7,
+      0.2,
+      0.94,
+      0.4
+    ],
+    [
+      0.26,
+      0.28,
+      0.62,
+      0.62
+    ]
+  ],
+  "featureLabels": [
+    "淡藍前額",
+    "淡藍肩斑",
+    "白色尾基",
+    "深藍通體"
+  ],
+  "featureNotes": [
+    "**前額是明顯較淡的銀藍色**，與深藍近黑的頭頂、臉側形成對比；HKBWS 指雄鳥在陰暗處常看似全黑，**只有在光線足夠時前額與肩的淡藍色塊才會浮現**，這正是野外把牠從「一團黑影」認出來的第一個線索，為插圖局部。",
+    "**肩部有一塊淡藍色斑**，與前額同屬插圖中最亮的兩處；HKBWS 形容雄鳥是 dark blue with a contrasting pale blue forehead and shoulder，兩個淡色塊合起來是本種的招牌配色，為插圖局部。",
+    "**尾部基部兩側有大片、狹長的白斑**，HKBWS 直接稱之為 diagnostic：牠趴伏在密叢時幾乎看不見，但**偶爾會把尾張開、露出尾基的白色**；雌鳥雖然全身褐色，**同樣有這片白斑**，是辨識雌鳥的關鍵，為插圖局部。",
+    "除前額、肩斑與尾基白斑外，**全身都是深藍近黑**，光線不足時整隻鳥像一團黑影；這種「深藍通體」在本港只有**體型大得多、嘴腳黃色、身上有亮斑的紫嘯鶇**與**腹部純白、藍色明亮的藍歌鴝**可比，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "MYS",
+      "NPL",
+      "THA",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife (factsheet under the name White-tailed Blue Robin) lists 11 native countries/territories, all with 110m geometry and all shaded here: Bangladesh, Bhutan, China (mainland), India, Laos, Malaysia, Myanmar, Nepal, Taiwan (China), Thailand and Vietnam. BirdLife's own country table does not include Hong Kong, even though HKBWS treats the species as a Category I winter visitor, so no Hong Kong statement is made here and the HKG territory, which has no 110m geometry, is not shaded. No vagrant-only countries are listed for this species. Not an occurrence polygon: a resident and short-distance altitudinal migrant of moist lowland and montane forest from central Nepal and northeast India east through central China and Indochina to Peninsular Malaysia, Taiwan and Hainan, inside an EOO of 7,290,000 km². Note that BirdLife treats the Cambodian population as a separate species, Myiomela cambodiana, and that the runtime range text also names Pakistan, which BirdLife does not list."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/049500",
+      "use": "香港第 I 類，**稀有的冬候鳥、現時似乎每年都有**。**17–19 cm**，**隱蔽而羞怯**；雄鳥在密叢深處常**看似全黑**，光線好時可見**通體深藍、前額與肩為對比的淡藍色**，**尾部基部兩側的長白斑是診斷特徵**；**雌鳥全身褐色、並不顯眼，但同樣有尾部白斑**。聲音：典型叫聲是**高音的「tsee」與低沉而相當響亮的「tuk」**，有時兩者連著發出；**鳴唱在本港罕見**，是**一句短、響亮、帶金屬感而略帶幽怨的調子**。生境：**有合適濃密下層植被的林地**；多筆紀錄在大帽山山體，亦見於**白沙澳、龍虎山、長洲**，以及**摩星嶺、何文田**等遷徙點。出現情況：**首筆是 1990-11-11 在嘉道理農業研究中心網捕的成年雄鳥，有明顯圈養跡象**，1993-01-23 大埔滘的雄鳥亦受審慎看待，**該種一度留在「逃逸鳥」類別**；直至 **2003/04 冬季**才有下一筆，之後到 **2011/12 冬季**再現空隙，此後紀錄漸趨規律，**2014 年升為第 I 類**；**1993 年 1 月大埔滘的雄鳥是首筆獲接受的野生紀錄**，第二筆是 **2004-01-11 至 02-22 大埔滘的雄鳥**；除 **2016/17** 冬季外，**自 2011/12 起每個冬季都有紀錄**，雖然仍屬罕見訪客，** sightings 增加，2019/20 冬季最高紀錄五隻**；**所有紀錄都是單隻**；**1993 年以來 18 隻次之中，10 隻次只錄得一天**，亦有停留較久的，例如 **2014-12-29 至 2015-03-07 白沙澳的雌鳥**。**極端日期為 10 月 24 日與 3 月 7 日**；**大部分紀錄在 11 月第三週至 2 月第三週**；**10 月只有一筆——2018-10-24 何文田的雄鳥，推測為過境鳥**；**2 月最後一週至 3 月第一週的唯一紀錄就是白沙澳那隻長期停留的鳥**。行為：**在地面、通常在濃密植被中覓食**，**偶爾張尾露出白色尾基**。分類：**承認三個亞種**——指名亞種在**海拔 1,000 m 以上**由**中尼泊爾經印度東北部、中國中部往東，再南經中南半島至馬來半島與海南**繁殖，在中國北至**甘肅東南部與陝西南部**、南至**西藏東南部、四川、湖北西部、雲南中部與西南部、海南、廣西東南部與廣東北部**；***M. l. montium*** 為**台灣留鳥**、***M. l. cambodiana*** 為**泰國東南部與柬埔寨留鳥**；本種**通常被視為留鳥或短距離垂直遷徙者**，但**本港紀錄可能顯示有更長距離的移動**。保育狀況：IUCN **Least Concern**、**趨勢下降**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/white-tailed-blue-robin-myiomela-leucura/details",
+      "use": "BirdLife 以英文名 **White-tailed Blue Robin** 收錄（`white-tailed-robin` 與 `white-tailed-robin-cinclidium-leucurum` 兩個網址皆 404）：IUCN **LC**，最近評估 **2024**（2016 亦為 LC，**2012 及以前標為 Not Recognised**，反映當時與 *M. cambodiana* 仍未分家、且置於 *Cinclidium* 屬）；**成熟個體 Unknown**、**趨勢 Decreasing（Suspected，因生境持續破壞）**；**EOO 7,290,000 km²**、**Not a Migrant**、繁殖 endemic No、**IBA／KBA 3 個**、海拔 **1,000–2,700 m**、世代 **2.9 年**、**森林依賴度 Medium**；生態系統 **Freshwater 與 Terrestrial**；生境分類為**熱帶／亞熱帶潮濕低地林（Suitable）**、**熱帶／亞熱帶潮濕山地林（Major）**與**永久溪流（Suitable）**；**貿易**方面被評為 **high prevalence：七個貿易數據集中有三個出現本種（Donald et al. 2024）**，用途為**國際性的寵物／展示動物**與**全國性、自給性的食用**；保護行動：**已識別涵蓋全部分佈範圍的保護地**、**已納入國際法例**，但**沒有復育計劃、系統性監測、入侵種控制、收成管理或遷地保育**；國家表列 **11 個原生國家／地區**（孟加拉、不丹、中國大陸、印度、寮國、馬來西亞、緬甸、尼泊爾、台灣、泰國、越南），**香港不在其列**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **499 項 白尾藍地鴝（Myiomela leucura），第 I 類**；鄰項 498 藍喉歌鴝、**500 紅喉歌鴝**、501 灰背燕尾、502 紫嘯鶇（皆 I 類）。"
+    },
+    {
+      "path": "scripts/cards/hk-master.json",
+      "use": "香港優先編號表確認 0496 = 白尾藍地鴝（Myiomela leucura），香港類別 **I**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（白尾藍地鴝；White-tailed Robin）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Myiomela leucura／鶲科 Muscicapidae）；speciesCode whtrob2；taxonOrder 29204。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **六軸齊全**：i=2、a=2.8、v=3.1（**含 vEst=1**）、r=1、c=1.2、o=2，故 missingScores 為空；**a 與 o 列入 withheldScores**（理由見 notes）。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案**多處損壞**：`look` 與 `funFact` 一字不差、**都只是別名與分類**（「又名白尾藍地鴝，為鶲科地鴝屬的鳥類，俗名白尾藍歐鴝、白尾斑地鴝」）；`range` 中文列巴基斯坦、印度、緬甸、孟加拉、泰國、柬埔寨、老撾、越南、馬來西亞（**含 BirdLife 未列的巴基斯坦，且未提台灣**），而 `fieldCopy.range.zh` 卻是「分佈於台灣本島」，與上一句互相矛盾；**`diet` 的英文是一段截斷的 IUCN 網址**（「[http://www.iucnredlist.org 2012 IUCN Red List of Threatened Species.」）；**`behavior` 被誤填為生境描述**；**`habitat`（中文）與 `voice`、`breeding`、`migration` 皆缺**；**`length` 與 `weight` 皆為空**；僅 `habitat.en`（亞熱帶／熱帶潮濕低地與山地林）可用。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 90.8 mm、尾 72.6 mm、跗蹠 27.2 mm、嘴峯 17.0 mm、體重 26.8 g；**翼 90.8 mm×0.22≈20.0 cm 較 HKBWS 的 17–19 cm 長**（v=3.1 含體長估算，只記錄）。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **499** 項、第 I 類；HKBWS 描述為**稀有的冬候鳥、現時似乎每年都有**。**首筆紀錄是 1990-11-11 在嘉道理農業研究中心網捕、有明顯圈養跡象的成年雄鳥**，1993-01-23 大埔滘的雄鳥亦受審慎看待，**該種一度被歸入「逃逸鳥」類別**；直到 **2014 年才升為第 I 類**，**1993 年 1 月大埔滘的雄鳥為首筆獲接受的野生紀錄**，第二筆是 **2004-01-11 至 02-22 大埔滘的雄鳥**。**1993 年以來只有 18 隻次，其中 10 隻次只錄得一天**；**極端日期 10 月 24 日至 3 月 7 日**，**大部分紀錄在 11 月第三週至 2 月第三週**，**10 月僅一筆（2018-10-24 何文田雄鳥，推測為過境鳥）**；**2019/20 冬季最高五隻**，仍全為單隻紀錄；**2016/17 冬季是 2011/12 之後唯一沒有紀錄的一年**。",
+    "辨識要點：**17–19 cm**，隱蔽羞怯；雄鳥在密叢中**常看似全黑**，光線好時可見**深藍通體＋淡藍前額＋淡藍肩斑**，**尾部基部的長白斑是診斷特徵**；**雌鳥全身褐色但同樣有尾基白斑**；叫聲為**高音「tsee」與低沉響亮的「tuk」**，有時連發；**鳴唱在本港罕見**，是一句**短、響亮、帶金屬感而略帶幽怨**的調子；**在地面濃密植被中覓食，偶爾張尾露出白色尾基**。",
+    "分類與地理：**三個亞種**——指名亞種在**海拔 1,000 m 以上**由中尼泊爾經印度東北部、中國中部往東南至中南半島、馬來半島與海南繁殖；***M. l. montium*** 留於**台灣**、***M. l. cambodiana*** 留於**泰國東南部與柬埔寨**，**BirdLife 把後者視為獨立種 *Myiomela cambodiana***，故其事實頁把本種列為 **11 個國家／地區**、且**不含香港**（與 0495 紅喉歌鴝相反——該種 BirdLife 明列香港）。HKBWS 視本種為**留鳥或短距離垂直遷徙者**，但**本港紀錄可能反映更長距離的移動**。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 評估（2016 亦 LC，**2012 及以前為 Not Recognised**，是分家與換屬的痕跡）；**成熟個體 Unknown**、**趨勢 Decreasing（Suspected，生境破壞）**——**與 0495 的「趨勢 Unknown」形成對照**。**EOO 7,290,000 km²**、**Not a Migrant**、**IBA／KBA 3 個**、海拔 **1,000–2,700 m**、世代 2.9 年、**森林依賴度 Medium**、生態系統**淡水＋陸域**；生境以**熱帶／亞熱帶潮濕山地林為 Major**；**貿易壓力被評為 high prevalence（七個數據集有三個）**，用途包括**國際寵物貿易**與**全國性食用**，值得在卡面外另作記錄。",
+    "**地圖**：BirdLife **11 個原生國家／地區全部有 110m 幾何，故填 11 個形狀**；**BirdLife 未列香港，故 note 不作香港的填色聲明**（與 0494／0495 相反，那兩張須說明「香港原生但無幾何」）；本種無迷鳥國家，**不涉排除**。種子註記：runtime `range` 另列**巴基斯坦**，BirdLife 未列，只記錄不改 runtime。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：**`look` 與 `funFact` 一字不差、都只是別名與分類，完全沒有形態描述**；**`range` 與 `fieldCopy.range.zh`（只說「分佈於台灣本島」）互相矛盾**，亦**含 BirdLife 未列的巴基斯坦**；**`diet` 的英文是被截斷的 IUCN 網址**；**`behavior` 被誤填為生境句子**；**`habitat`（中文）、`voice`、`breeding`、`migration` 全缺**；**`length`、`weight` 皆為空**。`dexScores` 六軸齊全（i2 / a2.8 / v3.1 含 vEst / r1 / c1.2 / o2），但**`look` 沒有任何形態內容，a=2.8 無從核對**，故 **a 列入 withheldScores**；**o=2 是依賴 a 的綜合分，一併待查**，卡面因此顯示「綜合評分待查」而不是 2.0——**這是本批第一次因 a 缺依據而連帶隱藏 o 的卡**（0494 是 a 與 o 一起隱藏、另有 i 與 c 缺分；0490 則是 a 無文字可核對但仍保留，兩者已分別記錄）。**v=3.1 沿用**（翼 90.8 mm×0.22≈20.0 cm 較 17–19 cm 長，只記錄）。",
+    "AI 主圖直接沿用 **0492 紫嘯鶇卡的比較鳥方形圖**（同一畫風、同一物種），由 1024×1024 放大至 1127×1127（不裁切、不補邊），畫出深藍近黑的身軀、淡藍前額與肩斑、黑色嘴腳，以及**半張開、露出尾基大片白斑的尾巴**——這一點是本種最具診斷性的特徵，也正好對應第 3 格局部；鳥站在濃密下層植被的苔蘚枝幹上。**比較鳥沿用已生成的方形圖**：**紫嘯鶇**（0492 主圖，本港另一種深藍近黑的大型林下鳥）與**藍歌鴝**（0490 主圖，另一種深藍而貼地的小型鶲科鳥），非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {
+    "a": "cardCopy.look 與 funFact 一字不差、且只有別名與分類（「又名白尾藍地鴝，為鶲科地鴝屬的鳥類」），完全沒有形態描述，a=2.8 無從核對，故卡面顯示待查；不修改 runtime 數值。",
+    "o": "o=2 是依賴 a 的綜合分，a 已因缺乏形態依據而待查，綜合分一併顯示待查，不把未經核對的分數印在卡面；runtime 數值不改。"
+  }
+}

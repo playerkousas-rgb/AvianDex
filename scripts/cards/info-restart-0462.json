@@ -1,0 +1,141 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "id": "0462",
+  "name": "烏鶇",
+  "scientificName": "Turdus mandarinus",
+  "illustrationTaxon": "Adult male Turdus mandarinus (sooty black, orange eye-ring and bill). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "寶興歌鶇",
+      "scientificName": "Turdus mupinensis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、體型相近的地棲鶇，但寶興歌鶇全身褐色、胸至肛周佈滿大型深褐斑、臉部灰白而有深色頰紋；本種全身烏黑（雌鳥較褐而喉部有淡色縱紋），嘴與眼圈橙黃，成鳥幾乎不會混淆。"
+    },
+    {
+      "zh": "白眉鶇",
+      "scientificName": "Turdus obscurus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬，但白眉鶇頭胸藍灰、有粗白眉與白色頰紋、脇橙黃、背暖褐、嘴黃而腳淡粉；本種整體烏黑、無白眉、嘴與眼圈橙黃、腳近黑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.69,
+      0.22,
+      0.815,
+      0.345
+    ],
+    [
+      0.765,
+      0.23,
+      0.89,
+      0.355
+    ],
+    [
+      0.42,
+      0.38,
+      0.545,
+      0.505
+    ],
+    [
+      0.48,
+      0.6,
+      0.605,
+      0.725
+    ]
+  ],
+  "featureLabels": [
+    "橙黃眼圈",
+    "橙黃嘴",
+    "通體烏黑",
+    "近黑腳"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥有一圈狹窄的橙黃色眼圈，在烏黑的頭部十分顯眼；雌鳥的眼圈較不明顯，第一齡個體亦較淡，為插圖局部。",
+    "嘴呈橙色至鮮黃色，與橙黃眼圈互相呼應；第一齡雄鳥的嘴較不黃，幼鳥嘴色更暗、口角偏黃，為插圖局部。",
+    "成鳥雄鳥上體烏黑而略帶炭灰光澤、下體褐黑，雌鳥較褐、頦與喉較淡並具寬深色縱紋；第一齡雄鳥黑度較低、初級覆羽與三級飛羽較黑而與較褐的飛羽成對比，為插圖局部。",
+    "腳與趾近黑至深褐色，與烏黑的身體協調；本種是體型最大的深色鶇之一，28–29 cm，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "LAO",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists China (native resident, and the breeding range), Hong Kong (native NON-breeding, folded into China's outline), Laos and Vietnam (native non-breeding) plus Macao (no separate geometry on the 110m base map). Bhutan, Cambodia, India, Japan, Myanmar, Nepal, South Korea, Sri Lanka, Taiwan and Thailand are VAGRANT entries and are left unshaded. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0390/046500",
+      "use": "香港第 I 類：常見的過境鳥與冬候鳥、新界西北稀少但正在增加的繁殖鳥；28–29 cm，大型全深色鶇，成鳥雄鳥上體炭黑、下體褐至炭黑、眼圈狹窄橙黃、嘴橙色至鮮黃、腳近黑至深褐；第一齡雄鳥黑度較低、初級覆羽與三級飛羽較黑而與較褐飛羽成對比、嘴較不黃；第一齡雌鳥明顯較褐、下體有模糊鱗斑、初級覆羽較灰；成鳥雌鳥比多數雄鳥略褐、頦與喉較淡並有寬深色縱紋、眼圈較不明顯；幼鳥深褐而臉與下體有深淺不一的淡黃斑駁與縱紋；飛行時發出金屬感的 hyeev，受驚或不安時發出單聲或短串的 chip／choo，鳴唱音高平均、通常包含雙音句 weet-hu；冬季常見而廣泛，偏好疏林、市區公園，偶爾進入較密的林地，最常見於新界中、東、北部，港島、離島與九龍亦規律；冬季圖集佔有 1 公里方格比例由 20.7%（2001–05）降至 8.2%（2016–19），下降廣泛但以大嶼山、南丫、港島及新界西北與中部比例較大；數量最多在新界（大帽山一帶的梧桐寨、林村谷、石崗與城門）、米埔、大埔滘、塱原／河上鄉與船灣，蒲台島秋季過境常見、季節高峰可超過 20 隻；最高計數為 1988-11-24 東涌至沙螺灣 500 隻，1999 年以來最高為 2005-11-18 梧桐寨 130 隻；夏季繁殖族群集中新界西北（米埔、落馬洲、Palm Springs、凹頭、屯門公園、元朗公園、天水圍公園），繁殖鳥調查佔有方格由 0.4%（1993–96）升至 0.8%（2016–19）；主要為秋季過境與冬候鳥，由 10 月第二週至 3 月底，少數個體度夏，11 月有遷徙高峰，1 月上半月已可能開始離開；首個確證繁殖為 1995-08-06 大埔鳳園一隻幼鳥與兩隻成鳥，2000 年代繁殖稀少（2004-06-28 米埔村一隻幼鳥），2010 年起規律繁殖，2023 年估計 10–20 對、全部在新界西北，且集中在市區或市區邊緣的公園；築巢由 3 月下旬開始，幼鳥 5 月下旬至 9 月初出現；秋冬季常成群、有時大群，多在樹冠層活動並群棲，但覓食多在**地面**、亦常在市區公園草地上 openly 覓食；雜食，紀錄有樟樹與鴨腳木果實，地面覓食相信是找無脊椎動物但缺乏詳細觀察；作為繁殖鳥是中國特有種，分佈於廣西、四川東北至北京一帶的低地，冬季南至中南半島北部；兩個亞種，T. m. mandarinus 繁殖華東並越冬華南、海南與中南半島北部，T. m. sowerbyi 繁殖華中並越冬華南與中南半島，香港出現的應以後者較少；Swinhoe (1861)、Kershaw (1904) 都沒有明確的香港紀錄，首個明確提及是 Vaughan & Jones (1913) 指其為稀少冬候鳥（澳門則常見）；IUCN LC、種群趨勢下降。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chinese-blackbird-turdus-mandarinus/details",
+      "use": "IUCN **2018** LC、成熟個體未量化、趨勢 **Stable**（Suspected；但評語段落寫 population trend appears to be increasing，欄位與文字不一致，已在 notes 記錄）；繁殖 EOO **3,440,000 km²**、非繁殖 EOO **4,020,000 km²**、完全遷徙、**繁殖 endemic Yes**；海拔未列；世代 **5.4 年**；森林依賴度 Medium；生境以溫帶林為主要，另有都市、鄉村花園、人工林、農地、溫帶草原與灌叢；用途為食用、寵物與運動狩獵（皆自給、國內）；國家表把**香港（中國）列為原生、非繁殖**，中國為原生留鳥，寮國、澳門與越南為原生非繁殖，其餘（不丹、柬埔寨、印度、日本、緬甸、尼泊爾、南韓、斯里蘭卡、台灣、泰國）為迷鳥。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（烏鶇；Chinese Blackbird）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Turdus mandarinus／鶇科 Turdidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=4.3、v=3.7（含 vEst=1）、r=3.3、c=1.2、o=2.9，missingScores 為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；diet（種子、漿果、水果，以樟樹與榕樹果實為主）、range（中國大陸特有）、look（雌鳥較褐、頦喉較淺、眼圈不明顯）、habitat（能適應各種生境、最高 4000 米）、breeding（3–7 月，雄鳥清晨在屋脊或樹冠鳴唱）、behavior（部分族群遷往香港、寮國、越南、台灣越冬）、voice、migration 有中文；conservation 與 etymology 沒有；length 與 weight 為空；callouts 為喙（橙黃色）與身（腹部棕黑色）。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 146.6 mm、尾 105.0 mm、跗蹠 35.7 mm、嘴峯 30.9 mm、體重 102.7 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 046500（路徑 `0390/`，鶇科）：香港第 I 類，常見過境鳥與冬候鳥、新界西北稀少但增加的繁殖鳥；28–29 cm，大型全深色鶇，成鳥雄鳥上體炭黑、下體褐至炭黑、眼圈狹窄橙黃、嘴橙至鮮黃、腳近黑；雌鳥較褐而喉有寬縱紋、眼圈較淡；幼鳥深褐而有淡黃斑駁。",
+    "本港紀錄：冬季圖集佔有方格由 20.7%（2001–05）降至 8.2%（2016–19），下降廣泛；最高 1988-11-24 東涌至沙螺灣 500 隻，1999 年以來最高 2005-11-18 梧桐寨 130 隻；主要 10 月第二週至 3 月底，11 月高峰；繁殖由 2000 年代稀少到 2010 年起規律，2023 年估計 10–20 對、集中新界西北市區公園，繁殖調查佔有方格 0.4%→0.8%。",
+    "習性：秋冬季成群、多在樹冠活動並群棲，但覓食多在地面、亦常在公園草地 openly 覓食；雜食，紀錄有樟樹與鴨腳木果實；叫聲為金屬感 hyeev、警報 chip／choo，鳴唱多含雙音句 weet-hu。",
+    "分類：作為繁殖鳥是中國特有種，兩個亞種 T. m. mandarinus 與 T. m. sowerbyi，香港出現的應以 sowerbyi 較少。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2018** 年評估；趨勢欄為 **Stable**，但同一頁的評語段落寫「population trend appears to be increasing」，兩者不一致（本地 HKBWS 亦記趨勢下降），已在此記錄；EOO 繁殖 3,440,000 km²、非繁殖 4,020,000 km²、完全遷徙、**繁殖 endemic**、世代 5.4 年、森林依賴度 Medium。",
+    "runtime 分數：i=2、a=4.3、r=3.3、c=1.2 沿用（a 有 habitat、diet、range 中文支撐，實際亦見其適應市區公園）；v=3.7 待查——length 與 weight 皆為空、vEst=1 即原值由體長估算，翼長 146.6 mm×0.22≈32.3 cm 高於 HKBWS 的 28–29 cm；o=2.9 依賴待查分項（v）不補算。",
+    "runtime 文案缺陷：conservation 與 etymology 兩欄沒有中文，length 與 weight 為空，callouts 只有兩項且「腹部棕黑色」並非最實用的辨識點。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖原為 1408×768 橫幅，補成方形後裁 `(0.08,0.12,0.88,0.92)`，畫出炭黑身體、橙色眼圈與橙黃嘴、近黑腳，站在市區公園草地上以呼應 HKBWS 所述「公園草地 openly 覓食」；雌鳥（較褐、喉有寬縱紋）與幼鳥（淡黃斑駁）仍待專家核。比較鳥沿用 0460 的寶興歌鶇與白眉鶇 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 146.6 mm×0.22≈32.3 cm 高於 HKBWS 的 28–29 cm，3.7 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}

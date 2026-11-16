@@ -1,0 +1,146 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：HKBWS 2023 趨勢穩定"
+  },
+  "id": "0406",
+  "name": "冕柳鶯",
+  "scientificName": "Phylloscopus coronatus",
+  "illustrationTaxon": "Adult-type Phylloscopus coronatus on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "歐柳鶯",
+      "scientificName": "Phylloscopus trochilus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "頭部無冠紋及側冠條紋，翼上無明顯淡色翼斑，嘴全深色。"
+    },
+    {
+      "zh": "嘰喳柳鶯",
+      "scientificName": "Phylloscopus collybita",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型較小、上體較褐灰、嘴腳全黑，無冠紋，初級飛羽短。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.245,
+      0.265,
+      0.45,
+      0.47
+    ],
+    [
+      0.16,
+      0.325,
+      0.26,
+      0.425
+    ],
+    [
+      0.39,
+      0.385,
+      0.545,
+      0.54
+    ],
+    [
+      0.4,
+      0.62,
+      0.575,
+      0.795
+    ]
+  ],
+  "featureLabels": [
+    "冠紋與側冠",
+    "橙黃下嘴",
+    "翼上淡斑",
+    "淡色腳"
+  ],
+  "featureNotes": [
+    "淡色中央冠紋與深灰側冠條紋，眉紋眼前偏黃、眼後偏白，為插圖局部。",
+    "下嘴橙黃、上嘴較深，為插圖局部。",
+    "大覆羽上的短窄淡色翼斑，為插圖局部。",
+    "淡肉色腳與腳趾握枝，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "JPN",
+      "RUS",
+      "CHN",
+      "PRK",
+      "KOR",
+      "IND",
+      "BGD",
+      "MMR",
+      "THA",
+      "LAO",
+      "VNM",
+      "KHM",
+      "MYS",
+      "IDN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering countries are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038800",
+      "use": "香港狀況（秋季不常見、春季稀少過境，罕見冬候，2010 年後冬季紀錄大增）、11–12 cm、辨識（冠紋、側冠、長眉紋、翼斑、橙黃下嘴）、食性（毛蟲、蜘蛛及昆蟲）、單型、繁殖於日本及烏蘇里經東北至華北中部、冬季至東南亞爪哇、IUCN 全球 LC 趨勢穩定。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=3.3、v=2.6、r=4.8、c=1.2、o=2.8，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；habitat 只寫越冬生境、diet 欄實為樹棲及混群行為、breeding 與 diet 重複、voice 只說常靠鳴聲發現、length 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 61.3 mm，×0.22≈13.5 cm，高於 HKBWS 11–12 cm。"
+    }
+  ],
+  "notes": [
+    "HKBWS：11–12 cm，香港秋季不常見、春季稀少過境，並為罕見冬候；森林及成熟灌叢、市區公園亦有記錄，極端日期 8 月 5 日至 5 月 8 日；單型，繁殖於日本及烏蘇里，經中國東北至華北中部，冬季南至東南亞爪哇；食毛蟲、蜘蛛及昆蟲。全球 LC、趨勢穩定。",
+    "runtime 分數 i=2、a=3.3、v=2.6、r=4.8、c=1.2、o=2.8、vEst=1。length 為空，v 由翼長估算 61.3 mm ×0.22≈13.5 cm，高於 HKBWS 11–12 cm，故 v 待查並保留「原觀賞值含體長估算」提示；cardCopy 的 diet 欄實為樹棲及混群行為、breeding 與 diet 重複、voice 只說常靠鳴聲發現，故適應分及研究分待查；c=1.2 沿 IUCN LC，o 依賴待查分項不補算。",
+    "世界底圖按 HKBWS 及 runtime 文案列出繁殖國（日本、俄羅斯、中國、北韓、南韓）及越冬國（印度、孟加拉、緬甸、泰國、老撾、越南、柬埔寨、馬來西亞、印尼），繁殖與越冬未分色；HKBWS 指出近年在港冬季記錄增加，可能與氣候暖化及觀察增加有關，但未逐國核實越冬邊界，綠色非全境、非完整分佈。",
+    "AI 主圖：深欖綠上體、白色下體、明顯冠紋（圖中呈兩條淡色冠線，實鳥為一條淡中央冠紋加深灰側冠）、橙黃下嘴、翼上淡斑，整體符合 HKBWS 描述但冠紋結構較誇張；足趾握枝及初級飛羽比例未核。歐柳鶯及嘰喳柳鶯對照圖重用已目視版本，非等比例，均為 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "diet 欄為樹棲及混群行為而非食性，適應分待查、不補值。",
+    "v": "length 為空，翼長推估 13.5 cm 超出 HKBWS 11–12 cm，觀賞分待查並保留估算提示。",
+    "r": "鳴聲及繁殖欄錯置或重複，研究分待查、不補值。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 記穩定"
+  },
+  "id": "0416",
+  "name": "日本柳鶯",
+  "scientificName": "Phylloscopus xanthodryas",
+  "illustrationTaxon": "Adult-type Phylloscopus xanthodryas on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "庫頁島柳鶯",
+      "scientificName": "Phylloscopus borealoides",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體褐灰、下體白、翼斑淡；本種上體欖綠、下體帶黃、翼斑帶黃綠。"
+    },
+    {
+      "zh": "淡腳柳鶯",
+      "scientificName": "Phylloscopus tenellipes",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體褐灰帶欖、下體白、腳淡粉、翼斑模糊；本種下體有明顯淡黃色澤、眉紋較粗且更黃。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.59,
+      0.22,
+      0.78,
+      0.41
+    ],
+    [
+      0.35,
+      0.375,
+      0.51,
+      0.535
+    ],
+    [
+      0.73,
+      0.245,
+      0.88,
+      0.395
+    ],
+    [
+      0.62,
+      0.35,
+      0.79,
+      0.52
+    ]
+  ],
+  "featureLabels": [
+    "黃色長眉",
+    "兩道翼斑",
+    "橙粉下嘴",
+    "淡黃下體"
+  ],
+  "featureNotes": [
+    "淡黃色眉紋長而明顯、眼紋深色，為插圖局部。",
+    "中覆羽及大覆羽上的兩道淡黃綠翼斑，為插圖局部。",
+    "下嘴橙粉色、上嘴較深，為插圖局部。",
+    "喉、胸及腹側的淡黃色澤，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "JPN",
+      "TWN",
+      "PHL",
+      "MYS",
+      "IDN",
+      "BRN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/japanese-leaf-warbler-phylloscopus-xanthodryas",
+      "use": "IUCN 2024 LC、趨勢穩定（無證據顯示下降）、成熟個體未量化、繁殖特有種 Yes、繁殖 EOO 569,000 km²、非繁殖 EOO 9,460,000 km²、完全遷徙、海拔 1,800–2,500 m、世代長度 2.0 年、森林依賴低；繁殖棲地為北方灌木叢（主要）及北方森林，非繁殖用熱帶低地濕林、紅樹林、乾林、人工林及農地；國家：日本繁殖，汶萊、印尼、馬來西亞、菲律賓、台灣非繁殖；主要威脅為未來氣候變遷導致的棲地轉移。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄列 408 日本柳鶯 Phylloscopus xanthodryas（第 I 類），但該種在 Avifauna of Hong Kong 未有獨立物種頁（040000 回 404），故香港狀況無細節可引。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/040100",
+      "use": "同屬的極北柳鶯頁：長初級飛羽伸出、眉紋不到嘴、眼紋深、胸部縱紋、下嘴淡色、腳褐色；極北柳鶯複合群（含日本柳鶯）在野外須靠叫聲與下體黃色程度分辨。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（日本柳鶯）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus xanthodryas／柳鶯科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.8、v=2.7、r=1、c=1.2、o=1.9，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range 只有「冬季分佈不確定」一句，look 全是量度數字，diet 混入遷徙與棲地描述，breeding 只有一句且句末帶多餘分號，voice、habitat、etymology、funFact、highlights、callouts、migration 全空，length 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 66.2 mm、嘴峯 13.5 mm、體重 10.9 g。"
+    }
+  ],
+  "notes": [
+    "BirdLife 2024：LC、趨勢穩定（評估理由為分佈廣、無量化下降證據），成熟個體未量化；繁殖特有種（僅日本繁殖），繁殖 EOO 569,000 km²、非繁殖 EOO 9,460,000 km²；完全遷徙，海拔 1,800–2,500 m，世代長度 2.0 年，森林依賴低；繁殖棲地為北方灌木叢（主要）及北方森林，非繁殖期用熱帶低地濕林、紅樹林、乾林、人工林、鄉村花園及農地；唯一列出的威脅是未來氣候變遷造成的棲地轉移。",
+    "分佈：日本（本州、四國、九州）繁殖；非繁殖於台灣、菲律賓、馬來西亞、印尼及汶萊。此為 2024 年分拆後的鳥類名錄處理，與舊資料把日本柳鶯併入極北柳鶯不同；卡面地圖依 BirdLife 國家表填色。",
+    "香港狀況缺口：香港鳥類名錄列本種為第 I 類（408 號），但 Avifauna of Hong Kong 未設獨立物種頁——`040000` 回 404，鄰近編號 `040200` 是栗頭鶲鶯、`040100` 是極北柳鶯——因此香港的出現季節與頻度無頁面可引，spec 只記名錄類別；辨識通則借用同屬極北柳鶯頁與分拆後的野外特徵（下體帶黃、眉紋粗而黃、下嘴橙粉）。",
+    "runtime 分數 i=2、a=2.8、v=2.7、r=1、c=1.2、o=1.9、vEst=1。a=2.8 沿用——diet 雖只寫「肉食性」並混入森林棲地，但已能支撐適應分；v 待查——length 為空，翼長 66.2 mm×0.22≈14.6 cm，遠超極北柳鶯複合群的 11.5–13 cm，保留「原觀賞值含體長估算」提示；r=1 沿用，因 voice、etymology、funFact、highlights 全空，breeding 只有一句、look 只有量度；o 依賴待查分項（v）不補算；c=1.2 與 LC 穩定一致、i=2 沿 runtime。",
+    "runtime 文案缺陷：range 僅「冬季分佈不確定。」，未交代繁殖地與度冬地；look 只列體重、翼長、嘴峯及喙寬，沒有羽色；diet 把「候鳥」與「棲息在密集高大樹木的森林」寫成食性；breeding 句末有多餘分號；funFact 為空。這些未影響 a 的沿用。",
+    "世界底圖按 BirdLife 原生六國填色（日本、台灣、菲律賓、馬來西亞、印尼、汶萊），繁殖與越冬未分色、不細分國家內部，綠色非全境、非完整分佈；日本為繁殖地、其餘為非繁殖地；香港無紀錄可填。",
+    "AI 主圖：欖綠上體、帶褐的翼、粗而黃的長眉直達嘴基、深色眼紋、下體帶明顯淡黃、兩道淡黃綠翼斑、下嘴橙粉、腳淡褐粉，符合分拆後的本種特徵；黃色程度深淺、翼斑數目及初級飛羽伸出長度仍待專家核。比較鳥為 0415 庫頁島柳鶯及 0414 淡腳柳鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 為空，翼長推估 14.6 cm 遠超極北柳鶯複合群 11.5–13 cm，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}

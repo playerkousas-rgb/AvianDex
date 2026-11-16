@@ -20,7 +20,7 @@
 5. 特徵標籤必須與圓內可見內容一致。看不到診斷特徵就縮窄成身體部位描述，不硬標；折翼圖不能宣稱示範飛行翼斑。`slim_feature_label()` 已可自適應膠囊寬度100–210px，字22→18，再省略；仍優先短句，避免靠省略掩蓋重要內容。
 6. 渲染：`python scripts/cards/render-info-restart.py NNNN`。產出 `deliver/cards/info-restart-NNNN/aviandex/NNNN.avif`、preview、manifest、SHA256SUMS及說明。每張全卡、四圈／標籤、比較圓框都要讀圖，修正後重渲染及再核對。
 7. 檢查 spec=manifest.spec、名稱／學名及六分=runtime、缺值／vEst、世界 bounds `[-180,-90,180,90]`、ISO3存在、AVIF解碼1024×1536、bytes/SHA256、無ZIP。跑 `python scripts/cards/test-slim-feature-label.py`（4測試）及 `git diff --check`。
-8. **上載前再次精確查重**；依用戶最新指示，新 AVIF 放在 `0201.avif` 所在的外層 Drive 資料夾 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`，**不要放入子資料夾「已上載R2」**。檔名 `NNNN.avif`、MIME `image/avif`，單張直接上載，不ZIP、不R2。先用 connector list 取得 schema，再 search/upload。遇同名先核實，不任意覆寫、刪除或重傳。
+8. **上載前再次精確查重**；依用戶最新指示，新 AVIF 放在 `0201.avif` 所在的外層 Drive 資料夾 `1Et0ea08AmkatqTA7aPxxEQtxMpKxJ3up`，**不要放入子資料夾「已上載R2」**。2026-11-15 實查該外層只剩分段子資料夾（「已上載R2」0009–0200、「200-300」0201–0300、「300-400」0301–0400），用戶已指示新批次放入新建的 **「400-500」（ID `1hwZj_kCquQi-4wDuc7e-u5CSJyk0r3vg`）**；再下一段應先問用戶是否另建「500-600」。檔名 `NNNN.avif`、MIME `image/avif`，單張直接上載，不ZIP、不R2。先用 connector list 取得 schema，再 search/upload。遇同名先核實，不任意覆寫、刪除或重傳。
 9. 驗證 Drive 回傳 parent、bytes、MD5 與本機吻合，才把本地 manifest top-level 設 `uploaded_drive_verified`，記 `driveFileId/driveParentId/driveMd5/driveBytesVerified`；embedded spec 的製作階段 `review_before_upload` 不等於未交付。
 10. 把交付 ID／hash／來源／修正及下一步寫入 `INFO_CARD_RESTART.md`，向用戶如實報告。AI 圖只基本目視，非獨立專家驗證。
 
@@ -37,3 +37,12 @@
 - 用戶否決的舊0078–0081由本分支新版本取代；0082–0084保留有效。PR25 的0051–0077資料／歷史要保留，0078–0081舊交付只作被取代歷史。
 - 0038–0040本地JSON是候選，**未建立與既有Drive成品的來源對應**，不可冒稱已驗證的交付spec。0041–0043來源JSON缺口仍待真實來源／畫面核對，不能編造裁切來湊全。
 - 不在未獲用戶確認R2上載的情況下註冊slim。用戶掌握最終完成量與下一批工作量。
+
+## 環境重建（2026-11-15 實測可用）
+
+- 沙盒重置後 `/home/user/card-venv`、`~/.fonts`、`cards/art`、`deliver/cards` 都會消失（前三者與後兩者都在 repo 外或 Git 忽略），只有追蹤中的檔案會留下。重建：
+  1. `python3 -m venv /home/user/card-venv && /home/user/card-venv/bin/pip install -q pillow numpy fonttools`（Pillow 13 內建 AVIF 讀寫，`features.check('avif')` 為 True，不需 pillow-avif-plugin）。
+  2. 字體：`git clone --filter=blob:none --depth 1 --sparse https://github.com/google/fonts /tmp/gfonts && cd /tmp/gfonts && git sparse-checkout set ofl/notosanstc`，再用 fontTools `instantiateVariableFont(..., {"wght":400/700})` 產生 `~/.fonts/NotoSansTC_400Regular.ttf` 與 `_700Bold.ttf`。
+  3. 底圖：`git clone --filter=blob:none --depth 1 --sparse https://github.com/nvkelso/natural-earth-vector /tmp/nev && git -C /tmp/nev sparse-checkout set --no-cone /geojson/ne_110m_admin_0_countries.geojson`，複製成每張卡的 `cards/art/info-restart-NNNN/countries.geojson`（838,726 bytes、MD5 `21abb20e7c74fc0c66b8dd955f8f7f73`）。
+- 比較鳥素材若原卡主圖已不在本機，可依原規格重新生圖（須在 spec 與交付記錄註明是重新生成，不是原始主圖）。
+- 注意：分支 ref 有時會在環境還原後退回 base commit，本地工作區仍是較新的內容；`git push` 前先 `git fetch` 並確認 `git log` 的父鏈，必要時 `git reset --hard origin/<branch>` 後重做最後一次 commit，避免把整段歷史當成新 commit 重複推送。

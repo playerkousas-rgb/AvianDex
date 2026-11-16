@@ -1,0 +1,143 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 記趨勢穩定"
+  },
+  "id": "0423",
+  "name": "淡腳樹鶯",
+  "scientificName": "Hemitesia pallidipes",
+  "illustrationTaxon": "Adult-type Hemitesia pallidipes perched low on an upright stem; AI interpretation, sex, subspecies and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "白斑尾柳鶯",
+      "scientificName": "Phylloscopus ogilviegranti",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體橄欖綠、有兩道翼斑、下體沾黃、嘴纖細而全淡；本種上體濃褐、無翼斑、喉純白而脇灰褐、嘴較粗厚。"
+    },
+    {
+      "zh": "華南冠紋柳鶯",
+      "scientificName": "Phylloscopus goodsoni",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "有冠紋與黃色翼斑、常在樹幹爬行、腳較深、下嘴橙色；本種無冠紋、濃褐上體、純白喉、淡灰粉腳。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.2,
+      0.275,
+      0.415,
+      0.5
+    ],
+    [
+      0.25,
+      0.235,
+      0.37,
+      0.335
+    ],
+    [
+      0.405,
+      0.615,
+      0.535,
+      0.775
+    ],
+    [
+      0.612,
+      0.258,
+      0.848,
+      0.398
+    ]
+  ],
+  "featureLabels": [
+    "純白喉部",
+    "粗黑眼紋",
+    "淡灰粉腳",
+    "明顯長尾"
+  ],
+  "featureNotes": [
+    "喉至上胸一大片純白，與灰褐帶黃的脇部形成強烈對比，是本種最顯眼的羽色特徵，為插圖局部。",
+    "粗黑眼紋在眼後較寬、眼前亦有，眼下半圈眼環白色明確，為插圖局部。",
+    "腳與趾淡灰粉紅色、相當醒目，英文名 Pale-footed 即指此，為插圖局部。",
+    "尾長而圓，明顯長於相似體態的鱗頭樹鶯，初級飛羽突出極短，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and resident, breeding and wintering areas are not colour-separated. Hong Kong and Sri Lanka are recorded only as vagrants by BirdLife and are not filled; Hong Kong also has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0310/037500",
+      "use": "香港第 I 類稀少冬候鳥；11–12.5 cm；最顯著為大片純白喉部與灰褐帶黃脇部成對比、眼後及眼前都有很深而明顯的眼紋、上體相當濃的深褐色、腳顯著淡灰粉紅、眼環下半部白色而清晰、上嘴及下嘴遠端深色但下嘴基部粉紅、初級飛羽突出極短；外觀似鱗頭樹鶯但眉紋較弱、尾明顯較長；叫聲「trrk／trrrrrrk」及短促「chek」；見於濃密灌叢，紀錄點包括九龍屋苑園景平台、米埔蘆葦沼澤、嘉道理農場山坡灌叢、東龍洲溪旁矮叢、和合石灌叢草地；1990-10-06 首筆（網捕），至 1998-11-08 前六筆亦為網捕，2007-11-30 後多為野外觀察，2020-21 冬季異常錄得五隻；極端日期 9 月 28 日及 2 月 24 日；潛行難見、貼近地面覓食、對播放有強烈反應；頁記 IUCN LC、趨勢未知。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/pale-footed-bush-warbler-hemitesia-pallidipes",
+      "use": "IUCN 2024 LC、趨勢穩定（推測）；成熟個體未量化、繁殖 EOO 4,660,000 km²、非繁殖 1,230,000 km²、垂直遷徙、海拔 0–2,260 m、世代長度 2.2 年、森林依賴低、7 個 IBA/KBA；國家：不丹、中國、香港（迷鳥）、印度、老撾（繁殖）、緬甸、尼泊爾、斯里蘭卡（迷鳥、非繁殖）、泰國、越南；棲息熱帶濕潤山地與低地林、乾燥草地及灌叢；原列 Cettia pallidipes。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（淡腳樹鶯；Pale-Footed Bush Warbler）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Hemitesia pallidipes／樹鶯科 Scotocercidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 只有 a=3.3、v=2.3、r=1、o=2.2，含 vEst=1；i 與 c 完全沒有分數。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；中文全部為空，英文多處截斷（「up to .」）、diet 與 conservation 同一句尼泊爾威脅、breeding 內容實為印度 Simlipal 紀錄、picks 為空陣列、length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 49.1 mm、嘴峯 13 mm、跗蹠 19.1 mm、體重 10 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 037500：11–12.5 cm，香港屬第 I 類稀少冬候鳥，見於濃密灌叢；紀錄點多樣——九龍一個屋苑的園景平台、米埔蘆葦沼澤、嘉道理農場山坡灌叢、東龍洲溪旁矮叢、和合石灌叢草地，顯示本種對灌叢而非成熟林地的偏好。",
+    "紀錄史：1990 年 10 月 6 日首筆為網捕，至 1998 年 11 月 8 日前的六筆亦全為網捕；2007 年 11 月 30 日之後的紀錄多為野外觀察，2020-21 冬季異常錄得五隻；極端日期 9 月 28 日及 2 月 24 日。",
+    "辨識要點：大片純白喉部對比灰褐帶黃脇部、眼後及眼前均有的深色粗眼紋、眼環下半白色、上體濃深褐、腳淡灰粉紅、上嘴及下嘴遠端深而基部粉紅、初級飛羽突出極短；與鱗頭樹鶯相比眉紋較弱但尾明顯較長。卡面四個標籤即取此四點。",
+    "分類與亞種：BirdLife 用 Hemitesia pallidipes、科 Scotocercidae，並註明舊置 Cettia；HKBWS 頁面用 Urosphena pallidipes。指名亞種由印度北部至緬甸北部及中國西南，laurentei 在本區東南（中南半島北部及中國西南），osmastoni 在安達曼群島；在中國雲南、廣西、廣東北部為留鳥，部分南移，近年可能向東擴展。",
+    "香港地位不一致：HKBWS 記第 I 類稀少冬候鳥、有多次紀錄；BirdLife 國家表把香港列為 Vagrant、斯里蘭卡為非繁殖迷鳥。地圖因此只填 BirdLife 的原生國家，不為香港及斯里蘭卡填色。",
+    "runtime 分數只有 a=3.3、v=2.3、r=1、o=2.2、vEst=1，i 與 c 完全缺失，卡面顯示待查並列於 missingScores。a=3.3 沿用——habitat、behavior、migration、funFact 都有內容（雖多被截斷）；v=2.3 沿用——翼長 49.1 mm×0.22≈10.8 cm，與 HKBWS 11–12.5 cm 不衝突，僅保留估算提示；r=1 沿用；o=2.2 的分項未被遮蔽，沿用。",
+    "runtime 文案缺陷：fieldCopy 中文全部為空，英文多處在句尾截斷成「up to .」而缺失數值；diet 一句實為尼泊爾族群受威脅、與 conservation 重複；breeding 一段其實是印度 Simlipal 老虎保護區的紀錄，並非繁殖描述；picks 為空陣列所以卡面預設只顯示 range 與 look；length、weight 為空；source 竟引用「國家保護的有益的或者有重要經濟、科學研究價值的陸生野生動物名錄」頁面。辨識內容一律以 HKBWS 為準。",
+    "AI 主圖按本種特徵畫成停於直立草莖的濃褐灌叢鶯，並畫出純白喉部、粗黑眼紋與白色下眼環、淡灰粉腳、短初級飛羽與明顯較長的圓尾；亞種歸屬與脇部褐色深淺仍待專家核。比較鳥為 0422 白斑尾柳鶯及 0421 華南冠紋柳鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {}
+}

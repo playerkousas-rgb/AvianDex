@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 記下降"
+  },
+  "id": "0434",
+  "name": "黑頦鳳鶥",
+  "scientificName": "Yuhina nigrimenta",
+  "illustrationTaxon": "Adult-type Yuhina nigrimenta (monotypic) on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "栗頸鳳鶥",
+      "scientificName": "Staphida torqueola",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型較大、嘴暗色、臉頰栗色帶白紋、下體純白、尾長而外側有寬白端；本種嘴鮮橙色、臉灰褐、喉有黑色頦斑、尾短。"
+    },
+    {
+      "zh": "紅脇繡眼鳥",
+      "scientificName": "Zosterops erythropleurus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "有明顯白色眼圈、上體橄欖綠、嘴暗色、脇部有栗紅塊；本種無白眼圈、嘴橙色、臉與上體灰褐、有黑色頦斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.245,
+      0.31,
+      0.345,
+      0.41
+    ],
+    [
+      0.28,
+      0.36,
+      0.37,
+      0.45
+    ],
+    [
+      0.33,
+      0.215,
+      0.43,
+      0.315
+    ],
+    [
+      0.5,
+      0.36,
+      0.62,
+      0.48
+    ]
+  ],
+  "featureLabels": [
+    "橙色嘴",
+    "黑色頦部",
+    "冠羽黑心灰邊",
+    "灰褐上體"
+  ],
+  "featureNotes": [
+    "嘴短而鮮橙色，在灰褐的頭部上非常突出，是與同科其他鳳鶥最直接的分別，為插圖局部。",
+    "黑色的眼先延伸至嘴下，形成一塊黑色頦斑，配白色的喉部界線清楚，是「黑頦」一名的由來，為插圖局部。",
+    "冠羽每片羽毛中央黑、邊緣灰白，形成鱗狀花紋，是鳳鶥類冠羽的典型質感，為插圖局部。",
+    "上體灰褐，後頸與頸側較淡的灰色，翼覆羽邊緣帶鏽色，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "KHM",
+      "LAO",
+      "MMR",
+      "NPL",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only: the nine countries BirdLife lists (Bangladesh, Bhutan, China, India, Cambodia, Laos, Myanmar, Nepal, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. Hong Kong has a single Cat I record (KFBG, 20 January 2021), is part of China's shading but has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0360/043200",
+      "use": "香港第 I 類迷鳥，至今只有一筆：2021-01-20 嘉道理農場暨植物園，海拔約 310 米的常綠闊葉次生林；辨識：小型活躍的林鳥，上體灰褐，後頸、頸側與臉頰較淡灰，黑色眼先延伸至嘴下形成黑頦，冠羽中央黑而邊緣灰、呈鱗狀，嘴鮮橙色最具辨識價值；叫聲為覓食群的輕碎吱喳加上極短而輕的 chik 聲，亦有較豐富而慢的吱喳及較響的單音或雙音；當日與白腹鳳鶥及暗綠繡眼鳥混群覓食；單型種；分佈由喜馬拉雅東至華南，南至緬北、泰北、中南半島北部及越南東南，在中國為黃河以南大部分地區的留鳥；頁記 IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/black-chinned-yuhina-yuhina-nigrimenta",
+      "use": "IUCN 2024 LC、趨勢下降（推測）；成熟個體未量化，描述為常見至罕見，中國約 10,000–100,000 對（Brazil 2009）；繁殖 EOO 5,920,000 km²；不遷徙、海拔 170–2,880 米、世代 2.6 年、森林依賴度高、22 個 IBA／KBA；因範圍內樹冠覆蓋十年間減少 7.3%，推測族群下降 1–19%（最佳估計 5–9%）；國家表為孟加拉、不丹、柬埔寨、中國、印度、寮國、緬甸、尼泊爾、越南，未列香港；貿易欄記寵物／展示動物為國際性、但屬低普遍度。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（黑頦鳳鶥；Black-Chinned Yuhina）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Yuhina nigrimenta／繡眼鳥科 Zosteropidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=2.8、v=2.5（含 vEst=1）、r=1、c=1.2、o=1.9。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range 中文為真實分佈（印度、緬甸、寮國、越南及中國西藏、四川、湖北、貴州、雲南、廣西、廣東），behavior 中文是同一句分佈的變體、屬放錯欄位，habitat 只有英文（濕潤低地及山地林），diet 與 voice 全空；length 與 weight 為空；picks 為 range、behavior。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 55.2 mm、尾 39.4 mm、跗蹠 14.9 mm、嘴峯 12.5 mm、體重 9.5 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 043200：香港第 I 類迷鳥，至今只有一筆——2021 年 1 月 20 日在嘉道理農場暨植物園、海拔約 310 米的常綠闊葉次生林，當時與白腹鳳鶥及暗綠繡眼鳥混群覓食。",
+    "辨識要點：小型活躍林鳥，上體灰褐，後頸、頸側與臉頰較淡灰；黑色眼先延伸至嘴下形成黑頦；冠羽中央黑、邊緣灰白呈鱗狀；嘴鮮橙色最具辨識價值。叫聲為輕碎吱喳加極短 chik 聲。卡面四個標籤取嘴、頦、冠羽與上體。",
+    "分類：單型種，無亞種問題；runtime 與 BirdLife 都歸繡眼鳥科 Zosteropidae（鳳鶥類），HKBWS 亦置於同一分類群。",
+    "分佈：由喜馬拉雅東至華南，南至緬北、泰北、中南半島北部及越南東南；在中國為黃河以南大部分地區的留鳥。BirdLife 另把柬埔寨（繁殖）與寮國（繁殖）列入國家表，地圖照此填九個國家。",
+    "IUCN：兩者都記 LC，但趨勢不同調——HKBWS 寫「趨勢穩定」，BirdLife 2024 版寫「下降」（範圍內樹冠十年減少 7.3%，推測下降 1–19%、最佳估計 5–9%），卡面註明 BirdLife 記下降。",
+    "runtime 分數：i=2、r=1（最低值）、c=1.2 沿用；a=2.8 待查——habitat 只有英文（中文全空）、diet 全空，behavior 中文寫的又是分佈而非行為，缺乏獨立支撐；v=2.5 待查——length 為空，且 HKBWS 043200 沒有提供體長，翼長 55.2 mm×0.22≈12.1 cm 無體長可核，保留「原觀賞值含體長估算」提示；o=1.9 依賴待查分項（a、v）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：behavior 中文是 range 句子的變體（分佈而非行為），habitat 只有英文、diet 與 voice 全空，length 與 weight 為空；「黑頦」與橙色嘴等辨識特徵 runtime 完全沒有描述。辨識與本地紀錄一律以 HKBWS 為準。",
+    "世界底圖按 BirdLife 國家表填孟加拉、不丹、中國、印度、柬埔寨、寮國、緬甸、尼泊爾及越南共九國，並非全部分佈區、也不是 occurrence polygon；香港雖有一筆迷鳥紀錄，但屬中國填色範圍，110m 底圖無獨立多邊形。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成小型灰褐鳳鶥，停於細枝上，並畫出鮮橙色嘴、由眼先延伸至嘴下的黑色頦斑、黑心灰邊的鱗狀冠羽、灰褐上體與白色下體、短尾及橙色腳；性別與年齡差異仍待專家核。生成圖四邊有白邊，已裁走並重排為正方形。比較鳥沿用 0433 的栗頸鳳鶥及紅脇繡眼鳥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 只有英文、中文全空，diet 全空，behavior 中文寫的是分佈而非行為，2.8 分缺乏獨立支撐，待查。",
+    "v": "length 為空且 HKBWS 043200 未提供體長，翼長推估 12.1 cm 無從核對，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項（a、v），不補算。"
+  }
+}

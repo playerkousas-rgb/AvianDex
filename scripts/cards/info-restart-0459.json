@@ -1,0 +1,152 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2019 評定"
+  },
+  "id": "0459",
+  "name": "橙頭地鶇",
+  "scientificName": "Geokichla citrina",
+  "illustrationTaxon": "Adult male Geokichla citrina (race melli presumed in HK). AI interpretation, subspecies and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "白眉地鶇",
+      "scientificName": "Geokichla sibirica",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、體型相若，但白眉地鶇成鳥雄鳥全身石板藍灰、只有一條粗白眉，雌鳥欖褐而鱗斑密佈，兩者都沒有大片橙色；本種頭、胸、腹與脇深橙色，只有背、翼與尾呈藍灰，對比極為鮮明。"
+    },
+    {
+      "zh": "懷氏地鶇",
+      "scientificName": "Zoothera aurea",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同是大型地棲鶇，但懷氏地鶇上體金褐密佈黑鱗、眼圈一整圈白、下體白底配寬黑新月斑，沒有任何橙色；本種上半身藍灰、下半身橙，野外幾乎不會認錯。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.575,
+      0.245,
+      0.7,
+      0.37
+    ],
+    [
+      0.395,
+      0.355,
+      0.52,
+      0.48
+    ],
+    [
+      0.455,
+      0.415,
+      0.58,
+      0.54
+    ],
+    [
+      0.59,
+      0.275,
+      0.715,
+      0.4
+    ]
+  ],
+  "featureLabels": [
+    "橙色頭胸",
+    "藍灰上體",
+    "白色翼斑",
+    "頰上黑紋"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥的頭、頦、胸、腹與脇為深橙色，與藍灰色的背及翼成強烈對比；雌鳥較暗啞、上體沾欖褐，橙色亦較淡，為插圖局部。",
+    "上體、翼上覆羽、三級飛羽與尾皆藍灰；成鳥雌鳥在翼覆羽、三級飛羽與腰帶一點灰調，第一齡雌鳥則完全沒有灰調，為插圖局部。",
+    "中覆羽有寬白端，在翼上排成一列白色翼斑；大覆羽的翼帶則模糊或不明顯。中國各亞種大多有白翼斑，只有雲南亞種 innotata 沒有，為插圖局部。",
+    "臉頰淡色，由眼後向下有兩條模糊的深色縱紋（本港族群相信為 melli 亞種，此紋是其特徵）；幼鳥臉部淡黃、嘴大部分淡色、頭頂偏褐，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PAK",
+      "LKA",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists these 14 (plus Singapore, native non-breeding, which has no separate geometry on the 110m base map) as native breeders or residents; China covers both the southern breeding range and Hong Kong, which BirdLife does not list as a separate row. Not an occurrence polygon: green does not imply full-country occupancy and the seasons are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0390/046300",
+      "use": "香港第 I 類：秋季不常見的過境鳥，稀少的繁殖鳥，主要在鬱閉森林及其他樹木茂密生境；20–23 cm，雄鳥深橙色的頭、胸、腹與脇與藍灰的上體、尾、翼覆羽與三級飛羽成對比，眼下有兩條模糊的深色縱紋而臉頰淡色，中覆羽有寬白端、大覆羽翼帶模糊或缺失；雌鳥較暗啞、上體沾欖褐，成鳥雌鳥在翼覆羽、三級飛羽與腰有灰調，第一齡雌鳥完全無灰調；幼鳥在肩羽有淡色楔斑、淡黃翼帶與臉、嘴大部分淡色、頭頂偏褐；鳴唱分完整的領域歌（短而柔美的樂句，每句 3–5 個元素，可連續重複最多五次）與較安靜的低強度／求偶歌（較粗、句子更長而散），聯絡叫聲為極高音的 tzee；一般出現於鬱閉森林或成熟灌叢，過境鳥亦會在植被較疏的地點如蒲台、赤鱲角機場島及何文田等市區邊緣出現；1956-11-29 首錄，1998 年前大部分紀錄來自大埔滘，1973 年初、1986 年底及 1989–1997 每年都有越冬鳥，1979–1996 有七年出現夏季（即可能繁殖）紀錄；1984 年 8 月至 10 月及 1993 年 8 月各有一隻被視為未成鳥，1995 年 9 月甲龍見可能為家族群，港島另有 1982-02-02、1990-11-26 與 1990-12-08 的冬季紀錄；1999 年起主要為秋季過境鳥，數量高峰在 9 月第三週至 10 月第三週，11–12 月漸減、隆冬稀少，2 月第一週似有高峰但部分可能因寒冷天候把鳥趕到開闊處，春季由 3 月最後一週起明顯、4 月第二週起以鳴唱雄鳥為主，5 月第一週後紀錄減少；繁殖：雄鳥抵港後即開始求偶與領域鳴唱，大埔滘曾同時聽到最多三隻，求偶歌見於 4 月 14–16 日、領域歌 3 月 31 日至 7 月 16 日（主要在 4–5 月），2016-04-21 至 06-03 大埔滘半島有一隻持續鳴唱；雖有 1979 年起夏季紀錄，首個確證繁殖是 2013-08-10 大埔滘半島一隻乞食幼鳥；最早依賴親鳥的幼鳥為 2015-05-25 大埔滘（該年該地狀況良好），2015-04-14 至 10-16 於該地繫放 22 隻（15 成鳥、7 幼鳥）中有 5 隻本地出生幼鳥，幼鳥遲至 10 月 2 日仍有紀錄但未必本地繁殖；害羞隱密，但寒冷天候下部分個體很易接近，黃昏與清晨較活躍，雖會在結果樹出現但主要在落葉層地面覓食，被驚飛時甚少鳴叫；1989-90 至 1996-97 所有冬季紀錄都是同一隻在大埔滘入口路底清晨出現的雄鳥，顯示強烈的定點忠誠；鳴唱時雄鳥停在中層樹上以濃密枝葉遮掩；多型種，十個亞種由喜馬拉雅向南經印度東南西、東至中國南部並南經中南半島、馬來半島至爪哇與峇里；中國有 melli（華南）、courtoisi（東部）、aurimacula（海南）、innotata（雲南西部與南部），香港族群相信為 melli（因在廣東繁殖），但與 courtoisi 幾乎無法區分，偶爾亦可見非中國亞種的逃逸鳥；IUCN LC、種群趨勢下降。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/orange-headed-thrush-geokichla-citrina/details",
+      "use": "IUCN **2019** LC、成熟個體 **Unknown**（各地局部常見，中國估計 100–10,000 對繁殖鳥與 50–1,000 隻過境鳥）、趨勢 **Decreasing**（Suspected，因籠鳥貿易捕捉壓力與持續森林喪失；爪哇與峇里的 rubecola 亞種野外劇減但仍有人工繁殖）；繁殖 EOO **16,000,000 km²**、非繁殖 EOO **2,780,000 km²**、完全遷徙、非繁殖 endemic；海拔 250–2,300 m；世代 3.0 年；森林依賴度 **Medium**；生境以熱帶潮濕低地林為主要（繁殖與非繁殖），另有乾燥林、人工林、鄉村花園與內陸溪流；用途為食用（自給、國內）與寵物（國際）；無 IBA 列於本頁；國家表 15 個原生國家（含新加坡非繁殖），**香港沒有獨立一列**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（橙頭地鶇；Orange-Headed Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Geokichla citrina／鶇科 Turdidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=2.3、v=3.4（含 vEst=1）、r=4.8、c=3.0、o=3.1，missingScores 為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；diet、range、look、habitat、breeding、voice、behavior、conservation、humanRelation、etymology、funFact、highlights 都有中文，但多處品質不佳（voice 句子有缺字、funFact 與 etymology 的種名解釋被截成「意旨『 』」、conservation 講的是 1956 年首錄而非保育評級、callouts 的「頭：橙頭地鶇是雜食性動物」與標籤不符）；length 與 weight 為空。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 118.2 mm、尾 73.4 mm、跗蹠 31.1 mm、嘴峯 21.7 mm、體重 53.3 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 046300（路徑 `0390/`，鶇科）：香港第 I 類，秋季不常見的過境鳥、稀少的繁殖鳥，主要在鬱閉森林；20–23 cm，雄鳥深橙頭胸腹與藍灰上體成強烈對比，眼下兩條深色縱紋、中覆羽寬白端；雌鳥較暗啞沾欖褐；幼鳥肩羽淡色楔斑、嘴大部分淡色。",
+    "本港紀錄：1956-11-29 首錄；1998 年前多來自大埔滘，1989–1997 每年有越冬鳥；1999 年起高峰在 9 月第三週至 10 月第三週，4 月第二週起以鳴唱雄鳥為主；首個確證繁殖為 2013-08-10 大埔滘半島一隻乞食幼鳥，2015-05-25 最早見依賴親鳥的幼鳥，該年繫放 22 隻中有 5 隻本地出生。",
+    "習性：害羞隱密、黃昏清晨較活躍，主要在落葉層地面覓食、亦上結果樹；鳴唱多在中層濃密枝葉間；1989-90 至 1996-97 的冬季紀錄疑為同一隻雄鳥，顯示強烈定點忠誠。",
+    "分類：十個亞種；中國有 melli、courtoisi、aurimacula、innotata，香港相信為 melli（廣東繁殖），但與 courtoisi 幾乎無法區分；偶見非中國亞種的逃逸鳥。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2019** 年評估；成熟個體未知，趨勢 **下降**（推測，籠鳥貿易捕捉與森林喪失，爪哇／峇里 rubecola 亞種野外劇減）；EOO 繁殖 16,000,000 km²、非繁殖 2,780,000 km²、完全遷徙、海拔 250–2,300 m、世代 3.0 年、森林依賴度 Medium。",
+    "runtime 分數：i=2、a=2.3、r=4.8、c=3.0 沿用（a 有 habitat 與 diet 中文支撐，但 runtime 文案本身有多處缺字與錯置）；v=3.4 待查——length 與 weight 皆為空、vEst=1 即原值由體長估算，而翼長 118.2 mm×0.22≈26.0 cm 高於 HKBWS 的 20–23 cm；o=3.1 依賴待查分項（v）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：voice 句子有缺字（「柔和的 或」）、funFact 與 etymology 的種名解釋被截空、conservation 講 1956 年首錄而非保育評級、callouts 有兩項與標籤不符；length 與 weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖原為 1408×768 橫幅，補成方形後裁 `(0.08,0.10,0.88,0.90)`，畫出橙色頭胸腹、藍灰背翼尾、白色中覆羽翼斑、頰上兩條深色縱紋與淡粉腳，站於林緣落葉層；雌鳥（較暗沾欖褐）與幼鳥（淡楔斑、淡色嘴）仍待專家核。比較鳥沿用 0458 的白眉地鶇與懷氏地鶇 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 118.2 mm×0.22≈26.0 cm 高於 HKBWS 的 20–23 cm，3.4 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}

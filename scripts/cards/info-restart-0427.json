@@ -1,0 +1,142 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "id": "0427",
+  "name": "遠東樹鶯",
+  "scientificName": "Horornis canturians",
+  "illustrationTaxon": "Adult-type Horornis canturians perched low among dense twigs; AI interpretation, sex and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "金頭擬縫葉鶯",
+      "scientificName": "Phyllergates cucullatus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "小型得多、橙紅前冠、臉胸灰色、腹部鮮黃、嘴細長；本種粗壯、暖褐羽冠、下體淡褐、嘴較短厚。"
+    },
+    {
+      "zh": "鱗頭樹鶯",
+      "scientificName": "Urosphena squameiceps",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "僅 9–10 cm、尾極短、全身銹褐；本種 15–18 cm、尾長、上體較灰褐而翼緣暖褐。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.195,
+      0.225,
+      0.345,
+      0.375
+    ],
+    [
+      0.645,
+      0.31,
+      0.78,
+      0.445
+    ],
+    [
+      0.42,
+      0.34,
+      0.6,
+      0.52
+    ],
+    [
+      0.125,
+      0.275,
+      0.265,
+      0.415
+    ]
+  ],
+  "featureLabels": [
+    "寬白眉紋",
+    "銹褐尾下覆羽",
+    "暖褐翼緣",
+    "粗厚嘴"
+  ],
+  "featureNotes": [
+    "眉紋寬而呈淡皮黃色，上接暖褐色羽冠、下接深色眼紋，是本種最穩定的辨識組合，為插圖局部。",
+    "尾下覆羽暖銹褐色，與淡褐白色的腹部形成對比，為插圖局部。",
+    "飛羽與三級飛羽的羽緣暖褐，與較灰的肩背形成對比；北方亞種 borealis 的後冠與肩背更灰更淡，為插圖局部。",
+    "嘴短而粗厚，下嘴淡色；雄鳥的嘴比雌鳥更厚、腿更粗，是兩性體型差異的一部分，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "LAO",
+      "PHL",
+      "THA",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding, passage and wintering areas are not colour-separated. India is recorded only as a vagrant and is not filled; Hong Kong is native per BirdLife and a common local winter visitor per HKBWS but has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0310/037200",
+      "use": "香港第 I 類不常見冬候鳥及過境遷徙鳥，見於低地開闊環境（乾濕皆有）及林緣；15–18 cm；雌雄體型差異明顯、體重幾乎不重疊，雄鳥較大、腿較粗、嘴較厚；短翼、長尾、圓頭、似公牛頸的粗壯體態；暖褐羽冠與翼緣對比略灰的上體及較褐的尾；寬淡色眉紋、深色眼紋、皮黃色脇部、暖褐尾下覆羽；北方亞種 borealis 後冠與肩背較灰較淡；叫聲以低沉粗糙「chak」為主，可連成短促連音；罕見於 400 m 以上；2001–05 與 2016–19 冬季圖集佔用方格由 14.5% 跌至 5.2%，離島及大嶼山西部跌幅較明顯；極端日期 2012-10-24 蒲台及 1996-05-08 鶴咀，最高 40 隻（1992-11-15 米埔）、1999 年後最高 20 隻（2020-02-29 豐樂圍）；1937-02-03 曾咀首筆；兩個亞種；頁記 IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/korean-bush-warbler-horornis-canturians",
+      "use": "BirdLife 以「Korean Bush-warbler」為英文名；IUCN 2025 LC、趨勢穩定；繁殖 EOO 2,470,000 km²、非繁殖 2,570,000 km²、完全遷徙、海拔 0–1,600 m、世代長度 2.6 年、森林依賴低；國家：中國、香港（原生）、印度（迷鳥）、老撾、菲律賓、中國台灣（非繁殖及過境）、泰國、越南；另記在七個貿易資料集其中一個以低普及度出現。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（遠東樹鶯；Manchurian Bush Warbler）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Horornis canturians／樹鶯科 Scotocercidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數齊備：i=2、a=3.3、v=2.8、r=3.3、c=1.2、o=2.5，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；look 只有量度（含喙寬、喙厚、跗蹠），diet 一句把遷徙、棲地與「肉食性」混在一起，breeding 以「*：」開頭並以「；」收尾，funFact、voice、behavior、conservation 只有英文，length 與 weight 為空，picks 列出六個欄位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 71.6 mm、尾 70.8 mm、跗蹠 26.6 mm、嘴峯 16.7 mm、體重 22.3 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 037200：15–18 cm，香港屬第 I 類不常見冬候鳥及過境遷徙鳥，見於低地開闊而灌木茂密之處、林緣，遷徙期亦見於蘆葦沼澤，罕見於 400 m 以上；1937 年 2 月 3 日曾咀首筆（Herklots 1937）；2001–05 至 2016–19 冬季圖集由 14.5% 方格跌至 5.2%，是本港近年明顯下降的灌叢鳥之一。",
+    "辨識要點：暖褐羽冠與暖褐翼緣對比略灰的肩背、較褐的長尾；寬淡色眉紋、深色眼紋、皮黃色脇部、暖褐尾下覆羽；短翼、圓頭、似公牛頸的粗壯體態；雄鳥明顯較大、腿較粗、嘴較厚，雌雄體重幾乎不重疊。卡面四個標籤取眉紋、尾下覆羽、翼緣與粗厚嘴。",
+    "亞種：指名亞種繁殖於中國中部至東部並北達北京；borealis 繁殖於中國東北沿岸省份、鄰近烏蘇里地區及朝鮮半島大部分，非繁殖期越冬於台灣並可達菲律賓北部。HKBWS 的雄鳥照片即標為 borealis。",
+    "英文名差異：HKBWS 用 Manchurian Bush Warbler，BirdLife 用 Korean Bush-warbler（同一學名 Horornis canturians）；中文同為「遠東樹鶯」。BirdLife 另有 Japanese Bush-warbler（H. diphone）為不同種，檢索時不宜混淆。",
+    "IUCN 表述一致：HKBWS 與 BirdLife 都記 LC、趨勢穩定；BirdLife 的評估年份為 2025。惟 HKBWS 的本地冬季圖集顯示本港數量明顯下降，卡面註記只述全球評估，本地情況見備註。",
+    "runtime 六項分數齊備 i=2、a=3.3、v=2.8、r=3.3、c=1.2、o=2.5、vEst=1，全部沿用：a 有 habitat、diet、behavior 內容；v 的翼長 71.6 mm×0.22≈15.8 cm 落在 HKBWS 15–18 cm 之內，估算與實際不矛盾但仍保留「原觀賞值含體長估算」提示；r=3.3 有 range、migration、breeding 內容。",
+    "runtime 文案缺陷：look 只有量度（並含喙寬 3.2、喙厚 3.9、跗蹠 26.6 mm 等未見於 measurements.json 的數字），完全沒有羽色；diet 一句把「部分遷徙」「棲息在密集灌木叢」「肉食性」混在一起，而本種實為食蟲；breeding 以「*：」開頭並以「；」收尾，像未清理的標記；funFact、voice、behavior、conservation 只有英文；length、weight 為空；picks 列出六個欄位。辨識內容一律以 HKBWS 為準。",
+    "世界底圖按 BirdLife 國家表填中國、老撾、菲律賓、中國台灣、泰國、越南；印度只記迷鳥故不填色；香港是 BirdLife 的原生國家條目，但 110m 底圖沒有獨立多邊形，故隨中國顯示。繁殖、過境與越冬地未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成粗壯的大型樹鶯，停於密枝之間的低位，並畫出暖褐羽冠、寬淡色眉紋、深色眼紋、較灰的肩背與暖褐羽緣、長褐尾、暖褐尾下覆羽、皮黃色脇部及粗壯淡粉腳；雌雄體型差異與亞種（指名或 borealis）仍待專家核。比較鳥為 0426 金頭擬縫葉鶯及 0424 鱗頭樹鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {}
+}

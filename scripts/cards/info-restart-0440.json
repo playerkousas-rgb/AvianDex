@@ -1,0 +1,144 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024（複合種評估）"
+  },
+  "id": "0440",
+  "name": "黑眉雀鶥",
+  "scientificName": "Alcippe hueti",
+  "illustrationTaxon": "Adult-type Alcippe hueti hueti (the taxon in Hong Kong) on a mossy branch; AI interpretation, subspecies, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紅頭穗鶥",
+      "scientificName": "Cyanoderma ruficeps",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體長相近但身形較修長、尾較長，頭頂栗紅而臉淡黃、無黑色眉紋；本種較矮壯、尾較短，頭淡灰而有明顯黑色眉紋與白色眼圈。"
+    },
+    {
+      "zh": "棕頭鴉雀",
+      "scientificName": "Suthora webbiana",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "嘴短而厚、呈鸚鵡狀，頭與上體棕褐而無灰色調，成群在竹叢與灌叢中活動；本種嘴細長如鶯、頭淡灰、翼栗褐，主要在闊葉林下層。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.57,
+      0.275,
+      0.685,
+      0.39
+    ],
+    [
+      0.628,
+      0.283,
+      0.748,
+      0.403
+    ],
+    [
+      0.38,
+      0.41,
+      0.495,
+      0.525
+    ],
+    [
+      0.5,
+      0.472,
+      0.615,
+      0.587
+    ]
+  ],
+  "featureLabels": [
+    "黑色眉紋",
+    "白色眼圈",
+    "栗褐色翼",
+    "淡黃褐色下體"
+  ],
+  "featureNotes": [
+    "頭側有一道粗黑的眉紋（側冠紋），由嘴基伸延至耳羽，明顯時可延伸至後頸，是本種最具代表性的辨識特徵，為插圖局部。",
+    "眼圈完整而白色，與淡灰色的頭部及旁邊的黑色眉紋形成強烈對比，為插圖局部。",
+    "肩與飛羽為暖栗褐色，與淡灰色的後頸及上背形成強烈分界，為插圖局部。",
+    "下體整體為淡黃褐色，腹中部較淡，與栗褐色的翼成對比，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "LAO",
+      "MMR",
+      "THA",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only: BirdLife's country table for the Grey-cheeked Fulvetta species complex (China, Laos, Myanmar, Taiwan, Thailand, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. BirdLife does not yet split Huet's Fulvetta from that complex, so the shading is wider than Huet's Fulvetta's own range (southeast China); Hong Kong, where the card's population lives, has no separate geometry on the 110m base map and is folded into China."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0360/043800",
+      "use": "香港第 IIA 類，新界中部森林及郁閉灌叢不常見的留鳥，族群可能源自籠鳥；12.5–14 cm，小型鶥，較紅頭穗鶥矮壯而尾短；頭淡灰、眼圈白、頭側有黑色縱紋（側冠紋），可明顯並伸延至後頸但有時模糊；後頸與上背淡灰，翼與尾暖褐色，下體淡黃褐；鳴唱少而為短促多音節樂句，警報聲為高頻有力的沙沙聲，覓食群發出較鬆散的顫音，聯絡聲為短短的 chi-tik 雙音；2001 年前視為籠鳥來源的第 E 類（灰眶雀鶥），2010 年跟隨 IOC 分種後一度記錄為 Alcippe sp.，Leven et al. (2013) 以鳴聲確定為本種後列入第 IIA 類；1999 年以來族群緩慢增加，2001 年 1 個地點至 2020 年 7 個地點、單次最高計數合計 58 隻；大埔滘最重要、2001 年起每年記錄，最高單次 50 隻（2015-01-08），城門、梧桐寨、大欖郊野公園亦每年有記錄；圖集記錄由 0.4%（1993–96 繁殖）、0.6%（2001–05 冬季）、2.0% 與 1.8%（2016–19 繁殖與冬季）；只限於有良好灌木層的大片闊葉林，多用下層與攀緣植物；無遷入本港的證據，深圳梧桐山有分佈；本港繁殖生態未有描述；食性與覓食行為在本港未有研究，大概為食蟲兼食果。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/grey-cheeked-fulvetta-alcippe-morrisonia",
+      "use": "IUCN 2024 LC（未列準則），理由為分佈極廣、族群未量化但未達門檻、下降速度未達 30%；趨勢下降，以樹冠十年減少 7.9%、森林依賴度中等推測族群下降 1–19%；成熟個體 Unknown；繁殖 EOO 4,630,000 km²；不遷徙、非繁殖 endemic；海拔 0–3,050 m；世代 2.8 年；森林依賴度 Medium；生境為亞熱帶／熱帶濕潤山地林（主要）及低地林與高山灌叢（適用）；28 個 IBA／KBA；國家表為中國、寮國、緬甸、台灣、泰國、越南，未列香港；貿易欄記兩種用途（食用為國內自給、寵物為國際），在七個貿易資料集中出現兩個；分類註記說明 2019 年後 Alcippe 屬被歸入雀鶥科 Alcippeidae。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（黑眉雀鶥；Huet's Fulvetta），與 HKBWS 頁面標題一致。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Alcippe hueti／噪鶥科 Leiothrichidae）；BirdLife 現時把 Alcippe 放在雀鶥科 Alcippeidae，科級歸屬隨分類系統而異。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 只有四個軸有分數：a=3.3、v=2.6（含 vEst=1）、r=1、o=2.3；i（觀賞性）與 c（保育）完全沒有分數，故 missingScores 為 i、c。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；habitat 中文全空、behavior 中文全空、look 中文只有量度、length 與 weight 為空、完全沒有 voice／breeding／etymology 欄；range 中文寫「分佈於中國東南地區（廣東至安徽）的山地森林」尚可、英文只有 It is endemic to southeast China；diet 中文寫的是「部分遷徙、棲息在密集高大樹木組成的森林、雜食性」，並非食性；diet 英文只有「Its diet includes Vaccinium carlesii.」一句；文中用「淡眉雀鶥」而鳥名欄用「黑眉雀鶥」，同一種的中文名不一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 60.9 mm、尾 52.4 mm、跗蹠 19.2 mm、嘴峯 12.3 mm、體重 15.3 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 043800：香港第 IIA 類，新界中部森林及郁閉灌叢不常見的留鳥，族群可能源自籠鳥；12.5–14 cm，較紅頭穗鶥矮壯而尾短；頭淡灰、白色眼圈、頭側黑色縱紋可明顯伸延至後頸，後頸與上背淡灰、翼與尾暖褐、下體淡黃褐。",
+    "分類與名錄史：2001 年 Carey et al. 把當時的「灰眶雀鶥 Alcippe morrisonia」列為第 E 類（全部紀錄視為籠鳥來源），2009–11 年一度以 Alcippe sp. 發表；2010 年跟隨 IOC 分種，2013 年 Leven et al. 以鳴聲確定本港鳥為本種後列入第 IIA 類；兩亞種，指名亞種分佈中國東南包括香港，rufescentior 只限海南。BirdLife 至今仍未把本種從灰眶雀鶥複合種分出，故 IUCN 評估為複合種的評估。",
+    "族群：1999 年起記錄增加但速度較慢，2001 年 1 個地點至 2020 年 7 個地點、各點最高計數合計 58 隻；大埔滘為核心（2001 年起每年、最高單次 50 隻於 2015-01-08），城門、梧桐寨、大欖郊野公園每年有記錄；圖集由 0.4%（1993–96 繁殖）升至 2.0%（2016–19 繁殖）與 1.8%（冬季）。新界東近年的報告增加，米埔、新田、塱原等濕地記錄被認為很可能屬誤記或地點錯誤。",
+    "生境與習性：只限於有良好灌木層的大片闊葉林，多用林下灌木層與攀緣植物；繁殖季成對而隱蔽，非繁殖季成群，常與紅頭穗鶥混群，廣東可成大群；本港繁殖生態未有描述，食性與覓食行為亦未有研究，大概為食蟲兼食果。",
+    "IUCN：本卡為 **LC（無危）**。BirdLife 2024 以灰眶雀鶥複合種評估，分佈極廣、下降速度未達門檻；趨勢下降（樹冠十年減 7.9%，推測族群十年下降 1–19%）、成熟個體 Unknown、EOO 4,630,000 km²、海拔 0–3,050 m、世代 2.8 年、森林依賴度中等、28 個 IBA。地圖按 BirdLife 國家表填六個國家／地區（含台灣），未列香港；香港在 110m 底圖併入中國。",
+    "runtime 分數：i（觀賞性）與 c（保育）**完全沒有分數**，卡面該兩軸顯示「待查」、missingScores 為 i、c，不以他處數值補算。a=3.3 待查——habitat 中文全空、behavior 中文全空、diet 中文實為遷徙與生境的樣板句而非食性、diet 英文只有一句 Vaccinium carlesii，中文與英文不對應。v=2.6 沿用——length 為空，但翼長 60.9 mm×0.22≈13.4 cm 落在 HKBWS 的 12.5–14 cm 內，只加「原觀賞值含體長估算」提示。r=1 沿用——runtime 完全沒有 voice／breeding／etymology 欄，而 1 已是量尺最低值，隱藏它不會增加資訊。o=2.3 依賴待查分項（a）不補算。",
+    "runtime 文案缺陷：habitat 與 behavior 中文全空、look 只有量度、length 與 weight 為空、diet 中文是樣板句而英文只有一句果實紀錄、完全沒有聲音／繁殖／詞源欄；文中用「淡眉雀鶥」而鳥名欄用「黑眉雀鶥」，中文名不一致。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖為方形畫布，單一長尾、純色深青底，畫出黑色眉紋、白色眼圈、淡灰頭與後頸、栗褐翼、淡黃褐下體；亞種、性別與年齡差異仍待專家核。比較鳥沿用 0437 的紅頭穗鶥及 0432 的棕頭鴉雀 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 與 behavior 中文全空、diet 中文是遷徙與生境的樣板句而非食性、diet 英文只有一句果實紀錄，中英不對應，3.3 分缺乏棲地與食性支撐，待查。",
+    "o": "綜合分依賴待查分項（a），不補算。"
+  }
+}

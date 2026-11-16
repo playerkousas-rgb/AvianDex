@@ -1,0 +1,142 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 記下降"
+  },
+  "id": "0433",
+  "name": "栗頸鳳鶥",
+  "scientificName": "Staphida torqueola",
+  "illustrationTaxon": "Adult-type Staphida torqueola (monotypic) on a mossy branch; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黑頦鳳鶥",
+      "scientificName": "Yuhina nigrimenta",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型更小、嘴與腳橙紅、喉中央有黑色小斑、沒有栗色臉頰與白色下體；本種嘴腳暗色、臉頰栗色帶白紋、下體純白、尾較長。"
+    },
+    {
+      "zh": "紅脇繡眼鳥",
+      "scientificName": "Zosterops erythropleurus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "有明顯白色眼圈、上體橄欖綠、脇部有栗紅色塊；本種無白眼圈、上體栗褐、臉頰有白紋、整片下體白色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.45,
+      0.175,
+      0.57,
+      0.295
+    ],
+    [
+      0.345,
+      0.245,
+      0.475,
+      0.375
+    ],
+    [
+      0.375,
+      0.43,
+      0.505,
+      0.56
+    ],
+    [
+      0.74,
+      0.72,
+      0.845,
+      0.825
+    ]
+  ],
+  "featureLabels": [
+    "短黑灰冠羽",
+    "栗頰白紋",
+    "白色下體",
+    "尾羽白端"
+  ],
+  "featureNotes": [
+    "頭頂有一撮短而蓬鬆的深灰冠羽，經常豎起，是鳳鶥類的標誌，為插圖局部。",
+    "臉頰（耳羽）為栗褐色並帶白色細紋，與白色喉部相接，是「栗頸」一名的由來，為插圖局部。",
+    "喉、胸至腹部為白色，與栗褐色的上體對比強烈，為插圖局部。",
+    "尾較長，外側尾羽有寬闊的白色端斑，散開或擺尾時最明顯，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "LAO",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only: the four countries BirdLife lists (China, Laos, Thailand, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. Hong Kong, where HKBWS treats it as a Cat I winter visitor with confirmed breeding, is part of China's shading but has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0360/043100",
+      "use": "香港第 I 類，鬱閉樹冠林地及灌叢的冬候鳥，少數在夏季出現、偶有繁殖報告；14–15 cm；小型栗褐色鳳鶥，頭頂短而深灰的冠羽、上體褐、下體白、耳羽栗色帶白紋，尾較長而外側尾羽有寬白端；雌雄相似，幼鳥似成鳥但上體帶褐、次級飛羽與覆羽邊較褐；聯絡聲不斷；1980-11-25 聶高信山首次記錄，偏好中至鬱閉樹冠的成熟森林，大埔滘與大帽山山系（梧桐寨、城門）為主要地點，亦見於大欖、流水響、沙田坳、白沙澳；多見於 10 月中至 1 月第三週、尤其 11 月第三週至 2 月第三週；2013-01-03 大埔滘 120 隻為最高，2019-11-25 大欖 110 隻、2020-03-14 海下路 110 隻；1994 年九龍山首次確認繁殖，2004-04-12 及 2017-03-18 梧桐寨見繁殖對，2004-06-22 沙田坳、2012-06-16 及 2014-04-27 獅子山、2017-04-23 梧桐寨見幼鳥；成群在樹冠活動，食性本地資料少，曾見吃毛蟲；單型種；分佈華南及東南（四川、雲南、湖北、浙江、廣西、廣東包括香港）、泰北、寮國、越南；頁記 IUCN LC、趨勢未定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/indochinese-yuhina-staphida-torqueola",
+      "use": "IUCN 2024 LC、趨勢下降；成熟個體未量化，描述為華南最常見的鳳鶥、全區普遍，中國約 10,000–100,000 對（Brazil 2009）；繁殖 EOO 2,640,000 km²；不遷徙、海拔 350–2,200 m、世代 2.9 年、森林依賴度中等；因範圍內樹冠覆蓋十年間減少 8.1%，暫推測族群下降 1–19%；國家表為中國、寮國、泰國、越南，未列香港；中國部分地區有爆發式冬季移動。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（栗頸鳳鶥；Indochinese Yuhina）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Staphida torqueola／繡眼鳥科 Zosteropidae，鳳鶥類歸入繡眼鳥科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 只有 i=2、v=2.7（含 vEst=1）、r=1、c=1.2、o=1.7；a 完全沒有分數。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range 與 diet 兩欄是同一句中文（留鳥、半開放高大樹木的森林、肉食性），look 中文寫的是體重翼長嘴峯等量度，英文除 funFact（Swinhoe 1870 命名）與 humanRelation（BirdLife 引用）外全空；length 與 weight 為空，aliases 為 ['1870']。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 63.8 mm、尾 59 mm、跗蹠 18 mm、嘴峯 11.4 mm、體重 11.8 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 043100：香港第 I 類，鬱閉樹冠林地及灌叢的冬候鳥，少數夏季出現、繁殖偶有報告並已多次證實（1994 年九龍山首次確認，2004 及 2017 年梧桐寨見繁殖對，沙田坳、獅子山、梧桐寨均有幼鳥紀錄）；1980-11-25 聶高信山首錄；2013-01-03 大埔滘 120 隻為最高紀錄。",
+    "辨識要點：14–15 cm，小型栗褐色鳳鶥，頭頂短而深灰的冠羽、上體褐、下體白、耳羽栗色帶白紋、尾較長而外側尾羽有寬白端；雌雄相似，幼鳥上體較褐。單型種，無亞種問題。卡面四個標籤取冠羽、臉頰、下體與尾端。",
+    "分類：曾長期置於 Yuhina，現用 Staphida torqueola；BirdLife 與 runtime 都歸繡眼鳥科 Zosteropidae（鳳鶥類），HKBWS 亦置於「Babblers, Parrotbills, Yuhinas, White-eyes」同一分類群。",
+    "分佈：華南及東南（四川、雲南、湖北、浙江、廣西、廣東包括香港）、泰北、寮國、越南；在本港偏好成熟而樹冠中度至鬱閉的森林，大埔滘與大帽山山系最穩定。BirdLife 亦記中國部分地區有爆發式冬季移動，與 HKBWS 早期視為 irruptive 冬候鳥的描述一致。",
+    "IUCN：兩者都記 LC，但趨勢不同調——HKBWS 寫「趨勢未定」，BirdLife 2024 版寫「下降」，理由是範圍內樹冠覆蓋十年間減少 8.1%、僅屬預防性推測（1–19%），未達易危門檻。卡面註明 BirdLife 記下降。",
+    "runtime 分數：i=2、c=1.2、r=1（最低值）、v=2.7 皆沿用；vEst=1 但 length 為空，翼長 63.8 mm×0.22≈14.0 cm 落在 HKBWS 14–15 cm 之內，估算與實測相符，故不再扣起 v；a 完全缺失並列 missingScores；o=1.7 依賴缺失分項（a），不補算。",
+    "runtime 文案缺陷：range 與 diet 兩欄共用同一句中文（留鳥、半開放高大樹木的森林、肉食性），內容空泛且「肉食性」其實只對應吃毛蟲的觀察；look 中文寫的是體重、翼長、嘴峯、喙寬、跗蹠與尾長等量度，並非野外特徵；英文除 funFact（Swinhoe 1870 命名）與 humanRelation（BirdLife 引用）外全空；length 與 weight 為空、aliases 為 ['1870']（誤把年份當別名）。辨識與本地紀錄一律以 HKBWS 為準。",
+    "世界底圖按 BirdLife 國家表填中國、寮國、泰國及越南，並非全部分佈區、也不是 occurrence polygon；香港屬中國填色範圍，但 110m 底圖無獨立多邊形，故不另標。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成小型栗褐鳳鶥，停於長滿苔蘚的樹枝，並畫出短而深灰的冠羽、栗色帶白紋的耳羽、白色的喉胸腹、栗褐上體及帶寬白端的長尾；性別與年齡差異仍待專家核。比較鳥為黑頦鳳鶥及紅脇繡眼鳥的 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "o": "綜合分依賴缺失分項（a），不補算。"
+  }
+}

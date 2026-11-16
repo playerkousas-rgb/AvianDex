@@ -1,0 +1,153 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2021 評定"
+  },
+  "id": "0477",
+  "name": "白腰鵲鴝",
+  "scientificName": "Copsychus malabaricus",
+  "illustrationTaxon": "Adult male Copsychus malabaricus (glossy blue-black head, upperparts, throat and upper breast, a broad white rump patch between the black back and the tail, brick-orange lower breast and belly, very long graduated tail black above with white outer feathers, black bill, long pale pink legs). Female is duller grey-brown with a shorter tail and is not shown. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "鵲鴝",
+      "scientificName": "Copsychus saularis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、本港最易混淆的一種；鵲鴝體型較小（19–21 cm）、尾明顯較短，雄鳥上體與胸黑但腹部純白、翼上有一道寬白帶、尾羽外側白，全身沒有一點橙栗色；本種大得多（23–28 cm），下胸至腹為磚橙栗色、腰有一塊醒目的白斑、尾極長而外側白，兩者在同一公園出現時體型與腹色即可分辨。"
+    },
+    {
+      "zh": "黑卷尾",
+      "scientificName": "Dicrurus macrocercus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "另一種「全黑＋長尾」的常見鳥；黑卷尾全身純黑而帶藍綠光澤、尾深叉而外側羽向上翻卷、嘴較粗壯而嘴峯略鉤並有明顯嘴鬚、腳短而黑、常在空中衝出捕食；本種尾長而漸次分級不外翻、腰有一大塊白斑、下腹橙栗色、腳長而粉紅，多在地面或下層枝條跳躍尋食。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.48,
+      0.31,
+      0.62,
+      0.45
+    ],
+    [
+      0.24,
+      0.28,
+      0.38,
+      0.45
+    ],
+    [
+      0.56,
+      0.6,
+      0.7,
+      0.74
+    ],
+    [
+      0.32,
+      0.49,
+      0.44,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "白腰斑",
+    "橙栗腹",
+    "極長尾",
+    "粉紅腳"
+  ],
+  "featureNotes": [
+    "腰與尾上覆羽有一大塊醒目的白斑，夾在黑背與長尾之間，是英文名 White-rumped 的由來，也是雌雄共有的特徵；飛行或跳躍時最顯眼，為插圖局部。",
+    "下胸至腹為磚橙栗色，與黑色的頭、上體成強烈對比；雌鳥的橙栗較淡而偏褐、範圍也較小，幼鳥更淡並帶斑駁，為插圖局部。",
+    "尾極長而漸次分級，上面黑色、外側羽白色，常高翹或上下擺動；雄鳥尾長可佔全長一半以上，是與鵲鴝最明顯的差別，為插圖局部。",
+    "腳長而呈淡粉紅色，配合長尾使站姿較直立；本種多在林下地面或低枝跳躍尋食，與常在地面走動的鵲鴝相近，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "BRN",
+      "CHN",
+      "IDN",
+      "IND",
+      "KHM",
+      "LAO",
+      "LKA",
+      "MMR",
+      "MYS",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only — green is the native range, NOT Hong Kong, Taiwan or Hawaii, where the species is introduced. BirdLife lists 15 native countries/territories (Bangladesh, Bhutan, Brunei, Cambodia, China, India, Indonesia, Laos, Malaysia, Myanmar, Nepal, Singapore, Sri Lanka, Thailand, Vietnam); Singapore has no separate 110m geometry, so 14 are shaded. The USA (Hawaii: O'ahu and Kaua'i) is listed as Introduced and is deliberately left unshaded; Hong Kong is not in BirdLife's country table at all (its feral population is Category IIB in the HK List) and has no separate geometry. Not an occurrence polygon: the green area is far larger than the occupied 0–600 m lowland forest belt inside a resident EOO of 13,900,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：**第 483 項 白腰鵲鴝 White-rumped Shama（Copsychus malabaricus），第 IIB 類**——即由人為引入、在無需再引入的情況下仍維持規律的野生繁殖族群的外來種；鄰項為 482 鵲鴝（I 類）、484 灰紋鶲（I 類）、485 烏鶲（I 類）。第 IIB 類的定義出自香港鳥類報告 2014。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/white-rumped-shama-copsychus-malabaricus/details",
+      "use": "IUCN **2021** LC（無危，準則 N/A）、成熟個體 Unknown、趨勢 **Decreasing**（Suspected，因棲地破壞與籠鳥貿易）、居民繁殖 EOO **13,900,000 km²**、AOO Unknown、非遷徙、繁殖 endemic No、**與本種有關的 IBA／KBA 數目為 0**、海拔 0–600 m（偶至 1,500 m）、世代 2.2 年、森林依賴度 **Medium**；生境為低地熱帶濕潤林、沼澤林、廢棄種植園、次生叢林、紅樹林與林間空地，多在林下與陰涼的溪谷地面及下層取食節肢動物、蚯蚓與漿果；威脅為籠鳥貿易（2018 年爪哇 3,000 戶調查估算當地飼養 3,385,689 ± 605,949 隻）與全面性的森林砍伐，亞種 hypoliza、barbouri、opisthochra 可能已在野外滅絕、melanurus 在西貝魯特（Siberut）情況危急；國家表列 **15 個原生國家／地區**（孟加拉、不丹、汶萊、柬埔寨、中國、印度、印尼、寮國、馬來西亞、緬甸、尼泊爾、新加坡、斯里蘭卡、泰國、越南）＋ **美國為引入（夏威夷 O'ahu 與 Kaua'i）**；**分佈敘述明言由印度北部、尼泊爾與華南向南至斯里蘭卡與印尼，香港不在表中**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/047400",
+      "use": "同屬的鵲鴝（047400）頁面，用作對照與比較鳥：第 I 類，本港常見而分佈廣泛的留鳥；19–21 cm；雄鳥上體與胸帶光澤的藍黑、腹白、翼有白帶、尾較長而兩側白，嘴腳黑；雌鳥以灰代替雄鳥的黑、脇帶皮黃；幼鳥有斑駁；鳴聲多變並善模仿，叫聲 'swee-woo' 與下降的 'syoooo'；2 月至 8 月繁殖、每窩 5 蛋、一年最多三窩、會用巢箱；IUCN LC 穩定、7 個亞種。**本種白腰鵲鴝在 avifauna.hkbws.org.hk 未找到獨立物種頁**（species/0400/047450 為 404，同批 0475–0479 已各佔一頁），故本卡的本港狀況以香港鳥類名錄 2024 的第 IIB 類為據。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（白腰鵲鴝；White-Rumped Shama）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Copsychus malabaricus／鶲科 Muscicapidae）；speciesCode whrsha；taxonOrder 28749。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **六軸齊全**：i=2、a=2.8、v=3.4、r=1、c=1.2、o=2.1，故 missingScores 為空、withheldScores 亦為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案：range「印度、尼泊爾、不丹、斯里蘭卡、孟加拉、緬甸、泰國、寮國、越南、馬來半島」、look「俗稱長尾知渣、長尾四喜」、breeding「在樹木稀疏的低地闊葉林築巢」、behavior（台灣籠中逸鳥、都會環境分佈、危害本土物種、清除工作仍在執行）、iucn「無危 LC」、iucnEn「Least Concern (LC)」、length 23–28 cm、weight 28–34 g；picks 為 range、habitat、look、breeding、funFact、behavior；**habitat 與 range 一字不差、funFact 與 look 一字不差**；**沒有 diet、voice、conservation、callouts**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 95.6 mm、尾 121.8 mm、跗蹠 27.0 mm、嘴峯 20.7 mm、體重 29.2 g（尾長佔全長比例極高，與卡面 23–28 cm 相符）。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **483** 項、**第 IIB 類**——由人為引入、在無需再引入下仍維持規律野生繁殖族群的外來種（定義見香港鳥類報告 2014）；Wikipedia 的香港鳥類名錄同樣標為 (I) 引入。**本卡是本批第一種 IIB 類外來種**，卡面因此不寫「原居」而寫引入狀況。",
+    "**沒有找到 HKBWS 獨立物種頁**：species/0400/047450 為 404，同批已確認 0475→047500、0476→047800、0473→047600、0474→047900、0472→047500（舊 numbering 並不按 app id 順序），故 0477 的編號不明；本卡的本港狀況改用名錄分類，辨識與生態改用 BirdLife 與同屬鵲鴝頁面，並在卡上明示資料來源差異。",
+    "辨識要點（成年雄鳥）：全身黑而頭、上體、喉與上胸帶藍黑光澤，腰有一大塊白斑，下胸至腹磚橙栗色，尾極長、上面黑而外側白、常高翹並上下擺動，嘴黑、腳淡粉紅；雌鳥以灰褐代替雄鳥的黑亮、橙栗較淡範圍較小、尾較短，幼鳥更淡並帶斑駁。與同屬鵲鴝（19–21 cm）的最大分別是體型（本種 23–28 cm）、腹色（本種橙栗、鵲鴝純白）與腰的白斑。",
+    "IUCN：**LC（無危）**，BirdLife **2021** 年評估、趨勢 **Decreasing**（Suspected），主因棲地破壞與籠鳥貿易；居民繁殖 EOO 13,900,000 km²、海拔 0–600 m（偶至 1,500 m）、世代 2.2 年、森林依賴度 Medium、IBA／KBA 0 個。BirdLife 指出亞種 hypoliza、barbouri、opisthochra 可能已在野外滅絕、melanurus 在西貝魯特情況危急，2018 年爪哇調查估算當地飼養 3,385,689 ± 605,949 隻——**貿易壓力與香港的引入族群是兩件不同的事**，卡面把兩者分開寫。",
+    "**地圖只填原生國家**：BirdLife 15 個原生國家／地區中新加坡無 110m 幾何、故填 14 個；**美國（夏威夷 O'ahu、Kaua'i）為 Introduced，刻意不填**；香港不在 BirdLife 國家表中亦無獨立幾何，已摺入中國輪廓——因此綠色不代表本種在香港、台灣或夏威夷的出現，這點寫在 note 與卡面說明。",
+    "**兩處 runtime 文案缺陷**（只記錄、不改 runtime）：①`habitat` 與 `range` 一字不差、`funFact` 與 `look` 一字不差，四欄實際只有兩段文字；②`behavior` 整段講**台灣**的籠中逸鳥、都會分佈、危害本土物種與清除工作，放在香港卡上會誤導（香港是第 IIB 類外來種、無系統性清除計劃紀錄），本卡因此沒有採用 behavior 原文，改以名錄分類與 BirdLife 的生態描述書寫。另 `look` 只有「俗稱長尾知渣、長尾四喜」十二字，沒有任何形態描述；`breeding` 只有一句築巢生境；沒有 diet、voice、conservation、callouts。",
+    "runtime 分數六軸齊全（i=2、a=2.8、v=3.4、r=1、c=1.2、o=2.1），故 missingScores 與 withheldScores 皆為空；v=3.4 與 23–28 cm、28–34 g 相符，翼 95.6 mm 亦屬此體型。",
+    "AI 主圖原為 1312×816 橫幅，直接取 816×816 方形（起點 x=496，不補邊）後放大至 1127×1127；第一與第二版分別出現白紙留邊與過於數碼化的問題，最終版以 0476 主圖作風格參照重繪，維持本批水彩田野外觀。比較鳥為同屬的鵲鴝與另一種全黑長尾的黑卷尾，兩張均由本卡主圖以圖生圖生成，非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "withheldScores": {}
+}

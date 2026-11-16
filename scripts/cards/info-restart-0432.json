@@ -1,0 +1,146 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 年評定"
+  },
+  "id": "0432",
+  "name": "棕頭鴉雀",
+  "scientificName": "Suthora webbiana",
+  "illustrationTaxon": "Adult-type Suthora webbiana perched on dwarf bamboo; AI interpretation of the nominate-group races, sex, subspecies and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紅頭穗鶥",
+      "scientificName": "Cyanoderma ruficeps",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣有橙紅的頭頂，但嘴細長而下彎、尾較短而窄、上體橄欖褐、下體灰白；本種嘴短粗、尾長而分級明顯、全身粉褐。"
+    },
+    {
+      "zh": "短尾鴉雀",
+      "scientificName": "Neosuthora davidiana",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "外形極相似但尾極短、看似無尾，頭部偏灰、臉頰淡皮黃；本種尾長而成級、頭橙紅。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.285,
+      0.165,
+      0.405,
+      0.285
+    ],
+    [
+      0.215,
+      0.245,
+      0.325,
+      0.355
+    ],
+    [
+      0.5,
+      0.4,
+      0.64,
+      0.54
+    ],
+    [
+      0.3,
+      0.39,
+      0.44,
+      0.53
+    ]
+  ],
+  "featureLabels": [
+    "橙紅頭頂",
+    "短粗嘴喙",
+    "鏽紅飛羽",
+    "粉褐下體"
+  ],
+  "featureNotes": [
+    "頭頂、額與臉頰為橙紅褐色，與粉褐色的身體明顯分開，是「棕頭」一名的由來，為插圖局部。",
+    "嘴短、厚而略向下彎，基部被羽毛鬚遮住鼻孔，是鴉雀科的典型特徵，為插圖局部。",
+    "飛羽邊緣鏽紅色，在褐色的翼上排成一片暖色，為插圖局部。",
+    "喉、胸至腹部為淡粉褐色（英文名 vinous 即酒渣色），比上體淺，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "KOR",
+      "MNG",
+      "PRK",
+      "RUS",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only: the countries BirdLife lists (China, Mongolia, North Korea, Russia, South Korea, Taiwan, Vietnam), merging BirdLife's separate 'Russia (Asian)' row into Russia, not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. The Hong Kong population is a Cat IIA established, probably ex-captive, population on Tai Mo Shan; Hong Kong is not listed by BirdLife and has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0360/043000",
+      "use": "香港第 IIA 類；11–13 cm；小型而尾長的鳥，身形比鷦鶯圓胖、頭較大而嘴短粗；羽色大致粉褐，頭橙、下體較淡，飛羽鏽紅，其餘上體包括尾為中褐；頭圓、完全沒有眉紋或過眼紋，眼神圓珠狀；叫聲為連串吱喳的聯絡聲，警戒時更急，廣告聲為中高音調的抑揚短句；只限於大帽山約 600 米以上的灌叢草地，尤其矮竹；1971 年薄扶林首次記錄（連同至 1980 年共六筆）被判為籠鳥逸出，1980 年大帽山首次見繁殖對，1998 年前多數年份見多達 12 隻，1999 年起每年均有，2017-11-08 高峰 30 隻，無明顯趨勢；不遷徙，在廣東亦只見於 600 米以上；籠鳥貿易常見；繁殖資料有限：3 月 23 日啣矮竹葉築巢、5 月 26 日及 6 月 7 日餵雛、7 月 1 日見離巢幼鳥；多在矮竹、高草或草叢間成對、家族群或結群活動，吵鬧而不怕人，常站竹莖頂；本港食性只有 1980 年繁殖對啣蟲餵雛的紀錄；分佈於華南及華東（海南除外），伸延至俄羅斯東南、朝鮮及越南北部，共六個亞種；頁記 IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/vinous-throated-parrotbill-suthora-webbiana",
+      "use": "IUCN 2018 LC、趨勢穩定（推測）；成熟個體數量未量化，全球被描述為常見且非常廣泛，意大利有野化族群；各地約 10,000–100,000 對（中國、台灣、朝鮮、俄羅斯，Brazil 2009）；繁殖 EOO 5,480,000 km²；不遷徙；世代長度 4.6 年、森林依賴度低；國家表為中國、蒙古、北韓、俄羅斯（含俄屬亞洲）、南韓、台灣、越南，未列香港；貿易欄記寵物／展示動物為國際性。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（棕頭鴉雀；Vinous-Throated Parrotbill）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Suthora webbiana／鴉雀科 Paradoxornithidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 只有 a=2.8、v=2.4、r=1、o=2.1；i 與 c 完全沒有分數。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；length 11–12.5 cm、weight 8.5–11 g 可用，range 與 habitat 為真內容，look 的中文寫的是「原短尾鴉雀屬（Neosuthora）只含短尾鴉雀一種」屬分類而非野外特徵、diet 英文寫的是尾與嘴的形態、voice／breeding／migration／funFact 四欄共用同一句群體大小的英文、humanRelation 為分類沿革，中文除 look 外全空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "runtime 無本種 AVONET 量度，翼長、嘴峯、尾長、體重皆缺。"
+    }
+  ],
+  "notes": [
+    "HKBWS 043000：香港第 IIA 類，被視為源自籠鳥逸出、現已在大帽山建立的小而似乎穩定的族群；1971 年薄扶林首次記錄至 1980 年共六筆均判為逸出鳥，1980 年大帽山首次見繁殖對，1999 年起每年均有紀錄，2017 年 11 月 8 日高峰 30 隻，整體無明顯趨勢。",
+    "辨識要點：11–13 cm，身形比鷦鶯圓胖、頭大而嘴短粗，羽色大致粉褐而頭橙、下體較淡、飛羽鏽紅、尾長而分級；頭圓、完全無眉紋或過眼紋，配淡灰色虹膜，眼神圓珠狀。卡面四個標籤取頭頂、嘴、飛羽與下體。",
+    "分類：曾置 Paradoxornis、Sinosuthora，現用 Suthora webbiana；HKBWS 頁面標題仍用 Sinosuthora。全球分六個亞種（mantchurica、fulvicauda、suffusa、webbiana、elisabethae 等），香港族群來源不明、可能混合籠鳥血統，亞種無法判定。",
+    "分佈：華南及華東（海南除外）、俄羅斯東南、朝鮮、越南北部，BirdLife 另列蒙古、台灣；在本港僅限大帽山約 600 米以上的灌叢草地與矮竹，是本地分佈最狹窄的陸鳥之一。地圖按 BirdLife 國家表填中國、蒙古、北韓、俄羅斯、南韓、台灣、越南七個。",
+    "IUCN：HKBWS 與 BirdLife 都記 LC、趨勢穩定；BirdLife 2018 年評定，數量未量化但被描述為常見而廣泛，另記意大利有野化族群，與香港的逸出族群情況相似。",
+    "runtime 分數：a=2.8 待查——habitat 英文雖有真內容，但 diet 一欄寫的是尾與嘴的形態、中文全空，缺乏獨立食性支撐；v=2.4 沿用——length 11–12.5 cm 與 HKBWS 11–13 cm 相符（runtime 無 AVONET 翼長，不作體長估算）；r=1 沿用——已是最低值；i、c 完全缺失並列 missingScores；o=2.1 依賴待查與缺失分項（a、i、c），不補算。",
+    "runtime 文案缺陷：中文除 look 外全空；look 的中文其實是「原短尾鴉雀屬只含短尾鴉雀一種」的分類說明、並非野外特徵；diet 英文寫的是尾與嘴的形態；voice、breeding、migration、funFact 四欄共用同一句關於群體大小的英文；humanRelation 英文為分類沿革；picks 只有 look。辨識與本地紀錄一律以 HKBWS 為準。",
+    "世界底圖按 BirdLife 國家表填中國、蒙古、北韓、俄羅斯、南韓、台灣及越南（BirdLife 的「俄屬亞洲」併入俄羅斯），並非全部分佈區、也不是 occurrence polygon；香港雖有第 IIA 類族群，但 BirdLife 未列香港、110m 底圖亦無獨立多邊形，故不填色。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成圓胖而尾長的鴉雀，停於竹莖上，並畫出橙紅頭頂、短粗而帶羽毛鬚的嘴、鏽紅飛羽、粉褐下體、長而分級的尾及淡灰虹膜的圓珠眼；亞種、性別與年齡差異仍待專家核。比較鳥為紅頭穗鶥及短尾鴉雀的 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 英文有真內容但 diet 欄寫的是尾與嘴的形態、中文全空，2.8 分缺乏獨立食性支撐，待查。",
+    "o": "綜合分依賴待查分項（a）及缺失分項（i、c），不補算。"
+  }
+}

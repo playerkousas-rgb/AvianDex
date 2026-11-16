@@ -1,0 +1,153 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0450",
+  "name": "北椋鳥",
+  "scientificName": "Agropsar sturninus",
+  "illustrationTaxon": "Adult male-type Agropsar sturninus (purple rear crown, purple back and pale grey underparts = male). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紫翅椋鳥",
+      "scientificName": "Sturnus vulgaris",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型較大而矮壯、嘴較長，全身深色並密佈淡白端斑、帶紫綠光澤，腰與頭部並非淡色；本種 16–19 cm、尾短，頭淡色而有大黑眼、背紫、腰淡白、肩羽白端成帶。"
+    },
+    {
+      "zh": "絨額鳾",
+      "scientificName": "Sitta frontalis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體整個亮藍綠、前額黑斑、嘴珊瑚紅、黃色虹膜，並以倒懸沿樹幹爬行見稱；本種嘴黑色、虹膜深色、背部紫、腰淡白，正立於枝條上而不沿樹幹上下走。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.245,
+      0.165,
+      0.37,
+      0.29
+    ],
+    [
+      0.395,
+      0.245,
+      0.52,
+      0.37
+    ],
+    [
+      0.325,
+      0.345,
+      0.45,
+      0.47
+    ],
+    [
+      0.395,
+      0.665,
+      0.52,
+      0.79
+    ]
+  ],
+  "featureLabels": [
+    "淡色頭部",
+    "紫色背部",
+    "白色肩斑",
+    "綠灰腳"
+  ],
+  "featureNotes": [
+    "頭與臉淡灰白，配一隻不成比例的大黑眼，是與本港其他小型椋鳥最直接的分別；雌鳥與幼鳥頭頂較褐，為插圖局部。",
+    "雄鳥的下背與腰上為帶光澤的紫色，是「紫背椋鳥」名稱的由來，也是與紫翅椋鳥（全身深色帶白斑）之別，為插圖局部。",
+    "肩羽黑色而末端寬白，在翼上形成一排明顯的白色肩斑，飛行與停棲時都看得到；雌鳥與幼鳥的白斑範圍較小，為插圖局部。",
+    "腳與趾為綠灰色而非紫翅椋鳥的粉紅色，是分辨兩種小型椋鳥的輔助特徵，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "JPN",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "PRK",
+      "RUS",
+      "THA",
+      "VNM",
+      "KOR",
+      "TWN"
+    ],
+    "note": "Partial NATIVE-country overview only: BirdLife's native list adds Hong Kong (China) and Singapore, which have no separate geometry on the 110m base map and are therefore not shaded (Hong Kong is folded into China); Pakistan is listed as origin 'Uncertain' and is left unshaded, as are the vagrant entries (Christmas Island, Norway, Sri Lanka). This is not an occurrence polygon, green does not imply full-country occupancy and the breeding/non-breeding seasons are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0380/045500",
+      "use": "香港第 I 類；秋季過境鳥（常見）、春季罕見，另有數筆冬季紀錄，見於開闊鄉郊；16–19 cm，小型短尾椋鳥，淡色頭部配大黑眼，上體與尾深色、腰淡、肩羽寬白端、翼深；雄鳥後冠有小片紫光澤羽、上背紫光澤、下背與背紫、下體淡灰；繁殖季嘴黑、非繁殖季嘴基淡，腳綠灰；雌鳥與幼鳥頭頂與後頸淡褐、背較深、褐翼褐尾、肩部白斑較少；叫聲與紅嘴椋鳥相近但更飽滿；偏好開闊地但需有樹木停棲，多見於后海灣一帶，其次為塱原，新界以外少見但蒲台島幾乎每年有紀錄，大嶼山（梅窩）與東龍洲亦有數筆；秋季過境為主，極端日期 2015-08-28 與 2013-11-13，多數紀錄集中於八月第三週至十一月第二週、高峰在九月最後一週與十月第一週；2005 年起有少量冬季紀錄（1 月 22 日至 2 月 10 日）；春季約一半年份有紀錄，極端日期 2007-03-27 與 2007-05-21；每年每週總計通常低於 15 隻，最大群為 2003-09-26 塱原至少 50 隻，2002 年 10 月 2–10 日同址最多 40 隻，其他高計數為 2013-09-16 大埔海濱公園 13 隻與 1999-10-18 米埔 12 隻；1977-09-25 米埔附近一群 35 隻為首錄；成群、常為小群，高度樹棲，多在魚塘邊或濕農地的小樹上覓食，常與其他椋鳥共棲但日間多為單一物種群；雜食，見食細葉榕與烏桕果實；單型種，繁殖於蒙古東部、俄羅斯東南部、中國東北與中部及北韓，越冬於東南亞與大巽他群島。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/purple-backed-starling-agropsar-sturninus/details",
+      "use": "BirdLife 以 **Purple-backed Starling** 為英文名；IUCN **2024** LC（分佈極廣、族群未量化、趨勢未知但未達門檻）；成熟個體 Unknown；趨勢 **Unknown**（生境改變的影響難以判斷）；繁殖 EOO 4,430,000 km²、非繁殖 EOO 2,710,000 km²；完全遷徙、非繁殖 endemic；海拔 0–3,100 m；世代 3.3 年；森林依賴度 Low；生境以溫帶草地為**主要**，溫帶林（繁殖）與農地、鄉村花園、都市（非繁殖）為適用；貿易欄記低普遍度、寵物用途（國內自給）；保育行動只有「已劃定保育地點」；國家表把**香港（中國）列為原生**，另有巴基斯坦（來源不確定）與聖誕島、挪威、斯里蘭卡三筆迷鳥；為本種劃定 1 個 IBA。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（北椋鳥；Daurian Starling）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Agropsar sturninus／椋鳥科 Sturnidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=2.3、v=3.3（含 vEst=1）、r=1、c=1.2、o=2.0，missingScores 為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；只有 range、look、breeding 三段中文有內容（look 只寫「深色的披肩和頭頂以及狹窄的翼斑」，breeding 只寫平原田野與樹洞牆縫營巢），habitat、diet、voice、behavior、funFact 中文全空，diet 英文其實是「2006 IUCN Red List of Threatened Species」這種引用字串、humanRelation 英文是「*BirdLife International 2004.」，length 與 weight 為空。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 105.6 mm、尾 51.4 mm、跗蹠 25.4 mm、嘴峯 18.2 mm、體重 49.4 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 045500（頁面編號與 app 的 0450 不同）：香港第 I 類，秋季過境鳥、春季罕見、另有數筆冬季紀錄；16–19 cm，小型短尾椋鳥，淡色頭配大黑眼、背紫、腰淡、肩羽白端成帶、腳綠灰；雄鳥後冠有紫色小斑、下體淡灰，雌鳥與幼鳥較褐、白斑較少。",
+    "本港紀錄：1977-09-25 米埔附近一群 35 隻首錄；秋季極端日期 2015-08-28 與 2013-11-13，高峰在九月最後一週至十月第一週；春季約一半年份有紀錄（2007-03-27 至 2007-05-21）；最大群 2003-09-26 塱原至少 50 隻，2002 年 10 月 2–10 日同址最多 40 隻；多見於后海灣與塱原，蒲台島幾乎每年有紀錄。",
+    "生態：成群、高度樹棲，多在魚塘邊或濕農地小樹上覓食，常與其他椋鳥共棲但日間多為單一物種群；雜食，見食細葉榕與烏桕果實。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife 2024 年評估，趨勢**未知**（成熟個體未量化）；EOO 繁殖 4,430,000 km²、非繁殖 2,710,000 km²、世代 3.3 年、森林依賴度 Low、溫帶草地為主要生境；國家表把香港列為原生，巴基斯坦來源不確定故地圖不填。",
+    "runtime 分數：i=2、r=1、c=1.2 沿用；a=2.3 待查（habitat 與 diet 中文全空、diet 英文只是引用字串、behavior 英文與 habitat 英文同句）；v=3.3 待查（length 與 look 中文皆空，翼長 105.6 mm×0.22≈23.2 cm 高於 HKBWS 的 16–19 cm）；o=2.0 依賴待查分項（a、v）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：只有 range、look、breeding 三段有中文，其餘中文全空；diet 與 humanRelation 的英文是引用字串而非內容，voice 與 funFact 中文缺失；length 與 weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖為方形畫布（原橫幅補邊後裁緊），畫出淡色頭部與大黑眼、後冠紫色小斑、紫色背部、白色肩斑、淡色腰、黑嘴與綠灰腳，站立於塘邊枯枝上；雌鳥與幼鳥（褐頭、白斑較少）及換羽差異仍待專家核。比較鳥沿用 0449 的紫翅椋鳥及 0448 的絨額鳾 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 與 diet 中文全空、diet 英文只是「2006 IUCN Red List」引用字串、behavior 英文與 habitat 英文同句，2.3 分缺乏棲地與食性支撐，待查。",
+    "v": "length 與 look 中文皆為空，翼長 105.6 mm×0.22≈23.2 cm 高於 HKBWS 的 16–19 cm，3.3 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（a、v），不補算。"
+  }
+}

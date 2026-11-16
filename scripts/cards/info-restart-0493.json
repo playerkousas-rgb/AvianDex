@@ -1,0 +1,164 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0493",
+  "name": "黃腹花蜜鳥",
+  "scientificName": "Cinnyris ornatus",
+  "illustrationTaxon": "Adult male Cinnyris ornatus of subspecies C. o. rhizophorae, the form occurring in Hong Kong (tiny sunbird 10–11.4 cm: olive-green upperparts; a variable purplish iridescent forecrown running into the throat and upper chest; a dark maroon band across the lower chest with a broader blackish band beneath it; the rest of the underparts creamy off-white; small yellow pectoral tufts at the shoulder; long, slender, down-curved black bill; underside of the tail feathers tipped white). Females are greenish above with a yellowish supercilium and yellowish underparts and are not shown. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "叉尾太陽鳥",
+      "scientificName": "Aethopyga christinae",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "HKBWS 直接以牠作比較對象：本種**比叉尾太陽鳥略大、嘴更長更粗**。叉尾太陽鳥（本港常見留鳥）雄鳥**頭頂與後頸是金屬綠、喉與上胸鮮紅、腹黃綠、尾中央羽極長而呈叉狀**，全身沒有紫羅蘭色；本種雄鳥**前額到喉胸是紫羅蘭虹彩、下胸有栗紅與黑色的橫帶、腹部近白**，尾短而無延伸的中央羽。雌鳥兩者都偏橄欖綠，但本種**尾羽腹面有白色端斑**。"
+    },
+    {
+      "zh": "朱背啄花鳥",
+      "scientificName": "Dicaeum cruentatum",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同是**市區與林緣常見的極小型食蜜／食果鳥**，常在花叢與槲寄生間活動；朱背啄花鳥**嘴短而粗、身形短圓、尾極短**，雄鳥**頭與喉藍黑、背至腰鮮紅、有白色頰紋**，完全沒有彎長的嘴與虹彩紫羅蘭色。本種**嘴細長而下彎**、身形修長，雄鳥的**紫色前額、栗黑胸帶與近白腹部**是啄花鳥不會有的組合。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.14,
+      0.2,
+      0.38,
+      0.34
+    ],
+    [
+      0.3,
+      0.18,
+      0.46,
+      0.34
+    ],
+    [
+      0.34,
+      0.4,
+      0.52,
+      0.54
+    ],
+    [
+      0.84,
+      0.56,
+      0.98,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "長而下彎嘴",
+    "紫虹彩前額",
+    "栗紅胸帶",
+    "白色尾端"
+  ],
+  "featureNotes": [
+    "**嘴細長而下彎、黑色**，是本種取食花蜜的工具，也是與叉尾太陽鳥比較時的第一個分別——HKBWS 明言本種**嘴比叉尾太陽鳥更長更粗**，為插圖局部。",
+    "**前額有一片紫羅蘭色的虹彩**，並向下延伸至喉與上胸；這片紫色在光線角度改變時會忽明忽暗，是雄鳥最搶眼的特徵，雌鳥與未成齡雄鳥則沒有，為插圖局部。",
+    "上胸以下是**深栗紅色的橫帶**，其下再有一道**更闊的黑褐色帶**，然後才是近白的腹部；這種「紫—栗紅—黑—白」的分層是 *rhizophorae* 亞種雄鳥的特徵，為插圖局部。",
+    "**尾羽腹面有白色端斑**，HKBWS 指出**雌雄皆有**，因此在光線下往往比紫色的喉更常被看到；插圖把尾端畫成白色，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AUS",
+      "BRN",
+      "CHN",
+      "IDN",
+      "IND",
+      "KHM",
+      "LAO",
+      "MMR",
+      "MYS",
+      "PHL",
+      "PNG",
+      "SLB",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife still treats this taxon inside Olive-backed Sunbird (Cinnyris jugularis) and lists 15 native countries/territories — Australia, Brunei, Cambodia, China (mainland), India, Indonesia, Laos, Malaysia, Myanmar, Papua New Guinea, the Philippines, Singapore, the Solomon Islands, Thailand and Vietnam; 14 have 110m geometry and are shaded, while Singapore is described here rather than shaded. Hong Kong is not in BirdLife's table at all. Not an occurrence polygon: a non-migrant of gardens, woodland edge, mangrove and open woodland from Myanmar and south China through Indochina and the Malay Peninsula to the Philippines, the Greater and Lesser Sundas, New Guinea and northeast Australia, inside a single EOO of 22,400,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052300",
+      "use": "香港第 I 類，**罕見但正在增加的訪客**（rare but increasing visitor）。**比叉尾太陽鳥略大、嘴更長更粗**；**雌雄的尾羽腹面都有白色端斑**。成年雄鳥（***C. o. rhizophorae***）：**橄欖綠色上體，前額有不同程度的紫羅蘭色虹彩並延伸至喉與上胸；下胸有一道深栗紅色橫帶，其下再有一道更闊的黑褐色帶；其餘下體為乳白或近白；胸簇黃色**。未成齡雄鳥似雌鳥但**喉部有些黑色、沒有淡色眉紋**。雌鳥：**淡黃色眉紋與下體、綠灰色上體**。聲音：**如一般太陽鳥般多聲**，**許多叫聲與部分鳴唱帶嗡嗡（buzzing）質感，可藉此與叉尾太陽鳥分辨**；雄鳥會**長時間重複一個粗糙、急轉的「tsweet」**，另有**令人聯想到黃眉柳鶯但明顯較低較粗的變體**；**鳴唱基本上是連串重複的樂句，前後句各不相同**。生境：**林緣、疏林與花園**。紀錄史：**2006 年 4 月 13 日柏架山一隻**（原列第 III 類，Reed 2010）；**2016 年 4 月 16–17 日蒲台一隻雄鳥**（Lo and Ho 2018）——因第二次紀錄加上對中國分佈的更佳理解，**由第 III 類改列第 I 類**。分佈與分類：由**緬甸北部經中南半島至中國西南、馬來半島至大巽他與小巽他群島、新幾內亞及鄰近島嶼與澳洲東北部，以及菲律賓**；在中國**常見於雲南南部、廣西南部與海南**，**廣東西南部與香港只有少數紀錄**；**C. o. rhizophorae 分佈於越南北部與中國南部（包括香港）**，另有二十個亞種。IUCN：**Least Concern，種群趨勢穩定**。**注意：本頁在 HKBWS 站內仍以舊名 Olive-backed Sunbird *Cinnyris jugularis* 為題，正文則已用 *C. j. rhizophorae*——即本卡所用的 *C. o. rhizophorae*，屬同一分類單元的更新名稱。**"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/olive-backed-sunbird-cinnyris-jugularis/details",
+      "use": "**BirdLife／IUCN 未拆分本種**：網站上沒有 *Cinnyris ornatus* 的條目（`ornate-sunbird-cinnyris-ornatus` 回 404），評定仍放在 **Olive-backed Sunbird *Cinnyris jugularis*** 之下——本卡照實引用並在 note 說明這項分類差異。IUCN **2024 LC**（準則 N/A）、成熟個體 Unknown、趨勢 **Stable（Suspected）**；**EOO 22,400,000 km²**、**Not a Migrant**、繁殖 endemic No、**IBA／KBA 為「-」**、海拔 **0–1,960 m**、世代 **2.1 年**、**森林依賴度 Low**；生境七項**全部為 Suitable**（耕地、人工林、鄉村花園、紅樹林、熱帶濕潤低地林、熱帶乾燥草地、濕潤灌叢），**沒有 Major**；種群量未量化、被描述為常見（Cheke et al. 2001）；國家表列 **15 個原生國家／地區**（澳洲、汶萊、柬埔寨、中國、印度、印尼、寮國、馬來西亞、緬甸、巴布亞新畿內亞、菲律賓、新加坡、所羅門群島、泰國、越南），**香港不在表中**；**貿易普遍度低（2/7）**，用途為寵物（自給、全國）；**保育地點只在部分範圍劃定**、**沒有列入國際法規**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **532 項 Ornate Sunbird 黃腹花蜜鳥（Cinnyris ornatus），第 I 類**（鄰項 531 朱背啄花鳥、529 純色啄花鳥、530 紅胸啄花鳥，之後為叉尾太陽鳥）。**注意：runtime id 0493 與名錄第 532 項並不一致。**"
+    },
+    {
+      "path": "scripts/cards/hk-master.json",
+      "use": "香港優先編號表確認 0493 = 黃腹花蜜鳥（Cinnyris ornatus），香港類別 **I**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（黃腹花蜜鳥；Ornate Sunbird）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Cinnyris ornatus／**太陽鳥科 Nectariniidae**）——**本批第一張非鶲科的卡**；speciesCode olbsun4；taxonOrder 30179。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "**runtime 完全沒有本種的評分紀錄**（`scores['0493']` 不存在）：i、a、r、c、v、o 六軸全部缺分，故 missingScores 為全部六軸、withheldScores 為空；卡面顯示「綜合評分待查」，雷達圖留空，**不代為估算任何分數**。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "**runtime 也沒有任何卡面文案**（沒有 look、habitat、voice、breeding、migration、conservation、highlights、callouts、etymology），`length` 與 `weight` 皆為空，picks 亦不存在——**本批第一張文案全空的卡**，卡面文字全部來自 HKBWS 與 BirdLife 的公開資料。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "**runtime 沒有 AVONET 測值**（wing／tail／tarsus／bill／mass 皆缺），故無從以翼長核對體長；體長 10–11.4 cm 直接引用 HKBWS 與外部描述。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **532** 項、第 I 類；HKBWS 描述為**罕見但正在增加的訪客**。紀錄只有兩筆：**2006 年 4 月 13 日柏架山一隻**（原被列為第 III 類，Reed 2010）、**2016 年 4 月 16–17 日蒲台一隻雄鳥**（Lo and Ho 2018）；**正因為第二次紀錄與對中國分佈的更佳理解，本種由第 III 類改列第 I 類**。生境為**林緣、疏林與花園**。這是本批第一張**太陽鳥科**的卡，也是第一張「Rare but increasing visitor」這種鳥況類型（與 0485 的一筆紀錄、0487 的新殖民、0488 的擴張都不同）。",
+    "辨識要點：**10–11.4 cm、比叉尾太陽鳥略大、嘴更長更粗**；雄鳥（*C. o. rhizophorae*）**橄欖綠上體、紫羅蘭虹彩前額延伸至喉與上胸、下胸深栗紅橫帶再配更闊的黑褐帶、其餘下體乳白、黃色胸簇**；雌鳥**綠灰上體、淡黃眉紋與下體**；**雌雄的尾羽腹面都有白色端斑**；未成齡雄鳥似雌鳥但喉有黑色、無淡色眉紋。",
+    "聲音：**許多叫聲與部分鳴唱帶嗡嗡質感，是與叉尾太陽鳥分辨的關鍵**；雄鳥會**長時間重複粗糙急轉的「tsweet」**，另有**似黃眉柳鶯但更低更粗的變體**；鳴唱是**連串互不相同的重複樂句**。",
+    "IUCN：**LC（無危）**，趨勢 **Stable（Suspected）**。**分類上必須說清楚**：**BirdLife／IUCN 尚未把 *Cinnyris ornatus* 從 *C. jugularis* 中拆出**（`ornate-sunbird-cinnyris-ornatus` 條目 404），所以本卡的全球評定、EOO 22,400,000 km²、海拔 0–1,960 m、世代 2.1 年、**森林依賴度 Low**、15 個原生國家等數字**全部取自 Olive-backed Sunbird 的條目**，HKBWS 頁面本身亦仍以舊名為題、正文用 *C. j. rhizophorae*——**卡面照實並列，不假裝兩者是同一個 IUCN 條目**。",
+    "**地圖**：BirdLife 15 個原生國家／地區中 **14 個有 110m 幾何並已填色**；**新加坡為原生但有時無幾何，只在 note 說明**；**香港不在 BirdLife 表中**。",
+    "**runtime 資料全空（本批首次）**：`dexScores` 沒有本種紀錄（六軸全缺）、`cardCopy` 沒有任何文案、`measurements` 沒有 AVONET 測值、`length` 與 `weight` 皆為空。因此**卡面六軸全部留白、顯示「綜合評分待查」**，`missingScores` 為 i、a、r、c、v、o 全部六項、`withheldScores` 為空（沒有可核對的分數，不存在「分數與資料衝突」的問題）；**不代為估算、不以體長推算 v**。卡面所有物種文字均取自 HKBWS 與 BirdLife 的公開資料。",
+    "AI 主圖以 0492 紫嘯鶇的方形主圖作風格參照（相同畫風），生成 1024×1024、直接放大至 1127×1127（不裁切、不補邊），按 HKBWS 對 *rhizophorae* 亞種的描述畫出橄欖綠上體、紫羅蘭虹彩前額與喉胸、栗紅＋黑褐胸帶、乳白腹部、黃色胸簇與白色尾端，站在枝上配一朵下垂的紅色花以呼應食蜜習性。比較鳥**叉尾太陽鳥**與**朱背啄花鳥**均為**本輪新生成**（各 1024×1024，直接調整為 816×816），前者是 HKBWS 直接點名的比較對象、後者是同類生境中最常見的極小型鳥，非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "r",
+    "c",
+    "v",
+    "o"
+  ],
+  "withheldScores": {}
+}

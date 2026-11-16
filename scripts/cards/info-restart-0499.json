@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "id": "0499",
+  "name": "綠背姬鶲",
+  "scientificName": "Ficedula elisae",
+  "illustrationTaxon": "Adult male Ficedula elisae (13–13.5 cm: plain olive-green crown, nape and mantle; short yellow supercilium confined to the lores plus a bright yellow orbital ring; bright yellow throat, breast, belly and rump; black tail; dark wing with a broad white patch on the inner wing coverts; broad-based dark bill). Females and sub-adults are olive-headed with yellowish underparts, an olive-brown tail and no white wing patch; most Hong Kong birds are first-winters in autumn and are not shown. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "白眉姬鶲",
+      "scientificName": "Ficedula zanthopygia",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "本港兩者都是姬鶲屬的過境鳥，褐色亞成鳥尤其容易混淆。白眉姬鶲雄鳥**頭、背與尾全黑**、**眉線純白**、**腰鮮黃**；本種雄鳥**上體橄綠**、**眉線是黃色而短、並且有黃色眼圈**、腰與腹面同為黃色。褐色個體的比較更關鍵：白眉姬鶲第一冬鳥**翼上有白斑（大覆羽與三級飛羽）**；**本種褐色個體翼上沒有白斑**，HKBWS 引 Bakewell et al.（2021）列出本種的識別組合——**嘴基部較寬而呈藍灰、鮮明的黃色眼圈、腹部黃而胸部有不明顯斑駁、橄綠背部、綠橄欖色腰、尾與尾上覆羽為橄欖褐（尾基略帶紅）、尾下覆羽短而只伸到尾部約一半**。"
+    },
+    {
+      "zh": "黃眉姬鶲",
+      "scientificName": "Ficedula narcissina",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "本種**以前被視為黃眉姬鶲的一個亞種**，因此兩者的相似程度最高，HKBWS 亦以「黃眉姬鶲－白眉姬鶲複合群」的文獻（Bakewell et al. 2021）來處理牠們的雌鳥與亞成鳥。黃眉姬鶲雄鳥**頭與上背黑色、下背與腰橄欖黃、眉線黃橙而長**、腹面黃色可深至橙黃；本種雄鳥**整個上體都是橄綠、眉線短而限於眼先、眼圈黃色**、尾黑色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.25,
+      0.19,
+      0.4,
+      0.28
+    ],
+    [
+      0.27,
+      0.32,
+      0.42,
+      0.5
+    ],
+    [
+      0.46,
+      0.4,
+      0.63,
+      0.54
+    ],
+    [
+      0.4,
+      0.27,
+      0.58,
+      0.4
+    ]
+  ],
+  "featureLabels": [
+    "黃色眉圈",
+    "黃色腹面",
+    "白色翼斑",
+    "橄綠背部"
+  ],
+  "featureNotes": [
+    "**短而只出現在眼先的黃色眉線**，配合**鮮明的黃色眼圈**，在橄欖綠的頭上形成一圈亮邊；HKBWS 描述成鳥雄鳥有 short yellow supercilium over the lores and yellow orbital ring，並指出**褐色個體同樣有這個黃眼圈**，是辨認亞成鳥時最有用的一點，為插圖局部。",
+    "**喉、胸、腹與腰都是鮮黃色**，與橄綠的上體分成上下兩色；本種褐色個體的腹面依然偏黃、**胸部只有不明顯的斑駁**（不像白眉姬鶲那樣乾淨），HKBWS 把這一點列入褐色個體的識別組合，為插圖局部。",
+    "翅膀內側覆羽上有一塊**寬闊的白斑**，是成鳥雄鳥的標誌；**褐色個體翼上並沒有白斑**，因此這一格的作用正好是「有白斑＝成鳥雄鳥、沒有白斑＝亞成鳥」的分界，為插圖局部。",
+    "**整個上體是樸素的橄欖綠**——由頭頂一路到背部都是同一個色調，沒有黃眉姬鶲那樣的黑色頭與上背，也沒有白眉姬鶲那樣的純黑；這種「通體橄綠」正是本種中文名「綠背」與英文名 Green-backed 的來源，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "MYS",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists just four native countries/territories for this restricted-range species, and all four have 110m geometry and are shaded: China (mainland, breeding — Shanxi, Hebei and Beijing), Malaysia (non-breeding), Thailand (non-breeding) and Vietnam (passage). Hong Kong is not in BirdLife's table even though HKBWS treats the species as a Category I very rare migrant, so no Hong Kong statement is made on the map. Not an occurrence polygon: a full migrant whose world breeding range is confined to eastern China and which winters in southern Thailand and Peninsular Malaysia, inside a breeding EOO of only 378,000 km² and a non-breeding EOO of 200,000 km² — the smallest pair of EOO values in this batch so far."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/050000",
+      "use": "香港第 I 類，**非常罕見的過境鳥，主要在秋季**。**13–13.5 cm**，中型姬鶲。成鳥雄鳥：**眼先之上的短黃色眉線、黃色眼圈、黃色腹面與腰**，**上體橄欖綠、尾黑色**，**翼內側覆羽有大片白斑**。褐色／亞成鳥（依 Bakewell et al. 2021）：**嘴基部深而呈藍灰**、**橄欖色頭上有一圈鮮明黃色眼圈**、**腹面偏黃（常頗亮）而胸部有不明顯斑駁**、**背部橄綠**、**腰綠橄欖**、**尾上覆羽與尾橄欖褐（尾基略帶紅）**、**尾下覆羽短、約只伸到尾部一半**。聲音：秋季遷徙鳥常發**中等偏高、下墜的「weet」**，常夾**短促的沙沙聲**，**該沙沙聲比白眉姬鶲更低沉、更慢**。出現紀錄（**春季為成鳥雄鳥、秋季為第一冬鳥**）：**1996-04-11 大埔滘（本港首筆，Kemp and Melgar 1998）**、**1997-03-29 蠔涌**、**2011-10-21 寶珊道**、**2015-11-10 蒲台**、**2018-10-22 何文田**、**2018-10-28 長洲**、**2019-10-04 何文田**。分類與分佈：**單型種，以前被視為黃眉姬鶲的一個亞種**；**繁殖範圍侷限於中國東部的山西、河北與北京，越冬於泰國南部與馬來半島**，**在中國東半部有過境紀錄**（Liu and Chen 2021）。保育狀況：IUCN **Least Concern**、**趨勢穩定**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/green-backed-flycatcher-ficedula-elisae/details",
+      "use": "IUCN **LC**，最近評估 **2025**（2016 亦 LC，**2012 及以前為 Not Recognised**，因當時仍視為黃眉姬鶲的亞種）；**成熟個體 Unknown**、**趨勢 Unknown**——**樹冠覆蓋在其分佈範圍內十年只減少 1.6%**，官方認為短期內不太可能快速下降，但無從判定方向；**繁殖 endemic 為 Yes**（**本批第一張被標為繁殖特有種的卡**）；**EOO 繁殖只有 378,000 km²、非繁殖 200,000 km²**（**本批至今最小**）；**Full Migrant**、**IBA／KBA 為「-」**、海拔 **800–1,400 m**、世代 **2.7 年**、**森林依賴度 Medium**、生態系統**只有陸域**；生境包括**温帶林（繁殖期 Suitable）**、**山區永久溪流（繁殖期）**、**亞熱帶／熱帶乾燥林**、**紅樹林高潮線上植被**、**潮濕灌叢**、**鄉村花園**與**邊際性農地**；**貿易 low prevalence（七個數據集只有一個）**，用途為**國際寵物／展示動物**與**全國性自給食用**；保護行動：**已識別涵蓋全部分佈範圍的保護地**、**已納入國際法例**，但無復育計劃、系統監測或收成管理；**國家表只有中國大陸、馬來西亞、泰國與越南四項，香港不在其列**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **508 項 綠背姬鶲（Ficedula elisae），第 I 類**；鄰項 507 白眉姬鶲、509 黃眉姬鶲（皆 I 類）。"
+    },
+    {
+      "path": "scripts/cards/hk-master.json",
+      "use": "香港優先編號表確認 0499 = 綠背姬鶲（Ficedula elisae），香港類別 **I**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（綠背姬鶲）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Ficedula elisae／鶲科 Muscicapidae）；speciesCode narfly1；taxonOrder 29233。注意 runtime 的英文名是 **Green-backed Flycatcher**，與 0498 的 Yellow-rumped Flycatcher 同屬不同種。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **缺 a 軸**：只有 i=2、v=2.9（**含 vEst=1**）、r=2.5、c=1.2、o=2.2；故 missingScores 為 `[\"a\"]`、withheldScores 為空；o=2.2 與五個現有軸的平均 2.16 相符，**照實保留、不視為無依據**。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案**殘缺**：`range` 與 `breeding` 是同一句**語法不通、內容也不準**的「綠背姬鶲分佈於繁殖於中國華北地區及東北地區；」（實際繁殖地是山西、河北與北京一帶）；`look` 只有「翼和尾黑色，覆羽和飛羽羽緣有白邊」一句、**沒有腹面與上體顏色**；`etymology` 只是「是屬於鶲科的一種雀鳥，是姬鶲屬的一種」的分類句；`callouts` 兩條只是「嘴和腳黑色」「翼和尾黑色」的重述；**`voice`、`diet`、`habitat` 全缺**；`fieldCopy.look.en` 講的是曾提出的 *beijingnica*（北京姬鶲）名稱與亞成鳥的關係，屬分類沿革而非形態；**`length` 與 `weight` 皆為空**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 75.2 mm、尾 47.4 mm、跗蹠 16.2 mm、嘴峯 14.0 mm、體重 13.1 g；**翼 75.2 mm×0.22≈16.5 cm 遠長於 13–13.5 cm**（v=2.9 含體長估算，只記錄）。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **508** 項、第 I 類；HKBWS 描述為**非常罕見的過境鳥，主要在秋季**。**全部紀錄只有七筆**：**1996-04-11 大埔滘（本港首筆）**、**1997-03-29 蠔涌**、**2011-10-21 寶珊道**、**2015-11-10 蒲台**、**2018-10-22 何文田**、**2018-10-28 長洲**、**2019-10-04 何文田**；**春季兩筆都是成鳥雄鳥，秋季五筆都是第一冬鳥**——這種「春季見成鳥、秋季見亞成鳥」的組合在本批其他卡未出現過。",
+    "辨識要點：**13–13.5 cm**；成鳥雄鳥**上體橄綠、眼先短黃眉＋黃眼圈、腹面與腰鮮黃、尾黑、翼內側覆羽有寬白斑**；**褐色／亞成鳥依 Bakewell et al.（2021）**：**嘴基寬而呈藍灰、明顯黃眼圈、腹面偏黃而胸部有不明顯斑駁、背部橄綠、腰綠橄欖、尾上覆羽與尾橄欖褐（尾基略帶紅）、尾下覆羽短而只伸到尾部約一半**，**翼上沒有白斑**。叫聲：**下墜的「weet」＋短沙沙聲**，**沙沙聲比白眉姬鶲更低沉、更慢**。",
+    "**與 0498 白眉姬鶲互為對照卡**：0498 把**白眉姬鶲**與**黃眉姬鶲**列為比較鳥，本卡則把**白眉姬鶲**與**黃眉姬鶲**同時列為比較鳥——三者的雄鳥可以用「**頭與上體是黑／黑＋橄欖／全橄綠**」與「**眉線是白／黃橙／短黃**」兩組特徵切開，褐色個體則以**翼上有無白斑**與**尾下覆羽長短**分辨。HKBWS 對兩張卡都引用同一份 Bakewell et al.（2021）文獻，這是本批第一次出現三張卡共用同一套辨識架構。",
+    "IUCN：**LC（無危）**，BirdLife **2025** 評估（2016 亦 LC，**2012 及以前為 Not Recognised**）；**成熟個體 Unknown**、**趨勢 Unknown**——**本批第三張趨勢為 Unknown 的卡**（0495 與 0497 亦為 Unknown），理由是**分佈範圍內樹冠覆蓋十年只減少 1.6%**、官方認為短期內不太可能快速下降；**繁殖 endemic 為 Yes**，**本批第一張繁殖特有種**；**EOO 繁殖 378,000 km²、非繁殖 200,000 km²，兩者都是本批至今最小**；**Full Migrant**、**IBA／KBA 為「-」**、海拔 **800–1,400 m**、世代 2.7 年、**森林依賴度 Medium**；生境包括**温帶林與山區永久溪流（繁殖期）**、乾燥林、紅樹林、灌叢、鄉村花園與**邊際性農地**；**貿易 low prevalence（七個數據集只有一個）**。",
+    "**地圖**：BirdLife **只有四個原生國家（中國大陸、馬來西亞、泰國、越南），全部有 110m 幾何，故填 4 個形狀**——**本批形狀數最少的一張**；**香港不在 BirdLife 表中**（與 0498 相反，0498 明列香港為原生過境），故 note 不作香港的填色聲明；本種無迷鳥國家。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：**`dexScores` 完全沒有 a 軸**（缺一軸而 o 仍存在，o=2.2 與五軸平均 2.16 相符，故保留 o 不列 withheld），**卡面因此顯示「個體魅力待查」與「待查非零分」**；`range` 與 `breeding` 同一句殘句、`look` 缺腹面與上體、`etymology` 只是分類句、`callouts` 重述、**`voice`／`diet`／`habitat` 全缺**、`length` 與 `weight` 為空。**v=2.9 沿用**（翼 75.2 mm×0.22≈16.5 cm 遠長於 13–13.5 cm，只記錄不改動）。",
+    "AI 主圖**不帶風格參照**生成（0497、0498 的經驗顯示帶參照會被照抄），改以硬性羽色規格描述，畫出橄欖綠上體、短黃眉＋黃眼圈、鮮黃腹面與腰、黑尾、翼內側白斑，站在苔蘚枝條上；成品為 1408×768 橫幅，**取中央 768 平方裁切後放大至 1127×1127**。比較鳥沿用已生成的方形圖：**白眉姬鶲**（0498 主圖）與**黃眉姬鶲**（0498 的比較鳥圖，本輪直接沿用，非另行生成），非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "missingScores": [
+    "a"
+  ],
+  "withheldScores": {}
+}

@@ -1,0 +1,158 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0492",
+  "name": "紫嘯鶇",
+  "scientificName": "Myophonus caeruleus",
+  "illustrationTaxon": "Adult Myophonus caeruleus (large, robust, very thrush-like chat 29–35 cm with an upright stance and a habit of fanning the tail: entire plumage deep indigo blue spangled with shining pale blue spots on crown, throat, breast and mantle; bill and legs black; iris dark brown; sexes similar). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "烏鶇",
+      "scientificName": "Turdus mandarinus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "HKBWS 指出本種在陰暗林下或清晨黃昏光線不足時**往往看似全黑**，最易被誤認為烏鶇。分別在於本種**站姿直立、尾較短**，全身是**深藍色而帶閃亮的淡藍斑點**，**嘴與腳皆黑色**；烏鶇**體態橫向、尾較長**，雄鳥**全身烏黑而有鮮黃色的嘴與眼圈**，兩者一在溪石上、一在草地與公園地面上活動，叫聲亦完全不同（本種是長而刺耳的下滑口哨）。"
+    },
+    {
+      "zh": "白尾藍地鴝",
+      "scientificName": "Myiomela leucura",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是**深藍近黑的林下鳥**，同樣喜歡濃密下層植被，本港亦同樣罕見而多在林下被瞥見；白尾藍地鴝**體型小得多（17–19 cm）**、**前額與肩有明顯的淡藍色塊**、**尾基有大片醒目的白斑（展尾時最明顯）**、全身**沒有淡藍斑點**。本種**大而粗壯（29–35 cm）**、全身佈滿**閃亮淡藍斑點**，尾亦沒有白色。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.24,
+      0.16,
+      0.42,
+      0.34
+    ],
+    [
+      0.3,
+      0.32,
+      0.5,
+      0.52
+    ],
+    [
+      0.62,
+      0.16,
+      0.95,
+      0.42
+    ],
+    [
+      0.3,
+      0.58,
+      0.55,
+      0.86
+    ]
+  ],
+  "featureLabels": [
+    "淡藍斑點",
+    "深藍通體",
+    "扇狀尾羽",
+    "黑色腳爪"
+  ],
+  "featureNotes": [
+    "**頭、喉、胸與背都散佈著閃亮的淡藍色斑點**，這是本種在良好光線下最華麗的特徵；HKBWS 特別提醒弱光下這些斑點會消失、整隻鳥看起來全黑，因此斑點能否看見往往取決於光線，為插圖局部。",
+    "除斑點以外，**全身都是深紫藍（indigo）**，愈往腹部與翼面愈暗；這種通體的深藍在本港鳥種中只有體型小得多的白尾藍地鴝與藍歌鴝近似，為插圖局部。",
+    "本種**有展開尾羽的習性**（HKBWS 形容為 characteristic habit of fanning its tail），求偶、警戒或落地時都會把尾扇開；插圖畫出微微扇開的長尾，為插圖局部。",
+    "**嘴與腳都是黑色**，虹膜深褐；粗壯的黑色腳爪適合在濕滑的溪石上跳躍行走，本種常在林中有石的水道旁活動，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "IDN",
+      "KAZ",
+      "KGZ",
+      "KHM",
+      "LAO",
+      "MMR",
+      "MYS",
+      "NPL",
+      "PAK",
+      "THA",
+      "TJK",
+      "TKM",
+      "UZB",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 19 native countries/territories with 110m geometry — Afghanistan, Bangladesh, Bhutan, China (mainland), India, Indonesia, Kazakhstan, Kyrgyzstan, Cambodia, Laos, Myanmar, Malaysia, Nepal, Pakistan, Thailand, Tajikistan, Turkmenistan, Uzbekistan and Vietnam — all shaded here. Iran is listed only as a vagrant and is not shaded; Hong Kong is not in BirdLife's table at all. Not an occurrence polygon: a mainly resident, altitudinal migrant of torrent streams and moist forest from the Hindu Kush and Himalaya east through southwest, central and eastern China to Indochina, the Malay Peninsula, Sumatra, Java and Borneo, inside a breeding EOO of 21,800,000 km² and a non-breeding EOO of 18,600,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/049800",
+      "use": "香港第 I 類，**常見而廣泛分佈的留鳥，見於林地與封閉樹冠灌叢，常近溪流**。**29–35 cm**；**大型粗壯、非常像鶇的鴝，站姿直立、有扇尾的習性**；**全身深藍，頭、喉、胸與背有閃亮的淡藍斑點**；**嘴與腳黑色、虹膜深褐**；**弱光下看似全黑，易與烏鶇混淆——此時要看直立站姿、較短的尾與長而刺耳的口哨聲**。聲音：**最具特色的是開始時下滑、具穿透力的口哨，多在黎明前或黃昏發出，飛行時可急促重複**；**黎明的鳴唱是音高變化很大的悅耳集錦**；日間另有**含低沉粗澀、近乎空洞摩擦音的鳴唱變體（功能未明）**。分佈：**林地與封閉樹冠灌叢，常近溪流，各海拔皆有**；Carey 等（2001）認為**港島是根據地**，但 **2016–19 地圖集顯示新界大部分地區與多數島嶼同樣普遍、密度相若**；**新界西北因生境有限而大致缺席**，東北則呈斑塊狀；**亦常在市區出現**（港島有蔭的溪流多近已發展區；九龍公園、葵涌公園與何文田配水庫提供合適生境）。狀況穩定：**Swinhoe（1861）、Kershaw（1904）、Vaughan and Jones（1913）與 Herklots（1967）都認為在合適生境中常見**；**繁殖地圖集 1993–96 為 18.9%、2016–19 為 18.5%；冬季地圖集 2001–05 為 20.4%、2016–19 為 22.0%**——分佈格局大致不變、或略更廣泛。出現：**留鳥，無規律移動證據**；Chalmers（1986）認為冬季較夏季分佈更廣更低，Carey 等（2001）視為觀察偏差，但地圖集數據略有支持；**米埔等不常錄得的地點偶有紀錄，市區公園亦有出現，說明有短距離移動**；本港範圍與深圳相連，應有跨邊界擴散。繁殖：**3 月中開始築巢、4 月中可見離巢幼鳥**；**通常每年兩窩（第二窩 6 月底至 7 月初離巢），亦可能三窩**；**大型杯狀巢以苔蘚與細根築成、內襯蕨類或葉**；**每窩通常四枚（偶爾二至三枚）藍綠色帶褐斑的蛋**；巢位於樹上或更常在岩壁，並**樂於利用人工位置：橋下、冷氣機外機、樓宇外牆簷、巢箱與廢棄建築內部（如大帽山頂的廢棄抽水站）**，同一巢位可重用多年。行為與食性：在林中溪流**多單獨而隱蔽，常在石上跳躍或貼水面低飛**，但鳴唱時會站在大石或低枝等顯眼處、並不特別怕人；**在市區更不怕人，清晨在草坪覓食，亦會利用夜間燈光捕食被燈吸引的昆蟲、甚至進入車房**；Barretto 與 Barretto（2020）記錄**取食 *Pavetta hongkongensis* 與 *Sterculia lanceolata* 的果實**；Vaughan and Jones（1913）認為本種食蟲，**會把大型蟬在石上砸碎**，本港近期亦記錄**用石作砧砸碎蝸牛殼**；**Leven（2000）把牠列為食蟲—食果鳥，93% 糞便含無脊椎動物、50% 含果實**，無脊椎以等翅目與鞘翅目為主，多在**地面或落葉層**捕食。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/blue-whistling-thrush-myophonus-caeruleus/details",
+      "use": "IUCN **2024 LC**（準則 N/A）；成熟個體 Unknown、趨勢 **Decreasing**——範圍內三個世代樹冠減少 **4.6%**，暫定懷疑下降 **1–19%**（最佳估計 <5%）；**EOO 繁殖 21,800,000 km²、非繁殖 18,600,000 km²**、**Altitudinal Migrant（本批第一張不是留鳥亦不是全遷徙鳥的卡）**、**繁殖 endemic No**、**IBA／KBA 為「-」**、海拔 **1,000–4,000 m**、**世代 4.3 年（本批最長）**、**森林依賴度 High（本批暫時唯一 High）**；生態系統同時列 **Freshwater 與 Terrestrial**；生境六項——**溫帶林與熱帶濕潤山地林為 Major**，低地林（非繁殖）、紅樹林（非繁殖）、永久河溪與鄉村花園為 Suitable；種群量未量化但被描述為**常見而稀疏**（Clement and Hathway 2000），中國約 100–100,000 繁殖對、台灣約 100–10,000 繁殖對（Brazil 2009）；**保育地點已在全範圍劃定**，但沒有系統監測、沒有復育計劃、沒有國際貿易管制；**貿易普遍度低（1/7）**，用途為食物與寵物（皆自給、全國）；國家表列 **19 個原生國家／地區加伊朗一個迷鳥紀錄**，**香港不在表中**。"
+    },
+    {
+      "path": "scripts/cards/hk-master.json",
+      "use": "香港優先編號表：0492 = 紫嘯鶇（Myophonus caeruleus），香港類別 **I**。香港鳥類名錄把紫嘯鶇列於第 **502** 項（鄰項 500 紅喉歌鴝、501 灰背燕尾、503 白喉短翅鶇），**runtime id 0492 與名錄序號 502 並不一致**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（紫嘯鶇；Blue Whistling-Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Myophonus caeruleus／鶲科 Muscicapidae）；speciesCode blwthr1；taxonOrder 29160。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **六軸齊全**：i=2、a=3.8、v=3.7、r=2.5、c=1.2、o=2.6（無 vEst），故 missingScores 與 withheldScores 皆為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案**中等可用**：`look`（全身深紫藍、眼鼻間與腹部及尾下與羽端有閃亮斑點——**與 HKBWS 的「頭、喉、胸與背有斑點」略有出入，以 HKBWS 為準**）、`voice`（黎明黃昏像人吹口哨的巨大叫聲）、`diet`（地上覓食、沿溪找小蛇與螃蟹）、`funFact`（別名石青、烏精、鳴雞、鐵老鴉等）可用；**`breeding` 寫的其實是黃昏鳴唱而非繁殖**、**`etymology` 中文殘缺（「正式被命名的種類分佈於中國中部和東部，嘴部為黑色」）**、`habitat` 與 `migration`、`conservation` 的中文皆為空；**本種的 length（29–35 cm）與 weight（136–231 g）是本批第一次兩者都有值**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 數值與 runtime 的 29–35 cm／136–231 g 相符，支持 v=3.7 這個偏高的體型分。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄第 **502** 項、第 I 類；HKBWS 描述為**常見而廣泛分佈的留鳥，見於林地與封閉樹冠灌叢，常近溪流**——**本批第一張「常見留鳥」**（前九張多為冬候鳥、過境鳥或迷鳥）。**Swinhoe（1861）、Kershaw（1904）、Vaughan and Jones（1913）與 Herklots（1967）都認為常見**，**四份地圖集**亦顯示變動極小：繁殖地圖集 **18.9%（1993–96）→ 18.5%（2016–19）**、冬季地圖集 **20.4%（2001–05）→ 22.0%（2016–19）**，或反映略更廣泛。**港島曾被視為根據地（Carey 等 2001）**，但 2016–19 地圖集顯示**新界大部分地區與多數島嶼同樣普遍**；**新界西北大致缺席、東北呈斑塊狀**；**亦常見於市區**（港島有蔭溪流、九龍公園、葵涌公園、何文田配水庫）。",
+    "辨識要點：**29–35 cm、大型粗壯如鶇、站姿直立、有扇尾習性**；**全身深藍、頭喉胸背有閃亮淡藍斑點、嘴腳黑色、虹膜深褐**；**弱光下看似全黑，靠直立站姿、短尾與長而刺耳的下滑口哨與烏鶇分辨**。叫聲是**黎明前／黃昏的下滑穿透性口哨**，黎明鳴唱是音高變化大的集錦；日間另有**含粗澀摩擦音的鳴唱變體，功能未明**。",
+    "繁殖與行為（本卡內容最豐富的一張）：**3 月中築巢、4 月中見離巢幼鳥，通常兩窩、可達三窩**；**大型杯狀巢以苔蘚細根築成、內襯蕨葉，每窩通常四枚藍綠色帶褐斑的蛋**；巢位除樹上與岩壁外，**常用橋下、冷氣機外機、樓宇簷邊、巢箱與廢棄建築（大帽山廢棄抽水站）**，可重用多年。食性：**Leven（2000）列為食蟲—食果鳥（93% 糞便含無脊椎、50% 含果實）**，會**在石上砸碎蟬與蝸牛殼**，亦記錄取食 *Pavetta hongkongensis* 與 *Sterculia lanceolata* 果實；**市區個體清晨在草坪覓食，並利用夜間燈光捕蟲、進入車房**。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 評估；趨勢 **Decreasing**（**非** Suspected，三個世代樹冠減 **4.6%**、下降 1–19%、最佳估計 <5%）。**EOO 繁殖 21,800,000 km²、非繁殖 18,600,000 km²**；**Altitudinal Migrant**——**本批第一張既非留鳥亦非全遷徙鳥**，對應 HKBWS 的「留鳥、無規律移動證據、或有短距離移動」；**世代 4.3 年（本批最長）**、**森林依賴度 High（本批唯一）**、**生態系統同時列淡水與陸域**；**IBA／KBA 為「-」**，但**保育地點已在全範圍劃定**；貿易普遍度低（1/7）。",
+    "**地圖**：BirdLife 19 個原生國家全部有 110m 幾何，故填 **19 個形狀**；**伊朗僅為迷鳥，不填**；**香港不在 BirdLife 表中**。",
+    "runtime 資料說明（只記錄、不改 runtime）：六軸齊全（i2 / a3.8 / v3.7 / r2.5 / c1.2 / o2.6），卡面綜合分 **2.6**；**v=3.7 是本批最高的體型分，並有 runtime 自身的 length 29–35 cm 與 weight 136–231 g 支持**（**本批第一次兩者都有值**）；**a=3.8 有 `look` 支撐**，但 `look` 說「斑點在眼鼻間、腹部、尾下與羽端」，HKBWS 則說「頭、喉、胸與背」，**卡面以 HKBWS 為準並在 sources 註明差異**。`breeding` 寫的是黃昏鳴唱、`etymology` 中文殘缺、`habitat`／`migration`／`conservation` 中文為空。",
+    "AI 主圖以 0491 藍喉歌鴝的方形主圖作風格參照（同科、同一畫風），生成 1024×1024、直接放大至 1127×1127（不裁切、不補邊），畫出深藍帶淡藍斑點、黑嘴黑腳、直立而微微扇尾的大型個體，站在溪畔濕苔石上以呼應其近溪習性。比較鳥**烏鶇**與**白尾藍地鴝**均為**本輪新生成**（各 1024×1024，直接調整為 816×816），分別對應 HKBWS 指出的「弱光下看似全黑」與「同樣深藍的林下鳥」，非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

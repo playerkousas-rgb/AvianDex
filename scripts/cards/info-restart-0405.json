@@ -1,0 +1,148 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：HKBWS 2023 記趨勢上升"
+  },
+  "id": "0405",
+  "name": "嘰喳柳鶯",
+  "scientificName": "Phylloscopus collybita",
+  "illustrationTaxon": "Adult-type Phylloscopus collybita on a twig; AI interpretation, sex, age and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "歐柳鶯",
+      "scientificName": "Phylloscopus trochilus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "初級飛羽較長（約等於外露三級飛羽）、腳粉褐、翼上較多淡色調；鳴聲為下降哨音而非「chiff-chaff」。"
+    },
+    {
+      "zh": "褐柳鶯",
+      "scientificName": "Phylloscopus fuscatus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "嘴較細、腳色較深但翼上無綠色羽緣，眉紋較長較白，嘴基部較淡。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.245,
+      0.305,
+      0.35,
+      0.41
+    ],
+    [
+      0.3,
+      0.27,
+      0.47,
+      0.44
+    ],
+    [
+      0.46,
+      0.36,
+      0.675,
+      0.575
+    ],
+    [
+      0.36,
+      0.545,
+      0.575,
+      0.76
+    ]
+  ],
+  "featureLabels": [
+    "全黑嘴",
+    "淡黃眉斑",
+    "翼羽淡邊",
+    "深色腳"
+  ],
+  "featureNotes": [
+    "上下嘴均為深色的細嘴，為插圖局部。",
+    "淡黃色眉斑與深色眼線，頭部花紋較淡，為插圖局部。",
+    "翼上及飛羽的淡色羽緣，秋季新羽或有極淡翼斑，為插圖局部。",
+    "深褐至黑色的腳與腳趾，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "GBR",
+      "FRA",
+      "DEU",
+      "POL",
+      "ITA",
+      "ESP",
+      "SWE",
+      "RUS",
+      "KAZ",
+      "CHN",
+      "MNG",
+      "MAR",
+      "DZA",
+      "EGY",
+      "ISR",
+      "IND"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering countries are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/038700",
+      "use": "香港第 I 類稀少至罕見冬候及過境、11–12 cm、全黑嘴腳、翼具綠色羽緣、初級飛羽短、叫聲下降「syoo」、繁殖由歐洲至貝加爾湖（含北哈薩克、新疆、蒙古西北）、冬季至北非及中東至印度次大陸、IUCN 全球 LC 趨勢上升。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.8、v=2.5、r=4.8、c=1.2、o=2.7；無 vEst 旗標。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；habitat 欄實為北方亞種 tristis 分類說明，diet／etymology／highlights 多處截句，length 為 12.5 cm。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 58.8 mm；未作體長換算。"
+    }
+  ],
+  "notes": [
+    "HKBWS：11–12 cm，香港屬第 I 類，稀少至罕見冬候及過境，多在校園式開闊灌叢及米埔一帶，記錄少於 20 筆，最早 1986 年 3 月；嘴及腳全黑、翼具綠色羽緣、初級飛羽短、頭部花紋較淡，秋季新羽或有極淡翼斑；叫聲為下降「syoo」。全球 LC、趨勢上升（HKBWS 2023）。",
+    "cardCopy 問題：habitat 欄被北方亞種 tristis 的分類說明佔用，實際上沒有棲地描述；diet 截句（「尤其是 的幼蟲」）、etymology 截句（「重複的 鳴唱聲」）、highlights 重複截句。故適應分及研究分顯示待查；i=2、v=2.5、c=1.2 沿用 runtime，o 依賴待查分項而不補算。",
+    "length 為 12.5 cm，較 HKBWS 11–12 cm 略大；西方族群的 tristis 亞種體型偏大，惟未獨立核實，v 仍沿用 runtime 而記錄此差異，不作補值。",
+    "世界底圖按 HKBWS 所述繁殖區（英、法、德、波、意、西、瑞典、俄、哈薩克、中國、蒙古）及越冬區（摩洛哥、阿爾及利亞、埃及、以色列、印度）選取部分國家，繁殖與越冬未分色；綠色非全境、非完整分佈。",
+    "AI 主圖沿用 0403 已目視的嘰喳柳鶯插圖（同一張素材），全黑嘴腳、淡黃眉斑、翼羽淡邊符合描述；但初級飛羽長度、秋季極淡翼斑及 tristis 亞種灰褐色調未核。歐柳鶯及褐柳鶯對照圖重用已目視版本，非等比例，均為 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 欄為亞種分類說明而非棲地描述，適應分待查、不補值。",
+    "r": "食性、詞源及要點多處截句，研究分待查、不補值。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}

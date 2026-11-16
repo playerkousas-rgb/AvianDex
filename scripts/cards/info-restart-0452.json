@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "id": "0452",
+  "name": "灰頭椋鳥",
+  "scientificName": "Sturnia malabarica",
+  "illustrationTaxon": "Adult Sturnia malabarica nemoricola (the eastern, pale-bellied subspecies recorded in Hong Kong). AI interpretation, sex, age and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "栗頰椋鳥",
+      "scientificName": "Agropsar philippensis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是小型短尾椋鳥，但雄鳥眼後有栗色斑、背部紫、飛羽帶綠光、翼有白帶，嘴全黑而短；本種頭部銀灰、背部淡灰褐、嘴藍而尖端大片鮮黃、尾與尾下覆羽栗色，兩者嘴色與背部顏色完全不同。"
+    },
+    {
+      "zh": "北椋鳥",
+      "scientificName": "Agropsar sturninus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "頭淡灰、眼大、腰淡白，但雄鳥後冠與下背帶紫、肩羽寬白端成白帶、嘴全黑；本種背部淡灰褐而無紫色、尾羽末端與尾下覆羽栗色、嘴藍底配大片黃尖。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.695,
+      0.145,
+      0.82,
+      0.27
+    ],
+    [
+      0.815,
+      0.155,
+      0.94,
+      0.28
+    ],
+    [
+      0.045,
+      0.425,
+      0.17,
+      0.55
+    ],
+    [
+      0.565,
+      0.395,
+      0.69,
+      0.52
+    ]
+  ],
+  "featureLabels": [
+    "灰白頭部",
+    "黃色嘴尖",
+    "栗色尾羽",
+    "淡黃下體"
+  ],
+  "featureNotes": [
+    "頭、後頸與喉為銀灰色，配白色虹膜，整體給人一種「淡色椋鳥」的印象，與深色的紫翅椋鳥成強烈對比，為插圖局部。",
+    "嘴基部藍灰、尖端大片鮮黃，這種雙色嘴是本種最特別的辨識點，插圖的成鳥即為此配色，為插圖局部。",
+    "尾羽末端與外側尾羽帶濃栗色（英文名 Chestnut-tailed Starling 的由來），在飛行與停棲時都看得到；本港出現的 nemoricola 亞種下體淡黃，與印度的指名亞種（下體灰）不同，為插圖局部。",
+    "本港亞種 nemoricola 的下體為淡黃褐色而非純白或灰色，胸腹與脇都是均勻的淡黃，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "PAK",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only: BirdLife's native list is Bangladesh, Bhutan, Cambodia, China, India, Laos, Myanmar, Nepal, Pakistan, Thailand and Vietnam, plus Hong Kong and Sri Lanka as VAGRANT — the two vagrant entries are deliberately left unshaded, and Hong Kong has no separate geometry on the 110m base map in any case (Kowloon's birds are of ex-captive origin). Taiwan, where the species is introduced, is not shaded. Not an occurrence polygon: green does not imply full-country occupancy and the seasons are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0380/045800",
+      "use": "香港第 I 類；極罕見的冬候鳥（開闊鄉郊），另有一個居於九龍市區的小型野化族群；18.5–20.5 cm，小型淡色椋鳥，翼端深色、尾羽末端與尾下覆羽兩側栗色，嘴藍色而尖端大片黃；本港自然出現的應為 _S. m. nemoricola_ 亞種，下體淡黃；叫聲為乾澀的吱喳聲；偏好開闊疏林，與其他椋鳥一樣避開郁閉森林與山區；自然來源紀錄集中於新界西北與離島；九龍公園、九龍城公園與九龍寨城公園有不定期的野化族群紀錄；自然來源紀錄：1993-01-22 至 02-05 尖鼻咀兩隻（Tyzzer & Cooper 1994）、1995-01-12 至 02-26 米埔三次最多兩隻、2004-03-17 梅窩一隻、2007-01-20 南丫島一隻；另有一對至少 1994-05-15 至 1996-09-05 居於九龍公園，1995-02-16 維多利亞公園一隻，2001-11-04 起再現、九龍公園最多 12 隻至 2017-08-25，九龍寨城公園 2019-12-22 至 24 最多十隻、九龍仔公園 2020-05-16 至 06-22 兩隻，均相信源自逃逸鳥，而 2011-07-01 米埔與 07-17 南生圍各一隻被視為同一隻、不列作自然來源；樹棲，主要繁殖區多為小群，九龍以外多為單隻；相信雜食但本港食性資料稀少；繁殖：1994–96 每年見鳥進出樹洞，唯一見到幼鳥為 1994-07-02 兩隻，其後仍有築巢行為，4 月下旬見進出樹洞、5 月見築巢；繁殖區自印度東北部向東至緬甸、泰國北與西部、中南半島其餘地區與中國西南；非繁殖期見於泰國其餘地區與柬埔寨；已引入台灣；兩個亞種，本港屬 nemoricola。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chestnut-tailed-starling-sturnia-malabarica/details",
+      "use": "IUCN **2025** LC（分佈「extremely large」、族群未量化、趨勢未知但未達門檻）；成熟個體 Unknown；趨勢 **Unknown**（沒有已發表的趨勢數據）；繁殖 EOO 9,770,000 km²、非繁殖 EOO 8,720,000 km²；不遷徙、非繁殖 endemic；海拔 0–3,050 m；世代 3.1 年；森林依賴度 Low；生境為乾燥亞熱帶／熱帶林、乾燥稀樹草原與人工林；用途為食用與寵物（皆國內自給）；36 個 IBA；國家表把**香港（中國）列為迷鳥**、斯里蘭卡同為迷鳥；台灣的引入族群未列入國家表。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（灰頭椋鳥；Chestnut-Tailed Starling）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Sturnia malabarica／椋鳥科 Sturnidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=5.0、v=3.1（沒有 vEst 標記）、r=1、c=1.2、o=2.5，missingScores 為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；range、look、funFact、breeding、behavior 有中文，但 look 與 funFact 都是「又名栗尾椋鳥，為椋鳥科亞洲椋鳥屬的鳥類」這種分類句，breeding 是分佈句、behavior 講的是台灣外來種；habitat、diet、voice、migration、conservation、etymology 中文全空；length 為 20 cm（與 HKBWS 18.5–20.5 相符），weight 為空；callouts 為「頭（在台灣為外來種）」與「尾（又名栗尾椋鳥）」，都不是外型描述。iucn 欄「無危 LC」與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 100.9 mm、尾 59.2 mm、跗蹠 24.4 mm、嘴峯 21.4 mm、體重 39.6 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 045800（頁面編號與 app 的 0452 不同，路徑為 `0380/`）：香港第 I 類，極罕見冬候鳥，另有九龍市區的野化族群；18.5–20.5 cm，頭與後頸銀灰、翼端深色、尾羽末端與尾下覆羽兩側栗色、嘴藍底配大片黃尖、白色虹膜；本港亞種 nemoricola 下體淡黃。",
+    "本港紀錄：自然來源者多為冬季 — 1993-01-22 尖鼻咀兩隻、1995-01-12 米埔最多兩隻、2004-03-17 梅窩一隻、2007-01-20 南丫島一隻；九龍公園一對 1994-05-15 至 1996-09-05、最多 12 隻至 2017-08-25，九龍寨城公園 2019-12-22 至 24 最多十隻，九龍仔公園 2020-05-16 至 06-22 兩隻，均相信源自逃逸鳥。",
+    "繁殖：1994–96 每年見鳥進出樹洞，唯一幼鳥紀錄為 1994-07-02 兩隻；4 月下旬進出樹洞、5 月築巢。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife 2025 年評估，趨勢**未知**（沒有趨勢數據）；EOO 繁殖 9,770,000 km²、非繁殖 8,720,000 km²、世代 3.1 年、森林依賴度 Low、36 個 IBA；國家表把香港列為**迷鳥**，故地圖只填原生國家，台灣（引入）亦不填色。",
+    "runtime 分數：i=2、r=1、c=1.2 沿用；v=3.1 待查——length 欄雖為 20 cm（與 HKBWS 相符），但 look 中文只是分類句、翼長 100.9 mm×0.22≈22.2 cm 高於 18.5–20.5 cm 上限；a=5.0 待查——habitat 與 diet 中文全空，最高分沒有棲地與食性支撐；o=2.5 依賴待查分項（a、v）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：look、funFact、breeding、behavior 中文都是分類、分佈或台灣外來種的句子而不是外型與習性，habitat、diet、voice、migration、conservation、etymology 中文全空；callouts 的「頭／尾」內容也不是外型描述。辨識與本地紀錄一律以 HKBWS 為準。",
+    "AI 主圖為方形畫布（原橫幅補邊後裁緊），畫出銀灰頭部與白色虹膜、藍底黃尖的嘴、淡灰褐上體配深色翼端、淡黃下體與栗色尾羽，站於木棉枝上呼應 HKBWS 所述河谷木棉與榕樹生境；指名亞種（下體灰）與雌雄差異仍待專家核。比較鳥沿用 0451 的栗頰椋鳥及 0450 的北椋鳥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 與 diet 中文全空，a=5.0（量尺最高）缺乏棲地與食性支撐，待查。",
+    "v": "look 中文只是分類句，翼長 100.9 mm×0.22≈22.2 cm 高於 HKBWS 的 18.5–20.5 cm（length 欄 20 cm 雖相符亦不足以單獨支撐），3.1 分待查。",
+    "o": "綜合分依賴待查分項（a、v），不補算。"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：趨勢記下降"
+  },
+  "id": "0437",
+  "name": "紅頭穗鶥",
+  "scientificName": "Cyanoderma ruficeps",
+  "illustrationTaxon": "Adult-type Cyanoderma ruficeps (presumed davidi, the taxon in Hong Kong) among leaves; AI interpretation, subspecies, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "棕頭鴉雀",
+      "scientificName": "Suthora webbiana",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "嘴短粗而呈淡灰、身體粉褐、頭橙紅且範圍更大、尾長而分級；本種嘴細長而尖、上體暗土褐、下體淡黃、栗紅只限頭頂而不及後頸。"
+    },
+    {
+      "zh": "栗頸鳳鶥",
+      "scientificName": "Staphida torqueola",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "有短而深灰的冠羽、臉頰栗色帶白紋、下體純白、尾長而外側有寬白端；本種沒有冠羽、臉部淡黃、下體淡黃褐、尾較短。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.56,
+      0.175,
+      0.68,
+      0.295
+    ],
+    [
+      0.6,
+      0.27,
+      0.71,
+      0.38
+    ],
+    [
+      0.36,
+      0.38,
+      0.48,
+      0.5
+    ],
+    [
+      0.56,
+      0.4,
+      0.68,
+      0.52
+    ]
+  ],
+  "featureLabels": [
+    "栗紅頭頂",
+    "黃色臉部",
+    "暗土褐上體",
+    "淡黃下體"
+  ],
+  "featureNotes": [
+    "頭頂鮮栗紅色，但只限頭頂，不會伸延至後頸、眼或眼先，是「紅頭」一名的由來，也是本種最搶眼的特徵，為插圖局部。",
+    "眼先是黃色、臉與頦部同為淡黃，完全沒有眉紋或過眼紋，配一個大而深色的眼，形成「圓珠眼」的表情，為插圖局部。",
+    "肩、翼與尾為暗土褐色，與黃色的下半身形成對比，翼短而尾長度中等，為插圖局部。",
+    "頦、喉與腹部為淡黃褐色，以頦、臉與喉最鮮明，黃的深淺個體差異頗大，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only: BirdLife's country table (Bhutan, China, India, Laos, Myanmar, Nepal, Taiwan, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. BirdLife also lists Hong Kong (China) as a breeding native, but Hong Kong has no separate geometry on the 110m base map and is covered by China's shading."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0360/043500",
+      "use": "香港第 IIA 類，森林及較成熟灌叢常見而增加的留鳥，主要在內陸新界；族群被視為源自籠鳥，但物種可能在本港人為生境改變前已存在；12 cm；小型似鶯的穗鶥，約與長尾縫葉鶯同大，翼短、尾中等長；肩翼尾暗土褐，下體淡黃而以頦、臉、喉最鮮明，黃色深淺有變異；頭頂栗紅但不伸延至後頸、眼或黃色的眼先；無眉紋與過眼紋，眼大而深色呈圓珠狀，虹膜深栗；嘴尖而強、灰色，腳灰黃；鳴唱為 4–6 個相同音符的簡單短句，叫聲為前高後低的雙音，警戒聲為高音吱喳；棲息於各海拔的森林及成熟鬱閉灌叢，偏好竹叢與下層纏結；1985-06-29 大埔滘首錄，1991-12-13 城門再現，1993–96 繁殖圖僅 4 格（0.3%），2001–05 為 53 格（4.4%），2016–19 達 20.8%（繁殖）與 23.3%（冬季）；現已與廣東族群相連；3 月開始繁殖、4 月中築巢、4 月 24 日至 8 月 15 日見離巢幼鳥，或每年兩至三窩；食蟲兼食果，本港未見研究，曾見吃常山果實；六個亞種，香港應為 davidi；頁記 IUCN LC、趨勢下降。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/rufous-capped-babbler-cyanoderma-ruficeps",
+      "use": "IUCN 2024 LC、趨勢下降（推測）；成熟個體未量化，描述為常見至頗常見，中國與台灣各約 10,000–100,000 對（Brazil 2009）；繁殖 EOO 5,130,000 km²；不遷徙、海拔 0–3,510 米、世代 2.1 年、森林依賴度高、18 個 IBA；因範圍內樹冠十年間減少 6.1%，推測族群下降 1–19%（最佳估計 5–9%）；國家表為不丹、中國、香港（中國）、印度、寮國、緬甸、尼泊爾、台灣、越南。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（紅頭穗鶥；Rufous-Capped Babbler）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Cyanoderma ruficeps／畫眉科 Timaliidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數且無 vEst：i=2、a=2.8、v=2.5、r=2.5、c=1.2、o=2.2。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；length 為 12 cm，look 中文「淺橄欖色、頭頂與頸背鮮棕紅色，體長，體重」有半句空值，habitat 中文為「密生灌木或竹林」但同句夾了 IUCN 無危的說明、英文與 behavior 英文完全同一句，diet 全空，etymology 記 Blyth 1847 年於大吉嶺的模式標本，funFact 只是「又名紅頭穗鶥」、weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 55 mm、尾 47 mm、跗蹠 19.6 mm、嘴峯 15 mm、體重 10.3 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 043500：香港第 IIA 類，森林及較成熟灌叢常見而增加的留鳥；1985-06-29 大埔滘首錄，1993–96 繁殖圖僅 4 格（0.3%），2001–05 為 53 格（4.4%），2016–19 升至 20.8%（繁殖）與 23.3%（冬季），現已與廣東族群相連。族群被視為源自籠鳥，但物種可能在本港人為生境改變前已經存在。",
+    "辨識要點：12 cm，小型似鶯的穗鶥，翼短尾中等；頭頂栗紅但不伸延至後頸、眼或黃色眼先；臉、頦、喉淡黃，無眉紋與過眼紋，眼大而深色呈圓珠狀；嘴灰色而尖，腳灰黃。卡面四個標籤取頭頂、臉、上體與下體。",
+    "分類：曾置 Stachyris，現用 Cyanoderma ruficeps；共六個亞種，香港應為 davidi。runtime 科名用「畫眉科」（Timaliidae），與 BirdLife 的 Timaliidae 一致。",
+    "分佈：東尼泊爾、印度東北、緬甸南至泰北、寮國與越南；在中國見於華南及華東、北至陝西河南江蘇，並有海南與台灣族群。BirdLife 國家表另列香港（中國），但 110m 底圖無獨立多邊形，故以中國填色覆蓋，地圖填八國。",
+    "IUCN：HKBWS 與 BirdLife 都記 LC、趨勢下降；BirdLife 2024 版指範圍內樹冠十年減少 6.1%，推測下降 1–19%（最佳估計 5–9%），未達易危門檻。",
+    "runtime 分數：i=2、v=2.5（length 12 cm 與 HKBWS 完全相同，無估算問題）、r=2.5、c=1.2 沿用；a=2.8 待查——habitat 中文把 IUCN 說明混進同一句、英文與 behavior 英文完全重複，diet 全空，缺乏獨立食性支撐；o=2.2 依賴待查分項（a）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：look 中文有「體長，體重」兩個空值、habitat 中文把 IUCN 等級混入生境句、behavior 英文與 habitat 英文重複、diet 全空、funFact 只是同義反覆（又名紅頭穗鶥）、weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "世界底圖按 BirdLife 國家表填不丹、中國、印度、寮國、緬甸、尼泊爾、台灣及越南共八國，並非全部分佈區、也不是 occurrence polygon；香港雖為本地留鳥且被 BirdLife 列為繁殖原生，但 110m 底圖無獨立多邊形，故只以中國填色覆蓋。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成小型穗鶥，站於葉叢間的枝條上，並畫出只及頭頂的栗紅冠、黃色眼先與臉、暗土褐的肩翼尾、淡黃下體、大而深色的圓珠眼及灰色尖嘴；亞種、性別與年齡差異仍待專家核。比較鳥沿用 0432 的棕頭鴉雀及 0433 的栗頸鳳鶥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 中文把 IUCN 說明混入同一句、英文與 behavior 英文完全重複，diet 全空，2.8 分缺乏獨立食性支撐，待查。",
+    "o": "綜合分依賴待查分項（a），不補算。"
+  }
+}

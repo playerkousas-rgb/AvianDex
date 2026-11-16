@@ -1,0 +1,148 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 記下降"
+  },
+  "id": "0424",
+  "name": "鱗頭樹鶯",
+  "scientificName": "Urosphena squameiceps",
+  "illustrationTaxon": "Adult-type Urosphena squameiceps standing on leaf litter; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "淡腳樹鶯",
+      "scientificName": "Hemitesia pallidipes",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "尾明顯較長、喉純白而脇灰褐、嘴較粗厚；本種尾極短、全身銹褐、眉紋奶油色而更明顯。"
+    },
+    {
+      "zh": "白斑尾柳鶯",
+      "scientificName": "Phylloscopus ogilviegranti",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "上體橄欖綠、有兩道翼斑、下體沾黃、嘴纖細；本種全身銹褐、無翼斑、尾短得幾乎看不出。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.545,
+      0.175,
+      0.725,
+      0.355
+    ],
+    [
+      0.63,
+      0.215,
+      0.76,
+      0.345
+    ],
+    [
+      0.1,
+      0.345,
+      0.31,
+      0.555
+    ],
+    [
+      0.33,
+      0.695,
+      0.52,
+      0.885
+    ]
+  ],
+  "featureLabels": [
+    "奶油長眉",
+    "深色眼紋",
+    "極短尾",
+    "淡粉腳"
+  ],
+  "featureNotes": [
+    "長而明顯的奶油色眉紋壓在銹紅羽冠之下，是本種頭部圖案的骨幹，為插圖局部。",
+    "深色眼紋在眼前與眼後同樣粗實，配上淡色耳羽與喉部，形成本種強烈的頭部對比，為插圖局部。",
+    "尾極短而略圓，停棲時幾乎與翼尖齊平，是 Stubtail（短尾鶯）之名所自，為插圖局部。",
+    "腳與趾淡粉肉色；本種貼近地面覓食，野外往往不易看清，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "KOR",
+      "LAO",
+      "MMR",
+      "PRK",
+      "RUS",
+      "THA",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding, passage and wintering areas are not colour-separated. Nepal and the Philippines are recorded only as vagrants by BirdLife and are not filled; Hong Kong is a common winter visitor and passage migrant per HKBWS but has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0310/037400",
+      "use": "香港第 I 類常見冬候鳥及過境遷徙鳥，見於密冠層灌叢及林地；9–10 cm；小型、頭相對大、尾極短；頭部圖案強烈——銹紅羽冠、長奶油色眉紋、眼前眼後同樣粗實的深色眼紋、淡色耳羽與喉；上體及尾素淨銹褐、翼較紅褐、脇灰褐；貼近地面覓食所以極淡的腳不易看見；叫聲似小鷦鶥但稍厚、較柔、音調較高；低強度鳴唱見於 3 月、偶見 11–12 月；87% 紀錄在 11 月至 1 月，最早 2019-09-30，最晚 2020-04-26 兩隻，最高 27 隻（2012-12-08 甲龍）；1955–57 年冬季由 Walker (1958) 首次報導；單型種；繁殖於南薩哈林、南烏蘇里、中國東北、朝鮮半島及日本，越冬於華南沿岸省份（含台灣及海南）及中南半島至越南南部與泰國南部；頁記 IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/asian-stubtail-urosphena-squameiceps",
+      "use": "IUCN 2024 LC 但記下降（林木覆蓋 10 年減 7.7%、推測族群減 1–19%、森林依賴中等）；成熟個體未量化、繁殖 EOO 2,680,000 km²、非繁殖 2,460,000 km²、完全遷徙、海拔 0–2,100 m、世代長度 2.2 年、4 個 IBA/KBA；國家：中國、日本、老撾、緬甸、尼泊爾（迷鳥）、北韓（繁殖）、菲律賓（迷鳥）、俄羅斯、南韓、中國台灣、泰國、越南。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（鱗頭樹鶯；Asian Stubtail）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Urosphena squameiceps／樹鶯科 Scotocercidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 只有 v=2.4、r=3.3，含 vEst=1；i、a、c、o 完全沒有分數。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；多句中文以逗號或分號結尾而未完成，habitat 中文實為非繁殖分佈而非棲地，behavior 中文重複分佈並補上灌叢棲地而英文只寫 temperate forest，length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 51 mm、尾 31 mm、嘴峯 13.2 mm、體重 9.3 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 037400：9–10 cm，香港屬第 I 類常見冬候鳥及過境遷徙鳥，分佈於密冠層灌叢及林地，大嶼山亦有，離島因生境稀少而紀錄較少；87% 紀錄集中在 11 月至 1 月，最早 2019 年 9 月 30 日、最晚 2020 年 4 月 26 日兩隻，最高 27 隻於 2012 年 12 月 8 日甲龍；1955–57 年冬季由 Walker (1958) 首次報導。",
+    "辨識要點：銹紅羽冠、長奶油色眉紋、眼前眼後同樣粗實的深色眼紋、淡色耳羽與喉、上體及尾素淨銹褐而翼較紅褐、脇灰褐、腳極淡；與淡腳樹鶯相比尾極短、眉紋更強、無純白喉。卡面四個標籤即取眉紋、眼紋、短尾與淡腳。",
+    "分佈：單型種，繁殖於南薩哈林、南烏蘇里、中國東北、朝鮮半島及日本，越冬於華南沿岸省份（含台灣、海南）及中南半島至越南南部與泰國南部；在中國繁殖南抵北京，越冬於黃河以南大部分地區。BirdLife 國家表另有尼泊爾及菲律賓，兩者皆為迷鳥。",
+    "IUCN 表述不一致：HKBWS 記 LC、趨勢穩定；BirdLife 2024 同樣 LC 但記下降（林木覆蓋 10 年減 7.7%，推測族群減 1–19%）。卡面註記採用較新的 BirdLife 表述。",
+    "runtime 分數只有 v=2.4、r=3.3、vEst=1，i、a、c、o 完全缺失並列於 missingScores。v 待查——length 為空，翼長 51 mm×0.22≈11.2 cm 明顯高於 HKBWS 9–10 cm，保留「原觀賞值含體長估算」提示；r=3.3 沿用——range、migration、habitat 三句都有實際內容；o 依賴待查分項（v）不補算。",
+    "runtime 文案缺陷：多句以逗號或分號收尾而未完成（range「…部分地區；」、voice「…cee-cee-cee，」、breeding「…也一樣；」）；habitat 中文其實是非繁殖分佈而非棲地；behavior 中文把分佈與「偏好常綠闊葉林或低地針葉林的灌叢棲地」併在一起，而英文只寫 temperate forest；look 只描述頭部圖案；length、weight 為空；picks 一次列出七個欄位。辨識內容以 HKBWS 為準。",
+    "世界底圖按 BirdLife 國家表填中國、日本、南韓、北韓、老撾、緬甸、俄羅斯、中國台灣、泰國、越南；尼泊爾與菲律賓只記迷鳥故不填色；香港雖然是本地常見冬候鳥及過境鳥，但 110m 底圖沒有獨立多邊形。繁殖、過境與越冬地未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成頭大尾極短的銹褐樹鶯，站在落葉層上，並畫出銹紅羽冠、奶油長眉、眼前眼後等粗的眼紋、淡色耳羽與喉、銹褐上體與偏紅的翼，以及極淡的腳；年齡與性別差異（成鳥與剛離巢幼鳥相似）仍待專家核。比較鳥為 0423 淡腳樹鶯及 0422 白斑尾柳鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 為空，翼長推估 11.2 cm 高於 HKBWS 9–10 cm，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}

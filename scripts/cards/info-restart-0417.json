@@ -1,0 +1,155 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 記穩定"
+  },
+  "id": "0417",
+  "name": "極北柳鶯",
+  "scientificName": "Phylloscopus borealis",
+  "illustrationTaxon": "Adult-type Phylloscopus borealis on a twig; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "日本柳鶯",
+      "scientificName": "Phylloscopus xanthodryas",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "下體帶黃、上體較褐綠、眉紋更黃且達嘴基；本種下體灰白、眉紋止於嘴基之前。"
+    },
+    {
+      "zh": "庫頁島柳鶯",
+      "scientificName": "Phylloscopus borealoides",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "翼斑較清楚、腳淡粉、初級飛羽伸出較短；本種嘴較重呈匕首狀、腳較褐、只有一道短翼斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.655,
+      0.215,
+      0.8,
+      0.36
+    ],
+    [
+      0.68,
+      0.33,
+      0.81,
+      0.46
+    ],
+    [
+      0.775,
+      0.245,
+      0.915,
+      0.385
+    ],
+    [
+      0.44,
+      0.42,
+      0.58,
+      0.56
+    ]
+  ],
+  "featureLabels": [
+    "白眉不到嘴",
+    "胸前淡縱紋",
+    "匕首狀嘴",
+    "單道翼斑"
+  ],
+  "featureNotes": [
+    "眉紋粗而白，止於嘴基之前，並有一條穿過眼先的深色眼紋，為插圖局部。",
+    "胸及腹側散佈灰白縱紋，為插圖局部。",
+    "嘴長而重、呈匕首狀，下嘴淡色並在近端有深色斑，為插圖局部。",
+    "大覆羽上只有一道短而模糊的淡色翼斑，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "NOR",
+      "SWE",
+      "FIN",
+      "RUS",
+      "MNG",
+      "USA",
+      "CHN",
+      "TWN",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "MYS",
+      "SGP",
+      "IDN",
+      "BRN",
+      "TLS"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/040100",
+      "use": "香港第 I 類常見秋季過境、冬季極罕見；11.5–13 cm、初級飛羽伸出長、眉紋不到嘴、眼紋穿過眼先、胸前縱紋模糊、下嘴淡色並有深色近端斑、只有一道短的大覆羽翼斑、腳褐色；IUCN LC、趨勢上升。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/arctic-warbler-phylloscopus-borealis",
+      "use": "IUCN 2025 LC、趨勢穩定、成熟個體 170,000,000（2011 估算，品質中等）、非繁殖特有、繁殖 EOO 22,600,000 km²、非繁殖 EOO 8,280,000 km²、完全遷徙；繁殖於芬諾斯堪底亞及古北界北部白樺、柳、楊、松林與矮柳灌叢，6–8 月在地面營巢、每窩 5–6 枚；主食小型昆蟲；國家表列芬蘭、挪威、瑞典、俄羅斯、蒙古、美國、中國為繁殖，汶萊、柬埔寨、香港、印尼、老撾、馬來西亞、緬甸、新加坡、台灣、泰國、東帝汶、越南為非繁殖。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（極北柳鶯）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus borealis／柳鶯科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.3、v=2.7、r=4.8、c=1.2、o=2.6，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；look、breeding、etymology、migration、highlights 有內容，diet 寫成遷徙距離、voice 寫成分類沿革、range 只談舊分類，habitat、funFact（截斷）、callouts 有問題，length 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 66.2 mm、嘴峯 13.5 mm、體重 10.9 g。"
+    }
+  ],
+  "notes": [
+    "BirdLife 2025：LC、趨勢穩定（歐洲懷疑上升、北美略降、亞洲仍常見，整體視為穩定）、成熟個體 170,000,000（2011 估算，品質中等）、繁殖 EOO 22,600,000 km²、非繁殖 EOO 8,280,000 km²、完全遷徙。HKBWS 頁記趨勢上升，與 BirdLife 的「穩定」方向一致，卡面註記用較新的 BirdLife 2025 表述。",
+    "分佈：繁殖於芬諾斯堪底亞（挪威、瑞典、芬蘭）經俄羅斯、蒙古至美國阿拉斯加，越冬在中南半島、馬來半島、印尼、菲律賓一帶及台灣；BirdLife 國家表把香港列為原生非繁殖地。HKBWS 則記香港為第 I 類常見秋季過境、冬季極罕見。",
+    "runtime 分數 i=2、a=2.3、v=2.7、r=4.8、c=1.2、o=2.6、vEst=1。a 待查——runtime 的 diet 寫的是遷徙距離、habitat 全空，未能支撐適應分；v 待查——length 為空，翼長 66.2 mm×0.22≈14.6 cm，高於 HKBWS 11.5–13 cm，保留「原觀賞值含體長估算」提示；o 依賴待查分項（a、v）不補算；r=4.8 沿用——etymology、breeding、migration、look 及 highlights 均有內容（voice 雖寫成分類沿革，但屬研究性資訊）；c=1.2 與 LC、穩定一致、i=2 沿 runtime。",
+    "runtime 文案缺陷：range 與 voice 都只談「過去被認為包含堪察加、千島群島和日本的種群」，未直接說出本種現今的繁殖與越冬範圍；diet 一句「因此，它擁有任何舊世界食蟲鳥類中最長的遷徙距離之一。」實為遷徙描述；funFact 在「（來自 skopeo」處截斷；callouts 全空。這些未影響 r 的沿用。",
+    "世界底圖按 BirdLife 原生國家表填色（挪威、瑞典、芬蘭、俄羅斯、蒙古、美國、中國、台灣、緬甸、泰國、老撾、柬埔寨、越南、馬來西亞、新加坡、印尼、汶萊、東帝汶），繁殖與越冬未分色、不細分國家內部，綠色非全境、非完整分佈；新加坡在 110m 底圖上無獨立多邊形故不會顯示，香港亦無獨立幾何、其紀錄併入中國但中國主要為繁殖地。",
+    "AI 主圖：欖綠上體、粗白眉止於嘴基之前、深色眼先眼紋、胸前灰白縱紋、只有一道短翼斑、長而重的匕首狀嘴配淡下嘴、褐色腳，符合 HKBWS 描述；初級飛羽伸出長度與嘴的近端深斑仍待專家核。比較鳥為 0416 日本柳鶯及 0415 庫頁島柳鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "runtime diet 實為遷徙描述、habitat 全空，適應分待查、不補值。",
+    "v": "length 為空，翼長推估 14.6 cm 高於 HKBWS 11.5–13 cm，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項（a、v），不補算。"
+  }
+}

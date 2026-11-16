@@ -1,0 +1,140 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2023 評定"
+  },
+  "id": "0445",
+  "name": "黑喉噪鶥",
+  "scientificName": "Pterorhinus chinensis",
+  "illustrationTaxon": "Adult-type Pterorhinus chinensis chinensis (the local Hong Kong taxon, with a white cheek). AI interpretation, hybrid/monachus forms, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "白頰噪鶥",
+      "scientificName": "Pterorhinus sannio",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "全身褐色而無灰色調，純白眉紋與白臉頰連成一片，沒有黑色面罩與黑喉；本種身體暗灰、翼尾深褐，黑色面罩與黑喉連在一起，白頰只是面罩後方的一小塊。"
+    },
+    {
+      "zh": "栗頸鳳鶥",
+      "scientificName": "Staphida torqueola",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "小得多（約 12 cm）、有豎起的冠羽、白色眼圈與栗色後頸，上體灰綠；本種 23–30 cm、體型厚重、暗灰而無冠羽，有黑色面罩與白頰。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.565,
+      0.165,
+      0.69,
+      0.29
+    ],
+    [
+      0.61,
+      0.205,
+      0.735,
+      0.33
+    ],
+    [
+      0.455,
+      0.29,
+      0.58,
+      0.415
+    ],
+    [
+      0.325,
+      0.385,
+      0.45,
+      0.51
+    ]
+  ],
+  "featureLabels": [
+    "白色臉頰",
+    "黑色面罩",
+    "暗灰色身體",
+    "深褐色翼"
+  ],
+  "featureNotes": [
+    "面罩後方有一大片對比強烈的白色臉頰，是本港最常見的指名亞種（白頰型）最醒目的特徵，為插圖局部。",
+    "眼先、眼周、耳羽與頦喉連成一整塊黑色，額上另有一小簇直立的黑羽，形成乾淨俐落的「黑面」圖案，為插圖局部。",
+    "身體大部分為沒有花紋的暗石板灰，帶柔和的鱗狀質感，與翼尾的褐色明顯不同，為插圖局部。",
+    "翼與尾為較深的暖褐色，比灰身深一級，在林中光線下形成上下兩截的色塊，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "KHM",
+      "LAO",
+      "MMR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only: BirdLife's native range (Cambodia, China, Laos, Myanmar, Thailand, Vietnam), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. BirdLife lists Hong Kong (China) and Taiwan as **Introduced**, so both are deliberately left unshaded; Hong Kong has no separate geometry on the 110m base map anyway."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0370/044300",
+      "use": "香港第 IIA 類，指名亞種在港島與新界森林及灌叢廣泛而局部常見的留鳥，本世紀大幅增加並擴散；具海南亞種 monachus 特徵的鳥自 2006 年首次記錄，現似在增加並與本地型雜交；23–30 cm，大型深色噪鶥，大部分為無花紋的暗灰，翼尾深褐；頭部圖案俐落——黑色面罩與黑喉、額上小簇黑羽、對比強烈的白頰；鳴唱豐富響亮多變並善模仿（大鷹鵑、蛇鵰、鳳頭鷹、噪鵑，甚至汽車防盜器與灰胸竹雞），最常聽到的叫聲為偏低沉的 werk／wek／wuh、較高而急降的 kerk 與尖銳的 kuwerk；生於森林與郁閉灌叢，偏好有濃密灌木層的森林，海拔由海平面到大帽山頂；1993–96 繁殖圖集 5.2%、2001–05 冬季 5.6%，2016–19 分別升至 28.1% 與 17.0%，港島為原有據點，現廣泛於中新界、東北、東及東南新界；與畫眉此消彼長（畫眉由 43.3% 降至 27.1%），但是否互相排斥未明；1948 年後港島族群可能源自籠鳥，1962 年大嶼山東涌、1964 年大欖涌首次在新界錄得；2006-03-01 梧桐寨首次錄得深色臉頰個體，2014 年起每年有 monachus 與疑似雜交個體的報告，集中於中新界（大埔滘尤甚），亦有港島、西貢、大嶼山等地的報告；全年鳴唱但 3–6 月最密；4 月 1 日見攜巢材、4 月 11 日見餵巢（竹叢 3 米高）、5 月 12 日見築巢（約 2 米高），6 月 2 日至 9 月 14 日見離巢幼鳥，本港巢與蛋未有描述；2010-07-02 大埔滘一群中見栗斑杜鵑，可能偶爾為其寄主；通常單隻、成對或 4–6 隻的小群，在灌木層或地面翻落葉，會加入混合群；食性在本港研究少，Leven (2000) 四份糞便全部有無脊椎（等翅目、蟻科、鞘翅目），Corlett (1998) 記錄三種植物果實，另有柿、薜荔與簕欓花椒及竹節蟲的觀察；原生範圍自緬甸經泰國中部至中國東部，並在台灣與新加坡建立野化族群；五亞種、中國有三個，香港為指名亞種，monachus 有時被分為獨立種海南噪鶥。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/black-throated-laughingthrush-pterorhinus-chinensis",
+      "use": "IUCN **2023** LC，理由為分佈大且部分地區仍普遍，但三個世代內估計下降 10–19%（生境喪失與鳴鳥貿易），未達受脅門檻；成熟個體 Unknown；亞族群 5–100 個；繁殖 EOO 2,700,000 km²；AOO 持續下降；不遷徙；海拔 0–1,525 m；世代 3.6 年；森林依賴度 Medium；30 個 IBA／KBA；威脅欄記生境喪失與籠鳥貿易（越南個體可售至 100 美元、主要出口印尼），海南的次生林見鳥數比橡膠園高約十倍；國家表八列，**香港（中國）與台灣列為 Introduced**，其餘柬埔寨、中國、寮國、緬甸、泰國、越南為原生。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（黑喉噪鶥；Black-throated Laughingthrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Pterorhinus chinensis／噪鶥科 Leiothrichidae）；BirdLife 科名用 Leiotrichidae。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **完全沒有本種的分數紀錄**：六個軸與綜合分全部缺席，missingScores 為六軸，卡面全部顯示「待查」，不以他處數值補算。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "runtime 亦沒有可分派的卡面文案：habitat、look、diet、voice、breeding、behavior、etymology、funFact 皆無本種內容，length 與 weight 為空，iucn 欄亦無。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "runtime 沒有本種的 AVONET 量度紀錄（無翼長、尾長、體重）。"
+    }
+  ],
+  "notes": [
+    "HKBWS 044300：香港第 IIA 類，指名亞種在港島與新界森林及灌叢廣泛而局部常見，本世紀大幅增加並擴散；23–30 cm，大型深色噪鶥，身體大部分無花紋暗灰、翼尾深褐，黑色面罩與黑喉、額上小簇黑羽、對比強烈的白頰。",
+    "族群變化：圖集由 5.2%（1993–96 繁殖）與 5.6%（2001–05 冬季）升至 28.1% 與 17.0%（2016–19）；與畫眉呈此消彼長（畫眉由 43.3% 降至 27.1%），但是否互相排斥未明；港島為原有據點，1948 年後的族群可能源自籠鳥，1962 年東涌、1964 年大欖涌首次在新界錄得；其他離島仍無紀錄。",
+    "海南型與雜交：2006-03-01 梧桐寨首次錄得深色臉頰個體，2014 年起每年有 monachus 及疑似雜交個體的報告（集中中新界、大埔滘尤甚），研究認為兩型之間幾無繁殖障礙，雜交可能威脅本港族群的遺傳完整性。",
+    "繁殖與食性：4 月 1 日攜巢材、4 月 11 日餵巢、5 月 12 日築巢、6 月 2 日至 9 月 14 日見離巢幼鳥，本港巢與蛋未有描述；2010-07-02 大埔滘一群中見栗斑杜鵑，可能偶爾為寄主；食性研究少（Leven 2000 四份糞便全有無脊椎，Corlett 1998 記錄三種果實）。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2023** 年評估；趨勢下降 10–19%／三個世代（生境喪失與鳴鳥貿易）、EOO 2,700,000 km²、海拔 0–1,525 m、世代 3.6 年、30 個 IBA。**BirdLife 把香港與台灣列為 Introduced**，故地圖只填六個原生國家，香港在 110m 底圖併入中國但不填色。",
+    "runtime 完全沒有本種的評分、量度與卡面文案：六個軸與綜合分全部缺席，missingScores 為 i、a、r、c、v、o，卡面六個軸皆顯示「待查」、綜合分亦為「待查」，本卡 **withheldScores 為空**（沒有可待查的分數，只有缺席的分數）。辨識、族群與 IUCN 資料一律以 HKBWS 與 BirdLife 為準。",
+    "AI 主圖為方形畫布（原橫幅補邊後裁緊），單一深褐尾、純色深青底，畫出白色臉頰、黑色面罩與黑喉、額上黑羽簇、暗灰色身體與深褐翼尾；指名亞種、monachus 型與雜交個體、性別與年齡差異仍待專家核。比較鳥沿用 0444 的白頰噪鶥及 0433 的栗頸鳳鶥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {}
+}

@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：趨勢記下降"
+  },
+  "id": "0435",
+  "name": "紅脇繡眼鳥",
+  "scientificName": "Zosterops erythropleurus",
+  "illustrationTaxon": "Adult-type Zosterops erythropleurus (monotypic), presumed male with a deep chestnut flank patch; AI interpretation, sex and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "暗綠繡眼鳥",
+      "scientificName": "Zosterops simplex",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "眼圈較窄、眼先黑色範圍小而清晰、喉與腹同樣帶黃、額帶黃、初級飛羽突出較短、沒有栗色脇斑；本種眼圈寬、眼先黑而散、喉黃但胸腹白、額不帶黃、脇有明顯栗斑。"
+    },
+    {
+      "zh": "黑頦鳳鶥",
+      "scientificName": "Yuhina nigrimenta",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "完全沒有白色眼圈、嘴橙色、上體灰褐、喉有黑色頦斑；本種有寬白眼圈、嘴暗而基部淡粉、上體橄欖綠、脇有栗斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.68,
+      0.175,
+      0.78,
+      0.275
+    ],
+    [
+      0.715,
+      0.19,
+      0.8,
+      0.275
+    ],
+    [
+      0.7,
+      0.25,
+      0.8,
+      0.35
+    ],
+    [
+      0.44,
+      0.45,
+      0.58,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "白色眼圈",
+    "黑色眼先",
+    "黃色喉部",
+    "栗色脇斑"
+  ],
+  "featureNotes": [
+    "眼圈寬而白，是繡眼鳥科的共同特徵，但本種的眼圈比暗綠繡眼鳥更寬更厚，為插圖局部。",
+    "眼先黑色而範圍較廣、邊界較散，與寬白眼圈形成強烈對比，是與暗綠繡眼鳥的關鍵分別之一，為插圖局部。",
+    "喉部黃色而範圍狹窄，與下方純白的胸部界線分明，反差比暗綠繡眼鳥強，為插圖局部。",
+    "脇部有一塊深栗色的斑，雄鳥色深、雌鳥與幼鳥較淡甚至近乎無，是「紅脇」一名的由來，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "KHM",
+      "KOR",
+      "LAO",
+      "MMR",
+      "PRK",
+      "RUS",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview only: BirdLife's country table (Cambodia, China, Japan — origin uncertain, Laos, Myanmar, North Korea, Russia, South Korea, Thailand, Vietnam, with 'Russia (Asian)' merged into Russia), not an occurrence polygon; green does not imply full-country occupancy and the seasons are not colour-separated. BirdLife lists Hong Kong (China) as extant, but Hong Kong has no separate geometry on the 110m base map, so it is covered by China's shading only."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0360/043300",
+      "use": "香港第 I 類，林區的不常見過境遷徙鳥及冬候鳥；與暗綠繡眼鳥之別：脇部通常有鏽色痕、體型略大、初級飛羽突出較長、嘴基淡粉、眼圈較寬而眼先黑色範圍較廣較散、黃喉與白胸對比更強、喉與耳羽對比較弱、上體較暗而額不帶黃（Leader 2000）；雄鳥脇斑色深，雌鳥及幼鳥脇斑淡鏽色、部分第一年幼鳥極淡或無；叫聲 tseeoo 向下滑、音質較純；多與暗綠繡眼鳥群混在一起，見於闊葉林及灌叢，全港多地包括蒲台；1970-11-14 薄扶林首次見多達三隻、1978-11-28 鷹巢兩隻，1980 年代初起每年冬季均有小量；主要見於 11 月第三週至 2 月第一週，極端日期 1995-10-21 及 1995-04-08，最多八隻（1995-12-03 鉛礦坳）；為常見籠鳥，部分紀錄屬逸出鳥，市區紀錄尤須存疑；食蟲，混群覓食；單型種；繁殖於中國東北及俄羅斯烏蘇里，越冬於中國西南經中南半島北部至泰國中部，在中國由河北東部至黑龍江繁殖；頁記 IUCN LC、趨勢下降。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chestnut-flanked-white-eye-zosterops-erythropleurus",
+      "use": "IUCN 2024 LC、趨勢下降（推測）；成熟個體未量化，中國約 10,000–100,000 對繁殖鳥及 1,000–10,000 隻過境鳥（Brazil 2009）；繁殖 EOO 1,280,000 km²、非繁殖 1,670,000 km²；完全遷徙、海拔 0–2,950 米、世代 2.4 年、森林依賴度高、5 個 IBA；因範圍內樹冠十年間減少 5.9%，推測族群下降 1–19%（最佳估計 5–9%）；國家表為柬埔寨、中國、香港（中國）、日本（來源不確定）、寮國、緬甸、北韓、俄羅斯（含俄屬亞洲）、南韓、泰國、越南；貿易欄記寵物／展示動物、國內規模。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（紅脇繡眼鳥；Chestnut-Flanked White-Eye）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Zosterops erythropleurus／繡眼鳥科 Zosteropidae）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六個軸都有分數：i=2、a=2.3、v=2.6（含 vEst=1）、r=3.3、c=1.2、o=2.3。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；look 中文寫「體長10.5公分，兩脅有顯著的栗色斑塊」，habitat 中文為森林、偏好較深的混合林及針葉林（實為英文 habitat 的內容，中文／英文兩欄對調），breeding 與 migration 同一句候鳥描述，behavior 與 range 亦互換（range 中文寫的是繁殖與越冬生境、海拔 1000 公尺以上），funFact 為 Swinhoe 1863 年命名；length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 60.8 mm、尾 42 mm、跗蹠 15.2 mm、嘴峯 13.7 mm、體重 11 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 043300：香港第 I 類，林區的不常見過境遷徙鳥及冬候鳥，1970-11-14 薄扶林首次（多達三隻），1980 年代初起每年冬季均有小量，主要見於 11 月第三週至 2 月第一週，極端日期 1995-10-21 與 1995-04-08，單次最多八隻（1995-12-03 鉛礦坳）；多與暗綠繡眼鳥混群。",
+    "辨識要點（Leader 2000）：脇部鏽色痕、體型略大、初級飛羽突出較長、嘴基淡粉、眼圈寬而眼先黑色範圍大、黃喉與白胸對比強、上體較暗而額不帶黃。雄鳥脇斑深栗，雌鳥與幼鳥淡甚至無。卡面四個標籤取眼圈、眼先、喉與脇。",
+    "分類：單型種，無亞種問題；runtime 與 BirdLife 都歸繡眼鳥科 Zosteropidae。HKBWS 提醒本種為熱門籠鳥，部分紀錄屬逸出鳥，市區紀錄須存疑。",
+    "分佈：繁殖於中國東北及俄羅斯烏蘇里，越冬於中國西南經中南半島北部至泰國中部；在中國由河北東部至黑龍江繁殖。BirdLife 國家表另列香港（中國）與日本（來源不確定），香港部分在 110m 底圖上併入中國填色。",
+    "IUCN：HKBWS 與 BirdLife 都記 LC、趨勢下降；BirdLife 2024 版指範圍內樹冠十年減少 5.9%，推測下降 1–19%（最佳估計 5–9%），未達易危門檻。",
+    "runtime 分數：i=2、r=3.3、c=1.2、a=2.3 沿用（habitat 有中英文真內容，另有 behavior 的生境與海拔補充，惟 diet 未提供）；v=2.6 待查——length 欄為空，HKBWS 043300 只寫「體型略大」而無體長，runtime look 寫 10.5 cm，翼長 60.8 mm×0.22≈13.4 cm 明顯高於 10.5 cm，保留「原觀賞值含體長估算」提示；o=2.3 依賴待查分項（v）不補算。六個軸都有原始分數，missingScores 為空。",
+    "runtime 文案缺陷：中文與英文的 habitat、behavior、range 三欄互相對調——中文 range 寫的是繁殖與越冬生境、中文 habitat 寫的是英文 habitat 的森林描述、中文 behavior 寫的是英文 behavior 的楊樹赤楊柳樹林；breeding 與 migration 共用同一句；look 只有體長與栗斑兩項；length 與 weight 為空。辨識與本地紀錄一律以 HKBWS 為準。",
+    "世界底圖按 BirdLife 國家表填中國、日本、柬埔寨、南韓、寮國、緬甸、北韓、俄羅斯、泰國及越南共十國（日本來源不確定、俄屬亞洲併入俄羅斯），並非全部分佈區、也不是 occurrence polygon；香港雖被 BirdLife 列為 extant，但 110m 底圖無獨立多邊形，故只以中國的填色覆蓋。季節未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖按本種特徵畫成繡眼鳥，停於細枝上，並畫出寬白眼圈、範圍較廣的黑色眼先、狹窄黃喉配白胸、深栗色脇斑、橄欖綠而上體無黃額、嘴基淡粉及較長的初級飛羽突出；性別與年齡差異仍待專家核。比較鳥為新畫的暗綠繡眼鳥及沿用 0434 的黑頦鳳鶥 AI 圖，非等比例、屬示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 為空，HKBWS 043300 只寫體型略大而無體長，runtime look 記 10.5 cm，翼長推估 13.4 cm 明顯超出，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}

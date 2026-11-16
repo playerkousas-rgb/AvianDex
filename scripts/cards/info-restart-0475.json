@@ -1,0 +1,156 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0475",
+  "name": "北灰鶲",
+  "scientificName": "Muscicapa dauurica",
+  "illustrationTaxon": "Adult Muscicapa dauurica (large-headed short-tailed grey-brown flycatcher, conspicuous white orbital ring and pale lores, broad-based dark bill with yellowish base to the lower mandible, pale greyish-brown breast and flanks with a faint breast band, white throat and belly, dark brown wings with short primary projection). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "烏鶲",
+      "scientificName": "Muscicapa sibirica",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬；烏鶲上體煙灰較暗、眼圈較寬、下體白而有瀰散深灰斑駁，翼較長（初級飛羽伸出等於或最多比露出三級飛羽長 20%）；本種上體較淡較褐、臉部線條簡潔（淡眼先、無明顯深色頰紋）、下體幾乎無斑駁而只在中胸有淡淡縱紋，翼短而初級飛羽伸出短於露出的三級飛羽。"
+    },
+    {
+      "zh": "灰紋鶲",
+      "scientificName": "Muscicapa griseisticta",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬；灰紋鶲下體白而胸與脇有**深灰、分明**的縱紋、眼先與喉側有較深的色塊、翼與初級飛羽明顯較長；本種下體只在中胸有淡淡斑紋、眼先淡白、整體較短身短翼，是本港三種褐色鶲中體態最緊湊的一種。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.395,
+      0.22,
+      0.495,
+      0.32
+    ],
+    [
+      0.305,
+      0.235,
+      0.395,
+      0.315
+    ],
+    [
+      0.375,
+      0.32,
+      0.475,
+      0.42
+    ],
+    [
+      0.62,
+      0.49,
+      0.72,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "白眼圈淡眼先",
+    "黃色下嘴基",
+    "灰褐胸脇",
+    "淡色三級羽緣"
+  ],
+  "featureNotes": [
+    "明顯的白色眼圈加上淡色的眼先（lores），令臉部比其他褐色鶲明亮；有時另有深色的頰下線與喉側線，個體差異較大，為插圖局部。",
+    "嘴基寬而嘴較大，**下嘴基部帶黃**，是近距離最容易確認的細節；成鳥與第一齡鳥皆有，光線不足時較難看出，為插圖局部。",
+    "胸與脇為淡灰褐、有時可看出淡淡的胸帶，喉、腹與尾下覆羽則白；成鳥羽緣較窄較灰，第一齡鳥的羽緣較寬較白，為插圖局部。",
+    "大覆羽與三級飛羽有淡色羽緣，第一齡鳥尤其明顯；初級飛羽伸出較短（短於露出的三級飛羽），令翼端較圓較短，是本種與烏鶲、灰紋鶲的體態分別，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "JPN",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PRK",
+      "PHL",
+      "RUS",
+      "KOR",
+      "LKA",
+      "TWN",
+      "TJK",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 24 native countries/territories, including **Hong Kong (China)** and **Macao (China)** as separate entries. Hong Kong and Macao have no geometry in the 110m base map and Singapore has none either, so 21 of the 24 are shaded: Bhutan, Brunei, Cambodia, China, India, Indonesia, Japan, Laos, Malaysia, Mongolia, Myanmar, Nepal, North Korea, the Philippines, Russia (including Asian and Central Asian Russia), South Korea, Sri Lanka, Taiwan, Tajikistan, Thailand and Vietnam. Denmark, Finland, Greece, Oman, Sweden and the USA are VAGRANT entries and are left unshaded. Russia is shaded as a country, not as a claim of breeding range west of the Urals. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/047700",
+      "use": "香港第 I 類：**常見的過境遷徙鳥（秋季多於春季）兼冬候鳥**，凡有合適樹木之處皆可見；**12–14 cm**，中小型、大頭短尾的鶲、雌雄同色；頭與上體灰褐、**白色眼圈明顯而眼先淡**（有時另有深色頰下線與喉側線）、**嘴基寬而下嘴帶黃**、翼與尾深褐、胸與脇淡灰褐（有時見淡淡胸帶）、喉腹與尾下覆羽白、成鳥羽緣較窄較灰；第一齡鳥大覆羽與三級飛羽的淡白羽緣更明顯；與灰紋鶲、烏鶲的其他分別包括**初級飛羽伸出短於露出的三級飛羽**，且通常沒有明顯保留的幼羽（Leader 2010）；兩種常用叫聲：下降音高的短乾薄 rattling，以及高音金屬「sip」；生境為任何有足夠樹木的落腳點，包括市區公園，2001–05 與 2016–19 兩次冬季圖集的 1 公里方格佔有率變化不大，但大帽山山體與港島近期的紀錄較少，可能與密冠層森林面積擴大有關；極端日期 8 月 26 日與 5 月 27 日，另有 2010-06-12 港島一隻被拍到照片；首批秋季鳥通常在 9 月上半月出現，**高峰為 9 月下半月至 10 月（1999–2020 年 52% 紀錄在 9 月 16 日至 10 月 31 日）**，11 月至 3 月第三週逐漸減少，3 月最後一週起再增反映過境，4 月仍持續但 5 月第一週大幅下降，**4 月只佔全年紀錄 8%**，反映春季過境明顯較弱，模式自 1958 年以來變化不大；每週計數總和由 1999/2000 年 64 隻升至 2019/20 年 345 隻（主要因觀鳥活動增加），而 Carey et al. (2001) 曾指本種在香港下降（1980 至 1990 年代缺乏高峰計數）；歷史最高計數為 1977-10-30 粉嶺高爾夫球場 25 隻與 1959-10-18 米埔 40 隻，1999–2020 年最高則為 2015-10-13 米埔 20 隻、只有五年達兩位數；首錄為 Vaughan & Jones (1913)，當時視為過境鶲中最常見者、偶爾越冬，情況與今日相同；行為多單獨，遷徙高峰時同一區域可有多隻、顯示部分可能成群遷徙，從樹木與灌木枝條衝出捕食飛蟲、返回同枝的頻率較烏鶲低；**冬季氣溫降至 10°C 以下時會在排水渠底或樹基在地面尋找昆蟲**；IUCN Least Concern、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/asian-brown-flycatcher-muscicapa-dauurica/details",
+      "use": "IUCN **2024** LC（下降未達門檻）、成熟個體 Unknown、趨勢 **Decreasing**（Suspected，分佈範圍十年樹冠減少 **11.2%**——本批減幅最大，暫定下降 1–19%）、繁殖 EOO **37,700,000 km²**（本批暫時最大）、非繁殖 EOO **17,800,000 km²**、完全遷徙、繁殖 endemic **No**、IBA／KBA 為「-」、海拔 0–2,340 m、世代 **2.1 年**（本批最短）、森林依賴度 **Medium**；生境以人工地帶（城市、鄉村花園、種植園）與各類森林為主，繁殖與非繁殖皆有 Suitable；國家表**把香港（中國）與澳門（中國）都列為原生**（本批首次出現澳門），另有不丹、汶萊、柬埔寨、中國（resident）、印度（resident）、印尼、日本（繁殖）、寮國、馬來西亞、蒙古（繁殖）、緬甸（resident）、尼泊爾、北韓（繁殖）、菲律賓、俄羅斯（含亞洲與中亞部分，繁殖）、新加坡、南韓（過境）、斯里蘭卡、台灣（過境）、塔吉克（過境）、泰國（resident）、越南（resident）共 24 個原生國家／地區；丹麥、芬蘭、希臘、阿曼、瑞典、美國為迷鳥。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（北灰鶲；Asian Brown Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Muscicapa dauurica／鶲科 Muscicapidae）；speciesCode asbfly；taxonOrder 28531。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六軸齊全：i=2、a=3.8、v=2.6、r=4.8、c=1.2、o=2.9（**v 沒有 vEst 標記，即體長來自實際資料而非翼長換算**）。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案豐富：look（上體灰褐、隨羽齡變灰、下體白而側腹帶棕）、diet 與 range **完全相同**（東亞、東南亞、南亞的林緣或森林中下層，以飛蟲為食）、voice（求偶期簡單悅耳歌聲）、breeding 與 behavior **完全相同**（樹洞築巢、四枚蛋、雌鳥孵）、funFact（種小名 dauurica 指外貝加爾的達烏里亞，源於當地遊牧部落）、etymology（Muscicapa 源自拉丁文 musca 蠅、capere 捕捉）、humanRelation（1992-07-01 至 02 費爾島紀錄被 BBRC 視為來源不明）、callouts 三項（嘴深色較大而基部寬／背灰褐／腹面灰白）、highlights、iucn；**migration 欄放的其實是 2007-10-03 約克郡弗蘭伯勒角一隻首度越冬的褐鶲吸引數百名觀鳥者**——那是英國的紀錄、並非遷徙描述；**length 為「13 cm」、weight 為空**；**沒有 habitat 與 conservation**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 70.5 mm、尾 49.5 mm、跗蹠 14.4 mm、嘴峯 12.8 mm、體重 9.8 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 047700（路徑 `0400/`，鶲科）：香港第 I 類，**常見的過境遷徙鳥（秋季多於春季）兼冬候鳥**——本批第一種在本港同時是冬候鳥的鶲；12–14 cm，大頭短尾、雌雄同色。",
+    "辨識要點：白色眼圈加淡眼先、嘴基寬而下嘴帶黃、胸脇淡灰褐而喉腹白、**初級飛羽伸出短於露出的三級飛羽**（Leader 2010）、通常沒有明顯保留的幼羽；兩種叫聲為下降音高的短 rattling 與高音金屬「sip」。",
+    "本港紀錄：極端日期 8 月 26 日與 5 月 27 日（另有 2010-06-12 港島一隻照片）；秋季高峰 9 月 16 日至 10 月 31 日佔 1999–2020 年 52%，4 月只佔全年 8%；每週計數總和由 1999/2000 年 64 隻升至 2019/20 年 345 隻；歷史最高 1959-10-18 米埔 40 隻與 1977-10-30 粉嶺高爾夫球場 25 隻，近季最高 2015-10-13 米埔 20 隻；首錄 Vaughan & Jones (1913)。",
+    "冬季行為：氣溫跌至 10°C 以下時，會在排水渠底或樹基在地面尋找昆蟲——這是本種在本港較少人留意的行為。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2024** 年評估、趨勢 **Decreasing**（Suspected，樹冠十年減少 **11.2%**，暫定下降 1–19%），而 HKBWS 頁面寫「Population trend stable」——**與 0473 烏鶲相同的趨勢記載差異**，本卡以 BirdLife 數據為準並記錄差異；繁殖 EOO 37,700,000 km² 是本批暫時最大、非繁殖 EOO 17,800,000 km²、完全遷徙、世代 2.1 年是本批最短、海拔 0–2,340 m、森林依賴度 Medium、IBA 0 個；**BirdLife 把香港（中國）與澳門（中國）都列為原生**——本批首次出現澳門。",
+    "runtime 分數：**六軸全部沿用、無待查項**——i=2、a=3.8（diet 與 range 文字可對應生境與食性）、v=2.6（**length 為「13 cm」，沒有 vEst 標記，屬實際資料而非翼長換算**，與 HKBWS 的 12–14 cm 相符）、r=4.8（本批最高：migration、etymology、callouts、humanRelation 皆有實質文字）、c=1.2、o=2.9。withheldScores 因此為空、missingScores 亦為空。",
+    "runtime 文案缺陷：diet 與 range 一字不差、breeding 與 behavior 一字不差；**migration 欄放的其實是 2007-10-03 約克郡弗蘭伯勒角那隻首度越冬個體吸引數百名觀鳥者**，屬英國紀錄而非遷徙描述（與 humanRelation 的 1992 年費爾島紀錄同屬歐洲迷鳥事件）；沒有 habitat 與 conservation；weight 為空；look 的「下半身白帶棕色側腹」與 HKBWS 的「胸與脇淡灰褐」略有出入，卡面以 HKBWS 為準。",
+    "AI 主圖原為 1312×816 橫幅，直接取 816×816 方形（起點 x=496，不補邊，避免平面色帶）後放大至 1127×1127，畫出大頭短尾的比例、白色眼圈與淡眼先、黃色下嘴基、淡灰褐胸脇與較短較圓的翼端；比較鳥沿用 0473 與 0472 已生成的烏鶲與灰紋鶲方形圖（本輪未生成新圖），非等比例、非專家認證。"
+  ],
+  "withheldScores": {}
+}

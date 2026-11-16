@@ -1,0 +1,138 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 記下降"
+  },
+  "id": "0421",
+  "name": "華南冠紋柳鶯",
+  "scientificName": "Phylloscopus goodsoni",
+  "illustrationTaxon": "Adult-type Phylloscopus goodsoni clinging to a trunk; AI interpretation, sex, subspecies and age unverified.",
+  "similarSpecies": [
+    {
+      "zh": "雙斑綠柳鶯",
+      "scientificName": "Phylloscopus plumbeitarsus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "冠部只是較灰、沒有黑色縱紋，翼斑淡白；本種有黑色冠側線與眼紋、翼斑帶黃。"
+    },
+    {
+      "zh": "黑眉柳鶯",
+      "scientificName": "Phylloscopus ricketti",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "下體硫黃、翼斑白色；本種下體白而只帶淡黃、翼斑黃色、嘴橙。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.575,
+      0.205,
+      0.72,
+      0.35
+    ],
+    [
+      0.72,
+      0.235,
+      0.83,
+      0.345
+    ],
+    [
+      0.42,
+      0.415,
+      0.56,
+      0.555
+    ],
+    [
+      0.6,
+      0.6,
+      0.76,
+      0.76
+    ]
+  ],
+  "featureLabels": [
+    "黑白冠紋",
+    "橙色下嘴",
+    "兩道黃翼斑",
+    "抓附樹幹"
+  ],
+  "featureNotes": [
+    "深灰綠的冠側線與眼紋都達嘴基、後段最深，中央冠紋前段模糊、後段轉寬變白，為插圖局部。",
+    "下嘴淡橙色、上嘴深色，為插圖局部。",
+    "中、大覆羽上的兩道淡黃翼斑，為插圖局部。",
+    "深色腳趾抓附直立的樹幹，重現本種似鳾的樹幹覓食姿勢，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated. Hong Kong is listed separately by BirdLife but has no separate geometry on the 110m base map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/040400",
+      "use": "香港第 I 類不常見冬候鳥，見於密冠層森林及灌叢；10.5–12 cm；有似鳾般在樹幹覓食的習性；深灰綠的冠側線與眼紋都達嘴基、後段最深，中央冠紋前段模糊而後段寬白，眉紋寬、前段帶黃後段轉白，上體深欖綠且均勻、兩道帶黃翼斑、下嘴淡橙、腳較深；叫聲多音節「pit-chee」或「pit-chee churoo」；11 月至 3 月、主要 12 月第二週至 2 月第一週，極端日期 9 月 5 日及 4 月 10 日；1978 年首次發現、1985 年起確定為規律冬候鳥，最高十隻（1990-11-12 及 2005-03-20 大埔滘）；兩個亞種 fokiensis 與指名亞種約各佔一半；越冬於華南沿岸包括海南，西至中國西南及中南半島相鄰地區；頁記 IUCN LC、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/harterts-leaf-warbler-phylloscopus-goodsoni",
+      "use": "IUCN 2024 LC 但趨勢下降（分佈區林木覆蓋 10 年減 9.3%、森林依賴中等、推測族群 10 年減 1–19%）；成熟個體未量化、繁殖 EOO 974,000 km²、非繁殖 88,600 km²、完全遷徙、海拔 0–3,700 m、世代長度 2.4 年；國家：中國（留鳥）、香港（非繁殖），另記可能東延至越南北部。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（華南冠紋柳鶯；HKBWS 頁題為「古氏［冠紋］柳鶯」，同種不同中文名）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus goodsoni／柳鶯科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.3、v=2.5、r=3.3、c=1.2、o=2.3，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；habitat、migration、funFact、range（帶「*：」前綴）、diet、look（全是量度）有內容，breeding 為「繁殖範圍未知；」並帶「*：」與多餘分號，voice、etymology、callouts 為空，length 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 58.4 mm、嘴峯 11.4 mm、體重 7.6 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 040400：10.5–12 cm，香港屬第 I 類不常見冬候鳥，見於密冠層森林及灌叢，2001–05 及 2016–19 冬季圖集都只在不足 0.7% 的 1 公里方格錄得；主要分布於大帽山、大欖、新界東北、西貢及大嶼山，反映成熟林地所在；11 月至 3 月、主要 12 月第二週至 2 月第一週，極端日期 9 月 5 日及 4 月 10 日；1978 年首次發現，1985 年起確定為規律冬候鳥，最高十隻（1990 年 11 月 12 日及 2005 年 3 月 20 日大埔滘）；有似鳾般在樹幹覓食的習性，常加入混合鳥群；兩個亞種 fokiensis 與指名亞種各約一半。",
+    "中文名差異：runtime 用「華南冠紋柳鶯」，HKBWS 頁題「古氏［冠紋］柳鶯」，英文同為 Hartert's Leaf Warbler、學名同為 P. goodsoni；卡面依 runtime 用名。",
+    "IUCN 表述不一致：HKBWS 頁記 LC、趨勢穩定；BirdLife 2024 同為 LC 但記下降（林木覆蓋 10 年減 9.3%，推測 10 年減 1–19%）。卡面註記用較新的 BirdLife 表述。",
+    "runtime 分數 i=2、a=2.3、v=2.5、r=3.3、c=1.2、o=2.3、vEst=1。a=2.3 沿用——habitat 與 diet 雖各只有一句，仍可支撐低分；v 待查——length 為空，翼長 58.4 mm×0.22≈12.9 cm，高於 HKBWS 10.5–12 cm，保留「原觀賞值含體長估算」提示；r=3.3 沿用——migration、funFact、habitat 有內容，breeding 未確；o 依賴待查分項（v）不補算；c=1.2 與 LC 一致、i=2 沿 runtime。",
+    "runtime 文案缺陷：range 以「*：」開頭、breeding 為「*：繁殖範圍未知；」且帶多餘分號，兩者都像未清理的標記；look 只列量度沒有羽色；voice 與 etymology 全空；funFact 只寫「是一種僅發現於中國的柳鶯」，而 BirdLife 把香港列為非繁殖地、並記可能東延至越南北部，措辭宜放寬。這些未影響 r 的沿用。",
+    "世界底圖只填中國：BirdLife 國家表為中國（留鳥）及香港（非繁殖），110m 底圖沒有香港獨立多邊形，而香港的紀錄本身也不宜當作原生國家分佈；越南北部僅為「可能」，故不填色。留鳥與越冬地未分色、不細分國家內部，綠色非全境、非完整分佈。",
+    "AI 主圖特意採用本種標誌性的樹幹抓附姿勢（似鳾），並畫出深灰綠冠側線達嘴基、中央冠紋後段轉寬變白、前黃後白的寬眉紋、深欖綠上體、兩道帶黃翼斑、淡橙下嘴與深色腳；亞種歸屬（fokiensis 或指名）及下體黃色程度仍待專家核。比較鳥為 0420 雙斑綠柳鶯及 0419 黑眉柳鶯主圖重用，非等比例、屬 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 為空，翼長推估 12.9 cm 高於 HKBWS 10.5–12 cm，觀賞分待查並保留估算提示。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}

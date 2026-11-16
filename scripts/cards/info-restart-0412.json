@@ -1,0 +1,167 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 記上升"
+  },
+  "id": "0412",
+  "name": "暗綠柳鶯",
+  "scientificName": "Phylloscopus trochiloides",
+  "illustrationTaxon": "Adult-type Phylloscopus trochiloides on a twig; AI interpretation, sex, age and subspecies unverified.",
+  "similarSpecies": [
+    {
+      "zh": "淡尾鶲鶯",
+      "scientificName": "Phylloscopus soror",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "有灰色中央冠紋與黑色側冠條紋、完整黃色眼圈、嘴較厚；本種頭部完全無冠紋亦無眼圈，只有一條淡眉。"
+    },
+    {
+      "zh": "歐柳鶯",
+      "scientificName": "Phylloscopus trochilus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "初級飛羽較長、翼上完全無翼斑、下體較白；本種大覆羽有一個兩端收窄的短翼斑，上體偏黃綠。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.62,
+      0.26,
+      0.78,
+      0.42
+    ],
+    [
+      0.49,
+      0.42,
+      0.6,
+      0.53
+    ],
+    [
+      0.72,
+      0.27,
+      0.86,
+      0.41
+    ],
+    [
+      0.5,
+      0.33,
+      0.68,
+      0.51
+    ]
+  ],
+  "featureLabels": [
+    "淡色長眉",
+    "單一短翼斑",
+    "淡色下嘴",
+    "欖綠上體"
+  ],
+  "featureNotes": [
+    "由嘴基伸延至眼後的淡色長眉線，眼前另有一小暗斑與嘴基分開，為插圖局部。",
+    "大覆羽上單一、兩端收窄的淡色短翼斑，為插圖局部。",
+    "下嘴大部分淡肉色、上嘴較深，為插圖局部。",
+    "欖綠色的上體，初級飛羽及三級飛羽均無淡色羽緣，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "KAZ",
+      "KGZ",
+      "TJK",
+      "UZB",
+      "AFG",
+      "PAK",
+      "IND",
+      "NPL",
+      "BTN",
+      "BGD",
+      "LKA",
+      "MMR",
+      "THA",
+      "LAO",
+      "KHM",
+      "VNM",
+      "CHN",
+      "POL",
+      "DEU",
+      "SWE",
+      "FIN",
+      "EST",
+      "LVA",
+      "LTU",
+      "BLR",
+      "UKR",
+      "CZE",
+      "SVK",
+      "AUT"
+    ],
+    "note": "Partial native-country overview only; green does not imply full-country occupancy, and breeding and wintering areas are not colour-separated."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0320/039600",
+      "use": "香港第 I 類偶然記錄（2015-12-18 至 2016-01-08 大澳、2016-05-02 梧桐寨、2020-11-01 至 04 鹿頸、2021-04-09 東龍洲）、10–11.5 cm、辨識（上體及三級飛羽純色、大覆羽短翼斑兩端收窄、上體下體帶黃、白色長眉由嘴基起、眼前暗斑與嘴基分開、下嘴大部分淡色）、叫聲為 viridanus 型、四亞種中 viridanus 繁殖東歐經西伯利亞至中國西北、IUCN LC 趨勢上升。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/greenish-warbler-phylloscopus-trochiloides",
+      "use": "IUCN 2024 LC、上升、成熟個體 20,200,000–38,300,000（2018 推算）；繁殖 EOO 18,700,000 km²、非繁殖 7,170,000 km²；完全遷徙；原生國家表列出歐洲至亞洲多國（繁殖、非繁殖及過境），香港列為迷鳥。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（暗綠柳鶯）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phylloscopus trochiloides／柳鶯科）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六項 runtime 分數 i=2、a=2.3、v=2.6、r=4.8、c=1.2、o=2.6，含 vEst=1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案；look 為「牠略小於該物種」等跨物種比較句、habitat 欄實為 trochiloides 與 viridanus 基因流動說明、migration 欄為伯格曼法則討論、breeding 欄講非繁殖鳥夏季上移、callouts 多處截句、length 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 61.3 mm，×0.22≈13.5 cm，高於 HKBWS 10–11.5 cm。"
+    }
+  ],
+  "notes": [
+    "HKBWS：10–11.5 cm，香港屬第 I 類偶然記錄，四筆（2015-12-18 至 2016-01-08 大澳、2016-05-02 梧桐寨、2020-11-01 至 04 鹿頸、2021-04-09 東龍洲）；上體及三級飛羽純色、大覆羽短翼斑兩端收窄、上體下體帶黃、白色長眉由嘴基伸延、眼前暗斑與嘴基分開、下嘴大部分淡色；叫聲可分辨。四亞種，香港記錄按叫聲歸 viridanus，該亞種繁殖東歐經西伯利亞至中國西北。全球 LC、趨勢上升。",
+    "BirdLife 2024 LC、上升，成熟個體 20,200,000–38,300,000（2018 推算），繁殖 EOO 18,700,000 km²、非繁殖 7,170,000 km²，完全遷徙；國家表把香港列為迷鳥。卡面 IUCN 註記用 BirdLife 2024 的「上升」。",
+    "runtime 分數 i=2、a=2.3、v=2.6、r=4.8、c=1.2、o=2.6、vEst=1。length 為空，翼長 61.3 mm×0.22≈13.5 cm 遠高於 HKBWS 10–11.5 cm，故 v 待查並保留「原觀賞值含體長估算」提示；cardCopy habitat 欄實為 trochiloides 與 viridanus 的基因流動說明而非棲地，故適應分待查；look 為「牠略小於該物種」等跨物種比較句、migration 欄講伯格曼法則、breeding 欄講非繁殖鳥上移，故研究分待查；c=1.2 與 LC 一致、i=2 沿 runtime；o 依賴待查分項不補算。",
+    "世界底圖按 BirdLife 原生國家表挑選 30 個可支持國家（歐洲及西伯利亞至中亞、南亞繁殖，印度、孟加拉、斯里蘭卡及中南半島非繁殖），涵蓋歐洲西緣及中亞過境地；繁殖與越冬未分色、不細分國家內部，綠色非全境、非完整分佈。香港及西歐多國在 BirdLife 屬迷鳥，故不填色。",
+    "AI 主圖：上體純欖綠無冠紋、淡色長眉由嘴基伸延、眼前小暗斑、單一兩端收窄的短翼斑、下嘴淡色、下體帶黃，符合 HKBWS 描述；嘴形粗細、翼斑長度及黃色調深淺仍待專家核。淡尾鶲鶯（重用 0411）及歐柳鶯（重用 0403）對照圖非等比例，均為 AI 示意而非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "habitat 欄為亞種間基因流動說明而非棲地，適應分待查、不補值。",
+    "v": "length 為空，翼長推估 13.5 cm 遠超 HKBWS 10–11.5 cm，觀賞分待查並保留估算提示。",
+    "r": "look 為跨物種比較句、遷徙及繁殖欄錯置為伯格曼法則與垂直移動討論，研究分待查、不補值。",
+    "o": "綜合分依賴待查分項，不補算。"
+  }
+}
