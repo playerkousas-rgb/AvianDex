@@ -1,0 +1,215 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "id": "0510",
+  "name": "赭紅尾鴝",
+  "scientificName": "Phoenicurus ochruros",
+  "illustrationTaxon": "Adult female Black Redstart Phoenicurus ochruros standing upright on a lichen-covered stone, tail slightly shivered. Head, nape, mantle, back and breast uniform dull sooty grey-brown, slightly darker on the upper breast, with no contrast between the head and the back; lower breast, belly and flanks warm orange-buff; the wing plain grey-brown with NO white panel and NO pale wing bar, only faint pale fringes; tail dark brown with rusty edges; thin black bill, dark legs. The adult male is not shown: the eastern race that has reached Hong Kong (presumed P. o. rufiventris) is black on the head, breast, upperparts and wings with orange-rufous rump, outer tail and underparts, and has never been recorded in Hong Kong. AI interpretation; sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "北紅尾鴝",
+      "scientificName": "Phoenicurus auroreus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "**雌鳥對雌鳥**才是本港真正要分的組合。本種雌鳥的**上下體都是同一片灰褐、沒有明顯的暖橙調**，**翼上完全沒有白色翼斑**；雌性北紅尾鴝則是**灰褐上體配暖褐皮黃下體**，翼上**通常有一塊明顯的白斑**。HKBWS 正是用這兩點分開兩者：「雌性北紅尾鴝缺少灰色調，且通常在翼上有一白斑」。另可留意**腰與外側尾羽**：北紅尾鴝雌鳥的腰與外側尾明顯**橙紅**，本種的尾只是深褐帶銹邊。"
+    },
+    {
+      "zh": "黑喉紅尾鴝",
+      "scientificName": "Phoenicurus hodgsoni",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "與上一張 0509 互為對照。**黑喉紅尾鴝雌鳥**上體灰褐但**有淡色眼圈**、大覆羽**淡端形成一條窄翼帶**、下體灰色而**腹部明顯較淡**、脛羽皮黃；本種雌鳥**沒有明顯眼圈**、**翼上沒有翼帶**（只有很淡的羽緣），而**下胸至腹是一片橙皮黃**。**雄鳥**則完全不用比：本種雄鳥全身黑、腰與外側尾橙紅；黑喉紅尾鴝雄鳥有銀灰冠、黑臉延伸至上胸、小白翼斑與橙紅下體。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.06,
+      0.1,
+      0.34,
+      0.4
+    ],
+    [
+      0.1,
+      0.35,
+      0.36,
+      0.66
+    ],
+    [
+      0.34,
+      0.3,
+      0.62,
+      0.55
+    ],
+    [
+      0.58,
+      0.3,
+      0.9,
+      0.56
+    ]
+  ],
+  "featureLabels": [
+    "灰褐上體",
+    "橙皮黃下腹",
+    "翼無白斑",
+    "深色尾"
+  ],
+  "featureNotes": [
+    "本種雌鳥**由頭頂到背都是同一片灰褐**，頭與背之間沒有界線、也沒有暖橙調；這正是 HKBWS 用來與雌性北紅尾鴝分開的「灰」——後者整體偏暖褐。為插圖局部。",
+    "**下胸、腹部與脇是橙皮黃**，與上體的灰褐形成本種雌鳥最明顯的上下對比；雌性北紅尾鴝的腹部是同調的暖褐皮黃，橙味不集中在腹部。為插圖局部。",
+    "**翼上沒有白色翼斑、也沒有淺色翼帶**，只有極淡的羽緣。這是最快排除雌性北紅尾鴝的一點（後者翼上那一塊白斑幾乎一定會看到）。為插圖局部。",
+    "**尾是深褐、邊緣帶銹紅**，擺尾時只隱約見暖色；本種雄鳥的橙紅腰與外側尾在雌鳥身上並不存在，故不能靠「有紅尾」認雌鳥。為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BLR",
+      "BEL",
+      "BTN",
+      "BIH",
+      "BGR",
+      "CHN",
+      "HRV",
+      "CYP",
+      "CZE",
+      "DNK",
+      "DJI",
+      "EGY",
+      "EST",
+      "ETH",
+      "FIN",
+      "FRA",
+      "GEO",
+      "DEU",
+      "GRC",
+      "HUN",
+      "IND",
+      "IRN",
+      "IRQ",
+      "IRL",
+      "ISR",
+      "ITA",
+      "JOR",
+      "KAZ",
+      "KWT",
+      "KGZ",
+      "LVA",
+      "LBN",
+      "LBY",
+      "LTU",
+      "LUX",
+      "MRT",
+      "MDA",
+      "MNG",
+      "MNE",
+      "MAR",
+      "MMR",
+      "NPL",
+      "NLD",
+      "MKD",
+      "NOR",
+      "OMN",
+      "PAK",
+      "POL",
+      "PRT",
+      "QAT",
+      "ROU",
+      "RUS",
+      "SAU",
+      "SRB",
+      "SVK",
+      "SVN",
+      "SOM",
+      "ESP",
+      "SDN",
+      "SWE",
+      "CHE",
+      "SYR",
+      "TJK",
+      "TUN",
+      "TUR",
+      "UKR",
+      "ARE",
+      "GBR",
+      "UZB",
+      "YEM"
+    ],
+    "note": "Partial NATIVE-country overview only. This is the largest country table in the batch so far: BirdLife lists 95 rows, of which 82 are native territories once the four Russian rows (Russia, Russia (Asian), Russia (Central Asian), Russia (European)) are collapsed into one; 76 of those 82 have 110m geometry and are shaded. Six native territories have no 110m geometry and are described in the text instead: Andorra, Bahrain, Gibraltar, Liechtenstein, Malta and Palestine. Thirteen territories are deliberately left unshaded because BirdLife lists them as VAGRANTS: Chad, Eritrea, the Faroe Islands (to Denmark), Iceland, Japan, Mali, Niger, North Korea, Senegal, South Korea, Taiwan, Vietnam — and Hong Kong (China), which appears in BirdLife's table as a vagrant for the first time in this batch and is treated by HKBWS as Category I / Accidental, so the two sources agree. Not an occurrence polygon: green does not imply full-country occupancy, and most of the shaded area is breeding range (BirdLife breeding EOO 31,100,000 km² against a non-breeding EOO of 39,600,000 km²)."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/050900",
+      "use": "香港第 I 類、**Accidental（偶發）**。**14–15 cm**；**雌鳥**上體**灰褐**、胸部**暗灰褐**，**下胸、腹部與脇為橙皮黃**；**雌性北紅尾鴝缺少灰色調，且通常在翼上有一白斑**。**成鳥雄鳥（本港未錄得）**的 *P. o. rufiventris* 亞種**上體、翼、頭與胸都是黑色**，**腰與外側尾羽橙紅**、**下體銹橙**。聲音：**中等偏高『tseet』**，若後接一串急促的**『tik』**通常表示警戒。生境：紀錄來自**離岸島嶼**與**塱原一片以旱作農業為主的區域**。出現情況（**全部三筆**）：**1995-04-23 東平洲一隻第一夏雄鳥**（Jantunen 1996，香港首筆）；**2011-04-05 至 13 蒲台一隻第一冬雌鳥**；**2017-10-29 至 12-27 塱原一隻第一冬雌鳥**。行為：**常以直立姿勢站立並頻頻抖尾**，愛停在**屋頂、柱與圍欄等人造物**上；**在地面覓食昆蟲**，偶爾像姬鶲一樣**空中捕食**。分類：分佈由**西歐與西北非**經**中東與中亞**至**印度、中國西部與中部及蒙古**；中國有三個亞種，本港相信出現的是 ***P. o. rufiventris***（繁殖於**吉爾吉斯南部與塔吉克**向東沿喜馬拉雅至**中國中部**，冬季在**西南亞與南亞**；在中國繁殖於**南疆、青海南部、甘肅與陝西南部至藏東、四川及雲南西部與西北部**；在**河北、山東、貴州、海南、台灣**以及**日本與南韓**屬迷鳥或罕見冬候鳥）；***P. o. phoenicuroides*** 繁殖於**伊朗東部與土庫曼至巴基斯坦西北**（北至哈薩克東南、中國西部、西伯利亞中南部與蒙古西部），冬季在**非洲東北部、阿拉伯半島與西南亞與南亞**；第三個亞種 ***P. o. murinus*** 在**中國中北部極北**（Fedorenko 2018）。保育：**IUCN Least Concern，趨勢 increasing**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/black-redstart-phoenicurus-ochruros/details",
+      "use": "IUCN **LC**、**2018 年評估**（與 0501／0507 同為本批最舊；2018、2016、2014、2012、2009、2008、2004 皆 LC，2000、1994、1988 為 Lower Risk/Least Concern——**本批第二長的評估歷史**）；**成熟個體 32,000,000–57,999,999（2012 年估算、品質 Poor、Derivation Estimated）**——**本批至今最大的族群數字**；歐洲 **5,760,000–10,000,000 繁殖對** = **11,500,000–20,000,000 成熟個體**，**歐洲佔全球分佈約 35%**，故全球估算為 32,800,000–57,100,000；**趨勢 Increasing（Estimated）——與 HKBWS 的 increasing 一致**，依據是**歐洲 1982–2013 整體上升**（EBCC 2015）；**繁殖 EOO 31,100,000 km²、非繁殖 EOO 39,600,000 km²（兩者都是本批最大）**、AOO Unknown、**Breeding endemic No**、**Full Migrant**、**IBA／KBA 為「-」**、**生態系統同時有 Marine 與 Terrestrial（本批第二次出現海洋生態系統）**、海拔 **0–3,700 m**、**世代 4.1 年（本批最長）**、**森林依賴度「通常不出現於森林」**；**生境 11 項（本批最多）**，其中**市區（繁殖與非繁殖期皆 Major）**與**岩石地帶（繁殖與非繁殖期皆 Major）**四項為 Major，另温帶草原、海崖與温帶／亞熱帶乾燥灌叢等為 Suitable；生境描述補充：**繁殖期西歐為 4 月中至 7 月中**、摩洛哥 4 月底至 6 月、以色列 4–7 月、印度 5–8 月、尼泊爾 4–7 月、中國 6–7 月；巢為草、苔、毛、羊毛與羽毛的疏鬆杯狀巢，置於牆縫、岩縫、土坡、石堆或地面；**每窩四至六枚蛋**；食性為**無脊椎動物與漿果**；種群狀態「不同地區為留鳥、部分遷徙、垂直遷徙或完全遷徙」；**威脅**：歐洲**大規模重建與舊區活化令市區繁殖地消失**，巢位亦易在**鐵路側線、貨車停車場**等地被清除或騷擾；**用途與貿易**：**人類食用、寵物／展示、狩獵／標本採集三種用途**（皆 Subsistence、National）；**保育行動**：**CMS 附錄 II、伯恩公約附錄 II**，在英國為 **BAP 保育關注種**並有地區行動計劃；建議維持歐洲繁殖族群、建立趨勢與現況、提高公眾認識；**系統性監測計劃為 Yes（本批第一次）**；**次全球評估：阿拉伯半島 2012 NT（準則 D1）**、EU27+UK 2021 LC、歐洲 2021 LC；命名人 **(Gmelin, 1774)**；Alliance for Zero Extinction 與 Search for Lost Birds 皆 No。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024（頁面最後更新 2025-05-11）：第 **519** 項 赭紅尾鴝 Black Redstart（*Phoenicurus ochruros*），**第 I 類**；鄰項為 518 紅尾水鴝與 520 北紅尾鴝——**名錄把赭紅尾鴝排在紅尾水鴝之後、北紅尾鴝之前**，而 runtime 次序為 0508 紅尾水鴝、**0509 黑喉紅尾鴝**、**0510 赭紅尾鴝**、0511 北紅尾鴝，兩者不同。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（赭紅尾鴝；Black Redstart）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phoenicurus ochruros／鶲科 Muscicapidae）；speciesCode blared1；taxonOrder 29348。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 2、a 3.3、v 2.6、r 4.8、c 1.2、o 2.8），`missingScores` 與 `withheldScores` 皆為空；**r 4.8 是本批最高**（全港只有三筆偶發紀錄），o 2.8 與六軸平均 2.78 相符。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "`look` 中文「腹部和尾下部位於西方亞種為黑灰色…而東方亞種則為橘紅色」屬形態描述（故 a 保留）；`haircut`／`voice` 與 `conservation` 中文都是亞種分類句而非叫聲或保育；`funFact` 缺了命名人姓名（英文版有 Gmelin）；`habitat` 中文講的是英國威爾斯與英格蘭海岸、與香港無關；`range` 中文以歐洲為中心；**length 13–14.5 cm（HKBWS 為 14–15 cm）、weight 12–20 g**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 83.1、tail 60.4、tarsus 22.4、bill 15.4、mass 16.5。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **519** 項、**第 I 類**；HKBWS 列為 **Accidental（偶發）**，全部 **三筆**——**1995-04-23 東平洲第一夏雄鳥**（香港首筆，Jantunen 1996）、**2011-04-05 至 13 蒲台第一冬雌鳥**、**2017-10-29 至 12-27 塱原第一冬雌鳥**。三筆之中兩筆是雌鳥、一筆是第一夏雄鳥，**成鳥雄鳥從未在港錄得**，所以卡面主圖畫的是雌鳥（也是本港實際會遇到的羽色）。地點提示了本種的偏好：離岸島嶼與塱原的旱作農地。",
+    "辨識要點（雌鳥）：本種雌鳥**上下體同為灰褐、沒有暖橙調**、**翼上沒有白斑**、**沒有明顯眼圈**；雌性北紅尾鴝**通常有白色翼斑**且下體帶暖褐皮黃、腰與外側尾橙紅；黑喉紅尾鴝雌鳥則**有淡色眼圈與窄翼帶**、腹部明顯較淡。行為上本種**常以直立姿勢站立並頻頻抖尾**，愛停在人造物（屋頂、柱、圍欄）上，並會下地面覓食。",
+    "IUCN：**LC（無危）**、BirdLife **2018** 年評估（與 0501／0507 同為本批最舊）。**成熟個體 32,000,000–57,999,999**（2012 年估算、品質 Poor）是本批最大的族群數字，歐洲佔全球約 35%；**趨勢 Increasing**，與 HKBWS 一致。繁殖 EOO 31,100,000 km²、非繁殖 EOO 39,600,000 km²（兩者皆本批最大）；**世代 4.1 年為本批最長**；**生境 11 項為本批最多**，其中**市區**與**岩石地帶**於繁殖與非繁殖期皆為 Major；**生態系統含 Marine**；**IBA／KBA 為「-」**。**威脅**為歐洲市區重建令繁殖地消失；**貿易有三種用途**（食用、寵物、狩獵／標本）；**系統性監測計劃為 Yes（本批第一次）**；**次全球評估中阿拉伯半島為 NT（D1）**，雖全球仍屬 LC。",
+    "地圖是本批最複雜的一張：BirdLife 列 **95 列**，**82 個原生地區**（俄羅斯四列併為一個 `RUS`），其中 **76 個有 110m 幾何** 並填色。**六個原生地區沒有幾何**，只在 note 以文字說明：**安道爾、巴林、直布羅陀、列支敦士登、馬爾他、巴勒斯坦**。**13 個地區為迷鳥故不填色**：乍得、厄立特里亞、法羅群島、冰島、日本、馬里、尼日爾、北韓、塞內加爾、南韓、台灣、越南，以及**香港（中國）**——**這是本批第一次 BirdLife 國家表出現香港**，且列為 **Vagrant**，與 HKBWS 的 Category I / Accidental 一致，故 note 照實寫出而**不把香港填色**。",
+    "running data 缺陷（只記錄、不改 runtime）：`look` 中文是亞種下體顏色對比句、仍屬形態（故 a 保留）；但 `voice`、`conservation` 兩欄中文都是「亞種數目五至七個」的分類句，**不是叫聲也不是保育**；`funFact` 漏了命名人 Gmelin；`habitat` 中文講英國威爾斯與英格蘭海岸，與香港完全無關；`range` 中文以歐洲為中心；`breeding` 只講孵化期 13–17 天。**length 13–14.5 cm 與 HKBWS 的 14–15 cm 不同**（照實並列）。六軸分數齊全，**r 4.8 為本批最高**。",
+    "HKBWS 頁面 id 是 **050900**（路徑 `0410/`；名錄第 **519** 項），比 runtime **0510** 小 1——**本批第一次出現負偏移**（此前 +0 至 +4）。查頁次序：050700 紅喉姬鶲、050800 紅胸姬鶲、**050900 赭紅尾鴝**、051000 黑喉紅尾鴝、051100 北紅尾鴝、051200 紅尾水鴝，內部 id 與 runtime、名錄序號均不對應，**必須開頁看標題**。",
+    "本輪開始前**沙盒第三次被重置**：`~/card-venv`、CJK 字型、`/tmp/dump.py`、`cards/art`、`deliver/cards` 全部消失、本機分支退回 base `75d0f82`。已 `git fetch` 後 `reset --hard origin/arena/3fc0e99d-aviandex` 回到 `9a46dfa`（工作區檔案 md5 與遠端一致，無損失），再以 `scripts/cards/setup-info-card-env.sh 0510` 重建 venv 與字型。主圖與兩張比較鳥**全部本輪新生成**：不帶風格參照、硬性羽色規格＋明寫負面條件；主圖第一版帶有畫紙白邊，已改為在落彩範圍內取正方形並放大；兩張比較鳥第一版同樣有紙邊且喙被裁，已重新生成為正方形滿版構圖。全部為 AI 解讀、非等比例，未經鳥類專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
