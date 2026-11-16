@@ -1,0 +1,148 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0488",
+  "name": "紅尾歌鴝",
+  "scientificName": "Larvivora sibilans",
+  "illustrationTaxon": "Adult Larvivora sibilans (small, round-bodied ground chat 13–14 cm, sexes similar: warm brown above; the rump, uppertail coverts and the whole tail bright rufous-chestnut; underparts whitish but heavily scaled with brown across the breast, flanks washed buff; a pale buff-white eye ring and a faint buff-white spot just in front of the eye; legs bright pink). Species is monotypic; first-winter birds would show pale tips to the inner greater coverts, which are omitted. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "白喉短翅鶇",
+      "scientificName": "Brachypteryx leucophris",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者都是在本港林下地面、落葉層活動的圓身褐色小鳥，常在數米內擦身而過；白喉短翅鶇身形更短圓、**尾極短而常翹起**、**翼特短**、臉與胸並無鱗狀斑，只有**一道纖細白眉**與淡皮黃胸帶，**腰尾與背部同為深褐、沒有赤褐色**，腿腳則更長更粗。本種**尾是明顯的赤褐色而與褐色背部斷開對比**、**胸與脇有濃密褐色鱗斑**、**有淡色眼圈與眼前斑**。"
+    },
+    {
+      "zh": "藍歌鴝",
+      "scientificName": "Larvivora cyane",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同樣在地面落葉層覓食並常把尾抖動；成年雄鳥全身藍色、白腹、有黑色眼罩，不會混淆，但**雌鳥與第一冬鳥是灰褐色、腰與尾帶藍色調、胸有模糊鱗斑**，是最接近本種的一種。分別在於藍歌鴝這類褐色個體**腰尾只是灰褐帶藍、不是亮赤褐**，**胸腹的鱗斑模糊而偏皮黃色調**，且**沒有淡色眼圈與眼前斑**；本種的赤褐色尾與清晰的白底褐鱗對比始終明顯。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.58,
+      0.2,
+      0.9,
+      0.42
+    ],
+    [
+      0.26,
+      0.3,
+      0.52,
+      0.52
+    ],
+    [
+      0.24,
+      0.16,
+      0.42,
+      0.32
+    ],
+    [
+      0.36,
+      0.58,
+      0.6,
+      0.88
+    ]
+  ],
+  "featureLabels": [
+    "赤褐腰尾",
+    "胸腹鱗斑",
+    "淡色眼圈",
+    "粉紅長腳"
+  ],
+  "featureNotes": [
+    "**腰、尾上覆羽與整條尾都是明亮的赤褐色**，與橄欖褐色的背部形成清楚的斷層，也是中文名與英文名（Rufous-tailed）的來源；在陰暗林下，這抹赤褐往往是最先看到的部分，為插圖局部。",
+    "下體偏白，但**胸與脇密佈褐色鱗狀斑**，像魚鱗一樣一層壓一層，脇部並染皮黃；HKBWS 特別提醒**第一冬鳥的內側大覆羽有淺色端斑，會隨冬季磨損消失**，故冬末的個體鱗斑會顯得較淡，為插圖局部。",
+    "**淡皮黃白色的眼圈**加上**眼前一道隱約的皮黃白斑（supraloral spot）**，在一片褐色的臉上形成兩個亮點；這兩點在本種身上比同屬其他歌鴝明顯，是近距離辨識的關鍵，為插圖局部。",
+    "**腳與趾呈鮮粉紅色**，在落葉層與苔蘚間格外顯眼；本種幾乎全在地面落葉與低矮植被中覓食，長而有力的腳趾正適合翻扒枯葉，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "LAO",
+      "PRK",
+      "RUS",
+      "KOR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 8 native countries with 110m geometry — China (mainland), Japan, Laos, North Korea, Russia (all three BirdLife rows fold into one shape), South Korea, Thailand and Vietnam — so 8 shapes are shaded. Hong Kong IS in BirdLife's table this time (native, non-breeding) but the HKG territory has no 110m geometry, so it is described here rather than shaded; the United Kingdom is listed only as a vagrant and is not shaded. Not an occurrence polygon: a full migrant breeding across central and eastern Siberia, northern Mongolia, northeast China and northern Japan, and wintering from southwest China (Tibet, Yunnan, Guangdong, Hainan) through northern Thailand and Laos to Vietnam, inside an EOO of 8,600,000 km² when breeding and 2,600,000 km² when not."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/049100",
+      "use": "香港第 I 類。**常見的過境遷徙鳥兼冬候鳥，主要見於封閉樹冠的森林與灌叢**；**13–14 cm，雌雄相似**：上體褐色，**腰、尾上覆羽與尾赤褐色**，下體偏白而**胸有褐色鱗斑、脇帶皮黃**，**有皮黃白色眼圈與隱約的皮黃白眼前斑**，**腳粉紅色**；**第一冬鳥的內側大覆羽有淺色端斑，隨冬季磨損消失**。分佈：冬季地圖集顯示**出現率由 2001-05 的 1.9% 升至 2016-19 的 5.3%（1 km 方格）**，其中**大嶼山的擴張最明顯**；主要見於封閉樹冠的森林與灌叢。出現時間：**全期為 10 月 17 日至 5 月 4 日**，10 月罕見；**11 月第二週至 2 月中屬常見，高峰在 11 月中至 12 月第一週**，穩定至 2 月第二週後明顯下降；**3 月第二週起再次上升，4 月第一週為高峰（過境，並被鳴唱雄鳥誇大）**，5 月仍有零星紀錄。歷史：**Walker（1958）在 1955-57 年錄得 8 次，日期為 12 月 29 日至 4 月 16 日，是本港最早的紀錄**；Kershaw（1904）與 Vaughan & Jones（1913）已把牠列入珠江三角洲的鳥類。行為：**在地面落葉層與低矮植被中覓食，羞怯而隱蔽**；2005-11-27 在流水響有一隻吞食大型蚯蚓。聲音：**高而略帶金屬感的「siht」（領域聲）與低沉的「tuk」**；**鳴唱是結結巴巴的顫音，開始時較響較清、之後漸弱並降低音調**；**鳴唱期為 2 月 26 日至 5 月 4 日**（另有兩次 12 月紀錄）；**單次最多鳴唱雄鳥為 1995-04-14 東平洲 13 隻**。分類：**單型種**；繁殖於中西伯利亞、中國東北（內蒙北部、黑龍江）與日本北部，冬季於中國西南及南部（西藏、雲南南部至廣東、海南）、泰北、寮國與越南（Collar 2020）。數量：**2008 年 2 月第二週（四十年來最冷的 2 月）錄得 35 隻以上**；**2017 年 1 月南丫島最多 11 隻同浴**、2018 年 1 月 10 隻。IUCN：**Least Concern，種群趨勢穩定**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/rufous-tailed-robin-larvivora-sibilans/details",
+      "use": "IUCN **2024 LC**（準則 N/A）；成熟個體 Unknown、趨勢 **Decreasing（Suspected）**——範圍內十年樹冠減少 **9.2%**、暫定懷疑下降 **1–19%**；**EOO 繁殖 8,600,000 km²、非繁殖 2,600,000 km²**、**Full Migrant**、繁殖 endemic No、**IBA／KBA 14 個**、海拔 **0–1,200 m**、世代 **2.7 年**、森林依賴度 **Medium**；種群量未量化但被描述為普遍常見（del Hoyo et al. 2005），中國遷徙期約 50–10,000 隻、韓國 50–10,000 隻、俄羅斯 10,000–100,000 繁殖對及 1,000–10,000 隻過境（Brazil 2009）；生境五項——**溫帶林為繁殖期 Major**，濕潤低地林、濕潤灌叢與城市／鄉村花園為非繁殖期 Suitable；國家表列 **8 個原生國家**（中國、日本、寮國、北韓、俄羅斯聯邦及其亞洲／中亞部分、南韓、泰國、越南）**加上香港（原生、非繁殖）**，**英國為迷鳥**；**貿易普遍度低（1/7）**，用途為食物與寵物（自給、全國）；保育行動：**全範圍已劃定保育地點、已列入國際法規**，但沒有系統監測、沒有復育計劃、**沒有國際貿易管制**；評估歷史 1988 年起一直 LC。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **506 項 紅尾歌鴝（Larvivora sibilans），第 I 類**；同科鄰項為 504 藍歌鴝、505 日本歌鴝（皆 I 類）。**注意：runtime id 0488 在名錄上是第 506 項，id 序號與名錄序號並不一致（0489 日本歌鴝反而是第 505 項、0490 藍歌鴝是第 504 項）。**"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（紅尾歌鴝；Rufous-tailed Robin）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Larvivora sibilans／鶲科 Muscicapidae）；speciesCode rutrob1；taxonOrder 29111。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **六軸齊全**：i=2、a=3.8、v=1.9、r=4.8、c=3、o=3.1，故 missingScores 為空、withheldScores 亦為空；但 **v=1.9 與體型不符**（見 notes），只記錄不改動。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案相對完整：`fieldCopy` 的 `look` 有真實形態描述（**臀部與尾巴亮紅褐、兩側黃褐、白色眼圈、臉頰黃褐條紋**）、`habitat`、`breeding`、`voice`、`migration`、`conservation`（LC）、`etymology` 與 **5 條 highlights**；**`diet` 被誤填為屬名的詞源說明**、**`voice` 的中文欄同樣誤填詞源**——屬資料缺陷，卡面不沿用該段；**length 與 weight 皆為空**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 68.2 mm、尾 50.2 mm、跗蹠 24.8 mm、嘴峯 14.0 mm、體重 16.7 g；**翼 68.2 mm×0.22≈15.0 cm，略長於 HKBWS 的 13–14 cm**——以 HKBWS 為準。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **506** 項、**第 I 類**；HKBWS 描述為**常見的過境遷徙鳥兼冬候鳥**，主要見於封閉樹冠的森林與灌叢；**全期 10 月 17 日至 5 月 4 日**，高峰為 **11 月中至 12 月第一週**（越冬鳥）與 **4 月第一週**（過境鳥，因鳴唱雄鳥而顯得更多），2 月第二週後明顯下降。歷史紀錄可追溯至 **Kershaw（1904）與 Vaughan & Jones（1913）的珠江三角洲名錄**，**Walker（1958）在 1955-57 年錄得 8 次、12 月 29 日至 4 月 16 日**。**冬季地圖集出現率由 1.9% 升至 5.3%（1 km 方格，2001-05 → 2016-19），大嶼山擴張最明顯**——本卡是本批第一張「本港可見度明顯上升／擴張」的物種，與 0483 棕腹大仙鶲的「每年冬候」、0485 琉璃藍鶲的「一筆紀錄」、0487 白喉短翅鶇的「新殖民並繁殖」構成四種不同鳥況。",
+    "辨識要點：**13–14 cm、圓身、雌雄相似**；上體褐、**腰與整條尾亮赤褐**、下體偏白而**胸有褐色鱗斑、脇皮黃**、**皮黃白眼圈與眼前斑**、**腳鮮粉紅**。**第一冬鳥的內側大覆羽有淺色端斑**，冬季磨損後消失——HKBWS 明言此點，故冬末個體看起來鱗斑較淡，插圖未畫出這種磨損狀態。單型種。",
+    "行為與聲音：**在地面落葉層與低矮植被覓食，羞怯隱蔽**，常用腳翻扒枯葉；叫聲為**高而略帶金屬感的「siht」**與**低沉的「tuk」**；**鳴唱是結結巴巴、開始響亮清晰、之後漸弱並降調的顫音**，鳴唱期 **2 月 26 日至 5 月 4 日**（另有兩次 12 月紀錄），**1995-04-14 東平洲 13 隻同唱為單次最高**；**2008 年 2 月第二週（四十年來最冷的 2 月）錄得 35 隻以上**、2017 年 1 月南丫島 11 隻同浴。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 評估；**趨勢 Decreasing（Suspected）**（樹冠減 **9.2%**、懷疑下降 1–19%），而 **HKBWS 寫「population trend stable」、本港出現率又在上升**——**全球懷疑下降與本港擴張方向相反**，兩者並列而不互相取代。EOO 繁殖 **8,600,000 km²**、非繁殖 **2,600,000 km²**、**Full Migrant**、**IBA／KBA 14 個**、海拔 **0–1,200 m**、世代 2.7 年、森林依賴度 Medium；生境只有溫帶林（繁殖期 **Major**）與濕潤低地林、濕潤灌叢、城市／鄉村花園（非繁殖期 Suitable）；**已列入國際法規、但沒有國際貿易管制**；貿易普遍度低（1/7）。",
+    "**地圖**：BirdLife 的 8 個原生國家全部有 110m 幾何，故填 **8 個形狀**（中國、日本、寮國、北韓、俄羅斯、南韓、泰國、越南；俄羅斯的三行在幾何上合為一個形狀）。**本卡與 0487 不同：BirdLife 今次有把「Hong Kong (China)」列入國家表（原生、非繁殖）**，但香港沒有 110m 幾何，故只在 note 說明、不上色；**英國僅為迷鳥，不上色**。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：**`cardCopy.fieldCopy.diet` 被填成屬名 *Larvivora* 的詞源說明（「caterpillar eater」），`voice` 的中文欄同樣是詞源而非聲音描述**——兩者都不是該欄應有的內容，卡面因此不引用該段；**length 與 weight 皆為空**；其餘 `look`、`habitat`、`breeding`、`voice`（英文）、`migration`、`conservation`、`etymology` 與 5 條 highlights 均可用。`dexScores` **六軸齊全**（i2 / a3.8 / v1.9 / r4.8 / c3 / o3.1），故 missingScores 與 withheldScores 皆為空。",
+    "**v=1.9 的存疑**：本批其他物種的 v 多在 2.5–2.8，而本種翼長 68.2 mm（×0.22≈15.0 cm）與 HKBWS 的 13–14 cm 都指向中型歌鴝，v=1.9 明顯偏低；由於 v 的計算方式未在 runtime 說明，無法判定是資料錯誤還是設計如此，**只記錄不改動、也不代為重算**，維持六軸齊全的顯示。",
+    "AI 主圖以 0483 棕腹大仙鶲的方形主圖作風格參照，生成 1024×1024、直接放大至 1127×1127（不裁切、不補邊），畫出褐色身體、亮赤褐腰尾、胸腹褐鱗、淡色眼圈與鮮粉紅長腳，站在苔蘚樹根上以呼應落葉層覓食。比較鳥為**白喉短翅鶇**（沿用 0487 主圖）與**藍歌鴝**（0490 主圖），非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
