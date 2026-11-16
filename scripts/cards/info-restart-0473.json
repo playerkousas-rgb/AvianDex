@@ -1,0 +1,158 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0473",
+  "name": "烏鶲",
+  "scientificName": "Muscicapa sibirica",
+  "illustrationTaxon": "Adult Muscicapa sibirica (sooty-grey head and upperparts, obvious white orbital ring broadest behind the eye, poorly defined white half-collar and submoustachial stripe, off-white underparts with diffuse dark mottling on breast and flanks, pale fringes to greater coverts and tertials, long dark wings). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "灰紋鶲",
+      "scientificName": "Muscicapa griseisticta",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同為過境鶲；本種下體只是瀰散的深灰斑駁、在胸與脇常糊成一片、眼圈較寬且後緣最寬、眼先不特別淡；灰紋鶲下體白而縱紋深灰、邊界清楚、彼此分明，眼圈只是一圈細白，並有較淡的眼先與喉側色塊（Leader 2010）。"
+    },
+    {
+      "zh": "北灰鶲",
+      "scientificName": "Muscicapa dauurica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、體型更小頭短翼；北灰鶲眼先明顯淡白、頭頂與臉部線條較單純，翼較短（初級飛羽伸出約等於或略長於三級飛羽）；本種眼先不淡、翼較長（初級飛羽伸出可達三級飛羽的 1.2 倍）、下體斑駁較重，最長尾下覆羽的深色羽心若可見則具診斷性。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.345,
+      0.235,
+      0.445,
+      0.335
+    ],
+    [
+      0.3,
+      0.395,
+      0.4,
+      0.495
+    ],
+    [
+      0.5,
+      0.395,
+      0.6,
+      0.495
+    ],
+    [
+      0.625,
+      0.6,
+      0.725,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "粗白眼圈",
+    "胸腹瀰散斑駁",
+    "翼覆羽淡色羽緣",
+    "白色尾下覆羽"
+  ],
+  "featureNotes": [
+    "眼圈明顯、白色、**後緣最寬**（眼後較闊），是本種最穩定的辨識點；成鳥與第一齡鳥皆有，西部亞種的眼圈略窄，為插圖局部。",
+    "下體近白而胸與脇有深灰斑駁與瀰散縱紋，斑常糊在一起而非一條條分明，遠看有鱗狀感；西部亞種下體斑紋更少、白腹範圍更小，為插圖局部。",
+    "大覆羽與三級飛羽有寬闊的淡色羽緣，第一齡鳥最明顯，並可能夾雜留有白端的幼羽；成鳥的羽緣較窄較淡，為插圖局部。",
+    "尾下覆羽白色，插圖只清楚畫到白色的尾下覆羽與其上的深色尾羽；HKBWS 指出**最長尾下覆羽的深色羽心**具診斷性，此處未能可靠呈現，故只以可辨的白色尾下覆羽為標籤，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "BGD",
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "JPN",
+      "KAZ",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PAK",
+      "PHL",
+      "PRK",
+      "RUS",
+      "KOR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 21 native countries/territories — Afghanistan (breeding), Bangladesh, Brunei, Cambodia, China, India, Indonesia, Japan, Kazakhstan (breeding), Laos, Malaysia, Myanmar, Nepal, North Korea, Pakistan, the Philippines, Russia (including Asian and Central Asian Russia), Singapore, South Korea, Thailand and Vietnam. Singapore has no geometry in the 110m base map, so 20 are shaded. Hong Kong has no separate 110m geometry and is folded into China's outline. The USA is listed as a VAGRANT entry and is left unshaded. Russia is shaded as a country, not as a claim of breeding range west of the Urals. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/047600",
+      "use": "香港第 I 類：**過境遷徙鳥**，見於疏林或林緣，**秋季相當常見而春季罕見**；**13–14 cm**，嘴短而細、**白色眼圈明顯且後緣最寬**、**最長尾下覆羽的深色羽心若可見則具診斷性**；第一齡鳥最常出現，以大覆羽與三級飛羽的寬闊淡色羽緣辨識，並常保留帶白端的幼羽（本港過境鳥中少數常見此現象）；胸有深色斑駁、常有鱗狀感；成鳥頭與上體煙灰、白色半頸環與頰下線不清楚，喉與下體近白而胸與脇有深色斑駁或瀰散深灰縱紋、下腹白、嘴黑但有時下嘴基帶黃；本種眼先罕有北灰鶲那樣明顯的淡色，翼較長（初級飛羽伸出等於或最多比露出的三級飛羽長 20%，Leader 2010）；西部亞種較暗、下體條紋更少、白腹範圍縮小、喉部淡色斑更窄更小；叫聲為高音金屬般的「chit」，可單聲或急促短串，另有較粗糙、較低沉平坦的音；生境為任何有合適遮蔽之處，新界中部林地最常見，有樹的開闊地與離島（尤其蒲台）亦常見；秋季紀錄期 8 月 26 日至 12 月 29 日，8 月最後一週極少、首批通常在 9 月第一週，**高峰為 9 月中至 10 月第一週（1999–2020 年 46% 紀錄在 9 月 15 日至 10 月 8 日）**，現時可穩定見至 11 月第三週（1990 年代末之前 10 月中之後罕見），1999–2020 年有八年 12 月有極少數紀錄；春季罕見，全部為單隻、3 月 31 日至 5 月 8 日（2012 年有三筆在不同地點）；最高計數為 2009-09-19 大埔滘 5 隻；2009 年後整體數量明顯上升（部分亦因觀鳥活動增加）：2000 年前每年估計多為個位至十幾隻，之後 2009 與 2013 年 38 隻、2015 年 65 隻、**2020 年 73 隻**；全部香港紀錄屬指名亞種，另有**三筆喜馬拉雅亞種（按分佈推測為 rothschildi）**——2013-12-29 貝澳一隻（Allcock 2015）與 2024 年 3 月石崗；1974 年首錄，Chalmers (1986) 只列三筆而視為迷鳥，1986 年後因辨識水平提高而成為常見紀錄；多單獨，捕食時會選定一根顯露的棲枝並反覆返回，常涉及長距離的空中特技飛行；IUCN Least Concern、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/dark-sided-flycatcher-muscicapa-sibirica/details",
+      "use": "IUCN **2024** LC（下降未達門檻）、成熟個體 Unknown、趨勢 **Decreasing**（Suspected，因分佈範圍內十年樹冠減少 2.3%，暫定下降 1–19%）、繁殖 EOO **19,600,000 km²**、非繁殖 EOO **8,420,000 km²**、完全遷徙、繁殖 endemic **No**、IBA／KBA 為「-」、海拔 0–4,000 m、世代 **2.2 年**（本批最短之一）、森林依賴度 **Medium**；生境為溫帶與北方林（繁殖）、亞熱帶／熱帶濕潤山地林、溫帶灌叢（繁殖）與熱帶高海拔灌叢（繁殖與非繁殖）；**無任何貿易或利用紀錄**（Donald et al. 2024 的七個貿易資料集皆無）；已納入國際法規；國家表列 21 個原生國家／地區（阿富汗與哈薩克為繁殖、俄羅斯與中亞俄羅斯為繁殖、其餘過境或越冬），美國為迷鳥；**香港沒有獨立一列**；範圍描述另提到歐洲族群（200,000–510,000 對、佔全球繁殖範圍 50–74%）十年間可能下降達 30%，但可能只是繁殖族群的位移，亞洲族群未見下降、非洲越冬族群似乎在增加。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（烏鶲；Dark-sided Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Muscicapa sibirica／鶲科 Muscicapidae）；speciesCode dasfly；taxonOrder 28523。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六軸齊全：i=2、a=3.3、v=2.9（含 vEst=1）、r=3.3、c=1.2、o=2.5。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案較豐富：diet 與 behavior 相同（在顯露樹枝等待、衝出捕捉飛蟲）、habitat（針葉林、混合林、林地，亦見於種植園、公園與花園）、look（上體單調深灰褐、有淺色翼帶與次級覆羽淡色邊）、voice（細小高音帶顫音與哨音，叫聲為金屬叮噹聲）、callouts 三項（喙短且深色／上身單調深灰褐／尾下覆羽白）、breeding（每窩三至四卵、雌鳥孵、雄鳥餵）、range、migration、funFact（拉森在貝加爾湖附近發現）、iucn（無危 LC）；**沒有 etymology、humanRelation、conservation**；**length 與 weight 為空**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 75.5 mm、尾 45.7 mm、跗蹠 13.1 mm、嘴峯 11.7 mm、體重 13.2 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 047600（路徑 `0400/`，鶲科）：香港第 I 類，**過境遷徙鳥**，見於疏林或林緣，**秋季相當常見而春季罕見**——與緊接的 0472 灰紋鶲（以春季為主）剛好相反；13–14 cm。",
+    "辨識要點：白色眼圈後緣最寬、嘴短而細、翼長（初級飛羽伸出等於或最多比露出三級飛羽長 20%）、眼先不特別淡、下體斑駁瀰散，最長尾下覆羽的深色羽心若可見則具診斷性（Leader 2010）。",
+    "本港紀錄：秋季 8 月 26 日至 12 月 29 日，高峰 9 月 15 日至 10 月 8 日（佔 1999–2020 年 46%），現可穩定見至 11 月第三週；春季罕見，全部單隻、3 月 31 日至 5 月 8 日；最高 2009-09-19 大埔滘 5 隻；每年估計由 2000 年前的個位至十幾隻升至 2015 年 65 隻、2020 年 73 隻；1974 年首錄，Chalmers (1986) 只有三筆。",
+    "亞種：全部香港紀錄為指名亞種，另有**三筆喜馬拉雅亞種**（按分佈推測為 *rothschildi*）：2013-12-29 貝澳（Allcock 2015）、2024 年 3 月石崗；HKBWS 只寫「三筆」而細節列出兩筆，本卡不作補齊。",
+    "IUCN：本卡為 **LC（無危）**；**評級年份與趨勢兩處需分別看待**——BirdLife **2024** 年評估、趨勢 **Decreasing**（因分佈範圍十年樹冠減少 2.3%，暫定下降 1–19%），而 HKBWS 頁面寫「Population trend stable」，兩者對趨勢的判斷不同，本卡以 BirdLife 數據為準並在此記錄差異；繁殖 EOO 19,600,000 km²、非繁殖 EOO 8,420,000 km²、完全遷徙、世代 2.2 年、海拔 0–4,000 m、森林依賴度 Medium、**IBA／KBA 0 個**、無貿易紀錄；BirdLife 沒有把香港獨立列出。",
+    "runtime 分數：i=2、a=3.3、r=3.3、c=1.2 沿用；v=2.9 **待查**（length 與 weight 皆空、vEst=1 即原值由體長估算，翼 75.5 mm×0.22≈16.6 cm 高於 HKBWS 的 13–14 cm）；o=2.5 依賴待查分項不補算。a=3.3 有 habitat（針葉林、混合林、種植園、公園）與 diet 支撐；r=3.3 有 migration 與三項 callouts 支撐。",
+    "runtime 文案缺陷：diet 與 behavior 一字不差、breeding 只寫孵卵分工而沒有繁殖地（繁殖地另見 range）、funFact 只記「拉森在貝加爾湖附近發現」（來源不明確）；沒有 etymology、humanRelation、conservation；length 與 weight 為空；voice 說「金屬般的叮噹聲」，HKBWS 則記為高音金屬「chit」並另有較低沉粗糙音，卡面不作取捨，兩者並列於 notes。",
+    "AI 主圖原為 1312×816 橫幅，直接取 816×816 方形（起點 x=496，不補邊，避免平面色帶）後放大至 1127×1127，畫出煙灰上體、粗白後寬眼圈、白色半頸環、胸腹瀰散斑駁與翼覆羽淡色羽緣，停在枯枝上；最長尾下覆羽的深色羽心未能可靠呈現，第 4 格因此改以清楚可見的白色尾下覆羽為標籤並在 featureNotes 說明。比較鳥為 0472 卡的灰紋鶲（同屬、下體縱紋最易混淆）與北灰鶲（同屬、最常見近似種），沿用 0472 已生成的方形圖，非等比例、非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 75.5 mm×0.22≈16.6 cm 高於 HKBWS 的 13–14 cm，2.9 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}
