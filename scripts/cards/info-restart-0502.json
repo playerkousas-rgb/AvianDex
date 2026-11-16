@@ -1,0 +1,153 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0502",
+  "name": "鴝姬鶲",
+  "scientificName": "Ficedula mugimaki",
+  "illustrationTaxon": "Adult male Mugimaki Flycatcher Ficedula mugimaki (uniform slate-grey head, nape, mantle, back and rump — not black, not olive, not blue; a small clean white spot immediately behind the eye rather than a supercilium; rufous-orange throat and upper breast; pure white lower breast, belly and undertail coverts; broad white patch on the upperwing coverts; narrow white tertial edges; blackish tail with white confined to the bases of the outer feathers; slim dark bill; dark grey legs). Female, first-winter male and first-winter female plumages are not shown. AI interpretation; sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "琉球姬鶲",
+      "scientificName": "Ficedula owstoni",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者雄鳥都有橙紅喉胸與白翼斑，分別在上體與下體的走向：本種頭、背與腰是**冷調石板灰**，琉球姬鶲是**深橄綠配藍黑頭頂**；本種的橙紅只到上胸，**腹部與尾下覆羽純白**，琉球姬鶲的黃橙色一直延伸到下腹、腰更是鮮檸檬黃；本種眼後只是一小塊**白斑**，琉球姬鶲有一條**橙黃眉線**由嘴基伸到眼後。"
+    },
+    {
+      "zh": "銹胸藍姬鶲",
+      "scientificName": "Ficedula erithacus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬近緣，本港只有四筆紀錄且全部是雌鳥或第一冬鳥，雄鳥從未在港錄得。雄鳥上體是更深的**石板藍**、眼先與頰黑成一片**面罩**、**沒有眼後白斑**、喉至腹是**深橙色**；本種上體石板灰、眼後有白斑、腹部純白。雌鳥與第一冬鳥都是灰褐帶淡翼帶與淺色眼圈，正是最易混淆的一對（見 HKBWS 對銹胸藍姬鶲雌鳥的描述），本卡只作雄鳥層面的分辨。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.62,
+      0.1,
+      0.93,
+      0.31
+    ],
+    [
+      0.7,
+      0.23,
+      0.92,
+      0.49
+    ],
+    [
+      0.34,
+      0.33,
+      0.61,
+      0.52
+    ],
+    [
+      0.48,
+      0.46,
+      0.76,
+      0.67
+    ]
+  ],
+  "featureLabels": [
+    "石板灰頭與眼後白斑",
+    "橙紅喉胸",
+    "白色翼斑",
+    "白色下腹"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥的頭、頰與上體是均勻的石板灰，眼後只有一小塊乾淨白斑——不是眉線；琉球姬鶲與黃眉姬鶲在同樣位置是橙色或黃橙色眉線，為插圖局部。",
+    "喉與上胸是銹橙紅，與灰色的頭頸形成清楚的界線；這個橙色只到上胸為止，是本種與琉球姬鶲（黃橙一路延伸到下腹）最直接的差別，為插圖局部。",
+    "上翼覆羽有一大片白斑，加上三級飛羽的白色細邊，是雄鳥飛行時最顯眼的位置；雌鳥與第一冬鳥只有兩條淡色翼帶，沒有這片純白，為插圖局部。",
+    "下胸以下的腹部與尾下覆羽是純白；銹胸藍姬鶲雄鳥的橙色一直延伸到腹部，本種的白腹因此在同屬之中相當突出，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BRN",
+      "CHN",
+      "IDN",
+      "KHM",
+      "KOR",
+      "LAO",
+      "MNG",
+      "MYS",
+      "PHL",
+      "PRK",
+      "RUS",
+      "THA",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 17 native countries/territories; 14 of them have 110m geometry and are shaded — Brunei, Cambodia, China (mainland), Indonesia, Laos, Malaysia, Mongolia, North Korea, the Philippines, Russia (its three BirdLife rows fold into one shape), South Korea, Taiwan (China), Thailand and Vietnam. Hong Kong (China) is listed as native and non-breeding, and Singapore as native and non-breeding, but neither territory has separate 110m geometry: Hong Kong is described in the text rather than shaded, and Singapore is likewise absent from the base map. Japan is listed only as a VAGRANT and is deliberately left unshaded. Not an occurrence polygon: green does not imply full-country occupancy — the species breeds from southern Siberia and Mongolia to the Russian Far East and winters from southeast China through the Greater Sundas to Sulawesi, within a breeding EOO of 7,500,000 km² and a non-breeding EOO of 9,010,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/050400",
+      "use": "香港第 I 類，**不常見的秋季遷徙鳥、稀少的冬候鳥與春季遷徙鳥**，見於**封閉樹冠的森林與林緣**。**12.5–13.5 cm**；**成鳥雄鳥**以**石板灰的頭與上體、眼後白斑、上翼覆羽白斑、三級飛羽白邊、尾基外側白邊、銹橙紅的喉與胸、白色的腹與尾下覆羽**辨認；**成鳥雌鳥**上體灰褐、喉胸淡啞橙，**有時眼後有淡斑**，**沒有雄鳥外側尾羽的白基**，大覆羽淡端斑形成不明顯翼帶；**第一冬雄鳥**變異大，有的像第一冬雌鳥、有的像褪色的成鳥雄鳥，但都有**褐色初級飛羽與翼覆羽、兩條淡色翼帶**，並有**外側尾羽白基、較深的橙調下體與深色尾上覆羽**；**第一冬雌鳥**上體灰褐、兩條淡翼帶、淡橙色喉胸。叫聲為**硬而乾的「tuk」、「tuk-tuk」或短串**。分佈與生境：**偏好成熟林地，尤其大帽山山體**，但亦見於**市區公園、離島**，並在**蒲台與何文田**等遷徙點穩定出現。出現情況：**紀錄期 10 月 4 日至 5 月 15 日**；**主要是秋季遷徙鳥**，**1999/2000–2019/20 有 66% 紀錄落在 10 月最後一週至 12 月第一週**，**11 月第三週數量最高**；冬季稀少；**春季有微弱遷徙、4 月前兩週有一個明顯高峰**；每季數量變動大，**最低 2002/03 四隻、最高 2016/17 八十三隻**（增加相信與觀察力度有關）；**歷來最高計數為 1969-11-23 大埔滘的 30 隻**；大埔滘五次與石崗一次的雙位數計數，**除 1986-11-20 大埔滘的 20 隻外全部落在 1968–1973**；**1999 年後高峰計數全部是個位數**，最高為 **2012-12-09 石崗機場路與 2016-11-23 何文田各 8 隻**；歷史紀錄：Vaughan & Jones（1913）視之為**4 月 2 至 17 日沿岸的春季遷徙鳥**，Herklots（1940）指**1930 年代唯一確定紀錄是 1939-11-25 蒙古塱的三隻**。行為：**通常單獨**，偶有數隻鬆散一起覓食；食物為**昆蟲、部分種子與果實**；**在樹冠各層與下層覓食**，由顯眼的棲枝起飛捕食、常改停另一枝；**大埔滘岬角最多兩隻越冬鳥數年於 11、12 月吃兩面針（Zanthoxylum avicennae）種子**，**2021-11-17 嘉道理農場六隻同在一棵結果的火力楠（Michelia macclurei）上進食**。分類：**單型種**；繁殖於**西伯利亞南部、蒙古北部、中國東北部、北韓、俄羅斯遠東與庫頁島**，越冬於**中國東南部、東南亞、大巽他群島、菲律賓與蘇拉威西**；在中國繁殖於**內蒙古東北部、黑龍江、吉林、遼寧**，越冬於**廣西、廣東與海南**。保育：**IUCN Least Concern，趨勢穩定**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/mugimaki-flycatcher-ficedula-mugimaki/details",
+      "use": "IUCN **LC**、**2024 年評估**（準則 N/A；2004 起全部 LC、2000 及以前為 Lower Risk/Least Concern）；成熟個體 **Unknown**，種群被描述為**繁殖地局部常見、非繁殖地由局部非常常見至稀少**（del Hoyo et al. 2006），國家估算包括**中國約 100–100,000 繁殖對及約 50–10,000 遷徙個體、韓國與俄羅斯同一組數字**（Brazil 2009）；趨勢 **Decreasing（Suspected）**，理由為**分佈範圍內十年樹冠覆蓋減少 10.6%**，推測族群下降 **1–19%**；**繁殖 EOO 7,500,000 km²、非繁殖 EOO 9,010,000 km²**、AOO Unknown、**Breeding endemic No**、**Full Migrant**、**IBA／KBA 8 個**（網絡面積 29,410 km²、平均保護覆蓋 64.43%，全部在俄羅斯，準則 A3）、海拔 **0–2,910 m**、世代 **2.6 年**、**森林依賴度 Medium**、**生態系統只有陸域**；生境分類 **8 項**——**温帶林（繁殖期 Major）**、北方針葉林與温帶灌叢（繁殖期 Suitable）、**亞熱帶／熱帶潮濕低地林、紅樹林高潮線上植被、亞熱帶／熱帶潮濕灌叢（非繁殖期 Suitable）**，另在非繁殖期用**城市區域與鄉村花園**；**貿易 high prevalence（七個數據集有三個，Donald et al. 2024）**，用途為**食用（自給、全國）與寵物（國際）**；保育行動只有**「已劃定保育地點（全分佈範圍）」與「已納入國際法規」**，沒有復育計劃、系統監測、入侵種控制、域外保育或貿易管制；**CMS 附錄 II**；Alliance for Zero Extinction 與 Search for Lost Birds 皆為 No；**國家表 19 列**——汶萊、柬埔寨、中國大陸、香港、印尼、寮國、馬來西亞、蒙古、北韓、菲律賓、俄羅斯（三個分列）、新加坡、南韓、台灣、泰國、越南為原生（**香港、新加坡為非繁殖**），**日本只是迷鳥**；命名人 **(Temminck, 1835)**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **511** 項 鴝姬鶲 Mugimaki Flycatcher（*Ficedula mugimaki*），**第 I 類**；鄰項為 510 琉球姬鶲與 512 銹胸藍姬鶲，比較鳥即取自這兩項。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（鴝姬鶲；Mugimaki Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Ficedula mugimaki／鶲科 Muscicapidae）；speciesCode mugfly；taxonOrder 29238。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime 六軸齊全（**i 2、a 2.8、v 2.8（vEst 1）、r 4.8、c 1.2、o 2.7**），`missingScores` 與 `withheldScores` 皆為空；`look` 有雌鳥形態描述，a 有依據；o 2.7 與六軸平均 2.72 相符。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "`look`、`diet`、`etymology`（mugimaki 來自日語「播麥」）可用；`range` 與 `breeding` 一字不差、而且**把本種誤寫成「白眉黃鶲」**；`behavior` 與 `migration` 一字不差；`voice` 的「顫動的鳴聲聲」有疊字與語病；`funFact` 只是「又名鴝姬鶲」的自指句；`callouts` 兩條都只描述雌鳥；`habitat` 中文全缺；length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 72.4、tail 49.4、tarsus 15.7、bill 11.9、mass 11.7。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **511** 項、**第 I 類**；HKBWS 描述為**不常見的秋季遷徙鳥、稀少的冬候鳥與春季遷徙鳥**，見於封閉樹冠森林與林緣。**紀錄期 10 月 4 日至 5 月 15 日**，**66% 的 1999/2000–2019/20 紀錄集中在 10 月最後一週至 12 月第一週**、**11 月第三週最多**；春季只有微弱遷徙、**4 月前兩週一個高峰**。每季數量由 **2002/03 的四隻到 2016/17 的八十三隻**；**歷來最高 1969-11-23 大埔滘 30 隻**，1999 年後高峰全部個位數（最高 8 隻）。",
+    "辨識要點：雄鳥**石板灰頭與上體、眼後白斑、上翼覆羽白斑、三級飛羽白邊、外側尾羽白基、銹橙紅喉胸、純白腹與尾下覆羽**。雌鳥灰褐、喉胸淡啞橙、無白尾基、翼帶不明顯；**第一冬雄鳥變異大，但都有褐色初級飛羽、兩條淡翼帶與外側尾羽白基**，是與第一冬雌鳥分辨的關鍵。叫聲是**硬而乾的「tuk」或「tuk-tuk」**。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 年評估、趨勢 **Decreasing**（Suspected，**分佈範圍十年樹冠覆蓋減少 10.6%**，推測下降 1–19%）——**與 HKBWS 的「趨勢穩定」不一致，卡面照實並列**（與 0498、0500 情況相同）。繁殖 EOO 7,500,000 km²、非繁殖 EOO 9,010,000 km²、**IBA／KBA 8 個全部在俄羅斯**、海拔 0–2,910 m、世代 2.6 年、森林依賴度 Medium；貿易 high prevalence，用途為食用與寵物；保育行動只有「已劃定保育地點」與「已納入國際法規」，**CMS 附錄 II**。",
+    "**地圖填 14 個形狀**（汶萊、柬埔寨、中國、印尼、韓國、寮國、蒙古、馬來西亞、菲律賓、北韓、俄羅斯、泰國、台灣、越南）——**香港與新加坡 BirdLife 都列為原生非繁殖，但兩者皆無 110m 幾何**，note 以文字說明而不填色；**日本只是迷鳥，不填**。俄羅斯三個分列只算一個 `RUS`。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`cardCopy.json` 的 `range` 與 `breeding` **把本種誤寫成「白眉黃鶲」（即白眉姬鶲 *F. zanthopygia*）**、兩句並一字不差；`behavior` 與 `migration` 一字不差；`voice` 中文有「鳴聲聲」疊字；`funFact` 自指；`callouts` 只描述雌鳥；`habitat` 中文全缺、length 與 weight 為空。六軸分數齊全，`look` 有雌鳥形態描述，故 `missingScores` 與 `withheldScores` 皆空。",
+    "HKBWS 頁面 id 是 **050400**（路徑 `0410/`），比 runtime **0502** 大兩號——**偏移不是固定的**（0501 只差一號、0503 差零號），每次都要開頁核對標題；本張以 `web_search` 直接命中頁面，名錄序號 511。",
+    "AI 主圖**不帶任何風格參照**生成，羽色寫成硬性規格（石板灰上體、眼後白斑、橙紅喉胸、純白腹部、白翼斑、白尾基），並明寫「不得出現黃色或橄欖色下體、橙色腹部、眉線、黑色面罩」；成品 1408×768 橫幅、**取 768 平方（x=236 起）後放大至 1127×1127**。比較鳥為**琉球姬鶲**（直接沿用 0501 主圖的方形裁切，同屬、同畫風、免再生成）與**銹胸藍姬鶲**（本輪新生成，HKBWS 指其雌鳥與第一冬鳥最易與本種混淆），**非等比例、非專家認證**；插圖與全部辨識要點均為 AI 解讀，未經鳥類專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
