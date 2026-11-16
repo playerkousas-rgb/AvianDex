@@ -1,0 +1,148 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "id": "0472",
+  "name": "灰紋鶲",
+  "scientificName": "Muscicapa griseisticta",
+  "illustrationTaxon": "Adult Muscicapa griseisticta (small long-winged grey flycatcher, greyish-brown upperparts, narrow whitish eye-ring, pale lores, white submoustachial stripe, grey-brown malar stripe, white underparts with bold dark grey streaks on breast and flanks, long primary projection). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "烏鶲",
+      "scientificName": "Muscicapa sibirica",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同樣是過境鶲；烏鶲整體較暗較褐、眼圈較寬較白、下體縱紋模糊而糊成一片、常在胸與脇融成煙霧狀（Leader 2010 指出兩者下體縱紋的清晰度是關鍵分別）；本種下體白而縱紋深灰、邊界清楚、彼此分明，眼圈只是一圈細白。"
+    },
+    {
+      "zh": "北灰鶲",
+      "scientificName": "Muscicapa dauurica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬的過境鶲，體型比例較小頭、短翼；北灰鶲眼先淡色而臉部沒有深色頰紋、頰下線無縱紋、頭頂無瀰散縱紋、下體只在上胸有淡淡的灰褐縱紋；本種眼先與喉側有較深的色塊、頰下線有縱紋、頭頂或有瀰散縱紋、下體白而縱紋深灰且清晰。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.33,
+      0.31,
+      0.43,
+      0.41
+    ],
+    [
+      0.375,
+      0.225,
+      0.475,
+      0.325
+    ],
+    [
+      0.3,
+      0.26,
+      0.4,
+      0.36
+    ],
+    [
+      0.63,
+      0.5,
+      0.73,
+      0.6
+    ]
+  ],
+  "featureLabels": [
+    "胸腹深灰縱紋",
+    "細白眼圈",
+    "白色頰下線",
+    "深褐翼長初級"
+  ],
+  "featureNotes": [
+    "白底上排列分明、邊界清楚的深灰縱紋，集中在胸與脇，是本種與烏鶲最直接的分別；秋季第一齡鳥的縱紋較淡較窄，為插圖局部。",
+    "眼圈為一圈細細的近白羽環，不若烏鶲般寬白；眼先只是瀰散的淡色而非明顯白斑，為插圖局部。",
+    "頰下線（submoustachial）近白、其下有一條灰褐的頰紋（malar），兩者並排令臉部下半較有層次，是與北灰鶲分別的要點；雌雄同色，為插圖局部。",
+    "翼與尾深褐，初級飛羽伸出三級飛羽甚遠，令本種看起來翼長而身形修長；秋季第一齡鳥的大覆羽端與三級飛羽有白邊，形成翼斑，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IDN",
+      "JPN",
+      "MYS",
+      "PRK",
+      "PNG",
+      "PHL",
+      "RUS",
+      "KOR",
+      "TWN"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists eleven native countries/territories — China (non-breeding), Indonesia, Japan, Malaysia, North Korea, Palau, Papua New Guinea, the Philippines, Russia and Asian Russia, South Korea and Taiwan. Palau has no geometry in the 110m base map, so only ten are shaded. Hong Kong has no separate 110m geometry and is folded into China's outline. Singapore, the USA and Vietnam are listed as VAGRANT entries and are left unshaded. Russia is shaded as a country, not as a claim of breeding range west of the Urals. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/047500",
+      "use": "香港第 I 類：**不常見的過境遷徙鳥**，數量年年不同，**以春季為主**，見於疏冠層的灌叢與林地；**12.5–14 cm**，小型長翼灰鶲，白下體有醒目深灰縱紋、初級飛羽伸出甚長、**雌雄同色**；頭與上體灰褐、有白色頰下線、灰褐頰紋、細白眼圈與瀰散淡色眼先，翼與尾深褐，下體白而胸與脇有分明深灰縱紋，尾下覆羽白；秋季第一齡鳥的大覆羽端白形成翼斑、三級飛羽有白邊，部分仍保留幼羽的白點（肩羽與尾上覆羽）；與北灰鶲的分別在眼先與喉側較深、頰下線有縱紋、頭頂或有瀰散縱紋、下體縱紋深而清楚；烏鶲雖亦有下體縱紋，但較不分明並可能在胸脇融成一片（Leader 2010）；叫聲為高音下降的「tseeee」；生境為任何有疏冠層灌叢或林地提供遮蔽之處，常見於新界中部林地、有樹的開闊地如米埔，離島如大嶼山、南丫、長洲、東平洲常見，**蒲台尤其穩定**，九龍何文田市區亦有紀錄；極端日期春季 3 月 25 日與 5 月 27 日、秋季 8 月 28 日與 11 月 29 日；**1999–2020 年 85% 紀錄在春季**（1990 年代末前只有 56%）；3 月紀錄極少、4 月上半月甚少，第三週起增加，**4 月最後一週至 5 月第一週為高峰（1999–2020 年佔春季紀錄 73%）**；多為單隻、高峰計數多位數，惡劣天氣時數量較多：1998 年前最高為 1989-05-05 長洲 12 隻，1999-05-08 颱風 Leo 後米埔 50 隻，**2020-04-24 東北季候風湧入時粉嶺高爾夫球場 65 隻分小群北飛（最高紀錄）**；秋季主要在 9 至 10 月、高峰在 9 月最後一週至 10 月第三週，數量少，近季最高 2009-10-01 蒲台 8 隻（熱帶風暴後），秋季最高紀錄為 1978-10-22 石崗 10 隻；1999–2020 年每年估計總數由 3 隻至 2013 年 138 隻、2020 年 191 隻，2008 年以來的上升相信與觀鳥活動增加有關；廣東最早由 Vaughan & Jones (1913) 於 10 月與 5 月紀錄，香港首錄為 Herklots (1941) 於 1941-05-07 及 08 在薄扶林最多兩隻；單型種；行為多為單獨，從顯露的棲枝快速衝出捕食飛蟲，返回同一棲枝的頻率較烏鶲低；IUCN Least Concern、趨勢穩定。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/grey-streaked-flycatcher-muscicapa-griseisticta/details",
+      "use": "IUCN **2018** LC（2016、2012、2009 亦為 LC）、成熟個體 Unknown、趨勢 **Stable**（Suspected，無下降證據）、繁殖 EOO **3,190,000 km²**、非繁殖 EOO **6,610,000 km²**、完全遷徙、繁殖 endemic **No**、**IBA／KBA 2 個**、海拔 0–2,000 m、世代 **2.9 年**、森林依賴度 **Medium**、生態系為陸域；生境為溫帶林與溫帶灌叢（繁殖，Suitable）、亞熱帶／熱帶濕潤山地與低地林、亞熱帶旱草原、亞熱帶濕潤灌叢（非繁殖）、城市與人工林（繁殖，Marginal）；種群描述為中國東北不常見、俄羅斯罕見或稀少、大部分非繁殖區相當常見（婆羅洲北部與中部除外），各國估計中國繁殖 100–10,000 對、過境 50–10,000 隻等；用途只有國際寵物貿易（**沒有食用**）；已納入國際法規但無國際貿易管制、有部分範圍的保護區、無系統性監測；國家表列中國大陸（非繁殖）、印尼、日本、馬來西亞、北韓、帛琉、巴布亞新幾內亞、菲律賓、俄羅斯與亞洲俄羅斯、南韓、台灣為原生，新加坡、美國、越南為迷鳥；**香港沒有獨立一列**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（灰紋鶲；Gray-Streaked Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Muscicapa griseisticta／鶲科 Muscicapidae）；speciesCode gysfly1；taxonOrder 28522。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六軸齊全：i=2、a=2.8、v=3（含 vEst=1）、r=3.3、c=1.2、o=2.5。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案中等：diet 與 habitat **內容完全相同**（都是「常棲息在開闊處，等待飛過的昆蟲，然後飛行約 20 米捕捉昆蟲，再返回其棲木進食」），look（上體灰褐、下體白、胸與側腹有灰色條紋）、range 與 breeding（繁殖於中國東北、北韓與西伯利亞東南部針葉林，含庫頁島與堪察加）、behavior 與 migration（春秋遷徙經中國東部與南部、南韓、日本及台灣）、funFact（1861 年由斯文豪首次描述）、iucn（無危 LC）與 iucnEn 皆有；**沒有 voice、etymology、humanRelation、conservation、callouts**；**length 與 weight 為空**；picks 列了 range、habitat、diet、highlights、look、breeding、funFact。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 84.5 mm、尾 47.0 mm、跗蹠 14.4 mm、嘴峯 11.9 mm、體重 15.9 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 047500（路徑 `0400/`，**鶲科 Muscicapidae**——本批第一個 `0400/` 路徑，亦是 0471 之後的第一種非鶇科）：香港第 I 類，**不常見的過境遷徙鳥**，數量年年不同、以春季為主，見於疏冠層灌叢與林地；12.5–14 cm，雌雄同色。",
+    "本港紀錄：極端日期春季 3 月 25 日與 5 月 27 日、秋季 8 月 28 日與 11 月 29 日；1999–2020 年 85% 在春季（1990 年代末前只有 56%），春季高峰為 4 月最後一週至 5 月第一週（佔 73%）；最高計數 2020-04-24 粉嶺高爾夫球場 65 隻（東北季候風湧入），其次 1999-05-08 颱風 Leo 後米埔 50 隻與 1989-05-05 長洲 12 隻；秋季最高為 1978-10-22 石崗 10 隻、近季 2009-10-01 蒲台 8 隻；首錄為 Herklots (1941) 於 1941-05-07／08 薄扶林最多兩隻；1999–2020 年每年 3 至 191 隻（2020 年最高），2008 年後上升相信與觀鳥活動增加有關。",
+    "生境與習性：任何有疏冠層灌叢或林地的地方，新界中部林地、有樹的開闊地（米埔）、離鳥（大嶼山、南丫、長洲、東平洲，**蒲台尤其穩定**）與何文田市區皆有紀錄；多單獨，從顯露棲枝快速衝出捕食飛蟲，返回同一棲枝的頻率較烏鶲低；叫聲為高音下降的「tseeee」。",
+    "分類：單型種；繁殖中國東北（內蒙古北部、黑龍江、吉林）、北韓、俄羅斯東南部、庫頁島與千島群島，冬季台灣、菲律賓、婆羅洲北部、蘇拉威西、小巽他東部、摩鹿加與新幾內亞西部，過境經華南大部。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2018** 年評估、趨勢 **Stable**（Suspected）；繁殖 EOO 3,190,000 km²、非繁殖 EOO 6,610,000 km²、完全遷徙、繁殖 endemic **No**、**IBA／KBA 2 個**、世代 2.9 年、海拔 0–2,000 m、森林依賴度 **Medium**；用途只有國際寵物貿易；BirdLife 沒有把香港獨立列出。",
+    "runtime 分數：i=2、a=2.8、r=3.3、c=1.2 沿用；v=3 **待查**（length 與 weight 皆空、vEst=1 即原值由體長估算，翼 84.5 mm×0.22≈18.6 cm 高於 HKBWS 的 12.5–14 cm）；o=2.5 依賴待查分項不補算。a 保留 2.8（非極端值，diet 文字確有覓食方式可對應），但已在此記錄 habitat 欄其實與 diet 一字不差、並非獨立生境描述——生境細節一律以 HKBWS 為準。",
+    "runtime 文案缺陷：habitat 與 diet 完全重複；range 與 breeding 亦幾乎重複；沒有 voice（HKBWS 有「tseeee」，卡面未用，因卡面只放 runtime 分數與本表說明）、etymology、humanRelation、conservation 與 callouts；length 與 weight 為空。辨識、本地紀錄與叫聲一律以 HKBWS 為準。",
+    "AI 主圖原為 1312×816 橫幅，直接取 816×816 方形（起點 x=496，不補邊，避免平面色帶）後放大至 1127×1127；首版下體縱紋太多太密、一直伸到腹部，與 HKBWS「胸與脇有分明縱紋、下體白」不符，已重生成縱紋只集中在上胸與脇的版本。比較鳥為本輪新生成的烏鶲（同屬、下體縱紋最易混淆）與北灰鶲（同屬、最常見的近似種），非等比例、非專家認證。"
+  ],
+  "withheldScores": {
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 84.5 mm×0.22≈18.6 cm 高於 HKBWS 的 12.5–14 cm，3.0 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（v），不補算。"
+  }
+}
