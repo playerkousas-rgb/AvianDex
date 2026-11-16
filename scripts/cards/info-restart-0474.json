@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0474",
+  "name": "棕尾褐鶲",
+  "scientificName": "Muscicapa ferruginea",
+  "illustrationTaxon": "Adult Muscicapa ferruginea (grey head, white eye-ring broader behind the eye, rich buff patch above the bill base, whitish submoustachial stripe with dark malar stripe, brown mantle, rufous-brown rump and uppertail coverts, two rufous-brown wing bars, rufous tertial fringes, rufous-orange breast and flanks, whitish belly, short bill with pale orange base to the lower mandible). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "北灰鶲",
+      "scientificName": "Muscicapa dauurica",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同為過境鶲；北灰鶲全身只有灰褐與白、沒有半點赤褐——臉部樸素、下體只在上胸有淡淡縱紋、翼上沒有赤褐翼斑、腰與尾不是赤褐；本種有灰色的頭配上赤褐的腰、尾上覆羽、兩道翼斑與橙褐的胸脇，暖色調是本種一眼可辨的特徵。"
+    },
+    {
+      "zh": "烏鶲",
+      "scientificName": "Muscicapa sibirica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同為過境鶲；烏鶲上體煙灰而較暗、眼圈較寬、下體白而上胸有瀰散深灰斑駁、沒有任何橙褐；本種上體褐而腰尾赤褐、胸脇橙褐、嘴基有橙褐色塊、三級飛羽有赤褐羽緣，色調與對比完全不同。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.355,
+      0.4,
+      0.455,
+      0.5
+    ],
+    [
+      0.455,
+      0.385,
+      0.555,
+      0.485
+    ],
+    [
+      0.275,
+      0.245,
+      0.375,
+      0.345
+    ],
+    [
+      0.665,
+      0.635,
+      0.765,
+      0.735
+    ]
+  ],
+  "featureLabels": [
+    "橙褐胸脇",
+    "赤褐翼斑",
+    "嘴基橙褐",
+    "赤褐尾羽"
+  ],
+  "featureNotes": [
+    "胸、脇與尾下覆羽都是橙赤褐，腹部則偏白，形成上下分明的暖色分界；雌雄同色，年齡造成的差異主要在羽緣新舊，為插圖局部。",
+    "翼上有兩道赤褐色的翼斑，三級飛羽亦有赤褐羽緣；羽緣磨損後會變淡，第一齡鳥的羽緣較新鮮較寬，為插圖局部。",
+    "嘴短而嘴基（尤其下嘴）有橙褐色，嘴基上方另有一小片橙褐色的羽區；這是本種與其他灰色鶲最易上手的分別之一，為插圖局部。",
+    "腰與尾上覆羽赤褐，尾羽亦為赤褐而帶波狀淡色羽緣；這片赤褐由背部一直延伸到尾端，是本種中文名「棕尾」的由來，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PHL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 12 native countries/territories — Bhutan (breeding), China (resident), India (breeding), Indonesia (non-breeding), Laos (passage), Malaysia (non-breeding), Myanmar (breeding), Nepal (breeding), the Philippines (non-breeding), Singapore (non-breeding), Thailand (passage) and Vietnam (resident). Singapore has no geometry in the 110m base map, so 11 are shaded. Hong Kong has no separate 110m geometry and is folded into China's outline. BirdLife lists NO vagrant territories for this species. Bangladesh and Japan appear in the app's own range sentence but are NOT in BirdLife's native list, so they are left unshaded. Not an occurrence polygon: green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/047900",
+      "use": "香港第 I 類：**不常見的過境遷徙鳥**，數量年年不同、見於林地，**春季稀少、秋季罕見**；**12–13 cm**，嘴短而**下嘴基帶淡橙色**、**雌雄同色**；頭灰、**白色眼圈後緣較寬**、嘴基上方有一片濃皮黃（rich buff）、白色頰下線配深色頰紋；背部褐色、**腰與尾上覆羽赤褐**、翼有**兩道赤褐翼斑**與三級飛羽赤褐羽緣；胸、脇與尾下覆羽橙赤褐；腳粉褐；叫聲極高音而帶金屬感，單或雙音「tsee」，或短串如「trrrrrrrrrree」；生境為任何有足夠樹木遮蔽的遷徙鳥落腳點，包括市區公園，近年最常在蒲台紀錄；春季最早 3 月 3 日（其次 3 月 14 日），最遲 5 月 14 日；1999–2020 年高峰為 3 月最後一週至 4 月第三週（佔春季紀錄 84%），**4 月第一週佔全部春季紀錄 33%**，5 月上半月有零星紀錄；多為單隻，最高計數 5 隻（1992-04-13 柯士甸山、1994-04-01 大埔滘、2008-04-05 蒲台、2021-04-05 烏蛟騰）；秋季只有 **11 筆單隻紀錄，9 月 13 日至 11 月 8 日，主要在 10 月**，除 1980 與 1992 兩筆外全部在 2003 年之後、各在不同年份；每年估計 4 至 12 隻，2000 與 2002 年無紀錄，最高 **2020 年 17 隻**（部分因觀鳥活動增加）；香港首錄為米埔／大鵬灣 4 月 6 或 10 日一隻（年份不明，應在 1900 年代初，Vaughan & Jones 1913），之後隔了 50 多年才再有：1953-04-18 至 25 薄扶林與林村最多兩隻（Dove & Goodhart 1955）、1957-03-30 太平山一隻（Walker 1958）；行為多單獨、不顯眼而安靜，可讓人接近，從顯露枝條衝出捕食飛蟲並常返回同一棲枝；單型種；IUCN Least Concern、**趨勢下降**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/ferruginous-flycatcher-muscicapa-ferruginea/details",
+      "use": "IUCN **2024** LC（2008 起一貫 LC）、成熟個體 Unknown、趨勢 **Decreasing**（Suspected，分佈範圍十年樹冠減少 2.2%，暫定下降 1–19%）、繁殖 EOO **4,290,000 km²**、非繁殖 EOO **6,430,000 km²**、完全遷徙、繁殖 endemic **No**、**IBA／KBA 19 個**（本批暫時最多）、海拔 0–3,600 m、世代 **2.3 年**、森林依賴度 **Medium**；生境為溫帶林（繁殖，Suitable）、亞熱帶／熱帶濕潤山地林（繁殖，**Major**）、亞熱帶／熱帶濕潤低地林（非繁殖，**Major**）；貿易普遍度低（七個貿易資料集中出現於一個），用途為國際寵物貿易；國家表列 **12 個原生國家／地區，沒有任何迷鳥國家**——不丹（繁殖）、中國（resident）、印度（繁殖）、印尼（非繁殖）、寮國（過境）、馬來西亞（非繁殖）、緬甸（繁殖）、尼泊爾（繁殖）、菲律賓（非繁殖）、新加坡（非繁殖）、泰國（過境）、越南（resident）；**香港沒有獨立一列**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（棕尾褐鶲；Ferruginous Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Muscicapa ferruginea／鶲科 Muscicapidae）；speciesCode ferfly1；taxonOrder 28530。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime 六軸齊全：i=2、a=2.8、v=2.8（含 vEst=1）、r=1、c=1.2、o=2.0。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案極少：只有 range（孟加拉、不丹、中國、印尼、日本、寮國、馬來西亞、緬甸、尼泊爾、菲律賓、印度、新加坡 的一串國名）與 look、funFact **兩段完全相同的循環句**「棕尾褐鶲又名棕尾褐鶲，為鶲科鶲屬的鳥類」；iucn「無危 LC」與 BirdLife 一致；picks 列 range、look、breeding、funFact，但 **breeding 欄是空字串**；**沒有 diet、habitat、voice、behavior、humanRelation、etymology、callouts、migration、conservation、highlights**，**length 與 weight 皆為空**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 70.0 mm、尾 45.6 mm、跗蹠 11.6 mm、嘴峯 11.6 mm、體重 12.0 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 047900（路徑 `0400/`，鶲科）：香港第 I 類，**不常見的過境遷徙鳥**，數量年年不同、見於林地，**春季稀少、秋季罕見**（與 0472 以春季為主、0473 以秋季為主都不同）；12–13 cm，雌雄同色。",
+    "辨識要點：嘴短而**下嘴基帶淡橙色**、嘴基上方一片濃皮黃、白色眼圈後緣較寬、白色頰下線配深色頰紋、背部褐而**腰與尾上覆羽赤褐**、**兩道赤褐翼斑**、三級飛羽赤褐羽緣、胸脇與尾下覆羽橙赤褐、腳粉褐；叫聲極高音帶金屬感。",
+    "本港紀錄：春季最早 3 月 3 日、最遲 5 月 14 日，1999–2020 年高峰為 3 月最後一週至 4 月第三週（84%），4 月第一週佔 33%；秋季只有 11 筆單隻、9 月 13 日至 11 月 8 日；最高計數均為 5 隻（1992、1994、2008、2021 四個地點）；每年 4 至 12 隻，2020 年最高 17 隻；首錄為 1900 年代初大鵬灣一隻，之後 1953 年薄扶林與林村、1957 年太平山。",
+    "IUCN：本卡為 **LC（無危）**，BirdLife **2024** 年評估、趨勢 **Decreasing**（Suspected，樹冠十年減少 2.2%、暫定下降 1–19%）——HKBWS 頁面亦寫「Population trend decreasing」，兩者一致（與 0473 烏鶲的衝突情況不同）；繁殖 EOO 4,290,000 km²、非繁殖 EOO 6,430,000 km²、完全遷徙、世代 2.3 年、海拔 0–3,600 m、森林依賴度 Medium、**IBA／KBA 19 個是本批暫時最多**；BirdLife 沒有把香港獨立列出，且**此種在 BirdLife 表中完全沒有迷鳥國家**。",
+    "runtime 文案缺陷：look 與 funFact 是同一句「棕尾褐鶲又名棕尾褐鶲，為鶲科鶲屬的鳥類」的循環句，breeding 是空字串但 picks 仍選了它；diet、habitat、voice、behavior、humanRelation、etymology、callouts、migration、conservation、highlights 全無；length 與 weight 為空。**runtime 的 range 句列出孟加拉與日本，但 BirdLife 原生名單沒有這兩國**，本卡地圖因此不填 BGD 與 JPN，並在 rangeMap note 說明。",
+    "runtime 分數：i=2、r=1、c=1.2 沿用；**a=2.8 待查**——此軸由棲地×食性 tag 推出，但本案 cardCopy 完全沒有 habitat 與 diet 文字；v=2.8 **待查**（length 與 weight 皆空、vEst=1 即原值由體長估算，翼 70.0 mm×0.22≈15.4 cm 高於 HKBWS 的 12–13 cm）；o=2.0 依賴待查分項不補算。r=1 為最低基準值，與「本地紀錄少、runtime 無遷徙或語源文字」相符，不作保留以外的解讀。",
+    "AI 主圖原為 1312×816 橫幅，直接取 816×816 方形（起點 x=496，不補邊，避免平面色帶）後放大至 1127×1127，畫出灰頭、白眼圈、嘴基橙褐、赤褐腰尾、兩道赤褐翼斑與橙褐胸脇，停在長滿苔蘚的樹枝上；第 1 格與第 4 格分別試過 3 個與 2 個框位，最後選定清楚看到橙褐胸脇與赤褐尾羽的區域。比較鳥為北灰鶲（全身無赤褐，對比最強）與烏鶲（上體煙灰、下體斑駁），沿用 0472／0473 已生成的方形圖，本輪未生成新圖，非等比例、非專家認證。"
+  ],
+  "withheldScores": {
+    "a": "此軸由棲地與食性 tag 推出，但本案 cardCopy 的 habitat 與 diet 皆缺（breeding 亦為空字串），2.8 分無可供核對的內容，待查。",
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 70.0 mm×0.22≈15.4 cm 高於 HKBWS 的 12–13 cm，2.8 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（a、v），不補算。"
+  }
+}
