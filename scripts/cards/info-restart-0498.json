@@ -1,0 +1,155 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "id": "0498",
+  "name": "白眉姬鶲",
+  "scientificName": "Ficedula zanthopygia",
+  "illustrationTaxon": "Adult male Ficedula zanthopygia (13–13.5 cm: glossy black head, nape, mantle and tail; bold white supercilium; bright yellow rump; black wings crossed by a prominent white stripe formed by the inner greater coverts and tertials; bright yellow throat, breast and upper belly, white lower belly and undertail coverts; black bill). Adults are scarce in Hong Kong: most birds seen there are first-winters in autumn, which are duller and greenish above and are not shown here. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黃眉姬鶲",
+      "scientificName": "Ficedula narcissina",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "本港最直接、也幾乎是唯一的近緣混淆種，HKBWS 明言**本種雄鳥的白色眉紋可以即時把牠與黃眉姬鶲雄鳥分開**。黃眉姬鶲雄鳥的**眉線是黃橙色而不是白色**、**腰是橄綠黃而不是鮮黃**、**上背黑色而下背轉橄欖黃**；本種雄鳥**頭、頸、背與尾都是純黑**、**眉線純白**、**腰鮮黃**。叫聲亦近：兩者的「weet」下墜音相似，但**本種的音調略低**。"
+    },
+    {
+      "zh": "綠背姬鶲",
+      "scientificName": "Ficedula elisae",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是**有一塊鮮黃腰、在遷徙期出現於林緣與灌叢**的近緣姬鶲，而且**本港見到的本種多數正是這種褐色調的第一冬鳥**，所以兩者的褐色個體才是最需要分辨的。綠背姬鶲**上體橄欖綠、眼圈淡色、翼褐色而沒有任何白斑**、喉胸淡白帶皮黃；本種第一冬鳥**翼上有由大覆羽與三級飛羽形成的白斑（三級飛羽末端還有白色「鈎」）**，HKBWS 正是用這兩點來判定年齡。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.7,
+      0.16,
+      0.9,
+      0.25
+    ],
+    [
+      0.72,
+      0.24,
+      0.9,
+      0.44
+    ],
+    [
+      0.47,
+      0.37,
+      0.63,
+      0.51
+    ],
+    [
+      0.3,
+      0.42,
+      0.46,
+      0.56
+    ]
+  ],
+  "featureLabels": [
+    "白色眉線",
+    "黃色喉胸",
+    "白色翼斑",
+    "黃色腰部"
+  ],
+  "featureNotes": [
+    "**粗而明顯的白色眉線**橫過純黑的頭部，是成鳥雄鳥最不會認錯的特徵；HKBWS 直接說這道白眉**即時就把牠與黃眉姬鶲雄鳥分開**（後者的眉線是黃橙色），為插圖局部。",
+    "**喉、胸與上腹都是明亮的黃色**，向下過渡到白色的下腹與尾下覆羽；HKBWS 形容成鳥雄鳥的 underparts 是黃色，這片黃在黑色的頭頸之下非常搶眼，也是「姬鶲」一類中辨識度最高的部位，為插圖局部。",
+    "黑色翼上有一道**由內側大覆羽與三級飛羽形成的寬白斑**，HKBWS 稱之為 prominent white stripe；第一冬鳥身上它會變成**較窄的白邊**，並在三級飛羽末端留下一個白色「鈎」，正是判齡的依據，為插圖局部。",
+    "**腰是鮮黃色**，在純黑的背與同樣黑的尾之間形成一條亮帶，這就是英文名 Yellow-rumped Flycatcher 的由來；黃眉姬鶲的腰只到橄綠黃，對比弱得多，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IDN",
+      "KOR",
+      "LAO",
+      "MMR",
+      "MNG",
+      "MYS",
+      "PRK",
+      "RUS",
+      "THA",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 13 native countries/territories; 12 of them have 110m geometry and are shaded here — China (mainland), Indonesia, North Korea, Laos, Malaysia, Mongolia, Russia (both BirdLife rows fold into one shape), South Korea, Taiwan (China), Thailand and Vietnam. Hong Kong (China) and Singapore are native in BirdLife's table but have no 110m geometry, so they are described rather than shaded. Two territories are listed as vagrant-only and are not shaded: Japan and Sri Lanka. Not an occurrence polygon: a full migrant breeding from Transbaikalia and eastern Mongolia east to Amurland and Ussuriland and south through central and eastern China to Korea, wintering in the Malay Peninsula, Sumatra and Java, inside a breeding EOO of 3,880,000 km² and a non-breeding EOO of 998,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/049900",
+      "use": "香港第 I 類，**規律但似乎在減少的秋季過境鳥；只有七筆春季紀錄，另有數筆有爭議的冬季紀錄**（**注意 HKBWS 同一頁的出現情況一節寫「1999–2020 只有九次春季紀錄」，與此句的「七筆」不一致，原文兩種說法並存**）。**13–13.5 cm**，中型姬鶲；**本港見到的絕大多數是秋季的第一冬鳥**，可用**外側大覆羽的細淡端斑**與**最內側三級飛羽末端的白色「鈎」**判齡；**第一冬雄鳥與第一冬雌鳥在野外一般無法區分**。成鳥雄鳥（本港少見）：**黑頭配粗白眉線**，**黑色的頸、背與尾與黃色腰成對比**，**黑色翼上有由內側大覆羽與三級飛羽形成的寬白斑**，**腹面黃色**；**白眉線即時可與黃眉姬鶲雄鳥區分**。**第二曆年雄鳥在春季有成年雄鳥的翼紋，但頭與背是暗綠色**。聲音：秋季遷徙鳥常發**中等偏高、下墜的「weet」**，中間常夾**短促的沙沙聲**；與黃眉姬鶲極似，**但本種的「weet」音調略低**。分佈與生境：**凡有合適林蔭的遷徙鳥點皆有紀錄，米埔屬規律，蒲台與何文田每年遷徙期可見**。秋季紀錄集中：**8 月 2 日至 11 月 24 日**，**8 月最後一週前稀少**，**1999–2020 有 70% 的秋季紀錄落在 9 月前三週**，**10 月第一週後罕見**，**11 月只有四筆**（1974-11-19 掃管笏山、1990-11-10 米埔、2006-11-06 至 10 蒲台、2017-11-23 至 24 長洲）。春季：**1999–2020 只九次**，八次為單隻、集中於 **4 月 5–14 日**，第九次為 **4 月 29–30 日**（唯一停留超過一天），**五隻雌、兩隻雄**（原文只交代七隻的性別），**四次在蒲台**；**春季紀錄稀少反映遷徙路線不同**。冬季：**1975-12-29 哈頓道、1987-02-17 香港大學、1999-12-05 米埔雌鳥、2004-01-21 大埔滘雌鳥、2007-01-08 至 15 米埔雌鳥**，**全部未獲接受為自然出現**，因日期不尋常且不止一隻的羽色有明顯籠養磨損；HKBWS 認為氣候變暖下冬季紀錄的地位或可重新檢視。數量：**1999–2020 年度總數由 0（2002）至 25（2000、2006）**，因近年觀察力度大增而**看不出趨勢**；但**過去 30 年單一地點的高峰數自 2000 年起下降**——**歷來最高是 1999-09-09 在米埔網捕 10 隻**，此後**任何地點都不超過 3 隻**；配合**馬來半島冬季豐度似有下降（Wells 2007）**，HKBWS 認為**值得關注**。歷史：**最早紀錄是 1952-08-12 與 1952-10-02、1953-09-22 與 1953-10-03 的單隻雌鳥**（Dove and Goodhart 1955），以及 **1955-09-28、1956-09-10**（Walker 1958）。行為：**通常單獨、安靜而不顯眼**，**在不同高度的枝上捕食昆蟲**，亦會**在離地不遠的枝條上作業**，因此**在米埔常被霧網捕到**。分類：**單型種**；繁殖自**東外貝加爾與東蒙古往東至阿穆爾與烏蘇里，南至中國中部與東部以及朝鮮半島**，越冬於**馬來半島、蘇門答臘與爪哇**；在中國繁殖於**東北各省與內蒙古，西至甘肅與四川東北部，南至貴州北部、湖南北部、安徽與江蘇**。保育狀況：IUCN **Least Concern**、**趨勢穩定**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/yellow-rumped-flycatcher-ficedula-zanthopygia/details",
+      "use": "IUCN **LC**，最近評估 **2025**（2016 亦 LC）；**成熟個體 Unknown（官方稱族群很可能非常大）**、**趨勢 Decreasing（Suspected）**——理由是**森林依賴度 Medium，而過去十年其分佈範圍內樹冠覆蓋估計減少 10.4%**（Global Forest Watch 2022）；**EOO 繁殖 3,880,000 km²、非繁殖 998,000 km²**、**Full Migrant**、繁殖 endemic No、**IBA／KBA 9 個**、海拔 **0–1,440 m**、世代 **2.6 年**、**森林依賴度 Medium**、生態系統**只有陸域**；生境以**温帶林（繁殖期 Major）**最重要，非繁殖期用**亞熱帶／熱帶潮濕低地林、紅樹林高潮線上植被、潮濕灌叢**，甚至**鄉村花園與城市區域**；**貿易 low prevalence（七個數據集有兩個）**，用途為**國際寵物／展示動物**與**全國性自給食用**；保護行動：**已識別涵蓋全部分佈範圍的保護地**、**已納入國際法例**，但無復育計劃、系統監測或收成管理；國家表列 **13 個原生國家／地區（香港列為原生、過境）**，**日本與斯里蘭卡為迷鳥**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **507 項 白眉姬鶲（Ficedula zanthopygia），第 I 類**；鄰項 506 紅尾歌鴝、508 綠背姬鶲、**509 黃眉姬鶲**、517 紅脇藍尾鴝（皆 I 類）。"
+    },
+    {
+      "path": "scripts/cards/hk-master.json",
+      "use": "香港優先編號表確認 0498 = 白眉姬鶲（Ficedula zanthopygia），香港類別 **I**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（白眉姬鶲）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Ficedula zanthopygia／鶲科 Muscicapidae）；speciesCode korfly1、英文名 Yellow-rumped Flycatcher；taxonOrder 29232。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **六軸齊全**：i=2、a=2.3、v=2.7（**含 vEst=1**）、r=3.3、c=1.2、o=2.3，故 missingScores 與 withheldScores 皆為空；六軸平均 2.30，與 runtime o=2.3 一致。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案**可用但有錯配**：`look`（腰、喉、胸及上腹黃，下腹與尾下覆羽白，其餘黑，僅眉線及翼斑白）與 `range`（繁殖於東亞包括蒙古、外貝加爾、華南、韓國與日本西部，冬季遷徙至中國南方）大致可用；`funFact`／`migration`（1989 年首次在印度中部錄得越冬，後來亦見於印度西南部與斯里蘭卡）、`breeding`（每窩 4–7 枚蛋、雌鳥單獨孵化 11–12 天）、`etymology` 可用；但 **`voice` 寫成「這兩者之間的鳴聲和形態也有明顯差異」**、**`behavior` 寫成「成鳥會在巢周圍約　範圍內覓食」（數字缺失）**、**`diet` 與 `behavior` 重複**、`conservation` 開頭又是巢卵句、`callouts` 三條只是零碎重述——**以上數項錯配，卡面不引用**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 67.9 mm、尾 49.8 mm、跗蹠 14.8 mm、嘴峯 13.1 mm、體重 12.1 g；**翼 67.9 mm×0.22≈14.9 cm 略長於 13–13.5 cm**（v=2.7 含體長估算，只記錄）。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **507** 項、第 I 類；HKBWS 描述為**規律但似乎在減少的秋季過境鳥，只有七筆春季紀錄**（同頁出現情況一節又寫**1999–2020 有九次春季紀錄**，頁內兩種說法並存，照實記錄）。**秋季 8 月 2 日至 11 月 24 日**，**8 月最後一週前稀少**，**70% 的秋季紀錄落在 9 月前三週**，**10 月第一週後罕見**，**11 月僅四筆**；**春季集中 4 月 5–14 日（八次單隻）**，另有 **4 月 29–30 日**一次（唯一停留超過一天），**四次在蒲台**。**五筆冬季紀錄全部未獲接受**（日期不尋常，且不止一隻的羽色有籠養磨損）。**1999–2020 年度總數 0 至 25 隻**，因觀察力度增加而看不出趨勢；但**單點高峰自 2000 年起下降**（歷來最高 1999-09-09 米埔網捕 **10 隻**，此後單點不超過 **3 隻**），配合**馬來半島冬季豐度似下降**，HKBWS 認為值得關注。",
+    "辨識要點：**13–13.5 cm**；成鳥雄鳥**黑頭黑背黑尾＋粗白眉線＋鮮黃腰＋黑色翼上的寬白斑＋黃色喉胸腹**（**白眉線即時可與黃眉姬鶲雄鳥分開**）；**第二曆年雄鳥春季已有成鳥的翼紋，但頭背暗綠**；**本港絕大多數是秋季第一冬鳥**，靠**外側大覆羽的淡端斑**與**最內側三級飛羽的白色「鈎」**判齡，**第一冬雄鳥與第一冬雌鳥野外一般無法區分**；叫聲為**下墜的「weet」加上短沙沙聲**，**與黃眉姬鶲極似但音調略低**。行為：**單獨、安靜、不顯眼**，**在不同高度枝上捕食**，**米埔常被霧網捕獲**。",
+    "**IUCN 趨勢兩邊不一致，卡面照實並列**：HKBWS 寫 **Population trend stable**，而 BirdLife 2025 判為 **Decreasing（Suspected，過去十年分佈範圍樹冠覆蓋減少 10.4%）**；**runtime 的 `iucn` 只寫「無危 LC」**，卡面的評估註記採用 BirdLife 的年份與類別，**趨勢差異在 notes 說明而不塞進卡面**。這是本批第一次出現「HKBWS 說穩定、BirdLife 說下降」的分歧（0497 是「HKBWS 說本港下降、BirdLife 說全球不明」）。",
+    "IUCN：**LC（無危）**，BirdLife **2025** 評估；**成熟個體 Unknown（很可能非常大）**；**EOO 繁殖 3,880,000 km²、非繁殖 998,000 km²**（非繁殖 EOO 是本批最小之一）；**Full Migrant**、**IBA／KBA 9 個**、海拔 **0–1,440 m**、世代 **2.6 年**、**森林依賴度 Medium**、**生態系統只有陸域**；生境以**温帶林（繁殖期 Major）**最重要，非繁殖期亦用**紅樹林高潮線上植被、鄉村花園與城市區域**；**貿易 low prevalence（七個數據集有兩個）**。",
+    "**地圖**：BirdLife **13 個原生國家／地區之中 12 個有 110m 幾何，故填 12 個形狀**（中國、印尼、北韓、寮國、馬來西亞、蒙古、俄羅斯、南韓、台灣、泰國、越南、緬甸**——注意緬甸在 runtime 的 `range` 有提及但 BirdLife 表中未列，本卡以 BirdLife 為準**）；**香港（原生、過境）與新加坡（原生、非繁殖）皆無 110m 幾何，只在 note 說明**；**日本與斯里蘭卡為迷鳥，一律不填**。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：**`voice` 與 `behavior` 都是錯配或殘句**（`behavior` 的「巢周圍約　範圍」缺了數字）、**`diet` 與 `behavior` 內容重複**、`conservation` 又是巢卵句、`callouts` 只是零碎重述；`look`、`range`、`breeding`、`funFact`／`migration`、`etymology` 可用。`dexScores` 六軸齊全（i2 / a2.3 / v2.7 含 vEst / r3.3 / c1.2 / o2.3），**a=2.3 有 `look` 的形態描述支撐**，故 missingScores 與 withheldScores 皆為空，卡面綜合分 **2.3**；**v=2.7 沿用**（翼 67.9 mm×0.22≈14.9 cm 略長於 13–13.5 cm，只記錄）。",
+    "AI 主圖**第一次生成失敗**（帶 0497 主圖作風格參照時，模型幾乎照抄了參照圖的藍色小鳥與橙脅），**改為不帶參照、把羽色寫成硬性規格重生成**才得到正確的白眉姬鶲雄鳥：純黑頭背尾、白眉、鮮黃腰、黑翼白斑、黃色喉胸腹，畫面為橫幅 1408×768，**以中央 768 平方裁切後放大至 1127×1127**（保留整隻鳥，不補邊）。比較鳥兩張皆為本輪新生成：**黃眉姬鶲**（黑頭、黃橙眉線、橄欖黃腰，HKBWS 明言的直接混淆種）與**綠背姬鶲**（橄欖綠上體、淡眼圈、無翼斑、黃腰，代表褐色第一冬鳥的比較）；非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
