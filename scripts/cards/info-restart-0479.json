@@ -1,0 +1,145 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0479",
+  "name": "中華仙鶲",
+  "scientificName": "Cyornis glaucicomans",
+  "illustrationTaxon": "Adult male Cyornis glaucicomans (bright blue crown, hindneck, mantle, wing and tail with a shining blue forecrown and shoulder patch, BLACK lores and chin, orange breast tapering upward into a narrow point that stops short of the chin, whitish lower breast and belly, brownish flanks making an untidy boundary, small black bill, pinkish-grey legs). Females have not been identified in Hong Kong and are not shown. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "山藍仙鶲",
+      "scientificName": "Cyornis whitei",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、本港最需要分辨的一種；山藍仙鶲的橙色由喉頭一直闊到下巴，側面看即可見大片橙色，橙色下延至下胸甚至腹部，而且**脇部不帶褐色**；本種的橙只集中在胸，向喉部收窄成一個尖楔而通常不到下巴，頦與眼先為黑色，脇部帶褐色而與橙色的胸形成一條不整齊的界線。"
+    },
+    {
+      "zh": "海南藍仙鶲",
+      "scientificName": "Cyornis hainanus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "本港海南藍仙鶲中帶 *klossi* 型特徵的個體最易與本種混淆；但這類個體**橙色明顯較淡**，伸向喉部的楔形部分為很淡的橙、更常見是白色，胸前並常有藍色羽毛混雜成不整齊的胸帶；本種的橙較飽和、楔形較清楚而止於黑頦之下。真正橙胸的 *dialilaemus* 與 *klossi* 在印度支那，本港至今只見帶稀釋特徵的個體。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.24,
+      0.2,
+      0.38,
+      0.32
+    ],
+    [
+      0.26,
+      0.28,
+      0.4,
+      0.42
+    ],
+    [
+      0.32,
+      0.44,
+      0.46,
+      0.58
+    ],
+    [
+      0.4,
+      0.56,
+      0.52,
+      0.66
+    ]
+  ],
+  "featureLabels": [
+    "黑眼先與頦",
+    "橙胸窄楔",
+    "白色腹部",
+    "粉灰雙腳"
+  ],
+  "featureNotes": [
+    "眼先與頦為黑色，是把本種與山藍仙鶲（橙色直達下巴）分開的關鍵；在良好光線下額與小覆羽另有一種更亮的藍，為插圖局部。",
+    "橙色只集中在胸部，並向喉部收窄成一個尖楔、通常不到下巴；這是 HKBWS 描述的核心辨識點，側面看時楔形比山藍仙鶲窄得多，為插圖局部。",
+    "下胸至腹為白色而非橙色，橙色與白色之間的界線因褐色脇部而顯得零散、不整齊；山藍仙鶲的橙色通常下延至下胸甚至腹部，為插圖局部。",
+    "腳與趾為粉灰色（嘴則為黑色、虹膜看似黑色）；本種在本港只有七筆紀錄、全部為雄鳥，任何腳色偏離粉灰的個體都應重新考慮，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "MYS",
+      "THA"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists just 3 native countries/territories — China (mainland, breeding), Malaysia (non-breeding) and Thailand (non-breeding); Laos is listed as a VAGRANT and is deliberately left unshaded. Hong Kong has no separate 110m geometry (folded into China's outline) and is NOT in BirdLife's country table at all, even though HKBWS has seven accepted records. Not an occurrence polygon: the breeding range is confined to western China (Sichuan, Guizhou, Yunnan) inside a breeding EOO of 868,000 km², and the non-breeding EOO is only 427,000 km² — green does not imply full-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/048200",
+      "use": "香港第 I 類，**稀少的過境遷徙鳥與冬候鳥**；與山藍仙鶲及帶橙胸 *klossi* 型特徵的海南藍仙鶲、以及其他迷鳥或籠中逸出的同屬鳥需分辨；**成年雄鳥**：上體鮮藍，良好光線下**額與小覆羽呈更亮的藍**，**眼先與頦黑色**，**橙色胸部向喉部伸成一個窄楔而通常不到下巴**，腹部白、**脇帶褐色**（有時伸到下胸，使橙與白的界線顯得零散不整齊），**嘴黑、腳與趾粉灰、虹膜看似黑色**。與山藍仙鶲的分別：山藍的橙喉寬得多、側看即可見，並直達下巴，橙色下體範圍更大、通常到下胸甚至腹部，且**脇部不帶褐色**；與海南藍仙鶲 *dialilaemus* 及 *klossi* 的分別：後兩者可能極相似，但本港（可能華南亦然）只見帶稀釋特徵的個體——橙色明顯較淡、伸向喉部的楔形為很淡的橙或白色，並常有藍色羽毛混成不整齊的胸帶。雌鳥**在本港從未被辨認出**：上體淡褐、喉胸淡橙、腹近白，與海南藍仙鶲雌鳥極相似（褐色調或稍暖、較少灰色頭），現有知識下野外未必可分；兩者雌鳥與山藍仙鶲雌鳥的分別在於後者橙色下體範圍更大更亮、通常延至腹部，且尾較亮赤褐而與上體成對比。叫聲與海南藍仙鶲相似但稍硬。生境：多數紀錄（包括僅有兩隻逗留多日的個體）來自新界林地。紀錄：**至 2019 年底共七筆、全部為雄鳥，介乎 10 月 18 日至 3 月 14 日**，多數（包括兩隻逗留者）在 1 月與 2 月——**1993** 年蠔涌 1 月 16 日至 2 月 4 日（Hale & Hackett 1993，本港首錄，當時記為藍喉仙鶲）、**1994** 年城門 1 月 31 日與 2 月 2 日、**2009** 年粉嶺 3 月 14 日、**2014** 年米埔 11 月 29–30 日、**2015** 年香港迪士尼樂園 10 月 18 日、**2017** 年石崗引水道 2 月 18 日至 3 月 5 日、**2018** 年石崗引水道 1 月 5–6 日；另有兩筆舊紀錄（**1994 年 5 月 2 日 KFBG 一隻雄鳥屍體**、**2004 年 4 月 1 日東平洲**）現被視為帶 *klossi* 特徵的海南藍仙鶲。分佈與分類：**繁殖上幾乎是中國西部的特有種**（可能僅及緬甸東北部），主要在四川、貴州與雲南，為**中距離遷徙鳥**，越冬紀錄多來自泰國、馬來半島與雲南南部（eBird 2025），因此在香港以過境鳥或冬候鳥身分偶爾出現並不意外；**單型種**，過去被視為藍喉仙鶲 *Cyornis rubeculoides* 的亞種，據 Zhang et al.(2016) 分出。IUCN：**Least Concern，趨勢穩定**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chinese-blue-flycatcher-cyornis-glaucicomans/details",
+      "use": "IUCN **2024** LC（2016 亦為 LC；2012 及之前為 **Not Recognised**，即尚未被承認為獨立種）、成熟個體 Unknown、趨勢 **Stable**（Suspected）、繁殖 EOO **868,000 km²**、非繁殖 EOO **427,000 km²**、AOO Unknown、遷徙狀況 **Full Migrant**、**繁殖 endemic Yes（本批第一個）**、**IBA／KBA 為「-」**、海拔 0–2,000 m、世代 **2.9 年**、森林依賴度 **Low**；生境四項——鄉村花園（Suitable）、亞熱帶／熱帶乾燥林（**Major**）、亞熱帶／熱帶濕潤低地林（Suitable）、亞熱帶／熱帶沼澤林（Suitable）；**貿易：七個貿易資料庫皆無紀錄、無任何被利用的跡象**（但 End uses 表仍列出食用與寵物、皆為自給全國，屬表內自相矛盾）；保育行動只有「已劃定保育地點（全分佈範圍）」與「已納入國際法規」，沒有復育計劃、系統監測或貿易管制；國家表列 **3 個原生國家／地區**（中國繁殖、馬來西亞非繁殖、泰國非繁殖），**寮國為迷鳥**，**香港不在表中**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **494 項 中華仙鶲（Cyornis glaucicomans），第 I 類**；鄰項為 495 海南藍仙鶲（I 類）、496 白喉林鶲（I 類，VU）、497 山藍仙鶲（I 類）。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（中華仙鶲；Chinese Blue Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Cyornis glaucicomans／鶲科 Muscicapidae）；speciesCode butfly2；taxonOrder 28863。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **只有五軸**：i=2、v=2.9（**含 vEst=1**）、r=3.3、c=1.2、o=2.3——**a（外觀）完全沒有分數**，故 missingScores 為 a、withheldScores 為 v、o。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案有 diet（「中華仙鶲在其分佈區內為留鳥，其棲息在半開放的高大樹木組成的森林中，食性為肉食性。」）、range（「越冬於泰國西南部和馬來半島等地。」）、look（「中華仙鶲體重約14.2克，翼長約78.6毫米，嘴峯長約13.9毫米，喙寬度約4.5毫米。」）、breeding（「繁殖於中國南部（陝西南部和湖北西部至四川和貴州）；」）、migration（與 range 一字不差）、highlights（上述三段的重複）與 iucn／iucnEn；**沒有 habitat、voice、behavior、humanRelation、etymology、conservation、callouts**；**length 與 weight 皆為空**；picks 為 range、diet、highlights、look、breeding、migration。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 78.6 mm、尾 65.0 mm、跗蹠 17.5 mm、嘴峯 13.9 mm、體重 14.2 g。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **494** 項、**第 I 類**；HKBWS 描述為**稀少的過境遷徙鳥與冬候鳥**，**至 2019 年底僅七筆、全部為雄鳥，10 月 18 日至 3 月 14 日**，多在 1–2 月。七筆逐一列出：1993 蠔涌（首錄）、1994 城門、2009 粉嶺、2014 米埔、2015 迪士尼、2017 與 2018 石崗引水道。**兩筆舊紀錄（1994 KFBG 屍體、2004 東平洲）已被重新歸為帶 *klossi* 特徵的海南藍仙鶲**。",
+    "辨識要點（成年雄鳥）：鮮藍上體＋更亮的額與小覆羽、**黑眼先與黑頦**、**橙色胸向喉收窄成窄楔而通常不到下巴**、白腹、**褐脇令橙白界線零散**、嘴黑、腳粉灰；與山藍仙鶲的分別在橙喉寬窄、是否達下巴、下體橙色範圍與脇部是否帶褐；與海南藍仙鶲 *klossi* 型的分別在橙色深淺、喉部楔形的顏色與是否混有藍羽。**雌鳥在本港從未被辨認出**，卡片全部以雄鳥為準。",
+    "分類與分佈：**單型種**，過去為藍喉仙鶲的亞種，據 Zhang et al.(2016) 分出；繁殖上幾乎是**中國西部特有種**（四川、貴州、雲南，可能僅及緬甸東北部），為中距離遷徙鳥，越冬於泰國、馬來半島與雲南南部。BirdLife 的 `breeding endemic Yes` 是本批第一次出現，與此相符。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 年評估、趨勢 **Stable**（HKBWS 亦寫 stable，兩者一致）；繁殖 EOO 868,000 km²、非繁殖 EOO 427,000 km²、**Full Migrant**、海拔 0–2,000 m、世代 2.9 年、森林依賴度 **Low**、IBA／KBA 0 個；生境以**亞熱帶／熱帶乾燥林為 Major**，濕潤低地林、沼澤林與鄉村花園為 Suitable。**評估歷史值得記錄**：2012 及之前 IUCN 列為 **Not Recognised**（尚未承認為獨立種），2016 起才是 LC。",
+    "**貿易資料自相矛盾**：BirdLife 文字寫「七個貿易資料庫皆無紀錄、無任何被利用的跡象」，但同一頁的 End uses 表仍列出食用（自給、全國）與寵物（自給、全國）；卡面以「無貿易紀錄」為主並在此並列，不代為取捨。另「已納入國際法規 Yes」與「無國際貿易管制」並存的寫法亦照錄。",
+    "**地圖**：BirdLife 只有 3 個原生國家／地區（中國繁殖、馬來西亞非繁殖、泰國非繁殖），**寮國為迷鳥故不填**；**香港不在 BirdLife 國家表中**（儘管 HKBWS 有七筆紀錄），而香港亦無獨立幾何、已摺入中國——這點在 note 中明寫，避免讀者以為本種在香港沒有出現。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`dexScores` **完全沒有 a 軸**（missingScores 為 a，卡面該軸顯示「待查」）；`cardCopy` 的 `diet` 開頭寫「在其分佈區內為留鳥」，與 HKBWS「中距離遷徙鳥」及 BirdLife `Full Migrant` **明顯不符**；`range` 只寫越冬地（泰國西南部與馬來半島）而漏掉繁殖地；`migration` 與 `range` 一字不差；**`look` 整段只是量度數字**（體重、翼長、嘴峯、喙寬）而非形態描述；`highlights` 是上述三段的重複；沒有 habitat、voice、behavior、conservation、callouts，length 與 weight 為空。分數：v=2.9 帶 `vEst=1`（原值由體長估算，length 欄為空，翼 78.6 mm×0.22≈17.3 cm 與本種約 13–15 cm 不符），o 依賴待查分項，故 withheldScores 為 v、o；i=2、r=3.3、c=1.2 沿用。",
+    "AI 主圖以 0478 主圖作風格參照（同屬、同一片林地）；**首版的橙色由喉部一直下延、楔形不明顯**，與 HKBWS「橙只集中胸部、向喉收窄成窄楔、止於黑頦」不符，已重生成黑頦清楚、橙胸收窄的版本。原圖 1312×816 橫幅，直接取 816×816 方形（起點 x=496，不補邊）再放大至 1127×1127。比較鳥為山藍仙鶲（沿用 0478 已生成、同風格的方形圖）與帶 *klossi* 型特徵的海南藍仙鶲（本輪由本卡主圖以圖生圖生成），非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "withheldScores": {
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 78.6 mm×0.22≈17.3 cm 與本種約 13–15 cm 的體型不符，2.9 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（v），且 a 軸本身缺分，不補算；i、r、c 三軸沿用。"
+  }
+}
