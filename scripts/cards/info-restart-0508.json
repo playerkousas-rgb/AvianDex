@@ -1,0 +1,153 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0508",
+  "name": "紅尾水鴝",
+  "scientificName": "Phoenicurus fuliginosus",
+  "illustrationTaxon": "Adult male Plumbeous Water Redstart Phoenicurus fuliginosus perched on a mossy boulder beside a rushing rocky stream, tail cocked and slightly spread. Head, nape, mantle, throat, breast, belly and flanks uniform slate blue-grey; wings blackish-brown with narrow pale fringes but no white panel and no pale wing bar; rump, vent and the whole tail rich chestnut rufous-orange, the warmest part of the bird, the rectrices dark-tipped; small black bill, dark grey legs. The female is not shown: she is slate-grey above with two wing-bars, grey underparts with paler spotting and barring, a white rump and a black tail with white at the sides of the base. AI interpretation; sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "北紅尾鴝",
+      "scientificName": "Phoenicurus auroreus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者都是本港常見的紅尾鴝屬冬候鳥，但雄鳥一望即分。本種**全身由頭至腹都是同一片石板藍**，**翼近黑而完全沒有白色翼斑**，熱色只出現在**腰、脇與整條尾**；北紅尾鴝雄鳥的**頭頂與後頸是銀灰色**、**臉頰、喉、背與翼都是黑色**，翼上有一大片**醒目的白色翼斑**，胸腹是**橙色**，尾則是深褐帶橙邊。簡單記法：**本種「藍身 + 栗尾 + 無白斑」，北紅尾鴝「黑白頭 + 橙腹 + 大白斑」**。"
+    },
+    {
+      "zh": "赭紅尾鴝",
+      "scientificName": "Phoenicurus ochruros",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "本種的**雌鳥**沒有石板藍，是最容易與其他紅尾鴝雌鳥混淆的羽色。本種雌鳥的**頭與上體是石板灰**、有**兩條翼帶**、**下體灰色並帶淡色點斑與橫紋**、**腰白色**、**尾黑而尾基兩側白**；赭紅尾鴝雌鳥則是**灰褐色**（頭與背沒有明顯石板調）、**翼上沒有翼帶**、**下胸至腹及脇是橙皮黃色**、沒有白色腰。HKBWS 指出赭紅尾鴝雌鳥**下體帶暖橙調**正是本種雌鳥缺少的，而雌性北紅尾鴝通常有白色翼斑。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.18,
+      0.19,
+      0.44,
+      0.46
+    ],
+    [
+      0.6,
+      0.26,
+      0.84,
+      0.5
+    ],
+    [
+      0.4,
+      0.3,
+      0.72,
+      0.56
+    ],
+    [
+      0.72,
+      0.06,
+      1.0,
+      0.4
+    ]
+  ],
+  "featureLabels": [
+    "石板藍頭胸",
+    "栗紅腰與尾基",
+    "近黑翼",
+    "栗紅尾羽"
+  ],
+  "featureNotes": [
+    "由額、頭頂、臉頰到喉與整個胸部都是**同一片粉狀石板藍**，沒有任何暖色或黑色面罩；成鳥雄鳥以此與北紅尾鴝（銀灰冠、黑臉喉）分開。為插圖局部。",
+    "**腰與尾上覆羽轉為濃栗紅**，是全身最暖、最亮的一段，也是英文名「Plumbeous（鉛灰）」以外的另一個關鍵：**藍身接栗腰**的對比在任何光線下都看得見。為插圖局部。",
+    "**翼面近黑褐、只有淡色羽緣，完全沒有白色翼斑或淺色翼帶**——這一點直接排除雄鳥北紅尾鴝（大片白翼斑）與部分赭紅尾鴝。為插圖局部。",
+    "**整條尾都是栗紅、末端轉深**；本種常把尾上下擺動並扇形展開，因此尾色在野外十分顯眼，是「紅尾」之名的來源。為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "KGZ",
+      "LAO",
+      "MMR",
+      "NPL",
+      "PAK",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 13 native rows — Afghanistan, Bangladesh, Bhutan, China (mainland), India, Kyrgyzstan, Laos, Myanmar, Nepal, Pakistan, Taiwan, Thailand and Vietnam — all Extant, Native and Resident, and every one of them has 110m geometry, so 13 shapes are shaded with no 'no geometry' caveat this time. Not an occurrence polygon: green does not imply full-country occupancy. BirdLife treats the species as 'Not a Migrant' with a resident/breeding EOO of 10,800,000 km² and a non-breeding EOO of 11,300,000 km², while HKBWS describes altitudinal movement in winter and treats Hong Kong birds as an uncommon winter visitor; Hong Kong is not in BirdLife's country table at all (only China (mainland) is listed), so no Hong Kong claim is drawn from it."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/051200",
+      "use": "香港第 I 類，**不常見的冬候鳥**，見於**多石溪流與引水道**，**有一次繁殖紀錄**。**12–13 cm**；**成鳥雄鳥**上體與下體都是**石板藍**、**翼近黑**、**腰、脇與尾為栗紅色**；**雌鳥**頭與上體**石板灰**、有**兩條翼帶**、下體**灰色並帶淡色點斑與橫紋**、**腰白色**、**尾黑而尾基兩側白**，部分雌鳥尾帶銹色。聲音：領域防衛時發出**拖長、帶顫音與嗡嗡感的『kreee』**；警戒時發出**帶轉調的『sweet』**，有時接一串急促的『tik』。生境：**多石溪流與集水區**，近年主要地點為**新娘潭／涌尾、林村河、荃灣曹公潭**；亦曾在異常地點出現（2006-12-25 南丫島東澳海灘石上、2012-10-28 大嶼山散頭乾山坡雄鳥）。出現情況：**極端日期 2019-10-21 與 1961-04-19**（後者是唯一 4 月紀錄，本世紀最晚為 3 月 16 日）；**11 月第三週前不多**，之後至 **2 月第三週數量穩定**，**79% 紀錄集中在 12 月至 2 月**，2 月底至 3 月第三週紀錄很少。通常**單隻或成對**，少有 3 隻同區；每個冬季數量變化大，**1999/2000 至 2019/20 有兩個冬季沒有紀錄**，其餘多為個位數，但 **2009/10 有 11 隻、2019/20 有 13 隻**，2017/18 的 12 隻包括 **3 隻雛鳥**。歷史：Vaughan & Jones（1913）視之為**常見冬候鳥**且偶有成對留下繁殖，但無繁殖證據；Herklots（1934）首次列入香港名錄。**繁殖**：2018 年一對在**曹公潭**繁殖——雄鳥 2017-11-24 首見、2018-01-05 雌雄同見、**2018-03-10 見成鳥與 3 隻雛鳥**，之後未再紀錄；另有兩次雄鳥在有雌鳥相伴時鳴唱的紀錄（2003-02-03 元崗、2004-01-29 涌尾）。行為：**常上下擺尾並以剪刀式展開**；在**水邊或溪中石間積極覓食**，亦會**短距離空中捕飛**；已確定的獵物包括**大蚊（Hexatoma sp.）、黑帶細身蜻（Euphaea decorata）與 報喜斑粉蝶（Delias pasithoe）**，亦吃**長葉木薑子果實**，2012-10-28 大嶼山那隻雄鳥在灌木上啄漿果後到石上吃。分類：**兩個亞種**，***R. f. fuliginosus*** 大致留居**阿富汗東部經喜馬拉雅至中國東北與東部**，南至**華南、中南半島與泰國西北**，冬季有**海拔移動**，部分遠至**緬甸中部與南部**；中國在**藏東南、青海、甘肅至內蒙古與河北一線以南、海拔 1,000 m 以上**繁殖；***R. f. affinis*** 留居**台灣**。保育：**IUCN Least Concern，趨勢 stable**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/plumbeous-water-redstart-phoenicurus-fuliginosus/details",
+      "use": "IUCN **LC**、**2024 年評估**（準則 N/A；2024、2016、2012、2009、2008 皆 LC，2004 LC，2000、1994、1988 為 Lower Risk/Least Concern，是本批**評估歷史最長的一張**）；**成熟個體 Unknown**、**趨勢 Stable（Suspected）——與 HKBWS 的 stable 一致**；種群未量化，但 **del Hoyo et al.（2005）** 稱在**巴基斯坦北部與印度常見**、在**東南亞稀少至局部常見**，**中國約 100–100,000 繁殖對**、**台灣約 10,000–100,000 繁殖對**（Brazil 2009）；**留居／繁殖 EOO 10,800,000 km²、非繁殖 EOO 11,300,000 km²**、AOO Unknown、**Breeding endemic No**、**Migratory status: Not a Migrant**（與 HKBWS 描述香港為冬候鳥、有海拔移動並列照實記錄）、**IBA／KBA 為「-」**（網絡面積 0 km²，本批第一張完全沒有 IBA 的卡）、海拔 **0–4,000 m**、世代 **2.4 年**、**森林依賴度：Does not normally occur in forest（本批第一次）**；**生態系統同時有 Freshwater 與 Terrestrial（本批第一次出現淡水生態系統）**；**生境只有 3 項**——**永久河流／溪流（含瀑布）在繁殖期與非繁殖期都是 Major**（本批第一次兩期皆 Major 的同一生境）、以及**人工水域／蓄水區（>8 公頃）非繁殖期 Suitable**；**用途與貿易**：low prevalence（**七個貿易數據集中有一個**），終端用途為**人類食用**與**寵物／展示**（皆 Subsistence、National）；**保育行動**只有「已劃定保育地點（覆蓋全部範圍）」與「已納入國際法規」，其餘七項皆 No；**政策工具：CMS 附錄 II**；**次全球／地區評估表只有全球一欄**；命名人 **(Vigors, 1831)**；分類註記：**Phoenicurus fuliginosus（del Hoyo & Collar 2016）以前放在 Rhyacornis 屬、作 R. fuliginosa**（Sibley & Monroe 1990、1993）；Alliance for Zero Extinction 與 Search for Lost Birds 皆 No。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024（頁面最後更新 2025-05-11）：第 **518** 項 紅尾水鴝 Plumbeous Water Redstart（*Phoenicurus fuliginosus*），**第 I 類**；鄰項為 517 紅脇藍尾鴝與 519 赭紅尾鴝。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（紅尾水鴝；Plumbeous Redstart）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phoenicurus fuliginosus／鶲科 Muscicapidae）；speciesCode plured1；taxonOrder 29331。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 2、a 2.8、v 2.7、r 1、c 3、o 2.3），`missingScores` 與 `withheldScores` 皆為空；o 2.3 與六軸平均 2.3 相符。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "`look` 中文是別名與台灣話名稱（石青仔），**英文才有形態描述**（雄鳥石板藍、尾銹紅），故 a 有依據；`funFact` 中文全空；`voice` 英文被誤填為體重句；`diet` 中文全空、英文只是「昆蟲多的溪流較受偏好」；`behavior` 與 `conservation` 中文同一句（領域性）；**length 14 cm、weight 22 g 皆有值（本批第一張兩者齊全）**，但 14 cm 與 HKBWS 的 12–13 cm 不同。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 73.6、tail 52.8、tarsus 22.7、bill 13.1、mass 20.3。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **518** 項、**第 I 類**；HKBWS 描述為**不常見的冬候鳥**，見於多石溪流與引水道。**極端日期 2019-10-21 與 1961-04-19**，**79% 紀錄在 12 月至 2 月**，11 月第三週前不多，2 月底後紀錄很少。通常單隻或成對，**1999/2000 至 2019/20 有兩個冬季沒有紀錄**，其餘多為個位數，最高為 2019/20 的 13 隻。主要地點：新娘潭／涌尾、林村河、荃灣曹公潭。另有 **2018 年曹公潭的繁殖紀錄**（3 隻雛鳥），是本種在香港的唯一繁殖紀錄。",
+    "辨識要點：雄鳥是**全石板藍身軀 + 近黑翼（無白翼斑）+ 栗紅腰與整條尾**，與北紅尾鴝雄鳥（銀灰冠、黑臉喉、橙腹、大片白翼斑）一望即分。雌鳥是**石板灰頭與上體、兩條翼帶、灰色下體帶淡色點斑與橫紋、白腰、黑尾而尾基兩側白**，與赭紅尾鴝雌鳥（灰褐、無翼帶、橙皮黃下腹）不同。行為上本種**常上下擺尾並以剪刀式展開**。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 年評估、**趨勢 Stable（Suspected）**，與 HKBWS 一致。成熟個體 Unknown，但頁面引 del Hoyo et al.（2005）指巴基斯坦北部與印度常見、東南亞稀少至局部常見，並引 Brazil（2009）的中國與台灣繁殖對估算。留居／繁殖 EOO 10,800,000 km²、非繁殖 EOO 11,300,000 km²；**完全沒有 IBA／KBA**；海拔 0–4,000 m；世代 2.4 年；**森林依賴度「通常不出現於森林」**；**生態系統首次包含 Freshwater**；生境只有 3 項而**永久溪流在繁殖與非繁殖期都是 Major**；貿易 low prevalence（食用與寵物）；保育行動只有「已劃定保育地點」與「已納入國際法規」，政策工具為 **CMS 附錄 II**。",
+    "資料衝突照實並列（不改 runtime）：(1) **遷徙性**——BirdLife 標示 **Not a Migrant**，HKBWS 則把香港族群描述為冬候鳥並說明有**海拔移動**、部分遠至緬甸；(2) **體長**——runtime 為 **14 cm**，HKBWS 寫 **12–13 cm**；(3) **香港地位**——HKBWS 視之為每年出現的不常見冬候鳥（並有一次繁殖紀錄），**BirdLife 國家表只列 China (mainland)，完全沒有香港**，故地圖不作任何香港聲明。",
+    "**地圖是本批第一張「原生國家全部有幾何」而且沒有任何排除項的卡：13 個形狀**。BirdLife 列 13 個原生地區（阿富汗、孟加拉、不丹、中國大陸、印度、吉爾吉斯、寮國、緬甸、尼泊爾、巴基斯坦、台灣、泰國、越南），全部 Extant／Native／**Resident**，**沒有迷鳥、沒有 Origin Uncertain**，亦**沒有缺 110m 幾何的地區**（本批首次）。台灣在 BirdLife 為原生留鳥（對應 HKBWS 的 *R. f. affinis* 亞種）。香港不在國家表，故 note 只說明 BirdLife 的分類，不畫香港。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`look` 中文是別名與台灣話名稱（石青仔）、英文才有形態描述（故 a 保留，沿用 0506／0507 先例）；`funFact` 中文全空；`voice` 英文被誤填為體重句、`diet` 只有「昆蟲多的溪流較受偏好」而中文全空；`behavior` 與 `conservation` 中文是同一句領域性描述；`range` 只列國家清單。六軸分數齊全。",
+    "HKBWS 頁面 id 是 **051200**（路徑 `0410/`），比 runtime **0508** 大 4——**本批偏移最大的一次**（0501 +1、0502 +2、0503 +0、0504 +1、0505 +1、0506 +1、0507 +1）；名錄序號 518。查頁次序：`050900` 是赭紅尾鴝、`051000` 是黑喉紅尾鴝、`051100` 是北紅尾鴝，紅尾水鴝落在 **`051200`**——可見 HKBWS 內部 id 既不跟 runtime 亦不跟名錄序號。",
+    "主圖與兩張比較鳥**全部是本輪新生成**：不帶任何風格參照，只以硬性羽色規格描述並明寫負面條件（主圖「不得有黑臉罩、不得有橙胸或橙腹、不得有白冠、不得有白翼斑、不得有斑點或橫紋下體」；北紅尾鴝「不得有石板藍身體、不得有栗色尾、不得有全藍頭、不得有灰或白腹」；赭紅尾鴝雌鳥「不得石板藍、不得栗腰栗尾、不得白翼斑、不得黑色下體」）。比較鳥第一版為版畫風格、與主圖水彩調不合，已重新生成為同調水彩。全部為 AI 解讀、非等比例，未經鳥類專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
