@@ -1,0 +1,149 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "VU",
+    "zh": "易危",
+    "assessmentNote": "全球 VU：BirdLife 2025 評定"
+  },
+  "id": "0481",
+  "name": "白喉林鶲",
+  "scientificName": "Cyornis brunneatus",
+  "illustrationTaxon": "Adult Cyornis brunneatus, sexes alike (plump brownish flycatcher, long heavy bill dark above with a yellowish lower mandible, prominent pale buff eye ring and lores, plain warm brown head and mantle, rufous-brown rump and tail, white throat and belly, pale brown breast and flanks with faint scaly feather centres, pinkish legs). AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "褐胸鶲",
+      "scientificName": "Muscicapa muttui",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "本港最有機會混淆的一種；褐胸鶲屬鶲屬、體型明顯較小（13–14 cm）而嘴較細短，嘴整體偏淡而只有下嘴的小部分帶深色，腰與尾暖褐但翼上有皮黃翼斑、飛羽中央不黑；本種體型較大較圓（13–15 cm）、**嘴粗長而重、上顎深色而下顎黃色**、眼圈與眼先大片皮黃、**腰與尾上覆羽及尾為赤褐色**、胸脇淡褐而有時呈鱗狀，翼上沒有褐胸鶲那樣明顯的皮黃翼斑。"
+    },
+    {
+      "zh": "北灰鶲",
+      "scientificName": "Muscicapa dauurica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同為褐色系的小型鶲；北灰鶲上體較冷的灰褐、嘴基寬而短、下嘴黃色但嘴形扁平、胸脇淡灰褐而少見鱗狀、腰與尾不帶赤褐；本種較大較圓、嘴粗長、眼圈皮黃更醒目、腰尾明顯赤褐、胸脇褐而帶鱗狀羽心。兩者在本港秋季都出現在遮蔭林地，體型與嘴形是最快的分辨點。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.3,
+      0.2,
+      0.42,
+      0.31
+    ],
+    [
+      0.105,
+      0.195,
+      0.315,
+      0.29
+    ],
+    [
+      0.66,
+      0.63,
+      0.84,
+      0.79
+    ],
+    [
+      0.3,
+      0.34,
+      0.42,
+      0.46
+    ]
+  ],
+  "featureLabels": [
+    "皮黃眼圈",
+    "黃色下顎",
+    "赤褐腰尾",
+    "鱗狀胸部"
+  ],
+  "featureNotes": [
+    "眼圈與眼先為醒目的皮黃色，在一片褐色的頭部上很突出；雌雄同色，第一齡冬羽與成鳥相似，為插圖局部。",
+    "嘴粗長而重——上顎深色、**下顎黃色**，是本種與其他褐色系鶲最直接的差別；第一齡冬鳥的下顎尖端會帶深色，為插圖局部。",
+    "腰、尾上覆羽與尾羽為赤褐色，與較淡的褐色背部成對比；褐胸鶲的暖褐腰尾較淡而翼上另有皮黃翼斑，為插圖局部。",
+    "胸與脇為淡褐色，胸部中央的羽毛有時呈鱗狀羽心，其餘下體白色；本種多在陰暗林下近地面處靜止不動，鱗狀胸在近距離才看得清，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "KHM",
+      "LAO",
+      "MYS",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 8 native countries/territories — Cambodia (passage), China (breeding and passage), Hong Kong (China, passage), Laos (passage), Malaysia (non-breeding and passage), Singapore (non-breeding and passage), Thailand (passage) and Vietnam (passage); Brunei is listed as a VAGRANT and is deliberately left unshaded. Hong Kong and Singapore have no separate 110m geometry, so 6 shapes are shaded (China, Cambodia, Laos, Malaysia, Thailand, Vietnam). Myanmar is NOT in BirdLife's native list and HKBWS does not mention it on passage, so it is not shaded. Not an occurrence polygon: this is a restricted-range breeder in dense undergrowth of SE Chinese hill forest (up to 1,600 m) wintering in mature Sundaic lowland forest inside a breeding EOO of 1,004,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/048300",
+      "use": "香港第 I 類，**稀少的秋季過境遷徙鳥**；**13–15 cm**，中型而圓胖的褐色鶲，**嘴長而重**、**眼圈與眼先大片皮黃**，雌雄同色；頭與上體樸素褐色，**腰、尾上覆羽與尾為赤褐色**；**胸與脇淡褐、胸部中央有時呈鱗狀**，其餘下體白色；**上顎深色、下顎黃色**；**腳粉紅**；第一齡冬鳥與成鳥相似，但下顎尖端帶深色、三級飛羽有皮黃羽端。鳴聲：離開繁殖地後少鳴，叫聲為短而帶調變的 rattling、各音之間分隔清楚，另有粗糙的 rattling；鳴唱特別，由兩組短的雙音組成、第一組較低沉。分佈與生境：見於遮蔭充足的林地；**至 2020 年共 36 隻**，其中 **13 隻在大埔滘、13 隻在何文田**（後者植被有限，但自 2014 年起每年有紀錄）；大埔滘 8 隻是在環誌計劃的霧網中捕獲、否則不會被發現。紀錄：**8 月 22 日至 11 月 4 日的稀少秋遷**；**最高計數為 2015 年 9 月 18 日大埔滘捕獲四隻**；首錄為 1995 年 9 月 16–21 日甲龍（Hopkin et al. 1996），之後至 2004 年才有兩隻，2005–2014 年有六個秋季有紀錄但每年最多兩隻，**2013 年起每年出現、每年最多八隻**；**另有 2010 年後三筆冬季紀錄被視為籠中逸出個體**；高峰在 8 月最後一週至 9 月第三週，佔全部紀錄 **67%**。行為：**害羞**、偏好林地中的遮蔭處，動作遲緩，常在同一枝上靜止一分鐘以上，總是單獨出現、常在近地面；會像典型鶲一樣從棲枝衝出捕食飛蟲，但**與大部分鶲不同，也會在地上跳躍覓食、有時在下層植被低處取食，並曾被見到從落葉堆取食果實與幼蟲**（Hopkin et al. 1996）。分類與分佈：**單型種**，**局限分佈**，只在中國東南部的原生林與成熟次生林（海拔可達 1,600 m）繁殖——南河南、南安徽與浙江，南至廣西、廣東與福建；越冬於馬來半島，可能亦在蘇門答臘；過境見於上海、海南、雲南、越南與泰國南部（Clement & Christie 2020）。IUCN：**VULNERABLE（易危）**，種群小且下降，主因繁殖地與越冬地的低地森林被砍伐及轉作農地。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/brown-chested-jungle-flycatcher-cyornis-brunneatus/details",
+      "use": "IUCN **2025** **VU（易危），準則 A2c+4c**——因繁殖地與非繁殖地森林流失導致懷疑的快速下降；趨勢 **Decreasing**（A2 與 A4 皆為 **10–35%**，2016–2026）、成熟個體 Unknown、繁殖 EOO **1,004,000 km²**、非繁殖 EOO **998,000 km²**、**AOO 持續下降 Yes**、遷徙狀況 **Full Migrant**、**繁殖 endemic Yes**、**IBA／KBA 為「-」**、海拔 **0–1,600 m**、世代 **2.9 年**、森林依賴度 **High**、**只有一個亞種群**（all individuals in one subpopulation Yes）；下降理由：過去十年（2013–2023）**非繁殖地適合越冬生境流失 19–23%**、繁殖地 4–6%，合計懷疑下降 15–35%，並指「迫切需要監測數據以更精確估計下降率」；生境——亞熱帶／熱帶濕潤低地林（繁殖 **Major**、非繁殖 **Major**）、亞熱帶／熱帶濕潤灌叢（過境 Suitable）；繁殖於 200–1,600 m 亞熱帶常綠闊葉林的濃密竹叢或低矮灌木，**不使用已伐林或人工林**，在馬來半島越冬幾乎只在平地成熟原生林；國家表列 **8 個原生國家／地區**（柬埔寨過境、中國繁殖與過境、**香港（中國）過境**、寮國過境、馬來西亞非繁殖與過境、**新加坡非繁殖與過境**、泰國過境、越南過境），**汶萊為迷鳥**；種群量未知，在中國屬「不常見」、在非繁殖區不常見至罕見但極不明顯。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **496 項 白喉林鶲（Cyornis brunneatus），第 I 類，VU**；鄰項為 494 中華仙鶲、495 海南藍仙鶲（皆 I 類）、497 山藍仙鶲（I 類）。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（白喉林鶲；Brown-Chested Jungle Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Cyornis brunneatus／鶲科 Muscicapidae）；speciesCode bncjuf1；taxonOrder 28912。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **六軸齊全**：i=3.8、a=2.8、v=2.9（**含 vEst=1**）、r=4.8、c=2.2、o=3.3；missingScores 為空、withheldScores 為 v、o。r=4.8 為本批最高，c=2.2 與 VU 相符。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案相對完整：diet（小型無脊椎動物、樹冠下層與灌木叢、翻揀落葉）、range（主要越冬地馬來半島，2010 年代起亦在蘇門答臘）、look（翅短、喙長、上顎黑、下顎黃）、habitat（高度依賴低地森林與沼澤林地）、breeding（夏季在中國南方山林繁殖、冬季至馬來半島與蘇門答臘）、behavior（以昆蟲為食、通常獨自覓食）、humanRelation（**廣西等地有捕鳥人用網捕捉本種作野味食用**）、etymology（種加詞 brunneatus 源自拉丁語「褐色」）、migration（秋季遷徙至東南亞越冬）、highlights、iucn／iucnEn；**沒有 voice、conservation、callouts、funFact**；**length 與 weight 皆為空**；picks 為 range、habitat、diet、highlights、look、breeding、behavior。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 77.8 mm、尾 58.8 mm、跗蹠 16.2 mm、嘴峯 16.2 mm、體重 18.1 g。"
+    }
+  ],
+  "notes": [
+    "**本卡是本批第一張 VU（易危）卡**：IUCN 2025 以 **A2c+4c** 評為 VU，趨勢 Decreasing、A2／A4 皆 10–35%；HKBWS 亦寫 VULNERABLE。runtime c=2.2、i=3.8、r=4.8（本批最高）與此相符，卡面照用。",
+    "香港狀況：香港鳥類名錄 2024 第 **496** 項、**第 I 類、VU**；HKBWS 描述為**稀少的秋季過境遷徙鳥（8 月 22 日至 11 月 4 日）**；**至 2020 年全港只有 36 隻野生個體**（大埔滘 13、何文田 13，其中大埔滘 8 隻是環誌霧網捕獲、否則不會被發現）；**最高計數 2015 年 9 月 18 日大埔滘四隻**；首錄 1995 年 9 月 16–21 日甲龍，2013 年起每年出現、每年最多八隻；**另有 2010 年後三筆冬季紀錄被視為籠中逸出個體**（未計入 36 隻）。",
+    "辨識要點：13–15 cm 圓胖褐色鶲、嘴粗長而重且**下顎黃色**、眼圈與眼先大片皮黃、腰與尾赤褐、胸脇淡褐有時呈鱗狀、其餘下體白色、腳粉紅；第一齡冬鳥下顎尖端帶深色、三級飛羽有皮黃羽端。卡片以「皮黃眼圈／黃色下顎／赤褐腰尾／鱗狀胸部」為四個標籤，全部在插圖上可辨。",
+    "行為值得單獨記錄：本種**並非純粹的空中捕食者**——除從棲枝衝出捕食飛蟲外，也會在地上跳躍覓食、在下層植被低處取食，並曾被見到從落葉堆取食果實與幼蟲（Hopkin et al. 1996）；HKBWS 亦形容其動作遲緩、常在枝上靜止一分鐘以上。runtime 的 `behavior` 只寫「以昆蟲為食、通常獨自覓食」，比 HKBWS 的敘述簡略，卡面以 HKBWS 為準。",
+    "IUCN 細節：**繁殖與非繁殖的低地林皆為 Major 生境**（本批少見的雙季 Major）、森林依賴度 **High**、**只有一個亞種群**、**不使用已伐林或人工林**、海拔 0–1,600 m、世代 2.9 年、IBA／KBA 0 個；下降主因是**非繁殖地（Sundaic 低地林）十年流失 19–23%** 大於繁殖地 4–6%，BirdLife 明言「迫切需要監測數據」。",
+    "runtime 的 `humanRelation` 記載「廣西等地有捕鳥人會用網捕捉白喉林鶲以作野味食用」——這是本批少見的本港卡會直接寫到捕捉食用的一項，已保留於 notes，卡面以 VU 與生境流失為主軸，不作道德判斷。",
+    "**地圖**：BirdLife 原生 8 個國家／地區（柬埔寨、中國、香港（中國）、寮國、馬來西亞、新加坡、泰國、越南），其中**香港與新加坡在 110m 底圖皆無獨立幾何**，故只填 **6 個形狀**（中國、柬埔寨、寮國、馬來西亞、泰國、越南）；**緬甸不在 BirdLife 原生名單、HKBWS 亦未提及過境，故不填**；**汶萊為迷鳥故不填**。note 內明寫本種為局限分佈的繁殖鳥（東南亞中國丘陵林 1,600 m 以下），綠色不代表全境佔用。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`length` 與 `weight` 皆為空，而 `look` 只寫「翅短、喙長、上顎黑、下顎黃」——**「翅短」與 HKBWS 所述本種在鶲科中屬中型偏大並不相符**，卡面以 HKBWS「中型而圓胖」為準；`diet` 與 `behavior` 內容重複（兩段都寫以昆蟲／小型無脊椎動物為食、獨自覓食）；`range` 只寫越冬地；沒有 voice、conservation、callouts。分數六軸齊全但 **v=2.9 帶 `vEst=1`**（原值由體長估算而 length 為空，翼 77.8 mm×0.22≈17.1 cm 高於 HKBWS 的 13–15 cm），o 依賴待查分項，故 withheldScores 為 v、o；i、a、r、c 沿用（a=2.8 有 look／diet／habitat 文字支撐，r=4.8 有 etymology、humanRelation、migration、highlights 等文字支撐）。",
+    "AI 主圖以 0480 主圖作風格參照；1312×816 橫幅直接取 816×816 方形（起點 x=496，不補邊）再放大至 1127×1127，畫出粗長而帶黃下顎的嘴、皮黃眼圈、赤褐腰尾、鱗狀淡褐胸部與白色下體，停在陰暗林下的細枝上。比較鳥為褐胸鶲與北灰鶲，**兩張均沿用 0476 已生成的方形圖（該卡主圖與北灰鶲比較圖），本輪未再生成比較鳥**，非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "withheldScores": {
+    "v": "length 與 weight 皆為空，vEst=1 表示原值本身即由體長估算；翼長 77.8 mm×0.22≈17.1 cm 高於 HKBWS 的 13–15 cm，2.9 分缺乏支撐，待查。",
+    "o": "綜合分依賴待查分項（v），不補算；i、a、r、c 四軸沿用（c=2.2 與 VU 相符）。"
+  }
+}
