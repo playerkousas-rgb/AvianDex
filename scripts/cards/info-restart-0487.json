@@ -1,0 +1,154 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0487",
+  "name": "白喉短翅鶇",
+  "scientificName": "Brachypteryx leucophris",
+  "illustrationTaxon": "Adult Brachypteryx leucophris of subspecies B. l. carolinae (small, compact, babbler-like chat 11–13 cm: rich dark brown above and on the face; a thin, often inconspicuous white supercilium; whitish underparts with a broad brownish-buff wash on the breast and flanks; wings very short and rounded, tail very short and often cocked; legs and feet notably long and bright pink). Females are more rufous and young birds show more obvious buff scaling below; neither is shown. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "棕褐短翅蝗鶯",
+      "scientificName": "Locustella luteoventris",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是褐色的林地隱蔽小鳥，同樣在灌叢與林下活動；棕褐短翅蝗鶯的身形較修長、**尾明顯較長而寬**、**喉至胸為較暖的橙皮黃**、眉紋更淡更短，腳亦較細而顏色較淡；本種則**身體短圓、尾極短（常翹起）**、眉紋是較明顯的一道白線、胸與脇只是淡皮黃褐而腹部偏白，腿腳**粗長而呈鮮粉紅**。"
+    },
+    {
+      "zh": "紅尾歌鴝",
+      "scientificName": "Larvivora sibilans",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "另一種在本港林下地面活動的褐色小鳥；紅尾歌鴝的**臉、胸與脇有濃密的皮黃與褐色鱗狀斑**（像「魚鱗」）、**腰與尾為明顯的赤褐色**而與橄欖褐背部成對比；本種全身均勻的深褐、**沒有赤褐腰尾**、臉與胸亦沒有鱗狀斑，只有一道白眉與淡皮黃的胸帶，腿腳更長更粉。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.24,
+      0.16,
+      0.42,
+      0.34
+    ],
+    [
+      0.62,
+      0.24,
+      0.84,
+      0.46
+    ],
+    [
+      0.42,
+      0.58,
+      0.6,
+      0.76
+    ],
+    [
+      0.33,
+      0.42,
+      0.51,
+      0.6
+    ]
+  ],
+  "featureLabels": [
+    "白色眉紋",
+    "短翅短尾",
+    "粉紅長腿",
+    "皮黃胸腹"
+  ],
+  "featureNotes": [
+    "眼上有一道**纖細的白色眉紋**，HKBWS 形容牠「通常不顯眼、興奮時會展開」；在一片深褐色的臉上，這道白線是野外最實用的辨識點，為插圖局部。",
+    "**翼特別短而圓、尾極短**（英文名「shortwing」由此而來），停棲時常把短尾微微翹起；這個短圓的輪廓與棕褐短翅蝗鶯等身形修長的褐色小鳥不同，為插圖局部。",
+    "**腿與腳特別長而呈鮮粉紅色**，站在苔蘚倒木或落葉層上時很顯眼；本種多在地面與林下低處活動，長腿是適應林下地面的特徵，為插圖局部。",
+    "下體近白，但**胸與脇有一大片皮黃褐色**，形成一條橫過胸部的暖色帶；幼鳥的皮黃部分更呈明顯的鱗狀，雌鳥整體則偏赤褐，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "THA",
+      "TLS",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 13 native countries/territories — Bangladesh, Bhutan, Cambodia, China (mainland), India, Indonesia, Laos, Malaysia, Myanmar, Nepal, Thailand, Timor-Leste and Vietnam — all of which have 110m geometry, so 13 shapes are shaded. Hong Kong is NOT in BirdLife's country table (it is folded into China's outline) even though HKBWS now treats it as a locally common resident and winter visitor that first colonised in 1998. Not an occurrence polygon: the species is a resident of moist montane and lowland forest inside a very large EOO of 13,600,000 km², from the eastern Himalayas through southeast China to Indochina, Sumatra, Java and Timor."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/048900",
+      "use": "香港第 I 類，**局部常見的留鳥兼冬候鳥，見於封閉樹冠的灌叢與森林**；**11–13 cm**，是一種不甚起眼、像小噪鶥的褐色小鳥，**眉紋通常不顯眼（興奮時會展開）**、**翼與尾非常短**、**下體近白而胸與脇帶皮黃褐**、**腿長而呈粉紅色**；**雌鳥較赤褐**；**幼鳥下體有更明顯的皮黃鱗狀斑**。生境與擴散：**在封閉樹冠、下層植被濃密的灌叢與森林中局部常見**；本世紀首十年的早期紀錄集中於**大帽山山塊（大埔滘、梧桐寨、大帽山上部森林與石崗）**，**700 m 以上的灌叢有小型繁殖種群**；2010 年代擴散至大欖郊野公園、八鄉、西貢（榕樹澳、白沙澳）與新娘潭，並在較低海拔錄得推定繁殖鳥；新界中部以外的紀錄增加，包括大嶼山（昂坪、大澳）、港島（摩星嶺）、蒲台與南丫；雖然通常遠離人居，但**亦有太富廣場與何文田公園式生境的冬季紀錄**。紀錄史：**1998 年首錄——11 月 14 日嘉道理農業研究中心環誌兩隻**（Carthy 2004），此後定居本港、**現時全年可見**；最高計數 **2017-11-01 大欖郊野公園 14 隻**，另有 2016-11-12～13 石崗集水區 11 隻；**首次確認繁殖為 2001-07-10 大帽山**；因隱蔽而少見築巢等行為，**7 月起可見幼鳥**。行為：**通常單獨、繁殖季與非繁殖季都有強烈領域性**，故全年大部分時間可聞鳴唱，以隆冬最少；**3 月頻率明顯上升並維持至 5 月底**，6 月至 9 月中偏低，**9 月最後十天回升、10 月下半月尤其明顯（此時建立冬季領域）**，可持續至 12 月中甚至更後；**極度隱蔽，多留在灌木或林下層的低枝深處**；主要吃無脊椎動物，但無細節。分佈與分類：由東喜馬拉雅向東至中國東南部、南至中南半島北部與越南南部，另見於蘇門答臘與爪哇至帝汶（Collar 2020）；共五個亞種，中國有兩個，**華南（包括香港）與中南半島北部只有 *B. l. carolinae***，*B. l. nipalensis* 在較西地區。IUCN：**Least Concern，種群趨勢下降**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/lesser-shortwing-brachypteryx-leucophris/details",
+      "use": "IUCN **2024 LC**（準則 N/A）；成熟個體 Unknown、趨勢 **Decreasing（Suspected）**——範圍內十年樹冠減少 **7.5%**、暫定懷疑下降 **1–19%**；EOO **13,600,000 km²**、**Not a Migrant**、繁殖 endemic No、**IBA／KBA 為「-」**、海拔 **40–3,900 m**、世代 **2.7 年**、森林依賴度 **Medium**、亞種群「-」；種群量未量化，被描述為在西喜馬拉雅與中國罕見、在印度東北部則非常常見（del Hoyo et al. 2005），**中國估計約 100–10,000 繁殖對**（Brazil 2009）；生境兩項——**亞熱帶／熱帶濕潤山地林為 Major**、濕潤低地林為 Suitable；國家表列 **13 個原生國家／地區**（孟加拉、不丹、柬埔寨、中國、印度、印尼、寮國、馬來西亞、緬甸、尼泊爾、泰國、東帝汶、越南），**香港不在表中**；**貿易普遍度低（1/7）**，用途為寵物（自給、全國）；保育行動：全範圍已劃定保育地點，但**沒有系統監測、沒有復育計劃、沒有列入國際法規、沒有國際貿易管制**；評估歷史 1988 年起一直 LC。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **503 項 白喉短翅鶇（Brachypteryx leucophris），第 I 類**；同科鄰項為 500 紅喉歌鴝、501 灰背燕尾、502 紫嘯鶇、504 藍歌鴝（皆 I 類）。**注意：runtime id 0487 在名錄上是第 503 項，id 序號與名錄序號並不一致。**"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（白喉短翅鶇；Lesser Shortwing）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Brachypteryx leucophris／鶲科 Muscicapidae）；speciesCode lessho1；taxonOrder 29084。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **只有四軸**：a=2.8、v=2.5（**含 vEst=1**）、r=1、o=2.1——**i（稀有度）與 c（保育）完全沒有分數**，故 missingScores 為 i、c；a 缺外觀文字支撐、o 依賴 a，故 withheldScores 為 a、o。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案**極薄**：只有 `range`（尼泊爾、不丹、印度、中南半島、印尼與中國四川、雲南）與 `behavior`，而 **`behavior` 其實是分佈句（與 `range` 幾乎相同）**；`fieldCopy` 的 `look` 只有英文一句「The lesser shortwing … is a species of chat」（分類陳述而非形態描述）、`habitat` 只有英文一句、`diet` 沒有；**沒有 voice、breeding、migration、conservation、highlights、callouts、etymology、funFact**；**length 與 weight 皆為空**；picks 只有 range 與 behavior。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 56.6 mm、尾 34.5 mm、跗蹠 26.0 mm、嘴峯 13.5 mm、體重 15.8 g——**跗蹠 26 mm 是本批暫時最長的**，正好對應「腿長」這項特徵。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **503** 項、**第 I 類**；HKBWS 描述為**局部常見的留鳥兼冬候鳥**；**1998 年 11 月 14 日嘉道理農業研究中心環誌兩隻為首錄**（Carthy 2004），此後**定居本港、現時全年可見**；**首次確認繁殖為 2001-07-10 大帽山**；最高計數 **2017-11-01 大欖郊野公園 14 隻**、2016-11-12～13 石崗集水區 11 隻；2010 年代由大帽山山塊擴散至大欖、八鄉、西貢與新娘潭，近年更見於大嶼山、摩星嶺、蒲台與南丫。**本卡是本批少見的「近年新殖民並已繁殖」物種**，與 0483 棕腹大仙鶲的「每年冬候」、0485 琉璃藍鶲的「一筆紀錄」形成三種不同的本港鳥況類型。",
+    "辨識要點：**11–13 cm 的小型褐色鳥、像小噪鶥**；**眉紋纖細而不顯眼（興奮時展開）**、**翼與尾極短（尾常翹起）**、**下體近白而胸與脇帶皮黃褐**、**腿長而鮮粉紅**；**雌鳥偏赤褐**、**幼鳥下體有明顯皮黃鱗狀斑**。華南（包括香港）的個體屬 ***B. l. carolinae***。",
+    "行為：**極度隱蔽、多留在林下低枝深處**，通常單獨而全年具領域性；因此**全年大部分時間可聞鳴唱**，3 月至 5 月底最盛、6 月至 9 月中最低、**9 月最後十天至 10 月下半月回升（建立冬季領域）**，可持續至 12 月中；主要吃無脊椎動物但 HKBWS 明言「無細節」——卡面照實寫「食性細節未有記錄」，不代為補充。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 評估、1988 年起一直 LC；**趨勢 Decreasing（Suspected）**（樹冠減 **7.5%**、懷疑下降 1–19%），而 HKBWS 寫「population trend decreasing」，**兩者一致**（與 0484、0486 兩張的「stable vs Decreasing」矛盾不同）。EOO **13,600,000 km²**、**Not a Migrant**、**IBA／KBA 為「-」**、海拔 **40–3,900 m**、世代 2.7 年、森林依賴度 Medium；生境只有濕潤山地林（**Major**）與濕潤低地林（Suitable）兩項；**沒有列入國際法規、沒有國際貿易管制**；貿易普遍度低（1/7，用途為寵物、自給）。",
+    "**地圖**：BirdLife **13 個原生國家／地區**全部有 110m 幾何，故填 **13 個形狀**（孟加拉、不丹、柬埔寨、中國、印度、印尼、寮國、馬來西亞、緬甸、尼泊爾、泰國、東帝汶、越南）；**香港不在 BirdLife 國家表中**（已摺入中國），note 內明寫本港自 1998 年殖民、現為局部常見留鳥。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：**`dexScores` 只有四軸，i 與 c 完全缺分**（missingScores 為 i、c）；`cardCopy` 的 `behavior` 其實是分佈句（與 `range` 幾乎相同）、`fieldCopy.look` 只有英文一句「is a species of chat」而無形態描述、`habitat` 只有英文一句、**沒有 diet、voice、breeding、migration、conservation、highlights、callouts**，**length 與 weight 皆為空**，picks 只有 range 與 behavior。因此 **a（2.8）無外觀文字可核對、o（2.1）依賴 a**，兩者列為待查；**v（2.5）今回沿用**——翼 56.6 mm×0.22≈12.5 cm 落在 HKBWS 的 11–13 cm 之內；r=1 亦沿用（但本種在本港屬局部常見的留鳥，r=1 是最低基準值，與實際狀況可能有落差，只記錄不改動）。`measurements` 的跗蹠 26 mm 為本批最長，與「腿長」特徵相符。",
+    "AI 主圖以 0483 棕腹大仙鶲的方形主圖作風格參照，生成 1024×1024、直接放大至 1127×1127（不裁切、不補邊），畫出深褐身體、白眉、極短尾（微微翹起）、皮黃色胸帶與鮮粉紅長腿，站在苔蘚倒木上以呼應林下地面習性。比較鳥為**棕褐短翅蝗鶯**與**紅尾歌鴝**，**本輪新生成**（各 1024×1024 方形，直接調整為 816×816），非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "withheldScores": {
+    "a": "cardCopy 的 fieldCopy.look 只有英文一句「The lesser shortwing … is a species of chat」（分類陳述），中文 look 與 diet 完全沒有，length 與 weight 皆為空，2.8 分無從核對，待查。",
+    "o": "綜合分依賴待查的 a 軸，且 i、c 本身缺分，不補算；v=2.5（翼 56.6 mm×0.22≈12.5 cm，在 11–13 cm 內）與 r=1 沿用。"
+  }
+}
