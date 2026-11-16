@@ -1,0 +1,154 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0504",
+  "name": "橙胸姬鶲",
+  "scientificName": "Ficedula strophiata",
+  "illustrationTaxon": "Adult male Rufous-gorgeted Flycatcher Ficedula strophiata (warm brown crown and nape; a clean narrow white forehead band; face, chin and throat deep black; a discrete orange-red gorget on the centre of the upper breast; lower breast plain grey, the grey running up the side of the neck to border the black face; flanks warm buff; mantle, back, wings and rump warm brown with brighter rufous edges to the flight feathers; black tail with extensive white at the bases of the outer feathers; slim dark bill; dark grey legs). Female and first-winter plumages — the female has a grey face and throat and a smaller, duller breast patch — are not shown. AI interpretation; sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紅喉姬鶲",
+      "scientificName": "Ficedula albicilla",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者都是本港的冬季訪客，同樣有橙紅喉胸與**黑尾白基**，是最容易混淆的一對。本種雄鳥有**白色前額**、**整塊黑臉與黑喉**，橙紅只集中在**上胸中央一個胸斑**，下胸是**灰色**；紅喉姬鶲**沒有白額也沒有黑臉**，臉與喉是同一片橙紅、由喉直落到上胸才在白腹前斷開，上體是冷調灰褐而本種偏暖栗褐。"
+    },
+    {
+      "zh": "銹胸藍姬鶲",
+      "scientificName": "Ficedula erithacus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者的**外側尾羽白基**同樣顯眼。本種上體與頭是暖褐、有**白額與黑臉**、橙色只是上胸一個斑；銹胸藍姬鶲雄鳥上體**深石板藍**、沒有白額、橙色由喉一直覆蓋到腹部，是本港只有四筆的偶發鳥，本種則是幾乎每年出現的稀少冬候鳥。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.05,
+      0.1,
+      0.33,
+      0.38
+    ],
+    [
+      0.06,
+      0.26,
+      0.3,
+      0.5
+    ],
+    [
+      0.16,
+      0.44,
+      0.4,
+      0.66
+    ],
+    [
+      0.55,
+      0.42,
+      0.8,
+      0.6
+    ]
+  ],
+  "featureLabels": [
+    "白額黑臉喉",
+    "橙紅胸斑",
+    "灰色下胸",
+    "白色尾基"
+  ],
+  "featureNotes": [
+    "額部一條乾淨的白帶夾在褐色頭頂與黑色臉部之間，是成鳥雄鳥最搶眼的位置；紅喉姬鶲沒有這條白額，黑臉亦只有本種才有，為插圖局部。",
+    "橙紅只落在上胸中央、形成一個界線清楚的「圍兜」斑塊，而不是整片喉胸；HKBWS 指這個斑塊有時模糊甚至缺席，雌鳥的更小更淡，為插圖局部。",
+    "下胸是素淨的灰色，並沿頸側向上包住黑色的臉——這條灰帶是與紅喉姬鶲（橙紅直接接到白腹）分開的關鍵，脅部則轉為皮黃，為插圖局部。",
+    "所有羽色都有**黑尾配外側尾羽大片白基**；HKBWS 把這一點列為「所有羽色皆有」的辨識特徵，即使雌鳥與第一冬鳥也適用，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists nine native countries/territories — Bangladesh, Bhutan, China (mainland), India, Laos (breeding), Myanmar, Nepal, Thailand and Vietnam — and all nine have 110m geometry, so nine shapes are shaded. Hong Kong (China) is listed by BirdLife only as a VAGRANT and is therefore deliberately left unshaded; note that HKBWS treats it as a rare but nearly annual winter visitor, a difference in status between the two sources that this map does not try to resolve. Not an occurrence polygon: green does not imply full-country occupancy — the nominate subspecies is largely resident from the Himalayas east to northeast India and central and south China while part of the population moves south in winter, inside a breeding EOO of 5,250,000 km² and a non-breeding EOO of 5,440,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/050500",
+      "use": "香港第 I 類，**稀少但幾乎每年出現的冬候鳥**，見於**林地、常在溪流附近**。**13–14·5 cm**；**所有羽色都有黑尾配外側尾羽大片白基**；**成鳥雄鳥褐色頭頂、白色前額、黑色臉／頦／喉**，**上胸中央橙紅（有時模糊甚至缺席）**，**下胸灰色並沿頸側向上與黑臉相接**，**脅部皮黃**，**上體與翼褐色、飛羽邊緣較暖的褐色**；**成鳥雌鳥**似雄鳥但**白額較不明顯、臉頦喉灰色**，胸斑如存在則較小較淡；**第一冬鳥**大覆羽可有淡端斑，**雄鳥甚至部分雌鳥會有淡銹色的喉（有時連上胸）**，與淡灰的頰與胸成對比。聲音：**重複的高音「see」，相信是警戒聲**。分佈與生境：**林地、常在溪流附近**；多數紀錄來自**新界中部的封閉樹冠林，尤其大埔滘、梧桐寨，近年大欖郊野公園**；亦見於**新娘潭、清水灣郊野公園、龍虎山與蒲台**。出現情況：**1989-02-01 林村首筆**，至 2005/06 另外八個冬季有紀錄；**2006/07 起幾乎每年出現**（相信與觀察力度增加有關），**通常每冬一隻**，但 **2009/10 四隻、2010/11 三隻、2017/18 四隻**；**紀錄期 11 月 23 日至 2 月 28 日**，多數在**12 月初至 2 月中**，高峰為**1 月最後一週至 2 月第二週**；除 **2009-11-28 蒲台兩隻**與 **2017-12-30 梧桐寨兩隻**外全部是單隻；同一隻可在同一地區停留**三至四星期**，最長紀錄是 **2011-01-06 至 02-12 新娘潭的雄鳥**。行為：**隱蔽而難見**，**常上下擺尾**，**在低矮灌叢與地面覓食昆蟲**。分類：***F. s. strophiata*** 大致留居**喜馬拉雅向東至印度東北部、中國中部與南部、孟加拉東南部、緬甸西部與北部**；在中國繁殖於**藏東南向東至甘肅西南、陝西、湖北西部、四川、廣西北部、雲南北部與西部**；部分族群冬季南移至**孟加拉東北部、中國南部（雲南西部與南部、廣西、廣東）、緬甸中部東部與南部、泰國北部與中南半島北部**；***F. s. fuscogularis*** 留居**寮國東部與越南安南南部**。保育：**IUCN Least Concern，趨勢穩定**。頁面最後更新 2025-06-05。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/rufous-gorgeted-flycatcher-ficedula-strophiata/details",
+      "use": "IUCN **LC**、**2024 年評估**（準則 N/A；2004 起全部 LC、2000 及以前為 Lower Risk/Least Concern）；成熟個體 **Unknown**，種群被描述為**喜馬拉雅中部與東部常見而廣泛、西部稀少**，**那加蘭與中國不常見**，**緬甸西部與北部相當常見至常見**，**孟加拉為稀少非繁殖訪客**（del Hoyo et al. 2006）；趨勢 **Stable（Suspected）**，理由為沒有下降或重大威脅的證據；**繁殖 EOO 5,250,000 km²、非繁殖 EOO 5,440,000 km²**、AOO Unknown、**Breeding endemic No**、**Full Migrant**、**IBA／KBA 17 個**（本批至今最多）、海拔 **20–3,800 m**、世代 **2.7 年**、**森林依賴度 Low**、**生態系統只有陸域**；**生境分類五項但沒有一項是 Major**——温帶林（繁殖期 Suitable）、亞熱帶／熱帶潮濕山地林（繁殖期與非繁殖期 Suitable）、亞熱帶／熱帶潮濕灌叢（繁殖期與非繁殖期 Suitable），是本批第一次出現「全部分類都只是 Suitable」；**貿易 low prevalence（七個數據集有兩個，Donald et al. 2024）**，用途為**食用（自給、全國）與寵物（國際）**；保育行動只有**「已劃定保育地點（全分佈範圍）」與「已納入國際法規」**，沒有復育計劃、系統監測、入侵種控制、域外保育或貿易管制；Alliance for Zero Extinction 與 Search for Lost Birds 皆 No；**國家表 10 列**——孟加拉、不丹、中國大陸、印度、寮國（繁殖）、緬甸、尼泊爾、泰國、越南為原生，**香港只列為迷鳥**；命名人 **(Hodgson, 1837)**；兩個亞種（指名亞種與 *fuscogularis*）與 HKBWS 所述一致。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **513** 項 橙胸姬鶲 Rufous-gorgeted Flycatcher（*Ficedula strophiata*），**第 I 類**；鄰項為 512 銹胸藍姬鶲與 514 白眉藍姬鶲，比較鳥之一即取 512。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（橙胸姬鶲；Rufous-Gorgeted Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Ficedula strophiata／鶲科 Muscicapidae）；speciesCode rugfly1；taxonOrder 29264。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **只有 a 2.8、v 2.8（vEst 1）、r 1、o 2.2**，**完全沒有 i 與 c 兩軸**，故 `missingScores` 為 `[\"i\",\"c\"]`；o 2.2 與現存四軸平均 2.2 相符。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "**`look` 的中文全空**，英文 `look` 其實是緬甸 Kachin 的分佈句而**不是形態描述**；`range` 只列中國大陸省份；`funFact` 與 `etymology` 都是同一句「以其紅褐色與喉部特有斑塊得名」的泛述；`habitat` 與 `behavior` 是同一句生境描述；`callouts`、`voice`、`diet` 全缺；length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 71.2、tail 56.6、tarsus 18.2、bill 12.3、mass 12.8（尾長 56.6、跗蹠 18.2 都偏長，符合本種長尾、常在地面與低灌叢活動的形態）。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **513** 項、**第 I 類**；HKBWS 描述為**稀少但幾乎每年出現的冬候鳥**，見於林地、常在溪流附近。**1989-02-01 林村首筆**，**2006/07 起幾乎每年出現**，通常每冬一隻，**2009/10 與 2017/18 各有四隻**；**紀錄期 11 月 23 日至 2 月 28 日**，高峰在**1 月最後一週至 2 月第二週**；最長停留的是 **2011-01-06 至 02-12 新娘潭的雄鳥**。",
+    "辨識要點：**所有羽色都有黑尾配外側尾羽大片白基**。雄鳥白額、黑臉頦喉、上胸中央橙紅斑、下胸灰色沿頸側包住黑臉、脅皮黃、上體暖褐；雌鳥白額不明顯、臉頦喉灰色、胸斑較小較淡；第一冬鳥大覆羽可有淡端斑，部分雄鳥與雌鳥有淡銹色喉。**常上下擺尾**，在低灌叢與地面覓食。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 年評估、趨勢 **Stable**（Suspected）——**與 HKBWS 的「趨勢穩定」一致**（0502、0503 都是兩者分歧）。繁殖 EOO 5,250,000 km²、非繁殖 EOO 5,440,000 km²、**IBA／KBA 17 個為本批至今最多**、海拔 20–3,800 m、世代 2.7 年、**森林依賴度 Low**；**生境五項全部只是 Suitable、沒有一項 Major**，是本批第一次；貿易 low prevalence，用途為食用與寵物；保育行動只有「已劃定保育地點」與「已納入國際法規」。",
+    "**地圖填 9 個形狀**（孟加拉、不丹、中國、印度、寮國、緬甸、尼泊爾、泰國、越南）——**BirdLife 的原生國家全部有 110m 幾何**；**香港被 BirdLife 列為迷鳥（Vagrant），故不填色、note 不作「香港原生」聲明**，但 note 也照實指出 **HKBWS 視之為幾乎每年的稀少冬候鳥**，兩個來源對香港地位的判斷不同。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`dexScores.json` **完全沒有 i 與 c**（只有 a、v、r、o），`missingScores` 為 `[\"i\",\"c\"]`；`cardCopy.json` 的 **`look` 中文全空、英文只是緬甸分佈句而沒有形態描述**，`funFact` 與 `etymology` 同一句泛述，`habitat` 與 `behavior` 同一句，`callouts`／`voice`／`diet` 全缺，length 與 weight 為空。因 `a` 3.3 以外並無任何形態文字可核對，依 0494／0496 從嚴先例把 **a 與依賴 a 的 o 一併列入 `withheldScores`**（卡面「綜合評分待查」＋「部分評分待核」）。",
+    "HKBWS 頁面 id 是 **050500**（路徑 `0410/`），比 runtime **0504** 大 1；配合 0501（+1）、0502（+2）、0503（+0）、0504（+1），可確認**偏移浮動且無規則**，每張必須開頁核對標題。",
+    "AI 主圖**不帶任何風格參照**生成，羽色寫成硬性規格（褐色頭頂、白額、黑臉黑喉、上胸橙紅斑、下胸灰、脅皮黃、暖褐上體、黑尾白基），並明寫「不得出現藍／石板色上體、黃色下體、白色眉線、白色喉或胸斑以下的黑領」。比較鳥**兩張都是沿用**：**紅喉姬鶲**（0503 新生成的比較鳥圖）與**銹胸藍姬鶲**（0503 主圖），同屬、同畫風、免再生成，**非等比例、非專家認證**；插圖與全部辨識要點均為 AI 解讀，未經鳥類專家審核。"
+  ],
+  "missingScores": [
+    "i",
+    "c"
+  ],
+  "withheldScores": {
+    "a": "runtime 有 a 2.8，但 cardCopy.json 的 look 中文全空、英文 look 只是緬甸 Kachin 的分佈句，funFact 與 etymology 只是「以其紅褐色與喉部特有斑塊得名」的泛述——沒有可核對的形態描述，依 0494／0496 從嚴先例列入待查。",
+    "o": "o 2.2 由現存四軸平均推導，而 a 已因無形態文字可核對而待查，依 0494／0496 先例一併隱藏，卡面顯示「綜合評分待查」。"
+  }
+}
