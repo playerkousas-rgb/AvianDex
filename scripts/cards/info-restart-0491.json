@@ -1,0 +1,220 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2019 評定"
+  },
+  "id": "0491",
+  "name": "藍喉歌鴝",
+  "scientificName": "Luscinia svecica",
+  "illustrationTaxon": "Adult male Luscinia svecica of the nominate subspecies in winter (small chat 13–14 cm: plain grey-brown upperparts and wings; bold whitish supercilium above a dark malar stripe; blue throat and upper breast with a small central chestnut-red patch, bordered below by a blackish-and-rufous band separating the blue from the whitish belly; rufous-chestnut base to the tail while the tail itself is dark; long thin pale legs). Females and first-winter birds are duller, with only a blackish crescent and at most a trace of blue, so they are not shown. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "白喉短翅鶇",
+      "scientificName": "Brachypteryx leucophris",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "本種的**雌鳥與第一冬鳥**上體灰褐、有明顯白眉、胸有暗色橫帶與頰紋，在灌叢邊很容易被當成另一種褐色小鳥；白喉短翅鶇正是本港林下最常見的同型對手。分別在於白喉短翅鶇**身形更短圓、翼與尾極短（尾常翹起）、完全沒有赤褐的尾基**，白眉只是一道纖細白線，胸帶是皮黃褐而非黑；本種**起飛或落地時常快速展開尾羽，露出赤褐的尾基**，腿亦較長較細。"
+    },
+    {
+      "zh": "紅尾歌鴝",
+      "scientificName": "Larvivora sibilans",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是**褐色上體配赤褐尾**、同樣在地面落葉或濕泥上覓食的小型歌鴝，兩者最易在冬日的濕地邊混淆。紅尾歌鴝**整條尾都是亮赤褐（不只是尾基）**、**胸腹密佈褐色鱗斑、有淡色眼圈與眼前斑、沒有白眉**；本種**只有尾基赤褐而尾端深色**、**眉紋粗白而清楚**，成鳥雄鳥更有藍色喉胸與橙紅喉斑，雌鳥與第一冬鳥則有**黑色的胸帶與頰紋**。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.22,
+      0.16,
+      0.4,
+      0.32
+    ],
+    [
+      0.26,
+      0.26,
+      0.42,
+      0.42
+    ],
+    [
+      0.28,
+      0.38,
+      0.44,
+      0.52
+    ],
+    [
+      0.6,
+      0.14,
+      0.98,
+      0.44
+    ]
+  ],
+  "featureLabels": [
+    "白色眉紋",
+    "藍喉紅斑",
+    "黑色胸帶",
+    "扇尾赤褐"
+  ],
+  "featureNotes": [
+    "**粗白的眉紋**橫過灰褐色的頭部，下方緊接一道**深色的頰紋**，形成「白眉＋黑頰」的強烈對比；HKBWS 指出所有羽色階段的個體都有這道明顯白眉，是野外最容易先看到的特徵，為插圖局部。",
+    "成鳥雄鳥的**喉與上胸呈藍色**，中央有一小塊**栗紅色的喉斑**（*L. s. svecica* 亞種的特徵，其他亞種可為白斑或無斑）；藍色在冬季會較暗淡，部分個體藍色範圍亦較小，為插圖局部。",
+    "藍色以下是**黑色與赤褐相間的胸帶**，把藍喉與近白的腹部隔開；HKBWS 特別提醒**雌鳥與第一冬鳥沒有藍色，卻有明顯的黑色胸帶與頰紋**，胸帶因此比藍色更常見到，為插圖局部。",
+    "起飛或落地時本種**常快速展開尾羽**，露出**赤褐色的尾基**（其餘尾羽深色）——HKBWS 形容為「fly away 時可見的赤褐尾基」，以及在植被間「快速上抬、緩慢放下」的尾部動作，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "AUT",
+      "AZE",
+      "BEL",
+      "BEN",
+      "BFA",
+      "BGR",
+      "BIH",
+      "BLR",
+      "CAN",
+      "CHE",
+      "CHN",
+      "CYP",
+      "CZE",
+      "DEU",
+      "DNK",
+      "DZA",
+      "EGY",
+      "ERI",
+      "EST",
+      "ETH",
+      "FIN",
+      "FRA",
+      "GEO",
+      "GHA",
+      "GRC",
+      "HRV",
+      "HUN",
+      "IND",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "ITA",
+      "JOR",
+      "JPN",
+      "KAZ",
+      "KGZ",
+      "KHM",
+      "KWT",
+      "LAO",
+      "LBN",
+      "LKA",
+      "LTU",
+      "LVA",
+      "MAR",
+      "MLI",
+      "MMR",
+      "MNE",
+      "MNG",
+      "NGA",
+      "NLD",
+      "NOR",
+      "NPL",
+      "OMN",
+      "PAK",
+      "POL",
+      "PRT",
+      "QAT",
+      "ROU",
+      "RUS",
+      "SAU",
+      "SDN",
+      "SEN",
+      "SRB",
+      "SVK",
+      "SVN",
+      "SWE",
+      "SYR",
+      "TCD",
+      "TJK",
+      "TKM",
+      "THA",
+      "TUN",
+      "TUR",
+      "UKR",
+      "USA"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists about 95 native countries/territories for this wide-ranging Palearctic migrant; 78 of them have 110m geometry and are shaded here as the principal breeding and wintering range (Europe and Russia across to Alaska, Central Asia, Mongolia, China and Japan for breeding; the Mediterranean, North Africa, the Middle East, South Asia and Indochina for wintering). Countries BirdLife lists only as vagrants — including Iceland, Ireland, Malta, Liechtenstein, the Faroe Islands, Bhutan, South Korea, Taiwan, Côte d'Ivoire, Gambia and Niger — are not shaded, and Palestine and Gibraltar have no 110m geometry. Hong Kong IS in BirdLife's country table (native, no seasonality given) but the HKG territory has no 110m geometry, so it is described here rather than shaded. Not an occurrence polygon: a full migrant with a breeding EOO of 35,500,000 km² and a non-breeding EOO of 58,100,000 km², the largest ranges in this batch."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/049300",
+      "use": "香港第 I 類，**不常見的冬候鳥，亦是大幅減少的春季過境鳥，見於新界西北的濕地植被**。**13–14 cm**。所有個體：**灰褐色上體、赤褐的尾基（離去時可見）、明顯的白色眉紋、較長而細的腳**；覓食時**尾常快速上抬、緩慢放下**。雄鳥**藍、黑、白、紅的圖案式下體**極具辨識度，***L. s. svecica* 有紅色喉斑**，冬季較暗淡。**第一冬雌鳥除尾基外全無暖色，並有深色胸帶與頰紋**；成鳥喉部圖案多變，**常在喉側有少許藍色，較老的雌鳥亦可能有小片藍色**，部分第一冬雄鳥胸部較藍。叫聲：最常聽到的是藏在植被中的**爆發性、略帶轉折與滾動感的「keert」**，另有**高音的「see」或較低沉豐富的「chee」後接乾燥平坦的「trt」或「chirt」（像彈舌）**；**鳴唱在本港少聞，通常不及錄音中完整**。分佈與生境：**依賴濕地，出現於濕農地、蘆葦沼澤與有植被的水道，幾乎只在新界西北**；多數紀錄來自**米埔、新田、落馬洲與塱原**。出現情況：**不常見的冬候鳥，極端日期 9 月 27 日至 5 月 6 日**；**10 月罕見**，在各主要地點一直稀少至**11 月最後一週（週平均高峰計數最高）與 12 月初**，或反映過境；**12 月第三週至 3 月底數量相若**，**4 月明顯減少**；觀察頻繁地點之間的顯著空檔顯示**部分（非全部）4 月紀錄、尤其是 4 月最後兩週，屬過境鳥**。此模式與 **1958–98 年不同**：當年**沒有明顯的 11 月底高峰**，春季高峰更明顯；**4 月過境的減少由 Welch 等（2016）提出，推測與區域數量下降有關，亦可能反映較溫和的冬季令鳥留在更北處越冬**。1980 年代中期與 1990 年代分別因**廈村（早已填平作貨櫃場）與塱原**的濕地覆蓋增加而錄得上升；**最高計數為 1994-01-28 塱原 13 隻**；1999 年以來的年度數量自 **2014/15 起整體上升**，**2017/18 估算最少 28 隻**（被認為與觀察增加有關），但**1990/91 至 2019/20 的單點高峰計數自 1990 年代起實際下降**，**本世紀高峰計數未超過五隻**。環誌：米埔資料顯示**可停留數週**（2015-12-14 首捕、至 2016-04-15 最後覆捕，共四次），並有**高度定點忠誠**（1991-11-24 米埔環誌的雄鳥在 1992、1993、1995 年春季覆捕；2004-12-12 環誌的雌鳥於 2008-04-25 覆捕）；**兩隻米埔環誌的個體在河北沿岸被發現**——1986-03-09 捕捉的成鳥雄於 1990-05-04 在秦皇島附近的籠中被人看見，**2018-04-13 環誌的第一年雌鳥於 2019-05-10 在唐山反非法捕鳥行動中被尋回**。歷史：Vaughan and Jones（1913）視本種為廣東與廣西的冬候鳥；**1936-01-15 米埔附近被射殺的一隻雌鳥為本港首錄**（Herklots 1936）。行為：**多單獨、羞怯而藏於植被中**，被驚起時**低飛直去**，落地前**常快速扇尾露出赤褐尾基**；**在地面覓食昆蟲，多隱於低植被，偶爾在開揚處進食**。分類：**多型種**，指名亞種由斯堪的納維亞向東經俄羅斯至中國西北與東北（內蒙西北與黑龍江）及阿拉斯加繁殖；整體繁殖範圍由歐洲經俄羅斯至西伯利亞，南至土耳其、伊朗、哈薩克、中亞山區、阿富汗、喜馬拉雅北緣、蒙古與中國西部／中部／東北，冬季南至南歐、北非與中非、西南與東南亞，東至中國東部（Guzy 等 2020）。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/bluethroat-luscinia-svecica/details",
+      "use": "IUCN **LC**，最近評估年份 **2019**（本批暫時唯一非 2024/2025 評定的一張）；**成熟個體 35,000,000–64,999,999**、趨勢 **Stable（穩定）**——與 HKBWS 的「本港 4 月過境減少」並存；**EOO 繁殖 35,500,000 km²、非繁殖 58,100,000 km²（本批最大）**、**Full Migrant**、繁殖 endemic No、**IBA／KBA 139 個**；國家表列**約 95 個原生國家／地區**，**香港（原生，未標季節）在表中**，**不丹、南韓、台灣、冰島、愛爾蘭、馬爾他、列支敦士登、法羅群島、科特迪瓦、甘比亞與尼日等僅為迷鳥**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：藍喉歌鴝（*Luscinia svecica*）列於第 I 類，位置緊接 506 紅尾歌鴝之後；**其名錄項目序號本輪未重新核對**（HKBWS hk-list 頁面本輪未抓取），故卡面只引用類別與相對位置，不寫具體項號。**注意：runtime id 0491 與名錄序號並不一致（0488 = 506、0489 = 505、0490 = 504）。**"
+    },
+    {
+      "path": "scripts/cards/hk-master.json",
+      "use": "香港優先編號表：0491 = 藍喉歌鴝（Luscinia svecica），香港類別 **I**，學名與 eBird/Clements v2024 一致。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（藍喉歌鴝；Bluethroat）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Luscinia svecica／鶲科 Muscicapidae）；speciesCode blueth；taxonOrder 29137。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **六軸齊全**：i=2、**a=2.3（本批暫時最低的外觀分）**、v=2.8（含 vEst=1）、r=4.8、c=1.2、o=2.6，故 missingScores 與 withheldScores 皆為空。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案**拼貼嚴重**：`look` 為「上半身單調棕色、尾巴黑色而兩側有紅色斑塊、有明顯白色眉紋」（**其實是非繁殖羽／雌鳥的描述，成鳥雄鳥的藍喉完全沒寫**）、`voice`（典型「chack」聲）、`migration`（冬季遷至伊比利亞半島、北非與南亞）、`funFact`／`etymology`（*svecica* 意為「瑞典的」）與 3 條 `callouts` 可用；**`breeding` 與 `humanRelation` 寫的是換羽與瑞典國旗、不是繁殖**、**`diet` 把食性與繁殖生境混成一句**、`range` 句讀殘缺、`habitat` 中文為空；**`fieldCopy` 的中英文大量錯配**（例如 `voice` 的英文竟是 chat 的定義、`conservation` 英文半句截斷）；**length 與 weight 皆為空**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 73.1 mm、尾 50.0 mm、跗蹠 26.3 mm、嘴峯 15.1 mm、體重 17.2 g；翼 73.1 mm×0.22≈16.1 cm，較 HKBWS 的 13–14 cm 長。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄第 I 類，**不常見的冬候鳥兼大幅減少的春季過境鳥**，**幾乎只在新界西北的濕農地、蘆葦沼澤與有植被的水道**（米埔、新田、落馬洲、塱原）。**極端日期 9 月 27 日至 5 月 6 日**；**11 月最後一週的週平均高峰計數最高**（可能是過境），12 月第三週至 3 月底數量相若，**4 月明顯減少**。**1936-01-15 米埔附近被射殺的一隻雌鳥為本港首錄**（Herklots 1936）；Vaughan and Jones（1913）已把本種列為廣東與廣西的冬候鳥。**最高計數 1994-01-28 塱原 13 隻**；**本世紀單點高峰未超過五隻**，年度估算雖在 2014/15 後上升（**2017/18 最少 28 隻**），HKBWS 認為主因是觀察增加；**1990/91 起單點高峰計數實際下降**。與本批其他卡相比，本種是**唯一以「濕地＋新界西北」為舞台**的物種（其餘多為林地），亦是第一張有**跨地環誌回收**（河北秦皇島、唐山）紀錄的卡。",
+    "辨識要點：**13–14 cm**；所有個體都有**灰褐上體、赤褐尾基、粗白眉紋、長而細的腳**；**成鳥雄鳥藍喉配栗紅喉斑（*svecica* 亞種）、下有黑褐胸帶、腹部近白**；**雌鳥與第一冬鳥無藍色，但有黑色胸帶與頰紋**；**成鳥喉部圖案多變，較老雌鳥亦可能有小片藍**。行為上**常快速抬尾、落地時扇尾露出赤褐尾基**。",
+    "聲音：最常聽見的是**爆發性、略帶滾動感的「keert」**，另有**高音「see」／「chee」＋乾燥平坦的「trt」或「chirt」**；**鳴唱在本港少聞且通常不完整**，卡面不作補充。多型種，指名亞種繁殖至中國西北與東北及阿拉斯加。",
+    "IUCN：**LC（無危）**，BirdLife **2019** 評估（**本批暫時唯一不是 2024／2025 評定的一張**）；**成熟個體 3,500 萬至 6,500 萬**、**趨勢 Stable**；EOO 繁殖 **35,500,000 km²**、非繁殖 **58,100,000 km²**，**兩者都是本批最大**；**IBA／KBA 139 個（本批最多）**；約 **95 個原生國家／地區**。**全球穩定 vs 本港 4 月過境顯著減少**（Welch 等 2016 推測與區域下降或較溫和冬季有關）——兩者並列，不互相取代。",
+    "**地圖**：BirdLife 約 95 個原生國家／地區中，**78 個有 110m 幾何並已填色**（涵蓋歐洲—俄羅斯—阿拉斯加的繁殖帶，以及地中海、北非、中東、南亞與中南半島的越冬區）；**只列為迷鳥的國家（冰島、愛爾蘭、馬爾他、列支敦士登、法羅群島、不丹、南韓、台灣、科特迪瓦、甘比亞、尼日等）不填**；巴勒斯坦與直布羅陀無 110m 幾何。**香港在 BirdLife 表中（原生、未標季節）但無 110m 幾何，只在 note 說明**。這是本批填色最多的一張，對應其最大的分佈範圍。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：**`look` 只寫非繁殖羽／雌鳥（棕身、黑尾帶紅斑、白眉），成鳥雄鳥的藍喉與紅斑完全沒有**；**`breeding` 與 `humanRelation` 寫換羽與瑞典國旗、並非繁殖內容**；**`diet` 把食性與繁殖生境混成一句**；`range` 句讀殘缺、`habitat` 中文為空；**`fieldCopy` 中英文大量錯配**（`voice` 英文竟是「chat 的定義」、`conservation` 英文半句截斷）；**length 與 weight 皆為空**。`dexScores` 六軸齊全（i2 / **a2.3** / v2.8 含 vEst / r4.8 / c1.2 / o2.6），卡面綜合分 **2.6**；**a=2.3 是本批最低的外觀分**，但 `callouts` 與 `look` 仍提供白眉、黑尾紅斑等可核對的特徵，故**不列 withheld、只註明分數偏低**；**v=2.8 沿用**（翼 73.1 mm×0.22≈16.1 cm 較 13–14 cm 長）。",
+    "AI 主圖以 0488 紅尾歌鴝的方形主圖作風格參照（同科的褐色系地面歌鴝），生成 1024×1024、直接放大至 1127×1127（不裁切、不補邊），畫出冬季的成年雄鳥：灰褐上體、粗白眉配深色頰紋、藍喉中央栗紅斑、黑褐胸帶、赤褐尾基與張開的扇尾、細長的淡粉腳，站在蘆葦與濕泥上以對應其濕地生境。比較鳥為**白喉短翅鶇**（0487 主圖，對應雌鳥／第一冬鳥的褐身白眉）與**紅尾歌鴝**（0488 主圖，對應赤褐尾的混淆），沿用已生成的方形圖，非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
