@@ -1,0 +1,162 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "id": "0497",
+  "name": "紅脇藍尾鴝",
+  "scientificName": "Tarsiger cyanurus",
+  "illustrationTaxon": "Adult male Tarsiger cyanurus (13–14 cm: slate-blue to cobalt upperparts and head, brightest blue on the rump and tail; narrow white supercilium; chin, throat and underparts pure white; brilliant orange-rufous flanks; black bill, pinkish legs; tail slightly cocked, as the species habitually flicks it). Females and first-winters are olive-brown above with blue only on the rump and tail, a white throat above a brown breast-band, and orange-rufous flanks; they are not shown. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "白尾藍地鴝",
+      "scientificName": "Myiomela leucura",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣是**冬天在林下濃密植被活動、尾會擺動**的小型鶲科鳥；但白尾藍地鴝**大得多（17–19 cm）**，雄鳥是**深藍近黑**、只有前額與肩是淡藍色塊，**尾一張開就露出兩側大片白斑**；本種雄鳥**上體是明亮的藍、腰與尾更藍**、**喉與腹部純白**、腰腹兩側是**橙紅色**，**尾沒有任何白斑**。雌鳥的比較同樣成立：白尾藍地鴝雌鳥是**褐色配白尾基**，本種雌鳥是**褐身、藍腰藍尾、白喉加橙脅**。"
+    },
+    {
+      "zh": "北紅尾鴝",
+      "scientificName": "Phoenicurus auroreus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "本港冬季**最常與本種同場出現、叫聲也最容易混淆**的一種；HKBWS 明言兩者同區時，**本種的高音叫比北紅尾鴝略低、帶明顯轉折，而「tuk」較低、連發時兩組之間的間隔也稍長**。外觀上本種**全身有藍（上體與尾）**、**脅部是橙紅而腹部純白**；北紅尾鴝雄鳥**臉上與喉是黑色、頭頂銀灰、翼有大白斑、腹面整片橙紅**，**完全沒有藍色**。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.24,
+      0.19,
+      0.4,
+      0.29
+    ],
+    [
+      0.25,
+      0.27,
+      0.36,
+      0.42
+    ],
+    [
+      0.4,
+      0.35,
+      0.56,
+      0.51
+    ],
+    [
+      0.66,
+      0.13,
+      0.92,
+      0.36
+    ]
+  ],
+  "featureLabels": [
+    "白色眉紋",
+    "純白喉部",
+    "橙紅脅部",
+    "藍腰藍尾"
+  ],
+  "featureNotes": [
+    "眼上有一道**細細的白眉**，在藍色的頭頂與深色的眼先之間非常清楚；HKBWS 把 white supercilium 列為雄鳥「一看即認得」的四個特徵之一，雌鳥與第一冬鳥則以白喉與藍尾為主、白眉不顯，為插圖局部。",
+    "**頦、喉與整個腹面都是純白色**，與藍色的上體切割得很乾淨；雌鳥與第一冬鳥同樣是白喉，但**喉下有一道褐色胸帶**（雄鳥沒有），HKBWS 特別點出這道胸帶是分辨雌鳥的關鍵，為插圖局部。",
+    "**胸側與脅部是鮮明的橙紅色**，雄鳥的橙紅較集中於脅部、與純白的腹部形成強烈對比；雌鳥的橙紅脅部色調較淺但同樣存在，是「紅脇」這個名字的由來，為插圖局部。",
+    "**腰與尾是整個身體最亮的藍色**，尾經常微微上舉或抖動——HKBWS 形容本種 constantly flicks its tail；雌鳥與第一冬鳥全身褐色，**只有腰與尾是藍色**，因此這格局部對辨認褐色個體尤其有用，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "EST",
+      "FIN",
+      "IND",
+      "JPN",
+      "KAZ",
+      "KOR",
+      "LAO",
+      "MMR",
+      "MNG",
+      "NPL",
+      "PAK",
+      "PRK",
+      "RUS",
+      "THA",
+      "TWN",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife (factsheet under the name Orange-flanked Bush-robin) lists 18 native countries/territories with 110m geometry — Bhutan, China (mainland), Estonia, Finland, India, Japan, Kazakhstan, Laos, Myanmar, Mongolia, Nepal, Pakistan, North Korea, Russia (all four BirdLife rows fold into one shape), South Korea, Taiwan (China), Thailand and Vietnam — all shaded here. BirdLife also lists Hong Kong (China) as native and non-breeding, but the HKG territory has no 110m geometry and is described rather than shaded. Not shaded, because they are vagrant-only: Bulgaria, Denmark, France, Germany, Israel, Lebanon, Malaysia, Norway, Slovenia, Sweden, the United States and the United Kingdom. Afghanistan is listed as extant with an uncertain origin and is likewise not shaded. Not an occurrence polygon: a full migrant breeding from Finland across central Siberia, Mongolia and northeast China to Kamchatka and northern Japan, wintering in Japan, Korea, eastern China, Taiwan and Southeast Asia, inside a breeding EOO of 22,300,000 km² and a non-breeding EOO of 5,970,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/049600",
+      "use": "香港第 I 類，**封閉樹冠灌叢與林地的相當常見冬候鳥；過境鳥稀少、出現在較開揚的生境；數量年際差異很大**。**13–14 cm**。成鳥雄鳥**一看即認得：上體藍色、白色眉紋、白色喉與腹部、橙紅色脅部**，上體羽毛的**灰色鈍端在冬季磨損**。**成鳥雌鳥與第一冬鳥（包括第一冬雄鳥）非常相似、野外難以區分**：**上體橄欖褐、腰與尾藍色**，**白喉在白胸帶之上格外突出**，其餘腹面白色、**脅部橙紅**。聲音：**相當多話**，兩種叫聲可連發可不連發——**中等偏高的「sweet」**與**中等偏低的「tuk」（通常連發兩聲，可多可少）**；**與北紅尾鴝同區時叫聲易混淆**，但本種的高音叫**音調略低、有明顯轉折**，「tuk」**音調更低**、成對發出時**兩組之間間隔稍長**；**低強度的鳴唱版本在晚秋或初春偶爾可聞**。生境：**封閉樹冠林地與灌叢密度最高**，Leven（2000）在灌叢網捕的非繁殖遷徙鳥中**本種相對豐度最高（15.7%）**；**全港可見、包括離島**，亦見於**何文田**等有足夠遮蔽的城市邊緣；**偏好林中較暗的區域，但寒冷天氣會走到有陽光的林緣**。出現情況：**冬候鳥，豐度由稀少到常見，似乎取決於冬季有多冷**；**極端日期 10 月 23 日至 4 月 17 日**；**11 月第三週前只有少量**，之後顯著增加；1990 年代的環誌顯示**11 月底至 12 月初有高置換率，反映繼續南遷**，例如 **1995 年秋季共網捕 71 隻不同個體，單日最高 13 隻（11 月 25 日）**；**數量最多是 12 月底至 2 月第一週**；**2 月第二週起離開**，2 月最後一週後稀少，**4 月的過境紀錄很少**；**1999/2000 至 2019/20 之間有七個冬季的估計總數只有個位數**（其中 1999/2000、2004/05、2008-09、2011/12 四個冬季特別差），而 **2013/14、2015/16、2019/20 數量高得多**（部分因觀察力度增加）；**歷來最高 39 隻，1992-01-21 嘉道理農場**；**1999 年以來最高 28 隻（2014-01-01 大欖郊野公園）與 28 隻（2020-01-29 城門與大埔滘之間）**，**都是 1 月，反映與寒冷天氣相關的中冬湧入**；**大部分是第一個冬季的鳥或雌鳥，雄鳥在寒冷期比例上升，顯示雄鳥平常在更北的地方越冬**。環誌：1990 年代確立**多數個體有季內定點忠誠**，但**只有兩例跨季覆捕**（1994-01-01 嘉道理環誌者於 1995-12-22 與 1996-01-06 再捕；1995-01-07 同地環誌者於 1997-01-08 再捕）。歷史：**1936-01-25 在蒙古塱（Mong Tseng）被射殺的雌鳥是本港首筆紀錄**（Herklots 1936），Herklots（1953）把本種列為 **11 月 25 日至 3 月 19 日**的冬候鳥。行為：**羞怯而難見**，在密林中常**靠叫聲得知存在**，**寒冷天氣食物短缺時反而較易見、較易接近**；**不停抖尾**；**主要從低枝落到地面捕食無脊椎動物**，亦會在灌木或樹冠下長時間覓食；2003 年 1 月有一隻**到上水一間村屋的露台吃了約兩星期麵包蟲**；**2014-01-01 在大欖郊野公園有兩隻取食白楸（*Mallotus paniculatus*）的果實**。分類：**單型種（monotypic）**；繁殖自**芬蘭橫跨中西伯利亞、蒙古與中國東北部（內蒙古、黑龍江）至堪察加與日本北部**，越冬於**日本南部、南韓、中國東部與東南部（最北至北京，主要在長江以南，由台灣西至海南與雲南）、緬甸、泰國北部、寮國與越南**。冬季地圖集：**2001-05 調查在 23.4% 的 1 km 方格錄得本種，而（原文誤植為 2001-05，實應為 2016-19）調查只錄得 5.1%**；**跌幅遍及全港，以深井灣一帶與新界西等次優生境最明顯**；HKBWS 提出兩個可能——**氣候變化令冬季較暖、更多鳥留在更北的地方越冬**，或**西伯利亞繁殖地生境改變令族群減少**。保育狀況：IUCN **Least Concern**、**趨勢穩定**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/orange-flanked-bush-robin-tarsiger-cyanurus/details",
+      "use": "BirdLife 以英文名 **Orange-flanked Bush-robin** 收錄（`red-flanked-bluetail-…` 與 `orange-flanked-bluetail-…` 兩個網址皆 404）：IUCN **LC**，最近評估 **2025**（2016 亦 LC，**2012 及以前為 Not Recognised**，因當時仍與 *T. rufilatus* 合併）；**成熟個體 9,000,000–18,000,000**（2021 年估計，歐洲 480,000–890,000 成熟個體、佔全球分佈約 5%）；**全球趨勢 Unknown**——官方明言歐洲族群**十年內快速增長、分佈向西擴展至芬諾斯堪的亞**，但**全球分佈範圍過去十年樹冠覆蓋估計減少 6.9%**，**兩者矛盾故全球趨勢無從判定**；**EOO 繁殖 22,300,000 km²、非繁殖 5,970,000 km²**、**Full Migrant**、繁殖 endemic No、**IBA／KBA 為「-」**、海拔 **0–4,400 m**、世代 **2.1 年**、**森林依賴度 Medium**、生態系統**只有陸域**；生境以**北方針葉林（繁殖期 Major）**最重要，另有温帶林、亞熱帶／熱帶潮濕低地與山地林（多為 Suitable）；繁殖期生境為**西伯利亞針葉林，偏好有倒木、苔蘚濕潤的老齡雲杉林與稀疏下層，亦用松林、樺木與杜鵑混交林**；**每窩三至七枚蛋**，巢為草、苔、蕨、細枝與根編成的杯狀，內襯毛、羽、細草與松針，置於樹洞、樹根間、腐木下或土坡洞穴；食性研究不足，大致以**無脊椎動物（尤其昆蟲）為主，非繁殖期亦吃果實與種子**；**貿易 high prevalence（七個數據集有三個，Donald et al. 2024）**，用途為**國際寵物／展示動物**；保護行動：**CMS 附錄 II、伯恩公約附錄 II**、**已識別涵蓋全部分佈範圍的保護地**、**已納入國際法例**，但無復育計劃、系統監測或收成管理；國家表列 **18 個原生國家／地區**，**香港列為原生、非繁殖**，另有**保加利亞、丹麥、法國、德國、以色列、黎巴嫩、馬來西亞、挪威、斯洛文尼亞、瑞典、美國與英國 12 個迷鳥地區**，以及**來源不確定的阿富汗**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **517 項 紅脇藍尾鴝（Tarsiger cyanurus），第 I 類**；同科鄰近項 504 藍歌鴝、505 日本歌鴝、506 紅尾歌鴝、**507 白眉姬鶲（即 0498）**、518 紅尾水鴝、520 北紅尾鴝（皆 I 類）。"
+    },
+    {
+      "path": "scripts/cards/hk-master.json",
+      "use": "香港優先編號表確認 0497 = 紅脇藍尾鴝（Tarsiger cyanurus），香港類別 **I**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（紅脇藍尾鴝）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Tarsiger cyanurus／鶲科 Muscicapidae）；speciesCode refblu1、英文名 Red-flanked Bluetail；taxonOrder 29214。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **六軸齊全**：i=2、a=4.3、v=2.9（**含 vEst=1**）、r=3.3、c=1.2、o=2.7，故 missingScores 與 withheldScores 皆為空；六軸平均 2.73，與 runtime o=2.7 一致。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案**部分可用、部分明顯錯配**：`look`（腹與尾下覆羽純白、胸側藍、兩脅橙）與 `diet`（小昆蟲、幼蟲、飛蠅，亦吃種子與果實）可用；`funFact`／`etymology`（種名 *cyanurus* 出自希臘語 *kuanos*「深藍」＋*oura*「尾」；屬名 *Tarsiger* 出自 *tarsos*「足底」＋拉丁語 *gerere*「攜帶」）可用；但 **`range` 只寫「分佈於中國中北部的亞種 albocoeruleus 由於 1937 年描述」**、**`breeding` 說「繁殖範圍向西到英國以及美國西部的阿拉斯加」**、**`voice` 寫成「此物種在遺傳學和鳴聲上具有明顯區別，但形態學上僅有些微差異」**（其實是談分家）、**`behavior` 寫成「通常被認為無效，直到 2018 年由 Hadoram Shirihai 和 Lars Svensson 確認其有效性」**（談的是分類），`callouts` 兩條亦分別只是「喉和胸均棕白色」與「又名紅脇藍尾鴝」——**以上五項皆為錯配，卡面不引用**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 78.5 mm、尾 60.4 mm、跗蹠 21.3 mm、嘴峯 11.8 mm、體重 13.4 g；**翼 78.5 mm×0.22≈17.3 cm 遠長於 HKBWS 的 13–14 cm**（v=2.9 含體長估算，只記錄）。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **517** 項、第 I 類；HKBWS 描述為**封閉樹冠灌叢與林地的相當常見冬候鳥，過境鳥稀少而多在較開揚生境，數量年際差異很大**。**極端日期 10 月 23 日至 4 月 17 日**；**11 月第三週前只有少量**，1995 年秋季單季網捕 71 隻不同個體（**單日最高 13 隻**，11 月 25 日），反映**11 月底至 12 月初仍有繼續南遷的置換**；**12 月底至 2 月第一週數量最多**，**2 月第二週起離開**，4 月過境罕見。**歷來最高 39 隻（1992-01-21 嘉道理農場）**，1999 年以來最高 **28 隻**（2014-01-01 大欖郊野公園；2020-01-29 城門至大埔滘），**三次高峰都在 1 月，是寒冷天氣帶來的湧入**；**大部分是第一個冬季的鳥或雌鳥，雄鳥在寒潮中比例上升**。**1936-01-25 蒙古塱被射殺的雌鳥為本港首筆紀錄**；Herklots（1953）列為 **11 月 25 日至 3 月 19 日**的冬候鳥。",
+    "辨識要點：**13–14 cm**；雄鳥**上體藍、白眉、白喉白腹、橙紅脅部**，上體羽毛的灰色鈍端在冬季磨損；**雌鳥與第一冬鳥（含第一冬雄鳥）幾乎無法區分**——**橄欖褐上體、藍腰藍尾、白喉之上有一道褐色胸帶、脅部橙紅**。叫聲為**中等偏高的「sweet」與中等偏低的「tuk」（通常連發兩聲）**，**與北紅尾鴝同區時最易混淆**：本種高音叫**略低、帶明顯轉折**，「tuk」**更低**、成對時**間隔稍長**；**低強度鳴唱**在晚秋或初春偶爾可聞。行為：**不停抖尾**、**從低枝落地捕食**、**寒冷天氣較易見**；2003 年 1 月有隻在**上水村屋露台吃了約兩星期麵包蟲**，2014-01-01 有兩隻在大欖吃**白楸果實**。",
+    "**本卡與 0495、0496 構成一組「藍色小鳥」對照**：0496 白尾藍地鴝是**深藍近黑＋尾基大片白斑**（17–19 cm），**本種是明亮藍＋橙脅＋純白腹**（13–14 cm）並成為 0496 的比較鳥；0495 紅喉歌鴝則是**褐色配紅喉**。0497 的比較鳥取 0496 白尾藍地鴝（雌鳥與褐色個體的混淆）與**北紅尾鴝**（HKBWS 明言叫聲最易混淆的冬候鳥，名錄 520 的獨立種）。",
+    "**本港下降 vs 全球不明**：HKBWS 的冬季地圖集顯示本種由**2001-05 的 23.4% 的 1 km 方格跌至（原文誤植為 2001-05，按上下文應為 2016-19）5.1%**，跌幅遍及全港、以**深井灣一帶與新界西的次優生境**最明顯，並提出**氣候變化令冬季變暖、鳥留在更北越冬**或**西伯利亞繁殖地生境改變**兩個假說；而 BirdLife 2025 的全球趨勢判為 **Unknown**——歐洲族群十年內快速增長、分佈西擴至芬諾斯堪的亞，與全球分佈範圍樹冠覆蓋十年減少 6.9% 互相矛盾。**卡面照實並列，不以本港跌幅代替全球趨勢**，這是本批**第二張全球趨勢為 Unknown 的卡**（第一張為 0495 紅喉歌鴝）。",
+    "IUCN：**LC（無危）**，BirdLife **2025** 評估；**成熟個體 9,000,000–18,000,000**（2021 年估計，歐洲 480,000–890,000、佔全球分佈約 5%）；**EOO 繁殖 22,300,000 km²、非繁殖 5,970,000 km²**、**Full Migrant**、**IBA／KBA 為「-」**、海拔 **0–4,400 m**、世代 **2.1 年**（本批目前最短）、**森林依賴度 Medium**、**生態系統只有陸域**；繁殖期以**北方針葉林為 Major**，偏好**有倒木與苔蘚的老齡雲杉林**；**每窩三至七枚蛋**；**貿易 high prevalence（七個數據集有三個）**，用途為**國際寵物貿易**；**CMS 附錄 II、伯恩公約附錄 II**。HKBWS 與 BirdLife 一致：**本種為單型種**（BirdLife 註明 *cyanurus* 與 *rufilatus* 在 2016 年分家，此前合併）。",
+    "**地圖**：BirdLife **18 個原生國家／地區全部有 110m 幾何，故填 18 個形狀**；**香港列為原生、非繁殖，但無 110m 幾何，只在 note 說明**；**12 個迷鳥地區（保加利亞、丹麥、法國、德國、以色列、黎巴嫩、馬來西亞、挪威、斯洛文尼亞、瑞典、美國、英國）一律不填**，**來源不確定的阿富汗亦不填**。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：**`range` 只講一個亞種的描述年份**、**`breeding` 說「向西到英國與阿拉斯加」**（與事實不符）、**`voice` 與 `behavior` 都被誤填為分類沿革的句子**、`callouts` 兩條只是自明句；`look`、`diet`、`funFact`、`etymology` 可用。`dexScores` 六軸齊全（i2 / a4.3 / v2.9 含 vEst / r3.3 / c1.2 / o2.7），**a=4.3 有 `look` 的形態描述支撐**（腹純白、胸側藍、兩脅橙），故 missingScores 與 withheldScores 皆為空，卡面綜合分 **2.7**；**v=2.9 沿用**（翼 78.5 mm×0.22≈17.3 cm 遠長於 13–14 cm，只記錄不改動）。",
+    "AI 主圖以 0496 白尾藍地鴝的方形主圖作風格參照（同科、同一畫風），生成 1024×1024 後直接放大至 1127×1127（不裁切、不補邊），畫出藍色上體、白色眉紋、純白喉腹、橙紅脅部與**微微上舉的藍色尾**，站在苔蘚覆蓋的枝幹上。**比較鳥**：**白尾藍地鴝**沿用 0496 已生成的方形主圖，**北紅尾鴝**為本輪新生成（黑臉黑喉、銀灰頭頂、褐色背、大白翼斑、橙紅腹面、紅尾，刻意不含藍色）。非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
