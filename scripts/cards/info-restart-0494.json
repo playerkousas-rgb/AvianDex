@@ -1,0 +1,160 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0494",
+  "name": "灰背燕尾",
+  "scientificName": "Enicurus schistaceus",
+  "illustrationTaxon": "Adult Enicurus schistaceus (slim, long-tailed stream bird 20–25 cm: crown and mantle slaty grey; white forehead running back over the eyes; black face and chin; black wings with a broad white patch across the greater coverts, a small white flash at the base of the primaries and white tips to the tertials and secondaries; white rump and white underparts; long graduated black tail with white bands and a white tip; black bill; pale pinkish legs; sexes similar). Juveniles are grey-brown above with dark breast scaling and no white on the face, so they are not shown. AI interpretation, sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "白冠燕尾",
+      "scientificName": "Enicurus leschenaulti",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同屬、同樣是長尾而黑白分明的溪流鳥，亦同樣在石上走跳、不時上下擺尾；白冠燕尾**頭、頸、背與翼都是光亮的黑色**（只有一大片白冠由前額伸到後頸），**背與肩不是灰色**，翼上亦**沒有本種那樣寬的白覆羽斑**。本種**頭頂與背是石板灰**、**白色只在前額與眼上成一道**、**翼上有大片白斑**，兩者並排時灰與黑的分別很清楚。"
+    },
+    {
+      "zh": "小燕尾",
+      "scientificName": "Enicurus scouleri",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣棲於湍急山溪的石上，常在同一條溪流出現，但**小燕尾小得多（11–14 cm）**、**尾短而常翹起**、翼上有一大片白斑、頭頂的白斑較靠近前額；本種**身形修長、尾極長而呈階梯狀（AVONET 尾長 121 mm）**，**上體是石板灰而非黑色**，尾的白帶與白端亦更細緻。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.18,
+      0.34,
+      0.34,
+      0.48
+    ],
+    [
+      0.4,
+      0.39,
+      0.58,
+      0.53
+    ],
+    [
+      0.6,
+      0.04,
+      0.96,
+      0.4
+    ],
+    [
+      0.52,
+      0.3,
+      0.7,
+      0.44
+    ]
+  ],
+  "featureLabels": [
+    "白色前額",
+    "翼上白斑",
+    "白色尾端",
+    "白色腰"
+  ],
+  "featureNotes": [
+    "**白色的前額向後延伸、蓋過眼睛上方**，下方緊接黑色的臉與頦——HKBWS 把它列為第一個辨識點；幼鳥沒有這片臉上的白色，因此白額同時反映年齡，為插圖局部。",
+    "黑色的翼上有一**大片白色的大覆羽斑**，另在初級飛羽基部有一小塊白斑、三級與次級飛羽有白端；這些白斑在陰暗溪谷中像一道道閃光，是遠距離辨識本種的關鍵，為插圖局部。",
+    "**長而呈階梯狀的黑尾帶白色橫帶與白色尾端**，AVONET 尾長 121 mm 幾乎等於翼長 90 mm 的 1.3 倍；本種在石上走動時常把這條長尾上下擺動，為插圖局部。",
+    "**腰與整個下體都是白色**，與黑色的翼及石板灰的背形成三段式對比；白色的腰在鳥背向觀察者時尤其明顯，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "KHM",
+      "LAO",
+      "MMR",
+      "MYS",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 12 native countries/territories — Bangladesh, Bhutan, Cambodia, China (mainland), Hong Kong (China), India, Laos, Malaysia, Myanmar, Nepal, Thailand and Vietnam; 11 have 110m geometry and are shaded. Hong Kong IS in BirdLife's table this time (native, breeding) but the HKG territory has no 110m geometry, so it is described here rather than shaded. Not an occurrence polygon: a non-migrant of fast rocky forest streams from the central and eastern Himalaya east through south-central and eastern China to Indochina and the Malay Peninsula, inside an EOO of 7,180,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0400/049700",
+      "use": "香港第 I 類，**偶爾出現、有時長期停留的訪客，見於有岩石的林地溪流；至少兩次繁殖紀錄**。**20–25 cm**；**頭頂與背石板灰、白色前額向後延伸蓋過眼上、黑色的頦與翼、大覆羽有一大片白斑、初級飛羽基部有小白斑、三級與次級飛羽有白端；長而呈階梯狀的黑尾有白帶與白端；腰白色；嘴黑色、腳粉紅；雌雄相似**。幼鳥**頭頂與背灰褐、胸部有深色鱗斑、臉上沒有白色**。聲音：**中等偏高音的「tseep」，有時約每秒重複一次**。生境：**有岩石的森林溪流**，多數紀錄來自**大埔滘、梧桐寨與城門**。出現情況：**1977-12-31 與 1978-01-01 大埔滘一隻成鳥為首錄**，其後 1979–1994 年間在同地有七年偶有紀錄；**1995–2005 年較常錄得**（2001、2002 年無紀錄），來自四個地點、主要為大埔滘與梧桐寨；**1995 年 1 月起梧桐寨有一對整年留在該處，5 月 23 日起見幼鳥**，推定同一對留至 1996 年全年、至少到 1997 年 9 月；1998、2003、2004 年在梧桐寨各有一隻，但無進一步繁殖證據，**2005-04-05 最後一次在該地出現**。大埔滘：1995 年 4 月一隻；1998 年 6 月 27 日一隻成鳥、8 月 30 日至 12 月 22 日有幼鳥；1999 年至 2000-03-01 持續有單隻，其中 1999-01-25 的第一冬鳥應即 1998-08-30 的幼鳥；2004-09-04 至 2005-02-24 一隻成鳥。城門：1998-10-04 一隻幼鳥、1998-12-06 可能為同一隻。**2006–2016 年極少，11 年中只有 5 年有紀錄**，全部為單日單隻，除 2014-05-01～03 大埔滘一隻。**2017 年 9 月至至少 2022 年 1 月城門最多有兩隻**；**2017 年 12 月、2018 年 12 月、2019 年 1 月與 2020 年 8 月錄得推定為第二曆年的個體，顯示該地有繁殖**。繁殖證據全部來自幼鳥出現：**1995 年梧桐寨（5 月 23 日起）**、**1997 年大埔滘（6 月 27 日）**、**1998 年大埔滘（8 月 30 日至 12 月 22 日）與城門（10 月 4 日）**；另有 **1997-02-22 梧桐寨的求偶餵食**、4 月 25 日一對中有鳥啣食物；2017–2022 年城門的成鳥與第一年鳥紀錄亦顯示繁殖。**沒有巢的報告，HKBWS 認為與牠們所處的岩石溪流難以到達有關。** 行為：**在石間行走與跳躍、常上下擺尾**，主要吃**沿岩石溪流找到的水生昆蟲**。分類：**單型種**，分佈由印度北部向東至緬甸的喜馬拉雅中東段、中國中南部與東部、泰國、中南半島與馬來半島；在中國繁殖於西藏東南部、四川、雲南、貴州，東至福建內陸、南至廣東內陸與海南；**大致留鳥，冬季有部分垂直移動**。IUCN：**Least Concern，種群趨勢穩定**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/slaty-backed-forktail-enicurus-schistaceus/details",
+      "use": "IUCN **2024 LC**（1988 年起一直 LC／Lower Risk-LC）；成熟個體 Unknown、趨勢 **Stable（Suspected）**；**EOO 7,180,000 km²**、**Not a Migrant**、繁殖 endemic No、**IBA／KBA 51 個**、海拔 **300–1,800 m**、世代 **3.4 年**、**森林依賴度「Does not normally occur in forest」（本批唯一）**——對應牠是溪流專家而非林鳥；生境**只有一項**：**永久河溪／溪澗（含瀑布）為 Major**；種群量未量化但被描述為相當常見（del Hoyo et al. 2005），中國約 100–10,000 繁殖對（Brazil 2009）；**2009–2024 年的評估全部為 LC**；**Donald 等（2024）檢視的貿易資料庫中完全沒有本種**（無貿易跡象）；**保育地點已在全範圍劃定**，但沒有系統監測、沒有列入國際法規；國家表列 **12 個原生國家／地區**，**香港列為原生、繁殖**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **501 項 灰背燕尾（Enicurus schistaceus），第 I 類**；鄰項為 500 紅喉歌鴝、502 紫嘯鶇（皆 I 類）。**注意：runtime id 0494 在名錄上是第 501 項，id 序號與名錄序號並不一致。**"
+    },
+    {
+      "path": "scripts/cards/hk-master.json",
+      "use": "香港優先編號表確認 0494 = 灰背燕尾（Enicurus schistaceus），香港類別 **I**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱（灰背燕尾；Slaty-backed Forktail）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Enicurus schistaceus／鶲科 Muscicapidae）；speciesCode slbfor1；taxonOrder 29192。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "runtime **只有四軸**：a=3.8、v=3.3、r=1、o=2.7——**i（稀有度）與 c（保育）完全沒有分數**，故 missingScores 為 i、c；a 缺外觀文字支撐、o 依賴 a，故 withheldScores 為 a、o（與 0487 白喉短翅鶇相同處理）。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "卡面文案**極薄**：`look` 只有一句「灰背燕尾為鶲科燕尾屬的鳥類，俗名中國灰背燕尾」（**分類陳述而非形態描述**）；`range` 與 `behavior` 幾乎一字不差（兩者都是分佈句）；`fieldCopy` 的英文有 habitat、diet 與 5 條 highlights 可用，但**中文多為空**；**沒有 voice、breeding、migration、conservation、callouts、etymology、funFact**；**length 與 weight 皆為空**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET 翼長 90.0 mm、**尾 121.0 mm（本批最長，超過翼長 1.3 倍）**、跗蹠 25.3 mm、嘴峯 20.5 mm、體重 31.0 g；**尾長數據正好對應「長階梯狀尾」這項特徵**；翼 90 mm×0.22≈19.8 cm 落在 HKBWS 的 20–25 cm 之內。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **501** 項、第 I 類；HKBWS 描述為**偶爾出現、有時長期停留的訪客，見於有岩石的林地溪流，至少兩次繁殖紀錄**。**1977-12-31／1978-01-01 大埔滘首錄**；1995 年 1 月起梧桐寨一對整年留守並見幼鳥，**1995、1997、1998 三年都有幼鳥紀錄（即至少兩處繁殖）**；**2006–2016 年極少，11 年中只有 5 年有紀錄**；**2017 年 9 月至 2022 年 1 月城門最多兩隻**，2017 年 12 月、2018 年 12 月、2019 年 1 月與 2020 年 8 月錄得推定第二曆年個體，**顯示城門仍在繁殖**。**從未發現鳥巢**，HKBWS 認為與岩石溪流難以到達有關。主要地點：**大埔滘、梧桐寨、城門**。",
+    "辨識要點：**20–25 cm**；**石板灰的頭頂與背、白色前額蓋過眼上、黑色臉與頦、黑翼上有大片白覆羽斑、初級飛羽基部小白斑、三級與次級白端、白色腰與下體、長階梯狀黑尾帶白帶與白端、黑嘴粉腳**；**幼鳥灰褐、胸部有深色鱗斑、臉上無白色**。叫聲為**中等偏高音的「tseep」，有時約每秒重複**。單型種。",
+    "行為與生境：**在石間行走跳躍、常上下擺尾**，主要吃**岩石溪流的水生昆蟲**；只在**有岩石的森林溪流**出現。BirdLife 的 **森林依賴度寫「Does not normally occur in forest」**——與 HKBWS 的「林地溪流」並不矛盾：牠依賴的是溪流本身，樹林只是背景，是本批唯一以單一生境（永久河溪）為 Major 的物種。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 評估、**1988 年起一直 LC**；趨勢 **Stable（Suspected）**，與 HKBWS 的「Population trend stable」**一致**。**EOO 只有 7,180,000 km²**（本批中等偏小）、**Not a Migrant**、**IBA／KBA 51 個**、海拔 **300–1,800 m**、世代 3.4 年；**Donald 等（2024）的貿易資料庫完全沒有本種**（本批第一張「零貿易紀錄」的卡）；**保育地點已在全範圍劃定**、沒有列入國際法規。",
+    "**地圖**：BirdLife 12 個原生國家／地區中 **11 個有 110m 幾何並已填色**；**本卡與 0488、0491 一樣有把香港列入 BirdLife 表（原生、繁殖），但 HKG 無 110m 幾何，只在 note 說明、不上色**。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`dexScores` **只有四軸（a3.8 / v3.3 / r1 / o2.7），i 與 c 完全缺分**；`cardCopy` 的 **`look` 只有一句分類陳述（「為鶲科燕尾屬的鳥類，俗名中國灰背燕尾」）而無形態描述**、`range` 與 `behavior` 幾乎一字不差、中文 habitat／diet 為空、**沒有 voice／breeding／migration／conservation／highlights／callouts／etymology**、**length 與 weight 皆為空**。因此 **a=3.8 無外觀文字可核對**、**o=2.7 依賴 a 且 i、c 本身缺分**，兩者列為 **withheld**（與 0487 同一處理原則）；**v=3.3 沿用**（翼 90 mm×0.22≈19.8 cm，落在 20–25 cm 內）、**r=1 沿用**（本港實際上是偶爾出現但有繁殖紀錄的稀有訪客，r=1 為最低基準值，與實況可能有落差，只記錄不改動）。`measurements` 的**尾長 121 mm 為本批最長**，正好對應「長階梯狀尾」。",
+    "AI 主圖以 0493 黃腹花蜜鳥的方形主圖作風格參照（同一畫風），生成 1024×1024、直接放大至 1127×1127（不裁切、不補邊），畫出石板灰上體、白前額、黑臉黑翼配大片白覆羽斑、白腰白腹、長階梯黑尾帶白帶白端與粉紅腳，站在急流中的濕石上。比較鳥**白冠燕尾**（同屬、本港常見的長尾溪流鳥）與**小燕尾**（同溪流的另一種燕尾）均為**本輪新生成**（各 1024×1024，直接調整為 816×816），非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+  ],
+  "missingScores": [
+    "i",
+    "c"
+  ],
+  "withheldScores": {
+    "a": "cardCopy 的 fieldCopy.look 只有一句分類陳述「灰背燕尾為鶲科燕尾屬的鳥類，俗名中國灰背燕尾」，沒有形態描述，中文亦無 habitat／diet 可補，length 與 weight 皆為空，3.8 分無從核對，待查。",
+    "o": "綜合分依賴待查的 a 軸，且 i、c 本身缺分，不補算；v=3.3（翼 90.0 mm×0.22≈19.8 cm，落在 HKBWS 的 20–25 cm 內）與 r=1 沿用。"
+  }
+}
