@@ -4431,3 +4431,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/055800` 香港 I 類偶發，一筆 2013 大埔滘雌鳥，卡圖為成雄；BirdLife 2024 LC、成熟個體未知、疑穩定，中國特有，國家概覽非全境。HKBWS 稱森林鳥，BirdLife 主要生境為潮濕灌叢。
 - AI 示意非專家認證、非等比例：主圖白腹偏少、尾形末端不夠寬，腳趾不可靠；鳳頭鵐背栗色過多、尾尖應深色；灰鵐缺暖紅褐腰尾、腳色過深。runtime r 1 與本港偶發不協調，照錄不改；文案欄位錯位。validator `errors: []`。未改 runtime、UI、R2。
 - 下一張 0558。
+
+## 新批次 0501–0583：0558 已交付
+
+- [0558 黃喉鵐](https://drive.google.com/file/d/1IMiLZpRnAI3w2_VKOfWxvRwyd34Q94ki/view)：137474 bytes，MD5 `e97b2acf5f0814d3bc80b6c588b11e00`，SHA256 `1cad70473164152c27c79ddb92a66d1679915ac3089dd71b36740adc402b2414`；查重無結果，get_file 核驗 MIME、尺寸、父目錄及 hash。
+- HKBWS `0460/056600` 香港 I 類稀少過境、秋較多；圖為成雄。BirdLife 2018 LC、數量未知、疑穩定；BirdLife 整體列非遷徙，HKBWS 指指名亞種遷徙、elegantula 大致留鳥；地圖原生國家概覽非全境。
+- AI 示意非專家認證、非等比例；胸斑與喉之間淡環或過寬、脅紋偏誇張，足趾不可靠；比較鳥細節限制見 spec。runtime v 含體長估算；look 只具尾羽形態仍保留 a，其他欄位錯位；未改 runtime/UI/R2。validator `errors: []`。
+- 下一張 0559。
