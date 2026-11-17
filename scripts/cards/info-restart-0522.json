@@ -1,0 +1,151 @@
+{
+  "id": "0522",
+  "name": "藍喉太陽鳥",
+  "scientificName": "Aethopyga gouldiae",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Adult male Aethopyga gouldiae dabryii: dark purplish-blue crown, nape and throat, red mantle, face sides and chest, yellow flanks and belly, dark blue rump and graduated tail with very long central feathers; AI illustration approximate, yellow lower back not clearly depicted.",
+  "featureCrops": [
+    [
+      0.08,
+      0.3,
+      0.3,
+      0.47
+    ],
+    [
+      0.23,
+      0.35,
+      0.44,
+      0.51
+    ],
+    [
+      0.26,
+      0.43,
+      0.47,
+      0.57
+    ],
+    [
+      0.47,
+      0.41,
+      0.79,
+      0.61
+    ]
+  ],
+  "featureLabels": [
+    "紫藍冠與喉",
+    "紅色背與胸",
+    "黃腹與橄欖翼",
+    "藍尾與長中央羽"
+  ],
+  "featureNotes": [
+    "雄鳥冠、後頸、眼先與喉深紫藍，面側紅；插圖為局部示意。",
+    "雄鳥肩、背上部及部分翼覆羽紅色，紅色延至面側和胸。",
+    "雄鳥腹與脅黃色，飛羽與大覆羽邊緣橄欖綠；插圖色彩僅供示意。",
+    "雄鳥腰、尾上覆羽及尾深藍，尾呈階梯形，中央尾羽特長。HKBWS 記下背黃色，本 AI 圖未清楚表現。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "藍喉太陽鳥 雌鳥",
+      "scientificName": "Aethopyga gouldiae",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同種雌鳥頭及背偏灰，喉白、下體與腰黃色，背及尾帶綠色；沒有雄鳥鮮明的紅胸及紫藍喉。雄鳥蝕羽則紅色程度不一，可能看來較斑駁。",
+      "portraitNote": "雌藍喉太陽鳥，AI 示意；灰頭白喉、黃下體。"
+    },
+    {
+      "zh": "叉尾太陽鳥",
+      "scientificName": "Aethopyga christinae",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "叉尾太陽鳥雄鳥黑臉、亮藍綠冠與腰、胭脂紅喉胸，外側尾羽細尖延長；藍喉太陽鳥雄鳥則紫藍喉、紅色面側和上背、黃色腹，中央尾羽延長。",
+      "portraitNote": "叉尾太陽鳥雄鳥，AI 示意；藍綠冠、紅喉胸。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 九個原生現存地區均列 Breeding；香港列 Vagrant、Non Breeding，無底圖形狀不填色。全球狀態 Not a Migrant，HKBWS 香港則列稀少冬候鳥；兩者為不同尺度資料。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052400",
+      "use": "第 I 類、林地稀少冬候鳥；雄鳥紅面側、肩背及胸，深紫藍冠喉、黃腹、黃下背與深藍腰尾，中央尾羽特長；雌鳥灰頭、白喉、黃下體與腰。香港紀錄全在 1 月 5 日至 3 月 27 日，約六成大埔滘、兩成嘉道理農場；1988 年首錄，過往疑逃鳥，後來依出現模式認為自然到港；2020 年大埔滘最高七隻。香港亞種 dabryii；HKBWS 稱全球種群穩定。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052500",
+      "use": "叉尾太陽鳥雄鳥黑臉、藍綠冠腰、胭脂紅喉胸，外側尾羽延長。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港名錄 2024 第 533 項，第 I 類。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/goulds-sunbird-aethopyga-gouldiae/details",
+      "use": "2024 LC、成熟個體未知、全球下降（Suspected）；十年樹覆蓋減 8.3%，謹慎推測種群減 1–19%。EOO 5,850,000 km²，Not a Migrant，海拔 300–4,270 m，世代 2.1 年，森林依賴中等；香港列 Vagrant／Non Breeding。七個貿易資料集中兩個有紀錄；食用及寵物用途列國內／自給。與 HKBWS stable 記載不同，並列來源及年份，不視為同一資料。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "學名 Aethopyga gouldiae，雀形目太陽鳥科、speciesCode gousun1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.3、v 2.5、r 1、c 1.2、o 2，vEst 1；a 保留：中文 look 空，英文有翼覆羽及飛羽顏色的可核對外形描述；六軸均保留。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "fieldCopy 中文除 range 外均空；英文 range 截斷，breeding 與 voice 重複求偶句；length、weight 空，IUCN LC 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 54.5、tail 57.6、tarsus 13.9、bill 17.9、mass 5 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 香港狀況為稀少冬候鳥；早期紀錄曾疑逃鳥，依後續季節模式重新認為自然到港，勿把過往懷疑當作現行分類。",
+    "HKBWS 記全球穩定，BirdLife 2024 依樹覆蓋損失疑似下降；不同來源照實並列。",
+    "雄鳥 AI 主圖的黃色下背未清楚畫出，不應用作下背準確色彩參考。比較圖：本種雌鳥與叉尾太陽鳥雄鳥。全部 AI 示意、非等比例、非專家認證。",
+    "叉尾比較圖沿用 0519 已修正的素材；另兩張新生成。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

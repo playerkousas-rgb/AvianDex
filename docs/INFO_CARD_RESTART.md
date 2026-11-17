@@ -4190,3 +4190,11 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - BirdLife 2024 LC，全球成熟個體數未知、趨勢疑似下降；分佈範圍十年樹覆蓋估計減 14.7%，謹慎推測種群減 1–19%，非直接統計。七個貿易資料集有三個記錄本種，列國際寵物／展示用途；資料集出現率不等於個體交易量。14 個原生現存地區，13 個有底圖幾何，新加坡列繁殖但底圖無幾何、不填色；香港未單列。
 - Runtime 六軸 i 2、a 2.8、v 2.3、r 1、c 1.2、o 1.9，vEst 1，全部保留；中文 look 是分佈，英文 look 為可核對的雌鳥形態。AVONET mass 5.6 g。主圖與紅胸雄鳥比較圖沿用 0520 的 AI 素材，雌朱背鳥新生成；均非等比例、非專家認證。四格及全卡預覽已看；`verify-info-card.py 0521` 通過，`errors: []`；未修改 runtime、UI 或 R2。
 - **下一張 0522 藍喉太陽鳥 *Aethopyga gouldiae***，HKBWS 組頁顯示 `species/0420/052400`，須先開頁核對內容；不同於名錄第 532 項黃腹花蜜鳥，應按 runtime id 順序製作。
+
+## 新批次 0501–0583：0522 已交付
+
+- [0522 藍喉太陽鳥](https://drive.google.com/file/d/1vJ3hkNIZHqG0PHik5ABFTDamzc4Lh90w/view)：135823 bytes、MD5 `7e60ad9d95f3e5c506162e2a90731d8e`、SHA256 `74834b046ce2c7a763d2d845b1d1596ee248438d2b0ca13bdc33f2086cdeacaa`。上載前查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0420/052400`：香港名錄第 533 項、第 I 類，林地稀少冬候鳥；全部紀錄在 1 月 5 日至 3 月 27 日。1988 年首錄曾疑逃鳥，依後續出現模式改認為自然到港。雄鳥紅面側、肩背及胸，紫藍冠喉，黃色下背與腹，深藍腰尾，中央尾羽長；香港亞種 *dabryii*。雌鳥灰頭白喉、黃下體及腰。
+- BirdLife 2024 LC、全球疑似下降（依過去十年範圍樹覆蓋估計減少 8.3%，謹慎推測種群減 1–19%），與 HKBWS 的全球穩定記載不同，已並列；成熟個體未知。九個原生繁殖地區的國家概覽；香港 Vagrant／Non Breeding 不填色。七貿易資料集兩個有紀錄。
+- Runtime 六軸齊全，a 保留（英文 look 有翼羽形態）；中文 fieldCopy 除 range 外均空，length、weight 空。AVONET mass 5 g。主圖、雌鳥比較圖新生成，叉尾太陽鳥比較圖沿用 0519；AI 示意非等比例、非專家認證，雄鳥主圖未清楚表現黃色下背，spec 已註明。`verify-info-card.py 0522` 通過（`errors: []`），未改 runtime、UI 或 R2。
+- **下一張 0523 黃胸織雀 *Ploceus philippinus***；香港名錄第 538 項、第 IIC 類，應先核對引入／歸化狀況，不把它誤寫為 I 類自然到港。runtime 缺 i、c 分數，需按規則處理。
