@@ -1,0 +1,208 @@
+{
+  "id": "0578",
+  "name": "草原鵰",
+  "scientificName": "Aquila nipalensis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "EN",
+    "zh": "瀕危",
+    "assessmentNote": "全球 EN：BirdLife 2021 評定"
+  },
+  "illustrationTaxon": "Aquila nipalensis, AI approximation of immature perched.",
+  "featureCrops": [
+    [
+      0.22,
+      0.28,
+      0.34,
+      0.39
+    ],
+    [
+      0.43,
+      0.39,
+      0.61,
+      0.51
+    ],
+    [
+      0.43,
+      0.52,
+      0.56,
+      0.66
+    ],
+    [
+      0.65,
+      0.46,
+      0.84,
+      0.58
+    ]
+  ],
+  "featureLabels": [
+    "粗大嘴裂",
+    "幼鳥淡翼帶",
+    "羽覆跗蹠",
+    "長翼與尾"
+  ],
+  "featureNotes": [
+    "嘴裂伸向眼後；AI 示意不夠長。",
+    "幼鳥大覆羽尖白形成淡帶，成鳥沒有。",
+    "腿有羽毛，趾爪黃色。",
+    "大型長翼，尾角較白肩鵰圓；圖中偏尖。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "烏鵰",
+      "scientificName": "Clanga clanga",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體型較緊湊，幼鳥翼覆羽有淡色尖斑。",
+      "portraitNote": "AI 白斑過於明顯及整齊，腳趾和羽列不可靠。"
+    },
+    {
+      "zh": "白肩鵰",
+      "scientificName": "Aquila heliaca",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥淡色頭頸與白肩斑；幼鳥外觀不同。",
+      "portraitNote": "AI 白斑太多，羽毛和足趾不準。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "AGO",
+      "ARM",
+      "AZE",
+      "BGD",
+      "BTN",
+      "BWA",
+      "BGR",
+      "BDI",
+      "CHN",
+      "COD",
+      "DJI",
+      "EGY",
+      "ERI",
+      "SWZ",
+      "ETH",
+      "GEO",
+      "GRC",
+      "IND",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "JOR",
+      "KAZ",
+      "KEN",
+      "KWT",
+      "KGZ",
+      "LBN",
+      "MWI",
+      "MYS",
+      "MNG",
+      "MMR",
+      "NAM",
+      "NPL",
+      "OMN",
+      "PAK",
+      "QAT",
+      "RUS",
+      "RWA",
+      "SAU",
+      "SOM",
+      "ZAF",
+      "SDN",
+      "SYR",
+      "TJK",
+      "TZA",
+      "THA",
+      "TKM",
+      "TUR",
+      "UGA",
+      "ARE",
+      "UZB",
+      "YEM",
+      "ZMB",
+      "ZWE"
+    ],
+    "note": "Partial BirdLife 2021 extant native countries across breeding, nonbreeding and passage; Palestine, South Sudan and Singapore omitted due to geometry/scale; non-native vagrants and extinct territories excluded. Countries not fully occupied."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/024900",
+      "use": "香港 I 類迷鳥，幼鳥嘴裂、翼淡帶及首個米埔紀錄。"
+    },
+    {
+      "url": "https://ebird.org/species/steeag1",
+      "use": "幼及未成鳥翼白帶，成鳥暗褐。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/steppe-eagle-aquila-nipalensis/details",
+      "use": "2021 EN，50,000–75,000成熟個體、下降，原生國家表。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/024700",
+      "use": "烏鵰較緊湊，幼鳥淡覆羽尖。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025000",
+      "use": "白肩鵰成鳥淡頭頸及白肩羽。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "分類學名"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六軸缺資料"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "缺資料"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "缺資料"
+    }
+  ],
+  "notes": [
+    "香港 I 類迷鳥，2008米埔首筆幼鳥紀錄。",
+    "AI 未成鳥示意非專家認證，嘴裂未達眼後、尾顯得尖窄、翼帶及足趾不精確；烏鵰白斑及白肩鵰白肩斑太多，腳趾和羽列不可靠。",
+    "BirdLife 2021 EN、估5萬–7.5萬成熟個體、下降。地圖部分原生國家，合併季節且非全境，南蘇丹、巴勒斯坦與新加坡省略。",
+    "runtime 無分數、文案及測量資料，六軸待查；未改 runtime。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}

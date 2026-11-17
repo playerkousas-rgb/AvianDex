@@ -4570,3 +4570,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0577 靴隼雕](https://drive.google.com/file/d/17LCnrdBYINQYS217I4OU1s4WUG5SXGrT/view)：122038 bytes，MD5 `24fab7168f0955e5e2876b096c1b23ac`，SHA256 `224523c6ac040acbe8212f37474a53966069098672270d31e76ac85ab8f9d8bd`；查重無結果，get_file 獨立核驗。
 - HKBWS 香港 I 類名錄；BirdLife 2021 LC，初步估15萬–19.5萬成熟個體、疑穩定。世界圖為部分原生國家概覽，非全境或精確季節分佈。
 - AI 插圖未經專家認證：淺色型主圖尾扇形而非典型方尾，羽列和足部不精確；普通鵟翼紋偏規則，黑鳶翼白斑偏明顯。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
+
+## 新批次 0501–0583：0578 已交付
+
+- [0578 草原鵰](https://drive.google.com/file/d/1qpa6AmoOjdS_6C7lEcd-diQ1dNv94aRK/view)：125761 bytes，MD5 `47ccb9352774dd0526320b4576c35c6a`，SHA256 `e7127ab21702aaf8863c374283f48368fb0da50f734cc5aabf879fd171f1a862`；查重無結果，get_file 獨立核驗。
+- HKBWS I 類迷鳥；BirdLife 2021 EN，估5萬–7.5萬成熟個體、下降。世界圖為部分原生國家概覽，非全境或精確季節分佈。
+- AI 插圖未經專家認證：未成鳥嘴裂偏短、尾尖窄，翼帶與足趾不精確；比較鳥白斑過多，羽列與足趾近似。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
