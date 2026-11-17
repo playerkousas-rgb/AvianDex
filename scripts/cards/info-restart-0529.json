@@ -1,0 +1,218 @@
+{
+  "id": "0529",
+  "name": "西黃鶺鴒",
+  "scientificName": "Motacilla flava",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "illustrationTaxon": "Breeding male Motacilla flava leucocephala with whitish head, grey wash, green upperparts and yellow underparts; AI approximation.",
+  "featureCrops": [
+    [
+      0.66,
+      0.19,
+      0.93,
+      0.36
+    ],
+    [
+      0.43,
+      0.29,
+      0.72,
+      0.46
+    ],
+    [
+      0.48,
+      0.45,
+      0.78,
+      0.59
+    ],
+    [
+      0.11,
+      0.48,
+      0.41,
+      0.62
+    ]
+  ],
+  "featureLabels": [
+    "白頭與淡灰頸",
+    "橄欖背與深翼",
+    "黃色胸腹",
+    "長尾與白尾緣"
+  ],
+  "featureNotes": [
+    "香港紀錄為 leucocephala 雄鳥，頭偏白，耳羽、後冠側與頸有淡灰色，圖像僅示意。",
+    "繁殖雄鳥綠色上體及深色翼；不同亞種頭部花紋差異大。",
+    "繁殖雄鳥下體黃色，其他羽況與雌鳥一般較淡。",
+    "尾長而邊緣帶白；相比白鶺鴒體型略纖細、尾較短。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "西黃鶺鴒 指名亞種",
+      "scientificName": "Motacilla flava flava",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同種指名亞種繁殖雄鳥藍灰頭及白眉，與香港紀錄的白頭型 leucocephala 不同；頭紋隨亞種、羽況差異甚大。",
+      "portraitNote": "西黃鶺鴒指名亞種雄鳥，AI 示意。"
+    },
+    {
+      "zh": "東黃鶺鴒",
+      "scientificName": "Motacilla tschutschensis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "東黃鶺鴒 macronyx 繁殖雄鳥深藍灰冠、較黑眼先和耳羽，通常無明顯眉；西黃 leucocephala 頭白且有淡灰色。其他亞種及羽況可重疊，需結合叫聲等審慎鑑別。",
+      "portraitNote": "東黃鶺鴒 macronyx 雄鳥，AI 示意。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "AGO",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BGD",
+      "BLR",
+      "BEL",
+      "BEN",
+      "BTN",
+      "BIH",
+      "BWA",
+      "BGR",
+      "BFA",
+      "BDI",
+      "CMR",
+      "CAF",
+      "TCD",
+      "CHN",
+      "COG",
+      "COD",
+      "HRV",
+      "CYP",
+      "CZE",
+      "CIV",
+      "DNK",
+      "DJI",
+      "EGY",
+      "GNQ",
+      "ERI",
+      "EST",
+      "SWZ",
+      "ETH",
+      "FIN",
+      "FRA",
+      "GAB",
+      "GMB",
+      "GEO",
+      "DEU",
+      "GHA",
+      "GRC",
+      "GIN",
+      "GNB",
+      "HUN",
+      "IND",
+      "IRN",
+      "IRQ",
+      "IRL",
+      "ISR",
+      "ITA",
+      "JOR",
+      "KAZ",
+      "KEN",
+      "KWT",
+      "KGZ",
+      "LVA",
+      "LBN",
+      "LBR",
+      "LBY",
+      "LTU",
+      "MWI",
+      "MLI",
+      "MRT",
+      "MDA",
+      "MNG",
+      "MNE",
+      "MAR",
+      "MOZ",
+      "NAM",
+      "NPL"
+    ],
+    "note": "BirdLife 原生現存地的部分國家概覽，合併繁殖、非繁殖及過境；只取表中已核對部分，並非全球完整範圍或全境分佈。香港迷鳥地無獨立底圖幾何，不另填。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053400",
+      "use": "香港 I 類偶至，唯一記錄為 2019 年 3 月 28 日至 4 月 13 日塱洲 leucocephala 雄鳥，頭白、耳羽後冠及頸帶淡灰且圖案多變。繁殖雄鳥上體綠下體黃，亞種頭紋差異大；飛行叫聲較東黃稍柔且稍拖長。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053530",
+      "use": "東黃鶺鴒 macronyx 雄繁殖羽深藍灰頭，眼先及耳羽更黑、一般無明顯眉。"
+    },
+    {
+      "url": "https://www.oiseaux-birds.com/card-western-yellow-wagtail.html",
+      "use": "指名 flava 雄鳥藍灰頭、白眉、橄欖色背及黃色下體，亞種間形態有差異。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港 2024 名錄第 543 項、第 I 類。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/western-yellow-wagtail-motacilla-flava/details",
+      "use": "2018 LC，全球下降，成熟個體約 6,000 萬至 1.1 億；Full Migrant，繁殖 EOO 40,900,000 km²、非繁殖 102,000,000 km²；取部分原生現存地製國家概覽。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Motacilla flava，雀形目鶺鴒科，speciesCode eaywag1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.3、v 2.9、r 4.8、c 1.2、o 2.8、vEst 1；look 中英文描述混雜類型仍含可核對頭羽形態，保留 a 與 o。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 為混合型截斷描述而非香港 leucocephala；behavior 為分類、英文 breeding 及 voice 錯置；length、weight 空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 79.5、tail 70.6、tarsus 23.1、bill 16、mass 17.7 g。"
+    }
+  ],
+  "notes": [
+    "主圖依香港唯一紀錄的 leucocephala 白頭型生成；指名 flava 與東黃 macronyx 作比較。三張均 AI 示意、非等比例、非專家認證。",
+    "亞種和非繁殖羽可高度相似，圖示不能作單一鑑定依據。",
+    "runtime 文案混雜或錯置，六軸保留不改 runtime。",
+    "全球國家概覽僅部分原生現存地，合併季節，非全境。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

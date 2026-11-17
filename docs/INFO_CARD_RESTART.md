@@ -4240,3 +4240,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `species/0440/053700`：香港 2024 名錄 #546、I 類，常見冬候鳥及過境鳥，常近濕地；灰上體、黃腰及長尾，繁殖雄鳥黑喉白邊。夏季曾有可能繁殖紀錄，但沒有明確證據，不能說已確定繁殖。
 - BirdLife 2025 LC、全球穩定，成熟個體估計 1,100–2,400 萬、Full Migrant。世界地圖只選部分原生現存地區，合併繁殖、非繁殖等季節，非全境或完整全球範圍。三張插圖沿用 0527 AI 示意；山鶺鴒比較圖胸紋不精確，非專家認證。
 - 六軸及 vEst 照 runtime 保留；range 限單亞種且截斷、funFact 黃色範圍敘述有誤、conservation 誤載繁殖內容等問題已記錄，不改 runtime。`verify-info-card.py 0528` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0529 已交付
+
+- [0529 西黃鶺鴒](https://drive.google.com/file/d/1IuPSSdVHxLftUI6UnxvCtYIi2W4KMSA8/view)：137537 bytes，MD5 `1c042bd8d1f66300ab4dc33ffa38b6dd`，SHA256 `8df28fa078cbe967937c1ee56904cef1c0ae7c839a92a0c6dbff348b60a4e289`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/053400`：香港 2024 名錄 #543、I 類，偶至；唯一紀錄為 2019 年 3 月 28 日至 4 月 13 日塱洲的白頭型 *leucocephala* 雄鳥。主圖以此亞種為原型，指名 *flava* 及東黃鶺鴒 *macronyx* 作比較；三圖均為 AI 示意、非專家認證，羽況及亞種相似，須綜合聲音及其他特徵鑑別。
+- BirdLife 2018 LC、全球下降、成熟個體 6,000 萬至約 1.1 億，Full Migrant；地圖僅選部分原生現存國家，合併不同季節、非全境及非完整分佈。
+- 六軸及 vEst 原樣保留；runtime look 為截斷混合型描述而非香港亞種，behavior、英文 breeding／voice 錯置，已記錄不修改。`verify-info-card.py 0529` 通過（`errors: []`）。
