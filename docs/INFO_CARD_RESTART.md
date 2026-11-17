@@ -4282,3 +4282,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `species/0440/054000`：香港 I 類偶至，頁面記兩次記錄；與理氏鷚差異細微、聲音重要。圖像均 AI 示意、非專家認證、非等比例；主圖黑頰斑可能過粗，腳趾細節不可靠。
 - BirdLife 2025 LC、懷疑穩定、數量未知；地圖為原生國家概覽，合併季節非全境。
 - runtime 僅有 v 3.1、r 1、vEst 1；缺 i、a、c、o，顯示待查不補算；文案缺失及錯置只記錄不修改。`verify-info-card.py 0534` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0535 已交付
+
+- [0535 山鷚](https://drive.google.com/file/d/1cakoQJ2fhESbvZxjZHb7apvNW3co_nmr/view)：142640 bytes，MD5 `7cfd2e2a018d0fc63dea2d0590ed7f23`，SHA256 `4baab387c7cb9fdccc1918371ea0a171ec6c077ecd494e9c15e29c3b4c2e65ec`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/054800`：香港 I 類、稀少山地草地留鳥，局部分佈已大幅減少。AI 主圖未呈現明顯下彎嘴峰，兩脅縱紋偏淡、腳趾不可靠；三圖非等比例、非專家認證。
+- BirdLife 2018 LC、全球懷疑穩定、數量未知；國家概覽非全境，香港原生但無獨立幾何，阿富汗來源未確定故不填。
+- runtime 缺 i、c；無外觀描述，a 與依賴該軸的 o 暫緩顯示，其餘分數保留；文案錯置不修改。`verify-info-card.py 0535` 通過（`errors: []`）。

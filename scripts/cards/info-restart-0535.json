@@ -1,0 +1,152 @@
+{
+  "id": "0535",
+  "name": "山鷚",
+  "scientificName": "Anthus sylvanus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "illustrationTaxon": "Anthus sylvanus, AI approximation.",
+  "featureCrops": [
+    [
+      0.63,
+      0.19,
+      0.87,
+      0.34
+    ],
+    [
+      0.4,
+      0.29,
+      0.64,
+      0.44
+    ],
+    [
+      0.67,
+      0.34,
+      0.82,
+      0.5
+    ],
+    [
+      0.49,
+      0.47,
+      0.71,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "淡眉與深縱紋冠",
+    "褐背重縱紋",
+    "胸部深色縱紋",
+    "淡色腹與兩脅"
+  ],
+  "featureNotes": [
+    "白眉對比深色縱紋冠；粗喙的嘴峰應明顯下彎，圖像未準確呈現。",
+    "上體褐色且深色縱紋濃重。",
+    "胸部有明顯深色縱紋，應同樣鮮明地延伸到兩脅；插圖脅紋偏淡。",
+    "淡色下體具脅紋；實鳥體型較緊湊豐滿。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "理氏鷚",
+      "scientificName": "Anthus richardi",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "理氏鷚一般較高挑、長腿長後爪，胸有紋但兩脅較少紋；山鷚體型較胖，背與兩脅紋較重，常在高地草地。",
+      "portraitNote": "理氏鷚 AI 示意，後爪及腳趾不可靠。"
+    },
+    {
+      "zh": "樹鷚",
+      "scientificName": "Anthus hodgsoni",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "樹鷚上體橄欖色、明顯眉及耳後淡斑，常於林地附近；山鷚偏褐、較粗壯，多見山地草地。",
+      "portraitNote": "樹鷚 AI 示意，不按比例。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IND",
+      "NPL",
+      "PAK"
+    ],
+    "note": "Partial NATIVE-country overview only. 香港為原生但缺底圖獨立幾何；阿富汗來源未確定而不填色。國家概覽非全境、非 occurrence polygon，留鳥 EOO 355 萬平方公里。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054800",
+      "use": "香港 I 類稀少山地草地留鳥，本地分佈大幅減少；粗短腿、下彎粗喙、白眉、深色冠背及胸側縱紋。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053900",
+      "use": "理氏鷚較長腿、後爪長，胸有紋；部分香港繁殖。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054200",
+      "use": "樹鷚橄欖色上體、白眉及耳後淡斑，常見林地附近。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/upland-pipit-anthus-sylvanus/details",
+      "use": "2018 LC、全球懷疑穩定、數量未知、非遷徙；香港原生，阿富汗來源未確定。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Anthus sylvanus，speciesCode uplpip1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "a 3.3、v 2.9、r 1、o 2.4、vEst 1；i、c 缺失，a 和 o 因缺外觀文字待查。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "中文只有範圍，無外觀文字；英文 voice、behavior、etymology 重複棲地，length、weight 空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 80.4、tail 67.6、tarsus 22.7、bill 16.1、mass 31 g。"
+    }
+  ],
+  "notes": [
+    "AI 主圖僅近似山鷚，喙未明顯下彎，兩脅縱紋偏淡、腳趾不可靠；三圖不按比例、非專家認證。",
+    "香港山地草地留鳥已大幅減少；全球 BirdLife 懷疑穩定與本地趨勢不同。",
+    "國家概覽並非全境，香港無獨立底圖幾何，來源未確定的阿富汗不填。",
+    "runtime 缺 i、c；缺外觀描述，a 及依賴 a 的 o 暫緩顯示；其他軸原樣保留。"
+  ],
+  "missingScores": [
+    "i",
+    "c"
+  ],
+  "withheldScores": {
+    "a": "runtime 缺少外觀描述，無從核對外觀軸。",
+    "o": "綜合分依賴未能核對的外觀軸，暫緩顯示。"
+  }
+}
