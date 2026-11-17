@@ -4205,3 +4205,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `species/0430/052900`：香港名錄第 538 項 IIC 類，米埔舊有籠鳥來源族群曾於 1995–2003 年繁殖，2004 年後無紀錄，不是自然到港的 I 類。繁殖雄鳥黃冠、深褐面喉、褐背淡羽緣與黃胸；雌鳥白喉、淡眉和淡褐下體。
 - BirdLife 2024 LC、成熟個體未知、全球疑似穩定；國家概覽涵蓋有 110m 底圖形狀的 14 個原生現存國家，新加坡無幾何未填色。七個貿易資料集三個有紀錄。主圖及同種雌鳥、家麻雀雌鳥均為 AI 近似示意，非專家認證。
 - Runtime 缺 i、c，不補分；保留 a 4.7、v 2.8、r 1、o 2.8、vEst 1。中文 fieldCopy 除 range 外空，英文 conservation 與 humanRelation 不相關。AVONET mass 28.2 g；runtime length、weight 空。`verify-info-card.py 0523` 通過（`errors: []`）。另更正 0520 spec 五軸均值註記為 2.78，runtime 不變。
+
+## 新批次 0501–0583：0524 已交付
+
+- [0524 斑文鳥](https://drive.google.com/file/d/17rquf2c7oS_FKlHIk6I8gQwwxknWFcm-/view)：143176 bytes；MD5 `5ab277f05d1573df800688ee8381d20a`，SHA256 `d2a6969782dad5d68c2117bcb62c989680da93369c8b11a313a15c28c5ff1d59`。上載前查重無結果，`get_file` 核對資料夾、尺寸、大小和 hash。
+- HKBWS `species/0430/053000`：香港 2024 名錄 #539、I 類，局部常見低地留鳥；成鳥褐頭背、白色下體帶深色鱗斑；幼鳥暖褐而缺鱗斑。蒲台有季節性遷徙；新界北核心區域較穩定，其他地區範圍及數量減少。
+- BirdLife 2025 LC、全球趨勢推斷增加；5,000 萬成熟個體為低質素估計，正文指部分根據引入地、總數未知。HKBWS 稱全球穩定，來源差異已註明。全球原生國家概覽含 19 個有底圖幾何地區，新加坡無幾何，外來引入地不填色。
+- 六軸 runtime 分數保留；range 僅涉及巴基斯坦且 fieldCopy 截斷，migration 誤載行為等問題記於 spec，不修改 runtime。AI 主圖、幼鳥及栗腹文鳥示意非專家認證；錯把鱗紋畫在白腰文鳥脅部的候選圖未使用。`verify-info-card.py 0524` 通過（`errors: []`）。

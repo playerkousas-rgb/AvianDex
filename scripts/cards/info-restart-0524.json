@@ -1,0 +1,161 @@
+{
+  "id": "0524",
+  "name": "斑文鳥",
+  "scientificName": "Lonchura punctulata",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Adult Lonchura punctulata: warm brown head and upperparts, dark conical bill, white underparts with dark scalloped scaling; AI approximation.",
+  "featureCrops": [
+    [
+      0.59,
+      0.18,
+      0.87,
+      0.38
+    ],
+    [
+      0.63,
+      0.34,
+      0.79,
+      0.53
+    ],
+    [
+      0.35,
+      0.31,
+      0.64,
+      0.51
+    ],
+    [
+      0.46,
+      0.48,
+      0.7,
+      0.62
+    ]
+  ],
+  "featureLabels": [
+    "褐頭與錐形嘴",
+    "胸側鱗狀斑",
+    "暖褐色背翼",
+    "白腹與鱗斑"
+  ],
+  "featureNotes": [
+    "成鳥暖褐色頭、深色粗短錐形嘴。",
+    "淡色胸側有密集深褐鱗狀或扇形斑紋。",
+    "背及翼暖褐色；AI 示意非精確羽色標本。",
+    "成鳥下體偏白，有明顯深色鱗斑；幼鳥則缺少。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "斑文鳥 幼鳥",
+      "scientificName": "Lonchura punctulata",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同種幼鳥整體暖褐，上體略深、下體偏淡黃褐，沒有成鳥明顯的鱗斑；與其他文鳥幼鳥須仔細比較。",
+      "portraitNote": "斑文鳥幼鳥，AI 示意。"
+    },
+    {
+      "zh": "栗腹文鳥 雄鳥",
+      "scientificName": "Lonchura atricapilla",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄栗腹文鳥黑頭、黑胸及黑腹斑與栗色身體形成對比；斑文鳥成鳥則褐頭、白色下體有深色鱗斑。香港栗腹文鳥列 IIC 類。",
+      "portraitNote": "栗腹文鳥雄鳥，AI 示意。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "BGD",
+      "BTN",
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PAK",
+      "PHL",
+      "LKA",
+      "TWN",
+      "THA",
+      "TLS",
+      "VNM"
+    ],
+    "note": "BirdLife 列 20 個原生現存國家或地區；新加坡沒有 Natural Earth 110m 幾何不填色，餘 19 個填色，僅國家概覽非全境。引入地及來源不明地不填色。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/053000",
+      "use": "第 I 類、局部常見留鳥，主要分佈新界北低地草地農地；10–12 cm，褐頭背與白色密鱗斑下體，幼鳥暖褐、下體較淡、嘴深色。蒲台有季節性遷徙；核心區域變化較小但其他區域下降。香港亞種 topela；頁面記全球 stable。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/053200",
+      "use": "栗腹文鳥雄鳥黑頭胸及黑腹斑、栗色身體；香港 IIC 類。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港 2024 名錄第 539 項第 I 類。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/scaly-breasted-munia-lonchura-punctulata/details",
+      "use": "2025 LC，全球趨勢 increasing 為推斷；概覽列 5,000 萬成熟個體（2016、低質素），正文稱估計超過 5,000 萬、部分根據引入地，總數未知。EOO 23,000,000 km²，Not a Migrant，七個貿易資料集三個有記錄。全球趨勢與 HKBWS stable 記載並列。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Lonchura punctulata，雀形目梅花雀科，speciesCode nutman。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.8、v 2.4、r 4.8、c 3、o 3.2；六軸保留。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "range 僅描述巴基斯坦且 fieldCopy 截斷，英文 range 是棲地；migration 誤載社會行為，behavior 中文缺語境，humanRelation 英文無關。length 11–12 cm、weight 12–16 g。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 52.6、tail 39、tarsus 14、bill 11.8、mass 13.6 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 稱全球 stable，BirdLife 2025 為推斷 increasing；保留來源差異。全球 Not a Migrant 不排除蒲台季節性遷徙。",
+    "主圖及兩張比較圖是 AI 示意，不等比例且未經專家認證。白腰文鳥候選生成圖脅部錯現鱗斑，未採用。",
+    "全球地圖只顯示有底圖形狀的原生地區，不含引入地或來源不明地。",
+    "runtime 分數全保留；文案多個欄位錯置，已記錄而不修改。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
