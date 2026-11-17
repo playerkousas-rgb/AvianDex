@@ -4254,3 +4254,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `species/0440/053510`：香港常見的 *taivana* 過境及冬候鳥；繁殖雄鳥灰綠頭背、寬長黃眉和暗耳羽。AI 主圖是此羽型近似示意，黃眉後端不夠方且腳趾與草重疊；西黃 *leucocephala* 和灰鶺鴒比較圖亦為 AI，非專家認證，不應僅憑頭紋辨種。
 - BirdLife 2019 LC、懷疑下降；5,000 萬至 1.5 億成熟個體為初步低質素估算。地圖合併季節、不表示全境，香港、新加坡等無獨立底圖幾何。
 - 六軸及 vEst 原樣保留；runtime look 不完整、behavior 和 highlights 截斷、多個英文欄錯置；不改 runtime。`verify-info-card.py 0530` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0531 已交付
+
+- [0531 黃頭鶺鴒](https://drive.google.com/file/d/185dxaj0ODMbaBGgYfFHzrThz7bCMiwke/view)：141907 bytes，MD5 `3aef401b7c6e6e7029d776b6a7f77946`，SHA256 `75c0fc96d1b57e65dfc5d22d61fc25e24ec54e34a00ee23f8764b85e28265ec8`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/053600`：香港 I 類、稀少至不常見冬候及過境鳥，指名亞種雄繁殖羽黃頭腹、灰背和黑頸帶；香港多第一冬羽，與主圖不同。主圖及比較圖為 AI，非專家認證；頭頂略灰綠、頸帶過粗、腳趾不清。
+- BirdLife 2019 LC、增加，全球 200–500 萬成熟個體屬極初步低質量推算，需驗證。BirdLife 列香港迷鳥與 HKBWS 本地評估不同；國家地圖合併季節、非全境，香港缺獨立幾何。
+- runtime 文案截斷、錯置及異常 alias 已記錄不改；六軸及 vEst 原樣保留。`verify-info-card.py 0531` 通過（`errors: []`）。
