@@ -1,0 +1,224 @@
+{
+  "id": "0526",
+  "name": "家麻雀",
+  "scientificName": "Passer domesticus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2016 評定"
+  },
+  "illustrationTaxon": "Male Passer domesticus with grey crown, chestnut nape, pale cheek and black throat bib. AI approximate, black bib is broken into unrealistic streaks on breast.",
+  "featureCrops": [
+    [
+      0.68,
+      0.2,
+      0.89,
+      0.37
+    ],
+    [
+      0.73,
+      0.3,
+      0.91,
+      0.48
+    ],
+    [
+      0.45,
+      0.32,
+      0.71,
+      0.49
+    ],
+    [
+      0.8,
+      0.26,
+      0.96,
+      0.38
+    ]
+  ],
+  "featureLabels": [
+    "灰冠與栗後頸",
+    "淡頰與黑喉",
+    "褐背黑縱紋",
+    "粗短錐形嘴"
+  ],
+  "featureNotes": [
+    "雄鳥灰色前冠延至眼後，後頸栗色。",
+    "雄鳥具淡頰及黑喉，繁殖羽黑斑延至胸；此 AI 插圖把胸部黑斑畫成散紋，不宜作精確羽色參考。",
+    "上背及肩羽暖褐色，具粗黑縱紋。",
+    "粗短錐形嘴，用於取食種子等。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "家麻雀 雌鳥",
+      "scientificName": "Passer domesticus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同種雌鳥沒有雄鳥灰冠黑喉，色調較淡，具淡眉紋及褐色縱紋背。",
+      "portraitNote": "雌家麻雀，沿用 0523 AI 示意。"
+    },
+    {
+      "zh": "樹麻雀",
+      "scientificName": "Passer montanus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "樹麻雀雌雄相似，栗色冠、白頰有黑頰斑；家麻雀雄鳥灰前冠、無黑頰斑且黑喉斑更大。",
+      "portraitNote": "樹麻雀，AI 示意。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BLR",
+      "BEL",
+      "BTN",
+      "BIH",
+      "BGR",
+      "KHM",
+      "CHN",
+      "COD",
+      "HRV",
+      "CYP",
+      "CZE",
+      "DNK",
+      "EGY",
+      "ERI",
+      "EST",
+      "FIN",
+      "FRA",
+      "GMB",
+      "GEO",
+      "DEU",
+      "GRC",
+      "HUN",
+      "ISL",
+      "IND",
+      "IDN",
+      "IRN",
+      "IRQ",
+      "IRL",
+      "ISR",
+      "JOR",
+      "KAZ",
+      "KWT",
+      "KGZ",
+      "LAO",
+      "LVA",
+      "LBN",
+      "LBY",
+      "LTU",
+      "MDA",
+      "MNG",
+      "MNE",
+      "MAR",
+      "MMR",
+      "NPL",
+      "NLD",
+      "NGA",
+      "MKD",
+      "NOR",
+      "OMN",
+      "POL",
+      "PRT",
+      "QAT",
+      "ROU",
+      "RUS",
+      "SAU",
+      "SRB",
+      "SVK",
+      "SVN",
+      "SOM",
+      "SSD",
+      "ESP",
+      "LKA",
+      "SDN",
+      "SWE",
+      "CHE",
+      "SYR",
+      "TJK",
+      "THA",
+      "TUN",
+      "TKM",
+      "TUR",
+      "UKR",
+      "ARE",
+      "GBR",
+      "UZB",
+      "YEM"
+    ],
+    "note": "選取 BirdLife 列為原生現存的部分國家並按 Natural Earth 110m 填色，非全部原生或全球分佈；未顯示廣泛引入地，亦不表示國家全境均有。秘魯在 BirdLife 表中標原生但與廣泛引入資料相異，暫不填。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/052800",
+      "use": "香港第 I 類、罕有秋季過境鳥，十項紀錄始於 2012；雄鳥灰前冠延至眼後，黑喉斑較大、無黑頰斑；雌鳥淡眉、眼先較淡。全球分佈廣，許多地方由人引入。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/052700",
+      "use": "樹麻雀栗冠白頰黑頰斑、兩性相似，香港豐富留鳥。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港 2024 名錄家麻雀第 537 項，第 I 類。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/house-sparrow-passer-domesticus/details",
+      "use": "2016 LC，全球下降 suspected；2012 年 8.96 億至 13.1 億成熟個體估計質素差、依歐洲外推及有待驗證；Not a Migrant；全球大範圍引入。原生國家列表包括秘魯，與通常的引入分佈不一致，未填色。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Passer domesticus，雀形目麻雀科，speciesCode houspa。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 2.8、v 2.8、r 1、c 3、o 2.3；保留，英文 look 有可核對上背形態，雖中文有錯。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "中文雌鳥 look 藍色條紋不可信；callout 栗色頭容易誤導雄鳥鑑別。funFact 截斷，conservation 缺上下文。length 16 cm、weight 24–39.5 g。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 74.9、tail 57.2、tarsus 17.9、bill 13.5、mass 26.5 g。"
+    }
+  ],
+  "notes": [
+    "全球原生國家僅選部分，全球引入分佈未涵蓋；地圖是部分國家概覽不是全境。",
+    "雄鳥主圖胸部黑斑被 AI 畫成斑駁散紋，非準確參考；三張圖均為 AI、非等比例或專家認證。",
+    "雌家麻雀比較圖沿用 0523，樹麻雀新生成。",
+    "中文 look 與 callouts 有錯或易混淆；英文 look 可核對故保留六軸。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
