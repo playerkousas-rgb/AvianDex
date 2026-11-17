@@ -4410,3 +4410,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/056200`：香港 I 類秋季不常見遷徙、冬春稀少，過去冬季較多。BirdLife 2025 LC、全球數量及趨勢未知，HKBWS 舊頁稱全球穩定、本地減少；國家概覽非全境。
 - AI 圖非專家認證、非等比例；主圖胸帶不夠密、下腹橙色過重、足趾不可靠，小鵐胸紋或偏重。runtime v 含估算、部分多語欄位錯位，不改 runtime。validator `errors: []`；未改 UI、R2。
 - 下一張 0555。
+
+## 新批次 0501–0583：0555 已交付
+
+- [0555 白頭鵐](https://drive.google.com/file/d/1xnS4rAEQs5umrgC-fvrg_G0J6zhfZtJR/view)：139229 bytes，MD5 `bf252c1316d9f8d1e1369811f93bdd60`，SHA256 `a61125bcdf01a92c131479e4e7e201f4f6fc9df623155f17677b30c03f2ce547`；查重無結果，get_file 核驗 MIME、尺寸、父目錄及 hash。
+- HKBWS `0460/055900`：香港 I 類迷鳥，兩個自然紀錄、偶見籠逃；主圖繁殖雄羽。BirdLife 2025 LC、全球疑下降而數量未知，HKBWS 舊頁稱穩定；部分原生國家概覽非全境，意大利在 BirdLife 原生表但歐洲族群列區域滅絕。
+- AI 圖非專家認證、非等比例；主圖白頰偏小、栗面或過深、足趾不可靠；小鵐胸紋或偏重。runtime v 含體長估算、部分雙語欄位錯位，未改 runtime。validator `errors: []`；未改 UI、R2。
+- 下一張 0556。
