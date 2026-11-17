@@ -1,35 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Footprints, Backpack } from 'lucide-react';
+import { Footprints, Backpack } from 'lucide-react';
 import type { Lang } from '../lib/explorer';
 import type { GuideKind } from './FieldGuideModal';
 import { BALL_BASE, BALL_SIZE, BALL_ICON, BALL_RAIL_LEFT, BALL_LABEL } from './ballStyles';
 
-/**
- * 左側浮動工具球（觀鳥地圖 / 觀鳥禮儀 / 觀鳥裝備 / 語言）。
- *
- * 為甚麼要搬出來做浮動球？
- *   用戶的原話：「觀鳥地圖、禮儀和裝備可以像右方那 3 個球浮在左方方便按」。
- *
- *   原本這三個功能收在手機的漢堡選單裡面 —— 要點兩下（開選單、再揀），
- *   而且選單一開就蓋住整個列表。右邊的 AI 球（聽聲／拍照／精靈球）是
- *   一按即到，同樣重要的功能卻要挖兩層，很矛盾。
- *
- *   現在左右各一排球，中間留空：
- *     左：地圖、禮儀、裝備、語言
- *     右：聽聲、拍照、前往 BIRD-DEX 2
- *   在手機上（窄螢幕）兩排球都不會蓋到卡面中間，只在邊緣。
- *
- * 為甚麼是 3 個而不是 4 個？
- *   用戶後來修正：「語言不用變成球，左 3 右 3 平均點」。
- *   所以語言只留在頂欄那個「中 | EN」開關，不佔用球的額度；
- *   左邊剛好 3 個（地圖／禮儀／裝備），右邊 3 個（聽聲／拍照／精靈球），
- *   兩邊對稱，視覺上不會一邊重一邊輕。
- */
+/** 左側兩個圖鑑輔助工具球：觀鳥禮儀與觀鳥裝備。 */
 
 interface Props {
   lang: Lang;
-  onMap: () => void;
   onGuide: (kind: GuideKind) => void;
   /** 有 modal 打開時隱藏，避免疊在上面 */
   hidden?: boolean;
@@ -40,17 +19,10 @@ interface Props {
    用戶一眼就看到「兩邊功能球大小不一」。 */
 const BTN = `${BALL_BASE} ${BALL_SIZE}`;
 
-export const SideToolBalls: React.FC<Props> = ({ lang, onMap, onGuide, hidden }) => {
+export const SideToolBalls: React.FC<Props> = ({ lang, onGuide, hidden }) => {
   const t = (zh: string, en: string) => (lang === 'en' ? en : zh);
 
   const items = [
-    {
-      key: 'map',
-      label: t('觀鳥地圖', 'Map'),
-      Icon: MapPin,
-      cls: 'bg-gradient-to-br from-emerald-300 to-emerald-700 text-white',
-      onClick: onMap,
-    },
     {
       key: 'etiquette',
       label: t('觀鳥禮儀', 'Etiquette'),

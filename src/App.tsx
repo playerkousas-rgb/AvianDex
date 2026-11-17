@@ -7,8 +7,6 @@ import { PokeballIcon } from './components/PokeballIcon.tsx';
 import { TopBar } from './components/TopBar.tsx';
 import { UpdateToast } from './components/UpdateToast.tsx';
 import { BALL_BASE, BALL_SIZE, BALL_ICON, BALL_RAIL_RIGHT, BALL_LABEL } from './components/ballStyles';
-import { RecognitionResultModal, Candidate } from './components/RecognitionResultModal.tsx';
-import { MediaCapturePanel, MediaKind } from './components/MediaCapturePanel.tsx';
 import { BirdingMapModal } from './components/BirdingMapModal.tsx';
 import { CardLoadDiagnostics } from './components/CardLoadDiagnostics.tsx';
 import { ExplorerPanel } from './components/ExplorerPanel.tsx';
@@ -16,17 +14,15 @@ import { FieldGuideModal, type GuideKind } from './components/FieldGuideModal.ts
 import { useBirds } from './hooks/useBirds';
 import { useCardStats } from './hooks/useCardStats';
 import { getLoadedIds, resetAll, requestCard } from './lib/cardImage';
-import { APP_VERSION, CARDS_PER_PAGE, DEFAULT_SORT_MODE } from './config';
+import { APP_VERSION, BIRD_CAPTURE_APP_URL, CARDS_PER_PAGE, DEFAULT_SORT_MODE } from './config';
 import { sortBirds, searchBirds, type SortMode } from './lib/pokedexOrder';
 import { filterByFacets, searchIndex, emptyFacets, hasActiveFacets, type Facets, type Lang } from './lib/explorer';
 import { resolveBirdId } from './data/nameAliases';
-import { useBirdNetLocal } from './hooks/useBirdNetLocal';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Bird as BirdIcon,
   RefreshCw,
-  Mic,
-  Camera as CameraIcon,
+  MapPin,
   Search,
   Sparkles,
   Wifi,
@@ -41,10 +37,8 @@ import { Analytics } from '@vercel/analytics/react';
 
 export { APP_VERSION };
 
-// 捕精靈 App（BIRD-DEX 2）網址
-export const BIRDDEX2_URL = 'https://skw-birdex2.vercel.app';
-
-type AnalyzeMode = 'audio' | 'image';
+/** Local capture records received from the sibling BIRD-DEX app. */
+export const CAPTURE_UNLOCKS_KEY = 'aviandex.capture-unlocks.v1';
 
 function App() {
   const { birds, loading, error } = useBirds();
@@ -61,7 +55,6 @@ function App() {
   const [sortMode, setSortMode] = useState<SortMode>(DEFAULT_SORT_MODE);
   const cardStats = useCardStats();
 
-  const [globalCaptureKind, setGlobalCaptureKind] = useState<MediaKind | null>(null);
 
   // 介面語言：'zh' ＝ 全中文（香港繁體）；'en' ＝ 全英文。
   // 選擇會記住；卡面文案、搜尋排序、觀鳥禮儀／裝備都會跟住轉。
@@ -87,106 +80,10 @@ function App() {
 
   // 觀鳥禮儀 / 觀鳥裝備
   const [guideKind, setGuideKind] = useState<GuideKind | null>(null);
-  const [recogOpen, setRecogOpen] = useState(false);
-  const [recogLoading, setRecogLoading] = useState(false);
-
-  // 前端本地 BirdNET（聲音）引擎
-  const birdnet = useBirdNetLocal();
-  const [recogMode, setRecogMode] = useState<AnalyzeMode | null>(null);
-  const [recogError, setRecogError] = useState<string | null>(null);
-  const [recogCandidates, setRecogCandidates] = useState<Candidate[]>([]);
-
-  const analyzeMedia = useCallback(
-    async (file: File | Blob, mode: AnalyzeMode) => {
-      setRecogMode(mode);
-      setRecogError(null);
-      setRecogCandidates([]);
-      setRecogLoading(true);
-      setRecogOpen(true);
-
-      try {
-        let results: { label: string; score: number; scientific?: string }[] = [];
-
-        if (mode === 'audio') {
-          // ✅ 聲音：走前端本地 BirdNET（免費、不上傳、無 rate limit）
-          const r = await birdnet.analyze(file);
-          if (birdnet.error) throw new Error(birdnet.error);
-          results = r.map((x) => ({ label: x.label, score: x.score, scientific: x.scientific }));
-        } else {
-          // 圖片：維持原本後端 HF /api/analyze
-          const response = await fetch('/api/analyze', {
-            method: 'POST',
-            headers: {
-              'Content-Type': (file as File).type || 'image/jpeg',
-              'X-Media-Type': mode,
-            },
-            body: file,
-          });
-
-          const text = await response.text();
-          interface ApiPayload {
-            details?: string;
-            error?: string;
-            results?: { label: string; score: number; scientific?: string }[];
-          }
-          let payload: ApiPayload | null = null;
-          try { payload = JSON.parse(text) as ApiPayload; }
-          catch { throw new Error(`伺服器回傳非預期內容：${String(text).slice(0, 200)}`); }
-
-          if (!response.ok) {
-            throw new Error(payload?.details || payload?.error || `HTTP ${response.status}`);
-          }
-          results = payload?.results || [];
-        }
-
-        const candidates: Candidate[] = results.map((r) => {
-          // 名稱對映：俗名先試，對不上再試學名（BirdNET 同時提供兩者）
-          const id = resolveBirdId(r.label) || (r.scientific ? resolveBirdId(r.scientific) : undefined);
-          const idx = id ? birds.findIndex((b) => b.id === id) : -1;
-          return {
-            label: r.label,
-            score: r.score,
-            matchedIndex: idx >= 0 ? idx : null,
-            matchedBird: idx >= 0 ? birds[idx] : undefined,
-          };
-        });
-
-        setRecogCandidates(candidates);
-        setRecogLoading(false);
-
-        const top = candidates[0];
-        if (top && top.matchedIndex !== null && top.score >= 0.7) {
-          setTimeout(() => {
-            setSelectedBirdId(top.matchedBird?.id ?? null);
-            setRecogOpen(false);
-          }, 1200);
-        }
-      } catch (err: unknown) {
-        console.error('辨識失敗:', err);
-        const msg = err instanceof Error ? err.message : '未知錯誤';
-        setRecogError(msg);
-        setRecogLoading(false);
-      }
-    },
-    [birds, birdnet],
-  );
-
-  const analyzeAudio = useCallback((file: File | Blob) => {
-          const t = (file as File).type || '';
-    const mode: AnalyzeMode = t.startsWith('image/') ? 'image' : 'audio';
-    analyzeMedia(file, mode);
-  }, [analyzeMedia]);
-
-  // 打開「聽聲」面板時，背景預熱本地模型（下載 + 暖機），讓使用者錄完即用
-  useEffect(() => {
-    if (globalCaptureKind === 'audio') birdnet.prefetch();
-  }, [globalCaptureKind, birdnet]);
-
   // ============================================================
-  // 跨 App 深層連結（與「捕精靈 App / BIRD-DEX 2」共用同一套編號）
-  // 支援：?id=12 或 ?id=0012（編號，最可靠，兩邊共用）
-  //       ?search=珠頸斑鳩（中文名後備）
-  // 例：https://avian-dex.vercel.app/?id=12
+  // 跨 App 深層連結（與「捕捉 App / BIRD-DEX 3」共用同一套編號）
+  // 支援 BirdEx 3 回傳 ?unlock=0008；亦支援通用 ?id=12 / ?id=0012 與 ?search=中文名。
+  // 捕捉編號會記入本機，並直接開啟對應圖鑑鳥種。
   // ============================================================
   useEffect(() => {
     if (!birds.length) return;
@@ -194,7 +91,8 @@ function App() {
     try { params = new URLSearchParams(window.location.search); }
     catch { return; }
 
-    const rawId = params.get('id');
+    const rawUnlock = params.get('unlock');
+    const rawId = params.get('id') || rawUnlock;
     const rawSearch = params.get('search');
     if (!rawId && !rawSearch) return;
 
@@ -228,6 +126,17 @@ function App() {
     }
 
     if (idx >= 0) {
+      if (rawUnlock) {
+        const no = birds[idx].id;
+        try {
+          const old = JSON.parse(localStorage.getItem(CAPTURE_UNLOCKS_KEY) || '[]') as Array<{ no?: string; unlocked_at?: string; source?: string }>;
+          const records = Array.isArray(old) ? old : [];
+          if (!records.some((record) => record?.no === no)) {
+            records.push({ no, unlocked_at: new Date().toISOString(), source: 'birddex3' });
+            localStorage.setItem(CAPTURE_UNLOCKS_KEY, JSON.stringify(records));
+          }
+        } catch { /* private mode / malformed prior value: still navigate to the species */ }
+      }
       // 深層連結：birds 是異步載入的，只能在 effect 中、資料就緒後套用網址參數
       // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional: apply ?id=/?search= after async data load
       setIsOpened(true);        // 跳過開機畫面，直接進入
@@ -238,6 +147,7 @@ function App() {
     try {
       const url = new URL(window.location.href);
       url.searchParams.delete('id');
+      url.searchParams.delete('unlock');
       url.searchParams.delete('search');
       window.history.replaceState({}, '', url.pathname + url.search + url.hash);
     } catch { /* ignore URL errors */ }
@@ -245,10 +155,10 @@ function App() {
 
   useEffect(() => {
     const anyModalOpen =
-      selectedBirdId !== null || showMap || recogOpen || !!globalCaptureKind || !!guideKind;
+      selectedBirdId !== null || showMap || !!guideKind;
     document.body.style.overflow = anyModalOpen ? 'hidden' : 'unset';
     return () => { document.body.style.overflow = 'unset'; };
-  }, [selectedBirdId, showMap, recogOpen, globalCaptureKind, guideKind]);
+  }, [selectedBirdId, showMap, guideKind]);
 
   const candidateBirds = useMemo(() => {
     let base = searchBirds(birds, query);
@@ -649,42 +559,24 @@ function App() {
 
         <div className={BALL_RAIL_RIGHT}>
           <button
-            onClick={() => setGlobalCaptureKind('image')}
-            title={L('看圖認雀', 'Identify from a photo')}
-            className={`${BALL_BASE} ${BALL_SIZE} bg-gradient-to-br from-fuchsia-400 to-fuchsia-700`}
+            onClick={() => setShowMap(true)}
+            title={L('觀鳥地圖', 'Birding map')}
+            aria-label={L('觀鳥地圖', 'Birding map')}
+            className={`${BALL_BASE} ${BALL_SIZE} bg-gradient-to-br from-emerald-300 to-emerald-700 text-white`}
           >
-            <CameraIcon className={`${BALL_ICON} text-white drop-shadow-[0_2px_0_rgba(0,0,0,0.5)]`} strokeWidth={2.6} />
-            <span className={BALL_LABEL('right')}>
-              {L('看圖認雀', 'Photo ID')}
-            </span>
-            <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-[8px] font-black px-1 rounded border border-black">
-              AI
-            </span>
+            <MapPin className={BALL_ICON} strokeWidth={2.6} />
+            <span className={BALL_LABEL('right')}>{L('觀鳥地圖', 'Map')}</span>
           </button>
+          {/* 精靈球：跳轉去 BIRD-DEX 3（捕捉 App） */}
           <button
-            onClick={() => setGlobalCaptureKind('audio')}
-            title={L('聽聲認雀', 'Identify from a sound')}
-            className={`${BALL_BASE} ${BALL_SIZE} bg-gradient-to-br from-cyan-300 to-cyan-700`}
-          >
-            <Mic className={`${BALL_ICON} text-white drop-shadow-[0_2px_0_rgba(0,0,0,0.5)]`} strokeWidth={2.6} />
-            <span className={BALL_LABEL('right')}>
-              {L('聽聲認雀', 'Sound ID')}
-            </span>
-            <span className="absolute -top-1 -right-1 bg-yellow-400 text-black text-[8px] font-black px-1 rounded border border-black">
-              AI
-            </span>
-          </button>
-
-          {/* 精靈球：跳轉去 BIRD-DEX 2（捕精靈 App） */}
-          <button
-            onClick={() => window.open(BIRDDEX2_URL, '_blank')}
-            title="前往 BIRD-DEX 2 捕捉精靈"
-            aria-label="前往 BIRD-DEX 2 捕捉精靈"
+            onClick={() => window.open(BIRD_CAPTURE_APP_URL, '_blank')}
+            title="前往 BIRD-DEX 3 捕捉精靈"
+            aria-label="前往 BIRD-DEX 3 捕捉精靈"
             className={`${BALL_BASE} ${BALL_SIZE} overflow-hidden bg-white`}
           >
             <PokeballIcon className="w-full h-full block" />
             <span className={BALL_LABEL('right')}>
-              去 BIRD-DEX 2 捕捉精靈
+              去 BIRD-DEX 3 捕捉精靈
             </span>
           </button>
         </div>
@@ -694,18 +586,16 @@ function App() {
             <p className="text-yellow-300 font-black tracking-widest mb-1">► CREDITS & DATA SOURCES ({APP_VERSION})</p>
             <p>分類權威：eBird / Clements Checklist（Cornell Lab of Ornithology）</p>
             <p>科學數據：Cornell Lab · eBird · Macaulay Library · Xeno-canto</p>
-            <p>AI 引擎：Hugging Face (BirdSet) · Nyckel · BirdNET</p>
             <p className="text-white/30 mt-1">© Scout System</p>
           </div>
         </footer>
       </div>
 
-      {/* 左邊浮動工具球：地圖／禮儀／裝備／語言（右邊三個 AI 球保持不變） */}
+      {/* 圖鑑工具球：左側禮儀／裝備；右側地圖／前往 BIRD-DEX 3。 */}
       <SideToolBalls
         lang={lang}
-        onMap={() => setShowMap(true)}
         onGuide={(k) => setGuideKind(k)}
-        hidden={selectedBirdId !== null || showMap || recogOpen || !!globalCaptureKind || !!guideKind}
+        hidden={selectedBirdId !== null || showMap || !!guideKind}
       />
 
       {/* 有新版本時的頂部橫幅（由 service worker 偵測，用戶按才換版） */}
@@ -719,25 +609,8 @@ function App() {
         initialIndex={dexIndex}
         isOpen={selectedBirdId !== null}
         onClose={() => setSelectedBirdId(null)}
-        onAnalyze={analyzeAudio}
-        onAnalyzeMedia={analyzeMedia}
         onOpenGuide={(k) => setGuideKind(k)}
         onOpenMap={() => setShowMap(true)}
-      />
-
-      <RecognitionResultModal
-        isOpen={recogOpen}
-        loading={recogLoading}
-        warming={birdnet.isWarming}
-        downloadProgress={birdnet.progress}
-        mode={recogMode}
-        error={recogError}
-        candidates={recogCandidates}
-        onClose={() => setRecogOpen(false)}
-        onPick={(idx) => {
-          setSelectedBirdId(birds[idx]?.id ?? null);
-          setRecogOpen(false);
-        }}
       />
 
       <BirdingMapModal isOpen={showMap} onClose={() => setShowMap(false)} />
@@ -749,15 +622,6 @@ function App() {
         onClose={() => setGuideKind(null)}
         onSwitchKind={(k) => setGuideKind(k)}
       />
-
-      {globalCaptureKind && (
-        <MediaCapturePanel
-          open={!!globalCaptureKind}
-          kind={globalCaptureKind}
-          onClose={() => setGlobalCaptureKind(null)}
-          onCapture={(file, kind) => analyzeMedia(file, kind)}
-        />
-      )}
 
       <Analytics />
     </>

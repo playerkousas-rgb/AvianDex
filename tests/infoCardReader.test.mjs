@@ -63,7 +63,7 @@ test('radar uses the same score source as the card, with readable live labels an
   assert.equal(render(InfoCardScores, { id: 'missing', lang: 'zh' }), '');
 });
 
-test('unknown legacy layouts are never guessed; unmade cards have artwork only', () => {
+test('unknown legacy layouts are never guessed; 0201+ slim cards split after successful load', () => {
   assert.equal(infoCardLayout('1'), 'slim');
   assert.equal(localInfoCardUrl('0001'), undefined, 'uploaded 0001 must load from R2, not a local demo');
   assert.deepEqual(mobileCardPages('0001').map(p => p.key), ['artwork', 'features', 'scores', 'distribution', 'similar']);
@@ -75,10 +75,10 @@ test('unknown legacy layouts are never guessed; unmade cards have artwork only',
   /* 0040 已上載 R2 並已登記 slim：手機照樣切五頁，不再只給一張完整卡。 */
   assert.deepEqual(mobileCardPages('0040').map(p => p.key), ['artwork', 'features', 'scores', 'distribution', 'similar']);
   assert.deepEqual(mobileCardPages('0040', true).map(p => p.key), ['artwork', 'features', 'scores', 'distribution', 'similar']);
-  /* 未登記的卡（例如日後新增、infoCards.json 未更新的編號）仍可翻：
-     讀到圖就有「完整資訊卡」一頁，讀不到就只有插畫，不會翻出空頁。 */
-  assert.deepEqual(mobileCardPages('0500').map(p => p.key), ['artwork']);
-  assert.deepEqual(mobileCardPages('0500', true).map(p => p.key), ['artwork', 'original']);
+  /* 201+ slim 卡未登記 metadata 時，讀到圖也要切成四個資訊區，而非整張長卡。 */
+  assert.deepEqual(mobileCardPages('0201').map(p => p.key), ['artwork']);
+  assert.deepEqual(mobileCardPages('0201', true).map(p => p.key), ['artwork', 'features', 'scores', 'distribution', 'similar']);
+  assert.deepEqual(mobileCardPages('0200').map(p => p.key), ['artwork', 'features', 'scores', 'distribution', 'similar']);
 });
 
 test('the whole delivered range 0001–0120 is registered slim, so every page is cut', () => {
@@ -230,5 +230,5 @@ test('welcome has only the AvianDex boot action; in-device BIRD-DEX ball remains
   assert.equal(source.includes('window.open'), false);
   assert.equal(source.includes('skw-birdex2'), false);
   const device = readFileSync(path.join(root, 'src/components/PokedexDevice.tsx'), 'utf8');
-  assert.ok(device.includes('前往 BIRD-DEX 2 捕捉精靈'));
+  assert.ok(device.includes('前往 BIRD-DEX 3 捕捉精靈'));
 });
