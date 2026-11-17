@@ -4309,3 +4309,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `species/0440/054200`：香港 I 類常見冬候及過境；橄欖背、鮮明眉及耳後淡暗斑。AI 主圖耳後暗斑不清、背紋可能偏重，腳趾不可靠；比較圖亦非專家認證、非等比例。
 - BirdLife 2025 LC、全球數量及趨勢未知；HKBWS 較舊頁面稱穩定。原生國家概覽非全境，香港無獨立底圖幾何，來源未確定的阿富汗不填。
 - runtime 污染註記與欄位錯置已記錄不改，六軸保留。`verify-info-card.py 0538` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0539 已交付
+
+- [0539 北鷚](https://drive.google.com/file/d/1eBMMkcgmBj72b6nl_GE6DscdzXLW2j3j/view)：142836 bytes，MD5 `50820837e531ef97f42ea893ecdcca92`，SHA256 `a38497e1bb28000f4ecf1d14c2f95d3bc1a00b806c559c70aab469278690fb07`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/054300`：香港 I 類稀少過境，春較秋多；背側黑白線、白翼斑、粉淡喙和胸脅粗紋。三圖均 AI 示意、非等比例非專家認證；主圖後脅紋不足，初級飛羽突出不清，腳趾不可靠。
+- BirdLife 2018 LC、懷疑穩定、數量未知，香港列迷鳥與 HKBWS 本地評估不同；原生國家概覽合併季節非全境。runtime 跨物種 callout 與重複別名記錄不改，六軸保留。`verify-info-card.py 0539` 通過（`errors: []`）。
