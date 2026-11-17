@@ -4233,3 +4233,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `species/0440/053300`：香港 2024 名錄 #542、I 類，稀少秋季過境、冬春罕見；橄欖灰上體、淡眉、雙翼斑，淡胸深色倒三角與深色胸側，身尾左右擺動。AI 主圖把胸紋畫成兩條完整黑環，與來源有別，不可用作精確羽紋參考；灰鶺鴒及白鶺鴒比較圖亦為 AI 近似示意、未經專家認證。
 - BirdLife 2024 LC、成熟數未知、全球疑似下降；樹覆蓋十年損失 9.8%，種群減 1–19% 為謹慎推測而非直接計數。HKBWS 較早記趨勢未知，並列來源。全球完全遷徙；國家概覽合併繁殖及越冬地、非全境；新加坡因底圖無幾何未填色。
 - Runtime 六軸及 vEst 保留；中文 range 空、diet 及 highlights 截斷，length／weight 空；AVONET mass 16.4 g。`verify-info-card.py 0527` 通過（`errors: []`）；未改 runtime、UI 或 R2。
+
+## 新批次 0501–0583：0528 已交付
+
+- [0528 灰鶺鴒](https://drive.google.com/file/d/1qn7usB8w6Bxe1oJpQ_Z_JmNpzLErhVJm/view)：141747 bytes，MD5 `8c6ad503ec76474163a4dc5b16b28ea6`，SHA256 `b2cc53dfbfeb28d1c401c3e7e2085460fed778945013498233114f100a9c1b2a`；查重無結果，`get_file` 確認父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/053700`：香港 2024 名錄 #546、I 類，常見冬候鳥及過境鳥，常近濕地；灰上體、黃腰及長尾，繁殖雄鳥黑喉白邊。夏季曾有可能繁殖紀錄，但沒有明確證據，不能說已確定繁殖。
+- BirdLife 2025 LC、全球穩定，成熟個體估計 1,100–2,400 萬、Full Migrant。世界地圖只選部分原生現存地區，合併繁殖、非繁殖等季節，非全境或完整全球範圍。三張插圖沿用 0527 AI 示意；山鶺鴒比較圖胸紋不精確，非專家認證。
+- 六軸及 vEst 照 runtime 保留；range 限單亞種且截斷、funFact 黃色範圍敘述有誤、conservation 誤載繁殖內容等問題已記錄，不改 runtime。`verify-info-card.py 0528` 通過（`errors: []`）。
