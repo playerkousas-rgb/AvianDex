@@ -4247,3 +4247,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `species/0440/053400`：香港 2024 名錄 #543、I 類，偶至；唯一紀錄為 2019 年 3 月 28 日至 4 月 13 日塱洲的白頭型 *leucocephala* 雄鳥。主圖以此亞種為原型，指名 *flava* 及東黃鶺鴒 *macronyx* 作比較；三圖均為 AI 示意、非專家認證，羽況及亞種相似，須綜合聲音及其他特徵鑑別。
 - BirdLife 2018 LC、全球下降、成熟個體 6,000 萬至約 1.1 億，Full Migrant；地圖僅選部分原生現存國家，合併不同季節、非全境及非完整分佈。
 - 六軸及 vEst 原樣保留；runtime look 為截斷混合型描述而非香港亞種，behavior、英文 breeding／voice 錯置，已記錄不修改。`verify-info-card.py 0529` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0530 已交付
+
+- [0530 東黃鶺鴒](https://drive.google.com/file/d/1Ft96NJMslCb553AqF9_7BGteKVyg1122/view)：140079 bytes，MD5 `b5b13809f927d79f222a6ebcb08705dd`，SHA256 `ac43d8aad0119de25bde522396f6da9d2c96ac8dcc78e6e72f816a537149b6b6`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/053510`：香港常見的 *taivana* 過境及冬候鳥；繁殖雄鳥灰綠頭背、寬長黃眉和暗耳羽。AI 主圖是此羽型近似示意，黃眉後端不夠方且腳趾與草重疊；西黃 *leucocephala* 和灰鶺鴒比較圖亦為 AI，非專家認證，不應僅憑頭紋辨種。
+- BirdLife 2019 LC、懷疑下降；5,000 萬至 1.5 億成熟個體為初步低質素估算。地圖合併季節、不表示全境，香港、新加坡等無獨立底圖幾何。
+- 六軸及 vEst 原樣保留；runtime look 不完整、behavior 和 highlights 截斷、多個英文欄錯置；不改 runtime。`verify-info-card.py 0530` 通過（`errors: []`）。
