@@ -1,0 +1,160 @@
+{
+  "id": "0567",
+  "name": "栗鵐",
+  "scientificName": "Emberiza rutila",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Emberiza rutila, AI approximation of breeding male.",
+  "featureCrops": [
+    [
+      0.13,
+      0.24,
+      0.3,
+      0.34
+    ],
+    [
+      0.13,
+      0.32,
+      0.29,
+      0.42
+    ],
+    [
+      0.29,
+      0.37,
+      0.47,
+      0.47
+    ],
+    [
+      0.23,
+      0.45,
+      0.43,
+      0.57
+    ]
+  ],
+  "featureLabels": [
+    "栗色頭部",
+    "栗色喉胸",
+    "栗色覆羽",
+    "黃色胸腹"
+  ],
+  "featureNotes": [
+    "繁殖雄鳥頭部鮮栗色。",
+    "繁殖雄鳥喉及上胸栗色，非繁殖羽較暗。",
+    "雄鳥背及翼覆羽呈栗色。",
+    "下胸及腹部黃色，脅具模糊灰紋。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "黃胸鵐",
+      "scientificName": "Emberiza aureola",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄黃胸鵐黑面黑喉且有白色翼斑；雌栗鵐較暗、頭紋不及雌黃胸鵐鮮明。",
+      "portraitNote": "AI 繁殖雄示意，白翼斑過大、黑喉與栗胸帶結構不準。"
+    },
+    {
+      "zh": "灰頭鵐",
+      "scientificName": "Emberiza spodocephala",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄灰頭鵐頭喉灰色、眼先及頦暗色，不似雄栗鵐栗頭喉。",
+      "portraitNote": "AI 繁殖雄示意，灰頭偏藍、黑色眼先及頦過小。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IND",
+      "JPN",
+      "LAO",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PRK",
+      "PAK",
+      "RUS",
+      "KOR",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 2025 extant native-country table all seasons, Russia rows merged; Hong Kong not separately listed but part of China geometry. Country overview not whole-country occupancy. Breeding EOO 5.34m and nonbreeding 2.89m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056800",
+      "use": "香港 I 類秋季常見、春稀少過境、冬罕見；雄栗頭喉胸背與黃腹，各羽色栗腰及尾下覆羽。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056700",
+      "use": "黃胸鵐雄黑面、黑喉、白翼帶。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057200",
+      "use": "灰頭鵐雄灰頭與黑眼先及頦。"
+    },
+    {
+      "url": "https://ebird.org/species/chebun1",
+      "use": "雄栗色上體黃腹，雌與黃胸鵐雌相似；eBird Schoeniclus rutilus。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chestnut-bunting-emberiza-rutila/details",
+      "use": "2025 LC、數量趨勢未知；原生國家表。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza rutila、鵐科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 2.8、v 2.8（vEst）、r 4.8、c 1.2、o 2.7。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 取雌羽描述；部分欄位錯位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 74.8、tail 56.9、tarsus 18.9、bill 12 mm、mass 17.5 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類秋常見、春稀少過境及罕見冬候鳥；主圖繁殖雄，雌幼色暗且頭紋不同。",
+    "AI 非專家認證、非等比例；栗色尾下覆羽被錯畫為黃色、脅紋較深，足趾不可靠；比較圖局限見 spec，不能以雄圖直接判別雌鳥。",
+    "BirdLife 2025 LC、全球數量及趨勢未知；HKBWS 舊資料指穩定。BirdLife 國家表不另列香港，其地形含於中國底圖；地圖非全境。",
+    "runtime v 為估算、look 為雌羽，部分文案錯位；照錄分數不改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
