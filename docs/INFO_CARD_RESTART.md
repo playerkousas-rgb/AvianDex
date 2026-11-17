@@ -4438,3 +4438,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/056600` 香港 I 類稀少過境、秋較多；圖為成雄。BirdLife 2018 LC、數量未知、疑穩定；BirdLife 整體列非遷徙，HKBWS 指指名亞種遷徙、elegantula 大致留鳥；地圖原生國家概覽非全境。
 - AI 示意非專家認證、非等比例；胸斑與喉之間淡環或過寬、脅紋偏誇張，足趾不可靠；比較鳥細節限制見 spec。runtime v 含體長估算；look 只具尾羽形態仍保留 a，其他欄位錯位；未改 runtime/UI/R2。validator `errors: []`。
 - 下一張 0559。
+
+### 0559 待製作：紅頸葦鵐（研究中，未交付）
+
+- runtime `Emberiza yessoensis`，a 3.3、v 2.7（vEst）、r 1、o 2.3，i／c 缺；英文 look 有冬季形態描述；r 1 與香港偶發情況不協調，保留並說明。AVONET wing 66.6、tail 60.2、tarsus 19.3、bill 11.1 mm、mass 13.5 g。
+- HKBWS https://avifauna.hkbws.org.hk/species/0460/057400 ：I 類秋季偶發，1992、2014、2020 三筆；首冬暖紅褐、沙色後頸、暗色冠、淡粉嘴及赭腰。BirdLife https://datazone.birdlife.org/species/factsheet/ochre-rumped-bunting-emberiza-yessoensis/details ：2020 NT C1，6000–15000 成熟個體、疑下降；原生 CHN JPN MNG PRK RUS KOR，香港列迷鳥不填；EOO 繁殖 214 萬／非繁殖 201 萬 km²。eBird https://ebird.org/species/ocrbun1 強調繁殖雄鳥全黑頭、各羽齡赭腰。
+- 本回合已達圖片生成上限；尚未生成本種圖片、未設 spec、渲染或上載。下一輪按實際物種重做素材；繁殖雄鳥全黑頭，勿套用普通蘆鵐的白鬚紋；可優先畫 HKBWS 有詳述的首冬雌鳥。需補比較鳥、核驗地圖及分數、審圖、Drive 查重／上載與獨立核驗。
