@@ -157,12 +157,12 @@ export const RecognitionResultModal: React.FC<Props> = ({
                     return (
                       <button
                         key={i}
-                        onClick={() => inDex && onPick(c.matchedIndex!)}
-                        disabled={!inDex}
+                        onClick={() => { if (inDex) onPick(c.matchedIndex!); }}
+                        aria-label={inDex ? `開啟圖鑑：${c.matchedBird?.name || c.label}` : `辨識結果：${c.label}，本地圖鑑未收錄`}
                         className={`group text-left p-3 rounded-xl border-[3px] transition-all flex items-center gap-3 ${
                           inDex
                             ? 'bg-white hover:bg-yellow-100 border-gray-900 active:translate-y-0.5 cursor-pointer shadow-[0_3px_0_rgba(0,0,0,0.6)] active:shadow-none'
-                            : 'bg-gray-300 border-gray-500 cursor-not-allowed opacity-60'
+                            : 'bg-gray-100 border-gray-500 cursor-default'
                         }`}
                       >
                         {/* 排名標籤 */}

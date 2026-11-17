@@ -23,6 +23,12 @@ export type MobileCardPage = typeof MOBILE_CARD_PAGES[number]['key'] | 'original
  */
 export function mobileCardPages(id: string, infoAvailable = false) {
   if (!canFlipInfoCard(id)) return [MOBILE_CARD_PAGES[0]];
+  // 0201 onward are composed with the slim template; once the remote card is verified
+  // loaded, expose its four information sections as separate mobile pages just like 0001–0200.
+  const numericId = Number.parseInt(id, 10);
+  if (infoAvailable && Number.isFinite(numericId) && numericId >= 201) {
+    return [...MOBILE_CARD_PAGES];
+  }
   if (hasInfoCard(id) && infoCardLayout(id) === 'slim' && hasFeatureCrops(id)) {
     return [...MOBILE_CARD_PAGES];
   }

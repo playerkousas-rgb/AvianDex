@@ -11,6 +11,9 @@ import infoCardsData from './data/infoCards.json';
 /** 雙版號 V1：檔名／頁面標題／APP_VERSION／頁尾 必須一致 */
 export const APP_VERSION = 'v1.9.0';
 
+/** The separate capture-game app; AvianDex itself remains the authoritative field guide. */
+export const BIRD_CAPTURE_APP_URL = 'https://birddex3.vercel.app';
+
 /**
  * 圖卡（鳥卡）來源 —— Cloudflare R2 公開網域。
  * 可用環境變數 VITE_R2_BASE_URL 覆寫（例如日後綁自訂網域 cdn.xxx.com）。

@@ -44,7 +44,7 @@ test('浮動球：尺寸符合觸控與滑鼠可達性（手機 48px、桌面 56
   /* 48px / 56px 都大過 WCAG 2.5.5 要求的 44px */
 });
 
-test('浮動球：左右兩排位置對稱，球數都是 3', () => {
+test('浮動球：左右兩排位置對稱，左側保留兩個輔助工具球', () => {
   const railLeft = styles.match(/BALL_RAIL_LEFT = `\$\{BALL_RAIL\} ([^`]+)`/);
   const railRight = styles.match(/BALL_RAIL_RIGHT = `\$\{BALL_RAIL\} ([^`]+)`/);
   assert.ok(railLeft && railRight, '應有左右兩條 rail 定義');
@@ -52,9 +52,9 @@ test('浮動球：左右兩排位置對稱，球數都是 3', () => {
   assert.ok(railLeft[1].includes('left-2'), '左排應貼左邊');
   assert.ok(railRight[1].includes('right-2'), '右排應貼右邊');
 
-  /* 左 3 個（地圖／禮儀／裝備） */
+  /* 地圖已移出浮動球列，左側只保留禮儀與裝備兩個工具球。 */
   const leftItems = (left.match(/key: '/g) || []).length;
-  assert.equal(leftItems, 3, `左排應 3 球，實際 ${leftItems}`);
+  assert.equal(leftItems, 2, `左排應 2 球，實際 ${leftItems}`);
 });
 
 test('安裝鍵：在頂欄，不再浮在右邊球上方（用戶第 2 點）', () => {
