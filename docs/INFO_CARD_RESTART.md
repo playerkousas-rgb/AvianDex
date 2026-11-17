@@ -4315,3 +4315,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0539 北鷚](https://drive.google.com/file/d/1eBMMkcgmBj72b6nl_GE6DscdzXLW2j3j/view)：142836 bytes，MD5 `50820837e531ef97f42ea893ecdcca92`，SHA256 `a38497e1bb28000f4ecf1d14c2f95d3bc1a00b806c559c70aab469278690fb07`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
 - HKBWS `species/0440/054300`：香港 I 類稀少過境，春較秋多；背側黑白線、白翼斑、粉淡喙和胸脅粗紋。三圖均 AI 示意、非等比例非專家認證；主圖後脅紋不足，初級飛羽突出不清，腳趾不可靠。
 - BirdLife 2018 LC、懷疑穩定、數量未知，香港列迷鳥與 HKBWS 本地評估不同；原生國家概覽合併季節非全境。runtime 跨物種 callout 與重複別名記錄不改，六軸保留。`verify-info-card.py 0539` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0540 已交付
+
+- [0540 紅喉鷚](https://drive.google.com/file/d/1xfE50Ki75yLm_gWg9HzMuATNB2xV0Yoo/view)：147123 bytes，MD5 `f29e4541c021e7f46f215884c7e86c6d`，SHA256 `349ef1c04f0e8d2db0a2f5643fc0bbc8776b0988ccbddb358608ea8d712b6382`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/054500`：香港 I 類常見過境及冬候，主圖為繁殖羽、非繁殖羽不紅喉。三圖 AI 示意、非等比例非專家認證；主圖脅紋偏淡、翼紋強烈、腳趾不可靠，初級飛羽突出難判。
+- BirdLife 2019 LC、估計 200 萬成熟個體、懷疑穩定；原生國家概覽合併季節非全境，略去細小地區。runtime 同名重複未改，六軸保留。`verify-info-card.py 0540` 通過（`errors: []`）。

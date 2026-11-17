@@ -1,0 +1,237 @@
+{
+  "id": "0540",
+  "name": "紅喉鷚",
+  "scientificName": "Anthus cervinus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2019 評定"
+  },
+  "illustrationTaxon": "Anthus cervinus, AI approximation of breeding plumage.",
+  "featureCrops": [
+    [
+      0.08,
+      0.21,
+      0.3,
+      0.34
+    ],
+    [
+      0.14,
+      0.29,
+      0.29,
+      0.44
+    ],
+    [
+      0.32,
+      0.29,
+      0.56,
+      0.41
+    ],
+    [
+      0.25,
+      0.4,
+      0.49,
+      0.54
+    ]
+  ],
+  "featureLabels": [
+    "細喙黃下嘴",
+    "繁殖羽紅喉",
+    "褐背粗紋淡線",
+    "兩脅深色縱紋"
+  ],
+  "featureNotes": [
+    "喙較細小，下喙及上嘴切緣帶黃。",
+    "繁殖羽頭胸呈粉磚紅；非繁殖羽不紅。",
+    "頭頂至尾上覆羽有暗紋，背側有淡線。",
+    "胸脅有暗色縱紋；插圖脅紋較淡。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "粉紅胸鷚",
+      "scientificName": "Anthus roseatus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "粉紅胸鷚繁殖羽胸泛粉紅但喉色較淡；紅喉鷚繁殖羽臉喉胸偏磚紅，且背有粗紋。",
+      "portraitNote": "粉紅胸鷚 AI 示意，非專家認證。"
+    },
+    {
+      "zh": "北鷚",
+      "scientificName": "Anthus gustavi",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "北鷚喙較大，背黑白線及翼斑顯著，初級飛羽突出；紅喉鷚細喙且突出較少。",
+      "portraitNote": "北鷚 AI 示意，後脅紋不足及初級飛羽突出不清。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "DZA",
+      "AUT",
+      "AZE",
+      "BGD",
+      "BLR",
+      "BEN",
+      "BTN",
+      "BRN",
+      "BGR",
+      "BFA",
+      "BDI",
+      "KHM",
+      "CMR",
+      "CAN",
+      "TCD",
+      "CHN",
+      "COD",
+      "CZE",
+      "CIV",
+      "DNK",
+      "DJI",
+      "EGY",
+      "ERI",
+      "ETH",
+      "FIN",
+      "FRA",
+      "GMB",
+      "DEU",
+      "GHA",
+      "GRC",
+      "IND",
+      "IDN",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "ITA",
+      "JPN",
+      "JOR",
+      "KAZ",
+      "KEN",
+      "KWT",
+      "LAO",
+      "LVA",
+      "LBN",
+      "LBR",
+      "LBY",
+      "MYS",
+      "MLI",
+      "MRT",
+      "MEX",
+      "MNG",
+      "MNE",
+      "MAR",
+      "MMR",
+      "NPL",
+      "NGA",
+      "PRK",
+      "NOR",
+      "OMN",
+      "PAK",
+      "PHL",
+      "POL",
+      "PRT",
+      "QAT",
+      "ROU",
+      "RUS",
+      "RWA",
+      "SAU",
+      "SEN",
+      "SRB",
+      "SLE",
+      "SVK",
+      "SOM",
+      "KOR",
+      "ESP",
+      "SDN",
+      "SWE",
+      "SYR",
+      "TWN",
+      "TJK",
+      "TZA",
+      "THA",
+      "TGO",
+      "TUN",
+      "TKM",
+      "TUR",
+      "USA",
+      "UGA",
+      "UKR",
+      "ARE",
+      "UZB",
+      "VNM",
+      "YEM",
+      "ZMB"
+    ],
+    "note": "Partial NATIVE-country overview only; combines breeding, non-breeding, passage and season unknown. Omitted small territories and geometries. Whole-country shading is not occupancy. BirdLife EOO breeding 540,000 and nonbreeding 77.4 million km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054500",
+      "use": "香港 I 類常見過境與冬候；繁殖羽粉磚紅臉胸，細喙、背側淡線、暗紋及短初級飛羽突出。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054400",
+      "use": "粉紅胸鷚辨識。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054300",
+      "use": "北鷚喙、翼斑及初級飛羽。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/red-throated-pipit-anthus-cervinus/details",
+      "use": "2019 LC，200 萬成熟個體估算、懷疑穩定；原生國家資料及 EOO。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Anthus cervinus，speciesCode retpip。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 4.3、v 3、r 4.8、c 3、o 3.4、vEst 1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 提及背紋；funFact 重複同名，不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET measurement data。"
+    }
+  ],
+  "notes": [
+    "香港常見過境與冬候。主圖為繁殖羽；非繁殖羽不具紅喉。",
+    "三圖 AI 示意非專家認證、非等比例；主圖脅紋不夠深、翼紋強烈、腳趾不可靠，初級飛羽突出難判。",
+    "原生國家概覽合併季節非全境，未含小地區。",
+    "runtime 同名重複，不改；六軸保留。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
