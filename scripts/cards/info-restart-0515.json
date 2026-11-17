@@ -1,0 +1,161 @@
+{
+  "id": "0515",
+  "name": "東亞石䳭",
+  "scientificName": "Saxicola stejnegeri",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2020 評估"
+  },
+  "illustrationTaxon": "Adult male Amur Stonechat Saxicola stejnegeri in winter plumage, a small compact chat perched upright on a dry weedy stem in open grassland. Head, face, chin and throat solid black; upperparts dark brownish-black with paler buff fringes; a bold white patch on each side of the neck forming a half-collar; white wing patch across the coverts; breast warm buffish-orange; belly and undertail coverts clean white; rump white. Short black bill, black legs, short tail.",
+  "featureCrops": [
+    [
+      0.38,
+      0.2,
+      0.55,
+      0.34
+    ],
+    [
+      0.5,
+      0.23,
+      0.63,
+      0.33
+    ],
+    [
+      0.42,
+      0.31,
+      0.63,
+      0.5
+    ],
+    [
+      0.54,
+      0.33,
+      0.68,
+      0.5
+    ]
+  ],
+  "featureLabels": [
+    "黑色頭與喉",
+    "白色頸環",
+    "橙褐胸與白腹",
+    "白翼斑"
+  ],
+  "featureNotes": [
+    "**頭、臉、頦與喉是一整片黑色**，在淡褐的草原背景上非常醒目；繁殖羽最黑，換羽後會因羽毛邊緣磨損而更深。雌鳥與第一齡鳥完全沒有黑頭，頭頂是褐色並帶不明顯的深色縱紋，這是秋冬現場最常要分辨的一步。為插圖局部。",
+    "**頸側一大塊白色，左右各一，形成斷開的「半頸環」**，把黑色的頭與橙褐的胸部隔開。HKBWS 描述成鳥雄鳥「頸側白色」，這點在野外比翼上的白斑更可靠；**腰部亦是白色**，飛行或翹尾時最明顯。為插圖局部。",
+    "**胸部是溫暖的橙褐色（buffish-orange）**，向下過渡到**乾淨的白色腹部與尾下覆羽**，中間沒有橫斑。雌鳥與第一齡鳥的胸帶橙褐但較淡、腹部帶褐色調，且喉部是淡色而非黑色；換羽中的雄鳥會同時出現黑頭與褐色羽緣，形成「半黑半褐」的過渡模樣。為插圖局部。",
+    "**覆羽上有一塊白色翼斑**——HKBWS 特別註明這個白斑**不一定看得到**（停棲姿態、翼收得緊或羽毛磨損時都會被遮住），所以野外不宜單靠翼斑判斷。相比之下，**白腰比白翼斑更常看到**：本種起飛、翹尾或轉身時，腰部的白色十分明顯。為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "灰林䳭 雄",
+      "scientificName": "Saxicola ferreus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "**雄鳥對雄鳥**：兩者都是小型、愛停在開闊地突出枝條上的鶲科鳥，但配色完全不同。灰林䳭雄鳥是**深石板灰的上體 + 一道很長的白色眉紋 + 白色喉 + 栗紅色的腹與脇**，**頭部沒有黑色**，也沒有橙褐色的胸；本種雄鳥是**整片黑色的頭與喉 + 白色頸環 + 橙褐胸 + 白腹**。尾長比例亦有差：灰林䳭的尾明顯更長更窄，本種是短尾、圓身的「石䳭」體型。叫聲亦不同——本種是沙啞的『chak』，灰林䳭的叫聲較細。",
+      "portraitNote": "灰林䳭雄鳥：深灰上體、長白眉、白喉、栗紅腹（0516 預定主圖，先在此作比較鳥）。"
+    },
+    {
+      "zh": "白頂䳭 雌",
+      "scientificName": "Oenanthe pleschanka",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "**雌鳥／第一齡鳥對雌鳥**——這才是秋冬最容易搞混的一對，因為兩者都是「褐色上體 + 淡色眉與喉 + 橙褐胸 + 深色翼」。分別在**腰與尾的顏色**：本種的**腰是白色**、**尾短而深色**、**翼上有白斑**；白頂䳭雌鳥**腰與尾上覆羽是淡褐至白色**但**尾的深色部分更大、張開時呈倒 T 形黑尾**，而且**翼上沒有本種那樣清楚的白色翼斑**，站姿更挺、更常在地面走動。本種 12–13 cm，白頂䳭約 14–15 cm，本種明顯更小巧。",
+      "portraitNote": "白頂䳭雌鳥：沙褐上體、深色翼板、淡色喉與橙褐胸（0517 預定主圖，先在此作比較鳥）。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "JPN",
+      "KHM",
+      "KOR",
+      "LAO",
+      "MMR",
+      "MNG",
+      "MYS",
+      "PRK",
+      "RUS",
+      "THA",
+      "VNM"
+    ],
+    "note": "**本張的地圖不是取自 BirdLife 國家表**：BirdLife 目前把本種併入 **Common Stonechat 複合種（*Saxicola torquatus* s.l.）** 評估，沒有 *S. stejnegeri* 的獨立國家表（合併表的 100 多列以非洲與歐洲為主，直接用會嚴重誇大本種範圍）。因此改依 **HKBWS 的分佈敘述**填色：**繁殖**——俄羅斯中東部、蒙古北部與東部、中國北部與中北部（黑龍江、內蒙古東南、河北北部）、俄羅斯東部、韓國、日本；**越冬**——印度北部、不丹、緬甸、中國南部、日本南部與中部、東南亞南至馬來西亞與新加坡。共 **14 個 ISO3**（中國、日本同時是繁殖與越冬地）。**香港本身是常見冬候鳥，但 110m 底圖沒有香港形狀**，故不能填色；**新加坡同樣無幾何**。此處如實標明「非 BirdLife 國家表」，與 0514 以前各張的做法不同。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/051600",
+      "use": "香港第 I 類、**常見的過境鳥與冬候鳥**，見於**開闊鄉野**。**12–13 cm**。**成鳥雄鳥（繁殖羽）**：**頭黑色**、**上體黑褐並有白色翼斑（不一定看得到）**、**腰白色**、**頸側白色**、**胸橙褐色（buffish-orange）**、**腹與尾下覆羽白色**；冬季褐色羽緣磨掉後上體更深。**第一齡雄鳥**（秋季完成換羽後）：頭頂與上體較褐並有深色斑駁、**腰紅褐色**、臉／頦／喉近黑，褐色羽緣在冬季逐漸磨走。**雌鳥與第一齡秋鳥**：上體褐色、頭頂有不明顯的深色縱紋、**眉紋淡褐色而深淺不一**、**喉淡色**、**胸與脇淡紅褐**、**翼斑小或不明顯**、**腰與尾上覆羽橙紅褐色**。聲音：**常發出略沙啞的『chak』**，有時夾雜**中等偏高而短促的『hweet』**——頻率與北紅尾鴝相近，但**尾音下降更明顯**。生境：**低地開闊生境**，包括**乾旱農地、村邊、荒地、疏冠灌叢、灌叢／草地、魚塘與蘆葦沼澤**，尤以**新界西北**為多；**2001–05 冬季地圖集見於 10.3% 的 1 km 方格，2016–19 降至 6.3%**，兩期的分佈面積大致相近，但**天水圍一帶跌幅較大**，相信與該區住宅發展佔用預留土地有關。出現情況：**極端日期 8 月 17 日與 5 月 9 日**；8 月罕見、9 月稀少、**10 月數量高峰**（相信主要是過境鳥）、11 月略低（過境與抵港越冬鳥混合）；11 月至 1 月大致穩定，之後逐漸下降至 3 月第一週；**3 月其餘時間回升**（北移過境鳥），**4 月中之後稀少、5 月初罕見**；**這個模式自 1958 年以來變化不大**。**最高紀錄為 1993-11-06 塱原 60 隻與 1994-10-12 天水圍 53 隻**；1999 年後一般較低：**2001-01-02 蠔殼圍 50 隻**（現視為異常高的冬季計數）、**2008-10-04 塱原 33 隻為此後最高**。**高峰計數下降加上地圖集由 10.3% 降至 6.3%，HKBWS 認為香港整體數量已經下降。** 米埔蘆葦床的環誌顯示**秋季過境高峰比野外紀錄略早（10 月上半月）、11 月第二週數量急跌**，冬季有少量留下，**3 月中至 4 月第三週有弱過境**；**同季重捕常見**（例如 2012-10-04 首次捕捉的鳥該季重捕五次，最後一次 2013-03-23），**跨季重捕少見但確實存在**（2011-11-22 上環的鳥在 2011/12、2012/13 及 2014 年重捕三次，最後一次 2014-12-19）。歷史：Swinhoe（1861）、Kershaw（1904）、Vaughan & Jones（1913）、Herklots（1953）皆記為常見冬候鳥。行為：**愛停在灌木、圍欄與架空電線等顯眼處**，**常抖翅與抖尾**；**秋冬季至少部分有領域性**，**2000-10-23 塱原曾有兩隻雄鳥同時鳴唱**；食性資料少，相信吃小型無脊椎動物；**Hutson（1931）** 形容牠「佔據灌木、綠籬或其他高處的制高點……像伯勞一樣俯衝撲向地面的昆蟲」。分類：**單型種**，**以往被視為 Common Stonechat *S. torquatus* 的一個亞種**；繁殖於**西伯利亞中部與東部、蒙古北部與東部、中國北部與中北部（黑龍江、內蒙古東南、河北北部）、俄羅斯東部、韓國與日本**，越冬於**印度北部、不丹、緬甸、中國南部、日本南部與中部、東南亞南至馬來西亞與新加坡**。保育：**IUCN Least Concern，趨勢 stable**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/common-stonechat-saxicola-torquatus/details",
+      "use": "**重要限制：BirdLife DataZone 沒有 *Saxicola stejnegeri* 的獨立 factsheet**（`amur-stonechat-saxicola-stejnegeri`、`stejnegers-stonechat-saxicola-stejnegeri`、`siberian-stonechat-saxicola-maurus` 三個 slug 全部 404），本種目前在 BirdLife 的分類下併入 **Common Stonechat *Saxicola torquatus***（含 *maurus*、*stejnegeri* 等）。該合併頁的數字因此**只能當作複合種的參考，不可當作本種的數字**：**LC、2020 年評估**（HKBWS 亦記 LC、stable，兩者一致）；**成熟個體 55,000,000–94,999,999**、**趨勢 Stable**；**EOO 留鳥／繁殖 113,000,000 km²、非繁殖 84,400,000 km²**；**Full Migrant**、**IBA／KBA 7 個**。本卡**不引用**其國家表作地圖（見地圖說明），亦**不把複合種的種群數字寫成「東亞石䳭的種群」**——這是本批第一次遇到「目標種被上級分類單元吸收」的情況，處理方式記於 docs。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **526** 項 東亞石䳭（HKBWS 頁面標題沿用舊名 **Amur Stonechat 黑喉石䳭**）*Saxicola stejnegeri*，**第 I 類**；鄰項為 525 灰林䳭與 527 白頂䳭。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（東亞石䳭；Amur Stonechat）；**本種與 HKBWS 的舊名「黑喉石䳭」指同一物種**，卡面用 runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（*Saxicola stejnegeri*／鶲科 Muscicapidae）；speciesCode stonec7；taxonOrder 29418。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "**runtime 完全沒有 0515 的評分紀錄**（0500–0520 之間唯一缺項），故 `missingScores` 為全部六軸 `[\"i\",\"a\",\"r\",\"c\",\"v\",\"o\"]`、`withheldScores` 為空；卡面六個軸與總分一律顯示「待查／?」，星號全暗，不補值、不推算——這是 render 腳本早已支援的情況（腳本註解：「Some species have no score record at all」）。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "**runtime 沒有 0515 的 cardCopy 紀錄**（同樣是 0500–0520 唯一缺項），所以本卡的文字全部來自 HKBWS 與 BirdLife，不引用 runtime 文案；亦因此沒有可核對的 `look`，六軸一律待查而非只藏 a。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "**runtime 沒有 0515 的 AVONET 量度紀錄**；體長 12–13 cm 取自 HKBWS（換算約 4.7–5.1 吋）。"
+    }
+  ],
+  "notes": [
+    "香港狀況：名錄 2024 第 **526** 項、**第 I 類**；HKBWS 描述為**常見的過境鳥與冬候鳥**，見於**低地開闊鄉野**（乾旱農地、村邊、荒地、灌叢草地、魚塘、蘆葦沼澤），集中**新界西北**。**極端日期 8 月 17 日與 5 月 9 日**，**10 月為高峰**、3 月有第二個上升（北移過境）。",
+    "**本張最重要的訊息是「數量下降」**：冬季地圖集的出現方格比例由 **2001–05 的 10.3% 降至 2016–19 的 6.3%**，同時**高峰計數大幅回落**——1993-11-06 塱原 **60 隻**、1994-10-12 天水圍 **53 隻**，1999 年後最高只是 2001-01-02 蠔殼圍 50 隻與 2008-10-04 塱原 33 隻。HKBWS 明確結論**香港整體數量已經下降**；天水圍一帶跌幅尤大，相信與住宅發展佔用預留土地有關。這一點與 BirdLife 對複合種的「Stable」並不衝突——一個是本地、一個是複合種全球。",
+    "**本批第一次遇到 runtime 三項資料全缺**：`dexScores.json`、`cardCopy.json`、`measurements.json` 都沒有 0515 的紀錄（0500–0520 之間唯一缺項）。因此卡面**六軸與總分全部「待查」**、星號全暗，**不補值、不推算、不借用複合種數字**；文字全部改以 HKBWS 與 BirdLife 撰寫。docs 已記錄此情況的處理方式。",
+    "**分類與評估的陷阱**：HKBWS 頁面標題仍用舊名「Amur Stonechat 黑喉石䳭」，BirdLife 則把本種併入 **Common Stonechat *S. torquatus*** 複合種（本種三個可能 slug 全部 404），故：**卡面用 runtime 名稱「東亞石䳭」**；**IUCN 標示為「BirdLife 2020 評定（併入 Common Stonechat）」**；**不引用複合種的種群數字**（55–95 百萬成熟個體是全球複合種，不是本種）；**地圖改依 HKBWS 的分佈敘述**（繁殖與越冬國家共 14 個 ISO3），並在地圖說明直言「非 BirdLife 國家表」。**香港與新加坡因底圖無形狀而不填色**。",
+    "辨識要點：雄鳥——**黑頭黑喉 + 白色頸環 + 橙褐胸 + 白腹 + 白腰 + 白色翼斑（不一定看到）**；雌鳥與第一齡鳥——**褐上體帶深色縱紋、淡色眉與喉、橙褐胸與脇、橙紅褐腰**。秋冬最易混淆的是**灰林䳭**（長白眉、白喉、栗紅腹、長尾、無黑頭）與**白頂䳭雌鳥**（深色翼板、深色大尾、無清楚白翼斑、體型稍大）。同屬的**西伯利亞石䳭**外型幾乎一樣，差別在**嘴基部較闊（4.7–5.7 mm 對 4.0–4.9 mm）與白腰較少**，野外基本分不出，需靠叫聲與地點。",
+    "插圖與兩張比較鳥皆為 AI 生成，非等比例、非專家認證。比較鳥刻意選**下兩張卡的主角**（0516 灰林䳭雄鳥、0517 白頂䳭雌鳥），日後可直接沿用，這是本批第一次「用比較鳥預先鋪路」。生成時第一版主圖與比較鳥都帶了水彩紙邊／不規則留白，已**重新生成並把比較鳥內縮 5.5% 裁掉殘留白邊**，確保四邊滿版。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "r",
+    "c",
+    "v",
+    "o"
+  ],
+  "withheldScores": {}
+}
