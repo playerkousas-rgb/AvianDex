@@ -4296,3 +4296,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `species/0440/054400`：香港 I 類偶至；繁殖羽喉至腹淡粉、非繁殖羽下體深紋較重。主圖繁殖羽經 AI 修正後仍腹部粉色不足、翼斑偏窄；三圖非等比例、非專家認證。
 - BirdLife 2019 LC、全球懷疑穩定、數量未知；地圖原生國家概覽非全境，阿富汗來源未確定不填。
 - runtime 缺 a，o 因依賴缺失軸暫緩顯示，其餘分數保留；文案缺失與錯置不修改。`verify-info-card.py 0536` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0537 已交付
+
+- [0537 林鷚](https://drive.google.com/file/d/1IGKYQ7xafyoW7ddopYgqesM0sdZGtiKo/view)：147454 bytes，MD5 `83d4876cfabab0adf81cc62ecb703b27`，SHA256 `7f4e3c567cde571431ec9efb129032e6c1e4c16d223a145879cda5fefa2688ec`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS 2024 名錄 #550、I 類；未找到該種物種全文，沒有猜測本地出現頻率。BirdGuides 指林鷚黃褐胸粗紋及較細脅紋；樹鷚臉紋一般較鮮明。插圖均 AI 示意、非等比例非專家認證，林鷚脅紋略粗、後爪及腳趾不可靠，山鷚比較圖嘴峰下彎不足。
+- BirdLife 2018 LC、下降，成熟個體約 1–1.6 億；地圖僅部分原生國家、合併季節且非全境。runtime 異常 alias、欄位錯置及截斷僅記錄，六軸保留。`verify-info-card.py 0537` 通過（`errors: []`）。

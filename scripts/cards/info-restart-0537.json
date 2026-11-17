@@ -1,0 +1,224 @@
+{
+  "id": "0537",
+  "name": "林鷚",
+  "scientificName": "Anthus trivialis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "illustrationTaxon": "Anthus trivialis; AI approximation.",
+  "featureCrops": [
+    [
+      0.65,
+      0.19,
+      0.88,
+      0.34
+    ],
+    [
+      0.43,
+      0.28,
+      0.67,
+      0.43
+    ],
+    [
+      0.69,
+      0.34,
+      0.81,
+      0.5
+    ],
+    [
+      0.49,
+      0.47,
+      0.71,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "淡眉與褐色臉",
+    "褐背深色縱紋",
+    "黃褐胸及深斑",
+    "淡腹與較細脅紋"
+  ],
+  "featureNotes": [
+    "臉紋較樹鷚低調，淡眉與褐色耳羽；個體及羽況有差異。",
+    "褐色上體深色縱紋較明顯。",
+    "黃褐色胸部有深色縱斑。",
+    "腹部淡色，兩脅縱紋通常比胸部細；插圖脅紋略粗。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "樹鷚",
+      "scientificName": "Anthus hodgsoni",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "樹鷚上體偏橄欖色，眉較醒目且耳羽後有淺斑及暗斑；林鷚較褐、背紋通常更明顯。兩種有重疊，需綜合判斷。",
+      "portraitNote": "樹鷚 AI 示意，不按比例。"
+    },
+    {
+      "zh": "山鷚",
+      "scientificName": "Anthus sylvanus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "山鷚體型較粗壯，嘴峰明顯下彎，胸及兩脅深色縱紋較粗，主要在山地草地。",
+      "portraitNote": "山鷚 AI 示意，喙下彎不足及脅紋偏淡。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "AGO",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BLR",
+      "BEL",
+      "BEN",
+      "BIH",
+      "BWA",
+      "BGR",
+      "BFA",
+      "BDI",
+      "CMR",
+      "CAF",
+      "TCD",
+      "CHN",
+      "COD",
+      "HRV",
+      "CZE",
+      "CIV",
+      "DNK",
+      "DJI",
+      "EGY",
+      "GNQ",
+      "ERI",
+      "EST",
+      "ETH",
+      "FIN",
+      "FRA",
+      "GAB",
+      "GMB",
+      "GEO",
+      "DEU",
+      "GHA",
+      "GRC",
+      "GIN",
+      "GNB",
+      "HUN",
+      "IND",
+      "IRN",
+      "IRQ",
+      "IRL",
+      "ISR",
+      "ITA",
+      "JOR",
+      "KAZ",
+      "KEN",
+      "KWT",
+      "KGZ",
+      "LVA",
+      "LBN",
+      "LBR",
+      "LBY",
+      "LTU",
+      "MWI",
+      "MLI",
+      "MRT",
+      "MDA",
+      "MNG",
+      "MNE",
+      "MAR",
+      "MOZ",
+      "NPL",
+      "NLD",
+      "NER",
+      "NGA",
+      "MKD",
+      "NOR",
+      "OMN",
+      "PAK",
+      "POL",
+      "PRT",
+      "QAT",
+      "ROU",
+      "RUS"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife 原生現存國家表僅部分，合併季節、非全境、非 occurrence polygon；繁殖 EOO 3510 萬、非繁殖 EOO 4020 萬平方公里。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024 第 550 項、I 類。未找到林鷚 HKBWS 物種全文，不推斷香港出現頻率。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054200",
+      "use": "樹鷚橄欖上體、顯著白眉和耳後淺斑；香港常見冬候及過境。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054800",
+      "use": "山鷚粗壯、嘴峰下彎、胸與脅均有粗縱紋。"
+    },
+    {
+      "url": "https://www.birdguides.com/articles/identification/meadow-tree-and-olive-backed-pipit-photo-id-guide/",
+      "use": "林鷚黃褐胸、胸粗縱紋及較細脅紋；樹鷚頭部花紋通常較鮮明，鑑別需多特徵。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/tree-pipit-anthus-trivialis/details",
+      "use": "2018 LC，下降，成熟個體 1–1.6 億；部分原生現存國家表。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Anthus trivialis，speciesCode trepip。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.8、v 3、r 4.8、c 1.2、o 3、vEst 1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 有形態描述；fieldCopy range 及部分英文 highlights 與欄位不符或截斷，alias 1758 為異常；不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 86.1、tail 59.9、tarsus 20.6、bill 15.7、mass 23.3 g。"
+    }
+  ],
+  "notes": [
+    "香港鳥類名錄 I 類；未找到 HKBWS 林鷚物種全文，未猜測本地狀態。",
+    "三圖 AI 近似、非等比例非專家認證；主圖脅紋較粗、後爪及腳趾不可靠；山鷚比較圖嘴峰不夠下彎。",
+    "地圖只取部分原生國、合併季節非全境；BirdLife 2018 LC、下降。",
+    "runtime 異常 alias、部分欄錯置截斷只記錄；六軸保持原值。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
