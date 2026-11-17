@@ -4424,3 +4424,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/056000`：香港 I 類偶發，2005 塱原一筆第一冬鳥；主圖為成雄。BirdLife 2025 LC、趨勢下降、成熟個體估 1100–1700 萬；國家概覽含過境，無法表示全境；HKBWS 記新疆繁殖但 BirdLife 國家表不列中國。
 - AI 圖非專家認證、非等比例；主圖眼圈、喉黃或偏亮，足趾不可靠；灰頸鵐頭灰或偏深。runtime 缺 a，o 原值保留；r 1 與香港偶發紀錄不協調，照錄不改；文案欄位錯位。validator `errors: []`；未改 UI、runtime、R2。
 - 下一張 0557。
+
+## 新批次 0501–0583：0557 已交付
+
+- [0557 藍鵐](https://drive.google.com/file/d/1cxnwsBtWtytLfENH1WPeXoexrAjZnLaj/view)：128257 bytes，MD5 `18229a2a8d4e1044db08a85a3a0c7d30`，SHA256 `073d65b74f8a8678955341f933d68938b67fd06d12f5b965a992f703264a14d4`；查重無結果，get_file 獨立核驗 MIME、尺寸、父目錄及 hash。
+- HKBWS `0460/055800` 香港 I 類偶發，一筆 2013 大埔滘雌鳥，卡圖為成雄；BirdLife 2024 LC、成熟個體未知、疑穩定，中國特有，國家概覽非全境。HKBWS 稱森林鳥，BirdLife 主要生境為潮濕灌叢。
+- AI 示意非專家認證、非等比例：主圖白腹偏少、尾形末端不夠寬，腳趾不可靠；鳳頭鵐背栗色過多、尾尖應深色；灰鵐缺暖紅褐腰尾、腳色過深。runtime r 1 與本港偶發不協調，照錄不改；文案欄位錯位。validator `errors: []`。未改 runtime、UI、R2。
+- 下一張 0558。

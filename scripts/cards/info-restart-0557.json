@@ -1,0 +1,147 @@
+{
+  "id": "0557",
+  "name": "藍鵐",
+  "scientificName": "Emberiza siemsseni",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Emberiza siemsseni, AI approximation of adult male.",
+  "featureCrops": [
+    [
+      0.08,
+      0.25,
+      0.24,
+      0.36
+    ],
+    [
+      0.16,
+      0.36,
+      0.31,
+      0.47
+    ],
+    [
+      0.32,
+      0.38,
+      0.5,
+      0.49
+    ],
+    [
+      0.47,
+      0.49,
+      0.64,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥板岩灰頭",
+    "灰色胸部",
+    "素灰色翅",
+    "白色下腹及尾底"
+  ],
+  "featureNotes": [
+    "雄鳥大致為板岩灰色，身形緊湊。",
+    "雄鳥胸部灰色、羽色整體均勻。",
+    "雄鳥翅大致灰色；第一冬雄翅較褐。",
+    "腹下及尾下覆羽白色，圖中白色偏少。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "鳳頭鵐",
+      "scientificName": "Emberiza lathami",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳳頭鵐有明顯冠羽與栗色翼尾；雄藍鵐灰色且腹下白。",
+      "portraitNote": "AI 雄鳥示意，背部栗色過多，尾應有深色端。"
+    },
+    {
+      "zh": "灰鵐",
+      "scientificName": "Emberiza variabilis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄灰鵐亦為深灰，但腰尾帶暖紅褐，無藍鵐顯著白色尾下。",
+      "portraitNote": "AI 雄鳥示意未畫出暖紅褐尾腰，腿色過深。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN"
+    ],
+    "note": "BirdLife 2024 native extant resident China mainland only, country overview not whole-country occupancy. China endemic; EOO 600,000 breeding, 1,040,000 nonbreeding km². Hong Kong local accidental record from HKBWS; not separately listed in BirdLife country table."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/055800",
+      "use": "香港 I 類偶發，2013 大埔滘雌鳥；雄板岩灰，雌褐且腹淡。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/055700",
+      "use": "鳳頭鵐冠羽及栗翼尾特徵。"
+    },
+    {
+      "url": "https://ebird.org/species/grybun?siteLanguage=en_GB",
+      "use": "灰鵐雄灰且腰尾暖紅褐。"
+    },
+    {
+      "url": "https://ebird.org/species/slabun1",
+      "use": "藍鵐雄灰藍白腹，雌褐及頭暖橙。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/slaty-bunting-emberiza-siemsseni/details",
+      "use": "2024 LC，數量未知，疑穩定，中國原生，海拔遷移。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 中文及英文名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza siemsseni、Emberizidae；HKBWS及 eBird 網頁用 Schoeniclus。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 2.3、v 2.6、r 1、c 1.2、o 1.8。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 英文含褐色羽及特殊尾形；多欄錯位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 67.3、tail 55.1、tarsus 19、bill 12 mm、mass 20 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類偶發，HKBWS 2013 年大埔滘雌鳥一筆；卡面為成雄示意，雌鳥羽色不同。",
+    "AI 示意未經專家核證且非等比例：主圖白腹偏少、尾形不夠末端寬、腳趾不可靠；鳳頭鵐背栗色過多、尾尖應深色；灰鵐缺暖紅褐腰尾，腿過深。",
+    "BirdLife 2024 LC，數量未知、疑穩定；中國原生概覽非全境。HKBWS 稱森林鳥，BirdLife 將主要生境列潮濕灌叢。",
+    "runtime r 1 與香港偶發不一致；英文 look 指褐羽及尾形、diet 等欄錯位，保留既有分數不改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
