@@ -133,7 +133,7 @@
     },
     {
       "path": "src/data/dexScores.json",
-      "use": "六軸 i 2、a 4.3、v 1.8、r 3.3、c 3、o 2.9；六軸均保留。look 中英文均有可核對外形，o 與五軸平均 2.88 相近。"
+      "use": "六軸 i 2、a 4.3、v 1.8、r 3.3、c 3、o 2.9；六軸均保留。look 中英文均有可核對外形，o 與五軸平均 2.78 相近。"
     },
     {
       "path": "src/data/cardCopy.json",

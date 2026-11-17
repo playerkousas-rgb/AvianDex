@@ -1,0 +1,159 @@
+{
+  "id": "0523",
+  "name": "黃胸織雀",
+  "scientificName": "Ploceus philippinus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Breeding adult male Ploceus philippinus: yellow crown and breast, dark brown face and throat, buff-edged brown mantle; AI approximation.",
+  "featureCrops": [
+    [
+      0.2,
+      0.19,
+      0.47,
+      0.38
+    ],
+    [
+      0.39,
+      0.31,
+      0.71,
+      0.5
+    ],
+    [
+      0.29,
+      0.36,
+      0.51,
+      0.58
+    ],
+    [
+      0.2,
+      0.24,
+      0.36,
+      0.37
+    ]
+  ],
+  "featureLabels": [
+    "黃冠與深色面",
+    "褐背淡羽緣",
+    "淡黃胸與腹",
+    "粗厚尖錐嘴"
+  ],
+  "featureNotes": [
+    "繁殖雄鳥額及冠黃色，與深褐面及喉形成對比。",
+    "肩背深褐，羽緣淡黃褐；圖像僅示意。",
+    "雄鳥胸偏黃、腹淡黃褐；色調會隨羽況變化。",
+    "粗厚而漸尖的錐形嘴，形態比文鳥更粗壯。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "黃胸織雀 雌鳥",
+      "scientificName": "Ploceus philippinus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同種雌鳥與非繁殖雄鳥沒有鮮黃冠及深色面罩；具寬淡眉紋、白喉與淡褐下體，胸部可見模糊縱紋。",
+      "portraitNote": "雌黃胸織雀，AI 示意。"
+    },
+    {
+      "zh": "家麻雀 雌鳥",
+      "scientificName": "Passer domesticus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "家麻雀雌鳥面貌與雌黃胸織雀相似；織雀嘴更粗厚漸尖，眉紋眼前眼後同樣明顯，需結合體態與其他特徵辨認。",
+      "portraitNote": "雌家麻雀，AI 示意。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PAK",
+      "LKA",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 列十五個原生現存地區，新加坡缺 Natural Earth 110m 幾何故不填色；其餘十四國為國家概覽，並非全境分佈。香港歷史族群為逃逸籠鳥，非原生分佈，未另填色。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/052900",
+      "use": "第 IIC 類：米埔曾有籠鳥來源、間歇繁殖的本地族群，2004 年後無紀錄；1995–2003 築巢。15 cm；繁殖雄鳥黃冠、深褐面喉、褐背淡羽緣及黃胸；雌鳥白喉、淡眉、淡褐下體。覓食草及蘆葦種子。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/052800",
+      "use": "家麻雀雌鳥體貌與淡眉特徵比較。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港名錄 2024 第 538 項，第 IIC 類。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/baya-weaver-ploceus-philippinus/details",
+      "use": "2024 LC，成熟個體數未知，全球疑似穩定；EOO 13,500,000 km²，Not a Migrant。15 原生現存地區。七個貿易資料集中三個有紀錄，列國際寵物用途。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "學名 Ploceus philippinus；雀形目織雀科、speciesCode baywea1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "a 4.7、v 2.8、r 1、o 2.8、vEst 1；i 和 c 缺失，不補分。英文 look 有可核對外形所以 a 保留。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "中文 fieldCopy 除 range 外空；英文 conservation 和 humanRelation 不是相關資訊；length、weight 空，LC 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 70.2、tail 45.9、tarsus 20.6、bill 17.9、mass 28.2 g。"
+    }
+  ],
+  "notes": [
+    "香港族群為籠鳥來源、已不再建立的繁殖族群；不是自然到港的第 I 類。",
+    "主圖雄鳥及比較圖雌鳥、雌家麻雀均為 AI 近似示意，非等比例、非專家認證。",
+    "全球原生國家概覽不代表各國全境；新加坡缺底圖幾何。",
+    "runtime 缺 i、c；不補分。"
+  ],
+  "missingScores": [
+    "i",
+    "c"
+  ],
+  "withheldScores": {}
+}

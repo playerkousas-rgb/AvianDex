@@ -4198,3 +4198,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - BirdLife 2024 LC、全球疑似下降（依過去十年範圍樹覆蓋估計減少 8.3%，謹慎推測種群減 1–19%），與 HKBWS 的全球穩定記載不同，已並列；成熟個體未知。九個原生繁殖地區的國家概覽；香港 Vagrant／Non Breeding 不填色。七貿易資料集兩個有紀錄。
 - Runtime 六軸齊全，a 保留（英文 look 有翼羽形態）；中文 fieldCopy 除 range 外均空，length、weight 空。AVONET mass 5 g。主圖、雌鳥比較圖新生成，叉尾太陽鳥比較圖沿用 0519；AI 示意非等比例、非專家認證，雄鳥主圖未清楚表現黃色下背，spec 已註明。`verify-info-card.py 0522` 通過（`errors: []`），未改 runtime、UI 或 R2。
 - **下一張 0523 黃胸織雀 *Ploceus philippinus***；香港名錄第 538 項、第 IIC 類，應先核對引入／歸化狀況，不把它誤寫為 I 類自然到港。runtime 缺 i、c 分數，需按規則處理。
+
+## 新批次 0501–0583：0523 已交付
+
+- [0523 黃胸織雀](https://drive.google.com/file/d/1fINjjpWPZJYwM3_MTm17ZiAu5ZeOI2zV/view)：141549 bytes，MD5 `0bbb479497b0f33f7e9100fb95b6c68d`，SHA256 `2c95fbc1415226c84235fc553c0e39a651e9e205e9bd83a9d604b9c5f322e4b0`；查重無結果，`get_file` 核對父目錄、大小、尺寸及 hash。
+- HKBWS `species/0430/052900`：香港名錄第 538 項 IIC 類，米埔舊有籠鳥來源族群曾於 1995–2003 年繁殖，2004 年後無紀錄，不是自然到港的 I 類。繁殖雄鳥黃冠、深褐面喉、褐背淡羽緣與黃胸；雌鳥白喉、淡眉和淡褐下體。
+- BirdLife 2024 LC、成熟個體未知、全球疑似穩定；國家概覽涵蓋有 110m 底圖形狀的 14 個原生現存國家，新加坡無幾何未填色。七個貿易資料集三個有紀錄。主圖及同種雌鳥、家麻雀雌鳥均為 AI 近似示意，非專家認證。
+- Runtime 缺 i、c，不補分；保留 a 4.7、v 2.8、r 1、o 2.8、vEst 1。中文 fieldCopy 除 range 外空，英文 conservation 與 humanRelation 不相關。AVONET mass 28.2 g；runtime length、weight 空。`verify-info-card.py 0523` 通過（`errors: []`）。另更正 0520 spec 五軸均值註記為 2.78，runtime 不變。
