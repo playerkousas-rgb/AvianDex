@@ -4363,3 +4363,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0547 普通朱雀](https://drive.google.com/file/d/1jeYKQqxyQez7kJBbjPaNSK3c8IihDZkk/view)：136763 bytes，MD5 `e8b818eb7ebaf835ffc48b7b9fdea40b`，SHA256 `e78a80f13af4efe9ef29188658e6a5834f095ce6ba867863e559d0097ea1f64e`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
 - HKBWS `species/0450/055300`：香港 I 類稀少冬候及罕見過境，主圖雄鳥，雌幼鳥褐色。三圖 AI 示意、非等比例非專家認證；主圖背紋或過強、翼帶偏白、腳趾不可靠。
 - BirdLife 2024 LC、2730–5600 萬成熟個體、下降；原生國家概覽合併季節非全境；runtime look 描述雌鳥，六軸保留。`verify-info-card.py 0547` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0548 已交付
+
+- [0548 金翅雀](https://drive.google.com/file/d/1S5wIrlwexD9qLNt8qrJpYC21AsopfKfX/view)：139746 bytes，MD5 `a06b6cb0101ae1e461896be3e8e94c11`，SHA256 `6bb1c2d3b63c8ccc6cebcf872d5a5e305b369d7919e5f333ac334328456b9202`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0450/055400`：香港極局部留鳥大幅下降，亦稀少過境及冬候。三圖 AI 示意、非等比例非專家認證；主圖背紋或偏重、腹略褐、腿爪不可靠；黃雀胸脅紋或過重。
+- BirdLife 2018 LC、數量未知、懷疑穩定，全球與本地趨勢不同；原生國家概覽合併季節非全境；runtime 外觀有限但 callout 有喙色，保留六軸。`verify-info-card.py 0548` 通過（`errors: []`）。
