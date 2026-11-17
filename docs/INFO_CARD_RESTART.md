@@ -4493,3 +4493,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/057100` 香港 I 類稀少過境，春季較多；主圖雄鳥。BirdLife 2022 LC、數量不確定但極可能超過一萬成熟個體，推定穩定；香港原生包含中國幾何，地圖國家概覽非全境。
 - AI 圖非專家認證、非等比例，眼圈應前後斷開、欠暗頦、額外白頰線不準，足趾不可靠；比較圖灰頭鵐黑喉太廣、黃胸鵐胸帶及翼斑失真。runtime 仍載舊 VU，i/c 照錄可能反映舊資料，v 估算；未改 runtime/UI/R2。validator `errors: []`。
 - 下一張 0566。
+
+## 新批次 0501–0583：0566 已交付
+
+- [0566 灰頭鵐](https://drive.google.com/file/d/1OX1lemuoB3BLA3faCMxrsMamrYEyEQcO/view)：136904 bytes，MD5 `164f8360deb321c0a05b5229e15f1106`，SHA256 `1d6b9563f20689043a9fca646e2d8b3b09c9e9d9b2d80673253c0adcead5bb38`；查重無結果、get_file 獨立核驗。
+- HKBWS `0460/057200` 香港 I 類常見過境及冬候鳥，主圖繁殖雄；BirdLife 2025 LC、全球數量及趨勢未知，HKBWS 舊描述趨勢穩定。BirdLife 分拆日本 masked bunting，日本不列；香港原生包括中國幾何，地圖非全境。
+- AI 圖非專家認證、非等比例，灰頭偏藍、眼先頦黑斑過小、灰胸邊界過硬、足趾不可靠；比較圖限制見 spec。runtime v 估算、中文 look 為雌羽，部分文案錯位或截斷；未改 runtime/UI/R2。validator `errors: []`。
+- 下一張 0567。
