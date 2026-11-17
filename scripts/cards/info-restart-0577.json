@@ -1,0 +1,251 @@
+{
+  "id": "0577",
+  "name": "靴隼雕",
+  "scientificName": "Hieraaetus pennatus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2021 評定"
+  },
+  "illustrationTaxon": "Hieraaetus pennatus, AI approximation of pale morph soaring.",
+  "featureCrops": [
+    [
+      0.04,
+      0.32,
+      0.2,
+      0.47
+    ],
+    [
+      0.29,
+      0.4,
+      0.45,
+      0.53
+    ],
+    [
+      0.46,
+      0.37,
+      0.56,
+      0.52
+    ],
+    [
+      0.43,
+      0.54,
+      0.6,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "指狀翼尖",
+    "深色飛羽",
+    "淺色身體",
+    "長尾及羽腿"
+  ],
+  "featureNotes": [
+    "翼尖初級飛羽呈指狀。",
+    "淺色型翼覆羽與深色飛羽強烈對比。",
+    "淺色型身體較淡，另有深色型。",
+    "長尾通常方形；跗蹠有羽。圖中尾形及腳不準。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "普通鵟",
+      "scientificName": "Buteo japonicus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "身形緊湊，尾短於翼寬，飛羽和尾有橫紋。",
+      "portraitNote": "AI 翼紋對稱過度，足及羽列不可靠。"
+    },
+    {
+      "zh": "黑鳶",
+      "scientificName": "Milvus migrans",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "全身偏褐，尾淺叉，翼常微拱並向前推。",
+      "portraitNote": "AI 翼白斑太顯著，尾和足部細節近似。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "AGO",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BGD",
+      "BLR",
+      "BEN",
+      "BTN",
+      "BIH",
+      "BWA",
+      "BGR",
+      "BFA",
+      "BDI",
+      "CMR",
+      "CAF",
+      "TCD",
+      "CHN",
+      "COG",
+      "COD",
+      "HRV",
+      "CYP",
+      "CIV",
+      "DJI",
+      "EGY",
+      "ERI",
+      "SWZ",
+      "ETH",
+      "FRA",
+      "GMB",
+      "GEO",
+      "DEU",
+      "GHA",
+      "GRC",
+      "HUN",
+      "IND",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "ITA",
+      "JOR",
+      "KAZ",
+      "KEN",
+      "KWT",
+      "KGZ",
+      "LBN",
+      "LSO",
+      "LBY",
+      "MWI",
+      "MYS",
+      "MLI",
+      "MRT",
+      "MDA",
+      "MNG",
+      "MNE",
+      "MAR",
+      "MOZ",
+      "MMR",
+      "NAM",
+      "NPL",
+      "NER",
+      "NGA",
+      "MKD",
+      "OMN",
+      "PAK",
+      "POL",
+      "PRT",
+      "ROU",
+      "RUS",
+      "RWA",
+      "SAU",
+      "SEN",
+      "SRB",
+      "SLE",
+      "SVK",
+      "SVN",
+      "SOM",
+      "ZAF",
+      "ESP",
+      "LKA",
+      "SDN",
+      "SYR",
+      "TJK",
+      "TZA",
+      "THA",
+      "TGO",
+      "TUN",
+      "TKM",
+      "TUR",
+      "UGA",
+      "UKR",
+      "ARE",
+      "UZB",
+      "YEM",
+      "ZMB",
+      "ZWE"
+    ],
+    "note": "Partial BirdLife extant native country overview combining seasons, includes passage and breeding countries. Palestine, South Sudan, Western Sahara and small territories omitted due to Natural Earth geometry. Not whole-country range."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/booeag1",
+      "use": "羽腿、指狀翼、長方尾、深淺二色型及肩部淡斑。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/booted-eagle-hieraaetus-pennatus/details",
+      "use": "2021 LC、初步估15萬–19.5萬成熟個體、疑穩定；原生國家表。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港 I 類名錄。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/026500",
+      "use": "普通鵟短尾、寬翼、飛羽與尾橫紋。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/026100",
+      "use": "黑鳶淺叉尾及飛行姿態。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "分類學名"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六軸缺資料"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "缺資料"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "缺資料"
+    }
+  ],
+  "notes": [
+    "HKBWS 香港 I 類名錄；未確認個別物種頁故不臆測本地出現頻率。",
+    "AI 淺色型示意，非專家認證、不等比例；主圖尾扇形而非典型長方尾，翅膀對稱過度、腿足及飛羽細節失真；普通鵟翼紋過於規則，黑鳶翼白斑偏明顯，足趾均不可靠。",
+    "BirdLife 2021 LC、初步估15萬–19.5萬成熟個體、疑穩定；地圖僅部分原生國家，非全境或精確季節分佈，小地區省略。",
+    "runtime 無分數、文案及測量資料，六軸待查；未改 runtime。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}
