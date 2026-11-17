@@ -4333,3 +4333,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0542 黃腹鷚](https://drive.google.com/file/d/1dXXoO5_zHzCH5ZBRwIKH9GKcZTe_FgPp/view)：139309 bytes，MD5 `fba84931e329b9b6d6154e49e3bfbb8b`，SHA256 `317d8ee74d979effba4dd1ccb53b5692b96cb495341cb0a41351f69c8bd220dd`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
 - HKBWS `species/0440/054600`：香港 I 類稀少冬候，灰褐頸背較素、眼環明顯、腿淡。三圖 AI 示意、非等比例非專家認證；主圖鬚紋或偏強、腳趾不可靠。
 - BirdLife 2018 LC、下降指廣義 A. rubescens，含北美與 japonicus，非拆分種獨立評估；卡上標示廣義種。國家地圖依 HKBWS/Observation.org 僅選亞洲部分國家，合併季節非全境。runtime 無評分、文案、測量，六軸均待查；`verify-info-card.py 0542` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0543 已交付
+
+- [0543 燕雀](https://drive.google.com/file/d/1ew_jg4t2k2nr6snWPSz8oZ2__I8WOWIQ/view)：137832 bytes，MD5 `b4d699821f20ba7da835a899ab1fb536`，SHA256 `72ed5b314aec9a0aa29b60dd54ac64d08105ca417196a11eed6e708c60b0390e`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0450/054900`：香港 I 類稀少過境、冬罕見，白腰所有羽態均有；主圖繁殖雄鳥，冬雄及雌鳥頭較淡。三圖 AI 示意、非等比例非專家認證，主圖白腰側視不明顯、翼斑可能偏白、腳趾不可靠。
+- BirdLife 2024 LC、3500–6500 萬成熟個體、下降；原生國家概覽合併季節非全境；六軸保留。`verify-info-card.py 0543` 通過（`errors: []`）。
