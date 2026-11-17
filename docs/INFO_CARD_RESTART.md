@@ -4302,3 +4302,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0537 林鷚](https://drive.google.com/file/d/1IGKYQ7xafyoW7ddopYgqesM0sdZGtiKo/view)：147454 bytes，MD5 `83d4876cfabab0adf81cc62ecb703b27`，SHA256 `7f4e3c567cde571431ec9efb129032e6c1e4c16d223a145879cda5fefa2688ec`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
 - HKBWS 2024 名錄 #550、I 類；未找到該種物種全文，沒有猜測本地出現頻率。BirdGuides 指林鷚黃褐胸粗紋及較細脅紋；樹鷚臉紋一般較鮮明。插圖均 AI 示意、非等比例非專家認證，林鷚脅紋略粗、後爪及腳趾不可靠，山鷚比較圖嘴峰下彎不足。
 - BirdLife 2018 LC、下降，成熟個體約 1–1.6 億；地圖僅部分原生國家、合併季節且非全境。runtime 異常 alias、欄位錯置及截斷僅記錄，六軸保留。`verify-info-card.py 0537` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0538 已交付
+
+- [0538 樹鷚](https://drive.google.com/file/d/1rsKAz221Zct0cIZIOQWQN8n3__f74359/view)：141001 bytes，MD5 `62a75ebde1e90e36e816ee1e4c96a7a6`，SHA256 `b4c6154326ace390e33b24f37e84bb76ae2807189bec9c76ece50c4bf15821ca`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/054200`：香港 I 類常見冬候及過境；橄欖背、鮮明眉及耳後淡暗斑。AI 主圖耳後暗斑不清、背紋可能偏重，腳趾不可靠；比較圖亦非專家認證、非等比例。
+- BirdLife 2025 LC、全球數量及趨勢未知；HKBWS 較舊頁面稱穩定。原生國家概覽非全境，香港無獨立底圖幾何，來源未確定的阿富汗不填。
+- runtime 污染註記與欄位錯置已記錄不改，六軸保留。`verify-info-card.py 0538` 通過（`errors: []`）。

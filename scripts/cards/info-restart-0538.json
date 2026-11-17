@@ -1,0 +1,162 @@
+{
+  "id": "0538",
+  "name": "樹鷚",
+  "scientificName": "Anthus hodgsoni",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Anthus hodgsoni; AI approximation.",
+  "featureCrops": [
+    [
+      0.11,
+      0.18,
+      0.33,
+      0.34
+    ],
+    [
+      0.29,
+      0.28,
+      0.54,
+      0.43
+    ],
+    [
+      0.16,
+      0.32,
+      0.32,
+      0.51
+    ],
+    [
+      0.26,
+      0.48,
+      0.5,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "白眉與耳後淡斑",
+    "橄欖背深色紋",
+    "胸部深色斑紋",
+    "淡腹與脅紋"
+  ],
+  "featureNotes": [
+    "短寬白眉，眼前偏黃褐，耳後有淡斑及下方暗斑；插圖耳斑不清。",
+    "上體帶橄欖色，深色紋輕至中等；插圖背紋可能過重。",
+    "黃褐胸具粗深色縱斑。",
+    "胸紋延伸至黃褐兩脅，可較細或較散。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "林鷚",
+      "scientificName": "Anthus trivialis",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "林鷚背較褐且紋一般更明顯，眉較淡、耳後通常無樹鷚特有淡暗斑；兩種個體有重疊，需綜合鑑別。",
+      "portraitNote": "林鷚 AI 示意，脅紋可能過粗。"
+    },
+    {
+      "zh": "山鷚",
+      "scientificName": "Anthus sylvanus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "山鷚粗壯、褐色、嘴峰明顯下彎，胸脅均有較粗紋；主要山地草地，樹鷚常在林地附近。",
+      "portraitNote": "山鷚 AI 示意，下彎嘴峰不足，脅紋偏淡。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "JPN",
+      "KWT",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PRK",
+      "OMN",
+      "PHL",
+      "RUS",
+      "KOR",
+      "TWN",
+      "THA",
+      "ARE",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. 香港原生但無獨立底圖幾何；阿富汗來源未確定不填。合併季節，非全境非 occurrence polygon；繁殖 EOO 2920 萬、非繁殖 1880 萬平方公里。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054200",
+      "use": "香港 I 類常見冬候及過境，林地及附近；橄欖背、白眉、耳後淡暗斑及胸縱紋。當頁全球趨勢稱穩定，較新 BirdLife 稱未知。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054800",
+      "use": "山鷚粗壯、嘴峰下彎、胸與脅均有粗紋，山地草地。"
+    },
+    {
+      "url": "https://www.birdguides.com/articles/identification/meadow-tree-and-olive-backed-pipit-photo-id-guide/",
+      "use": "林鷚較褐，胸紋粗、脅紋細；樹鷚臉紋鮮明、橄欖背。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/olive-backed-pipit-anthus-hodgsoni/details",
+      "use": "2025 LC，全球數量及趨勢未知，原生現存國家表；香港原生、阿富汗來源未確定。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Anthus hodgsoni，speciesCode olbpip。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.8、v 2.7、r 4.8、c 1.2、o 2.9；無 vEst。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 有形態描述；自動核對標示曾移除污染的 callout；部分帶星號及欄位錯置，不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 81、tail 58.4、tarsus 20.2、bill 14.1、mass 21.3 g。"
+    }
+  ],
+  "notes": [
+    "香港常見冬候和過境；AI 插圖非等比例及非專家認證，耳後暗斑不清、背紋可能太重、腳趾不可靠。",
+    "HKBWS 稱全球穩定，BirdLife 2025 趨勢未知；香港原生但無底圖獨立幾何。",
+    "runtime 有污染註記及部分欄位錯置，不修改；六軸照原值。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
