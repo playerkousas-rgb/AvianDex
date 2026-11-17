@@ -1,0 +1,223 @@
+{
+  "id": "0573",
+  "name": "彩䴉",
+  "scientificName": "Plegadis falcinellus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Plegadis falcinellus, AI approximation of breeding adult.",
+  "featureCrops": [
+    [
+      0.14,
+      0.29,
+      0.31,
+      0.46
+    ],
+    [
+      0.26,
+      0.25,
+      0.37,
+      0.34
+    ],
+    [
+      0.46,
+      0.37,
+      0.68,
+      0.51
+    ],
+    [
+      0.53,
+      0.54,
+      0.65,
+      0.72
+    ]
+  ],
+  "featureLabels": [
+    "長而下彎嘴",
+    "面部細白線",
+    "綠色金屬光",
+    "長而深色腳"
+  ],
+  "featureNotes": [
+    "長而下彎的嘴。",
+    "繁殖成鳥暗面皮邊緣有細白線，圖中偏粗。",
+    "成鳥紫褐色帶綠色金屬光，AI 翼色誇張。",
+    "長腿，圖中足趾不可靠。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "白臉䴉",
+      "scientificName": "Plegadis chihi",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖成鳥紅眼、紅面皮及較闊的白色臉部羽緣；非繁殖羽較難辨。",
+      "portraitNote": "AI 繁殖羽示意，白緣偏闊、翼色與足趾不可靠。"
+    },
+    {
+      "zh": "黑頭白䴉",
+      "scientificName": "Threskiornis melanocephalus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "白色身體，裸露黑頭頸及下彎黑嘴，明顯不同於彩䴉深色羽。",
+      "portraitNote": "AI 示意尾部黑色過重，足趾不可靠。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "AGO",
+      "ARM",
+      "AUS",
+      "AZE",
+      "BGD",
+      "BLZ",
+      "BEN",
+      "BIH",
+      "BWA",
+      "BGR",
+      "BFA",
+      "BDI",
+      "KHM",
+      "CMR",
+      "CAN",
+      "CAF",
+      "TCD",
+      "CHN",
+      "COL",
+      "CRI",
+      "HRV",
+      "CUB",
+      "CYP",
+      "CZE",
+      "CIV",
+      "DJI",
+      "DOM",
+      "ECU",
+      "EGY",
+      "ERI",
+      "SWZ",
+      "ETH",
+      "FRA",
+      "GAB",
+      "GMB",
+      "GHA",
+      "GRC",
+      "GNB",
+      "HTI",
+      "HND",
+      "HUN",
+      "IND",
+      "IDN",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "ITA",
+      "JAM",
+      "JOR",
+      "KAZ",
+      "KEN",
+      "KWT",
+      "LBN",
+      "LBR",
+      "LBY",
+      "MDG",
+      "MWI",
+      "MYS",
+      "MLI",
+      "MRT",
+      "MEX",
+      "MDA",
+      "MNE",
+      "MAR",
+      "MOZ",
+      "MMR",
+      "NAM"
+    ],
+    "note": "Partial BirdLife 2025 extant native-country table, combining seasons, intentionally incomplete; excludes small territories, vagrants and countries not yet reviewed; China mainland native, Hong Kong separately vagrant. Green is not whole-country occupancy."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0160/021700",
+      "use": "香港 I 類春季迷鳥；48–66 cm，長彎嘴、紫褐羽及綠翼光澤。"
+    },
+    {
+      "url": "https://ebird.org/species/gloibi",
+      "use": "暗面皮細白緣、深色眼及成鳥金屬光。"
+    },
+    {
+      "url": "https://ebird.org/species/whfibi",
+      "use": "白臉䴉紅眼、紅面及白色寬緣。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0160/021600",
+      "use": "黑頭白䴉白身黑頭、黑色彎嘴。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/22697422/details",
+      "use": "2025 LC、119,000–860,000 成熟個體、趨勢穩定，原生國家表；較舊 HKBWS 趨勢下降。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "分類及學名"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "0573 六軸缺資料"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "0573 缺資料"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "0573 缺資料"
+    }
+  ],
+  "notes": [
+    "香港 I 類春季迷鳥；圖示繁殖成鳥，幼鳥頭頸較暗淡。",
+    "AI 非專家認證、非等比例；主圖翼羽金屬色過飽和、面部細線偏粗、足趾不可靠；白臉比較鳥白緣過闊，黑頭白䴉尾羽過黑。",
+    "BirdLife 2025 LC、119,000–860,000成熟個體，趨勢穩定；HKBWS較舊資料稱下降。地圖僅部分原生國家、非全境；香港被列迷鳥但中國內地原生。",
+    "runtime 無分數、文案及測量資料，六軸待查；未改 runtime。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}

@@ -4540,3 +4540,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0572 信使圓尾鸌](https://drive.google.com/file/d/1XVo5Fsi-KE7-iojyf5mW7WZOFJVwmMF0/view)：131760 bytes，MD5 `fea25de6b4564226c82562cd3eb43173`，SHA256 `b4f68a846dcbe35d3e3fc0205362fb5af257989ac1bcac4e402d9a9f513c8974`；查重無結果，get_file 獨立核驗。
 - HKBWS 0140/020000 香港 I 類迷鳥；BirdLife 2018 LC、疑下降，估15萬個體而非成熟數。地圖部分原生國家概覽，不顯海上分布或完整島嶼，不能視作全境。
 - AI 非專家認證、不等比例；淺色型主圖翼底白閃斑像羽隙，尾型羽列不精確，兩比較鳥翼紋及足趾不可靠，詳見 spec。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
+
+## 新批次 0501–0583：0573 已交付
+
+- [0573 彩䴉](https://drive.google.com/file/d/1vFCNlHN8T-7C-EsXoU8Qb_TyAWQ3J21K/view)：132171 bytes，MD5 `37820bcc6a328ed48496d27c3fd5c95c`，SHA256 `db062a4088aaddb0fa3e9722edd37338e1b30da2661621c239ff0c8d1b08ce4e`；查重無結果，get_file 獨立核驗。
+- HKBWS 0160/021700 香港 I 類春季迷鳥；BirdLife 2025 LC、估119,000–860,000成熟個體、趨勢穩定，舊 HKBWS 指下降。地圖僅部分原生國家、非全境；香港迷鳥但中國內地原生。
+- AI 非專家認證、不等比例；主圖綠色過飽和、面線粗及足趾不可靠，白臉比較鳥白緣過闊、黑頭白䴉尾過黑。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
