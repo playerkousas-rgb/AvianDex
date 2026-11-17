@@ -1,0 +1,155 @@
+{
+  "id": "0525",
+  "name": "栗腹文鳥",
+  "scientificName": "Lonchura atricapilla",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Adult male Lonchura atricapilla: black head, breast and central belly patch, chestnut body and wings; pale conical bill. AI approximation.",
+  "featureCrops": [
+    [
+      0.63,
+      0.17,
+      0.91,
+      0.38
+    ],
+    [
+      0.65,
+      0.3,
+      0.85,
+      0.49
+    ],
+    [
+      0.37,
+      0.31,
+      0.67,
+      0.51
+    ],
+    [
+      0.42,
+      0.46,
+      0.73,
+      0.64
+    ]
+  ],
+  "featureLabels": [
+    "黑頭與粗厚嘴",
+    "黑胸對比栗身",
+    "栗色背與翼",
+    "栗腹及黑腹斑"
+  ],
+  "featureNotes": [
+    "雄鳥黑頭、淡色粗厚錐形嘴。",
+    "雄鳥頭胸黑色，與栗色身體形成對比。",
+    "背、翼及尾為栗色；插圖僅示意。",
+    "雄鳥栗色身體與黑腹斑對比；雌鳥較淡，黑腹斑較小。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "栗腹文鳥 幼鳥",
+      "scientificName": "Lonchura atricapilla",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "幼鳥灰褐色、淡黃褐下體，沒有成鳥黑頭胸及栗色體羽；與斑文鳥幼鳥相似，嘴較粗且通常較淡。",
+      "portraitNote": "栗腹文鳥幼鳥，AI 示意。"
+    },
+    {
+      "zh": "斑文鳥 成鳥",
+      "scientificName": "Lonchura punctulata",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "斑文鳥成鳥褐頭背及白色鱗斑下體；栗腹文鳥雄鳥黑頭胸、栗色身及黑腹斑。斑文鳥在香港列 I 類。",
+      "portraitNote": "斑文鳥成鳥，沿用 0524 AI 示意。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PHL",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 列十四個原生現存國家及地區，均有 110m 底圖幾何。地圖為國家概覽非全境；不填引入地。香港族群據 HKBWS 屬籠鳥來源並列 IIC，非原生。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/053200",
+      "use": "香港 IIC 類，不規則出現，籠鳥來源，現非自我維持繁殖族群。雄鳥黑頭、胸與腹斑，栗色身翼尾，雌較淡、黑腹斑較小；幼鳥灰褐、淡羽緣與淡黃褐下體。多在低地蘆葦及稻田。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/053000",
+      "use": "斑文鳥成鳥褐頭背、白色鱗斑下體；兩種幼鳥嘴色及粗細有差異。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港名錄 2024 第 541 項、第 IIC 類。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chestnut-munia-lonchura-atricapilla/details",
+      "use": "2024 LC，全球成熟個體未知、疑似穩定，EOO 13,200,000 km²，Not a Migrant，十四原生現存地區；七個貿易資料集三個有紀錄、寵物用途國際。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Lonchura atricapilla，雀形目梅花雀科，speciesCode chemun。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 2.3、v 2.4、r 2.5、c 3、o 2.4、vEst 1。中英文 look 雖截斷及混雜描述，仍含可核對上尾覆羽與其他外形；保留 a 及 o。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "中文 look 截斷且腹色敘述易混淆；英文 look 混雜羽色敘述並截斷；英文 breeding、voice、behavior、migration 錯置，funFact 截斷。length、weight 空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 51.7、tail 33.5、tarsus 15、bill 11.3、mass 12.4 g。"
+    }
+  ],
+  "notes": [
+    "香港族群源自籠鳥、現非自持族群，列 IIC；地圖中國原生標示不代表香港族群原生。",
+    "主圖沿用 0524 栗腹文鳥比較圖，斑文鳥比較圖沿用 0524 主圖；幼鳥另生成。全部 AI 示意、非等比例、非專家認證。",
+    "runtime 文案有截斷及錯置；六軸保留，不修改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
