@@ -4451,3 +4451,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/057400` I 類偶發三筆，主圖首冬雌鳥示意；BirdLife 2020 NT C1，成熟個體約 6000–15000、疑下降，香港為迷鳥、未填地圖；國家概覽非全境。
 - AI 圖非專家認證、非等比例，腰橙色偏鮮且延伸太長、足趾不可靠；比較鳥細節見 spec。runtime i、c 缺值，v 含估算；r 1 與香港偶發不協調，照錄不改；validator `errors: []`；未改 runtime、UI、R2。
 - 下一張 0560。
+
+## 新批次 0501–0583：0560 已交付
+
+- [0560 葦鵐](https://drive.google.com/file/d/1FdCxcOY7cXrVtNl8PKyN5ORrkxVTnh0j/view)：132920 bytes，MD5 `c0ac945e1bd4e06b4904696077cf01c0`，SHA256 `8f1a5fae5e2a1c695b0c630d40d0264287f3cf706ec6a329b0602f971f0cb5cf`；查重無結果，get_file 核驗 MIME、尺寸、父目錄及 hash。
+- HKBWS `0460/057300` 香港 I 類稀少秋季過境、可能越冬；主圖繁殖雄，香港多見非繁殖羽。BirdLife 2018 LC、數量未知、疑穩定；香港列迷鳥不填，國家概覽非全境。
+- AI 圖非專家認證、非等比例：雄圖覆羽偏暖、白鬚偏短，足趾不可靠；比較鳥為非繁殖雌鳥，不能僅靠跨性別圖像辨識。runtime v 含估算，多語文案錯位；validator `errors: []`；未改 runtime/UI/R2。
+- 下一張 0561。
