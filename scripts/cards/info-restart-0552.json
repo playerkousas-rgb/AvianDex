@@ -113,7 +113,6 @@
       "NPL",
       "MKD",
       "OMN",
-      "PSE",
       "QAT",
       "ROU",
       "RUS",
@@ -126,7 +125,7 @@
       "ARE",
       "GBR"
     ],
-    "note": "Partial native-country overview only, excludes vagrants including China/Hong Kong per BirdLife; India included based on HKBWS winter range despite omission in BirdLife country table. Combined seasons, not whole-country occurrence polygon. BirdLife EOO breeding 6.12m, nonbreeding 0.723m km²."
+    "note": "Partial native-country overview only, excludes vagrants including China/Hong Kong per BirdLife; India included based on HKBWS winter range despite omission in BirdLife country table. Combined seasons, not whole-country occurrence polygon. BirdLife EOO breeding 6.12m, nonbreeding 0.723m km². Palestine omitted: no matching Natural Earth ADM0_A3."
   },
   "sources": [
     {

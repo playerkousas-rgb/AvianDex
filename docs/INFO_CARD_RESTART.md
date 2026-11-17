@@ -4389,3 +4389,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/055700`：I 類稀少遷徙及冬候，昔日繁殖族群已在本地消失；採 Melophus 屬，runtime 與 BirdLife 採 Emberiza。BirdLife 2025 LC，全球數量和趨勢未知。地圖是部分原生國家概覽，非全境。
 - AI 三圖非專家認證、非等比例，主圖冠羽或偏高且足趾不可靠，黑頭鵐翼尾黃斑或不準。runtime funFact 稱單種屬與 runtime 分類不一致，部分多語欄位錯位；v 含估算；不改 runtime。validator `errors: []`；未改 UI、R2。
 - 下一張 0552。
+
+## 新批次 0501–0583：0552 已交付
+
+- [0552 黑頭鵐](https://drive.google.com/file/d/1l2C86Cp5oW9ub4Ghhdz34Fpk1jBZbdqX/view)：132220 bytes，MD5 `e2c10fca32f391cc640db933a5ebc5ac`，SHA256 `21b6e9e632eb7ae9c6b324c904101ca4570d0a1d58d673b40a1e5daee8f87019`；查重無結果，get_file 核驗 MIME、尺寸、父目錄及 hash。
+- HKBWS `0460/056900`：香港秋季稀少過境、春季與冬季罕見，BirdLife 視香港及中國迷鳥；主圖為繁殖雄羽，雌幼及冬羽不同。BirdLife 2024 LC、初估 760–2750 萬成熟個體、趨勢未知；國家表漏列印度，以 HKBWS 和 BirdLife 文字補充。地圖為部分國家概覽而非全境；巴勒斯坦在所用底圖不匹配，已從規格剔除（原圖未著色）。
+- AI 圖非專家認證、非等比例；主圖足趾不可靠，褐頭鵐黃臀或偏顯眼，鳳頭鵐冠羽或偏高。runtime habitat 缺名稱，部分欄位錯位；v 含估算，不改 runtime。修正底圖 ISO3 後 validator `errors: []`；未改 UI、R2。
+- 下一張 0553。
