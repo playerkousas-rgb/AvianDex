@@ -4369,3 +4369,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0548 金翅雀](https://drive.google.com/file/d/1S5wIrlwexD9qLNt8qrJpYC21AsopfKfX/view)：139746 bytes，MD5 `a06b6cb0101ae1e461896be3e8e94c11`，SHA256 `6bb1c2d3b63c8ccc6cebcf872d5a5e305b369d7919e5f333ac334328456b9202`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
 - HKBWS `species/0450/055400`：香港極局部留鳥大幅下降，亦稀少過境及冬候。三圖 AI 示意、非等比例非專家認證；主圖背紋或偏重、腹略褐、腿爪不可靠；黃雀胸脅紋或過重。
 - BirdLife 2018 LC、數量未知、懷疑穩定，全球與本地趨勢不同；原生國家概覽合併季節非全境；runtime 外觀有限但 callout 有喙色，保留六軸。`verify-info-card.py 0548` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0549 已交付
+
+- [0549 黃雀](https://drive.google.com/file/d/13Ha3FUTFgTW3PBh-PvBrkHkxfpLWxqsa/view)：136651 bytes，MD5 `bff8c2fd88dc9a7b0bcb7bd3cf34f139`，SHA256 `d549693bddc6990e06dbf0f2b9acab960b4f07f8941e7631632f91279eca41fb`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0450/055500`：香港 I 類罕見遷徙及冬候，偶大量入侵；BirdLife 列香港迷鳥，兩者不同。三圖 AI 示意非等比例非專家認證；主圖胸脅紋偏重、喙略厚、腳趾不可靠。
+- BirdLife 2024 LC、2490–4690 萬成熟個體、穩定，HKBWS 舊頁稱下降；原生國家概覽合併季節非全境。runtime funFact 為故事情節、喙描述與 HKBWS 不符，不改；六軸保留。`verify-info-card.py 0549` 通過（`errors: []`）。
