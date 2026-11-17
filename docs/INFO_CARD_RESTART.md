@@ -4403,3 +4403,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/057000`：香港 I 類冬季迷鳥及春季紀錄；主圖繁殖雄羽。BirdLife 2025 LC、全球疑增加、數量未知，與 HKBWS 舊頁穩定不同；國家概覽合併季節非全境。
 - AI 三圖非等比例非專家認證，主圖黃臀形似翼帶或過顯眼、背紋或偏重、足趾不可靠；鳳頭鵐冠羽或偏高。runtime 部分多語欄位錯位，英國紀錄與非法貿易推斷不等於全球趨勢，v 含估算，不改 runtime。validator `errors: []`；未改 UI、R2。
 - 下一張 0554。
+
+## 新批次 0501–0583：0554 已交付
+
+- [0554 栗耳鵐](https://drive.google.com/file/d/15nQFnPeQ-buPJWRrWd-5KBr-AasN0d5C/view)：136909 bytes，MD5 `f93cbec4a82d7c2e88f08d245f21d43b`，SHA256 `aca7e916c6cfd510af0334bc222b62a86f45b1a7b1d0aac6e18b5911c0769675`；查重無結果，get_file 核驗 MIME、尺寸、父目錄及 hash。
+- HKBWS `0460/056200`：香港 I 類秋季不常見遷徙、冬春稀少，過去冬季較多。BirdLife 2025 LC、全球數量及趨勢未知，HKBWS 舊頁稱全球穩定、本地減少；國家概覽非全境。
+- AI 圖非專家認證、非等比例；主圖胸帶不夠密、下腹橙色過重、足趾不可靠，小鵐胸紋或偏重。runtime v 含估算、部分多語欄位錯位，不改 runtime。validator `errors: []`；未改 UI、R2。
+- 下一張 0555。
