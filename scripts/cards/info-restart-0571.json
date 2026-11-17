@@ -1,0 +1,168 @@
+{
+  "id": "0571",
+  "name": "黑叉尾海燕",
+  "scientificName": "Hydrobates monorhis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危",
+    "assessmentNote": "全球 NT：BirdLife 2018 評定"
+  },
+  "illustrationTaxon": "Hydrobates monorhis, AI approximation in flight from above.",
+  "featureCrops": [
+    [
+      0.35,
+      0.36,
+      0.48,
+      0.46
+    ],
+    [
+      0.35,
+      0.46,
+      0.51,
+      0.55
+    ],
+    [
+      0.53,
+      0.45,
+      0.63,
+      0.54
+    ],
+    [
+      0.58,
+      0.49,
+      0.75,
+      0.63
+    ]
+  ],
+  "featureLabels": [
+    "小頭黑嘴",
+    "淡色翼斑",
+    "深色腰部",
+    "尾端有缺刻"
+  ],
+  "featureNotes": [
+    "小頭，黑色管鼻嘴。",
+    "上翼淡色覆羽區，圖中對比偏強。",
+    "深色腰部，並非白腰型。",
+    "尾端有缺刻，圖示尾形不宜作精確鑑別。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "白腰叉尾海燕",
+      "scientificName": "Hydrobates leucorhous",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "腰色多變，大西洋鳥通常白腰，太平洋亦有暗腰；飛行較不規則。",
+      "portraitNote": "AI 白腰型示意，尾部缺刻及翼斑不精確。"
+    },
+    {
+      "zh": "日本叉尾海燕",
+      "scientificName": "Hydrobates matsudairae",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "體形及嘴較大，白色初級羽羽軸較顯著，飛行較有力。",
+      "portraitNote": "AI 示意，翼上白斑不應視作正確羽軸，尾型與覆羽不精確。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IDN",
+      "JPN",
+      "MYS",
+      "PRK",
+      "RUS",
+      "KOR",
+      "LKA",
+      "TWN",
+      "THA",
+      "ARE"
+    ],
+    "note": "BirdLife extant native-country overview combining seasons; Singapore omitted due to low resolution, Russia Asian and Russia merged; countries with uncertain origin or vagrant excluded. Green does not imply whole-country occupancy; species is marine and sea range is not shown."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0140/019900",
+      "use": "香港 I 類迷鳥，18–20 cm，深褐、尾缺刻、淡色上翼覆羽、外初級羽白羽軸有時可見；2020香港首紀錄。"
+    },
+    {
+      "url": "https://ebird.org/species/swspet",
+      "use": "識別及與白腰叉尾海燕、日本叉尾海燕比較。"
+    },
+    {
+      "url": "https://ebird.org/species/lcspet",
+      "use": "白腰叉尾海燕腰色多變；典型飛行與尾形。"
+    },
+    {
+      "url": "https://ebird.org/species/maspet2",
+      "use": "日本叉尾海燕較大長嘴、白色初級羽羽軸明顯。"
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=6AA236DD9E0781A7",
+      "use": "日本叉尾海燕中文名稱。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/swinhoes-storm-petrel-hydrobates-monorhis/details",
+      "use": "2018 NT、估6.5萬–26萬成熟個體；現況疑穩定但預測未來下降，國家表。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "分類及學名"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "0571 六軸缺資料"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "0571 缺資料"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "0571 缺資料"
+    }
+  ],
+  "notes": [
+    "香港 I 類迷鳥，2020首紀錄。",
+    "AI 插圖非專家認證且不等比例：主圖淡翼斑偏白且界線過強，羽軸及尾形不精確；白腰型比較鳥翼斑偏白尾形不精確，日本叉尾海燕白斑錯畫為羽片且尾形不精確。",
+    "BirdLife 2018 NT，估6.5萬–26萬成熟個體、現況疑穩定但未來預期下降；地圖僅國家概覽，不表示全境或海上分布，未畫小國新加坡及不確定原生或迷鳥國家。",
+    "runtime 無分數、文案及測量資料，六軸待查；未改 runtime。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}
