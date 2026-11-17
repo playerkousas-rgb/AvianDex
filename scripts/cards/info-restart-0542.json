@@ -1,0 +1,162 @@
+{
+  "id": "0542",
+  "name": "黃腹鷚",
+  "scientificName": "Anthus japonicus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "廣義種 LC：BirdLife 2018"
+  },
+  "illustrationTaxon": "Anthus japonicus, AI approximation of winter plumage.",
+  "featureCrops": [
+    [
+      0.13,
+      0.18,
+      0.33,
+      0.31
+    ],
+    [
+      0.31,
+      0.27,
+      0.53,
+      0.4
+    ],
+    [
+      0.17,
+      0.32,
+      0.38,
+      0.49
+    ],
+    [
+      0.31,
+      0.59,
+      0.54,
+      0.77
+    ]
+  ],
+  "featureLabels": [
+    "短淡眉與眼環",
+    "灰褐背紋較淡",
+    "淡腹深色縱紋",
+    "淡粉色腿腳"
+  ],
+  "featureNotes": [
+    "臉部紋路較淡，淡眉短，眼環相對明顯。",
+    "頸背灰褐、暗色縱紋較不明顯。",
+    "冬羽下體灰白、胸及脅具深色縱紋。",
+    "腿色淡；AI 圖腳趾不可靠。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "水鷚",
+      "scientificName": "Anthus spinoletta",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "水鷚體稍大、喙較長強、背更褐且紋較明顯；冬羽腹較白、腿通常較深。",
+      "portraitNote": "水鷚冬羽 AI 示意，胸紋較銳、鬚紋或偏強。"
+    },
+    {
+      "zh": "紅喉鷚",
+      "scientificName": "Anthus cervinus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "紅喉鷚背側淡線及暗紋較明顯，繁殖羽頭喉胸磚紅；黃腹鷚頸背較素。",
+      "portraitNote": "紅喉鷚繁殖羽 AI 示意，脅紋偏淡。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "RUS",
+      "CHN",
+      "JPN",
+      "TWN",
+      "KOR"
+    ],
+    "note": "Partial country overview for japonicus inferred conservatively from HKBWS and Observation.org; native seasonal ranges combined, whole-country shading is not occupancy. Excludes countries only supported by broad rubescens assessment."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054600",
+      "use": "香港 I 類稀少冬候；背及後頸較素、眼環明顯、淡腿、冬羽灰白胸脅暗紋；東北俄國及中國繁殖，南中國日本台灣越冬。網頁改列 japonicus、引文仍用 rubescens。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054700",
+      "use": "水鷚比較，原文採較廣義 rubescens。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054500",
+      "use": "紅喉鷚背及繁殖羽。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/buff-bellied-pipit-anthus-rubescens/details",
+      "use": "2018 廣義 rubescens LC、下降，涵蓋北美及 japonicus；不等於對拆分種的獨立評估。"
+    },
+    {
+      "url": "https://observation.org/species/186858/",
+      "use": "japonicus 亞洲繁殖及南中國、日本、朝鮮半島越冬，採保守國家概覽。"
+    },
+    {
+      "url": "https://mapress.com/zt/article/view/zootaxa.5343.2.4",
+      "use": "分子及聲學支持 japonicus 拆分。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Anthus japonicus，speciesCode sibpip1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "整筆缺失，六軸不推算。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "整筆缺失。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "整筆缺失。"
+    }
+  ],
+  "notes": [
+    "香港稀少冬候；AI 主圖冬羽，繁殖羽下體可泛粉。",
+    "三圖 AI 示意、非等比例非專家認證；主圖鬚紋可能偏強，腳趾不可靠。",
+    "BirdLife 2018 LC 為廣義 rubescens 評估含北美，非獨立 japonicus 評估；地圖採亞洲保守部分國家並合併季節，非全境。",
+    "runtime 無評分、文案及測量，六軸均待查，不自行補值。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}

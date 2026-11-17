@@ -4327,3 +4327,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0541 水鷚](https://drive.google.com/file/d/1FCn4JnjpD0S3mHelWGQvLnaycT8mvg7_/view)：142387 bytes，MD5 `aae80e6d121ba34719a475231bf7e660`，SHA256 `aed0965233dd8437849a832fc00c090f8928ba0836737c718cd690fb30660659`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
 - HKBWS `species/0440/054700`：香港 I 類迷鳥；水鷚冬羽下體較白、褐紋較模糊。三圖 AI 示意、非等比例非專家認證；主圖冬羽胸紋較尖、鬚紋或偏強、腳趾不可靠，黃腹鷚背及臉紋或過強。HKBWS 比較黃腹鷚用較廣義 A. rubescens，runtime 已拆為 A. japonicus。
 - BirdLife 2018 LC、1000–2999.9999 萬成熟個體、懷疑穩定；原生國家概覽合併季節非全境；六軸保留。`verify-info-card.py 0541` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0542 已交付
+
+- [0542 黃腹鷚](https://drive.google.com/file/d/1dXXoO5_zHzCH5ZBRwIKH9GKcZTe_FgPp/view)：139309 bytes，MD5 `fba84931e329b9b6d6154e49e3bfbb8b`，SHA256 `317d8ee74d979effba4dd1ccb53b5692b96cb495341cb0a41351f69c8bd220dd`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/054600`：香港 I 類稀少冬候，灰褐頸背較素、眼環明顯、腿淡。三圖 AI 示意、非等比例非專家認證；主圖鬚紋或偏強、腳趾不可靠。
+- BirdLife 2018 LC、下降指廣義 A. rubescens，含北美與 japonicus，非拆分種獨立評估；卡上標示廣義種。國家地圖依 HKBWS/Observation.org 僅選亞洲部分國家，合併季節非全境。runtime 無評分、文案、測量，六軸均待查；`verify-info-card.py 0542` 通過（`errors: []`）。
