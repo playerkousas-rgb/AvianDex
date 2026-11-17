@@ -4546,3 +4546,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0573 彩䴉](https://drive.google.com/file/d/1vFCNlHN8T-7C-EsXoU8Qb_TyAWQ3J21K/view)：132171 bytes，MD5 `37820bcc6a328ed48496d27c3fd5c95c`，SHA256 `db062a4088aaddb0fa3e9722edd37338e1b30da2661621c239ff0c8d1b08ce4e`；查重無結果，get_file 獨立核驗。
 - HKBWS 0160/021700 香港 I 類春季迷鳥；BirdLife 2025 LC、估119,000–860,000成熟個體、趨勢穩定，舊 HKBWS 指下降。地圖僅部分原生國家、非全境；香港迷鳥但中國內地原生。
 - AI 非專家認證、不等比例；主圖綠色過飽和、面線粗及足趾不可靠，白臉比較鳥白緣過闊、黑頭白䴉尾過黑。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
+
+## 新批次 0501–0583：0574 已交付
+
+- [0574 綠鷺](https://drive.google.com/file/d/1OlehLUuPY4DLUci3slCy0-YCPG4GsIFc/view)：141039 bytes，MD5 `8376ac180f5c4a42240bf69a28884e4f`，SHA256 `0469a59b2f2dd9e8ec0b9b09c96ac4e3cc0c17f0fe071fe7ec9de3b61a905d89`；查重無結果，get_file 獨立核驗。
+- HKBWS 0170/022800 香港 I 類全年出現，夏局部不常見、冬稀少且本地下降。BirdLife 2022 寬分類 LC、173,000–1,500,000成熟個體、全球趨勢穩定；eBird 2025 將亞洲鳥分為 B. atricapilla，與 runtime、BirdLife 寬分類不同。地圖僅部分原生國家，不表示全境或缺席。
+- AI 圖非專家認證、不等比例；主圖冠羽過長偏綠、翼緣過黃粗、足趾不可靠；池鷺胸紋過多，詳見 spec。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
