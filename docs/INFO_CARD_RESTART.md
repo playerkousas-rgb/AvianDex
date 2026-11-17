@@ -4289,3 +4289,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `species/0440/054800`：香港 I 類、稀少山地草地留鳥，局部分佈已大幅減少。AI 主圖未呈現明顯下彎嘴峰，兩脅縱紋偏淡、腳趾不可靠；三圖非等比例、非專家認證。
 - BirdLife 2018 LC、全球懷疑穩定、數量未知；國家概覽非全境，香港原生但無獨立幾何，阿富汗來源未確定故不填。
 - runtime 缺 i、c；無外觀描述，a 與依賴該軸的 o 暫緩顯示，其餘分數保留；文案錯置不修改。`verify-info-card.py 0535` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0536 已交付
+
+- [0536 粉紅胸鷚](https://drive.google.com/file/d/1MTlmVMjXBy6CUXMxRy86A83EoPW47xCQ/view)：138319 bytes，MD5 `67e05b13171b67b549a5934f74f268d9`，SHA256 `eab7a96f5de3785333d326a7258a761aa9b625d4bcadbc7f051841faf2e187f2`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/054400`：香港 I 類偶至；繁殖羽喉至腹淡粉、非繁殖羽下體深紋較重。主圖繁殖羽經 AI 修正後仍腹部粉色不足、翼斑偏窄；三圖非等比例、非專家認證。
+- BirdLife 2019 LC、全球懷疑穩定、數量未知；地圖原生國家概覽非全境，阿富汗來源未確定不填。
+- runtime 缺 a，o 因依賴缺失軸暫緩顯示，其餘分數保留；文案缺失與錯置不修改。`verify-info-card.py 0536` 通過（`errors: []`）。
