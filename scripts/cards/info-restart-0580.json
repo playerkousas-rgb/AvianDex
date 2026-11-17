@@ -1,0 +1,167 @@
+{
+  "id": "0580",
+  "name": "大鵑鵙",
+  "scientificName": "Coracina javensis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2020 評定"
+  },
+  "illustrationTaxon": "Coracina javensis, AI approximation of adult male perched.",
+  "featureCrops": [
+    [
+      0.6,
+      0.28,
+      0.76,
+      0.41
+    ],
+    [
+      0.39,
+      0.37,
+      0.56,
+      0.48
+    ],
+    [
+      0.34,
+      0.44,
+      0.52,
+      0.54
+    ],
+    [
+      0.43,
+      0.5,
+      0.62,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "深色臉喉",
+    "板灰色上體",
+    "深色飛羽",
+    "淺色腹部"
+  ],
+  "featureNotes": [
+    "臉和喉暗色；圖中黑喉過於鮮明。",
+    "整體板灰，雌鳥下體有橫斑。",
+    "飛羽黑褐，羽緣淺色。",
+    "腹至尾下覆羽較白。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "暗灰鵑鵙",
+      "scientificName": "Lalage melaschistos",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "較小，雄鳥暗灰翼、較模糊黑面罩，尾下有白尖。",
+      "portraitNote": "AI 面罩太銳利，足趾及羽列近似。"
+    },
+    {
+      "zh": "灰山椒鳥",
+      "scientificName": "Pericrocotus divaricatus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥白前額與黑後冠，白色下體，身形較小。",
+      "portraitNote": "AI 翼上白帶過於明顯，尾及腳趾有誤差。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PAK",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 2020 extant native country overview in broader taxonomic treatment, includes Taiwan and Malaysia; eBird 2024 split/rearrangement differs and affinities of rexpineti are uncertain. Whole countries not occupied; Hong Kong accidental."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0250/031300",
+      "use": "香港 I 類迷鳥，2020 首紀錄，外觀和雌幼鳥差異。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/large-cuckooshrike-coracina-javensis/details",
+      "use": "2020 LC、數量未知、疑穩定，較廣分類的原生國家表。"
+    },
+    {
+      "url": "https://ebird.org/about/2024-ebird-taxonomy-update",
+      "use": "2024 分拆並合併物種之分類變動；rexpineti 親緣未定。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0230/031400",
+      "use": "暗灰鵑鵙體型、面罩、翼和尾。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0230/030900",
+      "use": "灰山椒鳥雄鳥白前額、黑後冠與白色下體。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "分類學名"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六軸缺資料"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "缺資料"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "缺資料"
+    }
+  ],
+  "notes": [
+    "香港 I 類迷鳥，2020 大埔滘記錄。",
+    "AI 示意非專家認證、不等比例；主圖黑喉顏色及邊界過於鮮明、足趾與尾羽細節不準；暗灰鵑鵙面罩太銳，灰山椒鳥翼白帶過明顯，足及羽列近似。",
+    "BirdLife 2020 LC、數量未知、疑穩定；原生國家地圖非全境，較廣分類含台灣與馬來西亞；eBird 2024 分拆重組且 rexpineti 親緣未定。",
+    "runtime 無分數、文案及測量資料，六軸待查；未改 runtime。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}

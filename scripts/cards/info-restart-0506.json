@@ -1,0 +1,156 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0506",
+  "name": "紅喉姬鶲",
+  "scientificName": "Ficedula albicilla",
+  "illustrationTaxon": "Adult male Taiga / Red-throated Flycatcher Ficedula albicilla in breeding plumage (plain grey-brown head, mantle, back and wings with slightly warmer buff edges to the flight feathers; a narrow pale eyering; grey face and cheeks; a grey breast band; throat and upper breast clear orange-red, ending against a clean white lower breast and belly; uppertail coverts blackish, darker than the tail; tail dark grey-brown with large white patches at the sides of the tail-base; slim all-dark bill; dark grey legs). Non-breeding adults — which make up almost all Hong Kong records and show no red throat at all — and first-winters are not shown. AI interpretation; sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "橙胸姬鶲",
+      "scientificName": "Ficedula strophiata",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者都是本港的冬候鳥，同樣有橙紅喉胸與**尾基白斑**。本種的橙紅由**灰色臉頰**包住、下緣有一條**灰色胸帶**；橙胸姬鶲雄鳥有**白色前額**與**整塊黑臉黑喉**，橙紅只是上胸中央一個**胸斑**、下胸是灰色而脅部皮黃。本種多數紀錄根本沒有紅喉，此時只能靠**灰調、比尾更黑的尾上覆羽與全黑的嘴**（HKBWS 的分辨要點）與橙胸姬鶲的**黑尾白基、褐色上體**區分。"
+    },
+    {
+      "zh": "銹胸藍姬鶲",
+      "scientificName": "Ficedula erithacus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者都有**外側尾羽白基**與橙調下體。本種上體**灰褐**、橙紅只到上胸、下胸有灰色胸帶、腹部純白；銹胸藍姬鶲雄鳥上體**深石板藍**、有**黑色面罩**、橙色由喉一直覆蓋到腹部。體型亦不同：本種 **11.5 cm**，是這群姬鶲中較小的一種。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.6,
+      0.13,
+      0.86,
+      0.39
+    ],
+    [
+      0.62,
+      0.2,
+      0.86,
+      0.44
+    ],
+    [
+      0.18,
+      0.52,
+      0.44,
+      0.74
+    ],
+    [
+      0.3,
+      0.42,
+      0.56,
+      0.62
+    ]
+  ],
+  "featureLabels": [
+    "灰臉與灰胸帶",
+    "橙紅喉",
+    "白色尾基",
+    "近黑尾上覆羽"
+  ],
+  "featureNotes": [
+    "繁殖羽雄鳥的橙紅喉被一片灰色臉頰包住，下緣另有一條深浅不定的灰色胸帶；HKBWS 明言這條胸帶可變，而且**本港絕大多數個體根本沒有紅喉**，為插圖局部。",
+    "橙紅只出現在喉與上胸，出現的時間也不固定——HKBWS 指帶完整紅喉的雄鳥多見於 4 月，部分越冬鳥留到 4 月中才長出紅喉，1 月底亦有零星紀錄，為插圖局部。",
+    "**所有羽色**的尾都是深灰褐、並在**尾基兩側各有一大塊白斑**——即使沒有紅喉的雌鳥與第一冬鳥，這一點也照樣成立，是本種最穩定的辨識特徵，為插圖局部。",
+    "尾上覆羽近黑、比深灰褐的尾更深，是 HKBWS 用來與紅胸姬鶲分開的三個要點之一（另兩點是整體灰調與全黑的嘴）；同一格亦可見飛羽邊緣的暖色調，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "JPN",
+      "KAZ",
+      "KOR",
+      "LAO",
+      "MMR",
+      "MNG",
+      "MYS",
+      "NPL",
+      "RUS",
+      "THA",
+      "TJK",
+      "UZB",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists 19 native countries/territories; 17 shapes are shaded because Russia's three BirdLife rows (Russia, Russia (Asian), Russia (Central Asian)) share one 110m outline — Bangladesh, Bhutan, China (mainland), India, Japan, Kazakhstan, Laos, Malaysia, Mongolia, Myanmar, Nepal, Russia, South Korea, Thailand, Tajikistan, Uzbekistan and Vietnam. Four territories are deliberately left unshaded: Afghanistan is listed as PASSAGE with ORIGIN UNCERTAIN, while Brunei, the Philippines and the United Arab Emirates are VAGRANTS. Not an occurrence polygon: green does not imply full-country occupancy — the species breeds from eastern Russia through central Asia to Kamchatka and winters from southern Nepal east to northeast India, Bangladesh, south China and southeast Asia, inside a breeding EOO of 14,400,000 km² and a non-breeding EOO of 9,250,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/050700",
+      "use": "香港第 I 類，**常見的過境遷徙鳥與冬候鳥**，見於開揚或疏林生境（HKBWS 用英文名 **Red-throated Flycatcher**，與 runtime／BirdLife 的 Taiga Flycatcher 同種）。**11.5 cm**；**所有羽色尾都是深灰褐、並在尾基兩側有大片白斑**；與紅胸姬鶲的分別在於本種**整體偏灰、尾上覆羽近黑而比尾更深、嘴全黑**（有時下喙基有一小點淡色）；**只有繁殖羽雄鳥（本港罕見）才有橙紅喉**，並被**灰色臉頰**與**深浅不定的灰色胸帶**包住，紅胸姬鶲雄鳥的橙紅更廣、且沒有灰色胸帶。叫聲：**短促的 rattles，比紅胸姬鶲更快、更有嗡嗡感**。分佈與生境：**多樣的疏林與開揚生境，包括高爾夫球場與林緣，主要在新界**；**大嶼山稀少、其他島嶼罕見**；**2016–19 冬季地圖集在 3.6% 的 1 km 方格有紀錄，較 2001–05 的 1.3% 大幅增加**，兩次調查都以**新界西北與東北**最多。出現情況：**極端日期 9 月 13 日與 4 月 28 日**，**10 月第三週至 2 月第三週數量最高**、**11 月高峰**（相信同時包含過境鳥與抵港越冬鳥）——與 **1958–1998 年 10 月第三週過境高峰、冬季較少**的模式不同；**2014/15 冬季後紀錄增加，但相信是觀察力度所致**；**歷來最高為 2015-11-26 粉嶺高爾夫球場的 17 隻**；**大部分紀錄的鳥沒有紅喉**，帶完整紅喉的雄鳥多在 4 月，亦有 1 月底的紀錄，包括留在香港越冬、到 4 月中才長出紅喉的個體；**1903 年春季首筆**（Vaughan & Jones 1913）。行為：**通常單獨**，活躍好動、**常彈翅與翹尾**，常靠叫聲發現；主食昆蟲，**由低枝短飛捕食**，**常在草地與地面覓食**，寒冷天氣會在集水渠的混凝土面覓食。分類：**單型種，以前與紅胸姬鶲同種**；繁殖於**俄羅斯東部經中亞至堪察加，南至哈薩克東北、蒙古北部與阿穆爾**；越冬自**尼泊爾南部向東至印度東北、孟加拉、中國南部（廣東、海南）與東南亞**（del Hoyo et al. 2020；Liu & Chen 2020）。保育：**IUCN Least Concern，趨勢穩定**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/red-throated-flycatcher-ficedula-albicilla/details",
+      "use": "BirdLife 以英文名 **Red-throated Flycatcher** 收錄（`taiga-flycatcher-ficedula-albicilla` 這個網址 404，第二次以 `red-throated-flycatcher-…` 才命中）：IUCN **LC**、**2024 年評估**（準則 N/A）；成熟個體 **Unknown**，種群資料稀少——**以前在印度與巴基斯坦的非繁殖區被視為廣泛而常見**，其餘地區不規則至稀少；趨勢 **Decreasing（Suspected）**，理由為**分佈範圍內十年樹冠覆蓋減少 8.8%**；**繁殖 EOO 14,400,000 km²、非繁殖 EOO 9,250,000 km²**、AOO Unknown、**Breeding endemic No**、**Full Migrant**、**IBA／KBA 為「-」**、海拔 **0–2,380 m**、世代 **2.6 年**、**森林依賴度 Medium**、**生態系統只有陸域**；生境分類 **6 項**——**温帶林（繁殖期 Major）**，另有鄉村花園（繁殖期 Suitable）、人工林（繁殖期與非繁殖期 Suitable）、亞熱帶／熱帶潮濕低地林與乾燥林（非繁殖期 Suitable）；**貿易 low prevalence（七個數據集只有一個，Donald et al. 2024）**；保育行動只有**「已劃定保育地點（全分佈範圍）」與「已納入國際法規」**，沒有復育計劃、系統監測、入侵種控制、域外保育或貿易管制；Alliance for Zero Extinction 與 Search for Lost Birds 皆 No；**國家表 23 列**——19 個原生國家／地區（**俄羅斯三個分列**、中國列為 Resident、日本與哈薩克、蒙古為 Breeding、塔吉克與烏茲別克為 Passage、其餘為非繁殖），**阿富汗為 Origin Uncertain 的 Passage**，**汶萊、菲律賓、阿聯酋為迷鳥**；**香港不在國家表**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024（頁面最後更新 2025-05-11）：第 **516** 項 紅喉姬鶲 Red-throated Flycatcher（*Ficedula albicilla*），**第 I 類**；鄰項為 515 紅胸姬鶲與 517 紅脇藍尾鴝——**名錄把紅喉姬鶲排在紅胸姬鶲之後**，與 runtime id 的次序（0506 紅喉姬鶲在前）相反。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（紅喉姬鶲；Taiga Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Ficedula albicilla／鶲科 Muscicapidae）；speciesCode taifly1；taxonOrder 29284。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 2、a 2.3、v 2.7（vEst 1）、r 3.3、c 1.2、o 2.3），`missingScores` 與 `withheldScores` 皆為空；o 2.3 與六軸平均 2.3 相符。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "`look` 只有「雄鳥耳覆羽和頸側帶有淡藍灰色，繁殖期的雄鳥喉部會變成橙紅色」一句——**是本批最單薄的形態描述**，但仍屬形態而非別名，故 a 保留不 withheld；`breeding` 其實是**與紅胸姬鶲的比較句**；`behavior` 與 `etymology` 一字不差、都只是「屬名來自拉丁語 ficus」的字源說明；`diet` 包含生境描述；`habitat` 英文只有「taiga forest」一句、中文全缺；length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 68.4、tail 49.9、tarsus 16.4、bill 12.1、mass 10.8。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **515** 項、**第 I 類**；HKBWS 描述為**常見的過境遷徙鳥與冬候鳥**，見於開揚或疏林生境。**極端日期 9 月 13 日與 4 月 28 日**，**10 月第三週至 2 月第三週數量最高**、**11 月高峰**；**2016–19 冬季地圖集在 3.6% 的 1 km 方格有紀錄**（2001–05 為 1.3%）；**歷來最高 2015-11-26 粉嶺高爾夫球場 17 隻**；**1903 年春季首筆**。",
+    "辨識要點：**所有羽色**的尾都是深灰褐、**尾基兩側有大片白斑**；與紅胸姬鶲的分別是本種**偏灰、尾上覆羽近黑而比尾更深、嘴全黑**。**只有繁殖羽雄鳥才有橙紅喉**，且被灰色臉頰與深浅不定的灰胸帶包住——而**本港絕大多數紀錄的鳥都沒有紅喉**，帶完整紅喉的多在 4 月，包括越冬後到 4 月中才長出紅喉的個體。叫聲是比紅胸姬鶲更快、更嗡嗡的 rattles。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 年評估、趨勢 **Decreasing**（Suspected，**十年樹冠覆蓋減少 8.8%**）——**與 HKBWS 的「趨勢穩定」不一致，照實並列**（0498、0500、0502、0503 亦有同類分歧）。繁殖 EOO **14,400,000 km²（本批至今最大）**、非繁殖 EOO 9,250,000 km²、**IBA／KBA 為「-」**、海拔 0–2,380 m、世代 2.6 年、森林依賴度 Medium；生境 6 項、**温帶林為繁殖期 Major**；貿易 low prevalence（只有一個資料集）；保育行動只有「已劃定保育地點」與「已納入國際法規」。",
+    "**地圖填 17 個形狀**（孟加拉、不丹、中國、印度、日本、哈薩克、韓國、寮國、緬甸、蒙古、馬來西亞、尼泊爾、俄羅斯、泰國、塔吉克、烏茲別克、越南）——俄羅斯三個分列只算一個 `RUS`；**阿富汗為 Origin Uncertain 的 Passage，不填**；**汶萊、菲律賓、阿聯酋為迷鳥，不填**；**香港不在 BirdLife 國家表，故 note 不提香港**。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`look` 只有一句（雄鳥耳覆羽與頸側淡藍灰、繁殖期喉變橙紅）——**本批最單薄的形態描述**，但屬形態而非別名，故 `a` 2.3 保留、不列 withheld；`breeding` 是與紅胸姬鶲的比較句而非繁殖資料；`behavior` 與 `etymology` 一字不差、都是字源說明；`diet` 混入生境；`habitat` 英文只有「taiga forest」、中文全缺；length 與 weight 為空。",
+    "HKBWS 頁面 id 是 **050700**（路徑 `0410/`），比 runtime **0506** 大 1；**BirdLife 的英文名與 runtime 不同**（BirdLife＝Red-throated Flycatcher、runtime＝Taiga Flycatcher），`taiga-flycatcher-ficedula-albicilla` 404、改用 `red-throated-flycatcher-ficedula-albicilla` 才命中。",
+    "主圖**直接沿用 0503 新生成的比較鳥紅喉姬鶲圖**（1408×768 原檔取 768 平方、x=230，放大至 1127²），是第二次「比較鳥升級為主圖」。比較鳥為**橙胸姬鶲**（0504 主圖，同樣橙喉＋白尾基）與**銹胸藍姬鶲**（0503 主圖，同樣白尾基），兩張都沿用、免再生成，**非等比例、非專家認證**；插圖與全部辨識要點均為 AI 解讀，未經鳥類專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

@@ -1,0 +1,168 @@
+{
+  "id": "0563",
+  "name": "小鵐",
+  "scientificName": "Emberiza pusilla",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Emberiza pusilla, AI approximation.",
+  "featureCrops": [
+    [
+      0.13,
+      0.24,
+      0.3,
+      0.34
+    ],
+    [
+      0.16,
+      0.29,
+      0.32,
+      0.39
+    ],
+    [
+      0.2,
+      0.36,
+      0.35,
+      0.46
+    ],
+    [
+      0.2,
+      0.42,
+      0.38,
+      0.54
+    ]
+  ],
+  "featureLabels": [
+    "暗色冠紋",
+    "栗褐耳羽",
+    "淡色顎下紋",
+    "白腹深色縱紋"
+  ],
+  "featureNotes": [
+    "頭頂深色冠紋，雄鳥通常較明顯。",
+    "暖褐耳羽、淡眉與完整淡眼圈。",
+    "耳羽下方顯著淡色顎下紋。",
+    "腹白，胸及脅有細暗縱紋。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "田鵐",
+      "scientificName": "Emberiza rustica",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "田鵐略大，栗色腰及脅紋；雄鳥具白喉、栗胸帶。",
+      "portraitNote": "AI 繁殖雄示意，胸帶過寬；雌幼羽較暗。"
+    },
+    {
+      "zh": "黃眉鵐",
+      "scientificName": "Emberiza chrysophrys",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄黃眉鵐眉前段黃，臉色較深；小鵐淡眉、暖褐耳羽。",
+      "portraitNote": "AI 雄鳥示意，雌幼較難分辨，尾及腳細節不可靠。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "FIN",
+      "IND",
+      "JPN",
+      "KAZ",
+      "KWT",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "NPL",
+      "NOR",
+      "PAK",
+      "PHL",
+      "RUS",
+      "KOR",
+      "SWE",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 2025 extant native countries all seasons; Hong Kong included in China geometry, Kuwait represented as native nonbreeding and passage; Russian rows merged; vagrants excluded including PRK. Country overview, not whole-country occupancy. Breeding EOO 18.2m, nonbreeding 3.48m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056300",
+      "use": "香港 I 類十一月至四月不常見；暖褐耳羽、淡眼圈、淡顎下紋及細暗胸脅紋。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056500",
+      "use": "田鵐略大，栗色腰及脅紋；雄具白喉栗胸帶。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056400",
+      "use": "黃眉鵐雄黃眉。"
+    },
+    {
+      "url": "https://ebird.org/species/litbun",
+      "use": "小鵐對比強烈頭紋及淡眼圈；eBird 屬種 Schoeniclus pusillus。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/little-bunting-emberiza-pusilla/details",
+      "use": "2025 LC，3300–4800萬成熟個體為初步估算，趨勢未知；原生國家表。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza pusilla、鵐科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.8、v 2.6、r 4.8、c 3、o 3.2。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 白腹深色縱紋；部分欄位錯位或截斷。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 70.3、tail 55.5、tarsus 18、bill 10.7 mm、mass 14.6 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類十一月至四月不常見，春秋有輕微過境。",
+    "AI 圖非專家認證、非等比例；主圖頭紋及胸紋過重、嘴偏大，足趾不可靠；田鵐胸帶偏寬，黃眉鵐圖為雄鳥。",
+    "BirdLife 2025 LC，成熟個體初步估約3300–4800萬、趨勢未知；HKBWS 舊描述稱穩定，資料時點不同。香港原生包含中國幾何；科威特列原生非繁殖及過境；朝鮮列迷鳥未填。",
+    "runtime 分數照錄，部分文字欄位錯位或截斷，不更改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

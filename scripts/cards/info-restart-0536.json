@@ -1,0 +1,156 @@
+{
+  "id": "0536",
+  "name": "粉紅胸鷚",
+  "scientificName": "Anthus roseatus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2019 評定"
+  },
+  "illustrationTaxon": "Breeding plumage Anthus roseatus; AI approximation.",
+  "featureCrops": [
+    [
+      0.6,
+      0.15,
+      0.85,
+      0.3
+    ],
+    [
+      0.4,
+      0.27,
+      0.65,
+      0.43
+    ],
+    [
+      0.65,
+      0.27,
+      0.79,
+      0.46
+    ],
+    [
+      0.44,
+      0.36,
+      0.66,
+      0.48
+    ]
+  ],
+  "featureLabels": [
+    "寬淡眉及暗耳羽",
+    "深色縱紋上體",
+    "繁殖羽淡粉胸",
+    "淡色翼斑"
+  ],
+  "featureNotes": [
+    "淡眉長而寬、後端向下，耳羽內有淡色區；圖像眉尾形狀僅示意。",
+    "上體有明顯深色縱紋。",
+    "繁殖羽喉至腹淡粉紅，下脅只有少量灰紋；插圖腹部粉色偏少。",
+    "翼覆羽有寬淡端形成明顯翼斑，圖像翼斑偏窄。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "山鷚",
+      "scientificName": "Anthus sylvanus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "山鷚較粗壯，胸與兩脅有濃深色縱紋，粗喙嘴峰下彎；粉紅胸鷚繁殖羽有淡粉胸，非繁殖羽則有濃紋。",
+      "portraitNote": "山鷚 AI 示意，喙下彎不足、脅紋偏淡。"
+    },
+    {
+      "zh": "樹鷚",
+      "scientificName": "Anthus hodgsoni",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "樹鷚上體較橄欖色、耳後有淺斑；粉紅胸鷚繁殖羽具粉紅下體，其他羽況須審慎鑑別。",
+      "portraitNote": "樹鷚 AI 示意，不按比例。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "MMR",
+      "NPL",
+      "PAK",
+      "KOR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. 原生國家季節未明、合併概覽；阿富汗來源未確定不填；非全境或 occurrence polygon。繁殖 EOO 675 萬、非繁殖 353 萬平方公里。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054400",
+      "use": "香港 I 類偶至；繁殖羽喉至腹淡粉紅，非繁殖羽淡色下體有重深紋，長寬淡眉後端下傾，翼覆羽淡端形成翼斑。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054800",
+      "use": "山鷚粗壯、喙峰下彎、胸與脅均有粗縱紋；本地山地草地留鳥。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054200",
+      "use": "樹鷚橄欖上體、淡眉及耳後淺斑。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/rosy-pipit-anthus-roseatus/details",
+      "use": "2019 LC，懷疑穩定，數量未知；原生現存國家表，阿富汗來源未確定。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Anthus roseatus，speciesCode rospip1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、v 3、r 1、c 1.2、o 1.8、vEst 1，a 缺失；o 因依賴缺失軸暫緩。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "僅有中文範圍，英文 habitat 為分佈、diet 為分類；無外觀描述，length、weight 空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 82.8、tail 60.6、tarsus 21.5、bill 13.7、mass 20.6 g。"
+    }
+  ],
+  "notes": [
+    "主圖 AI 修正後胸紋減少、粉色仍主要在胸而非延伸全腹，翼斑偏窄；所有插圖非等比例、非專家認證。",
+    "主圖示繁殖羽，香港第一冬羽等非繁殖羽下體可布滿深紋。",
+    "香港偶至；BirdLife 全球 LC、懷疑穩定；地圖非全境且阿富汗來源未確定不填。",
+    "runtime 缺 a、o 因依賴缺失軸暫緩；文案缺失與錯置不改。"
+  ],
+  "missingScores": [
+    "a"
+  ],
+  "withheldScores": {
+    "o": "runtime 缺少外觀軸，綜合分依賴該軸，暫緩顯示。"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2020 評定"
+  },
+  "id": "0505",
+  "name": "白眉藍姬鶲",
+  "scientificName": "Ficedula superciliaris",
+  "illustrationTaxon": "Adult male Ultramarine Flycatcher Ficedula superciliaris (entire upperparts — crown, nape, mantle, back, rump, wing coverts and tail — deep ultramarine blue; a narrow clean white supercilium above the eye; sides of head and neck deep blue; chin, centre of throat, centre of breast and belly pure white; a blue patch on each side of the breast framing the white centre; flight feathers dark brownish with blue edges; very small compact flycatcher, slim dark bill). The female and first-winter male — the plumage of every Hong Kong record so far — are not shown; the first-winter male is grey-brown above with blue wings, rump and tail. AI interpretation; sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "銹胸藍姬鶲",
+      "scientificName": "Ficedula erithacus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者雄鳥上體都是深藍調，是本批最接近的一對。本種是**飽和的群青藍**、有**白色眉線**、下體**純白而兩側各有一塊藍色胸斑**；銹胸藍姬鶲是**較灰的石板藍**、**沒有白眉**、眼先與頰黑成一片**面罩**，**喉至腹是深橙色**。兩者體型也相差明顯：本種翼長約 63 mm、體重約 8 g，是這批姬鶲中最小的。"
+    },
+    {
+      "zh": "鴝姬鶲",
+      "scientificName": "Ficedula mugimaki",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者雄鳥都有**純白下體**與**深色上體、深色頭**，是本港秋季最容易一時看錯的一組。本種上體是**群青藍**、有**白色眉線**、胸部兩側有藍斑；鴝姬鶲上體是**石板灰**、**沒有眉線而只有眼後一小塊白斑**、**喉與上胸是銹橙紅**。雌鳥與第一冬鳥同樣要靠翼上藍色與否分辨，本卡不作野外分辨承諾。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.18,
+      0.13,
+      0.45,
+      0.35
+    ],
+    [
+      0.38,
+      0.25,
+      0.72,
+      0.55
+    ],
+    [
+      0.17,
+      0.35,
+      0.44,
+      0.62
+    ],
+    [
+      0.22,
+      0.3,
+      0.46,
+      0.5
+    ]
+  ],
+  "featureLabels": [
+    "白色眉線",
+    "深藍上體",
+    "白色下體",
+    "藍色胸側斑"
+  ],
+  "featureNotes": [
+    "眼上一條乾淨的白眉線是全名「白眉藍姬鶲」的由來；鴝姬鶲在同一位置只有眼後一小塊白斑、不是線狀，而南阿薩姆山地的族群更完全沒有眉線（HKBWS 引 Clement & de Juana 2020），為插圖局部。",
+    "頭頂至背、腰與翼上覆羽是飽和的群青藍，在陰影下仍看得出藍調；銹胸藍姬鶲是偏灰的石板藍，鴝姬鶲則是石板灰，三者排在一起時藍的純度差很明顯，為插圖局部。",
+    "頦、喉中央、胸中央與腹是純白，是雄鳥最醒目的一面；HKBWS 描述成鳥雄鳥下體白色、只有兩側胸斑帶藍，第一冬雄鳥則只有藍色的翼、腰與尾，下體較淡，為插圖局部。",
+    "白胸的兩側各有一塊藍色胸斑，像把白色中央框住；HKBWS 指雌鳥（本港未錄得）在同樣位置是灰調，有時灰色橫過整個胸部，與雄鳥的藍斑相對應，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "BTN",
+      "CHN",
+      "IND",
+      "MMR",
+      "NPL",
+      "PAK",
+      "THA"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists eight native countries/territories — Afghanistan (breeding), Bhutan (breeding), China (mainland, breeding and non-breeding), India (both), Myanmar (both), Nepal (breeding), Pakistan (breeding) and Thailand (non-breeding) — and all eight have 110m geometry, so eight shapes are shaded. Bangladesh is listed only as a VAGRANT and is deliberately left unshaded. Hong Kong is not a BirdLife country row for this species and nothing is shaded for it. Not an occurrence polygon: green does not imply full-country occupancy — the species breeds above 1,800 m from eastern Afghanistan through the central Himalayas to southwest China and winters at lower altitudes and further south to Myanmar, northwest Thailand and southwest China, inside a breeding EOO of 2,190,000 km² and a non-breeding EOO of 2,910,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/050600",
+      "use": "香港第 I 類，**Accidental（偶發）**。**11–12 cm，是本批體型最小的姬鶲**；**第一冬雄鳥（本港全部紀錄都是此羽色）**上體灰褐、下體淡，但**翼、腰與尾是藍色**，有**白的大覆羽翼帶、顯眼的三級飛羽白邊與淡色眼圈**；**雌鳥（本港未錄得）**上體灰褐、下體白，但胸部兩側帶灰（與成鳥雄鳥的藍胸斑相對應），有時灰色橫過整個胸部，尾上覆羽與尾帶藍調；**成鳥雄鳥深藍色上體、藍色兩側胸斑、白色下體**（2007 年 4 月那隻被判斷為**換入成鳥羽的第二曆年雄鳥**，頭頂較成鳥淡，但藍胸斑與白下體明顯）。聲音：**中等偏高的「tsee」與短促的 rattles**。分佈與生境：**全部紀錄都在大帽山山體的林地**——**嘉道理農場（KFBG）或石崗引水道**。出現情況（**全部五筆**）：**1999-01-16 至 17 KFBG 第一冬雄鳥**、**2006-12-28 KFBG 第一冬雄鳥**、**2007-04-05 至 07 KFBG 第二曆年雄鳥**（相信與 2006 年 12 月那隻同一隻）、**2017-11-29 至 12-11 石崗引水道第一冬雄鳥**、**2018-01-31 石崗引水道第一冬雄鳥**（相信是 2017 年那隻）與**2018-12-28 及 12-30 石崗引水道另一隻第一冬雄鳥**；**首兩筆最初因可能非自然來源而被列第 III 類，2017 年那筆之後重新評審（Allcock 2019），全種改列第 I 類**。行為：**典型姬鶲式的定點捕飛**。分類：**繁殖於海拔 1,800 m 以上，由阿富汗東部經喜馬拉雅中部向東至印度東北與中國西南**，冬季下移至較低海拔並南達**印度中部向東至緬甸、泰國西北與中國西南**；***F. s. aestigma*** 在中國，繁殖於**藏東南向東至四川西南與雲南北部**，部分冬季留在**雲南南部**（Clement & de Juana 2020）。保育：**IUCN Least Concern，趨勢穩定**。頁面最後更新 2025-06-05。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/ultramarine-flycatcher-ficedula-superciliaris/details",
+      "use": "IUCN **LC**、**2020 年評估**（準則 N/A；**這是本批第二舊的一次評估**，次於 0501 的 2018；2016 及以前全部 LC，2000 及以前為 Lower Risk/Least Concern）；成熟個體 **Unknown**，種群被描述為**常見而廣泛至不常見**（del Hoyo et al. 2006）；趨勢 **Stable（Suspected）**，理由為沒有下降或重大威脅的證據；**繁殖 EOO 2,190,000 km²、非繁殖 EOO 2,910,000 km²**、AOO Unknown、**Breeding endemic No**、**Full Migrant**、**IBA／KBA 15 個**、**海拔一欄為「-」（BirdLife 未提供）——本批第一次**、世代 **2.4 年**、**森林依賴度 Medium**、**生態系統只有陸域**；**生境分類 8 項**——**亞熱帶／熱帶潮濕山地林（繁殖期 Major）**，其餘七項全部是**非繁殖期 Suitable**：潮濕低地林、乾燥林、乾燥稀樹草原、**城市區域、鄉村花園、人工林與耕地**（本批第一次把耕地與人工林列入）；**用途只有寵物（國際），沒有人類食用**，是本批第一次出現「單一用途」；保育行動只有**「已劃定保育地點（全分佈範圍）」與「已納入國際法規」**，沒有復育計劃、系統監測、入侵種控制、域外保育或貿易管制；Alliance for Zero Extinction 與 Search for Lost Birds 皆 No；**國家表 9 列**——阿富汗、不丹、中國大陸、印度、緬甸、尼泊爾、巴基斯坦、泰國為原生，**孟加拉只是迷鳥**；命名人 **(Jerdon, 1840)**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **514** 項 白眉藍姬鶲 Ultramarine Flycatcher（*Ficedula superciliaris*），**第 I 類**；鄰項為 513 橙胸姬鶲與 515 紅胸姬鶲。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（白眉藍姬鶲；Ultramarine Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Ficedula superciliaris／鶲科 Muscicapidae）；speciesCode ultfly1；taxonOrder 29280。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 2、a 2.8、v 2.6（vEst 1）、r 1、c 1.2、o 1.9），`missingScores` 與 `withheldScores` 皆為空；o 1.9 與六軸平均 1.93 相符。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "`look` 的**英文**有可用的形態描述（雄鳥上體深藍、頭頸兩側深藍、喉中央經胸至腹一片白），中文全空；`range` 只列四川、西藏、雲南；`diet` 是「對間接線索反應多於直接線索」的行為研究句、**不是食性**；`voice` 被誤填為「冬季通常單獨或混群」；`conservation` 只是南阿薩姆族群沒有眉線的分類註記；length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 63、tail 48.5、tarsus 16.4、bill 11.8、mass 8（翼長與體重都是本批姬鶲中最小的）。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **514** 項、**第 I 類**；HKBWS 列為 **Accidental（偶發）**，**至今只有五筆、全部在大帽山山體**（嘉道理農場或石崗引水道）：1999-01-16 至 17、2006-12-28、2007-04-05 至 07（相信與上一筆同一隻）、2017-11-29 至 12-11、2018-01-31 與 2018-12-28 及 12-30。**本港全部紀錄都是第一冬雄鳥或第二曆年雄鳥，成鳥雄鳥與雌鳥都未錄得**。**首兩筆原列第 III 類**（可能非自然來源），2017 年那筆後於 Allcock（2019）重新評審、全種改列第 I 類。",
+    "辨識要點：**11–12 cm**，本批最小的姬鶲。成鳥雄鳥**深藍上體、白色下體、兩側各一塊藍色胸斑**、有白眉線；第一冬雄鳥上體灰褐、下體淡，但**翼、腰與尾藍色**，有白的大覆羽翼帶、三級飛羽白邊與淡眼圈；雌鳥（未錄得）上體灰褐、下體白而胸部兩側帶灰。叫聲為中等偏高「tsee」與短 rattles。",
+    "IUCN：**LC（無危）**，BirdLife **2020** 年評估、趨勢 **Stable**（Suspected）——**與 HKBWS 一致**。繁殖 EOO 2,190,000 km²、非繁殖 EOO 2,910,000 km²、IBA／KBA 15 個、世代 2.4 年、森林依賴度 Medium；**BirdLife 的海拔一欄是「-」，本批第一次沒有海拔資料**；生境 8 項、**只有亞熱帶／熱帶潮濕山地林是繁殖期 Major**，其餘七項（含城市區域、鄉村花園、人工林與耕地）都是非繁殖期 Suitable；**用途只有國際寵物貿易、沒有人類食用**，是本批第一次的單一用途物種；保育行動只有「已劃定保育地點」與「已納入國際法規」。",
+    "**地圖填 8 個形狀**（阿富汗、不丹、中國、印度、緬甸、尼泊爾、巴基斯坦、泰國）——**BirdLife 的原生國家全部有 110m 幾何**；**孟加拉只列為迷鳥，不填**；**香港不在 BirdLife 國家表，故 note 不提香港**（本張雖有香港紀錄，但依規則不以 BirdLife 未列的國家作地圖聲明）。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`look` 中文全空（英文有可用形態描述，故 `a` 有依據、不作 withheld）；`diet` 被誤填為「對間接線索反應多於直接線索」的行為研究句、**完全不是食性**；`voice` 被誤填為「冬季通常單獨或混群」；`conservation` 只是南阿薩姆族群沒有眉線的分類註記；`range` 只列三個省；length 與 weight 為空。六軸分數齊全，`missingScores` 與 `withheldScores` 皆為空。",
+    "HKBWS 頁面 id 是 **050600**（路徑 `0410/`），比 runtime **0505** 大 1；配合前四張（+1、+2、+0、+1），再次確認必須逐頁核對標題。",
+    "AI 主圖**不帶任何風格參照**生成，羽色寫成硬性規格（群青藍上體、白眉線、純白喉胸腹、兩側藍胸斑），並明寫「不得出現橙、銹、皮黃或黃色，不得有黑面罩，不得以眼後白斑代替眉線」；成品 1408×768 橫幅、**取 768 平方（x=406 起）放大至 1127×1127**。比較鳥**兩張都沿用 0503 的主圖（銹胸藍姬鶲）與 0502 的主圖（鴝姬鶲）**，免再生成、同畫風，**非等比例、非專家認證**；插圖與全部辨識要點均為 AI 解讀，未經鳥類專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

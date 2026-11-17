@@ -1,0 +1,197 @@
+{
+  "id": "0547",
+  "name": "普通朱雀",
+  "scientificName": "Carpodacus erythrinus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Carpodacus erythrinus, AI approximation of adult male.",
+  "featureCrops": [
+    [
+      0.08,
+      0.2,
+      0.3,
+      0.35
+    ],
+    [
+      0.1,
+      0.34,
+      0.28,
+      0.49
+    ],
+    [
+      0.31,
+      0.28,
+      0.53,
+      0.4
+    ],
+    [
+      0.34,
+      0.38,
+      0.52,
+      0.48
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥紅頭暗眼線",
+    "粉紅喉胸",
+    "褐色背部羽紋",
+    "褐翼淡色翼帶"
+  ],
+  "featureNotes": [
+    "雄鳥粉紅頭部、較暗眼線；雌鳥及幼鳥褐色。",
+    "雄鳥頭、上胸及兩脅泛粉紅，腹較淡。",
+    "背部褐色，部分羽毛泛紅。",
+    "覆羽淡端形成翼帶，雄鳥深淺各異。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "金翅雀",
+      "scientificName": "Chloris sinica",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "金翅雀灰綠頭、較粗淡喙及明黃翼斑；普通朱雀雄鳥粉紅頭胸，雌鳥褐色。",
+      "portraitNote": "AI 示意，腹色可能偏褐。"
+    },
+    {
+      "zh": "燕雀",
+      "scientificName": "Fringilla montifringilla",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "燕雀繁殖雄鳥黑頭橙胸白腰；普通朱雀雄鳥粉紅頭胸、腰偏紅。",
+      "portraitNote": "AI 繁殖雄鳥示意，白腰側視不明顯。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BGD",
+      "BLR",
+      "BEL",
+      "BGR",
+      "CHN",
+      "CZE",
+      "DNK",
+      "EST",
+      "FIN",
+      "FRA",
+      "GEO",
+      "DEU",
+      "IND",
+      "IRN",
+      "IRL",
+      "ISR",
+      "ITA",
+      "JPN",
+      "KAZ",
+      "KWT",
+      "KGZ",
+      "LAO",
+      "LVA",
+      "LTU",
+      "MNG",
+      "MNE",
+      "MMR",
+      "NPL",
+      "NLD",
+      "PRK",
+      "NOR",
+      "OMN",
+      "PAK",
+      "POL",
+      "QAT",
+      "ROU",
+      "RUS",
+      "SAU",
+      "SRB",
+      "SVK",
+      "SVN",
+      "SWE",
+      "CHE",
+      "TJK",
+      "THA",
+      "TKM",
+      "TUR",
+      "UKR",
+      "ARE",
+      "GBR",
+      "UZB",
+      "VNM"
+    ],
+    "note": "Partial native-country overview combines breeding, resident, nonbreeding and passage; small territories omitted, not whole-country occupancy. BirdLife EOO breeding 41.7m, nonbreeding 10.2m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0450/055300",
+      "use": "香港 I 類稀少冬候、罕見過境；雄鳥紅頭胸，雌幼褐色；本地可能下降。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0450/055400",
+      "use": "金翅雀灰綠頭及黃色翼帶。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0450/054900",
+      "use": "燕雀繁殖雄鳥黑頭橙胸白腰。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/common-rosefinch-carpodacus-erythrinus/details",
+      "use": "2024 LC，估計 2730–5600 萬成熟個體、下降；原生國家及 EOO。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Carpodacus erythrinus，speciesCode comros。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 4.7、v 2.7、r 1、c 1.2、o 2.3。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "外觀描述雌鳥，卡圖為雄鳥；不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 80.2、tail 58.6、tarsus 16.4、bill 12、mass 24 g。"
+    }
+  ],
+  "notes": [
+    "香港稀少冬候、罕見過境；主圖雄鳥，雌鳥及幼鳥為褐色。",
+    "三圖 AI 示意非等比例非專家認證；主圖背紋或過強、翅帶偏白、腳趾不可靠。",
+    "原生國家概覽合併季節非全境；runtime look 為雌鳥，六軸保留。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

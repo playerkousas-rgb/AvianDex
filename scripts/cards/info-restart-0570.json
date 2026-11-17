@@ -1,0 +1,266 @@
+{
+  "id": "0570",
+  "name": "白額燕鷗",
+  "scientificName": "Sternula albifrons",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "illustrationTaxon": "Sternula albifrons, AI approximation of breeding adult.",
+  "featureCrops": [
+    [
+      0.13,
+      0.26,
+      0.28,
+      0.36
+    ],
+    [
+      0.04,
+      0.31,
+      0.19,
+      0.39
+    ],
+    [
+      0.64,
+      0.45,
+      0.88,
+      0.55
+    ],
+    [
+      0.34,
+      0.59,
+      0.46,
+      0.69
+    ]
+  ],
+  "featureLabels": [
+    "白額黑冠",
+    "黃嘴黑尖",
+    "長而尖的翼",
+    "橙黃色腳"
+  ],
+  "featureNotes": [
+    "繁殖成鳥白額與黑冠，眼先黑色。",
+    "繁殖成鳥黃嘴帶黑尖，冬季嘴黑。",
+    "長而尖的翼，外一至三枚初級羽實際較深；AI 圖未準確呈現。",
+    "繁殖成鳥橙黃色腳，圖中足趾不可靠。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "普通燕鷗",
+      "scientificName": "Sterna hirundo",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "普通燕鷗較大，繁殖羽全黑冠；香港常見 longipennis 黑嘴深色腳。",
+      "portraitNote": "AI longipennis 成鳥示意，腳趾與尾羽細節不可靠。"
+    },
+    {
+      "zh": "黑枕燕鷗",
+      "scientificName": "Sterna sumatrana",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "黑枕燕鷗白冠、黑眼線延伸至後頸，嘴腳黑；比白額燕鷗大。",
+      "portraitNote": "AI 成鳥示意，尾羽、足趾細節不可靠。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "ARM",
+      "AUS",
+      "AUT",
+      "AZE",
+      "BGD",
+      "BLR",
+      "BEL",
+      "BEN",
+      "BIH",
+      "BGR",
+      "BDI",
+      "KHM",
+      "CMR",
+      "TCD",
+      "CHN",
+      "COG",
+      "COD",
+      "HRV",
+      "CYP",
+      "CZE",
+      "CIV",
+      "DNK",
+      "DJI",
+      "EGY",
+      "GNQ",
+      "ERI",
+      "EST",
+      "FIN",
+      "FRA",
+      "GAB",
+      "GMB",
+      "GEO",
+      "DEU",
+      "GHA",
+      "GRC",
+      "GIN",
+      "GNB",
+      "HUN",
+      "IND",
+      "IDN",
+      "IRN",
+      "IRQ",
+      "IRL",
+      "ISR",
+      "ITA",
+      "JPN",
+      "JOR",
+      "KAZ",
+      "KEN",
+      "KWT",
+      "KGZ",
+      "LAO",
+      "LVA",
+      "LBR",
+      "LBY",
+      "LTU",
+      "MYS",
+      "MLI",
+      "MRT",
+      "MDA",
+      "MNG",
+      "MNE",
+      "MAR",
+      "MOZ",
+      "MMR",
+      "NPL",
+      "NLD",
+      "NZL",
+      "NER",
+      "NGA",
+      "PRK",
+      "MKD",
+      "NOR",
+      "OMN",
+      "PAK",
+      "PNG",
+      "PHL",
+      "POL",
+      "PRT",
+      "QAT",
+      "ROU",
+      "RUS",
+      "SAU",
+      "SEN",
+      "SRB",
+      "SVK",
+      "SVN",
+      "SLB",
+      "SOM",
+      "ZAF",
+      "KOR",
+      "ESP",
+      "LKA",
+      "SWE",
+      "CHE",
+      "SYR",
+      "TWN",
+      "TJK",
+      "TZA",
+      "THA",
+      "TLS",
+      "TGO",
+      "TUN",
+      "TKM",
+      "TUR",
+      "UKR",
+      "ARE",
+      "GBR",
+      "UZB",
+      "VNM"
+    ],
+    "note": "Partial BirdLife 2018 extant native-country overview, combining seasons; Russia merged, Hong Kong within China; excludes territories too small for 110m and omitted native countries, not whole-country occurrence. Native Guam and Northern Marianas not filled as USA mainland is vagrant, Palestine and Western Sahara omitted because their specified ISO3 does not match geometry. Breeding EOO 204m and nonbreeding 130m km² include marine areas."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018100",
+      "use": "香港 I 類春常見、秋稀少過境；繁殖羽白額黑冠、黃嘴黑尖及橙黃腳，外一至三枚初級羽深色。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018700",
+      "use": "普通燕鷗較大、longipennis 多為黑嘴深色腳。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0120/018600",
+      "use": "黑枕燕鷗白冠黑枕、黑嘴黑腳。"
+    },
+    {
+      "url": "https://ebird.org/species/litter1",
+      "use": "細小、白額黑冠與黃嘴黑尖；快速翼拍及俯衝捕魚。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/little-tern-sternula-albifrons/details",
+      "use": "2018 LC、全球估19萬–41萬隻（非成熟個體數）、疑下降；國家表及海陸 EOO。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Sternula albifrons，鴴形目鷗科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "0570 六軸均缺，非零分。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "0570 缺資料。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "0570 缺資料。"
+    }
+  ],
+  "notes": [
+    "香港 I 類春季常見、秋季稀少過境；圖示繁殖成鳥，冬羽眼先白、嘴黑。",
+    "AI 示意非專家認證、非等比例，主圖腿偏長、深色外初級羽未正確畫出、尾羽與翼重疊不準，足趾不可靠；比較燕鷗腳趾及尾羽細節亦不可靠。",
+    "BirdLife 2018 LC，全球估19萬–41萬隻非成熟數量、疑下降；地圖僅部分原生國家，不表示全境或海上範圍，小島及部分原生國家省略，美國本土列迷鳥但關島及北馬里亞納原生。",
+    "runtime 無分數、文案及測量資料，六軸待查；未改 runtime。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}

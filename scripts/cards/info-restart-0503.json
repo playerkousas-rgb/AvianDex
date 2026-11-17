@@ -1,0 +1,150 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0503",
+  "name": "銹胸藍姬鶲",
+  "scientificName": "Ficedula erithacus",
+  "illustrationTaxon": "Adult male Slaty-backed Flycatcher Ficedula erithacus (relatively small head and bill; crown, nape, mantle, back and rump deep slate-blue; lores and cheek black forming a dark face mask; blackish uppertail coverts; tail black with white at the bases of the outer feathers; throat, breast and flanks deep orange, becoming paler on the belly and undertail coverts; narrow pale edges to the flight feathers; slim dark bill; dark grey legs). The female and first-winter plumages — the only ones so far recorded in Hong Kong — are not shown. AI interpretation; sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "鴝姬鶲",
+      "scientificName": "Ficedula mugimaki",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者雄鳥都有白翼斑與橙調的下體，但本種上體是**深石板藍**、眼先與頰黑成一片**面罩**、喉至腹一路**深橙**；鴝姬鶲上體是**石板灰**、眼後只有一小塊**白斑**、橙只到上胸而**腹部純白**。兩者的雌鳥與第一冬鳥都是灰褐帶淡翼帶，HKBWS 明確指出這正是最易混淆的一組，本卡只作雄鳥層面分辨。"
+    },
+    {
+      "zh": "紅喉姬鶲",
+      "scientificName": "Ficedula albicilla",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "紅喉姬鶲是本港常見的冬候鳥，雄鳥上體**灰褐而不帶藍**、**沒有黑面罩**，喉至上胸是**橙紅**但到白腹就乾淨地斷開，體型更小、嘴更細；本種雄鳥上體**深石板藍**、有黑色面罩、**橙色一直延伸至腹部並在腹下才轉淡**。兩者雌鳥同為灰褐帶淺眼圈，野外須靠尾基白斑的形狀與嘴色分辨，本卡不作野外分辨承諾。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.42,
+      0.14,
+      0.72,
+      0.36
+    ],
+    [
+      0.62,
+      0.12,
+      0.9,
+      0.36
+    ],
+    [
+      0.62,
+      0.34,
+      0.86,
+      0.6
+    ],
+    [
+      0.18,
+      0.5,
+      0.44,
+      0.72
+    ]
+  ],
+  "featureLabels": [
+    "石板藍上體",
+    "黑色面罩",
+    "橙紅下體",
+    "白色尾基"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥的頭頂、後頸、肩與背是均勻的深石板藍——不是鴝姬鶲的冷灰、也不是綠背姬鶲的橄綠；這個藍調在陰影下會顯得近黑，要看反光位置，為插圖局部。",
+    "眼先與頰是純黑、與石板藍的頭頂形成一片清楚的面罩；鴝姬鶲在同一位置只有一小塊眼後白斑、沒有任何黑面罩，是雄鳥最直接的分別，為插圖局部。",
+    "喉、胸與脅是深橙色，僅在腹部與尾下覆羽轉淡；鴝姬鶲的橙色只到上胸、腹部純白，紅喉姬鶲的橙色則在白腹前乾淨斷開，三者的橙色範圍正好層層遞減，為插圖局部。",
+    "外側尾羽的白色只集中在**尾基**，其餘尾羽與尾上覆羽近黑；這個白尾基在停棲與張尾時都很顯眼，也是與灰褐系雌鳥分辨的關鍵，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists eight native countries/territories — Bhutan, China (mainland), India, Laos, Myanmar, Nepal, Thailand (non-breeding) and Vietnam — and all eight have 110m geometry, so eight shapes are shaded. Hong Kong is not a BirdLife country row for this species and nothing is shaded for it. Cambodia is listed only as a VAGRANT and is deliberately left unshaded. Not an occurrence polygon: green does not imply full-country occupancy — the species breeds from eastern Qinghai and Shaanxi south through southeast Tibet, Sichuan and Yunnan to northern Myanmar, and winters from central Nepal to northern Indochina, inside a breeding EOO of 2,750,000 km² and a non-breeding EOO of 3,380,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/050300",
+      "use": "香港第 I 類，**Accidental（偶發）**。**13–13·5 cm**，**頭與嘴相對細小**的小型姬鶲；**雌鳥與第一冬鳥**通體**樸素灰褐、有淡色翼帶、腰與飛羽邊緣帶銹色調、淡色眼圈**；**雄鳥（本港從未錄得）**除**黑色眼先與頰**及**近黑的尾上覆羽**外，**頭、面與上體都是深石板藍**，**尾黑而外側尾羽有白基**，**下體深橙、向腹部與尾下覆羽轉淡**。聲音：**本港紀錄的鳥都沒有叫聲紀錄**；一般發出姬鶲屬典型的**乾澀 rattles**，另有**短而上揚的「tsee」或「tsee-too」**。出現情況（**全部四筆**）：**2008-02-10 至 03-02 荃灣第一冬鳥**（Cheung 2011）、**2013-01-05 川龍雌鳥**（HKBR 2013 的日期有誤）、**2017-11-16 何文田第一冬鳥／雌鳥**、**2019-01-24 與 02-01 長洲雌鳥／第一冬鳥**、**2019-12-24 至 2020-01-05 大欖郊野公園第一冬鳥**。行為：Clement & de Juana（2020）指本種**罕有下到地面**，但 2008-02-10 荃灣那隻在**華南異常寒潮期間經常由樹飛下、停在溪床的石上**。分類：**單型種**；繁殖於**中國中部與南部（青海東部、甘肅東南部、陝西，南至藏東南、四川與雲南）及緬甸北部**；部分冬季移至**尼泊爾中部向東至不丹、印度東北部、緬甸中部與南部、泰國北部與西部、寮國北部與中部**。保育：**IUCN Least Concern，趨勢穩定**。頁面最後更新 2025-06-05。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/slaty-backed-flycatcher-ficedula-erithacus/details",
+      "use": "IUCN **LC**、**2024 年評估**（準則 N/A；2004 起全部 LC、2000 及以前為 Lower Risk/Least Concern）；成熟個體 **Unknown**，種群被描述為 **rare to fairly common**（del Hoyo et al. 2006），**中國估算少於約 100 繁殖對、少於約 50 遷徙個體**（Brazil 2009）；趨勢 **Decreasing（Suspected）**，理由為**分佈範圍內十年樹冠覆蓋減少 6%**、推測族群下降 **1–19%**；**繁殖 EOO 2,750,000 km²、非繁殖 EOO 3,380,000 km²**、AOO Unknown、**Breeding endemic No**、**Full Migrant**、**IBA／KBA 4 個**、海拔 **600–4,300 m**、世代 **2.5 年**、**森林依賴度 Medium**、**生態系統只有陸域**；生境分類**只有三項**——**亞熱帶／熱帶潮濕山地林（繁殖期 Major）**、亞熱帶／熱帶潮濕低地林（非繁殖期 Suitable）、亞熱帶／熱帶潮濕灌叢（非繁殖期 Suitable）；**貿易：Donald et al.（2024）審視的七個貿易資料庫全部沒有紀錄，亦無任何使用或貿易跡象**（與 0500、0501、0502 的 high／low prevalence 成對照）；保育行動只有**「已劃定保育地點（全分佈範圍）」與「已納入國際法規」**，沒有復育計劃、系統監測、入侵種控制、域外保育或貿易管制；Alliance for Zero Extinction 與 Search for Lost Birds 皆 No；**國家表 9 列**——不丹、中國大陸、印度、寮國、緬甸、尼泊爾、越南為原生居民，**泰國為原生非繁殖**，**柬埔寨只是迷鳥**；**香港不在國家表**；命名人 **(Jerdon & Blyth, 1861)**；分類註記沿用 *Ficedula hodgsoni* 這個拼法與 HKBWS 的 *F. hodgsonii* 只差一個字母。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **512** 項 銹胸藍姬鶲 Slaty-backed Flycatcher（*Ficedula erithacus*），**第 I 類**；鄰項為 511 鴝姬鶲與 513 橙胸姬鶲，比較鳥之一即取 511。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（銹胸藍姬鶲；Slaty-Backed Flycatcher — runtime 把 Backed 寫成有連字號的大寫形式）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Ficedula erithacus／鶲科 Muscicapidae）；speciesCode slbfly1；taxonOrder 29239（與 BirdLife 的 *F. hodgsoni* 同種異名）。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime 六軸齊全（**i 2、a 3.3、v 2.8（vEst 1）、r 1、c 1.2、o 2.1**），但 `cardCopy.json` **完全沒有形態描述**，故 a 與依賴 a 的 o 列入 `withheldScores`；o 2.1 與六軸平均 2.07 相符。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "**沒有 `look` 欄位**；`diet` 只有「它是雜食性動物。」一句；`range` 只是國家列表（不丹、柬埔寨、中國、印度、寮國、緬甸、尼泊爾、泰國），**把一個 BirdLife 判為迷鳥的柬埔寨寫成一般分佈**；`aliases` 只有字串「1874」；`notes` 自帶「⚠️ 條目含來源請求標記」的警告；`habitat`、`behavior`（英文）都只是同一句生境描述；length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 70.3、tail 55.4、tarsus 15.7、bill 10.9、mass 10（尾長 55.4 明顯長於同屬各卡，與本種較長的尾形相符）。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **512** 項、**第 I 類**；HKBWS 列為 **Accidental（偶發）**，**至今只有四筆**：2008-02-10 至 03-02 荃灣第一冬鳥、2013-01-05 川龍雌鳥、2017-11-16 何文田第一冬鳥／雌鳥、2019-01-24 與 02-01 長洲雌鳥／第一冬鳥、2019-12-24 至 2020-01-05 大欖郊野公園第一冬鳥。**本港從未錄得雄鳥**，卡面主圖畫的是雄鳥（見插圖說明）。",
+    "辨識要點：**雄鳥**深石板藍上體、黑色眼先與頰、近黑尾上覆羽、尾黑而外側尾羽白基、下體深橙向腹部轉淡；**雌鳥與第一冬鳥**樸素灰褐、淡色翼帶、腰與飛羽邊緣帶銹色調、淡色眼圈。叫聲一般是乾澀 rattles 與短而上揚的「tsee／tsee-too」，但**本港的鳥都沒有叫聲紀錄**。2008 年荃灣那隻在寒潮期間常下到溪床石上，與文獻「罕有下地面」相反。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 年評估、趨勢 **Decreasing**（Suspected，**十年樹冠覆蓋減少 6%**、推測下降 1–19%）——**與 HKBWS 的「趨勢穩定」不一致，照實並列**（0498、0500、0502 亦有同類分歧）。繁殖 EOO 2,750,000 km²、非繁殖 EOO 3,380,000 km²、IBA／KBA 4 個、海拔 600–4,300 m、世代 2.5 年、森林依賴度 Medium；**七個貿易資料庫全部沒有本種紀錄**；保育行動只有「已劃定保育地點」與「已納入國際法規」。",
+    "**地圖填 8 個形狀**（不丹、中國、印度、寮國、緬甸、尼泊爾、泰國、越南）——**BirdLife 的原生國家全部有 110m 幾何**，是本批少見沒有「無幾何」註記的一張；**柬埔寨只列為迷鳥，不填**；**香港不在 BirdLife 國家表，故 note 不提香港**（與 0501、0502 相反）。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`cardCopy.json` **完全沒有 `look` 欄位**，`diet` 只有「它是雜食性動物。」，`aliases` 只有「1874」，`notes` 自帶「⚠️ 來源請求」警告；`range` 把 BirdLife 判為**迷鳥的柬埔寨**寫成一般分佈國；`habitat` 與英文 `behavior` 是同一句生境描述；length 與 weight 為空。六軸分數雖齊全，但**`a` 3.3 無任何 runtime 形態文字可核對**，故依 0494／0496 的從嚴先例，`a` 與依賴 a 的 `o` 一併列入 `withheldScores`（卡面顯示「綜合評分待查」＋「部分評分待核」）；`missingScores` 為空。",
+    "HKBWS 頁面 id 是 **050300**（路徑 `0410/`），**與 runtime 0503 同號**——與 0501（+1）、0502（+2）都不同，再次證實偏移浮動、必須逐頁核對標題。",
+    "主圖**直接沿用 0502 的比較鳥方形圖**（同為本輪新生成的銹胸藍姬鶲雄鳥，816² 放大至 1127²），是本批第一次「上一張的比較鳥變成下一張的主圖」；比較鳥為**鴝姬鶲**（0502 主圖，HKBWS 指出的雌鳥／第一冬鳥混淆種）與**紅喉姬鶲**（本輪新生成，同屬橙喉但上體灰褐、無面罩），**非等比例、非專家認證**；插圖與全部辨識要點均為 AI 解讀，未經鳥類專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {
+    "a": "runtime 有 a 3.3，但 cardCopy.json 完全沒有 look 欄位，diet 只有「它是雜食性動物。」一句、aliases 只有「1874」、notes 自帶來源請求警告——沒有任何 runtime 文字可核對這個外觀分數，依 0494／0496 從嚴先例列入待查。",
+    "o": "o 2.1 由六軸平均推導，而 a 已因無 runtime 文字可核對而待查，依 0494／0496 先例一併隱藏，卡面顯示「綜合評分待查」。"
+  }
+}

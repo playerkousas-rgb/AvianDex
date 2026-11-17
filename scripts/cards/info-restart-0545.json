@@ -1,0 +1,152 @@
+{
+  "id": "0545",
+  "name": "黑尾蠟嘴雀",
+  "scientificName": "Eophona migratoria",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Eophona migratoria, AI approximation of male.",
+  "featureCrops": [
+    [
+      0.04,
+      0.3,
+      0.2,
+      0.42
+    ],
+    [
+      0.12,
+      0.28,
+      0.3,
+      0.49
+    ],
+    [
+      0.34,
+      0.34,
+      0.56,
+      0.46
+    ],
+    [
+      0.51,
+      0.45,
+      0.72,
+      0.54
+    ]
+  ],
+  "featureLabels": [
+    "黑尖粗黃喙",
+    "雄鳥黑頭與喉",
+    "灰褐色背肩",
+    "深翼白色端斑"
+  ],
+  "featureNotes": [
+    "黃喙粗大且末端深色。",
+    "雄鳥黑色延伸至耳羽及大部分喉，圖中黑喉延伸或過大。",
+    "頸及腰珠灰，背肩灰褐。",
+    "飛羽端白斑；圖中白斑位置不夠準確。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "黑頭蠟嘴雀",
+      "scientificName": "Eophona personata",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "黑頭蠟嘴雀兩性皆黑頭，黑色不及耳後且喉下狹，喙更大無黑尖、無初級飛羽白端。",
+      "portraitNote": "AI 示意，翼羽仍出現少量白色及尾形不可靠。"
+    },
+    {
+      "zh": "錫嘴雀",
+      "scientificName": "Coccothraustes coccothraustes",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "錫嘴雀頭褐黑面罩、喙淡灰粉、短尾白端；黑尾蠟嘴雀雄鳥黑頭黃喙且叉尾。",
+      "portraitNote": "AI 示意，脅紋可能虛構、翼羽及尾長不準。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "LAO",
+      "MMR",
+      "PRK",
+      "RUS",
+      "KOR",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial native-country overview combines breeding, nonbreeding and season unknown; Hong Kong lacks separate geometry; shading not whole-country occupancy. BirdLife EOO breeding 5.84m, nonbreeding 3.88m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0450/055100",
+      "use": "香港 I 類不常見冬候及稀少過境；雄鳥黃喙黑尖、黑頭喉、白初級羽端及叉尾。香港繁殖記錄；HKBWS 舊版全球趨勢穩定。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0450/055200",
+      "use": "黑頭蠟嘴雀黑色不及耳後、喉色狹、喙無黑尖及無初級白端。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0450/055000",
+      "use": "錫嘴雀淡色粗喙棕頭黑面罩。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chinese-grosbeak-eophona-migratoria/details",
+      "use": "2024 LC，數量未知、懷疑下降，與 HKBWS 舊趨勢不同；原生國家及 EOO。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Eophona migratoria，speciesCode yebgro1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.8、v 3.2、r 1、c 1.2、o 2.2、vEst 1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "外觀描述有來源請求，喙與尾 callout 為別名及行為；不改 runtime，特徵依 HKBWS。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 97.4、tail 75.8、tarsus 21.1、bill 21.8、mass 46.9 g。"
+    }
+  ],
+  "notes": [
+    "香港不常見冬候、稀少過境，少數夏季及繁殖紀錄。主圖雄鳥。",
+    "三圖 AI 示意非等比例非專家認證；主圖黑喉過大、白翼斑位置或不準、足部不可靠；黑頭蠟嘴雀圖有不應明顯的白翼點。",
+    "全球 BirdLife 2024 懷疑下降，HKBWS 2023 舊頁稱穩定。國家概覽合併季節非全境。",
+    "runtime 外觀標示來源請求、喙尾 callout 錯置；不改，六軸保留且形態由 HKBWS 支持。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

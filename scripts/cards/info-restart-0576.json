@@ -1,0 +1,171 @@
+{
+  "id": "0576",
+  "name": "鷹鵰",
+  "scientificName": "Nisaetus nipalensis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危",
+    "assessmentNote": "全球 NT：BirdLife 2021 評定"
+  },
+  "illustrationTaxon": "Nisaetus nipalensis, AI approximation of adult perched.",
+  "featureCrops": [
+    [
+      0.34,
+      0.24,
+      0.45,
+      0.37
+    ],
+    [
+      0.35,
+      0.36,
+      0.46,
+      0.47
+    ],
+    [
+      0.45,
+      0.48,
+      0.59,
+      0.62
+    ],
+    [
+      0.68,
+      0.53,
+      0.83,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "細長冠羽",
+    "深色喉紋",
+    "腹部橫斑",
+    "長而有帶尾"
+  ],
+  "featureNotes": [
+    "成鳥有直立細長冠羽。",
+    "喉部深色側紋與中央縱紋。",
+    "成鳥下體褐色橫斑；幼鳥通常較淡。",
+    "尾長而寬，深淺帶交替。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "鳳頭鷹鵰",
+      "scientificName": "Nisaetus cirrhatus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "羽色多變，部分族群冠羽較長；胸多縱紋。",
+      "portraitNote": "AI 羽紋與足趾近似，非鑑定圖；冠羽不同族群有別。"
+    },
+    {
+      "zh": "白腹隼鵰",
+      "scientificName": "Aquila fasciata",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥白色下體帶深色縱紋，灰尾有深色近端帶。",
+      "portraitNote": "AI 尾帶過規則，羽列和足趾不可靠。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "JPN",
+      "LAO",
+      "MMR",
+      "NPL",
+      "PAK",
+      "RUS",
+      "LKA",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 2021 extant native country overview; includes Sri Lanka under BirdLife taxonomy, although eBird treats Legge’s Hawk-Eagle as separate. Country-level only, not whole-country occupancy; Hong Kong is vagrant despite mainland China being native."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/024600",
+      "use": "香港 I 類迷鳥、66–84 cm、成鳥冠羽喉紋及腹部橫斑，1988 鹿頸記錄。"
+    },
+    {
+      "url": "https://ebird.org/species/mouhae1",
+      "use": "成鳥喉縱紋、腹橫斑、直立冠；幼鳥較淡。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/mountain-hawk-eagle-nisaetus-nipalensis/details",
+      "use": "2021 NT，估1,200–6,700成熟個體、下降；原生國家表，含斯里蘭卡。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025100",
+      "use": "白腹隼鵰成鳥白底縱紋與灰尾深色近端帶。"
+    },
+    {
+      "url": "https://zh.wikipedia.org/zh-tw/%E5%87%A4%E5%A4%B4%E9%B9%B0%E9%9B%95",
+      "use": "鳳頭鷹鵰中文名，羽色與冠羽依族群不同。"
+    },
+    {
+      "url": "https://ebird.org/species/crehae1",
+      "use": "有冠鳳頭鷹鵰族群圖片參考。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "分類學名"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六軸缺資料"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "缺資料"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "缺資料"
+    }
+  ],
+  "notes": [
+    "香港 I 類迷鳥，1988年鹿頸一筆未成鳥記錄。",
+    "AI 圖非專家認證、不等比例；主圖腹斑偏規則、中央喉紋不夠清楚、足趾及尾羽未必準確；鳳頭鷹鵰羽紋近似且冠羽依族群不同，白腹隼鵰尾帶過規則，所有足趾及羽列不可靠。",
+    "BirdLife 2021 NT、估1,200–6,700成熟個體且下降；國家地圖非全境、採 BirdLife 分類含斯里蘭卡，eBird 將 Legge’s Hawk-Eagle 分開；香港迷鳥而中國內地原生。",
+    "runtime 無分數、文案及測量資料，六軸待查；未改 runtime。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}

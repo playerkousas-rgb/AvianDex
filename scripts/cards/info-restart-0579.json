@@ -1,0 +1,218 @@
+{
+  "id": "0579",
+  "name": "褐耳鷹",
+  "scientificName": "Tachyspiza badia",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2021 評定"
+  },
+  "illustrationTaxon": "Tachyspiza badia, AI approximation of adult male perched.",
+  "featureCrops": [
+    [
+      0.29,
+      0.3,
+      0.41,
+      0.39
+    ],
+    [
+      0.41,
+      0.36,
+      0.58,
+      0.47
+    ],
+    [
+      0.34,
+      0.4,
+      0.49,
+      0.52
+    ],
+    [
+      0.7,
+      0.48,
+      0.86,
+      0.58
+    ]
+  ],
+  "featureLabels": [
+    "成雄紅虹膜",
+    "藍灰上體",
+    "細赤褐橫紋",
+    "尾部細暗帶"
+  ],
+  "featureNotes": [
+    "成雄虹膜偏紅，雌鳥偏黃。",
+    "成雄上體藍灰，雌鳥褐灰。",
+    "成鳥下體細褐橙色橫紋；幼鳥縱斑。",
+    "尾有細暗帶；AI 尾帶太粗。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "鳳頭鷹",
+      "scientificName": "Lophospiza trivirgata",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "成鳥喉中央有明顯暗縱紋，下體有縱斑及橫紋。",
+      "portraitNote": "AI 冠羽過顯眼、足與羽紋不精確。"
+    },
+    {
+      "zh": "赤腹鷹",
+      "scientificName": "Tachyspiza soloensis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "成雄胸淡桃色、橫紋較少；飛行時翼尖黑。",
+      "portraitNote": "AI 尾偏長、尾帶過粗，足趾及羽列不可靠。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "AGO",
+      "ARM",
+      "AZE",
+      "BGD",
+      "BEN",
+      "BTN",
+      "BWA",
+      "BFA",
+      "BDI",
+      "KHM",
+      "CMR",
+      "CAF",
+      "TCD",
+      "CHN",
+      "COG",
+      "COD",
+      "CIV",
+      "DJI",
+      "ERI",
+      "SWZ",
+      "ETH",
+      "GMB",
+      "GHA",
+      "GIN",
+      "GNB",
+      "IND",
+      "IRN",
+      "IRQ",
+      "KAZ",
+      "KEN",
+      "KWT",
+      "KGZ",
+      "LAO",
+      "LBR",
+      "MWI",
+      "MLI",
+      "MRT",
+      "MOZ",
+      "MMR",
+      "NAM",
+      "NPL",
+      "NER",
+      "NGA",
+      "OMN",
+      "PAK",
+      "RWA",
+      "SAU",
+      "SEN",
+      "SLE",
+      "SOM",
+      "ZAF",
+      "LKA",
+      "SDN",
+      "TJK",
+      "TZA",
+      "THA",
+      "TGO",
+      "TKM",
+      "UGA",
+      "UZB",
+      "VNM",
+      "YEM",
+      "ZMB",
+      "ZWE"
+    ],
+    "note": "Partial BirdLife 2021 extant native country table across seasons, South Sudan omitted due to geometry; vagrant and uncertain excluded. BirdLife uses Accipiter badius; runtime/eBird Tachyspiza badia. Country fill is not whole-country occurrence."
+  },
+  "sources": [
+    {
+      "url": "https://ebird.org/species/shikra1",
+      "use": "成雄紅眼藍灰上體與橙褐橫紋，雌眼偏黃，尾細暗帶。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/shikra-accipiter-badius/details",
+      "use": "2021 LC、50萬–999,999成熟個體、穩定及原生國家表；舊屬名。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港 I 類名錄。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025200",
+      "use": "鳳頭鷹喉中央暗紋和下體縱斑橫紋。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0180/025300",
+      "use": "赤腹鷹雄鳥淡桃胸、黑翼尖。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "分類學名"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六軸缺資料"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "缺資料"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "缺資料"
+    }
+  ],
+  "notes": [
+    "HKBWS 香港 I 類名錄；未確認個別物種頁故不臆測本地頻率。",
+    "AI 成雄示意非專家認證，主圖尾帶偏粗、腹紋過於規則、腿趾有誤差；鳳頭鷹冠羽過明顯，赤腹鷹尾偏長尾帶偏粗，羽列足趾均不可靠。",
+    "BirdLife 使用 Accipiter badius、runtime 用 Tachyspiza badia；2021 LC、估50萬–999,999成熟個體、穩定。世界圖部分原生國家非全境，省略南蘇丹。",
+    "runtime 無分數、文案及測量資料，六軸待查；未改 runtime。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}

@@ -1,0 +1,148 @@
+{
+  "id": "0518",
+  "name": "小太平鳥",
+  "scientificName": "Bombycilla japonica",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危",
+    "assessmentNote": "全球 NT：BirdLife 2018 評定"
+  },
+  "illustrationTaxon": "Adult Japanese Waxwing Bombycilla japonica perched on a bare twig with a few red berries, side view. Silky fawn-brown head and breast, greyer brown back, pale blue-grey rump and uppertail coverts, short pointed crest at the rear of the crown, bold black mask from the black bill through the eye and across the throat, a vinous wine-red panel across the folded wing, narrow white tips to the primaries forming a thin pale line, crimson-red terminal band on the tail, deep reddish undertail coverts, pale yellowish-white belly. Black bill.",
+  "featureCrops": [
+    [
+      0.7,
+      0.16,
+      0.88,
+      0.33
+    ],
+    [
+      0.55,
+      0.38,
+      0.72,
+      0.5
+    ],
+    [
+      0.26,
+      0.47,
+      0.5,
+      0.6
+    ],
+    [
+      0.02,
+      0.64,
+      0.18,
+      0.77
+    ]
+  ],
+  "featureLabels": [
+    "黑眼罩與黑喉",
+    "酒紅翼斑",
+    "白色飛羽端",
+    "紅色尾端斑"
+  ],
+  "featureNotes": [
+    "**黑色眼罩由嘴基穿過眼，一直蓋到喉部**，與淡皮黃褐的頭、胸形成強烈對比——這是太平鳥屬的招牌。本種的黑罩**一直延伸到冠羽後方**，是與太平鳥的分別之一。為插圖局部。",
+    "**收合的翼上有一片酒紅（vinous）色的板塊**，橫跨中、大覆羽。太平鳥的翼上也有紅色，但那是**次級飛羽上一顆顆蠟質的紅色「水滴」**；本種的紅是**整片染開的翼斑**，水滴狀的蠟質端只在雄鳥的次級飛羽上出現，而且沒有太平鳥那麼明顯（runtime 的 `funFact` 英文句）。為插圖局部。",
+    "**初級飛羽的羽端是白色**，收翼時在黑色的飛羽上形成一道細細的白線。**第一齡冬羽**這道白線最不明顯——外側飛羽外瓣的白較少甚至沒有，翼鏡也較淡，所以整隻鳥看起來比成鳥「濛」。為插圖局部。",
+    "**尾羽末端是一道鮮紅的端帶**，這是本種與太平鳥最直接的分別——**太平鳥的尾端是黃色**。香港這五筆紀錄全部落在 1 月至 4 月及 11 月，正是冬羽時期。為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "太平鳥",
+      "scientificName": "Bombycilla garrulus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "**這是真正會混淆的一對**——同屬、同體型輪廓、同樣在冬天成群的 berry 樹上出現。分別在四點：**尾端**本種是**鮮紅**、太平鳥是**鮮黃**；**翼上紅斑**本種是**一整片酒紅**、太平鳥是**次級飛羽上一顆顆蠟質紅色「水滴」（wax tips）**，而且太平鳥的蠟質端通常更明顯；**上體**本種較樸素、較偏褐灰，太平鳥**較灰、體型略大**且羽色更冷；**尾下覆羽**本種較鮮紅、太平鳥是較深的栗褐色。此外本種的黑罩**延伸到冠羽後方**。",
+      "portraitNote": "太平鳥（AI 生成比較鳥）：較灰、較大，尾端黃色、翼上蠟質紅滴明顯、尾下覆羽栗褐。"
+    },
+    {
+      "zh": "小太平鳥 第一齡冬羽",
+      "scientificName": "Bombycilla japonica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "**同一種、不同年齡**——香港 2018 年那一筆就是第一齡冬羽。分別在：**尾下覆羽**第一齡較暗啞（成鳥鮮紅）；**翼鏡**第一齡較淡；**初級飛羽外瓣的白**第一齡很少或沒有，所以成鳥那道白線在第一齡身上是斷開、隱約的；**冠羽**較短而不明顯；**尾端紅帶**較窄、較暗。整體而言第一齡鳥比成鳥「灰濛濛」，紅與黑都不夠飽和。",
+      "portraitNote": "小太平鳥第一齡冬羽（AI 生成）：較暗啞的褐色頭胸、短冠羽、翼鏡淡、尾端紅帶較窄。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "PRK",
+      "RUS",
+      "KOR",
+      "TWN"
+    ],
+    "note": "BirdLife 國家表只有 **8 列**（本批最少）：**原生 7 列**（`Russia` 與 `Russia (Asian)` 皆 Breeding，併為 `RUS`；中國、日本、南韓為非繁殖；北韓無季節；台灣 `Taiwan, China` 為非繁殖），共 **6 個 ISO3**，全部填色；**香港是 Vagrant，不填色**——本地 Accidental。分佈很窄：**只在俄羅斯遠東繁殖**（東西伯利亞的雅庫特東部、哈巴羅夫斯克、阿穆爾），**非繁殖期在中國東部、朝鮮半島與日本**。所以地圖上的綠色主要是**繁殖地（俄羅斯遠東）與越冬地（中國東部、日本、韓國）兩塊**，中間沒有明顯的過境地帶。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0270/034300",
+      "use": "香港第 I 類、**偶發冬候鳥（Accidental winter visitor）**；**五筆紀錄，全部在 1 月 16 日至 4 月 20 日**：**1991** 林村谷七隻 4 月 5–6 日（香港首筆紀錄，Pearse & Williams 1992）、**1997** 石湖圍五隻 2 月 7 日、**2003** 米埔自然護理區一隻 1 月 16 日、**2018** 石崗機場路一隻**第一齡冬羽** 1 月 18 日、**2019** 鰂魚涌一隻 11 月 28–29 日。HKBWS 明言本種是**irruptive、nomadic**，秋季遷徙較遲（Brazil 2018），所以「出現得晚、紀錄之間隔很久」是意料之中。生境：**開闊林地，主要在New Territories**。**15–18 cm**。**整體是褐皮黃色，腰、尾上覆羽與翼較灰**，**黑面罩與黑喉**、**尾下覆羽偏紅**、**初級飛羽白端**、**收翼時可見酒紅色翼斑**、**尾端紅色**。**第一齡冬羽**：**尾下覆羽較暗啞**、**翼鏡較淡**、**外側初級飛羽外瓣的白較少或沒有**。與**太平鳥**的分別：**尾端與肩羽紅色**（太平鳥黃色）、**黑罩延伸到冠羽後方**、**上體較樸素較灰**、**腹部較淡**、**尾下覆羽較暗啞**。聲音：全部高音——**短促急降的『see』**、**較長而稍低的『seee』**、以及**長短兩種中音顫音**。行為：**在樹上取食果實，通常容易觀察**。分類：**單型種**；**在俄羅斯東部繁殖**（雅庫特、哈巴羅夫斯克、阿穆爾，以及鄰接的黑龍江），**非繁殖期在中國東部、韓國與日本**；在中國是**東北各省的過境鳥**，並在**由雲南向東經貴州、湖南、江西至浙江與台灣，以及此區以北以東遠至遼寧**一帶越冬。保育：**IUCN 近危（NT），種群下降**；「一種稀少、全球種群被認為中等偏小、受生境喪失與**為野鳥貿易而捕捉**威脅的物種」。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/japanese-waxwing-bombycilla-japonica/details",
+      "use": "IUCN **NT（近危）**、**2018 年評估**、**準則 C1+2a(ii)**（本批第一次出現準則代碼）；**成熟個體 Unknown**（未量化）；**趨勢 Decreasing（Suspected）**，A2／A3／A4 皆 **1–9%**，**成熟個體持續下降 Yes**、**AOO 持續下降 Yes**；**EOO 繁殖 996,000 km²、非繁殖 3,850,000 km²**；**Full Migrant**；**IBA／KBA 只有 3 個（5,233 km²、平均保護區覆蓋 47.21%）**，全部在俄羅斯亞洲部分（Mukhtel' lake、Schast'ya Gulf、Udyl' lake）；**只有陸域**、**海拔欄為「-」（本批第一次未知海拔）**、世代 **4.4 年**、Landbird、**森林依賴度 High（本批第一次 High）**；**生境只有 3 項（本批最少）**：**温帶林（非繁殖）與北方林（繁殖）為 Major**，**城市地區（非繁殖）為 Suitable**；生殖段記**偏好針葉林、需要結果的樹**，**冬季在落葉與混交林，也會到公園與花園**，**六月至七月產卵（北方夏季晚期）**、遷徙相對短、**似隨果實收成而移動**；**Threats 有三列並全部 Impact Low**：**狩獵與誘捕（刻意針對本種，Ongoing、少數範圍、Rapid Declines）**、**伐木（大規模，非刻意）**、**道路與鐵路**；**1998 年以來單是歐盟國家就入口 5,390 隻野生個體，大部分由中國輸出**（UNEP-WCMC CITES 貿易資料庫 2005 年 1 月）；**貿易終端用途：食用－人類（Subsistence、National）與寵物／展示（International）**——**「國際」規模為本批第一次**；**正在進行的保育行動：列入歐盟野生動植物貿易法規附錄 D（Annex D），因此歐盟進口量受監察**（本批第一次出現 Annex D）；已就位行動中**只有「已劃定保育地點（全部範圍）」為 Yes**，**國際法規與國際貿易管制皆為 No**；**需要行動：保護合適生境、防止伐木與開發**；**需要研究：貿易趨勢、生境趨勢、生活史與生態**；AZE 與 Search for Lost Birds 皆 No；命名人 **(Siebold, 1824)**；評估歷史 2018／2016／2012 NT C1+2a(ii)，2008／2004 NT C1，2000／1994 LR/NT，1988 LR/LC。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：**第 351 項** 小太平鳥 Japanese Waxwing（*Bombycilla japonica*），**第 I 類**，IUCN 欄為 NT。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（小太平鳥；Japanese Waxwing）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（*Bombycilla japonica*／**太平鳥科 Bombycillidae**——本批首次出現這個科）；speciesCode japwax1；taxonOrder 29620。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 3、a 4.3、v 3.3、r 1.8、c 1.8、o 2.8，vEst 1），`missingScores` 與 `withheldScores` 皆為空；o 2.8 與五軸平均 2.84 相符。a 保留：`look` 中文是尾羽由灰至黑再配 8 mm 玫瑰紅端斑的圖案，英文是翼上黑灰白圖案與大覆羽的淡紅褐橫帶，兩句皆為可核對形態。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "中文多句在逗號處**中途截斷**（`habitat`、`diet`、`highlights` 前兩句）；`breeding` 中文本體是**食性**（衛矛、鼠李、女貞果實）而非繁殖；`habitat` 與 `behavior` 中文幾乎重複；`range` 中文只列「俄羅斯東部、烏蘇里江下游、庫頁島、北韓、南韓、台灣」，**漏了日本與中國東部這兩個最主要的越冬地**；`funFact` 中文給別名**十二紅、紅連雀**；`look` 的中文尾端紅斑描述與英文翼上圖案描述各自成句；`length`／`weight` 皆空；iucn 近危 NT 與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 107.2、tail 54、tarsus 17.3、bill 15.8、mass 42.3 g（本批目前最重）。"
+    }
+  ],
+  "notes": [
+    "香港狀況：名錄 2024 第 **351** 項、**第 I 類**；HKBWS 的級別是**偶發冬候鳥（Accidental winter visitor）**——**五筆紀錄**，日期由 1 月 16 日到 4 月 20 日（另有一筆 11 月底），1991 年林村谷七隻是香港首筆紀錄。HKBWS 特別指出本種**irruptive、nomadic**、秋季遷徙較遲，所以「出現得晚、紀錄之間隔很久」屬正常，不需要用「變少」去解釋這種稀疏。**本批第一次出現冬季/irruptive 型的分佈模式**——之前 17 張全部是候鳥或過境鳥。",
+    "**這一張與 0517 剛好相反**：0517 白頂䳭在七個貿易數據庫中**完全沒有紀錄**（0/7），而本種的**貿易就是被 IUCN 寫進瀕危理由的主要威脅之一**——**1998 年以來單是歐盟就入口 5,390 隻野生個體、大部分來自中國**，終端用途同時包括**食用（國內、自給）與寵物（國際）**，也是本批第一次出現**「國際」規模**的寵物貿易。保育對策同樣少見：**列入歐盟野生動植物貿易法規附錄 D，靠監察進口量**（Annex D 是本批第一次），而「已納入國際法規」與「受國際貿易管制」兩欄反而都是 No。",
+    "**本批其他「第一次」**：**IUCN 準則代碼 C1+2a(ii)**（之前只記年份與類別）；**森林依賴度 High**；**生境只有 3 項**（之前最少 6 項）；**海拔欄為未知**（其他 17 張都有數字）；**國家表只有 8 列、6 個 ISO3**（最少）；**世代 4.4 年**（最長，與 0517 的 1.9 年剛好是兩端）；**體重 42.3 g** 為本批目前最重。",
+    "趨勢與數字：BirdLife 2018 為 **NT、Decreasing（Suspected）**、A2／A3／A4 皆 1–9%、**成熟個體數未量化（Unknown）**；HMBWS 記**種群下降**，與 BirdLife 一致。IUCN 的理據同時列**生境喪失**與**為野鳥貿易而捕捉**兩項，卡上照兩項並列，不把其中一項當成唯一原因。",
+    "辨識要點：**尾端紅色**（太平鳥黃色）、**酒紅翼斑**（太平鳥是次級飛羽上蠟質紅「水滴」）、**黑罩延伸到冠羽後方**、**上體較樸素偏褐灰**、**尾下覆羽偏紅**、**初級飛羽白端成細線**。第一齡冬羽**尾下覆羽暗啞、翼鏡淡、外側初級飛羽白少或無、冠羽短**——香港 2018 年石崗那一筆就是第一齡冬羽。",
+    "分佈圖只填 **6 個形狀**：**CHN、JPN、PRK、RUS、KOR、TWN**。BirdLife 原生 7 列（`Russia` 與 `Russia (Asian)` 併為 `RUS`），**香港是 Vagrant 不填色**（本地 Accidental）。俄羅斯遠東是繁殖地，中國東部、日本、韓國是越冬地，北韓無季節記錄。",
+    "插圖全部為本次新生成（不像 0517 可以沿用）：**主圖為成鳥**，**比較鳥分別是太平鳥成鳥（真正的混淆種）與小太平鳥第一齡冬羽**（香港紀錄多為這個年齡）。三張圖生成時都有水彩紙邊，已用「內縮 3.5% + 依內容範圍重新置中成正方形」的方式處理，四個角都檢查過沒有殘留邊框。AI 生成，非等比例、非專家認證。",
+    "**教訓（已寫入 HANDOFF 待辦）**：這次一張圖在處理時被同名覆寫，導致主圖只剩原圖縮小後貼在黑底上的版本，只能重新生成；**生成檔一律另存 `*-gen.png`，只把處理結果寫成 `hero-raw.png`／`simN-square.png`**。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

@@ -1,0 +1,163 @@
+{
+  "id": "0533",
+  "name": "理氏鷚",
+  "scientificName": "Anthus richardi",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Anthus richardi, AI approximation.",
+  "featureCrops": [
+    [
+      0.08,
+      0.14,
+      0.34,
+      0.28
+    ],
+    [
+      0.29,
+      0.26,
+      0.56,
+      0.42
+    ],
+    [
+      0.18,
+      0.27,
+      0.39,
+      0.47
+    ],
+    [
+      0.29,
+      0.62,
+      0.56,
+      0.81
+    ]
+  ],
+  "featureLabels": [
+    "長喙及淡眉",
+    "褐色縱紋背",
+    "淡胸深色縱紋",
+    "長腿及後爪"
+  ],
+  "featureNotes": [
+    "大型鷚，喙較粗長、下喙基部淡色，眉紋淡而不太明顯。",
+    "上體褐色有深色縱紋；不同羽況可變。",
+    "胸部淡黃褐或白色，有明顯深色縱紋。",
+    "腿長，後爪明顯較長；AI 腳趾位置及後爪僅示意。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "稻田鷚",
+      "scientificName": "Anthus rufulus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "稻田鷚通常較小緊湊、尾與後爪較短，叫聲亦不同；差異有重疊，圖像並非同比例。",
+      "portraitNote": "稻田鷚 AI 示意，不代表香港常見種。"
+    },
+    {
+      "zh": "樹鷚",
+      "scientificName": "Anthus hodgsoni",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "樹鷚上體較橄欖色、眉較鮮明且耳羽後方有淺斑，常見於林地附近；理氏鷚上體褐色、腿長且喜開闊草地。",
+      "portraitNote": "樹鷚 AI 示意，耳斑位置僅供參考。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "JPN",
+      "JOR",
+      "KAZ",
+      "KWT",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PRK",
+      "OMN",
+      "RUS"
+    ],
+    "note": "僅選 BirdLife 原生現存國家表部分亞洲國家，合併不同季節及未明季節；與 HKBWS 所用分類範圍可能不同，不表示全境或完整全球分佈。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053900",
+      "use": "香港 I 類，常見過境及冬候，局部山地草地繁殖；大型、長腿、長後爪、褐背、胸縱紋，白色外側尾羽。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054200",
+      "use": "樹鷚有橄欖色上體、明顯眉及耳羽後淺斑，常見林地附近。"
+    },
+    {
+      "url": "https://ayuwat.blog/2021/04/29/paddyfield-pipit/",
+      "use": "稻田鷚一般較緊湊、尾與後爪較短，差異可有重疊。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/richards-pipit-anthus-richardi/details",
+      "use": "2025 LC、穩定、數量未量化；國家表與 HKBWS 分類範圍可能有差，地圖僅選部分亞洲原生國。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Anthus richardi，speciesCode ricpip1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 2.8、v 3.1、r 4.8、c 1.2、o 2.8、vEst 1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "使用大花鷚別名；英文與中文欄位有錯置或截斷；不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 92、tail 71.6、tarsus 29.2、bill 18、mass 32.2 g。"
+    }
+  ],
+  "notes": [
+    "三幅均 AI 示意非專家認證，理氏鷚眉紋偏醒目，腳趾和後爪結構不可靠；並非同比例。",
+    "稻田鷚與理氏鷚差異有重疊，須結合叫聲及多項特徵。",
+    "BirdLife 國家表較 HKBWS 亞洲分佈廣，可能分類處理不同；地圖保守取部分亞洲國家，不表示全境。",
+    "runtime 英文欄有錯置和截斷，六軸保持不變。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

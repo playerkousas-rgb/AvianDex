@@ -1,0 +1,162 @@
+{
+  "id": "0530",
+  "name": "東黃鶺鴒",
+  "scientificName": "Motacilla tschutschensis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2019 評定"
+  },
+  "illustrationTaxon": "Breeding male Motacilla tschutschensis taivana, AI approximation.",
+  "featureCrops": [
+    [
+      0.68,
+      0.18,
+      0.94,
+      0.34
+    ],
+    [
+      0.43,
+      0.28,
+      0.71,
+      0.46
+    ],
+    [
+      0.5,
+      0.43,
+      0.78,
+      0.59
+    ],
+    [
+      0.12,
+      0.54,
+      0.36,
+      0.67
+    ]
+  ],
+  "featureLabels": [
+    "黃眉與暗耳羽",
+    "灰綠頭背與深翼",
+    "黃色胸腹",
+    "長尾與白尾緣"
+  ],
+  "featureNotes": [
+    "taivana 繁殖雄鳥灰綠頭背，長而寬黃眉及深色耳羽；圖像示意。",
+    "上體灰綠，翼深色；亞種、性別及季節羽況差異大。",
+    "繁殖雄鳥下體黃色，非繁殖羽及第一年鳥可顯著較淡。",
+    "長尾有白色外側，走跑時擺動尾巴。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "西黃鶺鴒",
+      "scientificName": "Motacilla flava",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "香港所記錄的 leucocephala 雄鳥頭偏白而非灰綠黃眉；兩種亞種和羽況多變，須結合叫聲審慎鑑別。",
+      "portraitNote": "西黃鶺鴒 leucocephala 雄鳥，AI 示意。"
+    },
+    {
+      "zh": "灰鶺鴒",
+      "scientificName": "Motacilla cinerea",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "灰鶺鴒上體灰色、黃腰及更長尾；繁殖雄鳥黑喉有白邊，和東黃 taivana 的灰綠背黃眉不同。",
+      "portraitNote": "灰鶺鴒雄鳥，AI 示意。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AUS",
+      "BGD",
+      "BTN",
+      "BRN",
+      "KHM",
+      "CAN",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PHL",
+      "RUS",
+      "TWN",
+      "THA",
+      "USA",
+      "VNM"
+    ],
+    "note": "BirdLife 原生現存地國家概覽，合併繁殖、非繁殖和過境；香港、新加坡等缺獨立底圖幾何；不表示全境分佈。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053510",
+      "use": "taivana 香港常見過境及冬候鳥；繁殖雄鳥灰綠頭背、寬黃眉、深色耳羽，第一年鳥常淡色。棲低地濕地及開闊地，步行時擺尾覓食無脊椎動物。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053400",
+      "use": "西黃 leucocephala 香港紀錄白頭帶灰；亞種頭紋差異大，飛行叫聲略較東黃柔及拖長。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053700",
+      "use": "灰鶺鴒灰背黃腰、長尾，繁殖雄鳥黑喉白邊。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/eastern-yellow-wagtail-motacilla-tschutschensis/details",
+      "use": "2019 LC，懷疑下降；成熟個體 5,000 萬至 1.5 億為初步低質素估算；Full Migrant，原生現存國家表。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "M. tschutschensis，speciesCode eaywag。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.3、v 2.9、r 4.8、c 1.2、o 2.8、vEst 1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 不完整；behavior 及 highlights 截斷，多個英文欄錯置；length、weight 空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 78.8、tail 66.5、tarsus 24.3、bill 15.9、mass 18.5 g。"
+    }
+  ],
+  "notes": [
+    "AI 主圖示意香港常見的 taivana 繁殖雄鳥；比較西黃 leucocephala、灰鶺鴒。插圖非專家認證；黃眉後端不夠方，腳趾與草重疊。",
+    "亞種、性別與季節羽況差異大，不可只憑頭紋識別。",
+    "Runtime 文案截斷或錯置，六軸保持不變。",
+    "地圖國家合併季節，未表達全境，細小地區缺幾何。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

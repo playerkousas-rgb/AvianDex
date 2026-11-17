@@ -1,0 +1,197 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "id": "0507",
+  "name": "紅胸姬鶲",
+  "scientificName": "Ficedula parva",
+  "illustrationTaxon": "Adult male Red-breasted Flycatcher Ficedula parva in breeding plumage (crown, nape, mantle, back and wings muted warm brown with buff edges to the flight feathers; face, cheeks and the sides of the breast clear grey, framing the orange front; chin, throat and centre of the breast rich orange-red in a broad front panel that ends against clean white lower breast, belly and undertail coverts; tail plain grey-brown with large white patches at the sides of the tail-base; small pale eyering; fairly broad-based dark bill with a pale base to the lower mandible; dark grey legs). The non-breeding, female and first-winter plumages are not shown; the female and first-winter are very similar to non-breeding Red-throated Flycatcher. AI interpretation; sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "紅喉姬鶲",
+      "scientificName": "Ficedula albicilla",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "本種以前就是紅喉姬鶲的同種，是這批姬鶲中最難分的一對。雄鳥：本種的橙紅由**頦、喉一直覆蓋到胸前一大片**，兩側由**灰色臉頰與脅側**框住，**沒有灰色胸帶**；紅喉姬鶲的橙紅**只限於喉部一小塊**，下方有一條**清楚的灰色胸帶**把橙色與白腹隔開，而且**冬季會失去紅喉**。雌鳥與第一冬鳥則靠 HKBWS 的三點：本種**羽色較暖**、**下喙基淡色**、**尾上覆羽比尾淺**；紅喉姬鶲整體偏灰、嘴全黑、尾上覆羽比尾更深。叫聲亦不同——本種的 rattles **較慢、嗡嗡感較弱**。"
+    },
+    {
+      "zh": "橙胸姬鶲",
+      "scientificName": "Ficedula strophiata",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者都是本港的冬候鳥，同樣有橙紅胸位與**尾基白斑**。本種是**灰臉、橙紅一大片胸前板**、上體暖褐；橙胸姬鶲雄鳥有**白色前額**與**整塊黑臉黑喉**，橙紅只是上胸中央一個**胸斑**，下胸灰色、脅部皮黃。兩者在本港出現的季節與生境接近（開揚疏林、林緣），是本批冬季最容易混淆的一組。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.58,
+      0.12,
+      0.88,
+      0.4
+    ],
+    [
+      0.66,
+      0.26,
+      0.9,
+      0.52
+    ],
+    [
+      0.14,
+      0.58,
+      0.4,
+      0.8
+    ],
+    [
+      0.74,
+      0.14,
+      0.94,
+      0.32
+    ]
+  ],
+  "featureLabels": [
+    "灰臉與橙喉",
+    "橙紅胸板",
+    "尾基白斑",
+    "淡色下喙基"
+  ],
+  "featureNotes": [
+    "繁殖羽雄鳥的橙紅正面被**灰色臉頰與脅側**包住，這是與紅喉姬鶲（灰臉但橙紅只到喉部、下方有一條灰胸帶）最直接的比例差別，為插圖局部。",
+    "橙紅由頦、喉連成一大片胸前板，下緣乾淨地接到白腹；紅喉姬鶲的橙色只限喉部一小塊，**冬季更會完全消失**，而本種非繁殖雄鳥仍保留橙紅喉胸，為插圖局部。",
+    "**所有羽色**的尾都是灰褐、並在**尾基兩側各有一大塊白斑**——即使沒有橙紅的雌鳥與第一冬鳥也一樣，是本種最穩定的辨識特徵，為插圖局部。",
+    "下喙基的**淡色／肉色**是 HKBWS 用來與紅喉姬鶲（嘴全黑）分開的三點之一（另兩點是羽色較暖、尾上覆羽較尾淺），在沒有橙紅的個體上特別好用，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "ARE",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BEL",
+      "BGR",
+      "BIH",
+      "BLR",
+      "CHE",
+      "CYP",
+      "CZE",
+      "DEU",
+      "DNK",
+      "DZA",
+      "EGY",
+      "ESP",
+      "FIN",
+      "FRA",
+      "GBR",
+      "GEO",
+      "GRC",
+      "HRV",
+      "HUN",
+      "IND",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "ITA",
+      "JOR",
+      "KAZ",
+      "KWT",
+      "LBN",
+      "LBY",
+      "LTU",
+      "LUX",
+      "LVA",
+      "MAR",
+      "MDA",
+      "MKD",
+      "MNE",
+      "NLD",
+      "NOR",
+      "OMN",
+      "PAK",
+      "POL",
+      "PRT",
+      "QAT",
+      "ROU",
+      "RUS",
+      "SAU",
+      "SRB",
+      "SVK",
+      "SVN",
+      "SWE",
+      "TUN",
+      "TUR"
+    ],
+    "note": "Partial NATIVE-country overview only. This is by far the widest country table in the batch: BirdLife lists 61 native rows, which collapse to 60 distinct territories because Russia appears twice (Russia and Russia (European)), and 58 shapes are shaded — every native territory except Bahrain and Malta, which have no 110m geometry and are described in the text instead. Eight territories are deliberately left unshaded: the Faroe Islands (to Denmark), Iceland, Ireland and Sudan are VAGRANTS, while Palestine, Senegal, Syria and Vatican City are listed with ORIGIN UNCERTAIN. Not an occurrence polygon: green does not imply full-country occupancy — Europe holds more than 95% of the global range and the species winters mainly in Pakistan and India, inside a breeding EOO of 9,310,000 km² and a non-breeding EOO of 2,630,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/050800",
+      "use": "香港第 I 類，**不常見的過境遷徙鳥與冬候鳥**，見於開揚地區，**2005 年首次錄得**。**11.5 cm**；**所有羽色尾都是灰褐、尾基兩側有大片白斑**；**繁殖羽雄鳥**有**灰色臉頰與脅側**、**橙紅的頦喉與胸部**、其餘下體白色；**非繁殖雄鳥**較暗但**仍保留橙紅喉胸**——與紅喉姬鶲雄鳥不同，後者橙紅**只限喉部一小塊**、下方有**灰胸帶**、且**冬季失去紅喉**；**雌鳥與第一冬鳥**與非繁殖紅喉姬鶲極相似，靠**羽色較暖、下喙基淡色、尾上覆羽較尾淺**分辨。叫聲：**短 rattles，比紅喉姬鶲較慢、嗡嗡感較弱**。生境：**鄉村邊緣與有樹的開揚地區**，主要地點為**米埔、蒲台與石崗機場路**。出現情況：**2005 年首筆**（Leader & Welch 2011），此前因被視為不太可能出現於東亞、且缺乏與紅喉姬鶲的分辨知識而被忽略；**極端日期 9 月 19 日與 4 月 27 日**；**主要出現期為 10 月最後一週至 1 月最後一週**，**11 月下半月與 12 月第一週較多**（代表過境），**12 月底與 1 月有第二個小高峰**（可能為寒冷天氣帶來的越冬鳥湧入）；**2、3 月較少**，**3 月最後一週至 4 月底有春季遷徙**、數量較秋季少；**自首筆以來每個冬季都有紀錄**，**2011/12 前每年總數都是個位數**，之後由 **2012/13 的 16 隻到 2020/21 的 4 隻**。行為：**通常單獨、活躍好動、常彈翅與翹尾**，主食昆蟲、由低枝短飛捕食，**常在草地與地面覓食**，寒冷天氣會在集水渠混凝土面覓食。分類：**單型種，以前與紅喉姬鶲同種**；繁殖自**東歐至烏拉爾、哈薩克西北、土耳其北部、高加索與伊朗北部**；越冬於**巴基斯坦與印度**，局部在**阿曼與阿聯酋**；在東亞屬**罕見冬候鳥**，另錄於**中國東部（最北至北京）、台灣、韓國與日本**（Taylor et al. 2020）。保育：**IUCN Least Concern，趨勢 increasing**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/red-breasted-flycatcher-ficedula-parva/details",
+      "use": "IUCN **LC**、**2018 年評估**（準則 N/A；**與 0501 同為本批最舊的評估年份**；2018、2016、2013、2012、2010 皆 LC，**2008 及以前為 Not Recognised**，反映當時仍與紅喉姬鶲合併）；**成熟個體 6,500,000–10,499,999**（**2012 年估算、品質 Medium、Derivation Estimated；本批至今唯一有具體數量的物種**）——歐洲族群 **3,290,000–5,090,000 繁殖對**，換算 **6,570,000–10,200,000 成熟個體**（BirdLife International 2015），**歐洲佔全球分佈 >95%**；趨勢 **Increasing（Suspected，歐洲族群上升）**——**與 HKBWS 的「trend increasing」一致**，是本批第一張趨勢為上升的物種；**繁殖 EOO 9,310,000 km²、非繁殖 EOO 2,630,000 km²**、AOO Unknown、**Breeding endemic No**、**Full Migrant**、**IBA／KBA 6 個**（網絡 3,936 km²、平均保護覆蓋 70.52%，分布於芬蘭、塞爾維亞與斯洛文尼亞，準則 C6）、海拔 **0–2,350 m**、世代 **3.9 年（與 0501 並列本批最長）**、**森林依賴度 Medium**、**生態系統只有陸域**；**生境分類 6 項**——**温帶林（繁殖期 Major）**、人工林（繁殖期與非繁殖期 Suitable）、鄉村花園與亞熱帶／熱帶潮濕低地林、乾燥林（非繁殖期 Suitable）；原文另描述**偏好有高大樹木、林下茂密、樹冠開闊、冠層與林下之間有棲枝的落葉林（山毛櫸、橡樹），北部亦用雲杉林，並接受果園與葡萄園**，**每窩通常五至六枚蛋**，巢為苔蘚、乾草莖與葉、根纖維與毛髮組成的杯狀巢，置於樹洞、牆洞或樹幹側枝間，**亦接受巢箱**；**威脅：依賴老齡多樣化森林，易受現代林業（輪伐期縮短、砍伐老樹）影響，未來可能出現巢位短缺**；**保育行動：CMS 附錄 II、伯恩公約附錄 II、歐盟鳥類指令附件 I**，歐洲目前**沒有已知的保育措施**，建議維持低強度林業與提供巢箱；**本頁沒有貿易（Use and trade）一節**，與 0500–0506 各卡不同；**次全球評估：EU27+UK 與歐洲 2021 均為 LC**；命名人 **(Bechstein, 1792)**；Alliance for Zero Extinction 與 Search for Lost Birds 皆 No。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024（頁面最後更新 2025-05-11）：第 **515** 項 紅胸姬鶲 Red-breasted Flycatcher（*Ficedula parva*），**第 I 類**；鄰項為 514 白眉藍姬鶲與 516 紅喉姬鶲——**名錄把紅胸姬鶲排在紅喉姬鶲之前**（IOC 次序 *parva* 先於 *albicilla*），與 runtime id 的次序（0506 紅喉姬鶲在前）相反。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（紅胸姬鶲；Red-Breasted Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Ficedula parva／鶲科 Muscicapidae）；speciesCode rebfly；taxonOrder 29286。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 2、a 2.3、v 2.7（vEst 1）、r 1、c 1.2、o 1.8），`missingScores` 與 `withheldScores` 皆為空；o 1.8 與六軸平均 1.83 相符。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "`look` 中文只有量度、**英文才有形態描述**（成鳥雄鳥上體暗褐、下體白、灰頭、橙喉），故 a 有依據；`funFact` 中文只是「又名紅胸鶲」的自指句；`behavior` 只有「彈翅與展尾」一句而**沒有進食或遷徙內容**；`voice` 的鳴唱描述與 `humanRelation` 一字不差；`breeding` 只講前蘇聯地區的築巢時間；`habitat` 中文全缺；length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 67、tail 52.8、tarsus 15.4、bill 12.8、mass 10.8。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **516** 項、**第 I 類**；HKBWS 描述為**不常見的過境遷徙鳥與冬候鳥**，**2005 年首筆**（Leader & Welch 2011），此前一直被忽略。**極端日期 9 月 19 日與 4 月 27 日**，**主要出現期 10 月最後一週至 1 月最後一週**，11 月下半月至 12 月第一週為過境高峰，12 月底至 1 月有第二個小高峰；**自首筆以來每個冬季都有紀錄**，2011/12 前每年個位數，之後 **4 至 16 隻**（最高 2012/13）。主要地點：米埔、蒲台、石崗機場路。",
+    "辨識要點：與紅喉姬鶲是本批最難的一對。雄鳥——本種橙紅**由頦喉連成一大片胸前板**、兩側灰臉與脅側框住、**無灰胸帶**；紅喉姬鶲橙紅**只限喉部一小塊**、下方有**灰胸帶**、**冬季失去紅喉**。雌鳥與第一冬鳥——本種**羽色較暖**、**下喙基淡色**、**尾上覆羽較尾淺**；紅喉姬鶲偏灰、嘴全黑、尾上覆羽比尾更深。叫聲：本種 rattles **較慢、嗡嗡感較弱**。",
+    "IUCN：**LC（無危）**，BirdLife **2018** 年評估、**趨勢 Increasing**（Suspected，歐洲族群上升）——**與 HKBWS 的 increasing 一致**，是本批第一張趨勢上升的卡；**成熟個體 6,500,000–10,499,999** 是本批至今唯一有具體數量估計的物種（歐洲 3,290,000–5,090,000 繁殖對、佔全球分佈 >95%）；繁殖 EOO 9,310,000 km²、非繁殖 EOO 2,630,000 km²、IBA／KBA 6 個、海拔 0–2,350 m、世代 3.9 年、森林依賴度 Medium；**威脅**為現代林業導致老樹與巢位減少；**保育行動**為 CMS 附錄 II、伯恩公約附錄 II、歐盟鳥類指令附件 I，但歐洲沒有已知措施；**本頁沒有貿易一節**。",
+    "**地圖是本批最寬的一張：58 個形狀**。BirdLife 列 61 個原生列（俄羅斯分 Russia 與 Russia (European) 兩列），去重後 60 個地區，其中 **Bahrain 與 Malta 無 110m 幾何**，只在 note 以文字說明，故填 **58 個形狀**。**法羅群島、冰島、愛爾蘭、蘇丹為迷鳥**、**巴勒斯坦、塞內加爾、敘利亞、梵蒂岡為 Origin Uncertain**，一律不填；**香港不在 BirdLife 國家表**，故不作香港聲明。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`look` 中文只有量度、英文才有形態描述（故 `a` 保留）；`funFact` 中文自指；`behavior` 只有一句彈翅展尾、沒有進食或遷徙；`voice` 與 `humanRelation` 一字不差；`breeding` 只講前蘇聯的築巢時間；`habitat` 中文全缺；length 與 weight 為空。六軸分數齊全。",
+    "HKBWS 頁面 id 是 **050800**（路徑 `0410/`），比 runtime **0507** 大 1；名錄序號 **515**（在 516 紅喉姬鶲之前，與 runtime id 次序相反）。",
+    "**本輪開始前沙盒被重置**：`/home/user/card-venv`、字型、`/tmp/dump.py` 與 **`cards/art`、`deliver/cards` 全部消失**（只有 repo 內的檔案存活），本機 git 分支亦退回 base commit，需 `git fetch` 後 `git reset --hard origin/arena/3fc0e99d-aviandex` 才對回 `4d226c5`。0501–0506 的 AVIF 已在 Drive，不受影響，但**本機已無法重跑它們的 `verify-info-card.py`**（缺 art 與 manifest）。因此 0507 的三張圖全部重新生成：主圖紅胸姬鶲雄鳥、比較鳥紅喉姬鶲雄鳥與橙胸姬鶲雄鳥，均為**不帶風格參照、以硬性羽色規格描述**（分別明寫「不得有黑臉罩／白額」、「不得有橙胸板」、「不得有灰臉」等），**非等比例、非專家認證**；插圖與全部辨識要點均為 AI 解讀，未經鳥類專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

@@ -1,0 +1,204 @@
+{
+  "id": "0549",
+  "name": "黃雀",
+  "scientificName": "Spinus spinus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Spinus spinus, AI approximation of male.",
+  "featureCrops": [
+    [
+      0.08,
+      0.19,
+      0.26,
+      0.32
+    ],
+    [
+      0.05,
+      0.26,
+      0.21,
+      0.39
+    ],
+    [
+      0.34,
+      0.35,
+      0.56,
+      0.47
+    ],
+    [
+      0.67,
+      0.45,
+      0.88,
+      0.54
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥黑色頭頂",
+    "較細尖錐形喙",
+    "深翼黃色翼帶",
+    "黃色尾基叉尾"
+  ],
+  "featureNotes": [
+    "雄鳥頭頂與喉斑黑色；雌鳥頭無黑色、較多紋。",
+    "喙相對細長尖銳。",
+    "深色翅具寬黃翼帶。",
+    "尾短而叉，尾側基部黃色。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "金翅雀",
+      "scientificName": "Chloris sinica",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "金翅雀喙較粗淡，頭灰綠而非黑頂，雄鳥腹較褐；兩者均有黃翼。",
+      "portraitNote": "AI 雄鳥示意，背紋略重、腹偏褐。"
+    },
+    {
+      "zh": "普通朱雀",
+      "scientificName": "Carpodacus erythrinus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "普通朱雀雄鳥頭胸粉紅、褐翼；黃雀雄鳥黑頂黃綠，深翼具黃帶。",
+      "portraitNote": "AI 雄鳥示意，背紋或偏重。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ALB",
+      "DZA",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BLR",
+      "BEL",
+      "BIH",
+      "BGR",
+      "CHN",
+      "HRV",
+      "CYP",
+      "CZE",
+      "DNK",
+      "EGY",
+      "EST",
+      "FIN",
+      "FRA",
+      "GEO",
+      "DEU",
+      "GRC",
+      "HUN",
+      "ISL",
+      "IRN",
+      "IRQ",
+      "IRL",
+      "ISR",
+      "ITA",
+      "JPN",
+      "JOR",
+      "KAZ",
+      "KWT",
+      "KGZ",
+      "LVA",
+      "LBN",
+      "LBY",
+      "LTU",
+      "MNE",
+      "MAR",
+      "NLD",
+      "PRK",
+      "MKD",
+      "NOR",
+      "POL",
+      "PRT",
+      "ROU",
+      "RUS",
+      "SRB",
+      "SVK",
+      "SVN",
+      "KOR",
+      "ESP",
+      "SWE",
+      "CHE",
+      "SYR",
+      "TWN",
+      "TUN",
+      "TKM",
+      "TUR",
+      "UKR",
+      "ARE",
+      "GBR"
+    ],
+    "note": "Partial native-country overview combines breeding, resident, nonbreeding and passage, omitting small territories; not whole-country occupancy. BirdLife EOO breeding 33.3m and nonbreeding 11.7m km²; BirdLife lists Hong Kong as vagrant, HKBWS as rare migrant and winter visitor."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0450/055500",
+      "use": "香港 I 類罕見遷徙及冬候，偶有大量入侵；雄黑頂黑喉，尖喙、黃翼及尾側。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0450/055400",
+      "use": "金翅雀粗淡喙、灰綠頭及黃翼。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0450/055300",
+      "use": "普通朱雀雄鳥粉紅頭胸。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/eurasian-siskin-spinus-spinus/details",
+      "use": "2024 LC，估計 2490–4690 萬成熟個體、穩定；HKBWS 舊頁稱下降；香港列迷鳥，與本地評估不同。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Spinus spinus，speciesCode eursis。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.8、v 2.4、r 4.8、c 1.2、o 2.8。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "雄鳥黑頂黃綠，funFact 為故事情節，喙 callout 與 HKBWS 描述不符，不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 71.6、tail 46.4、tarsus 12.7、bill 12.8、mass 13.2 g。"
+    }
+  ],
+  "notes": [
+    "香港罕見遷徙冬候偶大量入侵；BirdLife 列香港迷鳥與 HKBWS 評估不同。",
+    "三圖 AI 示意非等比例非專家認證；主圖胸脅紋偏重、喙略厚、腳趾不可靠。",
+    "BirdLife 2024 全球穩定，HKBWS 舊頁稱下降；國家概覽合併季節非全境。",
+    "runtime funFact 為故事情節、喙描述與 HKBWS 不符，不改；外觀有黑頂及黃綠形態，六軸保留。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

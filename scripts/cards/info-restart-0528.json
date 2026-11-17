@@ -1,0 +1,219 @@
+{
+  "id": "0528",
+  "name": "灰鶺鴒",
+  "scientificName": "Motacilla cinerea",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Breeding male Motacilla cinerea with grey upperparts, yellow rump and underparts, black throat bordered white, very long tail. AI approximation.",
+  "featureCrops": [
+    [
+      0.07,
+      0.23,
+      0.28,
+      0.39
+    ],
+    [
+      0.24,
+      0.31,
+      0.51,
+      0.45
+    ],
+    [
+      0.18,
+      0.38,
+      0.5,
+      0.55
+    ],
+    [
+      0.52,
+      0.42,
+      0.91,
+      0.53
+    ]
+  ],
+  "featureLabels": [
+    "灰頭與黑喉",
+    "灰背與深灰翼",
+    "黃色腹與尾下",
+    "特長黑白尾"
+  ],
+  "featureNotes": [
+    "繁殖雄鳥黑喉兩側白條，頭及上體以灰色為主。",
+    "上體灰、翼深灰，翼斑常狹而不明顯。",
+    "腰及尾上覆羽偏黃，腹及尾下具黃色；因性別及羽季有變化。",
+    "長尾常隨後身上下擺動，黑白尾圖示僅供參考。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "白鶺鴒",
+      "scientificName": "Motacilla alba",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "白鶺鴒多為黑白灰色、下體不呈灰鶺鴒的鮮黃色；不同亞種頭面及背色差異大。",
+      "portraitNote": "白鶺鴒，沿用 0527 AI 示意，不指定亞種。"
+    },
+    {
+      "zh": "山鶺鴒",
+      "scientificName": "Dendronanthus indicus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "山鶺鴒橄欖灰上體、淡眉與深色胸紋，在林地以左右擺動身尾聞名；灰鶺鴒上體灰、黃色下體，常近水。",
+      "portraitNote": "山鶺鴒，沿用 0527 AI；胸紋簡化不準。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BGD",
+      "BEL",
+      "BTN",
+      "BIH",
+      "BRN",
+      "BGR",
+      "KHM",
+      "CAF",
+      "CHN",
+      "COD",
+      "HRV",
+      "CYP",
+      "CZE",
+      "DNK",
+      "DJI",
+      "EGY",
+      "ERI",
+      "EST",
+      "ETH",
+      "FIN",
+      "FRA",
+      "GEO",
+      "DEU",
+      "GRC",
+      "GNB",
+      "HUN",
+      "ISL",
+      "IND",
+      "IDN",
+      "IRN",
+      "IRQ",
+      "IRL",
+      "ISR",
+      "ITA",
+      "JPN",
+      "JOR",
+      "KAZ",
+      "KEN",
+      "KWT",
+      "KGZ",
+      "LAO",
+      "LVA",
+      "LBN",
+      "LBY",
+      "MWI",
+      "MYS",
+      "MLI",
+      "MRT",
+      "MNG",
+      "MNE",
+      "MAR",
+      "MMR",
+      "NPL",
+      "NLD",
+      "PRK",
+      "MKD",
+      "NOR",
+      "OMN",
+      "PAK",
+      "PHL",
+      "POL",
+      "PRT",
+      "QAT",
+      "ROU",
+      "RUS",
+      "RWA",
+      "SAU"
+    ],
+    "note": "BirdLife 列原生現存國家或地區中只選部分並以 110m 幾何顯示；合併繁殖、越冬、過境或季節未注明地，不顯示迷鳥地，也非完整範圍或全境分佈。香港及澳門各自缺底圖幾何，並入中國國家概覽不能精確顯示。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053700",
+      "use": "I 類常見冬候鳥及過境鳥，與濕地有關；17–20 cm，灰上體、黃腰與尾上覆羽，繁殖雄鳥黑喉白邊，長尾上下擺動。夏季曾有可能繁殖紀錄但沒有明確繁殖證據。冬季調查佔格率下降。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053300",
+      "use": "山鶺鴒橄欖灰上體、淡眉雙翼斑與胸紋，身尾左右擺動。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053810",
+      "use": "白鶺鴒 leucopsis 黑白灰羽色及不同亞種差異。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港 2024 名錄第 546 項、第 I 類。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/grey-wagtail-motacilla-cinerea/details",
+      "use": "2025 LC、全球穩定、成熟個體 1,100 萬至 2,400 萬；Full Migrant，繁殖 EOO 60,700,000 km²，非繁殖 103,000,000 km²。按列出的原生現存國家做不完整概覽。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Motacilla cinerea，雀形目鶺鴒科，speciesCode grywag。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.3、v 3、r 4.8、c 3、o 3.2、vEst 1；六軸保留，look 描述外形。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "range 是單一亞種且截斷；funFact 的黃色僅限喉和泄殖腔有誤；conservation 錯載繁殖；英文 breeding 和 behavior 錯置。length、weight 空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 82.8、tail 94.4、tarsus 18.2、bill 17.4、mass 17.2 g。"
+    }
+  ],
+  "notes": [
+    "HK 暫無明確繁殖證據，勿將可能繁殖寫成確定。",
+    "沿用 0527 的灰鶺鴒、白鶺鴒及山鶺鴒三張 AI 插圖；山鶺鴒胸紋兩條完整黑環不精確。全為示意、未經專家認證。",
+    "地圖僅部分原生現存地區、合併季節，不是全境或完整全球分佈。",
+    "runtime funFact 色彩限制有誤、conservation 錯載等，保留原始分數與資料不修改。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

@@ -1,0 +1,161 @@
+{
+  "id": "0582",
+  "name": "黃頰山雀",
+  "scientificName": "Machlolophus spilonotus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Male Machlolophus spilonotus, AI approximation.",
+  "featureCrops": [
+    [
+      0.56,
+      0.25,
+      0.69,
+      0.39
+    ],
+    [
+      0.55,
+      0.37,
+      0.69,
+      0.47
+    ],
+    [
+      0.47,
+      0.43,
+      0.58,
+      0.51
+    ],
+    [
+      0.53,
+      0.46,
+      0.65,
+      0.58
+    ]
+  ],
+  "featureLabels": [
+    "黑色尖冠",
+    "鮮黃臉頰",
+    "黑灰白翼",
+    "黑色胸腹"
+  ],
+  "featureNotes": [
+    "雄鳥頭頂具黑色尖冠。",
+    "臉及頸側黃色，眼後有細黑紋。",
+    "黑灰翅具白色斑紋。",
+    "雄鳥喉胸至下體大致黑色，側腹灰。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "黃腹山雀",
+      "scientificName": "Pardaliparus venustulus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "白頰、黑頭喉，腹沾黃，無明顯尖冠。",
+      "portraitNote": "AI 翼緣偏綠、背色與足趾近似。"
+    },
+    {
+      "zh": "遠東山雀",
+      "scientificName": "Parus minor",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "白頰，淡色腹有中央黑縱帶，無黃頰。",
+      "portraitNote": "AI 上背偏綠，腹部黑帶在側面不明顯，足趾近似。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 2024 native country list, excluding Bangladesh origin uncertain. BirdLife treats Hong Kong as native but HKBWS regards local birds as ex-captive origin (IIA); small Hong Kong is not separately mapped. Whole-country overview, not actual continuous range."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0270/034900",
+      "use": "香港 IIA、繁殖族群疑源自籠養；雄鳥外貌、香港近 rex。"
+    },
+    {
+      "url": "https://ebird.org/species/yectit1",
+      "use": "黃色臉頰、黑冠胸及黑灰白翅。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/yellow-cheeked-tit-machlolophus-spilonotus/details",
+      "use": "2024 LC，數量未知、下降；國家表。香港原生說法與 HKBWS 意見不同，孟加拉來源不明未上色。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0270/034600",
+      "use": "黃腹山雀雄鳥白頰、黑頭喉、腹沾黃。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0270/034800",
+      "use": "遠東山雀白頰及淡腹中央黑縱帶。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "分類學名"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六軸缺資料"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "缺資料"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "缺資料"
+    }
+  ],
+  "notes": [
+    "HKBWS 將香港種群列 IIA、視為籠養逃逸後建立；BirdLife 國家表列香港原生，來源判斷有差異。",
+    "AI 示意未經專家認證、不等比例；主圖冠過高、黑眼紋不清、黃頸側被截斷，羽列足趾近似。黃腹山雀翼偏綠，遠東山雀背偏綠及腹帶側視不明。",
+    "BirdLife 2024 LC，數量未知、估計下降；世界圖為部分原生國家概覽，不代表全境，排除來源不明孟加拉。",
+    "runtime 無分數、文案及測量資料，六軸待查。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}

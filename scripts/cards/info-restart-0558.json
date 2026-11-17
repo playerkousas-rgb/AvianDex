@@ -1,0 +1,153 @@
+{
+  "id": "0558",
+  "name": "黃喉鵐",
+  "scientificName": "Emberiza elegans",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "illustrationTaxon": "Emberiza elegans, AI approximation of adult male.",
+  "featureCrops": [
+    [
+      0.15,
+      0.21,
+      0.32,
+      0.32
+    ],
+    [
+      0.15,
+      0.29,
+      0.32,
+      0.4
+    ],
+    [
+      0.17,
+      0.37,
+      0.3,
+      0.49
+    ],
+    [
+      0.32,
+      0.39,
+      0.5,
+      0.5
+    ]
+  ],
+  "featureLabels": [
+    "黑冠與黃後冠",
+    "黑面與黃喉",
+    "雄鳥黑胸斑",
+    "褐背及淡翼帶"
+  ],
+  "featureNotes": [
+    "雄鳥黑前冠、黃後冠，通常冠羽豎起。",
+    "雄鳥具黑面罩和鮮黃喉；雌鳥較淡。",
+    "雄鳥胸有獨立黑斑，秋季羽緣可遮蔽。",
+    "背褐色，覆羽具淡端形成翼帶。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "黃眉鵐",
+      "scientificName": "Emberiza chrysophrys",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄黃眉鵐眉前黃、喉白，下體具深色條紋；不具黃喉鵐的黃喉與黑胸斑。",
+      "portraitNote": "AI 示意，翼帶及足趾細節不可靠。"
+    },
+    {
+      "zh": "白眉鵐",
+      "scientificName": "Emberiza tristrami",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄白眉鵐黑喉、白眉及白鬚紋，無黃喉；非繁殖羽較不鮮明。",
+      "portraitNote": "AI 示意，白頂線偏細，足趾不可靠。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "MMR",
+      "PRK",
+      "RUS",
+      "KOR",
+      "TWN"
+    ],
+    "note": "BirdLife extant native country overview, combined seasons, not whole-country occupancy; Russia duplicate entries combined. Breeding/resident EOO 6.76m, nonbreeding 5.24m km². BirdLife labels species not a migrant while HKBWS describes migratory nominate and largely resident elegantula."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056600",
+      "use": "香港 I 類稀少過境、秋季較多；雄鳥黑前冠、黃喉及獨立黑胸斑。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056400",
+      "use": "雄黃眉鵐前眉黃、喉淡及胸脅深紋。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056100",
+      "use": "雄白眉鵐黑喉白眉白鬚紋。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/yellow-throated-bunting-emberiza-elegans/details",
+      "use": "2018 LC、全球數量未知、疑穩定、國家表。"
+    },
+    {
+      "url": "https://ebird.org/species/yetbun1",
+      "use": "兩性冠、黃眉喉；雄黑胸斑。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 中文及英文名。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza elegans，鵐科；HKBWS及 eBird 網頁採 Schoeniclus。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.3、v 2.8（vEst）、r 1.8、c 1.2、o 2.2。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 中文為尾羽形態描述，部分文案及英文欄位錯位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 74.2、tail 60.2、tarsus 20.3、bill 12.1 mm、mass 16.8 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類稀少過境，以秋季較多；主圖為成雄，秋冬及雌鳥不同。",
+    "AI 圖非專家認證、非等比例；黑胸斑與黃喉間淡環可能過寬、白腹及脅紋偏誇張，足趾不可靠；黃眉鵐與白眉鵐示意細節見比較鳥備註。",
+    "BirdLife 2018 LC、數量未知、疑穩定。BirdLife 將整體列非遷徙，HKBWS 說指名亞種遷徙、elegantula 大致留鳥；原生國家概覽非全境。",
+    "runtime v 含體長估算；look 中文只有尾部形態但有描述故保留 a，部分文案錯位，不改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

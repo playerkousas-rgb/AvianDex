@@ -1,72 +1,56 @@
 {
+  "id": "0583",
+  "name": "山麻雀",
+  "scientificName": "Passer cinnamomeus",
   "layout": "slim",
   "size": [
     1024,
     1536
   ],
-  "status": "uploaded",
+  "status": "review_before_upload",
   "iucn": {
     "code": "LC",
     "zh": "無危",
     "assessmentNote": "全球 LC：BirdLife 2024 評定"
   },
-  "id": "0583",
-  "name": "山麻雀",
-  "scientificName": "Passer cinnamomeus",
-  "illustrationTaxon": "Adult male Passer cinnamomeus (unbroken rufous chestnut crown, nape and mantle, clean pale grey-white cheeks with no black ear spot, no black bib, whitish throat and underparts, warm brown wing with pale buff wingbars, short tail, stout conical dark bill, pinkish-brown feet). Female is duller with a buff supercilium and is not shown. AI interpretation, sex, age and moult unverified.",
-  "similarSpecies": [
-    {
-      "zh": "樹麻雀",
-      "scientificName": "Passer montanus",
-      "asset": "sim0-square.png",
-      "framing": "whole-bird",
-      "distinction": "本港最常見的麻雀；樹麻雀的栗褐只集中在頭頂與後頸、背部另為褐色並有黑色縱紋，頰部有一塊醒目的黑耳斑、喉有一小撮黑領，下體灰白而非近白；本種成年雄鳥的栗紅由頭頂、後頸一直連到背部成一片，頰部全白或近白而沒有黑耳斑、喉也沒有黑領，下體更白，兩者站在一起時本種整體偏暖紅而樹麻雀偏褐。"
-    },
-    {
-      "zh": "家麻雀",
-      "scientificName": "Passer domesticus",
-      "asset": "sim1-square.png",
-      "framing": "whole-bird",
-      "distinction": "同屬但本港只是稀少的引入種；雄鳥頭頂灰色、頰與腰灰、喉至上胸一大塊黑領、頸側栗褐，雌鳥有淡色眉紋而整體偏灰褐；本種雄鳥頭頂與後頸栗紅、沒有黑領、下體近白，且翼明顯較長、尾明顯較短——HKBWS 以翼長尾短作為與家麻雀最直接的分別；雌鳥與家麻雀雌鳥相似，但本種頭部花紋對比更強、眉紋較寬而清晰、下體較純白。"
-    }
-  ],
+  "illustrationTaxon": "Adult male Passer cinnamomeus, AI approximation.",
   "featureCrops": [
     [
-      0.27,
-      0.13,
-      0.45,
-      0.24
+      0.55,
+      0.29,
+      0.72,
+      0.4
     ],
     [
-      0.28,
-      0.19,
+      0.59,
+      0.34,
+      0.73,
+      0.44
+    ],
+    [
+      0.44,
       0.42,
-      0.32
+      0.61,
+      0.51
     ],
     [
-      0.32,
-      0.36,
-      0.46,
-      0.5
-    ],
-    [
-      0.21,
-      0.15,
-      0.35,
-      0.26
+      0.49,
+      0.51,
+      0.66,
+      0.6
     ]
   ],
   "featureLabels": [
-    "栗紅頭頸",
-    "白頰無耳斑",
-    "白色下體",
-    "粗短圓錐嘴"
+    "赤褐頭頂",
+    "白頰無黑斑",
+    "褐翼白斑",
+    "淡灰白腹"
   ],
   "featureNotes": [
-    "頭頂、後頸與背連成一片不中斷的栗紅，是成年雄鳥最容易辨認的一點；樹麻雀的栗褐只在頭頂與後頸、背部另為帶黑縱紋的褐色，為插圖局部。",
-    "頰部乾淨近白、沒有黑耳斑，也沒有喉部的黑領；樹麻雀恰有一塊黑耳斑加一小撮黑領，是兩者最直接的差別，雌鳥的頰亦較家麻雀雌鳥乾淨，為插圖局部。",
-    "喉、胸與腹近白而略帶灰，較樹麻雀的灰白更純；本種在收割前後的稻田地面尋食，白色的下體在稻茬間很顯眼，為插圖局部。",
-    "嘴粗短而呈圓錐形、色深角質，是典型麻雀科的啄食稻穀構造；Vaughan & Jones（1913）在廣東檢查的個體胃內「滿是稻穀」，為插圖局部。"
+    "雄鳥頭頂、後頸及背部赤褐。",
+    "白頰沒有樹麻雀的黑頰斑；喉黑。",
+    "深褐翼上可見白色翼斑。",
+    "雄鳥腹部淡灰白。"
   ],
   "featureSources": [
     "pixel.png",
@@ -74,9 +58,27 @@
     "pixel.png",
     "pixel.png"
   ],
+  "similarSpecies": [
+    {
+      "zh": "樹麻雀",
+      "scientificName": "Passer montanus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "栗冠及白頰黑斑，雌雄相似。",
+      "portraitNote": "AI 頰斑形狀較大，羽列及腳趾近似。"
+    },
+    {
+      "zh": "家麻雀",
+      "scientificName": "Passer domesticus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥灰色前冠、黑喉較廣，無頰斑。",
+      "portraitNote": "AI 喉斑呈碎紋、嘴偏大，羽列及腳趾近似。"
+    }
+  ],
   "rangeMap": {
     "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
-    "caption": "世界底圖・部分分佈國家",
+    "caption": "世界底圖・分佈國家",
     "disclaimer": "綠色非全境；非完整分佈",
     "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
     "geometryLicense": "Natural Earth public domain",
@@ -92,61 +94,76 @@
       "CHN",
       "IND",
       "JPN",
-      "KOR",
       "LAO",
       "MMR",
       "NPL",
-      "PAK",
       "PRK",
+      "PAK",
       "RUS",
-      "THA",
+      "KOR",
       "TWN",
+      "THA",
       "VNM"
     ],
-    "note": "Partial NATIVE-country overview only. BirdLife lists 15 native countries/territories — Bhutan, China (mainland), India, Japan, Laos, Myanmar, Nepal, North Korea, Pakistan, Russia, Russia (Asian), South Korea, Taiwan (China), Thailand and Vietnam; the two Russia rows share one 110m outline, so 14 shapes are shaded. Afghanistan is listed as a VAGRANT and is deliberately left unshaded. Hong Kong has no separate geometry and is folded into China's outline; BirdLife gives no separate Hong Kong row. Not an occurrence polygon: green does not imply full-country occupancy — HKBWS notes the species is sparse in South China with only a limited range in Guangxi and Guangdong, and absent from Hainan, inside a resident/breeding EOO of 12,400,000 km²."
+    "note": "Partial NATIVE-country overview only; Afghanistan is vagrant and excluded. EOO resident/breeding 12,400,000 km² and non-breeding 9,480,000 km². Country fill is not an occurrence polygon."
   },
   "sources": [
     {
       "url": "https://avifauna.hkbws.org.hk/species/0430/052600",
-      "use": "香港第 I 類，**稀少的秋季過境遷徙鳥，另有少數冬候與早春紀錄，主要在塱原的稻田**；**14–15 cm**，體態整潔而顏色鮮明的麻雀，雌雄異型；**雄鳥以栗紅的頭頂、後頸與背部、乾淨無黑耳斑的白頰、近白的下體即可辨認**，且**翼明顯較長、尾明顯較短**（與家麻雀比較）；雌鳥似家麻雀雌鳥，但頭部花紋對比更強、**白色或皮黃的眉紋較寬而清晰**、下體較純白。叫聲：非繁殖季為典型麻雀式的「cheep」「chreep」「thwik」；作叫聲與鳴唱時為雙音、較高音的「chireep」，錄音中雌鳥另有較短較輕的「chup」。生境：絕大多數紀錄在塱原的**收割後稻田、長草與蘆葦叢**，其餘少數在魚塘區，米埔一隻在蘆葦床被捕。紀錄史：Carey et al.(2001) 承認 1987–1997 年十筆單隻紀錄可能為野生鳥，描述為稀少秋遷（9 月 8 日至 10 月 3 日）、冬候（11 月 13 日至 12 月 29 日）與春遷（3 月 27 日與 4 月 1 日），但同時警告本種在香港曾見於籠中，1998–2010 年另有九筆共 13 隻、**除一筆外全部有圈養來源的證據**，故 2011 年全部紀錄重審後**被降至香港名錄第 III 類**；諷刺的是決定作出後不久，塱原收割稻田自 **2011 年 10 月 27 日至 11 月 6 日一連出現六隻（2 雄 4 雌）**，加上 2012–14 年五筆最多 14 隻（多在塱原，另有一隻在米埔被捕），2014 年**重新列回第 I 類**；此後每年紀錄、多為 15 隻以下、通常一至兩個地點（2020 年達四個地點）；**多數紀錄在 10 月 4 日至 11 月中，少數越冬至 2 月 28 日**，另有 2016 年 3 月 7 日至 4 月 11 日最多三隻於塱原；**93% 的鳥在塱原錄得**，最高計數為 2012 年 10 月 25 日至 11 月 2 日最多 14 隻；其餘五筆均為北新界單隻（馬草壟、落馬洲河套、新田、米埔），2016 年 1 月 3 日上水北區公園一隻地點與生境異常、懷疑為籠中逸鳥。作者認為 2011 年後狀況改變**與塱原恢復定期種稻直接相關**，並指早期觀察者在香港仍廣泛種稻時看不到本種反而奇怪：Vaughan & Jones(1913) 視之為四月「相當常見的過境鳥」、一月在西江見「一大群」，但在香港只提及牠與樹麻雀「擠在一起」出現在鳥店；Herklots(1953) 以其在廣東「基本上是山地鳥」解釋其缺席，Herklots(1967) 記 1960 年 12 月 10 日大帽山上部一隻，但 Webster(1975) 認為可能誤認。行為：多在**地面尋食或停在小灌木與電線上**，有時成小群；除尋食外**傾向不加入樹麻雀群**而自成一伙（Vaughan & Jones 在廣東亦見此習性）；在收割前後的稻田尋食、相信吃稻穀。分佈與亞種：由阿富汗東部與巴基斯坦北部向東經尼泊爾與印度北部、南至緬甸中部、泰國與中南半島北部；中國南部與東部大部份、西至藏南與雲南、北至四川與北京一帶，另見台灣、朝鮮半島與日本全境；在中國南部（廣西、廣東）分佈零散而海南沒有；三個亞種在中國都有——指名亞種在藏南、*rutilans* 在華中、*intensior* 在華南，**未知香港的鳥屬哪一亞種**（*intensior* 繁殖地較近，但長江以北繁殖的鳥會遷徙，較可能南飄）。IUCN：**Least Concern，趨勢穩定**。"
+      "use": "香港 I 類罕見秋季過境；雄赤褐冠背、白頰無斑，雌鳥不同。"
+    },
+    {
+      "url": "https://ebird.org/species/russpa2",
+      "use": "雄鳥栗冠背、白頰、窄黑喉和淡腹；雌鳥具眉紋。"
     },
     {
       "url": "https://datazone.birdlife.org/species/factsheet/russet-sparrow-passer-cinnamomeus/details",
-      "use": "IUCN **2024** LC（準則 N/A）、成熟個體 Unknown、趨勢 **Stable**（Suspected，無下降或重大威脅的證據）、居民／繁殖 EOO **12,400,000 km²**、非繁殖 EOO **9,480,000 km²**、AOO Unknown、遷徙狀況 **Altitudinal Migrant**（本批首見此類）、繁殖 endemic No、**IBA／KBA 為「-」**、海拔 **0–4,500 m**、世代 **2.4 年**、森林依賴度 **Low**；生境分類只有三項且全部 Suitable——耕地 Arable Land、亞熱帶／熱帶濕潤山地林、亞熱帶／熱帶高海拔灌叢；種群量未量化但被描述為常見或局部常見（Clement 1999），各國估算包括中國約 10,000–100,000 繁殖對、台灣少於 100 繁殖對、日韓俄各約 10,000–100,000 繁殖對；**貿易普遍度低，七個資料集中只出現於兩個**，用途為食用（自給、全國）與寵物（自給、全國）；保育行動只有「已劃定保育地點（全分佈範圍）」，沒有復育計劃、沒有系統監測、沒有國際法規與貿易管制；國家表列 **15 個原生國家／地區**（不丹、中國、印度、日本、寮國、緬甸、尼泊爾、北韓、巴基斯坦、俄羅斯、俄羅斯亞洲部分、南韓、台灣、泰國、越南），**阿富汗為迷鳥**；**香港沒有獨立一列**。"
+      "use": "2024 LC、成熟個體數未量化、疑穩定；原生國家及迷鳥表。"
     },
     {
-      "url": "https://avifauna.hkbws.org.hk/hk-list",
-      "use": "香港鳥類名錄 2024：第 **535 項 山麻雀 Russet Sparrow（Passer cinnamomeus），第 I 類**；鄰項為 536 樹麻雀（I 類）與 537 家麻雀（I 類），可見三種麻雀在本港名錄中相鄰，比較鳥選擇亦據此。"
+      "url": "https://avifauna.hkbws.org.hk/species/0430/052700",
+      "use": "樹麻雀白頰黑斑，兩性相似。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0430/052800",
+      "use": "雄家麻雀灰前冠、黑喉較廣，雌鳥區分。"
     },
     {
       "path": "src/data/birds.json",
-      "use": "Runtime 名稱（山麻雀；Russet Sparrow）。"
+      "use": "runtime 名稱"
     },
     {
       "path": "src/data/birdTaxonomy.json",
-      "use": "Runtime 學名、目科（Passer cinnamomeus／麻雀科 Passeridae）；speciesCode russpa2；taxonOrder 31291。"
+      "use": "分類學名"
     },
     {
       "path": "src/data/dexScores.json",
-      "use": "**本種完全沒有分數紀錄**（檔案內只有 540 個物種，0583 不在其中），故六軸全部缺分、missingScores 為 i、a、r、c、v、o。"
+      "use": "六軸缺資料"
     },
     {
       "path": "src/data/cardCopy.json",
-      "use": "**本種完全沒有卡面文案**（沒有 range、look、habitat、diet、voice、breeding、behavior、funFact、iucn、length、weight、picks）。"
+      "use": "缺資料"
     },
     {
       "path": "src/data/measurements.json",
-      "use": "**本種沒有 AVONET 量度紀錄**。"
+      "use": "缺資料"
     }
   ],
   "notes": [
-    "香港狀況：香港鳥類名錄 2024 第 **535** 項、**第 I 類**；HKBWS 描述為**稀少的秋季過境遷徙鳥**，另有少數冬候與早春紀錄，**93% 的紀錄在塱原**。**本卡是本批第一份 runtime 三張資料表（分數、卡面文案、量度）全部沒有的物種**：卡面全部內容由 HKBWS 物種頁與 BirdLife 撰寫。",
-    "**名錄分類的一波三折**（卡面已寫入 2011 降至第 III 類、2014 復列第 I 類的經過）：1998–2010 年九筆 13 隻幾乎全部有圈養來源證據，2011 年重審後被降至第 III 類；隨後塱原自 2011 年 10 月 27 日起出現六隻（2 雄 4 雌），加上 2012–14 年五筆最多 14 隻，2014 年復列第 I 類。HKBWS 認為這與**塱原恢復定期種稻**直接相關。14–15 cm；雄鳥栗紅頭頂至背、白頰無黑耳斑、無黑領、下體近白、翼長尾短；雌鳥似家麻雀雌鳥但眉紋較寬而清晰、下體較白。",
-    "紀錄與季節：多數在 **10 月 4 日至 11 月中**，少數越冬至 2 月 28 日，另 2016 年 3 月 7 日至 4 月 11 日最多三隻於塱原；最高計數 **2012 年 10 月 25 日至 11 月 2 日最多 14 隻**；塱原以外只有北新界五筆單隻（馬草壟、落馬洲河套、新田、米埔），2016 年 1 月 3 日上水北區公園一隻地點異常、懷疑籠中逸鳥。歷史：Vaughan & Jones(1913) 在港只提及鳥店中與樹麻雀擠在一起；Herklots(1953) 以「山地鳥」解釋缺席；Herklots(1967) 記 1960 年 12 月 10 日大帽山一隻但 Webster(1975) 認為可能誤認。",
-    "IUCN：**LC（無危）**，BirdLife **2024** 年評估、趨勢 **Stable**（HKBWS 亦寫 stable，兩者一致）；居民／繁殖 EOO 12,400,000 km²、非繁殖 EOO 9,480,000 km²、遷徙狀況為 **Altitudinal Migrant（本批首見）**、海拔 0–4,500 m、世代 2.4 年、森林依賴度 **Low**、IBA／KBA 0 個；生境三項全為 Suitable（耕地、亞熱帶／熱帶濕潤山地林、高海拔灌叢），與本種在塱原稻田覓食的本地狀況吻合。貿易普遍度低（七個資料集中兩個），用途為食用與寵物（皆自給、全國）；**保育行動只有「已劃定保育地點」**，沒有復育計劃、系統監測或國際貿易管制。",
-    "**地圖**：BirdLife 15 個原生國家／地區中，俄羅斯與「俄羅斯亞洲部分」共用一個 110m 輪廓，故填 **14 個形狀**；**阿富汗為迷鳥，刻意不填**；香港不在 BirdLife 國家表中、亦無獨立幾何，已摺入中國；note 明寫本種在華南分佈零散、廣西廣東有限、海南沒有，綠色不代表全境佔用。",
-    "runtime 資料缺陷（只記錄、不改 runtime）：`dexScores.json`、`cardCopy.json`、`measurements.json` **三張表都沒有 0583**，即卡面六軸全部顯示「待查」、`missingScores` 為 **i、a、r、c、v、o**（本批第一次六軸全缺），`withheldScores` 為空——沒有任何 runtime 文字可核對，故亦無可待查的推導項。這與 0476（缺 i、c）與其餘各卡（多為 3–5 軸）不同，屬結構性缺料而非個別欄位出錯。",
-    "AI 主圖以 0477 主圖作風格參照，維持本批水彩田野外觀；首版的喉部帶深色似黑領、與本種「無黑領、下體近白」不符，已重生成喉與胸近白的版本。原圖 1312×816 橫幅，直接取 816×816 方形（起點 x=496，不補邊）再放大至 1127×1127，停在收割稻田的稻穗稈上，呼應 HKBWS 所述塱原生境。比較鳥為樹麻雀與家麻雀，兩張由本卡主圖以圖生圖生成，非等比例、非專家認證；插圖與全部辨識要點均為 AI 解讀，未經專家審核。"
+    "香港 I 類罕見秋季過境，以塱原為主；歷史上部分記錄可能籠鳥逃逸，香港所見亞種未確定。",
+    "雄鳥赤褐冠背、白頰無黑斑；雌鳥與雄鳥不同，不能將卡圖當作雌雄皆同。",
+    "AI 示意未經專家認證、非等比例；雄鳥喙仍偏長、翼斑細節與足趾近似，樹麻雀頰斑形狀誇大，家麻雀喉斑碎紋及喙偏大。",
+    "BirdLife 2024 LC，全球數量未知、疑穩定；地圖只示部分原生國家，非實際佔據範圍，阿富汗迷鳥不填。",
+    "runtime 無分數、文案及測量資料，六軸待查。",
+    "Drive 目的資料夾已有 0583.avif，暫停上傳避免重複；待用戶決定。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
   ],
   "withheldScores": {}
 }

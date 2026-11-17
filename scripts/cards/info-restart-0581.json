@@ -1,0 +1,168 @@
+{
+  "id": "0581",
+  "name": "灰樹鵲",
+  "scientificName": "Dendrocitta formosae",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Dendrocitta formosae sinica, AI approximation perched.",
+  "featureCrops": [
+    [
+      0.15,
+      0.3,
+      0.28,
+      0.41
+    ],
+    [
+      0.27,
+      0.34,
+      0.44,
+      0.46
+    ],
+    [
+      0.3,
+      0.43,
+      0.48,
+      0.52
+    ],
+    [
+      0.77,
+      0.56,
+      0.95,
+      0.71
+    ]
+  ],
+  "featureLabels": [
+    "黑色臉部",
+    "灰頸褐背",
+    "深翼白羽基",
+    "長而漸闊尾"
+  ],
+  "featureNotes": [
+    "前臉黑，後頸灰。",
+    "背部偏褐，胸腹灰褐而漸淡。",
+    "黑翼初級飛羽有白色基部。",
+    "長尾中央羽尖變寬；AI 誇大匙形。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "棕腹樹鵲",
+      "scientificName": "Dendrocitta vagabunda",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "身體偏棕橙，頭頸暗，尾淡灰帶寬黑尖。",
+      "portraitNote": "AI 背腹過於亮橙，翼白斑及腳趾不準。"
+    },
+    {
+      "zh": "喜鵲",
+      "scientificName": "Pica serica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "黑白對比鮮明，白肩和白腹，頭胸黑。",
+      "portraitNote": "AI 羽色光澤過藍，尾羽及腳趾近似。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "PAK",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 2024 extant native country overview, Hong Kong native but not separately rendered at this scale; country fill not full occupation."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033500",
+      "use": "香港局部常見留鳥、sinica 黑尾、灰頸褐背、栗色尾下覆羽。"
+    },
+    {
+      "url": "https://ebird.org/species/grytre1",
+      "use": "廣義灰樹鵲羽色及不同地區尾灰黑。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/grey-treepie-dendrocitta-formosae/details",
+      "use": "2024 LC，數量未量化、疑下降；原生國家表。"
+    },
+    {
+      "url": "https://ebird.org/species/ruftre2",
+      "use": "棕腹樹鵲棕橙身和灰尾寬黑尖。"
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=959E1633",
+      "use": "棕腹樹鵲中文名。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0260/033600",
+      "use": "喜鵲黑白羽色、白肩及腹。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "分類學名"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六軸缺資料"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "缺資料"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "缺資料"
+    }
+  ],
+  "notes": [
+    "香港局部常見留鳥，sinica 亞種。",
+    "AI 示意非專家認證、不等比例；主圖尾尖誇張匙形、白翼基偏少、黑喉過暗且腳趾近似；棕腹樹鵲顏色偏飽和，喜鵲光澤過藍，羽列及足趾不可靠。",
+    "BirdLife 2024 LC、全球數量未知、疑下降；世界圖為原生國家概覽、非全境。",
+    "runtime 無分數、文案及測量資料，六軸待查；未改 runtime。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}

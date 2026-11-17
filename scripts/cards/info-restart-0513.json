@@ -1,0 +1,150 @@
+{
+  "id": "0513",
+  "name": "白喉磯鶇",
+  "scientificName": "Monticola gularis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Adult male White-throated Rock Thrush Monticola gularis perched upright on a mossy fallen log. Crown and nape bright blue, the blue carrying over as a wash on otherwise near-black dark blue upperparts; face and ear-coverts blackish; a small clean white patch on the centre of the throat framed by the dark malar; breast, belly, flanks and undertail coverts rich rufous-orange, unbarred; wings dark brownish-black with narrow pale buffy crescent fringes; tail dark with a blue tinge on the outer feathers.",
+  "featureCrops": [
+    [
+      0.49,
+      0.13,
+      0.67,
+      0.24
+    ],
+    [
+      0.36,
+      0.26,
+      0.58,
+      0.48
+    ],
+    [
+      0.55,
+      0.27,
+      0.71,
+      0.38
+    ],
+    [
+      0.5,
+      0.37,
+      0.72,
+      0.6
+    ]
+  ],
+  "featureLabels": [
+    "藍色頭頂",
+    "深藍上體與淡色羽緣",
+    "白喉",
+    "栗紅下體"
+  ],
+  "featureNotes": [
+    "**頭頂與後頸是鮮明的藍色**，是雄鳥全身最亮的部分；其餘上體卻是近黑的深藍，兩者落差正是本種的特徵。HKBWS 記「雄鳥上體深色、頭頂藍」；冬季換羽後藍色會更完整、上體更暗。雌鳥則完全沒有藍，頭頂是褐色。為插圖局部。",
+    "**背、肩與覆羽近黑而帶藍調**，覆羽末端有**淡色新月形羽緣**，形成一層層細鱗狀紋。HKBWS 特別提到**第一齡冬羽的淡色羽緣帶黃褐調、肩羽端部較窄**，換羽後（即春季）濃色更深、鱗狀感更弱；野外遇到的冬季個體因此常常「較花」。為插圖局部。",
+    "**喉部中央一小塊乾淨的白色**是本種名字的由來；上下由黑色的頰與顎紋框住。HKBWS 提醒：**這個白喉在兩性身上都可能不容易看出**，光線差或姿態不同時常被誤認為整片深色。作為比較的栗腹磯鶇雄鳥喉部是深藍、完全不帶白。為插圖局部。",
+    "**胸、腹與脇是一整片栗紅至橙褐色**，沒有橫斑；栗腹磯鶇雄鳥的栗色更深、更「栗」，而本種偏橙紅。雌鳥下體則是**白色底、密佈黑色鱗狀斑**，只有下腹留白——兩性差異極大。為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "栗腹磯鶇 雄",
+      "scientificName": "Monticola rufiventris",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "**雄鳥對雄鳥**：兩者都是「深色上體 + 藍色頭部 + 栗色下體」，是本批最相似的一對。分別在**藍色的分佈與下體色調**：本種的**藍集中在頭頂與後頸**，背與翼近黑而只帶藍調，**喉中央有一小塊白**，下體是**橙紅至栗紅**；栗腹磯鶇的**頭頂與整個上體都是灰藍**，**喉是更深的深藍**、**沒有白喉**，下體是**更深更暗的栗色**。體型亦有差距：本種 **16–19 cm**，栗腹磯鶇 **21–23 cm**，同場時本種明顯較小巧。",
+      "portraitNote": "栗腹磯鶇雄鳥（0512 主圖）：整體灰藍上體、深藍喉、整片深栗色下體。"
+    },
+    {
+      "zh": "栗腹磯鶇 雌",
+      "scientificName": "Monticola rufiventris",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "**雌鳥對雌鳥——這才是野外真正的難題**。兩者都是「褐色鱗狀上體 + 下體密佈鱗斑 + 白喉／淺色喉」。分別在**下體的留白範圍與臉部圖案**：本種雌鳥**下體的黑色鱗斑較疏**，**腹部與尾下覆羽是乾淨的白色**，**耳羽後方沒有明顯的淺色大斑**；栗腹磯鶇雌鳥**下體（連腹部與尾下覆羽）密佈淺褐與深褐鱗斑**、白只留在斑隙之間，而且**耳羽後方有一塊寬闊的淺色斑**、眼圈與下髭紋更搶眼。HKBWS 對本種的註記正是「與栗腹磯鶇雌鳥相似，但後者較大、下體橫斑更密、腹部與尾下覆羽不是純白」。",
+      "portraitNote": "栗腹磯鶇雌鳥（0512 比較鳥）：褐色鱗狀上體、耳羽後寬闊淺斑、下體密佈鱗斑至尾下覆羽。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "KHM",
+      "LAO",
+      "MNG",
+      "MMR",
+      "PRK",
+      "RUS",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 國家表共 **13 列**：**原生 10 列**（中國、柬埔寨、寮國、蒙古、緬甸、北韓、俄羅斯 ×2、泰國、越南），俄羅斯兩列併為 `RUS`，故 **9 個 ISO3**，全部在 110m 底圖上有幾何；**香港、馬來西亞、新加坡三列為 Vagrant（迷鳥）**，依先例不填色——但香港在本地是「稀少過境鳥兼冬候鳥」，兩邊看法不同，見卡下註記。分佈由**俄羅斯東南、北韓與中國東北繁殖**，冬季到**緬甸北部、泰國北部與東部、中南半島、中國南部（福建、廣東、廣西、雲南南部）**。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/051500",
+      "use": "香港第 I 類、**以秋季為主的稀少過境鳥，兼冬候鳥**，見於**閉郁林（closed-canopy forest）**。**16–19 cm**。**雄鳥**：**下體栗紅、上體深色**，**頭頂藍**、**部分或全部尾羽帶藍調**；第一齡冬羽與成鳥雄鳥非常相似，但**淡色羽緣帶黃褐調、肩羽與肩羽端部較窄**（Clement & Hathway 2000）；**冬季淡色羽端磨掉後，春季雄鳥顏色更濃、頭頂藍色更完整、上體更暗而鱗狀感更弱**。**雌鳥**：**頭頂褐色**、**上體密佈鱗狀斑**、**淺色下髭紋、深色顎紋、白喉**，**白色下體除下腹外密佈黑褐色鱗斑**；**白喉在兩性身上都可能不易看出**。聲音：**在香港沒有鳴唱紀錄**；叫聲為**高音『tsee』與短促『tak』**，兩者常交替。生境：**閉郁林，尤以大帽山山系為主**，亦見於**何文田等過境點**。出現情況：**1990-11-11 嘉道理農場首次紀錄**（一隻被繫放的雌鳥，是 1990/91 冬季三隻之一，Leader 1991）；至 2020/21 已在 **16 個冬季**出現，**2015/16 起每年都有**，此增幅與**觀察活動增加**同步。**見於 10 月 11 日至 5 月 9 日**；**81% 的紀錄集中在 10 月第三週（數量高峰，相信是過境）至 1 月最後一週**；**2 月只有兩筆、都在上半月**；3 月初至 5 月第二週只有零星（佔全季總數 **16%**）。每季總數通常低，**例外是 2019/20 的 10 隻**，其中**大欖郊野公園 2019-10-20 至 12-06 至少有 5 隻不同個體**；下一季同地只有兩筆。**幾乎都單獨出現**，但同一區域可有多隻；部分個體長期停留，例如**大埔滘 2004-11-27 至 2005-01-15 一隻雄鳥**、**同一隻雌鳥在 2013-10-15 與 12-21 在大埔滘**、**何文田 2017-10-23 至 10-29 一隻雌鳥**（後者較像過境鳥）。行為：**在地面或低矮樹木覓食昆蟲**；**愛停低枝，除非常緩慢的抽尾外可長時間不動**，被形容為**不怕人、相當信任人**（Leader 1991）。分類：**單型種**；繁殖於**俄羅斯東南至北韓與中國東北**（黑龍江、河北北部、內蒙古東北部、山西），冬季在**緬甸北部、泰國北部與東部、中南半島、中國南部（福建、廣東、廣西、雲南南部）**（Collar 2020）。保育：**IUCN Least Concern，趨勢 stable**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/white-throated-rock-thrush-monticola-gularis/details",
+      "use": "IUCN **LC**、**2024 年評估**（歷史同 0511／0512：2024–2004 皆 LC，2000／1994／1988 為 LR-lc）；**成熟個體 Unknown**、**趨勢 Decreasing（Suspected）——與 HKBWS 的 stable 相反，兩者並列**；種群未量化，**del Hoyo et al.（2005）稱在北韓稀有**；國家估算（Brazil 2009）：**中國 100–10,000 繁殖對、50–1,000 過境**，**俄羅斯 100–10,000 繁殖對、50–1,000 過境**；**森林依賴度 Medium**，範圍內**樹冠十年減少 9.4%**（本批目前最高的一次，0512 為 2.2%），故**推測下降 1–19%**；**繁殖 EOO 3,270,000 km²、非繁殖 EOO 3,940,000 km²**、AOO Unknown、**Breeding endemic No**、**Full Migrant**、生態系統只有陸域、海拔 **0–1,790 m**、世代 **2.5 年**、Landbird；**生境 5 項，只有「温帶林（繁殖）」是 Major**，其餘 4 項（亞熱帶／熱帶潮濕低地林非繁殖、岩石地區繁殖與非繁殖、温帶灌叢繁殖）只是 Suitable；**IBA／KBA：5 個，共 14,373 km²，平均保護區覆蓋 37.23%**——**本批第一次有具體 IBA 數目**（北韓 Mount Chilbo、俄羅斯 Arkhara lowlands、Kievka and Chernaya river basins、Bolon' lake、Udyl' lake，全部 A3 準則、2004 年評估；重疊情況：完全 20%、部分 60%、無 20%）；**用途與貿易：high prevalence，七個數據集中有三個**，終端用途為**人類食用（Subsistence、National）**與**寵物／展示（International）**——與 0511 北紅尾鴝相同組合；保育行動只有「已劃定保育地點（覆蓋全部範圍）」與「已納入國際法規」，**系統性監測 No**、**遷地保育 No**、**教育宣傳 No**；政策工具 **CMS 附錄 II**；AZE 與 Search for Lost Birds 皆 No；命名人 **(Swinhoe, 1863)**——與 runtime `funFact`「首次由斯文豪於 1863 年描述」一致。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **522** 項 白喉磯鶇 White-throated Rock Thrush（*Monticola gularis*），**第 I 類**；鄰項為 521 黑喉紅尾鴝與 523 栗腹磯鶇。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（白喉磯鶇；White-Throated Rock-Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（*Monticola gularis*／鶲科 Muscicapidae）；speciesCode wtrthr1；taxonOrder 29368。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 2、a 3.3、v 2.9、r 3.3、c 3、o 2.9），`missingScores` 與 `withheldScores` 皆為空；o 2.9 與六軸平均 2.88 相符。a 保留：`look` 中文是「年幼雄鳥灰或金棕色、橙色下體」，屬可核對形態。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "本張 copy 相對完整（**length 有 16–19 cm**、`voice`／`diet`／`migration`／`conservation` 皆有內容），但欄位錯位嚴重：`look` **中文**是形態（第一齡雄鳥），**英文卻是體重句**（34 g，32–37 g）；`diet` 英文亦是「Young males have gray or golden-brown feathers…」；`funFact` 英文是種群句；`behavior` 英文重複繁殖地句；`weight` 為空、`humanRelation` 只說「被廣泛飼養為寵物」（與 BirdLife 的貿易紀錄一致）。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 97、tail 64.2、tarsus 23.8、bill 20.4、mass 34.6 g。"
+    }
+  ],
+  "notes": [
+    "香港狀況：名錄 2024 第 **522** 項、**第 I 類**；HKBWS 描述為**以秋季為主的稀少過境鳥，兼冬候鳥**，生境是**閉郁林**。**1990-11-11 嘉道理農場首次紀錄**，至 2020/21 已在 **16 個冬季**出現、**2015/16 起每年都有**；HKBWS 明言此增幅**與觀察活動增加同步**。**見於 10 月 11 日至 5 月 9 日**，**81% 集中在 10 月第三週至 1 月最後一週**，**2 月只有兩筆**、3 月至 5 月上旬只佔 16%；**2019/20 的 10 隻是例外**（大欖郊野公園至少 5 隻）。行為上**愛停低枝、長時間不動，只極緩慢抽尾**，**相當不怕人**。",
+    "**兩邊對「迷鳥 vs 冬候鳥」看法不同**：BirdLife 把香港列為 **Vagrant**，HKBWS 則列為**稀少但每年出現的過境鳥兼冬候鳥**（2015/16 起每年都有紀錄）。地圖依 BirdLife 數字填色，但這點已在卡上並列說明——與 0512「BirdLife 不列香港、本地卻是冬候鳥」是同一類分歧，寫法保持一致。",
+    "趨勢亦**兩邊並列**：BirdLife 2024 為 **Decreasing（Suspected）**，理由是森林依賴度 Medium、範圍內樹冠十年減少 **9.4%**（本批目前最高），推測下降 1–19%；HKBWS 記 **stable**。香港層面無可用族群指數（每季多為一至兩隻）。",
+    "辨識要點：雄鳥——**藍頭頂 + 近黑帶藍調的上體（覆羽有淡色新月形羽緣）+ 喉中央一小塊白 + 整片橙紅至栗紅下體**；與**栗腹磯鶇雄鳥**的分別是後者**整體灰藍、喉深藍無白、下體更暗的栗色、體型明顯較大（21–23 cm 對 16–19 cm）**。雌鳥——**褐色鱗狀上體 + 白喉 + 白色下體密佈黑鱗斑（下腹留白）**；與**栗腹磯鶇雌鳥**的分別是後者**下體鱗斑更密（連腹部與尾下覆羽）、耳羽後有寬闊淺斑、體型較大**。兩種的**白喉都可能不易看出**。",
+    "分佈圖填 **9 個形狀**（中國、柬埔寨、寮國、蒙古、緬甸、北韓、俄羅斯、泰國、越南）：BirdLife 原生 10 列、俄羅斯兩列併為 `RUS`，**9 個都有 110m 幾何**；**香港、馬來西亞、新加坡為 Vagrant，不填色**（已在地圖說明註明，並說明與本地認定的差異）。",
+    "**本批第一次有具體 IBA／KBA 數目**（5 個、14,373 km²、平均保護區覆蓋 37.23%，全部 A3 準則、2004 年評估），之前 0510–0512 都是「-」。**貿易 high prevalence（7 個數據集有 3 個）**，終端用途與 0511 相同：人類食用（Subsistence、National）+ 寵物／展示（International）。",
+    "插圖為 AI 生成，非等比例、非專家認證。比較鳥兩張**直接沿用 0512 的主圖與比較鳥**（栗腹磯鶇雄鳥、栗腹磯鶇雌鳥）——這是本批**第四次**「上一張主圖降為下一張比較鳥」，也是**第一次兩隻比較鳥都來自同一張前一張卡**，因為 HKBWS 對本種的兩條比較線正是指向同一種的雄與雌。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

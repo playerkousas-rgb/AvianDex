@@ -1,0 +1,155 @@
+{
+  "id": "0554",
+  "name": "栗耳鵐",
+  "scientificName": "Emberiza fucata",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Emberiza fucata, AI approximation of male.",
+  "featureCrops": [
+    [
+      0.63,
+      0.25,
+      0.78,
+      0.38
+    ],
+    [
+      0.65,
+      0.21,
+      0.82,
+      0.3
+    ],
+    [
+      0.65,
+      0.38,
+      0.8,
+      0.5
+    ],
+    [
+      0.47,
+      0.35,
+      0.64,
+      0.46
+    ]
+  ],
+  "featureLabels": [
+    "栗色耳羽白眼圈",
+    "灰色頭頂深紋",
+    "胸部深色紋帶",
+    "褐背黑色縱紋"
+  ],
+  "featureNotes": [
+    "栗色耳羽及白色眼圈。",
+    "雄鳥灰色頭頂與後頸具深色條紋。",
+    "雄鳥上胸濃密深紋，下胸及脅橙褐；圖中胸帶不足。",
+    "褐色背部具深色縱紋。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "小鵐",
+      "scientificName": "Emberiza pusilla",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "小鵐較小，暖褐耳羽、淡色眉和白色下體細紋，缺雄栗耳鵐強烈胸帶。",
+      "portraitNote": "AI 示意，胸紋或偏重，腳趾不可靠。"
+    },
+    {
+      "zh": "鐵爪鵐",
+      "scientificName": "Calcarius lapponicus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖雄鐵爪鵐黑臉黑喉、淡眉和栗後頸，非栗耳鵐灰冠栗耳。",
+      "portraitNote": "AI 繁殖雄羽，黑胸偏小、足趾不可靠。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IND",
+      "JPN",
+      "LAO",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PRK",
+      "PAK",
+      "RUS",
+      "KOR",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only; combined seasons, excludes uncertain origin and vagrants; not occurrence polygon or whole-country occupancy. BirdLife EOO breeding 15.6m and nonbreeding 10.3m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056200",
+      "use": "香港 I 類秋季不常見遷徙、冬春稀少；雄鳥栗耳灰冠及胸部深紋。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056300",
+      "use": "小鵐體型及面紋、下體細紋。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/055600",
+      "use": "鐵爪鵐雄繁殖羽。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/chestnut-eared-bunting-emberiza-fucata/details",
+      "use": "2025 LC、數量及全球趨勢未知；原生國家和 EOO。HKBWS 舊頁全球稱穩定、本地減少。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza fucata、Emberizidae。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 2.8、v 2.8（含體長估算）、r 4.8、c 1.2、o 2.7。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "雄鳥灰冠栗耳及胸紋，部分多語欄位錯位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 73.6、tail 58、tarsus 20.5、bill 13.1 mm、mass 19.8 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類秋季不常見遷徙、冬春稀少，過去冬季較多；圖示雄鳥。",
+    "AI 圖非專家認證、非等比例；主圖胸帶不夠密，下腹橙色過重，足趾不可靠；小鵐胸紋或偏重；鐵爪鵐黑胸偏小。",
+    "BirdLife 2025 全球趨勢與數量未知，HKBWS 舊頁全球稱穩定、本地減少；地圖為部分原生國家概覽非全境。",
+    "runtime v 含體長估算，多語欄位部分錯位；不修改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

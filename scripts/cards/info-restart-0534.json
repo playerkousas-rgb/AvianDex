@@ -1,0 +1,156 @@
+{
+  "id": "0534",
+  "name": "布氏鷚",
+  "scientificName": "Anthus godlewskii",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Anthus godlewskii; AI approximation.",
+  "featureCrops": [
+    [
+      0.68,
+      0.2,
+      0.91,
+      0.34
+    ],
+    [
+      0.69,
+      0.29,
+      0.85,
+      0.45
+    ],
+    [
+      0.43,
+      0.28,
+      0.68,
+      0.43
+    ],
+    [
+      0.51,
+      0.46,
+      0.75,
+      0.58
+    ]
+  ],
+  "featureLabels": [
+    "淡眉與短喙",
+    "暗色頰紋及胸紋",
+    "褐背深色縱紋",
+    "淡黃褐兩脅"
+  ],
+  "featureNotes": [
+    "較理氏鷚略小，喙通常較短而基部較深，眼先不具紋。",
+    "暗色頰紋及斑，胸部有明顯縱紋；圖像黑斑或過於粗重。",
+    "褐色上體有深色縱紋，通常較理氏鷚明顯。",
+    "下體及兩脅通常較深黃褐；羽況變化和個體差異大。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "理氏鷚",
+      "scientificName": "Anthus richardi",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "理氏鷚通常更大、更長腿、喙及後爪；布氏鷚通常較小、褐色較濃，鑑別需綜合羽毛、結構與叫聲。",
+      "portraitNote": "理氏鷚 AI 示意，腳趾及後爪不可靠。"
+    },
+    {
+      "zh": "樹鷚",
+      "scientificName": "Anthus hodgsoni",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "樹鷚有橄欖色背、清晰眉與耳後淡斑，常在樹林附近；布氏鷚更喜開闊地。",
+      "portraitNote": "樹鷚 AI 示意，不按比例。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "MNG",
+      "MMR",
+      "NPL",
+      "RUS",
+      "LKA",
+      "ARE"
+    ],
+    "note": "Partial NATIVE-country overview only. 原生現存國家合併繁殖、非繁殖、過境及季節未明，非全境，非 occurrence polygon；繁殖 EOO 276 萬、非繁殖 EOO 695 萬平方公里。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054000",
+      "use": "香港 I 類偶至；截至頁面更新有 2002 錦田及 2013 塱原紀錄。較理氏鷚略小、褐背、深色頰紋及胸紋，飛行叫聲較高而不那麼刺耳。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053900",
+      "use": "理氏鷚較大長腿、長後爪，胸有明顯縱紋。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054200",
+      "use": "樹鷚上體帶橄欖色，眉紋明顯及耳後淺斑。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/blyths-pipit-anthus-godlewskii/details",
+      "use": "2025 LC、懷疑穩定、數量未知；Full Migrant；原生現存國家表。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Anthus godlewskii，speciesCode blypip1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "只有 v 3.1、r 1、vEst 1；i、a、c、o 缺失不作推算。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "中文 look 僅尺寸，range 缺、英文 diet 缺、英文 migration 錯置；不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 89.8、tail 71.4、tarsus 25.5、bill 15、mass 25.3 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類偶至；AI 主圖及比較圖均非專家認證、非等比例；主圖黑頰斑可能過粗，腳趾細節不可靠。",
+    "布氏和理氏差異細微且重疊，飛行叫聲重要，勿只依圖判斷。",
+    "BirdLife 2025 LC，懷疑穩定，數量未知；國家概覽合併季節非全境。",
+    "runtime 缺 i、a、c、o，不補分、不修改；文案含缺失及錯置。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}

@@ -1,0 +1,155 @@
+{
+  "id": "0559",
+  "name": "紅頸葦鵐",
+  "scientificName": "Emberiza yessoensis",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危",
+    "assessmentNote": "全球 NT：BirdLife 2020 評定"
+  },
+  "illustrationTaxon": "Emberiza yessoensis, AI approximation of first-winter female.",
+  "featureCrops": [
+    [
+      0.13,
+      0.27,
+      0.26,
+      0.37
+    ],
+    [
+      0.19,
+      0.3,
+      0.34,
+      0.4
+    ],
+    [
+      0.31,
+      0.35,
+      0.49,
+      0.46
+    ],
+    [
+      0.53,
+      0.41,
+      0.69,
+      0.52
+    ]
+  ],
+  "featureLabels": [
+    "粉色小嘴",
+    "雌鳥深色鬚紋",
+    "褐背深色縱紋",
+    "暖赭色腰部"
+  ],
+  "featureNotes": [
+    "非繁殖羽嘴大致淡粉，形狀小而短。",
+    "首冬雌鳥深色鬚紋及耳羽後緣。",
+    "背深色條紋與暖色羽緣對比。",
+    "赭色腰部為辨識要點但野外常難看見；圖示過鮮。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "葦鵐",
+      "scientificName": "Emberiza pallasi",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "葦鵐較小，腰色較淡；兩者灰色小覆羽類似，需結合其他特徵辨認。",
+      "portraitNote": "AI 首冬雌鳥示意，胸紋可能過重、嘴上喙不夠深。"
+    },
+    {
+      "zh": "蘆鵐",
+      "scientificName": "Emberiza schoeniclus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "非繁殖蘆鵐常較大而腰淡沙色，翼栗色多寡因亞種不同。",
+      "portraitNote": "AI 首冬雌鳥示意，嘴及足趾不可靠。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "MNG",
+      "PRK",
+      "RUS",
+      "KOR"
+    ],
+    "note": "BirdLife 2020 native extant country table, seasons combined; Russia duplicate merged. Hong Kong listed vagrant and omitted, Natural Earth 110m lacks geometry. Country overview is not whole-country occupancy; EOO breeding 2.14m and nonbreeding 2.01m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057400",
+      "use": "香港 I 類偶發三筆；首冬雌鳥暖褐、黑鬚紋、淡粉嘴及赭腰。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057300",
+      "use": "葦鵐較小及淡腰、灰色小覆羽。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057500",
+      "use": "蘆鵐非成雄羽色及沙色腰，資料曾可取得但目前可能不可用。"
+    },
+    {
+      "url": "https://ebird.org/species/ocrbun1",
+      "use": "各羽齡赭腰、繁殖雄全黑頭。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/ochre-rumped-bunting-emberiza-yessoensis/details",
+      "use": "2020 NT C1、成熟個體估6000–15000及疑下降、原生及迷鳥國家。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 中英文名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza yessoensis、Emberizidae；HKBWS 及 eBird 網頁作 Schoeniclus。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "a 3.3、v 2.7（vEst）、r 1、o 2.3；i、c 缺值。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "英文 look 有冬季顏色與嘴腳描述；部分欄位錯位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 66.6、tail 60.2、tarsus 19.3、bill 11.1 mm、mass 13.5 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類偶發，HKBWS 列 1992、2014、2020 三筆；主圖首冬雌鳥示意，繁殖雄鳥全黑頭。",
+    "AI 畫作非專家認證、非等比例：主圖腰部橙色過鮮且延伸過長，首冬胸部斑紋有變化、腳趾不可靠；比較鳥細節見各自備註。",
+    "BirdLife 2020 NT，估6000–15000成熟個體、疑下降；香港列迷鳥不填，國家圖非全境。",
+    "runtime i、c 缺值，v 含估算；r 1 與本港偶發紀錄不協調，照錄不改；多個文案欄位錯位。"
+  ],
+  "missingScores": [
+    "i",
+    "c"
+  ],
+  "withheldScores": {}
+}

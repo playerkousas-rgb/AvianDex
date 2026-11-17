@@ -1,0 +1,154 @@
+{
+  "id": "0566",
+  "name": "灰頭鵐",
+  "scientificName": "Emberiza spodocephala",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Emberiza spodocephala, AI approximation of breeding male.",
+  "featureCrops": [
+    [
+      0.68,
+      0.23,
+      0.86,
+      0.34
+    ],
+    [
+      0.75,
+      0.29,
+      0.91,
+      0.39
+    ],
+    [
+      0.72,
+      0.36,
+      0.86,
+      0.46
+    ],
+    [
+      0.53,
+      0.48,
+      0.73,
+      0.59
+    ]
+  ],
+  "featureLabels": [
+    "灰色頭部",
+    "暗色眼先",
+    "灰色喉胸",
+    "黃腹及深脅紋"
+  ],
+  "featureNotes": [
+    "雄鳥頭部灰色，畫中藍色過鮮。",
+    "雄鳥眼先、前額及頦偏黑，圖中黑斑太小。",
+    "雄鳥喉胸灰色，圖中邊界過於鮮明。",
+    "腹偏黃、脅具暗色縱紋。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "硫磺鵐",
+      "scientificName": "Emberiza sulphurata",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄硫磺鵐頭較綠、黃色喉及清晰細白眼圈；灰頭鵐雄頭較灰、暗色眼先。",
+      "portraitNote": "AI 雄鳥示意，眼圈應前後斷開、額外白頰線不準。"
+    },
+    {
+      "zh": "小鵐",
+      "scientificName": "Emberiza pusilla",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "小鵐較小、栗褐耳羽和明顯淡眼圈，腹白且胸脅細暗紋。",
+      "portraitNote": "AI 示意，頭及胸紋過重、嘴偏大。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "IND",
+      "LAO",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PRK",
+      "RUS",
+      "KOR",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 2025 extant native-country table all seasons, Russia rows merged, Hong Kong included China geometry; Japan not native on this taxonomy because masked bunting split, vagrants excluded. Country overview not whole-country occupancy. EOO breeding 10.6m and nonbreeding 3.3m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057200",
+      "use": "香港 I 類常見冬候及過境，雄灰頭喉胸、黑眼先額頦、黃腹深脅紋。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057100",
+      "use": "硫磺鵐雄綠頭、淡黃喉及細白眼圈。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056300",
+      "use": "小鵐暖褐耳羽、淡眼圈與細暗胸脅紋。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/black-faced-bunting-emberiza-spodocephala/details",
+      "use": "2025 LC，全球數量及趨勢未知；原生國家表採分拆物種。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza spodocephala、鵐科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.8、v 2.8（vEst）、r 1.8、c 1.2、o 2.3。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 中文為雌鳥、英文為雄鳥，部分欄位錯位或截斷。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 69.6、tail 61.8、tarsus 20.1、bill 12.5 mm、mass 18.5 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類常見冬候及過境；主圖繁殖雄，雌鳥褐頭及淡喉。",
+    "AI 圖非專家認證、非等比例：灰頭偏藍、暗色眼先及頦過小、灰胸邊界太硬，足趾不可靠；比較圖限制見 spec。",
+    "BirdLife 2025 LC、全球數量及趨勢未知；HKBWS 舊資料稱趨勢穩定，時點不同。日本鳥在 BirdLife 分拆為 masked bunting，故國家表未列日本；香港原生包括中國底圖。",
+    "runtime v 為估算、中文 look 為雌鳥，部分文案錯位或截斷；照錄分數未改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

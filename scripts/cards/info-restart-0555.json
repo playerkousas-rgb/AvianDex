@@ -1,0 +1,159 @@
+{
+  "id": "0555",
+  "name": "白頭鵐",
+  "scientificName": "Emberiza leucocephalos",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Emberiza leucocephalos, AI approximation of breeding male.",
+  "featureCrops": [
+    [
+      0.61,
+      0.23,
+      0.78,
+      0.34
+    ],
+    [
+      0.64,
+      0.3,
+      0.78,
+      0.43
+    ],
+    [
+      0.42,
+      0.34,
+      0.61,
+      0.46
+    ],
+    [
+      0.51,
+      0.5,
+      0.7,
+      0.61
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥白色頭頂",
+    "栗色面及喉部",
+    "褐背深色縱紋",
+    "淡腹及栗色脅紋"
+  ],
+  "featureNotes": [
+    "雄鳥白色頭頂，前額及冠側深色。",
+    "雄鳥面上半部、喉及頸側栗色，臉頰白色；圖中白頰偏小。",
+    "背部褐色而具深色縱紋。",
+    "腹淡，胸下及上脅具栗色羽心。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "黃鵐",
+      "scientificName": "Emberiza citrinella",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄黃鵐頭部及下體鮮黃，白頭鵐雄鳥白頂及栗面，兩者近緣。",
+      "portraitNote": "AI 繁殖雄羽示意，腳趾和羽毛細節不可靠。"
+    },
+    {
+      "zh": "小鵐",
+      "scientificName": "Emberiza pusilla",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "小鵐體型較小，暖褐耳羽、淡眉及胸脅細紋，無雄白頭鵐的白頂栗面。",
+      "portraitNote": "AI 示意，胸紋或偏重。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "CHN",
+      "IND",
+      "IRN",
+      "IRQ",
+      "ITA",
+      "JPN",
+      "KAZ",
+      "KGZ",
+      "MNG",
+      "NPL",
+      "PRK",
+      "PAK",
+      "RUS",
+      "KOR",
+      "SYR",
+      "TKM"
+    ],
+    "note": "Partial NATIVE-country overview only; combined seasons; excluded vagrants. BirdLife lists Italy native but considers European population regionally extinct; retained as present native country table. Not occurrence polygon or whole-country occupancy. EOO breeding 18.9m, nonbreeding 19.6m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/055900",
+      "use": "香港 I 類迷鳥，兩自然紀錄、偶見籠逃；雄鳥白頂白頰栗面喉、冬羽不同。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056300",
+      "use": "小鵐體型、面紋及胸脅細紋。"
+    },
+    {
+      "url": "https://ebird.org/species/yellow2",
+      "use": "雄黃鵐鮮黃頭與下體。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/pine-bunting-emberiza-leucocephalos/details",
+      "use": "2025 LC、數量未知、疑下降；HKBWS 舊頁稱穩定；原生國家、EOO。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza leucocephalos、Emberizidae。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.8、v 3.1（含體長估算）、r 4.8、c 1.2、o 3。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "雄鳥白頂白頰；部分多語欄位錯位，不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 91.6、tail 77.8、tarsus 19.1、bill 15 mm、mass 28.5 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類迷鳥，HKBWS 兩個自然紀錄，偶見籠逃；圖示繁殖雄鳥，雌鳥及冬羽不同。",
+    "AI 圖非專家認證、非等比例；主圖白頰偏小、栗面或過深、足趾不可靠；小鵐胸紋或偏重。",
+    "BirdLife 2025 全球疑下降、數量未知；HKBWS 舊頁稱穩定；地圖部分原生國家概覽，非全境，BirdLife 意大利列原生但稱歐洲種群區域滅絕。",
+    "runtime v 含體長估算、部分雙語欄位錯位，不改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

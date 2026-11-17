@@ -1,0 +1,164 @@
+{
+  "id": "0562",
+  "name": "黃胸鵐",
+  "scientificName": "Emberiza aureola",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "CR",
+    "zh": "極危",
+    "assessmentNote": "全球 CR：BirdLife 2017 評定"
+  },
+  "illustrationTaxon": "Emberiza aureola, AI approximation of breeding male.",
+  "featureCrops": [
+    [
+      0.13,
+      0.24,
+      0.3,
+      0.35
+    ],
+    [
+      0.16,
+      0.31,
+      0.31,
+      0.42
+    ],
+    [
+      0.31,
+      0.38,
+      0.49,
+      0.49
+    ],
+    [
+      0.25,
+      0.46,
+      0.43,
+      0.57
+    ]
+  ],
+  "featureLabels": [
+    "栗色頭頂",
+    "黑面及栗胸帶",
+    "白色翼斑",
+    "鮮黃胸腹"
+  ],
+  "featureNotes": [
+    "繁殖雄鳥冠及後頸栗色。",
+    "雄鳥黑面黑喉及栗色胸帶；圖中黑色延伸過長。",
+    "白色中覆羽在翼上形成寬白帶，圖示偏大。",
+    "雄鳥下體鮮黃，冬羽及雌鳥較淡。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "栗鵐",
+      "scientificName": "Emberiza rutila",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄栗鵐頭、喉及上胸栗色，下體黃，沒有雄黃胸鵐黑臉及大白翼斑。",
+      "portraitNote": "AI 繁殖雄示意，尾及腳細節不可靠。"
+    },
+    {
+      "zh": "黃眉鵐",
+      "scientificName": "Emberiza chrysophrys",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "黃眉鵐較小、雄鳥黃眉白喉且腹白具深紋，雌黃胸鵐則下體帶黃。",
+      "portraitNote": "AI 男鳥示意，羽紋和腳趾細節不可靠；此圖非等比例。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "KHM",
+      "CHN",
+      "IND",
+      "JPN",
+      "KAZ",
+      "LAO",
+      "MYS",
+      "MNG",
+      "MMR",
+      "NPL",
+      "PRK",
+      "PAK",
+      "RUS",
+      "KOR",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 2017 extant native-country table, combined seasons; Hong Kong and Singapore native but no Natural Earth 110m geometry; Finland possibly extinct excluded, Russia rows merged; vagrants excluded. Country overview not whole-country occupancy. EOO breeding 21.8m, nonbreeding 7.39m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056700",
+      "use": "香港 I 類秋季常見過境、春季不常見、冬季稀少；雄黑臉喉、栗胸帶及白翼斑；種群衰退。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056800",
+      "use": "栗鵐雄栗色頭喉胸、黃腹。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056400",
+      "use": "雄黃眉鵐黃色眉前段、白喉及深紋淡腹。"
+    },
+    {
+      "url": "https://ebird.org/species/yebbun",
+      "use": "雄羽黑面、栗頭及黃腹；eBird 最新屬種寫 Schoeniclus aureolus。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/yellow-breasted-bunting-emberiza-aureola/details",
+      "use": "2017 CR，全球數量未確定、急速下降；國家表含香港及新加坡原生。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza aureola、鵐科；不同來源屬名及詞尾有差異。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 5、a 3.8、v 2.7、r 3.3、c 4.7、o 3.9。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 中文描述非繁殖羽，英文形態與本種不符，voice 等欄錯位；未改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 75.3、tail 55.4、tarsus 20.5、bill 13.2 mm、mass 19.6 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類秋季常見過境、春季不常見、冬季稀少，歷史數量下降；圖示繁殖雄羽，其他羽色差異大。",
+    "AI 示意非專家認證、非等比例，白翼斑過大、栗胸帶與黑喉結構不準、黑色延伸胸帶下，足趾不可靠；黃眉鵐為雄鳥，雌羽難辨須謹慎。",
+    "BirdLife 2017 CR、全球數量未定、下降與捕捉有關；香港及新加坡原生但底圖無形狀，芬蘭可能滅絕不填。",
+    "runtime 英文 look 與本種羽色不符、中文為非繁殖羽形態，保留 a；voice 等欄錯位，未改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

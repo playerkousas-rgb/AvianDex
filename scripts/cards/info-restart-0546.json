@@ -1,0 +1,150 @@
+{
+  "id": "0546",
+  "name": "黑頭蠟嘴雀",
+  "scientificName": "Eophona personata",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "illustrationTaxon": "Eophona personata, AI approximation.",
+  "featureCrops": [
+    [
+      0.06,
+      0.25,
+      0.21,
+      0.36
+    ],
+    [
+      0.13,
+      0.22,
+      0.31,
+      0.38
+    ],
+    [
+      0.32,
+      0.33,
+      0.54,
+      0.46
+    ],
+    [
+      0.38,
+      0.44,
+      0.68,
+      0.57
+    ]
+  ],
+  "featureLabels": [
+    "粗黃喙無黑尖",
+    "黑頂與狹黑喉",
+    "身體大致灰色",
+    "深翼無白色端斑"
+  ],
+  "featureNotes": [
+    "喙巨大黃色，上嘴或灰但無黑尖。",
+    "兩性頭部黑，延伸只及眼後，下喉黑色範圍狹窄。",
+    "上、下體大致灰色，後腹較淡。",
+    "與黑尾蠟嘴雀不同，初級羽無白端。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "黑尾蠟嘴雀",
+      "scientificName": "Eophona migratoria",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "黑尾蠟嘴雀雄鳥黑色延至全耳羽和大部分喉，黃色喙黑尖，初級羽有寬白端。",
+      "portraitNote": "AI 雄鳥示意，黑喉過大、白翼斑位置或不準。"
+    },
+    {
+      "zh": "錫嘴雀",
+      "scientificName": "Coccothraustes coccothraustes",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "錫嘴雀棕頭黑面、灰淡粗喙及短尾白端；黑頭蠟嘴雀灰身黑頂、黃喙。",
+      "portraitNote": "AI 示意，脅紋或虛構，翼羽與尾長不準。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "PRK",
+      "RUS",
+      "KOR",
+      "TWN"
+    ],
+    "note": "Partial native-country overview: seasons combined, HK/Macao no separate geometry, country shading not occupancy. BirdLife EOO breeding 3.09m, nonbreeding 2.3m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0450/055200",
+      "use": "香港 I 類罕見冬候及過境；黃粗喙無黑尖、黑頂喉狹、灰體、無白色初級羽端。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0450/055100",
+      "use": "黑尾蠟嘴雀雄鳥黑耳與喉、黑尖喙及白翼端。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0450/055000",
+      "use": "錫嘴雀棕頭黑面罩、短尾白端。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/japanese-grosbeak-eophona-personata/details",
+      "use": "2018 LC，數量未知、懷疑穩定；原生國家及 EOO。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Eophona personata，speciesCode japgro1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 4.3、v 3.1、r 3.3、c 1.2、o 2.8；a 和 o 因外觀條目跨物種待查。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 提及厚嘴雀，voice 提及桑鳲，部分 callout 重複名字，可能混入其他物種；不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 108.7、tail 80.4、tarsus 22、bill 25.6、mass 80 g。"
+    }
+  ],
+  "notes": [
+    "香港罕見冬候及過境。",
+    "三圖 AI 示意、非等比例非專家認證；主圖黑頂延至後冠或略多、尾形及腳趾不可靠；黑尾蠟嘴雀圖黑喉或過大、白翼斑位置不準。",
+    "原生國家概覽合併季節非全境。runtime look 提及厚嘴雀，voice 提及桑鳲，callout 重複名；不改。外觀 a 及依賴它的 o 待查。"
+  ],
+  "missingScores": [],
+  "withheldScores": {
+    "a": "外觀描述提及另一物種厚嘴雀，無法核對外觀軸。",
+    "o": "綜合分依賴待查外觀軸。"
+  }
+}

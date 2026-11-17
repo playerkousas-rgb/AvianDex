@@ -1,0 +1,144 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "id": "0509",
+  "name": "黑喉紅尾鴝",
+  "scientificName": "Phoenicurus hodgsoni",
+  "illustrationTaxon": "Adult male Hodgson's Redstart Phoenicurus hodgsoni perched on a mossy rock, tail slightly raised. Crown and nape clean pale blue-grey; the whole face, cheeks, throat and upper breast black in one continuous mask that ends sharply against the orange lower breast; mantle and back grey-brown with an olive tinge; wings dark brown with a small white wing panel; lower breast, belly and rump rich orange-rufous; tail dark brown with orange-rufous edges. The female is not shown: she is plain grey-brown with a pale eyering, pale tips to the greater coverts forming a narrow wing-bar, and greyish underparts grading to a contrastingly paler belly and buff undertail coverts, with NO white panel in the wing. Hong Kong's only record is a female, so the male shown here is the diagnostic plumage, not the plumage recorded locally. AI interpretation; sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "北紅尾鴝",
+      "scientificName": "Phoenicurus auroreus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者雄鳥都有**銀灰冠、黑臉、大片白翼斑與橙紅下體**，是本批最相似的一對。分別在於**黑色範圍**：本種的黑由臉、頦、喉**一直延伸覆蓋上胸**，形成一整塊「黑面罩」並在胸前**乾淨地斷開**；北紅尾鴝的黑**只到喉部**，上胸已經是橙色。另一點是**白翼斑大小**：本種的**明顯較小**，北紅尾鴝的是一大片**醒目的長方形白斑**。HKBWS 對本種的描述正是「與北紅尾鴝雄鳥相似，但黑臉更廣、覆蓋上胸，白翼斑較小」。"
+    },
+    {
+      "zh": "赭紅尾鴝",
+      "scientificName": "Phoenicurus ochruros",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "**本港唯一紀錄是雌鳥**，所以這一對才是野外真正要分的。本種雌鳥**上體灰褐**、有**淡色眼圈**、大覆羽具**淡端形成一條窄翼帶**、下體灰色而**腹部明顯較淡**、脛羽皮黃；赭紅尾鴝雌鳥則是**均勻的灰褐**而**下胸至腹及脇帶橙皮黃暖調**、**翼上沒有翼帶**。HKBWS 指本種雌鳥與雌性北紅尾鴝的分別是**翼上沒有白斑**（北紅尾鴝雌鳥通常有）與**下體帶暖橙調**欠奉——兩點都用來排除赭紅尾鴝與北紅尾鴝雌鳥。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.14,
+      0.18,
+      0.42,
+      0.5
+    ],
+    [
+      0.2,
+      0.13,
+      0.5,
+      0.33
+    ],
+    [
+      0.48,
+      0.36,
+      0.74,
+      0.56
+    ],
+    [
+      0.6,
+      0.22,
+      0.9,
+      0.48
+    ]
+  ],
+  "featureLabels": [
+    "黑臉延伸上胸",
+    "銀灰冠與後頸",
+    "小白翼斑",
+    "橙紅腰與尾"
+  ],
+  "featureNotes": [
+    "成鳥雄鳥的**黑色由臉頰、頦、喉一路覆蓋到上胸**，下緣乾淨地停在橙色胸前——這正是與北紅尾鴝雄鳥（黑只到喉）最直接的分別，也是「黑喉」以外的第二個黑位。為插圖局部。",
+    "**頭頂至後頸是乾淨的淡藍灰色**，與黑色的臉形成強烈對比；銀灰冠加黑臉是紅尾鴝屬雄鳥的招牌組合，本種的黑面罩比北紅尾鴝更大。為插圖局部。",
+    "**白翼斑細小**，只佔大覆羽的一小截；北紅尾鴝雄鳥的白色翼斑是**一大片長方形**，兩者一比即見。雌鳥則完全沒有白翼斑，只有大覆羽的淡端窄翼帶。為插圖局部。",
+    "**腰、脇與整條尾都是橙紅褐色**，尾羽邊緣偏橙、羽心偏深；本種常把尾上下擺動，尾色在野外十分顯眼。為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BTN",
+      "CHN",
+      "IND",
+      "MMR",
+      "NPL"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists five native territories — Bhutan, China (mainland), India, Myanmar and Nepal — all Extant and Native, but with the seasonality column left blank for every one of them (a first in this batch). All five have 110m geometry, so five shapes are shaded and there is no 'no geometry', vagrant or origin-uncertain caveat. BirdLife classes the species as a Full Migrant with a breeding EOO of 1,960,000 km² and a non-breeding EOO of 2,160,000 km². Not an occurrence polygon: green does not imply full-country occupancy. Hong Kong is not in BirdLife's country table at all, and none of the five shaded countries is where Hong Kong's single record came from, so no Hong Kong claim is drawn from this map."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/051000",
+      "use": "香港第 I 類、**Accidental（偶發）**。**15 cm**；**雌鳥**相當素淨、整體**灰褐**，有**淡色眼圈**，**大覆羽的淡色羽端形成一條窄翼帶**，**下體灰色並逐漸轉為明顯較淡的腹部與皮黃的尾下覆羽**。辨識：離開正常分佈區的鳥本就難認；**與雌性北紅尾鴝相比，本種翼上沒有白斑**（雖然極少數雌性北紅尾鴝也沒有）、**下體也缺少暖色調**。**成鳥雄鳥（本港未錄得）**與雄性北紅尾鴝相似，但**黑臉範圍更大、覆蓋上胸**，**白翼斑較小**；*rufiventris* 與 *phoenicuroides* 兩個亞種的赭紅尾鴝則**頭頂與上體較深、沒有白翼斑**（部分 *phoenicuroides* 可有小白斑）。聲音：蒲台那隻發出**「tik tik」聲，類似歐洲知更鳥**，比北紅尾鴝的同類叫聲**更薄更硬**；另有**「seep」聲**，比北紅尾鴝的**音調略高、更薄，且沒有尾音下降**。出現情況：**2007 年 12 月 11 日蒲台一隻雌鳥**（Welch 2011）——**這是全港唯一紀錄**。行為：那隻鳥在**顯眼的枝條上定點捕飛**。分類：**單型種**；繁殖於中國**青藏高原東部與東南部向東至青海東部、甘肅西部與南部、陝西南部**，南至**四川西部與雲南北部**；冬季南移至**尼泊爾西部向東至華中與華南（四川東部、陝西南部、河南、湖北、湖南、雲南東部）與緬甸北部**（Clement & Rose 2015）。保育：**IUCN Least Concern，趨勢 stable**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/hodgsons-redstart-phoenicurus-hodgsoni/details",
+      "use": "IUCN **LC**、**2024 年評估**（準則 N/A；2024、2016、2012、2009、2008、2004 皆 LC，2000、1994、1988 為 Lower Risk/Least Concern）；**成熟個體 Unknown**、**趨勢 Decreasing（Suspected）——與 HKBWS 的「stable」不一致，照實並列**；下降理由是**森林依賴度 Medium**、分布範圍內**十年樹冠覆蓋減少 2.1%**（Global Forest Watch），故**推測族群下降 1–19%**；種群未量化（原文引 del Hoyo et al. 2005 但數值從缺）；**繁殖 EOO 1,960,000 km²、非繁殖 EOO 2,160,000 km²**、AOO Unknown、**Breeding endemic No**、**Full Migrant**、**IBA／KBA 4 個**（全部在**尼泊爾**：Annapurna、Kanchenjunga、Makalu Barun、Manaslu，網絡 **12,828 km²**、平均保護覆蓋 **99.43%**、準則 **A3**）、海拔 **130–2,500 m**（偶爾至 4,300 m）、世代 **2.2 年**、**森林依賴度 Medium**、**生態系統只有陸域**；**生境 8 項**，**亞熱帶／熱帶潮濕山地林（繁殖期 Major）與亞熱帶／熱帶高山灌叢（繁殖期 Major）** 為兩項 Major，其餘六項（鄉村花園、潮濕低地林、乾燥林、高山草地、潮濕灌叢、乾燥灌叢）皆 Suitable；**用途與貿易：七個貿易數據集全部沒有紀錄，沒有使用或貿易跡象**（繼 0503 之後第二次「完全無貿易」）；**保育行動**只有「已劃定保育地點（覆蓋全部範圍）」與「已納入國際法規」，其餘皆 No；**政策工具：CMS 附錄 II**；**國家表 5 列，季節欄全部空白**；命名人 **(Moore, 1854)**；Alliance for Zero Extinction 與 Search for Lost Birds 皆 No。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024（頁面最後更新 2025-05-11）：第 **521** 項 黑喉紅尾鴝 Hodgson's Redstart（*Phoenicurus hodgsoni*），**第 I 類**；鄰項為 520 北紅尾鴝與 522 白喉磯鶇——**名錄把黑喉紅尾鴝排在北紅尾鴝之後**，而 runtime 則以 0509 黑喉紅尾鴝先於 0511 北紅尾鴝。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（黑喉紅尾鴝；Hodgson's Redstart）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Phoenicurus hodgsoni／鶲科 Muscicapidae）；speciesCode hodred1；taxonOrder 29343。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 2、a 2.8、v 3（vEst 1）、r 2.5、c 1.2、o 2.3），`missingScores` 與 `withheldScores` 皆為空；o 2.3 與六軸平均 2.13 相差 0.17，屬本批正常範圍。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "`look` 中文只有「面部到胸部黑色，下體至尾部紅褐色」一句，屬形態描述（故 a 保留），且與本卡主圖一致；`callouts` 三條（雌鳥翼上沒有白斑／面部到胸部黑色／下體至尾部紅褐色）；`etymology` 只是分類泛述；`fieldCopy` 的 look 英文**全空**、behavior 英文誤填為「temperate forests」生境句；**length 與 weight 皆為空**；`range` 五國與 BirdLife 完全一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 82、tail 68.2、tarsus 23.2、bill 14.5、mass 17。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **521** 項、**第 I 類**；HKBWS 列為 **Accidental（偶發）**，**全港只有一筆**——**2007 年 12 月 11 日蒲台島一隻雌鳥**（Welch 2011）。那隻鳥在顯眼枝條上定點捕飛，發出類似歐洲知更鳥的「tik tik」聲。**本港從未錄得成鳥雄鳥**，因此卡面主圖畫的是雄鳥（辨識用的標準羽色），而野外真正會遇到的是雌鳥。",
+    "辨識要點（雌鳥優先，因為本港紀錄是雌鳥）：本種雌鳥**灰褐、有淡色眼圈**、**大覆羽淡端形成一條窄翼帶**、下體灰色而**腹部明顯較淡**、脛羽皮黃；與雌性北紅尾鴝之別是**翼上沒有白斑**（北紅尾鴝雌鳥通常有）與**下體沒有暖橙調**；與赭紅尾鴝雌鳥之別是後者**均勻灰褐帶橙皮黃下腹、沒有翼帶**。雄鳥則靠**黑臉延伸覆蓋上胸**與**較小的白翼斑**與北紅尾鴝雄鳥分開。",
+    "IUCN：**LC（無危）**，BirdLife **2024** 年評估。**趨勢 Decreasing（Suspected）**，與 HKBWS 的「stable」**不一致，照實並列**；下降依據是森林依賴度 Medium 加上分布範圍內十年樹冠覆蓋減少 2.1%，推測族群下降 1–19%。成熟個體 Unknown；繁殖 EOO 1,960,000 km²、非繁殖 EOO 2,160,000 km²；**Full Migrant**；**IBA／KBA 4 個全部在尼泊爾**（Annapurna、Kanchenjunga、Makalu Barun、Manaslu），網絡 12,828 km²、保護覆蓋 99.43%、準則 A3；海拔 130–2,500 m（偶爾 4,300 m）；世代 2.2 年；生境 8 項中兩項 Major（潮濕山地林與高山灌叢，均為繁殖期）；**七個貿易數據集全部沒有紀錄**（繼 0503 之後第二次完全無貿易）；保育行動只有「已劃定保育地點」與「已納入國際法規」；政策工具 **CMS 附錄 II**；命名人 (Moore, 1854)。",
+    "地圖填 **5 個形狀**（不丹、中國、印度、緬甸、尼泊爾）——BirdLife 原生地區就這五個，**全部有 110m 幾何**，沒有迷鳥、沒有 Origin Uncertain。兩點要留意：(1) **BirdLife 這五列的「季節」欄全部空白**，是本批第一次，故 note 不宣稱留鳥或度冬，只寫 Presence=Extant、Origin=Native；(2) **香港不在 BirdLife 國家表**，而五個填色國家都與香港紀錄的來源無關，故地圖不作任何香港聲明。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`look` 中文只有一句但屬形態（故 a 保留，沿用 0506–0508 先例）；`fieldCopy` 的 look 英文**全空**、behavior 英文誤填為生境句「temperate forests」；`etymology` 只是「屬於鶲科紅尾鴝屬」的泛述；`habitat` 中文「開闊原野和林地」與英文「temperate forests」不完全對應；**length 與 weight 皆為空**。六軸分數齊全。",
+    "HKBWS 頁面 id 是 **051000**（路徑 `0410/`；名錄第 **521** 項），比 runtime **0509** 大 1。查頁經過：`050900` 是赭紅尾鴝、**`051000` 才是黑喉紅尾鴝**、`051100` 是北紅尾鴝——與 runtime 次序（0509 黑喉 → 0510 赭紅 → 0511 北紅）不同，**必須開頁看標題**。",
+    "本輪開始前**沙盒再次被重置**：`/tmp/dump.py`、`cards/art`、`deliver/cards` 全部消失，本機分支退回 base `75d0f82`。已 `git fetch` 後 `git reset --hard origin/arena/3fc0e99d-aviandex` 回到 `6f7430f`（工作區檔案經 md5 比對與遠端一致，無損失）。**0508 的比較鳥素材因此消失**，改為重新生成。主圖與兩張比較鳥全部是本輪新生成，不帶風格參照、只以硬性羽色規格描述並明寫負面條件（主圖「不得有白喉、不得有大白翼斑、不得有橙冠、不得全身灰、黑色不得伸延至腹部」；北紅尾鴝「黑只到喉、白翼斑要大、不得石板藍」；赭紅尾鴝雌鳥「不得石板藍、不得栗腰栗尾、不得白翼斑」）。全部為 AI 解讀、非等比例，未經鳥類專家審核。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

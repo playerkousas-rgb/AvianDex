@@ -1,0 +1,159 @@
+{
+  "id": "0569",
+  "name": "白眉鵐",
+  "scientificName": "Emberiza tristrami",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Emberiza tristrami, AI approximation of breeding male.",
+  "featureCrops": [
+    [
+      0.08,
+      0.24,
+      0.25,
+      0.34
+    ],
+    [
+      0.1,
+      0.28,
+      0.26,
+      0.38
+    ],
+    [
+      0.1,
+      0.34,
+      0.25,
+      0.45
+    ],
+    [
+      0.18,
+      0.43,
+      0.39,
+      0.55
+    ]
+  ],
+  "featureLabels": [
+    "白冠紋白眉",
+    "黑面白耳斑",
+    "黑喉白顎紋",
+    "暖褐色脅部"
+  ],
+  "featureNotes": [
+    "雄鳥黑頭有白冠紋及白眉。",
+    "雄黑耳羽後角有白斑。",
+    "雄黑喉及白顎下紋，圖中黑喉延伸過長。",
+    "脅部暖褐，雌鳥色較淡。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "黃眉鵐",
+      "scientificName": "Emberiza chrysophrys",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "黃眉鵐雄眉前段黃，耳羽後角白斑及白喉；白眉鵐雄白眉黑喉。",
+      "portraitNote": "AI 雄圖眼圈太白、腰偏鮮，足趾不可靠。"
+    },
+    {
+      "zh": "田鵐",
+      "scientificName": "Emberiza rustica",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄田鵐白喉、栗胸帶，警戒時冠羽可豎起；雄白眉鵐黑喉。",
+      "portraitNote": "AI 雄圖栗胸帶過寬、喉側黑紋不準。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "LAO",
+      "MMR",
+      "PRK",
+      "RUS",
+      "KOR",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 2024 extant native-country table all seasons, Russia rows merged; Hong Kong not separately listed, included China geometry. Country overview not whole-country occupancy. Breeding EOO 766,000 and nonbreeding 1.32m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056100",
+      "use": "香港 I 類不常見冬候及稀少過境；雄黑頭喉、白冠紋、白眉及白顎下線。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056400",
+      "use": "雄黃眉鵐黃眉前段及白喉。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056500",
+      "use": "雄田鵐白喉栗胸帶，冠羽可豎起。"
+    },
+    {
+      "url": "https://ebird.org/species/tribun1",
+      "use": "黑白頭紋、暖褐體，與黃眉及田鵐比較；eBird Schoeniclus tristrami。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/tristrams-bunting-emberiza-tristrami/details",
+      "use": "2024 LC、全球數量未知，基於樹冠覆蓋損失疑下降；原生國家表。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza tristrami、鵐科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 2.3、v 2.8（vEst）、r 1、c 1.2、o 1.9；a/o 按規則待查。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "無 look 形態描述；英文有棲地與遷徙。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 69.6、tail 55、tarsus 19.4、bill 12.2 mm、mass 18 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類不常見冬候，稀少過境；圖示雄繁殖羽，雌鳥及冬季羽色較暗。",
+    "AI 非專家認證、非等比例，黑喉下延過長、脅色偏深且胸脅紋不夠、腳趾不可靠；比較圖限制見 spec。",
+    "BirdLife 2024 LC、數量未知，基於森林損失疑下降；HKBWS 舊資料稱穩定。香港未另列但底圖含於中國，國家概覽非全境。",
+    "runtime 無 look，依交接規則 a 與依賴它的 o 待查；v 估算，未改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {
+    "a": "runtime 無 look 形態描述，依既定規則外觀軸待查。",
+    "o": "綜合分依賴待查外觀軸。"
+  }
+}

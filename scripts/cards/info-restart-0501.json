@@ -1,0 +1,142 @@
+{
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "id": "0501",
+  "name": "琉球姬鶲",
+  "scientificName": "Ficedula owstoni",
+  "illustrationTaxon": "Adult male Ryukyu Flycatcher Ficedula owstoni (glossy blue-black crown and nape; dark olive-green lores, cheeks, ear-coverts, mantle and upper back — definitely not black and not blue; thin yellow-orange supercilium above the eye; orange throat and upper breast forming an orange bib that grades into a golden-yellow belly; bright lemon-yellow lower back and rump; blackish wings with one broad white greater-covert patch and a small white spur extending down the outermost tertial; black tail; slim dark bill; dark grey legs). Female, sub-adult and second-calendar-year male plumages are not shown. AI interpretation; sex, age and moult unverified.",
+  "similarSpecies": [
+    {
+      "zh": "黃眉姬鶲",
+      "scientificName": "Ficedula narcissina",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "本種以前就是黃眉姬鶲的一個亞種，兩者雄鳥都橙黃眉線、橙黃喉胸、鮮黃腰與大片白翼斑，最直接的分別在臉與背的顏色：黃眉姬鶲的頭頂、眼先、頰、耳羽、肩與上背都是**純黑**，本種同一範圍是**深橄綠**。第二個細節是白斑，本種大覆羽的白斑另有一條小小的白色 spur 沿最外側三級飛羽向下伸。雌鳥與亞成鳥在繁殖地以外極難分辨（Bakewell et al. 2021），本卡只作雄鳥層面的分辨。"
+    },
+    {
+      "zh": "綠背姬鶲",
+      "scientificName": "Ficedula elisae",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者上體都是橄綠，是本批三張橄綠上體姬鶲中最易混淆的一對。綠背姬鶲的喉、胸、腹與腰是**純鮮黃而完全沒有橙色**，本種的喉與上胸是**橙紅**、形成明顯的橙紅圍兜再過渡為金黃下腹；綠背姬鶲的黃眉只有前眼一小段、另有一圈黃眼圈，本種的橙黃眉線由嘴基一直伸到眼後；綠背姬鶲的大覆羽白斑較寬而沒有伸到最外側三級飛羽的白色 spur。"
+    }
+  ],
+  "featureCrops": [
+    [
+      0.09,
+      0.09,
+      0.4,
+      0.3
+    ],
+    [
+      0.05,
+      0.18,
+      0.29,
+      0.42
+    ],
+    [
+      0.33,
+      0.32,
+      0.58,
+      0.52
+    ],
+    [
+      0.6,
+      0.44,
+      0.82,
+      0.62
+    ]
+  ],
+  "featureLabels": [
+    "黑頭頂與橄綠臉",
+    "橙紅喉胸",
+    "白色翼斑",
+    "鮮黃腰部"
+  ],
+  "featureNotes": [
+    "頭頂與後頸是帶光澤的藍黑，眼先、頰與耳羽卻是深橄綠——這個「黑冠配橄綠臉」正是與黃眉姬鶲雄鳥分開的關鍵，後者的整個頭面都是純黑，為插圖局部。",
+    "喉與上胸是飽和的橙紅，向下過渡為金黃色下腹；黃眉姬鶲的喉胸偏橙黃而非橙紅，綠背姬鶲則完全是檸檬黃、毫無橙色，為插圖局部。",
+    "大覆羽上一道寬白斑是這一群姬鶲的共同特徵；本種的白斑另有一條白色小 spur 沿最外側三級飛羽往下伸，是 HKBWS 特別指出的第二個分別，為插圖局部。",
+    "下背與腰是明亮的檸檬黃，與黑色的尾和深褐的翼形成強烈對比；本種雖以下體橙黃著稱，腰部黃色才是「黃腰」這群姬鶲共同的名字由來，為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・部分分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "JPN"
+    ],
+    "note": "Partial NATIVE-country overview only. BirdLife lists exactly one native country/territory for this species — Japan, where it is resident — so a single shape is shaded. BirdLife's country table has no other row: the spring records from Taiwan and from Jiangsu and Guangdong in mainland China, and from South Korea, that HKBWS reports are passage occurrences rather than native-breeding rows, so none of those areas is shaded. Hong Kong (China) has its own HKBWS species account but is not a BirdLife country row and has no separate 110m geometry; it is folded into China's outline and nothing is shaded for it. Not an occurrence polygon: green does not imply full-country occupancy — this is a breeding endemic of islands from Makeshima south through the Nansei Islands, inside a resident/breeding EOO of only 110,000 km², the smallest EOO recorded in this batch so far."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/050200",
+      "use": "香港第 I 類，**罕見的春季過境遷徙鳥**（Rare spring passage migrant）。**12–13·5 cm**，中型姬鶲；**成鳥雄鳥似黃眉姬鶲雄鳥，但眼先、頰、耳羽、肩與上背是深橄綠而非純黑**，並且**大覆羽白斑另有一條白色小 spur 沿最外側三級飛羽向下伸**；依 Bakewell et al.（2021），**雌鳥或亞成鳥羽色**可由以下組合辨認——**嘴纖細近黑而嘴基藍灰**、**黃色眼圈在眼上方最明顯**、**由嘴基到眼的黃調眉線**、**灰褐或帶黃的下體而脅下部有濃密深色斑駁**、**帶橄綠調的肩背**、**暗橄欖腰**、**橄欖褐尾上覆羽**、**深褐尾而尾基略帶紅褐**、**短尾下覆羽只伸到尾部約一半**；**第二曆年雄鳥**以褐色的飛羽與明顯換入成鳥雄羽的跡象判齡（2010 年 4 月 Victoria Peak 的個體）。聲音（Clement et al. 2024）：**獨特的下滑音「piu, piu, piu」，有時夾入低沉的「tuc」或強而有力的「chuc」**。出現情況：**全部紀錄落在 3 月 20 日至 4 月 13 日**——**2002-03-24 摩星嶺一隻**、**2005-04-02 至 03 蒲台一隻**、**2006-03-26 與 03-30 蒲台一隻**、**2009-03-29 至 31 蒲台雌鳥及 03-31 大埔滘雄鳥**、**2010-03-26 至 28 山頂一隻及 04-06 元朗一隻**、**2011-03-20 元朗一隻及 04-10 至 13 石崗一隻**、**2020-03-21 山頂一隻**。行為：**在各個高度定點捕飛**。分類：**單型種，以前被視為黃眉姬鶲的亞種**；雖是**日本南部由馬毛島（Makeshima）往南至南西諸島的繁殖特有種**，但被視為**部分遷徙**、北部的族群冬季離開繁殖地；**春季在台灣、中國（江蘇、廣東與香港）及南韓有紀錄**；HKBWS 指出**香港全部紀錄都在春季，暗示東南亞某處應有一個尚未被發現的小型越冬族群**。保育：**IUCN Least Concern，族群趨勢穩定**。頁面最後更新 2025-12-10。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/ryukyu-flycatcher-ficedula-owstoni/details",
+      "use": "IUCN **LC**、**2018 年評估**（準則 N/A；**這是本批目前最舊的一次評估**，2016 亦 LC、2012 及以前為 Not Recognised）；成熟個體 **Unknown**，種群被描述為 **rare**（del Hoyo et al. 2006）；趨勢 **Stable**（**Suspected**，理由為沒有下降或重大威脅的證據）；居民／繁殖 **EOO 110,000 km²**（**本批至今最小**）、AOO Unknown、**Breeding endemic Yes**、嚴重破碎化 No、**遷徙狀況 Full Migrant**、**IBA／KBA 為「-」**、海拔 **150–200 m**（本批最窄的海拔帶）、世代長度 **3.9 年**（本批最長）、**森林依賴度 Medium**、物種類型 Landbird、**生態系統只有陸域**；生境分類**只有一項**——亞熱帶／熱帶乾燥林、居民期、重要性 Major（與 0498、0499、0500 的温帶林不同）；**貿易：食用（自給、全國）與寵物（國際）**，與 0499 的「low prevalence 只有一個資料集」不同；保育行動只有**「已劃定保育地點（全分佈範圍）」與「已納入國際法規」**，**沒有復育計劃、沒有系統監測、沒有國際貿易管制**；Alliance for Zero Extinction No；**國家表只有日本一列（Extant／Native／Resident）**；分類註記指 *F. narcissina*、*F. elisae* 與 *F. owstoni* 三者依 del Hoyo & Collar（2016）分家，之前依 AOU 等文獻合併；命名人 **(Bangs, 1901)**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **510** 項 琉球姬鶲 Ryukyu Flycatcher（*Ficedula owstoni*），**第 I 類**；鄰項為 509 黃眉姬鶲、511 鴝姬鶲、512 銹胸藍姬鶲，可見這一群姬鶲在名錄中連續排列。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（琉球姬鶲；Ryukyu Flycatcher）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（Ficedula owstoni／鶲科 Muscicapidae）；speciesCode narfly3；taxonOrder 29235。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime 只有 **i 2、v 2.9（vEst 1）、r 1、c 1.2、o 1.8**，**完全沒有 a 軸**，故 missingScores 為 `a`；o 1.8 與五軸平均 1.78 相符，保留不列 withheld。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "`look` 中文只有體重 13.1 克、翼長 75.2 毫米等量度而**完全沒有形態描述**（英文版才有橙黃腰與橙圍兜的句子）；`diet` 是「候鳥…食性為肉食性」的通用句；`voice` 的 eBird 引文**被截斷在「wee-ti!」**；`highlights` 三條亦被截斷；`breeding` 與 `funFact` 一字不差、都只是「指名亞種羽色最樸素、體型最小」；`callouts` 缺；`habitat`、`migration` 全缺；length 與 weight 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 75.2、tail 47.4、tarsus 16.2、bill 14、mass 13.1（與 0499、0500 幾乎相同，符合同屬近緣、體型相若）。"
+    }
+  ],
+  "notes": [
+    "香港狀況：香港鳥類名錄 2024 第 **510** 項、**第 I 類**；HKBWS 描述為**罕見的春季過境遷徙鳥**，**全部紀錄集中在 3 月 20 日至 4 月 13 日**，2002–2020 年間共 12 次、每次一至兩隻，地點為摩星嶺、蒲台、大埔滘、山頂、元朗、石崗。HKBWS 特別指出**全部紀錄都在春季，暗示東南亞某處有一個尚未發現的小型越冬族群**。",
+    "辨識要點：雄鳥與黃眉姬鶲雄鳥幾乎同款，**唯一穩定分別是臉與背的顏色**——本種眼先、頰、耳羽、肩與上背深橄綠，黃眉姬鶲純黑；第二個細節是大覆羽白斑另有一條白色小 spur 沿最外側三級飛羽向下伸。雌鳥與亞成鳥按 Bakewell et al.（2021）分辨：**嘴基藍灰、眼上方最亮的黃眼圈、嘴基到眼的黃調眉線、下體灰褐帶濃密斑駁、暗橄欖腰、橄欖褐尾上覆羽、深褐尾而尾基略帶紅褐、短尾下覆羽只到尾部一半**。聲音是**下滑的「piu, piu, piu」**，有時夾低沉的「tuc」或強「chuc」。",
+    "IUCN：**LC（無危）**，BirdLife **2018** 年評估、趨勢 **Stable**（Suspected，無下降證據）；成熟個體 Unknown、種群被描述為 rare；居民／繁殖 EOO **110,000 km²**、AOO Unknown、**繁殖特有種**、Full Migrant、海拔 150–200 m、世代 3.9 年、森林依賴度 Medium、生態系統只有陸域、IBA／KBA 0 個；生境只有一項（亞熱帶／熱帶乾燥林、Major）。貿易用途為食用（自給、全國）與寵物（國際），保育行動只有「已劃定保育地點」與「已納入國際法規」。",
+    "**地圖只有一個形狀**：BirdLife 的國家表只列**日本（Extant／Native／Resident）**，是本批至今最少的一張（0499 為 4 個）。HKBWS 提到的台灣、江蘇、廣東與南韓春季紀錄不屬 BirdLife 的原生繁殖列，故不填色；**香港有自己的 HKBWS 物種頁，但不在 BirdLife 國家表、亦無獨立 110m 幾何**，已摺入中國輪廓，note 不作「香港原生」聲明。",
+    "runtime 資料缺陷（只記錄、不改 runtime）：`dexScores.json` **完全沒有 a 軸**（只有 i、v、r、c、o），故 `missingScores` 為 `[\"a\"]`；`o` 1.8 與五軸平均 1.78 相符，保留。`cardCopy.json` 的 `look` 中文只有量度、沒有形態描述（`a` 既缺、亦無文字可核對）；`voice` 與 `hilights` 的 eBird 引文被截斷；`breeding` 與 `funFact` 重複；`habitat`、`migration`、`callouts` 全缺；length 與 weight 為空。AVONET 量度齊全（wing 75.2、tail 47.4、tarsus 16.2、bill 14、mass 13.1）。",
+    "HKBWS 的頁面 id 是 **050200**，比 runtime id **0501** 大一號（與 0500→050100 相同偏移），路徑在 `0410/`，標題已核對為 Ryukyu Flycatcher 琉球姬鶲。",
+    "AI 主圖**不帶任何風格參照**生成（沿用 0498–0500 的教訓：帶參照會被照抄），改把羽色寫成硬性規格——黑冠、橄綠臉與背、橙紅喉胸、鮮黃腰、白翼斑、黑尾，並明寫「不得出現紅色、栗色、白色喉部或藍色上體」；成品為 1408×768 橫幅，**取 768 平方（x=411 起）後放大至 1127×1127**，停在長苔的細枝上。比較鳥為**黃眉姬鶲**（本種的前母種、HKBWS 明言的直接比較對象）與**綠背姬鶲**（同為橄綠上體、只有黃色而無橙色），兩張均為本輪新生成、同畫風，**非等比例、非專家認證**；全部辨識要點與插圖均為 AI 解讀，未經鳥類專家審核。"
+  ],
+  "missingScores": [
+    "a"
+  ],
+  "withheldScores": {}
+}

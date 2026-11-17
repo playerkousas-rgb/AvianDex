@@ -1,0 +1,166 @@
+{
+  "id": "0572",
+  "name": "信使圓尾鸌",
+  "scientificName": "Pterodroma heraldica",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "illustrationTaxon": "Pterodroma heraldica, AI approximation of pale morph in flight from below.",
+  "featureCrops": [
+    [
+      0.34,
+      0.43,
+      0.47,
+      0.53
+    ],
+    [
+      0.3,
+      0.52,
+      0.45,
+      0.61
+    ],
+    [
+      0.48,
+      0.47,
+      0.65,
+      0.58
+    ],
+    [
+      0.6,
+      0.51,
+      0.75,
+      0.62
+    ]
+  ],
+  "featureLabels": [
+    "淡色眼先",
+    "深色翼底",
+    "淺色腹部",
+    "長而近方尾"
+  ],
+  "featureNotes": [
+    "淺色型眼先有灰色斑點。",
+    "翼底深色，初級羽基部有淡色閃斑；圖示閃斑不自然。",
+    "淺色型腹部白，胸灰；本種有深色及中間型。",
+    "長尾接近方形；不同角度可見收窄。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "克島圓尾鸌",
+      "scientificName": "Pterodroma neglecta",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "體形更大、翼較寬、尾較短闊；翼上初級羽有白羽軸。",
+      "portraitNote": "AI 淺色型示意，翼底過淡，羽軸及足趾細節不可靠。"
+    },
+    {
+      "zh": "亨氏圓尾鸌",
+      "scientificName": "Pterodroma atrata",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "整體灰褐色較均勻，嘴基淡斑；翼底前緣內側淡紋。",
+      "portraitNote": "AI 示意，淡紋偏白且延伸過長，足趾不可靠。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ARG",
+      "AUS",
+      "BRA",
+      "CHL",
+      "NCL"
+    ],
+    "note": "Partial BirdLife 2018 extant native-country overview: Argentina, Australia, Brazil, Chile, New Caledonia. Breeding on remote islands does not mean continental occupancy; Cook Islands, French Polynesia, Mauritius, Pitcairn, Tonga omitted due to low resolution and parent mainland not inferred. Uncertain or vagrant territories excluded. Marine range omitted."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0140/020000",
+      "use": "香港 I 類迷鳥；35–39 cm、三色型、淺型眼先及咽淡，翼底深色及初級羽基部淡閃斑、長方尾。"
+    },
+    {
+      "url": "https://ebird.org/species/herpet2",
+      "use": "三色型、翼底閃斑、與克島圓尾鸌比較。"
+    },
+    {
+      "url": "https://ebird.org/species/kerpet",
+      "use": "克島圓尾鸌翼上白羽軸、較大闊翼及短尾。"
+    },
+    {
+      "url": "https://ebird.org/species/henpet1",
+      "use": "亨氏圓尾鸌灰褐、嘴基淡斑及翼底前緣淡紋。"
+    },
+    {
+      "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=889232C779ABDB24",
+      "use": "克島圓尾鸌中文名稱。"
+    },
+    {
+      "url": "https://www.newton.com.tw/wiki/%E5%85%8B%E5%B3%B6%E5%9C%93%E5%B0%BE%E9%B8%8C",
+      "use": "亨氏圓尾鸌中文名稱與學名。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/herald-petrel-pterodroma-heraldica/details",
+      "use": "2018 LC、疑下降、估15萬個體非成熟數；國家表和海洋分布。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "分類及學名"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "0572 六軸缺資料"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "0572 缺資料"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "0572 缺資料"
+    }
+  ],
+  "notes": [
+    "香港 I 類迷鳥，2001一筆紀錄；本圖淺色型，亦有中間及深色型。",
+    "AI 非專家認證、非等比例；主圖翼底閃斑像羽隙、羽列與尾型不精確；克島比較鳥翼底太淡、亨氏翼底淡紋過白過長，兩鳥足趾不可靠。",
+    "BirdLife 2018 LC，疑下降；估15萬個體而非成熟個體數。國家概覽非全境亦不含海洋，繁殖多為偏遠島嶼，小島未畫。",
+    "runtime 無分數、文案及測量資料，六軸待查；未改 runtime。"
+  ],
+  "missingScores": [
+    "i",
+    "a",
+    "v",
+    "r",
+    "c",
+    "o"
+  ],
+  "withheldScores": {}
+}

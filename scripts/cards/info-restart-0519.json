@@ -1,0 +1,164 @@
+{
+  "id": "0519",
+  "name": "純色啄花鳥",
+  "scientificName": "Dicaeum minullum",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Adult Plain Flowerpecker Dicaeum minullum perched on a slender twig beside a sprig of mistletoe with small berries, side view facing right. Very small compact body, short tail, olive-tinged brown upperparts with a slightly greyer rump, off-white underparts washed buff on the flanks, an entirely plain unmarked face with no eyebrow or eye-stripe, small dark eye, a very short stubby decurved bill, blackish above with a paler pinkish base to the lower mandible, dark grey legs.",
+  "featureCrops": [
+    [
+      0.538,
+      0.211,
+      0.857,
+      0.531
+    ],
+    [
+      0.374,
+      0.306,
+      0.694,
+      0.626
+    ],
+    [
+      0.426,
+      0.401,
+      0.746,
+      0.721
+    ],
+    [
+      0.28,
+      0.33,
+      0.6,
+      0.65
+    ]
+  ],
+  "featureLabels": [
+    "素面與短喙",
+    "橄欖褐上體",
+    "米白下體與灰腳",
+    "短尾與翼羽"
+  ],
+  "featureNotes": [
+    "**眼先素淨**，沒有明顯花紋；**喙短而下彎**，下喙基部較淡。插圖中的粉紅色只是對淡色嘴基的示意；觀察時要配合羽色與叫聲辨認。為插圖局部。",
+    "**上體帶橄欖色的褐色**；整體羽色樸素，與米白色下體形成柔和對比。runtime 的英文外形資料記載雌雄沒有明顯差別。為插圖局部。",
+    "**下體米白色**。HKBWS 記載體長 **7.5–9.0 cm**；本插圖經放大，不能以圖像判斷實際大小。為插圖局部。",
+    "這格展示折合的翼羽與尾基。牠的「chik」叫聲比香港其他啄花鳥**較輕**，可能令人聯想到暗色柳鶯。為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "紅胸啄花鳥",
+      "scientificName": "Dicaeum ignipectus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "**雄鳥的鮮明胸斑與本種的樸素羽色不同**。紅胸啄花鳥雌鳥上體橄欖灰、頭較灰、腰較橄欖色，下體皮黃色，耳羽下方有較明顯的分界；純色啄花鳥上體帶橄欖的褐色，下體米白，眼先素淨。兩者體長範圍重疊（紅胸 7–9 cm；純色 7.5–9 cm），不能單靠體型分辨。",
+      "portraitNote": "紅胸啄花鳥（AI 生成比較鳥）：雄鳥藍黑上體、綠冠、鮮紅胸斑；雌鳥/幼鳥橄欖褐似純色啄花鳥。"
+    },
+    {
+      "zh": "叉尾太陽鳥",
+      "scientificName": "Aethopyga christinae",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "叉尾太陽鳥雄鳥的**黑臉、亮藍綠冠和腰、胭脂紅喉與上胸**，與純色啄花鳥的橄欖褐及米白色不同；雄鳥外側尾羽有尖細延伸。叉尾太陽鳥雌鳥較素，辨識時應多看羽色與叫聲；兩者的喙都短而下彎，不能簡化為長喙與短喙之別。**2017 年 5 月 10 日一隻純色啄花鳥雛鳥曾由兩種成鳥餵飼，翌日則由純色啄花鳥餵飼**，是本地唯一近期繁殖證據。",
+      "portraitNote": "叉尾太陽鳥雄鳥（AI 示意）：黑臉、藍綠冠與腰、紅喉胸、外側尾羽延伸。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 國家表有 14 個 Extant／Native／Resident 國家或地區；香港列 Vagrant，新加坡列 Extinct（Native／Resident），均不填色。綠色僅為國家層級概覽，並非全境皆有分佈；BirdLife 全球狀態為 Not a Migrant，但香港本地記載為夏季訪客。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052000",
+      "use": "香港第 I 類、**稀少但增加中的夏季訪客（Scarce but increasing summer visitor）**，主要在**春季以歌聲**被記錄，秋季與冬季稀少。**7.5–9.0 cm**；**橄欖褐上體、米白下體、素面、短而下彎的喙、下喙基部帶淡色**。歌聲是**一連串快速上升的細音**，叫聲是單音或雙音（第二音較高），偶有短促的嗡嗡聲；『chik』叫聲**比香港其他啄花鳥較輕，可能令人聯想到暗色柳鶯**。**首筆紀錄：1988 年 4 月 2 日上水何樹香一對鳥築巢（Cooper 1991）**；至 2001 年另有 17 筆；其後 8 年空白；2009 年 12 月至 2011 年 10 月 4 筆；約 5 年空白；**2016 年 4 月 13 日起急增：2016 年 13 個日期、2017 年 11、2018 年 18、2019 年 27、2020 年 47**。2011 年前 23 筆報告中除三筆外皆在非繁殖季（秋季過境與冬季訪客，7 筆在離島）；**2011 年後少於一成在 7 月至 2 月**。繁殖：**2017 年 5 月 10 日一隻雛鳥由純色啄花鳥和叉尾太陽鳥成鳥餵飼，翌日由純色啄花鳥成鳥餵飼**，至今仍是唯一的近期繁殖證據。生境轉變：2011 年前多在**灌木地**，2016 年後多在**大埔滘的成熟林與林緣（林村）**。取食**東方槲寄生 *Viscum ovalifolium***，在**高而外露的棲點**鳴唱。分佈：喜馬拉雅至華南、中南半島、泰國、馬來西亞、婆羅洲至峇里；中國南部沿海各省包括海南、台灣、雲南、四川西南。**5 個亞種；香港所見為 *D. m. olivaceum***，海南 *D. m. uchidai*，指名亞種在台灣。**IUCN 無危（LC），趨勢下降**。錄音 XC944341（歌）、XC944340／XC944339（叫）。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/plain-flowerpecker-dicaeum-minullum/details",
+      "use": "IUCN **LC（無危）**、**2024 年評估**、**準則 N/A**；**成熟個體數 Unknown**（未量化）；**趨勢 Decreasing（Suspected）**，A2／A3／A4 皆「–」；**EOO 13,600,000 km²**，AOO 未知；**Not a Migrant**（留鳥）；**IBA／KBA「–」／No data／0.00 km²**；**沒有 Threats 段**；種群文字：**森林依賴度中等，過去 10 年範圍內樹覆蓋下降 11.9%（GFW 2022／Hansen），推測種群下降 1–19%**；陸域、**海拔 0–3,660 m**、世代 **2.5 年**、森林依賴度 **Medium**；**生境 5 項全部 Suitable、沒有 Major**（耕地、種植園、鄉村花園、亞熱帶／熱帶潮濕低地林、亞熱帶／熱帶潮濕山地林）；**貿易：「在 Donald et al. (2024) 審查的任何貿易數據庫中均無紀錄」**；已就位保育行動中**只有「已劃定保育地點（全部範圍）」為 Yes**，其餘多為 No，採集管理計劃為「–」；AZE 與 Search for Lost Birds 皆 No；命名人 **Swinhoe, 1870**；分類註記 ***D. concolor* 與 *D. minullum* 在 del Hoyo & Collar 2016 前被併為一種**；評估歷史 2024／2016 LC，2012–1988 皆「Not Recognised」；**16 國**：新加坡 Extinct（Native, Resident）、香港 Vagrant。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：**第 529 項** 純色啄花鳥 Plain Flowerpecker（*Dicaeum minullum*），**第 I 類**。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（純色啄花鳥；Plain Flowerpecker）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（*Dicaeum minullum*／**啄花鳥科 Dicaeidae**）；speciesCode plaflo2（**不是 *concolor***）；taxonOrder 29767。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 2、a 2.3、v 2.2、r 1、c 1.2、o 1.7，vEst 1），`missingScores` 與 `withheldScores` 皆為空；o 1.7 與五軸平均 1.74 相符。a 保留：`look` 英文句「tiny (9 cm long) and there is no marked difference between the males and females」是可核對形態（體長與雌雄同色），HKBWS 另有完整的外形描述（橄欖褐上體、米白下體、素面、短下彎喙、下喙基淡色）。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "**本批最差的一份**：`fieldCopy` 中文除 `range` 外**全部為空**，`range` 中文只寫「分佈於台灣本島。」——**與香港紀錄直接矛盾**；英文在 diet／voice／funFact／habitat／behavior 五個欄位**重複同一句樣板**（「The subspecies found in northeastern India…」與「Its natural habitat is subtropical or tropical moist lowland forests.」）；頂層 `range`／`funFact` 幾乎重複，給別名**綠啄花鳥**，且**漏了大半真實分佈**；`length`／`weight` 皆空；iucn 無危 LC 與 BirdLife 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 44、tail 20.9、tarsus 10、bill 10.9、mass 6.2 g（本批目前最輕）。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052100",
+      "use": "紅胸啄花鳥 7–9 cm；雄鳥藍色上體及火焰色胸，雌鳥橄欖灰上體與皮黃下體。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052500",
+      "use": "叉尾太陽鳥 9–11 cm，短下彎喙；雄鳥黑臉、藍綠冠和腰、紅喉胸、外側尾羽延伸；取食花蜜、果實和小昆蟲。"
+    }
+  ],
+  "notes": [
+    "香港名錄 2024 第 529 項、第 I 類；HKBWS 列為稀少但增加中的夏季訪客，主要春季以歌聲記錄。1988 年首次發現築巢；2016 年起紀錄增加，2016 年 13 個日期，2020 年 47 個。2011 年前多在非繁殖季出現，2011 年後少於一成報告在 7 月至 2 月。2016 年後多在大埔滘成熟林或林村林緣。紀錄增加不等同已證實種群擴張。",
+    "比較鳥：紅胸啄花鳥雌鳥同樣樸素；叉尾太陽鳥與本種有特別的本地紀錄：2017 年 5 月 10 日兩種成鳥餵飼一隻純色啄花鳥雛鳥，翌日由純色啄花鳥餵飼。",
+    "BirdLife 全球遷徙狀態為 Not a Migrant；其國家表列 14 個現存原生留鳥地區、新加坡已滅絕及香港迷鳥。HKBWS 則記香港主要為夏季訪客，兩者不同尺度不可混為一談。",
+    "BirdLife 2024 LC，全球種群疑似下降；成熟個體數未知。過去 10 年樹覆蓋估計下降 11.9%，據此謹慎推測種群下降 1–19%；這是推測而非直接統計。頁面沒有 Threats 段，審查的貿易資料庫無本種紀錄，但不等於證明完全沒有威脅或貿易。",
+    "辨識要點：橄欖褐上體、米白下體、素淨眼先、短下彎喙、下喙基部較淡；叫聲較輕，歌聲起初音調快速上升。曾見在東方槲寄生上取食，不應推斷為專吃。香港亞種 olivaceum，海南 uchidai，台灣指名亞種。",
+    "分佈圖只填 **14 個形狀**：**BGD、BTN、BRN、KHM、CHN、IND、IDN、LAO、MYS、MMR、NPL、TWN、THA、VNM**。BirdLife 原生 16 列中，**新加坡是 Extinct 不填色**，**香港是 Vagrant 不填色**（110m 底圖亦無香港形狀）。",
+    "插圖為 AI 生成示意，非等比例、非專家認證。主圖第一版喙過長，採用第二版；叉尾太陽鳥初版羽色有誤，依 HKBWS 校正再生成。裁切避免越界造成黑邊。",
+    "分類學註記：本種曾與 *D. concolor* 併為一種，**2016 年 del Hoyo & Collar 才分開**，所以 BirdLife 評估歷史在 2012 年以前全部是「Not Recognised」；runtime 的 speciesCode 是 **plaflo2**（*Dicaeum minullum*），不是 *concolor*。命名人 **Swinhoe, 1870**。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

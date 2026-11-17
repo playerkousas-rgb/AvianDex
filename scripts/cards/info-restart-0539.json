@@ -1,0 +1,152 @@
+{
+  "id": "0539",
+  "name": "北鷚",
+  "scientificName": "Anthus gustavi",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "illustrationTaxon": "Anthus gustavi, AI approximation.",
+  "featureCrops": [
+    [
+      0.08,
+      0.15,
+      0.31,
+      0.29
+    ],
+    [
+      0.33,
+      0.25,
+      0.56,
+      0.39
+    ],
+    [
+      0.17,
+      0.28,
+      0.34,
+      0.46
+    ],
+    [
+      0.35,
+      0.36,
+      0.56,
+      0.48
+    ]
+  ],
+  "featureLabels": [
+    "粉淡喙與淡眉",
+    "背部黑白線紋",
+    "胸部粗黑縱紋",
+    "深翼白色翼斑"
+  ],
+  "featureNotes": [
+    "喙較大，粉色下喙和嘴緣；淡眉及褐色耳羽。",
+    "背側具對比鮮明黑白線紋。",
+    "胸及兩脅均有粗黑縱紋，插圖後脅紋不夠明顯。",
+    "翼覆羽白端形成顯著翼斑；實鳥初級飛羽超出三級飛羽，插圖表現不夠清楚。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "樹鷚",
+      "scientificName": "Anthus hodgsoni",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "樹鷚背較橄欖色、耳後有淡暗斑；北鷚背側黑白線及白翼斑較顯著，叫聲不同。",
+      "portraitNote": "樹鷚 AI 示意，背紋或偏重。"
+    },
+    {
+      "zh": "林鷚",
+      "scientificName": "Anthus trivialis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "林鷚上體褐色有紋，脅紋一般較胸紋細；北鷚胸及兩脅粗黑紋，背具黑白線。",
+      "portraitNote": "林鷚 AI 示意，脅紋略粗。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BRN",
+      "CHN",
+      "IDN",
+      "JPN",
+      "MYS",
+      "PRK",
+      "PHL",
+      "RUS",
+      "KOR",
+      "TWN"
+    ],
+    "note": "Partial NATIVE-country overview only. 合併原生繁殖、非繁殖、過境及季節未明；BirdLife 列香港迷鳥而 HKBWS 列稀少過境。非全境或 occurrence polygon；繁殖 EOO 1450 萬、非繁殖 347 萬平方公里。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054300",
+      "use": "香港 I 類稀少過境，春季較多；背側黑白線、白翼斑、粉淡喙，胸及兩脅粗黑紋，初級飛羽突出。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054200",
+      "use": "樹鷚橄欖上體、淡眉與耳後淺斑。"
+    },
+    {
+      "url": "https://www.birdguides.com/articles/identification/meadow-tree-and-olive-backed-pipit-photo-id-guide/",
+      "use": "林鷚褐色上體、黃褐胸粗紋及較細脅紋。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/pechora-pipit-anthus-gustavi/details",
+      "use": "2018 LC，懷疑穩定、數量未知；原生現存國家表，香港列迷鳥與 HKBWS 本地評估不同。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Anthus gustavi，speciesCode pecpip。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.8、v 2.9、r 4.8、c 1.2、o 2.9、vEst 1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 有形態描述；callout 提及另一物種，funFact 同名重複，欄位可能錯置；不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 80.5、tail 57.3、tarsus 22.2、bill 15.4、mass 19.8 g。"
+    }
+  ],
+  "notes": [
+    "香港稀少過境；BirdLife 列香港迷鳥與 HKBWS 觀察不一。",
+    "三圖 AI 示意、非等比例非專家認證；主圖後脅粗紋不足、初級飛羽突出不清，腳趾不可靠。",
+    "原生國家概覽合併季節，非全境。",
+    "runtime 存在跨物種 callout 和重複別名，不改；六軸保留。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
