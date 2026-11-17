@@ -4558,3 +4558,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0575 短趾雕](https://drive.google.com/file/d/1iakbb5GC-YH54_45gybnDZCgtbMUskKG/view)：128727 bytes，MD5 `d7f84b455d35ea24b4eb0fe1bcf52531`，SHA256 `b979cd757dbe715134149c376622a09e6f4a899833c204bfba365f02020a2c49`；查重無結果，get_file 獨立核驗。
 - HKBWS 0180/024500 香港 I 類迷鳥；BirdLife 2021 LC、估5萬–99,999成熟個體、疑穩定。地圖僅部分原生國家、非全境，省略無對應底圖的南蘇丹、巴勒斯坦及西撒哈拉。
 - AI 圖非專家認證、不等比例；主圖尾紋過於規則、足部似羽毛，蛇鵰翼白斑過多，蜂鷹翼斑及羽列不精確，詳見 spec。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
+
+## 新批次 0501–0583：0576 已交付
+
+- [0576 鷹鵰](https://drive.google.com/file/d/1cMJeZxXbfZTD9BcmwZG3q1B3mseiCEEQ/view)：128867 bytes，MD5 `585ecd7b868678f8072a8721e2ba1dba`，SHA256 `521ef3d70ee618a774f68bba90bcce2944fb2a7cfa7879f1282b1999d82988ff`；查重無結果，get_file 獨立核驗。
+- HKBWS I 類迷鳥；BirdLife 2021 NT，估1,200–6,700成熟個體並下降。世界圖為原生國家概覽，非全境；沿 BirdLife 分類包含斯里蘭卡，而 eBird 把 Legge’s Hawk-Eagle 分開。
+- AI 圖非專家認證、不等比例：主圖喉中央紋不夠明顯、腹斑偏規則，尾羽與足趾有誤差；比較鳥羽紋、足趾及尾帶近似。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
