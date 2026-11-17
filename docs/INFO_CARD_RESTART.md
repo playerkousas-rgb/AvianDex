@@ -4275,3 +4275,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `species/0440/053900`：香港 I 類、常見過境及冬候鳥，局部於山地草地繁殖；大型、長腿、長後爪，胸有深縱紋。三幅 AI 示意非專家認證、不按比例，主圖眉紋偏醒目、腳趾及後爪結構不可靠，近似種須綜合鑑別。
 - BirdLife 2025 LC、穩定、數量未量化；國家表與 HKBWS 範圍可能分類不同，地圖保守取部分亞洲原生國、合併季節且非全境。
 - 六軸及 vEst 保留，runtime 文案英文欄錯置與截斷未修改。`verify-info-card.py 0533` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0534 已交付
+
+- [0534 布氏鷚](https://drive.google.com/file/d/1RdVDP00PMVuNNcsXyQyEcKm-TEZ8PNqZ/view)：139421 bytes，MD5 `2f5f822f8dfaef5a1feed7a6fba74977`，SHA256 `aa7d55be2a222733d06f9a661d0b0eff8764c1e41a0a203416e2cddef11fdcbc`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/054000`：香港 I 類偶至，頁面記兩次記錄；與理氏鷚差異細微、聲音重要。圖像均 AI 示意、非專家認證、非等比例；主圖黑頰斑可能過粗，腳趾細節不可靠。
+- BirdLife 2025 LC、懷疑穩定、數量未知；地圖為原生國家概覽，合併季節非全境。
+- runtime 僅有 v 3.1、r 1、vEst 1；缺 i、a、c、o，顯示待查不補算；文案缺失及錯置只記錄不修改。`verify-info-card.py 0534` 通過（`errors: []`）。
