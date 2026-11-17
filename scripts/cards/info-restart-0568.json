@@ -1,0 +1,153 @@
+{
+  "id": "0568",
+  "name": "黃眉鵐",
+  "scientificName": "Emberiza chrysophrys",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Emberiza chrysophrys, AI approximation of breeding male.",
+  "featureCrops": [
+    [
+      0.15,
+      0.25,
+      0.3,
+      0.34
+    ],
+    [
+      0.18,
+      0.3,
+      0.34,
+      0.4
+    ],
+    [
+      0.2,
+      0.36,
+      0.35,
+      0.46
+    ],
+    [
+      0.22,
+      0.43,
+      0.42,
+      0.54
+    ]
+  ],
+  "featureLabels": [
+    "黃色眉紋",
+    "黑面白頰斑",
+    "寬白顎下紋",
+    "淡腹深縱紋"
+  ],
+  "featureNotes": [
+    "雄鳥眉前段黃，至眼後轉淡。",
+    "雄耳羽黑，後角有白斑。",
+    "雄鳥白色顎下紋寬。",
+    "胸與脅具深縱紋，腹淡色。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "白眉鵐",
+      "scientificName": "Emberiza tristrami",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖雄白眉鵐有白眉、黑喉；黃眉鵐眉前黃、喉較白。",
+      "portraitNote": "AI 雄鳥示意，黑喉下延較長、足趾不可靠。"
+    },
+    {
+      "zh": "小鵐",
+      "scientificName": "Emberiza pusilla",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "小鵐眉淡棕、耳羽暖褐且具淡眼圈，黃眉鵐眉具黃。",
+      "portraitNote": "AI 示意，頭胸紋過重、嘴偏大。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "MNG",
+      "PRK",
+      "RUS",
+      "KOR",
+      "TWN"
+    ],
+    "note": "BirdLife 2025 extant native-country table all seasons; Russia Asian native, central Asian vagrant but Russia merged; Hong Kong not separately listed, included China geometry. Country overview not whole-country occupancy. Breeding EOO 2.5m and nonbreeding 1.21m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056400",
+      "use": "香港 I 類秋稀少過境、春較少、冬罕見；雄黃眉、黑耳羽白後斑、白顎下線。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056100",
+      "use": "白眉鵐雄白眉白顎下紋及黑喉。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056300",
+      "use": "小鵐耳羽暖褐及淡眼圈。"
+    },
+    {
+      "url": "https://ebird.org/species/yebbun1",
+      "use": "雄頭黑、眉帶黃，雌頭偏褐；eBird Schoeniclus chrysophrys。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/yellow-browed-bunting-emberiza-chrysophrys/details",
+      "use": "2025 LC、數量及趨勢未知；原生國家表。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza chrysophrys、鵐科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.3、v 2.9（vEst）、r 2.5、c 1.2、o 2.4。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 雌雄特徵，部分欄位錯位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 77、tail 59、tarsus 18.5、bill 13.2 mm、mass 18 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類秋季稀少過境、春較少、冬罕見；成人雄在港少見。",
+    "AI 非專家認證、非等比例；主圖眼圈過白、腰色偏鮮、胸脅紋偏重、足趾不可靠；白眉鵐黑喉過長，兩比較圖限制見 spec。",
+    "BirdLife 2025 LC、全球數量及趨勢未知；HKBWS 舊資料指穩定，香港未另列但包括在中國幾何。俄羅斯亞區原生、中央亞區為迷鳥而底圖合併；地圖非全境。",
+    "runtime v 為估算，look 含雌雄羽差異，其他欄位錯位；分數照錄不更改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

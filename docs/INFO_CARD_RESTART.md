@@ -4507,3 +4507,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/056800` 香港 I 類秋季常見、春稀少過境、冬罕見；圖示繁殖雄。BirdLife 2025 LC、數量趨勢未知；香港未另列但地形包含中國底圖，國家概覽非全境。
 - AI 圖非專家認證、非等比例，尾下覆羽應栗色但圖示黃色、脅紋較深，足趾不可靠；比較圖局限見 spec。runtime v 估算、look 為雌羽，部分文案錯位；照錄分數，未改 runtime/UI/R2。validator `errors: []`。
 - 下一張 0568。
+
+## 新批次 0501–0583：0568 已交付
+
+- [0568 黃眉鵐](https://drive.google.com/file/d/11Ok_YIZ_l-1s140UUnMynvs7h123GcNj/view)：133907 bytes，MD5 `7faabca2f27a332bef33e83c8445dc94`，SHA256 `d8befb73e5e46ac88e6192810681de8b467ce498fdaf7ccc5f830dd1b7b49703`；查重無結果、get_file 獨立核驗。
+- HKBWS `0460/056400` 香港 I 類秋季稀少過境、春較少、冬罕見；圖為本地較少見的成雄。BirdLife 2025 LC、數量及趨勢未知，香港包括中國底圖；俄中央亞區全球表迷鳥但國界合併，國家概覽非全境。
+- AI 圖非專家認證、非等比例，眼圈過白、腰色偏鮮、胸脅紋偏重、足趾不可靠，白眉鵐黑喉過長；比較圖限制見 spec。runtime v 估算、部分文案錯位；照錄分數，未改 runtime/UI/R2。validator `errors: []`。
+- 下一張 0569。
