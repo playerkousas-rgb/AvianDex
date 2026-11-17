@@ -1,0 +1,152 @@
+{
+  "id": "0565",
+  "name": "硫磺鵐",
+  "scientificName": "Emberiza sulphurata",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2022 評定"
+  },
+  "illustrationTaxon": "Emberiza sulphurata, AI approximation of adult male.",
+  "featureCrops": [
+    [
+      0.68,
+      0.24,
+      0.84,
+      0.34
+    ],
+    [
+      0.72,
+      0.27,
+      0.86,
+      0.37
+    ],
+    [
+      0.7,
+      0.34,
+      0.84,
+      0.44
+    ],
+    [
+      0.48,
+      0.47,
+      0.69,
+      0.58
+    ]
+  ],
+  "featureLabels": [
+    "橄欖綠頭",
+    "細白眼圈",
+    "黃色喉部",
+    "淡黃下體"
+  ],
+  "featureNotes": [
+    "雄鳥頭部素綠，眼先及頦較暗。",
+    "白眼圈纖細，前後有缺口；圖示眼圈太完整。",
+    "雄鳥喉淡黃；雌幼色較暗。",
+    "下體淡黃，脅有模糊暗紋。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "灰頭鵐",
+      "scientificName": "Emberiza spodocephala",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄灰頭鵐灰頭、黑眼先及頦，腹偏黃；硫磺鵐頭更綠、白眼圈清晰。",
+      "portraitNote": "AI 雄鳥示意，黑喉畫得太廣，足趾不可靠。"
+    },
+    {
+      "zh": "黃胸鵐",
+      "scientificName": "Emberiza aureola",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖雄黃胸鵐黑臉喉、栗頭胸帶及白翼斑，與綠頭硫磺鵐有別。",
+      "portraitNote": "AI 雄鳥示意，白翼斑偏大、胸帶與黑喉結構不準。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "JPN",
+      "PRK",
+      "PHL",
+      "KOR",
+      "TWN"
+    ],
+    "note": "BirdLife 2022 extant native countries, all seasons; Hong Kong native included in China geometry. Country overview not whole-country occupancy. Breeding EOO 164,000 and nonbreeding 278,000 km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057100",
+      "use": "香港 I 類稀少過境，春較多；雄素綠頭、淡黃喉、前後斷開細白眼圈。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057200",
+      "use": "灰頭鵐雄灰頭、黑眼先額與頦。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056700",
+      "use": "黃胸鵐雄黑臉喉、栗胸帶與白翼斑。"
+    },
+    {
+      "url": "https://ebird.org/species/yelbun1",
+      "use": "雄黃綠頭胸、黃腹、窄白翼帶及白眼圈；eBird Schoeniclus sulphuratus。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/yellow-bunting-emberiza-sulphurata/details",
+      "use": "2022 LC、數量不確定但極可能超過一萬成熟個體、趨勢推定穩定；原生國家表。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza sulphurata、鵐科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 3.8、a 3.3、v 2.7（vEst）、r 2.5、c 4、o 3.3。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "runtime 舊 VU，英文 look 喙腳描述、中文 look 缺；部分欄位錯位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 68.1、tail 54.9、tarsus 18、bill 12.4 mm、mass 14.9 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類稀少過境、春較多；主圖雄鳥，雌幼較暗。",
+    "AI 圖非專家認證、非等比例；主圖眼圈應前後有缺口、頦欠暗色、額外白頰線不準、腳趾不可靠；灰頭鵐黑喉太廣，黃胸鵐胸帶及白翼斑失真。",
+    "BirdLife 2022 LC，數量不確定、極可能超過一萬成熟個體，趨勢推定穩定；runtime 舊 VU。香港原生包含中國底圖，國家概覽非全境。",
+    "runtime v 為估算、i/c 可能依舊保育資料，分數原樣照錄，並非現時威脅等級；部分文案錯位。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

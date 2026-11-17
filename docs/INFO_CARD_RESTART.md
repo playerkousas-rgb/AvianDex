@@ -4486,3 +4486,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/056500` 香港 I 類秋季稀少、春季罕見過境；繁殖雄示意。BirdLife 2025 NT、初估420–820萬成熟個體及疑下降，與 HKBWS 舊 VU 評估不同；香港與台灣全球表列迷鳥不填，國家概覽非全境。
 - AI 圖非專家認證、非等比例，栗胸帶過寬、白喉側黑線不準、嘴過暗、腳不可靠；比較圖限制見 spec。runtime 仍載舊 VU，i/c 照錄可能反映舊資料，v 含估算；未改 runtime/UI/R2。validator `errors: []`。
 - 下一張 0565。
+
+## 新批次 0501–0583：0565 已交付
+
+- [0565 硫磺鵐](https://drive.google.com/file/d/18iCS5B__nTtkaNF1G3zgthQZYdnhEmge/view)：130060 bytes，MD5 `cc167982519a9dc95e6a33e91081d7e9`，SHA256 `c0bb8db6781939000e9795a91cdf6004ff6ce5f801b78e9296aa418f7ef626ae`；查重無結果、get_file 獨立核驗。
+- HKBWS `0460/057100` 香港 I 類稀少過境，春季較多；主圖雄鳥。BirdLife 2022 LC、數量不確定但極可能超過一萬成熟個體，推定穩定；香港原生包含中國幾何，地圖國家概覽非全境。
+- AI 圖非專家認證、非等比例，眼圈應前後斷開、欠暗頦、額外白頰線不準，足趾不可靠；比較圖灰頭鵐黑喉太廣、黃胸鵐胸帶及翼斑失真。runtime 仍載舊 VU，i/c 照錄可能反映舊資料，v 估算；未改 runtime/UI/R2。validator `errors: []`。
+- 下一張 0566。
