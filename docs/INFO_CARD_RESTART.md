@@ -4226,3 +4226,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `species/0430/052800`：香港 2024 名錄 #537、第 I 類，罕有秋季過境鳥，頁面列十項紀錄始於 2012。雄鳥灰前冠、黑喉斑較大且無黑頰斑，與栗冠白頰黑斑的樹麻雀有別。
 - BirdLife 2016 LC，全球疑似下降；2012 年 8.96 億至 13.1 億成熟個體估計質素差、依歐洲外推且有待驗證。地圖僅顯示部分原生國家、非全球完整分佈，不含眾多引入地；BirdLife 國家表列秘魯為原生，與常見引入分佈不一致故暫不填色。
 - 六軸分數原樣保留；英文 look 有可核對形態，中文 look 的藍條紋不可信、callout 等問題記於 spec。AI 雄鳥主圖胸部黑斑被畫成散紋，非精確羽色參考；雌家麻雀圖沿用 0523、樹麻雀新生成，均非專家認證。`verify-info-card.py 0526` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0527 已交付
+
+- [0527 山鶺鴒](https://drive.google.com/file/d/1e3wxMUPwXp3bWpeP2iWAuWPqIxZNwN-b/view)：139840 bytes，MD5 `45dad507578aa1faf93d7c625e897cac`，SHA256 `b159b2615893ffef0e0931d6b5cb8eaaf12af017a2bd24e5b168fe75fdc2fa17`；上載前查重無結果，`get_file` 確認尺寸、大小、hash 與父目錄。
+- HKBWS `species/0440/053300`：香港 2024 名錄 #542、I 類，稀少秋季過境、冬春罕見；橄欖灰上體、淡眉、雙翼斑，淡胸深色倒三角與深色胸側，身尾左右擺動。AI 主圖把胸紋畫成兩條完整黑環，與來源有別，不可用作精確羽紋參考；灰鶺鴒及白鶺鴒比較圖亦為 AI 近似示意、未經專家認證。
+- BirdLife 2024 LC、成熟數未知、全球疑似下降；樹覆蓋十年損失 9.8%，種群減 1–19% 為謹慎推測而非直接計數。HKBWS 較早記趨勢未知，並列來源。全球完全遷徙；國家概覽合併繁殖及越冬地、非全境；新加坡因底圖無幾何未填色。
+- Runtime 六軸及 vEst 保留；中文 range 空、diet 及 highlights 截斷，length／weight 空；AVONET mass 16.4 g。`verify-info-card.py 0527` 通過（`errors: []`）；未改 runtime、UI 或 R2。

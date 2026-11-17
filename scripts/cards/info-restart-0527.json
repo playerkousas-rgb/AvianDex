@@ -1,0 +1,163 @@
+{
+  "id": "0527",
+  "name": "山鶺鴒",
+  "scientificName": "Dendronanthus indicus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Dendronanthus indicus adult, olive grey upperparts, white supercilium, pale wing bars and dark patterned breast. AI depicts two full black arcs rather than HKBWS inverted dark triangle and breast sides; approximate only.",
+  "featureCrops": [
+    [
+      0.67,
+      0.22,
+      0.91,
+      0.38
+    ],
+    [
+      0.45,
+      0.32,
+      0.72,
+      0.48
+    ],
+    [
+      0.7,
+      0.32,
+      0.87,
+      0.49
+    ],
+    [
+      0.18,
+      0.43,
+      0.52,
+      0.57
+    ]
+  ],
+  "featureLabels": [
+    "白眉與橄欖頭",
+    "橄欖背雙翼斑",
+    "淡胸與深色紋",
+    "長尾與淡腹"
+  ],
+  "featureNotes": [
+    "白色眉紋，眼先較窄；頭背橄欖灰。",
+    "橄欖灰色上體與深翼形成對比，中及大覆羽具淡羽尖形成雙翼斑。",
+    "HKBWS 描述淡胸有深色倒三角及深色胸側；AI 兩道完整黑環是簡化，並非準確圖鑑參考。",
+    "下體淡白，尾較長；身體及尾常以獨特方式左右擺動。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "灰鶺鴒 雄鳥",
+      "scientificName": "Motacilla cinerea",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "灰鶺鴒灰色上體、黃色腰及下體，繁殖雄鳥具黑喉；山鶺鴒橄欖灰上體、淡胸深色紋，常在林地出現。",
+      "portraitNote": "繁殖雄灰鶺鴒，AI 示意。"
+    },
+    {
+      "zh": "白鶺鴒",
+      "scientificName": "Motacilla alba",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "白鶺鴒多種亞種的黑白頭面與胸斑有變化，通常灰、黑、白色；山鶺鴒偏橄欖色，有淡眉及胸部深色紋。",
+      "portraitNote": "白鶺鴒 AI 近似示意，不指定亞種。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "JPN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "PRK",
+      "RUS",
+      "KOR",
+      "LKA",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 列 19 個原生現存國家或地區，包括繁殖、非繁殖及中國列 Resident；18 個有 Natural Earth 110m 幾何，新加坡無幾何未填；不填迷鳥地。僅國家概覽、非全境或季節分布圖。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053300",
+      "use": "第 I 類，稀少秋季過境、冬春罕見；16–18 cm，橄欖灰上體、淡眉及雙翼斑，白胸具深色倒三角與深色胸側，身尾左右擺動。秋季主要八月第三週至十月第一週；小量不規則越冬。HKBWS 2024 記全球趨勢未知。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053700",
+      "use": "灰鶺鴒灰上體、黃腰，繁殖雄鳥黑喉白邊，長尾。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/053810",
+      "use": "白鶺鴒 leucopsis 頭面及羽色，以及物種內亞種差異；插圖為概略示意，不指定亞種。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港 2024 名錄第 542 項、第 I 類。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/forest-wagtail-dendronanthus-indicus/details",
+      "use": "2024 LC、全球成熟數未知、疑似下降；10 年範圍樹覆蓋損失 9.8%，謹慎推測種群跌 1–19%，不是直接計數；Full Migrant、繁殖 EOO 7,080,000 km²、非繁殖 14,800,000 km²；七個貿易資料集一個有紀錄。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Dendronanthus indicus，雀形目鶺鴒科，speciesCode forwag1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 2.8、v 2.9、r 4.8、c 1.2、o 2.7、vEst 1；六軸保留，look 有可核對外形。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "中文 range 空，diet 與 highlights 截斷；length、weight 空，LC 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 78.4、tail 67、tarsus 20.5、bill 17.5、mass 16.4 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 全球趨勢未知；BirdLife 2024 按樹覆蓋變化推測下降，並列不同來源。",
+    "AI 主圖以兩條完整黑環示胸紋，未精確呈現 HKBWS 倒三角及深色胸側；不能作羽紋精確參考。灰、白鶺鴒比較圖與主圖皆 AI 示意，非專家認證。",
+    "鳥類遷徙使繁殖和越冬區不同，地圖綠色合併顯示國家概覽，非全境或季節性範圍。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
