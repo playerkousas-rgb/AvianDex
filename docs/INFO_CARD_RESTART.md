@@ -4357,3 +4357,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0546 黑頭蠟嘴雀](https://drive.google.com/file/d/1whx-7cIZ8dD2C_Z9gatQ6JKUFtdPKF2B/view)：135406 bytes，MD5 `ab491b72f3278743e4e4555c8ff4380a`，SHA256 `d145c5b500302b65463b644489a10a2b4d3852ff749ed75cc4ec52c14b530a96`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
 - HKBWS `species/0450/055200`：香港 I 類罕見冬候及過境，黃粗喙無黑尖、黑頂喉狹、灰體、初級羽無白端。三圖 AI 示意、非等比例非專家認證；主圖黑頂延至後冠或略多、尾形及腳趾不可靠；黑尾蠟嘴雀黑喉或過大、白翼斑位置不準。
 - BirdLife 2018 LC、數量未知、懷疑穩定；原生國家概覽合併季節非全境。runtime look 提及厚嘴雀、voice 提及桑鳲，callout 重複名字；不改。a 和依賴它的 o 暫緩；`verify-info-card.py 0546` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0547 已交付
+
+- [0547 普通朱雀](https://drive.google.com/file/d/1jeYKQqxyQez7kJBbjPaNSK3c8IihDZkk/view)：136763 bytes，MD5 `e8b818eb7ebaf835ffc48b7b9fdea40b`，SHA256 `e78a80f13af4efe9ef29188658e6a5834f095ce6ba867863e559d0097ea1f64e`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0450/055300`：香港 I 類稀少冬候及罕見過境，主圖雄鳥，雌幼鳥褐色。三圖 AI 示意、非等比例非專家認證；主圖背紋或過強、翼帶偏白、腳趾不可靠。
+- BirdLife 2024 LC、2730–5600 萬成熟個體、下降；原生國家概覽合併季節非全境；runtime look 描述雌鳥，六軸保留。`verify-info-card.py 0547` 通過（`errors: []`）。
