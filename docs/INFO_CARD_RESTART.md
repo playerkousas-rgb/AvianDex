@@ -4588,3 +4588,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0580 大鵑鵙](https://drive.google.com/file/d/1dYfQ_aKZNYATwzFi2obGXyFZK0KvLlsr/view)：125999 bytes，MD5 `d691f8c4215503e14c5221b5a3de3ef4`，SHA256 `31e22210f693492f45cdb1496c687f7a4cf153859aabc0e2e7dcb90b2765a580`；查重無結果，get_file 獨立核驗。
 - HKBWS I 類迷鳥；BirdLife 2020 LC，數量未知、疑穩定；世界圖採其較廣分類，包括台灣與馬來西亞，非全境；eBird 2024 分拆重組，rexpineti 親緣未定。
 - AI 圖未經專家認證：主圖黑喉過於鮮明，暗灰鵑鵙面罩太銳、灰山椒鳥翼白帶過明顯，足趾及羽列近似。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
+
+## 新批次 0501–0583：0581 已交付
+
+- [0581 灰樹鵲](https://drive.google.com/file/d/124N2iM9PlzrtxooxR9F2rf0LMJ9aL0cO/view)：126125 bytes，MD5 `42797d8a6bc82cc95404c0619b59673c`，SHA256 `da59e949021c55e55a256979644946d1ee3c41930f3b6573cb45f61760b1f769`；查重無結果，get_file 獨立核驗。
+- HKBWS 局部常見留鳥、香港亞種 sinica；BirdLife 2024 LC，全球數量未知、疑下降，地圖只作原生國家概覽。
+- AI 插圖未經專家認證：主圖尾尖過度匙形、白羽基偏少、黑喉偏暗；棕腹樹鵲橙色過飽和、喜鵲光澤偏藍，羽列足趾近似。六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
