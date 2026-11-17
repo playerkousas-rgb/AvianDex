@@ -1,0 +1,191 @@
+{
+  "id": "0517",
+  "name": "白頂䳭",
+  "scientificName": "Oenanthe pleschanka",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Adult male Pied Wheatear Oenanthe pleschanka in breeding plumage, standing on a flat stone in dry stony ground. Crown and nape pale buffish-white; a broad black mask from the bill through the eye and over the ear-coverts; mantle and back black; a large white wing panel on the coverts above darker flight feathers; chin, throat and upper breast black, confluent with the mask; lower breast, belly and undertail coverts pale buffish-white; tail black with white bases to the outer feathers. Fine black bill, black legs.",
+  "featureCrops": [
+    [
+      0.47,
+      0.12,
+      0.65,
+      0.22
+    ],
+    [
+      0.45,
+      0.17,
+      0.62,
+      0.33
+    ],
+    [
+      0.38,
+      0.32,
+      0.56,
+      0.46
+    ],
+    [
+      0.16,
+      0.5,
+      0.36,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "淡色頭頂",
+    "黑面罩與黑喉",
+    "翼上大白斑",
+    "白腰與黑尾"
+  ],
+  "featureNotes": [
+    "**頭頂與後頸是淡皮黃白色**，比身體其他部分都淺——「白頂」之名由此而來；這個淡色頂冠與黑色的面罩接壤，邊界十分利落。**非繁殖羽雄鳥**較暗啞、上體較褐、下體帶橙皮黃色；**成鳥雌鳥**則是暗褐的頭與上體、灰褐的喉與上胸。為插圖局部。",
+    "**由嘴基穿過眼、覆蓋耳羽的黑面罩，與黑色的頦、喉、上胸連成一大片**，下面是淡皮黃白的下體，形成本種最搶眼的「黑白配」。**雌鳥**沒有這片純黑：`look` 的英文描述指雌鳥「與雄鳥相似，但肩與肩羽是褐色帶皮黃羽端而非黑色，尾羽褐與白，翼羽褐色帶皮黃羽端」。為插圖局部。",
+    "**覆羽上有一大片白色，形成翼鏡**，與黑色的背、肩及深色的飛羽強烈對比。第一齡冬羽（香港兩筆紀錄都是這個年齡）翼上的白較窄、上體是帶淡色羽端的冷褐色，遠看整隻鳥偏灰褐而非黑白分明。為插圖局部。",
+    "**腰是白色，外側尾羽基部亦白，其餘尾羽黑色**——在尾羽收合時形成一個**黑色的倒 T**，是所有䳭（wheatear）共有的特徵。本種的**黑色端帶相對較窄，並有一條黑色沿兩側向上延伸**，與其他䳭的尾部圖案不同。為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "灰林䳭 雄",
+      "scientificName": "Saxicola ferreus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者都是**黑白（灰白）配色的開闊地小型鶲科鳥**，停棲時也都在突出的石頭或枝條上。分別在**黑色的位置與頂冠顏色**：本種（雄鳥）**頭頂是淡皮黃白色**、**黑面罩連著黑喉與黑上胸**、**背與肩黑**、**翼上有大白斑**；灰林䳭雄鳥**頭頂是灰色**、**黑色只限於眼先、耳羽與頰**、**喉與胸是白色**、**上體整片石板灰**、翼上沒有大片白斑。體型：本種 15–16 cm、尾較短而方，灰林䳭 13–15 cm 但尾明顯較長。",
+      "portraitNote": "灰林䳭雄鳥（0516 主圖）：灰色上體、長白眉、黑面罩、白色下體。"
+    },
+    {
+      "zh": "東亞石䳭 雄",
+      "scientificName": "Saxicola stejnegeri",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "**第一齡冬羽的白頂䳭**與**石䳭雌鳥／第一齡鳥**最容易混淆：兩者都是**帶淡色羽端的褐色上體 + 淡色喉 + 淡色胸帶**。分別在**腰與尾**：本種**腰白、尾有黑色倒 T**、**翼上仍見白色翼鏡**；東亞石䳭**腰是橙紅褐色**、**尾全深色而無倒 T**、**翼上白斑小或不明顯**。此外本種**幾乎總在地面跳走或奔跑**、站姿較挺，石䳭則多停**灌木頂、圍欄與電線**。",
+      "portraitNote": "東亞石䳭雄鳥（0516 比較鳥）：黑頭黑喉、白色頸環、橙褐胸、白腹白腰。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ARE",
+      "ARM",
+      "AZE",
+      "BGR",
+      "CHN",
+      "CYP",
+      "DJI",
+      "EGY",
+      "ERI",
+      "ETH",
+      "GEO",
+      "GRC",
+      "IND",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "JPN",
+      "KAZ",
+      "KEN",
+      "KGZ",
+      "KOR",
+      "KWT",
+      "LBN",
+      "LBY",
+      "LKA",
+      "MDA",
+      "MKD",
+      "MNE",
+      "MNG",
+      "OMN",
+      "PAK",
+      "QAT",
+      "ROU",
+      "RUS",
+      "SAU",
+      "SDN",
+      "SDS",
+      "SOM",
+      "SRB",
+      "SYR",
+      "TCD",
+      "TJK",
+      "TKM",
+      "TUR",
+      "TZA",
+      "UGA",
+      "UKR",
+      "UZB",
+      "YEM"
+    ],
+    "note": "BirdLife 國家表共 **75 列**：**原生 55 列**（俄羅斯四列 `Russia`／`Russia (Asian)`／`Russia (Central Asian)`／`Russia (European)` 併為 `RUS`，日本、南韓為原生而**北韓是 Vagrant**），**50 個 ISO3 在 110m 底圖上有幾何**，全部填色；**巴林與馬爾代夫兩個原生地區在 110m 底圖上沒有獨立幾何**，故不能填色。**另有 20 列 Vagrant 不填色**，其中包括**香港**——本地是「Accidental」，與 BirdLife 的 Vagrant 一致。分佈由**東南歐經烏拉爾、蒙古、外貝加爾、阿富汗、巴基斯坦北部、西北喜馬拉雅至中國東北**繁殖，**冬季在非洲東北部與阿拉伯半島西南部**——所以地圖上非洲東北角（埃及、蘇丹、南蘇丹、埃塞俄比亞、厄立特里亞、吉布提、索馬里、肯尼亞、坦桑尼亞、烏干達、乍得、利比亞）大片填色是**越冬地**，不是繁殖地。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/051800",
+      "use": "香港第 I 類、**偶發（Accidental）**——**全港只有兩筆紀錄**：**1989-09-24/25 華富邨一隻第一齡冬羽**（Smith 1990，香港首筆紀錄，地點是「裸露岩石與開闊泥土、極少草或其他覆蓋」），**2013-11-30 西九龍一隻第一齡冬羽**（在草地）。**15–16 cm**。**白腰與外側尾羽基部的白色，與其餘尾羽的黑色倒 T 對比**，是所有䳭的特徵；**本種的黑色端帶相對較窄，並有一條黑色沿尾側向上延伸**，是辨識關鍵。**第一齡冬羽**：**上體冷褐色、新羽帶淡色羽端**、**眉紋隱約**、**眼先較深**、**下體白色而胸前有一片褐色**。**繁殖羽成鳥雄鳥（香港未錄得）**：**頭頂與後頸偏白**、**臉、喉與上體近黑**、**下體白色**。**非繁殖羽雄鳥**較暗啞、上體較褐、下體帶橙皮黃。**成鳥雌鳥（香港未錄得）**：**頭與上體暗褐**、**喉與上胸灰褐**、**下胸、腹與肛周近白**。聲音：**短促而帶嗡嗡聲的『tzzek』**。行為：**在地面跳走與奔跑**，**愛停裸露岩石、灌木與鐵絲網等人造物**；華富邨那隻「由高達 10 m 的高處俯衝捕食地面的昆蟲，又由棲枝向上飛捕至約 20 m 高」（Smith 1990）。分類：**單型種**；**由東南歐向東至南烏拉爾、蒙古、外貝加爾、阿富汗、巴基斯坦北部、西北喜馬拉雅與中國東北繁殖**，**長距離遷徙至非洲東北部與阿拉伯半島越冬**；在中國繁殖於**新疆東至遼寧、南至河南北部**（Liu & Chen 2020）；**韓國、日本、台灣為迷鳥**。保育：**IUCN Least Concern，趨勢 stable**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/pied-wheatear-oenanthe-pleschanka/details",
+      "use": "IUCN **LC**、**2024 年評估**（2024–2004 皆 LC，2000／1994／1988 為 LR-lc）；**成熟個體 545,000–997,000（2018 年估算、Poor 品質）**，推算自**歐洲 54,500–99,700 成熟個體、27,200–49,900 繁殖對**（BirdLife 2021，約佔全球分佈 10%）；**趨勢 Unknown（Suspected）**——「沒有足夠資料推導趨勢」，與 HKBWS 記的 stable 並列照記；**EOO 繁殖 16,500,000 km²、非繁殖 5,110,000 km²**、AOO Unknown、**Breeding endemic No**、**Full Migrant**、**IBA／KBA 16 個、共 10,466 km²、平均保護區覆蓋 82.84%**（本批覆蓋率最高）；**只有陸域**、海拔 **0–4,290 m**、世代 **1.9 年（本批最短）**、Landbird、**森林依賴度 Low**；**生境 11 項，其中「岩石地區」繁殖與非繁殖兩項為 Major**，其餘 9 項只是 Suitable（牧地、耕地、温帶林、亞熱帶乾燥林、高山草原、乾燥稀樹草原、亞熱帶乾燥灌叢）；生態段記**乾旱多石的半荒漠、石坡、岩露頭、輕度樹木的山坡、丘陵牧場與休耕地**，巢是粗莖與根莖的鬆散淺杯，築於石下小穴或溝壁、堤岸、建築物牆內，**每窩 4–6 枚**；**本批第一次有「零貿易」紀錄**：**七個貿易數據庫全部沒有本種**，亦無任何使用迹象（0/7）；** Threats 段有一個非嚴重威脅**：在保加利亞與**穗䳭 *Oenanthe oenanthe* 雜交**；**保育行動：CMS 附錄 II、伯爾尼公約附錄 II、以及歐盟《鳥類指令》附錄 I——「鳥類指令」為本批首次出現**，行動上只有「已劃定保育地點（全部範圍）」與「已納入國際法規」，**系統性監測 No**，歐洲範圍內目前無需額外措施；**本批第一次出現「次全球評估表」**：**EU27+UK 2021 LC、歐洲 2021 LC**；AZE 與 Search for Lost Birds 皆 No；命名人 **(Lepechin, 1770)**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **527** 項 白頂䳭 Pied Wheatear（*Oenanthe pleschanka*），**第 I 類**；鄰項為 526 東亞石䳭與 528 橙腹葉鵯。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（白頂䳭；Pied Wheatear）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（*Oenanthe pleschanka*／鶲科 Muscicapidae）；speciesCode piewhe1；taxonOrder 29538。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 2、a 2.3、v 2.7、r 3.3、c 1.2、o 2.3），`missingScores` 與 `withheldScores` 皆為空；o 2.3 與五軸平均 2.3 相符。a 保留：`look` 的**英文**句是雌鳥羽色（肩羽褐帶皮黃羽端、尾羽褐白、翼羽褐帶皮黃羽端），屬可核對形態（0513 同類情況）。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "**中文嚴重錯位**：`look` 中文只有**一組量度**（體重 19.36 g、翼長 92.8 mm、嘴峯 16.4 mm、喙寬 3.2 mm、喙厚 3.5 mm、跗蹠 22.6 mm），形態只在英文句；`diet` 中文把**遷徙、生境與食性**混成一句；`highlights` 中文兩句在逗號處**中途截斷**；`range`／`migration` 中文只寫「在阿拉伯和伊朗至非洲東北部越冬」（只是分佈的一半）；`conservation` 英文給出「400,000–8,400,000 隻」的舊估算，與 BirdLife 現行**545,000–997,000 成熟個體**不同，卡上只用後者；`funFact` 英文在逗號處截斷；**length 寫 14 cm，而 HKBWS 寫 15–16 cm**——卡面不顯示體長，兩者並列於此備查；`weight` 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 92.8、tail 60.4、tarsus 22.6、bill 16.4、mass 19.4 g。"
+    }
+  ],
+  "notes": [
+    "香港狀況：名錄 2024 第 **527** 項、**第 I 類**；HKBWS 的級別是**偶發（Accidental）**——**全港只有兩筆紀錄**，而且**兩筆都是第一齡冬羽**：**1989-09-24/25 華富邨**（香港首筆紀錄，Smith 1990）與 **2013-11-30 西九龍**。兩筆都在**沿海地點**，一筆在「裸露岩石與開闊泥土、極少植被」，一筆在草地。這是本批第一次出現「Accidental」這個級別，也是紀錄數最少的一張卡。",
+    "**卡面插圖是繁殖羽雄鳥，但這個模樣在香港從未錄得**——HKBWS 明寫繁殖羽成鳥雄鳥與成鳥雌鳥在香港都沒有紀錄。這是刻意的選擇：卡面用最具代表性的羽色介紹這個物種，而香港實際見到的第一齡冬羽（冷褐上體、淡色羽端、白下體配褐胸帶）已在特徵與比較鳥段落中詳細交代。",
+    "**本批多個「第一次」落在這張**：**零貿易**（七個貿易數據庫全部沒有本種，0/7）、**歐盟《鳥類指令》附錄 I**、**次全球評估表**（EU27+UK 與歐洲皆 2021 LC）、**IBA 平均保護區覆蓋率 82.84%**（最高）、**世代長度 1.9 年**（最短）。另有 **Threats 段**：在保加利亞與穗䳭雜交，但被評估為非嚴重威脅。",
+    "趨勢兩邊不完全一致：BirdLife 2024 為 **Unknown（Suspected）**（「沒有足夠資料」），HKBWS 記 **stable**；兩者並列照記，不從中挑一個。種群數字以 BirdLife 的 **545,000–997,000 成熟個體** 為準，runtime `conservation` 的 400,000–8,400,000 隻舊估算不採用（兩者口徑不同：後者是「個體」而非「成熟個體」）。",
+    "辨識要點：**白腰 + 外側尾羽基部白色 + 其餘尾羽黑色形成倒 T**，而**本種的黑色端帶較窄、有一條黑色沿尾側向上延伸**；繁殖羽雄鳥**淡皮黃白頭頂 + 黑面罩連黑喉黑胸 + 黑背 + 翼上大白斑**；第一齡冬羽**冷褐上體帶淡色羽端、眉紋隱約、眼先深、下體白而胸前褐**；雌鳥**頭與上體暗褐、喉與上胸灰褐、下體近白**。與灰林䳭的分別在黑色位置與頂冠顏色，與東亞石䳭的分別在腰與尾的圖案。",
+    "分佈圖填 **50 個形狀**：BirdLife 原生 55 列、俄羅斯四列併為 `RUS`，**50 個 ISO3 有 110m 幾何**；**巴林與馬爾代夫兩個原生地區無幾何**（已寫進地圖說明）；**另有 20 列 Vagrant 不填色，包括香港**（本地 Accidental，與 BirdLife 一致）。注意地圖上**非洲東北與阿拉伯半島的大片綠色是越冬地**，繁殖地在歐亞大陸中部；本種是長距離遷徙鳥，卡面不區分繁殖／越冬，說明已寫「綠色非全境」。",
+    "插圖與比較鳥全部沿用 **0516** 的三張圖（主圖＝0516 sim1 的白頂䳭雄鳥、sim0＝0516 主圖灰林䳭雄鳥、sim1＝0516 sim0 東亞石䳭雄鳥）——這是本批第一次「一張卡的三張圖全部來自同一張前一張卡」。`pixel.png` 已由新主圖重新產生（0514 的教訓）。AI 生成，非等比例、非專家認證。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
