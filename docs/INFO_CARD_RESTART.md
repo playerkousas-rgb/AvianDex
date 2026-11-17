@@ -4375,3 +4375,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0549 黃雀](https://drive.google.com/file/d/13Ha3FUTFgTW3PBh-PvBrkHkxfpLWxqsa/view)：136651 bytes，MD5 `bff8c2fd88dc9a7b0bcb7bd3cf34f139`，SHA256 `d549693bddc6990e06dbf0f2b9acab960b4f07f8941e7631632f91279eca41fb`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
 - HKBWS `species/0450/055500`：香港 I 類罕見遷徙及冬候，偶大量入侵；BirdLife 列香港迷鳥，兩者不同。三圖 AI 示意非等比例非專家認證；主圖胸脅紋偏重、喙略厚、腳趾不可靠。
 - BirdLife 2024 LC、2490–4690 萬成熟個體、穩定，HKBWS 舊頁稱下降；原生國家概覽合併季節非全境。runtime funFact 為故事情節、喙描述與 HKBWS 不符，不改；六軸保留。`verify-info-card.py 0549` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0550 已交付
+
+- [0550 鐵爪鵐](https://drive.google.com/file/d/1B5y_tzHqgihJ6X6f3hYx5Ns9IQSXqIEZ/view)：141242 bytes，MD5 `a312726dad8af3747eeb97ef07f9295b`，SHA256 `66e3f71c6e264361775048e5518d85a3067535f08374ccc13078d9ed8fc5c0e9`；查重無結果，上載後獨立核驗檔名、MIME、父目錄、尺寸與 hash。
+- HKBWS `0460/055600`：I 類迷鳥，已記錄 2018、2021；主圖為繁殖雄羽示意。BirdLife 2025 LC、全球下降，與 HKBWS 舊頁所稱增加不同；地圖為部分原生國家概覽，非全境。
+- AI 圖非專家認證；主圖後爪及足趾不可靠，黑胸或偏小；鳳頭鵐冠羽或偏高。runtime 缺 i、c，不推算；v 含體長估算；range fieldCopy 與正文不一致，未改 runtime。validator `errors: []`，未改 UI、R2 或 runtime。
+- 下一張 0551。

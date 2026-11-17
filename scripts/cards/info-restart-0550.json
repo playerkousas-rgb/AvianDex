@@ -1,0 +1,178 @@
+{
+  "id": "0550",
+  "name": "鐵爪鵐",
+  "scientificName": "Calcarius lapponicus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Calcarius lapponicus, AI approximation of breeding male.",
+  "featureCrops": [
+    [
+      0.15,
+      0.24,
+      0.32,
+      0.4
+    ],
+    [
+      0.25,
+      0.25,
+      0.4,
+      0.4
+    ],
+    [
+      0.31,
+      0.35,
+      0.49,
+      0.48
+    ],
+    [
+      0.105,
+      0.275,
+      0.24,
+      0.39
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥黑面黑喉",
+    "栗紅色後頸",
+    "背部深色縱紋",
+    "短錐形淡色喙"
+  ],
+  "featureNotes": [
+    "繁殖雄鳥面及喉大面積黑色，淡色眉紋。",
+    "繁殖雄鳥後頸栗紅。",
+    "背部深色條紋明顯。",
+    "短錐喙常淡色帶黑尖。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "鳳頭鵐",
+      "scientificName": "Emberiza lathami",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳳頭鵐有明顯冠羽、深灰黑身及栗色翼；鐵爪鵐雄鳥黑臉栗後頸、白腹。",
+      "portraitNote": "AI 雄鳥示意，冠羽或偏高，足趾不可靠。"
+    },
+    {
+      "zh": "雪鵐",
+      "scientificName": "Plectrophenax nivalis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖雄雪鵐以白色頭身及黑背為主，鐵爪鵐雄鳥黑臉和栗後頸。",
+      "portraitNote": "AI 繁殖雄鳥示意，腳趾不可靠。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AUT",
+      "BLR",
+      "BEL",
+      "CAN",
+      "CHN",
+      "DNK",
+      "FIN",
+      "FRA",
+      "DEU",
+      "GRL",
+      "HUN",
+      "ISL",
+      "IRL",
+      "ITA",
+      "JPN",
+      "KAZ",
+      "LVA",
+      "LTU",
+      "MEX",
+      "MNG",
+      "NLD",
+      "PRK",
+      "NOR",
+      "POL",
+      "ROU",
+      "RUS",
+      "SVK",
+      "KOR",
+      "ESP",
+      "SWE",
+      "USA",
+      "UKR",
+      "GBR"
+    ],
+    "note": "Partial NATIVE-country overview only; breeding, resident, passage and nonbreeding combined, small territories omitted, vagrants excluded. Not occurrence polygon or whole-country occupancy; BirdLife EOO breeding 38.9m and nonbreeding 53.8m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/055600",
+      "use": "香港 I 類迷鳥；辨識、分佈及季節羽色。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/055700",
+      "use": "鳳頭鵐雄鳥冠羽與羽色，HKBWS 採 Melophus lathami，runtime 採 Emberiza。"
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Snow_Bunting/id",
+      "use": "雪鵐雄鳥繁殖羽白身黑背，繁殖時深色喙。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/lapland-longspur-calcarius-lapponicus/details",
+      "use": "2025 LC、1.19–1.4 億成熟個體，全球下降；HKBWS 舊頁稱增加。原生國家、EOO。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Calcarius lapponicus、Calcariidae。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "a 2.8、v 3.1（含估算）、r 1、o 2.3；i、c 缺失。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "繁殖雄鳥黑頭喉、淡眉與栗後頸；range 中文 fieldCopy 地域與正文不一致，不修改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 94.9、tail 67.8、tarsus 21.1、bill 12.3 mm、mass 27.8 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類迷鳥，HKBWS 記錄 2018、2021 個體；圖示繁殖雄羽，香港個體不一定同羽色。",
+    "三圖 AI 示意、非專家認證、非等比例；主圖後爪及足趾不可靠、黑胸面積或偏小；鳳頭鵐冠羽或偏高。",
+    "BirdLife 2025 全球下降，HKBWS 舊頁稱增加；地圖是部分原生國家概覽、合併季節非全境。",
+    "runtime 缺 i、c，不推算；v 含體長估算；fieldCopy range 中文地域與正文不一致，不改 runtime。"
+  ],
+  "missingScores": [
+    "i",
+    "c"
+  ],
+  "withheldScores": {}
+}
