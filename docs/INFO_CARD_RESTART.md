@@ -4514,3 +4514,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/056400` 香港 I 類秋季稀少過境、春較少、冬罕見；圖為本地較少見的成雄。BirdLife 2025 LC、數量及趨勢未知，香港包括中國底圖；俄中央亞區全球表迷鳥但國界合併，國家概覽非全境。
 - AI 圖非專家認證、非等比例，眼圈過白、腰色偏鮮、胸脅紋偏重、足趾不可靠，白眉鵐黑喉過長；比較圖限制見 spec。runtime v 估算、部分文案錯位；照錄分數，未改 runtime/UI/R2。validator `errors: []`。
 - 下一張 0569。
+
+## 新批次 0501–0583：0569 已交付
+
+- [0569 白眉鵐](https://drive.google.com/file/d/1LozDaViFNRd-WbS6PeI1TkRl8uUa-k8Z/view)：132650 bytes，MD5 `74060c8edcfc5dfbdec35d7ea932a660`，SHA256 `f0cb8f47e87d14d0654098391e48a7c92d19a10c4ebafc6d00714fd4a1cf1280`；查重無結果、get_file 獨立核驗。
+- HKBWS `0460/056100` 香港 I 類不常見冬候、稀少過境；繁殖雄示意。BirdLife 2024 LC、數量未知，基於樹冠損失疑下降，香港包含中國幾何、國家概覽非全境。
+- AI 圖非專家認證、非等比例，黑喉過長、脅色偏深及脅紋欠清晰、足趾不可靠；比較圖限制見 spec。runtime 無 look，依交接規則 a 及 o 待查；v 估算，不修改 runtime/UI/R2。validator `errors: []`。
+- 下一張 0570 白額燕鷗，轉入非雀形目，需重新研製鳥類及比較圖。
