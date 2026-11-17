@@ -4182,3 +4182,11 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - Runtime 六軸齊全 i 2、a 4.3、v 1.8、r 3.3、c 3、o 2.9，均保留；look 中英文都有可核對形態。runtime range 和 habitat 存在截斷或範圍差異，funFact 缺數字，behavior 中文重複繁殖句；length 7 cm、weight 7–9 g，AVONET mass 5.7 g。詳見 spec。
 - 主圖與兩張比較圖均新生成，AI 示意非等比例、非專家認證；比較鳥為紅胸啄花鳥雌鳥及朱背啄花鳥雄鳥。四格特徵及全卡預覽已檢查；`verify-info-card.py 0520` 通過，`errors: []`。未修改 runtime、UI 或 R2。
 - **下一張 0521 朱背啄花鳥 *Dicaeum cruentatum***；HKBWS `species/0420/052200` 已核對，香港名錄 531，第 I 類，局部常見繁殖留鳥；雄鳥紅帶由冠至腰、黑臉白喉；雌鳥較褐且紅色尾上覆羽與黑尾對比。0520 的比較鳥可作參考，但生成圖可能於沙盒重置後不存在，且 AI 插圖需重新核對。
+
+## 新批次 0501–0583：0521 已交付
+
+- [0521 朱背啄花鳥](https://drive.google.com/file/d/1bO6z9DyKtViQHBiWmNFBc01UkFiWVY03/view)：148475 bytes、MD5 `1526233fec0eb7fd3d7e0f1830e2a400`、SHA256 `da181bb815abca5d6374d3d2bcf698f797183e60d21f1e66b8011ef85a05cb22`。上載前查重無結果；上載後以 `get_file` 核對 parent、尺寸、大小及 hash。
+- HKBWS `species/0420/052200`：名錄第 531 項、第 I 類，局部常見繁殖留鳥，冬季有擴散；7–9 cm。雄鳥紅帶由頭頂至腰、黑臉、白喉及藍色調翼；雌鳥橄欖褐上體、淡色下體、紅色尾上覆羽與黑尾對比。1933 年城門首錄，常在新界中東部村落附近老樹和風水林，與東方槲寄生密切相關，亦取食朴樹果實。atlas 與較新 eBird 分佈訊號不同，本地趨勢不作簡化結論。
+- BirdLife 2024 LC，全球成熟個體數未知、趨勢疑似下降；分佈範圍十年樹覆蓋估計減 14.7%，謹慎推測種群減 1–19%，非直接統計。七個貿易資料集有三個記錄本種，列國際寵物／展示用途；資料集出現率不等於個體交易量。14 個原生現存地區，13 個有底圖幾何，新加坡列繁殖但底圖無幾何、不填色；香港未單列。
+- Runtime 六軸 i 2、a 2.8、v 2.3、r 1、c 1.2、o 1.9，vEst 1，全部保留；中文 look 是分佈，英文 look 為可核對的雌鳥形態。AVONET mass 5.6 g。主圖與紅胸雄鳥比較圖沿用 0520 的 AI 素材，雌朱背鳥新生成；均非等比例、非專家認證。四格及全卡預覽已看；`verify-info-card.py 0521` 通過，`errors: []`；未修改 runtime、UI 或 R2。
+- **下一張 0522 藍喉太陽鳥 *Aethopyga gouldiae***，HKBWS 組頁顯示 `species/0420/052400`，須先開頁核對內容；不同於名錄第 532 項黃腹花蜜鳥，應按 runtime id 順序製作。

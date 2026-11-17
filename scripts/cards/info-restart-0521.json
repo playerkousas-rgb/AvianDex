@@ -1,0 +1,155 @@
+{
+  "id": "0521",
+  "name": "朱背啄花鳥",
+  "scientificName": "Dicaeum cruentatum",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Adult male Scarlet-backed Flowerpecker Dicaeum cruentatum, tiny bird with a broad scarlet band from crown to rump, blackish face, neck sides and flanks, blue-tinged wings and white throat; AI approximation.",
+  "featureCrops": [
+    [
+      0.17,
+      0.28,
+      0.43,
+      0.49
+    ],
+    [
+      0.35,
+      0.29,
+      0.66,
+      0.47
+    ],
+    [
+      0.26,
+      0.37,
+      0.52,
+      0.57
+    ],
+    [
+      0.62,
+      0.39,
+      0.88,
+      0.56
+    ]
+  ],
+  "featureLabels": [
+    "紅冠與黑臉",
+    "紅色背帶",
+    "白喉與深色翼",
+    "紅色尾上覆羽"
+  ],
+  "featureNotes": [
+    "雄鳥頭頂紅色，臉與頸側黑，突出白色喉部；短喙適合處理小果實。此圖為 AI 插圖局部。",
+    "雄鳥最醒目的紅色寬帶由頭頂延至腰，與黑色臉及藍色調翼形成對比。插圖局部。",
+    "白喉被黑色臉側襯托，翼帶藍色調；本圖為示意而非個體鑑定依據。",
+    "紅色延伸至腰與尾上覆羽；雌鳥亦有紅色尾上覆羽，與黑色尾羽對比。插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "紅胸啄花鳥",
+      "scientificName": "Dicaeum ignipectus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥紅胸啄花鳥的火焰色斑在胸，藍色上體；雄朱背啄花鳥則紅帶從頭頂至腰、白喉。雌紅胸啄花鳥上體較灰、下體較皮黃，缺少雌朱背鳥的鮮紅尾上覆羽。兩種 chik 相似，不能單憑一聲判別。",
+      "portraitNote": "紅胸啄花鳥雄鳥，AI 示意；藍色上體與橙紅胸。"
+    },
+    {
+      "zh": "朱背啄花鳥 雌鳥",
+      "scientificName": "Dicaeum cruentatum",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同一種雌鳥上體橄欖褐、下體淡色；鮮紅尾上覆羽與黑尾對比，沒有雄鳥從頭頂到腰的完整紅帶。幼鳥類似雌鳥，但上體較暗、嘴淡橙且隨年齡變深。",
+      "portraitNote": "朱背啄花鳥雌鳥，AI 示意；橄欖褐上體、紅尾上覆羽與黑尾。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "BRN",
+      "KHM",
+      "CHN",
+      "IND",
+      "IDN",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 14 個現存原生國家或地區：13 個有底圖形狀，Singapore 為 Breeding 但底圖無幾何，僅記於此。香港不單列；HKBWS 列香港局部常見繁殖留鳥。綠色為國家概覽，不代表全境分佈。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052200",
+      "use": "第 I 類，局部常見繁殖留鳥，冬季有擴散；7–9 cm。雄鳥紅帶由冠至腰、黑臉頸側與脅、藍調翼、白喉；雌鳥橄欖褐上體、淡色下體、紅色尾上覆羽與黑尾。幼鳥嘴淡橙隨年齡變深。香港首錄 1933 年城門；常見於新界中東部村落附近大樹與風水林，與東方槲寄生密切相關，亦吃朴樹果實。繁殖與冬季調查佔用格數稍減，但 eBird 顯示更廣分佈，解讀需審慎。香港 LC、種群下降。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052100",
+      "use": "紅胸啄花鳥雄鳥火焰色胸及藍色上體；雌鳥較灰及較皮黃。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港名錄 2024 第 531 項，第 I 類。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/scarlet-backed-flowerpecker-dicaeum-cruentatum/details",
+      "use": "2024 LC；成熟個體未知，趨勢疑似下降。過去十年分佈範圍內樹覆蓋估計減 14.7%，謹慎推測種群下降 1–19%。EOO 10,800,000 km²；Not a Migrant；海拔 0–1,400 m，偶達 2,135 m，世代 2.3 年；中等森林依賴。14 個原生現存國家地區，新加坡列繁殖。貿易高普遍率：七個資料集中三個有紀錄，終端用途寵物／展示、國際。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱與 id。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "*Dicaeum cruentatum*，雀形目啄花鳥科，speciesCode scbflo1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 2.8、v 2.3、r 1、c 1.2、o 1.9、vEst 1，均保留；look 中文為分佈而非形態，但英文描述雌鳥橄欖綠羽色及紅尾上覆羽，為可核對形態；o 1.9 與五軸平均 1.86 相近。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "中文 look 是分佈而非外形，中文 range 只列海南，其他多欄中文空；英文 look 描述雌鳥、funFact 與 conservation 重複；weight 7–8 g、length 空；IUCN LC 一致。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 47.3、tail 25、tarsus 12、bill 11、mass 5.6 g。"
+    }
+  ],
+  "notes": [
+    "本地村落附近老樹與槲寄生關係密切，亦食其他果實；不應描述為只吃槲寄生。",
+    "BirdLife 全球種群下降為依樹覆蓋損失推測，並非直接統計。香港 atlas 與 eBird 分佈訊號不一，不可簡化成已確定的本地趨勢。",
+    "BirdLife 七個貿易資料集三個有紀錄，與上一張紅胸啄花鳥摘要無紀錄不同；資料集出現率不等於貿易個體數。",
+    "圖像均為 AI 示意、非等比例及非專家認證。主圖沿用 0520 朱背雄鳥比較圖，紅胸雄鳥比較圖沿用 0520 主圖；雌朱背鳥為本次新生成。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
