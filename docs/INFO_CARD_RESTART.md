@@ -4417,3 +4417,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/055900`：香港 I 類迷鳥，兩個自然紀錄、偶見籠逃；主圖繁殖雄羽。BirdLife 2025 LC、全球疑下降而數量未知，HKBWS 舊頁稱穩定；部分原生國家概覽非全境，意大利在 BirdLife 原生表但歐洲族群列區域滅絕。
 - AI 圖非專家認證、非等比例；主圖白頰偏小、栗面或過深、足趾不可靠；小鵐胸紋或偏重。runtime v 含體長估算、部分雙語欄位錯位，未改 runtime。validator `errors: []`；未改 UI、R2。
 - 下一張 0556。
+
+## 新批次 0501–0583：0556 已交付
+
+- [0556 圃鵐](https://drive.google.com/file/d/1g8-1GHFbjy-vjz9ij-ZjBQiHkc6yfdHu/view)：133867 bytes，MD5 `359d4af817ff723b01384b2c8c73387d`，SHA256 `902598f9f816c139013dae3c3e8e310cf2ae3b5aa31c1b36358da37791461055`；查重無結果、get_file 核驗 MIME、尺寸、父目錄及 hash。
+- HKBWS `0460/056000`：香港 I 類偶發，2005 塱原一筆第一冬鳥；主圖為成雄。BirdLife 2025 LC、趨勢下降、成熟個體估 1100–1700 萬；國家概覽含過境，無法表示全境；HKBWS 記新疆繁殖但 BirdLife 國家表不列中國。
+- AI 圖非專家認證、非等比例；主圖眼圈、喉黃或偏亮，足趾不可靠；灰頸鵐頭灰或偏深。runtime 缺 a，o 原值保留；r 1 與香港偶發紀錄不協調，照錄不改；文案欄位錯位。validator `errors: []`；未改 UI、runtime、R2。
+- 下一張 0557。
