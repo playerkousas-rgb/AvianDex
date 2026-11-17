@@ -1,0 +1,158 @@
+{
+  "id": "0516",
+  "name": "灰林䳭",
+  "scientificName": "Saxicola ferreus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Adult male Grey Bush Chat Saxicola ferreus perched on a barbed-wire fence above rough grassland. Crown, nape, back and rump clean slate grey; a long bold white supercilium from the base of the bill over the eye; lores, ear-coverts and cheeks black, forming a mask under the white brow; wings and tail blackish; chin, throat, breast and belly white with only a faint warm buff wash on the flanks. Fine black bill, black legs, fairly long tail.",
+  "featureCrops": [
+    [
+      0.36,
+      0.2,
+      0.54,
+      0.27
+    ],
+    [
+      0.38,
+      0.22,
+      0.54,
+      0.31
+    ],
+    [
+      0.5,
+      0.28,
+      0.7,
+      0.42
+    ],
+    [
+      0.38,
+      0.3,
+      0.58,
+      0.5
+    ]
+  ],
+  "featureLabels": [
+    "白色眉紋",
+    "黑面罩",
+    "灰色上體",
+    "白色下體"
+  ],
+  "featureNotes": [
+    "**一道很長、很白的眉紋**由嘴基一直劃過眼上，是本種最易認的特徵，在灰白的頭部上對比強烈。雌鳥亦有眉紋，但只是淡褐色、深淺不一，而且頭與上體是暖褐色而非灰色。為插圖局部。",
+    "**眼先、耳羽與頰是黑色，在白色眉紋之下形成一塊明顯的面罩**；HKBWS 描述成鳥雄鳥為「灰色、有白色眉紋、黑色面罩、黑色翼與尾、白色下體」。第一齡雄鳥與成鳥相似，只是上體帶褐色調——香港冬季見到的多數就是這種帶褐調的個體。為插圖局部。",
+    "**頭頂、後頸、背與腰是一片乾淨的石板灰**，沒有縱紋也沒有褐色混雜；翼與尾則是黑色，與灰色的身體形成硬邊對比。雌鳥的上體是**暖褐色**，腰與尾的兩側**紅褐色**、尾中央深褐——同一個位置顏色完全不同。為插圖局部。",
+    "**頦、喉、胸與腹都是白色**，只在脇部帶一點很淡的暖褐色；HKBWS 記雌鳥「下體除白喉與白腹外帶淡褐色」。與東亞石䳭的分別很清楚：石䳭的胸是**橙褐色**、喉在雄鳥是**黑色**，本種則通體白。為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "東亞石䳭 雄",
+      "scientificName": "Saxicola stejnegeri",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "**同屬、同一種生境、同樣愛停電線與灌木**，是香港冬季最常一齊出現的一對。分別在**頭部與胸口**：本種雄鳥是**灰色上體 + 長白眉 + 黑面罩 + 通體白色下體**，**沒有黑頭也沒有橙胸**；東亞石䳭雄鳥是**整個頭與喉黑色 + 白色頸環 + 橙褐色胸 + 白腹 + 白腰**。雌鳥／第一齡鳥更接近，但石䳭的**胸帶橙褐**、**腰是橙紅褐**，本種雌鳥**腰與尾側紅褐而尾中央深褐**、下體偏淡褐。體型：本種 13–15 cm，石䳭 12–13 cm，本種略大、尾略長。",
+      "portraitNote": "東亞石䳭雄鳥（0515 主圖重繪）：黑頭黑喉、白色頸環、橙褐胸、白腹白腰。"
+    },
+    {
+      "zh": "白頂䳭 雄",
+      "scientificName": "Oenanthe pleschanka",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "兩者都是**黑白（或灰白）配色的開闊地小型鶲科鳥**，遠看都像「灰色的鳥配白眉與白腹」。分別在**黑色的範圍**：白頂䳭雄鳥的**黑面罩與黑色的頦、喉、上胸連成一大片**，**頭頂是淡皮黃白色**（「白頂」之名所本），背與肩亦黑，**翼上有大白斑**；本種的**頭頂是灰色**，**黑色只限於眼先、耳羽與頰**，喉與胸是**白色**，翼上沒有大片白斑。站姿亦不同：白頂䳭多在**地面走動**，本種幾乎總在**灌木頂、圍欄或電線上**。",
+      "portraitNote": "白頂䳭雄鳥（0517 預定主圖，先在此作比較鳥）：淡色頭頂、黑面罩連黑喉與黑胸、翼上大白斑。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "KHM",
+      "LAO",
+      "MMR",
+      "NPL",
+      "PAK",
+      "THA",
+      "TWN",
+      "VNM"
+    ],
+    "note": "BirdLife 國家表共 **14 列**：**原生 12 列**（孟加拉、不丹、中國、印度、柬埔寨、寮國、緬甸、尼泊爾、巴基斯坦、泰國〔Breeding〕、台灣、越南），**12 個都在 110m 底圖上有幾何**，全部填色。**阿富汗一列 Origin 是「Uncertain」**（本批第一次遇到 Uncertain，不是 Native），依 0510 先例不填色；**日本一列是 Vagrant**，亦不填色。**香港不在 BirdLife 國家表內**，但本地是稀少的冬候鳥與過境鳥（見卡下註記）——兩者並不矛盾，BirdLife 國家表只列有繁殖或經常性紀錄的國家。分佈由**巴基斯坦東至中國中部與南部**，兩個亞種分別在**海拔 1,000 m 與 1,500 m 以上**繁殖、冬季降至較低海拔。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/051700",
+      "use": "香港第 I 類、**稀少的冬候鳥與過境鳥**，見於**林間空地、耕地與灌叢／草地**。**13–15 cm**。**成鳥雄鳥**：**灰色**、**白色眉紋**、**黑色面罩、黑色翼與尾**、**白色下體**；**第一齡雄鳥**相似但**上體帶褐調**。**雌鳥**：**頭與上體暖褐色**、**眉紋淡褐**、**腰與尾側紅褐色而尾中央深褐**、**下體除白喉與白腹外帶淡褐色**。聲音：多種叫聲，包括**帶轉折、略帶嗡嗡聲的『hzzeeoo』（似雀類）**、**『hzzzzt』**、**『shoo』**，以及較鼻音的**『zheet』／『zrrrt』**，另有**『chak』**；**鳴唱在香港很少聽到**，是**甜美而略急促、由頭到尾音高下降的短句**。生境：**開冠灌叢、林間空地與耕地的開闊處**，**愛停灌木與架空電線**；近年熱點為**石崗引水道**與**大嶼山二澳的稻田**。出現情況：**極端日期 9 月 14 日（該月唯一紀錄，次早為 10 月 1 日）與 4 月 20 日**；10 月首三週已有少量，**主要出現期為 10 月最後一週至 1 月第三週**，之後減少，但**2 月第三週有異常小高峰**，3 月與 4 月初仍有少量。**1998/99–2020/21 有三個冬季全無紀錄，14 個年度只有個位數字**；**2009/10 起有六個冬季達雙位數字**；**2013/14 的 17 隻為紀錄上第二高**，最高是 **1971/72 的 22 隻**。Carey et al.（2001）指**1970 年代初數量最高**、常有雙位數字，**1980 年代急跌**，1990 年代略回升，**2009/10 起再升**——HKBWS 認為 1990 年代以來的增加**很可能是觀察活動增加所致**。多為單隻，亦常見兩至三隻；**最高單次計數為 4 隻**（1940-01-31 林村、2015-12-04 二澳）。部分越冬鳥長期停留，例如 **2015-10-15 至 2016-03-11 石崗最多三隻**。另有一小撮在上述期間之外的紀錄，但**不能排除是逃逸或放生個體**（2003-07-01 與 07-05 大帽山、2007-05-16 蒲台、2007-03-31 至 06-03 大帽山）。歷史：**Swinhoe（1861）** 記 3 月第一個星期山區「相當豐富」，而 Kershaw（1904）、Vaughan & Jones（1913）、Herklots（1953）都只記為**罕見或偶見的冬候鳥**；**1940-01-31 林村 4 隻是 1930–1941 年間唯一紀錄**，Dove & Goodhart（1955）在 4 月 3 日與 13 日合共只見四隻；HKBWS 認為 **Swinhoe 的記述與後來紀錄不符，可能只是剛好遇上一次異常的湧入**。行為：**由棲枝飛撲地面捕食昆蟲**，**利用灌木與圍欄、柱子、架空電線**，亦會**像鶲一樣短飛捕食經過的昆蟲**（Hutson 1931）。分類：**兩個亞種**——***S. f. haringtoni*** 在中國**海拔 1,000 m 以上**繁殖（甘肅東南、陝西南部、安徽南部、上海以南至福建、廣東北部、廣西北部），冬季部分南遷至**中國南部（包括香港）與中南半島**；***S. f. ferreus*** 在**海拔 1,500 m 以上**由**巴基斯坦東至緬甸、泰國西北、寮国北部與中部、越南中部**及中國西南（藏東南、雲南西部與南部）繁殖，冬季降至**印度北部、緬甸南部與中南半島南部**（Collar 2020）。保育：**IUCN Least Concern，趨勢 stable**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/grey-bushchat-saxicola-ferreus/details",
+      "use": "IUCN **LC**、**2024 年評估**（2024–2004 皆 LC，2000／1994／1988 為 LR-lc）；**成熟個體 Unknown**、**趨勢 Stable（Suspected）**——理由是「沒有下降或重大威脅的證據」，與 HKBWS 的 stable 一致；種群未量化，**del Hoyo et al.（2005）** 稱**普遍常見**，中國估算（Brazil 2009）**100–100,000 繁殖對**；**EOO 留鳥／繁殖 7,640,000 km²、非繁殖 8,480,000 km²**、AOO Unknown、**Breeding endemic No**；**Migratory status：Not a Migrant（本批第一次）**——與 HKBWS 說香港見到的是「冬候鳥與過境鳥」並不衝突，BirdLife 的分類是就整個物種而言（大部分族羣留鳥，只有北緣部分南遷）；**IBA／KBA 為「-」**；**生態系統同時有 Freshwater 與 Terrestrial（本批第一次出現 Freshwater）**、海拔 **0–3,740 m**、世代 **2.0 年**（本批最短）、Landbird、**森林依賴度 Low**；**生境 12 項全部只是 Suitable、沒有一項 Major（與 0511 同類，本批第二次）**——市區、鄉村花園、人工林、耕地、温帶林、亞熱帶潮濕山地林、低地林、高山草原、乾燥草原、温帶灌叢、潮濕灌叢、高山灌叢各一；**用途與貿易：low prevalence，七個數據集中只有一個（本批最少）**，終端用途為**人類食用（Subsistence、National）**與**寵物／展示（Subsistence、National）——「寵物」首次只到 Subsistence 而沒有 International**；保育行動只有「已劃定保育地點（覆蓋全部範圍）」與「已納入國際法規」，**系統性監測 No**、**遷地保育 No**、**教育宣傳 No**；政策工具 **CMS 附錄 II**；AZE 與 Search for Lost Birds 皆 No；命名人 **Gray, 1846**。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **525** 項 灰林䳭 Grey Bush Chat（*Saxicola ferreus*），**第 I 類**；鄰項為 524 藍磯鶇與 526 東亞石䳭。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（灰林䳭；Gray Bushchat——注意 runtime 的英文用美式 Gray，HKBWS 與 BirdLife 用 Grey）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（*Saxicola ferreus*／鶲科 Muscicapidae）；speciesCode grybus1；taxonOrder 29459。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 2、a 2.8、v 2.7、r 1、c 1.2、o 1.9（vEst 1）），`missingScores` 為空；o 1.9 與五軸平均 1.94 相符。**但 a 與 o 列入 `withheldScores`**，原因見下。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "**沒有 `look` 欄位**，全份只有 `range`、`habitat`、`behavior` 三個 fieldCopy 與一段 `funFact`；而 `funFact` 只是分類與別名（「灰林鶺又名灰林鶺，為鶲科石䳭屬的鳥類，俗名灰叢樹石棲鳥」—— **兩個「鶺」都是錯字，應為「䳭」**），沒有任何可核對的形態描述 → 依 0494／0496／0503／0504 先例，**a 與 o 一併列入待查**（o 是由含 a 的五軸平均推導）。另外 `habitat` 與 `behavior` 英文同為一句生境描述、`range` 英文另有一份（Himalayas／southern China／Taiwan…）、**length 與 weight 皆為空**。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 66.3、tail 59.4、tarsus 20.8、bill 14.5、mass 14.7 g。"
+    }
+  ],
+  "withheldScores": {
+    "a": "runtime 有 a 2.8，但 `cardCopy.json` **完全沒有 `look` 欄位**——全份只有分佈、生境與一段純分類的 `funFact`（而且「灰林鶺」是錯字），沒有任何可核對的形態描述。依 0494／0496／0503／0504 從嚴先例，外觀分列入待查。",
+    "o": "o 1.9 是由含已被隱藏的 a 的五軸平均推導（(2+2.8+2.7+1+1.2)/5 = 1.94），依同一先例一併隱藏，卡面顯示「綜合評分待查」而非顯示一個建立在不可核對資料上的總分。"
+  },
+  "missingScores": [],
+  "notes": [
+    "香港狀況：名錄 2024 第 **525** 項、**第 I 類**；HKBWS 描述為**稀少的冬候鳥與過境鳥**。**極端日期 9 月 14 日（該月唯一）與 4 月 20 日**；**主要出現期為 10 月最後一週至 1 月第三週**，**2 月第三週有異常小高峰**。**1998/99–2020/21 有三個冬季全無紀錄、14 個年度只有個位數字**；**2013/14 的 17 隻為第二高**，最高是 **1971/72 的 22 隻**；**最高單次 4 隻**（1940 林村、2015 二澳）。",
+    "**數量史有明確的起落**：1970 年代初最高 → 1980 年代急跌 → 1990 年代略升 → 2009/10 起再升，但 HKBWS 明言 1990 年代以來的增加**很可能是觀察活動增加**而非真的回升。**Swinhoe（1861）「3 月山區相當豐富」的記述與後來所有紀錄都不符**，HKBWS 認為可能只是遇上一次異常湧入——這點照實記錄，不拿來當作「昔多今少」的證據。",
+    "**a 與 o 待查**：runtime 沒有任何 `look` 形態描述（`cardCopy.json` 連欄位都沒有），依 0494／0503／0504 先例把 a 與 o 一併隱藏；其餘四軸（i 2、v 2.7、r 1、c 1.2）照 runtime 顯示。這是本批第一次「六軸齊全但主動藏兩軸」的情況。",
+    "**英文名有兩個版本**：runtime 與 eBird／Clements 用 **Gray Bushchat**（美式拼法），HKBWS 與 BirdLife 用 **Grey Bush Chat**；卡面依 runtime 顯示「Gray Bushchat」，中文一律「灰林䳭」。",
+    "辨識要點：雄鳥——**灰色上體 + 長白眉 + 黑面罩 + 黑翼黑尾 + 白色下體**（第一齡雄鳥上體帶褐調）；雌鳥——**暖褐上體 + 淡褐眉 + 紅褐腰與尾側（尾中央深褐）+ 淡褐下體（喉與腹白）**。與**東亞石䳭**的分別是後者黑頭黑喉、橙褐胸、橙紅褐腰；與**白頂䳭**的分別是後者淡色頭頂、黑面罩連黑喉黑胸、翼上大白斑、多在地面活動。本種幾乎總停在**灌木頂、圍欄、柱子或電線上**，並常像鶲一樣短飛捕食。",
+    "分佈圖填 **12 個形狀**：BirdLife 原生 12 列全部有 110m 幾何；**阿富汗一列 Origin 為 Uncertain**（本批第一次）與**日本一列 Vagrant**都不填色；**香港不在 BirdLife 國家表內**（本地卻是稀少冬候鳥），已在說明指出兩者不矛盾。",
+    "**本批第一次出現的生態標籤**：`Not a Migrant`（物種整體不遷徙，只北緣部分南遷）與 **Freshwater 生態系統**（與 Terrestrial 並列）；另外生境 12 項**全部只是 Suitable、無 Major**，是 0511 之後第二次；貿易只有 **1/7 個數據集**（本批最少），而「寵物」一項首次只到 Subsistence、沒有 International。",
+    "插圖與兩張比較鳥皆為 AI 生成，非等比例、非專家認證。三張圖第一次生成時都帶水彩紙邊，已**重生並內縮 5.5% 裁掉殘留白邊**（主圖與 sim1 各一次；沿用 0515 的教訓）。比較鳥一是 **0515 主圖重繪的東亞石䳭雄鳥**、二是 **0517 預定主圖的白頂䳭雄鳥**，兩張都可給下一張卡沿用。"
+  ],
+  "missingScores_note": "runtime 六軸齊全，故 missingScores 為空；隱藏的是 a 與 o，見 withheldScores。"
+}
