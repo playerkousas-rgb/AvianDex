@@ -1,0 +1,152 @@
+{
+  "id": "0551",
+  "name": "鳳頭鵐",
+  "scientificName": "Emberiza lathami",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Emberiza lathami, AI approximation of adult male.",
+  "featureCrops": [
+    [
+      0.13,
+      0.09,
+      0.31,
+      0.28
+    ],
+    [
+      0.16,
+      0.3,
+      0.34,
+      0.48
+    ],
+    [
+      0.28,
+      0.39,
+      0.49,
+      0.53
+    ],
+    [
+      0.58,
+      0.55,
+      0.8,
+      0.7
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥明顯冠羽",
+    "深灰黑色身體",
+    "栗色翼覆羽",
+    "尾基部栗色"
+  ],
+  "featureNotes": [
+    "雄鳥有明顯而較長的冠羽；雌鳥冠較短。",
+    "雄鳥身體深灰至黑色。",
+    "雄鳥翼覆羽及飛羽邊栗色。",
+    "雄鳥尾基約三分之二栗色。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "鐵爪鵐",
+      "scientificName": "Calcarius lapponicus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖雄鐵爪鵐黑臉白腹、栗後頸，沒有鳳頭鵐的明顯冠羽。",
+      "portraitNote": "AI 繁殖雄羽，足趾不可靠、黑胸或偏小。"
+    },
+    {
+      "zh": "黑頭鵐",
+      "scientificName": "Emberiza melanocephala",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖雄黑頭鵐黑頭、栗背及鮮黃下體，鳳頭鵐雄鳥深色身體有冠羽。",
+      "portraitNote": "AI 繁殖雄鳥示意，翼尾黃斑及腳趾可能不準。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "CHN",
+      "IND",
+      "LAO",
+      "MMR",
+      "NPL",
+      "PAK",
+      "THA",
+      "VNM"
+    ],
+    "note": "Partial NATIVE-country overview only; breeding and other seasonal categories combined; not occurrence polygon or whole-country occupancy. BirdLife EOO breeding/resident 8.17m and nonbreeding 7m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/055700",
+      "use": "香港 I 類稀少遷徙冬候、香港繁殖族群已絕；雄鳥冠羽、栗翼尾；採 Melophus lathami。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/055600",
+      "use": "鐵爪鵐雄繁殖羽及香港狀況。"
+    },
+    {
+      "url": "https://ebird.org/species/blhbun1",
+      "use": "黑頭鵐雄繁殖羽黑頭黃下體栗背，分類可能異於 runtime。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/crested-bunting-emberiza-lathami/details",
+      "use": "2025 LC、全球數量和趨勢未知；原生國家和 EOO。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza lathami、Emberizidae。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 4.7、v 2.9（含體長估算）、r 4.8、c 1.2、o 3.1。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "雄鳥冠羽深身栗翼尾；funFact 自稱唯一屬種與 runtime Emberiza 分類不一致，多語欄位部分錯位，不修改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 79.9、tail 68.8、tarsus 20.5、bill 15.3 mm、mass 21.9 g。"
+    }
+  ],
+  "notes": [
+    "香港罕見遷徙及冬候，昔日繁殖族群已在本地消失；主圖為雄羽。",
+    "AI 三圖非專家認證、非等比例；主圖冠羽可能偏高、腳趾不可靠；黑頭鵐翼尾黃斑或不準。",
+    "BirdLife 2025 LC、全球趨勢及數量未知，不能推斷香港繁殖狀況；地圖為部分原生國家概覽，非全境。",
+    "runtime funFact 稱獨立單種屬與 runtime 分類不一致，部分雙語欄位錯位；不改 runtime；v 含體長估算。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

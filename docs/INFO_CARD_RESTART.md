@@ -4382,3 +4382,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/055600`：I 類迷鳥，已記錄 2018、2021；主圖為繁殖雄羽示意。BirdLife 2025 LC、全球下降，與 HKBWS 舊頁所稱增加不同；地圖為部分原生國家概覽，非全境。
 - AI 圖非專家認證；主圖後爪及足趾不可靠，黑胸或偏小；鳳頭鵐冠羽或偏高。runtime 缺 i、c，不推算；v 含體長估算；range fieldCopy 與正文不一致，未改 runtime。validator `errors: []`，未改 UI、R2 或 runtime。
 - 下一張 0551。
+
+## 新批次 0501–0583：0551 已交付
+
+- [0551 鳳頭鵐](https://drive.google.com/file/d/16DlTY-m_AP6cHQdEcWdSJygdC_U8E5pm/view)：136106 bytes，MD5 `068f3d5ff93ea7652f4dfd52db68e374`，SHA256 `08c7a2051f0da429b08da4b5b32f312a8c3ebf732d7663f48a616ff71c0d82b8`；查重無結果，get_file 核驗 MIME、尺寸、父目錄與 hash。
+- HKBWS `0460/055700`：I 類稀少遷徙及冬候，昔日繁殖族群已在本地消失；採 Melophus 屬，runtime 與 BirdLife 採 Emberiza。BirdLife 2025 LC，全球數量和趨勢未知。地圖是部分原生國家概覽，非全境。
+- AI 三圖非專家認證、非等比例，主圖冠羽或偏高且足趾不可靠，黑頭鵐翼尾黃斑或不準。runtime funFact 稱單種屬與 runtime 分類不一致，部分多語欄位錯位；v 含估算；不改 runtime。validator `errors: []`；未改 UI、R2。
+- 下一張 0552。
