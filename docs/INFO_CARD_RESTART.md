@@ -4594,3 +4594,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0581 灰樹鵲](https://drive.google.com/file/d/124N2iM9PlzrtxooxR9F2rf0LMJ9aL0cO/view)：126125 bytes，MD5 `42797d8a6bc82cc95404c0619b59673c`，SHA256 `da59e949021c55e55a256979644946d1ee3c41930f3b6573cb45f61760b1f769`；查重無結果，get_file 獨立核驗。
 - HKBWS 局部常見留鳥、香港亞種 sinica；BirdLife 2024 LC，全球數量未知、疑下降，地圖只作原生國家概覽。
 - AI 插圖未經專家認證：主圖尾尖過度匙形、白羽基偏少、黑喉偏暗；棕腹樹鵲橙色過飽和、喜鵲光澤偏藍，羽列足趾近似。六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
+
+## 新批次 0501–0583：0582 已交付
+
+- [0582 黃頰山雀](https://drive.google.com/file/d/1uy4KV7-a5XJ5s6GQNoJLEsCSuIC2TwD9/view)：126753 bytes，MD5 `32747219740e4e05dde1b34b52ab3dcf`，SHA256 `6131ef19a2bebf8fdc508ac08d477d76225f6944d80aabde86f5312751d023b7`；查重無結果，get_file 獨立核驗。
+- HKBWS 將香港群體列 IIA、視為籠養後建立，BirdLife 卻列香港原生，來源判斷不同；BirdLife 2024 LC、全球數量未知及估計下降。地圖僅原生國家概覽，來源不明的孟加拉未上色。
+- AI 圖未經專家認證：冠過高、眼紋不清、黃頸側不完整；比較鳥翼背偏色、腹帶側視不明，羽列足趾近似。六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
