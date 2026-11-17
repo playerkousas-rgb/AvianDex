@@ -4396,3 +4396,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/056900`：香港秋季稀少過境、春季與冬季罕見，BirdLife 視香港及中國迷鳥；主圖為繁殖雄羽，雌幼及冬羽不同。BirdLife 2024 LC、初估 760–2750 萬成熟個體、趨勢未知；國家表漏列印度，以 HKBWS 和 BirdLife 文字補充。地圖為部分國家概覽而非全境；巴勒斯坦在所用底圖不匹配，已從規格剔除（原圖未著色）。
 - AI 圖非專家認證、非等比例；主圖足趾不可靠，褐頭鵐黃臀或偏顯眼，鳳頭鵐冠羽或偏高。runtime habitat 缺名稱，部分欄位錯位；v 含估算，不改 runtime。修正底圖 ISO3 後 validator `errors: []`；未改 UI、R2。
 - 下一張 0553。
+
+## 新批次 0501–0583：0553 已交付
+
+- [0553 褐頭鵐](https://drive.google.com/file/d/1zt1x75z5Qwl0pgx-TOuzCEuWA9B6EYom/view)：134813 bytes，MD5 `90d916c36a8132e58a6324b948cede62`，SHA256 `4cb11df927d51659bd83ec6908c85cfbbcf5df7aa631ae5c7bac4206215b1b94`；查重無結果，get_file 核驗 MIME、尺寸、父目錄及 hash。
+- HKBWS `0460/057000`：香港 I 類冬季迷鳥及春季紀錄；主圖繁殖雄羽。BirdLife 2025 LC、全球疑增加、數量未知，與 HKBWS 舊頁穩定不同；國家概覽合併季節非全境。
+- AI 三圖非等比例非專家認證，主圖黃臀形似翼帶或過顯眼、背紋或偏重、足趾不可靠；鳳頭鵐冠羽或偏高。runtime 部分多語欄位錯位，英國紀錄與非法貿易推斷不等於全球趨勢，v 含估算，不改 runtime。validator `errors: []`；未改 UI、R2。
+- 下一張 0554。

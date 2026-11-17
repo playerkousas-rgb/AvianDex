@@ -1,0 +1,161 @@
+{
+  "id": "0553",
+  "name": "褐頭鵐",
+  "scientificName": "Emberiza bruniceps",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Emberiza bruniceps, AI approximation of breeding male.",
+  "featureCrops": [
+    [
+      0.69,
+      0.23,
+      0.87,
+      0.4
+    ],
+    [
+      0.52,
+      0.49,
+      0.72,
+      0.61
+    ],
+    [
+      0.46,
+      0.37,
+      0.65,
+      0.49
+    ],
+    [
+      0.82,
+      0.27,
+      0.94,
+      0.37
+    ]
+  ],
+  "featureLabels": [
+    "繁殖雄鳥赤褐頭",
+    "鮮黃色下體",
+    "褐橄欖色上體",
+    "短錐形淡色喙"
+  ],
+  "featureNotes": [
+    "繁殖雄鳥頭臉赤褐，冬羽受褐羽緣遮蓋。",
+    "繁殖雄鳥下體明亮黃色。",
+    "上體偏橄欖褐。",
+    "喙較黑頭鵐稍短弱；雌幼羽十分相似。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "黑頭鵐",
+      "scientificName": "Emberiza melanocephala",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖雄黑頭鵐黑頭栗背、黃下體，雄褐頭鵐頭赤褐；雌幼鳥難分。",
+      "portraitNote": "AI 繁殖雄羽示意，足趾不可靠。"
+    },
+    {
+      "zh": "鳳頭鵐",
+      "scientificName": "Emberiza lathami",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳳頭鵐有冠羽和深色身體栗翼尾，不具褐頭鵐赤褐頭黃下體。",
+      "portraitNote": "AI 雄鳥示意，冠羽或偏高。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "BGD",
+      "CHN",
+      "IND",
+      "IRN",
+      "KAZ",
+      "KWT",
+      "KGZ",
+      "MNG",
+      "NPL",
+      "PAK",
+      "RUS",
+      "TJK",
+      "TKM",
+      "UZB"
+    ],
+    "note": "Partial native-country overview only, excludes vagrants. Combined breeding, passage and nonbreeding; not whole-country occurrence polygon. BirdLife EOO breeding 5.78m, nonbreeding 1.86m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057000",
+      "use": "香港 I 類冬季迷鳥及春季紀錄；雌幼鳥與黑頭鵐相似、冬雄褐羽緣。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056900",
+      "use": "黑頭鵐辨識。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/055700",
+      "use": "鳳頭鵐雄鳥冠羽、栗翼。"
+    },
+    {
+      "url": "https://ebird.org/species/rehbun1",
+      "use": "繁殖雄鳥赤褐頭黃下體；eBird 使用 Melophus。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/red-headed-bunting-emberiza-bruniceps/details",
+      "use": "2025 LC，數量未知，全球疑增加；HKBWS 舊頁稱穩定。原生國家及 EOO。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza bruniceps，Emberizidae。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 2.8、v 3（含體長估算）、r 3.3、c 3、o 2.8。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "多語欄位部分錯位；英國紀錄與非法貿易的推斷不等於全球趨勢；不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 86.1、tail 68.1、tarsus 20.1、bill 15.8 mm、mass 24.8 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類冬季迷鳥、有春季紀錄；主圖為繁殖雄羽，非香港常見雌幼冬羽。",
+    "AI 圖非專家認證、非等比例；主圖黃臀形似翼帶且可能過分顯眼，背部紋理或偏重、腳趾不可靠；鳳頭鵐冠羽或偏高。",
+    "BirdLife 2025 全球疑增加、數量未知，HKBWS 舊頁稱穩定；地圖是原生國家概覽、非全境。",
+    "runtime v 含估算，部分多語欄位錯位；英國紀錄與非法貿易推斷不等於全球趨勢，不改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
