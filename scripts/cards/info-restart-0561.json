@@ -1,0 +1,212 @@
+{
+  "id": "0561",
+  "name": "蘆鵐",
+  "scientificName": "Emberiza schoeniclus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "illustrationTaxon": "Emberiza schoeniclus, AI approximation of breeding male.",
+  "featureCrops": [
+    [
+      0.69,
+      0.26,
+      0.83,
+      0.36
+    ],
+    [
+      0.65,
+      0.31,
+      0.81,
+      0.42
+    ],
+    [
+      0.48,
+      0.36,
+      0.66,
+      0.47
+    ],
+    [
+      0.45,
+      0.49,
+      0.63,
+      0.6
+    ]
+  ],
+  "featureLabels": [
+    "雄鳥黑頭及喉",
+    "白鬚與白頸圈",
+    "褐背深色條紋",
+    "淡色腹及脅"
+  ],
+  "featureNotes": [
+    "繁殖雄鳥頭及喉黑色，冬季常被淡羽緣遮蓋。",
+    "繁殖雄白色鬚紋及頸圈。",
+    "背褐色有深紋，翼帶暖栗色。",
+    "腹色淡而帶脅紋，圖中紋路略重。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "葦鵐",
+      "scientificName": "Emberiza pallasi",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "葦鵐通常較小、嘴較細、翼色較冷淡；繁殖雄同樣有黑頭白鬚。",
+      "portraitNote": "AI 繁殖雄鳥，翼偏暖、白鬚略短。"
+    },
+    {
+      "zh": "紅頸葦鵐",
+      "scientificName": "Emberiza yessoensis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "紅頸葦鵐有赭色腰，圖示首冬雌鳥；本卡主圖為繁殖雄鳥。",
+      "portraitNote": "AI 首冬雌鳥腰偏鮮及過長，非等比例。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BLR",
+      "BEL",
+      "BIH",
+      "BGR",
+      "CHN",
+      "HRV",
+      "CYP",
+      "CZE",
+      "DNK",
+      "EGY",
+      "EST",
+      "FIN",
+      "FRA",
+      "GEO",
+      "DEU",
+      "GRC",
+      "HUN",
+      "IND",
+      "IRN",
+      "IRQ",
+      "IRL",
+      "ISR",
+      "ITA",
+      "JPN",
+      "JOR",
+      "KAZ",
+      "KWT",
+      "KGZ",
+      "LVA",
+      "LBN",
+      "LBY",
+      "LTU",
+      "LUX",
+      "MDA",
+      "MNG",
+      "MNE",
+      "MAR",
+      "NLD",
+      "PRK",
+      "MKD",
+      "NOR",
+      "POL",
+      "PRT",
+      "ROU",
+      "RUS",
+      "SRB",
+      "SVK",
+      "SVN",
+      "KOR",
+      "ESP",
+      "SWE",
+      "CHE",
+      "SYR",
+      "TJK",
+      "TUN",
+      "TKM",
+      "TUR",
+      "UKR",
+      "GBR",
+      "UZB"
+    ],
+    "note": "BirdLife 2018 extant native country overview, seasons combined; Russia rows merged. Native Faroe Islands, Liechtenstein, Malta omitted due to missing 110m geometry; Hong Kong and other vagrants excluded. Country shading not whole-country occupancy. EOO breeding 42.1m, nonbreeding 40.9m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057500",
+      "use": "HKBWS 搜索索引快照：I 類稀少冬候鳥，繁殖雄黑頭白鬚頸圈、褐背；頁面擷取目前轉址404。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057300",
+      "use": "葦鵐較小嘴細、灰色小覆羽和淡腰。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057400",
+      "use": "紅頸葦鵐首冬暖褐、赭腰。"
+    },
+    {
+      "url": "https://ebird.org/species/reebun",
+      "use": "繁殖雄黑白頭、褐色翼，對比葦鵐。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/reed-bunting-emberiza-schoeniclus/details",
+      "use": "2018 LC，估2000–4000萬成熟個體、下降；國家表。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza schoeniclus、鵐科；eBird 網頁採 Schoeniclus。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 4.3、v 2.9（vEst）、r 4.8、c 3、o 3.4。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "雄鳥形態文字；原文含來源請求，多語欄位錯位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 77.9、tail 63.6、tarsus 19.3、bill 11.3 mm、mass 18.4 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類稀少冬候鳥，HKBWS 搜索索引有描述但原頁擷取時重定向至 404；主圖為繁殖雄鳥，本地少見繁殖羽。",
+    "AI 圖非專家認證、非等比例，腹脅條紋偏深、白鬚偏短、足趾不可靠；葦鵐圖翅偏暖，紅頸葦鵐為首冬雌鳥且赭腰過鮮。",
+    "BirdLife 2018 LC、估2000–4000萬成熟個體、趨勢下降；香港列迷鳥不填，地圖國家概覽非全境。",
+    "runtime v 含估算，部分文字有來源請求及欄位錯位；照錄分數不改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
