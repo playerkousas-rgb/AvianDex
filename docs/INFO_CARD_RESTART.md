@@ -4472,3 +4472,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/056700` 香港 I 類秋季常見過境、春季不常見、冬季稀少；主圖繁殖雄。BirdLife 2017 CR、數量未知且下降；香港及新加坡原生但底圖無形狀，芬蘭可能滅絕不填；地圖僅國家概覽。
 - AI 圖非專家認證、非等比例，翼斑偏大、栗胸帶與黑喉不準，黑色延伸胸帶下、足趾不可靠；比較圖限制見 spec。runtime 英文 look 與物種不符，多語欄位錯位；分數照錄，未改 runtime/UI/R2。validator `errors: []`。
 - 下一張 0563。
+
+## 新批次 0501–0583：0563 已交付
+
+- [0563 小鵐](https://drive.google.com/file/d/1uL-cPIZF4cpk55RNLWpWszy7ySGM-DeY/view)：135069 bytes，MD5 `5e72d4c49106a754ea1f2f4f0ce5de9f`，SHA256 `5504433e59faa9dd8b75c602f66045389ca03458e85a4bc194cdbed35df21214`；查重無結果，get_file 獨立核驗。
+- HKBWS `0460/056300` 香港 I 類十一月至四月不常見；BirdLife 2025 LC，3300–4800萬成熟個體為初估、趨勢未知；地圖是原生國家概覽，非全境。
+- AI 圖非專家認證、非等比例，主圖頭紋胸紋過重、嘴偏大，足趾不可靠；田鵐胸帶偏寬、比較鳥為雄羽。runtime 分數照錄、部分文案欄位錯位或截斷；未改 runtime/UI/R2。validator `errors: []`。
+- 下一張 0564。
