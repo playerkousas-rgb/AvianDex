@@ -4600,3 +4600,11 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0582 黃頰山雀](https://drive.google.com/file/d/1uy4KV7-a5XJ5s6GQNoJLEsCSuIC2TwD9/view)：126753 bytes，MD5 `32747219740e4e05dde1b34b52ab3dcf`，SHA256 `6131ef19a2bebf8fdc508ac08d477d76225f6944d80aabde86f5312751d023b7`；查重無結果，get_file 獨立核驗。
 - HKBWS 將香港群體列 IIA、視為籠養後建立，BirdLife 卻列香港原生，來源判斷不同；BirdLife 2024 LC、全球數量未知及估計下降。地圖僅原生國家概覽，來源不明的孟加拉未上色。
 - AI 圖未經專家認證：冠過高、眼紋不清、黃頸側不完整；比較鳥翼背偏色、腹帶側視不明，羽列足趾近似。六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
+
+## 新批次 0501–0583：0583 已交付
+
+- 用戶移除目的資料夾內舊同名檔後查重無結果，上載 [0583 山麻雀](https://drive.google.com/file/d/1XBHnA_3MR9kO8w7y3KzF4nar5mCAc1th/view)，獨立 get_file 核驗名稱、parent、MIME、大小、MD5。新檔 ID 不同於已移除舊檔。
+- 130482 bytes，MD5 `a588fb3beeb18686d6e4aa7e71e9d397`，SHA256 `16240a7ea475769e8440a2ed9775fbc5c021cd1470188cc1531322c387f7ee6d`；卡片與裁切預覽已檢視。
+- HKBWS I 類罕見秋季過境，以塱原為主，香港所見亞種不明；BirdLife 2024 LC，全球數量未量化，疑穩定。地圖只作原生國家概覽，阿富汗迷鳥不填。
+- AI 插圖未經專家認證、非等比例；主圖喙偏長、羽列及腳趾近似；比較鳥頰斑形狀或喉斑有偏差。六項分數缺值待查。驗證 `errors: []`；未改 runtime/UI/R2。
+- 0501–0583 本批次完成並交付 Drive；不代表已在 R2 或網站部署。
