@@ -4576,3 +4576,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0578 草原鵰](https://drive.google.com/file/d/1qpa6AmoOjdS_6C7lEcd-diQ1dNv94aRK/view)：125761 bytes，MD5 `47ccb9352774dd0526320b4576c35c6a`，SHA256 `e7127ab21702aaf8863c374283f48368fb0da50f734cc5aabf879fd171f1a862`；查重無結果，get_file 獨立核驗。
 - HKBWS I 類迷鳥；BirdLife 2021 EN，估5萬–7.5萬成熟個體、下降。世界圖為部分原生國家概覽，非全境或精確季節分佈。
 - AI 插圖未經專家認證：未成鳥嘴裂偏短、尾尖窄，翼帶與足趾不精確；比較鳥白斑過多，羽列與足趾近似。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
+
+## 新批次 0501–0583：0579 已交付
+
+- [0579 褐耳鷹](https://drive.google.com/file/d/1wCjhaL2K30xJICT-5z7nORxNbIr2FO3E/view)：125302 bytes，MD5 `39dafc9d0c8e10691055b505488584e1`，SHA256 `cea31936a4d1dd662c7985f10c2dfce1341f29bbc81eec91b1f56853efdff689`；查重無結果，get_file 獨立核驗。
+- HKBWS I 類名錄；BirdLife 舊屬名 Accipiter badius，2021 LC，估50萬–999,999成熟個體、穩定；世界圖部分原生國家，非全境。
+- AI 插圖未經專家認證：雄鳥尾帶偏粗、腹紋過規則，鳳頭鷹冠過顯眼，赤腹鷹尾偏長，足趾與羽列不精確。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
