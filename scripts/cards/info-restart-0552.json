@@ -1,0 +1,185 @@
+{
+  "id": "0552",
+  "name": "黑頭鵐",
+  "scientificName": "Emberiza melanocephala",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Emberiza melanocephala, AI approximation of breeding male.",
+  "featureCrops": [
+    [
+      0.65,
+      0.26,
+      0.83,
+      0.43
+    ],
+    [
+      0.47,
+      0.34,
+      0.67,
+      0.46
+    ],
+    [
+      0.57,
+      0.48,
+      0.75,
+      0.6
+    ],
+    [
+      0.76,
+      0.29,
+      0.89,
+      0.4
+    ]
+  ],
+  "featureLabels": [
+    "繁殖雄鳥黑頭",
+    "栗褐色背部",
+    "鮮黃色下體",
+    "粗短錐形喙"
+  ],
+  "featureNotes": [
+    "繁殖雄鳥黑頭，冬羽常被褐羽緣遮蓋。",
+    "雄鳥背栗褐。",
+    "繁殖雄鳥頸環及下體鮮黃。",
+    "喙粗短；雌及幼鳥和褐頭鵐相近。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "褐頭鵐",
+      "scientificName": "Emberiza bruniceps",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖雄褐頭鵐頭赤褐而非黑色；雌及幼鳥與黑頭鵐難區分。",
+      "portraitNote": "AI 繁殖雄鳥示意，黃色臀部偏顯眼，腳趾不可靠。"
+    },
+    {
+      "zh": "鳳頭鵐",
+      "scientificName": "Emberiza lathami",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳳頭鵐具明顯冠羽與黑身栗翼，非黑頭鵐黃腹栗背。",
+      "portraitNote": "AI 雄鳥示意，冠羽或偏高。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "ALB",
+      "ARM",
+      "AZE",
+      "BIH",
+      "BGR",
+      "HRV",
+      "CYP",
+      "EGY",
+      "GEO",
+      "GRC",
+      "IND",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "ITA",
+      "JOR",
+      "KAZ",
+      "KWT",
+      "LBN",
+      "MNE",
+      "NPL",
+      "MKD",
+      "OMN",
+      "PSE",
+      "QAT",
+      "ROU",
+      "RUS",
+      "SAU",
+      "SRB",
+      "SVN",
+      "SYR",
+      "TUR",
+      "UKR",
+      "ARE",
+      "GBR"
+    ],
+    "note": "Partial native-country overview only, excludes vagrants including China/Hong Kong per BirdLife; India included based on HKBWS winter range despite omission in BirdLife country table. Combined seasons, not whole-country occurrence polygon. BirdLife EOO breeding 6.12m, nonbreeding 0.723m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056900",
+      "use": "香港 I 類秋季稀少過境、春季及冬季罕見；印度越冬、雄冬羽及近似種辨識。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/057000",
+      "use": "褐頭鵐香港冬季迷鳥與近似種辨識。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/055700",
+      "use": "鳳頭鵐雄鳥冠羽、栗翼。"
+    },
+    {
+      "url": "https://ebird.org/species/blhbun1",
+      "use": "繁殖雄鳥黑頭、黃頸環下體和栗背；eBird 目前使用 Melophus。"
+    },
+    {
+      "url": "https://ebird.org/species/rehbun1",
+      "use": "褐頭鵐雄繁殖羽紅頭黃身。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/black-headed-bunting-emberiza-melanocephala/details",
+      "use": "2024 LC，初估 760–2750 萬成熟個體、趨勢未知；國家表缺印度但文中亦描述主要在印度越冬。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza melanocephala、Emberizidae。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 2.8、v 3.1（含體長估算）、r 4.8、c 1.2、o 2.8。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "habitat 文案缺失物種名、部分欄位截斷或對照錯誤，不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 94.3、tail 72.2、tarsus 21.3、bill 16.8 mm、mass 28.3 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類秋季稀少遷徙、冬季和春季罕見；主圖繁殖雄羽，冬羽及雌幼鳥不同。",
+    "AI 圖非專家認證、非等比例；主圖足趾不可靠，褐頭鵐黃臀或偏顯眼，鳳頭鵐冠羽或偏高。",
+    "BirdLife 國家表遺漏印度，按 HKBWS 及 BirdLife 生態文字補印度；中國、香港在 BirdLife 為迷鳥未著色，但 HKBWS 視香港為稀少過境。地圖非實際佔滿整國。",
+    "runtime habitat 缺物種名稱、部分文句截斷或多語欄位錯位；v 含估算，不改 runtime。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
