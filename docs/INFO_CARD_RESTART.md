@@ -4261,3 +4261,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `species/0440/053600`：香港 I 類、稀少至不常見冬候及過境鳥，指名亞種雄繁殖羽黃頭腹、灰背和黑頸帶；香港多第一冬羽，與主圖不同。主圖及比較圖為 AI，非專家認證；頭頂略灰綠、頸帶過粗、腳趾不清。
 - BirdLife 2019 LC、增加，全球 200–500 萬成熟個體屬極初步低質量推算，需驗證。BirdLife 列香港迷鳥與 HKBWS 本地評估不同；國家地圖合併季節、非全境，香港缺獨立幾何。
 - runtime 文案截斷、錯置及異常 alias 已記錄不改；六軸及 vEst 原樣保留。`verify-info-card.py 0531` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0532 已交付
+
+- [0532 白鶺鴒](https://drive.google.com/file/d/1WJGKcAMjuG0nVTgZCEONDZrPnp-c3bws/view)：136424 bytes，MD5 `b384c6e9d3041bde4786358d9d149ae7`，SHA256 `7f6f514ccfe1419a205c64810ab4bb0dd3256e955034547573354e5ab2d9d2cf`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/053810`：香港 I 類，*leucopsis* 常見過境及冬候，亦有繁殖；成年雄鳥白臉白喉、黑後冠黑胸斑。原生成圖錯誤黑喉，修正為白喉，但翼覆羽白色可能不足；主圖及比較圖均為 AI 示意、非專家認證；山鶺鴒圖胸紋不準確。
+- BirdLife 2019 LC，全球穩定，1.35–2.21 億成熟個體；地圖為部分原生現存國家概覽，合併季節、非全境，香港缺獨立底圖幾何。
+- runtime 文案有翻譯品質警告、錯置及殘句，已記錄不改；六軸原樣保留。`verify-info-card.py 0532` 通過（`errors: []`）。
