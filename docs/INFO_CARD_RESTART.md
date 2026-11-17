@@ -4321,3 +4321,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0540 紅喉鷚](https://drive.google.com/file/d/1xfE50Ki75yLm_gWg9HzMuATNB2xV0Yoo/view)：147123 bytes，MD5 `f29e4541c021e7f46f215884c7e86c6d`，SHA256 `349ef1c04f0e8d2db0a2f5643fc0bbc8776b0988ccbddb358608ea8d712b6382`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
 - HKBWS `species/0440/054500`：香港 I 類常見過境及冬候，主圖為繁殖羽、非繁殖羽不紅喉。三圖 AI 示意、非等比例非專家認證；主圖脅紋偏淡、翼紋強烈、腳趾不可靠，初級飛羽突出難判。
 - BirdLife 2019 LC、估計 200 萬成熟個體、懷疑穩定；原生國家概覽合併季節非全境，略去細小地區。runtime 同名重複未改，六軸保留。`verify-info-card.py 0540` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0541 已交付
+
+- [0541 水鷚](https://drive.google.com/file/d/1FCn4JnjpD0S3mHelWGQvLnaycT8mvg7_/view)：142387 bytes，MD5 `aae80e6d121ba34719a475231bf7e660`，SHA256 `aed0965233dd8437849a832fc00c090f8928ba0836737c718cd690fb30660659`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0440/054700`：香港 I 類迷鳥；水鷚冬羽下體較白、褐紋較模糊。三圖 AI 示意、非等比例非專家認證；主圖冬羽胸紋較尖、鬚紋或偏強、腳趾不可靠，黃腹鷚背及臉紋或過強。HKBWS 比較黃腹鷚用較廣義 A. rubescens，runtime 已拆為 A. japonicus。
+- BirdLife 2018 LC、1000–2999.9999 萬成熟個體、懷疑穩定；原生國家概覽合併季節非全境；六軸保留。`verify-info-card.py 0541` 通過（`errors: []`）。

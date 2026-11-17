@@ -1,0 +1,204 @@
+{
+  "id": "0541",
+  "name": "水鷚",
+  "scientificName": "Anthus spinoletta",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2018 評定"
+  },
+  "illustrationTaxon": "Anthus spinoletta, AI approximation of nonbreeding plumage.",
+  "featureCrops": [
+    [
+      0.07,
+      0.2,
+      0.3,
+      0.32
+    ],
+    [
+      0.32,
+      0.28,
+      0.55,
+      0.39
+    ],
+    [
+      0.17,
+      0.34,
+      0.37,
+      0.5
+    ],
+    [
+      0.3,
+      0.57,
+      0.53,
+      0.75
+    ]
+  ],
+  "featureLabels": [
+    "白眉與深色喙",
+    "褐色背部細紋",
+    "冬羽淡腹褐紋",
+    "腿腳通常較深"
+  ],
+  "featureNotes": [
+    "眉紋顯白、嘴較長而強；鬚紋相對不顯著。",
+    "上體褐而具紋，尾上覆羽與背略有對比。",
+    "冬羽腹面較白、胸脅棕紋較模糊；繪圖較尖銳。",
+    "冬羽腿通常較黃腹鷚深；圖中腳趾結構不可靠。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "黃腹鷚",
+      "scientificName": "Anthus japonicus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "黃腹鷚眉及鬚紋較突出，上體較灰且較少紋；水鷚喙較強、冬羽腹較白且紋較模糊。",
+      "portraitNote": "AI 示意冬羽，灰背紋及臉紋可能過強；HKBWS 比較用較廣義 rubescens。"
+    },
+    {
+      "zh": "紅喉鷚",
+      "scientificName": "Anthus cervinus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "紅喉鷚繁殖羽臉喉呈磚紅，並有粗背紋；水鷚繁殖羽淡桃胸而喉不紅。",
+      "portraitNote": "AI 繁殖羽示意，脅紋偏淡、翼紋偏強。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "DZA",
+      "ARM",
+      "AUT",
+      "AZE",
+      "BEL",
+      "BIH",
+      "BGR",
+      "CHN",
+      "HRV",
+      "CYP",
+      "CZE",
+      "DNK",
+      "EGY",
+      "EST",
+      "FIN",
+      "FRA",
+      "GEO",
+      "DEU",
+      "GRC",
+      "HUN",
+      "IND",
+      "IRN",
+      "IRQ",
+      "IRL",
+      "ISR",
+      "ITA",
+      "JOR",
+      "KAZ",
+      "KWT",
+      "KGZ",
+      "LBN",
+      "LBY",
+      "MNG",
+      "MNE",
+      "MAR",
+      "NPL",
+      "NLD",
+      "MKD",
+      "NOR",
+      "OMN",
+      "PAK",
+      "POL",
+      "PRT",
+      "QAT",
+      "ROU",
+      "RUS",
+      "SAU",
+      "SRB",
+      "SVK",
+      "SVN",
+      "KOR",
+      "ESP",
+      "SWE",
+      "CHE",
+      "SYR",
+      "TWN",
+      "TJK",
+      "TUN",
+      "TKM",
+      "TUR",
+      "UKR",
+      "ARE",
+      "GBR",
+      "UZB"
+    ],
+    "note": "Partial NATIVE-country overview, combines breeding, resident, nonbreeding, passage and season unknown. Omits small territories; whole-country shading not occupancy. BirdLife EOO breeding 17.5m, nonbreeding 31.4m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054700",
+      "use": "香港 I 類迷鳥；與黃腹鷚比較，水鷚冬羽較白、紋較褐且模糊、腿通常較暗，嘴較長強；香港 blakistoni。HKBWS 頁以較廣義 A. rubescens 比較，runtime 黃腹鷚為拆分 A. japonicus。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0440/054500",
+      "use": "紅喉鷚繁殖羽臉胸磚紅、背粗紋。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/water-pipit-anthus-spinoletta/details",
+      "use": "2018 LC，1000–2999.9999 萬成熟個體，懷疑穩定；原生國家與 EOO。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Anthus spinoletta，speciesCode watpip1；比較黃腹鷚為 A. japonicus。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 2、a 3.8、v 2.8、r 4.8、c 1.2、o 2.9。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "形態文字提及春季羽，插畫為冬羽；不改 runtime。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 86.9、tail 63.3、tarsus 22.9、bill 16.4、mass 23.9 g。"
+    }
+  ],
+  "notes": [
+    "香港迷鳥。主圖冬羽，繁殖羽胸淡桃色。",
+    "三圖 AI 示意非專家認證、非等比例；主圖胸紋較尖銳、鬚紋或偏強、腳趾不可靠；黃腹鷚示意背和臉紋可能過強。",
+    "HKBWS 比較黃腹鷚時用較廣義 A. rubescens，runtime 已拆為 A. japonicus。",
+    "原生國家概覽合併季節，不代表全境；六軸保留。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
