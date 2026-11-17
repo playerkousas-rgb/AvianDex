@@ -155,7 +155,6 @@
       "SVK",
       "SVN",
       "SOM",
-      "SSD",
       "ESP",
       "LKA",
       "SDN",
@@ -173,7 +172,7 @@
       "UZB",
       "YEM"
     ],
-    "note": "選取 BirdLife 列為原生現存的部分國家並按 Natural Earth 110m 填色，非全部原生或全球分佈；未顯示廣泛引入地，亦不表示國家全境均有。秘魯在 BirdLife 表中標原生但與廣泛引入資料相異，暫不填。"
+    "note": "選取 BirdLife 列為原生現存的部分國家並按 Natural Earth 110m 填色，非全部原生或全球分佈；未顯示廣泛引入地，亦不表示國家全境均有。秘魯在 BirdLife 表中標原生但與廣泛引入資料相異，暫不填。 南蘇丹 ISO3 SSD 不在底圖的 ADM0_A3，未填色。"
   },
   "sources": [
     {
