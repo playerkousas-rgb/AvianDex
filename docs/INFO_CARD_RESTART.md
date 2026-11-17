@@ -4582,3 +4582,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0579 褐耳鷹](https://drive.google.com/file/d/1wCjhaL2K30xJICT-5z7nORxNbIr2FO3E/view)：125302 bytes，MD5 `39dafc9d0c8e10691055b505488584e1`，SHA256 `cea31936a4d1dd662c7985f10c2dfce1341f29bbc81eec91b1f56853efdff689`；查重無結果，get_file 獨立核驗。
 - HKBWS I 類名錄；BirdLife 舊屬名 Accipiter badius，2021 LC，估50萬–999,999成熟個體、穩定；世界圖部分原生國家，非全境。
 - AI 插圖未經專家認證：雄鳥尾帶偏粗、腹紋過規則，鳳頭鷹冠過顯眼，赤腹鷹尾偏長，足趾與羽列不精確。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
+
+## 新批次 0501–0583：0580 已交付
+
+- [0580 大鵑鵙](https://drive.google.com/file/d/1dYfQ_aKZNYATwzFi2obGXyFZK0KvLlsr/view)：125999 bytes，MD5 `d691f8c4215503e14c5221b5a3de3ef4`，SHA256 `31e22210f693492f45cdb1496c687f7a4cf153859aabc0e2e7dcb90b2765a580`；查重無結果，get_file 獨立核驗。
+- HKBWS I 類迷鳥；BirdLife 2020 LC，數量未知、疑穩定；世界圖採其較廣分類，包括台灣與馬來西亞，非全境；eBird 2024 分拆重組，rexpineti 親緣未定。
+- AI 圖未經專家認證：主圖黑喉過於鮮明，暗灰鵑鵙面罩太銳、灰山椒鳥翼白帶過明顯，足趾及羽列近似。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
