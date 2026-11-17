@@ -4534,3 +4534,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0571 黑叉尾海燕](https://drive.google.com/file/d/1bS92EKtNp_NFseSLc0wCKR8w0ztl3BNt/view)：133862 bytes，MD5 `2f96794623774912da28be13977005ac`，SHA256 `e2000509b59ff661e8926714dc5fe00f6b671fa755f7151226bfc035754af054`；查重無結果，get_file 獨立核驗。
 - HKBWS 0140/019900 香港 I 類迷鳥；BirdLife 2018 NT，估 6.5萬–26萬成熟個體，現況疑穩定但預期下降。地圖為陸地國家概覽、不顯海洋分布，新加坡因底圖尺度省略，迷鳥及原生不確定國家不填。
 - AI 示意非專家認證、非等比例，主圖翼斑過白、尾形與白羽軸不精確；比較鳥羽斑、尾形有誤，詳見 spec。runtime 六軸缺值，均待查；validator `errors: []`，未改 runtime/UI/R2。
+
+## 新批次 0501–0583：0572 已交付
+
+- [0572 信使圓尾鸌](https://drive.google.com/file/d/1XVo5Fsi-KE7-iojyf5mW7WZOFJVwmMF0/view)：131760 bytes，MD5 `fea25de6b4564226c82562cd3eb43173`，SHA256 `b4f68a846dcbe35d3e3fc0205362fb5af257989ac1bcac4e402d9a9f513c8974`；查重無結果，get_file 獨立核驗。
+- HKBWS 0140/020000 香港 I 類迷鳥；BirdLife 2018 LC、疑下降，估15萬個體而非成熟數。地圖部分原生國家概覽，不顯海上分布或完整島嶼，不能視作全境。
+- AI 非專家認證、不等比例；淺色型主圖翼底白閃斑像羽隙，尾型羽列不精確，兩比較鳥翼紋及足趾不可靠，詳見 spec。runtime 六軸缺值待查；validator `errors: []`，未改 runtime/UI/R2。
