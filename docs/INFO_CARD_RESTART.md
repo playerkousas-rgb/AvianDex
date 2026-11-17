@@ -4521,3 +4521,10 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - HKBWS `0460/056100` 香港 I 類不常見冬候、稀少過境；繁殖雄示意。BirdLife 2024 LC、數量未知，基於樹冠損失疑下降，香港包含中國幾何、國家概覽非全境。
 - AI 圖非專家認證、非等比例，黑喉過長、脅色偏深及脅紋欠清晰、足趾不可靠；比較圖限制見 spec。runtime 無 look，依交接規則 a 及 o 待查；v 估算，不修改 runtime/UI/R2。validator `errors: []`。
 - 下一張 0570 白額燕鷗，轉入非雀形目，需重新研製鳥類及比較圖。
+
+## 新批次 0501–0583：0570 已交付
+
+- [0570 白額燕鷗](https://drive.google.com/file/d/1mflda1ULS5Ap9UV1qZcepFLrPKT3ZnDj/view)：134439 bytes，MD5 `8f1446fa0d510cab5d2cc883f375585f`，SHA256 `ad96e32646c663e2ad1eec67b6d4b6a3886ad110e4ab05954b3cae720c046490`；查重無結果、get_file 獨立核驗。
+- HKBWS `0120/018100` 香港 I 類春常見、秋稀少過境；主圖繁殖成鳥。BirdLife 2018 LC、估19萬–41萬隻（非成熟個體數）、疑下降；地圖只顯部分原生國家，省略小島、海上範圍及其他國家，不代表全境。美國本土迷鳥但關島等原生未填；底圖不含巴勒斯坦及西撒哈拉 ISO 對應。
+- AI 圖非專家認證、非等比例，腿偏長、深色外初級羽未準確畫出、翼尾重疊與足趾不可靠；比較鳥細節見 spec。runtime 缺分數、文案、測量，六軸待查；未改 runtime/UI/R2。validator `errors: []`。
+- 下一張 0571 黑叉尾海燕。
