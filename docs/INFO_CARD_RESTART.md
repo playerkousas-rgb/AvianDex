@@ -4345,3 +4345,9 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - [0544 錫嘴雀](https://drive.google.com/file/d/1W1tIyrGZTdPcMHvTFsisL104-6u7sfwx/view)：134675 bytes，MD5 `6acb97219d358516817397e71d863d2d`，SHA256 `63a6a1a7e6305fd872497294d8a8c9996838eb0dc1b5f4a5836ebf758cdd6ba9`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
 - HKBWS `species/0450/055000`：香港 I 類迷鳥，粗喙黑面喉、灰後頸及褐背。三圖 AI 示意、非等比例非專家認證；主圖脅紋可能虛構、翼羽不準、尾看來較長；黑尾蠟嘴雀黑耳羽不足、白翼點位置不準。
 - BirdLife 2024 LC、1460–2420 萬成熟個體、懷疑增長；原生國家概覽合併季節非全境，runtime 外觀文字截斷不改，六軸保留。`verify-info-card.py 0544` 通過（`errors: []`）。
+
+## 新批次 0501–0583：0545 已交付
+
+- [0545 黑尾蠟嘴雀](https://drive.google.com/file/d/15sPFh2-l0Mvc8d5izmVVmc6-ymuV79Ns/view)：134762 bytes，MD5 `248dfd16bb83c130d7a666c3edf4ae6d`，SHA256 `b500772b16049e699f1cd4927b7ca1f0a3c0be4b1ad02ee4942eacea90de7044`；查重無結果，`get_file` 核對父目錄、尺寸、大小及 hash。
+- HKBWS `species/0450/055100`：香港 I 類不常見冬候、稀少過境，少量夏季及繁殖紀錄。三圖 AI 示意、非等比例非專家認證；主圖雄鳥黑喉或過大、白翼斑位置或不準、足部不可靠；黑頭蠟嘴雀圖有不應明顯的白翼點。
+- BirdLife 2024 LC、數量未知、懷疑下降，HKBWS 2023 舊頁稱穩定；國家概覽合併季節非全境。runtime 外觀標示來源請求、喙尾 callout 錯置；不改，特徵依 HKBWS、六軸保留。`verify-info-card.py 0545` 通過（`errors: []`）。
