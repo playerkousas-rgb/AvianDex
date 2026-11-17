@@ -1,0 +1,220 @@
+{
+  "id": "0514",
+  "name": "藍磯鶇",
+  "scientificName": "Monticola solitarius",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Adult male Blue Rock Thrush of the east Asian subspecies philippensis Monticola solitarius philippensis, standing upright on a grey coastal rock. Head, nape, mantle, back, rump and thighs rich indigo blue; chin, throat and upper breast the same blue, continuous with the head and with no dark mask; lower breast, belly and undertail coverts deep chestnut rufous; wings and tail blackish-brown, darker than the body, coverts with narrow pale-buff crescent fringes.",
+  "featureCrops": [
+    [
+      0.48,
+      0.17,
+      0.7,
+      0.35
+    ],
+    [
+      0.45,
+      0.36,
+      0.65,
+      0.5
+    ],
+    [
+      0.44,
+      0.47,
+      0.63,
+      0.64
+    ],
+    [
+      0.39,
+      0.33,
+      0.57,
+      0.55
+    ]
+  ],
+  "featureLabels": [
+    "深藍頭與喉",
+    "藍胸栗腹分界",
+    "栗紅腹部與脇",
+    "翼上淡色羽緣"
+  ],
+  "featureNotes": [
+    "**頭、頸、頰與喉是連續一致的深靛藍**，**沒有深色面罩**——這一整片藍正是本亞種最易認的地方，也是與栗腹磯鶇（灰藍冠 + 近黑臉 + 深藍喉）最直接的分別。指名亞種雄鳥則是全身藍灰、只有翼較深。為插圖局部。",
+    "**藍色的上胸與栗色的下胸之間有一條清楚的界線**，位置大約在胸部中央。這是辨識 *philippensis* 與 *pandoo* 兩個亞種的關鍵：*philippensis* 的藍只到上胸、下胸以下全栗；*pandoo* 是**全身藍色**，部分個體只在下腹與尾下覆羽帶零星栗色橫紋。香港 1999–2020 年有 169 隻雄鳥分辨過亞種，其中 **103 隻（61%）是 *philippensis***。為插圖局部。",
+    "**下胸、腹部與脇是一整片栗紅（赤褐）色**，與上胸的藍形成硬界；雌鳥則相反，下體是褐色與乳白交錯的鱗狀斑與橫斑，腹部與尾下覆羽更有明顯深淺橫紋。第一齡冬羽雄鳥的下體會較暗並帶深淺斑駁，但仍是「上藍下栗」的格局。為插圖局部。",
+    "**翼面比身體暗**，覆羽末端有**淡黃褐至淡藍白的新月形羽緣**，令翼呈細鱗狀；HKBWS 對 *philippensis* 雄鳥的描述正是「頭、背、腰、大腿、頦、喉與上胸藍色，**翼與尾較深**」，指名亞種亦是「全身藍灰、**只有翼較深**」。野外遠看時，這片較暗的翼與明亮的藍色背、腰是分開的層次。為插圖局部。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "栗腹磯鶇 雄",
+      "scientificName": "Monticola rufiventris",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "**雄鳥對雄鳥**，同樣是「藍上體 + 栗下體」，但藍色的分佈完全不同。本種（*philippensis*）**頭、頸、喉與上胸是連續一致的深藍**，**沒有深色面罩**，藍色在**上胸中央**以硬界轉為栗色；栗腹磯鶇**頭頂與整個上體是灰藍、比喉淺**，**臉與頸側近黑**成一塊面罩，**喉是深藍**，栗色由**胸部更上方**開始且顏色更深更「栗」。體型亦有差：本種 **20–23 cm**、栗腹磯鶇 **21–23 cm**，野外幾乎分不出大小，要看顏色分佈。",
+      "portraitNote": "栗腹磯鶇雄鳥（0512 主圖）：灰藍上體、近黑面罩、深藍喉、整片深栗下體。"
+    },
+    {
+      "zh": "白喉磯鶇 雄",
+      "scientificName": "Monticola gularis",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "同樣「上深下栗」，但**色調深淺完全相反**：白喉磯鶇雄鳥的**上體近黑（只頭頂與後頸是亮藍）**，**喉中央有一小塊白**，下體是**橙紅至栗紅**；本種的**上體是一片亮麗的靛藍（連喉與上胸）**、**沒有白喉**，下體栗色較深。體型差別明顯：本種 **20–23 cm**，白喉磯鶇 **16–19 cm**。行為上本種常在**開闊岩石、防波堤、村屋天台與電線**上站立，白喉磯鶇則躲在**閉郁林**的低枝。",
+      "portraitNote": "白喉磯鶇雄鳥（0513 主圖）：近黑上體、亮藍頭頂、白喉、橙紅下體。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "AFG",
+      "ALB",
+      "ARE",
+      "ARM",
+      "AZE",
+      "BGR",
+      "BIH",
+      "BRN",
+      "BTN",
+      "CHE",
+      "CHN",
+      "CMR",
+      "CYP",
+      "DJI",
+      "DZA",
+      "EGY",
+      "ERI",
+      "ESP",
+      "ETH",
+      "FRA",
+      "GEO",
+      "GHA",
+      "GIN",
+      "GMB",
+      "GRC",
+      "HRV",
+      "IDN",
+      "IND",
+      "IRN",
+      "IRQ",
+      "ISR",
+      "ITA",
+      "JOR",
+      "JPN",
+      "KAZ",
+      "KGZ",
+      "KHM",
+      "KOR",
+      "KWT",
+      "LAO",
+      "LBN",
+      "LBR",
+      "LBY",
+      "LKA",
+      "MAR",
+      "MKD",
+      "MMR",
+      "MNE",
+      "MRT",
+      "MYS",
+      "NER",
+      "NGA",
+      "NPL",
+      "OMN",
+      "PAK",
+      "PHL",
+      "PRK",
+      "PRT",
+      "PSX",
+      "QAT",
+      "RUS",
+      "SAU",
+      "SDN",
+      "SEN",
+      "SLE",
+      "SOM",
+      "SRB",
+      "SVN",
+      "SYR",
+      "TCD",
+      "THA",
+      "TJK",
+      "TKM",
+      "TUN",
+      "TUR",
+      "UZB",
+      "VNM",
+      "YEM"
+    ],
+    "note": "BirdLife 國家表共 **101 列**：**原生 89 列**（俄羅斯三列中的 `Russia` 與 `Russia (European)` 併為 `RUS`，`Russia (Central Asian)` 本身是 Vagrant 故不計），**79 個 ISO3 在 110m 底圖上有幾何**，全部填色；**9 個原生地區在 110m 底圖上沒有獨立幾何**（安道爾、巴林、直布羅陀、**香港**、澳門、馬耳他、摩納哥、聖馬力諾、新加坡），故不能填色——**香港在 BirdLife 是 Native（無季節標註）**，與本地「局部常見的過境鳥與冬候鳥」一致，只是底圖沒有這個形狀。另有 **12 列為 Vagrant／Extinct**（澳洲、奧地利〔Extinct〕、比利時、加拿大、科特迪瓦、德國、馬里、帛琉、`Russia (Central Asian)`、斯洛伐克、瑞典、英國），一律不填色。分佈由**西北非經南歐與中東至東亞**，是磯鶇屬中分佈最廣的一種。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0410/051300",
+      "use": "香港第 I 類、**局部常見的過境鳥與冬候鳥**，偶有夏季紀錄。**20–23 cm**。**成鳥雄鳥 *philippensis***：**頭、背、腰、大腿、頦、喉與上胸藍色**，**翼與尾較深**，**下胸、腹與尾下覆羽栗紅**。**成鳥雄鳥 *pandoo***：**下體全藍**，部分個體的下腹與尾下覆羽有零星栗色橫紋。**第一齡雄鳥 *pandoo*** 與成鳥相似但喉與胸有深淺斑駁、腹部與尾下覆羽有橫紋；**第一齡雄鳥 *philippensis*** 較成鳥暗啞、有深淺斑駁與腹部橫紋。**雌鳥（兩亞種）**上體灰褐帶藍灰調，胸部褐色與乳白相間成鱗狀，腹部與尾下覆羽有深淺橫紋。聲音：**高音、帶轉折的『sweet』，尾音急降**；另有**『tschak』**聲；鳴唱是**短而相當豐富的句子**，因兼具純音與顫音，音色近似紫嘯鶇。生境：**多岩石或沿海地區，有時村落或農地**；**新界村屋屋頂常見**，偶入市區；**常在防波堤與混凝土水壩**；熱點包括**赤鱲角、蒲台與南丫島的西南向岩岸**。出現情況：**多在 9 月中至 4 月底**，**9 月最後一週至 10 月第三週**有明顯高峰（相信同時包含過境與抵港越冬鳥），之後大致穩定至 1 月底（**12 月最後一週有異常小高峰**），2 月至 3 月底逐漸下降，**4 月有過境並在 4 月最後一週達峰**，**5 月罕見**。**單一地點最高紀錄為蒲台 1996-11-27 與 2009-09-27 各 14 隻**，但這種通常獨居的鳥有雙位數字已屬罕見。**偶有夏季紀錄**：1999 年起有六個年份在 6、7 月有報告，最有趣是 **2011-06-17 赤鱲角兩隻雄鳥互相追逐、其中一隻鳴唱**，但**繁殖從未證實**。**1999–2020 年 169 隻分辨過亞種的雄鳥中，103 隻（61%）為 *philippensis*、66 隻（39%）為 *pandoo***；*pandoo* 昔日只是「偶爾報告」（Carey et al. 2001），增加相信是因為**更多人願意分辨亞種**而並非真的增加。歷史：**Swinhoe（1861）** 記 1860 年上半年「岩石山丘一帶數量眾多」，Kershaw（1904）、Vaughan & Jones（1913）、Herklots（1936、1953）亦有記述，後期作者指出牠偏好沿海，相信與內陸山丘植被變密有關。行為：**通常單獨、普遍害羞**，但不受打擾時會**大方停在岩石、屋頂與架空電線上**；**在地面跳走或奔跑覓食昆蟲，或由低處撲下地面**；**2009-01-07 赤鱲角有三隻在海面上空捕食報喜斑粉蝶**；**2011-10-08 畢拉山一隻吃過未指明的水果**。鳴唱紀錄：Herklots（1936）記兩隻 *pandoo*（日期不詳）與一隻 *philippensis* 在 5 月；近期有 **2009-04-30 與 2011-06-17 赤鱲角**、**2011-10-08 畢拉山**，均未分辨亞種。分類：繁殖由**西北非經南歐與中東至東亞**；**兩個亞種在華東（包括香港）出現**：***M. s. pandoo*** 由**喜馬拉雅中部東至華東與越南北部**，越冬於**南亞與東南亞至大巽他群島**，在中國**長江以南大致留鳥**、西至藏東南；***M. s. philippensis*** 繁殖於**蒙古東部、中國東北南至山東、韓國、庫頁島、南千島、日本、琉球、台灣沿海與菲律賓北部（巴丹島）**，越冬於**中國東南沿海、東南亞、菲律賓南至巽他群島、摩鹿加與帛琉**；第三個分類單元 ***M. s. longirostris*** 只是**過境藏西南**（Cheng 1987）。保育：**IUCN Least Concern，趨勢 stable**。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/blue-rock-thrush-monticola-solitarius/details",
+      "use": "IUCN **LC**、**2024 年評估**（2024–2004 皆 LC，2000／1994／1988 為 LR-lc）；**成熟個體 1,340,000–3,090,000（2018 年估算、Poor 品質）——本批第一次有量化種群數字**，推算基礎是**歐洲 201,000–463,000 成熟個體、100,000–232,000 繁殖對**（BirdLife International 2021），約佔全球分佈 15%；**趨勢：頁面「At a glance」寫 Decreasing，但 Population 段寫 Unknown（Derivation Suspected），同一頁自相矛盾，兩者都照記**；**EOO 繁殖／留鳥 66,600,000 km²、非繁殖 78,500,000 km²**（本批最大）、AOO Unknown、**Breeding endemic No**、**Full Migrant**、**IBA／KBA 27 個（本批最多）**、**只有陸域**、海拔 **0–4,420 m**、世代 **3.1 年**、Landbird、**森林依賴度「Does not normally occur in forest」——本批第一次**；**生境 10 項，只有「岩石地區（繁殖）」是 Major**，其餘 9 項只是 Suitable（温帶草原、温帶灌叢、亞熱帶／熱帶乾燥灌叢、地中海型灌叢各分繁殖與非繁殖），另有「市區（留鳥）」為 Marginal；生態描述指**關鍵生境是垂直面（崖壁、建築）加上 20–80% 的植被覆蓋**，並列出各地繁殖期（西北非 3–7 月、伊比利 4 月底至 7 月中、以色列 2 月底至 6 月中、中國 5–7 月等）；**威脅（本批第一次有獨立 Threats 段）**：1970–1990 年西班牙與意大利因**沿海旅遊開發、峽谷／峽谷水庫淹沒、舊塔與教堂翻新、放牧棄耕後造林與灌叢復育**而下降，馬耳他的**捕獵、掏巢與人為干擾**把族羣迫到難以到達的海岸；**用途與貿易：low prevalence（7 個數據集有 2 個）**，終端用途為**人類食用（Subsistence、National）**、**寵物／展示（International）**與**運動狩獵／標本採集（Subsistence、National）——最後一項為本批首次**；**保育行動**：**CMS 附錄 II + 伯爾尼公約附錄 II（本批首次出現伯爾尼公約）**，「已劃定保育地點（覆蓋全部範圍）」、「已納入國際法規」為 Yes，**系統性監測為 Yes（歐洲部分國家有繁殖鳥類調查）——本批第一次**，其餘 No，並有「需要／已在進行」的建議（保護沿海與長河系統生境、在葡萄牙、意大利、土耳其、希臘做普查與監測）；AZE 與 Search for Lost Birds 皆 No；命名人 **(Linnaeus, 1758)**——與 runtime `funFact`「林奈 1758 年命名為 Turdus solitarius」一致。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024：第 **524** 項 藍磯鶇 Blue Rock Thrush（*Monticola solitarius*），**第 I 類**；鄰項為 523 栗腹磯鶇與 525 灰林䳭。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱（藍磯鶇；Blue Rock-Thrush）。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Runtime 學名、目科（*Monticola solitarius*／鶲科 Muscicapidae）；speciesCode burthr；taxonOrder 29382。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "Runtime **六軸齊全**（i 2、a 3.8、v 3.2、**r 4.8**、**c 1.2**、o 3.0），`missingScores` 與 `withheldScores` 皆為空；o 3.0 與六軸平均（扣除 o）3.0 相符。a 保留：`look` 中文是「指名亞種繁殖期雄鳥全身藍灰、只有翼較深」，屬可核對形態。c 1.2 是本批目前最低的保育分，照 runtime 顯示不作修改。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "`look`、`diet`、`humanRelation`（馬耳他國鳥 Merill、Lm1 硬幣）、`etymology`（*mons*＋*colere*＋*solitarius*）皆有實質內容，`length` 為 **21–23 cm**；但欄位錯位與殘缺不少：`breeding` 中文重複 `look` 句；`range` 中文只寫「在中國大陸，分佈於西藏等地」，而英文配的卻是「歐洲、北非、東南亞多為留鳥」；`habitat` 中文空、英文是「生境結構比食物可得性重要」的研究結論句；`voice`／`conservation` 中文空，`conservation` 英文卻寫「印尼族羣有四種基本叫聲」；`migration` 英文語意斷裂（同時講與磯鶇重疊與古北界繁殖地）；`highlights` 英文多句在逗號處截斷（「unmistakable,」「louder than,」）；`weight` 為空。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 121.1、tail 84.6、tarsus 28.3、**bill 28.1（本批最長）**、mass 53.7 g。"
+    }
+  ],
+  "notes": [
+    "香港狀況：名錄 2024 第 **524** 項、**第 I 類**；HKBWS 描述為**局部常見的過境鳥與冬候鳥**，偶有夏季紀錄。**多在 9 月中至 4 月底**，9 月最後一週至 10 月第三週各有高峰，**4 月最後一週再有一個過境峰**，**5 月罕見**。**單一地點最高 14 隻（蒲台 1996-11-27、2009-09-27）**。**繁殖從未證實**，但 1999 年起有六個年份在 6–7 月有紀錄，包括 2011-06-17 赤鱲角兩雄追逐其中一隻鳴唱。",
+    "**兩個亞種的辨識是本張重點**：*philippensis*（藍只到上胸、下胸以下栗紅）與 *pandoo*（全身藍、部分個體下腹帶栗色橫紋）。香港 **1999–2020 年 169 隻分辨過亞種的雄鳥中 103 隻（61%）為 *philippensis***、66 隻（39%）為 *pandoo*；HKBWS 明言 *pandoo* 的比例上升**更可能是分辨意願提高**而非真的增加。**第三個分類單元 *longirostris* 只是過境藏西南**，不在香港名錄。",
+    "全球數字**本批第一次有量化種群**：成熟個體 **1,340,000–3,090,000**（2018 年估算、品質 Poor），由歐洲 201,000–463,000 成熟個體推算（歐洲約佔分佈 15%）。**趨勢一頁兩說**：頁面頂部「At a glance」寫 **Decreasing**，Population 段寫 **Unknown（Suspected）**，兩者並列照記；HKBWS 記本地 **stable**。",
+    "**本批多項「第一次」都落在這張**：森林依賴度「**Does not normally occur in forest**」、**獨立 Threats 段**（1970–1990 西班牙與意大利的沿海開發、水庫淹沒峽谷、舊教堂翻新、棄耕後造林；馬耳他的捕獵與掏巢）、**伯爾尼公約附錄 II**（連同 CMS 附錄 II）、**系統性監測為 Yes**、**運動狩獵／標本採集**這項終端用途、**IBA／KBA 27 個**（本批最多）、**EOO 66.6／78.5 百萬 km²**（本批最大）。",
+    "分佈圖填 **79 個形狀**（本批最多的一次）：BirdLife 原生 89 列，俄羅斯兩列原生併為 `RUS`，**79 個 ISO3 在 110m 底圖上有幾何**；**9 個原生地區無幾何**（安道爾、巴林、直布羅陀、**香港**、澳門、馬耳他、摩納哥、聖馬力諾、新加坡）已寫進地圖說明——**香港在 BirdLife 是 Native**，只是底圖無此形狀；另 **12 列 Vagrant／Extinct 不填色**（含 `Russia (Central Asian)`、奧地利〔Extinct〕）。",
+    "**比較鳥全部沿用舊素材**：主圖直接用 **0512 的藍磯鶇雄鳥（*philippensis*）比較鳥**（同一張插圖，顏色一致），比較鳥一是 **0512 主圖（栗腹磯鶇雄鳥）**、比較鳥二是 **0513 主圖（白喉磯鶇雄鳥）**——本批第一次「主圖本身也是沿用件」，第三次「比較鳥來自兩張不同的舊卡」。名牌加性別後綴「栗腹磯鶇 雄／白喉磯鶇 雄」，避免與之前卡片混淆。",
+    "runtime 的 `humanRelation` 提到**馬耳他國鳥 Merill 與 Lm1 硬幣**，而 BirdLife 的 Threats 段正好記**馬耳他的捕獵與掏巢**——兩者並讀很有意思，已在卡下說明並列，不作因果推論。",
+    "插圖為 AI 生成，非等比例、非專家認證。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
