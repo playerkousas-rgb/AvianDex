@@ -1,0 +1,156 @@
+{
+  "id": "0520",
+  "name": "紅胸啄花鳥",
+  "scientificName": "Dicaeum ignipectus",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "uploaded",
+  "iucn": {
+    "code": "LC",
+    "zh": "無危",
+    "assessmentNote": "全球 LC：BirdLife 2024 評定"
+  },
+  "illustrationTaxon": "Adult male Fire-breasted Flowerpecker Dicaeum ignipectus: glossy blue upperparts and wing coverts, greyish flight feathers, turquoise rump, grey chest sides, pink-orange throat, flame-coloured breast with an irregular blackish vertical line extending into it; short dark bill. Perched by mistletoe. AI illustration is an approximation.",
+  "featureCrops": [
+    [
+      0.48,
+      0.23,
+      0.78,
+      0.45
+    ],
+    [
+      0.45,
+      0.36,
+      0.72,
+      0.6
+    ],
+    [
+      0.3,
+      0.33,
+      0.56,
+      0.54
+    ],
+    [
+      0.13,
+      0.37,
+      0.39,
+      0.56
+    ]
+  ],
+  "featureLabels": [
+    "藍色頭與短喙",
+    "火紅胸與黑線",
+    "藍色覆羽",
+    "藍綠色腰"
+  ],
+  "featureNotes": [
+    "雄鳥頭部及上體帶藍色，喙短；喉帶粉橙色。圖為雄鳥示意局部。",
+    "雄鳥火焰色胸斑下方有不規則黑色縱線伸入胸斑；此插圖只作示意。",
+    "雄鳥翼覆羽及三級飛羽略帶光澤的藍色，飛羽則較暗灰。",
+    "雄鳥藍色上體有時與藍綠色腰部形成對比；不是所有個體都一樣鮮明。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "紅胸啄花鳥 雌鳥",
+      "scientificName": "Dicaeum ignipectus",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "同一物種不同性別：雌鳥上體中等橄欖灰、頭較灰，腰與尾上覆羽較橄欖色；下體皮黃，耳羽下方分界較明顯，沒有雄鳥鮮明的火紅胸斑。",
+      "portraitNote": "紅胸啄花鳥雌鳥，AI 示意，橄欖灰上體與皮黃下體。"
+    },
+    {
+      "zh": "朱背啄花鳥",
+      "scientificName": "Dicaeum cruentatum",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "雄鳥紅色寬帶由頭頂延伸至腰，臉和兩脅黑，喉白；紅胸啄花鳥雄鳥的火焰色在胸部而不是背部。雌朱背啄花鳥上體較褐、下體較不皮黃，紅色尾上覆羽與黑尾形成對比。兩種叫聲相近，單憑一聲 chik 不易判別。",
+      "portraitNote": "朱背啄花鳥雄鳥，AI 示意：紅色背帶及白喉。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "BGD",
+      "BTN",
+      "KHM",
+      "CHN",
+      "IND",
+      "LAO",
+      "MYS",
+      "MMR",
+      "NPL",
+      "PAK",
+      "TWN",
+      "THA",
+      "VNM"
+    ],
+    "note": "BirdLife 表列 13 個 Extant／Native／Resident 國家或地區；底圖為國家概覽，綠色不代表全境皆有。BirdLife 全球狀態 Not a Migrant；HKBWS 香港地區以冬候鳥為主，也有罕見繁殖記錄，不能混同。"
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052100",
+      "use": "第 I 類、稀少但分佈廣的冬候鳥、罕見繁殖；7–9 cm。雄鳥藍色上體和覆羽、粉橙喉、火焰色胸與不規則黑色縱線；雌鳥橄欖灰上體、較灰的頭、皮黃下體。主要林地，常在大埔滘等地；吃東方槲寄生和朴樹果實。1954 年首錄；1990 年 4 月 7 日香港首次確認繁殖，香港鳥類誌指出本世紀尚無明確繁殖報告。IUCN LC、下降。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0420/052200",
+      "use": "朱背啄花鳥雄鳥紅帶由冠至腰、白喉；雌鳥上體較紅胸褐、下體較不皮黃、尾上覆羽紅色。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/hk-list",
+      "use": "香港鳥類名錄 2024 第 530 項，第 I 類。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/fire-breasted-flowerpecker-dicaeum-ignipectus/details",
+      "use": "2024 LC，成熟個體未知，全球種群疑似下降。過去十年範圍內樹覆蓋估計減 6.5%，謹慎推測種群下降 1–19%；EOO 9,050,000 km²；Not a Migrant、海拔 10–3,950 m、世代 2.3 年、森林依賴中等。13 個原生留鳥地區；五種生境均 Suitable。貿易摘要指審查資料庫未見紀錄，但終端用途表列寵物／展示（自給、國內），兩欄並存不視為無貿易的證明。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "Runtime 名稱與 id。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "學名 *Dicaeum ignipectus*、雀形目啄花鳥科、speciesCode fibflo1。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "六軸 i 2、a 4.3、v 1.8、r 3.3、c 3、o 2.9；六軸均保留。look 中英文均有可核對外形，o 與五軸平均 2.88 相近。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 中文為胸斑黑線，英文為雄鳥藍黑上體；habitat 中文截斷，range 欄中英文亦截斷，中文頂層 range 將印尼列入而現行 BirdLife 表未列。behavior 中文重複繁殖句，funFact 中文丟失長度及重量數字。runtime length 7 cm、weight 7–9 g；HKBWS 體長為 7–9 cm。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET：wing 46.8、tail 24.6、tarsus 11.7、bill 9.4、mass 5.7 g。"
+    }
+  ],
+  "notes": [
+    "HKBWS 香港第 I 類、稀少但分佈廣的冬候鳥與罕見繁殖種。1954 首次紀錄，1990 首次確認繁殖；本世紀尚無明確繁殖報告。",
+    "全球趨勢疑似下降與本地記錄不應混同；BirdLife 樹覆蓋損失推論為保守估算，不是直接量度種群變化。",
+    "比較鳥為雌紅胸啄花鳥及雄朱背啄花鳥；雌朱背鳥與雌紅胸較相似，須結合尾上覆羽、上下體色與聲音辨識。",
+    "地圖為國家概覽，不是精確物種分佈；香港不在 BirdLife 國家表中，香港實況以 HKBWS 資料並列。",
+    "圖像均為 AI 生成示意，非等比例、非專家認證。主圖、比較圖裁切自不同生成原檔，保留完整鳥體。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}

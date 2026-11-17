@@ -4173,3 +4173,12 @@ Drive 資料夾 `1ifxTCJOC--wYGG1SRLK_9gv0Oem9ZseD` 現時這四個檔名**各�
 - Runtime 學名 *Dicaeum minullum*，非 *D. concolor*；六軸 i 2、a 2.3、v 2.2、r 1、c 1.2、o 1.7（vEst 1），均保留，英文 look 的體長與雌雄相似描述可核對。`fieldCopy` 中文除了 range 均空，range 只寫台灣；英文多欄重複不相干的分類或生境句；length、weight 空。AVONET mass 6.2 g。
 - 主圖及比較鳥為新生成的 AI 示意，非等比例、非專家認證；比較鳥為紅胸啄花鳥與叉尾太陽鳥。核對 HKBWS 後修正叉尾太陽鳥初版的錯誤羽色；兩者均有短下彎喙，紅胸及純色啄花鳥體長亦重疊，故不以單一喙長或體長分辨。主圖裁切曾越界產生黑邊，已改用來源範圍內裁切並重新檢查。生成檔保留不同檔名，避免覆寫。
 - `verify-info-card.py 0519` 通過（`errors: []`）；未修改 runtime、UI 或 R2。**下一張 0520 紅胸啄花鳥 *Dicaeum ignipectus***；HKBWS `species/0420/052100` 已核對，7–9 cm，雄鳥藍色上體、火焰色胸；雌鳥橄欖灰上體、皮黃下體。0519 比較鳥圖僅為 AI 示意，若沿用須先核對特徵；產物可能在新回合沙盒重置後不可用。
+
+## 新批次 0501–0583：0520 已交付
+
+- [0520 紅胸啄花鳥](https://drive.google.com/file/d/1SLg84vtGYplLv5gRUnZdvzY6c8KrWelK/view)：150212 bytes、MD5 `90d8d5460f28b28820347ed3ae6a18fe`、SHA256 `d67ce3ee542cc49742bc2edf1139320e7f4c02ef5c7a17e2551c2ec87e15b7e1`；上載前按名稱及資料夾查重無結果，上載後 `get_file` 核對大小、尺寸、父目錄及 hash。
+- HKBWS `species/0420/052100`：香港名錄第 530 項、第 I 類，稀少但廣佈的冬候鳥與罕見繁殖種；7–9 cm。雄鳥藍色上體及翼覆羽、粉橙喉、火焰色胸斑與不規則黑色縱線，雌鳥橄欖灰上體、皮黃下體。1954 年本港首錄，1990 年首次確證繁殖；HKBWS 指本世紀尚無明確繁殖報告。覓食於東方槲寄生及朴樹小果實。
+- BirdLife 2024 LC；成熟個體數未知，全球趨勢疑似下降；過去十年樹覆蓋估計下降 6.5%，謹慎推測種群下降 1–19%，非直接量度。全球狀態 Not a Migrant；香港主要冬候鳥的本地記載與全球狀態不同尺度，分別記錄。13 個現存原生留鳥地區以國家概覽顯示；香港不單獨列在 BirdLife 國家表。BirdLife 貿易摘要稱所審查資料庫無紀錄，但終端用途表列寵物／展示（自給、國內）；照實並列而不斷言無貿易。
+- Runtime 六軸齊全 i 2、a 4.3、v 1.8、r 3.3、c 3、o 2.9，均保留；look 中英文都有可核對形態。runtime range 和 habitat 存在截斷或範圍差異，funFact 缺數字，behavior 中文重複繁殖句；length 7 cm、weight 7–9 g，AVONET mass 5.7 g。詳見 spec。
+- 主圖與兩張比較圖均新生成，AI 示意非等比例、非專家認證；比較鳥為紅胸啄花鳥雌鳥及朱背啄花鳥雄鳥。四格特徵及全卡預覽已檢查；`verify-info-card.py 0520` 通過，`errors: []`。未修改 runtime、UI 或 R2。
+- **下一張 0521 朱背啄花鳥 *Dicaeum cruentatum***；HKBWS `species/0420/052200` 已核對，香港名錄 531，第 I 類，局部常見繁殖留鳥；雄鳥紅帶由冠至腰、黑臉白喉；雌鳥較褐且紅色尾上覆羽與黑尾對比。0520 的比較鳥可作參考，但生成圖可能於沙盒重置後不存在，且 AI 插圖需重新核對。
