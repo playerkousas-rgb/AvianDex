@@ -1,0 +1,154 @@
+{
+  "id": "0564",
+  "name": "田鵐",
+  "scientificName": "Emberiza rustica",
+  "layout": "slim",
+  "size": [
+    1024,
+    1536
+  ],
+  "status": "review_before_upload",
+  "iucn": {
+    "code": "NT",
+    "zh": "近危",
+    "assessmentNote": "全球 NT：BirdLife 2025 評定"
+  },
+  "illustrationTaxon": "Emberiza rustica, AI approximation of breeding male.",
+  "featureCrops": [
+    [
+      0.14,
+      0.22,
+      0.3,
+      0.32
+    ],
+    [
+      0.14,
+      0.29,
+      0.31,
+      0.39
+    ],
+    [
+      0.16,
+      0.39,
+      0.33,
+      0.5
+    ],
+    [
+      0.3,
+      0.46,
+      0.5,
+      0.57
+    ]
+  ],
+  "featureLabels": [
+    "黑冠白眉",
+    "白喉及黑面",
+    "栗色胸帶",
+    "栗色脅紋"
+  ],
+  "featureNotes": [
+    "繁殖雄頭黑，白色粗眉鮮明。",
+    "成雄白喉黑面，耳羽後有白斑；圖中頰線不準。",
+    "雄鳥栗色顎線連接栗胸帶，圖中帶太寬。",
+    "脅紋、腰及上尾覆羽呈栗色；圖中色調過深。"
+  ],
+  "featureSources": [
+    "pixel.png",
+    "pixel.png",
+    "pixel.png",
+    "pixel.png"
+  ],
+  "similarSpecies": [
+    {
+      "zh": "小鵐",
+      "scientificName": "Emberiza pusilla",
+      "asset": "sim0-square.png",
+      "framing": "whole-bird",
+      "distinction": "小鵐略小、暖褐耳羽、完整淡眼圈及暗色胸脅紋，不具栗色胸帶。",
+      "portraitNote": "AI 示意，頭及胸紋過重、嘴偏大。"
+    },
+    {
+      "zh": "蘆鵐",
+      "scientificName": "Emberiza schoeniclus",
+      "asset": "sim1-square.png",
+      "framing": "whole-bird",
+      "distinction": "繁殖雄蘆鵐黑頭白鬚及白領，無田鵐白眉及栗胸帶；冬季易混淆。",
+      "portraitNote": "AI 繁殖雄示意，腹脅紋偏深、白鬚偏短。"
+    }
+  ],
+  "rangeMap": {
+    "type": "world-view-partial-native-country-overview-not-occurrence-polygon",
+    "caption": "世界底圖・分佈國家",
+    "disclaimer": "綠色非全境；非完整分佈",
+    "geometrySource": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "geometryLicense": "Natural Earth public domain",
+    "bounds": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "viewport": "world",
+    "countryIso3": [
+      "CHN",
+      "EST",
+      "FIN",
+      "JPN",
+      "KAZ",
+      "LVA",
+      "MNG",
+      "PRK",
+      "NOR",
+      "RUS",
+      "KOR",
+      "SWE"
+    ],
+    "note": "BirdLife 2025 extant native-country table, all seasons; Russia rows merged, Hong Kong and Taiwan vagrants excluded. Country overview not whole-country occupancy. Breeding EOO 14.8m, nonbreeding 4.87m km²."
+  },
+  "sources": [
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056500",
+      "use": "香港 I 類秋稀少、春罕見過境；成雄黑白頭、白喉、栗胸帶及栗腰。舊 VU 評估。"
+    },
+    {
+      "url": "https://avifauna.hkbws.org.hk/species/0460/056300",
+      "use": "小鵐略小，耳羽暖褐、淡眼圈及白腹深色細紋。"
+    },
+    {
+      "url": "https://ebird.org/species/rusbun",
+      "use": "雄鳥黑冠白眉，冬季與蘆鵐混淆；eBird Schoeniclus rusticus。"
+    },
+    {
+      "url": "https://datazone.birdlife.org/species/factsheet/rustic-bunting-emberiza-rustica/details",
+      "use": "2025 NT，420–820萬成熟個體初估、疑下降；原生國家表。"
+    },
+    {
+      "path": "src/data/birds.json",
+      "use": "runtime 名稱。"
+    },
+    {
+      "path": "src/data/birdTaxonomy.json",
+      "use": "Emberiza rustica、鵐科。"
+    },
+    {
+      "path": "src/data/dexScores.json",
+      "use": "i 3.8、a 3.3、v 2.9（vEst）、r 4.8、c 2.2、o 3.4。"
+    },
+    {
+      "path": "src/data/cardCopy.json",
+      "use": "look 雄鳥外觀；iucn 仍為舊 VU，部分欄位錯位。"
+    },
+    {
+      "path": "src/data/measurements.json",
+      "use": "AVONET wing 78.4、tail 62.8、tarsus 20.5、bill 12.1 mm、mass 20.5 g。"
+    }
+  ],
+  "notes": [
+    "香港 I 類秋季稀少、春季罕見過境；圖示繁殖雄鳥，雌幼與冬羽較暗。",
+    "AI 圖非專家認證、非等比例；栗胸帶過寬、白喉側有不應有的黑線、嘴過暗且腳不可靠；比較鳥羽色及限制見說明。",
+    "BirdLife 2025 最新 NT，估420–820萬成熟個體為初步推算，疑下降；HKBWS 及 runtime 舊 VU 與現評不同。香港及台灣在全球表屬迷鳥不填；國家概覽非全境。",
+    "runtime v 含估算、i 及 c 為現有數值可能反映舊保育資料，未重算，顯示數值非物種現時威脅等級；部分文案錯位。"
+  ],
+  "missingScores": [],
+  "withheldScores": {}
+}
