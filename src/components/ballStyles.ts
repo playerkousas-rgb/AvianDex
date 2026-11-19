@@ -23,7 +23,12 @@ export const BALL_BASE =
   'shadow-[0_5px_0_rgba(0,0,0,0.7)] active:translate-y-1 active:shadow-[0_2px_0_rgba(0,0,0,0.7)] ' +
   'transition-all flex items-center justify-center shrink-0';
 
-/** 三排球共用的尺寸：手機 48px、sm 以上 56px */
+/** 圖鑑機頂部的工具球（手機 36px，電腦 32px）。 */
+export const DEVICE_BALL =
+  'rounded-full border-[2.5px] border-gray-900 shadow-[0_3px_0_rgba(0,0,0,0.55)] active:translate-y-0.5 ' +
+  'active:shadow-[0_1px_0_rgba(0,0,0,0.55)] transition-all flex items-center justify-center shrink-0 w-9 h-9 md:w-8 md:h-8';
+
+/** 左右側邊工具共用的尺寸：手機 48px、sm 以上 56px */
 export const BALL_SIZE = 'w-12 h-12 sm:w-14 sm:h-14';
 
 /** 內裡的圖示：比球小一號，兩種尺寸都一致 */

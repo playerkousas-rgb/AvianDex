@@ -14,13 +14,14 @@ await build({
     export { MobileCardPages, OriginalInfoCard, InfoCardScores, CardPanel } from './src/components/InfoCardReader';
     export { ResearchHubPage } from './src/components/ResearchHubPage';
     export { WelcomeScreen } from './src/components/WelcomeScreen';
+    export { BirdCaptureLink } from './src/components/BirdCaptureLink';
     export { infoCardLayout, localInfoCardUrl, hasInfoCard, canFlipInfoCard } from './src/lib/infoCards';
     export { mobileCardPages, nextMobileCardPage, mobileCardAspect, SLIM_PAGE_BOXES } from './src/lib/mobileInfoPages';`,
     resolveDir: root, loader: 'tsx' },
   bundle: true, platform: 'node', format: 'cjs', outfile, jsx: 'automatic',
-  define: { 'import.meta.env.BASE_URL': JSON.stringify('/') },
+  define: { 'import.meta.env.BASE_URL': JSON.stringify('/'), 'import.meta.env.VITE_R2_BASE_URL': 'undefined' },
 });
-const { renderToStaticMarkup, createElement, MobileCardPages, OriginalInfoCard, InfoCardScores, CardPanel, ResearchHubPage, WelcomeScreen, infoCardLayout, localInfoCardUrl, hasInfoCard, canFlipInfoCard, mobileCardPages, nextMobileCardPage, mobileCardAspect, SLIM_PAGE_BOXES } = createRequire(import.meta.url)(outfile);
+const { renderToStaticMarkup, createElement, MobileCardPages, OriginalInfoCard, InfoCardScores, CardPanel, ResearchHubPage, WelcomeScreen, BirdCaptureLink, infoCardLayout, localInfoCardUrl, hasInfoCard, canFlipInfoCard, mobileCardPages, nextMobileCardPage, mobileCardAspect, SLIM_PAGE_BOXES } = createRequire(import.meta.url)(outfile);
 const render = (component, props) => renderToStaticMarkup(createElement(component, props));
 const rawScores = JSON.parse(readFileSync(path.join(root, 'src/data/dexScores.json'))).scores;
 
@@ -221,14 +222,34 @@ test('research offers only info-card open/save, never illustration links, in bot
   }
 });
 
-test('welcome has only the AvianDex boot action; in-device BIRD-DEX ball remains', () => {
+test('welcome keeps a camouflage cover and white half with one egg action', () => {
   const html = render(WelcomeScreen, { onOpen() {} });
   assert.equal((html.match(/<button/g) || []).length, 1);
-  assert.ok(html.includes('開啟 AvianDex 圖鑑'));
-  assert.equal(html.includes('BIRD-DEX'), false);
-  const source = readFileSync(path.join(root, 'src/components/WelcomeScreen.tsx'), 'utf8');
-  assert.equal(source.includes('window.open'), false);
-  assert.equal(source.includes('skw-birdex2'), false);
+  assert.match(html, /aria-label="撳鳥蛋，開啟 AvianDex 圖鑑"/);
+  assert.match(html, /class="egg-crack"/);
+  assert.match(html, /class="welcome-cover field-camo [^"]*h-1\/2/);
+  assert.match(html, /class="welcome-notes [^"]*h-1\/2[^"]*bg-white/);
+  const feathers = html.match(/class="[^"]*welcome-feathers[^"]*"[^>]*>([\s\S]*?)<\/span>/)?.[1];
+  assert.ok(feathers);
+  assert.equal((feathers.match(/<svg /g) || []).length, 3);
+  assert.equal(new Set(feathers.match(/color:#[0-9a-f]{6}/gi)).size, 3);
+  assert.doesNotMatch(html, /BIRD-DEX|<a\s/);
+});
+
+test('the BIRD-DEX 3 link stays round with binoculars in the archive and a camera in the device', () => {
+  for (const [lang, compact, icon, glyph, label] of [
+    ['zh', false, 'binoculars', 'binoculars', '前往 BIRD-DEX 3 拍鳥'],
+    ['en', true, undefined, 'camera', 'Open BIRD-DEX 3 to photograph birds'],
+  ]) {
+    const html = render(BirdCaptureLink, { lang, compact, icon });
+    assert.match(html, /<a href="https:\/\/birddex3\.vercel\.app" target="_blank" rel="noopener"/);
+    assert.ok(html.includes(`lucide-${glyph}`));
+    assert.match(html, /class="[^"]*\brounded-full\b/);
+    assert.doesNotMatch(html, /class="[^"]*\brounded-xl\b/);
+    assert.ok(html.includes(`aria-label="${label}"`));
+  }
+  const app = readFileSync(path.join(root, 'src/App.tsx'), 'utf8');
   const device = readFileSync(path.join(root, 'src/components/PokedexDevice.tsx'), 'utf8');
-  assert.ok(device.includes('前往 BIRD-DEX 3 捕捉精靈'));
+  assert.match(app, /<BirdCaptureLink lang={lang} icon="binoculars" \/>/);
+  assert.match(device, /<BirdCaptureLink lang={lang} compact \/>/);
 });

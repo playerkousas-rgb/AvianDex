@@ -11,7 +11,7 @@ import {
   FileText,   // 詳細資料（文字）
   Compass,    // 科學研究中心
   Layers,     // 打開圖卡（1200×1600）
-  MapPin, Footprints, Backpack,   // 頂部球：地圖／禮儀／裝備
+  MapPin, Footprints, Backpack, Binoculars,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BirdSilhouette } from './BirdSilhouette';
@@ -19,7 +19,8 @@ import { useCardImage, useInfoCard } from '../hooks/useCardImage';
 import { searchBirds } from '../lib/pokedexOrder';
 import { BirdDetailPage } from './BirdDetailPage';
 import { ResearchHubPage } from './ResearchHubPage';
-import { PokeballIcon } from './PokeballIcon';
+import { BirdCaptureLink } from './BirdCaptureLink';
+import { DEVICE_BALL } from './ballStyles';
 import { MobileCardPages, OriginalInfoCard } from './InfoCardReader';
 import { mobileCardAspect, type MobileCardPage } from '../lib/mobileInfoPages';
 import { BirdNavigator } from './BirdNavigator';
@@ -34,12 +35,6 @@ import { PokedexTabs, type PokedexPage } from './PokedexTabs';
 import type { GuideKind } from './FieldGuideModal';
 import { ENTRIES, type Lang } from '../lib/explorer';
 import { canFlipInfoCard } from '../lib/infoCards';
-import { BIRD_CAPTURE_APP_URL } from '../config';
-
-/** 圖鑑機頂部的小球（手機 36px，電腦 32px） */
-const HDR_BALL =
-  'rounded-full border-[2.5px] border-gray-900 shadow-[0_3px_0_rgba(0,0,0,0.55)] active:translate-y-0.5 ' +
-  'active:shadow-[0_1px_0_rgba(0,0,0,0.55)] transition-all flex items-center justify-center shrink-0 w-9 h-9 md:w-8 md:h-8';
 
 // 圖卡未載入／不存在時顯示於螢幕內（不再只是空白或轉圈）
 const CardImageFallback: React.FC<{
@@ -398,52 +393,47 @@ export const PokedexDevice: React.FC<PokedexDeviceProps> = ({
             transition={{ type: "spring", damping: 25, stiffness: 120 }}
             className="w-full max-w-5xl h-[92vh] md:h-[88vh] flex flex-col md:flex-row shadow-[0_25px_70px_rgba(0,0,0,0.8),0_0_60px_rgba(250,204,21,0.15)] relative drop-shadow-2xl"
           >
-            {/* 總開關關閉按鈕 */}
-            <button 
+            <button
+              type="button"
               onClick={onClose}
-              className="absolute -top-5 -right-5 md:-right-10 md:-top-10 z-[60] p-3 bg-white rounded-full text-red-600 shadow-2xl border-4 border-gray-800 hover:rotate-90 transition-transform duration-500"
+              aria-label={t('關閉圖鑑', 'Close field guide')}
+              className="absolute top-2 right-2 md:-right-10 md:-top-10 z-[60] flex h-11 w-11 md:h-16 md:w-16 items-center justify-center bg-white rounded-full text-red-600 shadow-2xl border-[3px] md:border-4 border-gray-800 hover:rotate-90 transition-transform duration-500"
             >
-              <X className="w-8 h-8" />
+              <X className="h-5 w-5 md:h-8 md:w-8" />
             </button>
 
           {/* --- 左半部分：圖鑑顯示面板 (修正版) --- */}
-<div className="w-full md:w-1/2 shrink-0 md:shrink min-h-0 md:min-h-[50%] md:h-full bg-gradient-to-br from-[#E3350D] via-[#c92b0a] to-[#9a2208] border-[6px] md:border-[10px] border-gray-900 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3),inset_0_3px_8px_rgba(255,255,255,0.15)]">
+<div className="w-full md:w-1/2 shrink-0 md:shrink min-h-0 md:min-h-[50%] md:h-full field-camo border-[6px] md:border-[10px] border-gray-900 rounded-t-[40px] md:rounded-l-[40px] md:rounded-tr-none flex flex-col relative z-20 shadow-[inset_-15px_0_40px_rgba(0,0,0,0.3),inset_0_3px_8px_rgba(255,255,255,0.15)]">
   
-      {/* 頂部感應燈區塊 + 四個圖鑑工具球 */}
-  <div className="flex items-center justify-between p-2 pr-9 md:p-3 border-b-4 border-red-900/40 bg-gradient-to-b from-red-400 to-transparent">
+      {/* 望遠鏡標記與圖鑑工具。 */}
+  <div className="flex items-center justify-between gap-1 p-2 pr-12 md:p-3 border-b-4 border-[#182d1d]/40 bg-gradient-to-b from-[#788865]/25 to-transparent rounded-t-[34px] md:rounded-tr-none">
     <div className="flex items-center gap-2 md:gap-4">
-      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center border-[3px] border-gray-800 shadow-md">
-        <div className="w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#31A5E8] border-[2px] border-white shadow-[0_0_10px_rgba(49,165,232,0.8)] relative overflow-hidden">
-          <div className="absolute top-1 left-1 w-2 h-2 bg-white/50 rounded-full blur-[1px]" />
-        </div>
+      <div className="field-binoculars h-10 w-10 md:h-12 md:w-12" aria-hidden="true">
+        <Binoculars className="h-6 w-6 md:h-7 md:w-7" strokeWidth={1.75} />
       </div>
       {/* 左側兩球：觀鳥禮儀／觀鳥裝備 */}
       <div className="flex gap-1.5 md:gap-2">
         <button type="button" onClick={(e) => { e.stopPropagation(); onOpenGuide?.('etiquette'); }}
           title={t('觀鳥禮儀', 'Etiquette')} aria-label={t('觀鳥禮儀', 'Etiquette')}
-          className={`${HDR_BALL} bg-gradient-to-br from-sky-300 to-sky-700 text-white`}>
+          className={`${DEVICE_BALL} bg-gradient-to-br from-sky-300 to-sky-700 text-white`}>
           <Footprints className="w-4 h-4" strokeWidth={2.6} />
         </button>
         <button type="button" onClick={(e) => { e.stopPropagation(); onOpenGuide?.('gear'); }}
           title={t('觀鳥裝備', 'Gear')} aria-label={t('觀鳥裝備', 'Gear')}
-          className={`${HDR_BALL} bg-gradient-to-br from-amber-300 to-amber-700 text-white`}>
+          className={`${DEVICE_BALL} bg-gradient-to-br from-amber-300 to-amber-700 text-white`}>
           <Backpack className="w-4 h-4" strokeWidth={2.6} />
         </button>
       </div>
     </div>
 
-    {/* 右側兩球：地圖／前往 BIRD-DEX 3 */}
+    {/* 右側工具：地圖／前往 BIRD-DEX 3 拍鳥 */}
     <div className="flex gap-1.5">
       <button type="button" onClick={(e) => { e.stopPropagation(); onOpenMap?.(); }}
         title={t('觀鳥地圖', 'Map')} aria-label={t('觀鳥地圖', 'Map')}
-        className={`${HDR_BALL} bg-gradient-to-br from-emerald-300 to-emerald-700 text-white`}>
+        className={`${DEVICE_BALL} bg-gradient-to-br from-emerald-300 to-emerald-700 text-white`}>
         <MapPin className="w-4 h-4" strokeWidth={2.6} />
       </button>
-      <button type="button" onClick={(e) => { e.stopPropagation(); window.open(BIRD_CAPTURE_APP_URL, '_blank'); }}
-        title="前往 BIRD-DEX 3 捕捉精靈" aria-label="前往 BIRD-DEX 3 捕捉精靈"
-        className={`${HDR_BALL} overflow-hidden bg-white`}>
-        <PokeballIcon className="w-full h-full block" />
-      </button>
+      <BirdCaptureLink lang={lang} compact />
     </div>
   </div>
 
