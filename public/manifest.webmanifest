@@ -1,7 +1,7 @@
 {
   "name": "AvianDex · 香港鳥類圖鑑",
   "short_name": "AvianDex",
-  "description": "Pokédex 風格的香港鳥類圖鑑：583 個編號、圖卡收藏、AI 辨識。",
+  "description": "香港鳥類圖鑑：583 個編號、圖卡收藏、AI 辨識。",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

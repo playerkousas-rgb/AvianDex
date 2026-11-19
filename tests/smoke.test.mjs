@@ -98,7 +98,7 @@ function installGlobals(window) {
   g.MutationObserver = window.MutationObserver;
 }
 
-test('App 可以完整 render，不會白屏（模擬離線、第一次開）', async () => {
+test('離線首次啟動：鳥蛋裂開後可進入圖鑑，不會白屏', async () => {
   const out = bundle();
   const window = makeDom();
   installGlobals(window);
@@ -114,6 +114,7 @@ test('App 可以完整 render，不會白屏（模擬離線、第一次開）', 
   try {
     const React = await import(pathToFileURL(path.join(root, 'node_modules/react/index.js')).href);
     const { createRoot } = await import(pathToFileURL(path.join(root, 'node_modules/react-dom/client.js')).href);
+    const { flushSync } = await import(pathToFileURL(path.join(root, 'node_modules/react-dom/index.js')).href);
     const mod = await import(pathToFileURL(out).href);
 
     const rootEl = window.document.getElementById('root');
@@ -129,6 +130,22 @@ test('App 可以完整 render，不會白屏（模擬離線、第一次開）', 
     // 1) 絕對不可以是空白：白屏 = 使用者見到一片雪白
     assert.ok(html.length > 5000, `root 只有 ${html.length} 字元，看起來是白屏`);
     assert.match(rootEl.textContent || '', /AvianDex/, '連 App 標題都冇，React tree 應該掛了');
+
+    const egg = rootEl.querySelector('button.welcome-start');
+    const welcome = rootEl.querySelector('.welcome-screen');
+    const archive = rootEl.querySelector('main');
+    assert.ok(egg && welcome && archive);
+    assert.equal(welcome.dataset.opening, 'false');
+    assert.ok(archive.closest('[inert]'), '撳鳥蛋前不能操作底下的圖鑑');
+    flushSync(() => egg.click());
+    assert.equal(welcome.dataset.opening, 'true');
+    assert.ok(egg.disabled, '孵化時不會重複觸發');
+    assert.ok(archive.closest('[inert]'), '先裂開，再開啟圖鑑');
+    await new Promise((res) => setTimeout(res, 1000));
+    assert.equal(archive.closest('[inert]'), null, '裂開後圖鑑可以操作');
+    assert.equal(window.document.activeElement, rootEl.querySelector('header h1'));
+    assert.ok(rootEl.querySelector('header img[src="/icons/icon-192-v2.png"]'), '頂欄應使用 AvianDex 的小鳥圖標');
+    assert.ok(rootEl.querySelector('a[href="https://birddex3.vercel.app"] .lucide-binoculars'), '右側 BIRD-DEX 入口應用望遠鏡');
 
     // 2) 不應該有未捕捉的錯誤
     assert.deepEqual(errors, [], `render 期間拋錯：${errors[0]}`);

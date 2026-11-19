@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { FlipCard } from './components/FlipCard.tsx';
 import { PokedexDevice } from './components/PokedexDevice.tsx';
 import { WelcomeScreen } from './components/WelcomeScreen.tsx';
 import { SideToolBalls } from './components/SideToolBalls.tsx';
-import { PokeballIcon } from './components/PokeballIcon.tsx';
+import { BirdCaptureLink } from './components/BirdCaptureLink.tsx';
+import { FieldFeathers } from './components/FieldFeathers.tsx';
 import { TopBar } from './components/TopBar.tsx';
 import { UpdateToast } from './components/UpdateToast.tsx';
 import { BALL_BASE, BALL_SIZE, BALL_ICON, BALL_RAIL_RIGHT, BALL_LABEL } from './components/ballStyles';
@@ -14,11 +15,11 @@ import { FieldGuideModal, type GuideKind } from './components/FieldGuideModal.ts
 import { useBirds } from './hooks/useBirds';
 import { useCardStats } from './hooks/useCardStats';
 import { getLoadedIds, resetAll, requestCard } from './lib/cardImage';
-import { APP_VERSION, BIRD_CAPTURE_APP_URL, CARDS_PER_PAGE, DEFAULT_SORT_MODE } from './config';
+import { APP_VERSION, CARDS_PER_PAGE, DEFAULT_SORT_MODE } from './config';
 import { sortBirds, searchBirds, type SortMode } from './lib/pokedexOrder';
 import { filterByFacets, searchIndex, emptyFacets, hasActiveFacets, type Facets, type Lang } from './lib/explorer';
 import { resolveBirdId } from './data/nameAliases';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import {
   Bird as BirdIcon,
   RefreshCw,
@@ -46,6 +47,18 @@ function App() {
   // 因為排序（eBird / 中文 / 編號）會令同一張卡嘅索引變來變去。
   const [selectedBirdId, setSelectedBirdId] = useState<string | null>(null);
   const [isOpened, setIsOpened] = useState(false);
+  const dexHeading = useRef<HTMLHeadingElement>(null);
+  const focusAfterHatching = useRef(false);
+  const enterDex = useCallback(() => {
+    focusAfterHatching.current = true;
+    setIsOpened(true);
+  }, []);
+  useEffect(() => {
+    if (isOpened && focusAfterHatching.current) {
+      dexHeading.current?.focus({ preventScroll: true });
+      focusAfterHatching.current = false;
+    }
+  }, [isOpened]);
   const [query, setQuery] = useState('');
   const [showMap, setShowMap] = useState(false);
   // 分頁顯示：一次過 render 569 張卡會同時觸發幾百個圖片請求（r2.dev 會限流）
@@ -220,12 +233,13 @@ function App() {
 
   return (
     <>
-      {!isOpened && <WelcomeScreen onOpen={() => setIsOpened(true)} />}
+      <AnimatePresence initial={false}>
+        {!isOpened && <WelcomeScreen key="welcome" lang={lang} onOpen={enterDex} />}
+      </AnimatePresence>
 
       <div
-        className={`min-h-[100dvh] font-sans pb-32 sm:pb-24 transition-opacity duration-1000 relative ${
-          isOpened ? 'opacity-100' : 'opacity-0 h-screen overflow-hidden'
-        }`}
+        inert={!isOpened}
+        className={`min-h-[100dvh] font-sans pb-32 sm:pb-24 relative ${isOpened ? '' : 'invisible h-dvh overflow-hidden'}`}
         style={{
           background: `
             radial-gradient(ellipse at top, rgba(255,220,150,0.12), transparent 60%),
@@ -244,29 +258,22 @@ function App() {
         />
 
         <header className="relative z-20">
-          <div className="bg-gradient-to-b from-[#E3350D] via-[#c92b0a] to-[#9a2208] border-b-[6px] border-black shadow-[0_8px_24px_rgba(0,0,0,0.5)] relative overflow-hidden">
-            <div
-              className="absolute inset-0 opacity-20 pointer-events-none"
-              style={{
-                backgroundImage:
-                  'radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px)',
-                backgroundSize: '14px 14px',
-              }}
-            />
-            <div className="absolute top-2 left-2 w-2.5 h-2.5 rounded-full bg-gray-900 border border-red-900" />
-            <div className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-gray-900 border border-red-900" />
-            <div className="absolute bottom-2 left-2 w-2.5 h-2.5 rounded-full bg-gray-900 border border-red-900" />
-            <div className="absolute bottom-2 right-2 w-2.5 h-2.5 rounded-full bg-gray-900 border border-red-900" />
-
+          <div className="field-camo border-b-[6px] border-black shadow-[0_8px_24px_rgba(0,0,0,0.5)] relative overflow-hidden">
+            <div className="absolute top-2 left-2 w-2.5 h-2.5 rounded-full bg-gray-900 border border-[#4b4635]" />
+            <div className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-gray-900 border border-[#4b4635]" />
+            <div className="absolute bottom-2 left-2 w-2.5 h-2.5 rounded-full bg-gray-900 border border-[#4b4635]" />
+            <div className="absolute bottom-2 right-2 w-2.5 h-2.5 rounded-full bg-gray-900 border border-[#4b4635]" />
             <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-5 flex items-center justify-between gap-2 relative">
               <div className="flex items-center gap-2 sm:gap-4 min-w-0 flex-1 sm:flex-none">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-white to-gray-300 flex items-center justify-center border-[3px] sm:border-4 border-gray-900 shadow-[0_4px_0_rgba(0,0,0,0.4),inset_0_2px_4px_rgba(255,255,255,0.6)] shrink-0">
-                  <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#5bc0f8] to-[#1d80c4] border-2 border-white shadow-[0_0_15px_rgba(49,165,232,0.9),inset_0_-3px_6px_rgba(0,0,0,0.3)] relative overflow-hidden">
-                    <div className="absolute top-1 left-2 w-3 h-3 bg-white/70 rounded-full blur-[1px]" />
-                  </div>
-                </div>
+                <img
+                  src="/icons/icon-192-v2.png"
+                  alt=""
+                  width={192}
+                  height={192}
+                  className="h-12 w-12 shrink-0 rounded-full border-[3px] border-[#e4dbc3] shadow-[0_3px_0_#15201980] sm:h-16 sm:w-16"
+                />
                 <div className="min-w-0">
-                  <h1 className="text-xl sm:text-3xl md:text-4xl font-black italic tracking-tight text-white drop-shadow-[0_3px_0_rgba(0,0,0,0.5)] leading-none flex items-center gap-2">
+                  <h1 ref={dexHeading} tabIndex={-1} className="text-xl sm:text-3xl md:text-4xl font-black italic tracking-tight text-white drop-shadow-[0_3px_0_rgba(0,0,0,0.5)] leading-none flex items-center gap-2 focus:outline-none">
                     AvianDex
                     <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-yellow-300 animate-pulse hidden sm:block" />
                   </h1>
@@ -299,9 +306,7 @@ function App() {
                   <Backpack className="w-4 h-4" /> {lang === 'en' ? 'Gear' : '觀鳥裝備'}
                 </button>
                 <div className="flex gap-1.5 bg-black/30 backdrop-blur-sm rounded-full px-2.5 py-1.5 border border-white/10">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-500 border border-red-900 shadow-[0_0_8px_rgba(239,68,68,0.8)] animate-pulse" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-400 border border-yellow-700 shadow-[0_0_8px_rgba(250,204,21,0.8)]" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-500 border border-green-800 shadow-[0_0_8px_rgba(34,197,94,0.8)]" />
+                  <FieldFeathers className="gap-1.5 text-xs" />
                 </div>
                 <div className="hidden lg:flex items-center gap-2 bg-black/30 backdrop-blur-sm rounded-md px-3 py-1.5 border border-white/10 font-mono text-[10px] text-green-300">
                   <Wifi className="w-3 h-3" />
@@ -567,18 +572,7 @@ function App() {
             <MapPin className={BALL_ICON} strokeWidth={2.6} />
             <span className={BALL_LABEL('right')}>{L('觀鳥地圖', 'Map')}</span>
           </button>
-          {/* 精靈球：跳轉去 BIRD-DEX 3（捕捉 App） */}
-          <button
-            onClick={() => window.open(BIRD_CAPTURE_APP_URL, '_blank')}
-            title="前往 BIRD-DEX 3 捕捉精靈"
-            aria-label="前往 BIRD-DEX 3 捕捉精靈"
-            className={`${BALL_BASE} ${BALL_SIZE} overflow-hidden bg-white`}
-          >
-            <PokeballIcon className="w-full h-full block" />
-            <span className={BALL_LABEL('right')}>
-              去 BIRD-DEX 3 捕捉精靈
-            </span>
-          </button>
+          <BirdCaptureLink lang={lang} icon="binoculars" />
         </div>
 
         <footer className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 mt-6 sm:mt-8 pb-4">
@@ -591,11 +585,11 @@ function App() {
         </footer>
       </div>
 
-      {/* 圖鑑工具球：左側禮儀／裝備；右側地圖／前往 BIRD-DEX 3。 */}
+      {/* 圖鑑工具：左側禮儀／裝備；右側地圖／前往 BIRD-DEX 3。 */}
       <SideToolBalls
         lang={lang}
         onGuide={(k) => setGuideKind(k)}
-        hidden={selectedBirdId !== null || showMap || !!guideKind}
+        hidden={!isOpened || selectedBirdId !== null || showMap || !!guideKind}
       />
 
       {/* 有新版本時的頂部橫幅（由 service worker 偵測，用戶按才換版） */}

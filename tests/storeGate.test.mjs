@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFileSync } from 'node:fs';
+import { runInNewContext } from 'node:vm';
 import '../public/store_gate_v1.0.js';
 
 const gate = globalThis.ScoutStoreGate;
@@ -30,12 +31,39 @@ test('AvianDex entry gate allows approved portals and installed standalone PWA o
   assert.equal(decide('https://scoutappstore.vercel.app.evil.test/').allowed, false);
 });
 
-test('production HTML activates the gate while local and Arena preview bypass only the gate', async () => {
-  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+const bootstrap = html.match(/<script data-aviandex-entry-gate>([\s\S]*?)<\/script>/)?.[1];
+
+function gateOptions(url, dev = false) {
+  assert.ok(bootstrap, 'entry-gate bootstrap must be present');
+  let options;
+  runInNewContext(bootstrap.replaceAll('%DEV%', String(dev)), {
+    window: { location: new URL(url), initStoreGate: (value) => { options = value; } },
+  });
+  return options;
+}
+
+test('dev preview skips the store gate without relying on the proxy hostname or referrer', () => {
+  assert.equal(gateOptions('https://live-preview.example.test/', true), undefined);
+});
+
+test('built app opens directly on loopback and on the Arena preview host', () => {
+  for (const url of [
+    'http://localhost:4173/', 'http://127.0.0.1:4173/', 'http://[::1]:4173/',
+    'https://4173-test-sandbox.e2b.app/',
+  ]) {
+    assert.equal(gateOptions(url), undefined, url);
+  }
+});
+
+test('production HTML still activates the approved entry routes', () => {
   assert.match(html, /src="\/store_gate_v1\.0\.js"/);
-  assert.match(html, /mode: localOrArenaPreview \? 'open' : 'entry-gate'/);
-  assert.match(html, /portalIds: \['appstore', 'library'\]/);
-  assert.match(html, /id: 'birddex3'/);
-  assert.match(html, /https:\/\/birddex3\.vercel\.app\//);
-  assert.match(html, /allowStandalone: true/);
+  for (const url of ['https://avian-dex.vercel.app/', 'https://preview.e2b.app.example.test/']) {
+    const options = gateOptions(url);
+    assert.equal(options.mode, 'entry-gate');
+    assert.deepEqual([...options.portalIds], ['appstore', 'library']);
+    assert.equal(options.portals[0].id, 'birddex3');
+    assert.equal(options.portals[0].url, 'https://birddex3.vercel.app/');
+    assert.equal(options.allowStandalone, true);
+  }
 });
