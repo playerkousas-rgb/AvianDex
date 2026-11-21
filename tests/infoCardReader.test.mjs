@@ -248,8 +248,12 @@ test('the BIRD-DEX 3 link stays round with binoculars in the archive and a camer
     assert.doesNotMatch(html, /class="[^"]*\brounded-xl\b/);
     assert.ok(html.includes(`aria-label="${label}"`));
   }
-  const app = readFileSync(path.join(root, 'src/App.tsx'), 'utf8');
+  const rails = readFileSync(path.join(root, 'src/components/SideToolBalls.tsx'), 'utf8');
   const device = readFileSync(path.join(root, 'src/components/PokedexDevice.tsx'), 'utf8');
-  assert.match(app, /<BirdCaptureLink lang={lang} icon="binoculars" \/>/);
+  /* 2026-11-21：右排（地圖／回報／BIRD-DEX 3）搬入 SideToolBalls，App 唔再自己砌；
+     BIRD-DEX 3 球改為直接喺 rails 出 <a>，仍然要望遠鏡＋圓形。 */
+  assert.match(rails, /href={BIRD_CAPTURE_APP_URL}/);
+  assert.match(rails, /<Binoculars className={BALL_ICON}/);
+  assert.match(rails, /rel="noopener"/);
   assert.match(device, /<BirdCaptureLink lang={lang} compact \/>/);
 });

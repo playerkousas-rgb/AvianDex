@@ -1,7 +1,7 @@
 {
   "name": "aviandex",
   "private": true,
-  "version": "1.9.0",
+  "version": "1.10.0",
   "type": "module",
   "scripts": {
     "aliases": "node scripts/build-aliases.mjs",
@@ -62,7 +62,9 @@
     "test:facts": "node --test tests/facts.test.mjs",
     "test:order": "node --test tests/pokedexOrder.test.mjs",
     "test:taxonomy": "node --test tests/taxonomy.test.mjs",
-    "zh:resolve": "node scripts/cards/resolve-zh.mjs"
+    "zh:resolve": "node scripts/cards/resolve-zh.mjs",
+    "test:support": "node --test tests/supportButton.test.mjs",
+    "test:report": "node --test tests/scoutReport.test.mjs"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",

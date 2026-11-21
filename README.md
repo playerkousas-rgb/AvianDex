@@ -96,6 +96,10 @@ AvianDex 的做法是：**把「學習」包裝成「收集」**。
   深度百科（Cornell All About Birds）· 觀察雷達（eBird 香港即時分佈）·
   視覺圖庫（Flickr）· 影片中心（YouTube）· 鳴聲資料（Xeno-canto）· AI 辨識（Merlin）。
 - **可安裝**：加到主畫面全螢幕使用（PWA manifest + 圖標）。
+- **兩排球（各 3 粒）**：左＝**讚好／收藏**（開新分頁去 SCOUT APP STORE 詳情卡）、觀鳥禮儀、觀鳥裝備；
+  右＝觀鳥地圖、**回報問題**（Scout Admin 統一回報，可匿名）、前往 BIRD-DEX 3 拍鳥。
+  兩個新掣喺詳細資料頁底部都再出現一次；全部常駐、非阻塞、冇死連
+  （helper 未載入就唔顯示）。規則見 `readme` SG18 / docs/60。
 
 ## 與 BirdEx 的關係
 
