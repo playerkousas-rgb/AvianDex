@@ -89,3 +89,24 @@ a:active,
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(250, 204, 21, 0.6);
 }
+
+/* ============================================================
+ * Scout Admin 統一回報 widget（統一回報格式 v1）
+ * ------------------------------------------------------------
+ * widget 自己有一粒右下角 FAB；本 App 已有自己嘅「回報」球，
+ * 兩粒並排會爭位（同 HKMAP 做法一樣：FAB 收埋，入口用自己嗰粒）。
+ * 只改「入口位置」，widget 嘅 modal／表單／送出邏輯一律照用原版。
+ * ============================================================ */
+#scoutw-fab { display: none !important; }
+
+/* 列印：回報 modal／浮動球一律唔印（SG18 ⑤） */
+@media print {
+  #scoutw-root,
+  #scoutw-overlay,
+  #scoutw-fab,
+  .tool-ball { display: none !important; }
+}
+
+/* SG18 ⑤：`[hidden]` 一定要真係唔顯示 —— 否則 `display:inline-flex`
+   一類規則會令「hidden 但照顯示」＝出死連。 */
+[hidden] { display: none !important; }

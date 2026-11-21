@@ -1,5 +1,5 @@
 /**
- * store_gate_v1.0.js — 關站與指定入口（SCOUT APP STORE／通告圖書館）白名單閘門（SG1–SG6、SG17 / docs/50-app-store-whitelist-and-shutdown.md）
+ * store_gate_v1.0.js — 關站與指定入口（SCOUT APP STORE／通告圖書館）白名單閘門（SG1–SG19、docs/50-app-store-whitelist-and-shutdown.md）
  * © SCOUT SYSTEM · COPYRIGHT SCOUT SYSTEM
  *
  * 用法（放喺 index.html 嘅 <head> 最頂，零依賴；支援單一或多個指定入口）：
@@ -8,8 +8,10 @@
  *     initStoreGate({
  *       appKey: 'myapp',
  *       mode: 'entry-gate', // 'open' | 'entry-gate' | 'iframe-only' | 'closed'
- *       // ① 用官方四大入口註冊表（建議）：只寫 id，網址／標籤／順序由真理倉統一維護
+ *       // ① 用官方入口註冊表（建議）：只寫 id，網址／標籤／順序由真理倉統一維護
  *       portalIds: ['appstore', 'library', 'member', 'district'],
+ *       // ② SG19（2026-11-17 新標準）：門照開，但攔截卡只出 APP STORE 一粒掣
+ *       silentPortalIds: ['library'],   // 放行但唔畫掣（同 portalIds 任一寫法等效）
  *       // ② 或自訂入口（例如臨時活動頁、旅團門戶）
  *       portals: [
  *         { labelZh: '前往 SCOUT APP STORE', labelEn: 'Go to SCOUT APP STORE', url: 'https://scoutappstore.vercel.app/' },
@@ -19,7 +21,17 @@
  *     });
  *   </script>
  *
- * 官方四大入口（PORTAL_REGISTRY，2026-11-15 用戶定案；詳情 docs/50 §0.1）：
+ * SG19（2026-11-17 用戶定案）—— 「按鈕」同「放行來源」係兩件事：
+ *   子 App 預設應同時放行 appstore 同 library（library 係引流入口），
+ *   但用家直開網址被攔截時，提示卡**只顯示 appstore 一粒掣**。
+ *   寫法兩種等效：portalIds: ['appstore','library'], silentPortalIds: ['library']
+ *             或 portalIdsAdmit: 'all', silentPortalIds: ['library','member','district','gemini']
+ *
+ * SG18（2026-11-17 用戶定案）—— 子 App 內置「讚好／收藏」一鍵回跳主站：
+ *   getAppStoreUrl(slug) → 開新分頁返 APP STORE 詳情卡。
+ *   **嚴禁**子 App 直連主站 Supabase／複製 anon key／自行呼叫 bump_hearts／bump_stars。
+ *
+ * 官方五個入口（PORTAL_REGISTRY，2026-11-15 用戶定案；詳情 docs/50 §0.1）：
  *   1. appstore  1. APP STORE     https://scoutappstore.vercel.app/        （playerkousas-rgb/website）
  *   2. library   2. 圖書館         https://scout-circulars.vercel.app/      （playerkousas-rgb/scout-circulars）
  *   3. member    3. 成員系統       https://member-portal-sigma-swart.vercel.app/（playerkousas-rgb/member-portal）
@@ -59,7 +71,7 @@ const DEFAULT_LIBRARY_URL = 'https://scout-circulars.vercel.app/';
 const DEFAULT_ALLOWED_ORIGINS = ['https://scoutappstore.vercel.app'];
 
 /**
- * PORTAL_REGISTRY — 官方四大準入白名單入口（真理倉 docs/50 §0.1 唯一來源）
+ * PORTAL_REGISTRY — 官方五個準入白名單入口（真理倉 docs/50 §0.1 唯一來源）
  * 2026-11-15 用戶定案：1. APP STORE · 2. 圖書館 · 3. 成員系統 · 4. 區管理系統
  * 子 App 用 portalIds: ['appstore','library','member','district']（可只揀子集）即可；
  * 改網址／改排序只改呢個表，唔使逐個 App 改 index.html。
@@ -224,6 +236,25 @@ function getPortal(id, overrides = {}) {
   return { ...hit, ...(overrides || {}) };
 }
 
+/**
+ * SG18：組出「返回主站該 App 詳情卡」嘅深層連結（子 App 內置讚好／收藏掣用）。
+ * 子 App **嚴禁**直連主站 Supabase／複製 anon key／自行呼叫 bump_hearts／bump_stars；
+ * 一律用呢個 helper 開新分頁返主站，由用家自己撳 ❤️／⭐（收藏清單存喺主站同源 localStorage）。
+ *
+ *   getAppStoreUrl('aircraft-encyclopedia') → 'https://scoutappstore.vercel.app/?app=aircraft-encyclopedia'
+ *   getAppStoreUrl('')                       → 'https://scoutappstore.vercel.app/'
+ *
+ * ⚠️ 唔會出 `//?app=`：先去掉 registry url 尾斜線再串 query。
+ * ⚠️ slug 由主站 migrations/20261116-app-slug-seed.sql 或 apps.slug 核實，**唔准靠 repo 名猜**。
+ */
+function getAppStoreUrl(appSlug) {
+  const base = String((PORTAL_REGISTRY.appstore && PORTAL_REGISTRY.appstore.url) || DEFAULT_STORE_URL)
+    .trim()
+    .replace(/\/+$/, '');
+  const slug = String(appSlug == null ? '' : appSlug).trim();
+  return slug ? `${base}/?app=${encodeURIComponent(slug)}` : `${base}/`;
+}
+
 /** 由 portalIds: ['appstore','library'] 展開成完整入口物件清單（未知 id 靜靜略過） */
 function portalsFromIds(ids, labelMap = {}, options = {}) {
   if (!Array.isArray(ids)) return [];
@@ -249,6 +280,13 @@ function portalsFromIds(ids, labelMap = {}, options = {}) {
 const COPY = {
   zh: {
     whitelistBadge: '白名單保護 · 指定入口限定',
+    // SG19（2026-11-17 定案）：預設用「簡短人話」——零技術術語，唔講「白名單」。
+    // 舊字串（whitelistTitleSingle／whitelistBodySingle／Multi）**保留**做 alias：
+    //   ① 向下相容：任何 App 已用 customTitle 也唔受影響；
+    //   ② 想講清楚「為統一入口及版本管理」嘅 App 仍然可以自行指定；
+    //   ③ 測試同時鎖兩組字串，防止其中一組被靜靜改走。
+    whitelistTitleShort: '需經由 SCOUT APP STORE 開啟',
+    whitelistBodyShort: '請按下方按鈕前往 APP STORE 開啟。',
     whitelistTitleSingle: '此程式需經 SCOUT APP STORE 開啟',
     whitelistTitleMulti: '此程式需經指定入口網站開啟',
     whitelistBodySingle: '為統一入口及版本管理，本程式已啟用白名單限制，不支援直接開啟獨立網址。請由 SCOUT APP STORE 進入。',
@@ -272,6 +310,13 @@ const COPY = {
     whitelistTitleMulti: 'Please open this app via a designated portal',
     whitelistBodySingle: 'Direct URL access is disabled. This app is protected by an entry whitelist and must be launched from SCOUT APP STORE.',
     whitelistBodyMulti: 'Direct URL access is disabled. Please launch this app from one of the designated portals below:',
+    // SG19：簡短版（預設）
+    whitelistTitleShort: 'Open via SCOUT APP STORE',
+    whitelistBodyShort: 'Please use the button below to open this app from SCOUT APP STORE.',
+    // SG19 順手補齊：舊版 COPY.en 漏咗呢三個 → 英文模式下 renderSupportNudge 會出 undefined
+    supportText: 'Shelf space is limited: apps that nobody saves or likes get taken down to make room for new ones. If this is useful, tap ❤️ — once is enough.',
+    supportCta: 'Give a ❤️',
+    supportDismiss: 'Not now',
     iframeBody: 'This tool can only be opened inside a whitelisted portal view, not via a standalone URL.',
     closedBadge: 'Temporarily Closed · Maintenance',
     closedTitle: 'This site is temporarily closed',
@@ -298,17 +343,33 @@ function parseAllowedOrigin(rawUrl, allowLocalhost = false) {
   }
 }
 
-/** 正規化指定入口清單：自訂 portals 優先，其次官方 portalIds（四大入口註冊表），最後 storeUrl 單一入口 */
+/**
+ * SG19：靜默放行入口清單。
+ * `silentPortalIds` 內嘅入口會加入白名單放行（`matchedPortalId` 正常回報），
+ * 但**唔會**渲染成攔截卡按鈕 —— 用家直開網址撞卡時只見到 APP STORE 一粒掣。
+ * 目的：圖書館係引流入口（要有 Referer 放行得到），但唔係「主站」，
+ * 唔應該喺攔截卡同 APP STORE 並排爭位（一張卡兩粒掣＝用家唔知撳邊個）。
+ */
+function getSilentIds(options = {}) {
+  const list = Array.isArray(options.silentPortalIds) ? options.silentPortalIds : [];
+  return new Set(list.map((v) => String(v || '').trim().toLowerCase()).filter(Boolean));
+}
+
+/** 正規化指定入口清單：自訂 portals 優先，其次官方 portalIds（五個入口註冊表），最後 storeUrl 單一入口 */
 function normalizePortals(options = {}) {
   const allowLocalhost = Boolean(options.allowLocalhost);
-  const toEntry = (item) => {
+  const silentIds = getSilentIds(options);
+  const toEntry = (item, silent = false) => {
     if (!item || typeof item !== 'object') return null;
     const origin = parseAllowedOrigin(item.url, allowLocalhost);
     if (!origin) return null;
+    const id = item.id ? String(item.id) : '';
     return {
-      id: item.id ? String(item.id) : '',
+      id,
       url: item.url,
       origin,
+      // SG19：silent 入口照放行（仍然喺白名單），但唔畫成掣
+      silent: silent || (!!id && silentIds.has(id.toLowerCase())),
       labelZh: String(item.labelZh || item.label || COPY.zh.cta),
       labelEn: String(item.labelEn || item.label || COPY.en.cta),
     };
@@ -324,16 +385,20 @@ function normalizePortals(options = {}) {
   };
   // 自訂 portals 同官方 portalIds 可以並存：以 Origin 去重，先列自訂、再接官方未重複嘅入口
   if (Array.isArray(options.portals) && options.portals.length > 0) {
-    pushAll(options.portals.map(toEntry).filter(Boolean));
+    pushAll(options.portals.map((p) => toEntry(p)).filter(Boolean));
   }
   if (Array.isArray(options.portalIds) && options.portalIds.length > 0) {
-    pushAll(portalsFromIds(options.portalIds).map(toEntry).filter(Boolean));
+    pushAll(portalsFromIds(options.portalIds).map((p) => toEntry(p)).filter(Boolean));
   } else if (options.portalIdsAdmit) {
     // SG17：冇寫死 portalIds 時，可以用 portalIdsAdmit 一次過揀：
     //   'all' → OUTBOUND_PORTAL_IDS（1–4，Gemini 永遠唔會入圍）
     //   陣列 → 逐個指名
     //   唔傳 → DEFAULT_PORTAL_IDS（只有 APP STORE）
-    pushAll(portalsFromIds(resolvePortalIds(options.portalIds, options.portalIdsAdmit)).map(toEntry).filter(Boolean));
+    pushAll(portalsFromIds(resolvePortalIds(options.portalIds, options.portalIdsAdmit)).map((p) => toEntry(p)).filter(Boolean));
+  }
+  // SG19：silentPortalIds 內、頭先未出現過嘅入口一樣要加入白名單（否則靜默放行根本唔生效）
+  if (silentIds.size > 0) {
+    pushAll(portalsFromIds([...silentIds]).map((p) => toEntry(p, true)).filter(Boolean));
   }
   if (merged.length > 0) return merged;
   const fallbackUrl = parseAllowedOrigin(options.storeUrl || DEFAULT_STORE_URL, allowLocalhost)
@@ -343,6 +408,7 @@ function normalizePortals(options = {}) {
     id: 'appstore',
     url: fallbackUrl,
     origin: parseAllowedOrigin(fallbackUrl, allowLocalhost) || DEFAULT_ALLOWED_ORIGINS[0],
+    silent: false,
     labelZh: COPY.zh.cta,
     labelEn: COPY.en.cta,
   }];
@@ -393,11 +459,16 @@ function evaluateStoreGate(options = {}, env = {}) {
   const allowStandalone = options.allowStandalone !== false;
   const portals = normalizePortals(options);
 
-  const rawAllowed = Array.isArray(options.allowedOrigins) && options.allowedOrigins.length
+  // SG19：allowedOrigins 係「**額外**放行來源」，唔可以蓋過 portals。
+  // 舊寫法（有 allowedOrigins 就完全取代 portals）會令 silentPortalIds 嘅入口
+  // 放行得到但 matchedPortalId 變空 → SG10 統計認唔出入口。改為聯集。
+  const extraAllowed = Array.isArray(options.allowedOrigins) && options.allowedOrigins.length
     ? options.allowedOrigins
-    : portals.map((p) => p.origin);
+    : [];
   const allowedSet = new Set(
-    rawAllowed.map((o) => parseAllowedOrigin(o, allowLocalhost)).filter(Boolean),
+    [...portals.map((p) => p.origin), ...extraAllowed]
+      .map((o) => parseAllowedOrigin(o, allowLocalhost))
+      .filter(Boolean),
   );
 
   if (mode === 'open') {
@@ -406,7 +477,7 @@ function evaluateStoreGate(options = {}, env = {}) {
   if (mode === 'closed') {
     return { allowed: false, reason: 'closed', mode };
   }
-  // SG8：入口網站自己永遠唔會被自己嘅閘擋死（否則四大入口一齊鎖死）。
+  // SG8：入口網站自己永遠唔會被自己嘅閘擋死（否則五個入口一齊鎖死）。
   // 判定：當前頁面自己嘅 origin ∈ 白名單入口清單 → 放行；closed 已喺上面優先處理（關站蓋過一切），
   // open 亦已喺上面直接放行，所以呢兩行唔會改變原有行為。
   if (mode === 'iframe-only' || mode === 'entry-gate') {
@@ -431,7 +502,10 @@ function evaluateStoreGate(options = {}, env = {}) {
     }
     const refOrigin = parseAllowedOrigin(env.referrer || '', allowLocalhost);
     if (refOrigin && allowedSet.has(refOrigin)) {
-      const hit = portals.find((p) => p.origin === refOrigin);
+      // SG19：先由 portals 認；認唔到（例如入口只喺 allowedOrigins 出現）就查官方註冊表，
+      // 令 matchedPortalId 唔會無故變空（SG10 統計靠佢分辨「邊個入口引流」）。
+      const hit = portals.find((p) => p.origin === refOrigin)
+        || PORTAL_IDS.map((id) => getPortal(id)).find((p) => p && p.origin === refOrigin);
       return {
         allowed: true,
         reason: 'referrer-whitelist',
@@ -452,8 +526,12 @@ function evaluateStoreGate(options = {}, env = {}) {
 function renderGateOverlay(doc, win, decision, options = {}) {
   if (!doc || !doc.documentElement) return null;
   const portals = normalizePortals(options);
-  const primaryUrl = portals[0].url;
-  const isMulti = portals.length > 1;
+  // SG19：「按鈕」同「放行來源」分離 —— silent 入口照放行但唔畫掣。
+  // 只畫一粒掣時（沉默咗圖書館之後嘅常態），文案用 Short 版 + 掣文字去編號前綴。
+  const shown = portals.filter((p) => !p.silent);
+  const actionPortals = shown.length > 0 ? shown : portals;
+  const primaryUrl = actionPortals[0].url;
+  const isMulti = actionPortals.length > 1;
   const lang = options.lang === 'en' ? 'en' : detectCopyLang(doc);
   const c = COPY[lang] || COPY.zh;
   const isClosed = decision.reason === 'closed';
@@ -462,10 +540,10 @@ function renderGateOverlay(doc, win, decision, options = {}) {
   const badge = isClosed ? c.closedBadge : c.whitelistBadge;
   const defaultTitle = isClosed
     ? c.closedTitle
-    : (isMulti ? c.whitelistTitleMulti : c.whitelistTitleSingle);
+    : (isMulti ? c.whitelistTitleMulti : c.whitelistTitleShort);
   const defaultBody = isClosed
     ? c.closedBody
-    : (isIframe ? c.iframeBody : (isMulti ? c.whitelistBodyMulti : c.whitelistBodySingle));
+    : (isIframe ? c.iframeBody : (isMulti ? c.whitelistBodyMulti : c.whitelistBodyShort));
   const title = options.customTitle || defaultTitle;
   const body = options.customMessage || defaultBody;
 
@@ -517,13 +595,16 @@ function renderGateOverlay(doc, win, decision, options = {}) {
     const actions = doc.createElement('div');
     actions.className = 'sg-actions';
 
-    portals.forEach((portal, idx) => {
+    actionPortals.forEach((portal, idx) => {
       const a = doc.createElement('a');
       a.className = idx === 0 ? 'sg-cta' : 'sg-cta sg-secondary';
       a.href = portal.url;
       a.target = '_top';
       a.rel = 'noopener';
-      a.textContent = lang === 'en' ? portal.labelEn : portal.labelZh;
+      const rawLabel = lang === 'en' ? portal.labelEn : portal.labelZh;
+      // SG19：只得一粒掣時去掉「1. 」編號前綴（編號只有多過一粒掣才有意義）。
+      // 只食開頭嘅 `^\d+\.\s*`，唔會破壞自訂 label 中間嘅數字。
+      a.textContent = isMulti ? rawLabel : String(rawLabel).replace(/^\d+\.\s*/, '');
       actions.appendChild(a);
     });
 
@@ -546,7 +627,7 @@ function renderGateOverlay(doc, win, decision, options = {}) {
       sub.className = 'sg-sub';
       // 講清楚「會自動去邊個入口」，避免用家唔知跳去邊（預設永遠係第一粒＝APP STORE）
       const primaryName = isMulti
-        ? (lang === 'en' ? portals[0].labelEn : portals[0].labelZh)
+        ? (lang === 'en' ? actionPortals[0].labelEn : actionPortals[0].labelZh)
         : '';
       sub.textContent = isMulti
         ? `${c.countdownPrefix}${sec}${c.countdownSuffix}（${primaryName}）`
@@ -626,6 +707,11 @@ function initStoreGate(options = {}, win = typeof window !== 'undefined' ? windo
  * 目的唔係防抄（技術上防唔到），而係令「用得着嘅人」有一個極低門檻嘅表態位置，
  * 同時令創作者可以用 clicks／stars／hearts 判斷「值唔值得繼續更新」。
  * 規則：① 只喺獲放行時顯示 ② 永遠唔遮住內容、唔阻擋操作 ③ 有「唔使喇」 ④ 每 N 日最多一次
+ *
+ * ⚠️ SG18（2026-11-17）：A 組子 App 嘅標準做法係「常駐回跳掣」（子 App 自己頂欄／頁尾
+ *    用 getAppStoreUrl(slug) 開新分頁返主站詳情卡），**預設唔開** supportNudge。
+ *    兩者並存 = 同一個用家被騷擾兩次；所以由 App 自己揀其一，A 組預設揀 SG18。
+ *    （SG13 保留作可選機制，唔會被移除。）
  */
 function readLocal(win, key) {
   try {
@@ -771,6 +857,7 @@ if (typeof globalThis !== 'undefined') {
     NEVER_ADMIT_PORTAL_IDS,
     resolvePortalIds,
     getPortal,
+    getAppStoreUrl,
     portalsFromIds,
     buildTrackPayload,
     reportGateDecision,
@@ -802,6 +889,7 @@ if (typeof module !== 'undefined' && module.exports) {
     NEVER_ADMIT_PORTAL_IDS,
     resolvePortalIds,
     getPortal,
+    getAppStoreUrl,
     portalsFromIds,
     buildTrackPayload,
     reportGateDecision,

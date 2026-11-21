@@ -12,6 +12,8 @@ import type { Bird } from '../types';
 import { getOfflineBird } from '../lib/fieldPack';
 import { FieldPackPanel } from './FieldPackPanel';
 import { BirdAnatomy } from './BirdAnatomy';
+import { LikeSaveButton } from './LikeSaveButton';
+import { ReportBugButton } from './ReportBugButton';
 
 /**
  * 第 2 頁：詳細資料。
@@ -363,6 +365,13 @@ export const BirdDetailPage: React.FC<BirdDetailPageProps> = ({
         >
           <Backpack className="w-3.5 h-3.5" /> {t('觀鳥裝備', 'Gear')}
         </button>
+      </div>
+
+      {/* 讚好／收藏（readme SG18）＋ 回報問題（Scout Admin 統一回報 v1）
+          —— 同側邊兩粒球同一件事：入到圖鑑機都撳得到；都係常駐、非阻塞。 */}
+      <div className="grid grid-cols-2 gap-2">
+        <LikeSaveButton lang={lang} variant="row" />
+        <ReportBugButton lang={lang} variant="row" birdId={bird.id} birdName={bird.name} />
       </div>
 
       <FieldPackPanel lang={lang} compact />
