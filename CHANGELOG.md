@@ -2,6 +2,47 @@
 
 格式依 `readme` 的 V1 雙版號規範：版號同內文一齊改。
 
+## v1.10.0 — 2026-11-21（讚好／收藏 ＋ 回報；兩粒新球歸位）
+
+### 新增（readme SG18／docs/60：所有 App 必做）
+- **「讚好／收藏」掣**（`src/components/LikeSaveButton.tsx`）：
+  開新分頁去 SCOUT APP STORE 的 AvianDex 詳情卡（slug `aviandex`，已對
+  `website/migrations/20261116-app-slug-seed.sql` 核實）。
+  網址只由 `ScoutStoreGate.getAppStoreUrl(APP_STORE_SLUG)` 組出；
+  helper 未載入 → 唔 render（零死連）。**零直連主站資料庫、零 bump_hearts／bump_stars。**
+- **「回報」掣**（`src/components/ReportBugButton.tsx`）：
+  接 **Scout Admin 統一回報格式 v1**（同 HKMAP／圖書館同一條 Apps Script、
+  同一個 payload／Sheet）。第一次撳才載 widget；widget 載唔到（學校網絡封
+  `script.google.com`）→ 自動開 `report.html?app=AvianDex 鳥類圖鑑` 獨立回報頁。
+  widget 自己的右下角 FAB 由 `index.css` 收埋，入口只有本 App 粒球。
+- **詳細資料頁**底部多一排文字掣（用戶定案）：同一組「讚好／收藏」＋「回報問題」；
+  喺詳細頁開回報會自動帶入 `NO.0008 白頭鵯` 到標題，管理員一眼知邊隻雀。
+- `src/config.ts`：新增 `APP_STORE_SLUG`、`SCOUT_ADMIN_*`、`scoutReportPageUrl()`，
+  以及 **`TOOL_BALLS`**（左右兩排球次序的唯一來源）。
+
+### 改動
+- **兩粒新球歸位**：左＝讚好／收藏・觀鳥禮儀・觀鳥裝備；右＝觀鳥地圖・回報・BIRD-DEX 3
+  （兩邊各 3 粒、對稱）。右排由 `App.tsx` 搬入 `SideToolBalls.tsx`，
+  同左排讀同一組 `BALL_SIZE`／`BALL_BASE`，唔會再「兩邊大小不一」。
+- `public/store_gate_v1.0.js` 換成 readme 真理倉的現行版（v1.0 · SG1–SG19）：
+  新增 `getAppStoreUrl(slug)`、`silentPortalIds`、簡短人話攔截文案；
+  現有行為（放行 appstore／library／birddex3、standalone PWA）不變。
+- `index.css` 加 `[hidden]{display:none!important}`、列印隱藏、`#scoutw-fab` 收埋。
+
+### 測試（新增 15 項）
+- `tests/supportButton.test.mjs`（9 項）：SG18 十條硬規則逐條鎖住
+  （常駐非阻塞、getAppStoreUrl、slug 核實、`[hidden]`、零 Supabase、
+  中英同步、列印、左右各 3、唔開 supportNudge、詳細頁有入口）。
+- `tests/scoutReport.test.mjs`（6 項）：統一回報格式、FAB 收埋、
+  widget 死線＋fail-safe 獨立回報頁、唔重覆插 script、詳細頁帶 birdId。
+- 更新 `tests/toolBalls.test.mjs`／`tests/infoCardReader.test.mjs` 以反映新排法。
+
+### 已知限制
+- Apps Script 用 `no-cors` 送出，前端讀唔到回應：UI 只可以講「已送出」，
+  唔可以講「已處理」（管理員喺 Scout Admin 收件箱跟進）。
+- 本 App 冇登入／冇資料庫，所以「已讚好」狀態只會出現喺主站（同源 localStorage），
+  子 App 唔會顯示 ❤️ 已撳（SG18 明確：收藏清單只存喺主站）。
+
 ## v1.9.0 — 2026-11-04（多線索圖鑑・中英分開・觀鳥禮儀與裝備）
 
 ### 新增

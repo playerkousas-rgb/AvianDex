@@ -482,7 +482,7 @@ export function renderDexCard(d: DexCardInput, opts: RenderOpts = {}): string {
       <span class="foot-no">NO.${id4}</span>
       <span class="foot-name">${esc(d.zhName)} <em>${esc(d.sciName)}</em></span>
       <span class="foot-src mono">${esc(d.sources || d.source || PENDING_ZH)}</span>
-      <span class="foot-ver mono">${esc(d.version || 'v1.9.0')}</span>
+      <span class="foot-ver mono">${esc(d.version || 'v1.10.0')}</span>
     </footer>
   </div>
 </div>`;

@@ -3,11 +3,9 @@ import { FlipCard } from './components/FlipCard.tsx';
 import { PokedexDevice } from './components/PokedexDevice.tsx';
 import { WelcomeScreen } from './components/WelcomeScreen.tsx';
 import { SideToolBalls } from './components/SideToolBalls.tsx';
-import { BirdCaptureLink } from './components/BirdCaptureLink.tsx';
 import { FieldFeathers } from './components/FieldFeathers.tsx';
 import { TopBar } from './components/TopBar.tsx';
 import { UpdateToast } from './components/UpdateToast.tsx';
-import { BALL_BASE, BALL_SIZE, BALL_ICON, BALL_RAIL_RIGHT, BALL_LABEL } from './components/ballStyles';
 import { BirdingMapModal } from './components/BirdingMapModal.tsx';
 import { CardLoadDiagnostics } from './components/CardLoadDiagnostics.tsx';
 import { ExplorerPanel } from './components/ExplorerPanel.tsx';
@@ -23,7 +21,6 @@ import { AnimatePresence } from 'framer-motion';
 import {
   Bird as BirdIcon,
   RefreshCw,
-  MapPin,
   Search,
   Sparkles,
   Wifi,
@@ -562,19 +559,6 @@ function App() {
           )}
         </main>
 
-        <div className={BALL_RAIL_RIGHT}>
-          <button
-            onClick={() => setShowMap(true)}
-            title={L('觀鳥地圖', 'Birding map')}
-            aria-label={L('觀鳥地圖', 'Birding map')}
-            className={`${BALL_BASE} ${BALL_SIZE} bg-gradient-to-br from-emerald-300 to-emerald-700 text-white`}
-          >
-            <MapPin className={BALL_ICON} strokeWidth={2.6} />
-            <span className={BALL_LABEL('right')}>{L('觀鳥地圖', 'Map')}</span>
-          </button>
-          <BirdCaptureLink lang={lang} icon="binoculars" />
-        </div>
-
         <footer className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 mt-6 sm:mt-8 pb-4">
           <div className="bg-black/40 backdrop-blur-sm border-2 border-yellow-400/20 rounded-xl p-3 sm:p-4 font-mono text-[9px] sm:text-[11px] text-yellow-200/60 leading-relaxed">
             <p className="text-yellow-300 font-black tracking-widest mb-1">► CREDITS & DATA SOURCES ({APP_VERSION})</p>
@@ -585,10 +569,12 @@ function App() {
         </footer>
       </div>
 
-      {/* 圖鑑工具：左側禮儀／裝備；右側地圖／前往 BIRD-DEX 3。 */}
+      {/* 工具球（兩排各 3 粒）：左＝讚好／收藏・禮儀・裝備；右＝地圖・回報・BIRD-DEX 3。
+          次序喺 src/config.ts 的 TOOL_BALLS 唯一來源；有 modal 打開就兩排一齊收埋。 */}
       <SideToolBalls
         lang={lang}
         onGuide={(k) => setGuideKind(k)}
+        onOpenMap={() => setShowMap(true)}
         hidden={!isOpened || selectedBirdId !== null || showMap || !!guideKind}
       />
 
