@@ -90,6 +90,22 @@ python3 scripts/cards/pack-illustrations.py \
 | 0582 | 黃頰山雀 | Yellow-cheeked Tit | Machlolophus spilonotus | 新增編號 | 用戶回報已上載 R2（未獨立核實） |
 | 0583 | 山麻雀 | Russet Sparrow | Passer cinnamomeus | 新增編號 | 用戶回報已上載 R2（未獨立核實） |
 
+## 第二階段：舊庫保留槽位（`kept`）錯圖與懷疑編號全面修正（32／32 已完成並上載 Google Drive）
+
+經全庫 `NO.0001`–`0583` 歷史映射核查（比對 `7cdae5d` 舊版 569 槽位），除上述 43 個 `assigned` 編號外，540 個 `kept` 保留槽位中所有 **確認錯圖（3 張）＋分類分拆／改名複核（12 張）＋跨科中英衝突（13 張）＋同科不同種中英衝突（4 張：0083、0098、0105、0451）** 合計 **32 個編號**，已全部重繪為 `1024 × 1024` 滿版無字水彩圖鑑插畫，並逐張完成腳趾／肢體解剖結構、背面資訊卡鑑別特徵及全出血邊緣審查（完整清單記錄於 `scripts/cards/suspect-illustration-plan.json`）：
+
+- **Google Drive 專屬資料夾**：[AvianDex-插圖修正-2026-11](https://drive.google.com/drive/folders/1cmp6ffMtIqMChSrsExx32jVfsP_xjsld)
+  - `PNG預覽/`（[連結](https://drive.google.com/drive/folders/1kUg2CUsaUnall0ekMOksY-6vmiNbyJDA)）：全數 **32 張** `NNNN-中文名.png`，供直接在 Drive 縮圖檢視核對
+  - `birdcards/`（[連結](https://drive.google.com/drive/folders/1ck2lRgzA1lNj0L6b19L0j4cnbQP7F18b)）：全數 **32 張** `NNNN.avif`（`1024 × 1024`，RGB AVIF `quality=60, 4:4:4`），可直接選取上載至 R2 `birdcards/`
+  - 完整合併壓縮包：[AvianDex-HK-32-suspect-illustrations-AVIF.zip](https://drive.google.com/file/d/1NNh1QPStyfdU5tdvACE5Rk4EG_Fa_VFr/view?usp=drivesdk)（`5,491,820` bytes，SHA-256：`c62f0b76b170ff60bbcb51e3345eadd0ad610941892f85c24deeb7c50d2c8d8f`，內含 32 張 `birdcards/NNNN.avif`、`manifest.json`、`upload-list.csv`、`SHA256SUMS`、`README-上載說明.txt`）
+- **32 張完整編號清單**：
+  - 確認錯圖修正（3 張）：`0010` 灰胸秧雞、`0017` 普通鵟、`0156` 橙腹葉鵯
+  - 物種分拆／學名修訂複核（12 張）：`0009` 黑臉噪鶥、`0012` 黑領椋鳥、`0016` 遠東山雀、`0021` 亞歷山大鸚鵡、`0120` 蒙古沙鴴、`0196` 織女銀鷗、`0243` 中白鷺、`0247` 牛背鷺、`0272` 蒼鷹、`0388` 金腰燕、`0389` 白腹毛腳燕、`0471` 紅尾鶇
+  - 舊版跨科中英衝突修正（13 張）：`0039` 綠眉鴨、`0052` 絲絨海番鴨、`0075` 紅頂綠鳩、`0097` 小白腰雨燕、`0099` 普通秧雞、`0102` 白眉田雞、`0133` 紅腰杓鷸、`0199` 小黑背鷗、`0204` 烏燕鷗、`0321` 粉紅山椒鳥、`0418` 栗頭鶲鶯、`0439` 中華草鶥、`0477` 白腰鵲鴝
+  - 舊版同科不同種中英衝突修正（4 張）：`0083` 霍氏鷹鵑（舊中文誤標棕腹杜鵑）、`0098` 西方秧雞（舊中文誤標普通秧雞）、`0105` 灰腳秧雞（舊中文誤標白喉斑秧雞）、`0451` 栗頰椋鳥（舊中文誤標紫背椋鳥）
+
+同時已新增 `scripts/cards/rebuild-name-aliases.mjs` 重建 `src/data/nameAliases.ts`（附 `tests/nameAliases.test.mjs` 自動驗證全部 583 種），徹底清除舊版別名表（如 `暗綠繡眼鳥 → 0017`、`白腰文鳥 → 0010`）的殘留錯配。
+
 ## R2 上載與快取
 
 在 bucket 根目錄上載包內 `birdcards/` 資料夾；若已進入 R2 的 `birdcards/`，則只選取其中 `.avif` 檔。不要新增 `aviandex-` 前綴或多一層 `birdcards/birdcards/`。Content-Type 為 `image/avif`。
